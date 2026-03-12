@@ -51,22 +51,8 @@ add_action('wp_footer', function () {
  * Move WooCommerce "Place order" button after the order review table on mobile only.
  * We hide the default button (only the button, not payments) and print our own copy later.
  */
-add_action( 'wp', function () {
-
-    // Only on the checkout page (not the thank-you page) and only on mobile.
-    if ( ! function_exists( 'is_checkout' ) || ! is_checkout() || ( function_exists( 'is_order_received_page' ) && is_order_received_page() ) ) {
-        return;
-    }
-    if ( ! function_exists( 'wp_is_mobile' ) || ! wp_is_mobile() ) {
-        return;
-    }
-
-    // 1) Suppress only the default "Place order" button output.
-    add_filter( 'woocommerce_order_button_html', 'mytheme_hide_default_place_order_button', 999 );
-
-    // 2) Re-output a button after the order review table.
-    add_action( 'woocommerce_checkout_after_order_review', 'mytheme_mobile_place_order_button_after_review', 20 );
-});
+// Disabled: no longer hiding/moving place order button
+// Place order stays in its default WC position (inside #payment)
 
 /**
  * Filter callback to hide the default button.
@@ -159,14 +145,14 @@ function custom_move_email_field_first( $fields ) {
 
 add_filter( 'woocommerce_checkout_fields', 'custom_checkout_reorder_fields' );
 function custom_checkout_reorder_fields( $fields ) {
-    // Email first
-    if ( isset( $fields['billing']['billing_email'] ) ) {
-        $fields['billing']['billing_email']['priority'] = 1;
+    // Phone first (like vigoshop)
+    if ( isset( $fields['billing']['billing_phone'] ) ) {
+        $fields['billing']['billing_phone']['priority'] = 1;
     }
     
-      // Email first
-    if ( isset( $fields['billing']['billing_phone'] ) ) {
-        $fields['billing']['billing_phone']['priority'] = 2;
+    // Email second
+    if ( isset( $fields['billing']['billing_email'] ) ) {
+        $fields['billing']['billing_email']['priority'] = 2;
     }
 
     // Country next
@@ -230,17 +216,20 @@ add_action( 'woocommerce_before_checkout_billing_form', 'add_contact_heading_bef
 function add_contact_heading_before_email() {
 
     
-    echo '<h3 class="checkout-section-title">Vaši podaci</h3>';
+    echo '<h3 class="checkout-billing-title">Plaćanje i Dostava</h3>';
 }
 
 
-add_filter( 'woocommerce_checkout_fields', 'move_labels_to_placeholders' );
-function move_labels_to_placeholders( $fields ) {
+// Vigoshop-style: keep labels (for floating effect) AND set placeholders
+add_filter( 'woocommerce_checkout_fields', 'set_placeholders_keep_labels' );
+function set_placeholders_keep_labels( $fields ) {
     foreach ( $fields as $section_key => $section ) {
         foreach ( $section as $field_key => $field ) {
-            if ( isset( $fields[$section_key][$field_key]['label'] ) ) {
-                $fields[$section_key][$field_key]['placeholder'] = $fields[$section_key][$field_key]['label'];
-                $fields[$section_key][$field_key]['label'] = '';
+            if ( isset( $fields[$section_key][$field_key]['label'] ) && !empty($fields[$section_key][$field_key]['label']) ) {
+                // Set placeholder same as label
+                $clean_label = strip_tags($fields[$section_key][$field_key]['label']);
+                $fields[$section_key][$field_key]['placeholder'] = $clean_label;
+                // Keep label for floating label effect
             }
         }
     }
