@@ -446,3 +446,11 @@ function auto_select_and_hide_paid_shipping_when_free( $rates, $package ) {
 
     return ! empty( $free ) ? $free : $rates;
 }
+
+// Change "Ukupno" to "Ukupni iznos:" in checkout order review
+add_filter( 'gettext', function( $translated, $text, $domain ) {
+    if ( is_checkout() && $text === 'Total' && $domain === 'woocommerce' ) {
+        return 'Ukupni iznos:';
+    }
+    return $translated;
+}, 10, 3 );
