@@ -3,16 +3,11 @@
    Based on vigoshop.hr computed styles + checkout-hr.css
    ============================================= */
 
-/* Hide header + top-header + footer on checkout */
-.woocommerce-checkout .top-header,
-.woocommerce-checkout .navbar.header,
-.woocommerce-checkout .site-footer {
-    display: none !important;
-}
-
 /* ===== HIDE UNWANTED ELEMENTS ===== */
 body.woocommerce-checkout .header,
+body.woocommerce-checkout .navbar.header,
 body.woocommerce-checkout .footer,
+body.woocommerce-checkout .site-footer,
 body.woocommerce-checkout .top-header,
 body.woocommerce-checkout .info-banner,
 body.woocommerce-checkout .entry-header,
@@ -44,28 +39,6 @@ body.woocommerce-checkout {
   color: #333;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-}
-
-/* ===== HEADER (NORIKS logo) ===== */
-.checkout--my-header {
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 0 18px;
-  border-bottom: 1px solid #dedede;
-}
-.checkout--my-header a {
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
-}
-.checkout--my-header .noriks-logo-text {
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 33px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
 }
 
 /* ===== MAIN CONTAINER (vigoshop: container--xs = 40rem = 640px) ===== */
