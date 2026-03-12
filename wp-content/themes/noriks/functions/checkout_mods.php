@@ -325,7 +325,26 @@ add_action( 'wp_footer', function() {
             if ($shippingRow.length && $shippingSection.length) {
                 var $shippingTd = $shippingRow.find('td');
                 if ($shippingTd.length) {
-                    $shippingSection.html($shippingTd.html());
+                    // Calculate delivery dates (2-5 business days from now)
+                    var now = new Date();
+                    var addBizDays = function(d, days) {
+                        var r = new Date(d);
+                        while (days > 0) { r.setDate(r.getDate() + 1); if (r.getDay() !== 0 && r.getDay() !== 6) days--; }
+                        return r;
+                    };
+                    var dayNames = ['nedjelja','ponedjeljak','utorak','srijeda','četvrtak','petak','subota'];
+                    var from = addBizDays(now, 2);
+                    var to = addBizDays(now, 5);
+                    var fromStr = dayNames[from.getDay()] + ', ' + from.getDate() + '.' + (from.getMonth()+1) + '.';
+                    var toStr = dayNames[to.getDay()] + ', ' + to.getDate() + '.' + (to.getMonth()+1) + '.';
+                    var priceHtml = $shippingTd.html();
+                    $shippingSection.html(
+                        '<div class="shipping-card-content">' +
+                        '<span class="shipping-check">✓</span>' +
+                        '<span class="shipping-dates">' + fromStr + ' - ' + toStr + '</span>' +
+                        '<span class="shipping-price-pill">' + priceHtml + '</span>' +
+                        '</div>'
+                    );
                     $shippingRow.hide();
                 }
             }
