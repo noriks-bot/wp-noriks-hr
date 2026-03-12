@@ -422,6 +422,7 @@ function noriks_upsell_modal_markup() {
             $btn.addClass('adding').text('DODAJEM...');
 
             var data = {
+                'add-to-cart': modalData.product_id,
                 product_id: modalData.product_id,
                 variation_id: variation.variation_id,
                 quantity: 1
@@ -432,17 +433,26 @@ function noriks_upsell_modal_markup() {
                 data[key] = variation.attributes[key];
             }
 
-            $.post(woocommerce_params.ajax_url, $.extend(data, {
-                action: 'xoo_wsc_add_to_cart'
-            }), function(res) {
-                $btn.removeClass('adding').addClass('added').text('✓ DODANO!');
-                
-                // Refresh side cart
-                $(document.body).trigger('wc_fragment_refresh');
-                
-                setTimeout(function() {
-                    closeModal();
-                }, 800);
+            // Use WC AJAX endpoint which side cart plugin hooks into
+            $.post('/?wc-ajax=xoo_wsc_add_to_cart', data, function(res) {
+                if (res && !res.error) {
+                    $btn.removeClass('adding').addClass('added').text('✓ DODANO!');
+                    
+                    // Refresh side cart fragments
+                    if (res.fragments) {
+                        $.each(res.fragments, function(key, value) {
+                            $(key).replaceWith(value);
+                        });
+                    }
+                    $(document.body).trigger('wc_fragment_refresh');
+                    
+                    setTimeout(function() {
+                        closeModal();
+                    }, 800);
+                } else {
+                    $btn.removeClass('adding').text('DODAJ U KOŠARICU');
+                    $('#noriks-modal-error').text(res.notice || 'Greška pri dodavanju').show();
+                }
             }).fail(function() {
                 // Fallback: standard WC add to cart
                 $.post('/?wc-ajax=add_to_cart', data, function() {
