@@ -274,23 +274,23 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal-add-btn {
             width: 100%;
-            height: 46px;
+            height: 50px;
             padding: 0 16px;
-            background: #e53935;
+            background: #c00;
             color: #fff;
             border: none;
-            border-radius: 2px;
-            font-size: 14px;
+            border-radius: 8px;
+            font-size: 17px;
             font-weight: 700;
             cursor: pointer;
-            letter-spacing: -0.3px;
+            letter-spacing: 0.2px;
             transition: background 0.15s ease;
-            text-transform: uppercase;
+            text-transform: none;
             font-family: 'Roboto', sans-serif;
         }
-        .noriks-modal-add-btn:hover { background: #c62828; }
+        .noriks-modal-add-btn:hover { background: #a00; }
         .noriks-modal-add-btn.adding {
-            background: #999;
+            background: #888;
             pointer-events: none;
         }
         .noriks-modal-add-btn.added {
