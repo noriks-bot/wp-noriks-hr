@@ -72,7 +72,7 @@ body.woocommerce-checkout {
     padding: 0;
   }
   .checkout-card {
-    padding: 0 15px 15px;
+    padding: 0 15px 0;
     border-radius: 5px 5px 0 0;
     margin-top: 0 !important;
     border-left: none;
@@ -506,11 +506,14 @@ body.woocommerce-checkout #payment .payment_methods > .wc_payment_method > label
   flex-wrap: wrap;
   align-items: center;
   font-size: 16px !important;
-  font-weight: 700 !important;
-  padding: 22.65px 16px !important;
+  font-weight: 500 !important;
+  padding: 1.41575em 1em !important;
   cursor: pointer;
 }
-/* All labels already 700 — no need for extra selected weight */
+/* Selected payment method label gets bold (vigoshop) */
+body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .wc_payment_method > input[type="radio"]:checked + label {
+  font-weight: 700 !important;
+}
 /* Custom radio buttons (from app CSS) */
 body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .wc_payment_method > label::before {
   content: "";
@@ -525,7 +528,7 @@ body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .wc_
 }
 body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .wc_payment_method > input[type="radio"]:checked + label::before {
   background-color: #47b426;
-  box-shadow: 0 0 0 1px #47b426;
+  box-shadow: 0 0 0 2px #47b426;
 }
 .payment-fee-free {
   background-color: #9ce79c;
@@ -717,11 +720,27 @@ body.woocommerce-checkout #place_order {
   cursor: pointer;
   margin: 20px 0 10px !important;
   box-shadow: 0 2px 0 0 #090 !important;
+  border-bottom: 2px solid #090 !important;
   text-transform: none !important;
   letter-spacing: normal !important;
 }
+/* Lock icon before Naruči (from vigoshop button--green-gradient) */
 body.woocommerce-checkout #place_order::before {
-  display: none;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='20' viewBox='0 0 17 20' fill='none'%3E%3Cpath opacity='0.5' fill-rule='evenodd' clip-rule='evenodd' d='M15.1786 8.75H14.2679V5.9375C14.2679 2.66406 11.6799 0 8.5 0C5.32009 0 2.73214 2.66406 2.73214 5.9375V8.75H1.82143C0.815848 8.75 0 9.58984 0 10.625V18.125C0 19.1602 0.815848 20 1.82143 20H15.1786C16.1842 20 17 19.1602 17 18.125V10.625C17 9.58984 16.1842 8.75 15.1786 8.75ZM11.2321 8.75H5.76786V5.9375C5.76786 4.38672 6.99353 3.125 8.5 3.125C10.0065 3.125 11.2321 4.38672 11.2321 5.9375V8.75Z' fill='white'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
+}
+/* Arrow icon after Naruči (from vigoshop wc-proceed-to-checkout) */
+body.woocommerce-checkout #place_order::after {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.541 17.088'%3E%3Cg%3E%3Cpath d='m14.265 6.379-6.1-6.1a.941.941 0 0 0-1.334 1.327l4.5 4.5H0v1.879h11.327l-4.5 4.5a.941.941 0 0 0 1.331 1.331l6.1-6.1a.941.941 0 0 0 0-1.331' transform='translate(1.5 .5)' style='fill:%23fff'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
 }
 body.woocommerce-checkout #place_order:hover {
   opacity: 0.95;
@@ -755,24 +774,46 @@ body.woocommerce-checkout .agreed_terms_txt {
 body.woocommerce-checkout .policy-agreement-obligation {
   display: block;
 }
+body.woocommerce-checkout .agreed_terms_txt {
+  font-size: 11px !important;
+  margin-bottom: 24px;
+}
 body.woocommerce-checkout .terms-checkbox-and-links {
   display: flex;
   align-items: flex-start;
   gap: 6px;
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 11px;
   color: #888;
-  justify-content: center;
+  position: relative;
 }
 body.woocommerce-checkout .terms-checkbox-and-links a {
-  color: #888;
+  color: #333;
   text-decoration: underline;
 }
 body.woocommerce-checkout .terms-checkbox-and-links .checkbox {
   margin: 0;
 }
 body.woocommerce-checkout .terms-checkbox-and-links input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
   margin-top: 2px;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  body.woocommerce-checkout .terms-checkbox-and-links {
+    display: none;
+  }
+  body.woocommerce-checkout .agreed_terms_txt {
+    margin-bottom: 0;
+  }
 }
 
 /* ===== CLEARFIX ===== */
