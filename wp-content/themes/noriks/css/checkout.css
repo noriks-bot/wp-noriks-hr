@@ -232,17 +232,42 @@ body.woocommerce-checkout select {
 }
 
 /* ===== FIELD LAYOUT: Side by side fields ===== */
-body.woocommerce-checkout .col2-set .form-row-first {
+body.woocommerce-checkout .col2-set .form-row-first,
+body.woocommerce-checkout p#billing_first_name_field {
   float: left !important;
   width: 48% !important;
 }
-body.woocommerce-checkout .col2-set .form-row-last {
+body.woocommerce-checkout .col2-set .form-row-last,
+body.woocommerce-checkout p#billing_last_name_field {
   float: right !important;
   width: 48% !important;
 }
 body.woocommerce-checkout .form-row-wide {
   clear: both !important;
   width: 100% !important;
+}
+
+/* Address fields: Ulica + Kućni broj side by side */
+body.woocommerce-checkout p#billing_address_1_field {
+  float: left !important;
+  width: 58% !important;
+  clear: both !important;
+}
+body.woocommerce-checkout p#billing_address_2_field {
+  float: right !important;
+  width: 38% !important;
+  clear: none !important;
+}
+/* Poštanski broj + Grad side by side */
+body.woocommerce-checkout p#billing_postcode_field {
+  float: left !important;
+  width: 38% !important;
+  clear: both !important;
+}
+body.woocommerce-checkout p#billing_city_field {
+  float: right !important;
+  width: 58% !important;
+  clear: none !important;
 }
 
 /* ===== HELPER TEXTS (phone example, email not required) ===== */
@@ -434,6 +459,10 @@ body.woocommerce-checkout input[name="woocommerce_checkout_place_order"] {
   box-shadow: none !important;
   text-transform: none !important;
   letter-spacing: normal !important;
+}
+body.woocommerce-checkout #place_order::before {
+  content: "🔒";
+  font-size: 18px;
 }
 body.woocommerce-checkout #place_order:hover {
   background: linear-gradient(to bottom, #3da020, #1fa000) !important;
