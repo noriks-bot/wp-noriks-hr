@@ -452,3 +452,22 @@ add_filter( 'gettext', function( $translated, $text, $domain ) {
     }
     return $translated;
 }, 10, 3 );
+
+// Payment method order: COD first, then CC, then PayPal (like vigoshop)
+add_filter( 'woocommerce_available_payment_gateways', function( $gateways ) {
+    if ( ! is_checkout() ) return $gateways;
+    $order = array( 'cod', 'stripe', 'ppcp-gateway' );
+    $sorted = array();
+    foreach ( $order as $id ) {
+        if ( isset( $gateways[ $id ] ) ) {
+            $sorted[ $id ] = $gateways[ $id ];
+        }
+    }
+    // Add any remaining gateways
+    foreach ( $gateways as $id => $gw ) {
+        if ( ! isset( $sorted[ $id ] ) ) {
+            $sorted[ $id ] = $gw;
+        }
+    }
+    return $sorted;
+}, 100 );
