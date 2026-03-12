@@ -264,10 +264,21 @@ function set_placeholders_keep_labels( $fields ) {
 }
 
 
-// Remove default payment section
+// Remove default payment section from order review
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 
-// Re-add payment section right after billing fields
+// Add "Dostava" title + shipping info after billing fields
+add_action( 'woocommerce_checkout_after_customer_details', function() {
+    echo '<h3 class="checkout-section-title dostava-title">Dostava</h3>';
+    // WC shipping totals will appear in order review table
+}, 3 );
+
+// Add "Način plaćanja" title + payment methods after shipping
+add_action( 'woocommerce_checkout_after_customer_details', function() {
+    echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
+}, 4 );
+
+// Re-add payment section
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 5 );
 
 

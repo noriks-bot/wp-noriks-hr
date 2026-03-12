@@ -498,11 +498,15 @@ body.woocommerce-checkout .woocommerce-checkout-payment .payment_methods li .pay
   border-bottom: unset !important;
 }
 
-/* Hide default WC payment div backgrounds */
+/* Hide default WC payment div backgrounds and heading */
 body.woocommerce-checkout #payment {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+}
+body.woocommerce-checkout #payment .wc-payment-form,
+body.woocommerce-checkout #payment > h3 {
+  display: none !important;
 }
 body.woocommerce-checkout #payment .place-order {
   padding: 0 !important;
@@ -585,11 +589,19 @@ body.woocommerce-checkout .woocommerce-checkout-review-order-table tfoot td {
   text-align: right !important;
 }
 body.woocommerce-checkout .woocommerce-checkout-review-order-table .order-total {
-  font-size: 16px !important;
+  font-size: 18px !important;
   font-weight: 700 !important;
-  color: #24b800 !important;
+  color: #000 !important;
+  border-top: 1px solid #eee !important;
+  padding-top: 12px !important;
 }
-body.woocommerce-checkout .woocommerce-checkout-review-order-table .order-total * {
+body.woocommerce-checkout .woocommerce-checkout-review-order-table .order-total td {
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #000 !important;
+}
+body.woocommerce-checkout .woocommerce-checkout-review-order-table .order-total .woocommerce-Price-amount {
+  color: #000 !important;
   font-weight: 700 !important;
 }
 body.woocommerce-checkout table,
