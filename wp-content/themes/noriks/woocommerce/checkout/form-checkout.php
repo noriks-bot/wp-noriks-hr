@@ -2,7 +2,8 @@
 /**
  * Checkout Form — Noriks (Vigoshop-style single-column layout)
  *
- * Order: Billing → Dostava → Način plaćanja → Sažetak narudžbe → Naruči → Trust
+ * Vigoshop order: Billing → Dostava → Način plaćanja → COD prompt → VAT → Sažetak → Naruči
+ * All inside one white card. Payment + order review + button inside #payment.
  *
  * @see https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
@@ -38,19 +39,14 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 		</div>
 
-		<?php // Dostava + Način plaćanja are hooked into woocommerce_checkout_after_customer_details ?>
+		<?php // Hooks render: Dostava → Način plaćanja → #payment (with order review + button inside) ?>
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
 
-	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-
-	<!-- Sažetak narudžbe (order items + total) -->
-	<h3 class="checkout-section-title sazatak-title">Sažetak narudžbe</h3>
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+	<?php // Hidden order_review for WC compatibility (actual display is inside #payment via hook) ?>
+	<div id="order_review" class="woocommerce-checkout-review-order" style="display:none;">
 		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 	</div>
 
 </div><!-- .checkout-card -->

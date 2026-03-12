@@ -256,7 +256,7 @@ add_filter( 'woocommerce_order_button_text', function() {
     return 'Naruči';
 });
 
-// COD prompt + VAT note before place order button
+// COD prompt + VAT note + Sažetak placeholder before submit button (vigoshop order)
 add_action( 'woocommerce_review_order_before_submit', function() {
     ?>
     <div class="cod-checkout-prompt">
@@ -266,26 +266,12 @@ add_action( 'woocommerce_review_order_before_submit', function() {
         <span>Nema dodatnih troškova za carinu</span>
         <span>PDV je uključen u cijenu</span>
     </div>
+    <h3 class="checkout-section-title sazatak-title">Sažetak narudžbe</h3>
+    <div class="noriks-order-summary"></div>
     <?php
 });
 
-// Add "Kupujte bez brige" trust badge after place order button
-add_action( 'woocommerce_review_order_after_submit', function() {
-    ?>
-    <div class="checkout-trust-badge">
-        <div class="trust-badge-inner">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneyback.svg" alt="100% Money Back" class="trust-badge-icon" width="60" height="60">
-            <div class="trust-badge-text">
-                <strong>Kupujte bez brige</strong><br>
-                Povrat novca moguć u roku od 90 dana
-            </div>
-        </div>
-    </div>
-    <p class="checkout-order-note" style="font-size:12px; color:#666; margin-top:16px;">
-        Klikom na gumb <strong>Naruči</strong> pristajete na narudžbu uz obvezu plaćanja.
-    </p>
-    <?php
-});
+// (Removed: trust badge + disclaimer — not in vigoshop)
 
 
 // Vigoshop-style: keep labels (for floating effect) AND set placeholders
@@ -308,25 +294,25 @@ function set_placeholders_keep_labels( $fields ) {
 // Dostava title + shipping display before payment
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_after_customer_details', function() {
-    // Dostava section with shipping methods
     echo '<h3 class="checkout-section-title dostava-title">Dostava</h3>';
-    echo '<div class="noriks-shipping-section">';
-    // WC will render shipping in order_review table, we move it via JS
-    echo '</div>';
+    echo '<div class="noriks-shipping-section"></div>';
 }, 3 );
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
 }, 4 );
+// Payment WITHOUT the place-order button (we render button separately after sažetak)
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 5 );
 
-// Move shipping row via JS + hide duplicate place-order
+// Move shipping + order review table via JS
 add_action( 'wp_footer', function() {
     if ( ! is_checkout() || is_wc_endpoint_url('order-received') ) return;
     ?>
     <script>
     jQuery(function($){
-        function moveShipping() {
-            var $shippingRow = $('.woocommerce-checkout-review-order-table .woocommerce-shipping-totals');
+        function rearrangeCheckout() {
+            // 1. Move shipping from hidden #order_review table into .noriks-shipping-section
+            var $table = $('#order_review .woocommerce-checkout-review-order-table');
+            var $shippingRow = $table.find('.woocommerce-shipping-totals');
             var $shippingSection = $('.noriks-shipping-section');
             if ($shippingRow.length && $shippingSection.length) {
                 var $shippingTd = $shippingRow.find('td');
@@ -335,9 +321,15 @@ add_action( 'wp_footer', function() {
                     $shippingRow.hide();
                 }
             }
+
+            // 2. Clone order review table into .noriks-order-summary (before button)
+            var $summary = $('.noriks-order-summary');
+            if ($table.length && $summary.length) {
+                $summary.html($table.clone().show().prop('outerHTML'));
+            }
         }
-        moveShipping();
-        $(document.body).on('updated_checkout', moveShipping);
+        rearrangeCheckout();
+        $(document.body).on('updated_checkout', rearrangeCheckout);
     });
     </script>
     <?php
