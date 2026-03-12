@@ -464,6 +464,9 @@ function noriks_upsell_modal_markup() {
             }
 
             var variation = findVariation();
+            console.log('Selected attrs:', JSON.stringify(selectedAttrs));
+            console.log('Variations:', JSON.stringify(modalData.variations.map(function(v){return v.attributes})));
+            console.log('Match:', variation);
             if (!variation) {
                 $('#noriks-modal-error').text('Ova kombinacija nije dostupna').show();
                 return;
