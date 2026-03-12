@@ -199,6 +199,7 @@ function enqueue_main_styles() {
 
     // Enqueue checkout.css on checkout
     if (function_exists('is_checkout') && is_checkout()) {
+        wp_enqueue_style('google-roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap', array(), null);
         wp_enqueue_style(
             'checkout-style',
             get_template_directory_uri() . '/css/checkout.css',
