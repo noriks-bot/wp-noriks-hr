@@ -206,6 +206,13 @@ function enqueue_main_styles() {
             filemtime(get_template_directory() . '/css/checkout.css'),
             'all'
         );
+        wp_enqueue_script(
+            'checkout-fields',
+            get_template_directory_uri() . '/js/checkout-fields.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/js/checkout-fields.js'),
+            true
+        );
     }
     
     
