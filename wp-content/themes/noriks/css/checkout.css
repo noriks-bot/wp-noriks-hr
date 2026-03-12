@@ -254,11 +254,11 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row
 p#billing_address_1_field,
 p#billing_address_2_field,
 p#billing_city_field,
-p#billing_postcode_field { clear: none; }
-p#billing_address_1_field { float: left; width: 67%; }
-p#billing_address_2_field { float: right; width: 31%; }
-p#billing_postcode_field { clear: both; float: left; width: 35%; }
-p#billing_city_field { clear: none; float: right; width: 63%; }
+p#billing_postcode_field { clear: none !important; }
+p#billing_address_1_field { float: left !important; width: 67% !important; }
+p#billing_address_2_field { float: right !important; width: 31% !important; }
+p#billing_postcode_field { clear: both !important; float: left !important; width: 35% !important; }
+p#billing_city_field { clear: none !important; float: right !important; width: 63% !important; }
 @media (max-width: 575.98px) {
   p#billing_address_1_field,
   p#billing_address_2_field,
@@ -331,10 +331,10 @@ body.woocommerce-checkout .noriks-shipping-section li label,
 body.woocommerce-checkout #shipping_method li label {
   display: flex !important;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #ccc !important;
-  border-radius: 4px;
-  padding: 14px 16px !important;
+  background-color: #f0fff4;
+  border: 2px solid #4CAF50 !important;
+  border-radius: 8px;
+  padding: 16px 18px !important;
   font-size: 14px;
   font-weight: 600;
   color: #1a1a1a;
@@ -343,8 +343,13 @@ body.woocommerce-checkout #shipping_method li label {
 body.woocommerce-checkout .noriks-shipping-section .woocommerce-Price-amount,
 body.woocommerce-checkout #shipping_method li label .woocommerce-Price-amount {
   margin-left: auto;
-  color: #c00;
+  background-color: #4CAF50;
+  color: #fff !important;
   font-weight: 700;
+  font-size: 14px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 /* Hide shipping from review table (shown standalone above) */
 body.woocommerce-checkout .woocommerce-checkout-review-order-table .woocommerce-shipping-totals,
@@ -463,15 +468,18 @@ body.woocommerce-checkout #payment > h3 {
 body.woocommerce-checkout .cod-checkout-prompt {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: #fff8e1;
-  border: 1px solid #ffe082;
-  border-radius: 8px;
-  padding: 12px 16px;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 16px 0;
   margin: 16px 0 0;
   font-size: 14px;
   color: #333;
+}
+body.woocommerce-checkout .cod-prompt-icon {
+  font-size: 32px;
+  flex-shrink: 0;
 }
 body.woocommerce-checkout .vat-checkout-note {
   display: flex;
@@ -498,6 +506,17 @@ body.woocommerce-checkout .noriks-order-summary {
   margin: 16px 0;
 }
 body.woocommerce-checkout .noriks-order-summary .product-name img {
+  display: none !important;
+}
+body.woocommerce-checkout .noriks-order-summary .product-name {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+body.woocommerce-checkout .noriks-order-summary .cart_item .product-name .product-quantity {
+  display: inline !important;
+}
+/* Sažetak: show as "1x Product Name — Price" like vigoshop */
+body.woocommerce-checkout .noriks-order-summary .variation {
   display: none !important;
 }
 body.woocommerce-checkout #order_review,
