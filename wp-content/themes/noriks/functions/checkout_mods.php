@@ -406,6 +406,7 @@ function noriks_payment_fee_badges( $title, $payment_id ) {
         } else {
             $title .= ' <span class="payment-fee-free">Besplatno</span>';
         }
+        $title .= ' <span class="payment-icon-cod">💸</span>';
     } else {
         $title .= ' <span class="payment-fee-free">Besplatno</span>';
     }

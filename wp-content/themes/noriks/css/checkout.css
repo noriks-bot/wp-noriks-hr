@@ -456,8 +456,13 @@ body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .wc_
 }
 body.woocommerce-checkout .wc_payment_methods label .sv-wc-payment-gateway-card-icons,
 body.woocommerce-checkout .wc_payment_methods label .payment-icon-wrapper,
+body.woocommerce-checkout .wc_payment_methods label .payment-icon-cod,
 body.woocommerce-checkout .wc_payment_methods label > img {
   margin-left: auto !important;
+}
+body.woocommerce-checkout .payment-icon-cod {
+  font-size: 28px;
+  line-height: 1;
 }
 body.woocommerce-checkout .woocommerce-checkout-payment .payment_methods li .payment_box {
   padding: 1.41575em !important;
