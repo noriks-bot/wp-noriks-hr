@@ -939,3 +939,6 @@ remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
 add_filter('tiny_mce_plugins', function ($plugins) {
     return is_array($plugins) ? array_diff($plugins, ['wpemoji']) : [];
 });
+
+// Custom side cart upsell modal (replaces YITH Quick View)
+include(get_template_directory() . '/functions/sidecart-upsell-modal.php');

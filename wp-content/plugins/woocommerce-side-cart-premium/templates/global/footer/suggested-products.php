@@ -71,22 +71,14 @@ while ( $products->have_posts() ) : $products->the_post();
 
 				<?php if( $showATC ): ?>
 		<?php
-		            $product_id = $_product_id; // Or use your variable
+		            $product_id = $_product_id;
 
                                 if ( $product->is_type('variable') ) {
-                                    // Output hidden Quick View button using YITH shortcode (optional, safe fallback)
-                                    echo '<div style="display:none;">';
-                                    echo do_shortcode('[yith_quick_view product_id="' . esc_attr($product_id) . '"]');
-                                    echo '</div>';
-                                
-                                    // Your visible "dodaj" button to trigger quick view modal
-                                    echo '<a style="font-size:13px; padding: 5px 9px 5px 9px;" href="#" class="button yith-wcqv-button quick_view_upsell button" data-product_id="' . esc_attr($product_id) . '">+ DODAJ</a>';
+                                    echo '<a style="font-size:13px; padding: 5px 9px 5px 9px;" href="#" class="button noriks-upsell-btn" data-product_id="' . esc_attr($product_id) . '">+ DODAJ</a>';
                                 } else {
-                                    
+                                    echo '<a style="font-size:13px; padding: 5px 9px 5px 9px;" href="' . esc_url($product->add_to_cart_url()) . '" class="button add_to_cart_button ajax_add_to_cart" data-product_id="' . esc_attr($product_id) . '" data-quantity="1">+ DODAJ</a>';
                                 }
     			        ?>
-    			        
-					<!--<span class="xoo-wsc-sp-atc"><?php //woocommerce_template_loop_add_to_cart( array( 'is_xoo_wsc_sp' => 'yes' ) ) ?></span>-->
 					
 				<?php endif; ?>
 
