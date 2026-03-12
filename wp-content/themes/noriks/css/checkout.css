@@ -475,22 +475,179 @@ table:not(.has-background) th {
 
 /* === Mobile === */
 @media (max-width: 767px) {
+  /* Container: full width, minimal margin */
   .my-checkout-container {
-    margin: 12px auto;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
   }
+
+  /* Card: no rounding, no shadow, edge-to-edge white */
   .checkout-card {
-    padding: 0 20px 32px;
+    padding: 0 15px 32px;
     border-radius: 0;
     box-shadow: none;
+    margin-bottom: 0;
   }
+
+  /* Form: 15px side padding like vigoshop mobile */
+  form.checkout.woocommerce-checkout {
+    padding: 0 !important;
+  }
+
+  /* Section titles: slightly smaller on mobile */
+  .checkout-section-title {
+    font-size: 22px;
+    padding-top: 24px;
+  }
+  h3.checkout-section-title:first-child {
+    padding-top: 28px;
+  }
+
+  /* All form fields: stack vertically, full width */
+  .col2-set .form-row-first,
+  .col2-set .form-row-last {
+    width: 100% !important;
+    float: none !important;
+    margin-right: 0 !important;
+  }
+
+  /* Address fields: stack vertically */
+  #billing_address_1_field,
+  #billing_address_2_field {
+    width: 100% !important;
+    float: none !important;
+    margin-right: 0 !important;
+    clear: both;
+  }
+
+  /* Inputs: keep 18px to prevent iOS zoom, full width */
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=tel],
+  input[type=url],
+  input[type=password],
+  input[type=search],
+  textarea,
+  .input-text {
+    font-size: 16px !important; /* 16px prevents iOS auto-zoom */
+    padding: 10px 15px !important;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  /* Select2: touch-friendly height */
+  .select2-container--default .select2-selection--single {
+    height: 44px;
+    min-height: 44px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 16px;
+    padding-left: 15px;
+    line-height: 44px !important;
+  }
+
+  /* Labels: tighter padding on mobile */
+  .woocommerce-checkout .form-row label {
+    padding: 8px 0 3px;
+    font-size: 13px;
+  }
+
+  /* Place order button: full width, large touch target */
+  #place_order {
+    font-size: 18px !important;
+    padding: 16px 20px;
+    min-height: 56px;
+    border-radius: 4px;
+    margin-top: 12px;
+  }
+
+  /* Order review: clean on mobile */
+  #order_review,
+  .checkout-col-right,
+  table, td, tr, th,
+  .reviews-wrapper-my {
+    background: #fff !important;
+  }
+  .checkout-col-right {
+    margin-top: 20px !important;
+    border-radius: 0;
+  }
+
+  /* Reviews: stack vertically */
   .reviews {
     flex-direction: column;
   }
+
+  /* Review cards: full width */
+  .review-card {
+    width: 100%;
+  }
+
+  /* Trust section */
+  .trust-section {
+    margin-top: 20px;
+  }
+
+  /* Payment methods: comfortable spacing */
+  .woocommerce-checkout .wc_payment_methods label {
+    padding: 16px 12px 15px 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* Shipping methods: comfortable on mobile */
+  .shipping-method-ul li {
+    padding: 18px 10px 18px 20px;
+  }
+
+  /* Hide desktop place_order, show mobile one */
+  #customer_details #place_order {
+    display: none !important;
+  }
+  #payment .place-order {
+    margin-top: 0 !important;
+  }
+  #order_review #place_order {
+    margin-top: 0 !important;
+  }
+
+  /* Checkout header: slightly smaller on mobile */
+  .checkout--my-header {
+    padding: 10px 0 14px;
+  }
+  .checkout--my-header .noriks-logo-text,
+  .checkout--my-header span {
+    font-size: 28px !important;
+  }
+
+  /* Column padding */
+  .checkout-column {
+    padding: 5px !important;
+  }
 }
 
-/* === Misc overrides === */
+/* Small phones */
+@media (max-width: 375px) {
+  .checkout-card {
+    padding: 0 12px 28px;
+  }
+  .checkout-section-title {
+    font-size: 20px;
+  }
+  #place_order {
+    font-size: 16px !important;
+    padding: 14px 16px;
+  }
+}
+
+/* === Desktop overrides === */
 @media (min-width: 768px) {
   #order_review .shop_table {
     margin-bottom: 25px !important;
+  }
+  /* On desktop, hide duplicate place_order in order_review */
+  #order_review #place_order {
+    display: none !important;
   }
 }
