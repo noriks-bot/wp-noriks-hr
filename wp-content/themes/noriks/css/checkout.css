@@ -420,12 +420,19 @@ body.woocommerce-checkout .shipping-price-pill .woocommerce-Price-amount {
   border-radius: 0 !important;
 }
 
-/* EU warehouse badge */
-body.woocommerce-checkout .shipping-eu-badge {
+/* EU warehouse badge (from vigoshop) */
+body.woocommerce-checkout .delivery-from-eu-warehouse {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   color: #666;
   margin-top: 8px;
   margin-bottom: 4px;
+}
+body.woocommerce-checkout .delivery-from-eu-warehouse__icon {
+  width: 20px;
+  height: auto;
 }
 
 /* Hide shipping from the hidden #order_review (not from cloned sažetak) */
@@ -536,9 +543,12 @@ body.woocommerce-checkout .wc_payment_methods label .payment-icon-cod,
 body.woocommerce-checkout .wc_payment_methods label > img {
   margin-left: auto !important;
 }
-body.woocommerce-checkout .payment-icon-cod {
-  font-size: 28px;
-  line-height: 1;
+body.woocommerce-checkout .hs-checkout__payment-method-cod-icon-container {
+  margin-left: auto !important;
+}
+body.woocommerce-checkout .hs-checkout__payment-method-cod-icon {
+  width: 40px;
+  height: auto;
 }
 body.woocommerce-checkout .woocommerce-checkout-payment .payment_methods li .payment_box {
   padding: 1.41575em !important;
@@ -558,7 +568,7 @@ body.woocommerce-checkout #payment > h3 {
   display: none !important;
 }
 
-/* ===== COD PROMPT ===== */
+/* ===== COD PROMPT (from vigoshop hs-cod-checkout-prompt) ===== */
 body.woocommerce-checkout .cod-checkout-prompt {
   display: flex;
   align-items: center;
@@ -566,15 +576,20 @@ body.woocommerce-checkout .cod-checkout-prompt {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 10px;
+  padding: 10px 0;
   margin: 0;
   font-size: 14px;
   color: #333;
 }
-body.woocommerce-checkout .cod-prompt-icon {
-  font-size: 32px;
+body.woocommerce-checkout .cod-prompt-text {
+  flex: 1;
+}
+body.woocommerce-checkout .cod-prompt-image {
+  width: 50px;
+  height: auto;
   flex-shrink: 0;
 }
+/* VAT note (from vigoshop hs-vat-tax-checkout-prompt) */
 body.woocommerce-checkout .vat-checkout-note {
   display: flex;
   flex-direction: column;
@@ -583,6 +598,9 @@ body.woocommerce-checkout .vat-checkout-note {
   font-size: 13px;
   color: #333;
   margin: 0;
+}
+body.woocommerce-checkout .tax-and-vat-checkout-claims {
+  text-align: right;
 }
 
 /* ===== SAŽETAK NARUDŽBE ===== */
@@ -692,8 +710,7 @@ body.woocommerce-checkout #place_order {
   letter-spacing: normal !important;
 }
 body.woocommerce-checkout #place_order::before {
-  content: "🔒";
-  font-size: 18px;
+  content: none;
 }
 body.woocommerce-checkout #place_order:hover {
   opacity: 0.95;
@@ -718,11 +735,14 @@ body.woocommerce-checkout .moneyback-text {
   color: #333;
   line-height: 1.4;
 }
-body.woocommerce-checkout .checkout-legal-text {
+body.woocommerce-checkout .agreed_terms_txt {
   font-size: 12px;
   color: #888;
   text-align: center;
   margin: 8px 0 16px;
+}
+body.woocommerce-checkout .policy-agreement-obligation {
+  display: block;
 }
 
 /* ===== CLEARFIX ===== */

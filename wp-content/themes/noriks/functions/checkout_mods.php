@@ -265,12 +265,12 @@ add_filter( 'woocommerce_order_button_text', function() {
 add_action( 'woocommerce_review_order_before_submit', function() {
     ?>
     <div class="cod-checkout-prompt">
-        <span>Dovršite narudžbu sada,<br><strong>platite pouzećem :)</strong></span>
-        <span class="cod-prompt-icon">💸</span>
+        <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
+        <img class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
     </div>
     <div class="vat-checkout-note">
-        <span>Nema dodatnih troškova za carinu</span>
-        <span>PDV je uključen u cijenu</span>
+        <span class="tax-and-vat-checkout-claims">Nema dodatnih troškova za carinu</span>
+        <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
     </div>
     <h3 class="checkout-section-title sazatak-title">Sažetak narudžbe</h3>
     <div class="noriks-order-summary"></div>
@@ -281,14 +281,14 @@ add_action( 'woocommerce_review_order_before_submit', function() {
 add_action( 'woocommerce_review_order_after_submit', function() {
     ?>
     <div class="moneyback-section">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/moneyback.svg" alt="100% Povrat" class="moneyback-img">
+        <img src="https://images.vigo-shop.com/general/guarantee_money_back/satisfaction_icon_hr.png" alt="100% Povrat" class="moneyback-img">
         <div class="moneyback-text">
             <strong>Kupujte bez brige</strong><br>
             Povrat novca moguć u roku od 90 dana.
         </div>
     </div>
-    <div class="checkout-legal-text">
-        Klikom na gumb <strong>Naruči</strong> pristajete na narudžbu uz obvezu plaćanja.
+    <div class="agreed_terms_txt">
+        <span class="policy-agreement-obligation">Klikom na gumb <strong>Naruči</strong> pristajem na narudžbu uz obvezu plaćanja.</span>
     </div>
     <?php
 });
@@ -316,7 +316,7 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title dostava-title">Dostava</h3>';
     echo '<div class="noriks-shipping-section"></div>';
-    echo '<div class="shipping-eu-badge">🇪🇺 Skladište u EU</div>';
+    echo '<div class="delivery-from-eu-warehouse"><img class="delivery-from-eu-warehouse__icon" src="https://images.vigo-shop.com/general/flags/eu-warehouse.svg"><span class="delivery-from-eu-warehouse__text">Skladište u EU</span></div>';
 }, 3 );
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
@@ -447,7 +447,7 @@ function noriks_payment_fee_badges( $title, $payment_id ) {
         } else {
             $title .= ' <span class="payment-fee-free">Besplatno</span>';
         }
-        $title .= ' <span class="payment-icon-cod">💸</span>';
+        $title .= ' <div class="hs-checkout__payment-method-cod-icon-container"><img class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" /></div>';
     } else {
         $title .= ' <span class="payment-fee-free">Besplatno</span>';
     }
@@ -498,7 +498,7 @@ add_filter( 'gettext', function( $translated, $text, $domain ) {
 // Payment method order: COD first, then CC, then PayPal (like vigoshop)
 add_filter( 'woocommerce_available_payment_gateways', function( $gateways ) {
     if ( ! is_checkout() ) return $gateways;
-    $order = array( 'cod', 'stripe', 'ppcp-gateway' );
+    $order = array( 'cod', 'stripe_cc', 'ppcp-gateway' );
     $sorted = array();
     foreach ( $order as $id ) {
         if ( isset( $gateways[ $id ] ) ) {
