@@ -45,29 +45,7 @@ if ( ! wp_doing_ajax() ) {
 		</ul>
 	<?php endif; ?>
 	
-	<?php
-$chosen_methods = WC()->session->get( 'chosen_shipping_methods' );
-
-if ( ! empty( $chosen_methods ) && is_array( $chosen_methods ) ) {
-    $packages = WC()->shipping()->get_packages();
-
-    foreach ( $packages as $i => $package ) {
-        if ( isset( $chosen_methods[ $i ] ) ) {
-            $method_id = $chosen_methods[ $i ];
-            
-            $shippping_subtitle = get_field("checkout_option_subheading_3","options");
-
-            foreach ( $package['rates'] as $rate_id => $rate ) {
-                if ( $rate_id === $method_id ) {
-                    echo '<div class="woocommerce-selected-shipping" style="margin-top:20px;">';
-                    echo '<h3 class="checkout-section-title"> ' . $shippping_subtitle .' </h3> <ul class="shipping-method-ul"><li> ' . esc_html( $rate->get_label() ) . ' (' . wc_price( $rate->get_cost() ) . ')' ;
-                    echo '</li></ul></div>';
-                }
-            }
-        }
-    }
-}
-?>
+	<?php // Shipping display removed — handled by standalone Dostava section ?>
 	
 	
 	
