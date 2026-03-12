@@ -11,7 +11,7 @@ if (  has_term( array( 'starter-paketi','orto-starter' ), 'product_cat', get_the
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-          <img style="" src="/hr/wp-content/themes/noriks/img/starter-1.png
+          <img style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-1.png
 ">
       </div>
     </div>
@@ -75,7 +75,7 @@ ZAŠTO LJUDI BIRAJU STARTER PAKET?
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-           <img style="" src="/hr/wp-content/themes/noriks/img/starter-2.png
+           <img style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-2.png
 ">
       </div>
     </div>
@@ -135,7 +135,7 @@ KOMBINACIJA KOJA SE NOSI SVAKI DAN
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-          <img style="" src="/hr/wp-content/themes/noriks/img/starter-3.png
+          <img style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-3.png
 ">
       </div>
     </div>
@@ -314,7 +314,7 @@ if (  has_term( array( 'majice', 'orto-majice' ), 'product_cat', get_the_id() ) 
       <div class="video-wrapper">
           <img style="width: 100%;       
     aspect-ratio: 1/1; 
-    object-fit: cover;  " src="/hr/wp-content/themes/noriks/img/majice-3 (1).jpeg">
+    object-fit: cover;  " src="<?php echo get_template_directory_uri(); ?>/img/majice-3 (1).jpeg">
       </div>
     </div>
 
@@ -770,81 +770,7 @@ a:hover {
 }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Slick Carousel (Mobile only)
-  if (window.innerWidth <= 768) {
-    jQuery('.slider-mobile').not('.slick-initialized').slick({
-      slidesToShow: 1,
-      centerMode: true,
-      centerPadding: '60px',
-      arrows: false,
-      dots: true,
-      infinite: false
-    });
-  }
-});
-</script>
-
-<style>
-.slider-mobile .slick-list {
-  padding-left: 0 !important;
-  margin-left: 0px;
-}
-
-.slider-mobile {
-  overflow: visible;
-}
-
-.slick-slide {
-  transition: all 0.3s ease;
-  margin-right: 20px !important;
-  margin-left: -1px;
-}
-
-.slick-list {
-  overflow: visible;
-}
-
-/* Full-width horizontal dot container */
-.slick-dots {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 10px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Optional: give some padding or spacing on the sides */
-.slick-dots li {
-  flex: 1;
-  text-align: center;
-}
-
-/* Square dots */
-.slick-dots li button {
-  width: 95%;
-  height: 7px;
-  border-radius: 1px;
-  background: #ccc;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 0;
-  margin: 0 auto;
-}
-
-/* Active dot style */
-.slick-dots li.slick-active button {
-  background: #333;
-}
-
-.slider-mobile {
-  width: 100%;
-}
-</style>
+<!-- Slick carousel init and styles removed -->
 
 
 <?php if(   get_the_id() != 5567  ): ?>

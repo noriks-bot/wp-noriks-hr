@@ -14,7 +14,7 @@ include(get_template_directory() . '/functions/discounts.php');
 
 
 add_filter( 'woocommerce_gallery_image_size', function() {
-    return 'full';
+    return 'large';
 });
 
 
@@ -222,6 +222,43 @@ function enqueue_main_styles() {
     
     
     
+    // Enqueue header.css (load everywhere)
+    wp_enqueue_style(
+        'header-style',
+        get_template_directory_uri() . '/css/header.css',
+        array(),
+        filemtime(get_template_directory() . '/css/header.css'),
+        'all'
+    );
+
+    // Enqueue footer.css (load everywhere)
+    wp_enqueue_style(
+        'footer-style',
+        get_template_directory_uri() . '/css/footer.css',
+        array(),
+        filemtime(get_template_directory() . '/css/footer.css'),
+        'all'
+    );
+
+    // Enqueue header.js (load everywhere)
+    wp_enqueue_script(
+        'header-js',
+        get_template_directory_uri() . '/js/header.js',
+        array(),
+        filemtime(get_template_directory() . '/js/header.js'),
+        true
+    );
+
+    // Enqueue price-update.js only on product pages
+    if (function_exists('is_product') && is_product()) {
+        wp_enqueue_script(
+            'price-update-js',
+            get_template_directory_uri() . '/js/price-update.js',
+            array(),
+            filemtime(get_template_directory() . '/js/price-update.js'),
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'enqueue_main_styles');
 
@@ -713,45 +750,7 @@ function add_second_product_thumbnail() {
 
 
 
-function enqueue_custom_carousels_assets() {
-    // Slick Carousel CSS
-    wp_enqueue_style(
-        'slick-carousel-css',
-        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
-        array(),
-        '1.8.1'
-    );
-
-    // Glide.js CSS
-    wp_enqueue_style(
-        'glidejs-css',
-        'https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css',
-        array(),
-        null
-    );
-
-    // jQuery (Slick requires jQuery and WordPress includes jQuery by default)
-    wp_enqueue_script('jquery');
-
-    // Slick Carousel JS
-    wp_enqueue_script(
-        'slick-carousel-js',
-        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
-        array('jquery'),
-        '1.8.1',
-        true
-    );
-
-    // Glide.js JS
-    wp_enqueue_script(
-        'glidejs-js',
-        'https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js',
-        array(),
-        null,
-        true
-    );
-}
-add_action('wp_enqueue_scripts', 'enqueue_custom_carousels_assets');
+/* Slick/Glide carousel assets removed */
 
 add_action( 'woocommerce_before_variations_form', function() {
     get_template_part( 'template_parts/size-chart-modal' );

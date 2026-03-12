@@ -246,7 +246,7 @@ function is_active_menu_item( $path ) {
 <section class="one-banner-shop" style="position: relative; margin: 0 auto; padding: 0;">
 
   <img
-    src="/hr/wp-content/themes/noriks/img/noriks-shop.png"
+    src="<?php echo get_template_directory_uri(); ?>/img/noriks-shop.png"
     style="display:block; width:100%; min-height:105px; border-radius:0;"
     alt=""
   >
@@ -883,31 +883,7 @@ if ( is_shop() ) {
 
 
 
-<script>
-  function initMobileSlider() {
-    const isMobile = window.innerWidth < 768; // Change breakpoint as needed
-    const $slider = jQuery('.your-slider');
-
-    if (isMobile && !$slider.hasClass('slick-initialized')) {
-      $slider.slick({
-               dots: false,
-               arrows: false,
-              infinite: false,
-              speed: 300,
-              slidesToShow: 1,
-              centerMode: false,
-              variableWidth: true
-      });
-    } else if (!isMobile && $slider.hasClass('slick-initialized')) {
-      $slider.slick('unslick');
-    }
-  }
-
-  jQuery(document).ready(function () {
-    initMobileSlider();
-    jQuery(window).on('resize', initMobileSlider);
-  });
-</script>
+<!-- Slick carousel init removed -->
 
 
 

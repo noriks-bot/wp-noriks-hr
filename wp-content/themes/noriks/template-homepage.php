@@ -38,7 +38,7 @@ get_header(); ?>
   <div class="hero__media" aria-hidden="true">
     <!-- Replace with your image -->
     <img
-      src="/hr/wp-content/themes/noriks/img/noriks-hero.jpeg"
+      src="<?php echo get_template_directory_uri(); ?>/img/noriks-hero.jpeg"
       alt=""
     />
   </div>
@@ -183,7 +183,7 @@ get_header(); ?>
     <a class="collection-card" href="/hr/product-category/majice/">
       <div class="collection-card__media">
         <img
-          src="/hr/wp-content/themes/noriks/img/noriks-majice.jpeg"
+          src="<?php echo get_template_directory_uri(); ?>/img/noriks-majice.jpeg"
           alt="Crew neck t-shirt"
         />
       </div>
@@ -206,7 +206,7 @@ get_header(); ?>
     <a class="collection-card" href="/hr/product-category/bokserice/">
       <div class="collection-card__media">
         <img
-          src="/hr/wp-content/themes/noriks/img/noriks-boksarice.jpeg"
+          src="<?php echo get_template_directory_uri(); ?>/img/noriks-boksarice.jpeg"
           alt="V-neck t-shirt"
         />
       </div>
@@ -230,7 +230,7 @@ get_header(); ?>
     <a class="collection-card" href="/hr/product-category/kompleti/">
       <div class="collection-card__media">
         <img
-          src="/hr/wp-content/themes/noriks/img/noriks-kompleti.jpeg"
+          src="<?php echo get_template_directory_uri(); ?>/img/noriks-kompleti.jpeg"
           alt="Long sleeve shirt"
         />
       </div>
@@ -254,7 +254,7 @@ Najbolja vrijednost po paketu.
     <a class="collection-card" href="/hr/product-category/starter-paketi/">
       <div class="collection-card__media">
         <img
-          src="/hr/wp-content/themes/noriks/img/starter-paket_.jpeg"
+          src="<?php echo get_template_directory_uri(); ?>/img/starter-paket_.jpeg"
           alt="Long sleeve shirt"
         />
       </div>
@@ -508,79 +508,7 @@ if ( have_rows('homepage_section_2_product_list') ) {
 /************ get products by category homepage  ************/
 ?>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Slick Carousel (Mobile only) for PRODUCT CARDS (not images)
-  if (window.innerWidth <= 768) {
-    jQuery('.slider-mobile').not('.slick-initialized').slick({
-      slidesToShow: 1,
-      centerMode: true,
-      centerPadding: '60px',
-      arrows: false,
-      dots: true,
-      infinite: false
-    });
-  }
-
-  // REMOVED: Glide init (no more image slider)
-});
-</script>
-
-<style>
-.slider-mobile .slick-list {
-  padding-left: 0 !important;
-  margin-left: 0px;
-}
-
-.slider-mobile {
-  overflow: visible;
-  width: 100%;
-}
-
-.slick-slide {
-  transition: all 0.3s ease;
-  margin-right: 20px !important;
-  margin-left: -1px;
-}
-
-.slick-list {
-  overflow: visible; /* important! */
-}
-
-/* Full-width horizontal dot container */
-.slick-dots {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 10px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.slick-dots li {
-  flex: 1;
-  text-align: center;
-}
-
-/* Square dots */
-.slick-dots li button {
-  width: 95%;
-  height: 7px;
-  border-radius: 1px;
-  background: #ccc;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 0;
-  margin: 0 auto;
-}
-
-/* Active dot style */
-.slick-dots li.slick-active button {
-  background: #333;
-}
-</style>
+<!-- Slick carousel init and styles removed -->
 
 <style>
 /* Ensure each grid item (product card) behaves correctly */
