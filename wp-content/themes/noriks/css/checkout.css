@@ -316,23 +316,25 @@ body.woocommerce-checkout .hr_email_not_required {
 }
 
 /* ===== DOSTAVA / SHIPPING (green card) ===== */
-body.woocommerce-checkout .woocommerce-shipping-totals td {
-  padding: 0 !important;
+body.woocommerce-checkout .noriks-shipping-section {
+  margin-bottom: 8px;
 }
-body.woocommerce-checkout .woocommerce-shipping-totals th {
-  display: none !important;
-}
-body.woocommerce-checkout #shipping_method {
+body.woocommerce-checkout .noriks-shipping-section ul {
   margin: 0 !important;
   padding: 0 !important;
   list-style: none !important;
 }
-body.woocommerce-checkout #shipping_method li {
+body.woocommerce-checkout .noriks-shipping-section li {
   list-style: none !important;
 }
-body.woocommerce-checkout #shipping_method li input[type="radio"] {
+body.woocommerce-checkout .noriks-shipping-section li input[type="radio"],
+body.woocommerce-checkout .woocommerce-shipping-totals td {
   display: none !important;
 }
+body.woocommerce-checkout .woocommerce-shipping-totals th {
+  display: none !important;
+}
+body.woocommerce-checkout .noriks-shipping-section li label,
 body.woocommerce-checkout #shipping_method li label {
   display: flex !important;
   align-items: center;
@@ -346,6 +348,7 @@ body.woocommerce-checkout #shipping_method li label {
   color: #1a1a1a;
   cursor: pointer;
 }
+body.woocommerce-checkout .noriks-shipping-section li label .woocommerce-Price-amount,
 body.woocommerce-checkout #shipping_method li label .woocommerce-Price-amount {
   background: #4CAF50;
   color: #fff;
@@ -353,6 +356,10 @@ body.woocommerce-checkout #shipping_method li label .woocommerce-Price-amount {
   font-size: 13px;
   padding: 4px 12px;
   border-radius: 14px;
+}
+/* Hide shipping from order review table (moved to standalone section) */
+body.woocommerce-checkout .woocommerce-checkout-review-order-table .woocommerce-shipping-totals {
+  display: none !important;
 }
 
 /* ===== PAYMENT METHODS ===== */

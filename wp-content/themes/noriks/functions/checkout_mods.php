@@ -305,33 +305,47 @@ function set_placeholders_keep_labels( $fields ) {
 }
 
 
-// Move payment after billing fields (before order review in template)
+// Dostava title + shipping display before payment
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_checkout_after_customer_details', function() {
+    // Dostava section with shipping methods
+    echo '<h3 class="checkout-section-title dostava-title">Dostava</h3>';
+    echo '<div class="noriks-shipping-section">';
+    // WC will render shipping in order_review table, we move it via JS
+    echo '</div>';
+}, 3 );
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
 }, 4 );
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 5 );
 
-// Move place-order button after order review via JS
+// Move place-order button + shipping row via JS
 add_action( 'wp_footer', function() {
     if ( ! is_checkout() || is_wc_endpoint_url('order-received') ) return;
     ?>
     <script>
     jQuery(function($){
-        // Move .place-order (button + trust) after #order_review
-        var $placeOrder = $('#payment .place-order');
-        var $orderReview = $('#order_review');
-        if ($placeOrder.length && $orderReview.length) {
-            $orderReview.after($placeOrder);
-        }
-        // Also move on AJAX updates
-        $(document.body).on('updated_checkout', function(){
+        function moveElements() {
+            // Move .place-order (button + trust) after #order_review
             var $po = $('#payment .place-order');
             var $or = $('#order_review');
             if ($po.length && $or.length) {
                 $or.after($po);
             }
-        });
+            // Move shipping row from order review table into .noriks-shipping-section
+            var $shippingRow = $('.woocommerce-checkout-review-order-table .woocommerce-shipping-totals');
+            var $shippingSection = $('.noriks-shipping-section');
+            if ($shippingRow.length && $shippingSection.length) {
+                // Extract shipping content and display as standalone
+                var $shippingTd = $shippingRow.find('td');
+                if ($shippingTd.length) {
+                    $shippingSection.html($shippingTd.html());
+                    $shippingRow.hide();
+                }
+            }
+        }
+        moveElements();
+        $(document.body).on('updated_checkout', moveElements);
     });
     </script>
     <?php
