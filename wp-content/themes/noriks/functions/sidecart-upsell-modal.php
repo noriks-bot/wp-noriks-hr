@@ -355,6 +355,9 @@ function noriks_upsell_modal_markup() {
                     return;
                 }
                 modalData = res.data;
+                console.log('=== MODAL DATA ===');
+                console.log('Attributes:', JSON.stringify(modalData.attributes));
+                console.log('First variation:', JSON.stringify(modalData.variations[0]));
                 renderModal();
             });
         }
@@ -427,19 +430,19 @@ function noriks_upsell_modal_markup() {
             }
         }
 
-        function normalizeKey(key) {
-            // Normalize to 'attribute_pa_xxx' format
-            if (key.indexOf('attribute_') === 0) return key;
-            return 'attribute_' + key;
-        }
-
         function findVariation() {
             if (!modalData.variations) return null;
             
-            // Build normalized selectedAttrs
-            var normSelected = {};
+            // Build a lookup of all selected values (just the values, ignoring keys)
+            var selectedValues = {};
             for (var k in selectedAttrs) {
-                normSelected[normalizeKey(k)] = selectedAttrs[k];
+                // Store with multiple key formats for matching
+                selectedValues[k] = selectedAttrs[k];
+                if (k.indexOf('attribute_') === 0) {
+                    selectedValues[k.replace('attribute_', '')] = selectedAttrs[k];
+                } else {
+                    selectedValues['attribute_' + k] = selectedAttrs[k];
+                }
             }
             
             for (var i = 0; i < modalData.variations.length; i++) {
@@ -447,13 +450,17 @@ function noriks_upsell_modal_markup() {
                 var match = true;
                 
                 for (var key in v.attributes) {
-                    var nKey = normalizeKey(key);
                     if (v.attributes[key] === '') continue; // any value matches
                     
-                    if (normSelected[nKey] !== v.attributes[key]) {
-                        match = false;
-                        break;
-                    }
+                    // Try direct match, then without attribute_ prefix, then with it
+                    var val = v.attributes[key];
+                    if (selectedValues[key] === val) continue;
+                    
+                    var altKey = key.indexOf('attribute_') === 0 ? key.replace('attribute_', '') : 'attribute_' + key;
+                    if (selectedValues[altKey] === val) continue;
+                    
+                    match = false;
+                    break;
                 }
                 
                 if (match) return v;
