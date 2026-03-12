@@ -162,6 +162,7 @@ button:focus {outline : none; outline-color: transparent !important;}
     font-weight: 700 !important;
     font-size: 15px !important;
     letter-spacing: 0.3px !important;
+    border: none !important;
 }
 
 .xoo-wsc-ft-btn-checkout:hover { 
