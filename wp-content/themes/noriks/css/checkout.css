@@ -390,18 +390,29 @@ body.woocommerce-checkout .shipping-card-content {
   align-items: center;
   width: 100%;
 }
-body.woocommerce-checkout .shipping-check {
-  color: #4CAF50;
-  font-size: 20px;
-  font-weight: 700;
-  margin-right: 10px;
+body.woocommerce-checkout .shipping-check-svg {
   flex-shrink: 0;
+  margin-right: 10px;
+  width: 19px;
+  height: 14px;
+}
+body.woocommerce-checkout .shipping-inner {
+  flex: 1;
 }
 body.woocommerce-checkout .shipping-dates {
   font-size: 14px;
   font-weight: 600;
   color: #333;
-  flex: 1;
+}
+body.woocommerce-checkout .shipping-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+body.woocommerce-checkout .shipping-courier-logo {
+  height: 30px;
+  width: auto;
 }
 body.woocommerce-checkout .shipping-price-pill {
   background-color: #9ce79c;
@@ -710,7 +721,8 @@ body.woocommerce-checkout #place_order {
   letter-spacing: normal !important;
 }
 body.woocommerce-checkout #place_order::before {
-  content: none;
+  content: "🔒";
+  font-size: 18px;
 }
 body.woocommerce-checkout #place_order:hover {
   opacity: 0.95;

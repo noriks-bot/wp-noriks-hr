@@ -145,10 +145,27 @@ function custom_move_email_field_first( $fields ) {
 
 add_filter( 'woocommerce_checkout_fields', 'custom_checkout_reorder_fields' );
 function custom_checkout_reorder_fields( $fields ) {
-    // Vigoshop exact order: Ime/Prezime → Ulica → Kućni → Poštanski → Grad → Telefon → Email
-    // All address fields FULL WIDTH (form-row-wide) — matches vigoshop exactly
+    // Vigoshop EXACT order (from screenshot): Telefon → Email → Ime/Prezime → address hint → Ulica/Kućni → Poštanski/Grad
+    
+    // Telefon FIRST
+    if ( isset( $fields['billing']['billing_phone'] ) ) {
+        $fields['billing']['billing_phone']['priority'] = 1;
+        $fields['billing']['billing_phone']['label'] = 'Broj mobilnog telefona';
+        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
+    }
+    
+    // Email SECOND
+    if ( isset( $fields['billing']['billing_email'] ) ) {
+        $fields['billing']['billing_email']['priority'] = 2;
+        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
+    }
 
-    // First name + Last name side by side (like vigoshop)
+    // Country (hidden)
+    if ( isset( $fields['billing']['billing_country'] ) ) {
+        $fields['billing']['billing_country']['priority'] = 5;
+    }
+
+    // Ime + Prezime side by side
     if ( isset( $fields['billing']['billing_first_name'] ) ) {
         $fields['billing']['billing_first_name']['priority'] = 10;
         $fields['billing']['billing_first_name']['class'] = array( 'form-row-first' );
@@ -158,7 +175,7 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_last_name']['class'] = array( 'form-row-last' );
     }
 
-    // Ulica 67% + Kućni 31% side by side (from custom-checkout-hr)
+    // Ulica 67% + Kućni 31% (CSS floated)
     if ( isset( $fields['billing']['billing_address_1'] ) ) {
         $fields['billing']['billing_address_1']['priority'] = 20;
         $fields['billing']['billing_address_1']['required'] = true;
@@ -166,8 +183,6 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_address_1']['placeholder'] = 'Ulica';
         $fields['billing']['billing_address_1']['class'] = array( 'form-row-wide', 'address-field' );
     }
-
-    // Kućni broj (floated via CSS)
     if ( isset( $fields['billing']['billing_address_2'] ) ) {
         $fields['billing']['billing_address_2']['priority'] = 21;
         $fields['billing']['billing_address_2']['required'] = true;
@@ -176,37 +191,17 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_address_2']['class'] = array( 'form-row-wide', 'address-field' );
     }
 
-    // Poštanski 35% + Grad 63% side by side (from custom-checkout-hr)
+    // Poštanski 35% + Grad 63% (CSS floated)
     if ( isset( $fields['billing']['billing_postcode'] ) ) {
         $fields['billing']['billing_postcode']['priority'] = 30;
         $fields['billing']['billing_postcode']['class'] = array( 'form-row-wide', 'address-field' );
     }
-
-    // Grad (dropdown, floated via CSS)
     if ( isset( $fields['billing']['billing_city'] ) ) {
         $fields['billing']['billing_city']['priority'] = 31;
         $fields['billing']['billing_city']['class'] = array( 'form-row-wide', 'address-field' );
     }
-
-    // Telefon — after address fields
-    if ( isset( $fields['billing']['billing_phone'] ) ) {
-        $fields['billing']['billing_phone']['priority'] = 40;
-        $fields['billing']['billing_phone']['label'] = 'Broj mobilnog telefona';
-        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
-    }
     
-    // Email — after phone
-    if ( isset( $fields['billing']['billing_email'] ) ) {
-        $fields['billing']['billing_email']['priority'] = 41;
-        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
-    }
-
-    // Country — hidden (fixed HR)
-    if ( isset( $fields['billing']['billing_country'] ) ) {
-        $fields['billing']['billing_country']['priority'] = 90;
-    }
-    
-    // State — hidden via CSS (p#billing_state_field display:none)
+    // State — hidden via CSS
     if ( isset( $fields['billing']['billing_state'] ) ) {
         $fields['billing']['billing_state']['priority'] = 91;
     }
@@ -238,9 +233,9 @@ add_filter( 'woocommerce_form_field', 'noriks_checkout_helper_texts', 10, 4 );
 function noriks_checkout_helper_texts( $field, $key, $args, $value ) {
     if ( ! is_checkout() ) return $field;
     
-    // After last_name: address hint text (vigoshop puts this between name and address)
-    if ( $key === 'billing_last_name' ) {
-        $field .= '<div class="address-hint-text" style="clear:both; width:100%; float:none;">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';
+    // Before address_1: address hint text (vigoshop puts this between name and address)
+    if ( $key === 'billing_address_1' ) {
+        $field = '<div class="address-hint-text" style="clear:both; width:100%; float:none;">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>' . $field;
     }
     
     // After phone: helper row with both texts
@@ -353,9 +348,14 @@ add_action( 'wp_footer', function() {
                     var priceHtml = $shippingTd.html();
                     $shippingSection.html(
                         '<div class="shipping-card-content">' +
-                        '<span class="shipping-check">✓</span>' +
+                        '<svg class="shipping-check-svg" viewBox="0 0 19 14" fill="#3DBD00" width="19" height="14"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.5725 3.40179L8.14482 13.5874C7.5815 14.1375 6.66839 14.1375 6.1056 13.5874L0.422493 8.03956C-0.140831 7.48994 -0.140831 6.59748 0.422493 6.04707L1.44121 5.05126C2.00471 4.50094 2.91854 4.50094 3.48132 5.05126L7.12254 8.60835L15.5145 0.412609C16.078 -0.137536 16.9909 -0.137536 17.5537 0.412609L18.5733 1.40842C19.1424 1.95795 19.1424 2.8505 18.5725 3.40179Z"/></svg>' +
+                        '<div class="shipping-inner">' +
                         '<span class="shipping-dates">' + fromStr + ' - ' + toStr + '</span>' +
+                        '</div>' +
+                        '<div class="shipping-right">' +
                         '<span class="shipping-price-pill">' + priceHtml + '</span>' +
+                        '<img class="shipping-courier-logo" src="https://images.vigo-shop.com/general/curriers/home_small_paket24@2x.png" />' +
+                        '</div>' +
                         '</div>'
                     );
                     $shippingRow.hide();
