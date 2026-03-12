@@ -17,7 +17,7 @@ function translate_attribute_labels( $translated_text, $text, $domain ) {
 add_filter( 'woocommerce_checkout_fields', 'custom_billing_phone_placeholder' );
 function custom_billing_phone_placeholder( $fields ) {
     // Change the placeholder text for the billing phone field
-    $fields['billing']['billing_phone']['placeholder'] = 'Mobitel (primjer: 0912345678)';
+    $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
     
     return $fields;
 }

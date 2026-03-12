@@ -347,17 +347,10 @@ add_action( 'wp_footer', function() {
 
 
 
-add_filter( 'woocommerce_checkout_cart_item_quantity', 'add_product_image_to_checkout_review', 10, 3 );
-function add_product_image_to_checkout_review( $product_name, $cart_item, $cart_item_key ) {
-    if ( is_checkout() ) {
-        $product = $cart_item['data'];
-        $thumbnail = $product->get_image( [ 40, 40 ], [ 'style' => 'margin-right:10px; vertical-align:middle;' ] );
-
-        // Wrap in span or div for better layout control
-        return '<span  style="order: 1; display: flex; align-items: center;">' . $thumbnail . '<span>' . $product_name . '</span></span>';
-    }
-
-    return $product_name;
+// Clean quantity display: "× 1" (no images, like vigoshop)
+add_filter( 'woocommerce_checkout_cart_item_quantity', 'clean_checkout_quantity_display', 10, 3 );
+function clean_checkout_quantity_display( $quantity, $cart_item, $cart_item_key ) {
+    return $quantity; // Keep default "× N" format
 }
 
 
