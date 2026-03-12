@@ -4,6 +4,30 @@
  * Replaces YITH Quick View with a clean, simple modal for picking color + size
  */
 
+// Disable YITH Quick View completely from theme
+add_action('wp_enqueue_scripts', function() {
+    wp_dequeue_script('yith-wcqv-frontend');
+    wp_dequeue_style('yith-quick-view');
+    wp_deregister_script('yith-wcqv-frontend');
+}, 999);
+
+// Remove YITH Quick View modal from footer
+add_action('init', function() {
+    if (class_exists('YITH_WCQV_Frontend')) {
+        $frontend = YITH_WCQV_Frontend::get_instance();
+        remove_action('wp_footer', array($frontend, 'yith_quick_view'));
+        remove_action('wp_enqueue_scripts', array($frontend, 'enqueue_styles_scripts'));
+    }
+}, 20);
+
+// Remove YITH Quick View button from product loops
+add_action('init', function() {
+    if (class_exists('YITH_WCQV_Frontend')) {
+        $frontend = YITH_WCQV_Frontend::get_instance();
+        remove_action('woocommerce_after_shop_loop_item', array($frontend, 'yith_add_quick_view_button'), 15);
+    }
+}, 20);
+
 // Register AJAX handlers
 add_action('wp_ajax_get_product_variations', 'noriks_get_product_variations');
 add_action('wp_ajax_nopriv_get_product_variations', 'noriks_get_product_variations');
