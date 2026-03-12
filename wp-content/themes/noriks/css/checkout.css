@@ -602,28 +602,12 @@ body.woocommerce-checkout table tr {
   background: transparent !important;
 }
 
-/* ===== TRUST BADGE ===== */
-body.woocommerce-checkout .checkout-trust-badge {
-  margin-top: 24px;
-  text-align: center;
+/* ===== ORDER SUMMARY (inside .place-order, before button) ===== */
+body.woocommerce-checkout .noriks-order-summary {
+  margin: 16px 0;
 }
-body.woocommerce-checkout .trust-badge-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-body.woocommerce-checkout .trust-badge-icon {
-  flex-shrink: 0;
-}
-body.woocommerce-checkout .trust-badge-text {
-  text-align: left;
-  font-size: 14px;
-  color: #333;
-  line-height: 1.4;
-}
-body.woocommerce-checkout .checkout-order-note {
-  text-align: center;
+body.woocommerce-checkout .noriks-order-summary .woocommerce-checkout-review-order-table {
+  display: table !important;
 }
 
 /* ===== CLEARFIX ===== */
