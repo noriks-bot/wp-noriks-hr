@@ -274,16 +274,19 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal-add-btn {
             width: 100%;
-            padding: 12px;
+            height: 46px;
+            padding: 0 16px;
             background: #e53935;
             color: #fff;
             border: none;
-            border-radius: 8px;
-            font-size: 15px;
+            border-radius: 2px;
+            font-size: 14px;
             font-weight: 700;
             cursor: pointer;
-            letter-spacing: 0.3px;
+            letter-spacing: -0.3px;
             transition: background 0.15s ease;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
         }
         .noriks-modal-add-btn:hover { background: #c62828; }
         .noriks-modal-add-btn.adding {
