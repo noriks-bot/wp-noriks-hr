@@ -156,12 +156,20 @@ button:focus {outline : none; outline-color: transparent !important;}
 
 
 .xoo-wsc-ft-btn-checkout { 
-    background: #f5a623 !important;
-    color: black !important;
+    background: #e53935 !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    letter-spacing: 0.3px !important;
+}
+
+.xoo-wsc-ft-btn-checkout:hover { 
+    background: #c62828 !important;
 }
 
 .xoo-wsc-ft-btn-checkout span { 
-    color: black !important;
+    color: #fff !important;
 }
 
 
