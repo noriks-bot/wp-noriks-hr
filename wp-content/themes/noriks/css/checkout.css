@@ -729,6 +729,30 @@ body.woocommerce-checkout .trust-section .review-author {
   color: #333;
 }
 
+/* ===== TRUST BADGE (below button) ===== */
+body.woocommerce-checkout .checkout-trust-badge {
+  margin-top: 24px;
+  text-align: center;
+}
+body.woocommerce-checkout .trust-badge-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+body.woocommerce-checkout .trust-badge-icon {
+  flex-shrink: 0;
+}
+body.woocommerce-checkout .trust-badge-text {
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+body.woocommerce-checkout .checkout-order-note {
+  text-align: center;
+}
+
 /* ===== WOOCOMMERCE NOTICES ===== */
 body.woocommerce-checkout .woocommerce-error,
 body.woocommerce-checkout .woocommerce-message {

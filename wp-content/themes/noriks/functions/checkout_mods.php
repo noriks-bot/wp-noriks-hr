@@ -246,6 +246,24 @@ add_filter( 'woocommerce_order_button_text', function() {
     return 'Naruči';
 });
 
+// Add "Kupujte bez brige" trust badge after place order button
+add_action( 'woocommerce_review_order_after_submit', function() {
+    ?>
+    <div class="checkout-trust-badge">
+        <div class="trust-badge-inner">
+            <img src="https://images.vigo-shop.com/general/cart/moneyback.png" alt="100% Money Back" class="trust-badge-icon" width="60" height="60">
+            <div class="trust-badge-text">
+                <strong>Kupujte bez brige</strong><br>
+                Povrat novca moguć u roku od 90 dana
+            </div>
+        </div>
+    </div>
+    <p class="checkout-order-note" style="font-size:12px; color:#666; margin-top:16px;">
+        Klikom na gumb <strong>Naruči</strong> pristajete na narudžbu uz obvezu plaćanja.
+    </p>
+    <?php
+});
+
 
 // Vigoshop-style: keep labels (for floating effect) AND set placeholders
 add_filter( 'woocommerce_checkout_fields', 'set_placeholders_keep_labels' );
