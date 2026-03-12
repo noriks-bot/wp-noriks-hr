@@ -64,6 +64,7 @@ body.woocommerce-checkout {
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 18px 40px 48px;
+  border-left: 4px solid #4CAF50;
 }
 @media (max-width: 991px) {
   .checkout-card {
@@ -347,22 +348,38 @@ body.woocommerce-checkout #shipping_method li label .woocommerce-Price-amount {
   border-radius: 20px;
   white-space: nowrap;
 }
-/* Hide shipping from review table (shown standalone above) */
-body.woocommerce-checkout .woocommerce-checkout-review-order-table .woocommerce-shipping-totals,
-body.woocommerce-checkout .noriks-order-summary .woocommerce-shipping-totals {
+/* EU warehouse badge */
+body.woocommerce-checkout .shipping-eu-badge {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* Hide shipping from the hidden #order_review (not from cloned sažetak) */
+body.woocommerce-checkout #order_review .woocommerce-shipping-totals {
   display: none !important;
 }
-body.woocommerce-checkout .woocommerce-shipping-totals th {
-  display: none !important;
+/* Show shipping + fees in sažetak like vigoshop */
+body.woocommerce-checkout .noriks-order-summary .woocommerce-shipping-totals th,
+body.woocommerce-checkout .noriks-order-summary .woocommerce-shipping-totals td,
+body.woocommerce-checkout .noriks-order-summary .fee th,
+body.woocommerce-checkout .noriks-order-summary .fee td {
+  font-size: 14px !important;
+  color: #5f6061 !important;
+  padding: 8px 0 !important;
 }
-body.woocommerce-checkout .woocommerce-shipping-totals td {
-  padding: 0 !important;
+body.woocommerce-checkout .noriks-order-summary .woocommerce-shipping-totals th,
+body.woocommerce-checkout .noriks-order-summary .fee th {
+  text-align: left !important;
+  font-weight: 400 !important;
 }
-/* Hide any WC default shipping display inside payment area */
-body.woocommerce-checkout #payment .woocommerce-shipping-totals,
-body.woocommerce-checkout .place-order .woocommerce-shipping-totals,
-body.woocommerce-checkout .noriks-order-summary .shipping,
-body.woocommerce-checkout .noriks-order-summary tr.shipping {
+body.woocommerce-checkout .noriks-order-summary .woocommerce-shipping-totals td,
+body.woocommerce-checkout .noriks-order-summary .fee td {
+  text-align: right !important;
+}
+/* Hide WC default shipping display inside payment area (prevent duplicate) */
+body.woocommerce-checkout #payment .woocommerce-shipping-totals {
   display: none !important;
 }
 
@@ -558,11 +575,17 @@ body.woocommerce-checkout .woocommerce-checkout-review-order-table tfoot .cart-s
 }
 body.woocommerce-checkout .woocommerce-checkout-review-order-table .order-total th,
 body.woocommerce-checkout .woocommerce-checkout-review-order-table .order-total td {
-  border-top: 2px solid #eee !important;
+  border-top: none !important;
   padding-top: 16px !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   font-weight: 700 !important;
   color: #000 !important;
+}
+body.woocommerce-checkout .noriks-order-summary .order-total th {
+  text-align: left !important;
+}
+body.woocommerce-checkout .noriks-order-summary .order-total td {
+  text-align: right !important;
 }
 body.woocommerce-checkout table,
 body.woocommerce-checkout table th,
@@ -624,8 +647,22 @@ body.woocommerce-checkout .content-area {
     padding: 0 !important;
     margin: 0 auto !important;
   }
+  .checkout-card {
+    border-left: none;
+    border-radius: 5px 5px 0 0;
+  }
   body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-first,
   body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last {
+    float: none !important;
+    width: 100% !important;
+    clear: both !important;
+    margin-right: 0 !important;
+  }
+  /* Address fields stack on mobile */
+  body.woocommerce-checkout p#billing_address_1_field.form-row-first,
+  body.woocommerce-checkout p#billing_address_2_field.form-row-last,
+  body.woocommerce-checkout p#billing_postcode_field.form-row-first,
+  body.woocommerce-checkout p#billing_city_field.form-row-last {
     float: none !important;
     width: 100% !important;
     clear: both !important;
@@ -633,5 +670,25 @@ body.woocommerce-checkout .content-area {
   body.woocommerce-checkout #place_order {
     font-size: 18px !important;
     min-height: 56px !important;
+  }
+  body.woocommerce-checkout .phone-helper-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+  body.woocommerce-checkout .phone_number_delivery_assist_tooltip {
+    float: none;
+    text-align: left;
+    padding-right: 0;
+  }
+  body.woocommerce-checkout .vat-checkout-note {
+    align-items: center;
+  }
+  body.woocommerce-checkout .cod-checkout-prompt {
+    font-size: 13px;
+  }
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input,
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input:focus {
+    min-height: 52px;
+    font-size: 16px;
   }
 }

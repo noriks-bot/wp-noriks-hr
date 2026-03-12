@@ -302,6 +302,7 @@ remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_paymen
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title dostava-title">Dostava</h3>';
     echo '<div class="noriks-shipping-section"></div>';
+    echo '<div class="shipping-eu-badge">🇪🇺 Skladište u EU</div>';
 }, 3 );
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
