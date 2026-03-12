@@ -204,7 +204,7 @@ function enqueue_main_styles() {
             'checkout-style',
             get_template_directory_uri() . '/css/checkout.css',
             array(),
-            filemtime(get_template_directory() . '/css/checkout.css'),
+            md5_file(get_template_directory() . '/css/checkout.css'),
             'all'
         );
         wp_enqueue_script(
