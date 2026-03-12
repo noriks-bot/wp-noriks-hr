@@ -290,14 +290,37 @@ function set_placeholders_keep_labels( $fields ) {
 }
 
 
-// Remove default payment from order review (we render it separately)
+// Move payment after billing fields (before order review in template)
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-
-// After billing: Način plaćanja title + payment methods
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
 }, 4 );
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 5 );
+
+// Move place-order button after order review via JS
+add_action( 'wp_footer', function() {
+    if ( ! is_checkout() || is_wc_endpoint_url('order-received') ) return;
+    ?>
+    <script>
+    jQuery(function($){
+        // Move .place-order (button + trust) after #order_review
+        var $placeOrder = $('#payment .place-order');
+        var $orderReview = $('#order_review');
+        if ($placeOrder.length && $orderReview.length) {
+            $orderReview.after($placeOrder);
+        }
+        // Also move on AJAX updates
+        $(document.body).on('updated_checkout', function(){
+            var $po = $('#payment .place-order');
+            var $or = $('#order_review');
+            if ($po.length && $or.length) {
+                $or.after($po);
+            }
+        });
+    });
+    </script>
+    <?php
+}, 99 );
 
 
 

@@ -72,7 +72,16 @@ body.woocommerce-checkout {
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 18px 40px 48px;
+  display: flex;
+  flex-direction: column;
 }
+/* Section ordering via flex:
+   Fields(1) → Payment title(2) → Payment methods(3) → Summary(4) → Button(5) */
+body.woocommerce-checkout .checkout-card > #customer_details { order: 1; }
+body.woocommerce-checkout .checkout-card > .checkout-section-title.payment-title { order: 2; width: 100%; }
+body.woocommerce-checkout .checkout-card > #payment { order: 3; width: 100%; }
+body.woocommerce-checkout .checkout-card > #order_review { order: 4; width: 100%; }
+/* Payment stays as block, button moved via JS */
 
 /* ===== FORCE SINGLE COLUMN ===== */
 body.woocommerce-checkout .col2-set,
