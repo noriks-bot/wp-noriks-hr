@@ -52,9 +52,9 @@ body.woocommerce-checkout {
 
 /* ===== CONTAINER (app CSS: container--xs, wc-checkout-wrap) ===== */
 .my-checkout-container {
-  max-width: 40rem; /* container--xs = 40rem */
+  max-width: 560px; /* vigoshop container--xs exact */
   margin: 30px auto;
-  padding: 0 0.6em;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -92,10 +92,10 @@ body.woocommerce-checkout #customer_details .col-2 {
 
 /* ===== BILLING TITLE (from app CSS) ===== */
 body.woocommerce-checkout .checkout-billing-title {
-  color: #231f20;
+  color: #232f3e;
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   line-height: 28.8px;
 }
 
@@ -103,10 +103,16 @@ body.woocommerce-checkout .checkout-billing-title {
 body.woocommerce-checkout h3.checkout-section-title,
 body.woocommerce-checkout .payment-title {
   display: block !important;
-  font-size: 1.4rem !important;
+  font-size: 19.6px !important;
   font-weight: 700 !important;
   color: #333 !important;
-  margin: 20px 0 12px !important;
+  margin: 29.4px 0 14.7px !important;
+}
+body.woocommerce-checkout h3.dostava-title {
+  margin: 0 0 14.7px !important;
+}
+body.woocommerce-checkout h3.sazatak-title {
+  margin: 29.4px 0 23px !important;
 }
 
 /* ===== FORM ROWS (from custom-checkout-general) ===== */
@@ -472,19 +478,25 @@ body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .wc_
   box-shadow: 0 0 0 1px #47b426;
 }
 .payment-fee-free {
-  background-color: #47b426;
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 2px 10px;
-  border-radius: 4px;
+  background-color: #9ce79c;
+  color: #228b22 !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 5px;
   margin-left: 8px;
   display: inline-block;
   line-height: 1.5;
 }
 .payment-fee-not-free {
-  color: #666;
+  background-color: #fff;
+  color: #5f6061;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 5px;
   margin-left: 8px;
+  display: inline-block;
 }
 body.woocommerce-checkout .wc_payment_methods label .sv-wc-payment-gateway-card-icons,
 body.woocommerce-checkout .wc_payment_methods label .payment-icon-wrapper,
@@ -522,8 +534,8 @@ body.woocommerce-checkout .cod-checkout-prompt {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 16px 0;
-  margin: 16px 0 0;
+  padding: 10px;
+  margin: 0;
   font-size: 14px;
   color: #333;
 }
@@ -536,20 +548,13 @@ body.woocommerce-checkout .vat-checkout-note {
   flex-direction: column;
   align-items: flex-end;
   gap: 2px;
-  font-size: 12px;
-  color: #888;
-  margin-top: 8px;
+  font-size: 13px;
+  color: #333;
+  margin: 0;
 }
 
 /* ===== SAŽETAK NARUDŽBE ===== */
-body.woocommerce-checkout .sazatak-title {
-  font-size: 1.4rem !important;
-  font-weight: 700 !important;
-  color: #333 !important;
-  margin: 20px 0 12px !important;
-  padding-bottom: 10px !important;
-  border-bottom: 1px solid #eee;
-}
+/* sazatak-title inherits from .checkout-section-title, margin override above */
 
 /* ===== ORDER REVIEW TABLE (from checkout-order-review CSS) ===== */
 body.woocommerce-checkout .noriks-order-summary {
