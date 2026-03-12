@@ -280,22 +280,31 @@ body.woocommerce-checkout .address-hint-text {
 }
 
 /* ===== HELPER TEXTS (phone example, email not required) ===== */
+body.woocommerce-checkout .phone-helper-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  clear: both;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
 body.woocommerce-checkout .example-number {
   font-size: 12px;
   color: #999;
-  margin-top: 4px;
 }
 body.woocommerce-checkout .phone_number_delivery_assist_tooltip {
   font-size: 12px;
   color: #999;
-  float: right;
-  margin-top: 4px;
+}
+body.woocommerce-checkout .email-not-required-row {
+  text-align: right;
+  width: 100%;
+  clear: both;
+  margin-bottom: 2px;
 }
 body.woocommerce-checkout .hr_email_not_required {
   font-size: 12px;
   color: #999;
-  float: right;
-  margin-bottom: 4px;
 }
 
 /* ===== DOSTAVA SECTION TITLE ===== */

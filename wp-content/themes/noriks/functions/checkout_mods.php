@@ -175,20 +175,27 @@ function custom_checkout_reorder_fields( $fields ) {
      // Ensure address_1 has a priority before address_2
     if ( isset( $fields['billing']['billing_address_1'] ) ) {
         $fields['billing']['billing_address_1']['priority'] = 40;
-        $fields['billing']['billing_address_1']['required'] = true; // Keep it required
+        $fields['billing']['billing_address_1']['required'] = true;
+        $fields['billing']['billing_address_1']['class'] = array( 'form-row-first' );
     }
-
-
-
 
     // Make sure address_2 exists, is visible, and ordered correctly
     if ( isset( $fields['billing']['billing_address_2'] ) ) {
-        $fields['billing']['billing_address_2']['priority'] = 45; // Just after address_1
-        $fields['billing']['billing_address_2']['required'] = false; // Usually optional
-        $fields['billing']['billing_address_2']['class'] = array( 'form-row-wide' );
+        $fields['billing']['billing_address_2']['priority'] = 41;
+        $fields['billing']['billing_address_2']['required'] = true;
+        $fields['billing']['billing_address_2']['class'] = array( 'form-row-last' );
         $fields['billing']['billing_address_2']['label'] = __( 'Kućni broj', 'your-textdomain' );
         $fields['billing']['billing_address_2']['placeholder'] = __( 'Kućni broj', 'your-textdomain' );
-        $fields['billing']['billing_address_2']['required'] = true; // Keep it required
+    }
+
+    // Poštanski broj + Grad side by side
+    if ( isset( $fields['billing']['billing_postcode'] ) ) {
+        $fields['billing']['billing_postcode']['priority'] = 50;
+        $fields['billing']['billing_postcode']['class'] = array( 'form-row-first' );
+    }
+    if ( isset( $fields['billing']['billing_city'] ) ) {
+        $fields['billing']['billing_city']['priority'] = 51;
+        $fields['billing']['billing_city']['class'] = array( 'form-row-last' );
     }
 
 
@@ -222,20 +229,19 @@ add_filter( 'woocommerce_form_field', 'noriks_checkout_helper_texts', 10, 4 );
 function noriks_checkout_helper_texts( $field, $key, $args, $value ) {
     if ( ! is_checkout() ) return $field;
     
-    // After phone: "Primjer: 0912345678" + "Za pomoć s dostavom"
+    // After phone: helper row with both texts
     if ( $key === 'billing_phone' ) {
-        $field .= '<span class="example-number">Primjer: 0912345678</span>';
-        $field .= '<span class="phone_number_delivery_assist_tooltip">Za pomoć s dostavom</span>';
+        $field .= '<div class="phone-helper-row"><span class="example-number">Primjer: 0912345678</span><span class="phone_number_delivery_assist_tooltip">Za pomoć s dostavom</span></div>';
     }
     
-    // Before email: "* E-mail adresa nije obavezna"
+    // Before email: "* E-mail adresa nije obavezna" — as separate full-width row
     if ( $key === 'billing_email' ) {
-        $field = '<span class="hr_email_not_required">* E-mail adresa nije obavezna</span>' . $field;
+        $field = '<div class="email-not-required-row"><span class="hr_email_not_required">* E-mail adresa nije obavezna</span></div>' . $field;
     }
     
-    // Before address_1: hint text
+    // Before address_1: hint text — must be full-width and clear floats
     if ( $key === 'billing_address_1' ) {
-        $field = '<div class="address-hint-text">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>' . $field;
+        $field = '<div class="address-hint-text" style="clear:both; width:100%; float:none;">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>' . $field;
     }
     
     return $field;
@@ -251,7 +257,7 @@ add_action( 'woocommerce_review_order_after_submit', function() {
     ?>
     <div class="checkout-trust-badge">
         <div class="trust-badge-inner">
-            <img src="https://images.vigo-shop.com/general/cart/moneyback.png" alt="100% Money Back" class="trust-badge-icon" width="60" height="60">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/moneyback.png" alt="100% Money Back" class="trust-badge-icon" width="60" height="60">
             <div class="trust-badge-text">
                 <strong>Kupujte bez brige</strong><br>
                 Povrat novca moguć u roku od 90 dana
@@ -285,11 +291,7 @@ function set_placeholders_keep_labels( $fields ) {
 // Remove default payment section from order review
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 
-// Add "Dostava" title + shipping info after billing fields
-add_action( 'woocommerce_checkout_after_customer_details', function() {
-    echo '<h3 class="checkout-section-title dostava-title">Dostava</h3>';
-    // WC shipping totals will appear in order review table
-}, 3 );
+// Dostava title is rendered via CSS on the shipping totals row in order review
 
 // Add "Način plaćanja" title + payment methods after shipping
 add_action( 'woocommerce_checkout_after_customer_details', function() {
