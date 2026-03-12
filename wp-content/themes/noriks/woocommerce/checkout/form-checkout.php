@@ -37,8 +37,8 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
               <strong class="hs-custom-date">ponedaljak, 16.3. - utorak, 17.3.</strong>
             </div>
             <div class="inner-wrapper-img">
-              <span class="shipping_method_delivery_price tag tag--red">
-                <span class="woocommerce-Price-amount amount"><bdi>2,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
+              <span class="shipping_method_delivery_price">
+                <span class="woocommerce-Price-amount amount"><bdi>0,00<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
               </span>
               <span class="delivery_img"><img decoding="async" class="hrvatska_posta standard" src="https://images.vigo-shop.com/general/curriers/home_small_paket24@2x.png"/></span>
             </div>
@@ -103,8 +103,8 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 
       <div class="woocommerce-terms-and-conditions-wrapper"></div>
 
-      <!-- COD prompt -->
-      <div id="hs-cod-checkout-prompt">
+      <!-- COD prompt (shown via JS only when COD selected) -->
+      <div id="hs-cod-checkout-prompt" style="display:none;">
         <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
         <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
       </div>
@@ -206,3 +206,33 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 </div><!-- /.wc-checkout-wrap -->
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+
+<script>
+jQuery(function($){
+  // Dynamic shipping dates (2-5 business days)
+  var now = new Date();
+  function addBizDays(d, days) {
+    var r = new Date(d);
+    while (days > 0) { r.setDate(r.getDate() + 1); if (r.getDay() !== 0 && r.getDay() !== 6) days--; }
+    return r;
+  }
+  var dayNames = ['nedjelja','ponedjeljak','utorak','srijeda','četvrtak','petak','subota'];
+  var from = addBizDays(now, 2);
+  var to = addBizDays(now, 5);
+  var fromStr = dayNames[from.getDay()] + ', ' + from.getDate() + '.' + (from.getMonth()+1) + '.';
+  var toStr = dayNames[to.getDay()] + ', ' + to.getDate() + '.' + (to.getMonth()+1) + '.';
+  $('.hs-custom-date').text(fromStr + ' - ' + toStr);
+
+  // COD prompt toggle
+  function toggleCodPrompt() {
+    var selected = $('input[name="payment_method"]:checked').val();
+    if (selected === 'cod') {
+      $('#hs-cod-checkout-prompt').show();
+    } else {
+      $('#hs-cod-checkout-prompt').hide();
+    }
+  }
+  toggleCodPrompt();
+  $(document).on('change', 'input[name="payment_method"]', toggleCodPrompt);
+});
+</script>
