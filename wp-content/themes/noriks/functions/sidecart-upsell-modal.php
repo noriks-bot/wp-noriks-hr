@@ -105,6 +105,11 @@ function noriks_upsell_modal_markup() {
                     </div>
                 </div>
                 <div id="noriks-modal-attributes" class="noriks-modal-attributes"></div>
+                <div class="noriks-modal-qty">
+                    <button class="noriks-qty-btn" id="noriks-qty-minus">−</button>
+                    <input type="number" class="noriks-qty-val" id="noriks-qty-val" value="1" min="1" max="10" readonly>
+                    <button class="noriks-qty-btn" id="noriks-qty-plus">+</button>
+                </div>
                 <div id="noriks-modal-error" class="noriks-modal-error" style="display:none;">Odaberite sve opcije</div>
                 <button id="noriks-modal-add" class="noriks-modal-add-btn">DODAJ U KOŠARICU</button>
             </div>
@@ -130,13 +135,13 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal {
             background: #fff;
-            border-radius: 12px;
-            max-width: 400px;
-            width: 92%;
+            border-radius: 8px;
+            max-width: 360px;
+            width: 90%;
             max-height: 90vh;
             overflow-y: auto;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
             animation: noriks-slide-up 0.25s ease;
         }
         @keyframes noriks-slide-up {
@@ -156,16 +161,16 @@ function noriks_upsell_modal_markup() {
             padding: 4px 8px;
         }
         .noriks-modal-close:hover { color: #000; }
-        .noriks-modal-body { padding: 24px; }
+        .noriks-modal-body { padding: 16px; }
         .noriks-modal-product {
             display: flex;
-            gap: 16px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 16px;
             align-items: center;
         }
         .noriks-modal-image {
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
             flex-shrink: 0;
             border-radius: 8px;
             overflow: hidden;
@@ -177,13 +182,13 @@ function noriks_upsell_modal_markup() {
             object-fit: cover;
         }
         .noriks-modal-info h3 {
-            margin: 0 0 6px;
-            font-size: 16px;
+            margin: 0 0 4px;
+            font-size: 14px;
             font-weight: 600;
             color: #222;
         }
         .noriks-modal-price {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #e53935;
         }
@@ -191,33 +196,33 @@ function noriks_upsell_modal_markup() {
         .noriks-modal-price ins { text-decoration: none; }
         .noriks-modal-attributes { margin-bottom: 20px; }
         .noriks-attr-group {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
         .noriks-attr-label {
             display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 6px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
         .noriks-attr-options {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
         .noriks-attr-btn {
-            padding: 8px 16px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            padding: 6px 14px;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
             background: #fff;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: #333;
             transition: all 0.15s ease;
-            min-width: 44px;
+            min-width: 40px;
             text-align: center;
         }
         .noriks-attr-btn:hover {
@@ -233,22 +238,59 @@ function noriks_upsell_modal_markup() {
             cursor: not-allowed;
             text-decoration: line-through;
         }
+        .noriks-modal-qty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 12px;
+        }
+        .noriks-qty-btn {
+            width: 36px;
+            height: 36px;
+            border: 1.5px solid #ddd;
+            background: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            transition: all 0.1s;
+        }
+        .noriks-qty-btn:first-child { border-radius: 6px 0 0 6px; }
+        .noriks-qty-btn:last-child { border-radius: 0 6px 6px 0; }
+        .noriks-qty-btn:hover { background: #f5f5f5; }
+        .noriks-qty-val {
+            width: 44px;
+            height: 36px;
+            border-top: 1.5px solid #ddd;
+            border-bottom: 1.5px solid #ddd;
+            border-left: none;
+            border-right: none;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            background: #fff;
+        }
         .noriks-modal-add-btn {
             width: 100%;
-            padding: 14px;
-            background: #222;
+            padding: 12px;
+            background: #e53935;
             color: #fff;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             transition: background 0.15s ease;
         }
-        .noriks-modal-add-btn:hover { background: #444; }
+        .noriks-modal-add-btn:hover { background: #c62828; }
         .noriks-modal-add-btn.adding {
-            background: #666;
+            background: #999;
             pointer-events: none;
         }
         .noriks-modal-add-btn.added {
@@ -301,6 +343,7 @@ function noriks_upsell_modal_markup() {
             $modal.show();
             $loading.show();
             $('#noriks-modal-error').hide();
+            $('#noriks-qty-val').val(1);
 
             $.post(woocommerce_params.ajax_url, {
                 action: 'get_product_variations',
@@ -341,6 +384,18 @@ function noriks_upsell_modal_markup() {
 
             $('#noriks-modal-add').text('DODAJ U KOŠARICU').removeClass('adding added');
         }
+
+        // Quantity buttons
+        $(document).on('click', '#noriks-qty-minus', function() {
+            var $val = $('#noriks-qty-val');
+            var v = parseInt($val.val()) || 1;
+            if (v > 1) $val.val(v - 1);
+        });
+        $(document).on('click', '#noriks-qty-plus', function() {
+            var $val = $('#noriks-qty-val');
+            var v = parseInt($val.val()) || 1;
+            if (v < 10) $val.val(v + 1);
+        });
 
         // Select attribute
         $(document).on('click', '.noriks-attr-btn', function() {
@@ -422,11 +477,12 @@ function noriks_upsell_modal_markup() {
 
             $btn.addClass('adding').text('DODAJEM...');
 
+            var qty = parseInt($('#noriks-qty-val').val()) || 1;
             var data = {
                 'add-to-cart': modalData.product_id,
                 product_id: modalData.product_id,
                 variation_id: variation.variation_id,
-                quantity: 1
+                quantity: qty
             };
 
             // Add variation attributes
