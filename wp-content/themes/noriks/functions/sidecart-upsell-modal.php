@@ -222,28 +222,31 @@ function noriks_upsell_modal_markup() {
         .noriks-attr-options {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px;
         }
         .noriks-attr-btn {
-            padding: 6px 14px;
-            border: 1.5px solid #ddd;
-            border-radius: 6px;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
             background: #fff;
             cursor: pointer;
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
             color: #333;
-            transition: all 0.15s ease;
-            min-width: 40px;
+            transition: all 0.3s ease;
+            flex: 1;
             text-align: center;
+            outline: none;
         }
         .noriks-attr-btn:hover {
-            border-color: #999;
+            background: #F4F4F4;
+            border-color: black;
+            color: black;
         }
         .noriks-attr-btn.selected {
-            border-color: #222;
-            background: #222;
-            color: #fff;
+            background: #F4F4F4;
+            border-color: black;
+            color: black;
         }
         .noriks-attr-btn.out-of-stock {
             opacity: 0.3;
@@ -377,6 +380,20 @@ function noriks_upsell_modal_markup() {
             });
 
             $('#noriks-modal-add').text('DODAJ U KOŠARICU').removeClass('adding added');
+
+            // Auto-select first option for each attribute
+            setTimeout(function() {
+                $('.noriks-attr-group').each(function() {
+                    var $firstBtn = $(this).find('.noriks-attr-btn').first();
+                    if ($firstBtn.length) {
+                        $firstBtn.addClass('selected');
+                        var attr = $firstBtn.data('attr');
+                        var value = $firstBtn.data('value');
+                        selectedAttrs[attr] = value;
+                    }
+                });
+                updateVariationMatch();
+            }, 50);
         }
 
         // Select attribute
