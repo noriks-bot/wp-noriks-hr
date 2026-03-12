@@ -155,6 +155,7 @@ function custom_checkout_reorder_fields( $fields ) {
     // Email second
     if ( isset( $fields['billing']['billing_email'] ) ) {
         $fields['billing']['billing_email']['priority'] = 2;
+        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
     }
 
     // Country next
