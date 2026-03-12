@@ -104,12 +104,22 @@ function noriks_upsell_modal_markup() {
                         <div id="noriks-modal-price" class="noriks-modal-price"></div>
                     </div>
                 </div>
-                <div id="noriks-modal-attributes" class="noriks-modal-attributes"></div>
-                <div class="noriks-modal-qty">
-                    <button class="noriks-qty-btn" id="noriks-qty-minus">−</button>
-                    <input type="number" class="noriks-qty-val" id="noriks-qty-val" value="1" min="1" max="10" readonly>
-                    <button class="noriks-qty-btn" id="noriks-qty-plus">+</button>
+                <div class="noriks-modal-qty-row">
+                    <span class="noriks-attr-label">KOLIČINA</span>
+                    <select id="noriks-qty-val" class="noriks-qty-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                 </div>
+                <div id="noriks-modal-attributes" class="noriks-modal-attributes"></div>
                 <div id="noriks-modal-error" class="noriks-modal-error" style="display:none;">Odaberite sve opcije</div>
                 <button id="noriks-modal-add" class="noriks-modal-add-btn">DODAJ U KOŠARICU</button>
             </div>
@@ -122,7 +132,7 @@ function noriks_upsell_modal_markup() {
         .noriks-modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.35);
             z-index: 999999;
             display: flex;
             align-items: center;
@@ -135,9 +145,9 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal {
             background: #fff;
-            border-radius: 8px;
-            max-width: 360px;
-            width: 90%;
+            border-radius: 10px;
+            max-width: 420px;
+            width: 94%;
             max-height: 90vh;
             overflow-y: auto;
             position: relative;
@@ -150,27 +160,29 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal-close {
             position: absolute;
-            top: 8px; right: 12px;
+            top: 4px; right: 8px;
             background: none;
             border: none;
-            font-size: 28px;
+            font-size: 36px;
             cursor: pointer;
-            color: #666;
+            color: #444;
             z-index: 2;
             line-height: 1;
-            padding: 4px 8px;
+            padding: 4px 10px;
+            font-weight: 300;
         }
         .noriks-modal-close:hover { color: #000; }
-        .noriks-modal-body { padding: 16px; }
+        .noriks-modal-body { padding: 12px 14px 14px; }
         .noriks-modal-product {
             display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 10px;
+            margin-bottom: 12px;
+            margin-top: 28px;
             align-items: center;
         }
         .noriks-modal-image {
-            width: 70px;
-            height: 70px;
+            width: 64px;
+            height: 64px;
             flex-shrink: 0;
             border-radius: 8px;
             overflow: hidden;
@@ -238,42 +250,24 @@ function noriks_upsell_modal_markup() {
             cursor: not-allowed;
             text-decoration: line-through;
         }
-        .noriks-modal-qty {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0;
-            margin-bottom: 12px;
+        .noriks-modal-qty-row {
+            margin-bottom: 10px;
         }
-        .noriks-qty-btn {
-            width: 36px;
-            height: 36px;
+        .noriks-qty-select {
+            width: 100%;
+            padding: 8px 12px;
             border: 1.5px solid #ddd;
-            background: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            transition: all 0.1s;
-        }
-        .noriks-qty-btn:first-child { border-radius: 6px 0 0 6px; }
-        .noriks-qty-btn:last-child { border-radius: 0 6px 6px 0; }
-        .noriks-qty-btn:hover { background: #f5f5f5; }
-        .noriks-qty-val {
-            width: 44px;
-            height: 36px;
-            border-top: 1.5px solid #ddd;
-            border-bottom: 1.5px solid #ddd;
-            border-left: none;
-            border-right: none;
-            text-align: center;
-            font-size: 15px;
-            font-weight: 600;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
             color: #222;
             background: #fff;
+            cursor: pointer;
+            appearance: auto;
+        }
+        .noriks-qty-select:focus {
+            border-color: #222;
+            outline: none;
         }
         .noriks-modal-add-btn {
             width: 100%;
@@ -384,18 +378,6 @@ function noriks_upsell_modal_markup() {
 
             $('#noriks-modal-add').text('DODAJ U KOŠARICU').removeClass('adding added');
         }
-
-        // Quantity buttons
-        $(document).on('click', '#noriks-qty-minus', function() {
-            var $val = $('#noriks-qty-val');
-            var v = parseInt($val.val()) || 1;
-            if (v > 1) $val.val(v - 1);
-        });
-        $(document).on('click', '#noriks-qty-plus', function() {
-            var $val = $('#noriks-qty-val');
-            var v = parseInt($val.val()) || 1;
-            if (v < 10) $val.val(v + 1);
-        });
 
         // Select attribute
         $(document).on('click', '.noriks-attr-btn', function() {
