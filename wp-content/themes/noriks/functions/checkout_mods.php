@@ -214,10 +214,37 @@ add_filter( 'woocommerce_checkout_required_field_notice', function( $error, $fie
 // Output a heading above the email field
 add_action( 'woocommerce_before_checkout_billing_form', 'add_contact_heading_before_email' );
 function add_contact_heading_before_email() {
-
-    
     echo '<h3 class="checkout-billing-title">Plaćanje i Dostava</h3>';
 }
+
+// Helper texts: phone example, email not required, address hint
+add_filter( 'woocommerce_form_field', 'noriks_checkout_helper_texts', 10, 4 );
+function noriks_checkout_helper_texts( $field, $key, $args, $value ) {
+    if ( ! is_checkout() ) return $field;
+    
+    // After phone: "Primjer: 0912345678" + "Za pomoć s dostavom"
+    if ( $key === 'billing_phone' ) {
+        $field .= '<span class="example-number">Primjer: 0912345678</span>';
+        $field .= '<span class="phone_number_delivery_assist_tooltip">Za pomoć s dostavom</span>';
+    }
+    
+    // Before email: "* E-mail adresa nije obavezna"
+    if ( $key === 'billing_email' ) {
+        $field = '<span class="hr_email_not_required">* E-mail adresa nije obavezna</span>' . $field;
+    }
+    
+    // Before address_1: hint text
+    if ( $key === 'billing_address_1' ) {
+        $field = '<div class="address-hint-text">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>' . $field;
+    }
+    
+    return $field;
+}
+
+// Change button text to "Naruči"
+add_filter( 'woocommerce_order_button_text', function() {
+    return 'Naruči';
+});
 
 
 // Vigoshop-style: keep labels (for floating effect) AND set placeholders

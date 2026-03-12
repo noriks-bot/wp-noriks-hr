@@ -270,6 +270,15 @@ body.woocommerce-checkout p#billing_city_field {
   clear: none !important;
 }
 
+/* ===== ADDRESS HINT TEXT ===== */
+body.woocommerce-checkout .address-hint-text {
+  font-size: 13px;
+  color: #333;
+  margin: 8px 0 10px;
+  clear: both;
+  width: 100%;
+}
+
 /* ===== HELPER TEXTS (phone example, email not required) ===== */
 body.woocommerce-checkout .example-number {
   font-size: 12px;
