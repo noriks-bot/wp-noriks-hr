@@ -366,13 +366,14 @@ color: white;
 
 @media (min-width: 768px) {
     .storefront-full-width-content.single-product div.product .woocommerce-product-gallery {
-        width: 48%;
-        margin-right: 30px;
+        width: 48% !important;
+        margin-right: 2%;
+        float: left;
     }
-}
-
-.storefront-full-width-content.single-product div.product .summary {
-   width: 48%;
+    .storefront-full-width-content.single-product div.product .summary {
+        width: 48% !important;
+        float: right;
+    }
 }
 
 .woocommerce div.product div.images img {
