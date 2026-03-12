@@ -32,6 +32,54 @@ add_action('init', function() {
 add_action('wp_ajax_get_product_variations', 'noriks_get_product_variations');
 add_action('wp_ajax_nopriv_get_product_variations', 'noriks_get_product_variations');
 
+// Custom add-to-cart AJAX handler (bypasses WC_Form_Handler issues)
+add_action('wp_ajax_noriks_add_to_cart', 'noriks_ajax_add_to_cart');
+add_action('wp_ajax_nopriv_noriks_add_to_cart', 'noriks_ajax_add_to_cart');
+
+function noriks_ajax_add_to_cart() {
+    $product_id   = absint($_POST['product_id'] ?? 0);
+    $variation_id = absint($_POST['variation_id'] ?? 0);
+    $quantity     = max(1, intval($_POST['quantity'] ?? 1));
+    
+    $variations = [];
+    foreach ($_POST as $key => $value) {
+        if (strpos($key, 'attribute_') === 0) {
+            $variations[sanitize_title($key)] = sanitize_text_field($value);
+        }
+    }
+    
+    if (!$product_id) {
+        wp_send_json_error(['message' => 'No product ID']);
+    }
+    
+    $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variations);
+    
+    if ($cart_item_key) {
+        // Trigger the standard WC action so side cart picks it up
+        do_action('woocommerce_ajax_added_to_cart', $product_id);
+        
+        // Get refreshed fragments (same as side cart does)
+        ob_start();
+        wc_setcookie('woocommerce_items_in_cart', WC()->cart->get_cart_contents_count());
+        wc_setcookie('woocommerce_cart_hash', WC()->cart->get_cart_hash());
+        
+        $data = [
+            'fragments' => apply_filters('woocommerce_add_to_cart_fragments', []),
+            'cart_hash' => WC()->cart->get_cart_hash(),
+            'cart_count' => WC()->cart->get_cart_contents_count(),
+        ];
+        ob_end_clean();
+        
+        wp_send_json($data);
+    } else {
+        // Get WC notices for error message
+        $notices = wc_get_notices('error');
+        $msg = !empty($notices) ? strip_tags($notices[0]['notice'] ?? $notices[0]) : 'Greška pri dodavanju';
+        wc_clear_notices();
+        wp_send_json_error(['message' => $msg]);
+    }
+}
+
 function noriks_get_product_variations() {
     $product_id = intval($_POST['product_id'] ?? 0);
     if (!$product_id) {
@@ -494,7 +542,7 @@ function noriks_upsell_modal_markup() {
 
             var qty = parseInt($('#noriks-qty-val').val()) || 1;
             var data = {
-                'add-to-cart': modalData.product_id,
+                action: 'noriks_add_to_cart',
                 product_id: modalData.product_id,
                 variation_id: variation.variation_id,
                 quantity: qty
@@ -505,33 +553,38 @@ function noriks_upsell_modal_markup() {
                 data[key] = variation.attributes[key];
             }
 
-            // Use WC AJAX endpoint which side cart plugin hooks into
-            $.post('/?wc-ajax=xoo_wsc_add_to_cart', data, function(res) {
-                if (res && !res.error) {
+            console.log('=== ADD TO CART DATA ===', JSON.stringify(data));
+
+            $.post(woocommerce_params.ajax_url, data, function(res) {
+                console.log('=== ADD TO CART RESPONSE ===', JSON.stringify(res));
+                
+                if (res.success !== false && res.fragments) {
                     $btn.removeClass('adding').addClass('added').text('✓ DODANO!');
                     
-                    // Refresh side cart fragments
-                    if (res.fragments) {
-                        $.each(res.fragments, function(key, value) {
-                            $(key).replaceWith(value);
-                        });
-                    }
+                    // Apply fragments to update side cart
+                    $.each(res.fragments, function(key, value) {
+                        $(key).replaceWith(value);
+                    });
+                    $(document.body).trigger('added_to_cart', [res.fragments, res.cart_hash, $btn]);
                     $(document.body).trigger('wc_fragment_refresh');
                     
                     setTimeout(function() {
                         closeModal();
                     }, 800);
-                } else {
+                } else if (res.success === false) {
                     $btn.removeClass('adding').text('DODAJ U KOŠARICU');
-                    $('#noriks-modal-error').text(res.notice || 'Greška pri dodavanju').show();
-                }
-            }).fail(function() {
-                // Fallback: standard WC add to cart
-                $.post('/?wc-ajax=add_to_cart', data, function() {
+                    var msg = (res.data && res.data.message) ? res.data.message : 'Greška pri dodavanju';
+                    $('#noriks-modal-error').text(msg).show();
+                } else {
+                    // Fallback: no fragments but no error either — refresh
                     $btn.removeClass('adding').addClass('added').text('✓ DODANO!');
                     $(document.body).trigger('wc_fragment_refresh');
                     setTimeout(closeModal, 800);
-                });
+                }
+            }).fail(function(xhr) {
+                console.error('Add to cart failed:', xhr.responseText);
+                $btn.removeClass('adding').text('DODAJ U KOŠARICU');
+                $('#noriks-modal-error').text('Greška pri dodavanju').show();
             });
         });
 
