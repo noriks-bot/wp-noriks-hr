@@ -145,46 +145,35 @@ function custom_move_email_field_first( $fields ) {
 
 add_filter( 'woocommerce_checkout_fields', 'custom_checkout_reorder_fields' );
 function custom_checkout_reorder_fields( $fields ) {
-    // Vigoshop EXACT order (from screenshot): Telefon → Email → Ime/Prezime → address hint → Ulica/Kućni → Poštanski/Grad
+    // Vigoshop EXACT order (from HTML source):
+    // Ime(30) → Prezime(40) → [hint div] → Ulica(50) → Kućni(60) → Poštanski(70) → Grad(80) → Telefon(85) → Email(86)
+    // Country hidden, State hidden
     
-    // Telefon FIRST
-    if ( isset( $fields['billing']['billing_phone'] ) ) {
-        $fields['billing']['billing_phone']['priority'] = 1;
-        $fields['billing']['billing_phone']['label'] = 'Broj mobilnog telefona';
-        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
-    }
-    
-    // Email SECOND
-    if ( isset( $fields['billing']['billing_email'] ) ) {
-        $fields['billing']['billing_email']['priority'] = 2;
-        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
-    }
-
     // Country (hidden)
     if ( isset( $fields['billing']['billing_country'] ) ) {
         $fields['billing']['billing_country']['priority'] = 5;
     }
 
-    // Ime + Prezime side by side
+    // Ime + Prezime side by side (priorities 30/40 like vigoshop)
     if ( isset( $fields['billing']['billing_first_name'] ) ) {
-        $fields['billing']['billing_first_name']['priority'] = 10;
+        $fields['billing']['billing_first_name']['priority'] = 30;
         $fields['billing']['billing_first_name']['class'] = array( 'form-row-first' );
     }
     if ( isset( $fields['billing']['billing_last_name'] ) ) {
-        $fields['billing']['billing_last_name']['priority'] = 11;
+        $fields['billing']['billing_last_name']['priority'] = 40;
         $fields['billing']['billing_last_name']['class'] = array( 'form-row-last' );
     }
 
     // Ulica 67% + Kućni 31% (CSS floated)
     if ( isset( $fields['billing']['billing_address_1'] ) ) {
-        $fields['billing']['billing_address_1']['priority'] = 20;
+        $fields['billing']['billing_address_1']['priority'] = 50;
         $fields['billing']['billing_address_1']['required'] = true;
         $fields['billing']['billing_address_1']['label'] = 'Ulica';
         $fields['billing']['billing_address_1']['placeholder'] = 'Ulica';
         $fields['billing']['billing_address_1']['class'] = array( 'form-row-wide', 'address-field' );
     }
     if ( isset( $fields['billing']['billing_address_2'] ) ) {
-        $fields['billing']['billing_address_2']['priority'] = 21;
+        $fields['billing']['billing_address_2']['priority'] = 60;
         $fields['billing']['billing_address_2']['required'] = true;
         $fields['billing']['billing_address_2']['label'] = 'Kućni broj';
         $fields['billing']['billing_address_2']['placeholder'] = 'Kućni broj';
@@ -193,12 +182,25 @@ function custom_checkout_reorder_fields( $fields ) {
 
     // Poštanski 35% + Grad 63% (CSS floated)
     if ( isset( $fields['billing']['billing_postcode'] ) ) {
-        $fields['billing']['billing_postcode']['priority'] = 30;
+        $fields['billing']['billing_postcode']['priority'] = 70;
         $fields['billing']['billing_postcode']['class'] = array( 'form-row-wide', 'address-field' );
     }
     if ( isset( $fields['billing']['billing_city'] ) ) {
-        $fields['billing']['billing_city']['priority'] = 31;
+        $fields['billing']['billing_city']['priority'] = 80;
         $fields['billing']['billing_city']['class'] = array( 'form-row-wide', 'address-field' );
+    }
+
+    // Telefon AFTER address (vigoshop: priority 85, after city)
+    if ( isset( $fields['billing']['billing_phone'] ) ) {
+        $fields['billing']['billing_phone']['priority'] = 85;
+        $fields['billing']['billing_phone']['label'] = 'Telefon';
+        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
+    }
+    
+    // Email LAST (vigoshop: priority 86, after phone)
+    if ( isset( $fields['billing']['billing_email'] ) ) {
+        $fields['billing']['billing_email']['priority'] = 86;
+        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
     }
     
     // State — hidden via CSS
@@ -233,17 +235,17 @@ add_filter( 'woocommerce_form_field', 'noriks_checkout_helper_texts', 10, 4 );
 function noriks_checkout_helper_texts( $field, $key, $args, $value ) {
     if ( ! is_checkout() ) return $field;
     
-    // Before address_1: address hint text (vigoshop puts this between name and address)
+    // Before address_1: address hint text (vigoshop puts this between name fields and address)
     if ( $key === 'billing_address_1' ) {
-        $field = '<div class="address-hint-text" style="clear:both; width:100%; float:none;">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>' . $field;
+        $field = '<div class="form-row form-row-wide" style="clear:both;"><div class="address-hint-text">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div></div>' . $field;
     }
     
-    // After phone: helper row with both texts
+    // After phone: helper row with example and delivery assist
     if ( $key === 'billing_phone' ) {
         $field .= '<div class="phone-helper-row"><span class="example-number">Primjer: 0912345678</span><span class="phone_number_delivery_assist_tooltip">Za pomoć s dostavom</span></div>';
     }
     
-    // Before email: "* E-mail adresa nije obavezna"
+    // Before email: "* E-mail adresa nije obavezna" (right-aligned, like vigoshop)
     if ( $key === 'billing_email' ) {
         $field = '<div class="email-not-required-row"><span class="hr_email_not_required">* E-mail adresa nije obavezna</span></div>' . $field;
     }
@@ -259,7 +261,7 @@ add_filter( 'woocommerce_order_button_text', function() {
 // COD prompt + VAT note + Sažetak placeholder before submit button (vigoshop order)
 add_action( 'woocommerce_review_order_before_submit', function() {
     ?>
-    <div class="cod-checkout-prompt">
+    <div id="hs-cod-checkout-prompt" class="cod-checkout-prompt" style="display:none;">
         <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
         <img class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
     </div>
@@ -283,7 +285,13 @@ add_action( 'woocommerce_review_order_after_submit', function() {
         </div>
     </div>
     <div class="agreed_terms_txt">
-        <span class="policy-agreement-obligation">Klikom na gumb <strong>Naruči</strong> pristajem na narudžbu uz obvezu plaćanja.</span>
+        <span class="policy-agreement-obligation">Klikom na gumb <strong>Naruči</strong> pristajem na narudžbu uz obvezu plaćanja.</span><br>
+        <div class="terms-checkbox-and-links">
+            <label class="checkbox">
+                <input type="checkbox" class="input-checkbox" name="agree_to_checkout_terms" id="agree_to_terms_checkbox" value="1">
+            </label>
+            Pročitao sam i prihvaćam <a href="/opci-uvjeti-prodaje/" target="_blank">Opće uvjete prodaje</a> i <a href="/pravo-na-odustajanje/" target="_blank">pravo na odustajanje</a>.
+        </div>
     </div>
     <?php
 });
@@ -370,6 +378,20 @@ add_action( 'wp_footer', function() {
         }
         rearrangeCheckout();
         $(document.body).on('updated_checkout', rearrangeCheckout);
+
+        // COD prompt: show only when COD is selected (like vigoshop)
+        function toggleCodPrompt() {
+            var selected = $('input[name="payment_method"]:checked').val();
+            var $prompt = $('#hs-cod-checkout-prompt');
+            if (selected === 'cod') {
+                $prompt.show();
+            } else {
+                $prompt.hide();
+            }
+        }
+        toggleCodPrompt();
+        $(document.body).on('payment_method_selected updated_checkout', toggleCodPrompt);
+        $(document).on('change', 'input[name="payment_method"]', toggleCodPrompt);
     });
     </script>
     <?php
@@ -425,6 +447,14 @@ add_filter( 'woocommerce_gateway_description', 'remove_payment_method_descriptio
 function remove_payment_method_description( $description, $payment_id ) {
     return ''; // Return empty description
 }
+
+// Rename payment methods to match vigoshop exactly
+add_filter( 'woocommerce_gateway_title', function( $title, $id ) {
+    if ( ! is_checkout() ) return $title;
+    if ( $id === 'cod' ) return 'Plaćanje prilikom preuzimanja';
+    if ( $id === 'stripe_cc' ) return 'Kreditna kartica';
+    return $title;
+}, 5, 2 );
 
 // Add fee badges to payment method labels (Besplatno / price)
 add_filter( 'woocommerce_gateway_title', 'noriks_payment_fee_badges', 10, 2 );

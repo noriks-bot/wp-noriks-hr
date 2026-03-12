@@ -721,8 +721,7 @@ body.woocommerce-checkout #place_order {
   letter-spacing: normal !important;
 }
 body.woocommerce-checkout #place_order::before {
-  content: "🔒";
-  font-size: 18px;
+  display: none;
 }
 body.woocommerce-checkout #place_order:hover {
   opacity: 0.95;
@@ -755,6 +754,25 @@ body.woocommerce-checkout .agreed_terms_txt {
 }
 body.woocommerce-checkout .policy-agreement-obligation {
   display: block;
+}
+body.woocommerce-checkout .terms-checkbox-and-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  justify-content: center;
+}
+body.woocommerce-checkout .terms-checkbox-and-links a {
+  color: #888;
+  text-decoration: underline;
+}
+body.woocommerce-checkout .terms-checkbox-and-links .checkbox {
+  margin: 0;
+}
+body.woocommerce-checkout .terms-checkbox-and-links input[type="checkbox"] {
+  margin-top: 2px;
 }
 
 /* ===== CLEARFIX ===== */
