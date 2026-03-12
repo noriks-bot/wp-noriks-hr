@@ -256,6 +256,19 @@ add_filter( 'woocommerce_order_button_text', function() {
     return 'Naruči';
 });
 
+// COD prompt + VAT note before place order button
+add_action( 'woocommerce_review_order_before_submit', function() {
+    ?>
+    <div class="cod-checkout-prompt">
+        <span>Dovršite narudžbu sada, <strong>platite pouzećem :)</strong></span>
+    </div>
+    <div class="vat-checkout-note">
+        <span>Nema dodatnih troškova za carinu</span>
+        <span>PDV je uključen u cijenu</span>
+    </div>
+    <?php
+});
+
 // Add "Kupujte bez brige" trust badge after place order button
 add_action( 'woocommerce_review_order_after_submit', function() {
     ?>
