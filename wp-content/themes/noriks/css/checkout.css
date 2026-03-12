@@ -16,7 +16,12 @@ body.woocommerce-checkout .info-banner,
 body.woocommerce-checkout .entry-header,
 body.woocommerce-checkout .xoo-wsc-markup,
 body.woocommerce-checkout #page > .site-header,
-body.woocommerce-checkout #page > .site-footer {
+body.woocommerce-checkout #page > .site-footer,
+body.woocommerce-checkout .woocommerce-privacy-policy-text,
+body.woocommerce-checkout .woocommerce-form-coupon-toggle,
+body.woocommerce-checkout .woocommerce-message,
+body.woocommerce-checkout .woocommerce-additional-fields > h3,
+body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper {
   display: none !important;
 }
 
@@ -75,7 +80,7 @@ button, input, select, textarea { font-family: Roboto, sans-serif, -apple-system
 /* Container */
 .container { margin: 0px auto; width: 100%; }
 .container--l { max-width: 81.4286rem; }
-.container--xs { max-width: 40rem; }
+.container--xs { max-width: 560px; }
 
 /* Background & Colors */
 .bg--white { background-color: rgb(255, 255, 255); }
@@ -141,12 +146,52 @@ button, input, select, textarea { font-family: Roboto, sans-serif, -apple-system
 
 /* Button */
 .button { display: inline-block; cursor: pointer; font-weight: 700; text-align: center; text-decoration: none; border: 0; }
-.button--l { font-size: 1.28571rem; padding: 15px 30px; }
+.button--l { font-size: 20px; font-weight: 700; padding: 19px 40px; height: 64px; display: flex; align-items: center; justify-content: center; gap: 10px; text-align: center; border-radius: 4px; width: 100%; }
 .button--block { display: block; width: 100%; }
 .button--rounded { border-radius: var(--vigoshop-button-cta-border-radius, 4px); }
 .button--green { color: var(--vigoshop-button-cta-text, #fff); background: var(--vigoshop-button-cta-gradient); box-shadow: var(--vigoshop-button-cta-shadow); }
 .button--green-gradient { background-image: var(--vigoshop-button-cta-gradient); }
 .button--green:hover { opacity: 0.9; }
+
+/* Explicit place order button override */
+#place_order, button#place_order, .wc-checkout-wrap #place_order {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100% !important;
+  height: 64px !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background: linear-gradient(180deg, #3EC000 0%, #00AC00 100%) !important;
+  background-image: linear-gradient(180deg, #3EC000 0%, #00AC00 100%) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  box-shadow: 0px 2px 0px #009900 !important;
+  cursor: pointer;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin: 16px 0 0 !important;
+}
+#place_order::before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 17px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='20' viewBox='0 0 17 20' fill='none'%3E%3Cpath opacity='0.5' fill-rule='evenodd' clip-rule='evenodd' d='M15.1786 8.75H14.2679V5.9375C14.2679 2.66406 11.6799 0 8.5 0C5.32009 0 2.73214 2.66406 2.73214 5.9375V8.75H1.82143C0.815848 8.75 0 9.58984 0 10.625V18.125C0 19.1602 0.815848 20 1.82143 20H15.1786C16.1842 20 17 19.1602 17 18.125V10.625C17 9.58984 16.1842 8.75 15.1786 8.75ZM11.2321 8.75H5.76786V5.9375C5.76786 4.38672 6.99353 3.125 8.5 3.125C10.0065 3.125 11.2321 4.38672 11.2321 5.9375V8.75Z' fill='white'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+#place_order::after {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.541 17.088'%3E%3Cpath d='m14.265 6.379-6.1-6.1a.941.941 0 0 0-1.334 1.327l4.5 4.5H0v1.879h11.327l-4.5 4.5a.941.941 0 0 0 1.331 1.331l6.1-6.1a.941.941 0 0 0 0-1.331' transform='translate(1.5 .5)' fill='%23fff'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+}
 
 /* Val */
 .val--bottom { vertical-align: bottom; }
@@ -256,7 +301,7 @@ p#billing_state_field { display: none !important; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom { margin: 0px !important; padding: 0px !important; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom .delivery-icon { width: 25px; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom input[type="radio"]:first-child { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
-.woocommerce-checkout #custom_shipping .shipping_method_custom .checkedlabel { background-color: rgb(242, 254, 238); }
+.woocommerce-checkout #custom_shipping .shipping_method_custom .checkedlabel { background-color: rgb(242, 254, 238); border: 1px solid rgb(71, 180, 38); border-radius: 5px; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom .checkedlabel::before { color: rgb(71, 180, 38); }
 .woocommerce-checkout #custom_shipping .shipping_method_custom li { display: block; position: relative; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom li label { align-items: center; cursor: pointer; display: flex; margin-bottom: 0px; padding: 15px; position: relative; }
@@ -264,6 +309,7 @@ p#billing_state_field { display: none !important; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom li label p { margin: 0px; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom li label .outer-wrapper { display: flex; justify-content: space-between; width: 100%; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom li label .outer-wrapper .inner-wrapper-dates { align-content: center; }
+.woocommerce-checkout .hs-custom-date { font-size: 14px; font-weight: 700; line-height: 21px; color: #333; }
 .woocommerce-checkout #custom_shipping .shipping_method_custom li label .inner-wrapper-img { display: flex; flex-direction: column; min-width: 70px; text-align: right; }
 @media screen and (max-width: 992px) {
   .woocommerce-checkout #custom_shipping .shipping_method_custom li label .inner-wrapper-img { margin-left: 10px; min-width: auto; }
@@ -336,14 +382,40 @@ html.apple-pay-ready .sv-wc-apple-pay-button { opacity: 1; pointer-events: auto;
 
 /* ===== CHECKOUT LAYOUT (from vigoshop) ===== */
 
-.wc-checkout-wrap { padding: 20px 15px 30px; border-radius: 8px; }
-@media (min-width: 768px) {
-  .wc-checkout-wrap { padding: 30px 25px 40px; }
-}
+.wc-checkout-wrap { padding: 18px 0 15px; border-radius: 10px; margin: 30px auto; background: #fff; }
+.wc-checkout-wrap form.checkout { padding: 0 40px 48px; }
 
 .checkout-container { padding-top: 20px; padding-bottom: 40px; }
 
 .checkout-billing-title { font-size: 24px !important; font-weight: 700 !important; line-height: 28.8px !important; color: #232f3e !important; margin: 0 0 12px !important; }
+
+/* Address hint text */
+.address-hint-text { font-size: 13px; color: #333; margin: 8px 0 10px; clear: both !important; width: 100% !important; float: none !important; }
+
+/* Phone helper row */
+.phone-helper-row { display: flex; justify-content: space-between; width: 100%; clear: both; margin-top: 5px; margin-bottom: 4px; }
+
+/* Email not required row */
+.email-not-required-row { text-align: right; width: 100%; clear: both; margin-bottom: 2px; }
+.hr_email_not_required { font-size: 12px; color: #47b426; }
+
+/* Force single column layout */
+.woocommerce-checkout .col2-set .col-1, .woocommerce-checkout .col2-set .col-2 { float: none; width: 100%; }
+.woocommerce-checkout #customer_details::after { content: ""; display: table; clear: both; }
+
+/* Container max width for desktop */
+.wc-checkout-wrap { max-width: 560px; margin: 30px auto; }
+@media (max-width: 991px) {
+  .wc-checkout-wrap { margin: 0 auto; max-width: 100%; border-radius: 5px 5px 0 0; }
+}
+
+/* Mobile stacking for name fields */
+@media (max-width: 575.98px) {
+  .col2-set .form-row-first, .col2-set .form-row-last { float: none !important; width: 100% !important; margin-right: 0 !important; }
+  .phone-helper-row { flex-direction: column; gap: 2px; }
+  .phone_number_delivery_assist_tooltip { float: none; text-align: left; padding-right: 0; }
+  .terms-checkbox-and-links { display: none; }
+}
 
 /* Payment section */
 h3.payment-title { font-size: 19.6px !important; font-weight: 700 !important; line-height: 23.52px !important; color: #333 !important; margin: 29.4px 0 14.7px !important; }
@@ -355,7 +427,7 @@ h3.payment-title { font-size: 19.6px !important; font-weight: 700 !important; li
 #payment .payment_methods li:first-child { border-top-left-radius: 5px; border-top-right-radius: 5px; }
 #payment .payment_methods li:last-child { border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
 #payment .payment_methods li:has(input.input-radio:checked) { background-color: #e8f3ff; }
-#payment .payment_methods li label { display: flex; flex-wrap: wrap; row-gap: 10px; align-items: center; cursor: pointer; padding: 1.41575em 1em; border: none; border-radius: 0; background: transparent; font-size: 16px; font-weight: 500; }
+#payment .payment_methods li label { display: flex; flex-wrap: wrap; row-gap: 10px; align-items: center; cursor: pointer; padding: 22.652px 16px; border: none; border-radius: 0; background: transparent; font-size: 16px; font-weight: 700; line-height: 24px; color: #333; }
 #payment .payment_methods li input.input-radio:checked + label { font-weight: 700; }
 #payment .payment_methods li label:hover { background-color: rgba(232, 243, 255, 0.5); }
 #payment .payment_methods li input.input-radio { appearance: none; -webkit-appearance: none; width: 15px; height: 15px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 1px #ccc; background: #fff; margin-right: 15px; flex-shrink: 0; cursor: pointer; }
@@ -370,15 +442,14 @@ h3.payment-title { font-size: 19.6px !important; font-weight: 700 !important; li
 .hs-checkout__payment-method-cod-icon { height: 30px; width: auto; }
 
 /* COD prompt */
-#hs-cod-checkout-prompt { align-items: center; background-color: rgb(242, 254, 238); border: 2px solid rgb(36, 184, 0); border-radius: 5px; display: flex; gap: 15px; margin-bottom: 15px; padding: 15px; }
-#hs-cod-checkout-prompt { display: flex; padding: 10px; justify-content: space-between; }
+#hs-cod-checkout-prompt { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; margin-bottom: 10px; background: transparent; border: none; }
 #hs-cod-checkout-prompt .cod-prompt-text { display: flex; flex-direction: column; justify-content: center; font-size: 14px; line-height: 21px; color: #333; }
 #hs-cod-checkout-prompt .cod-prompt-image { width: 42px; height: auto; flex-shrink: 0; }
 
 /* VAT prompt */
 #hs-vat-tax-checkout-prompt { display: flex; flex-direction: column; align-items: flex-end; padding: 10px 0 0; font-size: 13px; line-height: 19.5px; color: #333; }
 #hs-vat-tax-checkout-prompt .tax-and-vat-checkout-claims { display: block; color: #333; font-size: 13px; line-height: 19.5px; }
-#hs-vat-tax-checkout-prompt .tax-and-vat-checkout-claims::before { content: "✓ "; color: rgb(36, 184, 0); }
+/* No checkmark prefix — vigoshop doesn't have it */
 
 /* Order total sum */
 .vigo-checkout-total__sum { padding: 15px 0 0; margin-top: 10px; border-top: 2px solid rgb(51, 51, 51); }
@@ -389,9 +460,10 @@ h3.payment-title { font-size: 19.6px !important; font-weight: 700 !important; li
 .place-order { margin-top: 20px; }
 
 /* Checkout warranty / moneyback */
-.checkout-warranty { display: flex; align-items: center; gap: 15px; margin: 20px 0; padding: 15px 0; }
-.checkout-warranty__icon img { width: 60px; height: auto; }
-.checkout-warranty__text { font-size: 1rem; }
+.checkout-warranty { display: flex; align-items: center; justify-content: center; gap: 10.5px; margin: 36px 0 22px; }
+.checkout-warranty__icon { width: 60px; flex-shrink: 0; }
+.checkout-warranty__icon img { width: 60px; height: 60px; object-fit: contain; }
+.checkout-warranty__text { font-size: 16px; line-height: 24px; color: #333; }
 
 /* Terms */
 .agreed_terms_txt { font-size: 0.9rem; color: rgb(95, 96, 97); margin-top: 15px; line-height: 1.5; }
