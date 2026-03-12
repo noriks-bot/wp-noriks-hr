@@ -180,7 +180,7 @@ function custom_checkout_reorder_fields( $fields ) {
     if ( isset( $fields['billing']['billing_address_1'] ) ) {
         $fields['billing']['billing_address_1']['priority'] = 40;
         $fields['billing']['billing_address_1']['required'] = true;
-        // CSS handles float layout (67%/31%)
+        $fields['billing']['billing_address_1']['class'] = array( 'form-row-first' );
     }
 
     // Make sure address_2 exists, is visible, and ordered correctly
@@ -189,14 +189,17 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_address_2']['required'] = true;
         $fields['billing']['billing_address_2']['label'] = __( 'Kućni broj', 'your-textdomain' );
         $fields['billing']['billing_address_2']['placeholder'] = __( 'Kućni broj', 'your-textdomain' );
+        $fields['billing']['billing_address_2']['class'] = array( 'form-row-last' );
     }
 
-    // Poštanski broj + Grad side by side (keep form-row-wide, CSS handles float)
+    // Poštanski broj + Grad side by side
     if ( isset( $fields['billing']['billing_postcode'] ) ) {
         $fields['billing']['billing_postcode']['priority'] = 50;
+        $fields['billing']['billing_postcode']['class'] = array( 'form-row-first' );
     }
     if ( isset( $fields['billing']['billing_city'] ) ) {
         $fields['billing']['billing_city']['priority'] = 51;
+        $fields['billing']['billing_city']['class'] = array( 'form-row-last' );
     }
     
     // Hide state field (vigoshop hides it)

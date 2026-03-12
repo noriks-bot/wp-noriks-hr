@@ -250,15 +250,11 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row
 #billing_first_name_field { padding-right: 0; z-index: 99; }
 #billing_last_name_field { z-index: 99; }
 
-/* ===== ADDRESS FIELDS (EXACT from custom-checkout-hr) ===== */
-p#billing_address_1_field,
-p#billing_address_2_field,
-p#billing_city_field,
-p#billing_postcode_field { clear: none !important; }
-p#billing_address_1_field { float: left !important; width: 67% !important; }
-p#billing_address_2_field { float: right !important; width: 31% !important; }
-p#billing_postcode_field { clear: both !important; float: left !important; width: 35% !important; }
-p#billing_city_field { clear: none !important; float: right !important; width: 63% !important; }
+/* ===== ADDRESS FIELDS (vigoshop: Ulica 67%/Kućni 31%, Poštanski 35%/Grad 63%) ===== */
+body.woocommerce-checkout p#billing_address_1_field.form-row-first { width: 67% !important; }
+body.woocommerce-checkout p#billing_address_2_field.form-row-last { width: 31% !important; }
+body.woocommerce-checkout p#billing_postcode_field.form-row-first { width: 35% !important; }
+body.woocommerce-checkout p#billing_city_field.form-row-last { width: 63% !important; }
 @media (max-width: 575.98px) {
   p#billing_address_1_field,
   p#billing_address_2_field,
