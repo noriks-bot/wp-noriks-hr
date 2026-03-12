@@ -5,6 +5,30 @@
  * All visual rendering is in form-checkout.php as static HTML.
  */
 
+// ===== DEQUEUE ALL CONFLICTING STYLES ON CHECKOUT =====
+add_action( 'wp_enqueue_scripts', function() {
+    if ( ! is_checkout() ) return;
+    
+    // Dequeue Storefront parent theme styles
+    wp_dequeue_style( 'storefront-style' );
+    wp_dequeue_style( 'storefront-woocommerce-style' );
+    wp_dequeue_style( 'storefront-gutenberg-blocks' );
+    
+    // Dequeue WooCommerce default styles
+    wp_dequeue_style( 'woocommerce-general' );
+    wp_dequeue_style( 'woocommerce-layout' );
+    wp_dequeue_style( 'woocommerce-smallscreen' );
+    wp_dequeue_style( 'wc-blocks-style' );
+    wp_dequeue_style( 'wc-blocks-vendors-style' );
+    
+    // Dequeue child theme style (if it loads storefront overrides)
+    wp_dequeue_style( 'storefront-child-style' );
+    wp_dequeue_style( 'noriks-style' );
+    
+    // Enqueue ONLY our checkout CSS
+    wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), filemtime( get_stylesheet_directory() . '/css/checkout.css' ) );
+}, 999 );
+
 // ===== FIELD ORDER & LABELS =====
 
 add_filter( 'woocommerce_checkout_fields', 'noriks_checkout_field_order' );
