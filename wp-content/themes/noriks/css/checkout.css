@@ -232,22 +232,35 @@ body.woocommerce-checkout select {
 }
 
 /* ===== FIELD LAYOUT: Side by side fields ===== */
-body.woocommerce-checkout .col2-set .form-row-first,
+body.woocommerce-checkout .form-row.form-row-first {
+  float: left !important;
+  width: 48% !important;
+  clear: both !important;
+}
+body.woocommerce-checkout .form-row.form-row-last {
+  float: right !important;
+  width: 48% !important;
+  clear: none !important;
+}
+body.woocommerce-checkout .form-row.form-row-wide {
+  clear: both !important;
+  width: 100% !important;
+  float: none !important;
+}
+
+/* Force Ime + Prezime side by side */
 body.woocommerce-checkout p#billing_first_name_field {
   float: left !important;
   width: 48% !important;
+  clear: both !important;
 }
-body.woocommerce-checkout .col2-set .form-row-last,
 body.woocommerce-checkout p#billing_last_name_field {
   float: right !important;
   width: 48% !important;
-}
-body.woocommerce-checkout .form-row-wide {
-  clear: both !important;
-  width: 100% !important;
+  clear: none !important;
 }
 
-/* Address fields: Ulica + Kućni broj side by side */
+/* Address fields: Ulica (58%) + Kućni broj (38%) side by side */
 body.woocommerce-checkout p#billing_address_1_field {
   float: left !important;
   width: 58% !important;
@@ -258,7 +271,8 @@ body.woocommerce-checkout p#billing_address_2_field {
   width: 38% !important;
   clear: none !important;
 }
-/* Poštanski broj + Grad side by side */
+
+/* Poštanski broj (38%) + Grad (58%) side by side */
 body.woocommerce-checkout p#billing_postcode_field {
   float: left !important;
   width: 38% !important;
@@ -307,18 +321,17 @@ body.woocommerce-checkout .hr_email_not_required {
   color: #999;
 }
 
-/* ===== DOSTAVA SECTION TITLE ===== */
-body.woocommerce-checkout .woocommerce-shipping-totals th,
-body.woocommerce-checkout .shipping-title-row th {
-  font-size: 1.4rem !important;
-  font-weight: 700 !important;
-  color: #333 !important;
-  padding-top: 20px !important;
+/* ===== SHIPPING ROW IN ORDER REVIEW — green card style ===== */
+body.woocommerce-checkout .woocommerce-shipping-totals {
+  display: block !important;
 }
-
-/* ===== SHIPPING METHOD ROWS — green card style ===== */
+body.woocommerce-checkout .woocommerce-shipping-totals th {
+  display: none !important;
+}
 body.woocommerce-checkout .woocommerce-shipping-totals td {
+  display: block !important;
   padding: 0 !important;
+  width: 100% !important;
 }
 body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method {
   margin: 0 !important;
@@ -333,15 +346,17 @@ body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li {
   margin-bottom: 4px;
   display: flex;
   align-items: center;
+  list-style: none !important;
 }
 body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li label {
-  display: flex;
+  display: flex !important;
   align-items: center;
   width: 100%;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 500 !important;
+  font-size: 14px !important;
   color: #333;
+  padding: 0 !important;
 }
 body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li label::before {
   content: "✓";
@@ -350,6 +365,7 @@ body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li lab
   justify-content: center;
   width: 22px;
   height: 22px;
+  min-width: 22px;
   background: #47b426;
   color: #fff;
   border-radius: 50%;
@@ -361,14 +377,19 @@ body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li lab
 body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li .woocommerce-Price-amount {
   margin-left: auto;
   background: #47b426;
-  color: #fff;
+  color: #fff !important;
   padding: 4px 12px;
   border-radius: 4px;
   font-weight: 700;
   font-size: 13px;
+  white-space: nowrap;
 }
 body.woocommerce-checkout .woocommerce-shipping-totals ul#shipping_method li input[type="radio"] {
   display: none !important;
+}
+/* Single shipping method (no radio) - just label text */
+body.woocommerce-checkout .woocommerce-shipping-totals .shipping-method-label {
+  font-weight: 500;
 }
 
 /* ===== SHIPPING SECTION (custom) ===== */

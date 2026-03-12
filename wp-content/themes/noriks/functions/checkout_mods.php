@@ -165,9 +165,9 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_first_name']['priority'] = 10;
     }
 
-    // Last name
+    // Last name — immediately after first name
     if ( isset( $fields['billing']['billing_last_name'] ) ) {
-        $fields['billing']['billing_last_name']['priority'] = 20;
+        $fields['billing']['billing_last_name']['priority'] = 11;
     }
 
 
