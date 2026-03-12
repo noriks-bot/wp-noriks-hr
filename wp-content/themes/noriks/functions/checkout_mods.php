@@ -262,7 +262,7 @@ add_filter( 'woocommerce_order_button_text', function() {
 add_action( 'woocommerce_review_order_before_submit', function() {
     ?>
     <div id="hs-cod-checkout-prompt" class="cod-checkout-prompt" style="display:none;">
-        <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
+        <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem &#x1F642;</strong></div>
         <img class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
     </div>
     <div class="vat-checkout-note">
