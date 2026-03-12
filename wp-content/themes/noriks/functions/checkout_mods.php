@@ -278,7 +278,21 @@ add_action( 'woocommerce_review_order_before_submit', function() {
     <?php
 });
 
-// (Removed: trust badge + disclaimer — not in vigoshop)
+// Moneyback badge after submit button (like vigoshop)
+add_action( 'woocommerce_review_order_after_submit', function() {
+    ?>
+    <div class="moneyback-section">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/moneyback.svg" alt="100% Povrat" class="moneyback-img">
+        <div class="moneyback-text">
+            <strong>Kupujte bez brige</strong><br>
+            Povrat novca moguć u roku od 90 dana.
+        </div>
+    </div>
+    <div class="checkout-legal-text">
+        Klikom na gumb <strong>Naruči</strong> pristajete na narudžbu uz obvezu plaćanja.
+    </div>
+    <?php
+});
 
 
 // Vigoshop-style: keep labels (for floating effect) AND set placeholders
