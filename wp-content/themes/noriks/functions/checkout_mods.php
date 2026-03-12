@@ -348,11 +348,19 @@ add_action( 'wp_footer', function() {
 
 
 
-// Clean quantity display: "× 1" (no images, like vigoshop)
-add_filter( 'woocommerce_checkout_cart_item_quantity', 'clean_checkout_quantity_display', 10, 3 );
-function clean_checkout_quantity_display( $quantity, $cart_item, $cart_item_key ) {
-    return $quantity; // Keep default "× N" format
-}
+// Vigoshop format: "Nx" before product name instead of "× N" after
+add_filter( 'woocommerce_cart_item_name', function( $name, $cart_item, $cart_item_key ) {
+    if ( is_checkout() ) {
+        $qty = $cart_item['quantity'];
+        return $qty . 'x ' . $name;
+    }
+    return $name;
+}, 10, 3 );
+
+// Hide default quantity display since we prepend it to name
+add_filter( 'woocommerce_checkout_cart_item_quantity', function() {
+    return '';
+}, 10 );
 
 
 add_action( 'woocommerce_checkout_create_order', 'copy_billing_to_shipping_after_order', 10, 2 );
