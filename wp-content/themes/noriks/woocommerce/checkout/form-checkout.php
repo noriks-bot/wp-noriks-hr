@@ -11,6 +11,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_checkout_form', $checkout );
 ?>
 
+<style>
+/* NUCLEAR OVERRIDE — kills ALL Storefront/WC/plugin styles on checkout */
+body.woocommerce-checkout .storefront-full-width-content .woocommerce,
+body.woocommerce-checkout .content-area,
+body.woocommerce-checkout .site-main,
+body.woocommerce-checkout .hentry { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+body.woocommerce-checkout .site-header,
+body.woocommerce-checkout .site-footer,
+body.woocommerce-checkout .storefront-breadcrumb,
+body.woocommerce-checkout .woocommerce-breadcrumb,
+body.woocommerce-checkout .woocommerce-privacy-policy-text,
+body.woocommerce-checkout .woocommerce-form-coupon-toggle,
+body.woocommerce-checkout .woocommerce-info,
+body.woocommerce-checkout .woocommerce-message { display: none !important; }
+body.woocommerce-checkout #payment { background: transparent !important; border: none !important; box-shadow: none !important; }
+body.woocommerce-checkout #payment .place-order { padding: 0 !important; background: transparent !important; }
+body.woocommerce-checkout #payment::before, body.woocommerce-checkout #payment::after { display: none !important; }
+</style>
+
 <div class="container container--xs bg--white wc-checkout-wrap">
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout"
