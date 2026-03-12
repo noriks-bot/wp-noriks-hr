@@ -45,8 +45,11 @@ function noriks_get_product_variations() {
 
     $attributes = [];
     foreach ($product->get_variation_attributes() as $attr_name => $options) {
-        // $attr_name is taxonomy slug like 'pa_size' or 'pa_color'
         $label = wc_attribute_label($attr_name);
+        
+        // For matching with variation attributes, use sanitized lowercase key
+        // WC variations use sanitize_title() on attribute names
+        $sanitized_key = 'attribute_' . sanitize_title($attr_name);
         
         $terms = [];
         foreach ($options as $option) {
@@ -58,8 +61,8 @@ function noriks_get_product_variations() {
         }
         
         $attributes[] = [
-            'name' => $attr_name,  // pa_size, pa_color etc.
-            'taxonomy' => 'attribute_' . $attr_name, // attribute_pa_size — matches variation keys
+            'name' => $attr_name,
+            'taxonomy' => $sanitized_key, // attribute_velicina — matches variation keys
             'label' => $label,
             'options' => $terms,
         ];
@@ -433,16 +436,10 @@ function noriks_upsell_modal_markup() {
         function findVariation() {
             if (!modalData.variations) return null;
             
-            // Build a lookup of all selected values (just the values, ignoring keys)
-            var selectedValues = {};
+            // Build lookup with lowercase keys for robust matching
+            var selectedLower = {};
             for (var k in selectedAttrs) {
-                // Store with multiple key formats for matching
-                selectedValues[k] = selectedAttrs[k];
-                if (k.indexOf('attribute_') === 0) {
-                    selectedValues[k.replace('attribute_', '')] = selectedAttrs[k];
-                } else {
-                    selectedValues['attribute_' + k] = selectedAttrs[k];
-                }
+                selectedLower[k.toLowerCase()] = selectedAttrs[k];
             }
             
             for (var i = 0; i < modalData.variations.length; i++) {
@@ -452,12 +449,10 @@ function noriks_upsell_modal_markup() {
                 for (var key in v.attributes) {
                     if (v.attributes[key] === '') continue; // any value matches
                     
-                    // Try direct match, then without attribute_ prefix, then with it
                     var val = v.attributes[key];
-                    if (selectedValues[key] === val) continue;
+                    var lkey = key.toLowerCase();
                     
-                    var altKey = key.indexOf('attribute_') === 0 ? key.replace('attribute_', '') : 'attribute_' + key;
-                    if (selectedValues[altKey] === val) continue;
+                    if (selectedLower[lkey] === val) continue;
                     
                     match = false;
                     break;
@@ -474,10 +469,7 @@ function noriks_upsell_modal_markup() {
             if ($btn.hasClass('adding')) return;
 
             // Check all attributes selected
-            var allSelected = modalData.attributes.every(function(attr) {
-                var key = attr.taxonomy || ('attribute_' + attr.name);
-                return selectedAttrs[key] !== undefined;
-            });
+            var allSelected = modalData.attributes.length > 0 && Object.keys(selectedAttrs).length >= modalData.attributes.length;
 
             if (!allSelected) {
                 $('#noriks-modal-error').show();
