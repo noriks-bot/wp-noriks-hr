@@ -349,6 +349,32 @@ function remove_payment_method_description( $description, $payment_id ) {
     return ''; // Return empty description
 }
 
+// Add fee badges to payment method labels (Besplatno / price)
+add_filter( 'woocommerce_gateway_title', 'noriks_payment_fee_badges', 10, 2 );
+function noriks_payment_fee_badges( $title, $payment_id ) {
+    if ( ! is_checkout() ) return $title;
+    
+    // COD has a fee (from WC settings), card/paypal are free
+    if ( $payment_id === 'cod' ) {
+        // Get COD fee from cart
+        $cod_fee = '';
+        if ( WC()->cart ) {
+            foreach ( WC()->cart->get_fees() as $fee ) {
+                if ( stripos( $fee->name, 'pouze' ) !== false || stripos( $fee->name, 'cod' ) !== false ) {
+                    $cod_fee = wc_price( $fee->total );
+                }
+            }
+        }
+        if ( $cod_fee ) {
+            $title .= ' <span class="payment-fee-not-free">' . $cod_fee . '</span>';
+        }
+    } else {
+        $title .= ' <span class="payment-fee-free">Besplatno</span>';
+    }
+    
+    return $title;
+}
+
 
 
 add_filter( 'woocommerce_cart_shipping_method_full_label', 'custom_shipping_label_price_only', 10, 2 );
