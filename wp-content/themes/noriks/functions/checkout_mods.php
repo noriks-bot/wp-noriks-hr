@@ -259,7 +259,7 @@ add_action( 'woocommerce_review_order_after_submit', function() {
     ?>
     <div class="checkout-trust-badge">
         <div class="trust-badge-inner">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/moneyback.png" alt="100% Money Back" class="trust-badge-icon" width="60" height="60">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneyback.svg" alt="100% Money Back" class="trust-badge-icon" width="60" height="60">
             <div class="trust-badge-text">
                 <strong>Kupujte bez brige</strong><br>
                 Povrat novca moguć u roku od 90 dana
@@ -377,19 +377,21 @@ add_filter( 'woocommerce_gateway_title', 'noriks_payment_fee_badges', 10, 2 );
 function noriks_payment_fee_badges( $title, $payment_id ) {
     if ( ! is_checkout() ) return $title;
     
-    // COD has a fee (from WC settings), card/paypal are free
+    // All payment methods get a fee badge
     if ( $payment_id === 'cod' ) {
-        // Get COD fee from cart
+        // COD might have a surcharge — check cart fees
         $cod_fee = '';
         if ( WC()->cart ) {
             foreach ( WC()->cart->get_fees() as $fee ) {
-                if ( stripos( $fee->name, 'pouze' ) !== false || stripos( $fee->name, 'cod' ) !== false ) {
-                    $cod_fee = wc_price( $fee->total );
+                if ( stripos( $fee->name, 'pouze' ) !== false || stripos( $fee->name, 'cod' ) !== false || stripos( $fee->name, 'pouze' ) !== false ) {
+                    $cod_fee = wc_price( $fee->total + $fee->tax );
                 }
             }
         }
         if ( $cod_fee ) {
             $title .= ' <span class="payment-fee-not-free">' . $cod_fee . '</span>';
+        } else {
+            $title .= ' <span class="payment-fee-free">Besplatno</span>';
         }
     } else {
         $title .= ' <span class="payment-fee-free">Besplatno</span>';
