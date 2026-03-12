@@ -221,9 +221,9 @@ body.woocommerce-checkout input[type="radio"] {
   line-height: 40px;
 }
 #billing_city_field .woocommerce-input-wrapper { display: flex; flex-direction: column; }
-#billing_city_field .select2-selection { height: 59px; }
-#billing_city_field .select2-selection .select2-selection__rendered { line-height: 59px; }
-#billing_city_field .select2-selection .select2-selection__arrow { height: 59px; }
+#billing_city_field .select2-selection { height: 60px; }
+#billing_city_field .select2-selection .select2-selection__rendered { line-height: 60px; font-size: 16px; }
+#billing_city_field .select2-selection .select2-selection__arrow { height: 60px; }
 #billing_city_field.dropdown .woocommerce-input-wrapper { flex-direction: column-reverse; }
 
 /* ===== FIELD LAYOUT: Ime/Prezime side-by-side (from app CSS) ===== */
