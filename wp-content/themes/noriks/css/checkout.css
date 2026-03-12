@@ -67,11 +67,19 @@ body.woocommerce-checkout {
   border-left: none;
 }
 @media (max-width: 991px) {
+  .my-checkout-container {
+    margin: 15px 0 0;
+    padding: 0;
+  }
   .checkout-card {
-    padding: 0 15px 30px;
+    padding: 0 15px 15px;
     border-radius: 5px 5px 0 0;
-    margin-top: 15px !important;
+    margin-top: 0 !important;
     border-left: none;
+  }
+  body.woocommerce-checkout .checkout-billing-title {
+    font-size: 20px;
+    margin: 0 0 15px;
   }
 }
 
@@ -712,22 +720,9 @@ body.woocommerce-checkout .content-area {
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 575.98px) {
-  .my-checkout-container {
-    padding: 0 !important;
-    margin: 0 auto !important;
-  }
-  .checkout-card {
-    border-left: none;
-    border-radius: 5px 5px 0 0;
-  }
+  /* All form-row-first/last stack to full width on mobile */
   body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-first,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last {
-    float: none !important;
-    width: 100% !important;
-    clear: both !important;
-    margin-right: 0 !important;
-  }
-  /* Address fields stack on mobile */
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last,
   body.woocommerce-checkout p#billing_address_1_field.form-row-first,
   body.woocommerce-checkout p#billing_address_2_field.form-row-last,
   body.woocommerce-checkout p#billing_postcode_field.form-row-first,
@@ -735,10 +730,7 @@ body.woocommerce-checkout .content-area {
     float: none !important;
     width: 100% !important;
     clear: both !important;
-  }
-  body.woocommerce-checkout #place_order {
-    font-size: 18px !important;
-    min-height: 56px !important;
+    margin-right: 0 !important;
   }
   body.woocommerce-checkout .phone-helper-row {
     flex-direction: column;
@@ -748,16 +740,5 @@ body.woocommerce-checkout .content-area {
     float: none;
     text-align: left;
     padding-right: 0;
-  }
-  body.woocommerce-checkout .vat-checkout-note {
-    align-items: center;
-  }
-  body.woocommerce-checkout .cod-checkout-prompt {
-    font-size: 13px;
-  }
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input:focus {
-    min-height: 52px;
-    font-size: 16px;
   }
 }
