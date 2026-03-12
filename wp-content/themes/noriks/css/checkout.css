@@ -232,56 +232,56 @@ body.woocommerce-checkout select {
 }
 
 /* ===== FIELD LAYOUT: Side by side fields ===== */
-/* ===== FIELD PAIRS: use flexbox for reliable side-by-side ===== */
+/* ===== FIELD PAIRS: float-based side-by-side ===== */
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 0 4% !important;
+  overflow: hidden !important; /* contain floats */
 }
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row {
   box-sizing: border-box !important;
 }
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-wide {
   width: 100% !important;
-  flex: 0 0 100% !important;
+  clear: both !important;
+  float: none !important;
 }
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-first {
   width: 48% !important;
-  flex: 0 0 48% !important;
-  float: none !important;
+  float: left !important;
+  clear: both !important;
+  margin-right: 0 !important;
 }
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last {
   width: 48% !important;
-  flex: 0 0 48% !important;
-  float: none !important;
+  float: right !important;
+  clear: none !important;
+  margin-left: 0 !important;
 }
 
 /* Ulica wider (58%), Kućni broj narrower (38%) */
 body.woocommerce-checkout p#billing_address_1_field {
-  flex: 0 0 58% !important;
   width: 58% !important;
+  margin-right: 0 !important;
 }
 body.woocommerce-checkout p#billing_address_2_field {
-  flex: 0 0 38% !important;
   width: 38% !important;
 }
 
 /* Poštanski broj narrower (38%), Grad wider (58%) */
 body.woocommerce-checkout p#billing_postcode_field {
-  flex: 0 0 38% !important;
   width: 38% !important;
+  margin-right: 0 !important;
 }
 body.woocommerce-checkout p#billing_city_field {
-  flex: 0 0 58% !important;
   width: 58% !important;
 }
 
-/* Helper text rows must be full width in the flex container */
+/* Helper text rows must be full width and clear floats */
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .phone-helper-row,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .email-not-required-row,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .address-hint-text {
-  flex: 0 0 100% !important;
   width: 100% !important;
+  clear: both !important;
+  float: none !important;
 }
 
 /* ===== ADDRESS HINT TEXT ===== */
@@ -687,8 +687,16 @@ body.woocommerce-checkout .apply-discount-button {
   white-space: nowrap;
 }
 
-/* ===== TRUST SECTION ===== */
-body.woocommerce-checkout .trust-section {
+/* ===== HIDE trust/coupon/extra sections completely ===== */
+body.woocommerce-checkout .trust-section,
+body.woocommerce-checkout .coupon-code-section,
+body.woocommerce-checkout .trust-section *,
+body.woocommerce-checkout .coupon-code-section * {
+  display: none !important;
+}
+
+/* ===== TRUST SECTION (legacy, hidden) ===== */
+body.woocommerce-checkout .trust-section-legacy {
   margin-top: 24px;
   padding-top: 16px;
   border-top: 1px solid #eee;
