@@ -326,6 +326,9 @@ add_action( 'wp_footer', function() {
     <script>
     jQuery(function($){
         function moveElements() {
+            // Remove any previously-moved .place-order outside #payment (prevents duplicates on updated_checkout)
+            $('.place-order').not('#payment .place-order').remove();
+            
             // Move .place-order (button + trust) after #order_review
             var $po = $('#payment .place-order');
             var $or = $('#order_review');
@@ -336,7 +339,6 @@ add_action( 'wp_footer', function() {
             var $shippingRow = $('.woocommerce-checkout-review-order-table .woocommerce-shipping-totals');
             var $shippingSection = $('.noriks-shipping-section');
             if ($shippingRow.length && $shippingSection.length) {
-                // Extract shipping content and display as standalone
                 var $shippingTd = $shippingRow.find('td');
                 if ($shippingTd.length) {
                     $shippingSection.html($shippingTd.html());
