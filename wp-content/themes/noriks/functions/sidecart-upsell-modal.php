@@ -424,19 +424,30 @@ function noriks_upsell_modal_markup() {
             }
         }
 
+        function normalizeKey(key) {
+            // Normalize to 'attribute_pa_xxx' format
+            if (key.indexOf('attribute_') === 0) return key;
+            return 'attribute_' + key;
+        }
+
         function findVariation() {
             if (!modalData.variations) return null;
+            
+            // Build normalized selectedAttrs
+            var normSelected = {};
+            for (var k in selectedAttrs) {
+                normSelected[normalizeKey(k)] = selectedAttrs[k];
+            }
             
             for (var i = 0; i < modalData.variations.length; i++) {
                 var v = modalData.variations[i];
                 var match = true;
                 
                 for (var key in v.attributes) {
-                    // key = 'attribute_pa_size', value = 'crne' etc.
+                    var nKey = normalizeKey(key);
                     if (v.attributes[key] === '') continue; // any value matches
                     
-                    // selectedAttrs uses same key format (attribute_pa_size)
-                    if (selectedAttrs[key] !== v.attributes[key]) {
+                    if (normSelected[nKey] !== v.attributes[key]) {
                         match = false;
                         break;
                     }
