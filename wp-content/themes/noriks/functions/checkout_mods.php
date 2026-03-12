@@ -319,23 +319,13 @@ add_action( 'woocommerce_checkout_after_customer_details', function() {
 }, 4 );
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 5 );
 
-// Move place-order button + shipping row via JS
+// Move shipping row via JS + hide duplicate place-order
 add_action( 'wp_footer', function() {
     if ( ! is_checkout() || is_wc_endpoint_url('order-received') ) return;
     ?>
     <script>
     jQuery(function($){
-        function moveElements() {
-            // Remove any previously-moved .place-order outside #payment (prevents duplicates on updated_checkout)
-            $('.place-order').not('#payment .place-order').remove();
-            
-            // Move .place-order (button + trust) after #order_review
-            var $po = $('#payment .place-order');
-            var $or = $('#order_review');
-            if ($po.length && $or.length) {
-                $or.after($po);
-            }
-            // Move shipping row from order review table into .noriks-shipping-section
+        function moveShipping() {
             var $shippingRow = $('.woocommerce-checkout-review-order-table .woocommerce-shipping-totals');
             var $shippingSection = $('.noriks-shipping-section');
             if ($shippingRow.length && $shippingSection.length) {
@@ -346,8 +336,8 @@ add_action( 'wp_footer', function() {
                 }
             }
         }
-        moveElements();
-        $(document.body).on('updated_checkout', moveElements);
+        moveShipping();
+        $(document.body).on('updated_checkout', moveShipping);
     });
     </script>
     <?php
