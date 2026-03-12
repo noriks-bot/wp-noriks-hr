@@ -461,8 +461,10 @@ h3.payment-title { font-size: 19.6px !important; font-weight: 700 !important; li
 
 /* Checkout warranty / moneyback */
 .checkout-warranty { display: flex; align-items: center; justify-content: center; gap: 10.5px; margin: 36px 0 22px; }
-.checkout-warranty__icon { width: 60px; flex-shrink: 0; }
-.checkout-warranty__icon img { width: 60px; height: 60px; object-fit: contain; }
+.checkout-warranty__icon { width: 60px !important; max-width: 60px !important; flex-shrink: 0; }
+.checkout-warranty__icon img { width: 60px !important; height: 60px !important; max-width: 60px !important; object-fit: contain; }
+/* Nuclear: prevent ANY image from being huge */
+.wc-checkout-wrap img:not(.shipping-courier-img):not(.sv-wc-payment-gateway-icon) { max-width: 100px; height: auto; }
 .checkout-warranty__text { font-size: 16px; line-height: 24px; color: #333; }
 
 /* Terms */

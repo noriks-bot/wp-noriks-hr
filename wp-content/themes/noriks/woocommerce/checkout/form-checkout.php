@@ -194,10 +194,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div>
   </div>
 
-  <!-- ========== HIDDEN WC ORDER REVIEW (for AJAX) ========== -->
-  <div id="wc_order_review_hidden" style="display:none">
-    <?php do_action( 'woocommerce_checkout_order_review' ); ?>
-  </div>
+  <!-- WC order review completely removed to prevent duplicate rendering -->
 
   <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 
