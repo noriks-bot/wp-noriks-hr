@@ -26,7 +26,7 @@ if ( ! wp_doing_ajax() ) {
 
 <div id="payment" class="woocommerce-checkout-payment">
     
- <h3 class="checkout-section-title"><?php echo get_field("checkout_option_subheading_2","options"); ?></h3>   
+ <?php // ACF subheading removed — section titles handled by checkout_mods.php ?>   
     
     
 	<?php if ( WC()->cart->needs_payment() ) : ?>
