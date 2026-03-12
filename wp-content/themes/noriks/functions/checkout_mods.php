@@ -148,6 +148,8 @@ function custom_checkout_reorder_fields( $fields ) {
     // Phone first (like vigoshop)
     if ( isset( $fields['billing']['billing_phone'] ) ) {
         $fields['billing']['billing_phone']['priority'] = 1;
+        $fields['billing']['billing_phone']['label'] = 'Broj mobilnog telefona';
+        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
     }
     
     // Email second

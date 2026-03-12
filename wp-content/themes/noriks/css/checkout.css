@@ -361,6 +361,13 @@ body.woocommerce-checkout #shipping_method li label .woocommerce-Price-amount {
 body.woocommerce-checkout .woocommerce-checkout-review-order-table .woocommerce-shipping-totals {
   display: none !important;
 }
+/* Hide any duplicate shipping display inside #payment */
+body.woocommerce-checkout #payment .woocommerce-shipping-totals,
+body.woocommerce-checkout #payment .shipping,
+body.woocommerce-checkout .place-order .woocommerce-shipping-totals,
+body.woocommerce-checkout .noriks-order-summary .woocommerce-shipping-totals {
+  display: none !important;
+}
 
 /* ===== PAYMENT METHODS ===== */
 body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods {
