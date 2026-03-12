@@ -232,56 +232,56 @@ body.woocommerce-checkout select {
 }
 
 /* ===== FIELD LAYOUT: Side by side fields ===== */
-body.woocommerce-checkout .form-row.form-row-first {
-  float: left !important;
-  width: 48% !important;
-  clear: both !important;
+/* ===== FIELD PAIRS: use flexbox for reliable side-by-side ===== */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0 4% !important;
 }
-body.woocommerce-checkout .form-row.form-row-last {
-  float: right !important;
-  width: 48% !important;
-  clear: none !important;
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row {
+  box-sizing: border-box !important;
 }
-body.woocommerce-checkout .form-row.form-row-wide {
-  clear: both !important;
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-wide {
   width: 100% !important;
+  flex: 0 0 100% !important;
+}
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-first {
+  width: 48% !important;
+  flex: 0 0 48% !important;
+  float: none !important;
+}
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last {
+  width: 48% !important;
+  flex: 0 0 48% !important;
   float: none !important;
 }
 
-/* Force Ime + Prezime side by side */
-body.woocommerce-checkout p#billing_first_name_field {
-  float: left !important;
-  width: 48% !important;
-  clear: both !important;
-}
-body.woocommerce-checkout p#billing_last_name_field {
-  float: right !important;
-  width: 48% !important;
-  clear: none !important;
-}
-
-/* Address fields: Ulica (58%) + Kućni broj (38%) side by side */
+/* Ulica wider (58%), Kućni broj narrower (38%) */
 body.woocommerce-checkout p#billing_address_1_field {
-  float: left !important;
+  flex: 0 0 58% !important;
   width: 58% !important;
-  clear: both !important;
 }
 body.woocommerce-checkout p#billing_address_2_field {
-  float: right !important;
+  flex: 0 0 38% !important;
   width: 38% !important;
-  clear: none !important;
 }
 
-/* Poštanski broj (38%) + Grad (58%) side by side */
+/* Poštanski broj narrower (38%), Grad wider (58%) */
 body.woocommerce-checkout p#billing_postcode_field {
-  float: left !important;
+  flex: 0 0 38% !important;
   width: 38% !important;
-  clear: both !important;
 }
 body.woocommerce-checkout p#billing_city_field {
-  float: right !important;
+  flex: 0 0 58% !important;
   width: 58% !important;
-  clear: none !important;
+}
+
+/* Helper text rows must be full width in the flex container */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .phone-helper-row,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .email-not-required-row,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .address-hint-text {
+  flex: 0 0 100% !important;
+  width: 100% !important;
 }
 
 /* ===== ADDRESS HINT TEXT ===== */
