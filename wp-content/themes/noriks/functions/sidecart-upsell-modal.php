@@ -45,7 +45,7 @@ function noriks_get_product_variations() {
 
     $attributes = [];
     foreach ($product->get_variation_attributes() as $attr_name => $options) {
-        $taxonomy = str_replace('attribute_', '', $attr_name);
+        // $attr_name is taxonomy slug like 'pa_size' or 'pa_color'
         $label = wc_attribute_label($attr_name);
         
         $terms = [];
@@ -53,12 +53,13 @@ function noriks_get_product_variations() {
             $term = get_term_by('slug', $option, $attr_name);
             $terms[] = [
                 'slug' => $option,
-                'name' => $term ? $term->name : $option,
+                'name' => $term ? $term->name : ucfirst($option),
             ];
         }
         
         $attributes[] = [
-            'name' => $attr_name,
+            'name' => $attr_name,  // pa_size, pa_color etc.
+            'taxonomy' => 'attribute_' . $attr_name, // attribute_pa_size — matches variation keys
             'label' => $label,
             'options' => $terms,
         ];
@@ -330,7 +331,7 @@ function noriks_upsell_modal_markup() {
                 attr.options.forEach(function(opt) {
                     var $btn = $('<button class="noriks-attr-btn">')
                         .text(opt.name)
-                        .attr('data-attr', attr.name)
+                        .attr('data-attr', attr.taxonomy || ('attribute_' + attr.name))
                         .attr('data-value', opt.slug);
                     $options.append($btn);
                 });
@@ -377,12 +378,11 @@ function noriks_upsell_modal_markup() {
                 var match = true;
                 
                 for (var key in v.attributes) {
-                    var attrName = key; // e.g., attribute_pa_size
-                    var lookupKey = key.replace('attribute_', '');
-                    
+                    // key = 'attribute_pa_size', value = 'crne' etc.
                     if (v.attributes[key] === '') continue; // any value matches
                     
-                    if (selectedAttrs[lookupKey] !== v.attributes[key]) {
+                    // selectedAttrs uses same key format (attribute_pa_size)
+                    if (selectedAttrs[key] !== v.attributes[key]) {
                         match = false;
                         break;
                     }
@@ -400,7 +400,8 @@ function noriks_upsell_modal_markup() {
 
             // Check all attributes selected
             var allSelected = modalData.attributes.every(function(attr) {
-                return selectedAttrs[attr.name] !== undefined;
+                var key = attr.taxonomy || ('attribute_' + attr.name);
+                return selectedAttrs[key] !== undefined;
             });
 
             if (!allSelected) {
