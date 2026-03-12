@@ -365,14 +365,17 @@ color: white;
 }
 
 @media (min-width: 768px) {
-    .storefront-full-width-content.single-product div.product .woocommerce-product-gallery {
+    .storefront-full-width-content.single-product div.product .woocommerce-product-gallery,
+    .single-product div.product .woocommerce-product-gallery {
         width: 48% !important;
-        margin-right: 2%;
-        float: left;
+        margin-right: 2% !important;
+        float: left !important;
     }
-    .storefront-full-width-content.single-product div.product .summary {
+    .storefront-full-width-content.single-product div.product .summary,
+    .single-product div.product .summary {
         width: 48% !important;
-        float: right;
+        float: right !important;
+        margin-right: 0 !important;
     }
 }
 
