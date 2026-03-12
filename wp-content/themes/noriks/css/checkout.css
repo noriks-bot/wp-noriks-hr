@@ -426,7 +426,7 @@ body.woocommerce-checkout input[name="woocommerce_checkout_place_order"] {
   font-weight: 700 !important;
   font-family: 'Roboto', sans-serif !important;
   color: #fff !important;
-  background: #cc0000 !important;
+  background: linear-gradient(to bottom, #47b426, #24b800) !important;
   border: none !important;
   border-radius: 4px !important;
   cursor: pointer;
@@ -436,7 +436,7 @@ body.woocommerce-checkout input[name="woocommerce_checkout_place_order"] {
   letter-spacing: normal !important;
 }
 body.woocommerce-checkout #place_order:hover {
-  background: #aa0000 !important;
+  background: linear-gradient(to bottom, #3da020, #1fa000) !important;
 }
 
 /* ===== ORDER REVIEW ===== */
