@@ -145,72 +145,72 @@ function custom_move_email_field_first( $fields ) {
 
 add_filter( 'woocommerce_checkout_fields', 'custom_checkout_reorder_fields' );
 function custom_checkout_reorder_fields( $fields ) {
-    // Phone first (like vigoshop)
-    if ( isset( $fields['billing']['billing_phone'] ) ) {
-        $fields['billing']['billing_phone']['priority'] = 1;
-        $fields['billing']['billing_phone']['label'] = 'Broj mobilnog telefona';
-        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
-    }
-    
-    // Email second
-    if ( isset( $fields['billing']['billing_email'] ) ) {
-        $fields['billing']['billing_email']['priority'] = 2;
-        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
-    }
+    // Vigoshop exact order: Ime/Prezime → Ulica → Kućni → Poštanski → Grad → Telefon → Email
+    // All address fields FULL WIDTH (form-row-wide) — matches vigoshop exactly
 
-    // Country next
-    if ( isset( $fields['billing']['billing_country'] ) ) {
-        $fields['billing']['billing_country']['priority'] = 5;
-    }
-
-    // First name
+    // First name + Last name side by side (like vigoshop)
     if ( isset( $fields['billing']['billing_first_name'] ) ) {
         $fields['billing']['billing_first_name']['priority'] = 10;
         $fields['billing']['billing_first_name']['class'] = array( 'form-row-first' );
     }
-
-    // Last name — immediately after first name
     if ( isset( $fields['billing']['billing_last_name'] ) ) {
         $fields['billing']['billing_last_name']['priority'] = 11;
         $fields['billing']['billing_last_name']['class'] = array( 'form-row-last' );
     }
 
-
-
-     // Ensure address_1 has a priority before address_2
+    // Ulica — full width
     if ( isset( $fields['billing']['billing_address_1'] ) ) {
-        $fields['billing']['billing_address_1']['priority'] = 40;
+        $fields['billing']['billing_address_1']['priority'] = 20;
         $fields['billing']['billing_address_1']['required'] = true;
-        $fields['billing']['billing_address_1']['class'] = array( 'form-row-first' );
+        $fields['billing']['billing_address_1']['label'] = 'Ulica';
+        $fields['billing']['billing_address_1']['placeholder'] = 'Ulica';
+        $fields['billing']['billing_address_1']['class'] = array( 'form-row-wide' );
     }
 
-    // Make sure address_2 exists, is visible, and ordered correctly
+    // Kućni broj — full width
     if ( isset( $fields['billing']['billing_address_2'] ) ) {
-        $fields['billing']['billing_address_2']['priority'] = 41;
+        $fields['billing']['billing_address_2']['priority'] = 21;
         $fields['billing']['billing_address_2']['required'] = true;
-        $fields['billing']['billing_address_2']['label'] = __( 'Kućni broj', 'your-textdomain' );
-        $fields['billing']['billing_address_2']['placeholder'] = __( 'Kućni broj', 'your-textdomain' );
-        $fields['billing']['billing_address_2']['class'] = array( 'form-row-last' );
+        $fields['billing']['billing_address_2']['label'] = 'Kućni broj';
+        $fields['billing']['billing_address_2']['placeholder'] = 'Kućni broj';
+        $fields['billing']['billing_address_2']['class'] = array( 'form-row-wide' );
     }
 
-    // Poštanski broj + Grad side by side
+    // Poštanski broj — full width
     if ( isset( $fields['billing']['billing_postcode'] ) ) {
-        $fields['billing']['billing_postcode']['priority'] = 50;
-        $fields['billing']['billing_postcode']['class'] = array( 'form-row-first' );
+        $fields['billing']['billing_postcode']['priority'] = 30;
+        $fields['billing']['billing_postcode']['class'] = array( 'form-row-wide' );
     }
+
+    // Grad — full width (dropdown via JS)
     if ( isset( $fields['billing']['billing_city'] ) ) {
-        $fields['billing']['billing_city']['priority'] = 51;
-        $fields['billing']['billing_city']['class'] = array( 'form-row-last' );
+        $fields['billing']['billing_city']['priority'] = 31;
+        $fields['billing']['billing_city']['class'] = array( 'form-row-wide' );
+    }
+
+    // Telefon — after address fields
+    if ( isset( $fields['billing']['billing_phone'] ) ) {
+        $fields['billing']['billing_phone']['priority'] = 40;
+        $fields['billing']['billing_phone']['label'] = 'Broj mobilnog telefona';
+        $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
     }
     
-    // Hide state field (vigoshop hides it)
-    if ( isset( $fields['billing']['billing_state'] ) ) {
-        $fields['billing']['billing_state']['class'] = array( 'form-row-wide', 'hidden-field' );
+    // Email — after phone
+    if ( isset( $fields['billing']['billing_email'] ) ) {
+        $fields['billing']['billing_email']['priority'] = 41;
+        $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
     }
 
-
-
-
+    // Country — hidden (fixed HR)
+    if ( isset( $fields['billing']['billing_country'] ) ) {
+        $fields['billing']['billing_country']['priority'] = 90;
+    }
+    
+    // State — hidden
+    if ( isset( $fields['billing']['billing_state'] ) ) {
+        $fields['billing']['billing_state']['class'] = array( 'form-row-wide', 'hidden-field' );
+        $fields['billing']['billing_state']['priority'] = 91;
+    }
 
     return $fields;
 }
@@ -234,24 +234,24 @@ function add_contact_heading_before_email() {
     echo '<h3 class="checkout-billing-title">Plaćanje i Dostava</h3>';
 }
 
-// Helper texts: phone example, email not required, address hint
+// Helper texts: address hint after last_name, phone example after phone, email note before email
 add_filter( 'woocommerce_form_field', 'noriks_checkout_helper_texts', 10, 4 );
 function noriks_checkout_helper_texts( $field, $key, $args, $value ) {
     if ( ! is_checkout() ) return $field;
+    
+    // After last_name: address hint text (vigoshop puts this between name and address)
+    if ( $key === 'billing_last_name' ) {
+        $field .= '<div class="address-hint-text" style="clear:both; width:100%; float:none;">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';
+    }
     
     // After phone: helper row with both texts
     if ( $key === 'billing_phone' ) {
         $field .= '<div class="phone-helper-row"><span class="example-number">Primjer: 0912345678</span><span class="phone_number_delivery_assist_tooltip">Za pomoć s dostavom</span></div>';
     }
     
-    // Before email: "* E-mail adresa nije obavezna" — as separate full-width row
+    // Before email: "* E-mail adresa nije obavezna"
     if ( $key === 'billing_email' ) {
         $field = '<div class="email-not-required-row"><span class="hr_email_not_required">* E-mail adresa nije obavezna</span></div>' . $field;
-    }
-    
-    // Before address_1: hint text — must be full-width and clear floats
-    if ( $key === 'billing_address_1' ) {
-        $field = '<div class="address-hint-text" style="clear:both; width:100%; float:none;">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>' . $field;
     }
     
     return $field;

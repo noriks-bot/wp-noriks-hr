@@ -241,12 +241,7 @@ body.woocommerce-checkout input[type="radio"] {
 #billing_city_field.dropdown .woocommerce-input-wrapper { flex-direction: column-reverse; }
 
 /* ===== FIELD LAYOUT: Ime/Prezime side-by-side (from app CSS) ===== */
-@media (min-width: 768px) {
-  .col2-set .form-row-first,
-  p#billing_postcode_field { margin-right: 2%; width: 49%; }
-  .col2-set .form-row-last,
-  p#billing_city_field { width: 49%; }
-}
+/* Name fields side by side on desktop (first/last name only) */
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-first {
   float: left !important;
   width: 49% !important;
@@ -267,16 +262,14 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row
 #billing_first_name_field { padding-right: 0; z-index: 99; }
 #billing_last_name_field { z-index: 99; }
 
-/* ===== ADDRESS FIELDS (vigoshop: Ulica 67%/Kućni 31%, Poštanski 35%/Grad 63%) ===== */
-body.woocommerce-checkout p#billing_address_1_field.form-row-first { width: 67% !important; }
-body.woocommerce-checkout p#billing_address_2_field.form-row-last { width: 31% !important; }
-body.woocommerce-checkout p#billing_postcode_field.form-row-first { width: 35% !important; }
-body.woocommerce-checkout p#billing_city_field.form-row-last { width: 63% !important; }
-@media (max-width: 575.98px) {
-  p#billing_address_1_field,
-  p#billing_address_2_field,
-  p#billing_city_field,
-  p#billing_postcode_field { width: 100%; float: none; clear: both; }
+/* ===== ADDRESS FIELDS (vigoshop: ALL full width, no side-by-side) ===== */
+body.woocommerce-checkout p#billing_address_1_field,
+body.woocommerce-checkout p#billing_address_2_field,
+body.woocommerce-checkout p#billing_postcode_field,
+body.woocommerce-checkout p#billing_city_field {
+  width: 100% !important;
+  float: none !important;
+  clear: both !important;
 }
 #billing_address_2_field .optional { display: none; }
 
@@ -720,13 +713,9 @@ body.woocommerce-checkout .content-area {
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 575.98px) {
-  /* All form-row-first/last stack to full width on mobile */
+  /* Name fields stack on mobile */
   body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-first,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last,
-  body.woocommerce-checkout p#billing_address_1_field.form-row-first,
-  body.woocommerce-checkout p#billing_address_2_field.form-row-last,
-  body.woocommerce-checkout p#billing_postcode_field.form-row-first,
-  body.woocommerce-checkout p#billing_city_field.form-row-last {
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row.form-row-last {
     float: none !important;
     width: 100% !important;
     clear: both !important;
