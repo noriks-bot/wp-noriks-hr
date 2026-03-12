@@ -262,16 +262,47 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .form-row
 #billing_first_name_field { padding-right: 0; z-index: 99; }
 #billing_last_name_field { z-index: 99; }
 
-/* ===== ADDRESS FIELDS (vigoshop: ALL full width, no side-by-side) ===== */
-body.woocommerce-checkout p#billing_address_1_field,
-body.woocommerce-checkout p#billing_address_2_field,
-body.woocommerce-checkout p#billing_postcode_field,
-body.woocommerce-checkout p#billing_city_field {
-  width: 100% !important;
-  float: none !important;
+/* ===== ADDRESS FIELDS (from custom-checkout-hr EXACT) ===== */
+p#billing_address_1_field,
+p#billing_address_2_field,
+p#billing_city_field,
+p#billing_postcode_field {
+  clear: none !important;
+}
+p#billing_address_1_field {
+  float: left !important;
+  width: 67% !important;
+}
+p#billing_address_2_field {
+  float: right !important;
+  width: 31% !important;
+}
+p#billing_postcode_field {
   clear: both !important;
+  float: left !important;
+  width: 35% !important;
+}
+p#billing_city_field {
+  clear: none !important;
+  float: right !important;
+  width: 63% !important;
+}
+@media (max-width: 575.98px) {
+  p#billing_address_1_field,
+  p#billing_address_2_field,
+  p#billing_city_field,
+  p#billing_postcode_field {
+    width: 100% !important;
+    float: none !important;
+  }
 }
 #billing_address_2_field .optional { display: none; }
+/* City select height (from custom-checkout-hr) */
+#billing_city_field .select2-selection { height: 59px !important; }
+#billing_city_field .select2-selection .select2-selection__rendered { line-height: 59px !important; }
+#billing_city_field .select2-selection .select2-selection__arrow { height: 59px !important; }
+/* State field hidden (vigoshop HR) */
+p#billing_state_field { display: none !important; }
 
 /* ===== ADDRESS HINT TEXT ===== */
 body.woocommerce-checkout .address-hint-text {
@@ -721,6 +752,7 @@ body.woocommerce-checkout .content-area {
     clear: both !important;
     margin-right: 0 !important;
   }
+  /* Address fields already handled by #billing_*_field media query above */
   body.woocommerce-checkout .phone-helper-row {
     flex-direction: column;
     gap: 2px;

@@ -158,34 +158,34 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_last_name']['class'] = array( 'form-row-last' );
     }
 
-    // Ulica — full width
+    // Ulica 67% + Kućni 31% side by side (from custom-checkout-hr)
     if ( isset( $fields['billing']['billing_address_1'] ) ) {
         $fields['billing']['billing_address_1']['priority'] = 20;
         $fields['billing']['billing_address_1']['required'] = true;
         $fields['billing']['billing_address_1']['label'] = 'Ulica';
         $fields['billing']['billing_address_1']['placeholder'] = 'Ulica';
-        $fields['billing']['billing_address_1']['class'] = array( 'form-row-wide' );
+        $fields['billing']['billing_address_1']['class'] = array( 'form-row-wide', 'address-field' );
     }
 
-    // Kućni broj — full width
+    // Kućni broj (floated via CSS)
     if ( isset( $fields['billing']['billing_address_2'] ) ) {
         $fields['billing']['billing_address_2']['priority'] = 21;
         $fields['billing']['billing_address_2']['required'] = true;
         $fields['billing']['billing_address_2']['label'] = 'Kućni broj';
         $fields['billing']['billing_address_2']['placeholder'] = 'Kućni broj';
-        $fields['billing']['billing_address_2']['class'] = array( 'form-row-wide' );
+        $fields['billing']['billing_address_2']['class'] = array( 'form-row-wide', 'address-field' );
     }
 
-    // Poštanski broj — full width
+    // Poštanski 35% + Grad 63% side by side (from custom-checkout-hr)
     if ( isset( $fields['billing']['billing_postcode'] ) ) {
         $fields['billing']['billing_postcode']['priority'] = 30;
-        $fields['billing']['billing_postcode']['class'] = array( 'form-row-wide' );
+        $fields['billing']['billing_postcode']['class'] = array( 'form-row-wide', 'address-field' );
     }
 
-    // Grad — full width (dropdown via JS)
+    // Grad (dropdown, floated via CSS)
     if ( isset( $fields['billing']['billing_city'] ) ) {
         $fields['billing']['billing_city']['priority'] = 31;
-        $fields['billing']['billing_city']['class'] = array( 'form-row-wide' );
+        $fields['billing']['billing_city']['class'] = array( 'form-row-wide', 'address-field' );
     }
 
     // Telefon — after address fields
@@ -206,9 +206,8 @@ function custom_checkout_reorder_fields( $fields ) {
         $fields['billing']['billing_country']['priority'] = 90;
     }
     
-    // State — hidden
+    // State — hidden via CSS (p#billing_state_field display:none)
     if ( isset( $fields['billing']['billing_state'] ) ) {
-        $fields['billing']['billing_state']['class'] = array( 'form-row-wide', 'hidden-field' );
         $fields['billing']['billing_state']['priority'] = 91;
     }
 
