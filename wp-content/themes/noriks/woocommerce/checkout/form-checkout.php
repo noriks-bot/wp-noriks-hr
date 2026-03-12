@@ -14,12 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="checkout--my-header">
-    <a href="<?php echo get_home_url(); ?>">
-        <span class="noriks-logo-text">NORIKS</span>
-    </a>
-</div>
-
 <?php
 do_action( 'woocommerce_before_checkout_form', $checkout );
 
