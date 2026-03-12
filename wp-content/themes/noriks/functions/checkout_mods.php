@@ -290,17 +290,13 @@ function set_placeholders_keep_labels( $fields ) {
 }
 
 
-// Remove default payment section from order review
+// Remove default payment from order review (we render it separately)
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 
-// Dostava title is rendered via CSS on the shipping totals row in order review
-
-// Add "Način plaćanja" title + payment methods after shipping
+// After billing: Način plaćanja title + payment methods
 add_action( 'woocommerce_checkout_after_customer_details', function() {
     echo '<h3 class="checkout-section-title payment-title">Način plaćanja</h3>';
 }, 4 );
-
-// Re-add payment section
 add_action( 'woocommerce_checkout_after_customer_details', 'woocommerce_checkout_payment', 5 );
 
 

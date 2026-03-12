@@ -2,7 +2,7 @@
 /**
  * Checkout Form — Noriks (Vigoshop-style single-column layout)
  *
- * Order: Billing fields → Shipping → Payment → Order Review → Place Order → Trust
+ * Order: Billing → Dostava → Način plaćanja → Sažetak → Ukupni iznos → Naruči → Trust
  *
  * @see https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
@@ -50,16 +50,14 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 
-	<!-- Order Review (Sažetak narudžbe) -->
+	<!-- Sažetak narudžbe + Payment + Button -->
 	<div id="order_review" class="woocommerce-checkout-review-order">
-		<h3 class="checkout-section-title">Sažetak narudžbe</h3>
+		<h3 class="checkout-section-title sazatak-title">Sažetak narudžbe</h3>
 
 		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 	</div>
-
-	<!-- Trust/reviews removed — checkout matches vigoshop minimal layout -->
 
 </div><!-- .checkout-card -->
 
