@@ -623,6 +623,40 @@ body.woocommerce-checkout .col-2 {
   clear: both !important;
 }
 
+/* ===== SAŽETAK NARUDŽBE TITLE ===== */
+body.woocommerce-checkout .sazatak-title {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  margin: 20px 0 12px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== PRODUCT ROWS IN ORDER REVIEW ===== */
+body.woocommerce-checkout .woocommerce-checkout-review-order-table tbody tr.cart_item td {
+  padding: 12px 0 !important;
+  border-bottom: 1px solid #f5f5f5 !important;
+  color: #666 !important;
+  font-size: 14px !important;
+}
+body.woocommerce-checkout .woocommerce-checkout-review-order-table tbody tr.cart_item:last-child td {
+  border-bottom: none !important;
+}
+
+/* ===== SHIPPING ROW LABEL ===== */
+body.woocommerce-checkout .woocommerce-checkout-review-order-table .shipping th {
+  color: #666 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
+/* ===== SUBTOTAL / TOTAL ROWS ===== */
+body.woocommerce-checkout .woocommerce-checkout-review-order-table tfoot .cart-subtotal th,
+body.woocommerce-checkout .woocommerce-checkout-review-order-table tfoot .cart-subtotal td {
+  display: none !important;
+}
+
 /* ===== STOREFRONT OVERRIDES ===== */
 body.woocommerce-checkout .storefront-full-width-content .woocommerce,
 body.woocommerce-checkout .content-area {
