@@ -3,6 +3,13 @@
    Based on vigoshop.hr computed styles + checkout-hr.css
    ============================================= */
 
+/* Hide header + top-header + footer on checkout */
+.woocommerce-checkout .top-header,
+.woocommerce-checkout .navbar.header,
+.woocommerce-checkout .site-footer {
+    display: none !important;
+}
+
 /* ===== HIDE UNWANTED ELEMENTS ===== */
 body.woocommerce-checkout .header,
 body.woocommerce-checkout .footer,
