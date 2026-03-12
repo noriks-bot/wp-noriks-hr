@@ -3,6 +3,7 @@
 
 # But keep .gitignore itself
 !.gitignore
+!.cpanel.yml
 
 # But keep wp-content
 !/wp-content/
