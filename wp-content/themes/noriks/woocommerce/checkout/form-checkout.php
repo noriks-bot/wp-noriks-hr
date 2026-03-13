@@ -35,7 +35,7 @@ body.woocommerce-checkout #payment::before, body.woocommerce-checkout #payment::
 .woocommerce-checkout [class*="zone-selector"],
 .woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .hidden-field,
 .woocommerce-checkout form.checkout > .woocommerce-info,
-.woocommerce-checkout form.checkout > div:first-child:not(.checkout-card):not(.container) { display: none !important; }
+.woocommerce-checkout form.checkout > div:first-child:not(.checkout-card):not(.container):not(.col2-set) { display: none !important; }
 /* Hide WC duplicate button — only show our static one */
 .woocommerce-checkout .place-order #place_order { display: none !important; }
 .woocommerce-checkout #order_review #place_order { display: flex !important; }
