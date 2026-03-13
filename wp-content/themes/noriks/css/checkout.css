@@ -40,7 +40,21 @@ body.woocommerce-checkout [class*="country-selector"],
 body.woocommerce-checkout [class*="zone-selector"],
 body.woocommerce-checkout .footer-copyright__content,
 body.woocommerce-checkout .footer-payment,
-body.woocommerce-checkout .general-sub-banner-wrapper {
+body.woocommerce-checkout .general-sub-banner-wrapper,
+body.woocommerce-checkout .storefront-handheld-footer-bar,
+body.woocommerce-checkout .xoo-wsc-container,
+body.woocommerce-checkout .xoo-wsc-modal,
+body.woocommerce-checkout .col-full,
+body.woocommerce-checkout .page-template-default > .hentry > .entry-content > *:not(.woocommerce),
+body.woocommerce-checkout .storefront-sorting,
+body.woocommerce-checkout .related.products,
+body.woocommerce-checkout .up-sells,
+body.woocommerce-checkout .site-info,
+body.woocommerce-checkout .footer-widgets,
+body.woocommerce-checkout #secondary,
+body.woocommerce-checkout .widget-area,
+body.woocommerce-checkout .storefront-product-section,
+body.woocommerce-checkout .woocommerce-products-header {
   display: none !important;
 }
 
@@ -438,9 +452,37 @@ p#billing_city_field { clear: none; float: right; width: 63%; }
   justify-content: flex-end;
   text-align: right;
 }
+.sv-wc-payment-gateway-card-icons img,
 .wc-braintree-credit-card-payment-gateway-icon {
   width: 48px !important;
   height: 30px !important;
+  max-width: 48px !important;
+  max-height: 30px !important;
+  object-fit: contain;
+}
+
+/* PayPal icon */
+.payment_method_braintree_paypal label img,
+.payment_method_braintree_paypal label > img {
+  width: 100px !important;
+  max-width: 100px !important;
+  max-height: 33px !important;
+  margin-left: auto;
+}
+
+/* COD icon */
+.hs-checkout__payment-method-cod-icon-container img {
+  height: 40px !important;
+  max-height: 40px !important;
+  width: auto !important;
+}
+
+/* ALL images inside payment labels must be constrained */
+#payment .wc_payment_methods li label img {
+  max-width: 100px;
+  max-height: 40px;
+  height: auto;
+  width: auto;
 }
 
 /* COD icon */
@@ -450,12 +492,7 @@ p#billing_city_field { clear: none; float: right; width: 63%; }
 }
 .hs-checkout__payment-method-cod-icon-container img { height: 40px; }
 
-/* PayPal icon */
-.payment_method_braintree_paypal label > img {
-  width: 100px;
-  max-height: 33px;
-  margin-left: auto;
-}
+/* (PayPal icon rule moved to card icons section above) */
 
 /* Braintree label flex layout */
 #payment ul.payment_methods li label[for='payment_method_braintree_credit_card'],
