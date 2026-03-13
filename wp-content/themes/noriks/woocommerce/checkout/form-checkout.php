@@ -28,6 +28,17 @@ body.woocommerce-checkout .woocommerce-message { display: none !important; }
 body.woocommerce-checkout #payment { background: transparent !important; border: none !important; box-shadow: none !important; }
 body.woocommerce-checkout #payment .place-order { padding: 0 !important; background: transparent !important; }
 body.woocommerce-checkout #payment::before, body.woocommerce-checkout #payment::after { display: none !important; }
+/* Hide country selector plugin */
+.woocommerce-checkout .wcpbc-checkout-zone-selector,
+.woocommerce-checkout .wcpbc-country-selector,
+.woocommerce-checkout [class*="country-selector"],
+.woocommerce-checkout [class*="zone-selector"],
+.woocommerce-checkout .woocommerce-billing-fields__field-wrapper > .hidden-field,
+.woocommerce-checkout form.checkout > .woocommerce-info,
+.woocommerce-checkout form.checkout > div:first-child:not(.checkout-card):not(.container) { display: none !important; }
+/* Hide WC duplicate button — only show our static one */
+.woocommerce-checkout .place-order #place_order { display: none !important; }
+.woocommerce-checkout #order_review #place_order { display: flex !important; }
 </style>
 
 <div class="container container--xs bg--white wc-checkout-wrap">
@@ -90,9 +101,9 @@ body.woocommerce-checkout #payment::before, body.woocommerce-checkout #payment::
       </li>
 
       <!-- Credit Card (Stripe) -->
-      <li class="wc_payment_method payment_method_stripe">
-        <input id="payment_method_stripe" type="radio" class="input-radio" name="payment_method" value="stripe" data-order_button_text="Naruči" />
-        <label for="payment_method_stripe">
+      <li class="wc_payment_method payment_method_stripe_cc">
+        <input id="payment_method_stripe_cc" type="radio" class="input-radio" name="payment_method" value="stripe_cc" data-order_button_text="Naruči" />
+        <label for="payment_method_stripe_cc">
           Kreditna kartica <span class="payment-fee-free">Besplatno</span>
           <div class="sv-wc-payment-gateway-card-icons">
             <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />

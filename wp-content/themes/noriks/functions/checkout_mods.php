@@ -132,9 +132,28 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
 // Remove WC's default payment rendering from order review
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 
-// Remove coupon form
+// Remove coupon form and country selector
 add_action( 'wp', function() {
     remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+    // Remove all hooks on woocommerce_before_checkout_form except login form
+    global $wp_filter;
+    if ( isset( $wp_filter['woocommerce_before_checkout_form'] ) ) {
+        foreach ( $wp_filter['woocommerce_before_checkout_form']->callbacks as $priority => $hooks ) {
+            foreach ( $hooks as $tag => $hook ) {
+                // Keep only WC login/checkout_form_billing and our own hooks
+                if ( strpos( $tag, 'woocommerce_checkout_login_form' ) === false && 
+                     strpos( $tag, 'checkout_billing_title' ) === false ) {
+                    // Remove country selectors and other plugin hooks
+                    if ( is_array( $hook['function'] ) ) {
+                        $class = is_object( $hook['function'][0] ) ? get_class( $hook['function'][0] ) : $hook['function'][0];
+                        if ( stripos( $class, 'country' ) !== false || stripos( $class, 'flag' ) !== false ) {
+                            remove_action( 'woocommerce_before_checkout_form', $hook['function'], $priority );
+                        }
+                    }
+                }
+            }
+        }
+    }
 });
 
 // ===== HIDE WC PRIVACY TEXT =====
@@ -176,3 +195,59 @@ add_filter( 'gettext', function( $translated, $text, $domain ) {
     if ( is_checkout() && $text === 'Total' && $domain === 'woocommerce' ) return 'Ukupni iznos:';
     return $translated;
 }, 10, 3 );
+
+// ===== PAYMENT METHOD ORDER: COD → CC → PayPal =====
+add_filter( 'woocommerce_available_payment_gateways', function( $gateways ) {
+    if ( ! is_checkout() ) return $gateways;
+    $order = array( 'cod', 'stripe_cc', 'ppcp-gateway' );
+    $sorted = array();
+    foreach ( $order as $id ) {
+        if ( isset( $gateways[ $id ] ) ) $sorted[ $id ] = $gateways[ $id ];
+    }
+    foreach ( $gateways as $id => $gw ) {
+        if ( ! isset( $sorted[ $id ] ) ) $sorted[ $id ] = $gw;
+    }
+    return $sorted;
+}, 100 );
+
+// ===== RENAME PAYMENT METHODS =====
+add_filter( 'woocommerce_gateway_title', function( $title, $id ) {
+    if ( ! is_checkout() ) return $title;
+    if ( $id === 'cod' ) return 'Plaćanje prilikom preuzimanja';
+    if ( $id === 'stripe_cc' ) return 'Kreditna kartica';
+    return $title;
+}, 5, 2 );
+
+// ===== DEFAULT COD =====
+add_filter( 'default_checkout_payment_method', function( $method, $gateways ) {
+    return isset( $gateways['cod'] ) ? 'cod' : $method;
+}, 10, 2 );
+
+add_action( 'woocommerce_before_checkout_form', function() {
+    if ( ! function_exists('WC') || ! WC()->session ) return;
+    $chosen = WC()->session->get('chosen_payment_method');
+    if ( empty($chosen) ) {
+        $available = WC()->payment_gateways()->get_available_payment_gateways();
+        if ( isset($available['cod']) ) WC()->session->set('chosen_payment_method', 'cod');
+    }
+}, 5 );
+
+// ===== HIDE COUNTRY FIELD COMPLETELY =====
+add_filter( 'woocommerce_checkout_fields', function( $fields ) {
+    // Set country to HR and hide it
+    if ( isset( $fields['billing']['billing_country'] ) ) {
+        $fields['billing']['billing_country']['type'] = 'hidden';
+        $fields['billing']['billing_country']['default'] = 'HR';
+        $fields['billing']['billing_country']['class'] = array( 'hidden-field' );
+    }
+    return $fields;
+}, 30 );
+
+// Force country to HR
+add_filter( 'default_checkout_billing_country', function() { return 'HR'; } );
+
+// ===== REMOVE PAYMENT DESCRIPTION =====
+add_filter( 'woocommerce_gateway_description', function() { return ''; }, 20, 2 );
+
+// ===== HIDE WC ORDER BUTTON (we have our own in static HTML) =====
+add_filter( 'woocommerce_order_button_html', function() { return ''; } );

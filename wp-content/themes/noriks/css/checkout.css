@@ -202,7 +202,12 @@ button, input, select, textarea { font-family: Roboto, sans-serif, -apple-system
 
 /* ===== custom-checkout-general-3ba2df51f0.css ===== */
 
-p#billing_country_field, p#billing_state_field { display: none; }
+p#billing_country_field, p#billing_state_field, #billing_country_field, .hidden-field,
+.woocommerce-checkout #billing_country_field, .country_to_state { display: none !important; }
+/* Hide ANY country selector with flags */
+.woocommerce-checkout .wc-block-components-country-input,
+.woocommerce-checkout .country_select,
+.woocommerce-checkout [id*="country"] img { display: none !important; }
 .form-row-wide { clear: both; width: 100%; }
 .custom-email-validation a, .remove-warranty-link, .woocommerce-table--order-details a { text-decoration: none !important; }
 .confirm-hint-button { background-color: rgb(30, 194, 46); border-radius: 4px; cursor: pointer; display: inline-block; margin-left: 8px; padding: 3px 8px; color: rgb(255, 255, 255) !important; }
