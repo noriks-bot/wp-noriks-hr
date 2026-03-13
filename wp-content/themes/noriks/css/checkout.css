@@ -21,7 +21,15 @@ body.woocommerce-checkout .woocommerce-privacy-policy-text,
 body.woocommerce-checkout .woocommerce-form-coupon-toggle,
 body.woocommerce-checkout .woocommerce-message,
 body.woocommerce-checkout .woocommerce-additional-fields > h3,
-body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper {
+body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper,
+body.woocommerce-checkout .language-modal,
+body.woocommerce-checkout .language-selector,
+body.woocommerce-checkout .language-modal-content,
+body.woocommerce-checkout .language-options,
+body.woocommerce-checkout .navbar,
+body.woocommerce-checkout header,
+body.woocommerce-checkout footer,
+body.woocommerce-checkout .storefront-breadcrumb {
   display: none !important;
 }
 

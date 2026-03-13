@@ -39,6 +39,19 @@ body.woocommerce-checkout #payment::before, body.woocommerce-checkout #payment::
 /* Hide WC duplicate button — only show our static one */
 .woocommerce-checkout .place-order #place_order { display: none !important; }
 .woocommerce-checkout #order_review #place_order { display: flex !important; }
+/* Hide language selector / header / footer / navbar on checkout */
+body.woocommerce-checkout .language-modal,
+body.woocommerce-checkout .language-selector,
+body.woocommerce-checkout .language-modal-content,
+body.woocommerce-checkout .language-options,
+body.woocommerce-checkout .navbar,
+body.woocommerce-checkout .navbar-right,
+body.woocommerce-checkout .site-header,
+body.woocommerce-checkout header,
+body.woocommerce-checkout .site-footer,
+body.woocommerce-checkout footer,
+body.woocommerce-checkout .storefront-breadcrumb,
+body.woocommerce-checkout .woocommerce-breadcrumb { display: none !important; }
 </style>
 
 <div class="container container--xs bg--white wc-checkout-wrap">
