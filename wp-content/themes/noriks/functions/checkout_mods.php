@@ -1,37 +1,70 @@
 <?php
 /**
- * Checkout Modifications — Field ordering, labels, style dequeue
- * Matches vigoshop.hr/dovrsite-kupnju/ field structure
+ * Checkout Modifications — Field ordering, labels, load vigoshop CSS directly
  */
-
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * NUCLEAR STYLE DEQUEUE — Remove ALL styles on checkout except ours
+ * NUCLEAR STYLE DEQUEUE + LOAD VIGOSHOP CSS FROM CDN
  */
 add_action( 'wp_enqueue_scripts', function() {
     if ( ! is_checkout() ) return;
 
-    // Our checkout CSS
-    wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), filemtime( get_stylesheet_directory() . '/css/checkout.css' ) );
-
-    // Dequeue everything else
+    // Dequeue ALL existing styles
     global $wp_styles;
     if ( ! empty( $wp_styles->registered ) ) {
-        $keep = array( 'noriks-checkout', 'admin-bar', 'dashicons', 'wp-block-library', 'select2' );
+        $keep = array( 'admin-bar', 'dashicons' );
         foreach ( $wp_styles->registered as $handle => $style ) {
             if ( ! in_array( $handle, $keep, true ) ) {
                 wp_deregister_style( $handle );
             }
         }
     }
+
+    // Load vigoshop CSS files directly from CDN (exact same files vigoshop uses)
+    $vigoshop_css = array(
+        'vigo-select2'              => 'https://vigoshop.hr/app/plugins/woocommerce/assets/css/select2.css',
+        'vigo-app'                  => 'https://vigoshop.hr/app/themes/hsplus/dist/app-bb7116ca22.css',
+        'vigo-brand'                => 'https://vigoshop.hr/app/themes/hsplus/dist/vigoshop-2809b8fc43.css',
+        'vigo-checkout-general'     => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-validation/css/custom-checkout-general-3ba2df51f0.css',
+        'vigo-checkout-hr'          => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-validation/css/custom-checkout-hr-708bf051cd.css',
+        'vigo-payment-notice'       => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/custom-payment-notice/css/custom-payment-notice-0baf6bff40.css',
+        'vigo-payment-fixes'        => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/payment-methods-fixes/css/payment-methods-fixes-75bc076f0b.css',
+        'vigo-shipping'             => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/shipping-method/css/shipping-method-14ad2b0a1f.css',
+        'vigo-order-review'         => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-order-review/css/checkout-order-review-17423b66f5.css',
+        'vigo-braintree-form'       => 'https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/css/frontend/sv-wc-payment-gateway-payment-form.min.css',
+        'vigo-braintree'            => 'https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/assets/css/frontend/wc-braintree.min.css',
+        'vigo-terms'                => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/terms-and-conditions-link/css/terms-and-conditions-link-4d809e8b6d.css',
+        'vigo-checkout-upsell'      => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-upsell/css/checkout-upsell-49a595b20c.css',
+        'vigo-free-shipping'        => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/free-shipping-above-quantity/css/free-shipping-above-quantity-02588a20ff.css',
+        'vigo-checkout-timer'       => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-timer/css/checkout-timer-73c98a5995.css',
+    );
+
+    foreach ( $vigoshop_css as $handle => $url ) {
+        wp_enqueue_style( $handle, $url, array(), null );
+    }
+
+    // Our overrides (loaded LAST — only for hiding Storefront/WP elements + body class fixes)
+    wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), filemtime( get_stylesheet_directory() . '/css/checkout.css' ) );
+
 }, 9999 );
+
+/**
+ * Add vigoshop body classes
+ */
+add_filter( 'body_class', function( $classes ) {
+    if ( is_checkout() ) {
+        $classes[] = 'brand-vigoshop';
+        $classes[] = 'theme-vigoshop';
+        $classes[] = 'theme-hsplus';
+    }
+    return $classes;
+});
 
 /**
  * Field ordering & labels — match vigoshop.hr HR layout
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-    // Field order
     $fields['billing']['billing_first_name']['priority'] = 30;
     $fields['billing']['billing_last_name']['priority']  = 40;
     $fields['billing']['billing_address_1']['priority']  = 50;
@@ -41,7 +74,6 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_phone']['priority']      = 85;
     $fields['billing']['billing_email']['priority']      = 86;
 
-    // Labels — Croatian
     $fields['billing']['billing_first_name']['label']       = 'Ime';
     $fields['billing']['billing_first_name']['placeholder'] = 'Ime';
     $fields['billing']['billing_last_name']['label']        = 'Prezime';
@@ -61,31 +93,14 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_email']['placeholder']      = 'E-mail adresa';
     $fields['billing']['billing_email']['required']         = false;
 
-    // Force HR country
     $fields['billing']['billing_country']['default'] = 'HR';
-
-    // Remove company field
     unset( $fields['billing']['billing_company'] );
 
     return $fields;
 }, 20 );
 
 /**
- * Billing title — match vigoshop
- */
-add_filter( 'woocommerce_checkout_billing_title', function() {
-    return 'Plaćanje i Dostava';
-});
-
-/**
- * Add address hint after name fields
- */
-add_action( 'woocommerce_after_checkout_billing_form', function() {
-    // The hint is inserted via JS or in the field wrapper
-});
-
-/**
- * Add address delivery hint between last_name and address_1
+ * Add address delivery hint before address_1
  */
 add_filter( 'woocommerce_form_field', function( $field, $key, $args, $value ) {
     if ( $key === 'billing_address_1' ) {
