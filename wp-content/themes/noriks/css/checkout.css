@@ -1,9 +1,9 @@
 /*
- * Noriks Checkout — MINIMAL overrides on top of vigoshop CSS
- * Vigoshop CSS handles 95% of styling. This file only adds Noriks-specific stuff.
+ * Noriks Checkout — MINIMAL overrides
+ * Vigoshop CDN CSS handles all styling. This only hides WP chrome + bridges WC output.
  */
 
-/* ===== HIDE STOREFRONT/WP CHROME ON CHECKOUT ===== */
+/* ===== HIDE WP/STOREFRONT CHROME ON CHECKOUT ===== */
 body.woocommerce-checkout .site-header,
 body.woocommerce-checkout .site-footer,
 body.woocommerce-checkout header.site-header,
@@ -35,17 +35,15 @@ body.woocommerce-checkout .promo-banner,
 body.woocommerce-checkout .marquee,
 body.woocommerce-checkout .ticker,
 body.woocommerce-checkout .woocommerce-notices-wrapper:empty,
-body.woocommerce-checkout p#billing_country_field,
-body.woocommerce-checkout p#billing_state_field,
-body.woocommerce-checkout #kl_newsletter_checkbox_field {
+body.woocommerce-checkout #kl_newsletter_checkbox_field,
+body.woocommerce-checkout #hsplus_accepts_marketing_field {
   display: none !important;
 }
 
-/* ===== CHECKOUT PAGE BACKGROUND ===== */
-body.woocommerce-checkout {
-  background-color: #f0f2f5 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* ===== HIDE FIELDS THAT VIGOSHOP HIDES ===== */
+body.woocommerce-checkout p#billing_country_field,
+body.woocommerce-checkout p#billing_state_field {
+  display: none !important;
 }
 
 /* ===== STOREFRONT RESETS ===== */
@@ -58,7 +56,7 @@ body.woocommerce-checkout .hentry {
   margin: 0 !important;
 }
 
-/* ===== HIDE the real WC #payment div (we render our own payment UI) ===== */
+/* ===== HIDDEN WC #payment (needed for AJAX, but off-screen) ===== */
 body.woocommerce-checkout #payment.woocommerce-checkout-payment {
   position: absolute !important;
   left: -9999px !important;
@@ -68,149 +66,13 @@ body.woocommerce-checkout #payment.woocommerce-checkout-payment {
   pointer-events: none !important;
 }
 
-/* ===== FIELD HINTS (injected via JS) ===== */
-.checkout-field-hints {
-  display: flex;
-  justify-content: space-between;
-  margin: 4px 0 0;
-  padding: 0 4px;
-  font-size: 12px;
-  line-height: 1.4;
-  color: #888;
-  width: 100%;
+/* ===== WC FIELD INPUT CLASS BRIDGE ===== */
+/* WC outputs .input-text, vigoshop expects .form-input — both should apply */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .input-text {
+  /* Ensure WC inputs get vigoshop styling via .form-input class (added via input_class filter) */
 }
 
-/* ===== OUR CUSTOM PAYMENT SECTION ===== */
-/* Payment icon images — constrain size */
-body.woocommerce-checkout .noriks-payment-methods .wc_payment_method label img,
-body.woocommerce-checkout .noriks-payment-methods .wc_payment_method label svg {
-  max-height: 24px;
-  width: auto;
-}
-body.woocommerce-checkout .hs-checkout__payment-method-cod-icon {
-  max-height: 40px !important;
-  height: 40px !important;
-}
-
-/* Payment icons push right */
-body.woocommerce-checkout .payment-icon-right {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-shrink: 0;
-}
-
-/* ===== ORDER SUMMARY ===== */
-body.woocommerce-checkout .noriks-order-summary .review-section-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 10px;
-  margin: 0 0 10px;
-  border-bottom: 1px solid #f0f2f5;
-  font-size: 14px;
-  color: #5f6061;
-}
-body.woocommerce-checkout .noriks-order-summary .review-section-container:last-child {
-  border-bottom: none;
-}
-body.woocommerce-checkout .noriks-order-summary .review-product-info {
-  flex: 1;
-}
-body.woocommerce-checkout .noriks-order-summary .review-product-info__attributes {
-  font-size: 12px;
-  color: #999;
-  margin-top: 2px;
-}
-body.woocommerce-checkout .noriks-order-summary .info-price {
-  min-width: 60px;
-  text-align: right;
-  font-size: 14px;
-  color: #5f6061;
-}
-
-/* Total row */
-body.woocommerce-checkout .noriks-order-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0 0;
-  margin-top: 10px;
-}
-body.woocommerce-checkout .noriks-order-total > span:first-child {
-  font-size: 18px;
-  font-weight: 400;
-  color: #232f3e;
-}
-body.woocommerce-checkout .noriks-order-total .noriks-total-price {
-  font-size: 18px;
-  font-weight: 700;
-  color: #232f3e;
-}
-
-/* ===== NORIKS PLACE ORDER BUTTON ===== */
-body.woocommerce-checkout .noriks-place-order {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  height: 64px;
-  background: linear-gradient(180deg, #3EC000, #00AC00);
-  box-shadow: 0 2px 0 #009900;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 16px;
-  padding: 19px 40px;
-}
-body.woocommerce-checkout .noriks-place-order:hover {
-  opacity: 0.9;
-}
-
-/* ===== WARRANTY BADGE — white bg card ===== */
-body.woocommerce-checkout .checkout-warranty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 36px auto 22px;
-  max-width: 560px;
-  padding: 16px;
-  background: #fff;
-  border-radius: 8px;
-}
-body.woocommerce-checkout .checkout-warranty__icon img {
-  width: 80px;
-  height: 80px;
-}
-body.woocommerce-checkout .checkout-warranty__text {
-  font-size: 16px;
-  line-height: 24px;
-  color: #333;
-}
-
-/* ===== TERMS ===== */
-body.woocommerce-checkout .agreed_terms_txt {
-  max-width: 560px;
-  margin: 12px auto;
-  padding: 0 16px;
-  font-size: 11px;
-  color: #888;
-  text-align: center;
-}
-body.woocommerce-checkout .agreed_terms_txt a {
-  color: #555;
-  text-decoration: underline;
-}
-body.woocommerce-checkout .terms-checkbox-and-links {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 6px;
+/* ===== REQUIRED ASTERISK — match vigoshop ===== */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper label .required {
+  color: inherit;
 }
