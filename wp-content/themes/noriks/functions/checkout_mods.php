@@ -379,15 +379,27 @@ add_action( 'wp_footer', function() {
     }
 
     /* ===== FIELD VALIDATION STATES ===== */
-    /* Error state */
+    /* Error state — white bg, red border */
     body.woocommerce-checkout .form-row.noriks-invalid input,
     body.woocommerce-checkout .form-row.noriks-invalid select,
     body.woocommerce-checkout .form-row.noriks-invalid .select2-selection {
       border: 2px solid #CC0000 !important;
-      background-color: #FDE8E8 !important;
+      background-color: #fff !important;
       box-shadow: none !important;
     }
-    /* Valid state */
+    /* Error message — pink block under input */
+    body.woocommerce-checkout .noriks-field-error {
+      display: block !important;
+      background: #FDE8E8 !important;
+      color: #CC0000 !important;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      padding: 8px 12px !important;
+      margin-top: 4px !important;
+      border-radius: 4px !important;
+      line-height: 1.4 !important;
+    }
+    /* Valid state — green border, light green bg */
     body.woocommerce-checkout .form-row.noriks-valid input,
     body.woocommerce-checkout .form-row.noriks-valid select,
     body.woocommerce-checkout .form-row.noriks-valid .select2-selection {
@@ -395,14 +407,24 @@ add_action( 'wp_footer', function() {
       background-color: #E8F5E9 !important;
       box-shadow: none !important;
     }
-    /* Error message */
-    body.woocommerce-checkout .noriks-field-error {
-      display: block !important;
-      color: #CC0000 !important;
-      font-size: 13px !important;
-      font-weight: 500 !important;
-      padding-top: 5px !important;
-      line-height: 1.4 !important;
+    /* Valid label turns green */
+    body.woocommerce-checkout .form-row.noriks-valid > label {
+      color: #4CAF50 !important;
+    }
+    /* Valid checkmark inside input */
+    body.woocommerce-checkout .form-row.noriks-valid .woocommerce-input-wrapper {
+      position: relative !important;
+    }
+    body.woocommerce-checkout .form-row.noriks-valid .woocommerce-input-wrapper::after {
+      content: '\2713' !important;
+      position: absolute !important;
+      right: 16px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      color: #4CAF50 !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      pointer-events: none !important;
     }
     </style>
 
