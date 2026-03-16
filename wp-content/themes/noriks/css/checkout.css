@@ -630,10 +630,16 @@ body.woocommerce-checkout .noriks-order-total {
   border-top: 1px solid #ddd !important;
 }
 
-/* Hint above email field */
-body.woocommerce-checkout .checkout-field-hints--above {
-  text-align: right !important;
-  margin-bottom: 2px !important;
+/* Force Ime/Prezime side by side on desktop */
+body.woocommerce-checkout #billing_first_name_field {
+  flex: 0 0 calc(50% - 5px) !important;
+  width: calc(50% - 5px) !important;
+  float: left !important;
+}
+body.woocommerce-checkout #billing_last_name_field {
+  flex: 0 0 calc(50% - 5px) !important;
+  width: calc(50% - 5px) !important;
+  float: right !important;
 }
 
 /* ===== WOOCOMMERCE-TERMS-AND-CONDITIONS-WRAPPER ===== */

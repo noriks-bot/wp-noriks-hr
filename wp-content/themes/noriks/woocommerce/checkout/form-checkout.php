@@ -223,6 +223,21 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
   update();
 })();
 
+/* Add email hint above email field (outside flex wrapper to not break layout) */
+(function(){
+  var emailField = document.getElementById('billing_email_field');
+  if(emailField){
+    var hint = document.createElement('div');
+    hint.className = 'checkout-field-hints checkout-field-hints--email';
+    hint.style.textAlign = 'right';
+    hint.style.fontSize = '13px';
+    hint.style.color = '#919293';
+    hint.style.marginBottom = '2px';
+    hint.textContent = '* E-mail adresa nije obavezna';
+    emailField.parentNode.insertBefore(hint, emailField);
+  }
+})();
+
 /* Floating labels for billing fields */
 (function(){
   document.querySelectorAll('.woocommerce-billing-fields__field-wrapper .form-row').forEach(function(row){
