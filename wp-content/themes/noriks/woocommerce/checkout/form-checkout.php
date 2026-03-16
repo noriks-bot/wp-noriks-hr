@@ -134,8 +134,8 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div>
   </div>
 
-  <!-- PLACE ORDER BUTTON -->
-  <button type="submit" class="button alt noriks-place-order" name="woocommerce_checkout_place_order" id="noriks_place_order" value="1">🔒 Naruči</button>
+  <!-- PLACE ORDER BUTTON — visible custom button triggers hidden WC button -->
+  <button type="button" class="button alt noriks-place-order" id="noriks_place_order" onclick="document.getElementById('place_order')&&document.getElementById('place_order').click()">🔒 Naruči</button>
 
   <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 
