@@ -70,6 +70,11 @@ body.woocommerce-checkout .woocommerce-privacy-policy-text {
   display: none !important;
 }
 
+/* ===== COD PROMPT — hidden by default like vigoshop ===== */
+body.woocommerce-checkout #hs-cod-checkout-prompt {
+  display: none !important;
+}
+
 /* ===== PAYMENT TITLE — vigoshop CSS hides it, force show ===== */
 body.woocommerce-checkout h3.payment-title {
   display: block !important;
