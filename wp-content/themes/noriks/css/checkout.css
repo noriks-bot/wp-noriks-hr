@@ -70,6 +70,25 @@ body.woocommerce-checkout .woocommerce-privacy-policy-text {
   display: none !important;
 }
 
+/* ===== PAYMENT TITLE — vigoshop CSS hides it, force show ===== */
+body.woocommerce-checkout h3.payment-title {
+  display: block !important;
+}
+
+/* ===== PAYMENT LABELS — match vigoshop padding ===== */
+body.woocommerce-checkout #noriks-payment .wc_payment_method label {
+  padding: 22.65px 16px !important;
+}
+
+/* ===== CONTAINER WIDTH — match vigoshop 530px inner ===== */
+body.woocommerce-checkout #order_review,
+body.woocommerce-checkout .checkout-warranty,
+body.woocommerce-checkout .agreed_terms_txt {
+  max-width: 530px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== HIDDEN WC #payment (off-screen for AJAX) ===== */
 body.woocommerce-checkout #payment.woocommerce-checkout-payment {
   position: absolute !important;
