@@ -260,14 +260,20 @@ add_action( 'wp_footer', function() {
     }
 
     /* ===== BUTTON/WARRANTY/TERMS — mobile padding ===== */
+    @media (max-width: 560px) {
+      body.woocommerce-checkout #order_review,
+      body.woocommerce-checkout .checkout-warranty,
+      body.woocommerce-checkout .agreed_terms_txt {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
     body.woocommerce-checkout #order_review,
     body.woocommerce-checkout .checkout-warranty,
     body.woocommerce-checkout .agreed_terms_txt {
       max-width: 560px !important;
       margin-left: auto !important;
       margin-right: auto !important;
-      padding-left: 15px !important;
-      padding-right: 15px !important;
       box-sizing: border-box !important;
     }
     </style>
