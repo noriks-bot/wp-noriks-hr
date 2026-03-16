@@ -260,9 +260,9 @@ add_action( 'wp_footer', function() {
     /* ===== FIELD DESCRIPTIONS (helper text under inputs) ===== */
     body.woocommerce-checkout .form-row .description {
       display: block !important;
-      font-size: 12px !important;
-      color: #8c8c8c !important;
-      margin-top: 4px !important;
+      font-size: 13px !important;
+      color: #5f6061 !important;
+      margin-top: 6px !important;
       line-height: 1.4 !important;
     }
 
