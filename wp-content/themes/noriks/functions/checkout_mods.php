@@ -65,14 +65,15 @@ add_filter( 'body_class', function( $classes ) {
  * Field ordering & labels — match vigoshop.hr HR layout
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-    $fields['billing']['billing_first_name']['priority'] = 30;
-    $fields['billing']['billing_last_name']['priority']  = 40;
-    $fields['billing']['billing_address_1']['priority']  = 50;
-    $fields['billing']['billing_address_2']['priority']  = 60;
-    $fields['billing']['billing_postcode']['priority']   = 70;
-    $fields['billing']['billing_city']['priority']       = 80;
-    $fields['billing']['billing_phone']['priority']      = 85;
-    $fields['billing']['billing_email']['priority']      = 86;
+    // Vigoshop order: Phone → Email → Ime/Prezime → Ulica/Kućni → Poštanski/Grad
+    $fields['billing']['billing_phone']['priority']      = 10;
+    $fields['billing']['billing_email']['priority']       = 20;
+    $fields['billing']['billing_first_name']['priority']  = 30;
+    $fields['billing']['billing_last_name']['priority']   = 40;
+    $fields['billing']['billing_address_1']['priority']   = 50;
+    $fields['billing']['billing_address_2']['priority']   = 60;
+    $fields['billing']['billing_postcode']['priority']    = 70;
+    $fields['billing']['billing_city']['priority']        = 80;
 
     $fields['billing']['billing_first_name']['label']       = 'Ime';
     $fields['billing']['billing_first_name']['placeholder'] = 'Ime';
@@ -96,19 +97,48 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_country']['default'] = 'HR';
     unset( $fields['billing']['billing_company'] );
 
+    // Ime/Prezime side by side
+    $fields['billing']['billing_first_name']['class'] = array( 'form-row', 'form-row-first' );
+    $fields['billing']['billing_last_name']['class']  = array( 'form-row', 'form-row-last' );
+
+    // Ulica/Kućni side by side
+    $fields['billing']['billing_address_1']['class']  = array( 'form-row', 'form-row-first', 'address-field' );
+    $fields['billing']['billing_address_2']['class']  = array( 'form-row', 'form-row-last', 'address-field' );
+
+    // Poštanski/Grad side by side
+    $fields['billing']['billing_postcode']['class']   = array( 'form-row', 'form-row-first', 'address-field' );
+    $fields['billing']['billing_city']['class']       = array( 'form-row', 'form-row-last', 'address-field' );
+
+    // Phone and email full width
+    $fields['billing']['billing_phone']['class']      = array( 'form-row', 'form-row-wide' );
+    $fields['billing']['billing_email']['class']      = array( 'form-row', 'form-row-wide' );
+
     return $fields;
 }, 20 );
 
 /**
- * Add address delivery hint before address_1
+ * Add hints after phone/email, address hint before address_1
  */
 add_filter( 'woocommerce_form_field', function( $field, $key, $args, $value ) {
+    if ( $key === 'billing_phone' ) {
+        $field .= '<div class="checkout-field-hints"><span class="hint-left">Primjer: 0912345678</span><span class="hint-right">Za pomoć s dostavom</span></div>';
+    }
+    if ( $key === 'billing_email' ) {
+        $field .= '<div class="checkout-field-hints"><span class="hint-left">* E-mail adresa nije obavezna</span></div>';
+    }
     if ( $key === 'billing_address_1' ) {
-        $hint = '<div class="form-row form-row-wide col-xs-12">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';
+        $hint = '<div class="form-row form-row-wide address-hint">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';
         return $hint . $field;
     }
     return $field;
 }, 10, 4 );
+
+/**
+ * Add "Plaćanje i Dostava" heading before billing fields
+ */
+add_action( 'woocommerce_before_checkout_billing_form', function() {
+    echo '<h2 class="checkout-main-title">Plaćanje i Dostava</h2>';
+});
 
 /**
  * Force billing country to HR

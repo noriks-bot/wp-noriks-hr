@@ -56,14 +56,13 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
   <div id="payment" class="woocommerce-checkout-payment">
     <ul class="wc_payment_methods payment_methods methods">
 
-      <!-- COD -->
-      <li class="wc_payment_method payment_method_cod">
+      <!-- COD — default selected, first -->
+      <li class="wc_payment_method payment_method_cod checked">
         <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked='checked' data-order_button_text="" />
         <label for="payment_method_cod">
-          Plaćanje prilikom preuzimanja <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount">1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></span></span>
-          <div class="hs-checkout__payment-method-cod-icon-container">
-            <img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" />
-          </div>
+          <span class="payment-method-name">Plaćanje prilikom preuzimanja</span>
+          <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
+          <span class="payment-icon-right"><img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" /></span>
         </label>
       </li>
 
@@ -71,12 +70,13 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
       <li class="wc_payment_method payment_method_braintree_credit_card">
         <input id="payment_method_braintree_credit_card" type="radio" class="input-radio" name="payment_method" value="braintree_credit_card" data-order_button_text="Naruči" />
         <label for="payment_method_braintree_credit_card">
-          Kreditna kartica <span class="payment-fee-free">Besplatno</span>
-          <div class="sv-wc-payment-gateway-card-icons">
-            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" class="sv-wc-payment-gateway-icon wc-braintree-credit-card-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />
-            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" class="sv-wc-payment-gateway-icon wc-braintree-credit-card-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />
-            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" class="sv-wc-payment-gateway-icon wc-braintree-credit-card-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />
-          </div>
+          <span class="payment-method-name">Kreditna kartica</span>
+          <span class="payment-fee-free">Besplatno</span>
+          <span class="payment-icon-right">
+            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" width="40" height="25" />
+            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" width="40" height="25" />
+            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" width="40" height="25" />
+          </span>
         </label>
       </li>
 
@@ -84,8 +84,9 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
       <li class="wc_payment_method payment_method_braintree_paypal">
         <input id="payment_method_braintree_paypal" type="radio" class="input-radio" name="payment_method" value="braintree_paypal" data-order_button_text="Naruči" />
         <label for="payment_method_braintree_paypal">
-          PayPal <span class="payment-fee-free">Besplatno</span>
-          <img decoding="async" src="https://images.vigo-shop.com/general/checkout/paypal/PayPal.svg" alt="PayPal">
+          <span class="payment-method-name">PayPal</span>
+          <span class="payment-fee-free">Besplatno</span>
+          <span class="payment-icon-right"><img decoding="async" src="https://images.vigo-shop.com/general/checkout/paypal/PayPal.svg" alt="PayPal" /></span>
         </label>
       </li>
 
@@ -160,10 +161,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div><!-- .col-2 -->
   </div><!-- .col2-set -->
 
-  <!-- ========== ORDER REVIEW (Naruči button) ========== -->
-  <div id="order_review" class="woocommerce-checkout-review-order container container--xs bg--white">
-    <button type="submit" class="button alt button--l button--block button--green button--rounded button--green-gradient" name="woocommerce_checkout_place_order" id="place_order" data-value="Naruči">Naruči</button>
-  </div>
+  <!-- ORDER REVIEW — WC handles the button inside #payment .place-order -->
 
 </form>
 
