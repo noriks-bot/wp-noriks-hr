@@ -78,11 +78,23 @@ body.woocommerce-checkout #hs-cod-checkout-prompt {
 /* ===== PAYMENT TITLE — vigoshop CSS hides it, force show ===== */
 body.woocommerce-checkout h3.payment-title {
   display: block !important;
+  font-size: 19.6px !important;
+  font-weight: 700 !important;
+  margin: 29.4px 0 14.7px !important;
+  color: #333 !important;
+}
+
+/* ===== PAYMENT METHODS LIST ===== */
+body.woocommerce-checkout #noriks-payment .wc_payment_methods {
+  margin-bottom: 21px !important;
 }
 
 /* ===== PAYMENT LABELS — match vigoshop padding ===== */
 body.woocommerce-checkout #noriks-payment .wc_payment_method label {
   padding: 22.65px 16px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  display: block !important;
 }
 
 /* ===== CONTAINER WIDTH — match vigoshop 530px inner ===== */
