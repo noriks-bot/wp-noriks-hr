@@ -259,11 +259,18 @@ add_action( 'wp_footer', function() {
 
     /* ===== FIELD DESCRIPTIONS (helper text under inputs) ===== */
     body.woocommerce-checkout .form-row .description {
-      display: block !important;
+      display: flex !important;
+      justify-content: flex-end !important;
       font-size: 13px !important;
       color: #5f6061 !important;
       margin-top: 6px !important;
       line-height: 1.4 !important;
+    }
+    body.woocommerce-checkout .form-row .description .desc-left {
+      margin-right: auto !important;
+      text-align: left !important;
+    }
+    body.woocommerce-checkout .form-row .description .desc-right {
       text-align: right !important;
     }
 
@@ -511,7 +518,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_city']['placeholder'] = 'Odaberite grad';
     $fields['billing']['billing_phone']['label'] = 'Telefon';
     $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
-    $fields['billing']['billing_phone']['description'] = 'Primjer: 0912345678 · Za pomoć s dostavom';
+    $fields['billing']['billing_phone']['description'] = '<span class="desc-left">Primjer: 0912345678</span><span class="desc-right">Za pomoć s dostavom</span>';
     $fields['billing']['billing_email']['label'] = 'E-mail adresa';
     $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
     $fields['billing']['billing_email']['description'] = 'Za potvrdu narudžbe i praćenje pošiljke';
