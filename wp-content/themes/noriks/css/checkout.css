@@ -129,11 +129,11 @@ body.woocommerce-checkout .checkout-main-title {
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 0 10px !important;
+  gap: 0 !important;
 }
 
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
-  margin: 0 0 10px 0 !important;
+  margin: 0 0 12px 0 !important;
   padding: 0 !important;
   position: relative !important;
   box-sizing: border-box !important;
@@ -145,38 +145,19 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-w
   float: none !important;
 }
 
-/* Ime/Prezime: 50/50 side by side — vigoshop exact */
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first {
-  flex: 0 0 calc(50% - 5px) !important;
-  width: calc(50% - 5px) !important;
+/* ALL fields: full width single column — matches vigoshop original */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last,
+body.woocommerce-checkout #billing_address_1_field,
+body.woocommerce-checkout #billing_address_2_field,
+body.woocommerce-checkout #billing_postcode_field,
+body.woocommerce-checkout #billing_city_field,
+body.woocommerce-checkout #billing_first_name_field,
+body.woocommerce-checkout #billing_last_name_field {
+  flex: 0 0 100% !important;
+  width: 100% !important;
   float: none !important;
-  clear: none !important;
-}
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last {
-  flex: 0 0 calc(50% - 5px) !important;
-  width: calc(50% - 5px) !important;
-  float: none !important;
-  clear: none !important;
-}
-
-/* Ulica ~67% / Kućni ~33% — vigoshop: 321px/158px at 480px form width */
-body.woocommerce-checkout #billing_address_1_field.form-row-first {
-  flex: 0 0 calc(67% - 5px) !important;
-  width: calc(67% - 5px) !important;
-}
-body.woocommerce-checkout #billing_address_2_field.form-row-last {
-  flex: 0 0 calc(33% - 5px) !important;
-  width: calc(33% - 5px) !important;
-}
-
-/* Poštanski ~35% / Grad ~65% — vigoshop: 168px/302px at 480px */
-body.woocommerce-checkout #billing_postcode_field.form-row-first {
-  flex: 0 0 calc(35% - 5px) !important;
-  width: calc(35% - 5px) !important;
-}
-body.woocommerce-checkout #billing_city_field.form-row-last {
-  flex: 0 0 calc(65% - 5px) !important;
-  width: calc(65% - 5px) !important;
+  clear: both !important;
 }
 
 /* Address hint — full width inside wrapper */
@@ -195,95 +176,68 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input[type=
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper select,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper textarea {
   width: 100% !important;
-  padding: 8.57px 18px !important;
-  height: 60px !important;
-  min-height: 60px !important;
-  border: 1px solid #c9c9c9 !important;
-  border-radius: 4px !important;
-  font-size: 18px !important;
+  padding: 12px 14px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  border: 1px solid #d0d0d0 !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
-  line-height: 18px !important;
+  line-height: 1.4 !important;
   font-family: 'Roboto', sans-serif, -apple-system, system-ui !important;
   background: #fff !important;
   color: #000 !important;
   box-sizing: border-box !important;
   outline: none !important;
-  box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.25) !important;
+  box-shadow: none !important;
   -webkit-appearance: none !important;
   appearance: none !important;
 }
 
-/* Select2 — vigoshop: height 59px, same border/shadow */
+/* Select2 — match input styling */
 body.woocommerce-checkout .select2-container .select2-selection--single {
-  height: 59px !important;
-  border: 1px solid #c9c9c9 !important;
-  border-radius: 4px !important;
-  box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.25) !important;
+  height: 46px !important;
+  border: 1px solid #d0d0d0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
 }
 body.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 59px !important;
-  font-size: 18px !important;
+  line-height: 46px !important;
+  font-size: 15px !important;
   color: #000 !important;
-  padding-left: 18px !important;
+  padding-left: 14px !important;
 }
 body.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: 59px !important;
+  height: 46px !important;
 }
 
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input:focus,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper select:focus {
   border-color: #47b426 !important;
-  background-color: #fafff9 !important;
+  box-shadow: none !important;
 }
 
-/* ===== FLOATING LABELS — vigoshop: 13px/500 #5f6061, opacity 0 ===== */
+/* ===== LABELS — hidden (placeholders do the job) ===== */
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper label:not(.checkbox) {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  padding: 11px 18px 0 !important;
-  font-size: 13px !important;
-  font-weight: 500 !important;
-  line-height: 13px !important;
-  color: #5f6061 !important;
-  opacity: 0 !important;
-  transform: translateY(3px) !important;
-  transition: all 0.2s ease-out !important;
-  pointer-events: none !important;
-  z-index: 1 !important;
-  display: block !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  width: 100% !important;
+  display: none !important;
 }
 
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .field--not-empty label {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .field--not-empty input,
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .field--not-empty select {
-  padding-top: 20px !important;
-  padding-bottom: 0 !important;
-}
-
-/* Placeholder — vigoshop: 16px in inputs */
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input::placeholder {
-  font-size: 16px !important;
-  color: #707070 !important;
+/* Placeholder */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input::placeholder,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper textarea::placeholder {
+  font-size: 15px !important;
+  color: #999 !important;
 }
 
 /* ===== FIELD HINTS — vigoshop: 16px #919293 ===== */
 body.woocommerce-checkout .checkout-field-hints {
   display: flex !important;
   justify-content: space-between !important;
-  margin: 5px 0 0 !important;
-  padding: 0 8px !important;
-  font-size: 16px !important;
-  line-height: 19.2px !important;
-  color: #919293 !important;
+  margin: 4px 0 0 !important;
+  padding: 0 4px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  color: #888 !important;
   width: 100% !important;
 }
 
@@ -310,7 +264,7 @@ body.woocommerce-checkout .shipping_method_custom label.checkedlabel {
   align-items: center !important;
   background: #f2feee !important;
   border: 1px solid #47b426 !important;
-  border-radius: 5px !important;
+  border-radius: 8px !important;
   padding: 15px !important;
   cursor: pointer !important;
   position: relative !important;
@@ -403,7 +357,7 @@ body.woocommerce-checkout .noriks-payment-methods .wc_payment_methods {
   padding: 0 !important;
   margin: 0 !important;
   border: 1px solid #d1dbe5 !important;
-  border-radius: 5px !important;
+  border-radius: 8px !important;
   overflow: hidden !important;
 }
 
@@ -713,19 +667,7 @@ body.woocommerce-checkout .terms-checkbox-and-links {
     border-radius: 5px 5px 0 0 !important;
     padding: 18px 15px 30px !important;
   }
-  /* ALL fields full width on mobile */
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last,
-  body.woocommerce-checkout #billing_address_1_field,
-  body.woocommerce-checkout #billing_address_2_field,
-  body.woocommerce-checkout #billing_postcode_field,
-  body.woocommerce-checkout #billing_city_field,
-  body.woocommerce-checkout #billing_first_name_field,
-  body.woocommerce-checkout #billing_last_name_field {
-    flex: 0 0 100% !important;
-    width: 100% !important;
-  }
+  /* Fields already full width globally — no mobile override needed */
   body.woocommerce-checkout .checkout-main-title {
     font-size: 20px !important;
   }

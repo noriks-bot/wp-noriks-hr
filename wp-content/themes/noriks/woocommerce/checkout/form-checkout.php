@@ -216,19 +216,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
   syncPayment();
 })();
 
-/* Floating labels for billing fields */
-(function(){
-  document.querySelectorAll('.woocommerce-billing-fields__field-wrapper .form-row').forEach(function(row){
-    var input = row.querySelector('input, textarea, select');
-    if(!input) return;
-    function check(){ if(input.value) row.classList.add('field--not-empty'); else row.classList.remove('field--not-empty'); }
-    input.addEventListener('input', check);
-    input.addEventListener('change', check);
-    input.addEventListener('focus', function(){ row.classList.add('field--not-empty'); });
-    input.addEventListener('blur', check);
-    check();
-  });
-})();
+/* Labels are hidden via CSS — placeholders do the job */
 
 /* Add field hints INSIDE their respective form-row divs */
 (function(){
