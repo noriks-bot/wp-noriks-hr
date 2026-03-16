@@ -1,6 +1,6 @@
 <?php
 /**
- * Checkout Form — Vigoshop Pixel-Perfect Copy (Phase 1)
+ * Checkout Form — Vigoshop Pixel-Perfect Copy
  * Based on vigoshop.hr/dovrsite-kupnju/ HTML structure
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -56,16 +56,6 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
   <div id="payment" class="woocommerce-checkout-payment">
     <ul class="wc_payment_methods payment_methods methods">
 
-      <!-- COD — default selected, first -->
-      <li class="wc_payment_method payment_method_cod checked">
-        <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked='checked' data-order_button_text="" />
-        <label for="payment_method_cod">
-          <span class="payment-method-name">Plaćanje prilikom preuzimanja</span>
-          <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
-          <span class="payment-icon-right"><img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" /></span>
-        </label>
-      </li>
-
       <!-- Credit Card -->
       <li class="wc_payment_method payment_method_braintree_credit_card">
         <input id="payment_method_braintree_credit_card" type="radio" class="input-radio" name="payment_method" value="braintree_credit_card" data-order_button_text="Naruči" />
@@ -77,6 +67,16 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
             <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" width="40" height="25" />
             <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" width="40" height="25" />
           </span>
+        </label>
+      </li>
+
+      <!-- COD -->
+      <li class="wc_payment_method payment_method_cod checked">
+        <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked='checked' data-order_button_text="" />
+        <label for="payment_method_cod">
+          <span class="payment-method-name">Plaćanje prilikom preuzimanja</span>
+          <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
+          <span class="payment-icon-right"><img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" /></span>
         </label>
       </li>
 
@@ -99,9 +99,9 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 
       <div class="woocommerce-terms-and-conditions-wrapper"></div>
 
-      <!-- COD prompt (hidden by default, shown via JS when COD selected) -->
+      <!-- COD prompt -->
       <div id="hs-cod-checkout-prompt" style="display:none;">
-        <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
+        <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem :)</strong></div>
         <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
       </div>
 
@@ -111,6 +111,50 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
         <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
       </div>
 
+      <!-- ORDER SUMMARY — inside place-order so CSS order works -->
+      <div id="noriks-order-summary" class="noriks-order-summary">
+        <h3 class="place-order-title">Sažetak narudžbe</h3>
+        <div class="noriks-order-items">
+          <?php
+          foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+            $product = $cart_item['data'];
+            $qty = $cart_item['quantity'];
+            $name = $product->get_name();
+            $price = WC()->cart->get_product_subtotal( $product, $qty );
+            $attrs = '';
+            if ( ! empty( $cart_item['variation'] ) ) {
+              $parts = array();
+              foreach ( $cart_item['variation'] as $attr_key => $attr_val ) {
+                $label = wc_attribute_label( str_replace( 'attribute_', '', $attr_key ) );
+                $parts[] = $label . ': ' . $attr_val;
+              }
+              $attrs = implode( ', ', $parts );
+            }
+            echo '<div class="review-section-container">';
+            echo '<div class="review-product-info"><div>' . esc_html( $qty ) . 'x ' . esc_html( $name ) . '</div>';
+            if ( $attrs ) echo '<div class="review-product-info__attributes">' . esc_html( $attrs ) . '</div>';
+            echo '</div>';
+            echo '<div class="info-price"><span class="review-sale-price">' . $price . '</span></div>';
+            echo '</div>';
+          }
+
+          // Show shipping + payment fees in summary
+          $shipping_total = WC()->cart->get_shipping_total();
+          $shipping_label = 'Paket24 Hrvatske pošte';
+          foreach ( WC()->cart->get_fees() as $fee ) {
+            echo '<div class="review-section-container">';
+            echo '<div class="review-product-info"><div>' . esc_html( $fee->name ) . '</div></div>';
+            echo '<div class="info-price"><span class="review-sale-price">' . wc_price( $fee->total ) . '</span></div>';
+            echo '</div>';
+          }
+          ?>
+        </div>
+        <div class="noriks-order-total">
+          <span>Ukupni iznos:</span>
+          <span class="noriks-total-price"><?php echo WC()->cart->get_total(); ?></span>
+        </div>
+      </div>
+
       <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
     </div>
   </div>
@@ -118,48 +162,14 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div><!-- .col-2 -->
   </div><!-- .col2-set -->
 
-  <!-- ========== SAŽETAK NARUDŽBE (outside #payment so WC AJAX won't wipe it) ========== -->
-  <div id="noriks-order-summary" class="noriks-order-summary">
-    <h3 class="place-order-title">Sažetak narudžbe</h3>
-    <div class="noriks-order-items">
-      <?php
-      foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-        $product = $cart_item['data'];
-        $qty = $cart_item['quantity'];
-        $name = $product->get_name();
-        $price = WC()->cart->get_product_subtotal( $product, $qty );
-        $attrs = '';
-        if ( ! empty( $cart_item['variation'] ) ) {
-          $parts = array();
-          foreach ( $cart_item['variation'] as $attr_key => $attr_val ) {
-            $label = wc_attribute_label( str_replace( 'attribute_', '', $attr_key ) );
-            $parts[] = $label . ': ' . $attr_val;
-          }
-          $attrs = implode( ', ', $parts );
-        }
-        echo '<div class="review-section-container">';
-        echo '<div class="review-product-info"><div>' . esc_html( $qty ) . 'x ' . esc_html( $name ) . '</div>';
-        if ( $attrs ) echo '<div class="review-product-info__attributes">' . esc_html( $attrs ) . '</div>';
-        echo '</div>';
-        echo '<div class="info-price"><span class="review-sale-price">' . $price . '</span></div>';
-        echo '</div>';
-      }
-      ?>
-    </div>
-    <div class="noriks-order-total">
-      <span>Ukupni iznos:</span>
-      <span class="noriks-total-price"><?php echo WC()->cart->get_total(); ?></span>
-    </div>
-  </div>
-
 </form>
 
 <!-- Warranty badge -->
-<div class="checkout-warranty flex flex--center flex--middle">
-  <div class="flex__item--autosize checkout-warranty__icon">
+<div class="checkout-warranty">
+  <div class="checkout-warranty__icon">
     <img decoding="async" src="https://images.vigo-shop.com/general/guarantee_money_back/satisfaction_icon_hr.png">
   </div>
-  <div class="flex__item--autosize f--m checkout-warranty__text">
+  <div class="checkout-warranty__text">
     <strong>Kupujte bez brige</strong><br>
     Povrat novca moguć u roku od 90 dana
   </div>
@@ -172,7 +182,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     <label class="checkbox">
       <input type="checkbox" class="input-checkbox" name="agree_to_checkout_terms" id="agree_to_terms_checkbox" value="1">
     </label>
-    Pročitao sam i prihvaćam <a href="#" id="terms_conditions_link">Opće uvjete prodaje</a> i <a href="#" id="withdrawal_policy_link">pravo na odustajanje</a>.
+    Pročitao sam i prihvaćam <a href="#" id="terms_conditions_link">Opće uvjete prodaje</a> &nbsp;i&nbsp; <a href="#" id="withdrawal_policy_link">pravo na odustajanje</a>.
   </div>
 </div>
 
@@ -209,7 +219,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
   toggle();
 })();
 
-/* Payment method checked class + label styling */
+/* Payment method checked class */
 (function(){
   var methods = document.querySelectorAll('.wc_payment_method');
   function update(){
@@ -223,22 +233,21 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
   update();
 })();
 
-/* Add field hints INSIDE their respective form-row divs (not as siblings in flex wrapper) */
+/* Add field hints INSIDE their respective form-row divs */
 (function(){
-  // Phone hints - append inside phone field div
   var phoneField = document.getElementById('billing_phone_field');
-  if(phoneField){
+  if(phoneField && !phoneField.querySelector('.checkout-field-hints')){
     var hint = document.createElement('div');
     hint.className = 'checkout-field-hints';
-    hint.innerHTML = '<span class="hint-left">Primjer: 0912345678</span> <span class="hint-right">Za pomoć s dostavom</span>';
+    hint.innerHTML = '<span class="hint-left">Primjer: 0912345678</span><span class="hint-right">Za pomoć s dostavom</span>';
     phoneField.appendChild(hint);
   }
-  // Email hint - append inside email field div
   var emailField = document.getElementById('billing_email_field');
-  if(emailField){
+  if(emailField && !emailField.querySelector('.checkout-field-hints')){
     var hint = document.createElement('div');
     hint.className = 'checkout-field-hints';
-    hint.innerHTML = '<span class="hint-right" style="margin-left:auto">* E-mail adresa nije obavezna</span>';
+    hint.style.justifyContent = 'flex-end';
+    hint.innerHTML = '<span class="hint-right">* E-mail adresa nije obavezna</span>';
     emailField.appendChild(hint);
   }
 })();
@@ -255,5 +264,23 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     input.addEventListener('blur', check);
     check();
   });
+})();
+
+/* Move address hint outside flex wrapper to prevent layout break */
+(function(){
+  var hint = document.querySelector('.address-hint');
+  var wrapper = document.querySelector('.woocommerce-billing-fields__field-wrapper');
+  if(hint && wrapper){
+    wrapper.parentNode.insertBefore(hint, wrapper.nextSibling);
+    /* Actually we want it before address fields but after name fields.
+       Better: insert it after the wrapper, then use CSS order... 
+       No — just move it right before the address_1 field's parent wrapper position.
+       Actually the simplest fix: remove it from the flex wrapper entirely and put it between wrapper sections. */
+    /* Move it to right before #billing_address_1_field */
+    var addr1 = document.getElementById('billing_address_1_field');
+    if(addr1){
+      addr1.parentNode.insertBefore(hint, addr1);
+    }
+  }
 })();
 </script>

@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', function() {
         }
     }
 
-    // Load vigoshop CSS files directly from CDN (exact same files vigoshop uses)
+    // Load vigoshop CSS files directly from CDN
     $vigoshop_css = array(
         'vigo-select2'              => 'https://vigoshop.hr/app/plugins/woocommerce/assets/css/select2.css',
         'vigo-app'                  => 'https://vigoshop.hr/app/themes/hsplus/dist/app-bb7116ca22.css',
@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', function() {
         wp_enqueue_style( $handle, $url, array(), null );
     }
 
-    // Our overrides (loaded LAST — only for hiding Storefront/WP elements + body class fixes)
+    // Our overrides loaded LAST
     wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), filemtime( get_stylesheet_directory() . '/css/checkout.css' ) );
 
 }, 9999 );
@@ -117,27 +117,24 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
 }, 20 );
 
 /**
- * Add hints after phone/email, address hint before address_1
+ * Add address hint AFTER the billing_email field (outside the flex wrapper via JS instead)
+ * We no longer inject it via woocommerce_form_field to avoid breaking flex layout
  */
-add_filter( 'woocommerce_form_field', function( $field, $key, $args, $value ) {
-    if ( $key === 'billing_phone' ) {
-        // Hints are added via JS to avoid breaking flex layout
-    }
-    if ( $key === 'billing_email' ) {
-        // Hints are added via JS to avoid breaking flex layout
-    }
-    if ( $key === 'billing_address_1' ) {
-        $hint = '<div class="form-row form-row-wide address-hint">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';
-        return $hint . $field;
-    }
-    return $field;
-}, 10, 4 );
 
 /**
  * Add "Plaćanje i Dostava" heading before billing fields
  */
 add_action( 'woocommerce_before_checkout_billing_form', function() {
     echo '<h2 class="checkout-main-title">Plaćanje i Dostava</h2>';
+});
+
+/**
+ * Add address hint AFTER the billing fields wrapper (not inside it)
+ */
+add_action( 'woocommerce_after_checkout_billing_form', function() {
+    // This outputs AFTER the field wrapper div closes, so it won't break flex
+    // But we actually want it between name and address fields...
+    // We'll handle positioning via JS in form-checkout.php
 });
 
 /**
@@ -148,7 +145,7 @@ add_filter( 'default_checkout_billing_country', function() {
 });
 
 /**
- * Change place order button text to match vigoshop
+ * Change place order button text
  */
 add_filter( 'woocommerce_order_button_text', function() {
     return '🔒 Naruči';
