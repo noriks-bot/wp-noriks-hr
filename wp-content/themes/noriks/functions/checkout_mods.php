@@ -108,12 +108,15 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
 });
 
 /**
- * Add address hint between name fields and address fields
- * Using woocommerce_form_field to add after last_name
+ * Add address hint after billing_last_name field (inside the field wrapper)
+ * This outputs right after the last_name field closes, still inside the flex wrapper
  */
-add_action( 'woocommerce_after_checkout_billing_form', function() {
-    echo '<p class="address-hint" style="flex:0 0 100%;width:100%;font-size:13px;color:#555;margin:2px 0 8px;order:45;">Unesite adresu na kojoj ćete biti <strong>između 8:00 i 16:00</strong> sati.</p>';
-});
+add_filter( 'woocommerce_form_field_text', function( $field, $key, $args, $value ) {
+    if ( $key === 'billing_last_name' ) {
+        $field .= '<p class="address-hint" style="flex:0 0 100%;width:100%;font-size:13px;color:#555;margin:2px 0 8px;">Unesite adresu na kojoj ćete biti <strong>između 8:00 i 16:00</strong> sati.</p>';
+    }
+    return $field;
+}, 10, 4 );
 
 /**
  * Force billing country to HR
