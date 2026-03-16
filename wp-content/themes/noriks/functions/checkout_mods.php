@@ -99,14 +99,100 @@ add_action( 'wp_print_scripts', function() {
 }, 9999 );
 
 /**
- * Inline styles from vigoshop <head>
+ * Inline styles from vigoshop <head> + checkout overrides
+ * wp_footer at high priority = loads AFTER all CDN CSS, guaranteed to win
  */
-add_action( 'wp_head', function() {
+add_action( 'wp_footer', function() {
     if ( ! is_checkout() ) return;
     echo '<style>tr.cart-discount.coupon-get1free .amount{display:none;}</style>';
     echo '<style>img:is([sizes="auto" i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}</style>';
     echo '<style>.woocommerce form .form-row .required{visibility:visible;}</style>';
-}, 5 );
+    ?>
+    <style id="noriks-checkout-overrides">
+    /* Payment title — show it */
+    body.woocommerce-checkout h3.payment-title {
+      display: block !important;
+      font-size: 19.6px !important;
+      font-weight: 700 !important;
+      margin: 29.4px 0 14.7px !important;
+      color: #333 !important;
+    }
+    /* Payment labels — match vigoshop 22.65px padding */
+    body.woocommerce-checkout #noriks-payment .wc_payment_method label {
+      padding: 22.65px 16px !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+    }
+    /* Payment methods list bottom margin */
+    body.woocommerce-checkout #noriks-payment .wc_payment_methods {
+      margin-bottom: 21px !important;
+    }
+    /* Button/warranty/terms — add mobile padding */
+    body.woocommerce-checkout #order_review,
+    body.woocommerce-checkout .checkout-warranty,
+    body.woocommerce-checkout .agreed_terms_txt {
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      box-sizing: border-box !important;
+    }
+    /* Hide ALL theme chrome */
+    body.woocommerce-checkout #languageModal,
+    body.woocommerce-checkout .top-header,
+    body.woocommerce-checkout .marquee,
+    body.woocommerce-checkout header.navbar.header,
+    body.woocommerce-checkout .xoo-wsc-markup,
+    body.woocommerce-checkout .xoo-wsc-container,
+    body.woocommerce-checkout .xoo-wsc-modal,
+    body.woocommerce-checkout .footer-wrap,
+    body.woocommerce-checkout footer.footer,
+    body.woocommerce-checkout footer.footer-mobile,
+    body.woocommerce-checkout .hs_loader,
+    body.woocommerce-checkout .storefront-breadcrumb,
+    body.woocommerce-checkout .woocommerce-breadcrumb,
+    body.woocommerce-checkout .storefront-handheld-footer-bar,
+    body.woocommerce-checkout .site-header,
+    body.woocommerce-checkout .site-footer,
+    body.woocommerce-checkout .site-info,
+    body.woocommerce-checkout #colophon,
+    body.woocommerce-checkout .entry-header,
+    body.woocommerce-checkout .entry-title,
+    body.woocommerce-checkout h1.entry-title,
+    body.woocommerce-checkout .phone-footer-checkout,
+    body.woocommerce-checkout .info-banner,
+    body.woocommerce-checkout .info-items-container,
+    body.woocommerce-checkout .woocommerce-form-coupon-toggle,
+    body.woocommerce-checkout .cookie-consent {
+      display: none !important;
+    }
+    /* Hide WC fields we don't need */
+    body.woocommerce-checkout p#billing_country_field,
+    body.woocommerce-checkout p#billing_state_field,
+    body.woocommerce-checkout #kl_newsletter_checkbox_field,
+    body.woocommerce-checkout #hsplus_accepts_marketing_field,
+    body.woocommerce-checkout .woocommerce-additional-fields > h3,
+    body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper,
+    body.woocommerce-checkout .woocommerce-privacy-policy-text {
+      display: none !important;
+    }
+    /* Hidden WC #payment (off-screen for AJAX) */
+    body.woocommerce-checkout #payment.woocommerce-checkout-payment {
+      position: absolute !important;
+      left: -9999px !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      overflow: hidden !important;
+      pointer-events: none !important;
+    }
+    /* COD prompt hidden by default */
+    body.woocommerce-checkout #hs-cod-checkout-prompt {
+      display: none !important;
+    }
+    </style>
+    <?php
+}, 50 );
 
 /**
  * Body classes — vigoshop expects these
