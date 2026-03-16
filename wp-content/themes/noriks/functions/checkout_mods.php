@@ -103,6 +103,47 @@ add_action( 'wp_head', function() {
 }, 5 );
 
 /**
+ * CSS-only overrides — injected AFTER all CDN CSS to guarantee winning specificity
+ * SAFE: no script/style dequeuing, purely additive CSS
+ */
+add_action( 'wp_footer', function() {
+    if ( ! is_checkout() ) return;
+    ?>
+    <style id="noriks-checkout-overrides">
+    /* Payment title — vigoshop CDN hides it, force show */
+    body.woocommerce-checkout h3.payment-title {
+      display: block !important;
+      font-size: 19.6px !important;
+      font-weight: 700 !important;
+      margin: 29.4px 0 14.7px !important;
+      color: #333 !important;
+    }
+    /* Payment labels — match vigoshop padding */
+    body.woocommerce-checkout #noriks-payment .wc_payment_method label {
+      padding: 22.65px 16px !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+    }
+    /* Payment methods list bottom margin */
+    body.woocommerce-checkout #noriks-payment .wc_payment_methods {
+      margin-bottom: 21px !important;
+    }
+    /* Button/warranty/terms outside form need padding on mobile */
+    body.woocommerce-checkout #order_review,
+    body.woocommerce-checkout .checkout-warranty,
+    body.woocommerce-checkout .agreed_terms_txt {
+      max-width: 560px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      box-sizing: border-box !important;
+    }
+    </style>
+    <?php
+}, 50 );
+
+/**
  * Body classes — vigoshop expects these
  */
 add_filter( 'body_class', function( $classes ) {
@@ -120,14 +161,15 @@ add_filter( 'body_class', function( $classes ) {
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     // Order — match vigoshop: name → address → phone → email
+    $fields['billing']['billing_phone']['priority']       = 10;
+    $fields['billing']['billing_email']['priority']       = 20;
     $fields['billing']['billing_first_name']['priority']  = 30;
     $fields['billing']['billing_last_name']['priority']   = 40;
     $fields['billing']['billing_address_1']['priority']   = 50;
     $fields['billing']['billing_address_2']['priority']   = 60;
     $fields['billing']['billing_postcode']['priority']    = 70;
     $fields['billing']['billing_city']['priority']        = 80;
-    $fields['billing']['billing_phone']['priority']       = 90;
-    $fields['billing']['billing_email']['priority']       = 100;
+    // phone/email priorities already set above (10/20)
 
     // Labels, placeholders, required
     $fields['billing']['billing_first_name']['label'] = 'Ime';
