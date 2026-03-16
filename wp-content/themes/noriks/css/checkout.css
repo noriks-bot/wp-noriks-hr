@@ -132,7 +132,9 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
   gap: 0 10px !important;
 }
 
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper p.form-row,
+body.woocommerce-checkout p.form-row {
   margin: 0 0 12px 0 !important;
   padding: 0 !important;
   position: relative !important;
