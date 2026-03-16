@@ -249,12 +249,10 @@ add_action( 'wp_footer', function() {
     }
     .vigo-checkout-total__sum {
       padding: 25px 0 0 !important;
-      font-size: 14px !important;
       color: #232f3e !important;
     }
     .vigo-checkout-total__sum .f--bold,
     .vigo-checkout-total__sum .price_total_wrapper {
-      font-size: 18px !important;
       font-weight: 700 !important;
       color: #232f3e !important;
     }
