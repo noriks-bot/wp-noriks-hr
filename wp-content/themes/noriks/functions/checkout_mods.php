@@ -6,36 +6,10 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Dequeue ALL WP/WC/theme styles on checkout, load vigoshop CDN CSS
+ * Enqueue vigoshop CDN CSS on checkout (early, so they load)
  */
 add_action( 'wp_enqueue_scripts', function() {
     if ( ! is_checkout() ) return;
-
-    // Remove ALL registered styles except admin-bar
-    global $wp_styles;
-    if ( ! empty( $wp_styles->registered ) ) {
-        foreach ( array_keys( $wp_styles->registered ) as $handle ) {
-            if ( $handle !== 'admin-bar' && $handle !== 'dashicons' ) {
-                wp_deregister_style( $handle );
-            }
-        }
-    }
-
-    // Remove ALL registered scripts except essential WC ones
-    global $wp_scripts;
-    $keep_scripts = array(
-        'jquery', 'jquery-core', 'jquery-migrate',
-        'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
-        'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
-        'wp-hooks', 'wp-i18n',
-    );
-    if ( ! empty( $wp_scripts->registered ) ) {
-        foreach ( array_keys( $wp_scripts->registered ) as $handle ) {
-            if ( ! in_array( $handle, $keep_scripts, true ) ) {
-                wp_deregister_script( $handle );
-            }
-        }
-    }
 
     // Vigoshop CDN CSS — exact same files + order as /test-checkout/
     $css = array(
@@ -83,13 +57,45 @@ add_action( 'wp_enqueue_scripts', function() {
 }, 9999 );
 
 /**
- * Also dequeue styles that get enqueued late (after priority 9999)
+ * Dequeue ALL non-vigoshop styles right before output
  */
 add_action( 'wp_print_styles', function() {
     if ( ! is_checkout() ) return;
-    // Remove any storefront/theme CSS that snuck through
-    $remove = array( 'storefront-style', 'storefront-woocommerce-style', 'storefront-gutenberg-blocks', 'wp-block-library' );
-    foreach ( $remove as $h ) wp_dequeue_style( $h );
+
+    // Keep only our vigoshop + checkout CSS handles
+    $keep = array( 'admin-bar', 'dashicons', 'google-roboto', 'noriks-checkout' );
+    // Add all vigo-* handles
+    global $wp_styles;
+    foreach ( array_keys( $wp_styles->registered ) as $h ) {
+        if ( strpos( $h, 'vigo-' ) === 0 ) $keep[] = $h;
+    }
+
+    foreach ( $wp_styles->queue as $h ) {
+        if ( ! in_array( $h, $keep, true ) ) {
+            wp_dequeue_style( $h );
+        }
+    }
+}, 9999 );
+
+/**
+ * Dequeue non-essential scripts on checkout
+ */
+add_action( 'wp_print_scripts', function() {
+    if ( ! is_checkout() ) return;
+
+    $keep_scripts = array(
+        'jquery', 'jquery-core', 'jquery-migrate',
+        'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
+        'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
+        'wp-hooks', 'wp-i18n', 'checkout-fields',
+    );
+
+    global $wp_scripts;
+    foreach ( $wp_scripts->queue as $h ) {
+        if ( ! in_array( $h, $keep_scripts, true ) ) {
+            wp_dequeue_script( $h );
+        }
+    }
 }, 9999 );
 
 /**
