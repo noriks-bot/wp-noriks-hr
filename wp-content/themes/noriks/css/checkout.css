@@ -89,9 +89,12 @@ body.woocommerce-checkout #noriks-payment .wc_payment_method label {
 body.woocommerce-checkout #order_review,
 body.woocommerce-checkout .checkout-warranty,
 body.woocommerce-checkout .agreed_terms_txt {
-  max-width: 530px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 
 /* ===== HIDDEN WC #payment (off-screen for AJAX) ===== */
