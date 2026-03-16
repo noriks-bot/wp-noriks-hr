@@ -379,6 +379,10 @@ add_action( 'wp_footer', function() {
     }
 
     /* ===== FIELD VALIDATION STATES ===== */
+    /* Override WC default validation styles so ours always win */
+    body.woocommerce-checkout .form-row.noriks-invalid.woocommerce-validated input,
+    body.woocommerce-checkout .form-row.noriks-invalid.woocommerce-validated select,
+    body.woocommerce-checkout .form-row.noriks-invalid.woocommerce-validated .select2-selection,
     /* Error state — white bg, red border */
     body.woocommerce-checkout .form-row.noriks-invalid input,
     body.woocommerce-checkout .form-row.noriks-invalid select,
@@ -437,7 +441,7 @@ add_action( 'wp_footer', function() {
       var touched = {}; /* track which fields have been validated */
 
       function showError($row, msg) {
-        $row.removeClass('noriks-valid').addClass('noriks-invalid');
+        $row.removeClass('noriks-valid woocommerce-validated').addClass('noriks-invalid woocommerce-invalid');
         if (!$row.find('.noriks-field-error').length) {
           $row.append('<span class="noriks-field-error">' + msg + '</span>');
         } else {
@@ -446,12 +450,12 @@ add_action( 'wp_footer', function() {
       }
 
       function showValid($row) {
-        $row.removeClass('noriks-invalid').addClass('noriks-valid');
+        $row.removeClass('noriks-invalid woocommerce-invalid').addClass('noriks-valid woocommerce-validated');
         $row.find('.noriks-field-error').remove();
       }
 
       function clearState($row) {
-        $row.removeClass('noriks-invalid noriks-valid');
+        $row.removeClass('noriks-invalid noriks-valid woocommerce-invalid woocommerce-validated');
         $row.find('.noriks-field-error').remove();
       }
 
@@ -516,6 +520,16 @@ add_action( 'wp_footer', function() {
         var key = $row.attr('id') || $row.index();
         touched[key] = true;
         validateField(this);
+      });
+
+      /* Block WC's own validate_field from overriding our validation states */
+      $(document.body).on('validate_field', function(e, el){
+        var $el = $(el);
+        var $row = $el.closest('.form-row');
+        if ($row.hasClass('noriks-invalid') || $row.hasClass('noriks-valid')) {
+          e.stopImmediatePropagation();
+          return false;
+        }
       });
 
       /* Re-apply validation after WC AJAX updates (update_checkout replaces DOM) */
