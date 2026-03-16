@@ -155,10 +155,13 @@ add_action( 'wp_footer', function() {
       padding: 22.65px 16px !important;
       margin: 0 !important;
       font-size: 16px !important;
-      font-weight: 700 !important;
+      font-weight: 500 !important;
       color: #333 !important;
       line-height: 24px !important;
       cursor: pointer !important;
+    }
+    #noriks-payment .wc_payment_method:has(input:checked) label {
+      font-weight: 700 !important;
     }
     /* Fee badges */
     #noriks-payment .payment-fee-free {
