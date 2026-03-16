@@ -375,20 +375,21 @@ body.woocommerce-checkout .noriks-payment-methods .wc_payment_methods {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  border: 1px solid #d1dbe5 !important;
-  border-radius: 4px !important;
-  overflow: hidden !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
 }
 
 body.woocommerce-checkout .noriks-payment-methods .wc_payment_method {
-  border-bottom: 1px solid #d1dbe5 !important;
+  border-left: 1px solid #d1dbe5 !important;
+  border-right: 1px solid #d1dbe5 !important;
+  border-top: 1px solid #d1dbe5 !important;
   margin: 0 !important;
   padding: 0 !important;
   background: #fff !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  padding-left: 16px !important;
+}
+body.woocommerce-checkout .noriks-payment-methods .wc_payment_method:last-of-type {
+  border-bottom: 1px solid #d1dbe5 !important;
 }
 body.woocommerce-checkout .noriks-payment-methods .wc_payment_method:last-child {
   border-bottom: none !important;
@@ -402,31 +403,37 @@ body.woocommerce-checkout .noriks-payment-methods .wc_payment_method.checked {
 /* Payment label — vigoshop: 16px/700, padding 22.652px 16px, flex, align-items center */
 body.woocommerce-checkout .noriks-payment-methods .wc_payment_method label {
   display: flex !important;
+  flex-wrap: wrap !important;
   align-items: center !important;
-  padding: 22.652px 16px !important;
+  padding: 16px !important;
   margin: 0 !important;
   cursor: pointer !important;
   font-size: 16px !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: 24px !important;
   color: #333 !important;
 }
+body.woocommerce-checkout .noriks-payment-methods .wc_payment_method input[type="radio"]:checked + label {
+  font-weight: 700 !important;
+}
 
-/* Radio buttons — vigoshop: 15px, green when checked */
-body.woocommerce-checkout .noriks-payment-methods input[type="radio"] {
-  -webkit-appearance: none !important;
-  appearance: none !important;
+/* Radio buttons — vigoshop: hide real radio, use label::before */
+body.woocommerce-checkout .noriks-payment-methods input[type="radio"],
+body.woocommerce-checkout .woocommerce-checkout-payment .wc_payment_methods .input-radio {
+  display: none !important;
+}
+body.woocommerce-checkout .noriks-payment-methods .wc_payment_method label::before {
+  content: "" !important;
   width: 15px !important;
   height: 15px !important;
+  background-color: #fff !important;
   border-radius: 50% !important;
-  border: 3px solid #fff !important;
   box-shadow: 0 0 0 1px #ccc !important;
-  background: #fff !important;
+  border: 3px solid #fff !important;
   margin-right: 15px !important;
   flex-shrink: 0 !important;
-  cursor: pointer !important;
 }
-body.woocommerce-checkout .noriks-payment-methods input[type="radio"]:checked {
+body.woocommerce-checkout .noriks-payment-methods .wc_payment_method input[type="radio"]:checked + label::before {
   background-color: #47b426 !important;
   box-shadow: 0 0 0 2px #47b426 !important;
 }
