@@ -361,9 +361,30 @@ body.woocommerce-checkout .hs-checkout__payment-method-cod-icon {
   width: auto !important;
 }
 
-/* Hide payment_box (card form etc) when not selected */
-body.woocommerce-checkout #payment .payment_box {
+/* Hide payment_box (card form etc) — WC injects large card logos here */
+body.woocommerce-checkout #payment .payment_box,
+body.woocommerce-checkout #payment .payment_method_braintree_credit_card .payment_box,
+body.woocommerce-checkout #payment .payment_method_braintree_paypal .payment_box,
+body.woocommerce-checkout #payment .payment_method_cod .payment_box {
   display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Cap ALL images inside #payment to prevent huge card logos */
+body.woocommerce-checkout #payment img {
+  max-height: 30px !important;
+  max-width: 50px !important;
+  width: auto !important;
+  height: auto !important;
+}
+body.woocommerce-checkout #payment .payment-icon-right img {
+  max-height: 22px !important;
+  max-width: 45px !important;
+}
+body.woocommerce-checkout #payment .hs-checkout__payment-method-cod-icon {
+  max-height: 30px !important;
+  max-width: 30px !important;
 }
 
 /* ===== PLACE ORDER AREA (contains order summary + button) ===== */
@@ -454,16 +475,38 @@ body.woocommerce-checkout .tax-and-vat-checkout-claims {
   display: block !important;
 }
 
-/* ===== ORDER SUMMARY ===== */
-body.woocommerce-checkout .place-order-title {
+/* ===== ORDER SUMMARY — force visible ===== */
+body.woocommerce-checkout h3.place-order-title,
+body.woocommerce-checkout .form-row.place-order h3.place-order-title,
+body.woocommerce-checkout #payment .place-order h3.place-order-title {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
   font-size: 18px !important;
   font-weight: 700 !important;
   margin: 20px 0 10px !important;
   color: #333 !important;
+  position: static !important;
 }
 
-body.woocommerce-checkout .review-section-container {
+body.woocommerce-checkout .vigo-checkout-total,
+body.woocommerce-checkout .form-row.place-order .vigo-checkout-total,
+body.woocommerce-checkout #payment .place-order .vigo-checkout-total {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: visible !important;
+  position: static !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+body.woocommerce-checkout .review-section-container,
+body.woocommerce-checkout .vigo-checkout-total .review-section-container {
   display: flex !important;
+  visibility: visible !important;
   justify-content: space-between !important;
   align-items: center !important;
   padding: 8px 0 !important;
@@ -472,12 +515,29 @@ body.woocommerce-checkout .review-section-container {
   color: #666 !important;
 }
 
-body.woocommerce-checkout .vigo-checkout-total__sum {
+body.woocommerce-checkout .vigo-checkout-total .review-all-products-container,
+body.woocommerce-checkout .vigo-checkout-total .vigo-checkout-total__content {
+  display: block !important;
+  visibility: visible !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+body.woocommerce-checkout .vigo-checkout-total__sum,
+body.woocommerce-checkout .vigo-checkout-total .vigo-checkout-total__sum {
+  display: flex !important;
+  visibility: visible !important;
   margin-top: 12px !important;
   padding-top: 12px !important;
   font-size: 18px !important;
   font-weight: 700 !important;
   color: #333 !important;
+}
+
+/* Force all children inside place-order to be visible */
+body.woocommerce-checkout .form-row.place-order > *,
+body.woocommerce-checkout #payment .form-row.place-order > * {
+  visibility: visible !important;
 }
 
 /* ===== WARRANTY BADGE ===== */
