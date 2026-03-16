@@ -135,10 +135,11 @@ add_action( 'wp_footer', function() {
     }
     #noriks-payment .wc_payment_method + .wc_payment_method {
       border-radius: 0 !important;
-      border-top: 0 !important;
+      border-top: none !important;
     }
     #noriks-payment .wc_payment_method:last-child {
       border-radius: 0 0 5px 5px !important;
+      border-bottom: 1px solid #d1dbe5 !important;
     }
     /* Selected payment = blue bg */
     #noriks-payment .wc_payment_method:has(input:checked) {
