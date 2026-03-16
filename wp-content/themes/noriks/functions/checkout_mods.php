@@ -234,8 +234,8 @@ add_action( 'wp_footer', function() {
       min-width: 60px !important;
     }
     .vigo-checkout-total__sum {
-      padding: 10px 0 0 !important;
-      font-size: 18px !important;
+      padding: 25px 0 0 !important;
+      font-size: 14px !important;
       color: #232f3e !important;
     }
     .vigo-checkout-total__sum .f--bold,
