@@ -352,19 +352,30 @@ add_action( 'wp_footer', function() {
         padding-right: 15px !important;
       }
     }
-    /* Warranty margin matches ref */
-    body.woocommerce-checkout .checkout-warranty {
-      margin-top: 36px !important;
-      margin-bottom: 22px !important;
-    }
+    /* Warranty margin — set below with button */
     /* Terms margin matches ref */
     body.woocommerce-checkout .agreed_terms_txt {
       margin-bottom: 24px !important;
     }
-    /* Button container — fill parent, no centering, let padding handle width */
+    /* Button container — tight to content above */
     body.woocommerce-checkout #order_review {
       max-width: none !important;
       margin: 0 !important;
+      padding-top: 0 !important;
+    }
+    /* Remove form bottom padding that creates gap above button */
+    body.woocommerce-checkout form.checkout {
+      padding-bottom: 10px !important;
+    }
+    /* Tighten place-order section bottom */
+    body.woocommerce-checkout .form-row.place-order {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    /* Warranty tighter to button */
+    body.woocommerce-checkout .checkout-warranty {
+      margin-top: 20px !important;
+      margin-bottom: 16px !important;
     }
 
     /* ===== FIELD VALIDATION STATES ===== */
