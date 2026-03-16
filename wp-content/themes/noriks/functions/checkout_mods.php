@@ -359,7 +359,111 @@ add_action( 'wp_footer', function() {
       max-width: none !important;
       margin: 0 !important;
     }
+
+    /* ===== FIELD VALIDATION STATES ===== */
+    /* Error state */
+    body.woocommerce-checkout .form-row.noriks-invalid input,
+    body.woocommerce-checkout .form-row.noriks-invalid select,
+    body.woocommerce-checkout .form-row.noriks-invalid .select2-selection {
+      border: 2px solid #CC0000 !important;
+      background-color: #FDE8E8 !important;
+      box-shadow: none !important;
+    }
+    /* Valid state */
+    body.woocommerce-checkout .form-row.noriks-valid input,
+    body.woocommerce-checkout .form-row.noriks-valid select,
+    body.woocommerce-checkout .form-row.noriks-valid .select2-selection {
+      border: 2px solid #4CAF50 !important;
+      background-color: #E8F5E9 !important;
+      box-shadow: none !important;
+    }
+    /* Error message */
+    body.woocommerce-checkout .noriks-field-error {
+      display: block !important;
+      color: #CC0000 !important;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      padding-top: 5px !important;
+      line-height: 1.4 !important;
+    }
     </style>
+
+    <script id="noriks-checkout-validation">
+    jQuery(function($){
+      var messages = {
+        required: '\u2715 Obavezna informacija',
+        billing_address_2: '\u2715 Ukoliko nemate kućni broj upišite BB',
+      };
+
+      function validateField(field) {
+        var $row = $(field).closest('.form-row');
+        var id = $row.attr('id') || '';
+        var val = $(field).val()?.trim() || '';
+        var isRequired = $row.hasClass('validate-required');
+        var isEmail = $row.hasClass('validate-email');
+        var isPhone = $row.hasClass('validate-phone');
+
+        // Remove old state
+        $row.removeClass('noriks-invalid noriks-valid');
+        $row.find('.noriks-field-error').remove();
+
+        // Skip non-required empty fields (like email)
+        if (!isRequired && !val) return true;
+
+        // Required check
+        if (isRequired && !val) {
+          var msg = messages[id.replace('_field','')] || messages.required;
+          $row.addClass('noriks-invalid');
+          $row.append('<span class="noriks-field-error">' + msg + '</span>');
+          return false;
+        }
+
+        // Email format
+        if (isEmail && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+          $row.addClass('noriks-invalid');
+          $row.append('<span class="noriks-field-error">\u2715 Unesite ispravnu e-mail adresu</span>');
+          return false;
+        }
+
+        // Phone format (at least 6 digits)
+        if (isPhone && val && val.replace(/\D/g,'').length < 6) {
+          $row.addClass('noriks-invalid');
+          $row.append('<span class="noriks-field-error">\u2715 Unesite ispravan broj telefona</span>');
+          return false;
+        }
+
+        // Valid
+        if (val) $row.addClass('noriks-valid');
+        return true;
+      }
+
+      // Validate on blur
+      $(document).on('blur', '.woocommerce-checkout .form-row input, .woocommerce-checkout .form-row select', function(){
+        validateField(this);
+      });
+
+      // Select2 change
+      $(document).on('change', '.woocommerce-checkout .form-row select', function(){
+        validateField(this);
+      });
+
+      // Validate all on submit
+      $('#noriks_place_order').on('click', function(e){
+        var allValid = true;
+        $('.woocommerce-checkout .form-row.validate-required').each(function(){
+          var input = $(this).find('input, select').first();
+          if (input.length && !validateField(input[0])) allValid = false;
+        });
+        if (!allValid) {
+          e.stopImmediatePropagation();
+          // Scroll to first error
+          var first = $('.noriks-invalid:first');
+          if (first.length) $('html,body').animate({scrollTop: first.offset().top - 100}, 300);
+          return false;
+        }
+      });
+    });
+    </script>
     <?php
 }, 50 );
 
