@@ -81,6 +81,8 @@ body.woocommerce-checkout {
   font-size: 14px !important;
   line-height: 21px !important;
   color: #333 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body.woocommerce-checkout .storefront-full-width-content .woocommerce,
@@ -131,7 +133,7 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
 }
 
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
-  margin-bottom: 10px !important;
+  margin: 0 0 10px 0 !important;
   padding: 0 !important;
   position: relative !important;
   box-sizing: border-box !important;
@@ -507,6 +509,7 @@ body.woocommerce-checkout .payment-icon-right img {
 }
 body.woocommerce-checkout .hs-checkout__payment-method-cod-icon {
   height: 40px !important;
+  max-height: 40px !important;
   width: auto !important;
 }
 
