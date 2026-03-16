@@ -257,6 +257,15 @@ add_action( 'wp_footer', function() {
       color: #232f3e !important;
     }
 
+    /* ===== FIELD DESCRIPTIONS (helper text under inputs) ===== */
+    body.woocommerce-checkout .form-row .description {
+      display: block !important;
+      font-size: 12px !important;
+      color: #8c8c8c !important;
+      margin-top: 4px !important;
+      line-height: 1.4 !important;
+    }
+
     /* ===== SHIPPING METHOD — force show (vigoshop CSS hides, JS shows) ===== */
     #custom_shipping .shipping_method_custom {
       display: block !important;
@@ -396,8 +405,10 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_city']['placeholder'] = 'Odaberite grad';
     $fields['billing']['billing_phone']['label'] = 'Telefon';
     $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
+    $fields['billing']['billing_phone']['description'] = 'Primjer: 0912345678 · Za pomoć s dostavom';
     $fields['billing']['billing_email']['label'] = 'E-mail adresa';
     $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
+    $fields['billing']['billing_email']['description'] = 'Za potvrdu narudžbe i praćenje pošiljke';
     $fields['billing']['billing_email']['required'] = false;
     $fields['billing']['billing_country']['default'] = 'HR';
     unset( $fields['billing']['billing_company'] );
