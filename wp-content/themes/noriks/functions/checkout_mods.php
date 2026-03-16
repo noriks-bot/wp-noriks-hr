@@ -356,7 +356,7 @@ add_action( 'wp_footer', function() {
     /* Button container — fill parent, no centering, let padding handle width */
     body.woocommerce-checkout #order_review {
       max-width: none !important;
-      margin: 16px 0 0 0 !important;
+      margin: 8px 0 0 0 !important;
     }
     </style>
     <?php
