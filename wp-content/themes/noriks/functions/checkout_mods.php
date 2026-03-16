@@ -523,8 +523,11 @@ add_action( 'wp_footer', function() {
         });
       });
 
+      /* Remove any existing click handlers on submit button (form-checkout.php binds one) */
+      $('#noriks_place_order').off('click');
+
       /* Validate all on submit — first time sets submitted=true */
-      $(document).on('click', '#noriks_place_order', function(e){
+      $('#noriks_place_order').on('click', function(e){
         e.preventDefault();
         e.stopImmediatePropagation();
         submitted = true;
