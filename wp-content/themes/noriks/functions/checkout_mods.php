@@ -321,7 +321,14 @@ add_action( 'wp_footer', function() {
       flex-shrink: 0 !important;
     }
 
-    /* ===== BUTTON/WARRANTY/TERMS — mobile padding ===== */
+    /* ===== BUTTON/WARRANTY/TERMS — match form padding ===== */
+    body.woocommerce-checkout #order_review,
+    body.woocommerce-checkout .checkout-warranty,
+    body.woocommerce-checkout .agreed_terms_txt {
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+      box-sizing: border-box !important;
+    }
     @media (max-width: 560px) {
       body.woocommerce-checkout #order_review,
       body.woocommerce-checkout .checkout-warranty,
@@ -330,13 +337,18 @@ add_action( 'wp_footer', function() {
         padding-right: 15px !important;
       }
     }
-    body.woocommerce-checkout #order_review,
-    body.woocommerce-checkout .checkout-warranty,
+    /* Warranty margin matches ref */
+    body.woocommerce-checkout .checkout-warranty {
+      margin-top: 36px !important;
+      margin-bottom: 22px !important;
+    }
+    /* Terms margin matches ref */
     body.woocommerce-checkout .agreed_terms_txt {
-      max-width: 560px !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      box-sizing: border-box !important;
+      margin-bottom: 24px !important;
+    }
+    /* Button top margin matches ref */
+    body.woocommerce-checkout #order_review {
+      margin-top: 16px !important;
     }
     </style>
     <?php
