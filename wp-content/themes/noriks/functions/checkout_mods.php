@@ -121,10 +121,10 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
  */
 add_filter( 'woocommerce_form_field', function( $field, $key, $args, $value ) {
     if ( $key === 'billing_phone' ) {
-        $field .= '<div class="checkout-field-hints"><span class="hint-left">Primjer: 0912345678</span> <span class="hint-right">Za pomoć s dostavom</span></div>';
+        // Hints are added via JS to avoid breaking flex layout
     }
     if ( $key === 'billing_email' ) {
-        // No hint after email — we add it via separate hook outside the flex wrapper
+        // Hints are added via JS to avoid breaking flex layout
     }
     if ( $key === 'billing_address_1' ) {
         $hint = '<div class="form-row form-row-wide address-hint">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';

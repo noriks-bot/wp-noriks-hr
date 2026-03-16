@@ -246,11 +246,9 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input::plac
   color: #707070 !important;
 }
 
-/* Force hints to take full width and clear properly */
+/* Hints are inside their form-row div, not siblings in flex wrapper */
 body.woocommerce-checkout .checkout-field-hints {
-  flex: 0 0 100% !important;
   width: 100% !important;
-  clear: both !important;
 }
 
 /* ===== FIELD HINTS — match vigoshop ===== */
