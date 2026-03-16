@@ -131,13 +131,7 @@ body.woocommerce-checkout .ticker {
   display: none !important;
 }
 
-/* ===== HIDE EVERYTHING OUTSIDE #content on checkout ===== */
-body.woocommerce-checkout > *:not(#page):not(script):not(style):not(link):not(#wpadminbar) {
-  display: none !important;
-}
-body.woocommerce-checkout #page > *:not(#content):not(script):not(style):not(#wpadminbar) {
-  display: none !important;
-}
+/* Keep checkout visible — only hide specific known elements */
 
 /* ===== STOREFRONT LAYOUT RESET ===== */
 body.woocommerce-checkout .storefront-full-width-content .woocommerce,
