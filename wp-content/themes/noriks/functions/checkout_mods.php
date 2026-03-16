@@ -201,3 +201,30 @@ add_filter( 'woocommerce_available_payment_gateways', function( $gw ) {
 }, 100 );
 
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+/**
+ * Remove coupon form from checkout entirely
+ */
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+add_action( 'init', function() {
+    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+});
+
+/**
+ * Remove info-banner section via output buffer on checkout
+ */
+add_action( 'wp_head', function() {
+    if ( ! is_checkout() ) return;
+    ob_start( function( $html ) {
+        // Remove info-banner section
+        $html = preg_replace( '/<section class="info-banner">[\s\S]*?<\/section>/i', '', $html );
+        // Remove coupon toggle + form if still present
+        $html = preg_replace( '/<div class="woocommerce-form-coupon-toggle">[\s\S]*?<\/div>/', '', $html );
+        $html = preg_replace( '/<form class="checkout_coupon woocommerce-form-coupon"[\s\S]*?<\/form>/', '', $html );
+        return $html;
+    });
+}, 1 );
+add_action( 'wp_footer', function() {
+    if ( ! is_checkout() ) return;
+    if ( ob_get_level() > 0 ) ob_end_flush();
+}, 9999 );
