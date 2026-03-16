@@ -175,43 +175,86 @@ body.woocommerce-checkout #billing_city_field.form-row-last {
   width: calc(63% - 5px) !important;
 }
 
-/* Input styling */
+/* Input styling — match vigoshop exactly */
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input[type="text"],
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input[type="email"],
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input[type="tel"],
-body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper select {
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper select,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper textarea {
   width: 100% !important;
-  padding: 12px 14px !important;
-  border: 1px solid #d1dbe5 !important;
-  border-radius: 6px !important;
-  font-size: 14px !important;
+  padding: 0.48em 1em !important;
+  min-height: 60px !important;
+  border: 1.5px solid #c9c9c9 !important;
+  border-radius: 4px !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
   line-height: 1.4 !important;
   background: #fff !important;
-  color: #333 !important;
+  color: #000 !important;
   box-sizing: border-box !important;
   outline: none !important;
-  transition: border-color 0.2s !important;
+  box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.25) !important;
+  transition: all 0.2s ease-out !important;
   -webkit-appearance: none !important;
 }
 
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input:focus,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper select:focus {
-  border-color: #80b3ff !important;
-  box-shadow: 0 0 0 2px rgba(66,133,244,0.15) !important;
+  border-color: #47b426 !important;
+  background-color: #fafff9 !important;
 }
 
-/* Hide labels, use placeholders */
+/* Floating labels — hidden by default, shown when field has value */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row {
+  position: relative !important;
+}
+
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper label:not(.checkbox) {
-  display: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  padding: 11px 18px 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #5f6061 !important;
+  opacity: 0 !important;
+  transform: translateY(3px) !important;
+  transition: all 0.2s ease-out !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  display: block !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  width: 100% !important;
 }
 
-/* ===== FIELD HINTS ===== */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .field--not-empty label {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .field--not-empty input,
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .field--not-empty select {
+  padding-top: 20px !important;
+  padding-bottom: 0 !important;
+}
+
+/* Placeholder styling */
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input::placeholder {
+  font-size: 16px !important;
+  color: #707070 !important;
+}
+
+/* ===== FIELD HINTS — match vigoshop ===== */
 body.woocommerce-checkout .checkout-field-hints {
   display: flex !important;
   justify-content: space-between !important;
-  margin: -4px 0 8px !important;
-  font-size: 12px !important;
-  color: #888 !important;
+  margin: 5px 0 0 !important;
+  padding: 0 8px !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  color: #919293 !important;
 }
 
 body.woocommerce-checkout .address-hint {
@@ -457,21 +500,52 @@ body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper {
   display: none !important;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE — vigoshop keeps side-by-side on mobile too ===== */
 @media (max-width: 600px) {
   body.woocommerce-checkout .wc-checkout-wrap {
-    padding: 12px 8px !important;
+    padding: 8px 0 !important;
   }
   body.woocommerce-checkout .wc-checkout-wrap > form.checkout {
     padding: 16px 12px !important;
+    border-radius: 0 !important;
   }
+  /* Keep Ime/Prezime side by side */
   body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last,
-  body.woocommerce-checkout #billing_address_1_field.form-row-first,
-  body.woocommerce-checkout #billing_address_2_field.form-row-last,
-  body.woocommerce-checkout #billing_postcode_field.form-row-first,
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last {
+    flex: 0 0 calc(50% - 5px) !important;
+    width: calc(50% - 5px) !important;
+  }
+  /* Postcode/City side by side on mobile too */
+  body.woocommerce-checkout #billing_postcode_field.form-row-first {
+    flex: 0 0 calc(35% - 5px) !important;
+    width: calc(35% - 5px) !important;
+  }
   body.woocommerce-checkout #billing_city_field.form-row-last {
-    flex: 0 0 100% !important;
-    width: 100% !important;
+    flex: 0 0 calc(63% - 5px) !important;
+    width: calc(63% - 5px) !important;
+  }
+  /* Ulica/Kućni might stack on very small screens */
+  body.woocommerce-checkout #billing_address_1_field.form-row-first {
+    flex: 0 0 calc(67% - 5px) !important;
+    width: calc(67% - 5px) !important;
+  }
+  body.woocommerce-checkout #billing_address_2_field.form-row-last {
+    flex: 0 0 calc(31% - 5px) !important;
+    width: calc(31% - 5px) !important;
+  }
+  /* Smaller font for payment on mobile */
+  body.woocommerce-checkout #payment ul.payment_methods li label {
+    padding: 12px !important;
+    font-size: 13px !important;
+  }
+  body.woocommerce-checkout .checkout-main-title {
+    font-size: 20px !important;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input::placeholder {
+    font-size: 14px !important;
   }
 }
