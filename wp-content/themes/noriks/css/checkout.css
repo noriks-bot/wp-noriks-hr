@@ -52,7 +52,10 @@ body.woocommerce-checkout .info-items-container,
 body.woocommerce-checkout .phone-footer-checkout,
 body.woocommerce-checkout .checkout_coupon,
 body.woocommerce-checkout .woocommerce-form-coupon,
-body.woocommerce-checkout .woocommerce-form-coupon-toggle {
+body.woocommerce-checkout .woocommerce-form-coupon-toggle,
+body.woocommerce-checkout .post-edit-link,
+body.woocommerce-checkout .edit-link,
+body.woocommerce-checkout a.post-edit-link {
   display: none !important;
 }
 
