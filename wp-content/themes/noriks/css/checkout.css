@@ -44,7 +44,62 @@ body.woocommerce-checkout .comments-area,
 body.woocommerce-checkout .entry-meta,
 body.woocommerce-checkout .cat-links,
 body.woocommerce-checkout .tags-links,
-body.woocommerce-checkout #colophon {
+body.woocommerce-checkout #colophon,
+body.woocommerce-checkout .page-title,
+body.woocommerce-checkout .entry-title,
+body.woocommerce-checkout h1.entry-title,
+body.woocommerce-checkout .woocommerce-checkout > .entry-header,
+body.woocommerce-checkout .entry-header,
+body.woocommerce-checkout .page-header,
+body.woocommerce-checkout .woocommerce-checkout-review-order-table + *,
+body.woocommerce-checkout .entry-content > *:not(.woocommerce),
+body.woocommerce-checkout .entry-content > .woocommerce ~ *,
+body.woocommerce-checkout .woocommerce-after-checkout,
+body.woocommerce-checkout .elementor-section,
+body.woocommerce-checkout [class*="jamstvo"],
+body.woocommerce-checkout [class*="garancija"],
+body.woocommerce-checkout [class*="podrska"],
+body.woocommerce-checkout [class*="dostava-iz"],
+body.woocommerce-checkout .wp-block-group,
+body.woocommerce-checkout .wp-block-image,
+body.woocommerce-checkout .wp-block-heading,
+body.woocommerce-checkout .wp-block-paragraph,
+body.woocommerce-checkout .wp-block-columns,
+body.woocommerce-checkout .wc-block-components-notices,
+body.woocommerce-checkout article.page > .entry-content > :not(.woocommerce):not(.wc-checkout-wrap) {
+  display: none !important;
+}
+
+/* Hide page title "Checkout" */
+body.woocommerce-checkout h1,
+body.woocommerce-checkout .page > header {
+  display: none !important;
+}
+
+/* Hide ALL content after the checkout form wrapper */
+body.woocommerce-checkout .wc-checkout-wrap ~ *,
+body.woocommerce-checkout .woocommerce ~ *:not(script):not(style),
+body.woocommerce-checkout .checkout.woocommerce-checkout ~ *:not(.checkout-warranty):not(.agreed_terms_txt):not(script):not(style) {
+  display: none !important;
+}
+
+/* Constrain payment gateway icons */
+body.woocommerce-checkout #payment ul.payment_methods li img,
+body.woocommerce-checkout .wc_payment_method img {
+  max-height: 24px !important;
+  width: auto !important;
+  max-width: 50px !important;
+}
+
+/* VISA/MC/Maestro in credit card option */
+body.woocommerce-checkout .wc_payment_method label img {
+  max-height: 22px !important;
+  margin-left: 4px;
+}
+
+/* Scrolling top text (breadcrumb-like spam) — hide */
+body.woocommerce-checkout .entry-content::before,
+body.woocommerce-checkout .site-main > *:first-child:not(.woocommerce) {
   display: none !important;
 }
 
