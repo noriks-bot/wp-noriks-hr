@@ -1,11 +1,12 @@
 <?php
 /**
- * Checkout Modifications — Field ordering, labels, CSS loading
+ * Checkout Modifications — Load vigoshop CSS directly + field ordering
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Dequeue all styles on checkout, load only our CSS + Google Fonts
+ * Load vigoshop CSS files on checkout page ONLY
+ * Order: vigoshop-app (base) → vigoshop-brand → vigoshop-checkout (inputs/forms) → our overrides (minimal)
  */
 add_action( 'wp_enqueue_scripts', function() {
     if ( ! is_checkout() ) return;
@@ -21,33 +22,43 @@ add_action( 'wp_enqueue_scripts', function() {
         }
     }
 
-    // Google Fonts: Roboto (vigoshop uses Roboto)
-    wp_enqueue_style( 'google-roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap', array(), null );
+    $theme_uri = get_stylesheet_directory_uri();
+    $theme_dir = get_stylesheet_directory();
 
-    // WC Select2 (needed for city dropdown)
+    // 1. Vigoshop app CSS (base styles: fonts, layout, buttons, containers)
+    wp_enqueue_style( 'vigoshop-app', $theme_uri . '/css/vigoshop-app.css', array(), '1.0' );
+
+    // 2. Vigoshop brand CSS (brand-specific overrides)
+    wp_enqueue_style( 'vigoshop-brand', $theme_uri . '/css/vigoshop-brand.css', array( 'vigoshop-app' ), '1.0' );
+
+    // 3. Vigoshop checkout CSS (form inputs, shipping, payment, order review)
+    wp_enqueue_style( 'vigoshop-checkout', $theme_uri . '/css/vigoshop-checkout.css', array( 'vigoshop-brand' ), '1.0' );
+
+    // 4. WC Select2 (needed for city dropdown)
     wp_enqueue_style( 'select2', WC()->plugin_url() . '/assets/css/select2.css', array(), null );
 
-    // Our checkout CSS — loaded LAST with md5 cache busting
-    $css_file = get_stylesheet_directory() . '/css/checkout.css';
+    // 5. Our minimal overrides (LAST — only Noriks-specific stuff)
+    $css_file = $theme_dir . '/css/checkout.css';
     $version = file_exists( $css_file ) ? md5_file( $css_file ) : '1';
-    wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), $version );
+    wp_enqueue_style( 'noriks-checkout', $theme_uri . '/css/checkout.css', array( 'vigoshop-checkout' ), $version );
 
 }, 9999 );
 
 /**
- * Add vigoshop body classes
+ * Add vigoshop body classes (needed for vigoshop CSS selectors)
  */
 add_filter( 'body_class', function( $classes ) {
     if ( is_checkout() ) {
         $classes[] = 'brand-vigoshop';
         $classes[] = 'theme-vigoshop';
+        $classes[] = 'theme-hsplus';
+        $classes[] = 'woocommerce-checkout';
     }
     return $classes;
 });
 
 /**
  * Field ordering & labels — match vigoshop.hr HR layout
- * Order: Phone → Email → Ime/Prezime → Address hint → Ulica/Kućni → Poštanski/Grad
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_phone']['priority']      = 10;
@@ -81,19 +92,13 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_country']['default'] = 'HR';
     unset( $fields['billing']['billing_company'] );
 
-    // Ime/Prezime side by side
+    // Side by side pairs
     $fields['billing']['billing_first_name']['class'] = array( 'form-row', 'form-row-first' );
     $fields['billing']['billing_last_name']['class']  = array( 'form-row', 'form-row-last' );
-
-    // Ulica/Kućni side by side
     $fields['billing']['billing_address_1']['class']  = array( 'form-row', 'form-row-first', 'address-field' );
     $fields['billing']['billing_address_2']['class']  = array( 'form-row', 'form-row-last', 'address-field' );
-
-    // Poštanski/Grad side by side
     $fields['billing']['billing_postcode']['class']   = array( 'form-row', 'form-row-first', 'address-field' );
     $fields['billing']['billing_city']['class']       = array( 'form-row', 'form-row-last', 'address-field' );
-
-    // Phone and email full width
     $fields['billing']['billing_phone']['class']      = array( 'form-row', 'form-row-wide' );
     $fields['billing']['billing_email']['class']      = array( 'form-row', 'form-row-wide' );
 
@@ -101,15 +106,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
 }, 20 );
 
 /**
- * Add "Plaćanje i Dostava" heading before billing fields
- */
-add_action( 'woocommerce_before_checkout_billing_form', function() {
-    echo '<h2 class="checkout-main-title">Plaćanje i Dostava</h2>';
-});
-
-/**
- * Add address hint after billing_last_name field (inside the field wrapper)
- * This outputs right after the last_name field closes, still inside the flex wrapper
+ * Add address hint after billing_last_name field
  */
 add_filter( 'woocommerce_form_field_text', function( $field, $key, $args, $value ) {
     if ( $key === 'billing_last_name' ) {
@@ -119,6 +116,13 @@ add_filter( 'woocommerce_form_field_text', function( $field, $key, $args, $value
 }, 10, 4 );
 
 /**
+ * Add "Plaćanje i Dostava" heading before billing fields
+ */
+add_action( 'woocommerce_before_checkout_billing_form', function() {
+    echo '<h2 class="checkout-billing-title">Plaćanje i Dostava</h2>';
+});
+
+/**
  * Force billing country to HR
  */
 add_filter( 'default_checkout_billing_country', function() {
@@ -126,7 +130,7 @@ add_filter( 'default_checkout_billing_country', function() {
 });
 
 /**
- * Change place order button text (for WC default button — we also have our own)
+ * Change place order button text
  */
 add_filter( 'woocommerce_order_button_text', function() {
     return '🔒 Naruči';
