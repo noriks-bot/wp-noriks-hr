@@ -214,11 +214,7 @@ jQuery(function($){
     $('#hs-cod-checkout-prompt').toggle(val==='cod');
   }).filter(':checked').trigger('change');
 
-  /* Submit button triggers WC hidden button */
-  $('#noriks_place_order').on('click',function(e){
-    e.preventDefault();
-    $('#place_order').trigger('click');
-  });
+  /* Submit handled by validation in checkout_mods.php — triggers #place_order only if valid */
 
   /* Trigger WC checkout update */
   $(document.body).trigger('update_checkout');

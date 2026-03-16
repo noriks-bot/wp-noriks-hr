@@ -524,7 +524,9 @@ add_action( 'wp_footer', function() {
       });
 
       /* Validate all on submit — first time sets submitted=true */
-      $('#noriks_place_order').on('click', function(e){
+      $(document).on('click', '#noriks_place_order', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
         submitted = true;
         var allValid = true;
         $('.woocommerce-checkout .form-row.validate-required').each(function(){
@@ -532,11 +534,12 @@ add_action( 'wp_footer', function() {
           if (input.length && !validateField(input[0], true)) allValid = false;
         });
         if (!allValid) {
-          e.stopImmediatePropagation();
           var first = $('.noriks-invalid:first');
           if (first.length) $('html,body').animate({scrollTop: first.offset().top - 100}, 300);
           return false;
         }
+        /* All valid — trigger WC checkout submit */
+        $('#place_order').trigger('click');
       });
     });
     </script>
