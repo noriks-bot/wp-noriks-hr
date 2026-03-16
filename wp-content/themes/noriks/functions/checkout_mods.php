@@ -6,10 +6,36 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Enqueue vigoshop CDN CSS on checkout (early, so they load)
+ * Dequeue ALL WP/WC/theme styles on checkout, load vigoshop CDN CSS
  */
 add_action( 'wp_enqueue_scripts', function() {
     if ( ! is_checkout() ) return;
+
+    // Remove ALL registered styles except admin-bar
+    global $wp_styles;
+    if ( ! empty( $wp_styles->registered ) ) {
+        foreach ( array_keys( $wp_styles->registered ) as $handle ) {
+            if ( $handle !== 'admin-bar' && $handle !== 'dashicons' ) {
+                wp_deregister_style( $handle );
+            }
+        }
+    }
+
+    // Remove ALL registered scripts except essential WC ones
+    global $wp_scripts;
+    $keep_scripts = array(
+        'jquery', 'jquery-core', 'jquery-migrate',
+        'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
+        'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
+        'wp-hooks', 'wp-i18n',
+    );
+    if ( ! empty( $wp_scripts->registered ) ) {
+        foreach ( array_keys( $wp_scripts->registered ) as $handle ) {
+            if ( ! in_array( $handle, $keep_scripts, true ) ) {
+                wp_deregister_script( $handle );
+            }
+        }
+    }
 
     // Vigoshop CDN CSS — exact same files + order as /test-checkout/
     $css = array(
@@ -57,142 +83,24 @@ add_action( 'wp_enqueue_scripts', function() {
 }, 9999 );
 
 /**
- * Dequeue ALL non-vigoshop styles right before output
+ * Also dequeue styles that get enqueued late (after priority 9999)
  */
 add_action( 'wp_print_styles', function() {
     if ( ! is_checkout() ) return;
-
-    // Keep only our vigoshop + checkout CSS handles
-    $keep = array( 'admin-bar', 'dashicons', 'google-roboto', 'noriks-checkout' );
-    // Add all vigo-* handles
-    global $wp_styles;
-    foreach ( array_keys( $wp_styles->registered ) as $h ) {
-        if ( strpos( $h, 'vigo-' ) === 0 ) $keep[] = $h;
-    }
-
-    foreach ( $wp_styles->queue as $h ) {
-        if ( ! in_array( $h, $keep, true ) ) {
-            wp_dequeue_style( $h );
-        }
-    }
+    // Remove any storefront/theme CSS that snuck through
+    $remove = array( 'storefront-style', 'storefront-woocommerce-style', 'storefront-gutenberg-blocks', 'wp-block-library' );
+    foreach ( $remove as $h ) wp_dequeue_style( $h );
 }, 9999 );
 
 /**
- * Dequeue non-essential scripts on checkout
+ * Inline styles from vigoshop <head>
  */
-add_action( 'wp_print_scripts', function() {
-    if ( ! is_checkout() ) return;
-
-    $keep_scripts = array(
-        'jquery', 'jquery-core', 'jquery-migrate',
-        'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
-        'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
-        'wp-hooks', 'wp-i18n', 'checkout-fields',
-    );
-
-    global $wp_scripts;
-    foreach ( $wp_scripts->queue as $h ) {
-        if ( ! in_array( $h, $keep_scripts, true ) ) {
-            wp_dequeue_script( $h );
-        }
-    }
-}, 9999 );
-
-/**
- * Inline styles from vigoshop <head> + checkout overrides
- * wp_footer at high priority = loads AFTER all CDN CSS, guaranteed to win
- */
-add_action( 'wp_footer', function() {
+add_action( 'wp_head', function() {
     if ( ! is_checkout() ) return;
     echo '<style>tr.cart-discount.coupon-get1free .amount{display:none;}</style>';
     echo '<style>img:is([sizes="auto" i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}</style>';
     echo '<style>.woocommerce form .form-row .required{visibility:visible;}</style>';
-    ?>
-    <style id="noriks-checkout-overrides">
-    /* Payment title — show it */
-    body.woocommerce-checkout h3.payment-title {
-      display: block !important;
-      font-size: 19.6px !important;
-      font-weight: 700 !important;
-      margin: 29.4px 0 14.7px !important;
-      color: #333 !important;
-    }
-    /* Payment labels — match vigoshop 22.65px padding */
-    body.woocommerce-checkout #noriks-payment .wc_payment_method label {
-      padding: 22.65px 16px !important;
-      font-size: 16px !important;
-      font-weight: 700 !important;
-    }
-    /* Payment methods list bottom margin */
-    body.woocommerce-checkout #noriks-payment .wc_payment_methods {
-      margin-bottom: 21px !important;
-    }
-    /* Button/warranty/terms — add mobile padding */
-    body.woocommerce-checkout #order_review,
-    body.woocommerce-checkout .checkout-warranty,
-    body.woocommerce-checkout .agreed_terms_txt {
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-      box-sizing: border-box !important;
-    }
-    /* Hide ALL theme chrome */
-    body.woocommerce-checkout #languageModal,
-    body.woocommerce-checkout .top-header,
-    body.woocommerce-checkout .marquee,
-    body.woocommerce-checkout header.navbar.header,
-    body.woocommerce-checkout .xoo-wsc-markup,
-    body.woocommerce-checkout .xoo-wsc-container,
-    body.woocommerce-checkout .xoo-wsc-modal,
-    body.woocommerce-checkout .footer-wrap,
-    body.woocommerce-checkout footer.footer,
-    body.woocommerce-checkout footer.footer-mobile,
-    body.woocommerce-checkout .hs_loader,
-    body.woocommerce-checkout .storefront-breadcrumb,
-    body.woocommerce-checkout .woocommerce-breadcrumb,
-    body.woocommerce-checkout .storefront-handheld-footer-bar,
-    body.woocommerce-checkout .site-header,
-    body.woocommerce-checkout .site-footer,
-    body.woocommerce-checkout .site-info,
-    body.woocommerce-checkout #colophon,
-    body.woocommerce-checkout .entry-header,
-    body.woocommerce-checkout .entry-title,
-    body.woocommerce-checkout h1.entry-title,
-    body.woocommerce-checkout .phone-footer-checkout,
-    body.woocommerce-checkout .info-banner,
-    body.woocommerce-checkout .info-items-container,
-    body.woocommerce-checkout .woocommerce-form-coupon-toggle,
-    body.woocommerce-checkout .cookie-consent {
-      display: none !important;
-    }
-    /* Hide WC fields we don't need */
-    body.woocommerce-checkout p#billing_country_field,
-    body.woocommerce-checkout p#billing_state_field,
-    body.woocommerce-checkout #kl_newsletter_checkbox_field,
-    body.woocommerce-checkout #hsplus_accepts_marketing_field,
-    body.woocommerce-checkout .woocommerce-additional-fields > h3,
-    body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper,
-    body.woocommerce-checkout .woocommerce-privacy-policy-text {
-      display: none !important;
-    }
-    /* Hidden WC #payment (off-screen for AJAX) */
-    body.woocommerce-checkout #payment.woocommerce-checkout-payment {
-      position: absolute !important;
-      left: -9999px !important;
-      opacity: 0 !important;
-      height: 0 !important;
-      overflow: hidden !important;
-      pointer-events: none !important;
-    }
-    /* COD prompt hidden by default */
-    body.woocommerce-checkout #hs-cod-checkout-prompt {
-      display: none !important;
-    }
-    </style>
-    <?php
-}, 50 );
+}, 5 );
 
 /**
  * Body classes — vigoshop expects these
@@ -212,14 +120,14 @@ add_filter( 'body_class', function( $classes ) {
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     // Order — match vigoshop: name → address → phone → email
-    $fields['billing']['billing_phone']['priority']       = 10;
-    $fields['billing']['billing_email']['priority']       = 20;
     $fields['billing']['billing_first_name']['priority']  = 30;
     $fields['billing']['billing_last_name']['priority']   = 40;
     $fields['billing']['billing_address_1']['priority']   = 50;
     $fields['billing']['billing_address_2']['priority']   = 60;
     $fields['billing']['billing_postcode']['priority']    = 70;
     $fields['billing']['billing_city']['priority']        = 80;
+    $fields['billing']['billing_phone']['priority']       = 90;
+    $fields['billing']['billing_email']['priority']       = 100;
 
     // Labels, placeholders, required
     $fields['billing']['billing_first_name']['label'] = 'Ime';
