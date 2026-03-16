@@ -1,1 +1,63 @@
-/* Noriks checkout — empty. All styling from vigoshop CDN via standalone template. */
+/*
+ * Noriks Checkout — Hide WP chrome, bridge WC to vigoshop
+ * Vigoshop CDN CSS handles all visual styling
+ */
+
+/* ===== HIDE EVERYTHING OUTSIDE CHECKOUT ===== */
+body.woocommerce-checkout .vigo-header,
+body.woocommerce-checkout header,
+body.woocommerce-checkout .footer-wrap,
+body.woocommerce-checkout footer,
+body.woocommerce-checkout .footer,
+body.woocommerce-checkout .footer-mobile,
+body.woocommerce-checkout .site-header,
+body.woocommerce-checkout .site-footer,
+body.woocommerce-checkout .storefront-breadcrumb,
+body.woocommerce-checkout .woocommerce-breadcrumb,
+body.woocommerce-checkout .woocommerce-form-coupon-toggle,
+body.woocommerce-checkout .woocommerce-info,
+body.woocommerce-checkout .woocommerce-message,
+body.woocommerce-checkout .storefront-handheld-footer-bar,
+body.woocommerce-checkout .xoo-wsc-container,
+body.woocommerce-checkout .site-info,
+body.woocommerce-checkout .footer-widgets,
+body.woocommerce-checkout #secondary,
+body.woocommerce-checkout .widget-area,
+body.woocommerce-checkout #colophon,
+body.woocommerce-checkout .entry-header,
+body.woocommerce-checkout .page-header,
+body.woocommerce-checkout .entry-title,
+body.woocommerce-checkout h1.entry-title,
+body.woocommerce-checkout .page-title,
+body.woocommerce-checkout .hero,
+body.woocommerce-checkout .announcement-bar,
+body.woocommerce-checkout .promo-banner,
+body.woocommerce-checkout .marquee,
+body.woocommerce-checkout .ticker,
+body.woocommerce-checkout .woocommerce-notices-wrapper:empty,
+body.woocommerce-checkout .cookie-consent,
+body.woocommerce-checkout .cookie-bar,
+body.woocommerce-checkout .hs_loader {
+  display: none !important;
+}
+
+/* ===== HIDE WC FIELDS WE DON'T NEED ===== */
+body.woocommerce-checkout p#billing_country_field,
+body.woocommerce-checkout p#billing_state_field,
+body.woocommerce-checkout #kl_newsletter_checkbox_field,
+body.woocommerce-checkout #hsplus_accepts_marketing_field,
+body.woocommerce-checkout .woocommerce-additional-fields > h3,
+body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper,
+body.woocommerce-checkout .woocommerce-privacy-policy-text {
+  display: none !important;
+}
+
+/* ===== HIDDEN WC #payment (off-screen for AJAX) ===== */
+body.woocommerce-checkout #payment.woocommerce-checkout-payment {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
