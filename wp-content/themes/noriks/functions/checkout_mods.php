@@ -203,28 +203,19 @@ add_filter( 'woocommerce_available_payment_gateways', function( $gw ) {
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
 /**
- * Remove coupon form from checkout entirely
+ * Disable coupons on checkout entirely
  */
-remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-add_action( 'init', function() {
-    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+add_filter( 'woocommerce_coupons_enabled', function( $enabled ) {
+    if ( is_checkout() ) return false;
+    return $enabled;
 });
 
 /**
- * Remove info-banner section via output buffer on checkout
+ * Remove info-banner from checkout page content
  */
-add_action( 'wp_head', function() {
-    if ( ! is_checkout() ) return;
-    ob_start( function( $html ) {
-        // Remove info-banner section
-        $html = preg_replace( '/<section class="info-banner">[\s\S]*?<\/section>/i', '', $html );
-        // Remove coupon toggle + form if still present
-        $html = preg_replace( '/<div class="woocommerce-form-coupon-toggle">[\s\S]*?<\/div>/', '', $html );
-        $html = preg_replace( '/<form class="checkout_coupon woocommerce-form-coupon"[\s\S]*?<\/form>/', '', $html );
-        return $html;
-    });
-}, 1 );
-add_action( 'wp_footer', function() {
-    if ( ! is_checkout() ) return;
-    if ( ob_get_level() > 0 ) ob_end_flush();
-}, 9999 );
+add_filter( 'the_content', function( $content ) {
+    if ( is_checkout() ) {
+        $content = preg_replace( '/<section class="info-banner">.*?<\/section>/s', '', $content );
+    }
+    return $content;
+}, 999 );
