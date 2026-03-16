@@ -6,6 +6,9 @@
 /* ===== HIDE EVERYTHING OUTSIDE CHECKOUT ===== */
 body.woocommerce-checkout .vigo-header,
 body.woocommerce-checkout header,
+body.woocommerce-checkout .navbar,
+body.woocommerce-checkout .top-header,
+body.woocommerce-checkout .marquee,
 body.woocommerce-checkout .footer-wrap,
 body.woocommerce-checkout footer,
 body.woocommerce-checkout .footer,
@@ -19,6 +22,9 @@ body.woocommerce-checkout .woocommerce-info,
 body.woocommerce-checkout .woocommerce-message,
 body.woocommerce-checkout .storefront-handheld-footer-bar,
 body.woocommerce-checkout .xoo-wsc-container,
+body.woocommerce-checkout .xoo-wsc-markup,
+body.woocommerce-checkout .xoo-wsc-modal,
+body.woocommerce-checkout .xoo-wsc-markup-notices,
 body.woocommerce-checkout .site-info,
 body.woocommerce-checkout .footer-widgets,
 body.woocommerce-checkout #secondary,
@@ -32,12 +38,15 @@ body.woocommerce-checkout .page-title,
 body.woocommerce-checkout .hero,
 body.woocommerce-checkout .announcement-bar,
 body.woocommerce-checkout .promo-banner,
-body.woocommerce-checkout .marquee,
 body.woocommerce-checkout .ticker,
 body.woocommerce-checkout .woocommerce-notices-wrapper:empty,
 body.woocommerce-checkout .cookie-consent,
 body.woocommerce-checkout .cookie-bar,
-body.woocommerce-checkout .hs_loader {
+body.woocommerce-checkout .hs_loader,
+body.woocommerce-checkout #languageModal,
+body.woocommerce-checkout .language-modal,
+body.woocommerce-checkout .language-trigger,
+body.woocommerce-checkout .country-selector {
   display: none !important;
 }
 
