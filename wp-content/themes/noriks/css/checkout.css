@@ -641,7 +641,7 @@ body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper {
   display: none !important;
 }
 
-/* ===== MOBILE — vigoshop keeps side-by-side on mobile too ===== */
+/* ===== MOBILE — all fields full width (stacked), matching vigoshop mobile ===== */
 @media (max-width: 600px) {
   body.woocommerce-checkout .wc-checkout-wrap {
     padding: 8px 0 !important;
@@ -650,29 +650,16 @@ body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper {
     padding: 16px 12px !important;
     border-radius: 0 !important;
   }
-  /* Keep Ime/Prezime side by side */
+  /* ALL fields full width on mobile — no side-by-side */
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row,
   body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-first,
-  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last {
-    flex: 0 0 calc(50% - 5px) !important;
-    width: calc(50% - 5px) !important;
-  }
-  /* Postcode/City side by side on mobile too */
-  body.woocommerce-checkout #billing_postcode_field.form-row-first {
-    flex: 0 0 calc(35% - 5px) !important;
-    width: calc(35% - 5px) !important;
-  }
-  body.woocommerce-checkout #billing_city_field.form-row-last {
-    flex: 0 0 calc(63% - 5px) !important;
-    width: calc(63% - 5px) !important;
-  }
-  /* Ulica/Kućni might stack on very small screens */
-  body.woocommerce-checkout #billing_address_1_field.form-row-first {
-    flex: 0 0 calc(67% - 5px) !important;
-    width: calc(67% - 5px) !important;
-  }
-  body.woocommerce-checkout #billing_address_2_field.form-row-last {
-    flex: 0 0 calc(31% - 5px) !important;
-    width: calc(31% - 5px) !important;
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper .form-row-last,
+  body.woocommerce-checkout #billing_address_1_field,
+  body.woocommerce-checkout #billing_address_2_field,
+  body.woocommerce-checkout #billing_postcode_field,
+  body.woocommerce-checkout #billing_city_field {
+    flex: 0 0 100% !important;
+    width: 100% !important;
   }
   /* Smaller font for payment on mobile */
   body.woocommerce-checkout #payment ul.payment_methods li label {
