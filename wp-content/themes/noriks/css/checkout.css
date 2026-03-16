@@ -46,7 +46,13 @@ body.woocommerce-checkout .hs_loader,
 body.woocommerce-checkout #languageModal,
 body.woocommerce-checkout .language-modal,
 body.woocommerce-checkout .language-trigger,
-body.woocommerce-checkout .country-selector {
+body.woocommerce-checkout .country-selector,
+body.woocommerce-checkout .info-banner,
+body.woocommerce-checkout .info-items-container,
+body.woocommerce-checkout .phone-footer-checkout,
+body.woocommerce-checkout .checkout_coupon,
+body.woocommerce-checkout .woocommerce-form-coupon,
+body.woocommerce-checkout .woocommerce-form-coupon-toggle {
   display: none !important;
 }
 
