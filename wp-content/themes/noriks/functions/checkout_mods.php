@@ -259,6 +259,68 @@ add_action( 'wp_footer', function() {
       color: #232f3e !important;
     }
 
+    /* ===== SHIPPING METHOD — force show (vigoshop CSS hides, JS shows) ===== */
+    #custom_shipping .shipping_method_custom {
+      display: block !important;
+    }
+    #custom_shipping .shipping_method_custom li {
+      display: list-item !important;
+      list-style: none !important;
+      margin: 0 0 3px !important;
+    }
+    #custom_shipping .shipping_method_custom label,
+    #custom_shipping .checkedlabel {
+      display: flex !important;
+      align-items: center !important;
+      background: #f2feee !important;
+      border: 1px solid #47b426 !important;
+      border-radius: 5px !important;
+      padding: 15px !important;
+      cursor: pointer !important;
+    }
+    #custom_shipping .outer-wrapper {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex: 1 !important;
+    }
+    #custom_shipping .inner-wrapper-dates {
+      display: block !important;
+    }
+    #custom_shipping .hs-custom-date {
+      display: inline !important;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+    }
+    #custom_shipping .inner-wrapper-img {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+    }
+    #custom_shipping .shipping_method_delivery_price {
+      display: block !important;
+      background: #9ce79c !important;
+      color: #228b22 !important;
+      border-radius: 5px !important;
+      padding: 0 10.5px !important;
+      margin: 5px 0 !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      line-height: 21px !important;
+    }
+    #custom_shipping .delivery_img img {
+      height: 30px !important;
+    }
+    #custom_shipping .shipping_method_field {
+      display: none !important;
+    }
+    #custom_shipping label svg {
+      width: 19px !important;
+      height: 14px !important;
+      margin-right: 10px !important;
+      flex-shrink: 0 !important;
+    }
+
     /* ===== BUTTON/WARRANTY/TERMS — mobile padding ===== */
     @media (max-width: 560px) {
       body.woocommerce-checkout #order_review,
