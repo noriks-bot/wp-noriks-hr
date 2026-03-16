@@ -264,6 +264,7 @@ add_action( 'wp_footer', function() {
       color: #5f6061 !important;
       margin-top: 6px !important;
       line-height: 1.4 !important;
+      text-align: right !important;
     }
 
     /* ===== SHIPPING METHOD — force show (vigoshop CSS hides, JS shows) ===== */
