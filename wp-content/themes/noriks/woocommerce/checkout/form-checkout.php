@@ -1,8 +1,7 @@
 <?php
 /**
- * Checkout Form — Vigoshop Pixel-Perfect Copy
- * Matches vigoshop.hr/dovrsite-kupnju/ HTML structure exactly
- * Uses WooCommerce hooks for actual functionality
+ * Checkout Form — Vigoshop Pixel-Perfect Copy (Phase 1)
+ * Based on vigoshop.hr/dovrsite-kupnju/ HTML structure
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -14,6 +13,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 <form name="checkout" method="post" class="checkout woocommerce-checkout"
       action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data" aria-label="Plaćanje">
 
+  <!-- ========== BILLING FIELDS (WooCommerce rendered) ========== -->
   <div class="col2-set" id="customer_details">
     <div class="col-1 clearfix">
       <?php do_action( 'woocommerce_checkout_billing' ); ?>
@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
       <div class="woocommerce-shipping-fields"></div>
       <div class="woocommerce-additional-fields">
 
-  <!-- ========== DOSTAVA (shipping) ========== -->
+  <!-- ========== DOSTAVA (shipping) — vigoshop HTML ========== -->
   <div id="custom_shipping">
     <h3>Dostava</h3>
     <ul class="shipping_method_custom">
@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
           <svg viewBox="0 0 19 14" fill="#3DBD00"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.5725 3.40179L8.14482 13.5874C7.5815 14.1375 6.66839 14.1375 6.1056 13.5874L0.422493 8.03956C-0.140831 7.48994-0.140831 6.59748 0.422493 6.04707L1.44121 5.05126C2.00471 4.50094 2.91854 4.50094 3.48132 5.05126L7.12254 8.60835L15.5145 0.412609C16.078-0.137536 16.9909-0.137536 17.5537 0.412609L18.5733 1.40842C19.1424 1.95795 19.1424 2.8505 18.5725 3.40179Z"/></svg>
           <div class="outer-wrapper">
             <div class="inner-wrapper-dates">
-              <strong class="hs-custom-date">srijeda, 18.3. - četvrtak, 19.3.</strong>
+              <strong class="hs-custom-date">utorak, 18.3. - petak, 21.3.</strong>
             </div>
             <div class="inner-wrapper-img">
               <span class="shipping_method_delivery_price tag tag--green">
@@ -51,64 +51,118 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div>
   </div>
 
-  <!-- ========== UPSELL — Surprise product ========== -->
-  <div class="sup_outher_wrapper">
-    <div class="surprise_upsells_wrapper">
-      <div class="vigo-surprise surprise_item vigo-gift border border--yellow border--all-2 border-radius--m m-top--m" data-product_id="0">
-        <div class="vigo-gift__tooltip">
-          <div class="flex flex--autosize flex--middle">
-            <div class="flex__item down_arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.061,12.354a1.5,1.5,0,0,0-2.122,0L13.5,14.793V6a1.5,1.5,0,0,0-3,0v8.793L8.061,12.354a1.5,1.5,0,0,0-2.122,2.121l3.586,3.586a3.5,3.5,0,0,0,4.95,0l3.586-3.586A1.5,1.5,0,0,0,18.061,12.354Z"/></svg></div>
-            <div class="flex__item f--bold">  Dodajte u narudžbu</div>
+  <!-- ========== NAČIN PLAĆANJA (payment) — vigoshop HTML ========== -->
+  <h3 class="payment-title">Način plaćanja</h3>
+  <div id="payment" class="woocommerce-checkout-payment">
+    <ul class="wc_payment_methods payment_methods methods">
+
+      <!-- COD -->
+      <li class="wc_payment_method payment_method_cod">
+        <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" checked='checked' data-order_button_text="" />
+        <label for="payment_method_cod">
+          Plaćanje prilikom preuzimanja <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount">1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></span></span>
+          <div class="hs-checkout__payment-method-cod-icon-container">
+            <img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" />
           </div>
-        </div>
-        <div class="flex sup_inner_wrapper">
-          <div>
-            <div class="surprise_product_click flex flex--wrap flex--autosize flex--gaps flex--middle">
-              <div>
-                <label for="surprise_item_upsell_0"></label>
-                <input id="surprise_item_upsell_0" type="checkbox" class="checkbox-simple checkbox-simple--green val--bottom" disabled/>
+        </label>
+      </li>
+
+      <!-- Credit Card -->
+      <li class="wc_payment_method payment_method_braintree_credit_card">
+        <input id="payment_method_braintree_credit_card" type="radio" class="input-radio" name="payment_method" value="braintree_credit_card" data-order_button_text="Naruči" />
+        <label for="payment_method_braintree_credit_card">
+          Kreditna kartica <span class="payment-fee-free">Besplatno</span>
+          <div class="sv-wc-payment-gateway-card-icons">
+            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" class="sv-wc-payment-gateway-icon wc-braintree-credit-card-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />
+            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" class="sv-wc-payment-gateway-icon wc-braintree-credit-card-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />
+            <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" class="sv-wc-payment-gateway-icon wc-braintree-credit-card-payment-gateway-icon" width="40" height="25" style="width: 40px; height: 25px;" />
+          </div>
+        </label>
+      </li>
+
+      <!-- PayPal -->
+      <li class="wc_payment_method payment_method_braintree_paypal">
+        <input id="payment_method_braintree_paypal" type="radio" class="input-radio" name="payment_method" value="braintree_paypal" data-order_button_text="Naruči" />
+        <label for="payment_method_braintree_paypal">
+          PayPal <span class="payment-fee-free">Besplatno</span>
+          <img decoding="async" src="https://images.vigo-shop.com/general/checkout/paypal/PayPal.svg" alt="PayPal">
+        </label>
+      </li>
+
+    </ul>
+
+    <div class="form-row place-order">
+      <noscript>
+        <button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Ažurirajte ukupno">Ažurirajte ukupno</button>
+      </noscript>
+
+      <div class="woocommerce-terms-and-conditions-wrapper"></div>
+
+      <!-- COD prompt (hidden by default, shown via JS when COD selected) -->
+      <div id="hs-cod-checkout-prompt" style="display:none;">
+        <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
+        <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
+      </div>
+
+      <!-- VAT notice -->
+      <div id="hs-vat-tax-checkout-prompt">
+        <span class="tax-and-vat-checkout-claims">Nema dodatnih troškova za carinu</span>
+        <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
+      </div>
+
+      <!-- ========== SAŽETAK (order summary) — static vigoshop HTML ========== -->
+      <h3 class="place-order-title" style="display: block;">Sažetak narudžbe</h3>
+      <div class="vigo-checkout-total order-total shop_table woocommerce-checkout-review-order-table">
+        <div class="grid m-top--s review-all-products-container">
+          <div class="col-xs-12 f--m flex flex--vertical vigo-checkout-total__content">
+
+            <div class="c--darkgray review-section-container">
+              <div class="review-product-info">
+                <div>1x NORIKS | Starter paket</div>
+                <div class="review-product-info__attributes"></div>
               </div>
-              <div class="f--l f--bold surprise_title">Proizvod iznenađenja</div>
-              <div class="tag_wrapper">
-                <div class="tag tag--red">
-                  <span class="woocommerce-Price-amount amount"><bdi>3,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
-                </div>
+              <div class="info-price">
+                <span class="review-sale-price"><span class="woocommerce-Price-amount amount"><bdi>24,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
               </div>
+              <div class="review-product-remove"></div>
             </div>
-            <div class="f--m c--darkgray s-top--s">U vrijednosti između 5 € i 15 €.</div>
-          </div>
-          <div class="vigo-checkout-gift__img">
-            <img decoding="async" class="img" src="https://images.vigo-shop.com/general/present_responsive.svg" alt="Gift icon">
+
+            <div class="c--darkgray review-section-container review-addons payment">
+              <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
+              <div class="review-addons-price review-sale-price">
+                <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
+              </div>
+              <div class="review-product-remove"></div>
+            </div>
+
+            <div class="c--darkgray review-section-container review-addons shipping_order_review">
+              <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
+              <div class="review-addons-price review-sale-price">
+                <span class="woocommerce-Price-amount amount"><bdi>0,00<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
+              </div>
+              <div class="review-product-remove"></div>
+            </div>
+
           </div>
         </div>
-        <div class="c--darkgray remove_wrapper">
-          <div class="remove_surprise vigo-checkout-total__trash hide"><svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.4286 1.15398H15.4286C15.7429 1.15398 16 1.41215 16 1.7309V2.88474C16 3.20334 15.7442 3.46166 15.4286 3.46166H0.571429C0.255857 3.46166 0 3.20334 0 2.88474V1.7309C0 1.41222 0.255857 1.15398 0.571429 1.15398H4.57143L4.98536 0.318892C5.08214 0.123461 5.27996 0 5.49643 0H10.5039C10.7204 0 10.9183 0.123461 11.015 0.318892L11.4286 1.15398ZM1.14286 16.7308C1.14286 17.6863 1.91071 18.4615 2.85714 18.4615H13.1429C14.0893 18.4615 14.8571 17.6863 14.8571 16.7308V4.61549H1.14286V16.7308ZM10.8571 7.50009C10.8571 7.17917 11.1107 6.92317 11.4286 6.92317C11.7464 6.92317 12 7.18008 12 7.50009V15.5769C12 15.897 11.7455 16.1539 11.4286 16.1539C11.1116 16.1539 10.8571 15.897 10.8571 15.5769V7.50009ZM8 6.92317C7.68214 6.92317 7.42857 7.17917 7.42857 7.50009V15.5769C7.42857 15.897 7.68304 16.1539 8 16.1539C8.31696 16.1539 8.57143 15.897 8.57143 15.5769V7.50009C8.57143 7.18008 8.31786 6.92317 8 6.92317ZM4 7.50009C4 7.17917 4.25357 6.92317 4.57143 6.92317C4.88929 6.92317 5.14286 7.18008 5.14286 7.50009V15.5769C5.14286 15.8979 4.88929 16.1539 4.57143 16.1539C4.25357 16.1539 4 15.897 4 15.5769V7.50009Z"/></svg>
-            <span>Ukloni</span>
+
+        <div class="vigo-checkout-total__sum flex flex--middle border_price">
+          <div class="flex__item f--l">
+            Ukupni iznos: <span class="f--bold price_total_wrapper"><span class="woocommerce-Price-amount amount"><bdi>26,98<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
           </div>
         </div>
       </div>
+
+      <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
     </div>
   </div>
-
-  <!-- ========== PAYMENT — WooCommerce dynamic ========== -->
-  <h3 class="payment-title">Način plaćanja</h3>
-  <?php do_action( 'woocommerce_checkout_payment' ); ?>
-
       </div><!-- .woocommerce-additional-fields -->
     </div><!-- .col-2 -->
   </div><!-- .col2-set -->
 
-  <!-- ========== ORDER REVIEW + CTA ========== -->
+  <!-- ========== ORDER REVIEW (Naruči button) ========== -->
   <div id="order_review" class="woocommerce-checkout-review-order container container--xs bg--white">
-    <?php
-    /**
-     * woocommerce_checkout_order_review hook renders order table + place_order button.
-     * We override the template for order-review to get vigoshop HTML structure.
-     */
-    ?>
-    <div id="order_review_inner">
-      <?php do_action( 'woocommerce_checkout_order_review' ); ?>
-    </div>
+    <button type="submit" class="button alt button--l button--block button--green button--rounded button--green-gradient" name="woocommerce_checkout_place_order" id="place_order" data-value="Naruči">Naruči</button>
   </div>
 
 </form>
@@ -131,7 +185,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     <label class="checkbox">
       <input type="checkbox" class="input-checkbox" name="agree_to_checkout_terms" id="agree_to_terms_checkbox" value="1">
     </label>
-    Pročitao sam i prihvaćam <a href="/opci-uvjeti-prodaje/" id="terms_conditions_link">Opće uvjete prodaje</a> i <a href="/pravo-na-odustajanje/" id="withdrawal_policy_link">pravo na odustajanje</a>.
+    Pročitao sam i prihvaćam <a href="#" id="terms_conditions_link">Opće uvjete prodaje</a> i <a href="#" id="withdrawal_policy_link">pravo na odustajanje</a>.
   </div>
 </div>
 
@@ -157,56 +211,42 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 
 /* COD prompt toggle */
 (function(){
-  function init() {
-    var radios = document.querySelectorAll('input[name="payment_method"]');
-    var prompt = document.getElementById('hs-cod-checkout-prompt');
-    if(!prompt || !radios.length) return;
-    function toggle(){
-      var checked = document.querySelector('input[name="payment_method"]:checked');
-      prompt.style.display = (checked && checked.value === 'cod') ? 'flex' : 'none';
-    }
-    radios.forEach(function(r){ r.addEventListener('change', toggle); });
-    toggle();
+  var radios = document.querySelectorAll('input[name="payment_method"]');
+  var prompt = document.getElementById('hs-cod-checkout-prompt');
+  if(!prompt) return;
+  function toggle(){
+    var checked = document.querySelector('input[name="payment_method"]:checked');
+    prompt.style.display = (checked && checked.value === 'cod') ? 'flex' : 'none';
   }
-  document.addEventListener('DOMContentLoaded', init);
-  jQuery(document.body).on('updated_checkout', init);
+  radios.forEach(function(r){ r.addEventListener('change', toggle); });
+  toggle();
 })();
 
-/* Payment method checked class */
+/* Payment method checked class + label styling */
 (function(){
-  function init() {
-    var methods = document.querySelectorAll('.wc_payment_method');
-    function update(){
-      methods.forEach(function(m){
-        var radio = m.querySelector('input[type="radio"]');
-        if(radio && radio.checked) { m.classList.add('checked'); }
-        else { m.classList.remove('checked'); }
-      });
-    }
-    document.querySelectorAll('input[name="payment_method"]').forEach(function(r){ r.addEventListener('change', update); });
-    update();
+  var methods = document.querySelectorAll('.wc_payment_method');
+  function update(){
+    methods.forEach(function(m){
+      var radio = m.querySelector('input[type="radio"]');
+      if(radio && radio.checked) { m.classList.add('checked'); }
+      else { m.classList.remove('checked'); }
+    });
   }
-  document.addEventListener('DOMContentLoaded', init);
-  jQuery(document.body).on('updated_checkout', init);
+  document.querySelectorAll('input[name="payment_method"]').forEach(function(r){ r.addEventListener('change', update); });
+  update();
 })();
 
 /* Floating labels for billing fields */
 (function(){
-  function initFloating() {
-    document.querySelectorAll('.woocommerce-billing-fields__field-wrapper .form-row').forEach(function(row){
-      if(row.dataset.floatingInit) return;
-      row.dataset.floatingInit = '1';
-      var input = row.querySelector('input, textarea, select');
-      if(!input) return;
-      function check(){ if(input.value) row.classList.add('field--not-empty'); else row.classList.remove('field--not-empty'); }
-      input.addEventListener('input', check);
-      input.addEventListener('change', check);
-      input.addEventListener('focus', function(){ row.classList.add('field--not-empty'); });
-      input.addEventListener('blur', check);
-      check();
-    });
-  }
-  document.addEventListener('DOMContentLoaded', initFloating);
-  jQuery(document.body).on('updated_checkout', initFloating);
+  document.querySelectorAll('.woocommerce-billing-fields__field-wrapper .form-row').forEach(function(row){
+    var input = row.querySelector('input, textarea, select');
+    if(!input) return;
+    function check(){ if(input.value) row.classList.add('field--not-empty'); else row.classList.remove('field--not-empty'); }
+    input.addEventListener('input', check);
+    input.addEventListener('change', check);
+    input.addEventListener('focus', function(){ row.classList.add('field--not-empty'); });
+    input.addEventListener('blur', check);
+    check();
+  });
 })();
 </script>
