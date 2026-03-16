@@ -282,7 +282,7 @@ add_action( 'wp_footer', function() {
       background: #f2feee !important;
       border: 1px solid #47b426 !important;
       border-radius: 5px !important;
-      padding: 15px !important;
+      padding: 10px 15px !important;
       cursor: pointer !important;
     }
     #custom_shipping .outer-wrapper {
