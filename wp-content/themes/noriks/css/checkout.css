@@ -103,6 +103,42 @@ body.woocommerce-checkout .site-main > *:first-child:not(.woocommerce) {
   display: none !important;
 }
 
+/* ===== HIDE INFO BANNER (Jamstvo, Podrška, Dostava icons) ===== */
+body.woocommerce-checkout .info-banner,
+body.woocommerce-checkout section.info-banner,
+body.woocommerce-checkout .info-items-container,
+body.woocommerce-checkout .info-item {
+  display: none !important;
+}
+
+/* ===== HIDE FOOTER ===== */
+body.woocommerce-checkout footer,
+body.woocommerce-checkout footer.footer,
+body.woocommerce-checkout .footer,
+body.woocommerce-checkout .footer-main,
+body.woocommerce-checkout .footer-top,
+body.woocommerce-checkout .footer-bottom {
+  display: none !important;
+}
+
+/* ===== HIDE SCROLLING PROMO BANNER ===== */
+body.woocommerce-checkout .general-sub-banner-wrapper,
+body.woocommerce-checkout .announcement-bar,
+body.woocommerce-checkout .promo-banner,
+body.woocommerce-checkout [class*="sub-banner"],
+body.woocommerce-checkout .marquee,
+body.woocommerce-checkout .ticker {
+  display: none !important;
+}
+
+/* ===== HIDE EVERYTHING OUTSIDE #content on checkout ===== */
+body.woocommerce-checkout > *:not(#page):not(script):not(style):not(link):not(#wpadminbar) {
+  display: none !important;
+}
+body.woocommerce-checkout #page > *:not(#content):not(script):not(style):not(#wpadminbar) {
+  display: none !important;
+}
+
 /* ===== STOREFRONT LAYOUT RESET ===== */
 body.woocommerce-checkout .storefront-full-width-content .woocommerce,
 body.woocommerce-checkout .content-area,
