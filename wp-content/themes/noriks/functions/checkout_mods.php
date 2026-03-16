@@ -1,16 +1,16 @@
 <?php
 /**
- * Checkout Modifications — Field ordering, labels, load vigoshop CSS directly
+ * Checkout Modifications — Field ordering, labels, CSS loading
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * NUCLEAR STYLE DEQUEUE + LOAD VIGOSHOP CSS FROM CDN
+ * Dequeue all styles on checkout, load only our CSS + Google Fonts
  */
 add_action( 'wp_enqueue_scripts', function() {
     if ( ! is_checkout() ) return;
 
-    // Dequeue ALL existing styles
+    // Dequeue ALL existing styles except admin bar
     global $wp_styles;
     if ( ! empty( $wp_styles->registered ) ) {
         $keep = array( 'admin-bar', 'dashicons' );
@@ -21,31 +21,16 @@ add_action( 'wp_enqueue_scripts', function() {
         }
     }
 
-    // Load vigoshop CSS files directly from CDN
-    $vigoshop_css = array(
-        'vigo-select2'              => 'https://vigoshop.hr/app/plugins/woocommerce/assets/css/select2.css',
-        'vigo-app'                  => 'https://vigoshop.hr/app/themes/hsplus/dist/app-bb7116ca22.css',
-        'vigo-brand'                => 'https://vigoshop.hr/app/themes/hsplus/dist/vigoshop-2809b8fc43.css',
-        'vigo-checkout-general'     => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-validation/css/custom-checkout-general-3ba2df51f0.css',
-        'vigo-checkout-hr'          => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-validation/css/custom-checkout-hr-708bf051cd.css',
-        'vigo-payment-notice'       => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/custom-payment-notice/css/custom-payment-notice-0baf6bff40.css',
-        'vigo-payment-fixes'        => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/payment-methods-fixes/css/payment-methods-fixes-75bc076f0b.css',
-        'vigo-shipping'             => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/shipping-method/css/shipping-method-14ad2b0a1f.css',
-        'vigo-order-review'         => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-order-review/css/checkout-order-review-17423b66f5.css',
-        'vigo-braintree-form'       => 'https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/css/frontend/sv-wc-payment-gateway-payment-form.min.css',
-        'vigo-braintree'            => 'https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/assets/css/frontend/wc-braintree.min.css',
-        'vigo-terms'                => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/terms-and-conditions-link/css/terms-and-conditions-link-4d809e8b6d.css',
-        'vigo-checkout-upsell'      => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-upsell/css/checkout-upsell-49a595b20c.css',
-        'vigo-free-shipping'        => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/free-shipping-above-quantity/css/free-shipping-above-quantity-02588a20ff.css',
-        'vigo-checkout-timer'       => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-timer/css/checkout-timer-73c98a5995.css',
-    );
+    // Google Fonts: Roboto (vigoshop uses Roboto)
+    wp_enqueue_style( 'google-roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap', array(), null );
 
-    foreach ( $vigoshop_css as $handle => $url ) {
-        wp_enqueue_style( $handle, $url, array(), null );
-    }
+    // WC Select2 (needed for city dropdown)
+    wp_enqueue_style( 'select2', WC()->plugin_url() . '/assets/css/select2.css', array(), null );
 
-    // Our overrides loaded LAST
-    wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), filemtime( get_stylesheet_directory() . '/css/checkout.css' ) );
+    // Our checkout CSS — loaded LAST with md5 cache busting
+    $css_file = get_stylesheet_directory() . '/css/checkout.css';
+    $version = file_exists( $css_file ) ? md5_file( $css_file ) : '1';
+    wp_enqueue_style( 'noriks-checkout', get_stylesheet_directory_uri() . '/css/checkout.css', array(), $version );
 
 }, 9999 );
 
@@ -56,16 +41,15 @@ add_filter( 'body_class', function( $classes ) {
     if ( is_checkout() ) {
         $classes[] = 'brand-vigoshop';
         $classes[] = 'theme-vigoshop';
-        $classes[] = 'theme-hsplus';
     }
     return $classes;
 });
 
 /**
  * Field ordering & labels — match vigoshop.hr HR layout
+ * Order: Phone → Email → Ime/Prezime → Address hint → Ulica/Kućni → Poštanski/Grad
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-    // Vigoshop order: Phone → Email → Ime/Prezime → Ulica/Kućni → Poštanski/Grad
     $fields['billing']['billing_phone']['priority']      = 10;
     $fields['billing']['billing_email']['priority']       = 20;
     $fields['billing']['billing_first_name']['priority']  = 30;
@@ -117,11 +101,6 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
 }, 20 );
 
 /**
- * Add address hint AFTER the billing_email field (outside the flex wrapper via JS instead)
- * We no longer inject it via woocommerce_form_field to avoid breaking flex layout
- */
-
-/**
  * Add "Plaćanje i Dostava" heading before billing fields
  */
 add_action( 'woocommerce_before_checkout_billing_form', function() {
@@ -129,12 +108,11 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
 });
 
 /**
- * Add address hint AFTER the billing fields wrapper (not inside it)
+ * Add address hint between name fields and address fields
+ * Using woocommerce_form_field to add after last_name
  */
 add_action( 'woocommerce_after_checkout_billing_form', function() {
-    // This outputs AFTER the field wrapper div closes, so it won't break flex
-    // But we actually want it between name and address fields...
-    // We'll handle positioning via JS in form-checkout.php
+    echo '<p class="address-hint" style="flex:0 0 100%;width:100%;font-size:13px;color:#555;margin:2px 0 8px;order:45;">Unesite adresu na kojoj ćete biti <strong>između 8:00 i 16:00</strong> sati.</p>';
 });
 
 /**
@@ -145,7 +123,7 @@ add_filter( 'default_checkout_billing_country', function() {
 });
 
 /**
- * Change place order button text
+ * Change place order button text (for WC default button — we also have our own)
  */
 add_filter( 'woocommerce_order_button_text', function() {
     return '🔒 Naruči';
