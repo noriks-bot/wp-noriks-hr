@@ -398,7 +398,8 @@ body.woocommerce-checkout #payment .hs-checkout__payment-method-cod-icon {
 body.woocommerce-checkout .place-order,
 body.woocommerce-checkout .form-row.place-order,
 body.woocommerce-checkout #payment .place-order {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column !important;
   visibility: visible !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -407,6 +408,12 @@ body.woocommerce-checkout #payment .place-order {
   height: auto !important;
   overflow: visible !important;
 }
+
+/* Order: COD prompt(1) → VAT(2) → Summary(3) → Button(last) */
+body.woocommerce-checkout .place-order #hs-cod-checkout-prompt { order: 1 !important; }
+body.woocommerce-checkout .place-order #hs-vat-tax-checkout-prompt { order: 2 !important; }
+body.woocommerce-checkout .place-order #noriks-order-summary { order: 3 !important; }
+body.woocommerce-checkout .place-order #place_order { order: 10 !important; }
 
 /* Order summary title */
 body.woocommerce-checkout h3.place-order-title {
@@ -590,45 +597,43 @@ body.woocommerce-checkout .terms-checkbox-and-links {
   margin-top: 6px !important;
 }
 
-/* ===== ORDER SUMMARY (WC order review table) ===== */
+/* ===== ORDER SUMMARY ===== */
 body.woocommerce-checkout .noriks-order-summary {
   margin-top: 20px !important;
 }
 
-body.woocommerce-checkout .noriks-order-summary .shop_table {
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-body.woocommerce-checkout .noriks-order-summary .shop_table th,
-body.woocommerce-checkout .noriks-order-summary .shop_table td {
-  border: none !important;
+body.woocommerce-checkout .noriks-order-summary .review-section-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
   padding: 8px 0 !important;
+  border-bottom: 1px solid #eee !important;
   font-size: 14px !important;
   color: #666 !important;
-  background: transparent !important;
 }
 
-body.woocommerce-checkout .noriks-order-summary .shop_table thead {
-  display: none !important;
+body.woocommerce-checkout .noriks-order-summary .review-product-info__attributes {
+  font-size: 12px !important;
+  color: #999 !important;
+  margin-top: 2px !important;
 }
 
-body.woocommerce-checkout .noriks-order-summary .shop_table tbody tr {
-  border-bottom: 1px solid #eee !important;
-}
-
-body.woocommerce-checkout .noriks-order-summary .shop_table tfoot tr {
-  border: none !important;
-}
-
-body.woocommerce-checkout .noriks-order-summary .shop_table tfoot .order-total th,
-body.woocommerce-checkout .noriks-order-summary .shop_table tfoot .order-total td {
+body.woocommerce-checkout .noriks-order-total {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 12px !important;
+  padding-top: 12px !important;
   font-size: 18px !important;
   font-weight: 700 !important;
   color: #333 !important;
-  padding-top: 12px !important;
   border-top: 1px solid #ddd !important;
+}
+
+/* Hint above email field */
+body.woocommerce-checkout .checkout-field-hints--above {
+  text-align: right !important;
+  margin-bottom: 2px !important;
 }
 
 /* ===== WOOCOMMERCE-TERMS-AND-CONDITIONS-WRAPPER ===== */

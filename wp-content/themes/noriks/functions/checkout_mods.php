@@ -124,7 +124,9 @@ add_filter( 'woocommerce_form_field', function( $field, $key, $args, $value ) {
         $field .= '<div class="checkout-field-hints"><span class="hint-left">Primjer: 0912345678</span> <span class="hint-right">Za pomoć s dostavom</span></div>';
     }
     if ( $key === 'billing_email' ) {
-        $field .= '<div class="checkout-field-hints"><span class="hint-left">* E-mail adresa nije obavezna</span></div>';
+        // Hint goes BEFORE the email field, right-aligned (like vigoshop original)
+        $hint = '<div class="checkout-field-hints checkout-field-hints--above"><span class="hint-right">* E-mail adresa nije obavezna</span></div>';
+        return $hint . $field;
     }
     if ( $key === 'billing_address_1' ) {
         $hint = '<div class="form-row form-row-wide address-hint">Unesite adresu na kojoj ćete biti <b>između 8:00 i 16:00 sati</b>.</div>';
@@ -145,4 +147,11 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
  */
 add_filter( 'default_checkout_billing_country', function() {
     return 'HR';
+});
+
+/**
+ * Change place order button text to match vigoshop
+ */
+add_filter( 'woocommerce_order_button_text', function() {
+    return '🔒 Naruči';
 });

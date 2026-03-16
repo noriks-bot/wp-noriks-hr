@@ -111,6 +111,40 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
         <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
       </div>
 
+      <!-- ========== SAŽETAK NARUDŽBE (dynamic from cart) ========== -->
+      <div id="noriks-order-summary" class="noriks-order-summary">
+        <h3 class="place-order-title">Sažetak narudžbe</h3>
+        <div class="noriks-order-items">
+          <?php
+          foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+            $product = $cart_item['data'];
+            $qty = $cart_item['quantity'];
+            $name = $product->get_name();
+            $price = WC()->cart->get_product_subtotal( $product, $qty );
+            $attrs = '';
+            if ( ! empty( $cart_item['variation'] ) ) {
+              $parts = array();
+              foreach ( $cart_item['variation'] as $attr_key => $attr_val ) {
+                $label = wc_attribute_label( str_replace( 'attribute_', '', $attr_key ) );
+                $parts[] = $label . ': ' . $attr_val;
+              }
+              $attrs = implode( ', ', $parts );
+            }
+            echo '<div class="review-section-container">';
+            echo '<div class="review-product-info"><div>' . esc_html( $qty ) . 'x ' . esc_html( $name ) . '</div>';
+            if ( $attrs ) echo '<div class="review-product-info__attributes">' . esc_html( $attrs ) . '</div>';
+            echo '</div>';
+            echo '<div class="info-price"><span class="review-sale-price">' . $price . '</span></div>';
+            echo '</div>';
+          }
+          ?>
+        </div>
+        <div class="noriks-order-total">
+          <span>Ukupni iznos:</span>
+          <span class="noriks-total-price"><?php echo WC()->cart->get_total(); ?></span>
+        </div>
+      </div>
+
       <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
     </div>
   </div>
@@ -118,11 +152,6 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div><!-- .col-2 -->
   </div><!-- .col2-set -->
 
-  <!-- ORDER REVIEW — WC dynamic order summary -->
-  <div id="order_review_summary" class="noriks-order-summary">
-    <h3 class="place-order-title">Sažetak narudžbe</h3>
-    <?php woocommerce_order_review(); ?>
-  </div>
 
 </form>
 
