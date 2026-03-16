@@ -494,6 +494,16 @@ body.woocommerce-checkout #payment .payment_methods li svg {
   width: auto !important;
 }
 
+/* HIDE the real WC #payment div (we render our own) */
+body.woocommerce-checkout #payment.woocommerce-checkout-payment {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
 /* Payment icons — push to right */
 body.woocommerce-checkout .payment-icon-right {
   margin-left: auto !important;
