@@ -119,15 +119,15 @@ add_filter( 'body_class', function( $classes ) {
  * WC checkout field config — match vigoshop HR layout
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-    // Order
-    $fields['billing']['billing_phone']['priority']      = 10;
-    $fields['billing']['billing_email']['priority']       = 20;
+    // Order — match vigoshop: name → address → phone → email
     $fields['billing']['billing_first_name']['priority']  = 30;
     $fields['billing']['billing_last_name']['priority']   = 40;
     $fields['billing']['billing_address_1']['priority']   = 50;
     $fields['billing']['billing_address_2']['priority']   = 60;
     $fields['billing']['billing_postcode']['priority']    = 70;
     $fields['billing']['billing_city']['priority']        = 80;
+    $fields['billing']['billing_phone']['priority']       = 90;
+    $fields['billing']['billing_email']['priority']       = 100;
 
     // Labels, placeholders, required
     $fields['billing']['billing_first_name']['label'] = 'Ime';
