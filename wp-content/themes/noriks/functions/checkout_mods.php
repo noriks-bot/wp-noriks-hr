@@ -217,6 +217,7 @@ add_action( 'wp_footer', function() {
     /* ===== ORDER SUMMARY ===== */
     .vigo-checkout-total .review-section-container {
       display: flex !important;
+      align-items: center !important;
       padding: 0 0 10px !important;
       margin: 0 0 10px !important;
       border-bottom: 1px solid #e3e6e8 !important;
@@ -228,10 +229,22 @@ add_action( 'wp_footer', function() {
     .vigo-checkout-total .review-product-info {
       display: flex !important;
       flex: 1 !important;
+      min-width: 0 !important;
+    }
+    .vigo-checkout-total .review-product-info > div:first-child {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
     }
     .vigo-checkout-total .info-price {
       text-align: right !important;
       min-width: 60px !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+    .vigo-checkout-total .review-product-remove {
+      width: 0 !important;
+      display: none !important;
     }
     .vigo-checkout-total__sum {
       padding: 25px 0 0 !important;
