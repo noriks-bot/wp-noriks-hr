@@ -196,10 +196,10 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper select,
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper textarea {
   width: 100% !important;
   padding: 12px 14px !important;
-  height: 46px !important;
-  min-height: 46px !important;
+  height: 42px !important;
+  min-height: 42px !important;
   border: 1px solid #d0d0d0 !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   font-size: 15px !important;
   font-weight: 400 !important;
   line-height: 1.4 !important;
@@ -215,19 +215,19 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper textarea {
 
 /* Select2 — match input styling */
 body.woocommerce-checkout .select2-container .select2-selection--single {
-  height: 46px !important;
+  height: 42px !important;
   border: 1px solid #d0d0d0 !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   box-shadow: none !important;
 }
 body.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 46px !important;
+  line-height: 42px !important;
   font-size: 15px !important;
   color: #000 !important;
   padding-left: 14px !important;
 }
 body.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: 46px !important;
+  height: 42px !important;
 }
 
 body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input:focus,
@@ -283,7 +283,7 @@ body.woocommerce-checkout .shipping_method_custom label.checkedlabel {
   align-items: center !important;
   background: #f2feee !important;
   border: 1px solid #47b426 !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   padding: 15px !important;
   cursor: pointer !important;
   position: relative !important;
@@ -376,7 +376,7 @@ body.woocommerce-checkout .noriks-payment-methods .wc_payment_methods {
   padding: 0 !important;
   margin: 0 !important;
   border: 1px solid #d1dbe5 !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   overflow: hidden !important;
 }
 
@@ -643,7 +643,7 @@ body.woocommerce-checkout .checkout-warranty {
   max-width: 560px !important;
   padding: 16px !important;
   background: #fff !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
 }
 body.woocommerce-checkout .checkout-warranty__icon img {
   width: 80px !important;
