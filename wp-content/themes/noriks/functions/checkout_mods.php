@@ -353,9 +353,10 @@ add_action( 'wp_footer', function() {
     body.woocommerce-checkout .agreed_terms_txt {
       margin-bottom: 24px !important;
     }
-    /* Button top margin matches ref */
+    /* Button container — fill parent, no centering, let padding handle width */
     body.woocommerce-checkout #order_review {
-      margin-top: 16px !important;
+      max-width: none !important;
+      margin: 16px 0 0 0 !important;
     }
     </style>
     <?php
