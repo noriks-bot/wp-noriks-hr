@@ -121,7 +121,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
  */
 add_filter( 'woocommerce_form_field', function( $field, $key, $args, $value ) {
     if ( $key === 'billing_phone' ) {
-        $field .= '<div class="checkout-field-hints"><span class="hint-left">Primjer: 0912345678</span><span class="hint-right">Za pomoć s dostavom</span></div>';
+        $field .= '<div class="checkout-field-hints"><span class="hint-left">Primjer: 0912345678</span> <span class="hint-right">Za pomoć s dostavom</span></div>';
     }
     if ( $key === 'billing_email' ) {
         $field .= '<div class="checkout-field-hints"><span class="hint-left">* E-mail adresa nije obavezna</span></div>';

@@ -111,49 +111,6 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
         <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
       </div>
 
-      <!-- ========== SAŽETAK (order summary) — static vigoshop HTML ========== -->
-      <h3 class="place-order-title" style="display: block;">Sažetak narudžbe</h3>
-      <div class="vigo-checkout-total order-total shop_table woocommerce-checkout-review-order-table">
-        <div class="grid m-top--s review-all-products-container">
-          <div class="col-xs-12 f--m flex flex--vertical vigo-checkout-total__content">
-
-            <div class="c--darkgray review-section-container">
-              <div class="review-product-info">
-                <div>1x NORIKS | Starter paket</div>
-                <div class="review-product-info__attributes"></div>
-              </div>
-              <div class="info-price">
-                <span class="review-sale-price"><span class="woocommerce-Price-amount amount"><bdi>24,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
-              </div>
-              <div class="review-product-remove"></div>
-            </div>
-
-            <div class="c--darkgray review-section-container review-addons payment">
-              <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
-              <div class="review-addons-price review-sale-price">
-                <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
-              </div>
-              <div class="review-product-remove"></div>
-            </div>
-
-            <div class="c--darkgray review-section-container review-addons shipping_order_review">
-              <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
-              <div class="review-addons-price review-sale-price">
-                <span class="woocommerce-Price-amount amount"><bdi>0,00<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
-              </div>
-              <div class="review-product-remove"></div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="vigo-checkout-total__sum flex flex--middle border_price">
-          <div class="flex__item f--l">
-            Ukupni iznos: <span class="f--bold price_total_wrapper"><span class="woocommerce-Price-amount amount"><bdi>26,98<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span></span>
-          </div>
-        </div>
-      </div>
-
       <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
     </div>
   </div>
@@ -161,7 +118,11 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     </div><!-- .col-2 -->
   </div><!-- .col2-set -->
 
-  <!-- ORDER REVIEW — WC handles the button inside #payment .place-order -->
+  <!-- ORDER REVIEW — WC dynamic order summary -->
+  <div id="order_review_summary" class="noriks-order-summary">
+    <h3 class="place-order-title">Sažetak narudžbe</h3>
+    <?php woocommerce_order_review(); ?>
+  </div>
 
 </form>
 

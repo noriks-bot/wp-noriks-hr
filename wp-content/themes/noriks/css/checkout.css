@@ -246,6 +246,13 @@ body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper input::plac
   color: #707070 !important;
 }
 
+/* Force hints to take full width and clear properly */
+body.woocommerce-checkout .checkout-field-hints {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  clear: both !important;
+}
+
 /* ===== FIELD HINTS — match vigoshop ===== */
 body.woocommerce-checkout .checkout-field-hints {
   display: flex !important;
@@ -548,7 +555,10 @@ body.woocommerce-checkout .checkout-warranty {
   gap: 12px !important;
   margin: 20px auto !important;
   max-width: 560px !important;
-  padding: 0 16px !important;
+  padding: 16px !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
 }
 body.woocommerce-checkout .checkout-warranty__icon img {
   width: 50px !important;
@@ -578,6 +588,47 @@ body.woocommerce-checkout .terms-checkbox-and-links {
   justify-content: center !important;
   gap: 6px !important;
   margin-top: 6px !important;
+}
+
+/* ===== ORDER SUMMARY (WC order review table) ===== */
+body.woocommerce-checkout .noriks-order-summary {
+  margin-top: 20px !important;
+}
+
+body.woocommerce-checkout .noriks-order-summary .shop_table {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.woocommerce-checkout .noriks-order-summary .shop_table th,
+body.woocommerce-checkout .noriks-order-summary .shop_table td {
+  border: none !important;
+  padding: 8px 0 !important;
+  font-size: 14px !important;
+  color: #666 !important;
+  background: transparent !important;
+}
+
+body.woocommerce-checkout .noriks-order-summary .shop_table thead {
+  display: none !important;
+}
+
+body.woocommerce-checkout .noriks-order-summary .shop_table tbody tr {
+  border-bottom: 1px solid #eee !important;
+}
+
+body.woocommerce-checkout .noriks-order-summary .shop_table tfoot tr {
+  border: none !important;
+}
+
+body.woocommerce-checkout .noriks-order-summary .shop_table tfoot .order-total th,
+body.woocommerce-checkout .noriks-order-summary .shop_table tfoot .order-total td {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  padding-top: 12px !important;
+  border-top: 1px solid #ddd !important;
 }
 
 /* ===== WOOCOMMERCE-TERMS-AND-CONDITIONS-WRAPPER ===== */
