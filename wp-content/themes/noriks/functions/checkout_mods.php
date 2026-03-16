@@ -110,6 +110,7 @@ add_action( 'wp_footer', function() {
     if ( ! is_checkout() ) return;
     ?>
     <style id="noriks-checkout-overrides">
+    /* ===== PAYMENT: duplicate #payment vigoshop styles for #noriks-payment ===== */
     /* Payment title — vigoshop CDN hides it, force show */
     body.woocommerce-checkout h3.payment-title {
       display: block !important;
@@ -118,17 +119,130 @@ add_action( 'wp_footer', function() {
       margin: 29.4px 0 14.7px !important;
       color: #333 !important;
     }
-    /* Payment labels — match vigoshop padding */
-    body.woocommerce-checkout #noriks-payment .wc_payment_method label {
+    /* Payment methods list */
+    #noriks-payment .wc_payment_methods {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 0 21px !important;
+    }
+    /* Payment method items */
+    #noriks-payment .wc_payment_method {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: 1px solid #d1dbe5 !important;
+      border-radius: 5px 5px 0 0 !important;
+    }
+    #noriks-payment .wc_payment_method + .wc_payment_method {
+      border-radius: 0 !important;
+      border-top: 0 !important;
+    }
+    #noriks-payment .wc_payment_method:last-child {
+      border-radius: 0 0 5px 5px !important;
+    }
+    /* Selected payment = blue bg */
+    #noriks-payment .wc_payment_method:has(input:checked) {
+      background: #e8f3ff !important;
+    }
+    /* Radio inputs hidden (vigoshop uses label as the clickable area) */
+    #noriks-payment .wc_payment_method .input-radio {
+      display: none !important;
+    }
+    /* Payment labels — exact vigoshop computed styles */
+    #noriks-payment .wc_payment_method label {
+      display: flex !important;
+      align-items: center !important;
       padding: 22.65px 16px !important;
+      margin: 0 !important;
       font-size: 16px !important;
       font-weight: 700 !important;
+      color: #333 !important;
+      line-height: 24px !important;
+      cursor: pointer !important;
     }
-    /* Payment methods list bottom margin */
-    body.woocommerce-checkout #noriks-payment .wc_payment_methods {
-      margin-bottom: 21px !important;
+    /* Fee badges */
+    #noriks-payment .payment-fee-free {
+      display: block !important;
+      padding: 3px 10px !important;
+      margin: 2px 0 2px 8px !important;
+      border-radius: 5px !important;
+      background: #9ce79c !important;
+      color: #228b22 !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      text-align: center !important;
+      line-height: 21px !important;
     }
-    /* Button/warranty/terms outside form need padding on mobile */
+    #noriks-payment .payment-fee-not-free {
+      display: block !important;
+      padding: 3px 10px !important;
+      margin: 2px 0 2px 8px !important;
+      border-radius: 5px !important;
+      background: #e3e6e8 !important;
+      color: #5f6061 !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      text-align: center !important;
+      line-height: 21px !important;
+    }
+    /* Card icons */
+    #noriks-payment .sv-wc-payment-gateway-card-icons {
+      display: flex !important;
+      align-items: center !important;
+      margin-left: auto !important;
+      gap: 4px !important;
+    }
+    #noriks-payment .sv-wc-payment-gateway-icon {
+      width: 40px !important;
+      height: 25px !important;
+    }
+    /* COD icon */
+    #noriks-payment .hs-checkout__payment-method-cod-icon-container {
+      display: flex !important;
+      align-items: center !important;
+      margin-left: auto !important;
+    }
+    #noriks-payment .hs-checkout__payment-method-cod-icon {
+      height: 30px !important;
+    }
+    /* PayPal icon */
+    #noriks-payment .payment_method_braintree_paypal label img {
+      margin-left: auto !important;
+      height: 22px !important;
+    }
+
+    /* ===== ORDER SUMMARY ===== */
+    .vigo-checkout-total .review-section-container {
+      display: flex !important;
+      padding: 0 0 10px !important;
+      margin: 0 0 10px !important;
+      border-bottom: 1px solid #e3e6e8 !important;
+      color: #5f6061 !important;
+      font-size: 14px !important;
+      line-height: 21px !important;
+      position: relative !important;
+    }
+    .vigo-checkout-total .review-product-info {
+      display: flex !important;
+      flex: 1 !important;
+    }
+    .vigo-checkout-total .info-price {
+      text-align: right !important;
+      min-width: 60px !important;
+    }
+    .vigo-checkout-total__sum {
+      padding: 10px 0 0 !important;
+      font-size: 18px !important;
+      color: #232f3e !important;
+    }
+    .vigo-checkout-total__sum .f--bold,
+    .vigo-checkout-total__sum .price_total_wrapper {
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      color: #232f3e !important;
+    }
+
+    /* ===== BUTTON/WARRANTY/TERMS — mobile padding ===== */
     body.woocommerce-checkout #order_review,
     body.woocommerce-checkout .checkout-warranty,
     body.woocommerce-checkout .agreed_terms_txt {
