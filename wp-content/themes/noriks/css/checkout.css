@@ -366,11 +366,36 @@ body.woocommerce-checkout #payment .payment_box {
   display: none !important;
 }
 
-/* ===== PLACE ORDER AREA ===== */
-body.woocommerce-checkout .place-order {
+/* ===== PLACE ORDER AREA (contains order summary + button) ===== */
+body.woocommerce-checkout .place-order,
+body.woocommerce-checkout .form-row.place-order,
+body.woocommerce-checkout #payment .place-order {
+  display: block !important;
+  visibility: visible !important;
   padding: 0 !important;
   margin: 0 !important;
   background: transparent !important;
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Order summary title */
+body.woocommerce-checkout h3.place-order-title {
+  display: block !important;
+  visibility: visible !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin: 20px 0 12px !important;
+  color: #333 !important;
+}
+
+/* Order review container */
+body.woocommerce-checkout .vigo-checkout-total {
+  display: block !important;
+  visibility: visible !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* Hide WC default button text, show only our styled one */
