@@ -253,25 +253,26 @@ body.woocommerce-order-received .woocommerce {
 /* Buttons */
 .ty-upsell-buttons {
     display: flex; gap: 12px;
-    padding: 4px 24px 24px;
+    padding: 12px 24px 20px;
 }
-/* Both buttons: filled red, rounded pill */
+/* "Ne želim" = outline (white bg, red border+text) */
 .ty-btn-skip {
-    flex: 0.8; height: 54px;
-    background: #971b1b; color: #fff;
-    border: none;
-    border-radius: 30px !important;
+    flex: 0.7; height: 54px;
+    background: #fff; color: #971b1b;
+    border: 2px solid #971b1b;
+    border-radius: 8px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
-.ty-btn-skip:hover { background: #7a1616; }
+.ty-btn-skip:hover { background: #fef5f5; }
+/* "DODAJ K NAROČILU" = filled red */
 .ty-btn-add {
-    flex: 1.2; height: 54px;
+    flex: 1.3; height: 54px;
     background: #971b1b; color: #fff;
-    border: none;
-    border-radius: 30px !important;
+    border: 2px solid #971b1b;
+    border-radius: 8px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 700;
     text-transform: uppercase;
@@ -279,9 +280,9 @@ body.woocommerce-order-received .woocommerce {
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
-.ty-btn-add:hover { background: #7a1616; }
-.ty-btn-add:disabled { background: #999; cursor: not-allowed; }
-.ty-btn-add.added { background: #2E7D32; }
+.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
+.ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
+.ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
     text-align: center; padding: 0 24px 16px;
     font-size: 13px; color: #888; min-height: 20px;
