@@ -439,7 +439,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* ═══ Mobile ═══ */
 @media (max-width: 560px) {
-    .ty-container { margin: 0 auto; padding: 0; }
+    .ty-container { margin: 0 auto; padding: 0 10px; }
     .ty-success { padding: 22px 16px; }
     .ty-success h1 { font-size: 19px !important; }
     .ty-upsell-product { padding: 16px; gap: 14px; }
@@ -717,6 +717,13 @@ body.woocommerce-order-received .woocommerce {
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
+            // Auto-open "Stavke narudžbe" and "Adresa dostave" sections
+            document.querySelectorAll('.ty-section .ty-section-header').forEach(function(h) {
+                if (!h.classList.contains('open')) {
+                    h.classList.add('open');
+                    h.nextElementSibling.classList.add('open');
+                }
+            });
             return;
         }
         var m = Math.floor(rem/60), s = rem%60;
