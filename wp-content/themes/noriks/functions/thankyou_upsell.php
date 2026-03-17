@@ -25,6 +25,8 @@ function noriks_register_primary_hold_status() {
     ));
 }
 
+// IMPORTANT: Do NOT hook into woocommerce_before_order_object_save — it breaks checkout
+
 // Add to WC status list
 add_filter( 'wc_order_statuses', 'noriks_add_primary_hold_to_statuses' );
 function noriks_add_primary_hold_to_statuses( $statuses ) {
@@ -72,45 +74,28 @@ function noriks_transition_to_processing( $order_id ) {
 }
 
 
-// ─── FAILSAFE: sweep stuck primary-hold orders on every page load ────────
-// wp_cron depends on page visits — this catches any orders that slipped through
+// ─── FAILSAFE: sweep stuck primary-hold orders ──────────────────────────
+// Runs on wp_loaded (after WC is fully initialized), NOT on init
+// Only on admin or AJAX — never on frontend checkout to avoid conflicts
 
-add_action( 'init', 'noriks_failsafe_primary_hold_sweep' );
+add_action( 'wp_loaded', 'noriks_failsafe_primary_hold_sweep' );
 function noriks_failsafe_primary_hold_sweep() {
+    // Only run in admin or AJAX context — never on frontend checkout
+    if ( ! is_admin() && ! wp_doing_ajax() ) return;
     // Only run once per minute (transient lock)
     if ( get_transient( 'noriks_ph_sweep_lock' ) ) return;
     set_transient( 'noriks_ph_sweep_lock', 1, 60 );
 
+    if ( ! function_exists( 'wc_get_orders' ) ) return;
+
     $orders = wc_get_orders( array(
         'status'     => 'primary-hold',
         'limit'      => 20,
-        'date_created' => '<' . ( time() - 300 ), // older than 5 min
+        'date_created' => '<' . ( time() - 300 ),
     ));
 
     foreach ( $orders as $order ) {
         $order->update_status( 'processing', 'Failsafe: primary-hold exceeded 5 min — auto-moved to processing.' );
-    }
-}
-
-
-// ─── FAILSAFE 2: WooCommerce order list hook (catches admin visits) ──────
-
-add_action( 'woocommerce_order_list_table_prepare_items_query_args', 'noriks_failsafe_on_admin_orders' );
-add_action( 'woocommerce_before_order_object_save', 'noriks_failsafe_on_order_save' );
-
-function noriks_failsafe_on_admin_orders( $args ) {
-    noriks_failsafe_primary_hold_sweep();
-    return $args;
-}
-
-function noriks_failsafe_on_order_save( $order ) {
-    // When any order is saved, also check for stuck primary-holds
-    if ( $order->get_status() === 'primary-hold' ) {
-        $created = $order->get_date_created();
-        if ( $created && ( time() - $created->getTimestamp() ) > 300 ) {
-            $order->set_status( 'processing' );
-            $order->add_order_note( 'Failsafe: primary-hold auto-resolved on save.' );
-        }
     }
 }
 
