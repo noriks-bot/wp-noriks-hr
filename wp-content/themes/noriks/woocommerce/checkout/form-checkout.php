@@ -59,10 +59,42 @@ if ( WC()->cart->is_empty() ) return;
           </div>
         </div>
 
-        <!-- Payment methods handled by WC #payment below -->
+        <!-- PAYMENT METHODS (visible) -->
+        <h3 class="payment-title">Način plaćanja</h3>
+        <div id="noriks-payment" class="woocommerce-checkout-payment">
+          <ul class="wc_payment_methods payment_methods methods">
+            <li class="wc_payment_method payment_method_cod">
+              <input id="noriks_pm_cod" type="radio" class="input-radio" name="noriks_payment" value="cod" checked='checked' data-order_button_text="">
+              <label for="noriks_pm_cod">
+                Plaćanje prilikom preuzimanja <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount">1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></span></span>
+                <div class="hs-checkout__payment-method-cod-icon-container">
+                  <img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" />
+                </div>
+              </label>
+            </li>
+            <li class="wc_payment_method payment_method_braintree_credit_card">
+              <input id="noriks_pm_card" type="radio" class="input-radio" name="noriks_payment" value="stripe_cc" data-order_button_text="Naruči">
+              <label for="noriks_pm_card">
+                Kreditna kartica <span class="payment-fee-free">Besplatno</span>
+                <div class="sv-wc-payment-gateway-card-icons">
+                  <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" />
+                  <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" />
+                  <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" />
+                </div>
+              </label>
+            </li>
+            <li class="wc_payment_method payment_method_braintree_paypal">
+              <input id="noriks_pm_paypal" type="radio" class="input-radio" name="noriks_payment" value="ppcp-gateway" data-order_button_text="Naruči">
+              <label for="noriks_pm_paypal">
+                PayPal <span class="payment-fee-free">Besplatno</span>
+                <img decoding="async" src="https://images.vigo-shop.com/general/checkout/paypal/PayPal.svg" alt="PayPal">
+              </label>
+            </li>
+          </ul>
+        </div>
 
-        <!-- WC payment + order review (normal, visible) -->
-        <div id="payment" class="woocommerce-checkout-payment">
+        <!-- Hidden WC #payment for AJAX + form processing -->
+        <div id="payment" class="woocommerce-checkout-payment" style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;pointer-events:none;">
           <?php do_action( 'woocommerce_checkout_order_review' ); ?>
         </div>
 

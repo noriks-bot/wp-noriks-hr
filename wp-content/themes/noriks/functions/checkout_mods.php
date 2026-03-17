@@ -432,57 +432,6 @@ add_action( 'wp_footer', function() {
     }
     </style>
 
-    <style id="noriks-checkout-force-visible">
-    /* Force #payment visible and full-width after WC AJAX */
-    body.woocommerce-checkout #payment.woocommerce-checkout-payment {
-      position: static !important;
-      left: auto !important;
-      opacity: 1 !important;
-      height: auto !important;
-      overflow: visible !important;
-      pointer-events: auto !important;
-      visibility: visible !important;
-      width: 100% !important;
-    }
-    /* Order review full width */
-    body.woocommerce-checkout #order_review {
-      width: 100% !important;
-    }
-    body.woocommerce-checkout .vigo-checkout-total {
-      width: 100% !important;
-    }
-    /* Payment radio circles visible */
-    body.woocommerce-checkout #payment .wc_payment_methods .input-radio {
-      display: inline-block !important;
-      visibility: visible !important;
-      -webkit-appearance: radio !important;
-      appearance: radio !important;
-      width: 18px !important;
-      height: 18px !important;
-      margin-right: 8px !important;
-    }
-    </style>
-
-    <script id="noriks-checkout-payment-fix">
-    /* Prevent WC updated_checkout from breaking layout */
-    jQuery(function($){
-      $(document.body).on('updated_checkout', function(){
-        /* Force payment visible */
-        $('#payment').css({
-          'position': 'static',
-          'left': 'auto',
-          'opacity': '1',
-          'height': 'auto',
-          'overflow': 'visible',
-          'pointer-events': 'auto',
-          'visibility': 'visible'
-        });
-        /* Force radio buttons visible */
-        $('#payment .input-radio').css('display', 'inline-block');
-      });
-    });
-    </script>
-
     <script id="noriks-checkout-validation">
     jQuery(function($){
       var messages = {
