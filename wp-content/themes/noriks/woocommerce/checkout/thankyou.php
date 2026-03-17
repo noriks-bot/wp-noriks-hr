@@ -620,8 +620,8 @@ body.woocommerce-order-received .woocommerce {
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;">
                     <div>
-                        <div style="margin:0;font-size:15px;font-weight:400;color:#555;">Još više proizvoda s popustom</div>
-                        <div style="font-size:20px;font-weight:700;color:#222;line-height:1.3;">Dodajte bilo koji proizvod s 50% popusta</div>
+                        <div style="margin:0;font-size:15px;font-weight:400;color:#fff;text-align:center;">Još više proizvoda s popustom</div>
+                        <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte bilo koji proizvod s 50% popusta</div>
                     </div>
                     <span class="ty-chevron">+</span>
                 </div>
