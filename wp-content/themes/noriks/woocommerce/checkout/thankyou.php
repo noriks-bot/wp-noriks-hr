@@ -96,7 +96,7 @@ footer.footer-mobile, .hs_loader, .entry-header,
 .woocommerce-customer-details { display: none !important; }
 
 body.woocommerce-order-received {
-    background: #f0f2f5 !important;
+    background: #F5F5F5 !important;
     font-family: 'Roboto', sans-serif !important;
     color: #333 !important;
     -webkit-font-smoothing: antialiased;
@@ -116,7 +116,7 @@ body.woocommerce-order-received .woocommerce {
 }
 
 /* ═══ Container ═══ */
-.ty-container { max-width: 560px; margin: 30px auto; padding: 0 4px; }
+.ty-container { max-width: 520px; margin: 30px auto; padding: 0 4px; }
 
 /* ═══ Success ═══ */
 .ty-success {
@@ -144,28 +144,27 @@ body.woocommerce-order-received .woocommerce {
    STEP 1: SINGLE UPSELL OFFER
    ═══════════════════════════════════════════════ */
 .ty-upsell-wrap {
-    background: #fff;
+    background: #FFFFFF;
     margin: 0 0 15px; overflow: hidden;
     border-radius: 8px !important;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
 }
 
-/* Banner — dark bg, LEFT RED BORDER, white text (1:1 reference) */
+/* Banner — #2D2D2D bg, #971b1b BORDER AROUND ALL, white text */
 .ty-upsell-banner {
-    background: #3a3a3a; color: #fff;
-    padding: 22px 28px 20px; text-align: left;
-    border-left: 4px solid #971b1b;
-    border-radius: 0 !important;
-    margin: 0;
+    background: #2D2D2D; color: #FFFFFF;
+    padding: 22px 24px 18px; text-align: center;
+    border: 2px solid #971b1b;
+    border-radius: 8px !important;
+    margin: 16px 16px 0;
 }
 .ty-upsell-banner-top {
     font-size: 16px; font-weight: 400; margin-bottom: 8px;
-    color: rgba(255,255,255,0.85);
-    display: flex; align-items: center; justify-content: flex-start; gap: 10px;
+    color: #FFFFFF;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .ty-timer-pill {
     display: inline-block;
-    background: #971b1b; color: #fff;
+    background: #971b1b; color: #FFFFFF;
     padding: 2px 8px;
     border-radius: 4px !important;
     font-size: 13px; font-weight: 700;
@@ -174,23 +173,22 @@ body.woocommerce-order-received .woocommerce {
 .ty-timer-pill.expired { background: #999; }
 .ty-upsell-banner h2 {
     font-size: 22px !important; font-weight: 700 !important;
-    color: #fff !important; margin: 0 !important;
+    color: #FFFFFF !important; margin: 0 !important;
     line-height: 1.35 !important;
 }
 
-/* Benefits — white bg, red text, centered (matches reference) */
+/* Benefits — #FFF bg, icons #971b1b, text grey/red, centered */
 .ty-upsell-benefits {
-    background: #fff;
-    padding: 20px 24px 14px;
+    background: #FFFFFF;
+    padding: 18px 24px 14px;
     display: flex; flex-direction: column; align-items: center; gap: 4px;
 }
 .ty-benefit {
     font-size: 15px; font-weight: 500;
     display: flex; align-items: center; gap: 6px;
-    color: #971b1b;
 }
-.ty-benefit .ty-b-icon { font-size: 16px; }
-.ty-benefit-green { color: #971b1b; }
+.ty-benefit .ty-b-icon { font-size: 16px; color: #971b1b; }
+.ty-benefit-green { color: #888888; }
 .ty-benefit-orange { color: #971b1b; }
 
 /* Product card wrapper */
@@ -200,7 +198,7 @@ body.woocommerce-order-received .woocommerce {
     overflow: hidden;
 }
 
-/* Product card — 1:1 reference layout */
+/* Product card — exact reference colors */
 .ty-upsell-product {
     display: flex; gap: 18px;
     padding: 20px 24px 16px;
@@ -209,48 +207,48 @@ body.woocommerce-order-received .woocommerce {
 .ty-upsell-img {
     width: 120px; min-width: 120px; height: 120px;
     object-fit: contain;
-    background: linear-gradient(135deg, #e8a87c, #971b1b);
+    background: #FADEC9;
     border-radius: 10px !important;
-    padding: 10px;
+    padding: 8px;
     box-sizing: border-box;
 }
 .ty-upsell-info { flex: 1; }
 .ty-upsell-qty {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px; font-weight: 300; color: #222;
+    font-size: 22px; font-weight: 700; color: #333333;
     line-height: 1; margin-bottom: 4px;
 }
 .ty-upsell-name {
     font-family: 'Roboto', sans-serif;
-    font-size: 13px; font-weight: 400; color: #777;
+    font-size: 13px; font-weight: 400; color: #666666;
     margin-bottom: 8px; line-height: 1.4;
 }
 .ty-upsell-old-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px; color: #bbb;
+    font-size: 14px; color: #AAAAAA;
     text-decoration: line-through;
     margin-bottom: 2px;
 }
 .ty-upsell-new-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 26px; font-weight: 700; color: #971b1b;
+    font-size: 22px; font-weight: 700; color: #971b1b;
     line-height: 1.1;
 }
 
-/* Variation dropdown — centered, rounded, border (1:1 reference) */
-.ty-upsell-select-wrap { padding: 0 50px 18px; }
+/* Variation dropdown — #CCC border, 4px radius, ~60% width centered */
+.ty-upsell-select-wrap { padding: 0 24px 18px; display: flex; justify-content: center; }
 .ty-upsell-select {
-    width: 100%; height: 46px;
-    border: 1px solid #ccc;
-    border-radius: 23px !important;
-    padding: 0 18px;
+    width: 60%; height: 44px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px !important;
+    padding: 0 16px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px; font-weight: 500;
-    color: #333; background: #fff;
+    color: #333; background: #FFFFFF;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 14px center;
+    background-position: right 12px center;
     background-size: 20px;
     cursor: pointer; outline: none;
 }
@@ -258,38 +256,41 @@ body.woocommerce-order-received .woocommerce {
 
 /* Buttons */
 .ty-upsell-buttons {
-    display: flex; gap: 10px;
+    display: flex; gap: 12px;
     padding: 10px 24px 24px;
     align-items: center;
+    justify-content: center;
 }
-/* "Ne želim" — OUTLINE pill, red text+border, white bg, smaller LEFT (1:1 ref) */
+/* "Ne želim" — OUTLINE pill, #971b1b border 1.5px, white bg, red text */
 .ty-btn-skip {
-    flex: 0; min-width: 110px; height: 46px;
-    background: #fff; color: #971b1b;
-    border: 2px solid #971b1b;
-    border-radius: 23px !important;
+    flex: 0; height: auto;
+    background: #FFFFFF; color: #971b1b;
+    border: 1.5px solid #971b1b;
+    border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 15px; font-weight: 500;
+    padding: 10px 28px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — DARK NAVY filled pill, white text, larger RIGHT (1:1 ref) */
+/* "DODAJ U NARUDŽBU" — FILLED #971b1b pill, white text, bold uppercase */
 .ty-btn-add {
-    flex: 1; height: 46px;
-    background: #232f3e; color: #fff;
-    border: 2px solid #232f3e;
-    border-radius: 23px !important;
+    flex: 0; height: auto;
+    background: #971b1b; color: #FFFFFF;
+    border: 1.5px solid #971b1b;
+    border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 14px; font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    padding: 12px 40px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
 }
-.ty-btn-add:hover { background: #1a2332; border-color: #1a2332; }
+.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
 .ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
 .ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
@@ -575,11 +576,11 @@ body.woocommerce-order-received .woocommerce {
         <div class="ty-grid-section" id="ty-grid-section">
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;">
-                    <span>
-                        <h3 style="margin:0;">Još više proizvoda s popustom</h3>
-                        <h2>Dodajte bilo koji proizvod s 50% popusta</h2>
-                    </span>
-                    <span class="ty-chevron" style="color:#fff;">+</span>
+                    <div>
+                        <div style="margin:0;font-size:15px;font-weight:400;color:#555;">Još više proizvoda s popustom</div>
+                        <div style="font-size:20px;font-weight:700;color:#222;line-height:1.3;">Dodajte bilo koji proizvod s 50% popusta</div>
+                    </div>
+                    <span class="ty-chevron">+</span>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
@@ -638,13 +639,13 @@ body.woocommerce-order-received .woocommerce {
         <?php endif; /* COD only */ ?>
 
         <!-- 📋 Order items -->
-        <div class="ty-section">
+        <div class="ty-section" id="ty-order-items-section">
             <div class="ty-section-header open" onclick="tyToggle(this)">
-                <span>Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
+                <span id="ty-order-items-header">Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
                 <span class="ty-chevron">+</span>
             </div>
             <div class="ty-section-body open">
-                <div class="ty-section-body-inner">
+                <div class="ty-section-body-inner" id="ty-order-items-body">
                     <?php foreach ( $order->get_items() as $item ) :
                         $qty = $item->get_quantity();
                         $meta_parts = array();
@@ -793,13 +794,21 @@ body.woocommerce-order-received .woocommerce {
             .then(function(r) { return r.json(); })
             .then(function(d) {
                 if (d.success) {
-                    // Update items section content
-                    var itemsInner = document.querySelector('.ty-section .ty-section-body-inner');
-                    if (itemsInner) itemsInner.innerHTML = d.data.items_html;
-                    // Update item count in header
-                    var headerSpan = document.querySelector('.ty-section .ty-section-header span:first-child');
-                    if (headerSpan && d.data.item_count) {
+                    // Update items section content by ID
+                    var itemsBody = document.getElementById('ty-order-items-body');
+                    if (itemsBody) itemsBody.innerHTML = d.data.items_html;
+                    // Update item count in header by ID
+                    var headerSpan = document.getElementById('ty-order-items-header');
+                    if (headerSpan) {
                         headerSpan.textContent = 'Stavke narudžbe (' + d.data.item_count + ')';
+                    }
+                    // Make sure section stays open
+                    var section = document.getElementById('ty-order-items-section');
+                    if (section) {
+                        var h = section.querySelector('.ty-section-header');
+                        var b = section.querySelector('.ty-section-body');
+                        if (h && !h.classList.contains('open')) h.classList.add('open');
+                        if (b && !b.classList.contains('open')) b.classList.add('open');
                     }
                 }
             })
@@ -925,10 +934,10 @@ function removeUpsellItem(btn) {
                     .then(function(r2) { return r2.json(); })
                     .then(function(d2) {
                         if (d2.success) {
-                            var itemsInner = document.querySelector('.ty-section .ty-section-body-inner');
-                            if (itemsInner) itemsInner.innerHTML = d2.data.items_html;
-                            var headerSpan = document.querySelector('.ty-section .ty-section-header span:first-child');
-                            if (headerSpan && d2.data.item_count) {
+                            var itemsBody = document.getElementById('ty-order-items-body');
+                            if (itemsBody) itemsBody.innerHTML = d2.data.items_html;
+                            var headerSpan = document.getElementById('ty-order-items-header');
+                            if (headerSpan) {
                                 headerSpan.textContent = 'Stavke narudžbe (' + d2.data.item_count + ')';
                             }
                         }
