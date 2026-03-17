@@ -152,7 +152,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Banner — #2D2D2D bg, #971b1b BORDER AROUND ALL, white text */
 .ty-upsell-banner {
-    background: #2D2D2D; color: #FFFFFF;
+    background: #333333; color: #FFFFFF;
     padding: 22px 24px 18px; text-align: center;
     border: none;
     border-radius: 0 !important;
@@ -932,6 +932,19 @@ function removeUpsellItem(btn) {
         .then(function(r) { return r.json(); })
         .then(function(d) {
             if (d.success) {
+                // Reset the main upsell "DODAJ" button back to active
+                var mainAddBtn = document.getElementById('ty-btn-add');
+                if (mainAddBtn) {
+                    mainAddBtn.disabled = false;
+                    mainAddBtn.classList.remove('added');
+                    mainAddBtn.textContent = 'DODAJ U NARUDŽBU';
+                }
+                // Also reset grid add buttons for this product
+                document.querySelectorAll('.g-add-btn.added').forEach(function(gb) {
+                    gb.disabled = false;
+                    gb.classList.remove('added');
+                    gb.textContent = 'DODAJ';
+                });
                 // Refresh order items
                 var rfd = new FormData();
                 rfd.append('action', 'noriks_refresh_order_items');
