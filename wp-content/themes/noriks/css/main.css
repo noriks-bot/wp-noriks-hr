@@ -156,24 +156,12 @@ button:focus {outline : none; outline-color: transparent !important;}
 
 
 .xoo-wsc-ft-btn-checkout { 
-    background: #c00 !important;
-    color: #fff !important;
-    border-radius: 8px !important;
-    font-weight: 700 !important;
-    font-size: 17px !important;
-    font-family: 'Roboto', sans-serif !important;
-    letter-spacing: 0.2px !important;
-    text-transform: none !important;
-    border: none !important;
-    height: 50px !important;
-}
-
-.xoo-wsc-ft-btn-checkout:hover { 
-    background: #a00 !important;
+    background: #f5a623 !important;
+    color: black !important;
 }
 
 .xoo-wsc-ft-btn-checkout span { 
-    color: #fff !important;
+    color: black !important;
 }
 
 
