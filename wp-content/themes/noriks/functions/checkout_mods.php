@@ -433,34 +433,29 @@ add_action( 'wp_footer', function() {
     </style>
 
     <script id="noriks-prevent-checkout-destroy">
-    /* Prevent WC updated_checkout from replacing our styled payment + review */
+    /* Block WC from replacing #order_review content via AJAX */
     jQuery(function($){
-      /* Save original HTML before WC AJAX destroys it */
-      var savedPayment = null;
-      var savedReview = null;
-      
-      $(document.body).on('update_checkout', function(){
-        /* Save before AJAX replaces */
-        if (!savedPayment) savedPayment = $('#payment').parent().html();
-        if (!savedReview) savedReview = $('.vigo-checkout-total').parent().html();
-      });
-      
-      $(document.body).on('updated_checkout', function(){
-        /* Restore if WC broke it */
-        if (savedPayment && $('#payment .wc_payment_methods li').length === 0) {
-          $('#payment').parent().html(savedPayment);
+      /* Intercept WC checkout AJAX — prevent it from replacing payment + review HTML */
+      var origAjax = $.ajax;
+      $.ajax = function(opts) {
+        if (opts && opts.url && opts.url.indexOf('update_order_review') !== -1) {
+          /* Let AJAX run but prevent WC from replacing DOM */
+          var origSuccess = opts.success;
+          opts.success = function(data) {
+            /* Only update fragments we want (shipping, totals), skip payment replacement */
+            if (data && data.fragments) {
+              /* Apply fragments EXCEPT payment */
+              $.each(data.fragments, function(selector, html) {
+                if (selector.indexOf('payment') === -1 && selector.indexOf('order_review') === -1) {
+                  $(selector).replaceWith(html);
+                }
+              });
+            }
+            $(document.body).trigger('updated_checkout');
+          };
         }
-        /* Force payment visible */
-        $('#payment').css({
-          'position': 'static',
-          'left': 'auto', 
-          'opacity': '1',
-          'height': 'auto',
-          'overflow': 'visible',
-          'visibility': 'visible',
-          'pointer-events': 'auto'
-        });
-      });
+        return origAjax.apply(this, arguments);
+      };
     });
     </script>
 
