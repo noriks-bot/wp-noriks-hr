@@ -99,6 +99,7 @@ body.woocommerce-order-received {
     background: #f0f2f5 !important;
     font-family: 'Roboto', sans-serif !important;
     color: #333 !important;
+    -webkit-font-smoothing: antialiased;
 }
 body.woocommerce-order-received .site-main,
 body.woocommerce-order-received .hentry {
@@ -150,7 +151,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Banner — RED background */
 .ty-upsell-banner {
-    background: #971b1b; color: #fff;
+    background: #cc0000; color: #fff;
     padding: 18px 24px; text-align: center;
 }
 .ty-upsell-banner-top {
@@ -173,7 +174,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Benefits */
 .ty-upsell-benefits {
-    background: #971b1b;
+    background: #cc0000;
     padding: 10px 24px 16px;
     display: flex; flex-direction: column; align-items: center; gap: 6px;
 }
@@ -217,40 +218,52 @@ body.woocommerce-order-received .woocommerce {
     margin-bottom: 2px;
 }
 .ty-upsell-new-price {
-    font-size: 28px; font-weight: 700; color: #971b1b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px; font-weight: 700; color: #cc0000;
     line-height: 1.1;
 }
 
 /* Variation dropdown */
 .ty-upsell-select-wrap { padding: 0 24px 16px; }
+/* Select — matches .variations select on product page */
 .ty-upsell-select {
-    width: 100%; height: 48px;
-    border: 2px solid #971b1b;
-    padding: 0 16px; font-size: 15px; font-weight: 500;
+    width: 100%; height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 1px !important;
+    padding: 0 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; font-weight: 600;
     color: #333; background: #fff;
     appearance: auto; cursor: pointer;
     outline: none;
+    transition: all 0.3s ease;
 }
-.ty-upsell-select:focus { border-color: #7a1616; }
+.ty-upsell-select:focus,
+.ty-upsell-select:hover {
+    border-color: #000;
+}
 
 /* Buttons — ALL RED */
 .ty-upsell-buttons {
     display: flex; gap: 4px;
     padding: 4px 24px 24px;
 }
-/* Buttons — product page style (red, full-width, bold white, rounded) */
+/* Buttons — matches .single_add_to_cart_button on product page */
 .ty-btn-skip,
 .ty-btn-add {
-    flex: 1; height: 54px;
-    background: #971b1b; color: #fff;
+    flex: 1; height: 60px;
+    background: #cc0000; color: #fff;
     border: none;
     border-radius: 8px !important;
-    font-size: 16px; font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px; font-weight: 600;
+    letter-spacing: 0.2px;
+    text-transform: none;
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
 .ty-btn-skip:hover,
-.ty-btn-add:hover { background: #7a1616; }
+.ty-btn-add:hover { background: #a30000; }
 .ty-btn-add:disabled { background: #999; cursor: not-allowed; border-radius: 8px !important; }
 .ty-btn-add.added { background: #2E7D32; }
 .ty-upsell-status {
@@ -260,7 +273,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Red bottom bar on step 1 */
 .ty-upsell-bottom-bar {
-    background: #971b1b;
+    background: #cc0000;
     padding: 12px 24px;
     text-align: center;
 }
@@ -284,7 +297,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #971b1b;
+    background: #cc0000;
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
@@ -331,22 +344,26 @@ body.woocommerce-order-received .woocommerce {
     text-decoration: line-through; color: #999; font-size: 12px;
 }
 .ty-grid-item .g-price-new {
-    color: #971b1b; font-size: 16px; font-weight: 700;
+    color: #cc0000; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
     width: 100%; padding: 6px; font-size: 12px;
-    border: 2px solid #971b1b; margin-top: 6px;
+    border: 1px solid #ccc; border-radius: 1px !important;
+    margin-top: 6px;
     background: #fff; color: #333; outline: none;
+    font-weight: 600; transition: all 0.3s ease;
 }
-.ty-grid-item select:focus { border-color: #7a1616; }
+.ty-grid-item select:focus,
+.ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 12px; background: #971b1b; color: #fff;
+    padding: 12px; background: #cc0000; color: #fff;
     border: none; border-radius: 8px !important;
-    font-size: 13px; font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
 }
-.ty-grid-item .g-add-btn:hover { background: #7a1616; }
+.ty-grid-item .g-add-btn:hover { background: #a30000; }
 .ty-grid-item .g-add-btn.added {
     background: #2E7D32; pointer-events: none;
 }
@@ -357,12 +374,13 @@ body.woocommerce-order-received .woocommerce {
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
     background: #fff; color: #333;
-    border: none; border-radius: 8px !important;
-    font-size: 16px; font-weight: 700;
+    border: 1px solid #ccc; border-radius: 8px !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
 }
-.ty-grid-close:hover { background: #f5f5f5; }
+.ty-grid-close:hover { background: #f4f4f4; border-color: #000; color: #000; }
 
 /* ═══ Collapsible sections ═══ */
 .ty-section {
@@ -436,7 +454,7 @@ body.woocommerce-order-received .woocommerce {
             <h1>Narudžba nije uspjela</h1>
             <p>Banka je odbila transakciju. Pokušajte ponovno.</p>
             <p style="margin-top:16px;">
-                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#971b1b;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
+                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#cc0000;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
             </p>
         </div>
     <?php else : ?>
