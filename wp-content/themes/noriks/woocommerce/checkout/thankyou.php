@@ -238,15 +238,15 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-btn-skip {
     flex: 1; height: 50px;
-    background: #C62828; color: #fff;
-    border: 2px solid #fff;
+    background: #B71C1C; color: #fff;
+    border: none;
     font-size: 14px; font-weight: 600;
     cursor: pointer; transition: opacity 0.2s;
 }
 .ty-btn-skip:hover { opacity: 0.85; }
 .ty-btn-add {
     flex: 1.5; height: 50px;
-    background: #C62828; color: #fff;
+    background: #999; color: #fff;
     border: none;
     font-size: 14px; font-weight: 700;
     cursor: pointer; text-transform: uppercase;
@@ -341,7 +341,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 10px; background: #C62828; color: #fff;
+    padding: 10px; background: #B71C1C; color: #fff;
     border: none; font-size: 12px; font-weight: 700;
     text-transform: uppercase; cursor: pointer;
     transition: opacity 0.2s;
@@ -356,13 +356,13 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: transparent; color: #fff;
-    border: 2px solid #fff;
+    background: #999; color: #fff;
+    border: none;
     font-size: 14px; font-weight: 700;
     text-transform: uppercase;
     cursor: pointer; text-align: center;
 }
-.ty-grid-close:hover { background: rgba(255,255,255,0.1); }
+.ty-grid-close:hover { opacity: 0.85; }
 
 /* ═══ Collapsible sections ═══ */
 .ty-section {
