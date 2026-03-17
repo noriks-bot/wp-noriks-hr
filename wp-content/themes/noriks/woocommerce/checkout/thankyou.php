@@ -219,7 +219,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-upsell-info { flex: 1; }
 .ty-upsell-qty {
     font-family: 'Roboto', sans-serif;
-    font-size: 22px; font-weight: 700; color: #333333;
+    font-size: 26px; font-weight: 300; color: #333333;
     line-height: 1; margin-bottom: 4px;
 }
 .ty-upsell-name {
@@ -280,11 +280,11 @@ body.woocommerce-order-received .woocommerce {
     line-height: 1;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — FILLED #971b1b pill, same height */
+/* "DODAJ U NARUDŽBU" — FILLED DARK pill, white text (matches reference) */
 .ty-btn-add {
     flex: 1;
-    background: #971b1b; color: #FFFFFF;
-    border: 1.5px solid #971b1b;
+    background: #444; color: #FFFFFF;
+    border: 1.5px solid #444;
     border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 15px; font-weight: 700;
@@ -296,7 +296,7 @@ body.woocommerce-order-received .woocommerce {
     white-space: nowrap;
     line-height: 1;
 }
-.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
+.ty-btn-add:hover { background: #333; border-color: #333; }
 .ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
 .ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
@@ -932,14 +932,20 @@ function removeUpsellItem(btn) {
         .then(function(r) { return r.json(); })
         .then(function(d) {
             if (d.success) {
-                // Reset the main upsell "DODAJ" button back to active
+                // Reset the main upsell section — show it again
+                var upsellWrap = document.getElementById('ty-upsell');
+                if (upsellWrap) upsellWrap.style.display = '';
+                // Reset "DODAJ" button back to active
                 var mainAddBtn = document.getElementById('ty-btn-add');
                 if (mainAddBtn) {
                     mainAddBtn.disabled = false;
                     mainAddBtn.classList.remove('added');
                     mainAddBtn.textContent = 'DODAJ U NARUDŽBU';
                 }
-                // Also reset grid add buttons for this product
+                // Hide grid section
+                var gridSection = document.getElementById('ty-grid-section');
+                if (gridSection) gridSection.classList.remove('show');
+                // Reset grid add buttons
                 document.querySelectorAll('.g-add-btn.added').forEach(function(gb) {
                     gb.disabled = false;
                     gb.classList.remove('added');
