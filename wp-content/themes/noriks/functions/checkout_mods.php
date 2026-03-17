@@ -432,6 +432,38 @@ add_action( 'wp_footer', function() {
     }
     </style>
 
+    <script id="noriks-prevent-checkout-destroy">
+    /* Prevent WC updated_checkout from replacing our styled payment + review */
+    jQuery(function($){
+      /* Save original HTML before WC AJAX destroys it */
+      var savedPayment = null;
+      var savedReview = null;
+      
+      $(document.body).on('update_checkout', function(){
+        /* Save before AJAX replaces */
+        if (!savedPayment) savedPayment = $('#payment').parent().html();
+        if (!savedReview) savedReview = $('.vigo-checkout-total').parent().html();
+      });
+      
+      $(document.body).on('updated_checkout', function(){
+        /* Restore if WC broke it */
+        if (savedPayment && $('#payment .wc_payment_methods li').length === 0) {
+          $('#payment').parent().html(savedPayment);
+        }
+        /* Force payment visible */
+        $('#payment').css({
+          'position': 'static',
+          'left': 'auto', 
+          'opacity': '1',
+          'height': 'auto',
+          'overflow': 'visible',
+          'visibility': 'visible',
+          'pointer-events': 'auto'
+        });
+      });
+    });
+    </script>
+
     <script id="noriks-checkout-validation">
     jQuery(function($){
       var messages = {
