@@ -8,90 +8,138 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-// Upsell product IDs — configure here
-// Format: [ 'label' => '...', 'product_id' => X, 'variation_id' => 0, 'qty' => 1, 'image' => 'url' ]
-$upsell_items = apply_filters( 'noriks_thankyou_upsell_items', array(
-    array( 'label' => '1 Bokserica',    'slug' => '1-bokserica',   'qty' => 1, 'type' => 'bokserice' ),
-    array( 'label' => '3 Bokserice',   'slug' => '3-bokserice',   'qty' => 3, 'type' => 'bokserice' ),
-    array( 'label' => '6 Bokseric',    'slug' => '6-bokseric',    'qty' => 6, 'type' => 'bokserice' ),
-    array( 'label' => '1 Majica',      'slug' => '1-majica',      'qty' => 1, 'type' => 'majice' ),
-    array( 'label' => '3 Majice',      'slug' => '3-majice',      'qty' => 3, 'type' => 'majice' ),
-    array( 'label' => '6 Majic',       'slug' => '6-majic',       'qty' => 6, 'type' => 'majice' ),
-));
+// Upsell products with real WC data
+$upsell_products = array(
+    array(
+        'product_id'   => 2781,
+        'label'        => 'Crne Bokserice',
+        'sublabel'     => '1 komad',
+        'image'        => 'https://devhr.noriks.com/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
+        'price'        => '15,99 €',
+    ),
+    array(
+        'product_id'   => 2890,
+        'label'        => 'Crne bokserice',
+        'sublabel'     => '3-paket',
+        'image'        => 'https://devhr.noriks.com/wp-content/uploads/2025/11/boksarice_3x_crne.png',
+        'price'        => '31,99 €',
+    ),
+    array(
+        'product_id'   => 4983,
+        'label'        => 'Crne bokserice',
+        'sublabel'     => '5-paket',
+        'image'        => 'https://devhr.noriks.com/wp-content/uploads/2026/01/boksarice_5x_crne.png',
+        'price'        => '48,99 €',
+    ),
+    array(
+        'product_id'   => 250,
+        'label'        => 'Crna majica',
+        'sublabel'     => '1 komad',
+        'image'        => 'https://devhr.noriks.com/wp-content/uploads/2025/09/black-1.jpg',
+        'price'        => '24,99 €',
+    ),
+    array(
+        'product_id'   => 605,
+        'label'        => 'Crne majice',
+        'sublabel'     => '3-paket',
+        'image'        => 'https://devhr.noriks.com/wp-content/uploads/2025/09/black-3x.jpg',
+        'price'        => '49,99 €',
+    ),
+    array(
+        'product_id'   => 4410,
+        'label'        => 'Crne majice',
+        'sublabel'     => '6-paket',
+        'image'        => 'https://devhr.noriks.com/wp-content/uploads/2026/01/6xcrnamajica.png',
+        'price'        => '96,99 €',
+    ),
+);
+$upsell_products = apply_filters( 'noriks_thankyou_upsell_products', $upsell_products );
+
+// Try to detect customer's size from order items
+$customer_size = '';
+if ( $order ) {
+    foreach ( $order->get_items() as $item ) {
+        $meta = $item->get_meta( 'pa_velicina' ) ?: $item->get_meta( 'Veličina' ) ?: $item->get_meta( 'velicina' );
+        if ( $meta ) { $customer_size = $meta; break; }
+        // Check variation attributes
+        if ( is_a( $item, 'WC_Order_Item_Product' ) ) {
+            $variation_id = $item->get_variation_id();
+            if ( $variation_id ) {
+                $variation = wc_get_product( $variation_id );
+                if ( $variation ) {
+                    $attrs = $variation->get_attributes();
+                    foreach ( $attrs as $k => $v ) {
+                        if ( stripos( $k, 'velicina' ) !== false || stripos( $k, 'size' ) !== false ) {
+                            $customer_size = $v;
+                            break 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 ?>
 
 <style>
 /* ===== THANK YOU PAGE — VIGOSHOP STYLE ===== */
 
-/* Hide WP chrome (same as checkout) */
+/* Hide WP chrome */
 .top-header, .marquee, header.navbar.header, #languageModal,
 .xoo-wsc-markup, .xoo-wsc-overlay, .footer-wrap, footer.footer,
 footer.footer-mobile, .hs_loader, .entry-header,
 .storefront-breadcrumb, .storefront-sorting,
-#secondary, .site-footer, .xoo-wsc-container { display: none !important; }
+#secondary, .site-footer, .xoo-wsc-container,
+.checkout--my-header { display: none !important; }
 
 body.woocommerce-order-received {
     background: #f0f2f5 !important;
     font-family: 'Roboto', sans-serif !important;
     color: #333 !important;
 }
-
 body.woocommerce-order-received .site-main,
 body.woocommerce-order-received .hentry {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 !important; padding: 0 !important;
 }
-
-/* === Logo header === */
-.ty-header {
-    background: #fff;
-    text-align: center;
-    padding: 14px 0 18px;
-    border-bottom: 1px solid #e0e0e0;
-}
-.ty-header a { text-decoration: none; }
-.ty-header .ty-brand {
-    font-family: 'Roboto', sans-serif;
-    font-size: 33px; font-weight: 700;
-    letter-spacing: 1.75px; color: #000;
-}
-.ty-header .ty-tagline {
-    display: block; font-size: 10px;
-    font-family: 'Roboto', sans-serif;
-    margin-top: -12px; letter-spacing: 0.38px;
-    color: #000; margin-left: 1px;
+body.woocommerce-order-received .woocommerce {
+    background: transparent !important; padding: 0 !important;
 }
 
 /* === Main container === */
 .ty-container {
     max-width: 560px;
     margin: 30px auto;
-    padding: 0;
+    padding: 0 15px;
 }
 
-/* === Success card === */
-.ty-success-card {
-    background: #fff;
+/* === Success banner === */
+.ty-success {
+    background: #e8f5e9;
     border-radius: 10px;
-    padding: 30px 40px;
+    padding: 28px 32px;
     margin-bottom: 16px;
     text-align: center;
 }
 .ty-success-icon {
-    width: 64px; height: 64px;
-    background: #e8f5e9;
+    width: 56px; height: 56px;
+    background: #4CAF50;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 16px;
-    font-size: 32px; color: #4CAF50;
+    margin: 0 auto 14px;
+    font-size: 28px; color: #fff;
 }
-.ty-success-card h1 {
-    font-size: 24px !important; font-weight: 700 !important;
-    color: #232f3e !important; margin: 0 0 8px !important;
+.ty-success h1 {
+    font-size: 22px !important; font-weight: 700 !important;
+    color: #232f3e !important; margin: 0 0 6px !important;
     line-height: 1.3 !important;
 }
-.ty-success-card p {
+.ty-success p {
     font-size: 14px; color: #5f6061; margin: 0;
+}
+.ty-success .ty-order-num {
+    display: inline-block; margin-top: 10px;
+    background: #fff; padding: 6px 16px; border-radius: 6px;
+    font-size: 13px; color: #333; font-weight: 600;
 }
 
 /* === Collapsible sections === */
@@ -103,152 +151,149 @@ body.woocommerce-order-received .hentry {
 }
 .ty-section-header {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 24px;
+    padding: 16px 20px;
     cursor: pointer; user-select: none;
-    font-size: 16px; font-weight: 700; color: #232f3e;
+    font-size: 15px; font-weight: 700; color: #232f3e;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
 }
-.ty-section-header.open { border-bottom-color: #eee; }
+.ty-section-header.open { border-bottom-color: #f0f0f0; }
 .ty-section-header .ty-chevron {
-    font-size: 12px; color: #999;
-    transition: transform 0.2s;
+    font-size: 11px; color: #999;
+    transition: transform 0.25s;
+    display: inline-block;
 }
 .ty-section-header.open .ty-chevron { transform: rotate(180deg); }
 .ty-section-body {
-    padding: 0 24px;
     max-height: 0; overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.3s ease;
 }
-.ty-section-body.open {
-    padding: 16px 24px;
-    max-height: 2000px;
-}
+.ty-section-body.open { max-height: 2000px; }
+.ty-section-body-inner { padding: 14px 20px; }
 
 /* Section content */
-.ty-detail-row {
-    display: flex; justify-content: space-between;
-    padding: 8px 0; font-size: 14px;
-    border-bottom: 1px solid #f0f0f0;
+.ty-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 7px 0; font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
 }
-.ty-detail-row:last-child { border-bottom: none; }
-.ty-detail-label { color: #5f6061; }
-.ty-detail-value { font-weight: 600; color: #232f3e; text-align: right; }
+.ty-row:last-child { border-bottom: none; }
+.ty-row-label { color: #888; }
+.ty-row-value { font-weight: 600; color: #232f3e; text-align: right; max-width: 60%; }
 
-/* Order items table */
-.ty-items-table { width: 100%; border-collapse: collapse; }
-.ty-items-table th {
-    text-align: left; font-size: 12px; color: #999;
-    font-weight: 500; padding: 0 0 8px; text-transform: uppercase;
+/* Items */
+.ty-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid #f5f5f5;
 }
-.ty-items-table td {
-    padding: 10px 0; font-size: 14px;
-    border-bottom: 1px solid #f0f0f0;
-}
-.ty-items-table td:last-child { text-align: right; font-weight: 600; }
-.ty-items-table .ty-item-name { color: #232f3e; }
-.ty-items-table .ty-item-meta { font-size: 12px; color: #999; }
-.ty-items-total td {
-    border-bottom: none; border-top: 2px solid #eee;
-    padding-top: 12px; font-weight: 700; font-size: 16px;
-}
+.ty-item:last-child { border-bottom: none; }
+.ty-item-name { font-size: 14px; color: #232f3e; flex: 1; }
+.ty-item-qty { color: #888; font-size: 13px; }
+.ty-item-meta { font-size: 12px; color: #999; margin-top: 2px; }
+.ty-item-price { font-weight: 600; font-size: 14px; color: #232f3e; margin-left: 12px; white-space: nowrap; }
+.ty-totals { margin-top: 8px; border-top: 2px solid #eee; padding-top: 8px; }
+.ty-totals .ty-row { padding: 5px 0; }
+.ty-totals .ty-total-final { font-size: 16px; font-weight: 700; }
 
-/* === Upsell section === */
+/* === Upsell === */
 .ty-upsell {
     background: #fff;
     border-radius: 10px;
-    padding: 24px;
+    padding: 24px 20px;
     margin-bottom: 16px;
 }
-.ty-upsell-header {
+.ty-upsell-head {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
-.ty-upsell-header h2 {
-    font-size: 19.6px !important; font-weight: 700 !important;
-    color: #232f3e !important; margin: 0 0 8px !important;
+.ty-upsell-head h2 {
+    font-size: 18px !important; font-weight: 700 !important;
+    color: #232f3e !important; margin: 0 0 10px !important;
 }
-.ty-upsell-timer {
+.ty-timer-badge {
     display: inline-flex; align-items: center; gap: 6px;
     background: #FFF3CD; color: #856404;
-    padding: 6px 14px; border-radius: 20px;
-    font-size: 14px; font-weight: 600;
+    padding: 5px 14px; border-radius: 20px;
+    font-size: 13px; font-weight: 600;
 }
-.ty-upsell-timer .ty-timer-icon { font-size: 16px; }
-.ty-upsell-expired { background: #f8d7da; color: #721c24; }
+.ty-timer-badge.expired { background: #f8d7da; color: #721c24; }
 
-/* Grid */
-.ty-upsell-grid {
+/* Upsell grid */
+.ty-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 10px;
 }
-.ty-upsell-card {
-    background: #f8f9fa;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 16px 12px;
+.ty-card {
+    background: #fff;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 12px;
     text-align: center;
     cursor: pointer;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
     position: relative;
+    display: flex; flex-direction: column; align-items: center;
 }
-.ty-upsell-card:hover {
+.ty-card:hover {
     border-color: #4CAF50;
-    box-shadow: 0 2px 8px rgba(76,175,80,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-.ty-upsell-card.adding {
-    opacity: 0.6; pointer-events: none;
-}
-.ty-upsell-card.added {
-    border-color: #4CAF50; background: #e8f5e9;
+.ty-card:active { transform: translateY(0); }
+.ty-card.adding { opacity: 0.5; pointer-events: none; }
+.ty-card.added {
+    border-color: #4CAF50; background: #f2feee;
     pointer-events: none;
 }
-.ty-upsell-card.added::after {
-    content: '✓'; position: absolute;
-    top: 8px; right: 8px;
-    background: #4CAF50; color: #fff;
-    width: 20px; height: 20px; border-radius: 50%;
-    font-size: 12px; display: flex; align-items: center; justify-content: center;
+.ty-card.added .ty-card-btn { background: #4CAF50; }
+.ty-card.added .ty-card-btn::after { content: ' ✓'; }
+.ty-card.disabled { opacity: 0.35; pointer-events: none; }
+
+.ty-card-img {
+    width: 100%; aspect-ratio: 1;
+    object-fit: cover; border-radius: 6px;
+    margin-bottom: 8px; background: #f8f8f8;
 }
-.ty-upsell-card .ty-upsell-icon {
-    font-size: 32px; margin-bottom: 8px;
+.ty-card-label {
+    font-size: 13px; font-weight: 700; color: #232f3e;
+    line-height: 1.2; margin-bottom: 2px;
 }
-.ty-upsell-card .ty-upsell-label {
-    font-size: 14px; font-weight: 600; color: #232f3e;
-    margin-bottom: 4px;
+.ty-card-sub {
+    font-size: 11px; color: #888; margin-bottom: 6px;
 }
-.ty-upsell-card .ty-upsell-price {
-    font-size: 13px; color: #5f6061;
+.ty-card-price {
+    font-size: 15px; font-weight: 700; color: #232f3e;
+    margin-bottom: 8px;
 }
-.ty-upsell-card.disabled {
-    opacity: 0.4; pointer-events: none;
+.ty-card-btn {
+    display: inline-block;
+    background: linear-gradient(to bottom, #3ec000, #00ac00);
+    color: #fff; font-size: 12px; font-weight: 700;
+    padding: 7px 14px; border-radius: 4px;
+    border: none; width: 100%;
+    transition: opacity 0.2s;
+}
+.ty-card-status {
+    font-size: 11px; color: #888; margin-top: 4px;
+    min-height: 16px;
 }
 
 /* === Mobile === */
 @media (max-width: 560px) {
-    .ty-container { margin: 15px 0 0; }
-    .ty-success-card, .ty-section, .ty-upsell {
-        border-radius: 5px;
-    }
-    .ty-success-card { padding: 24px 15px; }
-    .ty-success-card h1 { font-size: 20px !important; }
-    .ty-section-header { padding: 14px 15px; }
-    .ty-section-body.open { padding: 12px 15px; }
-    .ty-upsell { padding: 16px 15px; }
-    .ty-upsell-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .ty-container { margin: 15px auto; padding: 0 8px; }
+    .ty-success, .ty-section, .ty-upsell { border-radius: 6px; }
+    .ty-success { padding: 22px 16px; }
+    .ty-success h1 { font-size: 19px !important; }
+    .ty-section-header { padding: 14px 16px; font-size: 14px; }
+    .ty-section-body-inner { padding: 12px 16px; }
+    .ty-upsell { padding: 18px 14px; }
+    .ty-grid { grid-template-columns: repeat(2, 1fr); }
+    .ty-card { padding: 10px; }
+    .ty-card-label { font-size: 12px; }
+    .ty-card-price { font-size: 14px; }
 }
 </style>
-
-<!-- Logo header -->
-<div class="ty-header">
-    <a href="<?php echo esc_url( home_url('/') ); ?>">
-        <span class="ty-brand">NORIKS</span>
-        <span class="ty-tagline">Simple Shirts, Done Better</span>
-    </a>
-</div>
 
 <?php if ( $order ) : ?>
 
@@ -257,150 +302,121 @@ body.woocommerce-order-received .hentry {
     <?php do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
 
     <?php if ( $order->has_status( 'failed' ) ) : ?>
-        <div class="ty-success-card" style="border-left: 4px solid #dc3545;">
-            <div class="ty-success-icon" style="background:#fde8e8;">
-                <span style="color:#dc3545;">✕</span>
-            </div>
+        <div class="ty-success" style="background:#fde8e8;">
+            <div class="ty-success-icon" style="background:#dc3545;">✕</div>
             <h1>Narudžba nije uspjela</h1>
-            <p><?php esc_html_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
+            <p>Banka je odbila transakciju. Pokušajte ponovno.</p>
             <p style="margin-top:16px;">
-                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button" style="background:linear-gradient(to bottom,#3ec000,#00ac00);color:#fff;padding:12px 32px;border-radius:4px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
+                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:linear-gradient(to bottom,#3ec000,#00ac00);color:#fff;padding:12px 32px;border-radius:4px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
             </p>
         </div>
     <?php else : ?>
 
-        <!-- Success message -->
-        <div class="ty-success-card">
+        <!-- ✅ Success banner -->
+        <div class="ty-success">
             <div class="ty-success-icon">✓</div>
-            <h1>Vaše naručilo je bilo sprejeto</h1>
-            <p>Hvala vam za narudžbu! Potvrdu ste primili na e-mail.</p>
+            <h1>Vaša narudžba je zaprimljena!</h1>
+            <p>Potvrdu ste primili na <?php echo esc_html( $order->get_billing_email() ); ?></p>
+            <span class="ty-order-num">Narudžba #<?php echo $order->get_order_number(); ?></span>
         </div>
 
-        <!-- Order overview -->
-        <div class="ty-section">
-            <div class="ty-section-header open" onclick="toggleTySection(this)">
-                <span>Pregled narudžbe #<?php echo $order->get_order_number(); ?></span>
-                <span class="ty-chevron">▼</span>
-            </div>
-            <div class="ty-section-body open">
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Datum</span>
-                    <span class="ty-detail-value"><?php echo wc_format_datetime( $order->get_date_created() ); ?></span>
-                </div>
-                <?php if ( $order->get_billing_email() ) : ?>
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">E-mail</span>
-                    <span class="ty-detail-value"><?php echo esc_html( $order->get_billing_email() ); ?></span>
-                </div>
-                <?php endif; ?>
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Način plaćanja</span>
-                    <span class="ty-detail-value"><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></span>
-                </div>
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Ukupno</span>
-                    <span class="ty-detail-value"><?php echo $order->get_formatted_order_total(); ?></span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Order items -->
-        <div class="ty-section">
-            <div class="ty-section-header" onclick="toggleTySection(this)">
-                <span>Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
-                <span class="ty-chevron">▼</span>
-            </div>
-            <div class="ty-section-body">
-                <table class="ty-items-table">
-                    <thead>
-                        <tr><th>Proizvod</th><th style="text-align:right">Cijena</th></tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ( $order->get_items() as $item_id => $item ) :
-                        $product = $item->get_product();
-                        $qty = $item->get_quantity();
-                    ?>
-                        <tr>
-                            <td>
-                                <div class="ty-item-name"><?php echo $qty; ?>× <?php echo esc_html( $item->get_name() ); ?></div>
-                                <?php
-                                $meta = $item->get_formatted_meta_data('_', true);
-                                if ( $meta ) :
-                                    $parts = array();
-                                    foreach ( $meta as $m ) {
-                                        $parts[] = wp_strip_all_tags( $m->display_key . ': ' . $m->display_value );
-                                    }
-                                ?>
-                                    <div class="ty-item-meta"><?php echo esc_html( implode( ', ', $parts ) ); ?></div>
-                                <?php endif; ?>
-                            </td>
-                            <td><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                    <tfoot>
-                        <?php foreach ( $order->get_order_item_totals() as $key => $total ) : ?>
-                        <tr class="<?php echo ( $key === 'order_total' ) ? 'ty-items-total' : ''; ?>">
-                            <td><?php echo $total['label']; ?></td>
-                            <td><?php echo $total['value']; ?></td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
-
-        <!-- Delivery address -->
-        <div class="ty-section">
-            <div class="ty-section-header" onclick="toggleTySection(this)">
-                <span>Adresa dostave</span>
-                <span class="ty-chevron">▼</span>
-            </div>
-            <div class="ty-section-body">
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Ime</span>
-                    <span class="ty-detail-value"><?php echo esc_html( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ); ?></span>
-                </div>
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Adresa</span>
-                    <span class="ty-detail-value"><?php echo esc_html( $order->get_billing_address_1() ); ?> <?php echo esc_html( $order->get_billing_address_2() ); ?></span>
-                </div>
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Grad</span>
-                    <span class="ty-detail-value"><?php echo esc_html( $order->get_billing_postcode() . ' ' . $order->get_billing_city() ); ?></span>
-                </div>
-                <?php if ( $order->get_billing_phone() ) : ?>
-                <div class="ty-detail-row">
-                    <span class="ty-detail-label">Telefon</span>
-                    <span class="ty-detail-value"><?php echo esc_html( $order->get_billing_phone() ); ?></span>
-                </div>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <!-- POST-PURCHASE UPSELL -->
-        <div class="ty-upsell" id="ty-upsell-section" data-order-id="<?php echo $order->get_id(); ?>" data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
-            <div class="ty-upsell-header">
+        <!-- 🛒 POST-PURCHASE UPSELL -->
+        <div class="ty-upsell" id="ty-upsell" data-order-id="<?php echo $order->get_id(); ?>" data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>" data-size="<?php echo esc_attr( $customer_size ); ?>">
+            <div class="ty-upsell-head">
                 <h2>Dodajte uz narudžbu</h2>
-                <div class="ty-upsell-timer" id="ty-upsell-timer">
-                    <span class="ty-timer-icon">⏱</span>
+                <div class="ty-timer-badge" id="ty-timer">
+                    <span>⏱</span>
                     <span id="ty-timer-text">5:00</span>
                 </div>
             </div>
-            <div class="ty-upsell-grid" id="ty-upsell-grid">
-                <?php foreach ( $upsell_items as $i => $item ) :
-                    $icon = ( $item['type'] === 'bokserice' ) ? '🩲' : '👕';
-                ?>
-                <div class="ty-upsell-card" data-index="<?php echo $i; ?>" data-slug="<?php echo esc_attr( $item['slug'] ); ?>" onclick="addUpsell(this)">
-                    <div class="ty-upsell-icon"><?php echo $icon; ?></div>
-                    <div class="ty-upsell-label"><?php echo esc_html( $item['label'] ); ?></div>
-                    <div class="ty-upsell-price"></div>
+            <div class="ty-grid">
+                <?php foreach ( $upsell_products as $i => $up ) : ?>
+                <div class="ty-card" data-product-id="<?php echo $up['product_id']; ?>" onclick="tyAddUpsell(this)">
+                    <img class="ty-card-img" src="<?php echo esc_url( $up['image'] ); ?>" alt="<?php echo esc_attr( $up['label'] ); ?>" loading="lazy">
+                    <div class="ty-card-label"><?php echo esc_html( $up['label'] ); ?></div>
+                    <div class="ty-card-sub"><?php echo esc_html( $up['sublabel'] ); ?></div>
+                    <div class="ty-card-price"><?php echo esc_html( $up['price'] ); ?></div>
+                    <div class="ty-card-btn">Dodaj</div>
+                    <div class="ty-card-status"></div>
                 </div>
                 <?php endforeach; ?>
             </div>
         </div>
 
-    <?php endif; // not failed ?>
+        <!-- 📋 Order items -->
+        <div class="ty-section">
+            <div class="ty-section-header open" onclick="tyToggle(this)">
+                <span>Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
+                <span class="ty-chevron">▼</span>
+            </div>
+            <div class="ty-section-body open">
+                <div class="ty-section-body-inner">
+                    <?php foreach ( $order->get_items() as $item ) :
+                        $qty = $item->get_quantity();
+                        $meta_parts = array();
+                        $meta = $item->get_formatted_meta_data('_', true);
+                        foreach ( $meta as $m ) {
+                            $meta_parts[] = wp_strip_all_tags( $m->display_key . ': ' . $m->display_value );
+                        }
+                    ?>
+                    <div class="ty-item">
+                        <div>
+                            <div class="ty-item-name"><?php echo $qty; ?>× <?php echo esc_html( $item->get_name() ); ?></div>
+                            <?php if ( $meta_parts ) : ?>
+                            <div class="ty-item-meta"><?php echo esc_html( implode( ', ', $meta_parts ) ); ?></div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="ty-item-price"><?php echo $order->get_formatted_line_subtotal( $item ); ?></div>
+                    </div>
+                    <?php endforeach; ?>
+
+                    <div class="ty-totals">
+                        <?php foreach ( $order->get_order_item_totals() as $key => $total ) : ?>
+                        <div class="ty-row <?php echo $key === 'order_total' ? 'ty-total-final' : ''; ?>">
+                            <span class="ty-row-label"><?php echo $total['label']; ?></span>
+                            <span class="ty-row-value"><?php echo $total['value']; ?></span>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 📍 Delivery address -->
+        <div class="ty-section">
+            <div class="ty-section-header" onclick="tyToggle(this)">
+                <span>Adresa dostave</span>
+                <span class="ty-chevron">▼</span>
+            </div>
+            <div class="ty-section-body">
+                <div class="ty-section-body-inner">
+                    <div class="ty-row">
+                        <span class="ty-row-label">Ime</span>
+                        <span class="ty-row-value"><?php echo esc_html( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ); ?></span>
+                    </div>
+                    <div class="ty-row">
+                        <span class="ty-row-label">Adresa</span>
+                        <span class="ty-row-value"><?php echo esc_html( $order->get_billing_address_1() ); ?> <?php echo esc_html( $order->get_billing_address_2() ); ?></span>
+                    </div>
+                    <div class="ty-row">
+                        <span class="ty-row-label">Grad</span>
+                        <span class="ty-row-value"><?php echo esc_html( $order->get_billing_postcode() . ' ' . $order->get_billing_city() ); ?></span>
+                    </div>
+                    <?php if ( $order->get_billing_phone() ) : ?>
+                    <div class="ty-row">
+                        <span class="ty-row-label">Telefon</span>
+                        <span class="ty-row-value"><?php echo esc_html( $order->get_billing_phone() ); ?></span>
+                    </div>
+                    <?php endif; ?>
+                    <div class="ty-row">
+                        <span class="ty-row-label">Način plaćanja</span>
+                        <span class="ty-row-value"><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <?php endif; ?>
 
     <?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
     <?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
@@ -409,7 +425,7 @@ body.woocommerce-order-received .hentry {
 
 <?php else : ?>
     <div class="ty-container">
-        <div class="ty-success-card">
+        <div class="ty-success">
             <h1>Narudžba</h1>
             <?php wc_get_template( 'checkout/order-received.php', array( 'order' => false ) ); ?>
         </div>
@@ -417,91 +433,74 @@ body.woocommerce-order-received .hentry {
 <?php endif; ?>
 
 <script>
-/* Collapsible sections */
-function toggleTySection(header) {
-    var body = header.nextElementSibling;
-    var isOpen = header.classList.contains('open');
-    if (isOpen) {
-        header.classList.remove('open');
-        body.classList.remove('open');
-    } else {
-        header.classList.add('open');
-        body.classList.add('open');
-    }
+/* Toggle sections */
+function tyToggle(h) {
+    var b = h.nextElementSibling;
+    h.classList.toggle('open');
+    b.classList.toggle('open');
 }
 
-/* Countdown timer — 5 minutes */
+/* 5-min countdown */
 (function(){
-    var section = document.getElementById('ty-upsell-section');
-    var timerEl = document.getElementById('ty-timer-text');
-    var timerWrap = document.getElementById('ty-upsell-timer');
-    if (!section || !timerEl) return;
+    var el = document.getElementById('ty-timer-text');
+    var wrap = document.getElementById('ty-timer');
+    var upsell = document.getElementById('ty-upsell');
+    if (!el || !upsell) return;
 
-    var remaining = 5 * 60; // 5 minutes in seconds
-    var storageKey = 'ty_upsell_' + section.dataset.orderId;
-
-    // Check if timer was already started
-    var saved = localStorage.getItem(storageKey);
+    var key = 'ty_' + upsell.dataset.orderId;
+    var remaining = 300;
+    var saved = localStorage.getItem(key);
     if (saved) {
-        var elapsed = Math.floor((Date.now() - parseInt(saved)) / 1000);
-        remaining = Math.max(0, remaining - elapsed);
+        remaining = Math.max(0, 300 - Math.floor((Date.now() - parseInt(saved)) / 1000));
     } else {
-        localStorage.setItem(storageKey, Date.now().toString());
+        localStorage.setItem(key, Date.now().toString());
     }
 
-    function updateTimer() {
+    (function tick() {
         if (remaining <= 0) {
-            timerEl.textContent = 'Isteklo';
-            timerWrap.classList.add('ty-upsell-expired');
-            document.querySelectorAll('.ty-upsell-card:not(.added)').forEach(function(c) {
-                c.classList.add('disabled');
-            });
+            el.textContent = 'Isteklo';
+            wrap.classList.add('expired');
+            document.querySelectorAll('.ty-card:not(.added)').forEach(function(c){ c.classList.add('disabled'); });
             return;
         }
-        var m = Math.floor(remaining / 60);
-        var s = remaining % 60;
-        timerEl.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+        var m = Math.floor(remaining / 60), s = remaining % 60;
+        el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
         remaining--;
-        setTimeout(updateTimer, 1000);
-    }
-    updateTimer();
+        setTimeout(tick, 1000);
+    })();
 })();
 
-/* Add upsell to order via AJAX */
-function addUpsell(card) {
+/* Add upsell to order */
+function tyAddUpsell(card) {
     if (card.classList.contains('adding') || card.classList.contains('added') || card.classList.contains('disabled')) return;
 
-    var section = document.getElementById('ty-upsell-section');
-    var orderId = section.dataset.orderId;
-    var nonce = section.dataset.nonce;
-    var slug = card.dataset.slug;
-
+    var upsell = document.getElementById('ty-upsell');
+    var status = card.querySelector('.ty-card-status');
     card.classList.add('adding');
-    card.querySelector('.ty-upsell-price').textContent = 'Dodajem...';
+    status.textContent = 'Dodajem...';
 
-    var formData = new FormData();
-    formData.append('action', 'noriks_add_upsell');
-    formData.append('order_id', orderId);
-    formData.append('upsell_slug', slug);
-    formData.append('nonce', nonce);
+    var fd = new FormData();
+    fd.append('action', 'noriks_add_upsell');
+    fd.append('order_id', upsell.dataset.orderId);
+    fd.append('product_id', card.dataset.productId);
+    fd.append('size', upsell.dataset.size || '');
+    fd.append('nonce', upsell.dataset.nonce);
 
-    fetch('<?php echo admin_url("admin-ajax.php"); ?>', {
-        method: 'POST',
-        body: formData
-    })
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-        card.classList.remove('adding');
-        if (data.success) {
-            card.classList.add('added');
-            card.querySelector('.ty-upsell-price').textContent = 'Dodano! ' + (data.data.total || '');
-        } else {
-            card.querySelector('.ty-upsell-price').textContent = data.data || 'Greška';
-        }
-    })
-    .catch(function() {
-        card.classList.remove('adding');
-        card.querySelector('.ty-upsell-price').textContent = 'Greška';
-    });
+    fetch('<?php echo admin_url("admin-ajax.php"); ?>', { method: 'POST', body: fd })
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+            card.classList.remove('adding');
+            if (d.success) {
+                card.classList.add('added');
+                status.textContent = 'Dodano!';
+                card.querySelector('.ty-card-btn').textContent = 'Dodano';
+            } else {
+                status.textContent = d.data || 'Greška';
+            }
+        })
+        .catch(function(){
+            card.classList.remove('adding');
+            status.textContent = 'Greška — pokušajte ponovno';
+        });
 }
 </script>
