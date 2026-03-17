@@ -105,11 +105,15 @@ body.woocommerce-order-received .woocommerce {
     background: transparent !important; padding: 0 !important;
 }
 
+/* Hide WC default sections */
+.woocommerce-order-details,
+.woocommerce-customer-details { display: none !important; }
+
 /* === Main container === */
 .ty-container {
     max-width: 560px;
     margin: 30px auto;
-    padding: 0 15px;
+    padding: 0;
 }
 
 /* === Success banner === */
@@ -267,16 +271,34 @@ body.woocommerce-order-received .woocommerce {
     margin-bottom: 8px;
 }
 .ty-card-btn {
-    display: inline-block;
+    display: inline-flex; align-items: center; justify-content: center; gap: 5px;
     background: linear-gradient(to bottom, #3ec000, #00ac00);
-    color: #fff; font-size: 12px; font-weight: 700;
-    padding: 7px 14px; border-radius: 4px;
+    color: #fff; font-size: 13px; font-weight: 700;
+    padding: 9px 14px; border-radius: 6px;
     border: none; width: 100%;
-    transition: opacity 0.2s;
+    box-shadow: 0 2px 6px rgba(0,172,0,0.3);
+    transition: transform 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.3px;
+}
+.ty-card:hover .ty-card-btn {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,172,0,0.4);
+}
+.ty-card.added .ty-card-btn {
+    background: #4CAF50; box-shadow: none;
+    transform: none;
 }
 .ty-card-status {
     font-size: 11px; color: #888; margin-top: 4px;
     min-height: 16px;
+}
+
+/* Upsell section accent */
+.ty-upsell-head h2 span.ty-accent {
+    color: #00ac00;
+}
+.ty-upsell-note {
+    font-size: 12px; color: #888; margin-top: 14px; text-align: center;
 }
 
 /* === Mobile === */
@@ -323,7 +345,7 @@ body.woocommerce-order-received .woocommerce {
         <!-- 🛒 POST-PURCHASE UPSELL -->
         <div class="ty-upsell" id="ty-upsell" data-order-id="<?php echo $order->get_id(); ?>" data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>" data-size="<?php echo esc_attr( $customer_size ); ?>">
             <div class="ty-upsell-head">
-                <h2>Dodajte uz narudžbu</h2>
+                <h2>Dodajte <span class="ty-accent">uz narudžbu</span></h2>
                 <div class="ty-timer-badge" id="ty-timer">
                     <span>⏱</span>
                     <span id="ty-timer-text">5:00</span>
@@ -336,20 +358,21 @@ body.woocommerce-order-received .woocommerce {
                     <div class="ty-card-label"><?php echo esc_html( $up['label'] ); ?></div>
                     <div class="ty-card-sub"><?php echo esc_html( $up['sublabel'] ); ?></div>
                     <div class="ty-card-price"><?php echo esc_html( $up['price'] ); ?></div>
-                    <div class="ty-card-btn">Dodaj</div>
+                    <div class="ty-card-btn">🛒 Dodaj k nakupu</div>
                     <div class="ty-card-status"></div>
                 </div>
                 <?php endforeach; ?>
             </div>
+            <p class="ty-upsell-note">Proizvodi se dodaju na vašu postojeću narudžbu — bez ponovnog unosa podataka!</p>
         </div>
 
         <!-- 📋 Order items -->
         <div class="ty-section">
-            <div class="ty-section-header open" onclick="tyToggle(this)">
+            <div class="ty-section-header" onclick="tyToggle(this)">
                 <span>Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
                 <span class="ty-chevron">▼</span>
             </div>
-            <div class="ty-section-body open">
+            <div class="ty-section-body">
                 <div class="ty-section-body-inner">
                     <?php foreach ( $order->get_items() as $item ) :
                         $qty = $item->get_quantity();
@@ -493,7 +516,7 @@ function tyAddUpsell(card) {
             if (d.success) {
                 card.classList.add('added');
                 status.textContent = 'Dodano!';
-                card.querySelector('.ty-card-btn').textContent = 'Dodano';
+                card.querySelector('.ty-card-btn').textContent = '✓ Dodano';
             } else {
                 status.textContent = d.data || 'Greška';
             }
