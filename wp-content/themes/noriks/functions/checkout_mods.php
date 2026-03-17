@@ -110,7 +110,7 @@ add_action( 'wp_footer', function() {
     if ( ! is_checkout() ) return;
     ?>
     <style id="noriks-checkout-overrides">
-    /* ===== PAYMENT: duplicate #payment vigoshop styles for #payment ===== */
+    /* ===== PAYMENT: duplicate #payment vigoshop styles for #noriks-payment ===== */
     /* Payment title — vigoshop CDN hides it, force show */
     body.woocommerce-checkout h3.payment-title {
       display: block !important;
@@ -120,37 +120,37 @@ add_action( 'wp_footer', function() {
       color: #333 !important;
     }
     /* Payment methods list */
-    #payment .wc_payment_methods {
+    #noriks-payment .wc_payment_methods {
       list-style: none !important;
       padding: 0 !important;
       margin: 0 0 21px !important;
     }
     /* Payment method items */
-    #payment .wc_payment_method {
+    #noriks-payment .wc_payment_method {
       list-style: none !important;
       padding: 0 !important;
       margin: 0 !important;
       border: 1px solid #d1dbe5 !important;
       border-radius: 5px 5px 0 0 !important;
     }
-    #payment .wc_payment_method + .wc_payment_method {
+    #noriks-payment .wc_payment_method + .wc_payment_method {
       border-radius: 0 !important;
       border-top: none !important;
     }
-    #payment .wc_payment_method:last-child {
+    #noriks-payment .wc_payment_method:last-child {
       border-radius: 0 0 5px 5px !important;
       border-bottom: 1px solid #d1dbe5 !important;
     }
     /* Selected payment = blue bg */
-    #payment .wc_payment_method:has(input:checked) {
+    #noriks-payment .wc_payment_method:has(input:checked) {
       background: #e8f3ff !important;
     }
     /* Radio inputs hidden (vigoshop uses label as the clickable area) */
-    #payment .wc_payment_method .input-radio {
+    #noriks-payment .wc_payment_method .input-radio {
       display: none !important;
     }
     /* Payment labels — exact vigoshop computed styles */
-    #payment .wc_payment_method label {
+    #noriks-payment .wc_payment_method label {
       display: flex !important;
       align-items: center !important;
       padding: 22.65px 16px !important;
@@ -161,11 +161,11 @@ add_action( 'wp_footer', function() {
       line-height: 24px !important;
       cursor: pointer !important;
     }
-    #payment .wc_payment_method:has(input:checked) label {
+    #noriks-payment .wc_payment_method:has(input:checked) label {
       font-weight: 700 !important;
     }
     /* Fee badges */
-    #payment .payment-fee-free {
+    #noriks-payment .payment-fee-free {
       display: block !important;
       padding: 3px 10px !important;
       margin: 2px 0 2px 8px !important;
@@ -177,7 +177,7 @@ add_action( 'wp_footer', function() {
       text-align: center !important;
       line-height: 21px !important;
     }
-    #payment .payment-fee-not-free {
+    #noriks-payment .payment-fee-not-free {
       display: block !important;
       padding: 3px 10px !important;
       margin: 2px 0 2px 8px !important;
@@ -190,27 +190,27 @@ add_action( 'wp_footer', function() {
       line-height: 21px !important;
     }
     /* Card icons */
-    #payment .sv-wc-payment-gateway-card-icons {
+    #noriks-payment .sv-wc-payment-gateway-card-icons {
       display: flex !important;
       align-items: center !important;
       margin-left: auto !important;
       gap: 4px !important;
     }
-    #payment .sv-wc-payment-gateway-icon {
+    #noriks-payment .sv-wc-payment-gateway-icon {
       width: 40px !important;
       height: 25px !important;
     }
     /* COD icon */
-    #payment .hs-checkout__payment-method-cod-icon-container {
+    #noriks-payment .hs-checkout__payment-method-cod-icon-container {
       display: flex !important;
       align-items: center !important;
       margin-left: auto !important;
     }
-    #payment .hs-checkout__payment-method-cod-icon {
+    #noriks-payment .hs-checkout__payment-method-cod-icon {
       height: 30px !important;
     }
     /* PayPal icon */
-    #payment .payment_method_braintree_paypal label img {
+    #noriks-payment .payment_method_braintree_paypal label img {
       margin-left: auto !important;
       height: 22px !important;
     }
@@ -431,33 +431,6 @@ add_action( 'wp_footer', function() {
       pointer-events: none !important;
     }
     </style>
-
-    <script id="noriks-prevent-checkout-destroy">
-    /* Block WC from replacing #order_review content via AJAX */
-    jQuery(function($){
-      /* Intercept WC checkout AJAX — prevent it from replacing payment + review HTML */
-      var origAjax = $.ajax;
-      $.ajax = function(opts) {
-        if (opts && opts.url && opts.url.indexOf('update_order_review') !== -1) {
-          /* Let AJAX run but prevent WC from replacing DOM */
-          var origSuccess = opts.success;
-          opts.success = function(data) {
-            /* Only update fragments we want (shipping, totals), skip payment replacement */
-            if (data && data.fragments) {
-              /* Apply fragments EXCEPT payment */
-              $.each(data.fragments, function(selector, html) {
-                if (selector.indexOf('payment') === -1 && selector.indexOf('order_review') === -1) {
-                  $(selector).replaceWith(html);
-                }
-              });
-            }
-            $(document.body).trigger('updated_checkout');
-          };
-        }
-        return origAjax.apply(this, arguments);
-      };
-    });
-    </script>
 
     <script id="noriks-checkout-validation">
     jQuery(function($){

@@ -61,7 +61,7 @@ if ( WC()->cart->is_empty() ) return;
 
         <!-- PAYMENT METHODS (visible) -->
         <h3 class="payment-title">Način plaćanja</h3>
-        <div id="noriks-payment" class="woocommerce-checkout-payment" style="display:none;">
+        <div id="noriks-payment" class="woocommerce-checkout-payment">
           <ul class="wc_payment_methods payment_methods methods">
             <li class="wc_payment_method payment_method_cod">
               <input id="noriks_pm_cod" type="radio" class="input-radio" name="noriks_payment" value="cod" checked='checked' data-order_button_text="">
@@ -94,7 +94,7 @@ if ( WC()->cart->is_empty() ) return;
         </div>
 
         <!-- Hidden WC #payment for AJAX + form processing -->
-        <div id="payment" class="woocommerce-checkout-payment" style="">
+        <div id="payment" class="woocommerce-checkout-payment" style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;pointer-events:none;">
           <?php do_action( 'woocommerce_checkout_order_review' ); ?>
         </div>
 
