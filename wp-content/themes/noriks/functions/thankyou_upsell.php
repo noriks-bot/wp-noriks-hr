@@ -50,9 +50,18 @@ function noriks_handle_add_upsell() {
     }
 
     // ─── Calculate 50% discount SERVER-SIDE ───
-    // Use SALE price (current active price), not regular price
-    // 50% off the sale/active price
-    $active_price = (float) $product->get_price(); // get_price() returns sale price if on sale
+    // Use the LOWEST of sale price / active price
+    $sale_price = (float) $product->get_sale_price();
+    $current_price = (float) $product->get_price();
+    
+    // Pick whichever is lower (and non-zero)
+    if ( $sale_price && $current_price ) {
+        $active_price = min( $sale_price, $current_price );
+    } else {
+        $active_price = $current_price ?: $sale_price;
+    }
+    
+    // Fallback to regular price if nothing else
     if ( ! $active_price ) {
         $active_price = (float) $product->get_regular_price();
     }
@@ -60,7 +69,7 @@ function noriks_handle_add_upsell() {
         wp_send_json_error( 'Cijena proizvoda nije dostupna' );
     }
 
-    // Apply 50% discount on the active (sale) price
+    // Apply 50% discount on the sale/active price
     $upsell_price = round( $active_price * 0.5, 2 );
 
     // Add product to order with the discounted price
@@ -71,12 +80,9 @@ function noriks_handle_add_upsell() {
 
     if ( ! $item_id ) wp_send_json_error( 'Greška pri dodavanju' );
 
-    // Mark as upsell with clear metadata
+    // Mark as upsell
     $item = $order->get_item( $item_id );
     $item->add_meta_data( '_noriks_upsell', 'thank you upsell', true );
-    $item->add_meta_data( '_noriks_upsell_discount', '50%', true );
-    $item->add_meta_data( '_noriks_upsell_sale_price', $active_price, true );
-    $item->add_meta_data( '_noriks_upsell_discounted_price', $upsell_price, true );
     $item->save();
 
     // Recalculate order totals
