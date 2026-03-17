@@ -170,8 +170,8 @@ button:focus {outline : none; outline-color: transparent !important;}
 }
 
 .xoo-wsc-ft-btn-checkout:hover { 
-    background: #b00 !important;
-    opacity: 0.95;
+    background: #c00 !important;
+    opacity: 1 !important;
 }
 
 .xoo-wsc-ft-btn-checkout span { 
