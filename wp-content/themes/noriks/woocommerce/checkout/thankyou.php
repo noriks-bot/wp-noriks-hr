@@ -149,45 +149,44 @@ body.woocommerce-order-received .woocommerce {
     border-radius: 4px !important;
 }
 
-/* Banner — light grey bg, red text (matches reference screenshot) */
+/* Banner — RED bg, white text */
 .ty-upsell-banner {
-    background: #f5f5f5; color: #333;
+    background: #971b1b; color: #fff;
     padding: 20px 24px; text-align: center;
-    border-bottom: 1px solid #eee;
 }
 .ty-upsell-banner-top {
     font-size: 15px; font-weight: 500; margin-bottom: 6px;
-    color: #555;
+    color: #fff;
     display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 .ty-timer-pill {
     display: inline-block;
-    background: #971b1b; color: #fff;
+    background: rgba(0,0,0,0.25); color: #fff;
     padding: 4px 12px;
     border-radius: 4px !important;
     font-size: 14px; font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
-.ty-timer-pill.expired { background: #999; }
+.ty-timer-pill.expired { background: rgba(0,0,0,0.4); }
 .ty-upsell-banner h2 {
     font-size: 20px !important; font-weight: 700 !important;
-    color: #222 !important; margin: 0 !important;
+    color: #fff !important; margin: 0 !important;
     line-height: 1.3 !important;
 }
 
-/* Benefits — white bg, colored text */
+/* Benefits — red bg continues, white text with emoji icons */
 .ty-upsell-benefits {
-    background: #fff;
-    padding: 16px 24px;
+    background: #971b1b;
+    padding: 10px 24px 18px;
     display: flex; flex-direction: column; align-items: center; gap: 6px;
 }
 .ty-benefit {
-    font-size: 14px; font-weight: 600;
+    font-size: 14px; font-weight: 500; color: #fff;
     display: flex; align-items: center; gap: 8px;
 }
 .ty-benefit .ty-b-icon { font-size: 18px; }
-.ty-benefit-green { color: #2e7d32; }
-.ty-benefit-orange { color: #971b1b; }
+.ty-benefit-green { color: #fff; }
+.ty-benefit-orange { color: #fff; }
 
 /* Product card wrapper — clean white card */
 .ty-upsell-card {
@@ -256,23 +255,22 @@ body.woocommerce-order-received .woocommerce {
     display: flex; gap: 12px;
     padding: 4px 24px 24px;
 }
-/* "Ne želim" = outline red */
+/* Both buttons: filled red, rounded pill */
 .ty-btn-skip {
-    flex: 0.7; height: 54px;
-    background: #fff; color: #971b1b;
-    border: 2px solid #971b1b;
+    flex: 0.8; height: 54px;
+    background: #971b1b; color: #fff;
+    border: none;
     border-radius: 30px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
-.ty-btn-skip:hover { background: #fef0f0; }
-/* "DODAJ K NAROČILU" = filled red */
+.ty-btn-skip:hover { background: #7a1616; }
 .ty-btn-add {
-    flex: 1.3; height: 54px;
+    flex: 1.2; height: 54px;
     background: #971b1b; color: #fff;
-    border: 2px solid #971b1b;
+    border: none;
     border-radius: 30px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 700;
@@ -281,17 +279,28 @@ body.woocommerce-order-received .woocommerce {
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
-.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
-.ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
-.ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
+.ty-btn-add:hover { background: #7a1616; }
+.ty-btn-add:disabled { background: #999; cursor: not-allowed; }
+.ty-btn-add.added { background: #2E7D32; }
 .ty-upsell-status {
     text-align: center; padding: 0 24px 16px;
     font-size: 13px; color: #888; min-height: 20px;
 }
 
-/* Bottom countdown bar — hidden (timer in banner pill is enough) */
+/* Bottom countdown bar — red with timer */
 .ty-upsell-bottom-bar {
-    display: none;
+    background: #971b1b;
+    padding: 12px 24px;
+    text-align: center;
+}
+.ty-upsell-bottom-bar .ty-countdown-big {
+    display: inline-block;
+    background: rgba(0,0,0,0.25); color: #fff;
+    padding: 6px 16px;
+    border-radius: 4px !important;
+    font-size: 18px; font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 2px;
 }
 
 /* ═══════════════════════════════════════════════
@@ -305,7 +314,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #f5f5f5;
+    background: #971b1b;
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
@@ -315,19 +324,19 @@ body.woocommerce-order-received .woocommerce {
     padding: 18px 20px 14px;
     display: flex; align-items: center; justify-content: space-between;
     user-select: none;
-    background: #f5f5f5;
+    background: #971b1b;
 }
 .ty-grid-header h3 {
-    color: #555 !important; font-size: 15px;
+    color: #fff !important; font-size: 15px;
     font-weight: 400; margin: 0 0 6px 0; padding: 0;
 }
 .ty-grid-header h2 {
-    color: #222 !important; font-size: 20px;
+    color: #fff !important; font-size: 20px;
     font-weight: 700; margin: 0; padding: 0; line-height: 1.3;
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #555;
+    font-size: 13px; color: #fff;
 }
 
 .ty-grid {
@@ -387,14 +396,14 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: #fff; color: #971b1b;
-    border: 2px solid #971b1b; border-radius: 30px !important;
+    background: rgba(255,255,255,0.15); color: #fff;
+    border: 2px solid #fff; border-radius: 30px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
     transition: background 0.2s;
 }
-.ty-grid-close:hover { background: #fef0f0; }
+.ty-grid-close:hover { background: rgba(255,255,255,0.25); }
 
 /* ═══ Collapsible sections ═══ */
 .ty-section {
@@ -561,7 +570,7 @@ body.woocommerce-order-received .woocommerce {
                         <h3 style="margin:0;">Še več izdelkov s popustom</h3>
                         <h2>Dodajte katerikoli izdelek s 50% popustom</h2>
                     </span>
-                    <span class="ty-chevron" style="color:#222;">+</span>
+                    <span class="ty-chevron" style="color:#fff;">+</span>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
@@ -721,7 +730,7 @@ body.woocommerce-order-received .woocommerce {
             var banner = wrap.querySelector('.ty-upsell-banner');
             if (banner) {
                 banner.style.padding = '14px 24px';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#971b1b;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
