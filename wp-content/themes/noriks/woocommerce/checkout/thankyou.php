@@ -591,7 +591,7 @@ body.woocommerce-order-received .woocommerce {
                         </div>
                     </div>
 
-                    <?php if ( $upsell_variations ) : ?>
+                    <?php if ( false && $upsell_variations ) : ?>
                     <div class="variation-select-wrap">
                         <select class="variation-select" id="ty-variation-select">
                             <?php foreach ( $upsell_variations as $v ) : ?>
