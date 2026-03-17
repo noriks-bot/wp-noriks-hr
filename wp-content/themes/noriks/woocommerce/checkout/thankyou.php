@@ -235,7 +235,7 @@ body.woocommerce-order-received .woocommerce {
     width: 110px;
     min-width: 110px;
     height: 110px;
-    background: #FADEC9;
+    background: #f5d5d5;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
