@@ -149,40 +149,45 @@ body.woocommerce-order-received .woocommerce {
     border-radius: 4px !important;
 }
 
-/* Banner — RED background */
+/* Banner — light grey bg, red text (matches reference screenshot) */
 .ty-upsell-banner {
-    background: #cc0000; color: #fff;
-    padding: 18px 24px; text-align: center;
+    background: #f5f5f5; color: #333;
+    padding: 20px 24px; text-align: center;
+    border-bottom: 1px solid #eee;
 }
 .ty-upsell-banner-top {
     font-size: 15px; font-weight: 500; margin-bottom: 6px;
+    color: #555;
     display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 .ty-timer-pill {
     display: inline-block;
-    background: rgba(255,255,255,0.2); color: #fff;
-    padding: 3px 10px;
-    font-size: 13px; font-weight: 700;
+    background: #971b1b; color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px !important;
+    font-size: 14px; font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
-.ty-timer-pill.expired { background: #666; }
+.ty-timer-pill.expired { background: #999; }
 .ty-upsell-banner h2 {
     font-size: 20px !important; font-weight: 700 !important;
-    color: #fff !important; margin: 0 !important;
+    color: #222 !important; margin: 0 !important;
     line-height: 1.3 !important;
 }
 
-/* Benefits */
+/* Benefits — white bg, colored text */
 .ty-upsell-benefits {
-    background: #cc0000;
-    padding: 10px 24px 16px;
+    background: #fff;
+    padding: 16px 24px;
     display: flex; flex-direction: column; align-items: center; gap: 6px;
 }
 .ty-benefit {
-    font-size: 14px; font-weight: 500; color: #fff;
+    font-size: 14px; font-weight: 600;
     display: flex; align-items: center; gap: 8px;
 }
 .ty-benefit .ty-b-icon { font-size: 18px; }
+.ty-benefit-green { color: #2e7d32; }
+.ty-benefit-orange { color: #971b1b; }
 
 /* Product card wrapper — clean white card */
 .ty-upsell-card {
@@ -222,7 +227,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-upsell-new-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px; font-weight: 700; color: #cc0000;
+    font-size: 24px; font-weight: 700; color: #971b1b;
     line-height: 1.1;
 }
 
@@ -232,10 +237,10 @@ body.woocommerce-order-received .woocommerce {
 .ty-upsell-select {
     width: 100%; height: 50px;
     border: 1px solid #ccc;
-    border-radius: 1px !important;
+    border-radius: 8px !important;
     padding: 0 16px;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; font-weight: 600;
+    font-size: 16px; font-weight: 500;
     color: #333; background: #fff;
     appearance: auto; cursor: pointer;
     outline: none;
@@ -246,47 +251,47 @@ body.woocommerce-order-received .woocommerce {
     border-color: #000;
 }
 
-/* Buttons — ALL RED */
+/* Buttons */
 .ty-upsell-buttons {
-    display: flex; gap: 4px;
+    display: flex; gap: 12px;
     padding: 4px 24px 24px;
 }
-/* Buttons — matches .single_add_to_cart_button on product page */
-.ty-btn-skip,
-.ty-btn-add {
-    flex: 1; height: 60px;
-    background: #cc0000; color: #fff;
-    border: none;
-    border-radius: 8px !important;
+/* "Ne želim" = outline red */
+.ty-btn-skip {
+    flex: 0.7; height: 54px;
+    background: #fff; color: #971b1b;
+    border: 2px solid #971b1b;
+    border-radius: 30px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 17px; font-weight: 600;
-    letter-spacing: 0.2px;
-    text-transform: none;
+    font-size: 16px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
-.ty-btn-skip:hover,
-.ty-btn-add:hover { background: #a30000; }
-.ty-btn-add:disabled { background: #999; cursor: not-allowed; border-radius: 8px !important; }
-.ty-btn-add.added { background: #2E7D32; }
+.ty-btn-skip:hover { background: #fef0f0; }
+/* "DODAJ K NAROČILU" = filled red */
+.ty-btn-add {
+    flex: 1.3; height: 54px;
+    background: #971b1b; color: #fff;
+    border: 2px solid #971b1b;
+    border-radius: 30px !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer; transition: background 0.2s;
+    text-align: center;
+}
+.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
+.ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
+.ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
     text-align: center; padding: 0 24px 16px;
     font-size: 13px; color: #888; min-height: 20px;
 }
 
-/* Red bottom bar on step 1 */
+/* Bottom countdown bar — hidden (timer in banner pill is enough) */
 .ty-upsell-bottom-bar {
-    background: #cc0000;
-    padding: 12px 24px;
-    text-align: center;
-}
-.ty-upsell-bottom-bar .ty-countdown-big {
-    background: rgba(255,255,255,0.2);
-    color: #fff;
-    padding: 6px 14px;
-    font-size: 18px; font-weight: 700;
-    font-family: monospace;
-    letter-spacing: 2px;
+    display: none;
 }
 
 /* ═══════════════════════════════════════════════
@@ -300,7 +305,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #cc0000;
+    background: #f5f5f5;
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
@@ -310,18 +315,19 @@ body.woocommerce-order-received .woocommerce {
     padding: 18px 20px 14px;
     display: flex; align-items: center; justify-content: space-between;
     user-select: none;
+    background: #f5f5f5;
 }
 .ty-grid-header h3 {
-    color: #fff !important; font-size: 15px;
+    color: #555 !important; font-size: 15px;
     font-weight: 400; margin: 0 0 6px 0; padding: 0;
 }
 .ty-grid-header h2 {
-    color: #fff !important; font-size: 20px;
+    color: #222 !important; font-size: 20px;
     font-weight: 700; margin: 0; padding: 0; line-height: 1.3;
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #fff;
+    font-size: 13px; color: #555;
 }
 
 .ty-grid {
@@ -337,7 +343,7 @@ body.woocommerce-order-received .woocommerce {
     color: #333;
     transition: border-color 0.2s;
 }
-.ty-grid-item:hover { border-color: #cc0000; }
+.ty-grid-item:hover { border-color: #971b1b; }
 .ty-grid-item img {
     width: 100%; max-width: 120px; height: auto;
     object-fit: contain; margin-bottom: 8px;
@@ -352,7 +358,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item .g-price-new {
     font-family: 'Roboto', sans-serif;
-    color: #cc0000; font-size: 16px; font-weight: 700;
+    color: #971b1b; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
     width: 100%; padding: 6px; font-size: 12px;
@@ -365,13 +371,13 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 12px; background: #cc0000; color: #fff;
-    border: none; border-radius: 8px !important;
+    padding: 10px; background: #971b1b; color: #fff;
+    border: none; border-radius: 20px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
 }
-.ty-grid-item .g-add-btn:hover { background: #a30000; }
+.ty-grid-item .g-add-btn:hover { background: #7a1616; }
 .ty-grid-item .g-add-btn.added {
     background: #2E7D32; pointer-events: none;
 }
@@ -381,14 +387,14 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: #fff; color: #333;
-    border: 1px solid #ccc; border-radius: 8px !important;
+    background: #fff; color: #971b1b;
+    border: 2px solid #971b1b; border-radius: 30px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
-    transition: all 0.3s ease;
+    transition: background 0.2s;
 }
-.ty-grid-close:hover { background: #f4f4f4; border-color: #000; color: #000; }
+.ty-grid-close:hover { background: #fef0f0; }
 
 /* ═══ Collapsible sections ═══ */
 .ty-section {
@@ -469,7 +475,7 @@ body.woocommerce-order-received .woocommerce {
             <h1>Narudžba nije uspjela</h1>
             <p>Banka je odbila transakciju. Pokušajte ponovno.</p>
             <p style="margin-top:16px;">
-                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#cc0000;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
+                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#971b1b;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
             </p>
         </div>
     <?php else : ?>
@@ -496,13 +502,13 @@ body.woocommerce-order-received .woocommerce {
                 <h2>Dodajte še en izdelek s 50% dodatnega popusta</h2>
             </div>
 
-            <!-- Benefits (red bg continues) -->
+            <!-- Benefits -->
             <div class="ty-upsell-benefits">
-                <div class="ty-benefit">
+                <div class="ty-benefit ty-benefit-green">
                     <span class="ty-b-icon">✔</span>
                     Poslali ga bomo v istem paketu
                 </div>
-                <div class="ty-benefit">
+                <div class="ty-benefit ty-benefit-orange">
                     <span class="ty-b-icon">⭐</span>
                     Pomislite, komu bi lahko izdelek podarili
                 </div>
@@ -555,7 +561,7 @@ body.woocommerce-order-received .woocommerce {
                         <h3 style="margin:0;">Še več izdelkov s popustom</h3>
                         <h2>Dodajte katerikoli izdelek s 50% popustom</h2>
                     </span>
-                    <span class="ty-chevron" style="color:#fff;">+</span>
+                    <span class="ty-chevron" style="color:#222;">+</span>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
@@ -714,8 +720,8 @@ body.woocommerce-order-received .woocommerce {
             // Replace banner content with expired message
             var banner = wrap.querySelector('.ty-upsell-banner');
             if (banner) {
-                banner.style.padding = '9px 24px';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:20px;font-weight:700;color:#fff;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
+                banner.style.padding = '14px 24px';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#971b1b;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
