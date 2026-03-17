@@ -93,8 +93,8 @@ if ( WC()->cart->is_empty() ) return;
           </ul>
         </div>
 
-        <!-- Hidden WC #payment for AJAX + form processing -->
-        <div id="payment" class="woocommerce-checkout-payment" style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;pointer-events:none;">
+        <!-- WC payment + order review (normal, visible) -->
+        <div id="payment" class="woocommerce-checkout-payment">
           <?php do_action( 'woocommerce_checkout_order_review' ); ?>
         </div>
 
