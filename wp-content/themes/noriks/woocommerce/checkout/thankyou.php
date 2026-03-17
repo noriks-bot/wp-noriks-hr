@@ -146,13 +146,14 @@ body.woocommerce-order-received .woocommerce {
 .ty-upsell-wrap {
     background: #FFFFFF;
     margin: 0 0 15px; overflow: hidden;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
     border: 2px solid #971b1b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 /* Banner — #2D2D2D bg, #971b1b BORDER AROUND ALL, white text */
 .ty-upsell-banner {
-    background: #FFFFFF; color: #333;
+    background: #3a3a3a; color: #fff;
     padding: 22px 24px 18px; text-align: center;
     border: none;
     border-radius: 0 !important;
@@ -160,7 +161,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-upsell-banner-top {
     font-size: 16px; font-weight: 400; margin-bottom: 8px;
-    color: #666;
+    color: rgba(255,255,255,0.85);
     display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .ty-timer-pill {
@@ -174,7 +175,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-timer-pill.expired { background: #999; }
 .ty-upsell-banner h2 {
     font-size: 22px !important; font-weight: 700 !important;
-    color: #333 !important; margin: 0 !important;
+    color: #fff !important; margin: 0 !important;
     line-height: 1.35 !important;
 }
 
@@ -265,26 +266,26 @@ body.woocommerce-order-received .woocommerce {
     align-items: stretch;
     justify-content: center;
 }
-/* "Ne želim" — OUTLINE pill, same height as DODAJ */
+/* "Ne želim" — OUTLINE pill, smaller than DODAJ */
 .ty-btn-skip {
     flex: 0; 
     background: #FFFFFF; color: #971b1b;
     border: 1.5px solid #971b1b;
     border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px; font-weight: 500;
-    padding: 14px 32px;
+    font-size: 14px; font-weight: 500;
+    padding: 12px 24px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
     line-height: 1;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — FILLED DARK pill, white text (matches reference) */
+/* "DODAJ U NARUDŽBU" — FILLED RED pill, white text (matches reference) */
 .ty-btn-add {
     flex: 1;
-    background: #444; color: #FFFFFF;
-    border: 1.5px solid #444;
+    background: #971b1b; color: #FFFFFF;
+    border: 1.5px solid #971b1b;
     border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 15px; font-weight: 700;
@@ -296,7 +297,7 @@ body.woocommerce-order-received .woocommerce {
     white-space: nowrap;
     line-height: 1;
 }
-.ty-btn-add:hover { background: #333; border-color: #333; }
+.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
 .ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
 .ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
@@ -754,7 +755,7 @@ body.woocommerce-order-received .woocommerce {
             if (banner) {
                 banner.style.padding = '14px 24px';
                 banner.style.textAlign = 'center';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#971b1b;">PONUDA JE ISTEKLA</h2>';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;">PONUDA JE ISTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
