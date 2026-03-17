@@ -269,7 +269,7 @@ body.woocommerce-order-received .woocommerce {
     white-space: nowrap;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ K NAROČILU" — filled, rounded, larger RIGHT */
+/* "DODAJ U NARUDŽBU" — filled, rounded, larger RIGHT */
 .ty-btn-add {
     flex: 1; height: 48px;
     background: #971b1b; color: #fff;
@@ -508,21 +508,21 @@ body.woocommerce-order-received .woocommerce {
             <!-- Red banner -->
             <div class="ty-upsell-banner">
                 <div class="ty-upsell-banner-top">
-                    Posebna ponudba poteče
+                    Posebna ponuda ističe
                     <span class="ty-timer-pill" id="ty-timer">05:00</span>
                 </div>
-                <h2>Dodajte še en izdelek s 50% dodatnega popusta</h2>
+                <h2>Dodajte još jedan proizvod s 50% dodatnog popusta</h2>
             </div>
 
             <!-- Benefits -->
             <div class="ty-upsell-benefits">
                 <div class="ty-benefit ty-benefit-green">
                     <span class="ty-b-icon">✔</span>
-                    Poslali ga bomo v istem paketu
+                    Poslat ćemo ga u istom paketu
                 </div>
                 <div class="ty-benefit ty-benefit-orange">
                     <span class="ty-b-icon">⭐</span>
-                    Pomislite, komu bi lahko izdelek podarili
+                    Razmislite kome biste mogli pokloniti proizvod
                 </div>
             </div>
 
@@ -554,7 +554,7 @@ body.woocommerce-order-received .woocommerce {
 
                 <div class="ty-upsell-buttons">
                     <button class="ty-btn-skip" id="ty-btn-skip">Ne želim</button>
-                    <button class="ty-btn-add" id="ty-btn-add">DODAJ K NAROČILU</button>
+                    <button class="ty-btn-add" id="ty-btn-add">DODAJ U NARUDŽBU</button>
                 </div>
             </div>
 
@@ -570,15 +570,15 @@ body.woocommerce-order-received .woocommerce {
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;">
                     <span>
-                        <h3 style="margin:0;">Še več izdelkov s popustom</h3>
-                        <h2>Dodajte katerikoli izdelek s 50% popustom</h2>
+                        <h3 style="margin:0;">Još više proizvoda s popustom</h3>
+                        <h2>Dodajte bilo koji proizvod s 50% popusta</h2>
                     </span>
                     <span class="ty-chevron" style="color:#fff;">+</span>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
                 <div class="ty-grid-trust">
-                    ✔ Vse pošljemo v istem paketu
+                    ✔ Sve šaljemo u istom paketu
                 </div>
                 <div class="ty-grid">
                     <?php foreach ( $grid_products as $gp ) :
@@ -623,7 +623,7 @@ body.woocommerce-order-received .woocommerce {
                     </div>
                     <?php endforeach; ?>
                 </div>
-                <button class="ty-grid-close" id="ty-grid-close">Ne želim ekstra ponudbe</button>
+                <button class="ty-grid-close" id="ty-grid-close">Ne želim dodatnu ponudu</button>
                 </div><!-- /ty-section-body-inner -->
                 </div><!-- /ty-section-body -->
             </div>
@@ -734,7 +734,7 @@ body.woocommerce-order-received .woocommerce {
             var banner = wrap.querySelector('.ty-upsell-banner');
             if (banner) {
                 banner.style.padding = '14px 24px';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;text-align:center;">PONUDA JE ISTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
@@ -808,7 +808,7 @@ body.woocommerce-order-received .woocommerce {
                 })
                 .catch(function() {
                     addBtn.disabled = false;
-                    addBtn.textContent = 'DODAJ K NAROČILU';
+                    addBtn.textContent = 'DODAJ U NARUDŽBU';
                 });
         });
     }
