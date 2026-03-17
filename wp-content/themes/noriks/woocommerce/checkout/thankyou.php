@@ -141,183 +141,222 @@ body.woocommerce-order-received .woocommerce {
 }
 
 /* ═══════════════════════════════════════════════
-   STEP 1: SINGLE UPSELL OFFER
+   VIGOSHOP UPSELL — 1:1 copy from reference HTML
+   Class names match vigoshop: ty_upsell_one_wrapper, tyuo_*, pass-btn, buy-btn
+   Only color changed: orange → #971b1b
    ═══════════════════════════════════════════════ */
-.ty-upsell-wrap {
-    background: #FFFFFF;
-    margin: 0 0 15px; overflow: hidden;
-    border-radius: 10px !important;
+.ty_upsell_one_wrapper {
+    background: #fff;
+    margin: 0 0 15px;
     border: 2px solid #971b1b;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.ty_upsell_one_wrapper__popup-content {
+    display: block;
 }
 
-/* Banner — #2D2D2D bg, #971b1b BORDER AROUND ALL, white text */
-.ty-upsell-banner {
-    background: #3a3a3a; color: #fff;
-    padding: 22px 24px 18px; text-align: center;
-    border: none;
-    border-radius: 0 !important;
-    margin: 0;
+/* Timer/header — dark bg */
+.tyuo_timer {
+    background: #232f3e;
+    padding: 18px 20px;
+    text-align: center;
+    color: #fff;
 }
-.ty-upsell-banner-top {
-    font-size: 16px; font-weight: 400; margin-bottom: 8px;
+.tyuo_timer .timer_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.tyuo_timer .special_offer_txt {
+    font-size: 15px;
+    font-weight: 400;
     color: rgba(255,255,255,0.85);
-    display: flex; align-items: center; justify-content: center; gap: 10px;
 }
-.ty-timer-pill {
+.tyuo_timer .time {
     display: inline-block;
-    background: #971b1b; color: #FFFFFF;
-    padding: 2px 8px;
-    border-radius: 4px !important;
-    font-size: 13px; font-weight: 700;
+    background: #971b1b;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
-.ty-timer-pill.expired { background: #999; }
-.ty-upsell-banner h2 {
-    font-size: 22px !important; font-weight: 700 !important;
-    color: #fff !important; margin: 0 !important;
-    line-height: 1.35 !important;
+.tyuo_timer .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
 }
 
-/* Benefits — #FFF bg, icons #971b1b, text grey/red, centered */
-.ty-upsell-benefits {
-    background: #FFFFFF;
-    padding: 20px 24px 16px;
-    display: flex; flex-direction: column; align-items: center; gap: 4px;
+/* Middle section — benefits */
+.tyuo_middle_section {
+    background: #fff;
+    padding: 16px 20px;
+    text-align: center;
 }
-.ty-benefit {
-    font-size: 15px; font-weight: 500;
-    display: flex; align-items: center; gap: 6px;
-}
-.ty-benefit .ty-b-icon { font-size: 16px; font-weight: 700; }
-.ty-benefit-green { color: #888888; }
-.ty-benefit-green .ty-b-icon { color: #971b1b; }
-.ty-benefit-orange { color: #971b1b; }
-.ty-benefit-orange .ty-b-icon { color: #971b1b; }
-
-/* Product card wrapper */
-.ty-upsell-card {
-    background: #FFFFFF;
-    margin: 0;
-    overflow: hidden;
-    padding-bottom: 4px;
-}
-
-/* Product card — exact reference colors */
-.ty-upsell-product {
-    display: flex; gap: 18px;
-    padding: 20px 24px 16px;
-    align-items: flex-start;
-}
-.ty-upsell-img {
-    width: 120px; min-width: 120px; height: 120px;
-    object-fit: contain;
-    background: #FADEC9;
-    border-radius: 8px !important;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.ty-upsell-info { flex: 1; }
-.ty-upsell-qty {
-    font-family: 'Roboto', sans-serif;
-    font-size: 26px; font-weight: 300; color: #333333;
-    line-height: 1; margin-bottom: 4px;
-}
-.ty-upsell-name {
-    font-family: 'Roboto', sans-serif;
-    font-size: 13px; font-weight: 400; color: #666666;
-    margin-bottom: 8px; line-height: 1.4;
-}
-.ty-upsell-old-price {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px; color: #AAAAAA;
-    text-decoration: line-through;
+.tyuo_middle_section .sub_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
     margin-bottom: 4px;
 }
-.ty-upsell-new-price {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px; font-weight: 700; color: #971b1b;
-    line-height: 1.1;
+.tyuo_middle_section .sub_title__icon svg { width: 15px; height: auto; }
+.tyuo_middle_section .clue_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #971b1b;
+}
+.tyuo_middle_section .clue_text__icon svg { width: 15px; height: auto; }
+
+/* Product section */
+.tyuo_product_section {
+    padding: 0 20px 20px;
+}
+.tyuo_product_section .product_data {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+.tyuo_product_section .product_data .img {
+    width: 110px;
+    min-width: 110px;
+    height: 110px;
+    background: #FADEC9;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.tyuo_product_section .product_data .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.tyuo_product_section .right_section_wrapper {
+    flex: 1;
+}
+.tyuo_product_section .qty {
+    font-size: 24px;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.2;
+}
+.tyuo_product_section .product_name {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.4;
+    margin: 4px 0 8px;
+}
+.tyuo_product_section .product_regular_price {
+    font-size: 15px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-bottom: 2px;
+}
+.tyuo_product_section .product_new_sale_price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #971b1b;
 }
 
-/* Variation dropdown — #CCC border, 4px radius, ~55% width centered */
-.ty-upsell-select-wrap { padding: 0 24px 20px; display: flex; justify-content: center; }
-.ty-upsell-select {
-    width: 55%; height: 46px;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px !important;
+/* Variation select */
+.tyuo_product_section .variation-select-wrap {
+    padding: 0 0 16px;
+    display: flex;
+    justify-content: center;
+}
+.tyuo_product_section .variation-select {
+    width: 60%;
+    height: 44px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     padding: 0 16px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px; font-weight: 500;
-    color: #333; background: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    background: #fff;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 20px;
-    cursor: pointer; outline: none;
+    cursor: pointer;
+    outline: none;
 }
-.ty-upsell-select:focus { border-color: #971b1b; }
+.tyuo_product_section .variation-select:focus { border-color: #971b1b; }
 
-/* Buttons */
-.ty-upsell-buttons {
-    display: flex; gap: 14px;
-    padding: 10px 24px 28px;
+/* Buttons — vigoshop layout */
+.tyuo_product_section .buttons-section,
+.confirmation_wrapper .buttons-section {
+    display: flex;
+    gap: 12px;
     align-items: stretch;
+}
+.pass-btn {
+    flex: 0;
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+.pass-btn:hover { background: #f5f5f5; }
+.buy-btn {
+    flex: 1;
+    background: #232f3e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
-/* "Ne želim" — OUTLINE pill, smaller than DODAJ */
-.ty-btn-skip {
-    flex: 0; 
-    background: #FFFFFF; color: #971b1b;
-    border: 1.5px solid #971b1b;
-    border-radius: 25px !important;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px; font-weight: 500;
-    padding: 12px 24px;
-    cursor: pointer; transition: background 0.15s;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 1;
-}
-.ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — FILLED RED pill, white text (matches reference) */
-.ty-btn-add {
-    flex: 1;
-    background: #971b1b; color: #FFFFFF;
-    border: 1.5px solid #971b1b;
-    border-radius: 25px !important;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px; font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 14px 32px;
-    cursor: pointer; transition: background 0.15s;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 1;
-}
-.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
-.ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
-.ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
+.buy-btn:hover { background: #1a2332; }
+.buy-btn.added { background: #2E7D32; }
+.buy-btn.disabled, .buy-btn:disabled { background: #999; cursor: not-allowed; }
+
+/* Status text */
 .ty-upsell-status {
-    text-align: center; padding: 0 24px 16px;
-    font-size: 13px; color: #888; min-height: 20px;
+    text-align: center; padding: 8px 20px;
+    font-size: 13px; color: #888; min-height: 18px;
 }
 
-/* Bottom countdown bar — hidden (timer is in banner pill) */
-.ty-upsell-bottom-bar {
-    display: none;
-}
-.ty-upsell-bottom-bar .ty-countdown-big {
-    display: inline-block;
-    background: rgba(0,0,0,0.2); color: #fff;
-    padding: 6px 16px;
-    border-radius: 4px !important;
-    font-size: 18px; font-weight: 700;
-    font-family: monospace;
-    letter-spacing: 2px;
-}
+/* Hide old class names if they leak through */
+.ty-upsell-wrap, .ty-upsell-banner, .ty-upsell-benefits,
+.ty-upsell-card, .ty-upsell-bottom-bar { display: none; }
 
 /* ═══════════════════════════════════════════════
    STEP 2: 6-PRODUCT GRID (inline, not overlay)
@@ -471,20 +510,19 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Mobile ═══ */
 @media (max-width: 560px) {
     .ty-container { margin: 0 auto; padding: 0 10px; }
-    .ty-success { margin-left: -10px; margin-right: -10px; }
     .ty-success { padding: 22px 16px; }
     .ty-success h1 { font-size: 19px !important; }
-    .ty-upsell-product { padding: 16px; gap: 14px; }
-    .ty-upsell-img { width: 120px; min-width: 120px; height: 120px; }
-    .ty-upsell-qty { font-size: 26px; }
-    .ty-upsell-new-price { font-size: 24px; }
-    .ty-upsell-banner h2 { font-size: 17px !important; }
-    .ty-upsell-buttons { padding: 0 16px 20px; }
-    .ty-upsell-select-wrap { padding: 0 16px 12px; }
+    .tyuo_timer .title { font-size: 17px; }
+    .tyuo_product_section .product_data { gap: 12px; }
+    .tyuo_product_section .product_data .img { width: 90px; min-width: 90px; height: 90px; }
+    .tyuo_product_section .qty { font-size: 20px; }
+    .tyuo_product_section .product_new_sale_price { font-size: 20px; }
+    .tyuo_product_section .buttons-section { flex-direction: column; gap: 8px; }
+    .tyuo_product_section .variation-select-wrap { padding: 0 0 12px; }
+    .tyuo_product_section .variation-select { width: 100%; }
     .ty-section-header { padding: 14px 16px; font-size: 14px; }
     .ty-section-body-inner { padding: 12px 16px; }
     .ty-grid { grid-template-columns: repeat(2, 1fr); }
-    .ty-grid-header h2 { font-size: 17px !important; }
 }
 </style>
 
@@ -513,68 +551,66 @@ body.woocommerce-order-received .woocommerce {
             <span class="ty-order-num">Narudžba #<?php echo $order->get_order_number(); ?></span>
         </div>
 
-        <!-- ═══ STEP 1: SINGLE UPSELL (COD only) ═══ -->
+        <!-- ═══ STEP 1: VIGOSHOP UPSELL (COD only) ═══ -->
         <?php if ( $order->get_payment_method() === 'cod' ) : ?>
-        <div class="ty-upsell-wrap" id="ty-upsell"
+        <div class="ty_upsell_one_wrapper show" id="ty-upsell"
              data-order-id="<?php echo $order->get_id(); ?>"
              data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
+            <div class="ty_upsell_one_wrapper__popup-content">
 
-            <!-- Red banner -->
-            <div class="ty-upsell-banner">
-                <div class="ty-upsell-banner-top">
-                    Posebna ponuda ističe
-                    <span class="ty-timer-pill" id="ty-timer">05:00</span>
+                <div class="tyuo_timer">
+                    <div class="timer_wrapper">
+                        <div class="special_offer_txt">Posebna ponuda ističe</div>
+                        <div class="time" id="ty-timer">05:00</div>
+                    </div>
+                    <div class="title">Dodajte još jedan proizvod s 50% dodatnog popusta</div>
                 </div>
-                <h2>Dodajte još jedan proizvod s 50% dodatnog popusta</h2>
-            </div>
 
-            <!-- Benefits -->
-            <div class="ty-upsell-benefits">
-                <div class="ty-benefit ty-benefit-green">
-                    <span class="ty-b-icon">✓</span>
-                    Poslat ćemo ga u istom paketu
-                </div>
-                <div class="ty-benefit ty-benefit-orange">
-                    <span class="ty-b-icon">★</span>
-                    Razmislite kome biste mogli pokloniti proizvod
-                </div>
-            </div>
-
-            <!-- Product + select + buttons wrapped in one card -->
-            <div class="ty-upsell-card">
-                <div class="ty-upsell-product">
-                    <img class="ty-upsell-img" src="<?php echo esc_url( $upsell_image ); ?>" alt="<?php echo esc_attr( $upsell_name ); ?>">
-                    <div class="ty-upsell-info">
-                        <div class="ty-upsell-qty">1 x</div>
-                        <div class="ty-upsell-name"><?php echo esc_html( $upsell_name ); ?> | NORIKS</div>
-                        <div class="ty-upsell-old-price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
-                        <div class="ty-upsell-new-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+                <div class="tyuo_middle_section">
+                    <div class="sub_title">
+                        <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#47b426"></path></svg></span>
+                        Poslat ćemo ga u istom paketu
+                    </div>
+                    <div class="clue_text">
+                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#971b1b"></path></svg></span>
+                        Razmislite kome biste mogli pokloniti proizvod
                     </div>
                 </div>
 
-                <?php if ( $upsell_variations ) : ?>
-                <div class="ty-upsell-select-wrap">
-                    <select class="ty-upsell-select" id="ty-variation-select">
-                        <?php foreach ( $upsell_variations as $v ) : ?>
-                        <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>
-                            Crna, <?php echo esc_html( $v['size'] ); ?>
-                        </option>
-                        <?php endforeach; ?>
-                    </select>
+                <div class="tyuo_product_section">
+                    <div class="product_data">
+                        <div class="img">
+                            <img alt="<?php echo esc_attr( $upsell_name ); ?>" src="<?php echo esc_url( $upsell_image ); ?>">
+                        </div>
+                        <div class="right_section_wrapper">
+                            <div class="quantity">
+                                <div class="qty">1x <div class="product_name"><?php echo esc_html( $upsell_name ); ?></div></div>
+                                <div class="product_regular_price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
+                                <div class="product_new_sale_price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php if ( $upsell_variations ) : ?>
+                    <div class="variation-select-wrap">
+                        <select class="variation-select" id="ty-variation-select">
+                            <?php foreach ( $upsell_variations as $v ) : ?>
+                            <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>
+                                Crna, <?php echo esc_html( $v['size'] ); ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <?php endif; ?>
+
+                    <div class="ty-upsell-status" id="ty-upsell-status"></div>
+
+                    <div class="buttons-section">
+                        <a class="pass-btn" id="ty-btn-skip">Ne želim</a>
+                        <div class="buy-btn" id="ty-btn-add" data-product-id="<?php echo esc_attr( $upsell_product_id ); ?>">DODAJ U NARUDŽBU</div>
+                    </div>
                 </div>
-                <?php endif; ?>
 
-                <div class="ty-upsell-status" id="ty-upsell-status"></div>
-
-                <div class="ty-upsell-buttons">
-                    <button class="ty-btn-skip" id="ty-btn-skip">Ne želim</button>
-                    <button class="ty-btn-add" id="ty-btn-add">DODAJ U NARUDŽBU</button>
-                </div>
-            </div>
-
-            <!-- Red countdown bar -->
-            <div class="ty-upsell-bottom-bar">
-                <span class="ty-countdown-big" id="ty-countdown-bar">05:00</span>
             </div>
         </div>
 
@@ -734,7 +770,7 @@ body.woocommerce-order-received .woocommerce {
 
     // ─── Countdown ───
     var timerEl   = document.getElementById('ty-timer');
-    var barEl     = document.getElementById('ty-countdown-bar');
+    var barEl     = null; // no bottom bar in vigoshop layout
     var key       = 'ty_' + orderId;
     var rem       = 300;
     var saved     = localStorage.getItem(key);
@@ -743,19 +779,14 @@ body.woocommerce-order-received .woocommerce {
 
     function tick() {
         if (rem <= 0) {
-            // Hide everything except the red banner with expired message
-            var card = wrap.querySelector('.ty-upsell-card');
-            var benefits = wrap.querySelector('.ty-upsell-benefits');
-            var bottomBar = wrap.querySelector('.ty-upsell-bottom-bar');
-            if (card) card.style.display = 'none';
-            if (benefits) benefits.style.display = 'none';
-            if (bottomBar) bottomBar.style.display = 'none';
-            // Replace banner content with expired message
-            var banner = wrap.querySelector('.ty-upsell-banner');
-            if (banner) {
-                banner.style.padding = '14px 24px';
-                banner.style.textAlign = 'center';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;">PONUDA JE ISTEKLA</h2>';
+            // Hide product and benefits, show expired message in timer
+            var prodSec = wrap.querySelector('.tyuo_product_section');
+            var midSec = wrap.querySelector('.tyuo_middle_section');
+            if (prodSec) prodSec.style.display = 'none';
+            if (midSec) midSec.style.display = 'none';
+            var timerSec = wrap.querySelector('.tyuo_timer');
+            if (timerSec) {
+                timerSec.innerHTML = '<div class="title" style="padding:8px 0;">PONUDA JE ISTEKLA</div>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
