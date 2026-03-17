@@ -738,7 +738,7 @@ body.woocommerce-order-received .woocommerce {
                     <?php if ( $order->get_billing_phone() ) : ?>
                     <div class="ty-row"><span class="ty-row-label">Telefon</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_phone() ); ?></span></div>
                     <?php endif; ?>
-                    <div class="ty-row"><span class="ty-row-label">Način plaćanja</span><span class="ty-row-value"><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></span></div>
+
                 </div>
             </div>
         </div>
