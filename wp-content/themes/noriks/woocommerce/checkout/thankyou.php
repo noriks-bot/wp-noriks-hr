@@ -1,6 +1,11 @@
 <?php
 /**
- * Thankyou page — Vigoshop styled with post-purchase upsell
+ * Thankyou page — Post-purchase upsell with two-step flow
+ *
+ * Step 1: Single product offer (bokserice)
+ * Step 2: 6-product grid (after "Ne želim" or after adding 1 item)
+ *
+ * Style: Red background, no border-radius, red buttons
  *
  * @package WooCommerce\Templates
  * @version 8.1.0
@@ -8,15 +13,15 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-// Upsell product config
-$upsell_product_id = 2781; // Crne Bokserice
+// ─── Upsell product config ───
+$upsell_product_id = 2781; // Crne Bokserice (primary offer)
 $upsell_product    = wc_get_product( $upsell_product_id );
 $upsell_name       = $upsell_product ? $upsell_product->get_name() : 'Crne Bokserice';
 $upsell_image      = 'https://devhr.noriks.com/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg';
 $upsell_price      = $upsell_product ? (float) $upsell_product->get_price() : 15.99;
-$upsell_sale_price = round( $upsell_price * 0.5, 2 ); // 50% off
+$upsell_sale_price = round( $upsell_price * 0.5, 2 );
 
-// Get variations for dropdown
+// Variations for primary product
 $upsell_variations = array();
 if ( $upsell_product && $upsell_product->is_type('variable') ) {
     foreach ( $upsell_product->get_available_variations() as $v ) {
@@ -42,10 +47,45 @@ if ( $order ) {
         }
     }
 }
+
+// ─── Grid products (6 products for step 2) ───
+$grid_product_ids = array();
+$ordered_ids = array();
+if ( $order ) {
+    foreach ( $order->get_items() as $item ) {
+        $ordered_ids[] = $item->get_product_id();
+    }
+}
+
+// Get products for grid — exclude already-ordered
+$grid_args = array(
+    'status'  => 'publish',
+    'limit'   => 6,
+    'exclude' => array_merge( $ordered_ids, array( $upsell_product_id ) ),
+    'orderby' => 'popularity',
+    'type'    => array( 'simple', 'variable' ),
+);
+
+// Try bokserice/majice categories first
+$grid_products = array();
+foreach ( array( 'bokserice', 'boxerice', 'majice', 'majica' ) as $cat_slug ) {
+    $cat = get_term_by( 'slug', $cat_slug, 'product_cat' );
+    if ( $cat ) {
+        $grid_args['category'] = array( $cat_slug );
+        $grid_products = wc_get_products( $grid_args );
+        if ( count( $grid_products ) >= 6 ) break;
+    }
+}
+// Fallback: any products
+if ( count( $grid_products ) < 6 ) {
+    unset( $grid_args['category'] );
+    $grid_products = wc_get_products( $grid_args );
+}
+$grid_products = array_slice( $grid_products, 0, 6 );
 ?>
 
 <style>
-/* Hide WP chrome + WC default sections */
+/* ═══ RESET: hide WP chrome ═══ */
 .top-header, .marquee, header.navbar.header, #languageModal,
 .xoo-wsc-markup, .xoo-wsc-overlay, .footer-wrap, footer.footer,
 footer.footer-mobile, .hs_loader, .entry-header,
@@ -68,16 +108,22 @@ body.woocommerce-order-received .woocommerce {
     background: transparent !important; padding: 0 !important;
 }
 
-/* === Container === */
+/* ═══ GLOBAL: kill ALL border-radius ═══ */
+.ty-container *, .ty-container *::before, .ty-container *::after,
+.ty-upsell-overlay *, .ty-upsell-overlay *::before, .ty-upsell-overlay *::after {
+    border-radius: 0 !important;
+}
+
+/* ═══ Container ═══ */
 .ty-container { max-width: 560px; margin: 30px auto; padding: 0; }
 
-/* === Success === */
+/* ═══ Success ═══ */
 .ty-success {
-    background: #e8f5e9; border-radius: 10px;
+    background: #e8f5e9;
     padding: 28px 24px; margin-bottom: 16px; text-align: center;
 }
 .ty-success-icon {
-    width: 56px; height: 56px; background: #4CAF50; border-radius: 50%;
+    width: 56px; height: 56px; background: #4CAF50;
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto 14px; font-size: 28px; color: #fff;
 }
@@ -88,19 +134,21 @@ body.woocommerce-order-received .woocommerce {
 .ty-success p { font-size: 14px; color: #5f6061; margin: 0; }
 .ty-success .ty-order-num {
     display: inline-block; margin-top: 10px;
-    background: #fff; padding: 6px 16px; border-radius: 6px;
+    background: #fff; padding: 6px 16px;
     font-size: 13px; color: #333; font-weight: 600;
 }
 
-/* === UPSELL — vigoshop style === */
+/* ═══════════════════════════════════════════════
+   STEP 1: SINGLE UPSELL OFFER
+   ═══════════════════════════════════════════════ */
 .ty-upsell-wrap {
-    background: #fff; border-radius: 10px;
+    background: #fff;
     margin-bottom: 16px; overflow: hidden;
 }
 
-/* Banner */
+/* Banner — RED background */
 .ty-upsell-banner {
-    background: #232f3e; color: #fff;
+    background: #C62828; color: #fff;
     padding: 18px 24px; text-align: center;
 }
 .ty-upsell-banner-top {
@@ -109,12 +157,12 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-timer-pill {
     display: inline-block;
-    background: #e74c3c; color: #fff;
-    padding: 3px 10px; border-radius: 4px;
+    background: rgba(255,255,255,0.2); color: #fff;
+    padding: 3px 10px;
     font-size: 13px; font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
-.ty-timer-pill.expired { background: #999; }
+.ty-timer-pill.expired { background: #666; }
 .ty-upsell-banner h2 {
     font-size: 20px !important; font-weight: 700 !important;
     color: #fff !important; margin: 0 !important;
@@ -123,15 +171,14 @@ body.woocommerce-order-received .woocommerce {
 
 /* Benefits */
 .ty-upsell-benefits {
-    padding: 16px 24px 0;
+    background: #C62828;
+    padding: 10px 24px 16px;
     display: flex; flex-direction: column; align-items: center; gap: 6px;
 }
 .ty-benefit {
-    font-size: 14px; font-weight: 500;
+    font-size: 14px; font-weight: 500; color: #fff;
     display: flex; align-items: center; gap: 8px;
 }
-.ty-benefit-green { color: #2e7d32; }
-.ty-benefit-orange { color: #e65100; }
 .ty-benefit .ty-b-icon { font-size: 18px; }
 
 /* Product card */
@@ -142,7 +189,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-upsell-img {
     width: 160px; min-width: 160px; height: 160px;
-    object-fit: cover; border-radius: 8px;
+    object-fit: cover;
     background: #f8f8f8;
 }
 .ty-upsell-info { flex: 1; }
@@ -160,139 +207,161 @@ body.woocommerce-order-received .woocommerce {
     margin-bottom: 2px;
 }
 .ty-upsell-new-price {
-    font-size: 28px; font-weight: 700; color: #e74c3c;
+    font-size: 28px; font-weight: 700; color: #C62828;
     line-height: 1.1;
 }
 
 /* Variation dropdown */
-.ty-upsell-select-wrap {
-    padding: 0 24px 16px;
-}
+.ty-upsell-select-wrap { padding: 0 24px 16px; }
 .ty-upsell-select {
     width: 100%; height: 48px;
-    border: 1px solid #ccc; border-radius: 6px;
+    border: 1px solid #ccc;
     padding: 0 16px; font-size: 15px; font-weight: 500;
     color: #333; background: #fff;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 24px;
-    cursor: pointer;
+    appearance: auto; cursor: pointer;
 }
 
-/* Buttons */
+/* Buttons — ALL RED */
 .ty-upsell-buttons {
     display: flex; gap: 12px;
     padding: 0 24px 24px;
 }
 .ty-btn-skip {
     flex: 1; height: 50px;
-    background: #fff; color: #333;
-    border: 2px solid #ddd; border-radius: 6px;
+    background: #C62828; color: #fff;
+    border: 2px solid #fff;
     font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: border-color 0.2s;
+    cursor: pointer; transition: opacity 0.2s;
 }
-.ty-btn-skip:hover { border-color: #999; }
+.ty-btn-skip:hover { opacity: 0.85; }
 .ty-btn-add {
     flex: 1.5; height: 50px;
-    background: #232f3e; color: #fff;
-    border: none; border-radius: 6px;
+    background: #C62828; color: #fff;
+    border: none;
     font-size: 14px; font-weight: 700;
     cursor: pointer; text-transform: uppercase;
     letter-spacing: 0.5px;
-    transition: background 0.2s;
+    transition: opacity 0.2s;
 }
-.ty-btn-add:hover { background: #1a2332; }
+.ty-btn-add:hover { opacity: 0.85; }
 .ty-btn-add:disabled { background: #999; cursor: not-allowed; }
-.ty-btn-add.added { background: #4CAF50; }
+.ty-btn-add.added { background: #2E7D32; }
 .ty-upsell-status {
     text-align: center; padding: 0 24px 16px;
     font-size: 13px; color: #888; min-height: 20px;
 }
 
-/* Dismissed state */
-.ty-upsell-wrap.dismissed { display: none; }
+/* Red bottom bar on step 1 */
+.ty-upsell-bottom-bar {
+    background: #C62828;
+    padding: 12px 24px;
+    text-align: center;
+}
+.ty-upsell-bottom-bar .ty-countdown-big {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 18px; font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
 
-/* === Confirmation Modal === */
-.ty-modal-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.5); z-index: 9999;
+/* ═══════════════════════════════════════════════
+   STEP 2: 6-PRODUCT GRID OVERLAY
+   ═══════════════════════════════════════════════ */
+.ty-upsell-overlay {
+    display: none;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999;
     align-items: center; justify-content: center;
-    padding: 16px;
+    padding: 15px; box-sizing: border-box;
 }
-.ty-modal-overlay.show { display: flex; }
-.ty-modal {
-    background: #fff; border-radius: 12px;
-    max-width: 480px; width: 100%;
-    overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-.ty-modal-body { padding: 24px; }
-.ty-modal-title {
-    font-size: 15px; font-weight: 500; color: #333;
-    margin-bottom: 18px;
-}
-.ty-modal-product {
-    display: flex; gap: 16px; align-items: flex-start;
-    margin-bottom: 20px;
-}
-.ty-modal-img {
-    width: 100px; height: 100px; min-width: 100px;
-    object-fit: cover; border-radius: 6px;
-    border: 1px solid #eee;
-}
-.ty-modal-info {}
-.ty-modal-qty {
-    font-size: 28px; font-weight: 700; color: #232f3e;
-    line-height: 1; margin-bottom: 4px;
-}
-.ty-modal-name {
-    font-size: 14px; color: #333; line-height: 1.3;
-    margin-bottom: 8px;
-}
-.ty-modal-price {
-    font-size: 22px; font-weight: 700; color: #e74c3c;
-}
-.ty-modal-total {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding-top: 16px; border-top: 1px solid #eee;
-    margin-bottom: 20px;
-}
-.ty-modal-total-label {
-    font-size: 16px; color: #333;
-}
-.ty-modal-total-value {
-    font-size: 24px; font-weight: 700; color: #232f3e;
-}
-.ty-modal-buttons {
-    display: flex; gap: 12px;
-}
-.ty-modal-btn-cancel {
-    flex: 1; height: 48px;
-    background: #fff; color: #e65100;
-    border: 2px solid #e65100; border-radius: 6px;
-    font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: background 0.2s;
-}
-.ty-modal-btn-cancel:hover { background: #fff5f0; }
-.ty-modal-btn-confirm {
-    flex: 1.3; height: 48px;
-    background: #232f3e; color: #fff;
-    border: none; border-radius: 6px;
-    font-size: 14px; font-weight: 700;
-    cursor: pointer; transition: background 0.2s;
-}
-.ty-modal-btn-confirm:hover { background: #1a2332; }
-.ty-modal-btn-confirm:disabled { background: #999; cursor: not-allowed; }
-.ty-modal-btn-confirm.added { background: #4CAF50; }
-.ty-modal-status {
-    text-align: center; margin-top: 12px;
-    font-size: 13px; color: #888; min-height: 18px;
+.ty-upsell-overlay.show { display: flex; }
+
+.ty-grid-popup {
+    background: #C62828;
+    width: 100%; max-width: 620px;
+    max-height: 90vh; overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    position: relative;
 }
 
-/* === Collapsible sections === */
+.ty-grid-header {
+    padding: 18px 20px 14px; text-align: center;
+}
+.ty-grid-header h3 {
+    color: #fff !important; font-size: 15px;
+    font-weight: 400; margin: 0 0 6px 0; padding: 0;
+}
+.ty-grid-header h2 {
+    color: #fff !important; font-size: 20px;
+    font-weight: 700; margin: 0; padding: 0; line-height: 1.3;
+}
+.ty-grid-trust {
+    text-align: center; padding: 6px 20px 12px;
+    font-size: 13px; color: #fff;
+}
+
+.ty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 15px 15px;
+}
+.ty-grid-item {
+    background: #fff; text-align: center;
+    padding: 12px; border: 1px solid #eee;
+    color: #333;
+}
+.ty-grid-item img {
+    width: 100%; max-width: 120px; height: auto;
+    object-fit: contain; margin-bottom: 8px;
+}
+.ty-grid-item .g-name {
+    font-size: 12px; color: #333; margin-bottom: 5px;
+    line-height: 1.3; min-height: 32px;
+}
+.ty-grid-item .g-price-old {
+    text-decoration: line-through; color: #999; font-size: 12px;
+}
+.ty-grid-item .g-price-new {
+    color: #C62828; font-size: 16px; font-weight: 700;
+}
+.ty-grid-item select {
+    width: 100%; padding: 6px; font-size: 12px;
+    border: 1px solid #ddd; margin-top: 6px;
+    background: #fff; color: #333;
+}
+.ty-grid-item .g-add-btn {
+    display: block; width: 100%; margin-top: 8px;
+    padding: 10px; background: #C62828; color: #fff;
+    border: none; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; cursor: pointer;
+    transition: opacity 0.2s;
+}
+.ty-grid-item .g-add-btn:hover { opacity: 0.85; }
+.ty-grid-item .g-add-btn.added {
+    background: #2E7D32; pointer-events: none;
+}
+.ty-grid-item .g-add-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.ty-grid-close {
+    display: block;
+    width: calc(100% - 30px); margin: 0 15px 15px;
+    padding: 14px;
+    background: transparent; color: #fff;
+    border: 2px solid #fff;
+    font-size: 14px; font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer; text-align: center;
+}
+.ty-grid-close:hover { background: rgba(255,255,255,0.1); }
+
+/* ═══ Collapsible sections ═══ */
 .ty-section {
-    background: #fff; border-radius: 10px;
+    background: #fff;
     margin-bottom: 12px; overflow: hidden;
 }
 .ty-section-header {
@@ -330,11 +399,9 @@ body.woocommerce-order-received .woocommerce {
 .ty-totals .ty-row { padding: 5px 0; }
 .ty-totals .ty-total-final { font-size: 16px; font-weight: 700; }
 
-/* === Mobile === */
+/* ═══ Mobile ═══ */
 @media (max-width: 560px) {
     .ty-container { margin: 0 auto; padding: 0; }
-    .ty-success, .ty-section { border-radius: 6px; }
-    .ty-upsell-wrap { border-radius: 6px; }
     .ty-success { padding: 22px 16px; }
     .ty-success h1 { font-size: 19px !important; }
     .ty-upsell-product { padding: 16px; gap: 14px; }
@@ -346,6 +413,8 @@ body.woocommerce-order-received .woocommerce {
     .ty-upsell-select-wrap { padding: 0 16px 12px; }
     .ty-section-header { padding: 14px 16px; font-size: 14px; }
     .ty-section-body-inner { padding: 12px 16px; }
+    .ty-grid { grid-template-columns: repeat(2, 1fr); }
+    .ty-grid-header h2 { font-size: 17px !important; }
 }
 </style>
 
@@ -361,7 +430,7 @@ body.woocommerce-order-received .woocommerce {
             <h1>Narudžba nije uspjela</h1>
             <p>Banka je odbila transakciju. Pokušajte ponovno.</p>
             <p style="margin-top:16px;">
-                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#232f3e;color:#fff;padding:12px 32px;border-radius:6px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
+                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#C62828;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
             </p>
         </div>
     <?php else : ?>
@@ -374,10 +443,12 @@ body.woocommerce-order-received .woocommerce {
             <span class="ty-order-num">Narudžba #<?php echo $order->get_order_number(); ?></span>
         </div>
 
-        <!-- 🛒 UPSELL — vigoshop style -->
-        <div class="ty-upsell-wrap" id="ty-upsell" data-order-id="<?php echo $order->get_id(); ?>" data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
+        <!-- ═══ STEP 1: SINGLE UPSELL ═══ -->
+        <div class="ty-upsell-wrap" id="ty-upsell"
+             data-order-id="<?php echo $order->get_id(); ?>"
+             data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
 
-            <!-- Banner -->
+            <!-- Red banner -->
             <div class="ty-upsell-banner">
                 <div class="ty-upsell-banner-top">
                     Posebna ponudba poteče
@@ -386,13 +457,13 @@ body.woocommerce-order-received .woocommerce {
                 <h2>Dodajte še en izdelek s 50% dodatnega popusta</h2>
             </div>
 
-            <!-- Benefits -->
+            <!-- Benefits (red bg continues) -->
             <div class="ty-upsell-benefits">
-                <div class="ty-benefit ty-benefit-green">
+                <div class="ty-benefit">
                     <span class="ty-b-icon">✔</span>
                     Poslali ga bomo v istem paketu
                 </div>
-                <div class="ty-benefit ty-benefit-orange">
+                <div class="ty-benefit">
                     <span class="ty-b-icon">⭐</span>
                     Pomislite, komu bi lahko izdelek podarili
                 </div>
@@ -409,7 +480,7 @@ body.woocommerce-order-received .woocommerce {
                 </div>
             </div>
 
-            <!-- Variation dropdown -->
+            <!-- Variation -->
             <?php if ( $upsell_variations ) : ?>
             <div class="ty-upsell-select-wrap">
                 <select class="ty-upsell-select" id="ty-variation-select">
@@ -425,13 +496,69 @@ body.woocommerce-order-received .woocommerce {
             <!-- Status -->
             <div class="ty-upsell-status" id="ty-upsell-status"></div>
 
-            <!-- Buttons -->
+            <!-- Red buttons -->
             <div class="ty-upsell-buttons">
-                <button class="ty-btn-skip" onclick="document.getElementById('ty-upsell').classList.add('dismissed')">Ne želim</button>
-                <button class="ty-btn-add" id="ty-btn-add" onclick="tyAddUpsell()">DODAJ K NAROČILU</button>
+                <button class="ty-btn-skip" id="ty-btn-skip">Ne želim</button>
+                <button class="ty-btn-add" id="ty-btn-add">DODAJ K NAROČILU</button>
             </div>
 
+            <!-- Red countdown bar -->
+            <div class="ty-upsell-bottom-bar">
+                <span class="ty-countdown-big" id="ty-countdown-bar">05:00</span>
+            </div>
         </div>
+
+        <!-- ═══ STEP 2: 6-PRODUCT GRID OVERLAY ═══ -->
+        <?php if ( ! empty( $grid_products ) ) : ?>
+        <div class="ty-upsell-overlay" id="ty-grid-overlay">
+            <div class="ty-grid-popup">
+                <div class="ty-grid-header">
+                    <h3>Še več izdelkov s popustom</h3>
+                    <h2>Dodajte katerikoli izdelek s 50% popustom</h2>
+                </div>
+                <div class="ty-grid-trust">
+                    ✔ Vse pošljemo v istem paketu
+                </div>
+                <div class="ty-grid">
+                    <?php foreach ( $grid_products as $gp ) :
+                        $gp_price     = (float) $gp->get_regular_price();
+                        $gp_sale      = round( $gp_price * 0.5, 2 );
+                        $gp_img_id    = $gp->get_image_id();
+                        $gp_img_url   = $gp_img_id ? wp_get_attachment_url( $gp_img_id ) : wc_placeholder_img_src();
+                        $gp_is_var    = $gp->is_type('variable');
+                        $gp_vars      = array();
+                        if ( $gp_is_var ) {
+                            foreach ( $gp->get_available_variations() as $gv ) {
+                                $gv_label = '';
+                                foreach ( $gv['attributes'] as $gk => $gval ) { $gv_label = $gval; }
+                                $gp_vars[] = array( 'id' => $gv['variation_id'], 'label' => $gv_label );
+                            }
+                        }
+                    ?>
+                    <div class="ty-grid-item">
+                        <img src="<?php echo esc_url( $gp_img_url ); ?>" alt="<?php echo esc_attr( $gp->get_name() ); ?>">
+                        <div class="g-name"><?php echo esc_html( $gp->get_name() ); ?></div>
+                        <div class="g-price-old"><?php echo number_format( $gp_price, 2, ',', '.' ); ?>€</div>
+                        <div class="g-price-new"><?php echo number_format( $gp_sale, 2, ',', '.' ); ?>€</div>
+                        <?php if ( $gp_vars ) : ?>
+                        <select class="g-variation" data-product-id="<?php echo $gp->get_id(); ?>">
+                            <?php foreach ( $gp_vars as $gv ) : ?>
+                            <option value="<?php echo $gv['id']; ?>"><?php echo esc_html( $gv['label'] ); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <?php endif; ?>
+                        <button class="g-add-btn"
+                                data-product-id="<?php echo $gp->get_id(); ?>"
+                                data-sale-price="<?php echo $gp_sale; ?>">
+                            DODAJ
+                        </button>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <button class="ty-grid-close" id="ty-grid-close">Zaključi</button>
+            </div>
+        </div>
+        <?php endif; ?>
 
         <!-- 📋 Order items -->
         <div class="ty-section">
@@ -496,35 +623,6 @@ body.woocommerce-order-received .woocommerce {
 
 </div>
 
-<!-- Confirmation modal -->
-<div class="ty-modal-overlay" id="ty-modal">
-    <div class="ty-modal">
-        <div class="ty-modal-body">
-            <div class="ty-modal-title">Izdelek bo dodan v obstoječe naročilo.</div>
-            <div class="ty-modal-product">
-                <img class="ty-modal-img" src="<?php echo esc_url( $upsell_image ); ?>" alt="">
-                <div class="ty-modal-info">
-                    <div class="ty-modal-qty">1x</div>
-                    <div class="ty-modal-name" id="ty-modal-name"><?php echo esc_html( $upsell_name ); ?> | NORIKS</div>
-                    <div class="ty-modal-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
-                </div>
-            </div>
-            <div class="ty-modal-total">
-                <span class="ty-modal-total-label">Nova skupna cena:</span>
-                <span class="ty-modal-total-value" id="ty-modal-total"><?php
-                    $current_total = (float) $order->get_total();
-                    echo number_format( $current_total + $upsell_sale_price, 2, ',', '.' );
-                ?>€</span>
-            </div>
-            <div class="ty-modal-buttons">
-                <button class="ty-modal-btn-cancel" onclick="tyCloseModal()">Ne želim</button>
-                <button class="ty-modal-btn-confirm" id="ty-modal-confirm" onclick="tyConfirmUpsell()">Potrdite</button>
-            </div>
-            <div class="ty-modal-status" id="ty-modal-status"></div>
-        </div>
-    </div>
-</div>
-
 <?php else : ?>
     <div class="ty-container">
         <div class="ty-success"><h1>Narudžba</h1>
@@ -534,97 +632,142 @@ body.woocommerce-order-received .woocommerce {
 <?php endif; ?>
 
 <script>
-function tyToggle(h) {
-    h.classList.toggle('open');
-    h.nextElementSibling.classList.toggle('open');
-}
-
-/* Countdown */
 (function(){
-    var el = document.getElementById('ty-timer');
-    var wrap = document.getElementById('ty-upsell');
-    if (!el || !wrap) return;
-    var key = 'ty_' + wrap.dataset.orderId;
-    var rem = 300;
-    var saved = localStorage.getItem(key);
+    var wrap     = document.getElementById('ty-upsell');
+    var overlay  = document.getElementById('ty-grid-overlay');
+    if (!wrap) return;
+
+    var orderId  = wrap.dataset.orderId;
+    var nonce    = wrap.dataset.nonce;
+    var ajaxUrl  = '<?php echo admin_url("admin-ajax.php"); ?>';
+
+    // ─── Countdown ───
+    var timerEl   = document.getElementById('ty-timer');
+    var barEl     = document.getElementById('ty-countdown-bar');
+    var key       = 'ty_' + orderId;
+    var rem       = 300;
+    var saved     = localStorage.getItem(key);
     if (saved) { rem = Math.max(0, 300 - Math.floor((Date.now() - parseInt(saved)) / 1000)); }
     else { localStorage.setItem(key, Date.now().toString()); }
-    (function tick() {
+
+    function tick() {
         if (rem <= 0) {
-            el.textContent = 'Isteklo'; el.classList.add('expired');
-            var btn = document.getElementById('ty-btn-add');
-            if (btn) { btn.disabled = true; btn.textContent = 'PONUDA ISTEKLA'; }
+            if (timerEl) { timerEl.textContent = 'Isteklo'; timerEl.classList.add('expired'); }
+            if (barEl) barEl.textContent = 'PONUDA ISTEKLA';
+            var addBtn = document.getElementById('ty-btn-add');
+            if (addBtn) { addBtn.disabled = true; addBtn.textContent = 'PONUDA ISTEKLA'; }
             return;
         }
         var m = Math.floor(rem/60), s = rem%60;
-        el.textContent = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+        var display = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+        if (timerEl) timerEl.textContent = display;
+        if (barEl) barEl.textContent = display;
         rem--; setTimeout(tick, 1000);
-    })();
+    }
+    tick();
+
+    // ─── Step transitions ───
+    function showGrid() {
+        wrap.style.display = 'none';
+        if (overlay) overlay.classList.add('show');
+    }
+    function closeAll() {
+        if (overlay) overlay.classList.remove('show');
+    }
+
+    // ─── Step 1: "Ne želim" → show grid ───
+    var skipBtn = document.getElementById('ty-btn-skip');
+    if (skipBtn) {
+        skipBtn.addEventListener('click', function() {
+            if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
+        });
+    }
+
+    // ─── Step 1: "DODAJ" → add to order, then show grid ───
+    var addBtn = document.getElementById('ty-btn-add');
+    if (addBtn) {
+        addBtn.addEventListener('click', function() {
+            if (addBtn.disabled) return;
+            addBtn.disabled = true;
+            addBtn.textContent = 'Dodajem...';
+
+            var select = document.getElementById('ty-variation-select');
+            var fd = new FormData();
+            fd.append('action', 'noriks_add_upsell');
+            fd.append('order_id', orderId);
+            fd.append('product_id', <?php echo $upsell_product_id; ?>);
+            fd.append('variation_id', select ? select.value : '');
+            fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
+            fd.append('nonce', nonce);
+
+            fetch(ajaxUrl, { method: 'POST', body: fd })
+                .then(function(r) { return r.json(); })
+                .then(function(d) {
+                    addBtn.textContent = '✓ DODANO';
+                    addBtn.classList.add('added');
+                    // Show grid after short delay
+                    setTimeout(function() {
+                        if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
+                    }, 800);
+                })
+                .catch(function() {
+                    addBtn.disabled = false;
+                    addBtn.textContent = 'DODAJ K NAROČILU';
+                });
+        });
+    }
+
+    // ─── Step 2: Grid individual add buttons ───
+    if (overlay) {
+        overlay.querySelectorAll('.g-add-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var el = this;
+                if (el.disabled) return;
+                el.disabled = true;
+                el.textContent = '...';
+
+                var productId = el.getAttribute('data-product-id');
+                var salePrice = el.getAttribute('data-sale-price');
+                var varSelect = el.parentElement.querySelector('.g-variation');
+
+                var fd = new FormData();
+                fd.append('action', 'noriks_add_upsell');
+                fd.append('order_id', orderId);
+                fd.append('product_id', productId);
+                fd.append('variation_id', varSelect ? varSelect.value : '');
+                fd.append('sale_price', salePrice);
+                fd.append('nonce', nonce);
+
+                fetch(ajaxUrl, { method: 'POST', body: fd })
+                    .then(function(r) { return r.json(); })
+                    .then(function(d) {
+                        if (d.success) {
+                            el.textContent = '✔ DODANO';
+                            el.classList.add('added');
+                        } else {
+                            el.textContent = d.data || 'Napaka';
+                            setTimeout(function() { el.disabled = false; el.textContent = 'DODAJ'; }, 2000);
+                        }
+                    })
+                    .catch(function() {
+                        el.disabled = false;
+                        el.textContent = 'DODAJ';
+                    });
+            });
+        });
+
+        // Close grid
+        document.getElementById('ty-grid-close').addEventListener('click', closeAll);
+
+        // Close on overlay click
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeAll();
+        });
+    }
 })();
 
-/* Open confirmation modal */
-function tyAddUpsell() {
-    var btn = document.getElementById('ty-btn-add');
-    if (!btn || btn.disabled) return;
-    // Update modal name with selected variation
-    var select = document.getElementById('ty-variation-select');
-    var nameEl = document.getElementById('ty-modal-name');
-    if (select && nameEl) {
-        var opt = select.options[select.selectedIndex];
-        nameEl.textContent = '<?php echo esc_js( $upsell_name ); ?> | NORIKS - ' + opt.textContent.trim();
-    }
-    document.getElementById('ty-modal').classList.add('show');
-}
-
-function tyCloseModal() {
-    document.getElementById('ty-modal').classList.remove('show');
-}
-
-/* Confirm and send AJAX */
-function tyConfirmUpsell() {
-    var wrap = document.getElementById('ty-upsell');
-    var confirmBtn = document.getElementById('ty-modal-confirm');
-    var mainBtn = document.getElementById('ty-btn-add');
-    var status = document.getElementById('ty-modal-status');
-    var select = document.getElementById('ty-variation-select');
-    if (!confirmBtn || confirmBtn.disabled) return;
-
-    confirmBtn.disabled = true;
-    confirmBtn.textContent = 'Dodajem...';
-    status.textContent = '';
-
-    var fd = new FormData();
-    fd.append('action', 'noriks_add_upsell');
-    fd.append('order_id', wrap.dataset.orderId);
-    fd.append('product_id', <?php echo $upsell_product_id; ?>);
-    fd.append('variation_id', select ? select.value : '');
-    fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
-    fd.append('nonce', wrap.dataset.nonce);
-
-    fetch('<?php echo admin_url("admin-ajax.php"); ?>', { method: 'POST', body: fd })
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-            if (d.success) {
-                confirmBtn.textContent = '✓ Dodano';
-                confirmBtn.classList.add('added');
-                status.textContent = 'Uspješno dodano!';
-                status.style.color = '#2e7d32';
-                // Update main button
-                if (mainBtn) { mainBtn.textContent = '✓ DODANO'; mainBtn.classList.add('added'); mainBtn.disabled = true; }
-                // Close modal after delay
-                setTimeout(function(){ tyCloseModal(); }, 1500);
-            } else {
-                confirmBtn.disabled = false;
-                confirmBtn.textContent = 'Potrdite';
-                status.textContent = d.data || 'Greška';
-                status.style.color = '#e74c3c';
-            }
-        })
-        .catch(function(){
-            confirmBtn.disabled = false;
-            confirmBtn.textContent = 'Potrdite';
-            status.textContent = 'Greška — pokušajte ponovno';
-            status.style.color = '#e74c3c';
-        });
+function tyToggle(h) {
+    h.classList.toggle('open');
+    h.nextElementSibling.classList.toggle('open');
 }
 </script>
