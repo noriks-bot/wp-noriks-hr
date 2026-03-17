@@ -19,7 +19,10 @@ $upsell_product    = wc_get_product( $upsell_product_id );
 $upsell_name       = $upsell_product ? $upsell_product->get_name() : 'Crne Bokserice';
 $upsell_image      = 'https://devhr.noriks.com/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg';
 $upsell_price      = $upsell_product ? (float) $upsell_product->get_price() : 15.99;
-$upsell_sale_price = round( $upsell_price * 0.5, 2 );
+$raw_half = $upsell_price * 0.5;
+$floor_half = floor( $raw_half );
+$upsell_sale_price = ( $raw_half - $floor_half >= 0.50 ) ? $floor_half + 0.99 : $floor_half + 0.49;
+if ( $upsell_sale_price <= 0 ) $upsell_sale_price = 0.99;
 
 // Variations for primary product
 $upsell_variations = array();
@@ -572,7 +575,10 @@ body.woocommerce-order-received .woocommerce {
                         if ( ! $gp_price ) {
                             $gp_price = (float) $gp->get_regular_price();
                         }
-                        $gp_sale = round( $gp_price * 0.5, 2 );
+                        $gp_raw = $gp_price * 0.5;
+                        $gp_floor = floor( $gp_raw );
+                        $gp_sale = ( $gp_raw - $gp_floor >= 0.50 ) ? $gp_floor + 0.99 : $gp_floor + 0.49;
+                        if ( $gp_sale <= 0 ) $gp_sale = 0.99;
                         $gp_img_id    = $gp->get_image_id();
                         $gp_img_url   = $gp_img_id ? wp_get_attachment_url( $gp_img_id ) : wc_placeholder_img_src();
                         $gp_is_var    = $gp->is_type('variable');

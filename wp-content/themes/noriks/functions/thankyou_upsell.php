@@ -291,7 +291,10 @@ function noriks_handle_add_upsell() {
         wp_send_json_error( 'Cijena proizvoda nije dostupna' );
     }
 
-    $upsell_price = round( $active_price * 0.5, 2 );
+    $raw = $active_price * 0.5;
+    $floor = floor( $raw );
+    $upsell_price = ( $raw - $floor >= 0.50 ) ? $floor + 0.99 : $floor + 0.49;
+    if ( $upsell_price <= 0 ) $upsell_price = 0.99;
 
     // Add to order
     $item_id = $order->add_product( $product, 1, array(
