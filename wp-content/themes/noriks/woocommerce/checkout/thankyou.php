@@ -440,6 +440,7 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Mobile ═══ */
 @media (max-width: 560px) {
     .ty-container { margin: 0 auto; padding: 0 10px; }
+    .ty-success { margin-left: -10px; margin-right: -10px; }
     .ty-success { padding: 22px 16px; }
     .ty-success h1 { font-size: 19px !important; }
     .ty-upsell-product { padding: 16px; gap: 14px; }
@@ -713,7 +714,8 @@ body.woocommerce-order-received .woocommerce {
             // Replace banner content with expired message
             var banner = wrap.querySelector('.ty-upsell-banner');
             if (banner) {
-                banner.innerHTML = '<h2 style="margin:0;padding:10px 0;font-size:20px;font-weight:700;color:#fff;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
+                banner.style.padding = '9px 24px';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:20px;font-weight:700;color:#fff;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
