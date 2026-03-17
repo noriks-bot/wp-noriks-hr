@@ -1016,3 +1016,7 @@ function tyToggle(h) {
     h.nextElementSibling.classList.toggle('open');
 }
 </script>
+
+<style>
+.tyuo_product_section .variation-select-wrap, .tyuo_product_section .variation-select { display:none !important; }
+</style>
