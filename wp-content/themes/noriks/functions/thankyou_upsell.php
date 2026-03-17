@@ -133,7 +133,100 @@ function noriks_release_primary_hold() {
 }
 
 
-// ─── 4. AJAX: Add upsell product to order ───────────────────────────────
+// ─── 4. AJAX: Refresh order items HTML ───────────────────────────────────
+
+add_action( 'wp_ajax_noriks_refresh_order_items', 'noriks_refresh_order_items' );
+add_action( 'wp_ajax_nopriv_noriks_refresh_order_items', 'noriks_refresh_order_items' );
+
+function noriks_refresh_order_items() {
+    $order_id = absint( $_POST['order_id'] ?? 0 );
+    if ( ! $order_id ) wp_send_json_error( 'Missing order_id' );
+
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) wp_send_json_error( 'Order not found' );
+
+    // Build items HTML
+    $items_html = '';
+    foreach ( $order->get_items() as $item ) {
+        $qty = $item->get_quantity();
+        $meta_parts = array();
+        foreach ( $item->get_formatted_meta_data( '_', true ) as $m ) {
+            $meta_parts[] = wp_strip_all_tags( $m->display_key . ': ' . $m->display_value );
+        }
+        $is_upsell = $item->get_meta( '_noriks_upsell' ) === 'thank you upsell';
+        $items_html .= '<div class="ty-item">';
+        $items_html .= '<div>';
+        $items_html .= '<div class="ty-item-name">' . $qty . '× ' . esc_html( $item->get_name() ) . '</div>';
+        if ( $meta_parts ) {
+            $items_html .= '<div class="ty-item-meta">' . esc_html( implode( ', ', $meta_parts ) ) . '</div>';
+        }
+        $items_html .= '</div>';
+        $items_html .= '<div style="display:flex;align-items:center;gap:8px;">';
+        $items_html .= '<div class="ty-item-price">' . $order->get_formatted_line_subtotal( $item ) . '</div>';
+        if ( $is_upsell && $order->get_status() === 'primary-hold' ) {
+            $items_html .= '<button class="ty-upsell-remove" data-item-id="' . $item->get_id() . '" data-order-id="' . $order_id . '" onclick="removeUpsellItem(this)" style="width:22px;height:22px;border-radius:50%;background:#971b1b;color:#fff;border:none;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex-shrink:0;">✕</button>';
+        }
+        $items_html .= '</div>';
+        $items_html .= '</div>';
+    }
+
+    // Build totals HTML
+    $totals_html = '<div class="ty-totals">';
+    foreach ( $order->get_order_item_totals() as $key => $total ) {
+        $class = $key === 'order_total' ? 'ty-row ty-total-final' : 'ty-row';
+        $totals_html .= '<div class="' . $class . '">';
+        $totals_html .= '<span class="ty-row-label">' . $total['label'] . '</span>';
+        $totals_html .= '<span class="ty-row-value">' . $total['value'] . '</span>';
+        $totals_html .= '</div>';
+    }
+    $totals_html .= '</div>';
+
+    wp_send_json_success( array(
+        'items_html'  => $items_html . $totals_html,
+        'item_count'  => $order->get_item_count(),
+        'total'       => $order->get_formatted_order_total(),
+    ));
+}
+
+
+// ─── 5. AJAX: Remove upsell item from order ─────────────────────────────
+
+add_action( 'wp_ajax_noriks_remove_upsell', 'noriks_remove_upsell' );
+add_action( 'wp_ajax_nopriv_noriks_remove_upsell', 'noriks_remove_upsell' );
+
+function noriks_remove_upsell() {
+    $order_id = absint( $_POST['order_id'] ?? 0 );
+    $item_id  = absint( $_POST['item_id'] ?? 0 );
+    if ( ! $order_id || ! $item_id ) wp_send_json_error( 'Missing data' );
+
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) wp_send_json_error( 'Order not found' );
+
+    $item = $order->get_item( $item_id );
+    if ( ! $item ) wp_send_json_error( 'Item not found' );
+
+    // Only allow removing upsell items
+    if ( $item->get_meta( '_noriks_upsell' ) !== 'thank you upsell' ) {
+        wp_send_json_error( 'Samo upsell proizvode je moguće ukloniti' );
+    }
+
+    // Only allow while in primary-hold
+    if ( $order->get_status() !== 'primary-hold' ) {
+        wp_send_json_error( 'Vrijeme za izmjene je isteklo' );
+    }
+
+    $product_name = $item->get_name();
+    $order->remove_item( $item_id );
+    $order->calculate_totals();
+    $order->save();
+
+    $order->add_order_note( sprintf( 'Upsell uklojen: %s', $product_name ) );
+
+    wp_send_json_success( array( 'message' => 'Uklonjeno' ) );
+}
+
+
+// ─── 6. AJAX: Add upsell product to order ───────────────────────────────
 
 add_action( 'wp_ajax_noriks_add_upsell', 'noriks_handle_add_upsell' );
 add_action( 'wp_ajax_nopriv_noriks_add_upsell', 'noriks_handle_add_upsell' );

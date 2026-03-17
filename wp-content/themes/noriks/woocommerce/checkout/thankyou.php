@@ -147,17 +147,19 @@ body.woocommerce-order-received .woocommerce {
     background: #fff;
     margin: 0 0 15px; overflow: hidden;
     border-radius: 10px !important;
-    border: 1px solid #e0e0e0;
 }
 
-/* Banner — dark charcoal bg, white text (1:1 from reference) */
+/* Banner — WHITE bg, RED BORDER around it, dark text centered */
 .ty-upsell-banner {
-    background: #232f3e; color: #fff;
-    padding: 22px 24px 18px; text-align: center;
+    background: #fff; color: #333;
+    padding: 24px 24px 20px; text-align: center;
+    border: 2px solid #971b1b;
+    border-radius: 8px !important;
+    margin: 15px 15px 0;
 }
 .ty-upsell-banner-top {
-    font-size: 16px; font-weight: 500; margin-bottom: 8px;
-    color: #fff;
+    font-size: 17px; font-weight: 500; margin-bottom: 8px;
+    color: #555;
     display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .ty-timer-pill {
@@ -170,19 +172,19 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-timer-pill.expired { background: #999; }
 .ty-upsell-banner h2 {
-    font-size: 22px !important; font-weight: 700 !important;
-    color: #fff !important; margin: 0 !important;
+    font-size: 24px !important; font-weight: 700 !important;
+    color: #222 !important; margin: 0 !important;
     line-height: 1.3 !important;
 }
 
-/* Benefits — white bg, red/colored text */
+/* Benefits — white bg, red colored text, centered */
 .ty-upsell-benefits {
     background: #fff;
-    padding: 18px 24px;
+    padding: 20px 24px 10px;
     display: flex; flex-direction: column; align-items: center; gap: 6px;
 }
 .ty-benefit {
-    font-size: 15px; font-weight: 600;
+    font-size: 16px; font-weight: 600;
     display: flex; align-items: center; gap: 8px;
 }
 .ty-benefit .ty-b-icon { font-size: 18px; }
@@ -203,10 +205,12 @@ body.woocommerce-order-received .woocommerce {
     align-items: flex-start;
 }
 .ty-upsell-img {
-    width: 130px; min-width: 130px; height: 130px;
+    width: 140px; min-width: 140px; height: 140px;
     object-fit: contain;
-    background: #f8f8f8;
-    border-radius: 6px !important;
+    background: linear-gradient(135deg, #f4a460, #971b1b);
+    border-radius: 8px !important;
+    padding: 8px;
+    box-sizing: border-box;
 }
 .ty-upsell-info { flex: 1; }
 .ty-upsell-qty {
@@ -231,20 +235,20 @@ body.woocommerce-order-received .woocommerce {
     line-height: 1.1;
 }
 
-/* Variation dropdown — flat border, full width (matches reference) */
-.ty-upsell-select-wrap { padding: 0 24px 16px; }
+/* Variation dropdown — centered, rounded border (matches reference) */
+.ty-upsell-select-wrap { padding: 0 60px 20px; }
 .ty-upsell-select {
-    width: 100%; height: 48px;
+    width: 100%; height: 50px;
     border: 1px solid #ccc;
-    border-radius: 6px !important;
-    padding: 0 16px;
+    border-radius: 25px !important;
+    padding: 0 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px; font-weight: 500;
+    font-size: 16px; font-weight: 500;
     color: #333; background: #fff;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 12px center;
+    background-position: right 16px center;
     background-size: 22px;
     cursor: pointer; outline: none;
 }
@@ -252,38 +256,38 @@ body.woocommerce-order-received .woocommerce {
 
 /* Buttons */
 .ty-upsell-buttons {
-    display: flex; gap: 10px;
-    padding: 8px 24px 24px;
+    display: flex; gap: 12px;
+    padding: 10px 15px 20px;
     align-items: center;
 }
-/* "Ne želim" — outline, rounded, smaller LEFT (matches reference exactly) */
+/* "Ne želim" — OUTLINE, red text+border, white bg, smaller LEFT */
 .ty-btn-skip {
-    flex: 0; min-width: 120px; height: 48px;
+    flex: 0; min-width: 130px; height: 52px;
     background: #fff; color: #971b1b;
     border: 2px solid #971b1b;
-    border-radius: 24px !important;
+    border-radius: 8px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px; font-weight: 500;
+    font-size: 16px; font-weight: 500;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — filled, rounded, larger RIGHT */
+/* "DODAJ U NARUDŽBU" — DARK GREY filled, white text, larger RIGHT */
 .ty-btn-add {
-    flex: 1; height: 48px;
-    background: #971b1b; color: #fff;
-    border: 2px solid #971b1b;
-    border-radius: 24px !important;
+    flex: 1; height: 52px;
+    background: #555; color: #fff;
+    border: 2px solid #555;
+    border-radius: 8px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px; font-weight: 700;
+    font-size: 16px; font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
 }
-.ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
+.ty-btn-add:hover { background: #444; border-color: #444; }
 .ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
 .ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
@@ -633,11 +637,11 @@ body.woocommerce-order-received .woocommerce {
 
         <!-- 📋 Order items -->
         <div class="ty-section">
-            <div class="ty-section-header" onclick="tyToggle(this)">
+            <div class="ty-section-header open" onclick="tyToggle(this)">
                 <span>Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
                 <span class="ty-chevron">+</span>
             </div>
-            <div class="ty-section-body">
+            <div class="ty-section-body open">
                 <div class="ty-section-body-inner">
                     <?php foreach ( $order->get_items() as $item ) :
                         $qty = $item->get_quantity();
@@ -646,6 +650,7 @@ body.woocommerce-order-received .woocommerce {
                             $meta_parts[] = wp_strip_all_tags( $m->display_key . ': ' . $m->display_value );
                         }
                     ?>
+                    <?php $is_upsell_item = $item->get_meta( '_noriks_upsell' ) === 'thank you upsell'; ?>
                     <div class="ty-item">
                         <div>
                             <div class="ty-item-name"><?php echo $qty; ?>× <?php echo esc_html( $item->get_name() ); ?></div>
@@ -653,7 +658,12 @@ body.woocommerce-order-received .woocommerce {
                             <div class="ty-item-meta"><?php echo esc_html( implode( ', ', $meta_parts ) ); ?></div>
                             <?php endif; ?>
                         </div>
-                        <div class="ty-item-price"><?php echo $order->get_formatted_line_subtotal( $item ); ?></div>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <div class="ty-item-price"><?php echo $order->get_formatted_line_subtotal( $item ); ?></div>
+                            <?php if ( $is_upsell_item && $order->get_status() === 'primary-hold' ) : ?>
+                            <button class="ty-upsell-remove" data-item-id="<?php echo $item->get_id(); ?>" data-order-id="<?php echo $order->get_id(); ?>" onclick="removeUpsellItem(this)" style="width:22px;height:22px;border-radius:50%;background:#971b1b;color:#fff;border:none;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex-shrink:0;">✕</button>
+                            <?php endif; ?>
+                        </div>
                     </div>
                     <?php endforeach; ?>
                     <div class="ty-totals">
@@ -670,11 +680,11 @@ body.woocommerce-order-received .woocommerce {
 
         <!-- 📍 Address -->
         <div class="ty-section">
-            <div class="ty-section-header" onclick="tyToggle(this)">
+            <div class="ty-section-header open" onclick="tyToggle(this)">
                 <span>Adresa dostave</span>
                 <span class="ty-chevron">+</span>
             </div>
-            <div class="ty-section-body">
+            <div class="ty-section-body open">
                 <div class="ty-section-body-inner">
                     <div class="ty-row"><span class="ty-row-label">Ime</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ); ?></span></div>
                     <div class="ty-row"><span class="ty-row-label">Adresa</span><span class="ty-row-value"><?php echo esc_html( $order->get_billing_address_1() . ' ' . $order->get_billing_address_2() ); ?></span></div>
@@ -771,6 +781,28 @@ body.woocommerce-order-received .woocommerce {
         if (overlay) overlay.classList.remove('show');
     }
 
+    // ─── Refresh order items after upsell add ───
+    function refreshOrderItems() {
+        var rfd = new FormData();
+        rfd.append('action', 'noriks_refresh_order_items');
+        rfd.append('order_id', orderId);
+        fetch(ajaxUrl, { method: 'POST', body: rfd })
+            .then(function(r) { return r.json(); })
+            .then(function(d) {
+                if (d.success) {
+                    // Update items section content
+                    var itemsInner = document.querySelector('.ty-section .ty-section-body-inner');
+                    if (itemsInner) itemsInner.innerHTML = d.data.items_html;
+                    // Update item count in header
+                    var headerSpan = document.querySelector('.ty-section .ty-section-header span:first-child');
+                    if (headerSpan && d.data.item_count) {
+                        headerSpan.textContent = 'Stavke narudžbe (' + d.data.item_count + ')';
+                    }
+                }
+            })
+            .catch(function(){});
+    }
+
     // ─── Step 1: "Ne želim" → show grid ───
     var skipBtn = document.getElementById('ty-btn-skip');
     if (skipBtn) {
@@ -801,6 +833,7 @@ body.woocommerce-order-received .woocommerce {
                 .then(function(d) {
                     addBtn.textContent = '✓ DODANO';
                     addBtn.classList.add('added');
+                    refreshOrderItems();
                     // Show grid after short delay
                     setTimeout(function() {
                         if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
@@ -840,6 +873,7 @@ body.woocommerce-order-received .woocommerce {
                         if (d.success) {
                             el.textContent = '✔ DODANO';
                             el.classList.add('added');
+                            refreshOrderItems();
                         } else {
                             el.textContent = d.data || 'Napaka';
                             setTimeout(function() { el.disabled = false; el.textContent = 'DODAJ'; }, 2000);
@@ -865,6 +899,48 @@ body.woocommerce-order-received .woocommerce {
         }
     });
 })();
+
+function removeUpsellItem(btn) {
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.textContent = '…';
+    var itemId = btn.getAttribute('data-item-id');
+    var orderId = btn.getAttribute('data-order-id');
+    var fd = new FormData();
+    fd.append('action', 'noriks_remove_upsell');
+    fd.append('order_id', orderId);
+    fd.append('item_id', itemId);
+    fetch('<?php echo admin_url("admin-ajax.php"); ?>', { method: 'POST', body: fd })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+            if (d.success) {
+                // Refresh order items
+                var rfd = new FormData();
+                rfd.append('action', 'noriks_refresh_order_items');
+                rfd.append('order_id', orderId);
+                fetch('<?php echo admin_url("admin-ajax.php"); ?>', { method: 'POST', body: rfd })
+                    .then(function(r2) { return r2.json(); })
+                    .then(function(d2) {
+                        if (d2.success) {
+                            var itemsInner = document.querySelector('.ty-section .ty-section-body-inner');
+                            if (itemsInner) itemsInner.innerHTML = d2.data.items_html;
+                            var headerSpan = document.querySelector('.ty-section .ty-section-header span:first-child');
+                            if (headerSpan && d2.data.item_count) {
+                                headerSpan.textContent = 'Stavke narudžbe (' + d2.data.item_count + ')';
+                            }
+                        }
+                    });
+            } else {
+                btn.disabled = false;
+                btn.textContent = '✕';
+                alert(d.data || 'Greška');
+            }
+        })
+        .catch(function() {
+            btn.disabled = false;
+            btn.textContent = '✕';
+        });
+}
 
 function tyToggle(h) {
     h.classList.toggle('open');
