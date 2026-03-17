@@ -6,7 +6,6 @@
  */
 
 include(get_template_directory() . '/functions/checkout_mods.php');
-include(get_template_directory() . '/functions/thankyou_upsell.php');
 include(get_template_directory() . '/functions/cpts.php');
 include(get_template_directory() . '/functions/options.php');
 include(get_template_directory() . '/functions/single_product_mods.php');
