@@ -147,15 +147,16 @@ body.woocommerce-order-received .woocommerce {
     background: #FFFFFF;
     margin: 0 0 15px; overflow: hidden;
     border-radius: 8px !important;
+    border: 2px solid #971b1b;
 }
 
 /* Banner — #2D2D2D bg, #971b1b BORDER AROUND ALL, white text */
 .ty-upsell-banner {
     background: #2D2D2D; color: #FFFFFF;
     padding: 22px 24px 18px; text-align: center;
-    border: 2px solid #971b1b;
-    border-radius: 8px !important;
-    margin: 16px 16px 0;
+    border: none;
+    border-radius: 0 !important;
+    margin: 0;
 }
 .ty-upsell-banner-top {
     font-size: 16px; font-weight: 400; margin-bottom: 8px;
@@ -180,7 +181,7 @@ body.woocommerce-order-received .woocommerce {
 /* Benefits — #FFF bg, icons #971b1b, text grey/red, centered */
 .ty-upsell-benefits {
     background: #FFFFFF;
-    padding: 18px 24px 14px;
+    padding: 20px 24px 16px;
     display: flex; flex-direction: column; align-items: center; gap: 4px;
 }
 .ty-benefit {
@@ -193,9 +194,10 @@ body.woocommerce-order-received .woocommerce {
 
 /* Product card wrapper */
 .ty-upsell-card {
-    background: #fff;
+    background: #FFFFFF;
     margin: 0;
     overflow: hidden;
+    padding-bottom: 4px;
 }
 
 /* Product card — exact reference colors */
@@ -208,8 +210,8 @@ body.woocommerce-order-received .woocommerce {
     width: 120px; min-width: 120px; height: 120px;
     object-fit: contain;
     background: #FADEC9;
-    border-radius: 10px !important;
-    padding: 8px;
+    border-radius: 8px !important;
+    padding: 10px;
     box-sizing: border-box;
 }
 .ty-upsell-info { flex: 1; }
@@ -225,9 +227,9 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-upsell-old-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px; color: #AAAAAA;
+    font-size: 16px; color: #AAAAAA;
     text-decoration: line-through;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 .ty-upsell-new-price {
     font-family: 'Roboto', sans-serif;
@@ -235,10 +237,10 @@ body.woocommerce-order-received .woocommerce {
     line-height: 1.1;
 }
 
-/* Variation dropdown — #CCC border, 4px radius, ~60% width centered */
-.ty-upsell-select-wrap { padding: 0 24px 18px; display: flex; justify-content: center; }
+/* Variation dropdown — #CCC border, 4px radius, ~55% width centered */
+.ty-upsell-select-wrap { padding: 0 24px 20px; display: flex; justify-content: center; }
 .ty-upsell-select {
-    width: 60%; height: 44px;
+    width: 55%; height: 46px;
     border: 1px solid #CCCCCC;
     border-radius: 4px !important;
     padding: 0 16px;
@@ -256,39 +258,41 @@ body.woocommerce-order-received .woocommerce {
 
 /* Buttons */
 .ty-upsell-buttons {
-    display: flex; gap: 12px;
-    padding: 10px 24px 24px;
-    align-items: center;
+    display: flex; gap: 14px;
+    padding: 10px 24px 28px;
+    align-items: stretch;
     justify-content: center;
 }
-/* "Ne želim" — OUTLINE pill, #971b1b border 1.5px, white bg, red text */
+/* "Ne želim" — OUTLINE pill, same height as DODAJ */
 .ty-btn-skip {
-    flex: 0; height: auto;
+    flex: 0; 
     background: #FFFFFF; color: #971b1b;
     border: 1.5px solid #971b1b;
     border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 15px; font-weight: 500;
-    padding: 10px 28px;
+    padding: 14px 32px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
+    line-height: 1;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — FILLED #971b1b pill, white text, bold uppercase */
+/* "DODAJ U NARUDŽBU" — FILLED #971b1b pill, same height */
 .ty-btn-add {
-    flex: 0; height: auto;
+    flex: 1;
     background: #971b1b; color: #FFFFFF;
     border: 1.5px solid #971b1b;
     border-radius: 25px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px; font-weight: 700;
+    font-size: 15px; font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 12px 40px;
+    padding: 14px 32px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
+    line-height: 1;
 }
 .ty-btn-add:hover { background: #7a1616; border-color: #7a1616; }
 .ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
