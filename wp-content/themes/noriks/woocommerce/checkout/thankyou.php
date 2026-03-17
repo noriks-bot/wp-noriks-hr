@@ -183,6 +183,14 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-benefit .ty-b-icon { font-size: 18px; }
 
+/* Product card wrapper */
+.ty-upsell-card {
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 4px !important;
+    overflow: hidden;
+}
+
 /* Product card */
 .ty-upsell-product {
     display: flex; gap: 20px;
@@ -467,37 +475,36 @@ body.woocommerce-order-received .woocommerce {
                 </div>
             </div>
 
-            <!-- Product -->
-            <div class="ty-upsell-product">
-                <img class="ty-upsell-img" src="<?php echo esc_url( $upsell_image ); ?>" alt="<?php echo esc_attr( $upsell_name ); ?>">
-                <div class="ty-upsell-info">
-                    <div class="ty-upsell-qty">1 x</div>
-                    <div class="ty-upsell-name"><?php echo esc_html( $upsell_name ); ?> | NORIKS</div>
-                    <div class="ty-upsell-old-price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
-                    <div class="ty-upsell-new-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+            <!-- Product + select + buttons wrapped in one card -->
+            <div class="ty-upsell-card">
+                <div class="ty-upsell-product">
+                    <img class="ty-upsell-img" src="<?php echo esc_url( $upsell_image ); ?>" alt="<?php echo esc_attr( $upsell_name ); ?>">
+                    <div class="ty-upsell-info">
+                        <div class="ty-upsell-qty">1 x</div>
+                        <div class="ty-upsell-name"><?php echo esc_html( $upsell_name ); ?> | NORIKS</div>
+                        <div class="ty-upsell-old-price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
+                        <div class="ty-upsell-new-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Variation -->
-            <?php if ( $upsell_variations ) : ?>
-            <div class="ty-upsell-select-wrap">
-                <select class="ty-upsell-select" id="ty-variation-select">
-                    <?php foreach ( $upsell_variations as $v ) : ?>
-                    <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>
-                        Crna, <?php echo esc_html( $v['size'] ); ?>
-                    </option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <?php endif; ?>
+                <?php if ( $upsell_variations ) : ?>
+                <div class="ty-upsell-select-wrap">
+                    <select class="ty-upsell-select" id="ty-variation-select">
+                        <?php foreach ( $upsell_variations as $v ) : ?>
+                        <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>
+                            Crna, <?php echo esc_html( $v['size'] ); ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <?php endif; ?>
 
-            <!-- Status -->
-            <div class="ty-upsell-status" id="ty-upsell-status"></div>
+                <div class="ty-upsell-status" id="ty-upsell-status"></div>
 
-            <!-- Red buttons -->
-            <div class="ty-upsell-buttons">
-                <button class="ty-btn-skip" id="ty-btn-skip">Ne želim</button>
-                <button class="ty-btn-add" id="ty-btn-add">DODAJ K NAROČILU</button>
+                <div class="ty-upsell-buttons">
+                    <button class="ty-btn-skip" id="ty-btn-skip">Ne želim</button>
+                    <button class="ty-btn-add" id="ty-btn-add">DODAJ K NAROČILU</button>
+                </div>
             </div>
 
             <!-- Red countdown bar -->
