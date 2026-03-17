@@ -214,6 +214,82 @@ body.woocommerce-order-received .woocommerce {
 /* Dismissed state */
 .ty-upsell-wrap.dismissed { display: none; }
 
+/* === Confirmation Modal === */
+.ty-modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5); z-index: 9999;
+    align-items: center; justify-content: center;
+    padding: 16px;
+}
+.ty-modal-overlay.show { display: flex; }
+.ty-modal {
+    background: #fff; border-radius: 12px;
+    max-width: 480px; width: 100%;
+    overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.ty-modal-body { padding: 24px; }
+.ty-modal-title {
+    font-size: 15px; font-weight: 500; color: #333;
+    margin-bottom: 18px;
+}
+.ty-modal-product {
+    display: flex; gap: 16px; align-items: flex-start;
+    margin-bottom: 20px;
+}
+.ty-modal-img {
+    width: 100px; height: 100px; min-width: 100px;
+    object-fit: cover; border-radius: 6px;
+    border: 1px solid #eee;
+}
+.ty-modal-info {}
+.ty-modal-qty {
+    font-size: 28px; font-weight: 700; color: #232f3e;
+    line-height: 1; margin-bottom: 4px;
+}
+.ty-modal-name {
+    font-size: 14px; color: #333; line-height: 1.3;
+    margin-bottom: 8px;
+}
+.ty-modal-price {
+    font-size: 22px; font-weight: 700; color: #e74c3c;
+}
+.ty-modal-total {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-top: 16px; border-top: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.ty-modal-total-label {
+    font-size: 16px; color: #333;
+}
+.ty-modal-total-value {
+    font-size: 24px; font-weight: 700; color: #232f3e;
+}
+.ty-modal-buttons {
+    display: flex; gap: 12px;
+}
+.ty-modal-btn-cancel {
+    flex: 1; height: 48px;
+    background: #fff; color: #e65100;
+    border: 2px solid #e65100; border-radius: 6px;
+    font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: background 0.2s;
+}
+.ty-modal-btn-cancel:hover { background: #fff5f0; }
+.ty-modal-btn-confirm {
+    flex: 1.3; height: 48px;
+    background: #232f3e; color: #fff;
+    border: none; border-radius: 6px;
+    font-size: 14px; font-weight: 700;
+    cursor: pointer; transition: background 0.2s;
+}
+.ty-modal-btn-confirm:hover { background: #1a2332; }
+.ty-modal-btn-confirm:disabled { background: #999; cursor: not-allowed; }
+.ty-modal-btn-confirm.added { background: #4CAF50; }
+.ty-modal-status {
+    text-align: center; margin-top: 12px;
+    font-size: 13px; color: #888; min-height: 18px;
+}
+
 /* === Collapsible sections === */
 .ty-section {
     background: #fff; border-radius: 10px;
@@ -420,6 +496,35 @@ body.woocommerce-order-received .woocommerce {
 
 </div>
 
+<!-- Confirmation modal -->
+<div class="ty-modal-overlay" id="ty-modal">
+    <div class="ty-modal">
+        <div class="ty-modal-body">
+            <div class="ty-modal-title">Izdelek bo dodan v obstoječe naročilo.</div>
+            <div class="ty-modal-product">
+                <img class="ty-modal-img" src="<?php echo esc_url( $upsell_image ); ?>" alt="">
+                <div class="ty-modal-info">
+                    <div class="ty-modal-qty">1x</div>
+                    <div class="ty-modal-name" id="ty-modal-name"><?php echo esc_html( $upsell_name ); ?> | NORIKS</div>
+                    <div class="ty-modal-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+                </div>
+            </div>
+            <div class="ty-modal-total">
+                <span class="ty-modal-total-label">Nova skupna cena:</span>
+                <span class="ty-modal-total-value" id="ty-modal-total"><?php
+                    $current_total = (float) $order->get_total();
+                    echo number_format( $current_total + $upsell_sale_price, 2, ',', '.' );
+                ?>€</span>
+            </div>
+            <div class="ty-modal-buttons">
+                <button class="ty-modal-btn-cancel" onclick="tyCloseModal()">Ne želim</button>
+                <button class="ty-modal-btn-confirm" id="ty-modal-confirm" onclick="tyConfirmUpsell()">Potrdite</button>
+            </div>
+            <div class="ty-modal-status" id="ty-modal-status"></div>
+        </div>
+    </div>
+</div>
+
 <?php else : ?>
     <div class="ty-container">
         <div class="ty-success"><h1>Narudžba</h1>
@@ -457,16 +562,35 @@ function tyToggle(h) {
     })();
 })();
 
-/* Add upsell */
+/* Open confirmation modal */
 function tyAddUpsell() {
-    var wrap = document.getElementById('ty-upsell');
     var btn = document.getElementById('ty-btn-add');
-    var status = document.getElementById('ty-upsell-status');
-    var select = document.getElementById('ty-variation-select');
     if (!btn || btn.disabled) return;
+    // Update modal name with selected variation
+    var select = document.getElementById('ty-variation-select');
+    var nameEl = document.getElementById('ty-modal-name');
+    if (select && nameEl) {
+        var opt = select.options[select.selectedIndex];
+        nameEl.textContent = '<?php echo esc_js( $upsell_name ); ?> | NORIKS - ' + opt.textContent.trim();
+    }
+    document.getElementById('ty-modal').classList.add('show');
+}
 
-    btn.disabled = true;
-    btn.textContent = 'DODAJEM...';
+function tyCloseModal() {
+    document.getElementById('ty-modal').classList.remove('show');
+}
+
+/* Confirm and send AJAX */
+function tyConfirmUpsell() {
+    var wrap = document.getElementById('ty-upsell');
+    var confirmBtn = document.getElementById('ty-modal-confirm');
+    var mainBtn = document.getElementById('ty-btn-add');
+    var status = document.getElementById('ty-modal-status');
+    var select = document.getElementById('ty-variation-select');
+    if (!confirmBtn || confirmBtn.disabled) return;
+
+    confirmBtn.disabled = true;
+    confirmBtn.textContent = 'Dodajem...';
     status.textContent = '';
 
     var fd = new FormData();
@@ -481,20 +605,24 @@ function tyAddUpsell() {
         .then(function(r){ return r.json(); })
         .then(function(d){
             if (d.success) {
-                btn.textContent = '✓ DODANO';
-                btn.classList.add('added');
-                status.textContent = 'Uspješno dodano! Novi ukupni iznos: ' + (d.data.total || '');
+                confirmBtn.textContent = '✓ Dodano';
+                confirmBtn.classList.add('added');
+                status.textContent = 'Uspješno dodano!';
                 status.style.color = '#2e7d32';
+                // Update main button
+                if (mainBtn) { mainBtn.textContent = '✓ DODANO'; mainBtn.classList.add('added'); mainBtn.disabled = true; }
+                // Close modal after delay
+                setTimeout(function(){ tyCloseModal(); }, 1500);
             } else {
-                btn.disabled = false;
-                btn.textContent = 'DODAJ K NAROČILU';
+                confirmBtn.disabled = false;
+                confirmBtn.textContent = 'Potrdite';
                 status.textContent = d.data || 'Greška';
                 status.style.color = '#e74c3c';
             }
         })
         .catch(function(){
-            btn.disabled = false;
-            btn.textContent = 'DODAJ K NAROČILU';
+            confirmBtn.disabled = false;
+            confirmBtn.textContent = 'Potrdite';
             status.textContent = 'Greška — pokušajte ponovno';
             status.style.color = '#e74c3c';
         });
