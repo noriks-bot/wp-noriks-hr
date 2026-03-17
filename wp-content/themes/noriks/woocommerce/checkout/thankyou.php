@@ -238,19 +238,20 @@ body.woocommerce-order-received .woocommerce {
     display: flex; gap: 4px;
     padding: 4px 24px 24px;
 }
-/* Buttons — product page style (red, full-width, bold white) */
+/* Buttons — product page style (red, full-width, bold white, rounded) */
 .ty-btn-skip,
 .ty-btn-add {
     flex: 1; height: 54px;
     background: #971b1b; color: #fff;
     border: none;
+    border-radius: 8px !important;
     font-size: 16px; font-weight: 700;
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
 .ty-btn-skip:hover,
 .ty-btn-add:hover { background: #7a1616; }
-.ty-btn-add:disabled { background: #999; cursor: not-allowed; }
+.ty-btn-add:disabled { background: #999; cursor: not-allowed; border-radius: 8px !important; }
 .ty-btn-add.added { background: #2E7D32; }
 .ty-upsell-status {
     text-align: center; padding: 0 24px 16px;
@@ -341,7 +342,8 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
     padding: 12px; background: #971b1b; color: #fff;
-    border: none; font-size: 13px; font-weight: 700;
+    border: none; border-radius: 8px !important;
+    font-size: 13px; font-weight: 700;
     cursor: pointer; transition: background 0.2s;
 }
 .ty-grid-item .g-add-btn:hover { background: #7a1616; }
@@ -355,7 +357,7 @@ body.woocommerce-order-received .woocommerce {
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
     background: #fff; color: #333;
-    border: none;
+    border: none; border-radius: 8px !important;
     font-size: 16px; font-weight: 700;
     cursor: pointer; text-align: center;
     transition: background 0.2s;
