@@ -146,48 +146,50 @@ body.woocommerce-order-received .woocommerce {
 .ty-upsell-wrap {
     background: #fff;
     margin: 0 0 15px; overflow: hidden;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
 }
 
-/* Banner — WHITE bg, RED BORDER around it, dark text centered */
+/* Banner — dark bg, LEFT RED BORDER, white text (1:1 reference) */
 .ty-upsell-banner {
-    background: #fff; color: #333;
-    padding: 24px 24px 20px; text-align: center;
-    border: 2px solid #971b1b;
-    border-radius: 8px !important;
-    margin: 15px 15px 0;
+    background: #3a3a3a; color: #fff;
+    padding: 22px 28px 20px; text-align: left;
+    border-left: 4px solid #971b1b;
+    border-radius: 0 !important;
+    margin: 0;
 }
 .ty-upsell-banner-top {
-    font-size: 17px; font-weight: 500; margin-bottom: 8px;
-    color: #555;
-    display: flex; align-items: center; justify-content: center; gap: 10px;
+    font-size: 16px; font-weight: 400; margin-bottom: 8px;
+    color: rgba(255,255,255,0.85);
+    display: flex; align-items: center; justify-content: flex-start; gap: 10px;
 }
 .ty-timer-pill {
     display: inline-block;
     background: #971b1b; color: #fff;
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 4px !important;
     font-size: 13px; font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
 .ty-timer-pill.expired { background: #999; }
 .ty-upsell-banner h2 {
-    font-size: 24px !important; font-weight: 700 !important;
-    color: #222 !important; margin: 0 !important;
-    line-height: 1.3 !important;
+    font-size: 22px !important; font-weight: 700 !important;
+    color: #fff !important; margin: 0 !important;
+    line-height: 1.35 !important;
 }
 
-/* Benefits — white bg, red colored text, centered */
+/* Benefits — white bg, red text, centered (matches reference) */
 .ty-upsell-benefits {
     background: #fff;
-    padding: 20px 24px 10px;
-    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 20px 24px 14px;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
 }
 .ty-benefit {
-    font-size: 16px; font-weight: 600;
-    display: flex; align-items: center; gap: 8px;
+    font-size: 15px; font-weight: 500;
+    display: flex; align-items: center; gap: 6px;
+    color: #971b1b;
 }
-.ty-benefit .ty-b-icon { font-size: 18px; }
+.ty-benefit .ty-b-icon { font-size: 16px; }
 .ty-benefit-green { color: #971b1b; }
 .ty-benefit-orange { color: #971b1b; }
 
@@ -198,96 +200,96 @@ body.woocommerce-order-received .woocommerce {
     overflow: hidden;
 }
 
-/* Product card — matches reference layout */
+/* Product card — 1:1 reference layout */
 .ty-upsell-product {
-    display: flex; gap: 20px;
-    padding: 24px 24px 16px;
+    display: flex; gap: 18px;
+    padding: 20px 24px 16px;
     align-items: flex-start;
 }
 .ty-upsell-img {
-    width: 140px; min-width: 140px; height: 140px;
+    width: 120px; min-width: 120px; height: 120px;
     object-fit: contain;
-    background: linear-gradient(135deg, #f4a460, #971b1b);
-    border-radius: 8px !important;
-    padding: 8px;
+    background: linear-gradient(135deg, #e8a87c, #971b1b);
+    border-radius: 10px !important;
+    padding: 10px;
     box-sizing: border-box;
 }
 .ty-upsell-info { flex: 1; }
 .ty-upsell-qty {
     font-family: 'Roboto', sans-serif;
-    font-size: 32px; font-weight: 700; color: #222;
-    line-height: 1; margin-bottom: 6px;
+    font-size: 30px; font-weight: 300; color: #222;
+    line-height: 1; margin-bottom: 4px;
 }
 .ty-upsell-name {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px; font-weight: 400; color: #555;
-    margin-bottom: 12px; line-height: 1.4;
+    font-size: 13px; font-weight: 400; color: #777;
+    margin-bottom: 8px; line-height: 1.4;
 }
 .ty-upsell-old-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px; color: #aaa;
+    font-size: 14px; color: #bbb;
     text-decoration: line-through;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 .ty-upsell-new-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 28px; font-weight: 700; color: #971b1b;
+    font-size: 26px; font-weight: 700; color: #971b1b;
     line-height: 1.1;
 }
 
-/* Variation dropdown — centered, rounded border (matches reference) */
-.ty-upsell-select-wrap { padding: 0 60px 20px; }
+/* Variation dropdown — centered, rounded, border (1:1 reference) */
+.ty-upsell-select-wrap { padding: 0 50px 18px; }
 .ty-upsell-select {
-    width: 100%; height: 50px;
+    width: 100%; height: 46px;
     border: 1px solid #ccc;
-    border-radius: 25px !important;
-    padding: 0 20px;
+    border-radius: 23px !important;
+    padding: 0 18px;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; font-weight: 500;
+    font-size: 15px; font-weight: 500;
     color: #333; background: #fff;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 16px center;
-    background-size: 22px;
+    background-position: right 14px center;
+    background-size: 20px;
     cursor: pointer; outline: none;
 }
 .ty-upsell-select:focus { border-color: #971b1b; }
 
 /* Buttons */
 .ty-upsell-buttons {
-    display: flex; gap: 12px;
-    padding: 10px 15px 20px;
+    display: flex; gap: 10px;
+    padding: 10px 24px 24px;
     align-items: center;
 }
-/* "Ne želim" — OUTLINE, red text+border, white bg, smaller LEFT */
+/* "Ne želim" — OUTLINE pill, red text+border, white bg, smaller LEFT (1:1 ref) */
 .ty-btn-skip {
-    flex: 0; min-width: 130px; height: 52px;
+    flex: 0; min-width: 110px; height: 46px;
     background: #fff; color: #971b1b;
     border: 2px solid #971b1b;
-    border-radius: 8px !important;
+    border-radius: 23px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; font-weight: 500;
+    font-size: 15px; font-weight: 500;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
 }
 .ty-btn-skip:hover { background: #fef5f5; }
-/* "DODAJ U NARUDŽBU" — DARK GREY filled, white text, larger RIGHT */
+/* "DODAJ U NARUDŽBU" — DARK NAVY filled pill, white text, larger RIGHT (1:1 ref) */
 .ty-btn-add {
-    flex: 1; height: 52px;
-    background: #555; color: #fff;
-    border: 2px solid #555;
-    border-radius: 8px !important;
+    flex: 1; height: 46px;
+    background: #232f3e; color: #fff;
+    border: 2px solid #232f3e;
+    border-radius: 23px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; font-weight: 700;
+    font-size: 14px; font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     cursor: pointer; transition: background 0.15s;
     text-align: center;
     white-space: nowrap;
 }
-.ty-btn-add:hover { background: #444; border-color: #444; }
+.ty-btn-add:hover { background: #1a2332; border-color: #1a2332; }
 .ty-btn-add:disabled { background: #999; border-color: #999; cursor: not-allowed; }
 .ty-btn-add.added { background: #2E7D32; border-color: #2E7D32; }
 .ty-upsell-status {
@@ -744,7 +746,8 @@ body.woocommerce-order-received .woocommerce {
             var banner = wrap.querySelector('.ty-upsell-banner');
             if (banner) {
                 banner.style.padding = '14px 24px';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;text-align:center;">PONUDA JE ISTEKLA</h2>';
+                banner.style.textAlign = 'center';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;">PONUDA JE ISTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
