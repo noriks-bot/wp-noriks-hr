@@ -167,15 +167,37 @@ button:focus {outline : none; outline-color: transparent !important;}
     border: none !important;
     height: auto !important;
     padding: 18px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-.xoo-wsc-ft-btn-checkout:hover { 
+.xoo-wsc-ft-btn-checkout,
+.xoo-wsc-ft-btn-checkout:hover,
+.xoo-wsc-ft-btn-checkout:focus,
+.xoo-wsc-ft-btn-checkout:active,
+.xoo-wsc-ft-btn-checkout:visited { 
     background: #c00 !important;
+    background-color: #c00 !important;
     opacity: 1 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
 }
 
 .xoo-wsc-ft-btn-checkout span { 
     color: #fff !important;
+}
+
+.xoo-wsc-ft-buttons-cont {
+    grid-template-columns: 1fr !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 
