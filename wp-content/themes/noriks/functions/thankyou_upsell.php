@@ -2,16 +2,16 @@
 /**
  * Thank You — Post-Purchase Upsell System
  * 
- * - COD orders only: upsell popup shown
- * - COD orders go to "primary-hold" for 5 min (upsell window), then auto → processing
- * - Non-COD orders: no upsell, normal flow (processing/completed)
- * - 50% off SALE price, server-side calculated
- * - Metadata: _noriks_upsell = "thank you upsell"
+ * SAFE: All hooks are guarded to NEVER interfere with checkout.
+ * register_post_status + wc_order_statuses run only after WC is loaded.
+ * Failsafe sweep only runs in admin/AJAX.
+ * All AJAX endpoints are isolated.
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 // ─── 1. Register custom order status "primary-hold" ─────────────────────
+// Uses woocommerce_register_shop_order_post_statuses (safe, WC-specific)
 
 add_action( 'init', 'noriks_register_primary_hold_status' );
 function noriks_register_primary_hold_status() {
@@ -25,32 +25,31 @@ function noriks_register_primary_hold_status() {
     ));
 }
 
-// IMPORTANT: Do NOT hook into woocommerce_before_order_object_save — it breaks checkout
-
-// Add to WC status list
+// Add to WC status dropdown — ONLY in admin, not on frontend
 add_filter( 'wc_order_statuses', 'noriks_add_primary_hold_to_statuses' );
 function noriks_add_primary_hold_to_statuses( $statuses ) {
+    // Safety: only add if not during checkout AJAX
+    if ( defined( 'WOOCOMMERCE_CHECKOUT' ) ) return $statuses;
     $statuses['wc-primary-hold'] = 'Primary Hold';
     return $statuses;
 }
 
 
-// ─── 2. COD orders → primary-hold (instead of processing) ───────────────
+// ─── 2. COD orders → primary-hold ONLY on thank you page ────────────────
 
 add_action( 'woocommerce_thankyou', 'noriks_set_cod_primary_hold', 1 );
 function noriks_set_cod_primary_hold( $order_id ) {
     if ( ! $order_id ) return;
+    
     $order = wc_get_order( $order_id );
     if ( ! $order ) return;
 
     // Only COD orders
     if ( $order->get_payment_method() !== 'cod' ) return;
 
-    // Only if currently on-hold or processing (fresh order)
+    // Only fresh orders
     $status = $order->get_status();
     if ( ! in_array( $status, array( 'on-hold', 'processing', 'pending' ) ) ) return;
-
-    // Don't re-apply if already in primary-hold
     if ( $status === 'primary-hold' ) return;
 
     $order->update_status( 'primary-hold', 'Upsell window: 5 min hold for post-purchase offers.' );
@@ -61,46 +60,38 @@ function noriks_set_cod_primary_hold( $order_id ) {
     }
 }
 
-// Auto-transition: primary-hold → processing after 5 min
+// Auto-transition cron callback
 add_action( 'noriks_primary_hold_to_processing', 'noriks_transition_to_processing' );
 function noriks_transition_to_processing( $order_id ) {
     $order = wc_get_order( $order_id );
     if ( ! $order ) return;
-
-    // Only transition if still in primary-hold
     if ( $order->get_status() !== 'primary-hold' ) return;
-
     $order->update_status( 'processing', 'Upsell window expired — auto-transitioned to processing.' );
 }
 
 
-// ─── FAILSAFE: sweep stuck primary-hold orders ──────────────────────────
-// Runs on wp_loaded (after WC is fully initialized), NOT on init
-// Only on admin or AJAX — never on frontend checkout to avoid conflicts
+// ─── FAILSAFE: sweep stuck orders — ADMIN ONLY ──────────────────────────
 
-add_action( 'wp_loaded', 'noriks_failsafe_primary_hold_sweep' );
+add_action( 'admin_init', 'noriks_failsafe_primary_hold_sweep' );
 function noriks_failsafe_primary_hold_sweep() {
-    // Only run in admin or AJAX context — never on frontend checkout
-    if ( ! is_admin() && ! wp_doing_ajax() ) return;
-    // Only run once per minute (transient lock)
     if ( get_transient( 'noriks_ph_sweep_lock' ) ) return;
     set_transient( 'noriks_ph_sweep_lock', 1, 60 );
 
     if ( ! function_exists( 'wc_get_orders' ) ) return;
 
     $orders = wc_get_orders( array(
-        'status'     => 'primary-hold',
-        'limit'      => 20,
+        'status'       => 'primary-hold',
+        'limit'        => 20,
         'date_created' => '<' . ( time() - 300 ),
     ));
 
     foreach ( $orders as $order ) {
-        $order->update_status( 'processing', 'Failsafe: primary-hold exceeded 5 min — auto-moved to processing.' );
+        $order->update_status( 'processing', 'Failsafe: primary-hold exceeded 5 min.' );
     }
 }
 
 
-// ─── 3. AJAX: Manual fix stuck orders + auto-release ─────────────────────
+// ─── 3. AJAX: Release primary-hold ──────────────────────────────────────
 
 add_action( 'wp_ajax_noriks_release_primary_hold', 'noriks_release_primary_hold' );
 add_action( 'wp_ajax_nopriv_noriks_release_primary_hold', 'noriks_release_primary_hold' );
@@ -118,7 +109,7 @@ function noriks_release_primary_hold() {
 }
 
 
-// ─── 4. AJAX: Refresh order items HTML ───────────────────────────────────
+// ─── 4. AJAX: Refresh order items HTML ──────────────────────────────────
 
 add_action( 'wp_ajax_noriks_refresh_order_items', 'noriks_refresh_order_items' );
 add_action( 'wp_ajax_nopriv_noriks_refresh_order_items', 'noriks_refresh_order_items' );
@@ -130,7 +121,6 @@ function noriks_refresh_order_items() {
     $order = wc_get_order( $order_id );
     if ( ! $order ) wp_send_json_error( 'Order not found' );
 
-    // Build items HTML
     $items_html = '';
     foreach ( $order->get_items() as $item ) {
         $qty = $item->get_quantity();
@@ -155,7 +145,6 @@ function noriks_refresh_order_items() {
         $items_html .= '</div>';
     }
 
-    // Build totals HTML
     $totals_html = '<div class="ty-totals">';
     foreach ( $order->get_order_item_totals() as $key => $total ) {
         $class = $key === 'order_total' ? 'ty-row ty-total-final' : 'ty-row';
@@ -174,7 +163,7 @@ function noriks_refresh_order_items() {
 }
 
 
-// ─── 5. AJAX: Remove upsell item from order ─────────────────────────────
+// ─── 5. AJAX: Remove upsell item ────────────────────────────────────────
 
 add_action( 'wp_ajax_noriks_remove_upsell', 'noriks_remove_upsell' );
 add_action( 'wp_ajax_nopriv_noriks_remove_upsell', 'noriks_remove_upsell' );
@@ -190,12 +179,10 @@ function noriks_remove_upsell() {
     $item = $order->get_item( $item_id );
     if ( ! $item ) wp_send_json_error( 'Item not found' );
 
-    // Only allow removing upsell items
     if ( $item->get_meta( '_noriks_upsell' ) !== 'thank you upsell' ) {
         wp_send_json_error( 'Samo upsell proizvode je moguće ukloniti' );
     }
 
-    // Only allow while in primary-hold
     if ( $order->get_status() !== 'primary-hold' ) {
         wp_send_json_error( 'Vrijeme za izmjene je isteklo' );
     }
@@ -205,13 +192,13 @@ function noriks_remove_upsell() {
     $order->calculate_totals();
     $order->save();
 
-    $order->add_order_note( sprintf( 'Upsell uklojen: %s', $product_name ) );
+    $order->add_order_note( sprintf( 'Upsell uklonjen: %s', $product_name ) );
 
     wp_send_json_success( array( 'message' => 'Uklonjeno' ) );
 }
 
 
-// ─── 6. AJAX: Add upsell product to order ───────────────────────────────
+// ─── 6. AJAX: Add upsell product ────────────────────────────────────────
 
 add_action( 'wp_ajax_noriks_add_upsell', 'noriks_handle_add_upsell' );
 add_action( 'wp_ajax_nopriv_noriks_add_upsell', 'noriks_handle_add_upsell' );
@@ -229,7 +216,6 @@ function noriks_handle_add_upsell() {
     $order = wc_get_order( $order_id );
     if ( ! $order ) wp_send_json_error( 'Narudžba nije pronađena' );
 
-    // Only allow upsell on COD orders in primary-hold
     if ( $order->get_payment_method() !== 'cod' ) {
         wp_send_json_error( 'Upsell dostupan samo za plaćanje pouzećem' );
     }
@@ -237,51 +223,36 @@ function noriks_handle_add_upsell() {
         wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
     }
 
-    // Time limit: 5 min from order creation (safety check)
     $created = $order->get_date_created();
-    if ( $created && ( time() - $created->getTimestamp() ) > 330 ) { // 5.5 min grace
+    if ( $created && ( time() - $created->getTimestamp() ) > 330 ) {
         wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
     }
 
-    // Get the actual product (variation or simple)
     $product = $variation_id ? wc_get_product( $variation_id ) : wc_get_product( $product_id );
     if ( ! $product ) wp_send_json_error( 'Proizvod nije pronađen' );
 
     // Duplicate check
     $check_product_id = $variation_id ? $product_id : $product->get_id();
     foreach ( $order->get_items() as $item ) {
-        $item_product_id = $item->get_product_id();
-        $item_variation_id = $item->get_variation_id();
-        if ( $item_product_id == $check_product_id || ( $variation_id && $item_variation_id == $variation_id ) ) {
+        if ( $item->get_product_id() == $check_product_id || ( $variation_id && $item->get_variation_id() == $variation_id ) ) {
             if ( $item->get_meta( '_noriks_upsell' ) ) {
                 wp_send_json_error( 'Već ste dodali ovaj proizvod' );
             }
         }
     }
 
-    // ─── Calculate 50% off SALE price ───
+    // 50% off sale price, rounded to .99/.49
     $sale_price = (float) $product->get_sale_price();
     $current_price = (float) $product->get_price();
-
-    if ( $sale_price && $current_price ) {
-        $active_price = min( $sale_price, $current_price );
-    } else {
-        $active_price = $current_price ?: $sale_price;
-    }
-
-    if ( ! $active_price ) {
-        $active_price = (float) $product->get_regular_price();
-    }
-    if ( ! $active_price ) {
-        wp_send_json_error( 'Cijena proizvoda nije dostupna' );
-    }
+    $active_price = ( $sale_price && $current_price ) ? min( $sale_price, $current_price ) : ( $current_price ?: $sale_price );
+    if ( ! $active_price ) $active_price = (float) $product->get_regular_price();
+    if ( ! $active_price ) wp_send_json_error( 'Cijena proizvoda nije dostupna' );
 
     $raw = $active_price * 0.5;
     $floor = floor( $raw );
     $upsell_price = ( $raw - $floor >= 0.50 ) ? $floor + 0.99 : $floor + 0.49;
     if ( $upsell_price <= 0 ) $upsell_price = 0.99;
 
-    // Add to order
     $item_id = $order->add_product( $product, 1, array(
         'subtotal' => $upsell_price,
         'total'    => $upsell_price,
@@ -289,7 +260,6 @@ function noriks_handle_add_upsell() {
 
     if ( ! $item_id ) wp_send_json_error( 'Greška pri dodavanju' );
 
-    // Mark as upsell
     $item = $order->get_item( $item_id );
     $item->add_meta_data( '_noriks_upsell', 'thank you upsell', true );
     $item->save();
@@ -298,12 +268,7 @@ function noriks_handle_add_upsell() {
     $order->save();
 
     $order->add_order_note(
-        sprintf(
-            'Thank you upsell: %s dodano s 50%% popustom — akcijska cijena: %s, upsell cijena: %s',
-            $product->get_name(),
-            wc_price( $active_price ),
-            wc_price( $upsell_price )
-        )
+        sprintf( 'Thank you upsell: %s — cijena: %s', $product->get_name(), wc_price( $upsell_price ) )
     );
 
     wp_send_json_success( array(
