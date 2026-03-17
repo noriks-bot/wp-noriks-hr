@@ -251,26 +251,38 @@ body.woocommerce-order-received .woocommerce {
 
 /* Buttons — ALL RED */
 .ty-upsell-buttons {
-    display: flex; gap: 4px;
-    padding: 4px 24px 24px;
+    display: flex; gap: 10px;
+    padding: 8px 24px 24px;
 }
-/* Buttons — matches .single_add_to_cart_button on product page */
-.ty-btn-skip,
+/* "Ne želim" — outline, smaller, dark border+text */
+.ty-btn-skip {
+    flex: 0; height: 50px;
+    background: #fff; color: #333;
+    border: 2px solid #333;
+    border-radius: 8px !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; font-weight: 600;
+    padding: 0 28px;
+    cursor: pointer; transition: background 0.15s;
+    text-align: center;
+    white-space: nowrap;
+}
+.ty-btn-skip:hover { background: #f5f5f5; }
+/* "DODAJ U NARUDŽBU" — filled red, wider (flex:1) */
 .ty-btn-add {
-    flex: 1; height: 60px;
+    flex: 1; height: 50px;
     background: #971b1b; color: #fff;
     border: none;
     border-radius: 8px !important;
     font-family: 'Roboto', sans-serif;
-    font-size: 17px; font-weight: 600;
-    letter-spacing: 0.2px;
-    text-transform: none;
+    font-size: 17px; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
     cursor: pointer; transition: background 0.2s;
     text-align: center;
 }
-.ty-btn-skip:hover,
 .ty-btn-add:hover { background: #7a1616; }
-.ty-btn-add:disabled { background: #999; cursor: not-allowed; border-radius: 8px !important; }
+.ty-btn-add:disabled { background: #999; cursor: not-allowed; }
 .ty-btn-add.added { background: #2E7D32; }
 .ty-upsell-status {
     text-align: center; padding: 0 24px 16px;
