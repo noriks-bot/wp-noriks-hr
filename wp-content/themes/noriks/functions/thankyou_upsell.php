@@ -115,7 +115,25 @@ function noriks_failsafe_on_order_save( $order ) {
 }
 
 
-// ─── 3. AJAX: Add upsell product to order ───────────────────────────────
+// ─── 3. AJAX: Manual fix stuck orders + auto-release ─────────────────────
+
+add_action( 'wp_ajax_noriks_release_primary_hold', 'noriks_release_primary_hold' );
+add_action( 'wp_ajax_nopriv_noriks_release_primary_hold', 'noriks_release_primary_hold' );
+
+function noriks_release_primary_hold() {
+    $order_id = absint( $_POST['order_id'] ?? 0 );
+    if ( ! $order_id ) wp_send_json_error( 'Missing order_id' );
+
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) wp_send_json_error( 'Order not found' );
+    if ( $order->get_status() !== 'primary-hold' ) wp_send_json_success( 'Already released' );
+
+    $order->update_status( 'processing', 'Released from primary-hold (timer expired on client).' );
+    wp_send_json_success( 'Released to processing' );
+}
+
+
+// ─── 4. AJAX: Add upsell product to order ───────────────────────────────
 
 add_action( 'wp_ajax_noriks_add_upsell', 'noriks_handle_add_upsell' );
 add_action( 'wp_ajax_nopriv_noriks_add_upsell', 'noriks_handle_add_upsell' );

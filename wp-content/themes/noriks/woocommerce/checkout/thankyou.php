@@ -745,6 +745,11 @@ body.woocommerce-order-received .woocommerce {
                     h.nextElementSibling.classList.add('open');
                 }
             });
+            // Release primary-hold → processing via AJAX
+            var releaseFd = new FormData();
+            releaseFd.append('action', 'noriks_release_primary_hold');
+            releaseFd.append('order_id', orderId);
+            fetch(ajaxUrl, { method: 'POST', body: releaseFd }).catch(function(){});
             return;
         }
         var m = Math.floor(rem/60), s = rem%60;
@@ -850,6 +855,15 @@ body.woocommerce-order-received .woocommerce {
         // Close grid
         document.getElementById('ty-grid-close').addEventListener('click', closeAll);
     }
+    // Backup: if user leaves page while timer still running, use sendBeacon to release
+    window.addEventListener('pagehide', function() {
+        if (rem <= 0) {
+            var data = new URLSearchParams();
+            data.append('action', 'noriks_release_primary_hold');
+            data.append('order_id', orderId);
+            navigator.sendBeacon(ajaxUrl, data);
+        }
+    });
 })();
 
 function tyToggle(h) {
