@@ -184,10 +184,10 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-benefit .ty-b-icon { font-size: 18px; }
 
-/* Product card wrapper */
+/* Product card wrapper — clean white card */
 .ty-upsell-card {
     background: #fff;
-    margin: 0 15px;
+    margin: 0 15px 15px;
     border-radius: 4px !important;
     overflow: hidden;
 }
@@ -205,21 +205,24 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-upsell-info { flex: 1; }
 .ty-upsell-qty {
-    font-size: 32px; font-weight: 700; color: #232f3e;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px; font-weight: 700; color: #222;
     line-height: 1; margin-bottom: 4px;
 }
 .ty-upsell-name {
-    font-size: 15px; font-weight: 500; color: #333;
-    margin-bottom: 10px; line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; font-weight: 400; color: #555;
+    margin-bottom: 10px; line-height: 1.4;
 }
 .ty-upsell-old-price {
+    font-family: 'Roboto', sans-serif;
     font-size: 14px; color: #999;
     text-decoration: line-through;
     margin-bottom: 2px;
 }
 .ty-upsell-new-price {
     font-family: 'Roboto', sans-serif;
-    font-size: 28px; font-weight: 700; color: #cc0000;
+    font-size: 24px; font-weight: 700; color: #cc0000;
     line-height: 1.1;
 }
 
@@ -330,20 +333,25 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item {
     background: #fff; text-align: center;
     padding: 12px; border: 1px solid #eee;
+    border-radius: 4px !important;
     color: #333;
+    transition: border-color 0.2s;
 }
+.ty-grid-item:hover { border-color: #cc0000; }
 .ty-grid-item img {
     width: 100%; max-width: 120px; height: auto;
     object-fit: contain; margin-bottom: 8px;
 }
 .ty-grid-item .g-name {
-    font-size: 12px; color: #333; margin-bottom: 5px;
-    line-height: 1.3; min-height: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px; color: #222; margin-bottom: 5px;
+    line-height: 1.3; min-height: 32px; font-weight: 500;
 }
 .ty-grid-item .g-price-old {
     text-decoration: line-through; color: #999; font-size: 12px;
 }
 .ty-grid-item .g-price-new {
+    font-family: 'Roboto', sans-serif;
     color: #cc0000; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
@@ -388,17 +396,22 @@ body.woocommerce-order-received .woocommerce {
     margin-bottom: 15px; overflow: hidden;
     border-radius: 4px !important;
 }
+/* Section headers — matches product page collapsibles (Detalji o proizvodu, etc.) */
 .ty-section-header {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 20px; cursor: pointer; user-select: none;
-    font-size: 15px; font-weight: 700; color: #232f3e;
-    border-bottom: 1px solid transparent; transition: border-color 0.2s;
+    padding: 18px 20px; cursor: pointer; user-select: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; font-weight: 700; color: #222;
+    font-style: italic;
+    border-bottom: 1px solid #eee;
+    transition: border-color 0.2s;
 }
-.ty-section-header.open { border-bottom-color: #f0f0f0; }
+.ty-section-header.open { border-bottom-color: #eee; }
 .ty-section-header .ty-chevron {
-    font-size: 11px; color: #999; transition: transform 0.25s; display: inline-block;
+    font-size: 18px; color: #222; font-weight: 300; font-style: normal;
+    transition: transform 0.25s; display: inline-block;
 }
-.ty-section-header.open .ty-chevron { transform: rotate(180deg); }
+.ty-section-header.open .ty-chevron { transform: rotate(45deg); }
 .ty-section-body {
     max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
 }
@@ -406,19 +419,20 @@ body.woocommerce-order-received .woocommerce {
 .ty-section-body-inner { padding: 14px 20px; }
 .ty-row {
     display: flex; justify-content: space-between; align-items: baseline;
-    padding: 7px 0; font-size: 14px; border-bottom: 1px solid #f5f5f5;
+    padding: 8px 0; font-family: 'Roboto', sans-serif;
+    font-size: 14px; border-bottom: 1px solid #f0f0f0;
 }
 .ty-row:last-child { border-bottom: none; }
-.ty-row-label { color: #888; }
-.ty-row-value { font-weight: 600; color: #232f3e; text-align: right; max-width: 60%; }
+.ty-row-label { color: #888; font-weight: 400; }
+.ty-row-value { font-weight: 600; color: #222; text-align: right; max-width: 60%; }
 .ty-item {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 10px 0; border-bottom: 1px solid #f5f5f5;
+    padding: 10px 0; border-bottom: 1px solid #f0f0f0;
 }
 .ty-item:last-child { border-bottom: none; }
-.ty-item-name { font-size: 14px; color: #232f3e; flex: 1; }
+.ty-item-name { font-family: 'Roboto', sans-serif; font-size: 14px; color: #222; flex: 1; }
 .ty-item-meta { font-size: 12px; color: #999; margin-top: 2px; }
-.ty-item-price { font-weight: 600; font-size: 14px; color: #232f3e; margin-left: 12px; white-space: nowrap; }
+.ty-item-price { font-family: 'Roboto', sans-serif; font-weight: 600; font-size: 14px; color: #222; margin-left: 12px; white-space: nowrap; }
 .ty-totals { margin-top: 8px; border-top: 2px solid #eee; padding-top: 8px; }
 .ty-totals .ty-row { padding: 5px 0; }
 .ty-totals .ty-total-final { font-size: 16px; font-weight: 700; }
@@ -540,7 +554,7 @@ body.woocommerce-order-received .woocommerce {
                         <h3 style="margin:0;">Še več izdelkov s popustom</h3>
                         <h2>Dodajte katerikoli izdelek s 50% popustom</h2>
                     </span>
-                    <span class="ty-chevron" style="color:#fff;">▼</span>
+                    <span class="ty-chevron" style="color:#fff;">+</span>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
@@ -601,7 +615,7 @@ body.woocommerce-order-received .woocommerce {
         <div class="ty-section">
             <div class="ty-section-header" onclick="tyToggle(this)">
                 <span>Stavke narudžbe (<?php echo $order->get_item_count(); ?>)</span>
-                <span class="ty-chevron">▼</span>
+                <span class="ty-chevron">+</span>
             </div>
             <div class="ty-section-body">
                 <div class="ty-section-body-inner">
@@ -638,7 +652,7 @@ body.woocommerce-order-received .woocommerce {
         <div class="ty-section">
             <div class="ty-section-header" onclick="tyToggle(this)">
                 <span>Adresa dostave</span>
-                <span class="ty-chevron">▼</span>
+                <span class="ty-chevron">+</span>
             </div>
             <div class="ty-section-body">
                 <div class="ty-section-body-inner">
@@ -689,10 +703,20 @@ body.woocommerce-order-received .woocommerce {
 
     function tick() {
         if (rem <= 0) {
-            if (timerEl) { timerEl.textContent = 'Isteklo'; timerEl.classList.add('expired'); }
-            if (barEl) barEl.textContent = 'PONUDA ISTEKLA';
-            var addBtn = document.getElementById('ty-btn-add');
-            if (addBtn) { addBtn.disabled = true; addBtn.textContent = 'PONUDA ISTEKLA'; }
+            // Hide everything except the red banner with expired message
+            var card = wrap.querySelector('.ty-upsell-card');
+            var benefits = wrap.querySelector('.ty-upsell-benefits');
+            var bottomBar = wrap.querySelector('.ty-upsell-bottom-bar');
+            if (card) card.style.display = 'none';
+            if (benefits) benefits.style.display = 'none';
+            if (bottomBar) bottomBar.style.display = 'none';
+            // Replace banner content with expired message
+            var banner = wrap.querySelector('.ty-upsell-banner');
+            if (banner) {
+                banner.innerHTML = '<h2 style="margin:0;padding:10px 0;font-size:20px;font-weight:700;color:#fff;text-align:center;">PONUDBA SE JE IZTEKLA</h2>';
+            }
+            // Also hide the grid section if visible
+            if (overlay) overlay.style.display = 'none';
             return;
         }
         var m = Math.floor(rem/60), s = rem%60;
