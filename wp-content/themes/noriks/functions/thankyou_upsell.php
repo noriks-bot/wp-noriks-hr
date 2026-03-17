@@ -1,12 +1,78 @@
 <?php
 /**
- * Thank You — Post-Purchase Upsell AJAX
- * Adds a product (with 50% discount) to an existing order.
+ * Thank You — Post-Purchase Upsell System
  * 
- * Price is calculated SERVER-SIDE (50% of regular price) — never trusts client-sent price.
- * Metadata '_noriks_upsell' = 'thank you upsell' marks items from this flow.
+ * - COD orders only: upsell popup shown
+ * - COD orders go to "primary-hold" for 5 min (upsell window), then auto → processing
+ * - Non-COD orders: no upsell, normal flow (processing/completed)
+ * - 50% off SALE price, server-side calculated
+ * - Metadata: _noriks_upsell = "thank you upsell"
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
+
+
+// ─── 1. Register custom order status "primary-hold" ─────────────────────
+
+add_action( 'init', 'noriks_register_primary_hold_status' );
+function noriks_register_primary_hold_status() {
+    register_post_status( 'wc-primary-hold', array(
+        'label'                     => 'Primary Hold',
+        'public'                    => true,
+        'exclude_from_search'       => false,
+        'show_in_admin_all_list'    => true,
+        'show_in_admin_status_list' => true,
+        'label_count'               => _n_noop( 'Primary Hold <span class="count">(%s)</span>', 'Primary Hold <span class="count">(%s)</span>' ),
+    ));
+}
+
+// Add to WC status list
+add_filter( 'wc_order_statuses', 'noriks_add_primary_hold_to_statuses' );
+function noriks_add_primary_hold_to_statuses( $statuses ) {
+    $statuses['wc-primary-hold'] = 'Primary Hold';
+    return $statuses;
+}
+
+
+// ─── 2. COD orders → primary-hold (instead of processing) ───────────────
+
+add_action( 'woocommerce_thankyou', 'noriks_set_cod_primary_hold', 1 );
+function noriks_set_cod_primary_hold( $order_id ) {
+    if ( ! $order_id ) return;
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) return;
+
+    // Only COD orders
+    if ( $order->get_payment_method() !== 'cod' ) return;
+
+    // Only if currently on-hold or processing (fresh order)
+    $status = $order->get_status();
+    if ( ! in_array( $status, array( 'on-hold', 'processing', 'pending' ) ) ) return;
+
+    // Don't re-apply if already in primary-hold
+    if ( $status === 'primary-hold' ) return;
+
+    $order->update_status( 'primary-hold', 'Upsell window: 5 min hold for post-purchase offers.' );
+
+    // Schedule auto-transition to processing after 5 minutes
+    if ( ! wp_next_scheduled( 'noriks_primary_hold_to_processing', array( $order_id ) ) ) {
+        wp_schedule_single_event( time() + 300, 'noriks_primary_hold_to_processing', array( $order_id ) );
+    }
+}
+
+// Auto-transition: primary-hold → processing after 5 min
+add_action( 'noriks_primary_hold_to_processing', 'noriks_transition_to_processing' );
+function noriks_transition_to_processing( $order_id ) {
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) return;
+
+    // Only transition if still in primary-hold
+    if ( $order->get_status() !== 'primary-hold' ) return;
+
+    $order->update_status( 'processing', 'Upsell window expired — auto-transitioned to processing.' );
+}
+
+
+// ─── 3. AJAX: Add upsell product to order ───────────────────────────────
 
 add_action( 'wp_ajax_noriks_add_upsell', 'noriks_handle_add_upsell' );
 add_action( 'wp_ajax_nopriv_noriks_add_upsell', 'noriks_handle_add_upsell' );
@@ -24,9 +90,17 @@ function noriks_handle_add_upsell() {
     $order = wc_get_order( $order_id );
     if ( ! $order ) wp_send_json_error( 'Narudžba nije pronađena' );
 
-    // Time limit: 10 min from order creation
+    // Only allow upsell on COD orders in primary-hold
+    if ( $order->get_payment_method() !== 'cod' ) {
+        wp_send_json_error( 'Upsell dostupan samo za plaćanje pouzećem' );
+    }
+    if ( $order->get_status() !== 'primary-hold' ) {
+        wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
+    }
+
+    // Time limit: 5 min from order creation (safety check)
     $created = $order->get_date_created();
-    if ( $created && ( time() - $created->getTimestamp() ) > 600 ) {
+    if ( $created && ( time() - $created->getTimestamp() ) > 330 ) { // 5.5 min grace
         wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
     }
 
@@ -34,34 +108,28 @@ function noriks_handle_add_upsell() {
     $product = $variation_id ? wc_get_product( $variation_id ) : wc_get_product( $product_id );
     if ( ! $product ) wp_send_json_error( 'Proizvod nije pronađen' );
 
-    // For variations, also need the parent product ID for duplicate check
+    // Duplicate check
     $check_product_id = $variation_id ? $product_id : $product->get_id();
-
-    // Check if this product was already added as upsell
     foreach ( $order->get_items() as $item ) {
         $item_product_id = $item->get_product_id();
         $item_variation_id = $item->get_variation_id();
-        if ( $item_product_id == $check_product_id || $item_variation_id == $variation_id ) {
-            $meta = $item->get_meta( '_noriks_upsell' );
-            if ( $meta ) {
+        if ( $item_product_id == $check_product_id || ( $variation_id && $item_variation_id == $variation_id ) ) {
+            if ( $item->get_meta( '_noriks_upsell' ) ) {
                 wp_send_json_error( 'Već ste dodali ovaj proizvod' );
             }
         }
     }
 
-    // ─── Calculate 50% discount SERVER-SIDE ───
-    // Use the LOWEST of sale price / active price
+    // ─── Calculate 50% off SALE price ───
     $sale_price = (float) $product->get_sale_price();
     $current_price = (float) $product->get_price();
-    
-    // Pick whichever is lower (and non-zero)
+
     if ( $sale_price && $current_price ) {
         $active_price = min( $sale_price, $current_price );
     } else {
         $active_price = $current_price ?: $sale_price;
     }
-    
-    // Fallback to regular price if nothing else
+
     if ( ! $active_price ) {
         $active_price = (float) $product->get_regular_price();
     }
@@ -69,10 +137,9 @@ function noriks_handle_add_upsell() {
         wp_send_json_error( 'Cijena proizvoda nije dostupna' );
     }
 
-    // Apply 50% discount on the sale/active price
     $upsell_price = round( $active_price * 0.5, 2 );
 
-    // Add product to order with the discounted price
+    // Add to order
     $item_id = $order->add_product( $product, 1, array(
         'subtotal' => $upsell_price,
         'total'    => $upsell_price,
@@ -85,11 +152,9 @@ function noriks_handle_add_upsell() {
     $item->add_meta_data( '_noriks_upsell', 'thank you upsell', true );
     $item->save();
 
-    // Recalculate order totals
     $order->calculate_totals();
     $order->save();
 
-    // Add order note for admin visibility
     $order->add_order_note(
         sprintf(
             'Thank you upsell: %s dodano s 50%% popustom — akcijska cijena: %s, upsell cijena: %s',
@@ -100,10 +165,9 @@ function noriks_handle_add_upsell() {
     );
 
     wp_send_json_success( array(
-        'message'        => 'Dodano',
-        'product_name'   => $product->get_name(),
-        'original_price' => $regular_price,
-        'upsell_price'   => $upsell_price,
-        'total'          => $order->get_formatted_order_total(),
+        'message'      => 'Dodano',
+        'product_name' => $product->get_name(),
+        'upsell_price' => $upsell_price,
+        'total'        => $order->get_formatted_order_total(),
     ));
 }

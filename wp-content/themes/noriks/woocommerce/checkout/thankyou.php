@@ -497,7 +497,8 @@ body.woocommerce-order-received .woocommerce {
             <span class="ty-order-num">Narudžba #<?php echo $order->get_order_number(); ?></span>
         </div>
 
-        <!-- ═══ STEP 1: SINGLE UPSELL ═══ -->
+        <!-- ═══ STEP 1: SINGLE UPSELL (COD only) ═══ -->
+        <?php if ( $order->get_payment_method() === 'cod' ) : ?>
         <div class="ty-upsell-wrap" id="ty-upsell"
              data-order-id="<?php echo $order->get_id(); ?>"
              data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
@@ -626,6 +627,7 @@ body.woocommerce-order-received .woocommerce {
             </div>
         </div>
         <?php endif; ?>
+        <?php endif; /* COD only */ ?>
 
         <!-- 📋 Order items -->
         <div class="ty-section">
