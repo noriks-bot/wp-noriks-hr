@@ -159,7 +159,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Timer/header — dark bg */
 .tyuo_timer {
-    background: #232f3e;
+    background: #971b1b;
     padding: 18px 20px;
     text-align: center;
     color: #fff;
