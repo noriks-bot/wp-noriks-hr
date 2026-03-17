@@ -152,7 +152,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Banner — #2D2D2D bg, #971b1b BORDER AROUND ALL, white text */
 .ty-upsell-banner {
-    background: #333333; color: #FFFFFF;
+    background: #FFFFFF; color: #333;
     padding: 22px 24px 18px; text-align: center;
     border: none;
     border-radius: 0 !important;
@@ -160,7 +160,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-upsell-banner-top {
     font-size: 16px; font-weight: 400; margin-bottom: 8px;
-    color: #FFFFFF;
+    color: #666;
     display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .ty-timer-pill {
@@ -174,7 +174,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-timer-pill.expired { background: #999; }
 .ty-upsell-banner h2 {
     font-size: 22px !important; font-weight: 700 !important;
-    color: #FFFFFF !important; margin: 0 !important;
+    color: #333 !important; margin: 0 !important;
     line-height: 1.35 !important;
 }
 
@@ -754,7 +754,7 @@ body.woocommerce-order-received .woocommerce {
             if (banner) {
                 banner.style.padding = '14px 24px';
                 banner.style.textAlign = 'center';
-                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#fff;">PONUDA JE ISTEKLA</h2>';
+                banner.innerHTML = '<h2 style="margin:0;padding:0;font-size:18px;font-weight:700;color:#971b1b;">PONUDA JE ISTEKLA</h2>';
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
