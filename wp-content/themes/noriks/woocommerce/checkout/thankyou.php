@@ -120,7 +120,7 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Success ═══ */
 .ty-success {
     background: #e8f5e9;
-    padding: 28px 24px 0; margin-bottom: 0; text-align: center;
+    padding: 28px 24px 0; margin-bottom: 15px; text-align: center;
     border-radius: 4px !important;
 }
 .ty-success-icon {
@@ -144,7 +144,7 @@ body.woocommerce-order-received .woocommerce {
    ═══════════════════════════════════════════════ */
 .ty-upsell-wrap {
     background: #fff;
-    margin: 0 0 4px; overflow: hidden;
+    margin: 0 0 15px; overflow: hidden;
     border-radius: 4px !important;
 }
 
@@ -280,7 +280,7 @@ body.woocommerce-order-received .woocommerce {
    STEP 2: 6-PRODUCT GRID (inline, not overlay)
    ═══════════════════════════════════════════════ */
 .ty-grid-section {
-    margin-bottom: 4px; overflow: hidden;
+    margin-bottom: 15px; overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease;
 }
@@ -367,7 +367,7 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Collapsible sections ═══ */
 .ty-section {
     background: #fff;
-    margin-bottom: 4px; overflow: hidden;
+    margin-bottom: 15px; overflow: hidden;
     border-radius: 4px !important;
 }
 .ty-section-header {
