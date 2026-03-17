@@ -432,6 +432,31 @@ add_action( 'wp_footer', function() {
     }
     </style>
 
+    <script id="noriks-checkout-payment-fix">
+    /* Force payment methods + review order visible after WC AJAX updates */
+    jQuery(function($){
+      function forceCheckoutVisible() {
+        $('#noriks-payment').show();
+        $('.woocommerce-checkout-payment').not('#payment').show();
+        $('.place-order-title').show();
+        $('.vigo-checkout-total').show();
+        $('#order_review').show();
+        /* Ensure #noriks-payment has payment methods */
+        if ($('#noriks-payment .wc_payment_methods li').length === 0) {
+          var orig = $('#payment .wc_payment_methods').clone(true);
+          if (orig.length) {
+            $('#noriks-payment').html(orig);
+          }
+        }
+      }
+      $(document.body).on('updated_checkout', forceCheckoutVisible);
+      /* Also run on load with small delay */
+      setTimeout(forceCheckoutVisible, 500);
+      setTimeout(forceCheckoutVisible, 1500);
+      setTimeout(forceCheckoutVisible, 3000);
+    });
+    </script>
+
     <script id="noriks-checkout-validation">
     jQuery(function($){
       var messages = {
