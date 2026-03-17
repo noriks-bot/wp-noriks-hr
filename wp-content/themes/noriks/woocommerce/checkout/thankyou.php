@@ -121,6 +121,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-success {
     background: #e8f5e9;
     padding: 28px 24px 0; margin-bottom: 0; text-align: center;
+    border-radius: 4px !important;
 }
 .ty-success-icon {
     width: 56px; height: 56px; background: #4CAF50;
@@ -144,6 +145,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-upsell-wrap {
     background: #fff;
     margin: 0 0 4px; overflow: hidden;
+    border-radius: 4px !important;
 }
 
 /* Banner — RED background */
@@ -280,6 +282,7 @@ body.woocommerce-order-received .woocommerce {
     background: #C62828;
     width: 100%;
     overflow: hidden;
+    border-radius: 4px !important;
 }
 
 .ty-grid-header {
@@ -357,6 +360,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-section {
     background: #fff;
     margin-bottom: 4px; overflow: hidden;
+    border-radius: 4px !important;
 }
 .ty-section-header {
     display: flex; align-items: center; justify-content: space-between;
