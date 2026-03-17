@@ -110,7 +110,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* ═══ GLOBAL: kill ALL border-radius ═══ */
 .ty-container *, .ty-container *::before, .ty-container *::after,
-.ty-upsell-overlay *, .ty-upsell-overlay *::before, .ty-upsell-overlay *::after {
+.ty-grid-section *, .ty-grid-section *::before, .ty-grid-section *::after {
     border-radius: 0 !important;
 }
 
@@ -267,25 +267,18 @@ body.woocommerce-order-received .woocommerce {
 }
 
 /* ═══════════════════════════════════════════════
-   STEP 2: 6-PRODUCT GRID OVERLAY
+   STEP 2: 6-PRODUCT GRID (inline, not overlay)
    ═══════════════════════════════════════════════ */
-.ty-upsell-overlay {
+.ty-grid-section {
     display: none;
-    position: fixed; top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 99999;
-    align-items: center; justify-content: center;
-    padding: 15px; box-sizing: border-box;
+    margin-bottom: 16px; overflow: hidden;
 }
-.ty-upsell-overlay.show { display: flex; }
+.ty-grid-section.show { display: block; }
 
 .ty-grid-popup {
     background: #C62828;
-    width: 100%; max-width: 620px;
-    max-height: 90vh; overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .ty-grid-header {
@@ -510,7 +503,7 @@ body.woocommerce-order-received .woocommerce {
 
         <!-- ═══ STEP 2: 6-PRODUCT GRID OVERLAY ═══ -->
         <?php if ( ! empty( $grid_products ) ) : ?>
-        <div class="ty-upsell-overlay" id="ty-grid-overlay">
+        <div class="ty-grid-section" id="ty-grid-section">
             <div class="ty-grid-popup">
                 <div class="ty-grid-header">
                     <h3>Še več izdelkov s popustom</h3>
@@ -521,8 +514,15 @@ body.woocommerce-order-received .woocommerce {
                 </div>
                 <div class="ty-grid">
                     <?php foreach ( $grid_products as $gp ) :
-                        $gp_price     = (float) $gp->get_regular_price();
-                        $gp_sale      = round( $gp_price * 0.5, 2 );
+                        // For variable products, get_regular_price() can be empty
+                        $gp_price = (float) $gp->get_regular_price();
+                        if ( ! $gp_price && $gp->is_type('variable') ) {
+                            $gp_price = (float) $gp->get_variation_regular_price('min');
+                        }
+                        if ( ! $gp_price ) {
+                            $gp_price = (float) $gp->get_price();
+                        }
+                        $gp_sale = round( $gp_price * 0.5, 2 );
                         $gp_img_id    = $gp->get_image_id();
                         $gp_img_url   = $gp_img_id ? wp_get_attachment_url( $gp_img_id ) : wc_placeholder_img_src();
                         $gp_is_var    = $gp->is_type('variable');
@@ -555,7 +555,7 @@ body.woocommerce-order-received .woocommerce {
                     </div>
                     <?php endforeach; ?>
                 </div>
-                <button class="ty-grid-close" id="ty-grid-close">Zaključi</button>
+                <button class="ty-grid-close" id="ty-grid-close">ZAKLJUČI PONUDBO</button>
             </div>
         </div>
         <?php endif; ?>
@@ -634,7 +634,7 @@ body.woocommerce-order-received .woocommerce {
 <script>
 (function(){
     var wrap     = document.getElementById('ty-upsell');
-    var overlay  = document.getElementById('ty-grid-overlay');
+    var overlay  = document.getElementById('ty-grid-section');
     if (!wrap) return;
 
     var orderId  = wrap.dataset.orderId;
@@ -670,6 +670,8 @@ body.woocommerce-order-received .woocommerce {
     function showGrid() {
         wrap.style.display = 'none';
         if (overlay) overlay.classList.add('show');
+        // Scroll to grid
+        if (overlay) overlay.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     function closeAll() {
         if (overlay) overlay.classList.remove('show');
@@ -758,11 +760,6 @@ body.woocommerce-order-received .woocommerce {
 
         // Close grid
         document.getElementById('ty-grid-close').addEventListener('click', closeAll);
-
-        // Close on overlay click
-        overlay.addEventListener('click', function(e) {
-            if (e.target === overlay) closeAll();
-        });
     }
 })();
 
