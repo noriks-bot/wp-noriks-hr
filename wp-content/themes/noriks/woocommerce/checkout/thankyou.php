@@ -503,7 +503,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-item-name { font-family: 'Roboto', sans-serif; font-size: 14px; color: #222; flex: 1; }
 .ty-item-meta { font-size: 12px; color: #999; margin-top: 2px; }
 .ty-item-price { font-family: 'Roboto', sans-serif; font-weight: 600; font-size: 14px; color: #222; margin-left: 12px; white-space: nowrap; }
-.ty-totals { margin-top: 8px; border-top: 2px solid #eee; padding-top: 8px; }
+.ty-totals { margin-top: 8px; border-top: 1px solid #f0f0f0; padding-top: 8px; }
 .ty-totals .ty-row { padding: 5px 0; }
 .ty-totals .ty-total-final { font-size: 16px; font-weight: 700; }
 
