@@ -115,12 +115,12 @@ body.woocommerce-order-received .woocommerce {
 }
 
 /* ═══ Container ═══ */
-.ty-container { max-width: 560px; margin: 30px auto; padding: 0; }
+.ty-container { max-width: 560px; margin: 30px auto; padding: 0 4px; }
 
 /* ═══ Success ═══ */
 .ty-success {
     background: #e8f5e9;
-    padding: 28px 24px; margin-bottom: 16px; text-align: center;
+    padding: 28px 24px 0; margin-bottom: 0; text-align: center;
 }
 .ty-success-icon {
     width: 56px; height: 56px; background: #4CAF50;
@@ -143,7 +143,7 @@ body.woocommerce-order-received .woocommerce {
    ═══════════════════════════════════════════════ */
 .ty-upsell-wrap {
     background: #fff;
-    margin-bottom: 16px; overflow: hidden;
+    margin: 0 0 4px; overflow: hidden;
 }
 
 /* Banner — RED background */
@@ -223,8 +223,8 @@ body.woocommerce-order-received .woocommerce {
 
 /* Buttons — ALL RED */
 .ty-upsell-buttons {
-    display: flex; gap: 12px;
-    padding: 0 24px 24px;
+    display: flex; gap: 4px;
+    padding: 4px 24px 24px;
 }
 .ty-btn-skip {
     flex: 1; height: 50px;
@@ -270,10 +270,11 @@ body.woocommerce-order-received .woocommerce {
    STEP 2: 6-PRODUCT GRID (inline, not overlay)
    ═══════════════════════════════════════════════ */
 .ty-grid-section {
-    display: none;
-    margin-bottom: 16px; overflow: hidden;
+    margin-bottom: 4px; overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
 }
-.ty-grid-section.show { display: block; }
+.ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
     background: #C62828;
@@ -355,7 +356,7 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Collapsible sections ═══ */
 .ty-section {
     background: #fff;
-    margin-bottom: 12px; overflow: hidden;
+    margin-bottom: 4px; overflow: hidden;
 }
 .ty-section-header {
     display: flex; align-items: center; justify-content: space-between;
@@ -555,7 +556,7 @@ body.woocommerce-order-received .woocommerce {
                     </div>
                     <?php endforeach; ?>
                 </div>
-                <button class="ty-grid-close" id="ty-grid-close">ZAKLJUČI PONUDBO</button>
+                <button class="ty-grid-close" id="ty-grid-close">Ne želim ekstra ponudbe</button>
             </div>
         </div>
         <?php endif; ?>
