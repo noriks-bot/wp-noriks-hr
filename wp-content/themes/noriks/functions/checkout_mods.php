@@ -110,7 +110,7 @@ add_action( 'wp_footer', function() {
     if ( ! is_checkout() ) return;
     ?>
     <style id="noriks-checkout-overrides">
-    /* ===== PAYMENT: duplicate #payment vigoshop styles for #noriks-payment ===== */
+    /* ===== PAYMENT: duplicate #payment vigoshop styles for #payment ===== */
     /* Payment title — vigoshop CDN hides it, force show */
     body.woocommerce-checkout h3.payment-title {
       display: block !important;
@@ -120,37 +120,37 @@ add_action( 'wp_footer', function() {
       color: #333 !important;
     }
     /* Payment methods list */
-    #noriks-payment .wc_payment_methods {
+    #payment .wc_payment_methods {
       list-style: none !important;
       padding: 0 !important;
       margin: 0 0 21px !important;
     }
     /* Payment method items */
-    #noriks-payment .wc_payment_method {
+    #payment .wc_payment_method {
       list-style: none !important;
       padding: 0 !important;
       margin: 0 !important;
       border: 1px solid #d1dbe5 !important;
       border-radius: 5px 5px 0 0 !important;
     }
-    #noriks-payment .wc_payment_method + .wc_payment_method {
+    #payment .wc_payment_method + .wc_payment_method {
       border-radius: 0 !important;
       border-top: none !important;
     }
-    #noriks-payment .wc_payment_method:last-child {
+    #payment .wc_payment_method:last-child {
       border-radius: 0 0 5px 5px !important;
       border-bottom: 1px solid #d1dbe5 !important;
     }
     /* Selected payment = blue bg */
-    #noriks-payment .wc_payment_method:has(input:checked) {
+    #payment .wc_payment_method:has(input:checked) {
       background: #e8f3ff !important;
     }
     /* Radio inputs hidden (vigoshop uses label as the clickable area) */
-    #noriks-payment .wc_payment_method .input-radio {
+    #payment .wc_payment_method .input-radio {
       display: none !important;
     }
     /* Payment labels — exact vigoshop computed styles */
-    #noriks-payment .wc_payment_method label {
+    #payment .wc_payment_method label {
       display: flex !important;
       align-items: center !important;
       padding: 22.65px 16px !important;
@@ -161,11 +161,11 @@ add_action( 'wp_footer', function() {
       line-height: 24px !important;
       cursor: pointer !important;
     }
-    #noriks-payment .wc_payment_method:has(input:checked) label {
+    #payment .wc_payment_method:has(input:checked) label {
       font-weight: 700 !important;
     }
     /* Fee badges */
-    #noriks-payment .payment-fee-free {
+    #payment .payment-fee-free {
       display: block !important;
       padding: 3px 10px !important;
       margin: 2px 0 2px 8px !important;
@@ -177,7 +177,7 @@ add_action( 'wp_footer', function() {
       text-align: center !important;
       line-height: 21px !important;
     }
-    #noriks-payment .payment-fee-not-free {
+    #payment .payment-fee-not-free {
       display: block !important;
       padding: 3px 10px !important;
       margin: 2px 0 2px 8px !important;
@@ -190,27 +190,27 @@ add_action( 'wp_footer', function() {
       line-height: 21px !important;
     }
     /* Card icons */
-    #noriks-payment .sv-wc-payment-gateway-card-icons {
+    #payment .sv-wc-payment-gateway-card-icons {
       display: flex !important;
       align-items: center !important;
       margin-left: auto !important;
       gap: 4px !important;
     }
-    #noriks-payment .sv-wc-payment-gateway-icon {
+    #payment .sv-wc-payment-gateway-icon {
       width: 40px !important;
       height: 25px !important;
     }
     /* COD icon */
-    #noriks-payment .hs-checkout__payment-method-cod-icon-container {
+    #payment .hs-checkout__payment-method-cod-icon-container {
       display: flex !important;
       align-items: center !important;
       margin-left: auto !important;
     }
-    #noriks-payment .hs-checkout__payment-method-cod-icon {
+    #payment .hs-checkout__payment-method-cod-icon {
       height: 30px !important;
     }
     /* PayPal icon */
-    #noriks-payment .payment_method_braintree_paypal label img {
+    #payment .payment_method_braintree_paypal label img {
       margin-left: auto !important;
       height: 22px !important;
     }
