@@ -188,9 +188,11 @@ body.woocommerce-order-received .woocommerce {
     font-size: 15px; font-weight: 500;
     display: flex; align-items: center; gap: 6px;
 }
-.ty-benefit .ty-b-icon { font-size: 16px; color: #971b1b; }
+.ty-benefit .ty-b-icon { font-size: 16px; font-weight: 700; }
 .ty-benefit-green { color: #888888; }
+.ty-benefit-green .ty-b-icon { color: #971b1b; }
 .ty-benefit-orange { color: #971b1b; }
+.ty-benefit-orange .ty-b-icon { color: #971b1b; }
 
 /* Product card wrapper */
 .ty-upsell-card {
@@ -528,11 +530,11 @@ body.woocommerce-order-received .woocommerce {
             <!-- Benefits -->
             <div class="ty-upsell-benefits">
                 <div class="ty-benefit ty-benefit-green">
-                    <span class="ty-b-icon">✔</span>
+                    <span class="ty-b-icon">✓</span>
                     Poslat ćemo ga u istom paketu
                 </div>
                 <div class="ty-benefit ty-benefit-orange">
-                    <span class="ty-b-icon">⭐</span>
+                    <span class="ty-b-icon">★</span>
                     Razmislite kome biste mogli pokloniti proizvod
                 </div>
             </div>
