@@ -432,52 +432,6 @@ add_action( 'wp_footer', function() {
     }
     </style>
 
-    <style id="noriks-force-checkout-visible">
-    /* FORCE everything visible — override any CSS/JS that hides checkout elements */
-    body.woocommerce-checkout #noriks-payment,
-    body.woocommerce-checkout #noriks-payment * ,
-    body.woocommerce-checkout .payment-title,
-    body.woocommerce-checkout .vigo-checkout-total,
-    body.woocommerce-checkout .place-order-title,
-    body.woocommerce-checkout #order_review,
-    body.woocommerce-checkout .place-order {
-      visibility: visible !important;
-      opacity: 1 !important;
-      display: block !important;
-      height: auto !important;
-      overflow: visible !important;
-      position: static !important;
-      left: auto !important;
-    }
-    body.woocommerce-checkout #noriks-payment .wc_payment_methods {
-      display: block !important;
-    }
-    body.woocommerce-checkout #noriks-payment .wc_payment_method {
-      display: list-item !important;
-      list-style: none !important;
-    }
-    body.woocommerce-checkout #noriks-payment .wc_payment_method label {
-      display: flex !important;
-    }
-    </style>
-
-    <script id="noriks-force-visible-loop">
-    /* Brute force — every 500ms ensure checkout elements stay visible */
-    (function(){
-      function forceVisible() {
-        var els = document.querySelectorAll('#noriks-payment, .payment-title, .vigo-checkout-total, .place-order-title, #order_review');
-        for (var i = 0; i < els.length; i++) {
-          els[i].style.setProperty('display', 'block', 'important');
-          els[i].style.setProperty('visibility', 'visible', 'important');
-          els[i].style.setProperty('opacity', '1', 'important');
-          els[i].style.setProperty('height', 'auto', 'important');
-        }
-      }
-      setInterval(forceVisible, 500);
-      document.addEventListener('DOMContentLoaded', forceVisible);
-    })();
-    </script>
-
     <script id="noriks-checkout-validation">
     jQuery(function($){
       var messages = {
