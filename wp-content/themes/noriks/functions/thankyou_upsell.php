@@ -50,17 +50,18 @@ function noriks_handle_add_upsell() {
     }
 
     // ─── Calculate 50% discount SERVER-SIDE ───
-    // Get the regular price (what customer would normally pay)
-    $regular_price = (float) $product->get_regular_price();
-    if ( ! $regular_price ) {
-        $regular_price = (float) $product->get_price();
+    // Use SALE price (current active price), not regular price
+    // 50% off the sale/active price
+    $active_price = (float) $product->get_price(); // get_price() returns sale price if on sale
+    if ( ! $active_price ) {
+        $active_price = (float) $product->get_regular_price();
     }
-    if ( ! $regular_price ) {
+    if ( ! $active_price ) {
         wp_send_json_error( 'Cijena proizvoda nije dostupna' );
     }
 
-    // Apply 50% discount
-    $upsell_price = round( $regular_price * 0.5, 2 );
+    // Apply 50% discount on the active (sale) price
+    $upsell_price = round( $active_price * 0.5, 2 );
 
     // Add product to order with the discounted price
     $item_id = $order->add_product( $product, 1, array(
@@ -74,7 +75,7 @@ function noriks_handle_add_upsell() {
     $item = $order->get_item( $item_id );
     $item->add_meta_data( '_noriks_upsell', 'thank you upsell', true );
     $item->add_meta_data( '_noriks_upsell_discount', '50%', true );
-    $item->add_meta_data( '_noriks_upsell_original_price', $regular_price, true );
+    $item->add_meta_data( '_noriks_upsell_sale_price', $active_price, true );
     $item->add_meta_data( '_noriks_upsell_discounted_price', $upsell_price, true );
     $item->save();
 
@@ -85,9 +86,9 @@ function noriks_handle_add_upsell() {
     // Add order note for admin visibility
     $order->add_order_note(
         sprintf(
-            'Thank you upsell: %s dodano s 50%% popustom — originalna cijena: %s, upsell cijena: %s',
+            'Thank you upsell: %s dodano s 50%% popustom — akcijska cijena: %s, upsell cijena: %s',
             $product->get_name(),
-            wc_price( $regular_price ),
+            wc_price( $active_price ),
             wc_price( $upsell_price )
         )
     );

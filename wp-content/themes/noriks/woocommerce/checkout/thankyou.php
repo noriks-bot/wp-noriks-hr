@@ -579,13 +579,13 @@ body.woocommerce-order-received .woocommerce {
                 </div>
                 <div class="ty-grid">
                     <?php foreach ( $grid_products as $gp ) :
-                        // For variable products, get_regular_price() can be empty
-                        $gp_price = (float) $gp->get_regular_price();
+                        // Use active/sale price (get_price returns sale price if on sale)
+                        $gp_price = (float) $gp->get_price();
                         if ( ! $gp_price && $gp->is_type('variable') ) {
-                            $gp_price = (float) $gp->get_variation_regular_price('min');
+                            $gp_price = (float) $gp->get_variation_price('min', true);
                         }
                         if ( ! $gp_price ) {
-                            $gp_price = (float) $gp->get_price();
+                            $gp_price = (float) $gp->get_regular_price();
                         }
                         $gp_sale = round( $gp_price * 0.5, 2 );
                         $gp_img_id    = $gp->get_image_id();
