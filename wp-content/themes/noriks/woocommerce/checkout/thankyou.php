@@ -372,10 +372,11 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #E86C00;
+    background: #fff;
     width: 100%;
     overflow: hidden;
-    border-radius: 4px !important;
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0;
 }
 
 .ty-grid-header {
@@ -394,7 +395,8 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #fff;
+    font-size: 13px; color: #E86C00;
+    background: #fff;
 }
 
 .ty-grid {
@@ -402,6 +404,7 @@ body.woocommerce-order-received .woocommerce {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 0 15px 15px;
+    background: #fff;
 }
 .ty-grid-item {
     background: #fff; text-align: center;
