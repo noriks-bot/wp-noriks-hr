@@ -171,7 +171,8 @@ body.woocommerce-order-received .woocommerce {
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
     /* Blur everything except upsell when visible */
-    .ty-container.upsell-active > *:not(.ty_upsell_one_wrapper):not(.ty-grid-section) {
+    .ty-container.upsell-active > *:not(.ty_upsell_one_wrapper):not(#ty-grid-section),
+    .ty-container.grid-active > *:not(#ty-grid-section):not(.ty_upsell_one_wrapper) {
         filter: blur(3px);
         opacity: 0.5;
         pointer-events: none;
@@ -691,6 +692,7 @@ body.woocommerce-order-received .woocommerce {
     } else if (stepState === '2') {
         wrap.style.display = 'none';
         if (overlay) overlay.classList.add('show');
+        if (tyContainer) { tyContainer.classList.remove('upsell-active'); tyContainer.classList.add('grid-active'); }
     }
 
     function showGrid() {
@@ -698,11 +700,12 @@ body.woocommerce-order-received .woocommerce {
         localStorage.setItem(stepKey, '2');
         if (overlay) overlay.classList.add('show');
         if (overlay) overlay.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (tyContainer) { tyContainer.classList.remove('upsell-active'); tyContainer.classList.add('grid-active'); }
     }
     function closeAll() {
         if (overlay) overlay.classList.remove('show');
         if (wrap) wrap.style.display = 'none';
-        if (tyContainer) tyContainer.classList.remove('upsell-active');
+        if (tyContainer) { tyContainer.classList.remove('upsell-active'); tyContainer.classList.remove('grid-active'); }
         localStorage.setItem(stepKey, 'done');
         // Release order — process it
         var relFd = new FormData();
