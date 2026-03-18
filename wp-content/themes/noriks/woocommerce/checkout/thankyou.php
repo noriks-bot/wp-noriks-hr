@@ -927,6 +927,12 @@ body.woocommerce-order-received .woocommerce {
                 .then(function(d) {
                     addBtn.textContent = '✓ DODANO';
                     addBtn.classList.add('added');
+                    // Remember in localStorage
+                    var ak = 'ty_added_' + orderId;
+                    var al = JSON.parse(localStorage.getItem(ak) || '[]');
+                    var pid1 = String(<?php echo $upsell_product_id; ?>);
+                    if (al.indexOf(pid1) === -1) al.push(pid1);
+                    localStorage.setItem(ak, JSON.stringify(al));
                     refreshOrderItems();
                     // Show grid after short delay
                     setTimeout(function() {
@@ -985,23 +991,35 @@ body.woocommerce-order-received .woocommerce {
             });
         });
 
-        // Restore added state from localStorage
-        var addedKey = 'ty_added_' + orderId;
-        var addedProducts = JSON.parse(localStorage.getItem(addedKey) || '[]');
-        if (addedProducts.length > 0) {
+        // Close grid
+        document.getElementById('ty-grid-close').addEventListener('click', closeAll);
+    }
+
+    // Restore added state from localStorage (runs always, after DOM ready)
+    setTimeout(function() {
+        var addedKey2 = 'ty_added_' + orderId;
+        var addedProducts2 = JSON.parse(localStorage.getItem(addedKey2) || '[]');
+        if (addedProducts2.length > 0) {
             document.querySelectorAll('.g-add-btn').forEach(function(btn) {
                 var pid = btn.getAttribute('data-product-id');
-                if (addedProducts.indexOf(pid) !== -1) {
+                if (addedProducts2.indexOf(pid) !== -1) {
                     btn.textContent = '✔ DODANO';
                     btn.classList.add('added');
                     btn.disabled = true;
                 }
             });
+            // Also restore step 1 button if primary product was added
+            var mainBtn = document.getElementById('ty-btn-add');
+            if (mainBtn) {
+                var mainPid = mainBtn.getAttribute('data-product-id');
+                if (addedProducts2.indexOf(mainPid) !== -1 || addedProducts2.indexOf(String(mainPid)) !== -1) {
+                    mainBtn.textContent = '✓ DODANO';
+                    mainBtn.classList.add('added');
+                    mainBtn.disabled = true;
+                }
+            }
         }
-
-        // Close grid
-        document.getElementById('ty-grid-close').addEventListener('click', closeAll);
-    }
+    }, 100);
     // Backup: if user leaves page while timer still running, use sendBeacon to release
     window.addEventListener('pagehide', function() {
         if (rem <= 0) {
