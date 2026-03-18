@@ -131,8 +131,14 @@ body.woocommerce-checkout #payment .wc_payment_method:last-child {
 body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) {
   background: #e8f3ff !important;
 }
-/* Hide radio inputs */
-body.woocommerce-checkout #payment .wc_payment_method > input.input-radio {
+/* Hide ALL radio inputs in payment (WC puts them in different places) */
+body.woocommerce-checkout #payment .wc_payment_method input.input-radio,
+body.woocommerce-checkout #payment .wc_payment_method input[type="radio"] {
+  display: none !important;
+}
+/* Hide duplicate gateway icon that Stripe plugin adds next to label */
+body.woocommerce-checkout #payment .wc_payment_method > label > img.stripe-icon,
+body.woocommerce-checkout #payment .wc_payment_method > label > .wc-stripe-card-icons-container {
   display: none !important;
 }
 /* Labels */
@@ -185,6 +191,16 @@ body.woocommerce-checkout #payment .payment_box fieldset {
   color: #5f6061;
   margin-top: 6px;
   line-height: 1.4;
+}
+
+/* ===== Order summary — full width ===== */
+body.woocommerce-checkout .vigo-checkout-total,
+body.woocommerce-checkout .place-order-title,
+body.woocommerce-checkout .form-row.place-order,
+body.woocommerce-checkout #hs-vat-tax-checkout-prompt {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* ===== blockUI — transparent (no flicker, payment logic works) ===== */
