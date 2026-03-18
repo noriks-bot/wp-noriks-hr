@@ -19,7 +19,7 @@ $upsell_product    = wc_get_product( $upsell_product_id );
 $upsell_name       = $upsell_product ? $upsell_product->get_name() : 'Crne Bokserice';
 $upsell_image      = 'https://devhr.noriks.com/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg';
 $upsell_price      = $upsell_product ? (float) $upsell_product->get_price() : 15.99;
-$upsell_sale_price = round( $upsell_price * 0.5, 2 );
+$upsell_sale_price = floor( $upsell_price * 0.5 ) + 0.99;
 
 // Variations for primary product
 $upsell_variations = array();
