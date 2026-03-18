@@ -266,6 +266,22 @@ body.woocommerce-checkout .woocommerce-additional-fields {
   float: none !important;
 }
 
+/* ===== Terms checkbox — clickable ===== */
+body.woocommerce-checkout #agree_to_terms_checkbox {
+  -webkit-appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  appearance: checkbox !important;
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  opacity: 1 !important;
+  position: static !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  vertical-align: middle !important;
+  margin-right: 6px !important;
+}
+
 /* ===== Shipping free badge ===== */
 body.woocommerce-checkout .shipping-free-badge {
   display: inline-block;
