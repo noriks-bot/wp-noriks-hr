@@ -127,6 +127,14 @@ body.woocommerce-checkout #payment .wc_payment_methods .payment_box * {
   line-height: 1.4;
 }
 
-/* blockUI — native WC behavior */
+/* blockUI overlay invisible but functional (prevents text flicker, keeps payment working) */
+body.woocommerce-checkout .blockUI.blockOverlay {
+  background: transparent !important;
+  opacity: 0 !important;
+  border: none !important;
+}
+body.woocommerce-checkout .blockUI.blockMsg {
+  display: none !important;
+}
 
 /* Payment fields — let WC/Stripe handle natively */
