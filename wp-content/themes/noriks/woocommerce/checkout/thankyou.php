@@ -787,6 +787,7 @@ body.woocommerce-order-received .woocommerce {
             fd.append('product_id', <?php echo $upsell_product_id; ?>);
             fd.append('variation_id', select ? select.value : '');
             fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
+            fd.append('upsell_type', 'post_purchase_step1');
             fd.append('nonce', nonce);
 
             fetch(ajaxUrl, { method: 'POST', body: fd })
@@ -862,6 +863,7 @@ body.woocommerce-order-received .woocommerce {
                     fd.append('product_id', productId);
                     fd.append('variation_id', varSelect ? varSelect.value : '');
                     fd.append('sale_price', salePrice);
+                    fd.append('upsell_type', 'post_purchase_step2');
                     fd.append('nonce', nonce);
 
                     promises.push(

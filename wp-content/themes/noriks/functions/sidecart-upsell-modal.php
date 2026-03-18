@@ -52,7 +52,8 @@ function noriks_ajax_add_to_cart() {
         wp_send_json_error(['message' => 'No product ID']);
     }
     
-    $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variations);
+    $cart_item_data = array( '_noriks_upsell' => 'sidecart_upsell' );
+    $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variations, $cart_item_data);
     
     if ($cart_item_key) {
         // Trigger the standard WC action so side cart picks it up
@@ -607,3 +608,12 @@ function noriks_upsell_modal_markup() {
     </script>
     <?php
 }
+
+/**
+ * Transfer sidecart upsell meta from cart item to order item
+ */
+add_action( 'woocommerce_checkout_create_order_line_item', function( $item, $cart_item_key, $values, $order ) {
+    if ( ! empty( $values['_noriks_upsell'] ) ) {
+        $item->add_meta_data( '_noriks_upsell', sanitize_text_field( $values['_noriks_upsell'] ), true );
+    }
+}, 10, 4 );

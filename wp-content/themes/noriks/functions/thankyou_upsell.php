@@ -301,7 +301,8 @@ function noriks_handle_add_upsell() {
 
     // Mark as upsell
     $item = $order->get_item( $item_id );
-    $item->add_meta_data( '_noriks_upsell', 'thank you upsell', true );
+    $upsell_type = sanitize_text_field( $_POST['upsell_type'] ?? 'post_purchase_step1' );
+    $item->add_meta_data( '_noriks_upsell', $upsell_type, true );
     $item->save();
 
     $order->calculate_totals();
