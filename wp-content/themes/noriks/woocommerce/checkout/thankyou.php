@@ -171,7 +171,7 @@ body.woocommerce-order-received .woocommerce {
     @media (max-width:576px) { .buttons-section { flex-direction:row; padding:0 0 15px !important; } }
     .pass-btn { flex:1; }
     .buy-btn { flex:2.8; }
-    @media (max-width:576px) { .buttons-section { flex-direction:column; } .pass-btn, .buy-btn { flex:none; width:100%; } }
+    /* removed — buttons always side by side */
     .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; padding:12px 0; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; line-height:1.2; box-sizing:border-box; }
     .buy-btn { background:#000; border:1px solid #000; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; padding:14px 0; text-align:center; line-height:1.2; box-sizing:border-box; }
     .buy-btn.added { background:#2E7D32; }
@@ -375,7 +375,7 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .product_data .img { width: 90px; min-width: 90px; height: 90px; }
     .tyuo_product_section .qty { font-size: 20px; }
     .tyuo_product_section .product_new_sale_price { font-size: 20px; }
-    .tyuo_product_section .buttons-section { flex-direction: column; gap: 8px; }
+    /* removed — buttons always side by side */
     .tyuo_product_section .variation-select-wrap { padding: 0 0 8px; justify-content: center; }
     .tyuo_product_section .variation-select { width: 100%; }
     .ty-section-header { padding: 14px 16px; font-size: 14px; }
