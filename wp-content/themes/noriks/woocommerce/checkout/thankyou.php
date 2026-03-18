@@ -443,7 +443,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
     padding: 10px; background: #1A1A1A; color: #fff;
-    border: none; border-radius: 6px !important;
+    border: none; border-radius: 0 !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
