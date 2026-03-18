@@ -122,7 +122,7 @@ if ( WC()->cart->is_empty() ) return;
 
                 <!-- COD fee — shown/hidden dynamically -->
                 <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row" style="display:none;">
-                  <div class="review-addons-title"><div>Naknada za pouzeće</div></div>
+                  <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
                   <div class="review-addons-price review-sale-price">
                     <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
                   </div>
