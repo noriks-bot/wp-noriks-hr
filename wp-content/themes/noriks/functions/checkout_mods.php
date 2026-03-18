@@ -499,13 +499,19 @@ add_action( 'wp_footer', function() {
         return true;
       }
 
-      /* Prevent blockUI flicker on checkout AJAX updates */
-      $(document).ajaxSend(function(){
-        setTimeout(function(){
-          $('.blockUI.blockOverlay').hide();
-          $('.processing').removeClass('processing');
-        }, 10);
-      });
+      /* Prevent blockUI flicker — override jQuery.fn.block entirely on checkout */
+      if ($.fn.block) {
+        $.fn.block = function(){ return this; };
+        $.fn.unblock = function(){ return this; };
+      }
+      /* Also catch any blockUI overlay that somehow gets injected */
+      new MutationObserver(function(mutations){
+        mutations.forEach(function(m){
+          m.addedNodes.forEach(function(n){
+            if (n.classList && n.classList.contains('blockOverlay')) n.remove();
+          });
+        });
+      }).observe(document.body, {childList:true, subtree:true});
 
       /* Re-validate on input/change — clears error when value becomes valid */
       $(document).on('input', '.woocommerce-checkout .form-row input', function(){
