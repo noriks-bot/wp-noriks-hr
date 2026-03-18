@@ -818,6 +818,10 @@ body.woocommerce-order-received .woocommerce {
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
+            // Clear all upsell localStorage
+            localStorage.removeItem('ty_added_' + orderId);
+            localStorage.removeItem(stepKey);
+            localStorage.removeItem(key);
             // Auto-open "Stavke narudžbe" and "Adresa dostave" sections
             document.querySelectorAll('.ty-section .ty-section-header').forEach(function(h) {
                 if (!h.classList.contains('open')) {
