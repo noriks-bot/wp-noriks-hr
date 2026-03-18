@@ -539,6 +539,8 @@ ul.products::before, ul.products::after {
     gap: 10px;
     justify-content: space-between;
     overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .variation-button {

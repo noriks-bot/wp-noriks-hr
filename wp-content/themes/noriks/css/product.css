@@ -204,6 +204,7 @@ body.single-product {
     .summary {
         width: 100% !important;
         margin-bottom: -2px !important;
+        overflow-x: hidden !important;
     }
     
     .woocommerce-product-gallery {
