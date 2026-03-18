@@ -414,23 +414,27 @@ add_action( 'wp_footer', function() {
       var $newBtn = $btn.clone(false);
       $btn.replaceWith($newBtn);
 
-      /* Validate all on submit — first time sets submitted=true */
+      /* Submit — validate then trigger WC checkout immediately */
       $newBtn.on('click', function(e){
         e.preventDefault();
-        e.stopImmediatePropagation();
         submitted = true;
         var allValid = true;
+        var firstInvalid = null;
         $('.woocommerce-checkout .form-row.validate-required').each(function(){
           var input = $(this).find('input, select').first();
-          if (input.length && !validateField(input[0], true)) allValid = false;
+          if (input.length && !validateField(input[0], true)) {
+            allValid = false;
+            if (!firstInvalid) firstInvalid = $(this);
+          }
         });
         if (!allValid) {
-          var first = $('.noriks-invalid:first');
-          if (first.length) $('html,body').animate({scrollTop: first.offset().top - 100}, 300);
-          return false;
+          if (firstInvalid) firstInvalid[0].scrollIntoView({behavior:'smooth',block:'center'});
+          return;
         }
-        /* All valid — trigger WC checkout submit */
-        $('#place_order').trigger('click');
+        /* Disable button, show loading */
+        $newBtn.prop('disabled',true).text('Naručujem...');
+        /* Trigger WC submit directly */
+        $('form.checkout').trigger('submit');
       });
     });
     </script>
