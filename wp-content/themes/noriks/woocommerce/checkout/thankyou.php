@@ -651,18 +651,10 @@ body.woocommerce-order-received .woocommerce {
 
     function tick() {
         if (rem <= 0) {
-            // Hide product and benefits, show expired message in timer
-            var prodSec = wrap.querySelector('.tyuo_product_section');
-            var midSec = wrap.querySelector('.tyuo_middle_section');
-            if (prodSec) prodSec.style.display = 'none';
-            if (midSec) midSec.style.display = 'none';
-            var timerSec = wrap.querySelector('.tyuo_timer');
-            if (timerSec) {
-                timerSec.innerHTML = '<div class="title" style="padding:8px 0;">PONUDA JE ISTEKLA</div>';
-            }
-            // Also hide the grid section if visible
+            // Hide everything — upsell over
+            wrap.style.display = 'none';
             if (overlay) overlay.style.display = 'none';
-            if (tyContainer) tyContainer.classList.remove('upsell-active');
+            if (tyContainer) { tyContainer.classList.remove('upsell-active'); tyContainer.classList.remove('grid-active'); }
             // Clear all upsell localStorage
             localStorage.removeItem('ty_added_' + orderId);
             localStorage.removeItem(stepKey);
