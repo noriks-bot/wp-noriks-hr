@@ -164,8 +164,9 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .product_new_sale_price { color:#F37021; font-size:25px; font-weight:700; }
     .wrapper_selectbox { color:#5f6060; font-size:1.1em; font-weight:500; padding:0 10px; text-align:right; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #a9a9a9; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; min-width:50%; outline:0; padding:10px; }
-    .buttons-section { display:flex; justify-content:space-between; padding:10px; }
-    .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; flex:1; line-height:15px; margin-right:10px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
+    .buttons-section { display:flex; flex-direction:column; gap:8px; padding:10px; }
+    .pass-btn, .buy-btn { flex:none; width:100%; }
+    .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; line-height:15px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
     .buy-btn { background:#F37021; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
