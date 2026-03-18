@@ -1,6 +1,6 @@
 /*
- * Noriks Checkout — Hide WP chrome, bridge WC to vigoshop
- * Vigoshop CDN CSS handles all visual styling
+ * Noriks Checkout — Hide WP chrome, native WC payment
+ * Vigoshop CDN CSS handles visual styling
  */
 
 /* ===== HIDE EVERYTHING OUTSIDE CHECKOUT ===== */
@@ -52,7 +52,6 @@ body.woocommerce-checkout .info-items-container,
 body.woocommerce-checkout .phone-footer-checkout,
 body.woocommerce-checkout .checkout_coupon,
 body.woocommerce-checkout .woocommerce-form-coupon,
-body.woocommerce-checkout .woocommerce-form-coupon-toggle,
 body.woocommerce-checkout .post-edit-link,
 body.woocommerce-checkout .edit-link,
 body.woocommerce-checkout a.post-edit-link {
@@ -70,15 +69,17 @@ body.woocommerce-checkout .woocommerce-privacy-policy-text {
   display: none !important;
 }
 
-/* ===== COD PROMPT — hidden by default like vigoshop ===== */
+/* ===== COD PROMPT ===== */
 body.woocommerce-checkout #hs-cod-checkout-prompt {
   display: none !important;
 }
 
-/* ===== PAYMENT — native WC, force visible (vigoshop CDN hides it) ===== */
+/* ===== PAYMENT TITLE ===== */
 body.woocommerce-checkout h3.payment-title {
   display: block !important;
 }
+
+/* ===== #payment — force visible (vigoshop CDN hides it) ===== */
 body.woocommerce-checkout #payment {
   display: block !important;
   position: static !important;
@@ -87,29 +88,17 @@ body.woocommerce-checkout #payment {
   height: auto !important;
   overflow: visible !important;
   pointer-events: auto !important;
-  left: auto !important;
-  clip: auto !important;
 }
+body.woocommerce-checkout #payment * {
+  visibility: visible !important;
+}
+
+/* Hide WC's place_order inside #payment (we have our own) */
 body.woocommerce-checkout #payment .place-order {
   display: none !important;
 }
-/* Force payment_box (card fields) visible when selected */
-body.woocommerce-checkout #payment .wc_payment_method .payment_box {
-  display: none !important;
-}
-body.woocommerce-checkout #payment .wc_payment_method.wc_payment_method input:checked ~ .payment_box,
-body.woocommerce-checkout #payment .payment_method_stripe_cc .payment_box {
-  display: block !important;
-}
-body.woocommerce-checkout #payment .wc_payment_methods,
-body.woocommerce-checkout #payment .wc_payment_methods li,
-body.woocommerce-checkout #payment .wc_payment_methods label,
-body.woocommerce-checkout #payment .wc_payment_methods .payment_box * {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
 
-/* ===== Field descriptions via CSS (immune to WC AJAX re-renders) ===== */
+/* ===== Field descriptions via CSS ::after ===== */
 #billing_email_field::after {
   content: 'Za potvrdu narudžbe i praćenje pošiljke';
   display: block;
@@ -127,14 +116,11 @@ body.woocommerce-checkout #payment .wc_payment_methods .payment_box * {
   line-height: 1.4;
 }
 
-/* blockUI overlay invisible but functional (prevents text flicker, keeps payment working) */
+/* ===== blockUI — transparent (no flicker, payment logic works) ===== */
 body.woocommerce-checkout .blockUI.blockOverlay {
   background: transparent !important;
   opacity: 0 !important;
-  border: none !important;
 }
 body.woocommerce-checkout .blockUI.blockMsg {
   display: none !important;
 }
-
-/* Payment fields — let WC/Stripe handle natively */
