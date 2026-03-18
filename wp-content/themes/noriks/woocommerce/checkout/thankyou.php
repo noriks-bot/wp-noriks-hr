@@ -235,7 +235,7 @@ body.woocommerce-order-received .woocommerce {
     width: 110px;
     min-width: 110px;
     height: 110px;
-    background: #FDE8CC;
+    background: #fff;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -1025,7 +1025,4 @@ function tyToggle(h) {
     h.nextElementSibling.classList.toggle('open');
 }
 </script>
-
-<style>
-.tyuo_product_section .variation-select-wrap, .tyuo_product_section .variation-select { display:none !important; }
-</style>
+<!-- variation dropdown now visible -->
