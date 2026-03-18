@@ -392,6 +392,7 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal-add-btn.added {
             background: #2e7d32;
+            color: #fff;
         }
         .noriks-modal-error {
             color: #e22b26;
