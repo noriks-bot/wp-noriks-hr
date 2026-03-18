@@ -175,6 +175,7 @@ body.woocommerce-order-received .woocommerce {
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
+    .g-select-btn.selected { background:#2E7D32 !important; }
     /* Blur everything except upsell when visible */
     .ty-container.upsell-active .ty-success,
     .ty-container.grid-active .ty-success { margin-bottom:0 !important; }
@@ -529,15 +530,18 @@ body.woocommerce-order-received .woocommerce {
                             <?php endforeach; ?>
                         </select>
                         <?php endif; ?>
-                        <button class="g-add-btn"
+                        <button class="g-add-btn g-select-btn"
                                 data-product-id="<?php echo $gp->get_id(); ?>"
                                 data-sale-price="<?php echo $gp_sale; ?>">
-                            DODAJ
+                            IZBERI
                         </button>
                     </div>
                     <?php endforeach; ?>
                 </div>
-                <button class="ty-grid-close" id="ty-grid-close">Ne želim dodatnu ponudu</button>
+                <div class="buttons-section" style="padding:0 15px 15px;">
+                    <a class="pass-btn" id="ty-grid-close">Ne želim</a>
+                    <div class="buy-btn" id="ty-grid-add-all">DODAJ K NARUDŽBI</div>
+                </div>
                 </div><!-- /ty-section-body-inner -->
                 </div><!-- /ty-section-body -->
             </div>
@@ -570,9 +574,7 @@ body.woocommerce-order-received .woocommerce {
                         </div>
                         <div style="display:flex;align-items:center;gap:8px;">
                             <div class="ty-item-price"><?php echo $order->get_formatted_line_subtotal( $item ); ?></div>
-                            <?php if ( $is_upsell_item && $order->get_status() === 'primary-hold' ) : ?>
-                            <button class="ty-upsell-remove" data-item-id="<?php echo $item->get_id(); ?>" data-order-id="<?php echo $order->get_id(); ?>" onclick="removeUpsellItem(this)" style="width:22px;height:22px;border-radius:50%;background:#E8450E;color:#fff;border:none;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex-shrink:0;">✕</button>
-                            <?php endif; ?>
+                            <!-- remove button disabled -->
                         </div>
                     </div>
                     <?php endforeach; ?>
@@ -822,95 +824,84 @@ body.woocommerce-order-received .woocommerce {
         });
     }
 
-    // ─── Step 2: Grid individual add buttons ───
+    // ─── Step 2: Grid select/deselect + batch add ───
     if (overlay) {
-        overlay.querySelectorAll('.g-add-btn').forEach(function(btn) {
+        // Toggle select on grid items
+        overlay.querySelectorAll('.g-select-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var el = this;
-                if (el.disabled) return;
-                el.disabled = true;
-                el.textContent = '...';
-
-                var productId = el.getAttribute('data-product-id');
-                var salePrice = el.getAttribute('data-sale-price');
-                var varSelect = el.parentElement.querySelector('.g-variation');
-
-                var fd = new FormData();
-                fd.append('action', 'noriks_add_upsell');
-                fd.append('order_id', orderId);
-                fd.append('product_id', productId);
-                fd.append('variation_id', varSelect ? varSelect.value : '');
-                fd.append('sale_price', salePrice);
-                fd.append('nonce', nonce);
-
-                fetch(ajaxUrl, { method: 'POST', body: fd })
-                    .then(function(r) { return r.json(); })
-                    .then(function(d) {
-                        if (d.success) {
-                            el.textContent = '✔ DODANO';
-                            el.classList.add('added');
-                            // Remember added products
-                            var addedKey = 'ty_added_' + orderId;
-                            var added = JSON.parse(localStorage.getItem(addedKey) || '{}');
-                            if (typeof added !== 'object' || Array.isArray(added)) added = {};
-                            added[productId] = varSelect ? varSelect.value : '';
-                            localStorage.setItem(addedKey, JSON.stringify(added));
-                            // Disable dropdown for this item
-                            if (varSelect) { varSelect.disabled = true; }
-                            refreshOrderItems();
-                        } else {
-                            el.textContent = d.data || 'Napaka';
-                            setTimeout(function() { el.disabled = false; el.textContent = 'DODAJ'; }, 2000);
-                        }
-                    })
-                    .catch(function() {
-                        el.disabled = false;
-                        el.textContent = 'DODAJ';
-                    });
+                if (el.classList.contains('selected')) {
+                    el.classList.remove('selected');
+                    el.textContent = 'IZBERI';
+                    el.style.background = '#000';
+                } else {
+                    el.classList.add('selected');
+                    el.textContent = '✔ IZBRANO';
+                    el.style.background = '#2E7D32';
+                }
             });
         });
 
-        // Close grid
+        // "Ne želim" — close all, show summary without upsells
         document.getElementById('ty-grid-close').addEventListener('click', closeAll);
+
+        // "DODAJ K NARUDŽBI" — add all selected items, then close
+        var gridAddAll = document.getElementById('ty-grid-add-all');
+        if (gridAddAll) {
+            gridAddAll.addEventListener('click', function() {
+                var selected = overlay.querySelectorAll('.g-select-btn.selected');
+                if (selected.length === 0) {
+                    closeAll();
+                    return;
+                }
+                gridAddAll.textContent = 'Dodajem...';
+                gridAddAll.style.pointerEvents = 'none';
+
+                var promises = [];
+                selected.forEach(function(btn) {
+                    var productId = btn.getAttribute('data-product-id');
+                    var salePrice = btn.getAttribute('data-sale-price');
+                    var varSelect = btn.parentElement.querySelector('.g-variation');
+
+                    var fd = new FormData();
+                    fd.append('action', 'noriks_add_upsell');
+                    fd.append('order_id', orderId);
+                    fd.append('product_id', productId);
+                    fd.append('variation_id', varSelect ? varSelect.value : '');
+                    fd.append('sale_price', salePrice);
+                    fd.append('nonce', nonce);
+
+                    promises.push(
+                        fetch(ajaxUrl, { method: 'POST', body: fd })
+                            .then(function(r) { return r.json(); })
+                    );
+                });
+
+                Promise.all(promises).then(function() {
+                    refreshOrderItems();
+                    closeAll();
+                }).catch(function() {
+                    closeAll();
+                });
+            });
+        }
     }
 
-    // Restore added state from localStorage (runs always, after DOM ready)
+    // Restore step 1 button from localStorage
     setTimeout(function() {
         var addedKey2 = 'ty_added_' + orderId;
         var addedMap = JSON.parse(localStorage.getItem(addedKey2) || '{}');
         if (typeof addedMap !== 'object' || Array.isArray(addedMap)) addedMap = {};
-        var addedPids = Object.keys(addedMap);
-        if (addedPids.length > 0) {
-            // Restore grid buttons + dropdowns
-            document.querySelectorAll('.g-add-btn').forEach(function(btn) {
-                var pid = btn.getAttribute('data-product-id');
-                if (addedMap.hasOwnProperty(pid)) {
-                    btn.textContent = '✔ DODANO';
-                    btn.classList.add('added');
-                    btn.disabled = true;
-                    // Set + disable dropdown
-                    var dd = btn.parentElement.querySelector('.g-variation');
-                    if (dd && addedMap[pid]) {
-                        dd.value = addedMap[pid];
-                        dd.disabled = true;
-                    }
-                }
-            });
-            // Restore step 1 button + dropdown
-            var mainBtn = document.getElementById('ty-btn-add');
-            if (mainBtn) {
-                var mainPid = mainBtn.getAttribute('data-product-id');
-                if (addedMap.hasOwnProperty(mainPid) || addedMap.hasOwnProperty(String(mainPid))) {
-                    mainBtn.textContent = '✓ DODANO';
-                    mainBtn.classList.add('added');
-                    mainBtn.disabled = true;
-                    var mainDd = document.getElementById('ty-variation-select');
-                    var savedVal = addedMap[mainPid] || addedMap[String(mainPid)];
-                    if (mainDd && savedVal) {
-                        mainDd.value = savedVal;
-                        mainDd.disabled = true;
-                    }
-                }
+        var mainBtn = document.getElementById('ty-btn-add');
+        if (mainBtn) {
+            var mainPid = mainBtn.getAttribute('data-product-id');
+            if (addedMap.hasOwnProperty(mainPid) || addedMap.hasOwnProperty(String(mainPid))) {
+                mainBtn.textContent = '✓ DODANO';
+                mainBtn.classList.add('added');
+                mainBtn.disabled = true;
+                var mainDd = document.getElementById('ty-variation-select');
+                var savedVal = addedMap[mainPid] || addedMap[String(mainPid)];
+                if (mainDd && savedVal) { mainDd.value = savedVal; mainDd.disabled = true; }
             }
         }
     }, 100);
