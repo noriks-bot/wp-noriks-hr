@@ -184,6 +184,26 @@ body.woocommerce-checkout #payment .wc_payment_method > label img {
   width: auto !important;
   margin-left: 8px !important;
 }
+/* Fee badges — "Besplatno" for card & PayPal, price for COD */
+body.woocommerce-checkout #payment .wc_payment_method > label::after {
+  content: 'Besplatno' !important;
+  display: inline-block !important;
+  padding: 3px 10px !important;
+  margin-left: auto !important;
+  border-radius: 5px !important;
+  background: #9ce79c !important;
+  color: #228b22 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+  white-space: nowrap !important;
+}
+body.woocommerce-checkout #payment .payment_method_cod > label::after {
+  content: '1,99\00a0€' !important;
+  background: #e3e6e8 !important;
+  color: #5f6061 !important;
+}
+
 /* Payment box (card fields) */
 body.woocommerce-checkout #payment .payment_box {
   padding: 16px !important;
@@ -228,6 +248,18 @@ body.woocommerce-checkout .woocommerce-additional-fields {
   max-width: 100% !important;
   box-sizing: border-box !important;
   float: none !important;
+}
+
+/* ===== Shipping free badge ===== */
+body.woocommerce-checkout .shipping-free-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 5px;
+  background: #9ce79c;
+  color: #228b22;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
 }
 
 /* ===== blockUI — transparent (no flicker, payment logic works) ===== */

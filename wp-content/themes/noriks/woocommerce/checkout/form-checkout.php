@@ -104,11 +104,18 @@ if ( WC()->cart->is_empty() ) return;
                 </div>
                 <?php endforeach; ?>
 
-                <!-- Shipping -->
+                <!-- Shipping — always show -->
                 <div class="c--darkgray review-section-container review-addons shipping_order_review">
                   <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
                   <div class="review-addons-price review-sale-price">
-                    <span class="woocommerce-Price-amount amount"><bdi>2,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
+                    <?php
+                    $shipping_total = WC()->cart->get_shipping_total();
+                    if ( floatval($shipping_total) > 0 ) {
+                      echo '<span class="woocommerce-Price-amount amount"><bdi>' . number_format(floatval($shipping_total), 2, ',', '.') . '<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>';
+                    } else {
+                      echo '<span class="shipping-free-badge">Besplatno</span>';
+                    }
+                    ?>
                   </div>
                   <div class="review-product-remove"></div>
                 </div>
