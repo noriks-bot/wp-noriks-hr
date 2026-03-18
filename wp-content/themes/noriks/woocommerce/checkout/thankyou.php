@@ -166,7 +166,10 @@ body.woocommerce-order-received .woocommerce {
     .wrapper_selectbox { text-align:right; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; width:50%; outline:0; padding:10px; box-sizing:border-box; }
     @media (max-width:576px) { .wrapper_selectbox select { width:100%; } }
-    .buttons-section { display:flex; flex-direction:column; gap:8px; padding:0 0 15px; }
+    .buttons-section { display:flex; gap:10px; padding:0 0 15px; }
+    .pass-btn { flex:1; }
+    .buy-btn { flex:2.8; }
+    @media (max-width:576px) { .buttons-section { flex-direction:column; } .pass-btn, .buy-btn { flex:none; width:100%; } }
     .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; line-height:15px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
     .buy-btn { background:#000; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
     .buy-btn.added { background:#2E7D32; }
