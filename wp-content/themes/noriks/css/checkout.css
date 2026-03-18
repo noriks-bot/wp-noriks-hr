@@ -283,20 +283,35 @@ body.woocommerce-checkout #agree_to_terms_checkbox {
 }
 
 /* ===== Order summary prices always visible ===== */
-body.woocommerce-checkout .review-addons-price,
-body.woocommerce-checkout .info-price,
-body.woocommerce-checkout .review-sale-price {
-  display: block !important;
+body.woocommerce-checkout .noriks-order-summary .review-addons-price,
+body.woocommerce-checkout .noriks-order-summary .info-price,
+body.woocommerce-checkout .noriks-order-summary .review-sale-price,
+body.woocommerce-checkout .noriks-order-summary .review-addons-price *,
+body.woocommerce-checkout .noriks-order-summary .info-price * {
+  display: inline-block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  font-size: 14px !important;
+  color: #333 !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-addons-price,
+body.woocommerce-checkout .noriks-order-summary .info-price {
   text-align: right !important;
   min-width: 60px !important;
   flex-shrink: 0 !important;
+  white-space: nowrap !important;
 }
-body.woocommerce-checkout .review-section-container {
+body.woocommerce-checkout .noriks-order-summary .review-section-container {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
+  gap: 10px !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-addons-title {
+  flex: 1 !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-product-remove {
+  display: none !important;
 }
 
 /* ===== Shipping free badge ===== */
