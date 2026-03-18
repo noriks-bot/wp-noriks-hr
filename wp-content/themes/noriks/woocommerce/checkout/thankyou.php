@@ -144,15 +144,15 @@ body.woocommerce-order-received .woocommerce {
     .ty_upsell_one_wrapper.show { display:block; }
     .ty_upsell_one_wrapper.hide { display:none; }
     .ty_upsell_one_wrapper__popup-content { background:#fff; }
-    .tyuo_timer { background-color:#fff2bb; border:2px solid #fedb4b; border-radius:4px; color:#000; padding:10px; margin-bottom:15px; text-align:center; }
+    .tyuo_timer { background-color:#1A1A1A; border-radius:4px; color:#fff; padding:10px; margin-bottom:15px; text-align:center; }
     .tyuo_timer .timer_wrapper { display:flex; align-items:baseline; justify-content:center; }
-    .tyuo_timer .special_offer_txt { font-size:16px; margin-right:5px; }
-    .tyuo_timer .time { background-color:#e22b26; border-radius:4px; color:#fff; padding:2px 5px; }
-    .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; text-align:center; }
+    .tyuo_timer .special_offer_txt { font-size:16px; margin-right:5px; color:#fff; }
+    .tyuo_timer .time { background-color:#F37021; border-radius:4px; color:#fff; padding:2px 8px; }
+    .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; text-align:center; color:#fff; }
     .tyuo_middle_section { padding:0 5px; text-align:center; }
     .tyuo_middle_section svg { margin-right:5px; max-width:15px; }
-    .tyuo_middle_section .sub_title { color:#47b426; font-size:16px; font-weight:500; }
-    .tyuo_middle_section .clue_text { color:#47b426; font-size:16px; font-weight:500; margin:6px 0; }
+    .tyuo_middle_section .sub_title { color:#F37021; font-size:16px; font-weight:500; }
+    .tyuo_middle_section .clue_text { color:#F37021; font-size:16px; font-weight:500; margin:6px 0; }
     .tyuo_product_section { margin:15px 0; padding:0 15px; }
     .tyuo_product_section .product_data { display:flex; margin-bottom:10px; }
     .tyuo_product_section .product_data .img { margin-right:15px; max-width:150px; width:50%; }
@@ -161,12 +161,12 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .quantity { display:flex; flex-direction:column; font-size:2em; }
     .tyuo_product_section .product_name { font-size:18px; font-weight:700; color:#1A1A1A; line-height:20px; margin:4px 0 10px; }
     .tyuo_product_section .product_regular_price { color:#8f8f8f; font-size:17px; text-decoration:line-through; }
-    .tyuo_product_section .product_new_sale_price { color:#ca232c; font-size:25px; font-weight:700; }
+    .tyuo_product_section .product_new_sale_price { color:#F37021; font-size:25px; font-weight:700; }
     .wrapper_selectbox { color:#5f6060; font-size:1.1em; font-weight:500; padding:0 10px; text-align:right; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #a9a9a9; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; min-width:50%; outline:0; padding:10px; }
     .buttons-section { display:flex; justify-content:space-between; padding:10px; }
-    .pass-btn { background:#fff; border:1px solid #E86C00; border-radius:4px; color:#E86C00; flex:1; line-height:15px; margin-right:10px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
-    .buy-btn { background:#000; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
+    .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; flex:1; line-height:15px; margin-right:10px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
+    .buy-btn { background:#F37021; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
@@ -417,11 +417,11 @@ body.woocommerce-order-received .woocommerce {
 
                 <div class="tyuo_middle_section">
                     <div class="sub_title">
-                        <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#E8450E"></path></svg></span>
+                        <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#F37021"></path></svg></span>
                         Poslat ćemo ga u istom paketu
                     </div>
                     <div class="clue_text">
-                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#E8450E"></path></svg></span>
+                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#F37021"></path></svg></span>
                         Razmislite kome biste mogli pokloniti proizvod
                     </div>
                 </div>
