@@ -75,12 +75,21 @@ body.woocommerce-checkout #hs-cod-checkout-prompt {
   display: none !important;
 }
 
-/* ===== PAYMENT — native WC, minimal overrides ===== */
-/* Payment title — vigoshop CDN hides it, force show */
+/* ===== PAYMENT — native WC, force visible (vigoshop CDN hides it) ===== */
 body.woocommerce-checkout h3.payment-title {
   display: block !important;
 }
-/* Hide WC's place_order inside #payment (we have our own) */
+body.woocommerce-checkout #payment {
+  display: block !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
+  left: auto !important;
+  clip: auto !important;
+}
 body.woocommerce-checkout #payment .place-order {
   display: none !important;
 }
