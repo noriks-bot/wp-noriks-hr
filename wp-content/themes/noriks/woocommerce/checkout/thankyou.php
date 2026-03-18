@@ -149,7 +149,7 @@ body.woocommerce-order-received .woocommerce {
     background: #fff;
     margin: 0 0 15px;
     border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    border-radius: 4px;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
