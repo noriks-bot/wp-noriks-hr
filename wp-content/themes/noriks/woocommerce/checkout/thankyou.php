@@ -871,10 +871,12 @@ body.woocommerce-order-received .woocommerce {
                     );
                 });
 
-                Promise.all(promises).then(function() {
+                Promise.all(promises).then(function(results) {
+                    console.log('Upsell results:', results);
                     refreshOrderItems();
                     closeAll();
-                }).catch(function() {
+                }).catch(function(err) {
+                    console.error('Upsell error:', err);
                     closeAll();
                 });
             });
