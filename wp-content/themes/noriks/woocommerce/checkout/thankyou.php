@@ -119,9 +119,10 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Success ═══ */
 .ty-success {
     background: #e8f5e9;
-    padding: 12px 16px; margin-bottom: 15px; text-align: center;
+    padding: 6px 8px; margin-bottom: 0; text-align: center;
     border-radius: 4px !important;
 }
+@media (max-width:576px) { .ty-success { margin-left:0; margin-right:0; padding-left:0; padding-right:0; border-radius:0 !important; } }
 .ty-success-icon {
     width: 20px; height: 20px; background: #4CAF50;
     display: inline-flex; align-items: center; justify-content: center;
@@ -483,12 +484,12 @@ body.woocommerce-order-received .woocommerce {
         <div class="ty-grid-section" id="ty-grid-section">
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" style="cursor:pointer;flex-direction:column;position:relative;">
-                    <span class="ty-upsell-close" id="ty-step2-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:rgba(255,255,255,0.7);cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
+                    <span class="ty-upsell-close" id="ty-step2-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:#000;cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
                     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;">
-                        <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);">Posebna ponuda ističe</div>
-                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#D63B0E;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
+                        <div style="font-size:15px;font-weight:400;color:#000;">Posebna ponuda ističe</div>
+                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#e22b26;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
                     </div>
-                    <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte bilo koji proizvod s 50% popusta</div>
+                    <div style="font-size:20px;font-weight:700;color:#000;line-height:1.3;text-align:center;padding-top:10px;">Dodajte bilo koji proizvod s 50% popusta</div>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
@@ -539,7 +540,7 @@ body.woocommerce-order-received .woocommerce {
                     </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="buttons-section" style="padding:0 15px 15px;">
+                <div class="buttons-section">
                     <a class="pass-btn" id="ty-grid-close">Ne želim</a>
                     <div class="buy-btn" id="ty-grid-add-all">DODAJ K NARUDŽBI</div>
                 </div>
