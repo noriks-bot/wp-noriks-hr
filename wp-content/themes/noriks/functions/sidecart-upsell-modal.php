@@ -211,9 +211,7 @@ function noriks_upsell_modal_markup() {
                 <div id="noriks-modal-error" class="noriks-modal-error" style="display:none;">Odaberite sve opcije</div>
                 <button id="noriks-modal-add" class="noriks-modal-add-btn">DODAJ U KOŠARICU</button>
             </div>
-            <div id="noriks-modal-loading" class="noriks-modal-loading" style="display:none;">
-                <div class="noriks-spinner"></div>
-            </div>
+
         </div>
     </div>
     <style>
@@ -392,25 +390,7 @@ function noriks_upsell_modal_markup() {
             margin-bottom: 10px;
             text-align: center;
         }
-        .noriks-modal-loading {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255,255,255,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-        }
-        .noriks-spinner {
-            width: 36px; height: 36px;
-            border: 3px solid #eee;
-            border-top-color: #222;
-            border-radius: 50%;
-            animation: noriks-spin 0.6s linear infinite;
-        }
-        @keyframes noriks-spin {
-            to { transform: rotate(360deg); }
-        }
+
     </style>
     <script>
     (function($) {
@@ -432,7 +412,6 @@ function noriks_upsell_modal_markup() {
             selectedAttrs = {};
             $('#noriks-modal-error').hide();
             $('#noriks-qty-val').val(1);
-            $('#noriks-modal-loading').hide();
 
             // Try both string and number keys
             var cached = variationCache[productId] || variationCache[String(productId)] || variationCache[Number(productId)];
@@ -570,9 +549,6 @@ function noriks_upsell_modal_markup() {
             }
 
             var variation = findVariation();
-            console.log('Selected attrs:', JSON.stringify(selectedAttrs));
-            console.log('Variations:', JSON.stringify(modalData.variations.map(function(v){return v.attributes})));
-            console.log('Match:', variation);
             if (!variation) {
                 $('#noriks-modal-error').text('Ova kombinacija nije dostupna').show();
                 return;
@@ -598,10 +574,8 @@ function noriks_upsell_modal_markup() {
                 data[key] = variation.attributes[key];
             }
 
-            console.log('=== ADD TO CART DATA ===', JSON.stringify(data));
 
             $.post(woocommerce_params.ajax_url, data, function(res) {
-                console.log('=== ADD TO CART RESPONSE ===', JSON.stringify(res));
                 
                 if (res.success !== false && res.fragments) {
                     $btn.removeClass('adding').addClass('added').text('✓ DODANO!');
@@ -627,7 +601,6 @@ function noriks_upsell_modal_markup() {
                     setTimeout(closeModal, 800);
                 }
             }).fail(function(xhr) {
-                console.error('Add to cart failed:', xhr.responseText);
                 $btn.removeClass('adding').text('DODAJ U KOŠARICU');
                 $('#noriks-modal-error').text('Greška pri dodavanju').show();
             });
