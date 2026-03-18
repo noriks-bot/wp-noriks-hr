@@ -171,8 +171,8 @@ body.woocommerce-order-received .woocommerce {
     .pass-btn { flex:1; }
     .buy-btn { flex:2.8; }
     @media (max-width:576px) { .buttons-section { flex-direction:column; } .pass-btn, .buy-btn { flex:none; width:100%; } }
-    .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; line-height:15px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
-    .buy-btn { background:#000; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
+    .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; padding:12px 10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; line-height:1.2; }
+    .buy-btn { background:#000; border:1px solid #000; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; padding:12px 10px; text-align:center; line-height:1.2; }
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
