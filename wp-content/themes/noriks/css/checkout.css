@@ -81,7 +81,7 @@ body.woocommerce-checkout h3.payment-title {
 }
 
 /* ===== PAYMENT LABELS — match vigoshop padding ===== */
-body.woocommerce-checkout #noriks-payment .wc_payment_method label {
+body.woocommerce-checkout #payment .wc_payment_method label {
   padding: 22.65px 16px !important;
 }
 
@@ -94,14 +94,22 @@ body.woocommerce-checkout .agreed_terms_txt {
   margin-right: auto;
 }
 
-/* ===== HIDDEN WC #payment (off-screen for AJAX) ===== */
+/* ===== WC #payment — VISIBLE, styled as vigoshop ===== */
 body.woocommerce-checkout #payment.woocommerce-checkout-payment {
-  position: absolute !important;
-  left: -9999px !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
+  position: static !important;
+  left: auto !important;
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* Hide WC's place_order button inside #payment (we have our own) */
+body.woocommerce-checkout #payment .place-order {
+  display: none !important;
 }
 
 /* ===== FIX: Prevent blockUI flicker on checkout ===== */
@@ -113,25 +121,25 @@ body.woocommerce-checkout .processing .blockUI.blockOverlay {
 }
 
 /* ===== Stripe CC fields in visible payment area ===== */
-#noriks-payment .payment_box {
+#payment .payment_box {
   display: none;
   padding: 10px 16px 16px !important;
   background: #f8f8f8 !important;
   border-top: 1px solid #e3e6e8 !important;
 }
-#noriks-payment .wc_payment_method:has(input:checked) .payment_box {
+#payment .wc_payment_method:has(input:checked) .payment_box {
   display: block !important;
 }
-#noriks-payment .wc-braintree-hosted-field,
-#noriks-payment .wc-stripe-elements-field,
-#noriks-payment iframe {
+#payment .wc-braintree-hosted-field,
+#payment .wc-stripe-elements-field,
+#payment iframe {
   min-height: 40px !important;
   border: 1px solid #d1dbe5 !important;
   border-radius: 4px !important;
   background: #fff !important;
   padding: 10px !important;
 }
-#noriks-payment .form-row label {
+#payment .form-row label {
   display: block !important;
   font-size: 14px !important;
   font-weight: 500 !important;
@@ -139,14 +147,14 @@ body.woocommerce-checkout .processing .blockUI.blockOverlay {
   margin-bottom: 4px !important;
   padding: 0 !important;
 }
-#noriks-payment .form-row {
+#payment .form-row {
   margin-bottom: 12px !important;
 }
-#noriks-payment .form-row-first {
+#payment .form-row-first {
   float: left !important;
   width: 48% !important;
 }
-#noriks-payment .form-row-last {
+#payment .form-row-last {
   float: right !important;
   width: 48% !important;
 }
