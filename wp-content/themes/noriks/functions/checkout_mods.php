@@ -519,12 +519,7 @@ add_filter( 'woocommerce_form_field_text', function( $field, $key ) {
     return $field;
 }, 10, 2 );
 
-add_filter( 'woocommerce_form_field_tel', function( $field, $key ) {
-    if ( $key === 'billing_phone' ) {
-        $field .= '<div class="noriks-phone-desc"><span>Primjer: 0912345678</span><span>Za pomoć s dostavom</span></div>';
-    }
-    return $field;
-}, 10, 2 );
+/* Phone description handled by CSS ::after — immune to WC AJAX */
 
 /**
  * Billing title
