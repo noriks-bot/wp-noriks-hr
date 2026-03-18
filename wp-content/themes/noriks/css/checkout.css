@@ -103,3 +103,50 @@ body.woocommerce-checkout #payment.woocommerce-checkout-payment {
   overflow: hidden !important;
   pointer-events: none !important;
 }
+
+/* ===== FIX: Prevent blockUI flicker on checkout ===== */
+body.woocommerce-checkout .blockUI.blockOverlay,
+body.woocommerce-checkout .woocommerce .blockUI.blockOverlay,
+body.woocommerce-checkout .processing .blockUI.blockOverlay {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* ===== Stripe CC fields in visible payment area ===== */
+#noriks-payment .payment_box {
+  display: none;
+  padding: 10px 16px 16px !important;
+  background: #f8f8f8 !important;
+  border-top: 1px solid #e3e6e8 !important;
+}
+#noriks-payment .wc_payment_method:has(input:checked) .payment_box {
+  display: block !important;
+}
+#noriks-payment .wc-braintree-hosted-field,
+#noriks-payment .wc-stripe-elements-field,
+#noriks-payment iframe {
+  min-height: 40px !important;
+  border: 1px solid #d1dbe5 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  padding: 10px !important;
+}
+#noriks-payment .form-row label {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  margin-bottom: 4px !important;
+  padding: 0 !important;
+}
+#noriks-payment .form-row {
+  margin-bottom: 12px !important;
+}
+#noriks-payment .form-row-first {
+  float: left !important;
+  width: 48% !important;
+}
+#noriks-payment .form-row-last {
+  float: right !important;
+  width: 48% !important;
+}

@@ -28,6 +28,9 @@ add_action( 'wp_enqueue_scripts', function() {
         'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
         'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
         'wp-hooks', 'wp-i18n',
+        // Stripe / payment gateway scripts
+        'stripe', 'wc-stripe', 'wc-stripe-elements', 'wc-stripe-checkout',
+        'woocommerce-gateway-stripe', 'stripe_v3',
     );
     if ( ! empty( $wp_scripts->registered ) ) {
         foreach ( array_keys( $wp_scripts->registered ) as $handle ) {
@@ -495,6 +498,14 @@ add_action( 'wp_footer', function() {
         if (val) showValid($row);
         return true;
       }
+
+      /* Prevent blockUI flicker on checkout AJAX updates */
+      $(document).ajaxSend(function(){
+        setTimeout(function(){
+          $('.blockUI.blockOverlay').hide();
+          $('.processing').removeClass('processing');
+        }, 10);
+      });
 
       /* Re-validate on input/change — clears error when value becomes valid */
       $(document).on('input', '.woocommerce-checkout .form-row input', function(){

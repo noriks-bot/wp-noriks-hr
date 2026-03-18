@@ -59,41 +59,54 @@ if ( WC()->cart->is_empty() ) return;
           </div>
         </div>
 
-        <!-- PAYMENT METHODS (visible) -->
+        <!-- PAYMENT METHODS — dynamically read from WC gateways -->
         <h3 class="payment-title">Način plaćanja</h3>
         <div id="noriks-payment" class="woocommerce-checkout-payment">
           <ul class="wc_payment_methods payment_methods methods">
-            <li class="wc_payment_method payment_method_cod">
-              <input id="noriks_pm_cod" type="radio" class="input-radio" name="noriks_payment" value="cod" checked='checked' data-order_button_text="">
-              <label for="noriks_pm_cod">
-                Plaćanje prilikom preuzimanja <span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount">1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></span></span>
-                <div class="hs-checkout__payment-method-cod-icon-container">
-                  <img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" />
-                </div>
+            <?php
+            $available_gateways = WC()->payment_gateways->get_available_payment_gateways();
+            $first = true;
+            // Payment display config per gateway
+            $payment_labels = array(
+              'cod' => array(
+                'label' => 'Plaćanje prilikom preuzimanja',
+                'fee'   => '<span class="payment-fee-not-free"><span class="woocommerce-Price-amount amount">1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></span></span>',
+                'icon'  => '<div class="hs-checkout__payment-method-cod-icon-container"><img decoding="async" class="hs-checkout__payment-method-cod-icon" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg" /></div>',
+              ),
+              'stripe_cc' => array(
+                'label' => 'Kreditna kartica',
+                'fee'   => '<span class="payment-fee-free">Besplatno</span>',
+                'icon'  => '<div class="sv-wc-payment-gateway-card-icons"><img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" /><img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" /><img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" /></div>',
+              ),
+              'ppcp-gateway' => array(
+                'label' => 'PayPal',
+                'fee'   => '<span class="payment-fee-free">Besplatno</span>',
+                'icon'  => '<img decoding="async" src="https://images.vigo-shop.com/general/checkout/paypal/PayPal.svg" alt="PayPal">',
+              ),
+            );
+            foreach ( $available_gateways as $gw_id => $gateway ) :
+              $checked = $first ? " checked='checked'" : '';
+              $cfg = isset($payment_labels[$gw_id]) ? $payment_labels[$gw_id] : null;
+              $label_text = $cfg ? $cfg['label'] : esc_html($gateway->get_title());
+              $fee_html = $cfg ? $cfg['fee'] : '';
+              $icon_html = $cfg ? $cfg['icon'] : '';
+            ?>
+            <li class="wc_payment_method payment_method_<?php echo esc_attr($gw_id); ?>">
+              <input id="noriks_pm_<?php echo esc_attr($gw_id); ?>" type="radio" class="input-radio" name="noriks_payment" value="<?php echo esc_attr($gw_id); ?>"<?php echo $checked; ?>>
+              <label for="noriks_pm_<?php echo esc_attr($gw_id); ?>">
+                <?php echo $label_text; ?> <?php echo $fee_html; ?><?php echo $icon_html; ?>
               </label>
+              <?php if ( $gateway->has_fields() ) : ?>
+              <div class="payment_box payment_method_<?php echo esc_attr($gw_id); ?>">
+                <?php $gateway->payment_fields(); ?>
+              </div>
+              <?php endif; ?>
             </li>
-            <li class="wc_payment_method payment_method_braintree_credit_card">
-              <input id="noriks_pm_card" type="radio" class="input-radio" name="noriks_payment" value="stripe_cc" data-order_button_text="Naruči">
-              <label for="noriks_pm_card">
-                Kreditna kartica <span class="payment-fee-free">Besplatno</span>
-                <div class="sv-wc-payment-gateway-card-icons">
-                  <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-visa.svg" alt="visa" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" />
-                  <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-mastercard.svg" alt="mastercard" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" />
-                  <img decoding="async" src="https://vigoshop.hr/app/plugins/woocommerce-gateway-paypal-powered-by-braintree/vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/assets/images/card-maestro.svg" alt="maestro" class="sv-wc-payment-gateway-icon" width="40" height="25" style="width:40px;height:25px;" />
-                </div>
-              </label>
-            </li>
-            <li class="wc_payment_method payment_method_braintree_paypal">
-              <input id="noriks_pm_paypal" type="radio" class="input-radio" name="noriks_payment" value="ppcp-gateway" data-order_button_text="Naruči">
-              <label for="noriks_pm_paypal">
-                PayPal <span class="payment-fee-free">Besplatno</span>
-                <img decoding="async" src="https://images.vigo-shop.com/general/checkout/paypal/PayPal.svg" alt="PayPal">
-              </label>
-            </li>
+            <?php $first = false; endforeach; ?>
           </ul>
         </div>
 
-        <!-- Hidden WC #payment for AJAX + form processing -->
+        <!-- Hidden WC #payment for AJAX form processing -->
         <div id="payment" class="woocommerce-checkout-payment" style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;pointer-events:none;">
           <?php do_action( 'woocommerce_checkout_order_review' ); ?>
         </div>
