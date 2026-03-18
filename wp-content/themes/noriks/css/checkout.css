@@ -320,7 +320,7 @@ body.woocommerce-checkout .blockUI.blockMsg {
   display: none !important;
 }
 
-/* ===== Mobile: Naruči button — no white sides ===== */
+/* ===== Mobile: full-bleed button, no white gaps ===== */
 @media (max-width: 560px) {
   body.woocommerce-checkout #order_review {
     background: transparent !important;
@@ -328,5 +328,10 @@ body.woocommerce-checkout .blockUI.blockMsg {
     padding-right: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  body.woocommerce-checkout #order_review .button {
+    border-radius: 0 !important;
   }
 }
