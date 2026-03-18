@@ -141,6 +141,42 @@ function noriks_get_product_variations() {
 // Enqueue modal CSS/JS
 add_action('wp_footer', 'noriks_upsell_modal_markup');
 function noriks_upsell_modal_markup() {
+    // Pre-build variation data server-side for known upsell products
+    $upsell_ids = [4154, 4162];
+    $preloaded = [];
+    foreach ($upsell_ids as $pid) {
+        $product = wc_get_product($pid);
+        if (!$product || !$product->is_type('variable')) continue;
+        $attributes = [];
+        foreach ($product->get_variation_attributes() as $attr_name => $options) {
+            $label = wc_attribute_label($attr_name);
+            $sanitized_key = 'attribute_' . sanitize_title($attr_name);
+            $terms = [];
+            foreach ($options as $option) {
+                $term = get_term_by('slug', $option, $attr_name);
+                $terms[] = ['slug' => $option, 'name' => $term ? $term->name : ucfirst($option)];
+            }
+            $attributes[] = ['name' => $attr_name, 'taxonomy' => $sanitized_key, 'label' => $label, 'options' => $terms];
+        }
+        $variations = [];
+        foreach ($product->get_available_variations() as $v) {
+            $variations[] = [
+                'variation_id' => $v['variation_id'],
+                'attributes' => $v['attributes'],
+                'price_html' => $v['price_html'],
+                'is_in_stock' => $v['is_in_stock'],
+                'image' => $v['image']['thumb_src'] ?? '',
+            ];
+        }
+        $preloaded[$pid] = [
+            'product_id' => $pid,
+            'product_name' => $product->get_name(),
+            'product_image' => wp_get_attachment_image_url($product->get_image_id(), 'medium'),
+            'price_html' => $product->get_price_html(),
+            'attributes' => $attributes,
+            'variations' => $variations,
+        ];
+    }
     ?>
     <!-- Noriks Upsell Modal -->
     <div id="noriks-upsell-modal" class="noriks-modal-overlay" style="display:none;">
@@ -380,24 +416,8 @@ function noriks_upsell_modal_markup() {
     (function($) {
         var modalData = {};
         var selectedAttrs = {};
-        var variationCache = {};
-
-        // Pre-fetch ALL upsell product variations on page load (background)
-        $(function() {
-            var ids = [];
-            $('.noriks-upsell-btn').each(function() {
-                var pid = $(this).data('product_id');
-                if (pid && ids.indexOf(pid) === -1) ids.push(pid);
-            });
-            ids.forEach(function(pid) {
-                $.post(woocommerce_params.ajax_url, {
-                    action: 'get_product_variations',
-                    product_id: pid
-                }, function(res) {
-                    if (res.success) variationCache[pid] = res.data;
-                });
-            });
-        });
+        // Variation data pre-loaded server-side — ZERO network requests
+        var variationCache = <?php echo json_encode($preloaded); ?>;
 
         // Open modal
         $(document).on('click', '.noriks-upsell-btn', function(e) {
