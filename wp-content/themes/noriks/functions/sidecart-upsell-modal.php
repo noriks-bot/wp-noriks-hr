@@ -254,7 +254,7 @@ function noriks_upsell_modal_markup() {
         .noriks-modal-price {
             font-size: 16px;
             font-weight: 700;
-            color: #e53935;
+            color: #e22b26;
         }
         .noriks-modal-price del { color: #999; font-weight: 400; font-size: 14px; }
         .noriks-modal-price ins { text-decoration: none; }
@@ -349,7 +349,7 @@ function noriks_upsell_modal_markup() {
             background: #2e7d32;
         }
         .noriks-modal-error {
-            color: #e53935;
+            color: #e22b26;
             font-size: 13px;
             margin-bottom: 10px;
             text-align: center;
