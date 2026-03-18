@@ -225,11 +225,6 @@ function noriks_upsell_modal_markup() {
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: noriks-fade-in 0.2s ease;
-        }
-        @keyframes noriks-fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
         .noriks-modal {
             background: #fff;
@@ -240,11 +235,6 @@ function noriks_upsell_modal_markup() {
             overflow-y: auto;
             position: relative;
             box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-            animation: noriks-slide-up 0.25s ease;
-        }
-        @keyframes noriks-slide-up {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
         }
         .noriks-modal-close {
             position: absolute;
