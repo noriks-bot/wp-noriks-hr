@@ -282,7 +282,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Variation select */
 .tyuo_product_section .variation-select-wrap {
-    padding: 0 0 10px;
+    padding: 0 0 6px;
     display: flex;
     justify-content: flex-end;
 }
