@@ -93,6 +93,21 @@ body.woocommerce-checkout #payment {
 body.woocommerce-checkout #payment .place-order {
   display: none !important;
 }
+/* Force payment_box (card fields) visible when selected */
+body.woocommerce-checkout #payment .wc_payment_method .payment_box {
+  display: none !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method.wc_payment_method input:checked ~ .payment_box,
+body.woocommerce-checkout #payment .payment_method_stripe_cc .payment_box {
+  display: block !important;
+}
+body.woocommerce-checkout #payment .wc_payment_methods,
+body.woocommerce-checkout #payment .wc_payment_methods li,
+body.woocommerce-checkout #payment .wc_payment_methods label,
+body.woocommerce-checkout #payment .wc_payment_methods .payment_box * {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 
 /* ===== Field descriptions via CSS (immune to WC AJAX re-renders) ===== */
 #billing_email_field::after {
