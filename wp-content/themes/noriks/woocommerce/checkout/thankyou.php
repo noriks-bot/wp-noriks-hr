@@ -426,7 +426,12 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item .g-add-btn {
     padding-left: 8px; padding-right: 8px;
 }
-.ty-grid-item .g-name { margin-top: 8px; }
+.ty-grid-item .g-category {
+    font-size: 10px; font-weight: 700; color: #999;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-top: 8px; padding-left: 8px; padding-right: 8px;
+}
+.ty-grid-item .g-name { margin-top: 2px; }
 .ty-grid-item .g-name {
     font-family: 'Roboto', sans-serif;
     font-size: 12px; color: #222; margin-bottom: 5px;
@@ -677,6 +682,7 @@ body.woocommerce-order-received .woocommerce {
                     ?>
                     <div class="ty-grid-item">
                         <img src="<?php echo esc_url( $gp_img_url ); ?>" alt="<?php echo esc_attr( $gp->get_name() ); ?>">
+                        <div class="g-category">BOKSERICE</div>
                         <div class="g-name"><?php echo esc_html( $gp->get_name() ); ?></div>
                         <div class="g-price-old"><?php echo number_format( $gp_price, 2, ',', '.' ); ?>€</div>
                         <div class="g-price-new"><?php echo number_format( $gp_sale, 2, ',', '.' ); ?>€</div>
