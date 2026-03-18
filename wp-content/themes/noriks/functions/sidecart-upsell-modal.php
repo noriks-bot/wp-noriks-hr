@@ -184,7 +184,9 @@ function noriks_upsell_modal_markup() {
         .noriks-modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.35);
+            background: rgba(0,0,0,0.5);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
             z-index: 999999;
             display: flex;
             align-items: center;
@@ -378,6 +380,24 @@ function noriks_upsell_modal_markup() {
     (function($) {
         var modalData = {};
         var selectedAttrs = {};
+        var variationCache = {};
+
+        // Pre-fetch ALL upsell product variations on page load (background)
+        $(function() {
+            var ids = [];
+            $('.noriks-upsell-btn').each(function() {
+                var pid = $(this).data('product_id');
+                if (pid && ids.indexOf(pid) === -1) ids.push(pid);
+            });
+            ids.forEach(function(pid) {
+                $.post(woocommerce_params.ajax_url, {
+                    action: 'get_product_variations',
+                    product_id: pid
+                }, function(res) {
+                    if (res.success) variationCache[pid] = res.data;
+                });
+            });
+        });
 
         // Open modal
         $(document).on('click', '.noriks-upsell-btn', function(e) {
@@ -386,9 +406,6 @@ function noriks_upsell_modal_markup() {
             var productId = $(this).data('product_id');
             openUpsellModal(productId);
         });
-
-        // Pre-fetch cache: store variation data so reopening is instant
-        var variationCache = {};
 
         function openUpsellModal(productId) {
             var $modal = $('#noriks-upsell-modal');
