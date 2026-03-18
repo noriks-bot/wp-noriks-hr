@@ -14,10 +14,14 @@ add_action( 'wp_enqueue_scripts', function() {
     // Remove ALL registered styles except admin-bar
     global $wp_styles;
     if ( ! empty( $wp_styles->registered ) ) {
+        // Keep: admin, WC core, stripe, payment-related styles
+        $keep_style_patterns = array( 'admin-bar', 'dashicons', 'stripe', 'wc-stripe', 'woocommerce', 'wc-', 'select2' );
         foreach ( array_keys( $wp_styles->registered ) as $handle ) {
-            if ( $handle === 'admin-bar' || $handle === 'dashicons' ) continue;
-            if ( strpos( $handle, 'stripe' ) !== false || strpos( $handle, 'wc-stripe' ) !== false ) continue;
-            wp_deregister_style( $handle );
+            $keep = false;
+            foreach ( $keep_style_patterns as $pat ) {
+                if ( strpos( $handle, $pat ) !== false ) { $keep = true; break; }
+            }
+            if ( ! $keep ) wp_deregister_style( $handle );
         }
     }
 
