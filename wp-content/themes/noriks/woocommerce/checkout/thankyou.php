@@ -248,6 +248,8 @@ body.woocommerce-order-received .woocommerce {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 .tyuo_product_section .right_section_wrapper {
     flex: 1;
@@ -583,31 +585,36 @@ body.woocommerce-order-received .woocommerce {
                             <img alt="<?php echo esc_attr( $upsell_name ); ?>" src="<?php echo esc_url( $upsell_image ); ?>">
                         </div>
                         <div class="right_section_wrapper">
-                            <div class="quantity">
-                                <div class="qty">1x <div class="product_name"><?php echo esc_html( $upsell_name ); ?></div></div>
-                                <div class="product_regular_price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
-                                <div class="product_new_sale_price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
-                            </div>
+                            <div class="qty">1 x</div>
+                            <div class="product_name"><?php echo esc_html( $upsell_name ); ?></div>
+                            <div class="product_regular_price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
+                            <div class="product_new_sale_price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
                         </div>
                     </div>
 
-                    <?php if ( $upsell_variations ) : ?>
                     <div class="variation-select-wrap">
                         <select class="variation-select" id="ty-variation-select">
-                            <?php foreach ( $upsell_variations as $v ) : ?>
-                            <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>
-                                Crna, <?php echo esc_html( $v['size'] ); ?>
-                            </option>
-                            <?php endforeach; ?>
+                            <?php if ( $upsell_variations ) : ?>
+                                <?php foreach ( $upsell_variations as $v ) : ?>
+                                <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>
+                                    Črna, <?php echo esc_html( $v['size'] ); ?>
+                                </option>
+                                <?php endforeach; ?>
+                            <?php else : ?>
+                                <option value="">Črna, S</option>
+                                <option value="">Črna, M</option>
+                                <option value="">Črna, L</option>
+                                <option value="">Črna, XL</option>
+                                <option value="">Črna, XXL</option>
+                            <?php endif; ?>
                         </select>
                     </div>
-                    <?php endif; ?>
 
                     <div class="ty-upsell-status" id="ty-upsell-status"></div>
 
                     <div class="buttons-section">
                         <a class="pass-btn" id="ty-btn-skip">Ne želim</a>
-                        <div class="buy-btn" id="ty-btn-add" data-product-id="<?php echo esc_attr( $upsell_product_id ); ?>">DODAJ U NARUDŽBU</div>
+                        <div class="buy-btn" id="ty-btn-add" data-product-id="<?php echo esc_attr( $upsell_product_id ); ?>">DODAJ V NAROČILO</div>
                     </div>
                 </div>
 
