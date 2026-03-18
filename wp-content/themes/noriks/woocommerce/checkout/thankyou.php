@@ -163,7 +163,7 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .product_regular_price { color:#8f8f8f; font-size:17px; text-decoration:line-through; }
     .tyuo_product_section .product_new_sale_price { color:#F37021; font-size:25px; font-weight:700; }
     .wrapper_selectbox { color:#5f6060; font-size:1.1em; font-weight:500; padding:0 0 10px; }
-    .wrapper_selectbox { text-align:right; }
+    .wrapper_selectbox { text-align:right; padding:0 15px 10px; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; width:50%; outline:0; padding:10px; box-sizing:border-box; }
     @media (max-width:576px) { .wrapper_selectbox select { width:100%; } }
     .buttons-section { display:flex; gap:10px; padding:0 0 15px; }
