@@ -109,11 +109,7 @@ body.woocommerce-order-received .woocommerce {
     background: transparent !important; padding: 0 !important;
 }
 
-/* ═══ GLOBAL: kill ALL border-radius ═══ */
-.ty-container *, .ty-container *::before, .ty-container *::after,
-.ty-grid-section *, .ty-grid-section *::before, .ty-grid-section *::after {
-    border-radius: 0 !important;
-}
+/* border-radius handled per element — removed global kill */
 
 /* ═══ Container ═══ */
 .ty-container { max-width: 520px; margin: 30px auto; padding: 0 4px; }
