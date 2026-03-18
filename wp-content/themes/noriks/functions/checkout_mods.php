@@ -504,14 +504,20 @@ add_action( 'wp_footer', function() {
         $.fn.block = function(){ return this; };
         $.fn.unblock = function(){ return this; };
       }
-      /* Also catch any blockUI overlay that somehow gets injected */
-      new MutationObserver(function(mutations){
-        mutations.forEach(function(m){
-          m.addedNodes.forEach(function(n){
-            if (n.classList && n.classList.contains('blockOverlay')) n.remove();
-          });
-        });
-      }).observe(document.body, {childList:true, subtree:true});
+
+      /* Persistent field descriptions — survive WC update_checkout re-renders */
+      function injectDescriptions() {
+        var phoneRow = $('#billing_phone_field');
+        if (phoneRow.length && !phoneRow.find('.noriks-desc').length) {
+          phoneRow.append('<span class="description noriks-desc"><span class="desc-left">Primjer: 0912345678</span><span class="desc-right">Za pomoć s dostavom</span></span>');
+        }
+        var emailRow = $('#billing_email_field');
+        if (emailRow.length && !emailRow.find('.noriks-desc').length) {
+          emailRow.append('<span class="description noriks-desc">Za potvrdu narudžbe i praćenje pošiljke</span>');
+        }
+      }
+      injectDescriptions();
+      $(document.body).on('updated_checkout', injectDescriptions);
 
       /* Re-validate on input/change — clears error when value becomes valid */
       $(document).on('input', '.woocommerce-checkout .form-row input', function(){
@@ -614,10 +620,12 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_city']['placeholder'] = 'Odaberite grad';
     $fields['billing']['billing_phone']['label'] = 'Telefon';
     $fields['billing']['billing_phone']['placeholder'] = 'Broj mobilnog telefona';
-    $fields['billing']['billing_phone']['description'] = '<span class="desc-left">Primjer: 0912345678</span><span class="desc-right">Za pomoć s dostavom</span>';
+    /* Description injected via JS to survive update_checkout AJAX re-renders */
+    // $fields['billing']['billing_phone']['description'] = '...';
     $fields['billing']['billing_email']['label'] = 'E-mail adresa';
     $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
-    $fields['billing']['billing_email']['description'] = 'Za potvrdu narudžbe i praćenje pošiljke';
+    /* Description injected via JS to survive update_checkout AJAX re-renders */
+    // $fields['billing']['billing_email']['description'] = 'Za potvrdu narudžbe i praćenje pošiljke';
     $fields['billing']['billing_email']['required'] = false;
     $fields['billing']['billing_country']['default'] = 'HR';
     unset( $fields['billing']['billing_company'] );
