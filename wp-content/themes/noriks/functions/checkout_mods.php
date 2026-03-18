@@ -487,7 +487,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_email']['placeholder'] = 'E-mail adresa';
     /* Description injected via JS to survive update_checkout AJAX re-renders */
     // $fields['billing']['billing_email']['description'] = 'Za potvrdu narudžbe i praćenje pošiljke';
-    $fields['billing']['billing_email']['required'] = false;
+    $fields['billing']['billing_email']['required'] = true;
     $fields['billing']['billing_country']['default'] = 'HR';
     unset( $fields['billing']['billing_company'] );
 
