@@ -407,10 +407,20 @@ add_action( 'wp_footer', function() {
         });
       });
 
-      /* Checkout button — direct form submit */
+      /* Checkout button — direct form submit, instant feedback */
       $('#noriks_place_order').on('click', function(e){
         e.preventDefault();
+        submitted = true;
+        var $btn = $(this);
+        /* Instant visual feedback */
+        $btn.prop('disabled', true).css('opacity','0.7').text('Obrada...');
         $('form.checkout').submit();
+        /* Re-enable after 8s safety (in case of validation error) */
+        setTimeout(function(){ $btn.prop('disabled', false).css('opacity','1').text('Naruči'); }, 8000);
+      });
+      /* Also re-enable on WC checkout error */
+      $(document.body).on('checkout_error', function(){
+        $('#noriks_place_order').prop('disabled', false).css('opacity','1').text('Naruči');
       });
     });
     </script>
