@@ -282,6 +282,23 @@ body.woocommerce-checkout #agree_to_terms_checkbox {
   margin-right: 6px !important;
 }
 
+/* ===== Order summary prices always visible ===== */
+body.woocommerce-checkout .review-addons-price,
+body.woocommerce-checkout .info-price,
+body.woocommerce-checkout .review-sale-price {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-align: right !important;
+  min-width: 60px !important;
+  flex-shrink: 0 !important;
+}
+body.woocommerce-checkout .review-section-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
 /* ===== Shipping free badge ===== */
 body.woocommerce-checkout .shipping-free-badge {
   display: inline-block;
