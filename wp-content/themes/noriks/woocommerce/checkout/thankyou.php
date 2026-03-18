@@ -128,6 +128,7 @@ body.woocommerce-order-received .woocommerce {
     width: 56px; height: 56px; background: #4CAF50;
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto 14px; font-size: 28px; color: #fff;
+    border-radius: 4px;
 }
 .ty-success h1 {
     font-size: 22px !important; font-weight: 700 !important;
