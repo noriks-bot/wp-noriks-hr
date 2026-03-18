@@ -140,7 +140,7 @@ body.woocommerce-order-received .woocommerce {
 }
 
     /* ═══ UPSELL STEP 1 — inline, no modal ═══ */
-    .ty_upsell_one_wrapper { background:#fff; border-radius:4px; margin-bottom:20px; }
+    .ty_upsell_one_wrapper { background:#fff; border-radius:4px; margin:15px 0; }
     .ty_upsell_one_wrapper.show { display:block; }
     .ty_upsell_one_wrapper.hide { display:none; }
     .ty_upsell_one_wrapper__popup-content { background:#fff; }
