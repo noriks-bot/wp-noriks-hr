@@ -17,46 +17,49 @@ add_action( 'wp_enqueue_scripts', function() {
 
     // Scripts — keep ALL (payment gateways need their JS to render fields)
 
-    // Vigoshop CDN CSS — exact same files + order as /test-checkout/
+    // Vigoshop CSS — LOCAL copies (no CDN dependency)
+    $vendor = '/css/vendor/';
     $css = array(
-        'vigo-select2'           => 'https://vigoshop.hr/app/plugins/woocommerce/assets/css/select2.css',
-        'vigo-brands'            => 'https://vigoshop.hr/app/plugins/woocommerce/assets/css/brands.css',
-        'vigo-child'             => 'https://vigoshop.hr/app/themes/hsplus-child/style.css',
-        'vigo-app'               => 'https://vigoshop.hr/app/themes/hsplus/dist/app-bb7116ca22.css',
-        'vigo-swiper'            => 'https://vigoshop.hr/app/themes/hsplus/assets/plugins/swiper/swiper.min.css',
-        'vigo-brand'             => 'https://vigoshop.hr/app/themes/hsplus/dist/vigoshop-2809b8fc43.css',
-        'vigo-agent-kc'          => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/agent-kc/css/agent-kc-d24968c5d8.css',
-        'vigo-cart-warranty'     => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/cart-warranty/css/cart-warranty-294993db14.css',
-        'vigo-checkout-triggers' => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-extra-triggers/css/checkout-extra-triggers-8a82c39c7f.css',
-        'vigo-checkout-general'  => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-validation/css/custom-checkout-general-3ba2df51f0.css',
-        'vigo-checkout-hr'       => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-validation/css/custom-checkout-hr-708bf051cd.css',
-        'vigo-payment-notice'    => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/custom-payment-notice/css/custom-payment-notice-0baf6bff40.css',
-        'vigo-header'            => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/header/css/header-f98b75e0d2.css',
-        'vigo-shop-elements'     => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/homepage-shop-elements/css/general-shop-elements-a82fb8d5a2.css',
-        'vigo-payment-fixes'     => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/payment-methods-fixes/css/payment-methods-fixes-75bc076f0b.css',
-        'vigo-checkout-review'   => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-order-review/css/checkout-order-review-17423b66f5.css',
-        'vigo-checkout-upsell'   => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/checkout-upsell/css/checkout-upsell-49a595b20c.css',
-        'vigo-shipping'          => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/shipping-method/css/shipping-method-14ad2b0a1f.css',
-        'vigo-parcel'            => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/parcel-pickup/css/parcel-pickup-hr-8754cf5c08.css',
-        'vigo-parcel-buttons'    => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/parcel-pickup/css/extra-shipping-method-buttons-093d5c786e.css',
-        'vigo-pdf'               => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/pdf-products/css/pdf-products-2009e19a3b.css',
-        'vigo-pdf-special'       => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/pdf-products/css/pdf-special-offer-545e3ee266.css',
-        'vigo-terms'             => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/terms-and-conditions-link/css/terms-and-conditions-link-4d809e8b6d.css',
-        'vigo-email-checkbox'    => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/email-checkbox-subscription/css/email-checkbox-subscription-1def327263.css',
-        'vigo-free-shipping'     => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/free-shipping-above-quantity/css/free-shipping-above-quantity-02588a20ff.css',
-        'vigo-loader'            => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/loader/css/loader-c25fc35077.css',
-        'vigo-check-client'      => 'https://vigoshop.hr/app/plugins/core/resources/dist/css/check-client/css/check-client-8571deb0ef.css',
+        'vigo-select2'           => $vendor . 'select2.css',
+        'vigo-brands'            => $vendor . 'brands.css',
+        'vigo-child'             => $vendor . 'style.css',
+        'vigo-app'               => $vendor . 'app-bb7116ca22.css',
+        'vigo-swiper'            => $vendor . 'swiper.min.css',
+        'vigo-brand'             => $vendor . 'vigoshop-2809b8fc43.css',
+        'vigo-agent-kc'          => $vendor . 'agent-kc-d24968c5d8.css',
+        'vigo-cart-warranty'     => $vendor . 'cart-warranty-294993db14.css',
+        'vigo-checkout-triggers' => $vendor . 'checkout-extra-triggers-8a82c39c7f.css',
+        'vigo-checkout-general'  => $vendor . 'custom-checkout-general-3ba2df51f0.css',
+        'vigo-checkout-hr'       => $vendor . 'custom-checkout-hr-708bf051cd.css',
+        'vigo-payment-notice'    => $vendor . 'custom-payment-notice-0baf6bff40.css',
+        'vigo-header'            => $vendor . 'header-f98b75e0d2.css',
+        'vigo-shop-elements'     => $vendor . 'general-shop-elements-a82fb8d5a2.css',
+        'vigo-payment-fixes'     => $vendor . 'payment-methods-fixes-75bc076f0b.css',
+        'vigo-checkout-review'   => $vendor . 'checkout-order-review-17423b66f5.css',
+        'vigo-checkout-upsell'   => $vendor . 'checkout-upsell-49a595b20c.css',
+        'vigo-shipping'          => $vendor . 'shipping-method-14ad2b0a1f.css',
+        'vigo-parcel'            => $vendor . 'parcel-pickup-hr-8754cf5c08.css',
+        'vigo-parcel-buttons'    => $vendor . 'extra-shipping-method-buttons-093d5c786e.css',
+        'vigo-pdf'               => $vendor . 'pdf-products-2009e19a3b.css',
+        'vigo-pdf-special'       => $vendor . 'pdf-special-offer-545e3ee266.css',
+        'vigo-terms'             => $vendor . 'terms-and-conditions-link-4d809e8b6d.css',
+        'vigo-email-checkbox'    => $vendor . 'email-checkbox-subscription-1def327263.css',
+        'vigo-free-shipping'     => $vendor . 'free-shipping-above-quantity-02588a20ff.css',
+        'vigo-loader'            => $vendor . 'loader-c25fc35077.css',
+        'vigo-check-client'      => $vendor . 'check-client-8571deb0ef.css',
     );
 
+    $uri = get_template_directory_uri();
+    $dir = get_template_directory();
     $prev = array();
-    foreach ( $css as $handle => $url ) {
-        wp_enqueue_style( $handle, $url, $prev, null );
+    foreach ( $css as $handle => $path ) {
+        $file = $dir . $path;
+        $ver = file_exists( $file ) ? filemtime( $file ) : '1';
+        wp_enqueue_style( $handle, $uri . $path, $prev, $ver );
         $prev = array( $handle );
     }
 
     // Our checkout override CSS — LAST
-    $dir = get_template_directory();
-    $uri = get_template_directory_uri();
     $file = $dir . '/css/checkout.css';
     wp_enqueue_style( 'noriks-checkout', $uri . '/css/checkout.css', $prev, file_exists($file) ? md5_file($file) : '1' );
 
