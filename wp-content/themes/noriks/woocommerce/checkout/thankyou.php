@@ -148,7 +148,7 @@ body.woocommerce-order-received .woocommerce {
 .ty_upsell_one_wrapper {
     background: #fff;
     margin: 0 0 15px;
-    border: 2px solid #F5A623;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
@@ -159,10 +159,10 @@ body.woocommerce-order-received .woocommerce {
 
 /* Timer/header — dark bg */
 .tyuo_timer {
-    background: #F5A623;
+    background: #E86C00;
     padding: 18px 20px;
     text-align: center;
-    color: #1A1A1A;
+    color: #fff;
 }
 .tyuo_timer .timer_wrapper {
     display: flex;
@@ -174,11 +174,11 @@ body.woocommerce-order-received .woocommerce {
 .tyuo_timer .special_offer_txt {
     font-size: 15px;
     font-weight: 400;
-    color: #1A1A1A;
+    color: rgba(255,255,255,0.9);
 }
 .tyuo_timer .time {
     display: inline-block;
-    background: #D63B0E;
+    background: #2BA84A;
     color: #fff;
     padding: 2px 10px;
     border-radius: 4px;
@@ -189,7 +189,7 @@ body.woocommerce-order-received .woocommerce {
 .tyuo_timer .title {
     font-size: 20px;
     font-weight: 700;
-    color: #1A1A1A;
+    color: #fff;
     line-height: 1.3;
 }
 
@@ -235,9 +235,9 @@ body.woocommerce-order-received .woocommerce {
     width: 120px;
     min-width: 120px;
     height: 120px;
-    background: #f9f9f9;
+    background: transparent;
     border-radius: 8px;
-    border: 1px solid #eee;
+    border: none;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -314,8 +314,8 @@ body.woocommerce-order-received .woocommerce {
 .pass-btn {
     flex: 0;
     background: #fff;
-    color: #E8450E;
-    border: 1px solid #ccc;
+    color: #E86C00;
+    border: 1px solid #E86C00;
     border-radius: 6px;
     padding: 12px 24px;
     font-size: 14px;
@@ -370,7 +370,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #F5A623;
+    background: #E86C00;
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
@@ -380,19 +380,19 @@ body.woocommerce-order-received .woocommerce {
     padding: 18px 20px 14px;
     display: flex; align-items: center; justify-content: space-between;
     user-select: none;
-    background: #F5A623;
+    background: #E86C00;
 }
 .ty-grid-header h3 {
-    color: #1A1A1A !important; font-size: 15px;
+    color: #fff !important; font-size: 15px;
     font-weight: 400; margin: 0 0 6px 0; padding: 0;
 }
 .ty-grid-header h2 {
-    color: #1A1A1A !important; font-size: 20px;
+    color: #fff !important; font-size: 20px;
     font-weight: 700; margin: 0; padding: 0; line-height: 1.3;
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #1A1A1A;
+    font-size: 13px; color: #fff;
 }
 
 .ty-grid {
@@ -454,8 +454,8 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: #fff; color: #E8450E;
-    border: 1px solid #ccc; border-radius: 6px !important;
+    background: #fff; color: #E86C00;
+    border: 1px solid #E86C00; border-radius: 6px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
@@ -628,10 +628,10 @@ body.woocommerce-order-received .woocommerce {
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;flex-direction:column;">
                     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;">
-                        <div style="font-size:15px;font-weight:400;color:#1A1A1A;">Posebna ponudba poteče</div>
-                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#D63B0E;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
+                        <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);">Posebna ponudba poteče</div>
+                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#2BA84A;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
                     </div>
-                    <div style="font-size:20px;font-weight:700;color:#1A1A1A;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
+                    <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
