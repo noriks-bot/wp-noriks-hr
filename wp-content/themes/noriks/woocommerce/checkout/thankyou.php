@@ -415,8 +415,9 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item:hover { border-color: #F5A623; }
 .ty-grid-item img {
-    width: 100%; max-width: 120px; height: auto;
-    object-fit: contain; margin-bottom: 8px;
+    width: 100%; max-width: 120px; height: 120px;
+    object-fit: cover; object-position: center;
+    margin-bottom: 8px; border-radius: 4px;
 }
 .ty-grid-item .g-name {
     font-family: 'Roboto', sans-serif;
