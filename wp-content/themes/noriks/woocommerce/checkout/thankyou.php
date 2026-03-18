@@ -371,7 +371,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #E8450E;
+    background: #F5A623;
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
@@ -381,19 +381,19 @@ body.woocommerce-order-received .woocommerce {
     padding: 18px 20px 14px;
     display: flex; align-items: center; justify-content: space-between;
     user-select: none;
-    background: #E8450E;
+    background: #F5A623;
 }
 .ty-grid-header h3 {
-    color: #fff !important; font-size: 15px;
+    color: #1A1A1A !important; font-size: 15px;
     font-weight: 400; margin: 0 0 6px 0; padding: 0;
 }
 .ty-grid-header h2 {
-    color: #fff !important; font-size: 20px;
+    color: #1A1A1A !important; font-size: 20px;
     font-weight: 700; margin: 0; padding: 0; line-height: 1.3;
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #fff;
+    font-size: 13px; color: #1A1A1A;
 }
 
 .ty-grid {
@@ -409,7 +409,7 @@ body.woocommerce-order-received .woocommerce {
     color: #333;
     transition: border-color 0.2s;
 }
-.ty-grid-item:hover { border-color: #E8450E; }
+.ty-grid-item:hover { border-color: #F5A623; }
 .ty-grid-item img {
     width: 100%; max-width: 120px; height: auto;
     object-fit: contain; margin-bottom: 8px;
@@ -424,7 +424,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item .g-price-new {
     font-family: 'Roboto', sans-serif;
-    color: #E8450E; font-size: 16px; font-weight: 700;
+    color: #F5A623; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
     width: 100%; padding: 6px; font-size: 12px;
@@ -437,13 +437,15 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 10px; background: #E8450E; color: #fff;
-    border: none; border-radius: 20px !important;
+    padding: 10px; background: #232f3e; color: #fff;
+    border: none; border-radius: 6px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
-.ty-grid-item .g-add-btn:hover { background: #7a1616; }
+.ty-grid-item .g-add-btn:hover { background: #1a2332; }
 .ty-grid-item .g-add-btn.added {
     background: #2E7D32; pointer-events: none;
 }
@@ -453,14 +455,14 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: rgba(255,255,255,0.15); color: #fff;
-    border: 2px solid #fff; border-radius: 30px !important;
+    background: #fff; color: #E8450E;
+    border: 1px solid #ccc; border-radius: 6px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
     transition: background 0.2s;
 }
-.ty-grid-close:hover { background: rgba(255,255,255,0.25); }
+.ty-grid-close:hover { background: #f5f5f5; }
 
 /* ═══ Collapsible sections ═══ */
 .ty-section {
@@ -627,8 +629,8 @@ body.woocommerce-order-received .woocommerce {
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;">
                     <div>
-                        <div style="margin:0;font-size:15px;font-weight:400;color:#fff;text-align:center;">Još više proizvoda s popustom</div>
-                        <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte bilo koji proizvod s 50% popusta</div>
+                        <div style="margin:0;font-size:15px;font-weight:400;color:#1A1A1A;text-align:center;">Še več izdelkov s popustom</div>
+                        <div style="font-size:20px;font-weight:700;color:#1A1A1A;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
                     </div>
                     <span class="ty-chevron">+</span>
                 </div>
