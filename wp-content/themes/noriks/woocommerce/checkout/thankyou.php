@@ -627,12 +627,12 @@ body.woocommerce-order-received .woocommerce {
         <?php if ( ! empty( $grid_products ) ) : ?>
         <div class="ty-grid-section" id="ty-grid-section">
             <div class="ty-grid-popup">
-                <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;">
-                    <div>
-                        <div style="margin:0;font-size:15px;font-weight:400;color:#1A1A1A;text-align:center;">Še več izdelkov s popustom</div>
-                        <div style="font-size:20px;font-weight:700;color:#1A1A1A;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
+                <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;flex-direction:column;">
+                    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;">
+                        <div style="font-size:15px;font-weight:400;color:#1A1A1A;">Posebna ponudba poteče</div>
+                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#D63B0E;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
                     </div>
-                    <span class="ty-chevron">+</span>
+                    <div style="font-size:20px;font-weight:700;color:#1A1A1A;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
@@ -817,6 +817,8 @@ body.woocommerce-order-received .woocommerce {
         var display = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
         if (timerEl) timerEl.textContent = display;
         if (barEl) barEl.textContent = display;
+        var timer2 = document.getElementById('ty-timer-2');
+        if (timer2) timer2.textContent = display;
         rem--; setTimeout(tick, 1000);
     }
     tick();
