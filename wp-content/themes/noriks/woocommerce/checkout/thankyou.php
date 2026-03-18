@@ -988,20 +988,8 @@ function removeUpsellItem(btn) {
         .then(function(r) { return r.json(); })
         .then(function(d) {
             if (d.success) {
-                // Reset the main upsell section — show it again
-                var upsellWrap = document.getElementById('ty-upsell');
-                if (upsellWrap) upsellWrap.style.display = '';
-                // Reset "DODAJ" button back to active
-                var mainAddBtn = document.getElementById('ty-btn-add');
-                if (mainAddBtn) {
-                    mainAddBtn.disabled = false;
-                    mainAddBtn.classList.remove('added');
-                    mainAddBtn.textContent = 'DODAJ U NARUDŽBU';
-                }
-                // Hide grid section
-                var gridSection = document.getElementById('ty-grid-section');
-                if (gridSection) gridSection.classList.remove('show');
-                // Reset grid add buttons
+                // Stay on step 2 — never go back to step 1
+                // Just reset the grid add buttons so user can re-add
                 document.querySelectorAll('.g-add-btn.added').forEach(function(gb) {
                     gb.disabled = false;
                     gb.classList.remove('added');
