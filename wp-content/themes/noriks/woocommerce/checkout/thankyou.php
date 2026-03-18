@@ -199,27 +199,28 @@ body.woocommerce-order-received .woocommerce {
     width: 100%;
     overflow: visible;
     border-radius: 4px !important;
-    border: 2px solid #E86C00;
     box-sizing: border-box;
 }
 
 .ty-grid-header {
-    padding: 18px 20px 14px;
-    display: flex; align-items: center; justify-content: space-between;
-    user-select: none;
-    background: #E86C00;
+    padding: 10px;
+    text-align: center;
+    background: #ffe795;
+    border: 2px solid #f5a623;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 .ty-grid-header h3 {
-    color: #fff !important; font-size: 15px;
+    color: #000 !important; font-size: 15px;
     font-weight: 400; margin: 0 0 6px 0; padding: 0;
 }
 .ty-grid-header h2 {
-    color: #fff !important; font-size: 20px;
-    font-weight: 700; margin: 0; padding: 0; line-height: 1.3;
+    color: #000 !important; font-size: 20px;
+    font-weight: 700; margin: 0; padding-top: 10px; line-height: 1.3;
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #E86C00;
+    font-size: 13px; color: #F37021;
     background: #fff;
 }
 
@@ -273,7 +274,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item .g-price-new {
     font-family: 'Roboto', sans-serif;
-    color: #F5A623; font-size: 16px; font-weight: 700;
+    color: #F37021; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
     width: 100%; padding: 6px; font-size: 12px;
@@ -286,8 +287,8 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 10px; background: #1A1A1A; color: #fff;
-    border: none; border-radius: 0 !important;
+    padding: 10px; background: #000; color: #fff;
+    border: none; border-radius: 4px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
     cursor: pointer; transition: background 0.2s;
@@ -304,8 +305,8 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: #fff; color: #E86C00;
-    border: 1px solid #E86C00; border-radius: 0 !important;
+    background: #fff; color: #F37021;
+    border: 1px solid #F37021; border-radius: 4px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
