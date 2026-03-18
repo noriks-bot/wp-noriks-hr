@@ -166,7 +166,7 @@ body.woocommerce-order-received .woocommerce {
     .wrapper_selectbox { text-align:right; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; width:50%; outline:0; padding:10px; box-sizing:border-box; }
     @media (max-width:576px) { .wrapper_selectbox select { width:100%; } }
-    .buttons-section { display:flex; flex-direction:column; gap:8px; padding:0; }
+    .buttons-section { display:flex; flex-direction:column; gap:8px; padding:0 0 15px; }
     .pass-btn { background:#fff; border:1px solid #F37021; border-radius:4px; color:#F37021; line-height:15px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
     .buy-btn { background:#F37021; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
     .buy-btn.added { background:#2E7D32; }
@@ -403,7 +403,7 @@ body.woocommerce-order-received .woocommerce {
         <!-- ═══ STEP 1: VIGOSHOP UPSELL (COD only) ═══ -->
         <?php if ( $order->get_payment_method() === 'cod' ) : ?>
         <div class="ty_upsell_one_wrapper show" id="ty-upsell"
-             style="position:static !important;display:block !important;width:100% !important;max-width:520px !important;height:auto !important;top:auto !important;left:auto !important;transform:none !important;opacity:1 !important;visibility:visible !important;z-index:auto !important;backdrop-filter:none !important;"
+             style="position:static !important;display:block !important;width:100% !important;max-width:520px !important;height:auto !important;top:auto !important;left:auto !important;transform:none !important;opacity:1 !important;visibility:visible !important;z-index:auto !important;backdrop-filter:none !important;margin:0 !important;padding:0 !important;"
              data-order-id="<?php echo $order->get_id(); ?>"
              data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
             <div class="ty_upsell_one_wrapper__popup-content">
