@@ -75,39 +75,12 @@ body.woocommerce-checkout #hs-cod-checkout-prompt {
   display: none !important;
 }
 
-/* ===== PAYMENT TITLE — vigoshop CSS hides it, force show ===== */
+/* ===== PAYMENT — native WC, minimal overrides ===== */
+/* Payment title — vigoshop CDN hides it, force show */
 body.woocommerce-checkout h3.payment-title {
   display: block !important;
 }
-
-/* ===== PAYMENT LABELS — match vigoshop padding ===== */
-body.woocommerce-checkout #payment .wc_payment_method label {
-  padding: 22.65px 16px !important;
-}
-
-/* ===== CONTAINER WIDTH — match vigoshop 530px inner ===== */
-body.woocommerce-checkout #order_review,
-body.woocommerce-checkout .checkout-warranty,
-body.woocommerce-checkout .agreed_terms_txt {
-  max-width: 530px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===== WC #payment — VISIBLE, styled as vigoshop ===== */
-body.woocommerce-checkout #payment.woocommerce-checkout-payment {
-  position: static !important;
-  left: auto !important;
-  opacity: 1 !important;
-  height: auto !important;
-  overflow: visible !important;
-  pointer-events: auto !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-/* Hide WC's place_order button inside #payment (we have our own) */
+/* Hide WC's place_order inside #payment (we have our own) */
 body.woocommerce-checkout #payment .place-order {
   display: none !important;
 }
@@ -138,41 +111,4 @@ body.woocommerce-checkout .processing .blockUI.blockOverlay {
   opacity: 0 !important;
 }
 
-/* ===== Stripe CC fields in visible payment area ===== */
-#payment .payment_box {
-  display: none;
-  padding: 10px 16px 16px !important;
-  background: #f8f8f8 !important;
-  border-top: 1px solid #e3e6e8 !important;
-}
-#payment .wc_payment_method:has(input:checked) .payment_box {
-  display: block !important;
-}
-#payment .wc-braintree-hosted-field,
-#payment .wc-stripe-elements-field,
-#payment iframe {
-  min-height: 40px !important;
-  border: 1px solid #d1dbe5 !important;
-  border-radius: 4px !important;
-  background: #fff !important;
-  padding: 10px !important;
-}
-#payment .form-row label {
-  display: block !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  color: #333 !important;
-  margin-bottom: 4px !important;
-  padding: 0 !important;
-}
-#payment .form-row {
-  margin-bottom: 12px !important;
-}
-#payment .form-row-first {
-  float: left !important;
-  width: 48% !important;
-}
-#payment .form-row-last {
-  float: right !important;
-  width: 48% !important;
-}
+/* Payment fields — let WC/Stripe handle natively */
