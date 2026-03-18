@@ -406,17 +406,27 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item {
     background: #f5f5f5; text-align: center;
-    padding: 12px; border: none;
+    padding: 0; border: none;
     border-radius: 4px !important;
     color: #333;
     transition: background 0.2s;
+    overflow: hidden;
 }
 .ty-grid-item:hover { background: #efefef; }
 .ty-grid-item img {
-    width: 100%; max-width: 120px; height: 120px;
+    width: 100%; height: 120px;
     object-fit: cover; object-position: center;
-    margin-bottom: 8px; border-radius: 4px;
+    display: block; border-radius: 0;
+    max-width: none;
 }
+.ty-grid-item .g-name,
+.ty-grid-item .g-price-old,
+.ty-grid-item .g-price-new,
+.ty-grid-item select,
+.ty-grid-item .g-add-btn {
+    padding-left: 8px; padding-right: 8px;
+}
+.ty-grid-item .g-name { margin-top: 8px; }
 .ty-grid-item .g-name {
     font-family: 'Roboto', sans-serif;
     font-size: 12px; color: #222; margin-bottom: 5px;
