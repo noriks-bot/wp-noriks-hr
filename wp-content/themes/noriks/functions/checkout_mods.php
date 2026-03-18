@@ -545,6 +545,33 @@ add_filter( 'woocommerce_available_payment_gateways', function( $gw ) {
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
 /**
+ * COD fee — add 1.99€ surcharge when Cash on Delivery is selected
+ */
+add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
+
+    $chosen_gateway = WC()->session->get( 'chosen_payment_method' );
+    if ( $chosen_gateway === 'cod' ) {
+        $cart->add_fee( 'Naknada za pouzeće', 1.99, false );
+    }
+});
+
+/**
+ * Update totals when payment method changes (AJAX)
+ */
+add_action( 'woocommerce_review_order_before_payment', function() {
+    ?>
+    <script>
+    jQuery(function($){
+      $('form.checkout').on('change', 'input[name="payment_method"]', function(){
+        $('body').trigger('update_checkout');
+      });
+    });
+    </script>
+    <?php
+});
+
+/**
  * Disable coupons on checkout entirely
  */
 add_filter( 'woocommerce_coupons_enabled', function( $enabled ) {
