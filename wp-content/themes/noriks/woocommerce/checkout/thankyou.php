@@ -228,15 +228,16 @@ body.woocommerce-order-received .woocommerce {
 .tyuo_product_section .product_data {
     display: flex;
     gap: 16px;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 16px;
 }
 .tyuo_product_section .product_data .img {
-    width: 110px;
-    min-width: 110px;
-    height: 110px;
-    background: #fff;
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    background: #f9f9f9;
     border-radius: 8px;
+    border: 1px solid #eee;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -255,7 +256,7 @@ body.woocommerce-order-received .woocommerce {
     flex: 1;
 }
 .tyuo_product_section .qty {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 300;
     color: #333;
     line-height: 1.2;
@@ -265,7 +266,7 @@ body.woocommerce-order-received .woocommerce {
     font-weight: 400;
     color: #666;
     line-height: 1.4;
-    margin: 4px 0 8px;
+    margin: 4px 0 10px;
 }
 .tyuo_product_section .product_regular_price {
     font-size: 15px;
@@ -274,7 +275,7 @@ body.woocommerce-order-received .woocommerce {
     margin-bottom: 2px;
 }
 .tyuo_product_section .product_new_sale_price {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     color: #E8450E;
 }
@@ -282,11 +283,9 @@ body.woocommerce-order-received .woocommerce {
 /* Variation select */
 .tyuo_product_section .variation-select-wrap {
     padding: 0 0 16px;
-    display: flex;
-    justify-content: center;
 }
 .tyuo_product_section .variation-select {
-    width: 60%;
+    width: 100%;
     height: 44px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -331,11 +330,11 @@ body.woocommerce-order-received .woocommerce {
 .pass-btn:hover { background: #f5f5f5; }
 .buy-btn {
     flex: 1;
-    background: #232f3e;
+    background: #1A1A1A;
     color: #fff;
     border: none;
     border-radius: 6px;
-    padding: 12px 24px;
+    padding: 14px 24px;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
@@ -346,7 +345,7 @@ body.woocommerce-order-received .woocommerce {
     align-items: center;
     justify-content: center;
 }
-.buy-btn:hover { background: #1a2332; }
+.buy-btn:hover { background: #333; }
 .buy-btn.added { background: #2E7D32; }
 .buy-btn.disabled, .buy-btn:disabled { background: #999; cursor: not-allowed; }
 
@@ -404,8 +403,8 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item {
     background: #fff; text-align: center;
-    padding: 12px; border: 1px solid #eee;
-    border-radius: 4px !important;
+    padding: 12px; border: 1px solid #ddd;
+    border-radius: 6px !important;
     color: #333;
     transition: border-color 0.2s;
 }
@@ -437,7 +436,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 10px; background: #232f3e; color: #fff;
+    padding: 10px; background: #1A1A1A; color: #fff;
     border: none; border-radius: 6px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
@@ -445,7 +444,7 @@ body.woocommerce-order-received .woocommerce {
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
-.ty-grid-item .g-add-btn:hover { background: #1a2332; }
+.ty-grid-item .g-add-btn:hover { background: #333; }
 .ty-grid-item .g-add-btn.added {
     background: #2E7D32; pointer-events: none;
 }
