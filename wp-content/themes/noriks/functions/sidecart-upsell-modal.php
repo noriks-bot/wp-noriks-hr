@@ -197,7 +197,7 @@ function noriks_upsell_modal_markup() {
         }
         .noriks-modal {
             background: #fff;
-            border-radius: 10px;
+            border-radius: 4px;
             max-width: 420px;
             width: 94%;
             max-height: 90vh;
@@ -361,7 +361,7 @@ function noriks_upsell_modal_markup() {
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
+            border-radius: 4px;
         }
         .noriks-spinner {
             width: 36px; height: 36px;
@@ -387,30 +387,45 @@ function noriks_upsell_modal_markup() {
             openUpsellModal(productId);
         });
 
+        // Pre-fetch cache: store variation data so reopening is instant
+        var variationCache = {};
+
         function openUpsellModal(productId) {
             var $modal = $('#noriks-upsell-modal');
             var $loading = $('#noriks-modal-loading');
             
             selectedAttrs = {};
             $modal.show();
-            $loading.show();
+            $loading.hide();
             $('#noriks-modal-error').hide();
             $('#noriks-qty-val').val(1);
+
+            // If cached, render instantly
+            if (variationCache[productId]) {
+                modalData = variationCache[productId];
+                renderModal();
+                return;
+            }
+
+            // Show modal immediately with placeholder, fetch in background
+            $('#noriks-modal-img').attr('src', '');
+            $('#noriks-modal-title').text('Učitavanje...');
+            $('#noriks-modal-price').html('');
+            $('#noriks-modal-attributes').empty();
+            $('#noriks-modal-add').prop('disabled', true).css('opacity','0.5');
 
             $.post(woocommerce_params.ajax_url, {
                 action: 'get_product_variations',
                 product_id: productId
             }, function(res) {
-                $loading.hide();
                 if (!res.success) {
                     $modal.hide();
                     return;
                 }
                 modalData = res.data;
-                console.log('=== MODAL DATA ===');
-                console.log('Attributes:', JSON.stringify(modalData.attributes));
-                console.log('First variation:', JSON.stringify(modalData.variations[0]));
+                variationCache[productId] = res.data;
                 renderModal();
+                $('#noriks-modal-add').prop('disabled', false).css('opacity','1');
             });
         }
 
