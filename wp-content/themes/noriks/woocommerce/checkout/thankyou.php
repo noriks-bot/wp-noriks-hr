@@ -121,9 +121,9 @@ body.woocommerce-order-received .woocommerce {
     border-radius: 4px !important;
 }
 .ty-success-icon {
-    width: 56px; height: 56px; background: #4CAF50;
+    width: 28px; height: 28px; background: #4CAF50;
     display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 14px; font-size: 28px; color: #fff;
+    margin: 0 auto 14px; font-size: 14px; color: #fff;
     border-radius: 4px;
 }
 .ty-success h1 {
