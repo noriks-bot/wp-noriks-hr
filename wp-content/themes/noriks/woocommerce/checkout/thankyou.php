@@ -119,24 +119,24 @@ body.woocommerce-order-received .woocommerce {
 /* ═══ Success ═══ */
 .ty-success {
     background: #e8f5e9;
-    padding: 28px 24px; margin-bottom: 15px; text-align: center;
+    padding: 12px 16px; margin-bottom: 15px; text-align: center;
     border-radius: 4px !important;
 }
 .ty-success-icon {
-    width: 28px; height: 28px; background: #4CAF50;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 14px; font-size: 14px; color: #fff;
-    border-radius: 4px;
+    width: 20px; height: 20px; background: #4CAF50;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #fff; border-radius: 4px;
+    vertical-align: middle; margin-right: 6px;
 }
 .ty-success h1 {
-    font-size: 22px !important; font-weight: 700 !important;
-    color: #232f3e !important; margin: 0 0 6px !important;
+    font-size: 16px !important; font-weight: 700 !important;
+    color: #232f3e !important; margin: 0 0 4px !important; display: inline; vertical-align: middle;
 }
-.ty-success p { font-size: 14px; color: #5f6061; margin: 0; }
+.ty-success p { font-size: 12px; color: #5f6061; margin: 4px 0 0; }
 .ty-success .ty-order-num {
-    display: inline-block; margin-top: 10px;
-    background: #fff; padding: 6px 16px;
-    font-size: 13px; color: #333; font-weight: 600;
+    display: inline-block; margin-top: 6px;
+    background: #fff; padding: 4px 12px;
+    font-size: 11px; color: #333; font-weight: 600;
 }
 
     /* ═══ UPSELL STEP 1 — inline, no modal ═══ */
