@@ -374,7 +374,7 @@ body.woocommerce-order-received .woocommerce {
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #E86C00;
 }
 
 .ty-grid-header {
@@ -405,13 +405,13 @@ body.woocommerce-order-received .woocommerce {
     background: #fff;
 }
 .ty-grid-item {
-    background: #fff; text-align: center;
-    padding: 12px; border: 1px solid #ddd;
-    border-radius: 6px !important;
+    background: #f5f5f5; text-align: center;
+    padding: 12px; border: none;
+    border-radius: 4px !important;
     color: #333;
-    transition: border-color 0.2s;
+    transition: background 0.2s;
 }
-.ty-grid-item:hover { border-color: #F5A623; }
+.ty-grid-item:hover { background: #efefef; }
 .ty-grid-item img {
     width: 100%; max-width: 120px; height: 120px;
     object-fit: cover; object-position: center;
@@ -459,7 +459,7 @@ body.woocommerce-order-received .woocommerce {
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
     background: #fff; color: #E86C00;
-    border: 1px solid #E86C00; border-radius: 6px !important;
+    border: 1px solid #E86C00; border-radius: 0 !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
