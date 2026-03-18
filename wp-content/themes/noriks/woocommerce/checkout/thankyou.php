@@ -929,10 +929,14 @@ body.woocommerce-order-received .woocommerce {
                     addBtn.classList.add('added');
                     // Remember in localStorage
                     var ak = 'ty_added_' + orderId;
-                    var al = JSON.parse(localStorage.getItem(ak) || '[]');
+                    var al = JSON.parse(localStorage.getItem(ak) || '{}');
+                    if (typeof al !== 'object' || Array.isArray(al)) al = {};
                     var pid1 = String(<?php echo $upsell_product_id; ?>);
-                    if (al.indexOf(pid1) === -1) al.push(pid1);
+                    var selVal = document.getElementById('ty-variation-select');
+                    al[pid1] = selVal ? selVal.value : '';
                     localStorage.setItem(ak, JSON.stringify(al));
+                    // Disable dropdown
+                    if (selVal) selVal.disabled = true;
                     refreshOrderItems();
                     // Show grid after short delay
                     setTimeout(function() {
@@ -975,9 +979,12 @@ body.woocommerce-order-received .woocommerce {
                             el.classList.add('added');
                             // Remember added products
                             var addedKey = 'ty_added_' + orderId;
-                            var added = JSON.parse(localStorage.getItem(addedKey) || '[]');
-                            if (added.indexOf(productId) === -1) added.push(productId);
+                            var added = JSON.parse(localStorage.getItem(addedKey) || '{}');
+                            if (typeof added !== 'object' || Array.isArray(added)) added = {};
+                            added[productId] = varSelect ? varSelect.value : '';
                             localStorage.setItem(addedKey, JSON.stringify(added));
+                            // Disable dropdown for this item
+                            if (varSelect) { varSelect.disabled = true; }
                             refreshOrderItems();
                         } else {
                             el.textContent = d.data || 'Napaka';
@@ -998,24 +1005,39 @@ body.woocommerce-order-received .woocommerce {
     // Restore added state from localStorage (runs always, after DOM ready)
     setTimeout(function() {
         var addedKey2 = 'ty_added_' + orderId;
-        var addedProducts2 = JSON.parse(localStorage.getItem(addedKey2) || '[]');
-        if (addedProducts2.length > 0) {
+        var addedMap = JSON.parse(localStorage.getItem(addedKey2) || '{}');
+        if (typeof addedMap !== 'object' || Array.isArray(addedMap)) addedMap = {};
+        var addedPids = Object.keys(addedMap);
+        if (addedPids.length > 0) {
+            // Restore grid buttons + dropdowns
             document.querySelectorAll('.g-add-btn').forEach(function(btn) {
                 var pid = btn.getAttribute('data-product-id');
-                if (addedProducts2.indexOf(pid) !== -1) {
+                if (addedMap.hasOwnProperty(pid)) {
                     btn.textContent = '✔ DODANO';
                     btn.classList.add('added');
                     btn.disabled = true;
+                    // Set + disable dropdown
+                    var dd = btn.parentElement.querySelector('.g-variation');
+                    if (dd && addedMap[pid]) {
+                        dd.value = addedMap[pid];
+                        dd.disabled = true;
+                    }
                 }
             });
-            // Also restore step 1 button if primary product was added
+            // Restore step 1 button + dropdown
             var mainBtn = document.getElementById('ty-btn-add');
             if (mainBtn) {
                 var mainPid = mainBtn.getAttribute('data-product-id');
-                if (addedProducts2.indexOf(mainPid) !== -1 || addedProducts2.indexOf(String(mainPid)) !== -1) {
+                if (addedMap.hasOwnProperty(mainPid) || addedMap.hasOwnProperty(String(mainPid))) {
                     mainBtn.textContent = '✓ DODANO';
                     mainBtn.classList.add('added');
                     mainBtn.disabled = true;
+                    var mainDd = document.getElementById('ty-variation-select');
+                    var savedVal = addedMap[mainPid] || addedMap[String(mainPid)];
+                    if (mainDd && savedVal) {
+                        mainDd.value = savedVal;
+                        mainDd.disabled = true;
+                    }
                 }
             }
         }
