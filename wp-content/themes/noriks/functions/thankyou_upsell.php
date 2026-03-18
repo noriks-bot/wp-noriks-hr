@@ -163,9 +163,7 @@ function noriks_refresh_order_items() {
         $items_html .= '</div>';
         $items_html .= '<div style="display:flex;align-items:center;gap:8px;">';
         $items_html .= '<div class="ty-item-price">' . $order->get_formatted_line_subtotal( $item ) . '</div>';
-        if ( $is_upsell && $order->get_status() === 'primary-hold' ) {
-            $items_html .= '<button class="ty-upsell-remove" data-item-id="' . $item->get_id() . '" data-order-id="' . $order_id . '" onclick="removeUpsellItem(this)" style="width:22px;height:22px;border-radius:50%;background:#971b1b;color:#fff;border:none;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex-shrink:0;">✕</button>';
-        }
+        /* remove button disabled */
         $items_html .= '</div>';
         $items_html .= '</div>';
     }
