@@ -144,11 +144,11 @@ body.woocommerce-order-received .woocommerce {
     .ty_upsell_one_wrapper.show { display:block; }
     .ty_upsell_one_wrapper.hide { display:none; }
     .ty_upsell_one_wrapper__popup-content { background:#fff; }
-    .tyuo_timer { background-color:#1A1A1A; border-radius:4px; color:#fff; padding:10px; margin-bottom:15px; text-align:center; }
+    .tyuo_timer { background-color:#fff; border:2px solid #F37021; border-radius:4px; color:#000; padding:10px; margin-bottom:15px; text-align:center; }
     .tyuo_timer .timer_wrapper { display:flex; align-items:baseline; justify-content:center; }
-    .tyuo_timer .special_offer_txt { font-size:16px; margin-right:5px; color:#fff; }
+    .tyuo_timer .special_offer_txt { font-size:16px; margin-right:5px; color:#000; }
     .tyuo_timer .time { background-color:#F37021; border-radius:4px; color:#fff; padding:2px 8px; }
-    .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; text-align:center; color:#fff; }
+    .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; text-align:center; color:#000; }
     .tyuo_middle_section { padding:0 5px; text-align:center; }
     .tyuo_middle_section svg { margin-right:5px; max-width:15px; }
     .tyuo_middle_section .sub_title { color:#F37021; font-size:16px; font-weight:500; }
