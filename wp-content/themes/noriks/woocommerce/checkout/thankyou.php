@@ -282,7 +282,7 @@ body.woocommerce-order-received .woocommerce {
 
 /* Variation select */
 .tyuo_product_section .variation-select-wrap {
-    padding: 0 0 6px;
+    padding: 0; margin: 0 0 2px;
     display: flex;
     justify-content: flex-end;
 }
@@ -353,9 +353,10 @@ body.woocommerce-order-received .woocommerce {
 
 /* Status text */
 .ty-upsell-status {
-    text-align: center; padding: 8px 20px;
-    font-size: 13px; color: #888; min-height: 18px;
+    text-align: center; padding: 0;
+    font-size: 13px; color: #888; min-height: 0;
 }
+.ty-upsell-status:empty { display: none; }
 
 /* Hide old class names if they leak through */
 .ty-upsell-wrap, .ty-upsell-banner, .ty-upsell-benefits,
