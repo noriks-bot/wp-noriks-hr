@@ -225,26 +225,29 @@ body.woocommerce-checkout #payment .payment_box fieldset {
   margin-top: 6px;
   line-height: 1.4;
 }
-/* Phone description — two spans side by side */
+/* Phone description — left + right on same line */
 #billing_phone_field {
+  padding-bottom: 24px !important;
   position: relative !important;
 }
 #billing_phone_field::after {
   content: 'Primjer: 0912345678' !important;
-  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
   font-size: 13px !important;
   color: #5f6061 !important;
-  margin-top: 6px !important;
   line-height: 1.4 !important;
 }
-#billing_phone_field .woocommerce-input-wrapper::after {
+#billing_phone_field::before {
   content: 'Za pomoć s dostavom' !important;
   position: absolute !important;
   right: 0 !important;
-  bottom: -20px !important;
+  bottom: 0 !important;
   font-size: 13px !important;
   color: #5f6061 !important;
   line-height: 1.4 !important;
+  z-index: 1 !important;
 }
 
 /* ===== Order summary + place-order — full width ===== */
