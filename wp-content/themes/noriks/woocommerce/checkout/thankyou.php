@@ -178,7 +178,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .tyuo_timer .time {
     display: inline-block;
-    background: #2BA84A;
+    background: #D63B0E;
     color: #fff;
     padding: 2px 10px;
     border-radius: 4px;
@@ -635,7 +635,7 @@ body.woocommerce-order-received .woocommerce {
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;flex-direction:column;">
                     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;">
                         <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);">Posebna ponudba poteče</div>
-                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#2BA84A;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
+                        <div class="time" id="ty-timer-2" style="display:inline-block;background:#D63B0E;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
                     </div>
                     <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
                 </div>
