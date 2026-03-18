@@ -582,7 +582,8 @@ body.woocommerce-order-received .woocommerce {
              data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
             <div class="ty_upsell_one_wrapper__popup-content">
 
-                <div class="tyuo_timer">
+                <div class="tyuo_timer" style="position:relative;">
+                    <span class="ty-upsell-close" id="ty-step1-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:rgba(255,255,255,0.7);cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
                     <div class="timer_wrapper">
                         <div class="special_offer_txt">Posebna ponuda ističe</div>
                         <div class="time" id="ty-timer">05:00</div>
@@ -647,7 +648,8 @@ body.woocommerce-order-received .woocommerce {
         <?php if ( ! empty( $grid_products ) ) : ?>
         <div class="ty-grid-section" id="ty-grid-section">
             <div class="ty-grid-popup">
-                <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;flex-direction:column;">
+                <div class="ty-grid-header" style="cursor:pointer;flex-direction:column;position:relative;">
+                    <span class="ty-upsell-close" id="ty-step2-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:rgba(255,255,255,0.7);cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
                     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;">
                         <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);">Posebna ponuda ističe</div>
                         <div class="time" id="ty-timer-2" style="display:inline-block;background:#D63B0E;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
@@ -901,6 +903,23 @@ body.woocommerce-order-received .woocommerce {
                 }
             })
             .catch(function(){});
+    }
+
+    // ─── Step 1: X close → skip to step 2 ───
+    var step1Close = document.getElementById('ty-step1-close');
+    if (step1Close) {
+        step1Close.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
+        });
+    }
+    // ─── Step 2: X close → dismiss all ───
+    var step2Close = document.getElementById('ty-step2-close');
+    if (step2Close) {
+        step2Close.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeAll();
+        });
     }
 
     // ─── Step 1: "Ne želim" → show grid ───
