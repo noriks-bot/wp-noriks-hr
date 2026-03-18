@@ -967,6 +967,11 @@ body.woocommerce-order-received .woocommerce {
                         if (d.success) {
                             el.textContent = '✔ DODANO';
                             el.classList.add('added');
+                            // Remember added products
+                            var addedKey = 'ty_added_' + orderId;
+                            var added = JSON.parse(localStorage.getItem(addedKey) || '[]');
+                            if (added.indexOf(productId) === -1) added.push(productId);
+                            localStorage.setItem(addedKey, JSON.stringify(added));
                             refreshOrderItems();
                         } else {
                             el.textContent = d.data || 'Napaka';
@@ -979,6 +984,20 @@ body.woocommerce-order-received .woocommerce {
                     });
             });
         });
+
+        // Restore added state from localStorage
+        var addedKey = 'ty_added_' + orderId;
+        var addedProducts = JSON.parse(localStorage.getItem(addedKey) || '[]');
+        if (addedProducts.length > 0) {
+            document.querySelectorAll('.g-add-btn').forEach(function(btn) {
+                var pid = btn.getAttribute('data-product-id');
+                if (addedProducts.indexOf(pid) !== -1) {
+                    btn.textContent = '✔ DODANO';
+                    btn.classList.add('added');
+                    btn.disabled = true;
+                }
+            });
+        }
 
         // Close grid
         document.getElementById('ty-grid-close').addEventListener('click', closeAll);
