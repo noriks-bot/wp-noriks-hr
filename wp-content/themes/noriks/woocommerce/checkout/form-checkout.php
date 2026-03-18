@@ -80,7 +80,7 @@ if ( WC()->cart->is_empty() ) return;
 
           <!-- ORDER SUMMARY -->
           <h3 class="place-order-title" style="display:block;">Sažetak narudžbe</h3>
-          <div class="vigo-checkout-total order-total shop_table woocommerce-checkout-review-order-table">
+          <div class="vigo-checkout-total order-total shop_table noriks-order-summary">
             <div class="grid m-top--s review-all-products-container">
               <div class="col-xs-12 f--m flex flex--vertical vigo-checkout-total__content">
                 <?php foreach ( WC()->cart->get_cart() as $item ) :
