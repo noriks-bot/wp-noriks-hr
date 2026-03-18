@@ -287,7 +287,7 @@ body.woocommerce-order-received .woocommerce {
     width: 50%;
     height: 44px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0;
     padding: 0 16px;
     font-size: 15px;
     font-weight: 500;
