@@ -141,8 +141,25 @@ function noriks_get_product_variations() {
 // Enqueue modal CSS/JS
 add_action('wp_footer', 'noriks_upsell_modal_markup');
 function noriks_upsell_modal_markup() {
-    // Pre-build variation data server-side for known upsell products
-    $upsell_ids = [4154, 4162];
+    // Pre-build variation data for ALL variable products in the catalog
+    // This covers sidecart suggested products (dynamic IDs)
+    $upsell_ids = [];
+    // Known upsell IDs
+    $upsell_ids[] = 4154;
+    $upsell_ids[] = 4162;
+    // Also get all variable products from sidecart suggested products
+    $sp_args = Xoo_Wsc_Template_Args::suggested_products();
+    if (!empty($sp_args['products']) && $sp_args['products']->have_posts()) {
+        while ($sp_args['products']->have_posts()) {
+            $sp_args['products']->the_post();
+            $sp = wc_get_product(get_the_ID());
+            if ($sp && $sp->is_type('variable')) {
+                $upsell_ids[] = $sp->get_id();
+            }
+        }
+        wp_reset_postdata();
+    }
+    $upsell_ids = array_unique($upsell_ids);
     $preloaded = [];
     foreach ($upsell_ids as $pid) {
         $product = wc_get_product($pid);
@@ -412,18 +429,16 @@ function noriks_upsell_modal_markup() {
                 return;
             }
 
-            // Fallback: AJAX (should not happen with server-side preload)
-            $modal.show();
-            $('#noriks-modal-add').prop('disabled', true).css('opacity','0.5');
+            // Fallback: fetch THEN show (never show empty modal)
             $.post(woocommerce_params.ajax_url, {
                 action: 'get_product_variations',
                 product_id: productId
             }, function(res) {
-                if (!res.success) { $modal.hide(); return; }
+                if (!res.success) return;
                 modalData = res.data;
                 variationCache[productId] = res.data;
                 renderModal();
-                $('#noriks-modal-add').prop('disabled', false).css('opacity','1');
+                $modal.show();
             });
         }
 
