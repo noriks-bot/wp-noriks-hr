@@ -84,7 +84,7 @@ if ( count( $grid_products ) < 6 ) {
 $grid_products = array_slice( $grid_products, 0, 6 );
 ?>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/vendor/thankyou-upsell-one.css" />
+<!-- vendor upsell CSS removed — using inline styles only -->
 
 <style>
 /* ═══ RESET: hide WP chrome ═══ */
@@ -139,7 +139,37 @@ body.woocommerce-order-received .woocommerce {
     font-size: 13px; color: #333; font-weight: 600;
 }
 
-    /* Upsell CSS loaded from vendor/thankyou-upsell-one.css */
+    /* ═══ UPSELL STEP 1 — inline, no modal ═══ */
+    .ty_upsell_one_wrapper { background:#fff; border-radius:4px; margin-bottom:20px; }
+    .ty_upsell_one_wrapper.show { display:block; }
+    .ty_upsell_one_wrapper.hide { display:none; }
+    .ty_upsell_one_wrapper__popup-content { background:#fff; }
+    .tyuo_timer { background-color:#fff2bb; border:2px solid #fedb4b; border-radius:4px; color:#000; padding:10px; margin-bottom:15px; text-align:center; }
+    .tyuo_timer .timer_wrapper { display:flex; align-items:baseline; justify-content:center; }
+    .tyuo_timer .special_offer_txt { font-size:16px; margin-right:5px; }
+    .tyuo_timer .time { background-color:#e22b26; border-radius:4px; color:#fff; padding:2px 5px; }
+    .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; text-align:center; }
+    .tyuo_middle_section { padding:0 5px; text-align:center; }
+    .tyuo_middle_section svg { margin-right:5px; max-width:15px; }
+    .tyuo_middle_section .sub_title { color:#47b426; font-size:16px; font-weight:500; }
+    .tyuo_middle_section .clue_text { color:#47b426; font-size:16px; font-weight:500; margin:6px 0; }
+    .tyuo_product_section { margin:15px 0; padding:0 15px; }
+    .tyuo_product_section .product_data { display:flex; margin-bottom:10px; }
+    .tyuo_product_section .product_data .img { margin-right:15px; max-width:150px; width:50%; }
+    .tyuo_product_section .product_data .img img { border-radius:4px; aspect-ratio:1/1; object-fit:cover; object-position:center; width:100%; }
+    .tyuo_product_section .right_section_wrapper { display:flex; flex-direction:column; line-height:29px; width:50%; }
+    .tyuo_product_section .quantity { display:flex; flex-direction:column; font-size:2em; }
+    .tyuo_product_section .product_name { font-size:18px; font-weight:700; color:#1A1A1A; line-height:20px; margin:4px 0 10px; }
+    .tyuo_product_section .product_regular_price { color:#8f8f8f; font-size:17px; text-decoration:line-through; }
+    .tyuo_product_section .product_new_sale_price { color:#ca232c; font-size:25px; font-weight:700; }
+    .wrapper_selectbox { color:#5f6060; font-size:1.1em; font-weight:500; padding:0 10px; text-align:right; }
+    .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #a9a9a9; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; min-width:50%; outline:0; padding:10px; }
+    .buttons-section { display:flex; justify-content:space-between; padding:10px; }
+    .pass-btn { background:#fff; border:1px solid #E86C00; border-radius:4px; color:#E86C00; flex:1; line-height:15px; margin-right:10px; padding:10px; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; }
+    .buy-btn { background:#000; border:none; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; line-height:15px; padding:10px; text-align:center; }
+    .buy-btn.added { background:#2E7D32; }
+    .buy-btn:disabled { background:#999; cursor:not-allowed; }
+    .ty-upsell-status:empty { display:none; }
 /* ═══════════════════════════════════════════════
    STEP 2: 6-PRODUCT GRID (inline, not overlay)
    ═══════════════════════════════════════════════ */
