@@ -363,6 +363,7 @@ body.woocommerce-order-received .woocommerce {
         <!-- ═══ STEP 1: VIGOSHOP UPSELL (COD only) ═══ -->
         <?php if ( $order->get_payment_method() === 'cod' ) : ?>
         <div class="ty_upsell_one_wrapper show" id="ty-upsell"
+             style="position:static !important;display:block !important;width:100% !important;max-width:520px !important;height:auto !important;top:auto !important;left:auto !important;transform:none !important;opacity:1 !important;visibility:visible !important;z-index:auto !important;backdrop-filter:none !important;"
              data-order-id="<?php echo $order->get_id(); ?>"
              data-nonce="<?php echo wp_create_nonce('noriks_upsell_' . $order->get_id()); ?>">
             <div class="ty_upsell_one_wrapper__popup-content">
