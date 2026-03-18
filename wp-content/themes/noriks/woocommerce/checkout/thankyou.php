@@ -415,11 +415,14 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item:hover { background: #efefef; }
 .ty-grid-item img {
     width: 100%;
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
     display: block;
     border-radius: 0;
+    min-height: 80px;
+    background: #eee;
 }
 .ty-grid-item .g-name,
 .ty-grid-item .g-price-old,
