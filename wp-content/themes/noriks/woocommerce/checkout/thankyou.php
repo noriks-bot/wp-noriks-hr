@@ -372,9 +372,10 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-popup {
     background: #fff;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px !important;
     border: 2px solid #E86C00;
+    box-sizing: border-box;
 }
 
 .ty-grid-header {
@@ -401,7 +402,7 @@ body.woocommerce-order-received .woocommerce {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    padding: 0 15px 15px;
+    padding: 10px 15px 15px;
     background: #fff;
 }
 .ty-grid-item {
