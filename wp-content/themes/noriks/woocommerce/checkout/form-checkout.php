@@ -119,6 +119,15 @@ if ( WC()->cart->is_empty() ) return;
                   </div>
                   <div class="review-product-remove"></div>
                 </div>
+
+                <!-- COD fee — shown/hidden dynamically -->
+                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row" style="display:none;">
+                  <div class="review-addons-title"><div>Naknada za pouzeće</div></div>
+                  <div class="review-addons-price review-sale-price">
+                    <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
+                  </div>
+                  <div class="review-product-remove"></div>
+                </div>
               </div>
             </div>
             <div class="vigo-checkout-total__sum flex flex--middle border_price">
@@ -177,14 +186,24 @@ jQuery(function($){
   var now=new Date(),from=addBiz(now,2),to=addBiz(now,3);
   $('#js-delivery-dates').text(days[from.getDay()]+', '+from.getDate()+'.'+(from.getMonth()+1)+'. - '+days[to.getDay()]+', '+to.getDate()+'.'+(to.getMonth()+1)+'.');
 
-  /* COD prompt toggle based on WC payment method */
-  $(document.body).on('payment_method_selected', function(){
+  /* COD prompt + fee row toggle */
+  var baseTotal = parseFloat($('.price_total_wrapper').text().replace(/[^\d,]/g,'').replace(',','.')) || 0;
+
+  function updateCodDisplay(){
     var val = $('input[name="payment_method"]:checked').val();
-    $('#hs-cod-checkout-prompt').toggle(val === 'cod');
-  });
-  /* Initial trigger */
-  var initPm = $('input[name="payment_method"]:checked').val();
-  $('#hs-cod-checkout-prompt').toggle(initPm === 'cod');
+    var isCod = (val === 'cod');
+    $('#hs-cod-checkout-prompt').toggle(isCod);
+    $('#noriks-cod-fee-row').toggle(isCod);
+
+    /* Update displayed total */
+    var total = baseTotal + (isCod ? 1.99 : 0);
+    var formatted = total.toFixed(2).replace('.',',');
+    $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + formatted + '<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>');
+  }
+
+  $(document.body).on('payment_method_selected', updateCodDisplay);
+  $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
+  updateCodDisplay();
 
   /* Trigger WC checkout update */
   $(document.body).trigger('update_checkout');
