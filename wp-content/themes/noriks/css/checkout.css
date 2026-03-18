@@ -112,6 +112,24 @@ body.woocommerce-checkout #payment .place-order {
   display: none !important;
 }
 
+/* ===== Field descriptions via CSS (immune to WC AJAX re-renders) ===== */
+#billing_email_field::after {
+  content: 'Za potvrdu narudžbe i praćenje pošiljke';
+  display: block;
+  font-size: 13px;
+  color: #5f6061;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+#billing_phone_field::after {
+  content: 'Primjer: 0912345678';
+  display: block;
+  font-size: 13px;
+  color: #5f6061;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
 /* ===== FIX: Prevent blockUI flicker on checkout ===== */
 body.woocommerce-checkout .blockUI.blockOverlay,
 body.woocommerce-checkout .woocommerce .blockUI.blockOverlay,

@@ -505,19 +505,7 @@ add_action( 'wp_footer', function() {
         $.fn.unblock = function(){ return this; };
       }
 
-      /* Persistent field descriptions — survive WC update_checkout re-renders */
-      function injectDescriptions() {
-        var phoneRow = $('#billing_phone_field');
-        if (phoneRow.length && !phoneRow.find('.noriks-desc').length) {
-          phoneRow.append('<span class="description noriks-desc"><span class="desc-left">Primjer: 0912345678</span><span class="desc-right">Za pomoć s dostavom</span></span>');
-        }
-        var emailRow = $('#billing_email_field');
-        if (emailRow.length && !emailRow.find('.noriks-desc').length) {
-          emailRow.append('<span class="description noriks-desc">Za potvrdu narudžbe i praćenje pošiljke</span>');
-        }
-      }
-      injectDescriptions();
-      $(document.body).on('updated_checkout', injectDescriptions);
+      /* Field descriptions handled by CSS ::after — immune to WC re-renders */
 
       /* Re-validate on input/change — clears error when value becomes valid */
       $(document).on('input', '.woocommerce-checkout .form-row input', function(){
