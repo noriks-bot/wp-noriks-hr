@@ -212,16 +212,18 @@ body.single-product {
     
     
     .variation-buttons {
-       display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        justify-content: space-between;
-        overflow-x: hidden;
+       display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 7px !important;
+        justify-content: space-between !important;
+        overflow-x: hidden !important;
+        overflow: hidden !important;
     }
     .variation-button{
-        padding: 10px 10px;
-        min-width: 0;
-        flex: 1 1 auto;
+        padding: 10px 10px !important;
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        box-sizing: border-box !important;
     }
     
     .product_title {
