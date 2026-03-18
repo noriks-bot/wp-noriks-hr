@@ -176,7 +176,8 @@ body.woocommerce-order-received .woocommerce {
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
     /* Blur everything except upsell when visible */
-    .ty-container.upsell-active .ty-success { margin-bottom:0 !important; }
+    .ty-container.upsell-active .ty-success,
+    .ty-container.grid-active .ty-success { margin-bottom:0 !important; }
     .ty-container.upsell-active > *:not(.ty_upsell_one_wrapper):not(#ty-grid-section),
     .ty-container.grid-active > *:not(#ty-grid-section):not(.ty_upsell_one_wrapper) {
         filter: blur(3px);
