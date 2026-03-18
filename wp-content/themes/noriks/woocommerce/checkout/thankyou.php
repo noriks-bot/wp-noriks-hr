@@ -282,10 +282,12 @@ body.woocommerce-order-received .woocommerce {
 
 /* Variation select */
 .tyuo_product_section .variation-select-wrap {
-    padding: 0 0 16px;
+    padding: 0 0 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 .tyuo_product_section .variation-select {
-    width: 100%;
+    width: 50%;
     height: 44px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -521,7 +523,7 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .qty { font-size: 20px; }
     .tyuo_product_section .product_new_sale_price { font-size: 20px; }
     .tyuo_product_section .buttons-section { flex-direction: column; gap: 8px; }
-    .tyuo_product_section .variation-select-wrap { padding: 0 0 12px; }
+    .tyuo_product_section .variation-select-wrap { padding: 0 0 8px; justify-content: center; }
     .tyuo_product_section .variation-select { width: 100%; }
     .ty-section-header { padding: 14px 16px; font-size: 14px; }
     .ty-section-body-inner { padding: 12px 16px; }
