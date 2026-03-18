@@ -103,12 +103,6 @@ body.woocommerce-checkout #payment .place-order {
   line-height: 1.4;
 }
 
-/* ===== FIX: Prevent blockUI flicker on checkout ===== */
-body.woocommerce-checkout .blockUI.blockOverlay,
-body.woocommerce-checkout .woocommerce .blockUI.blockOverlay,
-body.woocommerce-checkout .processing .blockUI.blockOverlay {
-  display: none !important;
-  opacity: 0 !important;
-}
+/* blockUI — native WC behavior */
 
 /* Payment fields — let WC/Stripe handle natively */

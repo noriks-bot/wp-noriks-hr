@@ -400,11 +400,7 @@ add_action( 'wp_footer', function() {
         return true;
       }
 
-      /* Prevent blockUI flicker — override jQuery.fn.block entirely on checkout */
-      if ($.fn.block) {
-        $.fn.block = function(){ return this; };
-        $.fn.unblock = function(){ return this; };
-      }
+      /* blockUI — let WC use it natively (needed for payment method switching) */
 
       /* Field descriptions handled by CSS ::after — immune to WC re-renders */
 
