@@ -100,7 +100,6 @@ if ( WC()->cart->is_empty() ) return;
                   <div class="info-price">
                     <span class="review-sale-price"><?php echo WC()->cart->get_product_subtotal($p,$q); ?></span>
                   </div>
-                  <div class="review-product-remove"></div>
                 </div>
                 <?php endforeach; ?>
 
@@ -108,25 +107,16 @@ if ( WC()->cart->is_empty() ) return;
                 <div class="c--darkgray review-section-container review-addons shipping_order_review">
                   <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
                   <div class="review-addons-price review-sale-price">
-                    <?php
-                    $shipping_total = WC()->cart->get_shipping_total();
-                    if ( floatval($shipping_total) > 0 ) {
-                      echo '<span class="woocommerce-Price-amount amount"><bdi>' . number_format(floatval($shipping_total), 2, ',', '.') . '<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>';
-                    } else {
-                      echo '<span class="shipping-free-badge">Besplatno</span>';
-                    }
-                    ?>
+                    <span class="woocommerce-Price-amount amount"><bdi>2,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
                   </div>
-                  <div class="review-product-remove"></div>
                 </div>
 
                 <!-- COD fee — shown/hidden dynamically -->
-                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row" style="display:none;">
+                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row">
                   <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
                   <div class="review-addons-price review-sale-price">
                     <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
                   </div>
-                  <div class="review-product-remove"></div>
                 </div>
               </div>
             </div>
