@@ -829,10 +829,18 @@ body.woocommerce-order-received .woocommerce {
     tick();
 
     // ─── Step transitions ───
-    function showGrid() {
+    var stepKey = 'ty_step_' + orderId;
+
+    // If user already passed step 1, skip directly to step 2
+    if (localStorage.getItem(stepKey) === '2') {
         wrap.style.display = 'none';
         if (overlay) overlay.classList.add('show');
-        // Scroll to grid
+    }
+
+    function showGrid() {
+        wrap.style.display = 'none';
+        localStorage.setItem(stepKey, '2');
+        if (overlay) overlay.classList.add('show');
         if (overlay) overlay.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     function closeAll() {
