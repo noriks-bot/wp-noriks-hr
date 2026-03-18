@@ -143,12 +143,12 @@ body.woocommerce-order-received .woocommerce {
 /* ═══════════════════════════════════════════════
    VIGOSHOP UPSELL — 1:1 copy from reference HTML
    Class names match vigoshop: ty_upsell_one_wrapper, tyuo_*, pass-btn, buy-btn
-   Only color changed: orange → #971b1b
+   Only color changed: orange → #E8450E
    ═══════════════════════════════════════════════ */
 .ty_upsell_one_wrapper {
     background: #fff;
     margin: 0 0 15px;
-    border: 2px solid #971b1b;
+    border: 2px solid #F5A623;
     border-radius: 10px;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
@@ -159,10 +159,10 @@ body.woocommerce-order-received .woocommerce {
 
 /* Timer/header — dark bg */
 .tyuo_timer {
-    background: #971b1b;
+    background: #F5A623;
     padding: 18px 20px;
     text-align: center;
-    color: #fff;
+    color: #1A1A1A;
 }
 .tyuo_timer .timer_wrapper {
     display: flex;
@@ -174,11 +174,11 @@ body.woocommerce-order-received .woocommerce {
 .tyuo_timer .special_offer_txt {
     font-size: 15px;
     font-weight: 400;
-    color: rgba(255,255,255,0.85);
+    color: #1A1A1A;
 }
 .tyuo_timer .time {
     display: inline-block;
-    background: #971b1b;
+    background: #D63B0E;
     color: #fff;
     padding: 2px 10px;
     border-radius: 4px;
@@ -189,7 +189,7 @@ body.woocommerce-order-received .woocommerce {
 .tyuo_timer .title {
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: #1A1A1A;
     line-height: 1.3;
 }
 
@@ -206,7 +206,7 @@ body.woocommerce-order-received .woocommerce {
     gap: 6px;
     font-size: 14px;
     font-weight: 500;
-    color: #666;
+    color: #2E9E3F;
     margin-bottom: 4px;
 }
 .tyuo_middle_section .sub_title__icon svg { width: 15px; height: auto; }
@@ -217,7 +217,7 @@ body.woocommerce-order-received .woocommerce {
     gap: 6px;
     font-size: 14px;
     font-weight: 500;
-    color: #971b1b;
+    color: #2E9E3F;
 }
 .tyuo_middle_section .clue_text__icon svg { width: 15px; height: auto; }
 
@@ -235,7 +235,7 @@ body.woocommerce-order-received .woocommerce {
     width: 110px;
     min-width: 110px;
     height: 110px;
-    background: #f5d5d5;
+    background: #FDE8CC;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -274,7 +274,7 @@ body.woocommerce-order-received .woocommerce {
 .tyuo_product_section .product_new_sale_price {
     font-size: 22px;
     font-weight: 700;
-    color: #971b1b;
+    color: #E8450E;
 }
 
 /* Variation select */
@@ -301,7 +301,7 @@ body.woocommerce-order-received .woocommerce {
     cursor: pointer;
     outline: none;
 }
-.tyuo_product_section .variation-select:focus { border-color: #971b1b; }
+.tyuo_product_section .variation-select:focus { border-color: #E8450E; }
 
 /* Buttons — vigoshop layout */
 .tyuo_product_section .buttons-section,
@@ -313,8 +313,8 @@ body.woocommerce-order-received .woocommerce {
 .pass-btn {
     flex: 0;
     background: #fff;
-    color: #333;
-    border: 1px solid #333;
+    color: #E8450E;
+    border: 1px solid #ccc;
     border-radius: 6px;
     padding: 12px 24px;
     font-size: 14px;
@@ -369,7 +369,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-section.show { max-height: 2000px; }
 
 .ty-grid-popup {
-    background: #971b1b;
+    background: #E8450E;
     width: 100%;
     overflow: hidden;
     border-radius: 4px !important;
@@ -379,7 +379,7 @@ body.woocommerce-order-received .woocommerce {
     padding: 18px 20px 14px;
     display: flex; align-items: center; justify-content: space-between;
     user-select: none;
-    background: #971b1b;
+    background: #E8450E;
 }
 .ty-grid-header h3 {
     color: #fff !important; font-size: 15px;
@@ -407,7 +407,7 @@ body.woocommerce-order-received .woocommerce {
     color: #333;
     transition: border-color 0.2s;
 }
-.ty-grid-item:hover { border-color: #971b1b; }
+.ty-grid-item:hover { border-color: #E8450E; }
 .ty-grid-item img {
     width: 100%; max-width: 120px; height: auto;
     object-fit: contain; margin-bottom: 8px;
@@ -422,7 +422,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item .g-price-new {
     font-family: 'Roboto', sans-serif;
-    color: #971b1b; font-size: 16px; font-weight: 700;
+    color: #E8450E; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
     width: 100%; padding: 6px; font-size: 12px;
@@ -435,7 +435,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 10px; background: #971b1b; color: #fff;
+    padding: 10px; background: #E8450E; color: #fff;
     border: none; border-radius: 20px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
@@ -538,7 +538,7 @@ body.woocommerce-order-received .woocommerce {
             <h1>Narudžba nije uspjela</h1>
             <p>Banka je odbila transakciju. Pokušajte ponovno.</p>
             <p style="margin-top:16px;">
-                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#971b1b;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
+                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" style="display:inline-block;background:#E8450E;color:#fff;padding:12px 32px;text-decoration:none;font-weight:700;">Pokušaj ponovno</a>
             </p>
         </div>
     <?php else : ?>
@@ -560,20 +560,20 @@ body.woocommerce-order-received .woocommerce {
 
                 <div class="tyuo_timer">
                     <div class="timer_wrapper">
-                        <div class="special_offer_txt">Posebna ponuda ističe</div>
+                        <div class="special_offer_txt">Posebna ponudba poteče</div>
                         <div class="time" id="ty-timer">05:00</div>
                     </div>
-                    <div class="title">Dodajte još jedan proizvod s 50% dodatnog popusta</div>
+                    <div class="title">Dodajte še en izdelek s 50% dodatnega popusta</div>
                 </div>
 
                 <div class="tyuo_middle_section">
                     <div class="sub_title">
                         <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#47b426"></path></svg></span>
-                        Poslat ćemo ga u istom paketu
+                        Poslali ga bomo v istem paketu
                     </div>
                     <div class="clue_text">
-                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#971b1b"></path></svg></span>
-                        Razmislite kome biste mogli pokloniti proizvod
+                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#2E9E3F"></path></svg></span>
+                        Pomislite, komu bi lahko izdelek podarili
                     </div>
                 </div>
 
@@ -591,7 +591,7 @@ body.woocommerce-order-received .woocommerce {
                         </div>
                     </div>
 
-                    <?php if ( false && $upsell_variations ) : ?>
+                    <?php if ( $upsell_variations ) : ?>
                     <div class="variation-select-wrap">
                         <select class="variation-select" id="ty-variation-select">
                             <?php foreach ( $upsell_variations as $v ) : ?>
@@ -707,7 +707,7 @@ body.woocommerce-order-received .woocommerce {
                         <div style="display:flex;align-items:center;gap:8px;">
                             <div class="ty-item-price"><?php echo $order->get_formatted_line_subtotal( $item ); ?></div>
                             <?php if ( $is_upsell_item && $order->get_status() === 'primary-hold' ) : ?>
-                            <button class="ty-upsell-remove" data-item-id="<?php echo $item->get_id(); ?>" data-order-id="<?php echo $order->get_id(); ?>" onclick="removeUpsellItem(this)" style="width:22px;height:22px;border-radius:50%;background:#971b1b;color:#fff;border:none;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex-shrink:0;">✕</button>
+                            <button class="ty-upsell-remove" data-item-id="<?php echo $item->get_id(); ?>" data-order-id="<?php echo $order->get_id(); ?>" onclick="removeUpsellItem(this)" style="width:22px;height:22px;border-radius:50%;background:#E8450E;color:#fff;border:none;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;flex-shrink:0;">✕</button>
                             <?php endif; ?>
                         </div>
                     </div>
