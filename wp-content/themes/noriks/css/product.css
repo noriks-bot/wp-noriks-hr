@@ -213,13 +213,15 @@ body.single-product {
     
     .variation-buttons {
        display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 7px;
         justify-content: space-between;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
     .variation-button{
-        padding: 12px 12px;
+        padding: 10px 10px;
+        min-width: 0;
+        flex: 1 1 auto;
     }
     
     .product_title {
