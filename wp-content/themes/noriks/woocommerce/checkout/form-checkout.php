@@ -103,12 +103,10 @@ if ( WC()->cart->is_empty() ) return;
                 </div>
                 <?php endforeach; ?>
 
-                <!-- Shipping — always show -->
+                <!-- Shipping — dynamic from WC -->
                 <div class="c--darkgray review-section-container review-addons shipping_order_review">
                   <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
-                  <div class="review-addons-price review-sale-price">
-                    <span class="woocommerce-Price-amount amount"><bdi>2,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
-                  </div>
+                  <div class="review-addons-price review-sale-price" id="noriks-shipping-price"></div>
                 </div>
 
                 <!-- COD fee — shown/hidden dynamically -->
@@ -176,19 +174,39 @@ jQuery(function($){
   var now=new Date(),from=addBiz(now,2),to=addBiz(now,3);
   $('#js-delivery-dates').text(days[from.getDay()]+', '+from.getDate()+'.'+(from.getMonth()+1)+'. - '+days[to.getDay()]+', '+to.getDate()+'.'+(to.getMonth()+1)+'.');
 
-  /* COD prompt + fee row toggle */
-  var baseTotal = parseFloat($('.price_total_wrapper').text().replace(/[^\d,]/g,'').replace(',','.')) || 0;
+  /* Shipping price — read from WC after checkout update */
+  function updateShippingDisplay() {
+    var shippingEl = $('#noriks-shipping-price');
+    // WC puts shipping total in the hidden review order table
+    var wcShipping = $('.woocommerce-shipping-totals td').text().trim();
+    if (!wcShipping) {
+      // Fallback: calculate from cart total - subtotal - fees
+      wcShipping = '';
+    }
+    if (wcShipping && wcShipping.indexOf('0,00') === -1 && wcShipping.indexOf('Besplatno') === -1 && wcShipping.indexOf('Free') === -1) {
+      shippingEl.html(wcShipping);
+    } else {
+      shippingEl.html('<span style="display:inline-block;padding:3px 10px;border-radius:5px;background:#9ce79c;color:#228b22;font-size:14px;font-weight:500;">Besplatno</span>');
+    }
+  }
+  function updateTotalDisplay() {
+    var wcTotal = $('.order-total td .woocommerce-Price-amount').first().text().trim();
+    if (wcTotal) {
+      $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + wcTotal + '</bdi></span>');
+    }
+  }
+  $(document.body).on('updated_checkout', function() {
+    updateShippingDisplay();
+    updateTotalDisplay();
+  });
+  setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
+  /* COD prompt + fee row toggle (WC handles total calculation via cart fees hook) */
   function updateCodDisplay(){
     var val = $('input[name="payment_method"]:checked').val();
     var isCod = (val === 'cod');
     $('#hs-cod-checkout-prompt').toggle(isCod);
     $('#noriks-cod-fee-row').toggle(isCod);
-
-    /* Update displayed total */
-    var total = baseTotal + (isCod ? 1.99 : 0);
-    var formatted = total.toFixed(2).replace('.',',');
-    $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + formatted + '<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>');
   }
 
   $(document.body).on('payment_method_selected', updateCodDisplay);

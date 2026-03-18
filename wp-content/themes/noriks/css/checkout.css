@@ -330,6 +330,7 @@ body.woocommerce-checkout .shipping-free-badge {
 body.woocommerce-checkout .blockUI.blockOverlay {
   background: transparent !important;
   opacity: 0 !important;
+  pointer-events: none !important;
 }
 body.woocommerce-checkout .blockUI.blockMsg {
   display: none !important;
