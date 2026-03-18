@@ -131,15 +131,36 @@ body.woocommerce-checkout #payment .wc_payment_method:last-child {
 body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) {
   background: #e8f3ff !important;
 }
-/* Hide ALL radio inputs in payment (WC puts them in different places) */
+/* Hide ALL native radio inputs in payment */
 body.woocommerce-checkout #payment .wc_payment_method input.input-radio,
 body.woocommerce-checkout #payment .wc_payment_method input[type="radio"] {
-  display: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
 }
-/* Hide duplicate gateway icon that Stripe plugin adds next to label */
-body.woocommerce-checkout #payment .wc_payment_method > label > img.stripe-icon,
-body.woocommerce-checkout #payment .wc_payment_method > label > .wc-stripe-card-icons-container {
-  display: none !important;
+/* Custom radio circle via label ::before */
+body.woocommerce-checkout #payment .wc_payment_method > label::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  border: 2px solid #ccc !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  margin-right: 12px !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) > label::before {
+  background: #3DBD00 !important;
+  border-color: #3DBD00 !important;
+  box-shadow: inset 0 0 0 3px #fff !important;
 }
 /* Labels */
 body.woocommerce-checkout #payment .wc_payment_method > label {
@@ -193,14 +214,20 @@ body.woocommerce-checkout #payment .payment_box fieldset {
   line-height: 1.4;
 }
 
-/* ===== Order summary — full width ===== */
+/* ===== Order summary + place-order — full width ===== */
 body.woocommerce-checkout .vigo-checkout-total,
 body.woocommerce-checkout .place-order-title,
 body.woocommerce-checkout .form-row.place-order,
-body.woocommerce-checkout #hs-vat-tax-checkout-prompt {
+body.woocommerce-checkout #hs-vat-tax-checkout-prompt,
+body.woocommerce-checkout #hs-cod-checkout-prompt,
+body.woocommerce-checkout .woocommerce-checkout-review-order,
+body.woocommerce-checkout .woocommerce-checkout-review-order-table,
+body.woocommerce-checkout .col-2,
+body.woocommerce-checkout .woocommerce-additional-fields {
   width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box !important;
+  float: none !important;
 }
 
 /* ===== blockUI — transparent (no flicker, payment logic works) ===== */
