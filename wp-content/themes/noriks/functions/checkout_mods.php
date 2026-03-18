@@ -15,9 +15,9 @@ add_action( 'wp_enqueue_scripts', function() {
     global $wp_styles;
     if ( ! empty( $wp_styles->registered ) ) {
         foreach ( array_keys( $wp_styles->registered ) as $handle ) {
-            if ( $handle !== 'admin-bar' && $handle !== 'dashicons' ) {
-                wp_deregister_style( $handle );
-            }
+            if ( $handle === 'admin-bar' || $handle === 'dashicons' ) continue;
+            if ( strpos( $handle, 'stripe' ) !== false || strpos( $handle, 'wc-stripe' ) !== false ) continue;
+            wp_deregister_style( $handle );
         }
     }
 
@@ -28,13 +28,17 @@ add_action( 'wp_enqueue_scripts', function() {
         'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
         'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
         'wp-hooks', 'wp-i18n',
-        // Stripe / payment gateway scripts
-        'stripe', 'wc-stripe', 'wc-stripe-elements', 'wc-stripe-checkout',
-        'woocommerce-gateway-stripe', 'stripe_v3',
     );
+    // Keep all stripe-related scripts (woo-stripe-payment plugin)
+    $keep_prefixes = array( 'stripe', 'wc-stripe', 'wc_stripe' );
     if ( ! empty( $wp_scripts->registered ) ) {
         foreach ( array_keys( $wp_scripts->registered ) as $handle ) {
-            if ( ! in_array( $handle, $keep_scripts, true ) ) {
+            if ( in_array( $handle, $keep_scripts, true ) ) continue;
+            $keep = false;
+            foreach ( $keep_prefixes as $prefix ) {
+                if ( strpos( $handle, $prefix ) !== false ) { $keep = true; break; }
+            }
+            if ( ! $keep ) {
                 wp_deregister_script( $handle );
             }
         }
