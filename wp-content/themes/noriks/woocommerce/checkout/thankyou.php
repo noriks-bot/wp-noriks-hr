@@ -567,20 +567,20 @@ body.woocommerce-order-received .woocommerce {
 
                 <div class="tyuo_timer">
                     <div class="timer_wrapper">
-                        <div class="special_offer_txt">Posebna ponudba poteče</div>
+                        <div class="special_offer_txt">Posebna ponuda ističe</div>
                         <div class="time" id="ty-timer">05:00</div>
                     </div>
-                    <div class="title">Dodajte še en izdelek s 50% dodatnega popusta</div>
+                    <div class="title">Dodajte još jedan proizvod s 50% dodatnog popusta</div>
                 </div>
 
                 <div class="tyuo_middle_section">
                     <div class="sub_title">
                         <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#E8450E"></path></svg></span>
-                        Poslali ga bomo v istem paketu
+                        Poslat ćemo ga u istom paketu
                     </div>
                     <div class="clue_text">
                         <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#E8450E"></path></svg></span>
-                        Pomislite, komu bi lahko izdelek podarili
+                        Razmislite kome biste mogli pokloniti proizvod
                     </div>
                 </div>
 
@@ -619,7 +619,7 @@ body.woocommerce-order-received .woocommerce {
 
                     <div class="buttons-section">
                         <a class="pass-btn" id="ty-btn-skip">Ne želim</a>
-                        <div class="buy-btn" id="ty-btn-add" data-product-id="<?php echo esc_attr( $upsell_product_id ); ?>">DODAJ V NAROČILO</div>
+                        <div class="buy-btn" id="ty-btn-add" data-product-id="<?php echo esc_attr( $upsell_product_id ); ?>">DODAJ U NARUDŽBU</div>
                     </div>
                 </div>
 
@@ -632,10 +632,10 @@ body.woocommerce-order-received .woocommerce {
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" onclick="tyToggle(this)" style="cursor:pointer;flex-direction:column;">
                     <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;">
-                        <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);">Posebna ponudba poteče</div>
+                        <div style="font-size:15px;font-weight:400;color:rgba(255,255,255,0.9);">Posebna ponuda ističe</div>
                         <div class="time" id="ty-timer-2" style="display:inline-block;background:#D63B0E;color:#fff;padding:2px 10px;border-radius:4px;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">05:00</div>
                     </div>
-                    <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte katerikoli izdelek s 50% popustom</div>
+                    <div style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;text-align:center;">Dodajte bilo koji proizvod s 50% popusta</div>
                 </div>
                 <div class="ty-section-body open" id="ty-grid-body">
                 <div class="ty-section-body-inner" style="padding:0;">
