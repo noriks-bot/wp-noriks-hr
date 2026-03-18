@@ -242,15 +242,15 @@ body.woocommerce-order-received .woocommerce {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 0;
     box-sizing: border-box;
 }
 .tyuo_product_section .product_data .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
     display: block;
-    margin: 0 auto;
 }
 .tyuo_product_section .right_section_wrapper {
     flex: 1;
