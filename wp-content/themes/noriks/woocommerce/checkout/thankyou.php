@@ -84,6 +84,8 @@ if ( count( $grid_products ) < 6 ) {
 $grid_products = array_slice( $grid_products, 0, 6 );
 ?>
 
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/vendor/thankyou-upsell-one.css" />
+
 <style>
 /* ═══ RESET: hide WP chrome ═══ */
 .top-header, .marquee, header.navbar.header, #languageModal,
@@ -137,228 +139,7 @@ body.woocommerce-order-received .woocommerce {
     font-size: 13px; color: #333; font-weight: 600;
 }
 
-/* ═══════════════════════════════════════════════
-   VIGOSHOP UPSELL — 1:1 copy from reference HTML
-   Class names match vigoshop: ty_upsell_one_wrapper, tyuo_*, pass-btn, buy-btn
-   Only color changed: orange → #E8450E
-   ═══════════════════════════════════════════════ */
-.ty_upsell_one_wrapper {
-    background: #fff;
-    margin: 0 0 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
-}
-.ty_upsell_one_wrapper__popup-content {
-    display: block;
-}
-
-/* Timer/header — dark bg */
-.tyuo_timer {
-    background: #E86C00;
-    padding: 18px 20px;
-    text-align: center;
-    color: #fff;
-}
-.tyuo_timer .timer_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-.tyuo_timer .special_offer_txt {
-    font-size: 15px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.9);
-}
-.tyuo_timer .time {
-    display: inline-block;
-    background: #D63B0E;
-    color: #fff;
-    padding: 2px 10px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-}
-.tyuo_timer .title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.3;
-}
-
-/* Middle section — benefits */
-.tyuo_middle_section {
-    background: #fff;
-    padding: 16px 20px;
-    text-align: center;
-}
-.tyuo_middle_section .sub_title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #E8450E;
-    margin-bottom: 4px;
-}
-.tyuo_middle_section .sub_title__icon svg { width: 15px; height: auto; }
-.tyuo_middle_section .clue_text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #E8450E;
-}
-.tyuo_middle_section .clue_text__icon svg { width: 15px; height: auto; }
-
-/* Product section */
-.tyuo_product_section {
-    padding: 0 20px 20px;
-}
-.tyuo_product_section .product_data {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 16px;
-}
-.tyuo_product_section .product_data .img {
-    width: 120px;
-    min-width: 120px;
-    height: 120px;
-    background: transparent;
-    border-radius: 4px;
-    border: none;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    box-sizing: border-box;
-}
-.tyuo_product_section .product_data .img img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-.tyuo_product_section .right_section_wrapper {
-    flex: 1;
-}
-.tyuo_product_section .qty {
-    font-size: 28px;
-    font-weight: 300;
-    color: #333;
-    line-height: 1.2;
-}
-.tyuo_product_section .product_name {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1A1A1A;
-    line-height: 1.4;
-    margin: 4px 0 10px;
-}
-.tyuo_product_section .product_regular_price {
-    font-size: 15px;
-    color: #aaa;
-    text-decoration: line-through;
-    margin-bottom: 2px;
-}
-.tyuo_product_section .product_new_sale_price {
-    font-size: 26px;
-    font-weight: 700;
-    color: #E8450E;
-}
-
-/* Variation select */
-.tyuo_product_section .variation-select-wrap {
-    padding: 0; margin: 0 0 15px;
-    display: flex;
-    justify-content: flex-end;
-}
-.tyuo_product_section .variation-select {
-    width: 50%;
-    height: 44px;
-    border: 1px solid #ccc;
-    border-radius: 0;
-    padding: 0 16px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #333;
-    background: #fff;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 20px;
-    cursor: pointer;
-    outline: none;
-}
-.tyuo_product_section .variation-select:focus { border-color: #E8450E; }
-
-/* Buttons — vigoshop layout */
-.tyuo_product_section .buttons-section,
-.confirmation_wrapper .buttons-section {
-    display: flex;
-    gap: 12px;
-    align-items: stretch;
-}
-.pass-btn {
-    flex: 0;
-    background: #fff;
-    color: #E86C00;
-    border: 1px solid #E86C00;
-    border-radius: 0;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-}
-.pass-btn:hover { background: #f5f5f5; }
-.buy-btn {
-    flex: 1;
-    background: #1A1A1A;
-    color: #fff;
-    border: none;
-    border-radius: 0;
-    padding: 14px 24px;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.buy-btn:hover { background: #333; }
-.buy-btn.added { background: #2E7D32; }
-.buy-btn.disabled, .buy-btn:disabled { background: #999; cursor: not-allowed; }
-
-/* Status text */
-.ty-upsell-status {
-    text-align: center; padding: 0;
-    font-size: 13px; color: #888; min-height: 0;
-}
-.ty-upsell-status:empty { display: none; }
-
-/* Hide old class names if they leak through */
-.ty-upsell-wrap, .ty-upsell-banner, .ty-upsell-benefits,
-.ty-upsell-card, .ty-upsell-bottom-bar { display: none; }
-
+    /* Upsell CSS loaded from vendor/thankyou-upsell-one.css */
 /* ═══════════════════════════════════════════════
    STEP 2: 6-PRODUCT GRID (inline, not overlay)
    ═══════════════════════════════════════════════ */
@@ -619,7 +400,7 @@ body.woocommerce-order-received .woocommerce {
                         </div>
                     </div>
 
-                    <div class="variation-select-wrap">
+                    <div class="wrapper_selectbox">
                         <select class="variation-select" id="ty-variation-select">
                             <?php if ( $upsell_variations ) : ?>
                                 <?php foreach ( $upsell_variations as $v ) : ?>
