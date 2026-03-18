@@ -176,7 +176,8 @@ body.woocommerce-order-received .woocommerce {
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
-    .g-select-btn.selected { background:#2E7D32 !important; }
+    .g-select-btn.selected { background:#2E7D32 !important; color:#fff !important; }
+    .g-select-btn { height:40px; display:flex !important; align-items:center; justify-content:center; gap:4px; }
     /* Blur everything except upsell when visible */
     .ty-container.upsell-active .ty-success,
     .ty-container.grid-active .ty-success { margin-bottom:0 !important; }
@@ -830,7 +831,7 @@ body.woocommerce-order-received .woocommerce {
                     el.style.background = '#000';
                 } else {
                     el.classList.add('selected');
-                    el.innerHTML = '✔ IZBRANO <span style="font-size:10px;opacity:0.7;display:block;margin-top:2px;">odstrani</span>';
+                    el.innerHTML = '✔ IZBRANO <span style="font-size:10px;opacity:0.7;margin-left:4px;">odstrani</span>';
                     el.style.background = '#2E7D32';
                 }
             });
