@@ -13,40 +13,9 @@ add_action( 'wp_enqueue_scripts', function() {
 
     // Remove ALL registered styles except admin-bar
     global $wp_styles;
-    if ( ! empty( $wp_styles->registered ) ) {
-        // Keep: admin, WC core, stripe, payment-related styles
-        $keep_style_patterns = array( 'admin-bar', 'dashicons', 'stripe', 'wc-stripe', 'woocommerce', 'wc-', 'select2' );
-        foreach ( array_keys( $wp_styles->registered ) as $handle ) {
-            $keep = false;
-            foreach ( $keep_style_patterns as $pat ) {
-                if ( strpos( $handle, $pat ) !== false ) { $keep = true; break; }
-            }
-            if ( ! $keep ) wp_deregister_style( $handle );
-        }
-    }
+    // Styles — keep ALL (vigoshop CDN + WC + Stripe all needed)
 
-    // Remove ALL registered scripts except essential WC ones
-    global $wp_scripts;
-    $keep_scripts = array(
-        'jquery', 'jquery-core', 'jquery-migrate',
-        'wc-checkout', 'woocommerce', 'wc-country-select', 'wc-address-i18n',
-        'selectWoo', 'wc-jquery-blockui', 'wc-js-cookie',
-        'wp-hooks', 'wp-i18n',
-    );
-    // Keep all stripe-related scripts (woo-stripe-payment plugin)
-    $keep_prefixes = array( 'stripe', 'wc-stripe', 'wc_stripe' );
-    if ( ! empty( $wp_scripts->registered ) ) {
-        foreach ( array_keys( $wp_scripts->registered ) as $handle ) {
-            if ( in_array( $handle, $keep_scripts, true ) ) continue;
-            $keep = false;
-            foreach ( $keep_prefixes as $prefix ) {
-                if ( strpos( $handle, $prefix ) !== false ) { $keep = true; break; }
-            }
-            if ( ! $keep ) {
-                wp_deregister_script( $handle );
-            }
-        }
-    }
+    // Scripts — keep ALL (payment gateways need their JS to render fields)
 
     // Vigoshop CDN CSS — exact same files + order as /test-checkout/
     $css = array(
