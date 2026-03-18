@@ -170,6 +170,13 @@ body.woocommerce-order-received .woocommerce {
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
+    /* Blur everything except upsell when visible */
+    .ty-container.upsell-active > *:not(.ty_upsell_one_wrapper):not(.ty-grid-section) {
+        filter: blur(3px);
+        opacity: 0.5;
+        pointer-events: none;
+        user-select: none;
+    }
 /* ═══════════════════════════════════════════════
    STEP 2: 6-PRODUCT GRID (inline, not overlay)
    ═══════════════════════════════════════════════ */
@@ -612,6 +619,10 @@ body.woocommerce-order-received .woocommerce {
     var overlay  = document.getElementById('ty-grid-section');
     if (!wrap) return;
 
+    // Blur background when upsell is visible
+    var tyContainer = document.querySelector('.ty-container');
+    if (tyContainer) tyContainer.classList.add('upsell-active');
+
     var orderId  = wrap.dataset.orderId;
     var nonce    = wrap.dataset.nonce;
     var ajaxUrl  = '<?php echo admin_url("admin-ajax.php"); ?>';
@@ -638,6 +649,7 @@ body.woocommerce-order-received .woocommerce {
             }
             // Also hide the grid section if visible
             if (overlay) overlay.style.display = 'none';
+            if (tyContainer) tyContainer.classList.remove('upsell-active');
             // Clear all upsell localStorage
             localStorage.removeItem('ty_added_' + orderId);
             localStorage.removeItem(stepKey);
@@ -675,6 +687,7 @@ body.woocommerce-order-received .woocommerce {
     if (stepState === 'done') {
         wrap.style.display = 'none';
         if (overlay) overlay.style.display = 'none';
+        if (tyContainer) tyContainer.classList.remove('upsell-active');
     } else if (stepState === '2') {
         wrap.style.display = 'none';
         if (overlay) overlay.classList.add('show');
@@ -689,6 +702,7 @@ body.woocommerce-order-received .woocommerce {
     function closeAll() {
         if (overlay) overlay.classList.remove('show');
         if (wrap) wrap.style.display = 'none';
+        if (tyContainer) tyContainer.classList.remove('upsell-active');
         localStorage.setItem(stepKey, 'done');
         // Release order — process it
         var relFd = new FormData();
