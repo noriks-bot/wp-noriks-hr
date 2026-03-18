@@ -429,36 +429,28 @@ function noriks_upsell_modal_markup() {
 
         function openUpsellModal(productId) {
             var $modal = $('#noriks-upsell-modal');
-            var $loading = $('#noriks-modal-loading');
-            
             selectedAttrs = {};
-            $modal.show();
-            $loading.hide();
             $('#noriks-modal-error').hide();
             $('#noriks-qty-val').val(1);
+            $('#noriks-modal-loading').hide();
 
-            // If cached, render instantly
-            if (variationCache[productId]) {
-                modalData = variationCache[productId];
+            // Try both string and number keys
+            var cached = variationCache[productId] || variationCache[String(productId)] || variationCache[Number(productId)];
+            if (cached) {
+                modalData = cached;
                 renderModal();
+                $modal.show();
                 return;
             }
 
-            // Show modal immediately with placeholder, fetch in background
-            $('#noriks-modal-img').attr('src', '');
-            $('#noriks-modal-title').text('Učitavanje...');
-            $('#noriks-modal-price').html('');
-            $('#noriks-modal-attributes').empty();
+            // Fallback: AJAX (should not happen with server-side preload)
+            $modal.show();
             $('#noriks-modal-add').prop('disabled', true).css('opacity','0.5');
-
             $.post(woocommerce_params.ajax_url, {
                 action: 'get_product_variations',
                 product_id: productId
             }, function(res) {
-                if (!res.success) {
-                    $modal.hide();
-                    return;
-                }
+                if (!res.success) { $modal.hide(); return; }
                 modalData = res.data;
                 variationCache[productId] = res.data;
                 renderModal();
