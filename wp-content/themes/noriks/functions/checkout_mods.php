@@ -407,17 +407,10 @@ add_action( 'wp_footer', function() {
         });
       });
 
-      /* Remove ALL existing click handlers on submit button, then bind ours */
-      var $btn = $('#noriks_place_order');
-      $btn.off('click');
-      /* Also clone-replace to remove handlers bound before .off() could run */
-      var $newBtn = $btn.clone(false);
-      $btn.replaceWith($newBtn);
-
-      /* Submit — let WC handle everything natively */
-      $newBtn.on('click', function(e){
+      /* Checkout button — direct form submit */
+      $('#noriks_place_order').on('click', function(e){
         e.preventDefault();
-        $('form.checkout').trigger('submit');
+        $('form.checkout').submit();
       });
     });
     </script>
