@@ -59,9 +59,9 @@ if ( WC()->cart->is_empty() ) return;
           </div>
         </div>
 
-        <!-- PAYMENT — use WC's real #payment div (visible, styled with vigoshop look) -->
+        <!-- PAYMENT — native WC -->
         <h3 class="payment-title">Način plaćanja</h3>
-        <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+        <?php woocommerce_checkout_payment(); ?>
 
         <div class="form-row place-order">
           <div class="woocommerce-terms-and-conditions-wrapper"></div>
