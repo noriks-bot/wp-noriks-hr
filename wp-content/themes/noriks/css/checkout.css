@@ -77,6 +77,10 @@ body.woocommerce-checkout #hs-cod-checkout-prompt {
 /* ===== PAYMENT TITLE ===== */
 body.woocommerce-checkout h3.payment-title {
   display: block !important;
+  font-size: 19.6px !important;
+  font-weight: 700 !important;
+  margin: 29.4px 0 14.7px !important;
+  color: #333 !important;
 }
 
 /* ===== #payment — force visible (vigoshop CDN hides it) ===== */
@@ -88,6 +92,9 @@ body.woocommerce-checkout #payment {
   height: auto !important;
   overflow: visible !important;
   pointer-events: auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 body.woocommerce-checkout #payment * {
   visibility: visible !important;
@@ -96,6 +103,70 @@ body.woocommerce-checkout #payment * {
 /* Hide WC's place_order inside #payment (we have our own) */
 body.woocommerce-checkout #payment .place-order {
   display: none !important;
+}
+
+/* ===== Payment methods — vigoshop style ===== */
+body.woocommerce-checkout #payment .wc_payment_methods {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 21px !important;
+  border: none !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid #d1dbe5 !important;
+  border-bottom: none !important;
+  background: #fff !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:first-child {
+  border-radius: 5px 5px 0 0 !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:last-child {
+  border-radius: 0 0 5px 5px !important;
+  border-bottom: 1px solid #d1dbe5 !important;
+}
+/* Selected = blue bg */
+body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) {
+  background: #e8f3ff !important;
+}
+/* Hide radio inputs */
+body.woocommerce-checkout #payment .wc_payment_method > input.input-radio {
+  display: none !important;
+}
+/* Labels */
+body.woocommerce-checkout #payment .wc_payment_method > label {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  padding: 16px !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  cursor: pointer !important;
+  row-gap: 10px !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) > label {
+  font-weight: 700 !important;
+}
+/* Card/payment icons — right-aligned, consistent size */
+body.woocommerce-checkout #payment .wc_payment_method > label img {
+  max-height: 25px !important;
+  width: auto !important;
+  margin-left: 8px !important;
+}
+/* Payment box (card fields) */
+body.woocommerce-checkout #payment .payment_box {
+  padding: 16px !important;
+  background: #f7f8fa !important;
+  border-top: 1px solid #e3e6e8 !important;
+}
+body.woocommerce-checkout #payment .payment_box fieldset {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* ===== Field descriptions via CSS ::after ===== */
