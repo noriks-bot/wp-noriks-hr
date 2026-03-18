@@ -836,7 +836,7 @@ body.woocommerce-order-received .woocommerce {
                     el.style.background = '#000';
                 } else {
                     el.classList.add('selected');
-                    el.textContent = '✔ IZBRANO';
+                    el.textContent = '✔ IZBRANO — ODSTRANI';
                     el.style.background = '#2E7D32';
                 }
             });
