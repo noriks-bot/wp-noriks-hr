@@ -259,9 +259,9 @@ body.woocommerce-order-received .woocommerce {
     line-height: 1.2;
 }
 .tyuo_product_section .product_name {
-    font-size: 13px;
-    font-weight: 400;
-    color: #666;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
     line-height: 1.4;
     margin: 4px 0 10px;
 }
