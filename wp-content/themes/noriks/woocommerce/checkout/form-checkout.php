@@ -148,7 +148,7 @@ if ( WC()->cart->is_empty() ) return;
 </div><!-- .before_form -->
 
 <!-- Submit button — outside form, triggers hidden WC button -->
-<div id="order_review" class="woocommerce-checkout-review-order container container--xs bg--white">
+<div id="order_review" class="woocommerce-checkout-review-order container container--xs">
   <button type="button" class="button alt button--l button--block button--green button--rounded button--green-gradient"
           id="noriks_place_order" data-value="Naruči">Naruči</button>
 </div>
