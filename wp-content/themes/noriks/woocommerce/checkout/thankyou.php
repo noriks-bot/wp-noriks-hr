@@ -833,8 +833,13 @@ body.woocommerce-order-received .woocommerce {
     // ─── Step transitions ───
     var stepKey = 'ty_step_' + orderId;
 
-    // If user already passed step 1, skip directly to step 2
-    if (localStorage.getItem(stepKey) === '2') {
+    // If user already passed step 1, skip to step 2
+    // If user dismissed step 2 ('done'), hide everything
+    var stepState = localStorage.getItem(stepKey);
+    if (stepState === 'done') {
+        wrap.style.display = 'none';
+        if (overlay) overlay.style.display = 'none';
+    } else if (stepState === '2') {
         wrap.style.display = 'none';
         if (overlay) overlay.classList.add('show');
     }
@@ -847,6 +852,7 @@ body.woocommerce-order-received .woocommerce {
     }
     function closeAll() {
         if (overlay) overlay.classList.remove('show');
+        localStorage.setItem(stepKey, 'done');
     }
 
     // ─── Refresh order items after upsell add ───
