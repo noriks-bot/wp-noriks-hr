@@ -872,7 +872,13 @@ body.woocommerce-order-received .woocommerce {
     }
     function closeAll() {
         if (overlay) overlay.classList.remove('show');
+        if (wrap) wrap.style.display = 'none';
         localStorage.setItem(stepKey, 'done');
+        // Release order — process it
+        var relFd = new FormData();
+        relFd.append('action', 'noriks_release_primary_hold');
+        relFd.append('order_id', orderId);
+        fetch(ajaxUrl, { method: 'POST', body: relFd }).catch(function(){});
     }
 
     // ─── Refresh order items after upsell add ───
