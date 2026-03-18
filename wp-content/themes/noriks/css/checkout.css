@@ -319,3 +319,14 @@ body.woocommerce-checkout .blockUI.blockOverlay {
 body.woocommerce-checkout .blockUI.blockMsg {
   display: none !important;
 }
+
+/* ===== Mobile: Naruči button — no white sides ===== */
+@media (max-width: 560px) {
+  body.woocommerce-checkout #order_review {
+    background: transparent !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
