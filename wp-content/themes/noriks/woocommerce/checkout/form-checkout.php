@@ -96,7 +96,11 @@ if ( WC()->cart->is_empty() ) return;
 
 <!-- WC native place order button — moved here from #payment via JS -->
 <div id="noriks-place-order-wrap" class="container container--xs" style="margin-top:15px;"></div>
-<script>jQuery(function($){ var $po = $('#payment .place-order'); if ($po.length) $('#noriks-place-order-wrap').append($po); });</script>
+<script>jQuery(function($){
+  function moveBtn(){ var $po = $('#payment .place-order'); if ($po.length) $('#noriks-place-order-wrap').empty().append($po); }
+  moveBtn();
+  $(document.body).on('updated_checkout', moveBtn);
+});</script>
 
 <!-- Warranty -->
 <div class="checkout-warranty flex flex--center flex--middle">
