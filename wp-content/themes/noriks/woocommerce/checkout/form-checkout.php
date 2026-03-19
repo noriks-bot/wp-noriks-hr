@@ -213,10 +213,11 @@ jQuery(function($){
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
 
-  /* Payment method change → update checkout (for COD fee) but prevent card input flicker */
+  /* Payment method change → visual only, no AJAX (prevents card input flicker) */
   $('form.checkout').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
-    $('body').trigger('update_checkout');
+    updateShippingDisplay();
+    updateTotalDisplay();
   });
 });
 </script>
