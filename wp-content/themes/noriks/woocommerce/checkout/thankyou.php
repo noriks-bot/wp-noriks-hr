@@ -386,6 +386,16 @@ body.woocommerce-order-received .woocommerce {
 
 <?php if ( $order ) : ?>
 
+<!-- Order confirmed fullscreen splash -->
+<div id="order-splash" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#04ac00;z-index:999999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease;">
+    <div style="width:80px;height:80px;border:4px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h1 style="color:#fff;font-family:'Roboto',sans-serif;font-size:28px;font-weight:700;margin:0;">Naročilo oddano!</h1>
+    <p style="color:rgba(255,255,255,0.85);font-family:'Roboto',sans-serif;font-size:15px;margin:10px 0 0;">Številka naročila: #<?php echo $order->get_order_number(); ?></p>
+</div>
+<script>setTimeout(function(){var s=document.getElementById('order-splash');s.style.opacity='0';setTimeout(function(){s.style.display='none';},600);},2000);</script>
+
 <div class="ty-container">
 
     <?php do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
