@@ -101,9 +101,14 @@ body.woocommerce-checkout #payment * {
 }
 
 /* WC native place_order button — below everything */
+body.woocommerce-checkout #payment {
+  display: flex !important;
+  flex-direction: column !important;
+}
 body.woocommerce-checkout #payment .place-order {
   padding: 0 15px !important;
   box-sizing: border-box !important;
+  order: 99 !important;
 }
 body.woocommerce-checkout #place_order {
   width: 100% !important;
