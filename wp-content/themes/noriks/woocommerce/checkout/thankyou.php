@@ -491,7 +491,7 @@ body.woocommerce-order-received .woocommerce {
 
         <!-- ═══ STEP 2: 6-PRODUCT GRID OVERLAY ═══ -->
         <?php if ( ! empty( $grid_products ) ) : ?>
-        <div class="ty-grid-section" id="ty-grid-section">
+        <div class="ty-grid-section" id="ty-grid-section" style="display:none !important;">
             <div class="ty-grid-popup">
                 <div class="ty-grid-header" style="cursor:pointer;flex-direction:column;position:relative;">
                     <span class="ty-upsell-close" id="ty-step2-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:#000;cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
@@ -699,14 +699,10 @@ body.woocommerce-order-received .woocommerce {
     // If user already passed step 1, skip to step 2
     // If user dismissed step 2 ('done'), hide everything
     var stepState = localStorage.getItem(stepKey);
-    if (stepState === 'done') {
+    if (stepState === 'done' || stepState === '2') {
         wrap.style.display = 'none';
         if (overlay) overlay.style.display = 'none';
-        if (tyContainer) tyContainer.classList.remove('upsell-active');
-    } else if (stepState === '2') {
-        wrap.style.display = 'none';
-        if (overlay) overlay.classList.add('show');
-        if (tyContainer) { tyContainer.classList.remove('upsell-active'); tyContainer.classList.add('grid-active'); }
+        if (tyContainer) { tyContainer.classList.remove('upsell-active'); tyContainer.classList.remove('grid-active'); }
     }
 
     function showGrid() {
@@ -763,7 +759,7 @@ body.woocommerce-order-received .woocommerce {
     if (step1Close) {
         step1Close.addEventListener('click', function(e) {
             e.stopPropagation();
-            if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
+            closeAll();
         });
     }
     // ─── Step 2: X close → dismiss all ───
@@ -779,7 +775,7 @@ body.woocommerce-order-received .woocommerce {
     var skipBtn = document.getElementById('ty-btn-skip');
     if (skipBtn) {
         skipBtn.addEventListener('click', function() {
-            if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
+            closeAll();
         });
     }
 
@@ -819,7 +815,7 @@ body.woocommerce-order-received .woocommerce {
                     refreshOrderItems();
                     // Show grid after short delay
                     setTimeout(function() {
-                        if (overlay) { showGrid(); } else { wrap.style.display = 'none'; }
+                        closeAll();
                     }, 800);
                 })
                 .catch(function() {
