@@ -569,3 +569,12 @@ add_action('woocommerce_review_order_before_submit', function(){
     woocommerce_order_review();
     echo '</div>';
 });
+
+/**
+ * Validate billing_address_2 (kućni broj) is required
+ */
+add_action('woocommerce_checkout_process', function(){
+    if ( empty( $_POST['billing_address_2'] ) ) {
+        wc_add_notice( 'Molimo unesite kućni broj.', 'error' );
+    }
+});
