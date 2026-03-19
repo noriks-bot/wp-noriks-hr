@@ -109,13 +109,6 @@ if ( WC()->cart->is_empty() ) return;
                   <div class="review-addons-price review-sale-price" id="noriks-shipping-price"></div>
                 </div>
 
-                <!-- COD fee — shown/hidden by WC fee in cart -->
-                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row"
-                  <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
-                  <div class="review-addons-price review-sale-price">
-                    <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="vigo-checkout-total__sum flex flex--middle border_price">
@@ -202,15 +195,11 @@ jQuery(function($){
   });
   setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
-  /* COD row: check WC hidden fee table — if fee exists, show row */
-  function syncCodRow(){
-    var hasFee = $('.fee td .woocommerce-Price-amount').length > 0;
-    $('#noriks-cod-fee-row').toggle(hasFee);
-    $('#hs-cod-checkout-prompt').toggle(hasFee);
+  /* WC handles COD fee natively — just update our shipping + total display */
+  $(document.body).on('updated_checkout', function(){
     updateShippingDisplay();
     updateTotalDisplay();
-  }
-  $(document.body).on('updated_checkout', syncCodRow);
+  });
   $(document.body).trigger('update_checkout');
 });
 </script>
