@@ -217,5 +217,8 @@ jQuery(function($){
     updateCodDisplay();
     $('body').trigger('update_checkout');
   });
+
+  /* Initial checkout update on page load */
+  $(document.body).trigger('update_checkout');
 });
 </script>
