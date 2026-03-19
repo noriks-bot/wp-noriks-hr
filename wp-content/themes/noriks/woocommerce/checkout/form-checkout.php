@@ -134,6 +134,7 @@ jQuery(function($){
   $('#js-delivery-dates').text(days[from.getDay()]+', '+from.getDate()+'.'+(from.getMonth()+1)+'. - '+days[to.getDay()]+', '+to.getDate()+'.'+(to.getMonth()+1)+'.');
 
   /* Shipping price — read from WC after checkout update */
-  /* WC handles everything natively — order review auto-updates via AJAX */
+  /* Trigger WC update_checkout on payment change — recalculates fees + total */
+  $(document.body).on('payment_method_selected', function(){ $(document.body).trigger('update_checkout'); });
 });
 </script>
