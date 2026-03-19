@@ -71,22 +71,20 @@ if ( WC()->cart->is_empty() ) return;
           <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
         </div>
 
-        <!-- PAYMENT — native WC -->
+        <!-- PAYMENT + ORDER SUMMARY + BUTTON — all via WC hooks -->
         <h3 class="payment-title">Način plaćanja</h3>
-        <?php woocommerce_checkout_payment(); ?>
-
-        <!-- ORDER SUMMARY — WC native, auto-updates via AJAX -->
-        <h3 class="place-order-title" style="display:block;">Sažetak narudžbe</h3>
-        <div class="vigo-checkout-total order-total shop_table">
-          <?php woocommerce_order_review(); ?>
-        </div>
+        <?php
+          // Insert order summary BEFORE place_order button inside payment
+          add_action('woocommerce_review_order_before_submit', function(){
+            echo '<h3 class="place-order-title" style="display:block;margin:15px 0 10px;">Sažetak narudžbe</h3>';
+            echo '<div class="vigo-checkout-total order-total shop_table" style="margin-bottom:15px;">';
+            woocommerce_order_review();
+            echo '</div>';
+          });
+          woocommerce_checkout_payment();
+        ?>
 
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
-
-        <!-- Naruči button — triggers WC hidden #place_order -->
-        <div style="padding:15px 15px 0;">
-          <button type="button" id="noriks_place_order" class="button alt" style="width:100%;font-size:20px;font-weight:700;padding:18px 0;border:0;border-radius:4px;color:#fff;background:linear-gradient(180deg,#3ec000 0,#00ac00 100%);box-shadow:0 2px 0 #090;cursor:pointer;">Naruči</button>
-        </div>
 
       </div><!-- .woocommerce-additional-fields -->
     </div><!-- .col-2 -->
@@ -135,7 +133,6 @@ jQuery(function($){
   $(document).on('click', '#payment .wc_payment_method', function(){
     $('form.checkout').trigger('update');
   });
-  /* Our button clicks WC hidden #place_order inside form */
-  $('#noriks_place_order').on('click', function(){ $('form.checkout').submit(); });
+
 });
 </script>

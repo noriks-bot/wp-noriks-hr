@@ -104,7 +104,6 @@ body.woocommerce-checkout #payment * {
 body.woocommerce-checkout #payment .place-order {
   padding: 0 15px !important;
   box-sizing: border-box !important;
-  display: none !important;
 }
 body.woocommerce-checkout #place_order {
   width: 100% !important;
