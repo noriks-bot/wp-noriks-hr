@@ -213,23 +213,9 @@ jQuery(function($){
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
 
-  /* Payment method change → AJAX for correct totals, prevent card input flash */
   $('form.checkout').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
-    /* Save card input HTML before AJAX destroys it */
-    var $box = $('.payment_box:visible');
-    var savedHTML = $box.length ? $box.html() : null;
-    var savedId = $box.closest('.wc_payment_method').find('input[type=radio]').attr('id');
     $('body').trigger('update_checkout');
-    /* After AJAX: restore card inputs to prevent re-init flash */
-    $(document.body).one('updated_checkout', function(){
-      if (savedHTML && savedId) {
-        var $newBox = $('#' + savedId).closest('.wc_payment_method').find('.payment_box');
-        if ($newBox.length && $newBox.is(':visible')) {
-          $newBox.html(savedHTML);
-        }
-      }
-    });
   });
 });
 </script>
