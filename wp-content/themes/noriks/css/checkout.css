@@ -100,9 +100,25 @@ body.woocommerce-checkout #payment * {
   visibility: visible !important;
 }
 
-/* Hide WC's place_order inside #payment (we have our own) */
+/* WC native place_order button — styled like our original */
 body.woocommerce-checkout #payment .place-order {
-  display: none !important;
+  padding: 15px 0 0 !important;
+}
+body.woocommerce-checkout #place_order {
+  width: 100% !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  padding: 18px 0 !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  background: linear-gradient(180deg, #3ec000 0, #00ac00 100%) !important;
+  box-shadow: 0 2px 0 #090 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
 }
 
 /* ===== Payment methods — vigoshop style ===== */
