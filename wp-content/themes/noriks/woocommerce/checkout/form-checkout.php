@@ -210,8 +210,13 @@ jQuery(function($){
   }
 
   $(document.body).on('payment_method_selected', updateCodDisplay);
-  $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
+
+  /* Payment method change → update checkout (for COD fee) but prevent card input flicker */
+  $('form.checkout').on('change', 'input[name="payment_method"]', function(){
+    updateCodDisplay();
+    $('body').trigger('update_checkout');
+  });
 });
 </script>

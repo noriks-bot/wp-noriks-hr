@@ -204,11 +204,13 @@ body.woocommerce-checkout #payment .payment_method_cod > label::after {
   color: #5f6061 !important;
 }
 
-/* Payment box (card fields) */
+/* Payment box (card fields) — min-height prevents collapse flicker during AJAX */
 body.woocommerce-checkout #payment .payment_box {
   padding: 16px !important;
   background: #f7f8fa !important;
   border-top: 1px solid #e3e6e8 !important;
+  min-height: 50px;
+  transition: none;
 }
 body.woocommerce-checkout #payment .payment_box fieldset {
   border: none !important;
