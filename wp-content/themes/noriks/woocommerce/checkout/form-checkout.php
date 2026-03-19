@@ -202,21 +202,28 @@ jQuery(function($){
   });
   setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
-  /* COD prompt + fee row toggle (WC handles total calculation via cart fees hook) */
+  /* COD fee row + total: toggle on ANY payment method interaction */
   function updateCodDisplay(){
-    var val = $('input[name="payment_method"]:checked').val();
-    var isCod = (val === 'cod');
-    $('#hs-cod-checkout-prompt').toggle(isCod);
-    $('#noriks-cod-fee-row').toggle(isCod);
+    var radios = document.querySelectorAll('input[name="payment_method"]');
+    var isCod = false;
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked && radios[i].value === 'cod') { isCod = true; break; }
+    }
+    document.getElementById('hs-cod-checkout-prompt').style.display = isCod ? '' : 'none';
+    document.getElementById('noriks-cod-fee-row').style.display = isCod ? '' : 'none';
   }
-
-  $(document.body).on('payment_method_selected', function(){
+  /* Listen to everything: WC events + native click + change */
+  $(document.body).on('payment_method_selected updated_checkout', function(){
     updateCodDisplay();
-    $('body').trigger('update_checkout');
+    updateShippingDisplay();
+    updateTotalDisplay();
   });
-  $(document).on('click', '.wc_payment_method label', function(){
-    setTimeout(function(){ updateCodDisplay(); $('body').trigger('update_checkout'); }, 50);
-  });
+  document.addEventListener('change', function(e){
+    if (e.target && e.target.name === 'payment_method') {
+      updateCodDisplay();
+      jQuery('body').trigger('update_checkout');
+    }
+  }, true);
   updateCodDisplay();
 
   /* Trigger WC checkout update */
