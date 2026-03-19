@@ -95,7 +95,7 @@ if ( WC()->cart->is_empty() ) return;
 </div><!-- .before_form -->
 
 <!-- WC native place order button — moved here from #payment via JS -->
-<div id="noriks-place-order-wrap" class="container container--xs" style="margin-top:15px;padding:0 15px;"></div>
+<div id="noriks-place-order-wrap" class="woocommerce-checkout-review-order container container--xs"></div>
 <script>jQuery(function($){
   function moveBtn(){ var $po = $('#payment .place-order'); if ($po.length) $('#noriks-place-order-wrap').empty().append($po); }
   moveBtn();
