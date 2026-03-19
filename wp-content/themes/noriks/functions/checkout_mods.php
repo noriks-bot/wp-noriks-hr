@@ -555,3 +555,14 @@ add_filter( 'the_content', function( $content ) {
     }
     return $content;
 }, 999 );
+
+/**
+ * Insert order summary before submit button (inside #payment)
+ * This hook fires on every AJAX update_checkout render
+ */
+add_action('woocommerce_review_order_before_submit', function(){
+    echo '<h3 class="place-order-title" style="display:block;margin:15px 0 10px;">Sažetak narudžbe</h3>';
+    echo '<div class="vigo-checkout-total order-total shop_table" style="margin-bottom:15px;">';
+    woocommerce_order_review();
+    echo '</div>';
+});

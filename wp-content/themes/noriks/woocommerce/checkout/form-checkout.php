@@ -71,18 +71,9 @@ if ( WC()->cart->is_empty() ) return;
           <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
         </div>
 
-        <!-- PAYMENT + ORDER SUMMARY + BUTTON — all via WC hooks -->
+        <!-- PAYMENT + ORDER SUMMARY + BUTTON — via WC hooks -->
         <h3 class="payment-title">Način plaćanja</h3>
-        <?php
-          // Insert order summary BEFORE place_order button inside payment
-          add_action('woocommerce_review_order_before_submit', function(){
-            echo '<h3 class="place-order-title" style="display:block;margin:15px 0 10px;">Sažetak narudžbe</h3>';
-            echo '<div class="vigo-checkout-total order-total shop_table" style="margin-bottom:15px;">';
-            woocommerce_order_review();
-            echo '</div>';
-          });
-          woocommerce_checkout_payment();
-        ?>
+        <?php woocommerce_checkout_payment(); ?>
 
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 
