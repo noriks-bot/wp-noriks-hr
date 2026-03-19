@@ -420,7 +420,7 @@ body.woocommerce-order-received .woocommerce {
         </div>
 
         <!-- ═══ STEP 1: VIGOSHOP UPSELL (COD only) ═══ -->
-        <?php if ( $order->get_payment_method() === 'cod' ) : ?>
+        <?php if ( $order->get_payment_method() === 'cod' && (float)$order->get_total() <= 120 ) : ?>
         <div class="ty_upsell_one_wrapper show" id="ty-upsell"
              style="position:static !important;display:block !important;width:100% !important;max-width:520px !important;height:auto !important;top:auto !important;left:auto !important;transform:none !important;opacity:1 !important;visibility:visible !important;z-index:auto !important;backdrop-filter:none !important;margin:0 !important;padding:0 !important;"
              data-order-id="<?php echo $order->get_id(); ?>"
@@ -430,24 +430,37 @@ body.woocommerce-order-received .woocommerce {
                 <div class="tyuo_timer" style="position:relative;">
                     <span class="ty-upsell-close" id="ty-step1-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:rgba(255,255,255,0.7);cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
                     <div class="timer_wrapper">
-                        <div class="special_offer_txt">Posebna ponuda ističe</div>
-                        <div class="time" id="ty-timer">05:00</div>
+                        <div class="special_offer_txt">Zadnja prilika – ponuda ističe za</div>
+                        <div class="time" id="ty-timer">04:40</div>
                     </div>
-                    <div class="title">Dodajte još jedan proizvod s 50% dodatnog popusta</div>
+                    <div class="title">Dodaj bokserice sada – 50% popusta</div>
                 </div>
 
                 <div class="tyuo_middle_section">
                     <div class="sub_title">
                         <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#47b426"></path></svg></span>
-                        Poslat ćemo ga u istom paketu
+                        Bez dodatne dostave – sve u jednom paketu
                     </div>
                     <div class="clue_text">
                         <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#47b426"></path></svg></span>
-                        Razmislite kome biste mogli pokloniti proizvod
+                        Upotpuni kombinaciju i uštedi
                     </div>
                 </div>
 
                 <div class="tyuo_product_section">
+                    <!-- Qty picker FIRST — above product image -->
+                    <div class="ty-qty-picker" style="display:flex;gap:8px;padding:0 10px 10px;justify-content:center;">
+                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
+                            <input type="radio" name="ty_qty" value="1" style="display:none;"> 1x kos
+                        </label>
+                        <label class="ty-qty-btn active" style="flex:1;text-align:center;padding:10px 0;border:2px solid #f39c12;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#f39c1217;color:#000;">
+                            <input type="radio" name="ty_qty" value="3" checked style="display:none;"> 3x kos
+                        </label>
+                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
+                            <input type="radio" name="ty_qty" value="5" style="display:none;"> 5x kos
+                        </label>
+                    </div>
+
                     <div class="product_data">
                         <div class="img">
                             <img alt="<?php echo esc_attr( $upsell_name ); ?>" src="<?php echo esc_url( $upsell_image ); ?>">
@@ -455,24 +468,13 @@ body.woocommerce-order-received .woocommerce {
                         <div class="right_section_wrapper">
                             <div class="product_name"><?php echo esc_html( $upsell_name ); ?></div>
                             <div class="product_regular_price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
-                            <div class="product_new_sale_price" id="ty-upsell-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+                            <div class="product_new_sale_price" id="ty-upsell-price">19,99€</div>
                         </div>
                     </div>
 
-                    <div class="ty-qty-picker" style="display:flex;gap:8px;padding:0 15px 10px;justify-content:center;">
-                        <label class="ty-qty-btn active" style="flex:1;text-align:center;padding:10px 0;border:2px solid #f39c12;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#f39c1217;color:#000;">
-                            <input type="radio" name="ty_qty" value="1" checked style="display:none;"> 1x kos
-                        </label>
-                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
-                            <input type="radio" name="ty_qty" value="3" style="display:none;"> 3x kos
-                        </label>
-                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
-                            <input type="radio" name="ty_qty" value="5" style="display:none;"> 5x kos
-                        </label>
-                    </div>
                     <script>
                     (function(){
-                        var basePrice = <?php echo $upsell_sale_price; ?>;
+                        var prices = {1: '7,99€', 3: '19,99€', 5: '29,99€'};
                         document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
                             btn.addEventListener('click', function(){
                                 document.querySelectorAll('.ty-qty-btn').forEach(function(b){
@@ -480,8 +482,7 @@ body.woocommerce-order-received .woocommerce {
                                 });
                                 btn.style.borderColor='#f39c12'; btn.style.background='#f39c1217'; btn.classList.add('active');
                                 var q = parseInt(btn.querySelector('input').value);
-                                var total = (basePrice * q).toFixed(2).replace('.',',');
-                                document.getElementById('ty-upsell-price').textContent = total + '€';
+                                document.getElementById('ty-upsell-price').textContent = prices[q] || '19,99€';
                             });
                         });
                     })();
