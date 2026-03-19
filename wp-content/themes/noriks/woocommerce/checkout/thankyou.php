@@ -21,8 +21,10 @@ foreach ( $order->get_items() as $item ) {
     $name = strtolower( $item->get_name() );
     $product = $item->get_product();
     $sku = $product ? strtolower( $product->get_sku() ) : '';
-    // Bokserice: name contains bokser/paket OR SKU contains BOX
-    $is_boks = ( strpos($name, 'bokser') !== false || strpos($name, 'paket') !== false || strpos($sku, 'box') !== false );
+    // Bokserice: name contains bokser/paket/airflow OR SKU contains BOX or BOXERS
+    $cats = wp_get_post_terms( $item->get_product_id(), 'product_cat', array('fields' => 'slugs') );
+    $cat_str = is_array($cats) ? implode(' ', $cats) : '';
+    $is_boks = ( strpos($name, 'bokser') !== false || strpos($name, 'paket') !== false || strpos($name, 'airflow') !== false || strpos($sku, 'box') !== false || strpos($cat_str, 'boxer') !== false || strpos($cat_str, 'bokser') !== false );
     if ( $is_boks ) {
         $has_bokserice = true;
     }
