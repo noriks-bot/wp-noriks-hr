@@ -210,7 +210,10 @@ jQuery(function($){
   }
 
   $(document.body).on('payment_method_selected', updateCodDisplay);
-  $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
+  $('form.checkout').on('change', 'input[name="payment_method"]', function(){
+    updateCodDisplay();
+    $('body').trigger('update_checkout');
+  });
   updateCodDisplay();
 
   /* Trigger WC checkout update */
