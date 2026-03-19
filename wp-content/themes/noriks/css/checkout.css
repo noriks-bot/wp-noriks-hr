@@ -79,7 +79,7 @@ body.woocommerce-checkout h3.payment-title {
   display: block !important;
   font-size: 19.6px !important;
   font-weight: 700 !important;
-  margin: 29.4px 0 14.7px !important;
+  margin: 10px 0 10px !important;
   color: #333 !important;
 }
 
@@ -102,7 +102,7 @@ body.woocommerce-checkout #payment * {
 
 /* WC native place_order button — below everything */
 body.woocommerce-checkout #payment .place-order {
-  padding: 0 15px !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 body.woocommerce-checkout #place_order {
