@@ -392,3 +392,15 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
 
 /* Shipping section — no bottom margin */
 #custom_shipping { margin-bottom: 0 !important; }
+
+
+/* All free shipping badges — same green */
+.noriks-order-summary .shipping_order_review .review-addons-price span {
+  display: inline-block !important;
+  padding: 3px 10px !important;
+  border-radius: 5px !important;
+  background: #9ce79c !important;
+  color: #228b22 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
