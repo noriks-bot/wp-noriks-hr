@@ -195,32 +195,16 @@ jQuery(function($){
       $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + wcTotal + '</bdi></span>');
     }
   }
-  $(document.body).on('updated_checkout', function() {
-    updateCodDisplay();
-    updateShippingDisplay();
-    updateTotalDisplay();
-  });
-  setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
-
-  /* COD toggle — simple */
-  function updateCodDisplay(){
+  /* Single handler for ALL updates */
+  function syncAll(){
     var isCod = $('input[name="payment_method"]:checked').val() === 'cod';
     $('#hs-cod-checkout-prompt').toggle(isCod);
     $('#noriks-cod-fee-row').toggle(isCod);
-  }
-  /* WC stopPropagation blocks change event — listen to WC's own event instead */
-  $(document.body).on('payment_method_selected', function(){
-    updateCodDisplay();
-    $(document.body).trigger('update_checkout');
-  });
-  $(document.body).on('updated_checkout', function(){
-    updateCodDisplay();
     updateShippingDisplay();
     updateTotalDisplay();
-  });
-  updateCodDisplay();
-
-  /* Trigger WC checkout update */
+  }
+  $(document.body).on('updated_checkout payment_method_selected', syncAll);
+  setTimeout(syncAll, 500);
   $(document.body).trigger('update_checkout');
 });
 </script>
