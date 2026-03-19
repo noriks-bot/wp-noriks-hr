@@ -213,22 +213,23 @@ jQuery(function($){
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
 
-  /* Payment method change → visual COD toggle + simulate fee in total (no AJAX) */
-  var codFee = 1.99;
-  var baseTotal = null;
+  /* Payment method change → AJAX for correct totals, prevent card input flash */
   $('form.checkout').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
-    // Parse current WC total if not set
-    if (baseTotal === null) {
-      var raw = $('.order-total td .woocommerce-Price-amount').first().text().replace(/[^\d,\.]/g,'').replace(',','.');
-      baseTotal = parseFloat(raw) || 0;
-      // If COD was already selected on load, baseTotal includes fee — subtract it
-      if ($('#noriks-cod-fee-row').is(':visible')) baseTotal -= codFee;
-    }
-    var isCod = $('input[name="payment_method"]:checked').val() === 'cod';
-    var newTotal = isCod ? (baseTotal + codFee) : baseTotal;
-    var formatted = newTotal.toFixed(2).replace('.',',');
-    $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + formatted + '&euro;</bdi></span>');
+    /* Save card input HTML before AJAX destroys it */
+    var $box = $('.payment_box:visible');
+    var savedHTML = $box.length ? $box.html() : null;
+    var savedId = $box.closest('.wc_payment_method').find('input[type=radio]').attr('id');
+    $('body').trigger('update_checkout');
+    /* After AJAX: restore card inputs to prevent re-init flash */
+    $(document.body).one('updated_checkout', function(){
+      if (savedHTML && savedId) {
+        var $newBox = $('#' + savedId).closest('.wc_payment_method').find('.payment_box');
+        if ($newBox.length && $newBox.is(':visible')) {
+          $newBox.html(savedHTML);
+        }
+      }
+    });
   });
 });
 </script>
