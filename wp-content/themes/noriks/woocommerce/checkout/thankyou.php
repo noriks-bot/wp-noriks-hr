@@ -536,11 +536,11 @@ body.woocommerce-order-received .woocommerce {
                                     b.style.borderColor='#ddd'; b.style.background='#fff'; b.classList.remove('active');
                                 });
                                 btn.style.borderColor='#f39c12'; btn.style.background='#f39c1217'; btn.classList.add('active');
-                                var q = parseInt(btn.querySelector('input').value);
-                                document.getElementById('ty-upsell-price').textContent = prices[q] || '19,99€';
-                                document.getElementById('ty-upsell-name').textContent = names[q] || '3x Crne Bokserice';
-                                document.getElementById('ty-upsell-img').src = images[q] || images[3];
-                                document.getElementById('ty-upsell-regular').textContent = regulars[q] || '';
+                                var q = btn.querySelector('input').value;
+                                document.getElementById('ty-upsell-price').textContent = prices[q] || prices['3'] || '';
+                                document.getElementById('ty-upsell-name').textContent = names[q] || names['3'] || '';
+                                document.getElementById('ty-upsell-img').src = images[q] || images['3'] || '';
+                                document.getElementById('ty-upsell-regular').textContent = regulars[q] || regulars['3'] || '';
                             });
                         });
                     })();
