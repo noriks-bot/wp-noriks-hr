@@ -21,15 +21,18 @@ foreach ( $order->get_items() as $item ) {
     $name = strtolower( $item->get_name() );
     $product = $item->get_product();
     $sku = $product ? strtolower( $product->get_sku() ) : '';
-    // Bokserice: name contains bokser/paket/airflow OR SKU contains BOX or BOXERS
+    // Check if item is majica
+    $is_majica = ( strpos($name, 'majic') !== false );
+    // Check if item is komplet (has both)
+    $is_komplet = ( strpos($name, 'komplet') !== false );
+    // Everything else = bokserice (paket, airflow, orto, SKU BOX, category boxer)
     $cats = wp_get_post_terms( $item->get_product_id(), 'product_cat', array('fields' => 'slugs') );
     $cat_str = is_array($cats) ? implode(' ', $cats) : '';
-    $is_boks = ( strpos($name, 'bokser') !== false || strpos($name, 'paket') !== false || strpos($name, 'airflow') !== false || strpos($sku, 'box') !== false || strpos($cat_str, 'boxer') !== false || strpos($cat_str, 'bokser') !== false );
+    $is_boks = ( !$is_majica && !$is_komplet && ( strpos($name, 'bokser') !== false || strpos($name, 'airflow') !== false || strpos($sku, 'box') !== false || strpos($cat_str, 'boxer') !== false || strpos($cat_str, 'bokser') !== false || strpos($name, 'paket') !== false ) );
     if ( $is_boks ) {
         $has_bokserice = true;
     }
-    // If item has majica or komplet → not only bokserice
-    if ( strpos($name, 'majic') !== false || strpos($name, 'komplet') !== false ) {
+    if ( $is_majica || $is_komplet ) {
         $has_only_bokserice = false;
     }
 }
