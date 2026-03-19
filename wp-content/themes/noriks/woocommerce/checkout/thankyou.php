@@ -34,12 +34,12 @@ $upsell_is_majice = $has_only_bokserice;
 if ( $upsell_is_majice ) {
     $upsell_product_id = 250; // Crna majica (variable)
     $upsell_name       = 'Crne Majice';
-    $upsell_qty_prices = array( 1 => 9.99, 3 => 27.99, 5 => 39.99 );
-    $upsell_qty_names  = array( 1 => '1x Crna Majica', 3 => '3x Crne Majice', 5 => '5x Crnih Majica' );
+    $upsell_qty_prices = array( 1 => 9.99, 3 => 27.99, 6 => 49.99 );
+    $upsell_qty_names  = array( 1 => '1x Crna Majica', 3 => '3x Crne Majice', 6 => '6x Crnih Majica' );
     $upsell_qty_images = array(
         1 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-1.jpg',
         3 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-3x.jpg',
-        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/15xcrnamajica.png',
+        6 => 'https://noriks.com/hr/wp-content/uploads/2026/01/15xcrnamajica.png',
     );
     $upsell_title_text = 'Dodaj majice sada – 50% popusta';
 } else {
@@ -487,15 +487,17 @@ body.woocommerce-order-received .woocommerce {
                 <div class="tyuo_product_section">
                     <!-- Qty picker FIRST — above product image -->
                     <div class="ty-qty-picker" style="display:flex;gap:8px;padding:0 0 10px;justify-content:center;">
-                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
-                            <input type="radio" name="ty_qty" value="1" style="display:none;"> 1x kos
+                        <?php $qty_keys = array_keys($upsell_qty_prices); foreach ($qty_keys as $i => $q) :
+                            $is_mid = ($i === 1);
+                            $border = $is_mid ? '#f39c12' : '#ddd';
+                            $bg = $is_mid ? '#f39c1217' : '#fff';
+                            $cls = $is_mid ? ' active' : '';
+                            $chk = $is_mid ? ' checked' : '';
+                        ?>
+                        <label class="ty-qty-btn<?php echo $cls; ?>" style="flex:1;text-align:center;padding:10px 0;border:2px solid <?php echo $border; ?>;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:<?php echo $bg; ?>;color:#000;">
+                            <input type="radio" name="ty_qty" value="<?php echo $q; ?>"<?php echo $chk; ?> style="display:none;"> <?php echo $q; ?>x kos
                         </label>
-                        <label class="ty-qty-btn active" style="flex:1;text-align:center;padding:10px 0;border:2px solid #f39c12;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#f39c1217;color:#000;">
-                            <input type="radio" name="ty_qty" value="3" checked style="display:none;"> 3x kos
-                        </label>
-                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
-                            <input type="radio" name="ty_qty" value="5" style="display:none;"> 5x kos
-                        </label>
+                        <?php endforeach; ?>
                     </div>
 
                     <div class="product_data">
