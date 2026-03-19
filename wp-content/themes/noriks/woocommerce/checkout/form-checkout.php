@@ -195,16 +195,14 @@ jQuery(function($){
       $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + wcTotal + '</bdi></span>');
     }
   }
-  /* Single handler for ALL updates */
-  function syncAll(){
+  /* Sync COD row + totals — poll every 300ms, always correct */
+  setInterval(function(){
     var isCod = $('input[name="payment_method"]:checked').val() === 'cod';
     $('#hs-cod-checkout-prompt').toggle(isCod);
     $('#noriks-cod-fee-row').toggle(isCod);
     updateShippingDisplay();
     updateTotalDisplay();
-  }
-  $(document.body).on('updated_checkout payment_method_selected', syncAll);
-  setTimeout(syncAll, 500);
+  }, 300);
   $(document.body).trigger('update_checkout');
 });
 </script>
