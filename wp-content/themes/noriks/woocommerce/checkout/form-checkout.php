@@ -94,7 +94,9 @@ if ( WC()->cart->is_empty() ) return;
 </form>
 </div><!-- .before_form -->
 
-<!-- WC native place order button is rendered by woocommerce_checkout_payment() inside the form -->
+<!-- WC native place order button — moved here from #payment via JS -->
+<div id="noriks-place-order-wrap" class="container container--xs" style="margin-top:15px;"></div>
+<script>jQuery(function($){ var $po = $('#payment .place-order'); if ($po.length) $('#noriks-place-order-wrap').append($po); });</script>
 
 <!-- Warranty -->
 <div class="checkout-warranty flex flex--center flex--middle">

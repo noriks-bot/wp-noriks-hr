@@ -100,7 +100,7 @@ body.woocommerce-checkout #payment * {
   visibility: visible !important;
 }
 
-/* WC native place_order button — styled like our original */
+/* WC native place_order button — below everything */
 body.woocommerce-checkout #payment .place-order {
   padding: 15px 0 0 !important;
 }
