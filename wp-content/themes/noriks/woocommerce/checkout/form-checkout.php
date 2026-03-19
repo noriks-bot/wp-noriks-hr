@@ -210,7 +210,6 @@ jQuery(function($){
   }
   $('body').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
-    $('body').trigger('update_checkout');
   });
   $(document.body).on('updated_checkout', function(){
     updateCodDisplay();
