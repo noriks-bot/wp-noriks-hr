@@ -195,18 +195,20 @@ jQuery(function($){
       $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + wcTotal + '</bdi></span>');
     }
   }
-  /* COD row toggle + update_checkout on payment change */
-  var lastPayment = '';
-  setInterval(function(){
+  /* COD row toggle — one event, no polling */
+  function syncCod(){
     var r = document.querySelector('input[name="payment_method"]:checked');
-    var val = r ? r.value : '';
-    var cod = val === 'cod';
+    var cod = r && r.value === 'cod';
     var row = document.getElementById('noriks-cod-fee-row');
     var prompt = document.getElementById('hs-cod-checkout-prompt');
     if (row) { cod ? row.classList.add('cod-visible') : row.classList.remove('cod-visible'); }
     if (prompt) { cod ? prompt.classList.add('cod-visible') : prompt.classList.remove('cod-visible'); }
-    if (val !== lastPayment) { lastPayment = val; if (lastPayment) $(document.body).trigger('update_checkout'); }
-  }, 200);
-  $(document.body).on('updated_checkout', function(){ updateShippingDisplay(); updateTotalDisplay(); });
+  }
+  $(document.body).on('payment_method_selected', function(){
+    syncCod();
+    $(document.body).trigger('update_checkout');
+  });
+  $(document.body).on('updated_checkout', function(){ syncCod(); updateShippingDisplay(); updateTotalDisplay(); });
+  syncCod();
 });
 </script>
