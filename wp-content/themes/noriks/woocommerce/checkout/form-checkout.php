@@ -67,7 +67,7 @@ if ( WC()->cart->is_empty() ) return;
           <div class="woocommerce-terms-and-conditions-wrapper"></div>
 
           <!-- COD prompt -->
-          <div id="hs-cod-checkout-prompt" style="display:none;">
+          <div id="hs-cod-checkout-prompt">
             <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
             <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
           </div>
@@ -201,19 +201,14 @@ jQuery(function($){
   });
   setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
-  /* COD prompt + fee row toggle (WC handles total calculation via cart fees hook) */
+  /* COD display — simple toggle */
   function updateCodDisplay(){
-    var val = $('input[name="payment_method"]:checked').val();
-    var isCod = (val === 'cod');
+    var isCod = $('input[name="payment_method"]:checked').val() === 'cod';
     $('#hs-cod-checkout-prompt').toggle(isCod);
     $('#noriks-cod-fee-row').toggle(isCod);
   }
-
-  $(document.body).on('payment_method_selected', updateCodDisplay);
+  $(document.body).on('payment_method_selected updated_checkout', updateCodDisplay);
   $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
   updateCodDisplay();
-
-  /* Trigger WC checkout update */
-  $(document.body).trigger('update_checkout');
 });
 </script>
