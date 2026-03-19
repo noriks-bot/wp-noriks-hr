@@ -83,6 +83,11 @@ if ( WC()->cart->is_empty() ) return;
 
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 
+        <!-- Naruči button — triggers WC hidden #place_order -->
+        <div style="padding:15px 15px 0;">
+          <button type="button" id="noriks_place_order" class="button alt" style="width:100%;font-size:20px;font-weight:700;padding:18px 0;border:0;border-radius:4px;color:#fff;background:linear-gradient(180deg,#3ec000 0,#00ac00 100%);box-shadow:0 2px 0 #090;cursor:pointer;">Naruči</button>
+        </div>
+
       </div><!-- .woocommerce-additional-fields -->
     </div><!-- .col-2 -->
   </div><!-- #customer_details -->
@@ -130,5 +135,7 @@ jQuery(function($){
   $(document).on('click', '#payment .wc_payment_method', function(){
     $('form.checkout').trigger('update');
   });
+  /* Our button clicks WC hidden #place_order inside form */
+  $('#noriks_place_order').on('click', function(){ $('form.checkout').submit(); });
 });
 </script>
