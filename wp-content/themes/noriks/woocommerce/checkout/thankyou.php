@@ -463,7 +463,7 @@ body.woocommerce-order-received .woocommerce {
 
                     <div class="product_data">
                         <div class="img">
-                            <img id="ty-upsell-img" alt="Crne Bokserice" src="https://noriks.com/hr/wp-content/uploads/2026/01/Jednokratna-starter-ponuda-4-1.png">
+                            <img id="ty-upsell-img" alt="Crne Bokserice" src="https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png">
                         </div>
                         <div class="right_section_wrapper">
                             <div class="product_name" id="ty-upsell-name">3x Crne Bokserice</div>
@@ -478,7 +478,7 @@ body.woocommerce-order-received .woocommerce {
                         var names = {1: '1x Crne Bokserice', 3: '3x Crne Bokserice', 5: '5x Crne Bokserice'};
                         var images = {
                             1: 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
-                            3: 'https://noriks.com/hr/wp-content/uploads/2026/01/Jednokratna-starter-ponuda-4-1.png',
+                            3: 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png',
                             5: 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png'
                         };
                         document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
