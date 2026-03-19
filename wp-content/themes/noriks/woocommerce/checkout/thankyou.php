@@ -145,7 +145,7 @@ body.woocommerce-order-received .woocommerce {
     .ty_upsell_one_wrapper.show { display:block; }
     .ty_upsell_one_wrapper.hide { display:none; }
     .ty_upsell_one_wrapper__popup-content { background:#fff; }
-    .tyuo_timer { background-color:#ffe795; border:2px solid #f5a623; border-radius:4px; color:#000; padding:10px; margin-bottom:15px; text-align:center; }
+    .tyuo_timer { background-color:#f39c1217; border:2px solid #f39c12; border-radius:4px; color:#000; padding:10px; margin-bottom:15px; text-align:center; }
     .tyuo_timer .timer_wrapper { display:flex; align-items:baseline; justify-content:center; }
     .tyuo_timer .special_offer_txt { font-size:16px; margin-right:5px; color:#000; }
     .tyuo_timer .time { background-color:#e22b26; border-radius:4px; color:#fff; padding:2px 8px; }
