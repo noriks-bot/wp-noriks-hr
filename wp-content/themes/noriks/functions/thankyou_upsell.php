@@ -290,11 +290,12 @@ function noriks_handle_add_upsell() {
     }
 
     $upsell_price = floor( $active_price * 0.5 ) + 0.99;
+    $quantity = max( 1, absint( $_POST['quantity'] ?? 1 ) );
 
     // Add to order
-    $item_id = $order->add_product( $product, 1, array(
-        'subtotal' => $upsell_price,
-        'total'    => $upsell_price,
+    $item_id = $order->add_product( $product, $quantity, array(
+        'subtotal' => $upsell_price * $quantity,
+        'total'    => $upsell_price * $quantity,
     ));
 
     if ( ! $item_id ) wp_send_json_error( 'Greška pri dodavanju' );

@@ -453,12 +453,39 @@ body.woocommerce-order-received .woocommerce {
                             <img alt="<?php echo esc_attr( $upsell_name ); ?>" src="<?php echo esc_url( $upsell_image ); ?>">
                         </div>
                         <div class="right_section_wrapper">
-                            <div class="qty">1 x</div>
                             <div class="product_name"><?php echo esc_html( $upsell_name ); ?></div>
                             <div class="product_regular_price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
-                            <div class="product_new_sale_price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
+                            <div class="product_new_sale_price" id="ty-upsell-price"><?php echo number_format( $upsell_sale_price, 2, ',', '.' ); ?>€</div>
                         </div>
                     </div>
+
+                    <div class="ty-qty-picker" style="display:flex;gap:8px;padding:0 15px 10px;justify-content:center;">
+                        <label class="ty-qty-btn active" style="flex:1;text-align:center;padding:10px 0;border:2px solid #f39c12;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#f39c1217;color:#000;">
+                            <input type="radio" name="ty_qty" value="1" checked style="display:none;"> 1x kos
+                        </label>
+                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
+                            <input type="radio" name="ty_qty" value="3" style="display:none;"> 3x kos
+                        </label>
+                        <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
+                            <input type="radio" name="ty_qty" value="5" style="display:none;"> 5x kos
+                        </label>
+                    </div>
+                    <script>
+                    (function(){
+                        var basePrice = <?php echo $upsell_sale_price; ?>;
+                        document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
+                            btn.addEventListener('click', function(){
+                                document.querySelectorAll('.ty-qty-btn').forEach(function(b){
+                                    b.style.borderColor='#ddd'; b.style.background='#fff'; b.classList.remove('active');
+                                });
+                                btn.style.borderColor='#f39c12'; btn.style.background='#f39c1217'; btn.classList.add('active');
+                                var q = parseInt(btn.querySelector('input').value);
+                                var total = (basePrice * q).toFixed(2).replace('.',',');
+                                document.getElementById('ty-upsell-price').textContent = total + '€';
+                            });
+                        });
+                    })();
+                    </script>
 
                     <div class="wrapper_selectbox">
                         <select class="variation-select" id="ty-variation-select">
@@ -788,12 +815,15 @@ body.woocommerce-order-received .woocommerce {
             addBtn.textContent = 'Dodajem...';
 
             var select = document.getElementById('ty-variation-select');
+            var qtyRadio = document.querySelector('input[name="ty_qty"]:checked');
+            var qty = qtyRadio ? parseInt(qtyRadio.value) : 1;
             var fd = new FormData();
             fd.append('action', 'noriks_add_upsell');
             fd.append('order_id', orderId);
             fd.append('product_id', <?php echo $upsell_product_id; ?>);
             fd.append('variation_id', select ? select.value : '');
             fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
+            fd.append('quantity', qty);
             fd.append('upsell_type', 'post_purchase_step1');
             fd.append('nonce', nonce);
 
