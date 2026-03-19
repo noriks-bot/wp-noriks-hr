@@ -207,8 +207,12 @@ jQuery(function($){
     $('#hs-cod-checkout-prompt').toggle(isCod);
     $('#noriks-cod-fee-row').toggle(isCod);
   }
-  $(document.body).on('payment_method_selected updated_checkout', updateCodDisplay);
+  $(document.body).on('payment_method_selected updated_checkout', function(){
+    updateCodDisplay();
+    updateTotalDisplay();
+  });
   $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
   updateCodDisplay();
+  $(document.body).trigger('update_checkout');
 });
 </script>
