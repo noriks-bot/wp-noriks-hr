@@ -321,7 +321,15 @@ add_action( 'wp_footer', function() {
       var submitted = false; /* only validate after first submit attempt */
       /* Set submitted=true when WC native button is clicked */
       $('form.checkout').on('checkout_place_order', function(){ submitted = true; });
-      $(document).on('click', '#place_order', function(){ submitted = true; });
+      $(document).on('click', '#place_order', function(){
+        submitted = true;
+        $(this).css('opacity','0.6').text('Obrada...');
+        $('form.checkout').css({'opacity':'0.4','pointer-events':'none','transition':'opacity 0.3s'});
+      });
+      $(document.body).on('checkout_error', function(){
+        $('#place_order').css('opacity','1').text('Naruči');
+        $('form.checkout').css({'opacity':'1','pointer-events':''});
+      });
 
       function showError($row, msg) {
         $row.removeClass('noriks-valid woocommerce-validated').addClass('noriks-invalid woocommerce-invalid');
