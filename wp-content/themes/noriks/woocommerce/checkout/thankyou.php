@@ -13,13 +13,51 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-// ─── Upsell product config ───
-$upsell_product_id = 2781; // Crne Bokserice (primary offer)
+// ─── Upsell product config — detect what to offer ───
+// Check if order has ONLY bokserice (no majice, no komplet)
+$has_only_bokserice = true;
+$has_bokserice = false;
+foreach ( $order->get_items() as $item ) {
+    $name = strtolower( $item->get_name() );
+    if ( strpos($name, 'bokser') !== false ) {
+        $has_bokserice = true;
+    }
+    if ( strpos($name, 'majic') !== false || strpos($name, 'komplet') !== false ) {
+        $has_only_bokserice = false;
+    }
+}
+if ( !$has_bokserice ) $has_only_bokserice = false;
+
+// ONLY bokserice in order → upsell MAJICE, else → upsell BOKSERICE
+$upsell_is_majice = $has_only_bokserice;
+
+if ( $upsell_is_majice ) {
+    $upsell_product_id = 250; // Crna majica (variable)
+    $upsell_name       = 'Crne Majice';
+    $upsell_qty_prices = array( 1 => 9.99, 3 => 27.99, 5 => 39.99 );
+    $upsell_qty_names  = array( 1 => '1x Crna Majica', 3 => '3x Crne Majice', 5 => '5x Crnih Majica' );
+    $upsell_qty_images = array(
+        1 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-1.jpg',
+        3 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-3x.jpg',
+        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/15xcrnamajica.png',
+    );
+    $upsell_title_text = 'Dodaj majice sada – 50% popusta';
+} else {
+    $upsell_product_id = 2781; // Crne Bokserice
+    $upsell_name       = 'Crne Bokserice';
+    $upsell_qty_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
+    $upsell_qty_names  = array( 1 => '1x Crne Bokserice', 3 => '3x Crne Bokserice', 5 => '5x Crnih Bokseric' );
+    $upsell_qty_images = array(
+        1 => 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
+        3 => 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png',
+        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png',
+    );
+    $upsell_title_text = 'Dodaj bokserice sada – 50% popusta';
+}
 $upsell_product    = wc_get_product( $upsell_product_id );
-$upsell_name       = $upsell_product ? $upsell_product->get_name() : 'Crne Bokserice';
-$upsell_image      = 'https://devhr.noriks.com/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg';
+$upsell_image      = $upsell_qty_images[3];
 $upsell_price      = $upsell_product ? (float) $upsell_product->get_price() : 15.99;
-$upsell_sale_price = floor( $upsell_price * 0.5 ) + 0.99;
+$upsell_sale_price = $upsell_qty_prices[3];
 
 // Variations for primary product
 $upsell_variations = array();
@@ -432,7 +470,7 @@ body.woocommerce-order-received .woocommerce {
                         <div class="special_offer_txt">Zadnja prilika – ponuda ističe za</div>
                         <div class="time" id="ty-timer">04:40</div>
                     </div>
-                    <div class="title">Dodaj bokserice sada – 50% popusta</div>
+                    <div class="title"><?php echo esc_html($upsell_title_text); ?></div>
                 </div>
 
                 <div class="tyuo_middle_section">
@@ -462,23 +500,20 @@ body.woocommerce-order-received .woocommerce {
 
                     <div class="product_data">
                         <div class="img">
-                            <img id="ty-upsell-img" alt="Crne Bokserice" src="https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png">
+                            <img id="ty-upsell-img" alt="<?php echo esc_attr($upsell_name); ?>" src="<?php echo esc_url($upsell_qty_images[3]); ?>">
                         </div>
                         <div class="right_section_wrapper">
-                            <div class="product_name" id="ty-upsell-name">3x Crne Bokserice</div>
-                            <div class="product_regular_price">15,99€</div>
-                            <div class="product_new_sale_price" id="ty-upsell-price">19,99€</div>
+                            <div class="product_name" id="ty-upsell-name"><?php echo esc_html($upsell_qty_names[3]); ?></div>
+                            <div class="product_regular_price"><?php echo number_format($upsell_price, 2, ',', '.'); ?>€</div>
+                            <div class="product_new_sale_price" id="ty-upsell-price"><?php echo number_format($upsell_qty_prices[3], 2, ',', '.'); ?>€</div>
                         </div>
                     </div>
 
                     <script>
                     (function(){
-                        var prices = {1: '7,99€', 3: '19,99€', 5: '29,99€'};
-                        var names = {1: '1x Crne Bokserice', 3: '3x Crne Bokserice', 5: '5x Crne Bokserice'};
-                        var images = {
-                            1: 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
-                            3: 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png',
-                            5: 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png'
+                        var prices = <?php echo json_encode(array_map(function($p){ return number_format($p,2,',','.') . '€'; }, $upsell_qty_prices)); ?>;
+                        var names = <?php echo json_encode($upsell_qty_names); ?>;
+                        var images = <?php echo json_encode($upsell_qty_images); ?>
                         };
                         document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
                             btn.addEventListener('click', function(){
