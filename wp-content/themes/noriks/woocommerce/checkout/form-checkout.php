@@ -101,7 +101,7 @@ if ( WC()->cart->is_empty() ) return;
   </div>
 </div>
 <script>jQuery(function($){
-  $('#noriks_place_order').on('click', function(){ $('#place_order').trigger('click'); });
+  $('#noriks_place_order').on('click', function(){ $('form.checkout').submit(); });
 });</script>
 
 <!-- Warranty -->
