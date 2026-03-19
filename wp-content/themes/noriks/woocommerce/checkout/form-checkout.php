@@ -213,9 +213,22 @@ jQuery(function($){
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
 
-  /* Payment method change → only visual COD toggle, no AJAX */
+  /* Payment method change → visual COD toggle + simulate fee in total (no AJAX) */
+  var codFee = 1.99;
+  var baseTotal = null;
   $('form.checkout').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
+    // Parse current WC total if not set
+    if (baseTotal === null) {
+      var raw = $('.order-total td .woocommerce-Price-amount').first().text().replace(/[^\d,\.]/g,'').replace(',','.');
+      baseTotal = parseFloat(raw) || 0;
+      // If COD was already selected on load, baseTotal includes fee — subtract it
+      if ($('#noriks-cod-fee-row').is(':visible')) baseTotal -= codFee;
+    }
+    var isCod = $('input[name="payment_method"]:checked').val() === 'cod';
+    var newTotal = isCod ? (baseTotal + codFee) : baseTotal;
+    var formatted = newTotal.toFixed(2).replace('.',',');
+    $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + formatted + '&euro;</bdi></span>');
   });
 });
 </script>
