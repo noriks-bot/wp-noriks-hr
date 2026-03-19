@@ -428,7 +428,6 @@ body.woocommerce-order-received .woocommerce {
             <div class="ty_upsell_one_wrapper__popup-content">
 
                 <div class="tyuo_timer" style="position:relative;">
-                    <span class="ty-upsell-close" id="ty-step1-close" style="position:absolute;top:10px;right:12px;font-size:20px;color:rgba(255,255,255,0.7);cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:300;">✕</span>
                     <div class="timer_wrapper">
                         <div class="special_offer_txt">Zadnja prilika – ponuda ističe za</div>
                         <div class="time" id="ty-timer">04:40</div>
