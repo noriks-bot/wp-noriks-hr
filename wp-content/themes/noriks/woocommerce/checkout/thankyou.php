@@ -164,7 +164,7 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .product_regular_price { color:#8f8f8f; font-size:17px; text-decoration:line-through; }
     .tyuo_product_section .product_new_sale_price { color:#c00; font-size:25px; font-weight:700; }
     .wrapper_selectbox { color:#5f6060; font-size:1.1em; font-weight:500; padding:0 0 10px; }
-    .wrapper_selectbox { text-align:right; padding:0 15px 10px; }
+    .wrapper_selectbox { text-align:right; padding:0 0 10px; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; width:50%; outline:0; padding:10px; box-sizing:border-box; }
     @media (max-width:576px) { .wrapper_selectbox select { width:100%; } }
     .buttons-section { display:flex !important; flex-direction:row !important; gap:10px; padding:0 0 15px; box-sizing:border-box; flex-wrap:nowrap !important; }
@@ -449,7 +449,7 @@ body.woocommerce-order-received .woocommerce {
 
                 <div class="tyuo_product_section">
                     <!-- Qty picker FIRST — above product image -->
-                    <div class="ty-qty-picker" style="display:flex;gap:8px;padding:0 10px 10px;justify-content:center;">
+                    <div class="ty-qty-picker" style="display:flex;gap:8px;padding:0 0 10px;justify-content:center;">
                         <label class="ty-qty-btn" style="flex:1;text-align:center;padding:10px 0;border:2px solid #ddd;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer;background:#fff;color:#000;">
                             <input type="radio" name="ty_qty" value="1" style="display:none;"> 1x kos
                         </label>
@@ -463,11 +463,11 @@ body.woocommerce-order-received .woocommerce {
 
                     <div class="product_data">
                         <div class="img">
-                            <img alt="<?php echo esc_attr( $upsell_name ); ?>" src="<?php echo esc_url( $upsell_image ); ?>">
+                            <img id="ty-upsell-img" alt="Crne Bokserice" src="https://noriks.com/hr/wp-content/uploads/2026/01/Jednokratna-starter-ponuda-4-1.png">
                         </div>
                         <div class="right_section_wrapper">
-                            <div class="product_name"><?php echo esc_html( $upsell_name ); ?></div>
-                            <div class="product_regular_price"><?php echo number_format( $upsell_price, 2, ',', '.' ); ?>€</div>
+                            <div class="product_name" id="ty-upsell-name">3x Crne Bokserice</div>
+                            <div class="product_regular_price">15,99€</div>
                             <div class="product_new_sale_price" id="ty-upsell-price">19,99€</div>
                         </div>
                     </div>
@@ -475,6 +475,12 @@ body.woocommerce-order-received .woocommerce {
                     <script>
                     (function(){
                         var prices = {1: '7,99€', 3: '19,99€', 5: '29,99€'};
+                        var names = {1: '1x Crne Bokserice', 3: '3x Crne Bokserice', 5: '5x Crne Bokserice'};
+                        var images = {
+                            1: 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
+                            3: 'https://noriks.com/hr/wp-content/uploads/2026/01/Jednokratna-starter-ponuda-4-1.png',
+                            5: 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png'
+                        };
                         document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
                             btn.addEventListener('click', function(){
                                 document.querySelectorAll('.ty-qty-btn').forEach(function(b){
@@ -483,6 +489,8 @@ body.woocommerce-order-received .woocommerce {
                                 btn.style.borderColor='#f39c12'; btn.style.background='#f39c1217'; btn.classList.add('active');
                                 var q = parseInt(btn.querySelector('input').value);
                                 document.getElementById('ty-upsell-price').textContent = prices[q] || '19,99€';
+                                document.getElementById('ty-upsell-name').textContent = names[q] || '3x Crne Bokserice';
+                                document.getElementById('ty-upsell-img').src = images[q] || images[3];
                             });
                         });
                     })();
