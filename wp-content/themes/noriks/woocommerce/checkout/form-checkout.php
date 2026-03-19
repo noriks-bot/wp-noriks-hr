@@ -214,6 +214,9 @@ jQuery(function($){
     updateCodDisplay();
     $('body').trigger('update_checkout');
   });
+  $(document).on('click', '.wc_payment_method label', function(){
+    setTimeout(function(){ updateCodDisplay(); $('body').trigger('update_checkout'); }, 50);
+  });
   updateCodDisplay();
 
   /* Trigger WC checkout update */
