@@ -62,8 +62,6 @@ if ( WC()->cart->is_empty() ) return;
         <!-- PAYMENT — native WC -->
         <h3 class="payment-title">Način plaćanja</h3>
         <?php woocommerce_checkout_payment(); ?>
-        <!-- Hidden WC order review table — needed for AJAX update_checkout to work -->
-        <div style="display:none !important;"><?php woocommerce_order_review(); ?></div>
 
         <div class="form-row place-order">
           <div class="woocommerce-terms-and-conditions-wrapper"></div>
@@ -80,51 +78,10 @@ if ( WC()->cart->is_empty() ) return;
             <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
           </div>
 
-          <!-- ORDER SUMMARY -->
+          <!-- ORDER SUMMARY — WC native, auto-updates via AJAX -->
           <h3 class="place-order-title" style="display:block;">Sažetak narudžbe</h3>
-          <div class="vigo-checkout-total order-total shop_table noriks-order-summary">
-            <div class="grid m-top--s review-all-products-container">
-              <div class="col-xs-12 f--m flex flex--vertical vigo-checkout-total__content">
-                <?php foreach ( WC()->cart->get_cart() as $item ) :
-                  $p = $item['data']; $q = $item['quantity'];
-                  $attrs = '';
-                  if ( !empty($item['variation']) ) {
-                    $parts = array();
-                    foreach ($item['variation'] as $k=>$v) $parts[] = wc_attribute_label(str_replace('attribute_','',$k)).': '.$v;
-                    $attrs = implode(', ',$parts);
-                  }
-                ?>
-                <div class="c--darkgray review-section-container">
-                  <div class="review-product-info">
-                    <div><?php echo esc_html($q.'x '.$p->get_name()); ?></div>
-                    <?php if ($attrs): ?><div class="review-product-info__attributes"><?php echo esc_html($attrs); ?></div><?php endif; ?>
-                  </div>
-                  <div class="info-price">
-                    <span class="review-sale-price"><?php echo WC()->cart->get_product_subtotal($p,$q); ?></span>
-                  </div>
-                </div>
-                <?php endforeach; ?>
-
-                <!-- Shipping — dynamic from WC -->
-                <div class="c--darkgray review-section-container review-addons shipping_order_review">
-                  <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
-                  <div class="review-addons-price review-sale-price" id="noriks-shipping-price"><span style="display:inline-block;padding:3px 10px;border-radius:5px;background:#9ce79c;color:#228b22;font-size:14px;font-weight:500;">Besplatno</span></div>
-                </div>
-
-                <!-- COD fee — shown/hidden dynamically -->
-                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row" style="display:none">
-                  <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
-                  <div class="review-addons-price review-sale-price">
-                    <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="vigo-checkout-total__sum flex flex--middle border_price">
-              <div class="flex__item f--l">
-                Ukupni iznos: <span class="f--bold price_total_wrapper"><?php echo WC()->cart->get_total(); ?></span>
-              </div>
-            </div>
+          <div class="vigo-checkout-total order-total shop_table">
+            <?php woocommerce_order_review(); ?>
           </div>
 
           <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
@@ -177,40 +134,6 @@ jQuery(function($){
   $('#js-delivery-dates').text(days[from.getDay()]+', '+from.getDate()+'.'+(from.getMonth()+1)+'. - '+days[to.getDay()]+', '+to.getDate()+'.'+(to.getMonth()+1)+'.');
 
   /* Shipping price — read from WC after checkout update */
-  function updateShippingDisplay() {
-    var shippingEl = $('#noriks-shipping-price');
-    // WC puts shipping total in the hidden review order table
-    var wcShipping = $('.woocommerce-shipping-totals td').text().trim();
-    if (!wcShipping) {
-      // Fallback: calculate from cart total - subtotal - fees
-      wcShipping = '';
-    }
-    if (wcShipping && wcShipping.indexOf('0,00') === -1 && wcShipping.indexOf('Besplatno') === -1 && wcShipping.indexOf('Free') === -1) {
-      shippingEl.html(wcShipping);
-    } else {
-      shippingEl.html('<span style="display:inline-block;padding:3px 10px;border-radius:5px;background:#9ce79c;color:#228b22;font-size:14px;font-weight:500;">Besplatno</span>');
-    }
-  }
-  function updateTotalDisplay() {
-    var wcTotal = $('.woocommerce-checkout-review-order-table .order-total td .woocommerce-Price-amount').first().text().trim();
-    if (wcTotal) {
-      $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + wcTotal + '</bdi></span>');
-    }
-  }
-  /* COD row toggle — one event, no polling */
-  function syncCod(){
-    var r = document.querySelector('input[name="payment_method"]:checked');
-    var cod = r && r.value === 'cod';
-    var row = document.getElementById('noriks-cod-fee-row');
-    var prompt = document.getElementById('hs-cod-checkout-prompt');
-    if (row) { cod ? row.classList.add('cod-visible') : row.classList.remove('cod-visible'); }
-    if (prompt) { cod ? prompt.classList.add('cod-visible') : prompt.classList.remove('cod-visible'); }
-  }
-  $(document.body).on('payment_method_selected', function(){
-    syncCod();
-    $(document.body).trigger('update_checkout');
-  });
-  $(document.body).on('updated_checkout', function(){ syncCod(); updateShippingDisplay(); updateTotalDisplay(); });
-  syncCod();
+  /* WC handles everything natively — order review auto-updates via AJAX */
 });
 </script>
