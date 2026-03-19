@@ -198,6 +198,7 @@ jQuery(function($){
   $(document.body).on('updated_checkout', function() {
     updateShippingDisplay();
     updateTotalDisplay();
+    updateCodDisplay();
   });
   setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
