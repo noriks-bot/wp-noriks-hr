@@ -103,7 +103,7 @@ body.woocommerce-checkout #payment * {
 /* WC native place_order button — below everything */
 body.woocommerce-checkout #payment .place-order,
 #noriks-place-order-wrap .place-order {
-  padding: 15px 40px 0 !important;
+  padding: 0px 15px 0 !important;
   box-sizing: border-box !important;
   max-width: 520px !important;
   margin: 0 auto !important;
