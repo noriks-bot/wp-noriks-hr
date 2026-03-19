@@ -109,8 +109,8 @@ if ( WC()->cart->is_empty() ) return;
                   <div class="review-addons-price review-sale-price" id="noriks-shipping-price"></div>
                 </div>
 
-                <!-- COD fee — shown/hidden dynamically -->
-                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row">
+                <!-- COD fee — shown/hidden by JS based on payment method -->
+                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row" style="display:none">
                   <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
                   <div class="review-addons-price review-sale-price">
                     <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
@@ -202,22 +202,27 @@ jQuery(function($){
   });
   setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
-  /* COD prompt + fee row toggle (WC handles total calculation via cart fees hook) */
+  /* COD toggle — vanilla JS, delegated, works after WC DOM refresh */
   function updateCodDisplay(){
-    var val = $('input[name="payment_method"]:checked').val();
-    var isCod = (val === 'cod');
-    $('#hs-cod-checkout-prompt').toggle(isCod);
-    $('#noriks-cod-fee-row').toggle(isCod);
+    var el = document.querySelector('input[name="payment_method"]:checked');
+    var isCod = el && el.value === 'cod';
+    var prompt = document.getElementById('hs-cod-checkout-prompt');
+    var feeRow = document.getElementById('noriks-cod-fee-row');
+    if (prompt) prompt.style.display = isCod ? '' : 'none';
+    if (feeRow) feeRow.style.display = isCod ? '' : 'none';
   }
-
-  $(document.body).on('payment_method_selected', updateCodDisplay);
-  $('form.checkout').on('change', 'input[name="payment_method"]', function(){
+  document.addEventListener('change', function(e){
+    if (e.target.name === 'payment_method') {
+      updateCodDisplay();
+      jQuery('body').trigger('update_checkout');
+    }
+  });
+  $(document.body).on('payment_method_selected updated_checkout', function(){
     updateCodDisplay();
-    $('body').trigger('update_checkout');
+    updateShippingDisplay();
+    updateTotalDisplay();
   });
   updateCodDisplay();
-
-  /* Trigger WC checkout update */
   $(document.body).trigger('update_checkout');
 });
 </script>
