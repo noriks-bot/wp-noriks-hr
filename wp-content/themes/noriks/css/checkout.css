@@ -364,3 +364,9 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
     border-radius: 0 !important;
   }
 }
+
+/* COD fee row — hidden by default, shown by JS only when COD selected */
+#noriks-cod-fee-row { display: none !important; }
+#noriks-cod-fee-row.cod-visible { display: flex !important; }
+#hs-cod-checkout-prompt { display: none !important; }
+#hs-cod-checkout-prompt.cod-visible { display: block !important; }
