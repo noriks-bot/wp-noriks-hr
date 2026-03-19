@@ -94,11 +94,7 @@ if ( WC()->cart->is_empty() ) return;
 </form>
 </div><!-- .before_form -->
 
-<!-- Submit button — outside form, triggers hidden WC button -->
-<div id="order_review" class="woocommerce-checkout-review-order container container--xs">
-  <button type="button" class="button alt button--l button--block button--green button--rounded button--green-gradient"
-          id="noriks_place_order" data-value="Naruči">Naruči</button>
-</div>
+<!-- WC native place order button is rendered by woocommerce_checkout_payment() inside the form -->
 
 <!-- Warranty -->
 <div class="checkout-warranty flex flex--center flex--middle">
