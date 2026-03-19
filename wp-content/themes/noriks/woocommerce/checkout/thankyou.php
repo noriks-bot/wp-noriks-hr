@@ -152,8 +152,8 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; padding-top:10px; text-align:center; color:#000; }
     .tyuo_middle_section { padding:0 5px; text-align:center; }
     .tyuo_middle_section svg { margin-right:5px; max-width:15px; }
-    .tyuo_middle_section .sub_title { color:#47b426; font-size:16px; font-weight:500; }
-    .tyuo_middle_section .clue_text { color:#47b426; font-size:16px; font-weight:500; margin:6px 0; }
+    .tyuo_middle_section .sub_title { color:#000; font-size:16px; font-weight:500; }
+    .tyuo_middle_section .clue_text { color:#000; font-size:16px; font-weight:500; margin:6px 0; }
     .tyuo_product_section { margin:15px 0; padding:0 15px; }
     .tyuo_product_section .product_data { display:flex; margin-bottom:10px; }
     .tyuo_product_section .product_data .img { margin-right:15px; max-width:150px; width:50%; }
