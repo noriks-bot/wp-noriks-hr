@@ -205,9 +205,8 @@ jQuery(function($){
     var prompt = document.getElementById('hs-cod-checkout-prompt');
     if (row) { cod ? row.classList.add('cod-visible') : row.classList.remove('cod-visible'); }
     if (prompt) { cod ? prompt.classList.add('cod-visible') : prompt.classList.remove('cod-visible'); }
-    if (val && val !== lastPayment) { lastPayment = val; $(document.body).trigger('update_checkout'); }
+    if (val !== lastPayment) { lastPayment = val; if (lastPayment) $(document.body).trigger('update_checkout'); }
   }, 200);
   $(document.body).on('updated_checkout', function(){ updateShippingDisplay(); updateTotalDisplay(); });
-  $(document.body).trigger('update_checkout');
 });
 </script>
