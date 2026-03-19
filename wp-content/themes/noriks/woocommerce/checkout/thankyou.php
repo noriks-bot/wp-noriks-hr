@@ -63,7 +63,14 @@ if ( $upsell_is_majice ) {
 }
 $upsell_product    = wc_get_product( $upsell_product_id );
 $upsell_image      = $upsell_qty_images[3];
-$upsell_unit_price = $upsell_product ? ( (float) $upsell_product->get_regular_price() ?: (float) $upsell_product->get_price() ) : 15.99;
+// Get unit price from first variation (variable products have empty parent price)
+$upsell_unit_price = 15.99;
+if ( $upsell_product && $upsell_product->is_type('variable') ) {
+    $var_prices = $upsell_product->get_variation_prices();
+    $upsell_unit_price = !empty($var_prices['regular_price']) ? (float) reset($var_prices['regular_price']) : (float) $upsell_product->get_price();
+} elseif ( $upsell_product ) {
+    $upsell_unit_price = (float) $upsell_product->get_regular_price() ?: (float) $upsell_product->get_price();
+}
 $upsell_sale_price = $upsell_qty_prices[3];
 // Regular prices per qty (unit price * qty)
 $upsell_qty_regular = array();
