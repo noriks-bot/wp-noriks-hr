@@ -213,17 +213,19 @@ jQuery(function($){
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
 
-  /* Payment method change → update checkout but hide payment box flicker */
+  /* Payment method change → update checkout, hide flicker with opacity */
+  var paymentUpdating = false;
   $('form.checkout').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
-    // Freeze payment box height during AJAX to prevent flash
-    var pb = $('#payment .payment_methods');
-    pb.css({'min-height': pb.outerHeight()+'px', 'overflow':'hidden'});
-    $('body').trigger('update_checkout');
+    if (!paymentUpdating) {
+      paymentUpdating = true;
+      $('#payment').css('opacity','0.01');
+      $('body').trigger('update_checkout');
+    }
   });
   $(document.body).on('updated_checkout', function(){
-    var pb = $('#payment .payment_methods');
-    pb.css({'min-height':'', 'overflow':''});
+    paymentUpdating = false;
+    $('#payment').css('opacity','1');
   });
 });
 </script>
