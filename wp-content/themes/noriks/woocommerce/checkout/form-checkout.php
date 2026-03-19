@@ -196,6 +196,7 @@ jQuery(function($){
     }
   }
   $(document.body).on('updated_checkout', function() {
+    updateCodDisplay();
     updateShippingDisplay();
     updateTotalDisplay();
   });
