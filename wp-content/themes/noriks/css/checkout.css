@@ -208,6 +208,8 @@ body.woocommerce-checkout #payment .payment_box {
   padding: 16px !important;
   background: #f7f8fa !important;
   border-top: 1px solid #e3e6e8 !important;
+  min-height: 60px;
+  overflow: hidden;
 }
 body.woocommerce-checkout #payment .payment_box fieldset {
   border: none !important;
