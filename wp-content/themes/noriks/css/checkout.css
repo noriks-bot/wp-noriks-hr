@@ -389,3 +389,6 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
   }
 }
 
+
+/* PayPal reCaptcha container — no margin */
+#ppcp-recaptcha-v2-container { margin: 0 !important; }
