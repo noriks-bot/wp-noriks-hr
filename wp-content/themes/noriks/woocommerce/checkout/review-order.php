@@ -5,7 +5,7 @@
  */
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="noriks-order-summary">
+<div class="noriks-order-summary woocommerce-checkout-review-order-table">
   <div class="review-all-products-container">
     <div class="vigo-checkout-total__content">
       <?php foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) :
