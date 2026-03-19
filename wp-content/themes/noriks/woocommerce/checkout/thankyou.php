@@ -34,12 +34,12 @@ $upsell_is_majice = $has_only_bokserice;
 if ( $upsell_is_majice ) {
     $upsell_product_id = 250; // Crna majica (variable)
     $upsell_name       = 'Crne Majice';
-    $upsell_qty_prices = array( 1 => 12.99, 3 => 29.99, 5 => 49.99 );
-    $upsell_qty_names  = array( 1 => '1x Crna Majica', 3 => '3x Crne Majice', 5 => '5x Crnih Majica' );
+    $upsell_qty_prices = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
+    $upsell_qty_names  = array( 1 => '1x Crna Majica', 3 => '3x Crne Majice', 6 => '6x Crnih Majica' );
     $upsell_qty_images = array(
         1 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-1.jpg',
         3 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-3x.jpg',
-        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/15xcrnamajica.png',
+        6 => 'https://noriks.com/hr/wp-content/uploads/2026/01/15xcrnamajica.png',
     );
     $upsell_title_text = 'Dodaj majice sada – 50% popusta';
 } else {
@@ -869,7 +869,7 @@ body.woocommerce-order-received .woocommerce {
             fd.append('variation_id', select ? select.value : '');
             fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
             fd.append('quantity', qty);
-            fd.append('upsell_type', 'post_purchase_step1');
+            fd.append('upsell_type', '<?php echo $upsell_is_majice ? "post_purchase_step1_majica" : "post_purchase_step1_bokserica"; ?>');
             fd.append('nonce', nonce);
 
             fetch(ajaxUrl, { method: 'POST', body: fd })
