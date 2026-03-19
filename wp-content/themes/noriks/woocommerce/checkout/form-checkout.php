@@ -213,19 +213,9 @@ jQuery(function($){
   $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
 
-  /* Payment method change → update checkout, hide flicker with opacity */
-  var paymentUpdating = false;
+  /* Payment method change → only visual COD toggle, no AJAX */
   $('form.checkout').on('change', 'input[name="payment_method"]', function(){
     updateCodDisplay();
-    if (!paymentUpdating) {
-      paymentUpdating = true;
-      $('#payment').css('opacity','0.01');
-      $('body').trigger('update_checkout');
-    }
-  });
-  $(document.body).on('updated_checkout', function(){
-    paymentUpdating = false;
-    $('#payment').css('opacity','1');
   });
 });
 </script>
