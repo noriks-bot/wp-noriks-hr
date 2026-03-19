@@ -210,8 +210,7 @@ jQuery(function($){
     $('#noriks-cod-fee-row').toggle(isCod);
   }
 
-  $(document.body).on('payment_method_selected', updateCodDisplay);
-  $('form.checkout').on('change', 'input[name="payment_method"]', function(){
+  $(document.body).on('payment_method_selected', function(){
     updateCodDisplay();
     $('body').trigger('update_checkout');
   });
