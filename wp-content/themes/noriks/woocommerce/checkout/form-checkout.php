@@ -134,7 +134,11 @@ jQuery(function($){
   $('#js-delivery-dates').text(days[from.getDay()]+', '+from.getDate()+'.'+(from.getMonth()+1)+'. - '+days[to.getDay()]+', '+to.getDate()+'.'+(to.getMonth()+1)+'.');
 
   /* Shipping price — read from WC after checkout update */
-  /* WC update_totals_on_change — triggers update_checkout on payment radio change */
-  $('.wc_payment_methods').addClass('update_totals_on_change');
+  /* Update checkout once on payment method change — debounced to prevent loops */
+  var lastPM = $('input[name="payment_method"]:checked').val() || '';
+  $(document.body).on('payment_method_selected', function(){
+    var cur = $('input[name="payment_method"]:checked').val() || '';
+    if (cur !== lastPM) { lastPM = cur; $(document.body).trigger('update_checkout'); }
+  });
 });
 </script>
