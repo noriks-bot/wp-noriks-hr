@@ -109,6 +109,13 @@ if ( WC()->cart->is_empty() ) return;
                   <div class="review-addons-price review-sale-price" id="noriks-shipping-price"></div>
                 </div>
 
+                <!-- COD fee — shown/hidden dynamically -->
+                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row">
+                  <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
+                  <div class="review-addons-price review-sale-price">
+                    <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="vigo-checkout-total__sum flex flex--middle border_price">
@@ -191,15 +198,22 @@ jQuery(function($){
   $(document.body).on('updated_checkout', function() {
     updateShippingDisplay();
     updateTotalDisplay();
-    updateCodDisplay();
   });
   setTimeout(function() { updateShippingDisplay(); updateTotalDisplay(); }, 1000);
 
-  /* WC handles COD fee natively — just update our shipping + total display */
-  $(document.body).on('updated_checkout', function(){
-    updateShippingDisplay();
-    updateTotalDisplay();
-  });
+  /* COD prompt + fee row toggle (WC handles total calculation via cart fees hook) */
+  function updateCodDisplay(){
+    var val = $('input[name="payment_method"]:checked').val();
+    var isCod = (val === 'cod');
+    $('#hs-cod-checkout-prompt').toggle(isCod);
+    $('#noriks-cod-fee-row').toggle(isCod);
+  }
+
+  $(document.body).on('payment_method_selected', updateCodDisplay);
+  $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
+  updateCodDisplay();
+
+  /* Trigger WC checkout update */
   $(document.body).trigger('update_checkout');
 });
 </script>
