@@ -211,9 +211,7 @@ jQuery(function($){
 
   $(document.body).on('payment_method_selected', updateCodDisplay);
   $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
+  $(document.body).on('updated_checkout', updateCodDisplay);
   updateCodDisplay();
-
-  /* Trigger WC checkout update */
-  $(document.body).trigger('update_checkout');
 });
 </script>
