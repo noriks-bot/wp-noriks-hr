@@ -209,8 +209,8 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-header {
     padding: 10px;
     text-align: center;
-    background: #ffe795;
-    border: 2px solid #f5a623;
+    background: #fff2bb;
+    border: 2px solid #fedb4b;
     border-radius: 4px;
     margin-bottom: 15px;
 }
