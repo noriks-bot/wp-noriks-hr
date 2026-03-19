@@ -210,21 +210,10 @@ jQuery(function($){
   }
 
   $(document.body).on('payment_method_selected', updateCodDisplay);
-  $(document.body).on('updated_checkout', function(){
-    setTimeout(function(){
-      updateCodDisplay();
-      updateShippingDisplay();
-      updateTotalDisplay();
-    }, 100);
-  });
+  $('form.checkout').on('change', 'input[name="payment_method"]', updateCodDisplay);
   updateCodDisplay();
 
-  $('form.checkout').on('change', 'input[name="payment_method"]', function(){
-    updateCodDisplay();
-    $('body').trigger('update_checkout');
-  });
-
-  /* Initial checkout update on page load */
+  /* Trigger WC checkout update */
   $(document.body).trigger('update_checkout');
 });
 </script>

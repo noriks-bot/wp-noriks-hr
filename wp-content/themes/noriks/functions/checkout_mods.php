@@ -549,7 +549,17 @@ add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
 /**
  * Update totals when payment method changes (AJAX)
  */
-/* Removed: update_checkout on payment method change was causing double-render of card inputs */
+add_action( 'woocommerce_review_order_before_payment', function() {
+    ?>
+    <script>
+    jQuery(function($){
+      $('form.checkout').on('change', 'input[name="payment_method"]', function(){
+        $('body').trigger('update_checkout');
+      });
+    });
+    </script>
+    <?php
+});
 
 /**
  * Disable coupons on checkout entirely
