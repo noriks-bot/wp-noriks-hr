@@ -152,8 +152,8 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_timer .title { font-size:22px; font-weight:700; line-height:26px; margin-bottom:5px; padding-top:10px; text-align:center; color:#000; }
     .tyuo_middle_section { padding:0 5px; text-align:center; }
     .tyuo_middle_section svg { margin-right:5px; max-width:15px; }
-    .tyuo_middle_section .sub_title { color:#F37021; font-size:16px; font-weight:500; }
-    .tyuo_middle_section .clue_text { color:#F37021; font-size:16px; font-weight:500; margin:6px 0; }
+    .tyuo_middle_section .sub_title { color:#47b426; font-size:16px; font-weight:500; }
+    .tyuo_middle_section .clue_text { color:#47b426; font-size:16px; font-weight:500; margin:6px 0; }
     .tyuo_product_section { margin:15px 0; padding:0 15px; }
     .tyuo_product_section .product_data { display:flex; margin-bottom:10px; }
     .tyuo_product_section .product_data .img { margin-right:15px; max-width:150px; width:50%; }
@@ -162,7 +162,7 @@ body.woocommerce-order-received .woocommerce {
     .tyuo_product_section .quantity { display:flex; flex-direction:column; font-size:2em; }
     .tyuo_product_section .product_name { font-size:18px; font-weight:700; color:#1A1A1A; line-height:20px; margin:4px 0 10px; }
     .tyuo_product_section .product_regular_price { color:#8f8f8f; font-size:17px; text-decoration:line-through; }
-    .tyuo_product_section .product_new_sale_price { color:#F37021; font-size:25px; font-weight:700; }
+    .tyuo_product_section .product_new_sale_price { color:#c00; font-size:25px; font-weight:700; }
     .wrapper_selectbox { color:#5f6060; font-size:1.1em; font-weight:500; padding:0 0 10px; }
     .wrapper_selectbox { text-align:right; padding:0 15px 10px; }
     .wrapper_selectbox select { -webkit-appearance:none; -moz-appearance:none; background:#fff url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center; background-size:20px; border:1px solid #ccc; border-radius:4px; cursor:pointer; font-size:14px; font-weight:500; width:50%; outline:0; padding:10px; box-sizing:border-box; }
@@ -278,7 +278,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-item .g-price-new {
     font-family: 'Roboto', sans-serif;
-    color: #F37021; font-size: 16px; font-weight: 700;
+    color: #c00; font-size: 16px; font-weight: 700;
 }
 .ty-grid-item select {
     width: 100%; padding: 6px; font-size: 12px;
