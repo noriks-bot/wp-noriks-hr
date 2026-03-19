@@ -201,9 +201,10 @@ function noriks_upsell_modal_markup() {
     </div>
     <style>
         /* Side cart button overrides */
-        .xoo-wsc-ft-buttons-cont { display:flex !important; flex-direction:column !important; }
-        .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout { order:-1 !important; border-radius:4px !important; padding-top:15px !important; padding-bottom:15px !important; }
-        .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue { background:#fff !important; color:#000 !important; border:1px solid #000 !important; border-radius:4px !important; padding-top:5px !important; padding-bottom:5px !important; font-size:75% !important; }
+        .xoo-wsc-footer { padding-top:20px !important; padding-bottom:20px !important; }
+        .xoo-wsc-ft-buttons-cont { display:flex !important; flex-direction:column !important; gap:8px !important; }
+        .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout { order:-1 !important; border-radius:4px !important; padding-top:18px !important; padding-bottom:18px !important; }
+        .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue { background:#fff !important; color:#000 !important; border:1px solid #000 !important; border-radius:4px !important; padding-top:8px !important; padding-bottom:8px !important; font-size:75% !important; }
         .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue:hover { background:#f5f5f5 !important; }
 
         .noriks-modal-overlay {
