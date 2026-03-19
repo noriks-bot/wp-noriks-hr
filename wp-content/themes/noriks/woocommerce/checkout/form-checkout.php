@@ -59,33 +59,29 @@ if ( WC()->cart->is_empty() ) return;
           </div>
         </div>
 
-        <!-- PAYMENT — native WC -->
+        <!-- COD prompt -->
+        <div id="hs-cod-checkout-prompt" style="display:none;">
+          <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
+          <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
+        </div>
+
+        <!-- VAT -->
+        <div id="hs-vat-tax-checkout-prompt">
+          <span class="tax-and-vat-checkout-claims">Nema dodatnih troškova za carinu</span>
+          <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
+        </div>
+
+        <!-- ORDER SUMMARY — WC native, auto-updates via AJAX -->
+        <h3 class="place-order-title" style="display:block;">Sažetak narudžbe</h3>
+        <div class="vigo-checkout-total order-total shop_table">
+          <?php woocommerce_order_review(); ?>
+        </div>
+
+        <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+
+        <!-- PAYMENT — native WC (includes #place_order button at bottom) -->
         <h3 class="payment-title">Način plaćanja</h3>
         <?php woocommerce_checkout_payment(); ?>
-
-        <div class="form-row place-order">
-          <div class="woocommerce-terms-and-conditions-wrapper"></div>
-
-          <!-- COD prompt -->
-          <div id="hs-cod-checkout-prompt" style="display:none;">
-            <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
-            <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
-          </div>
-
-          <!-- VAT -->
-          <div id="hs-vat-tax-checkout-prompt">
-            <span class="tax-and-vat-checkout-claims">Nema dodatnih troškova za carinu</span>
-            <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
-          </div>
-
-          <!-- ORDER SUMMARY — WC native, auto-updates via AJAX -->
-          <h3 class="place-order-title" style="display:block;">Sažetak narudžbe</h3>
-          <div class="vigo-checkout-total order-total shop_table">
-            <?php woocommerce_order_review(); ?>
-          </div>
-
-          <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
-        </div><!-- .place-order -->
 
       </div><!-- .woocommerce-additional-fields -->
     </div><!-- .col-2 -->
