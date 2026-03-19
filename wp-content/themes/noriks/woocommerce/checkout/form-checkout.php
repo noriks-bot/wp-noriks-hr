@@ -190,7 +190,7 @@ jQuery(function($){
     }
   }
   function updateTotalDisplay() {
-    var wcTotal = $('.order-total td .woocommerce-Price-amount').first().text().trim();
+    var wcTotal = $('.woocommerce-checkout-review-order-table .order-total td .woocommerce-Price-amount').first().text().trim();
     if (wcTotal) {
       $('.price_total_wrapper').html('<span class="woocommerce-Price-amount amount"><bdi>' + wcTotal + '</bdi></span>');
     }
