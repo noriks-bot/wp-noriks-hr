@@ -413,9 +413,7 @@ add_action( 'wp_footer', function() {
         submitted = true;
         var $btn = $(this);
         /* Instant visual feedback */
-        $btn.prop('disabled', true).text('Obrada...');
-        $btn.css({'background':'linear-gradient(180deg,#3ec000 0,#00ac00 100%)','opacity':'0.85'});
-        $('form.checkout').css('opacity','0.5').css('pointer-events','none');
+        $btn.prop('disabled', true).css('opacity','0.7').text('Obrada...');
         $('form.checkout').submit();
         /* Re-enable after 8s safety (in case of validation error) */
         setTimeout(function(){ $btn.prop('disabled', false).css('opacity','1').text('Naruči'); }, 8000);
@@ -423,7 +421,6 @@ add_action( 'wp_footer', function() {
       /* Also re-enable on WC checkout error */
       $(document.body).on('checkout_error', function(){
         $('#noriks_place_order').prop('disabled', false).css('opacity','1').text('Naruči');
-        $('form.checkout').css('opacity','1').css('pointer-events','');
       });
     });
     </script>
