@@ -224,7 +224,7 @@ body.woocommerce-order-received .woocommerce {
 }
 .ty-grid-trust {
     text-align: center; padding: 6px 20px 12px;
-    font-size: 13px; color: #F37021;
+    font-size: 13px; color: #47b426;
     background: #fff;
 }
 
@@ -309,8 +309,8 @@ body.woocommerce-order-received .woocommerce {
     display: block;
     width: calc(100% - 30px); margin: 0 15px 15px;
     padding: 14px;
-    background: #fff; color: #F37021;
-    border: 1px solid #F37021; border-radius: 4px !important;
+    background: #fff; color: #47b426;
+    border: 1px solid #47b426; border-radius: 4px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; font-weight: 600;
     cursor: pointer; text-align: center;
@@ -438,11 +438,11 @@ body.woocommerce-order-received .woocommerce {
 
                 <div class="tyuo_middle_section">
                     <div class="sub_title">
-                        <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#F37021"></path></svg></span>
+                        <span class="sub_title__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11.293" viewBox="0 0 15 11.293"><path d="M50.915,62.211,46.07,57.366a.44.44,0,0,1,0-.623L47.208,55.6a.44.44,0,0,1,.623,0l3.084,3.084a.441.441,0,0,0,.623,0l7.512-7.513a.44.44,0,0,1,.623,0l1.138,1.138a.44.44,0,0,1,0,.623l-9.273,9.274a.441.441,0,0,1-.623,0" transform="translate(-12.941 319.806)" fill="#47b426"></path></svg></span>
                         Poslat ćemo ga u istom paketu
                     </div>
                     <div class="clue_text">
-                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#F37021"></path></svg></span>
+                        <span class="clue_text__icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.333" viewBox="0 0 15 14.333"><path d="M6.885.383,5.1,4a.686.686,0,0,1-.517.375l-3.994.58a.686.686,0,0,0-.38,1.17L3.1,8.945a.686.686,0,0,1,.2.607L2.614,13.53a.686.686,0,0,0,1,.723l3.572-1.878a.686.686,0,0,1,.639,0l3.572,1.878a.686.686,0,0,0,1-.723l-.682-3.978a.686.686,0,0,1,.2-.607l2.89-2.817a.686.686,0,0,0-.38-1.17l-3.994-.58A.686.686,0,0,1,9.9,4L8.116.383a.686.686,0,0,0-1.23,0" fill="#47b426"></path></svg></span>
                         Razmislite kome biste mogli pokloniti proizvod
                     </div>
                 </div>
