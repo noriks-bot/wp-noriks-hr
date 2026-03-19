@@ -171,8 +171,8 @@ body.woocommerce-order-received .woocommerce {
     .pass-btn { flex:1 !important; min-width:0 !important; }
     .buy-btn { flex:2.8 !important; min-width:0 !important; }
     /* removed — buttons always side by side */
-    .pass-btn { background:#fff; border:1px solid #c00; border-radius:4px; color:#c00; padding:12px 0; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; line-height:1.2; box-sizing:border-box; }
-    .buy-btn { background:#c00; border:1px solid #c00; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; padding:14px 0; text-align:center; line-height:1.2; box-sizing:border-box; }
+    .pass-btn { background:#fff; border:1px solid #04ac00; border-radius:4px; color:#04ac00; padding:12px 0; text-align:center; text-decoration:none; cursor:pointer; font-size:14px; line-height:1.2; box-sizing:border-box; }
+    .buy-btn { background:#04ac00; border:1px solid #04ac00; border-radius:4px; color:#fff; cursor:pointer; flex:2.8; font-size:14px; font-weight:700; padding:14px 0; text-align:center; line-height:1.2; box-sizing:border-box; }
     .buy-btn.added { background:#2E7D32; }
     .buy-btn:disabled { background:#999; cursor:not-allowed; }
     .ty-upsell-status:empty { display:none; }
@@ -291,7 +291,7 @@ body.woocommerce-order-received .woocommerce {
 .ty-grid-item select:hover { border-color: #000; }
 .ty-grid-item .g-add-btn {
     display: block; width: 100%; margin-top: 8px;
-    padding: 10px; background: #c00; color: #fff;
+    padding: 10px; background: #04ac00; color: #fff;
     border: none; border-radius: 4px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 13px; font-weight: 600;
@@ -299,7 +299,7 @@ body.woocommerce-order-received .woocommerce {
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
-.ty-grid-item .g-add-btn:hover { background: #a00; }
+.ty-grid-item .g-add-btn:hover { background: #039a00; }
 .ty-grid-item .g-add-btn.added {
     background: #2E7D32; pointer-events: none;
 }
