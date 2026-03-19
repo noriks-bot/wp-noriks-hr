@@ -71,10 +71,6 @@ if ( WC()->cart->is_empty() ) return;
           <span class="tax-and-vat-checkout-claims">PDV je uključen u cijenu</span>
         </div>
 
-        <!-- PAYMENT — native WC -->
-        <h3 class="payment-title">Način plaćanja</h3>
-        <?php woocommerce_checkout_payment(); ?>
-
         <!-- ORDER SUMMARY — WC native, auto-updates via AJAX -->
         <h3 class="place-order-title" style="display:block;">Sažetak narudžbe</h3>
         <div class="vigo-checkout-total order-total shop_table">
@@ -82,6 +78,10 @@ if ( WC()->cart->is_empty() ) return;
         </div>
 
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+
+        <!-- PAYMENT + Naruči button — native WC -->
+        <h3 class="payment-title">Način plaćanja</h3>
+        <?php woocommerce_checkout_payment(); ?>
 
       </div><!-- .woocommerce-additional-fields -->
     </div><!-- .col-2 -->
