@@ -208,8 +208,10 @@ jQuery(function($){
     $('#hs-cod-checkout-prompt').toggle(isCod);
     $('#noriks-cod-fee-row').toggle(isCod);
   }
-  $('body').on('change', 'input[name="payment_method"]', function(){
+  /* WC stopPropagation blocks change event — listen to WC's own event instead */
+  $(document.body).on('payment_method_selected', function(){
     updateCodDisplay();
+    $(document.body).trigger('update_checkout');
   });
   $(document.body).on('updated_checkout', function(){
     updateCodDisplay();
