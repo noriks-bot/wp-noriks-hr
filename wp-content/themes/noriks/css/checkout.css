@@ -101,8 +101,10 @@ body.woocommerce-checkout #payment * {
 }
 
 /* WC native place_order button — below everything */
-body.woocommerce-checkout #payment .place-order {
-  padding: 15px 0 0 !important;
+body.woocommerce-checkout #payment .place-order,
+#noriks-place-order-wrap .place-order {
+  padding: 15px 15px 0 !important;
+  box-sizing: border-box !important;
 }
 body.woocommerce-checkout #place_order {
   width: 100% !important;
