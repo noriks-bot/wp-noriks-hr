@@ -62,6 +62,8 @@ if ( WC()->cart->is_empty() ) return;
         <!-- PAYMENT — native WC -->
         <h3 class="payment-title">Način plaćanja</h3>
         <?php woocommerce_checkout_payment(); ?>
+        <!-- Hidden WC order review table — needed for AJAX update_checkout to work -->
+        <div style="display:none !important;"><?php woocommerce_order_review(); ?></div>
 
         <div class="form-row place-order">
           <div class="woocommerce-terms-and-conditions-wrapper"></div>
