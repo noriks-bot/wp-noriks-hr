@@ -542,7 +542,7 @@ add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
 
     $chosen_gateway = WC()->session->get( 'chosen_payment_method' );
     if ( $chosen_gateway === 'cod' ) {
-        $cart->add_fee( 'Naknada za pouzeće', 1.99, false );
+        $cart->add_fee( 'Plaćanje prilikom preuzimanja', 1.99, false );
     }
 });
 
