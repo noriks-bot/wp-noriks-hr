@@ -94,12 +94,14 @@ if ( WC()->cart->is_empty() ) return;
 </form>
 </div><!-- .before_form -->
 
-<!-- WC native place order button — moved here from #payment via JS -->
-<div id="noriks-place-order-wrap" class="woocommerce-checkout-review-order container container--xs"></div>
+<!-- Our button that clicks WC's hidden #place_order -->
+<div class="woocommerce-checkout-review-order container container--xs">
+  <div class="place-order">
+    <button type="button" id="noriks_place_order" class="button alt" style="width:100%;font-size:20px;font-weight:700;padding:18px 0;border:0;border-radius:4px;color:#fff;background:linear-gradient(180deg,#3ec000 0,#00ac00 100%);box-shadow:0 2px 0 #090;cursor:pointer;">Naruči</button>
+  </div>
+</div>
 <script>jQuery(function($){
-  function moveBtn(){ var $po = $('#payment .place-order'); if ($po.length) $('#noriks-place-order-wrap').empty().append($po); }
-  moveBtn();
-  $(document.body).on('updated_checkout', moveBtn);
+  $('#noriks_place_order').on('click', function(){ $('#place_order').trigger('click'); });
 });</script>
 
 <!-- Warranty -->
