@@ -201,7 +201,7 @@ function noriks_upsell_modal_markup() {
     </div>
     <style>
         /* Side cart button overrides */
-        .xoo-wsc-footer { padding-top:20px !important; padding-bottom:20px !important; }
+        .xoo-wsc-footer { padding-top:0 !important; padding-bottom:20px !important; }
         .xoo-wsc-ft-buttons-cont { display:flex !important; flex-direction:column !important; gap:8px !important; }
         .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout { order:-1 !important; border-radius:4px !important; padding-top:18px !important; padding-bottom:18px !important; margin-top:0 !important; }
         .xoo-wsc-ft-buttons-cont { margin-top:0 !important; padding-top:0 !important; }
