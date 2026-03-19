@@ -535,8 +535,7 @@ body.woocommerce-order-received .woocommerce {
                         var prices = <?php echo json_encode(array_map(function($p){ return number_format($p,2,',','.') . '€'; }, $upsell_qty_prices)); ?>;
                         var names = <?php echo json_encode($upsell_qty_names); ?>;
                         var images = <?php echo json_encode($upsell_qty_images); ?>;
-                        var regulars = <?php echo json_encode(array_map(function($p){ return number_format($p,2,',','.') . '€'; }, $upsell_qty_regular)); ?>
-                        };
+                        var regulars = <?php echo json_encode(array_map(function($p){ return number_format($p,2,',','.') . '€'; }, $upsell_qty_regular)); ?>;
                         document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
                             btn.addEventListener('click', function(){
                                 document.querySelectorAll('.ty-qty-btn').forEach(function(b){
