@@ -134,12 +134,9 @@ jQuery(function($){
   $('#js-delivery-dates').text(days[from.getDay()]+', '+from.getDate()+'.'+(from.getMonth()+1)+'. - '+days[to.getDay()]+', '+to.getDate()+'.'+(to.getMonth()+1)+'.');
 
   /* Shipping price — read from WC after checkout update */
-  /* Click on payment label → update checkout once (radio has pointer-events:none so we listen on label) */
-  var pmUpdating = false;
-  $(document).on('click', '.wc_payment_method > label', function(){
-    if (pmUpdating) return;
-    pmUpdating = true;
-    setTimeout(function(){ $(document.body).trigger('update_checkout'); pmUpdating = false; }, 500);
+  /* WC payment_method_selected → update checkout (fires only on actual change) */
+  $(document.body).on('payment_method_selected', function(){
+    $(document.body).trigger('update_checkout');
   });
 });
 </script>
