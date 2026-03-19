@@ -106,7 +106,7 @@ if ( WC()->cart->is_empty() ) return;
                 <!-- Shipping — dynamic from WC -->
                 <div class="c--darkgray review-section-container review-addons shipping_order_review">
                   <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
-                  <div class="review-addons-price review-sale-price" id="noriks-shipping-price"></div>
+                  <div class="review-addons-price review-sale-price" id="noriks-shipping-price"><span style="display:inline-block;padding:3px 10px;border-radius:5px;background:#9ce79c;color:#228b22;font-size:14px;font-weight:500;">Besplatno</span></div>
                 </div>
 
                 <!-- COD fee — shown/hidden dynamically -->
