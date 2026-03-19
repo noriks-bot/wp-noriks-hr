@@ -19,9 +19,14 @@ $has_only_bokserice = true;
 $has_bokserice = false;
 foreach ( $order->get_items() as $item ) {
     $name = strtolower( $item->get_name() );
-    if ( strpos($name, 'bokser') !== false ) {
+    $product = $item->get_product();
+    $sku = $product ? strtolower( $product->get_sku() ) : '';
+    // Bokserice: name contains bokser/paket OR SKU contains BOX
+    $is_boks = ( strpos($name, 'bokser') !== false || strpos($name, 'paket') !== false || strpos($sku, 'box') !== false );
+    if ( $is_boks ) {
         $has_bokserice = true;
     }
+    // If item has majica or komplet → not only bokserice
     if ( strpos($name, 'majic') !== false || strpos($name, 'komplet') !== false ) {
         $has_only_bokserice = false;
     }
@@ -56,8 +61,13 @@ if ( $upsell_is_majice ) {
 }
 $upsell_product    = wc_get_product( $upsell_product_id );
 $upsell_image      = $upsell_qty_images[3];
-$upsell_price      = $upsell_product ? (float) $upsell_product->get_price() : 15.99;
+$upsell_unit_price = $upsell_product ? (float) $upsell_product->get_regular_price() : 15.99;
 $upsell_sale_price = $upsell_qty_prices[3];
+// Regular prices per qty (unit price * qty)
+$upsell_qty_regular = array();
+foreach ($upsell_qty_prices as $q => $p) {
+    $upsell_qty_regular[$q] = $upsell_unit_price * $q;
+}
 
 // Variations for primary product
 $upsell_variations = array();
@@ -506,7 +516,7 @@ body.woocommerce-order-received .woocommerce {
                         </div>
                         <div class="right_section_wrapper">
                             <div class="product_name" id="ty-upsell-name"><?php echo esc_html($upsell_qty_names[3]); ?></div>
-                            <div class="product_regular_price"><?php echo number_format($upsell_price, 2, ',', '.'); ?>€</div>
+                            <div class="product_regular_price" id="ty-upsell-regular"><?php echo number_format($upsell_qty_regular[3], 2, ',', '.'); ?>€</div>
                             <div class="product_new_sale_price" id="ty-upsell-price"><?php echo number_format($upsell_qty_prices[3], 2, ',', '.'); ?>€</div>
                         </div>
                     </div>
@@ -515,7 +525,8 @@ body.woocommerce-order-received .woocommerce {
                     (function(){
                         var prices = <?php echo json_encode(array_map(function($p){ return number_format($p,2,',','.') . '€'; }, $upsell_qty_prices)); ?>;
                         var names = <?php echo json_encode($upsell_qty_names); ?>;
-                        var images = <?php echo json_encode($upsell_qty_images); ?>
+                        var images = <?php echo json_encode($upsell_qty_images); ?>;
+                        var regulars = <?php echo json_encode(array_map(function($p){ return number_format($p,2,',','.') . '€'; }, $upsell_qty_regular)); ?>
                         };
                         document.querySelectorAll('.ty-qty-btn').forEach(function(btn){
                             btn.addEventListener('click', function(){
@@ -527,6 +538,7 @@ body.woocommerce-order-received .woocommerce {
                                 document.getElementById('ty-upsell-price').textContent = prices[q] || '19,99€';
                                 document.getElementById('ty-upsell-name').textContent = names[q] || '3x Crne Bokserice';
                                 document.getElementById('ty-upsell-img').src = images[q] || images[3];
+                                document.getElementById('ty-upsell-regular').textContent = regulars[q] || '';
                             });
                         });
                     })();
