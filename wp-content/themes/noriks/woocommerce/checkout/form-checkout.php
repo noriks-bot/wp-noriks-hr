@@ -67,7 +67,7 @@ if ( WC()->cart->is_empty() ) return;
           <div class="woocommerce-terms-and-conditions-wrapper"></div>
 
           <!-- COD prompt -->
-          <div id="hs-cod-checkout-prompt">
+          <div id="hs-cod-checkout-prompt" style="display:none;">
             <div class="cod-prompt-text">Dovršite narudžbu sada, <strong>platite pouzećem 🙂</strong></div>
             <img decoding="async" class="cod-prompt-image" src="https://images.vigo-shop.com/general/checkout/cod/uni_cash_on_delivery.svg">
           </div>
@@ -110,7 +110,7 @@ if ( WC()->cart->is_empty() ) return;
                 </div>
 
                 <!-- COD fee — shown/hidden dynamically -->
-                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row">
+                <div class="c--darkgray review-section-container review-addons" id="noriks-cod-fee-row" style="display:none;">
                   <div class="review-addons-title"><div>Plaćanje prilikom preuzimanja</div></div>
                   <div class="review-addons-price review-sale-price">
                     <span class="woocommerce-Price-amount amount"><bdi>1,99<span class="woocommerce-Price-currencySymbol">&euro;</span></bdi></span>
