@@ -40,14 +40,11 @@ defined( 'ABSPATH' ) || exit;
         $discount_amount = WC()->cart->get_coupon_discount_amount( $code, WC()->cart->display_cart_ex_tax );
         $currency = get_woocommerce_currency_symbol();
       ?>
-      <div class="c--darkgray review-section-container review-addons" style="background:#f0fdf0;border-radius:4px;padding:8px 12px;margin:4px 0;">
-        <div class="review-addons-title" style="display:inline-flex;align-items:center;gap:4px;line-height:1;">
-          <span style="font-size:13px;line-height:1;vertical-align:middle;">🏷️</span>
-          <span style="font-size:13px;font-weight:600;color:#333;line-height:1;vertical-align:middle;">Kupon: <?php echo esc_html( strtoupper($code) ); ?></span>
-        </div>
-        <div class="review-addons-price" style="display:flex;align-items:center;gap:8px;">
-          <span style="font-size:14px;font-weight:700;color:#16a34a;">-<?php echo esc_html( number_format($discount_amount, 2, ',', '.') . ' ' . $currency ); ?></span>
-          <a href="<?php echo esc_url( wc_get_cart_url() ); ?>?remove_coupon=<?php echo esc_attr( $code ); ?>" class="woocommerce-remove-coupon" data-coupon="<?php echo esc_attr( $code ); ?>" style="font-size:11px;color:#999;text-decoration:none;cursor:pointer;" onclick="event.preventDefault();jQuery('[name=coupon_code]').val('');jQuery.post('<?php echo esc_url(wc_get_checkout_url()); ?>?wc-ajax=remove_coupon',{coupon:this.dataset.coupon,security:'<?php echo wp_create_nonce("remove-coupon"); ?>'},function(){jQuery('body').trigger('update_checkout');});">✕</a>
+      <div class="c--darkgray review-section-container review-addons">
+        <div class="review-addons-title"><div>Kupon: <?php echo esc_html( strtoupper($code) ); ?></div></div>
+        <div class="review-addons-price review-sale-price" style="display:flex;align-items:center;gap:6px;">
+          <span>-<?php echo esc_html( number_format($discount_amount, 2, ',', '.') . ' ' . $currency ); ?></span>
+          <a href="#" class="woocommerce-remove-coupon" data-coupon="<?php echo esc_attr( $code ); ?>" style="color:#999;text-decoration:none;font-size:13px;padding-left:4px;" onclick="event.preventDefault();jQuery.post('<?php echo esc_url(wc_get_checkout_url()); ?>?wc-ajax=remove_coupon',{coupon:this.dataset.coupon,security:'<?php echo wp_create_nonce("remove-coupon"); ?>'},function(){jQuery('body').trigger('update_checkout');});">✕</a>
         </div>
       </div>
       <?php endforeach; ?>
