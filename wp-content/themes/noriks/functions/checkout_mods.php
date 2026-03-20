@@ -579,6 +579,34 @@ add_action('woocommerce_review_order_before_submit', function(){
 });
 
 /**
+ * Copy ALL billing fields to shipping on checkout
+ * Ensures shipping address = billing address (name, address, phone, etc.)
+ */
+add_action('woocommerce_checkout_create_order', function($order, $data){
+    $fields = array('first_name','last_name','company','address_1','address_2','city','postcode','country','state','phone');
+    foreach ($fields as $f) {
+        $getter = 'get_billing_' . $f;
+        $setter = 'set_shipping_' . $f;
+        if (method_exists($order, $getter) && method_exists($order, $setter)) {
+            $order->$setter($order->$getter());
+        }
+    }
+}, 10, 2);
+
+/**
+ * Also populate shipping fields in $_POST so WC processes them
+ */
+add_filter('woocommerce_checkout_posted_data', function($data){
+    $fields = ['first_name','last_name','company','address_1','address_2','city','postcode','country','state','phone'];
+    foreach ($fields as $f) {
+        if (!empty($data['billing_'.$f]) && empty($data['shipping_'.$f])) {
+            $data['shipping_'.$f] = $data['billing_'.$f];
+        }
+    }
+    return $data;
+});
+
+/**
  * Validate billing_address_2 (kućni broj) is required
  */
 add_action('woocommerce_checkout_process', function(){

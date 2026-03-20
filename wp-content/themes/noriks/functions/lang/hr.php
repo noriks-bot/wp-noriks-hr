@@ -67,7 +67,7 @@ function hide_checkout_fields( $fields ) {
     // Optional: Remove shipping fields
     //unset( $fields['shipping']['shipping_country'] );
     unset( $fields['shipping']['shipping_state'] );
-     unset( $fields['shipping']['shipping_address_2'] );
+     // shipping_address_2 kept — copied from billing via checkout_mods.php
 
 
     return $fields;
