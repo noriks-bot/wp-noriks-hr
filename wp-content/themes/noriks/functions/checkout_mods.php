@@ -591,11 +591,15 @@ add_action('woocommerce_review_order_before_submit', function(){
             method:'POST',
             body:new URLSearchParams({coupon_code:code,security:'<?php echo wp_create_nonce("apply-coupon"); ?>'}),
             headers:{'Content-Type':'application/x-www-form-urlencoded'}
-        }).then(function(r){return r.text();}).then(function(html){
+        }).then(function(r){
+            var ok=r.ok;return r.text().then(function(html){return{ok:ok,html:html};});
+        }).then(function(res){
             msg.style.display='block';
-            if(html.indexOf('error')!==-1){
+            var isError=!res.ok||res.html.indexOf('error')!==-1||res.html.indexOf('ne postoji')!==-1||res.html.indexOf('nije valjan')!==-1||res.html.indexOf('removed')!==-1;
+            if(isError){
                 msg.style.background='#fde8e8';msg.style.color='#c00';
-                msg.innerHTML=html.replace(/<[^>]*>/g,'')||'Kupon kod nije valjan.';
+                var txt=res.html.replace(/<[^>]*>/g,'').trim();
+                msg.innerHTML='❌ '+(txt||'Kupon kod nije valjan.');
             }else{
                 msg.style.background='#e8fde8';msg.style.color='#080';
                 msg.innerHTML='✅ Kupon primijenjen!';
