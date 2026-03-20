@@ -36,10 +36,19 @@ defined( 'ABSPATH' ) || exit;
       </div>
 
       <!-- Coupon discounts -->
-      <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-      <div class="c--darkgray review-section-container review-addons" style="color:#080;">
-        <div class="review-addons-title"><div>🏷️ Kupon: <?php echo esc_html( strtoupper($code) ); ?></div></div>
-        <div class="review-addons-price review-sale-price" style="color:#080;font-weight:600;">-<?php echo wc_cart_totals_coupon_html( $coupon ); ?></div>
+      <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : 
+        $discount_amount = WC()->cart->get_coupon_discount_amount( $code, WC()->cart->display_cart_ex_tax );
+        $currency = get_woocommerce_currency_symbol();
+      ?>
+      <div class="c--darkgray review-section-container review-addons" style="background:#f0fdf0;border-radius:4px;padding:8px 12px;margin:4px 0;">
+        <div class="review-addons-title" style="display:flex;align-items:center;gap:6px;">
+          <span style="font-size:14px;">🏷️</span>
+          <span style="font-size:13px;font-weight:600;color:#333;"><?php echo esc_html( strtoupper($code) ); ?></span>
+        </div>
+        <div class="review-addons-price" style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:14px;font-weight:700;color:#16a34a;">-<?php echo esc_html( number_format($discount_amount, 2, ',', '.') . ' ' . $currency ); ?></span>
+          <a href="<?php echo esc_url( wc_get_cart_url() ); ?>?remove_coupon=<?php echo esc_attr( $code ); ?>" class="woocommerce-remove-coupon" data-coupon="<?php echo esc_attr( $code ); ?>" style="font-size:11px;color:#999;text-decoration:none;cursor:pointer;" onclick="event.preventDefault();jQuery('[name=coupon_code]').val('');jQuery.post('<?php echo esc_url(wc_get_checkout_url()); ?>?wc-ajax=remove_coupon',{coupon:this.dataset.coupon,security:'<?php echo wp_create_nonce("remove-coupon"); ?>'},function(){jQuery('body').trigger('update_checkout');});">✕</a>
+        </div>
       </div>
       <?php endforeach; ?>
 
