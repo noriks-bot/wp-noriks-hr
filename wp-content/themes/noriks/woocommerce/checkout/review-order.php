@@ -41,9 +41,9 @@ defined( 'ABSPATH' ) || exit;
         $currency = get_woocommerce_currency_symbol();
       ?>
       <div class="c--darkgray review-section-container review-addons" style="background:#f0fdf0;border-radius:4px;padding:8px 12px;margin:4px 0;">
-        <div class="review-addons-title" style="display:flex;align-items:center;gap:6px;">
-          <span style="font-size:14px;">🏷️</span>
-          <span style="font-size:13px;font-weight:600;color:#333;"><?php echo esc_html( strtoupper($code) ); ?></span>
+        <div class="review-addons-title" style="display:inline-flex;align-items:center;gap:4px;line-height:1;">
+          <span style="font-size:13px;line-height:1;vertical-align:middle;">🏷️</span>
+          <span style="font-size:13px;font-weight:600;color:#333;line-height:1;vertical-align:middle;">Kupon: <?php echo esc_html( strtoupper($code) ); ?></span>
         </div>
         <div class="review-addons-price" style="display:flex;align-items:center;gap:8px;">
           <span style="font-size:14px;font-weight:700;color:#16a34a;">-<?php echo esc_html( number_format($discount_amount, 2, ',', '.') . ' ' . $currency ); ?></span>
