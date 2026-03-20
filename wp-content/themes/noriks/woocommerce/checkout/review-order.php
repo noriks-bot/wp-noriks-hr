@@ -35,6 +35,14 @@ defined( 'ABSPATH' ) || exit;
         <div class="review-addons-price review-sale-price" id="noriks-shipping-price"><span style="display:inline-block;padding:3px 10px;border-radius:5px;background:#9ce79c;color:#228b22;font-size:14px;font-weight:500;">Besplatno</span></div>
       </div>
 
+      <!-- Coupon discounts -->
+      <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+      <div class="c--darkgray review-section-container review-addons" style="color:#080;">
+        <div class="review-addons-title"><div>🏷️ Kupon: <?php echo esc_html( strtoupper($code) ); ?></div></div>
+        <div class="review-addons-price review-sale-price" style="color:#080;font-weight:600;">-<?php echo wc_cart_totals_coupon_html( $coupon ); ?></div>
+      </div>
+      <?php endforeach; ?>
+
       <!-- COD fee — WC renders this automatically via get_fees() -->
       <?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
       <div class="c--darkgray review-section-container review-addons">
