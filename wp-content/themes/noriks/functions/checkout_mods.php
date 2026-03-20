@@ -571,8 +571,8 @@ add_action('woocommerce_review_order_before_submit', function(){
     if ( wc_coupons_enabled() ) :
     ?>
     <div class="noriks-coupon-wrap" style="margin:12px 0 16px;">
-        <button type="button" id="noriks-coupon-btn" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:20px;font-size:13px;color:#333;cursor:pointer;font-weight:500;" onclick="this.style.display='none';document.getElementById('noriks-coupon-expanded').style.display='flex';">
-            🏷️ Dodaj popust
+        <button type="button" id="noriks-coupon-btn" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:#fff;border:1px solid #ddd;border-radius:4px;font-size:13px;color:#333;cursor:pointer;font-weight:500;" onclick="this.style.display='none';document.getElementById('noriks-coupon-expanded').style.display='flex';">
+            🏷️ Unesi kupon kod
         </button>
         <div id="noriks-coupon-expanded" style="display:none;gap:8px;align-items:center;">
             <input type="text" id="noriks_coupon_code" placeholder="Kupon kod" style="flex:1;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;" />
