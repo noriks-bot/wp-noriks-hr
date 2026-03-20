@@ -550,12 +550,8 @@ add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
 /* Removed: was causing infinite loop with Stripe — WC review-order template handles updates natively */
 
 /**
- * Disable coupons on checkout entirely
+ * Coupons enabled on checkout (was disabled, now re-enabled)
  */
-add_filter( 'woocommerce_coupons_enabled', function( $enabled ) {
-    if ( is_checkout() ) return false;
-    return $enabled;
-});
 
 /**
  * Remove info-banner from checkout page content
