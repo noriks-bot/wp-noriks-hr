@@ -568,6 +568,50 @@ add_filter( 'the_content', function( $content ) {
  * This hook fires on every AJAX update_checkout render
  */
 add_action('woocommerce_review_order_before_submit', function(){
+    if ( wc_coupons_enabled() ) :
+    ?>
+    <div class="noriks-coupon-wrap" style="margin:12px 0 16px;padding:12px 16px;background:#fff;border:1px solid #e0e0e0;border-radius:6px;">
+        <div class="noriks-coupon-toggle" style="display:flex;align-items:center;gap:6px;cursor:pointer;" onclick="var f=this.nextElementSibling;f.style.display=f.style.display==='none'?'flex':'none';this.querySelector('.nc-arrow').textContent=f.style.display==='none'?'▸':'▾';">
+            <span style="font-size:13px;">🏷️</span>
+            <span style="font-size:13px;color:#333;font-weight:500;">Imaš kupon kod?</span>
+            <span class="nc-arrow" style="font-size:11px;color:#999;">▸</span>
+        </div>
+        <div class="noriks-coupon-form" style="display:none;margin-top:10px;gap:8px;align-items:center;">
+            <input type="text" id="noriks_coupon_code" placeholder="Unesi kupon kod" style="flex:1;padding:8px 12px;border:1px solid #ccc;border-radius:4px;font-size:13px;" />
+            <button type="button" style="padding:8px 16px;background:#000;color:#fff;border:none;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;" onclick="noriksApplyCoupon()">Primijeni</button>
+        </div>
+        <div id="noriks-coupon-msg" style="display:none;margin-top:8px;padding:6px 10px;border-radius:4px;font-size:12px;"></div>
+    </div>
+    <script>
+    function noriksApplyCoupon(){
+        var code=document.getElementById('noriks_coupon_code').value.trim();
+        if(!code)return;
+        var msg=document.getElementById('noriks-coupon-msg');
+        var btn=event.target;btn.textContent='...';btn.disabled=true;
+        fetch('<?php echo esc_url(wc_get_checkout_url()); ?>?wc-ajax=apply_coupon',{
+            method:'POST',
+            body:new URLSearchParams({coupon_code:code,security:'<?php echo wp_create_nonce("apply-coupon"); ?>'}),
+            headers:{'Content-Type':'application/x-www-form-urlencoded'}
+        }).then(function(r){return r.text();}).then(function(html){
+            msg.style.display='block';
+            if(html.indexOf('error')!==-1){
+                msg.style.background='#fde8e8';msg.style.color='#c00';
+                msg.innerHTML=html.replace(/<[^>]*>/g,'')||'Kupon kod nije valjan.';
+            }else{
+                msg.style.background='#e8fde8';msg.style.color='#080';
+                msg.innerHTML='✅ Kupon primijenjen!';
+                document.getElementById('noriks_coupon_code').value='';
+                if(window.jQuery)jQuery('body').trigger('update_checkout');
+            }
+            btn.textContent='Primijeni';btn.disabled=false;
+        }).catch(function(){
+            msg.style.display='block';msg.style.background='#fde8e8';msg.style.color='#c00';
+            msg.textContent='Greška. Pokušajte ponovo.';btn.textContent='Primijeni';btn.disabled=false;
+        });
+    }
+    </script>
+    <?php
+    endif;
     echo '<h3 class="place-order-title" style="display:block;margin:15px 0 10px;">Sažetak narudžbe</h3>';
     echo '<div class="vigo-checkout-total order-total shop_table" style="margin-bottom:20px;">';
     woocommerce_order_review();
