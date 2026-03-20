@@ -570,15 +570,13 @@ add_filter( 'the_content', function( $content ) {
 add_action('woocommerce_review_order_before_submit', function(){
     if ( wc_coupons_enabled() ) :
     ?>
-    <div class="noriks-coupon-wrap" style="margin:12px 0 16px;padding:12px 16px;background:#fff;border:1px solid #e0e0e0;border-radius:6px;">
-        <div class="noriks-coupon-toggle" style="display:flex;align-items:center;gap:6px;cursor:pointer;" onclick="var f=this.nextElementSibling;f.style.display=f.style.display==='none'?'flex':'none';this.querySelector('.nc-arrow').textContent=f.style.display==='none'?'▸':'▾';">
-            <span style="font-size:13px;">🏷️</span>
-            <span style="font-size:13px;color:#333;font-weight:500;">Imaš kupon kod?</span>
-            <span class="nc-arrow" style="font-size:11px;color:#999;">▸</span>
-        </div>
-        <div class="noriks-coupon-form" style="display:none;margin-top:10px;gap:8px;align-items:center;">
-            <input type="text" id="noriks_coupon_code" placeholder="Unesi kupon kod" style="flex:1;padding:8px 12px;border:1px solid #ccc;border-radius:4px;font-size:13px;" />
-            <button type="button" style="padding:8px 16px;background:#000;color:#fff;border:none;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;" onclick="noriksApplyCoupon()">Primijeni</button>
+    <div class="noriks-coupon-wrap" style="margin:12px 0 16px;">
+        <button type="button" id="noriks-coupon-btn" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:20px;font-size:13px;color:#333;cursor:pointer;font-weight:500;" onclick="this.style.display='none';document.getElementById('noriks-coupon-expanded').style.display='flex';">
+            🏷️ Dodaj popust
+        </button>
+        <div id="noriks-coupon-expanded" style="display:none;gap:8px;align-items:center;">
+            <input type="text" id="noriks_coupon_code" placeholder="Kupon kod" style="flex:1;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:14px;" />
+            <button type="button" style="padding:10px 20px;background:#000;color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;" onclick="noriksApplyCoupon()">Primijeni</button>
         </div>
         <div id="noriks-coupon-msg" style="display:none;margin-top:8px;padding:6px 10px;border-radius:4px;font-size:12px;"></div>
     </div>
