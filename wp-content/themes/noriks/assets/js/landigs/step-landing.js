@@ -1,11 +1,20 @@
 (function () {
   var config = window.noriksStepLandingConfig || {};
   var skuMap = config.skuMap || {};
+  var variationMap = config.variationMap || [];
   var landingState = {
     primaryName: null,
     secondaryName: null,
     offerQuantity: null
   };
+
+  function normalizeValue(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "");
+  }
 
   function enableOptionButton(button) {
     button.disabled = false;
@@ -360,6 +369,45 @@
     return 1;
   }
 
+  function selectedPrimaryName() {
+    if (landingState.primaryName) {
+      return landingState.primaryName;
+    }
+
+    var primaryValue = document.getElementById("selected-color-variation-value");
+    return primaryValue ? primaryValue.textContent.trim() : "";
+  }
+
+  function selectedSecondaryName() {
+    if (landingState.secondaryName) {
+      return landingState.secondaryName;
+    }
+
+    var selectedButton = document.querySelector(".single-variation-container .button-variation[selected-option='true']");
+    return selectedButton ? selectedButton.textContent.trim() : "";
+  }
+
+  function selectedVariationMapping() {
+    if (!variationMap.length) {
+      return null;
+    }
+
+    var selectedColor = normalizeValue(selectedPrimaryName());
+    var selectedSize = normalizeValue(selectedSecondaryName());
+
+    for (var i = 0; i < variationMap.length; i += 1) {
+      var variation = variationMap[i];
+      var variationColor = normalizeValue(variation.barvaLabel || variation.barva);
+      var variationSize = normalizeValue(variation.sizeLabel || variation.velikost);
+
+      if (variationColor === selectedColor && variationSize === selectedSize) {
+        return variation;
+      }
+    }
+
+    return variationMap[0] || null;
+  }
+
   function addToCartUrl() {
     if (config.simpleProduct && config.productId) {
       var simpleUrl = new URL(config.targetProductUrl || config.homeUrl);
@@ -368,17 +416,16 @@
       return simpleUrl.toString();
     }
 
-    var variation = currentVariation();
-    if (!variation || !variation.sku || !skuMap[variation.sku] || !config.productId) {
+    var mapped = selectedVariationMapping();
+    if (!mapped || !config.productId) {
       return null;
     }
 
-    var mapped = skuMap[variation.sku];
     var url = new URL(config.homeUrl);
     url.searchParams.set("add-to-cart", String(config.productId));
     url.searchParams.set("variation_id", String(mapped.id));
-    url.searchParams.set("attribute_pa_barva", mapped.b || "");
-    url.searchParams.set("attribute_pa_velikost", mapped.v || "");
+    url.searchParams.set("attribute_pa_barva", mapped.barva || "");
+    url.searchParams.set("attribute_pa_velikost", mapped.velikost || "");
     url.searchParams.set("quantity", String(selectedQuantity()));
     return url.toString();
   }
@@ -434,8 +481,7 @@
     formData.append("quantity", String(quantity));
 
     if (!config.simpleProduct) {
-      var variation = currentVariation();
-      var mapped = variation && variation.sku ? skuMap[variation.sku] : null;
+      var mapped = selectedVariationMapping();
 
       if (!mapped) {
         return null;
@@ -443,8 +489,8 @@
 
       formData.append("product_id", String(config.productId));
       formData.append("variation_id", String(mapped.id));
-      formData.append("attribute_pa_barva", mapped.b || "");
-      formData.append("attribute_pa_velikost", mapped.v || "");
+      formData.append("attribute_pa_barva", mapped.barva || "");
+      formData.append("attribute_pa_velikost", mapped.velikost || "");
     }
 
     return formData;

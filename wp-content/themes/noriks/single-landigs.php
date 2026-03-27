@@ -734,6 +734,7 @@ preg_match_all('/"sku":"([^"]+)"/', $source_markup, $sku_matches);
 $skus          = array_values(array_unique($sku_matches[1] ?? array()));
 
 $sku_map           = array();
+$variation_map     = array();
 $current_product   = 0;
 
 if (function_exists('wc_get_product_id_by_sku')) {
@@ -760,14 +761,58 @@ if (function_exists('wc_get_product_id_by_sku')) {
     }
 }
 
+$configured_product = $target_product_id ? wc_get_product($target_product_id) : null;
+
+if ($configured_product && $configured_product->is_type('variable')) {
+    $current_product = (int) $configured_product->get_id();
+
+    foreach ($configured_product->get_children() as $variation_id) {
+        $variation = wc_get_product($variation_id);
+        if (!$variation || !$variation->is_type('variation')) {
+            continue;
+        }
+
+        $color_slug = (string) $variation->get_attribute('pa_barva');
+        $size_slug  = (string) $variation->get_attribute('pa_velikost');
+        $color_name = $color_slug;
+        $size_name  = $size_slug;
+
+        if ($color_slug) {
+            $color_term = get_term_by('slug', $color_slug, 'pa_barva');
+            if ($color_term && !is_wp_error($color_term)) {
+                $color_name = $color_term->name;
+            }
+        }
+
+        if ($size_slug) {
+            $size_term = get_term_by('slug', $size_slug, 'pa_velikost');
+            if ($size_term && !is_wp_error($size_term)) {
+                $size_name = $size_term->name;
+            }
+        }
+
+        $variation_map[] = array(
+            'id'         => (int) $variation->get_id(),
+            'product_id' => (int) $current_product,
+            'barva'      => $color_slug,
+            'velikost'   => $size_slug,
+            'barvaLabel' => $color_name,
+            'sizeLabel'  => $size_name,
+        );
+    }
+}
+
+$is_simple_product = !($configured_product && $configured_product->is_type('variable'));
+
 $runtime_config = array(
     'landingUrl'       => $landing_url,
     'cartUrl'          => $cart_url,
     'homeUrl'          => $home_url,
     'productId'        => $target_product_id ?: $current_product,
     'targetProductUrl' => $target_product_url,
-    'simpleProduct'    => true,
+    'simpleProduct'    => $is_simple_product,
     'skuMap'           => $sku_map,
+    'variationMap'     => $variation_map,
     'optionGroups'     => array(
         'primary' => array(
             'label'   => $primary_label,
