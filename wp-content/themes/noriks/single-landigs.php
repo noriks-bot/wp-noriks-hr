@@ -205,47 +205,121 @@ html.noriks-landings-pending #dynamic-cart-variations-container {
 .xoo-wsc-footer {
   padding: 5px 20px 25px 20px !important;
 }
+.xoo-wsc-container,
+.xoo-wsc-container *,
+.xoo-wsc-markup,
+.xoo-wsc-markup * {
+  font-family: "Roboto", sans-serif !important;
+}
 span.xoo-wsc-footer-txt {
   font-size: 70% !important;
 }
-.xoo-wsc-ft-btn-checkout {
-  background: #c00 !important;
-  background-color: #c00 !important;
-  color: #fff !important;
-  border-radius: 0 !important;
-  font-weight: 700 !important;
-  font-size: 17px !important;
-  font-family: "Roboto", sans-serif !important;
-  letter-spacing: 0.2px !important;
-  text-transform: none !important;
-  border: none !important;
-  height: auto !important;
-  padding: 18px 20px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin: 0 0 10px !important;
-  box-shadow: none !important;
-  transform: none !important;
-  filter: none !important;
-  transition: none !important;
-}
-.xoo-wsc-ft-btn-checkout:hover,
-.xoo-wsc-ft-btn-checkout:focus,
-.xoo-wsc-ft-btn-checkout:active,
-.xoo-wsc-ft-btn-checkout:visited {
-  background: #c00 !important;
-  background-color: #c00 !important;
-  color: #fff !important;
-}
-.xoo-wsc-ft-btn-checkout span {
-  color: #fff !important;
-}
 .xoo-wsc-ft-buttons-cont {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
   grid-template-columns: 1fr !important;
 }
 .xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn {
   width: 100% !important;
   box-sizing: border-box !important;
+  font-family: "Roboto", sans-serif !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout {
+  order: -1 !important;
+  background: #c00 !important;
+  background-color: #c00 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  font-family: "Roboto", sans-serif !important;
+  letter-spacing: 0.2px !important;
+  text-transform: none !important;
+  border: none !important;
+  height: auto !important;
+  padding: 22px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout:hover,
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout:focus,
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout:active,
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout:visited {
+  background: #c00 !important;
+  background-color: #c00 !important;
+  color: #fff !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-checkout span {
+  color: #fff !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+  border-radius: 4px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  font-size: 75% !important;
+  font-weight: 500 !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue:hover,
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue:focus,
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn-continue:active {
+  background: #f5f5f5 !important;
+  color: #000 !important;
+}
+.xoo-wsc-sp-container,
+.xoo-wsc-sp-product,
+.xoo-wsc-sp-right-col,
+.xoo-wsc-sp-title,
+.xoo-wsc-sp-price,
+.xoo-wsc-sp-heading {
+  font-family: "Roboto", sans-serif !important;
+}
+.xoo-wsc-sp-title {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+  color: #111 !important;
+}
+.xoo-wsc-sp-price {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #111 !important;
+}
+span.xoo-wsc-sp-atc a.button,
+span.xoo-wsc-sp-atc a.button:hover,
+span.xoo-wsc-sp-atc a.button:focus,
+span.xoo-wsc-sp-atc a.button:active,
+span.xoo-wsc-sp-atc a.add_to_cart_button,
+span.xoo-wsc-sp-atc a.add_to_cart_button:hover,
+span.xoo-wsc-sp-atc a.add_to_cart_button:focus,
+span.xoo-wsc-sp-atc a.add_to_cart_button:active,
+span.xoo-wsc-sp-atc a.noriks-upsell-btn,
+span.xoo-wsc-sp-atc a.noriks-upsell-btn:hover,
+span.xoo-wsc-sp-atc a.noriks-upsell-btn:focus,
+span.xoo-wsc-sp-atc a.noriks-upsell-btn:active {
+  background: #c00 !important;
+  background-color: #c00 !important;
+  color: #fff !important;
+  border: 1px solid #c00 !important;
+  border-radius: 4px !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  padding: 9px 12px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
 .xoo-wsc-sm-sales {
   display: none !important;
