@@ -669,8 +669,11 @@
     applyReviewFeedImages();
     rewriteAnchors();
     syncBuyButtons();
-
-    document.documentElement.classList.remove("noriks-landings-pending");
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        document.documentElement.classList.remove("noriks-landings-pending");
+      });
+    });
   }
 
   document.addEventListener("click", handleBuyClick, true);

@@ -166,7 +166,9 @@ if (!function_exists('noriks_get_landing_override_styles')) {
         return '<style id="noriks-landigs-overrides">
 html.noriks-landings-pending .sct-hero__dyn-properties,
 html.noriks-landings-pending .choose-qty,
-html.noriks-landings-pending #dynamic-cart-variations-container {
+html.noriks-landings-pending #dynamic-cart-variations-container,
+html.noriks-landings-pending .add-to-cart-button-container,
+html.noriks-landings-pending .related-product-wrapper {
   opacity: 0 !important;
   visibility: hidden !important;
 }
