@@ -63,6 +63,7 @@ $runtime_script = sprintf(
 
 $legacy_wc_fix_tag       = sprintf('<script src="%s/wc-atc-fix.js?v=1.0"></script>', get_template_directory_uri());
 $legacy_homepage_fix_tag = '<script src="/wp-content/themes/ortostep/homepage-atc-fix.js?v=1.0"></script>';
+$legacy_orto_wc_fix_tag  = '<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/themes/ortostep/wc-atc-fix.js?ver=1.0" id="wc-atc-fix-js"></script>';
 
 ob_start();
 include $source_path;
@@ -72,20 +73,30 @@ $markup = str_replace(
     array(
         'https://ortowp.noriks.com/product/stepease/',
         'https://ortowp.noriks.com/cart/',
+        'https://ortowp.noriks.com/kosarica/?add-more=',
         'https://ortowp.noriks.com/',
         $legacy_wc_fix_tag . "\n" . $legacy_homepage_fix_tag,
         $legacy_wc_fix_tag,
         $legacy_homepage_fix_tag,
+        $legacy_orto_wc_fix_tag,
     ),
     array(
         esc_url($landing_url),
         esc_url($cart_url),
+        esc_url($cart_url),
         esc_url($home_url),
-        $runtime_script,
-        $runtime_script,
+        '',
+        '',
+        '',
         '',
     ),
     $markup
 );
+
+if (strpos($markup, '</body>') !== false) {
+    $markup = str_replace('</body>', $runtime_script . "\n</body>", $markup);
+} else {
+    $markup .= $runtime_script;
+}
 
 echo $markup; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

@@ -79,6 +79,10 @@
       link.href = config.cartUrl;
     });
 
+    document.querySelectorAll("a[href='https://ortowp.noriks.com/kosarica/?add-more='], a.header__cart").forEach(function (link) {
+      link.href = config.cartUrl;
+    });
+
     document.querySelectorAll("a[href='https://ortowp.noriks.com/']").forEach(function (link) {
       link.href = config.homeUrl;
     });

@@ -1,15 +1,10 @@
-<?php
-/**
- * Pixel-perfect homepage - copy of stepease.eu/si/collection/t1/v1/lp1
- * All stepease.eu hrefs replaced with ortowp.noriks.com
- */
-?>
 <!DOCTYPE html><html lang="sl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta property="og:title" content="Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE">
-<meta property="og:description" content>
-<meta property="og:image" content="https://si.stepease.eu/app/uploads/2025/10/STEPEASE-3831127616552-EN-9__171025.jpg">
+<meta property="og:description" content="Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami
+">
+<meta property="og:image" content="https://ortowp.noriks.com/app/uploads/2025/10/STEPEASE-3831127616552-EN-9__171025.jpg">
 <script>window.noZensmooth = true</script>
 <link rel="shortcut icon" href="https://images.hs-plus.com/assets/shared-images/24326c2909d3e_favicon-stepease.svg" type="image/svg">
 <link href="https://images.hs-plus.com/assets/shared-images/24326c2909d3e_favicon-stepease.svg" rel="apple-touch-icon">
@@ -85,17 +80,8 @@ posthog.init('phc_xPISlrzmvdEyzol4A16rpFgFQkuK4rvXHziyZiRz9uT',{api_host:'https:
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE</title>
-
-        <style>
-
-        </style>
-    
-
-    <script>
-        const currentUrl = window.location.href;
-    
-    </script>
-<style>
+	<style>.quantity-banner.individual-countries {display: none;}</style>
+	<style>
 /* Auto shared resourse - "Cart CSS" */
 html, body {
   touch-action: manipulation;
@@ -1081,7 +1067,7 @@ body {
 hr {
 	margin-block: var(--padding);
 	border: 0;
-	border-top: .0938rem solid var(--clr-border);
+	border-top: 0.0625rem solid var(--clr-border);
 }
 
 /* other */
@@ -1180,15 +1166,12 @@ hr {
 	opacity: 0;
 	transition: right 0.3s ease, opacity 0.3s ease;
 }
-
-@media (hover: hover) {
-	.btn-arw:hover {
-		padding-right: 55px;
-	}
-	.btn-arw:hover::after {
-		right: 15px;
-		opacity: 1;
-	}
+.btn-arw:hover {
+	padding-right: 55px;
+}
+.btn-arw:hover::after {
+	right: 15px;
+	opacity: 1;
 }
 
 /* header */
@@ -1305,6 +1288,19 @@ hr {
 	}
 }
 
+/* @media (min-width: 48rem) {
+	.header__menu {
+		display: flex;
+		gap: 1.5rem;
+		max-height: none;
+		grid-row: 1;
+	}
+
+	.header__hamburger-icon {
+		display: none;
+	}
+} */
+
 @media (min-width: 64rem) {
 	.header__menu {
 		display: flex;
@@ -1394,171 +1390,6 @@ hr {
 	object-fit: contain;
 }
 .product-rating__txt {}
-
-
-/* section split */
-/* ========================================================================== */
-
-.sct-split {}
-.sct-split__content {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: var(--gap-xxl);
-	align-items: center;
-	justify-items: center
-}
-/* .sct-split__content.reverse {
-	grid-template-columns: 0.9fr 1.1fr;
-} */
-.sct-split__descr {
-	width: 100%;
-	margin-inline: auto;
-	/* text-wrap: balance; */
-	line-height: 1.65;
-}
-.sct-split__title {
-	font-size: var(--step-6_5);
-	/* max-width: 16ch; */
-	margin-inline: auto;
-	line-height: 1.2;
-}
-.sct-split__subtitle {
-	color: #121212cc;
-	font-weight: 700;
-}
-.sct-split__text {
-	font-size: var(--step-1);
-}
-.sct-split__list-1 {
-	list-style: none;
-	padding-left: 0;
-	line-height: 1.85;
-}
-.sct-split__list-1 li {
-	display: flex;
-	align-items: center;
-	gap: 1ch;
-}
-.sct-split__list-1 img {
-	width: 22px;
-}
-.sct-split__illustr {
-	width: 100%;
-	text-align: center;
-}
-.sct-split__illustr img {
-	width: 522px;
-	/* width: 100%; */
-	border-radius: var(--radius-big);
-}
-.sct-split__illustr video {
-	/* width: auto; */
-	width: 100%;
-	/* max-width: 100%; */
-	border-radius: var(--radius-big);
-}
-.sct-split__btn {
-	display: block;
-	width: 100%;
-	/* margin-inline: auto; */
-	margin-top: var(--gap-l);
-	margin-block: 1rem;
-}
-
-@media (max-width: 63.9375rem) {}
-@media (max-width: 47.9375rem) {
-	.sct-split__content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--gap-l);
-	}
-	/* .sct-split__content.reverse {
-		display: flex;
-		flex-direction: column-reverse;
-		gap: var(--gap-l);
-	} */
-}
-
-/* section standard */
-/* ========================================================================== */
-.sct-standard {}
-.sct-standard__content {
-
-}
-.sct-standard__descr {
-	text-align: center;
-	margin-inline: auto;
-	text-wrap: balance;
-}
-.sct-standard__title {
-	font-size: var(--step-5);
-	margin-inline: auto;
-	line-height: 1.2;
-	margin-bottom: var(--gap-xl);
-}
-.sct-standard__title.center {
-	text-align: center;
-}
-.sct-standard__text {
-	font-size: var(--step-1);
-	line-height: 1.75;
-}
-.sct-standard__card {
-	max-width: 45rem;
-	margin-inline: auto;
-}
-
-.sct-standard .acrd__body {
-	font-size: var(--step-1);
-}
-
-.sct-standard__btn {
-	display: inline-block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* section hero */
 /* ========================================================================== */
@@ -1893,9 +1724,12 @@ hr {
 	display: grid;
 	gap: var(--gap-xxs);
 	text-align: center;
+	justify-items: center;
 }
 .seller-benefits__item-icon {
 	font-size: 2.25rem;
+	width: 2.25rem;
+    height: 2.25rem;
 }
 .seller-benefits__item-text {
 	text-wrap: balance;
@@ -1958,6 +1792,1043 @@ hr {
 	align-items: center;
 	gap: var(--gap-xxs);
 }
+
+
+/* timer */
+/* ========================================================================== */
+.timer {
+	margin-block: var(--gap-m);
+}
+.timer-title {
+	display: block;
+	font-size: var(--step-1);
+	text-align: center;
+	margin-bottom: var(--gap-xxs);
+}
+.timer-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--gap-xxs);
+}
+.time-block {
+	text-align: center;
+}
+.time-block span {
+	display: block;
+	font-size: 2rem;
+	font-weight: bold;
+	color: white;
+	background-color: #ff5c00;
+	width: 3.75rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	border-radius: .625rem;
+	margin-bottom: .625rem;
+}
+.time-block p {
+	margin-block: 0;
+}
+
+/* section reviews */
+/* ========================================================================== */
+/* section reviews - slider */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+.hero-reviews.swiper {
+	height: auto;
+}
+.hero-reviews .swiper-wrapper {
+	height: auto;
+}
+.hero-reviews-pagination {
+	text-align: center;
+	margin-inline: auto;
+	transform: unset!important;
+	margin-top: .625rem;
+}
+.hero-reviews-pagination .swiper-pagination-bullet-active {
+	background: #000;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.hero-reviews {}
+.hero-reviews-item {
+	display: flex;
+	gap: var(--gap-m);
+	background-color: var(--bg-clr-two);
+	padding: .5rem .625rem;
+	border-radius: var(--radius-big);
+	cursor: grab;
+}
+.hero-reviews__photo {}
+.hero-reviews__photo-img {
+	width: 3.125rem!important;
+	height: 3.125rem!important;
+	border-radius: 50%;
+	max-width: unset!important;
+}
+.hero-reviews__descr {}
+.hero-reviews__descr-text {
+	font-size: var(--step--1);
+	text-align: left;
+}
+.hero-reviews__descr-text p {
+	margin-block: 0;
+}
+.hero-reviews__descr-author {
+	display: flex;
+	align-items: center;
+	gap: 0.5ch;
+	font-size: var(--step--2);
+	color: #797979;
+	border-top: 1px solid var(--clr-border-dark);
+	padding-top: .5rem;
+	margin-top: .5rem;
+}
+.hero-reviews__descr-rating {
+	height: .6875rem!important;
+	width: auto!important;
+}
+.hero-reviews__descr-verif {
+	height: .75rem!important;
+	width: auto!important;
+}
+
+/* product benefits */
+/* ========================================================================== */
+.product-benefits {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gap-xxs);
+	hyphens: auto;
+}
+.product-benefits__item {
+	display: grid;
+	gap: var(--gap-xxs);
+	text-align: center;
+}
+.product-benefits__item-icon {
+	width: 3rem;
+	margin-inline: auto;
+}
+.product-benefits__item-text {
+	font-style: var(--step-1);
+	font-weight: 800;
+	text-wrap: balance;
+}
+
+/* urgency texs */
+/* ========================================================================== */
+
+.urgency-text {
+	color: var(--clr-one);
+	border: .125rem solid var(--clr-one);
+	width: fit-content;
+	padding: 0.25em 0.5em;
+	margin-block: var(--gap-m);
+	margin-inline: auto;
+}
+
+/* section cure */
+/* ========================================================================== */
+
+.sct-cure {}
+.sct-cure__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap-xxl);
+	align-items: center;
+	justify-items: center
+}
+.sct-cure__descr {
+	text-align: center;
+	/* max-width: 42ch; */
+	margin-inline: auto;
+	text-wrap: balance;
+}
+.sct-cure__title {
+	font-size: var(--step-6_5);
+	/* max-width: 16ch; */
+	margin-inline: auto;
+	line-height: 1.2;
+}
+.sct-cure__text {
+	line-height: 1.75;
+}
+.sct-cure__illustr {
+	max-width: 575px;
+	width: 100%;
+}
+.sct-cure__illustr video {
+	/* width: auto; */
+	width: 100%;
+	/* max-width: 100%; */
+	border-radius: var(--radius-big);
+}
+.sct-cure__illustr img {
+	width: 100%;
+	border-radius: var(--radius-big);
+}
+
+@media (max-width: 63.9375rem) {}
+@media (max-width: 47.9375rem) {
+	.sct-cure__content {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: var(--gap-l);
+	}
+}
+
+/* section comparison */
+/* ========================================================================== */
+
+.sct-comparison {}
+.sct-comparison__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap-xxl);
+	align-items: center;
+	justify-items: center
+}
+.sct-comparison__illustr {}
+.sct-comparison__descr {
+	text-align: center;
+	margin-inline: auto;
+	text-wrap: balance;
+}
+.sct-comparison__title {
+	font-size: var(--step-6_5);
+	/* max-width: 16ch; */
+	margin-inline: auto;
+	line-height: 1.2;
+}
+.sct-comparison__text {
+	line-height: 1.75;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+.comparison-benefits {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap-xxs);
+	margin-top: var(--gap-xl);
+}
+.comparison-benefits__item {
+	display: grid;
+	gap: var(--gap-xxs);
+	text-align: center;
+	justify-items: center;
+}
+.comparison-benefits__item-icon {
+	color: var(--clr-one);
+	font-size: 2.75rem;
+	width: 2.75rem;
+	height: 2.75rem;
+}
+.comparison-benefits__item-text {
+	text-wrap: balance;
+	line-height: 1.75;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+.comparison {
+	max-width: 450px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.comparison__container {
+	position: relative;
+	display: flex;
+}
+.comparison__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left;
+}
+.comparison__text {
+	position: absolute;
+	top: 0;
+	font-weight: 600;
+	font-size: 14px;
+	color: var(--clr-white);
+	background: var(--clr-one);
+	padding: 3px 13px;
+}
+.comparison__text.before {
+	left: 0;
+}
+.comparison__text.after {
+	right: 0;
+}
+.comparison__image.before {
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+.comparison__range {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	cursor: col-resize;
+}
+
+.comparison__slider-line,
+.comparison__slider-icon {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+.comparison__slider-line {
+	position: absolute;
+	height: 100%;
+	width: 3px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.comparison__slider-line::before,
+.comparison__slider-line::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: calc(50% - 25px);
+	background: var(--clr-black);
+}
+.comparison__slider-line::before {
+	top: 0;
+}
+.comparison__slider-line::after {
+	bottom: 0;
+}
+.comparison__slider-icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 50px;
+	width: 50px;
+	border: 3px solid var(--clr-black);
+	border-radius: 50%;
+	background: #ffffff33;
+	backdrop-filter: blur(2px);
+	transform: translate(-50%, -50%);
+}
+.comparison__slider-icon::before,
+.comparison__slider-icon::after {
+	position: absolute;
+	content: "";
+	top: 50%;
+	border: 10px solid transparent;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.comparison__slider-icon::before {
+	left: 30%;
+	border-left-color: var(--clr-black);
+}
+.comparison__slider-icon::after {
+	left: 70%;
+	border-top-color: var(--clr-black);
+}
+
+@media (max-width: 63.9375rem) {}
+@media (max-width: 47.9375rem) {
+	.sct-comparison__content {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: var(--gap-l);
+	}
+	.comparison-benefits {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* section purposes */
+/* ========================================================================== */
+.sct-purposes {
+	padding-inline: 0;
+}
+.sct-purposes__content {}
+.sct-purposes__title {
+	font-size: var(--step-6_5);
+	text-align: center;
+	margin-inline: auto;
+	line-height: 1.2;
+	margin-bottom: var(--gap-xl);
+}
+.purposes-slider {}
+.purposes-slider__item {
+	border-radius: var(--radius-big);
+	overflow: hidden;
+	text-align: center;
+	cursor: grab;
+}
+.purposes-slider__item img {}
+.purposes-slider__item span {
+	display: block;
+	background-color: #000;
+	color: #fff;
+	padding: 0.625rem;
+	font-weight: 700;
+}
+.purposes-slider-pagination {}
+
+.purposes-slider .swiper-button-next:after,
+.purposes-slider .swiper-button-prev:after {
+	font-size: 1rem;
+	color: #fff;
+	background-color: #0000006e;
+	padding: 0.5rem 0.75rem;
+	border-radius: 50em;
+}
+
+.purposes-slider-pagination {
+	text-align: center;
+	margin-inline: auto;
+	transform: unset!important;
+	margin-top: .625rem;
+}
+.sct-purposes .swiper-pagination-bullet-active {
+	background: #000;
+}
+
+/* section loockat */
+/* ========================================================================== */
+.sct-loockat {
+	--swiper-navigation-sides-offset: -25px;
+	--swiper-theme-color: #000;
+	overflow-x: hidden;
+}
+.sct-loockat__content {
+	position: relative;
+}
+.sct-loockat__title {
+	font-size: var(--step-6_5);
+	text-align: center;
+	line-height: 1.2;
+}
+.sct-loockat__text {
+	text-align: center;
+	letter-spacing: 0.03em;
+	line-height: 1.75;
+}
+
+.loockat-slider__wrapper {
+	position: relative;
+	margin-bottom: 3rem;
+}
+
+.loockat-slider,
+.loockat-video-slider {
+	max-width: calc(100% - 1.875rem);
+}
+
+.loockat-slider__item,
+.loockat-video-slider__item {
+	cursor: grab;
+}
+.loockat-video-slider__item {
+	border-radius: var(--radius-big);
+}
+
+.loockat-card {
+	background-color: var(--bg-clr-two);
+	padding: .5rem 1.25rem;
+	border-radius: var(--radius-big);
+	overflow: hidden;
+	height: 100%;
+}
+.loockat-card__photo {
+	margin-top: -0.5rem;
+	margin-inline: -1.25rem;
+	position: relative;
+}
+.loockat-card__photo-img {}
+.loockat-card__photo-icon-wrapper {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	height: 3.125rem;
+	width: 3.125rem;
+	background-color: var(--clr-one);
+	border-radius: 50em;
+	padding: .75rem;
+	position: absolute;
+	bottom: -1.5625rem;
+	right: 1.5rem;
+}
+.loockat-card__photo-icon {
+}
+.loockat-card__info {
+	display: grid;
+	gap: var(--gap-xxs);
+	margin-top: var(--gap-xs);
+}
+.loockat-card__rating-img {
+	display: block;
+	margin-inline: auto;
+	height: 1.25rem;
+	width: auto;
+}
+.loockat-card__title {
+	text-align: center;
+}
+.loockat-card__text {
+	margin-block: 0;
+	text-align: center;
+	text-wrap: balance;
+}
+.loockat-card__name {
+	padding-top: var(--gap-xxs);
+	border-top: 0.0625rem solid var(--clr-border-dark);
+	text-align: center;
+}
+
+.sct-loockat .swiper-wrapper {
+	box-sizing: border-box;
+}
+.sct-loockat .swiper-button-next:after,
+.sct-loockat .swiper-button-prev:after {
+	font-size: 1.5rem;
+}
+
+.loockat-slider-pagination,
+.loockat-video-pagination {
+	text-align: center;
+	margin-inline: auto;
+	transform: unset!important;
+	margin-top: .625rem;
+}
+.sct-loockat .swiper-pagination-bullet-active {
+	background: #000;
+}
+
+@media (max-width: 63.9375rem) {
+	.sct-loockat {
+		--swiper-navigation-sides-offset: 0;
+	}
+	.loockat-slider,
+	.loockat-video-slider {
+		max-width: 100%;
+	}
+	.sct-loockat .swiper-button-next,
+	.sct-loockat .swiper-button-prev {
+		top: unset;
+		margin-top: 0.75rem;
+	}
+	.loockat-slider-pagination,
+	.loockat-video-pagination {
+		margin-top: 1.5rem;
+	}
+}
+@media (max-width: 47.9375rem) {}
+
+/* section reviews */
+/* ========================================================================== */
+.sct-results {}
+.sct-results__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap-xxl);
+	align-items: center;
+	justify-items: center
+}
+.sct-results__descr {
+	text-align: center;
+	/* max-width: 42ch; */
+	margin-inline: auto;
+	text-wrap: balance;
+}
+.sct-results__title {
+	font-size: var(--step-6_5);
+	/* max-width: 16ch; */
+	margin-inline: auto;
+	line-height: 1.2;
+}
+.sct-results__text {
+	line-height: 1.75;
+}
+.sct-results__illustr {}
+
+.results {}
+.results__rows-container {
+	margin-bottom: 1rem;
+}
+.results__percentage {
+	--border-width: .45rem;
+	width: 4.375rem;
+	height: 4.375rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	text-align: center;
+	border-radius: 50%;
+	position: relative;
+	z-index: 0;
+}
+.results__percentage:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	z-index: -2;
+	background: conic-gradient(from 0deg at 50% 50%, #ff5b00 0%, #ff5b00 var(--percentage), #fff var(--percentage), #fff 100%);
+}
+.results__percentage:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: var(--border-width);
+	left: var(--border-width);
+	bottom: var(--border-width);
+	right: var(--border-width);
+	border-radius: 50%;
+	z-index: -1;
+	background: #fff;
+}
+.results__percentage p {
+	margin: 0;
+	color: #ff5b00;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+.results__row {
+	display: flex;
+	align-items: center;
+	gap: var(--gap-s);
+	padding: 1rem 0;
+	border-bottom: 2px solid var(--clr-border);
+}
+.results__row:first-of-type {
+	border-top: 2px solid var(--clr-border);
+}
+.results__text p {
+	margin: 0;
+	/* text-wrap: balance; */
+}
+.results__caption p {
+	margin: 0;
+	font-size: var(--step--2)
+}
+
+.results__btn {
+	display: block;
+	margin-inline: auto;
+	margin-top: var(--gap-l);
+}
+
+@media (max-width: 63.9375rem) {}
+@media (max-width: 47.9375rem) {
+	.sct-results__content {
+		grid-template-columns: 1fr;
+		gap: var(--gap-l);
+	}
+}
+
+/* section special */
+/* ========================================================================== */
+.sct-special {}
+.sct-special__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap-xxl);
+	align-items: center;
+	justify-items: center
+}
+.sct-special__descr {
+	text-align: center;
+	margin-inline: auto;
+	text-wrap: balance;
+}
+.sct-special__title {
+	font-size: var(--step-6_5);
+	max-width: 16ch;
+	margin-inline: auto;
+	line-height: 1.2;
+}
+.sct-special__text {
+	line-height: 1.75;
+}
+.sct-special__table {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 31.25rem;
+}
+
+@media (max-width: 63.9375rem) {}
+@media (max-width: 47.9375rem) {
+	.sct-special__content {
+		grid-template-columns: 1fr;
+		gap: var(--gap-l);
+	}
+	.sct-special__table {
+		justify-content: initial;
+		overflow-x: auto;
+		padding-bottom: 0.15rem;
+		padding-right: 0.15rem;
+	}
+}
+
+/* comparation table */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+.compar-table {
+	width: 100%;
+	--border-radius: 2rem;
+	flex-grow: 1;
+	border-spacing: 0;
+}
+.compar-table th {
+	padding: .5rem .75rem;
+	line-height: 1.3;
+}
+.compar-table thead {
+	z-index: 1;
+}
+.compar-table tbody {
+	border-radius: var(--border-radius);
+}
+.compar-table td {
+	--cell-bottom-separator-thickness: -.1rem;
+	--cell-separator-opacity: 0;
+	--cell-overlay-opacity: 0;
+	--border-shadow-offset: -.1rem 0 0 0;
+	/* --outer-box-shadow: .3rem .3rem .8rem rgba(0, 0, 0, .15), var(--border-shadow-offset) rgba(0, 0, 0, .08); */
+	--outer-box-shadow: .1rem .1rem .15rem rgba(0, 0, 0, .04), var(--border-shadow-offset) rgba(0, 0, 0, .03);
+	padding: 0.875rem 1.5rem;
+	text-align: center;
+	box-shadow: inset 0 var(--cell-bottom-separator-thickness) 0 0 rgba(255, 255, 255, var(--cell-separator-opacity)), inset 0 0 0 6rem rgba(255, 255, 255, var(--cell-overlay-opacity)), var(--outer-box-shadow);
+	position: relative;
+}
+.compar-table tr:not(:last-of-type) .highlighted-cell {--cell-separator-opacity: 0.0;}
+.compar-table tr:not(:last-of-type) .regular-cell {--cell-separator-opacity: 0.1;}
+.compar-table tr:nth-child(2n) .highlighted-cell {--cell-overlay-opacity: 0.0;}
+.compar-table tr:nth-child(2n) .regular-cell {--cell-overlay-opacity: 0.0;}
+
+.compar-table td:last-of-type {--border-shadow-offset: .1rem 0 0 0;}
+.compar-table tbody tr:first-of-type td {--border-shadow-offset: 0 -.1rem 0 0;}
+.compar-table tbody tr:last-of-type td {--border-shadow-offset: 0 .1rem 0 0;}
+
+.compar-table tbody tr:first-of-type td:first-child {
+	border-radius: var(--border-radius) 0 0 0;
+	--border-shadow-offset: -.1rem -.1rem 0 0;
+}
+.compar-table tbody tr:last-of-type td:first-child {
+	border-radius: 0 0 0 var(--border-radius);
+	--border-shadow-offset: -.1rem .1rem 0 0;
+}
+.compar-table tbody tr:first-of-type td:last-child {
+	border-radius: 0 var(--border-radius) 0 0;
+	--border-shadow-offset: .1rem -.1rem 0 0;
+}
+.compar-table tbody tr:last-of-type td:last-child {
+	border-radius: 0 0 var(--border-radius) 0;
+	--border-shadow-offset: .1rem .1rem 0 0;
+}
+.compar-table tbody td:not(.compar-table__row-name) {
+	padding: 0.75rem 1rem;
+}
+.compar-table__row-name {
+	font-size: var(--step-1);
+	color: #fff;
+	background-color: #ff5b00;
+}
+.compar-table__icon {
+	font-size: 1.25rem;
+	width: 1em;
+	height: 1em;
+	margin: auto;
+	border-radius: 50%;
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.compar-table__icon svg {
+	color: var(--icon-color);
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.compar-table .compar-table__row-name {
+	margin: 0;
+}
+
+/* section experts */
+/* ========================================================================== */
+.sct-experts {}
+.sct-experts__content {
+
+}
+.sct-experts__descr {
+	text-align: center;
+	margin-inline: auto;
+	text-wrap: balance;
+}
+.sct-experts__title {
+	font-size: var(--step-6_5);
+	margin-inline: auto;
+	line-height: 1.2;
+	margin-bottom: var(--gap-xl);
+}
+.sct-experts__text {
+	line-height: 1.75;
+}
+.sct-experts__card {
+	max-width: 45rem;
+	margin-inline: auto;
+}
+
+/* section ebook */
+/* ========================================================================== */
+.sct-ebook {
+	display: block;
+}
+
+.sct-ebook__top {
+	display: flex;
+	flex-direction: column;
+}
+
+.sct-ebook__top-image_box {
+	position: relative;
+	width: 100%;
+}
+
+.sct-ebook__top-image {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 100.0%;
+}
+
+.sct-ebook__top-image img{
+	display: block;
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.sct-ebook__title {
+	font-size: var(--step-6_5);
+	margin-inline: auto;
+	line-height: 1.2;
+	margin-bottom: var(--gap-xl);
+}
+
+.sct-ebook__text {
+	line-height: 1.8;
+	margin-block: 0;
+}
+
+.sct-ebook__card {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 320px;
+	background: #ffffff;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+	border-radius: 10px;
+	padding-bottom: 20px;
+	margin: 0 auto;
+}
+
+.sct-ebook__card-badge {
+	position: absolute;
+	width: max-content;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #ffffffe6;
+	background: #000000;
+	border-radius: 4px;
+	padding: 0 9px;
+	margin: 0;
+	z-index: 1;
+}
+
+.sct-ebook__card-title_box {
+	overflow: hidden;
+	border-radius: 10px 10px 0 0;
+	padding-top: 15px;
+	margin: 0 -3px;
+	z-index: 0;
+}
+
+.sct-ebook__card-title {
+	position: relative;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	padding: 0 20px 30px;
+	margin: 0 0 15px;
+}
+
+.sct-ebook__card-title::before {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+	width: 800px;
+	height: 800px;
+	background: rgba(255, 91, 0, 1);
+	box-shadow: 0 11px 10px -7.5px rgba(0, 0, 0, .2);
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.sct-ebook__card-text {
+	font-size: 12px;
+	text-align: center;
+	text-wrap: balance;
+	padding: 0 20px;
+	margin: 0 0 15px;
+}
+
+.sct-ebook__card-text span {
+	font-weight: 850;
+	font-size: 25px;
+	margin-right: 5px;
+}
+
+.sct-ebook__card-list {
+	list-style: none;
+	padding: 0 20px;
+	margin: 0 0 10px;
+}
+
+.sct-ebook__card-item {
+	display: flex;
+	align-items: flex-start;
+	line-height: 21px;
+	margin-bottom: 10px;
+}
+
+.sct-ebook__card-item::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	margin: 3px 8px 0 0;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.45 25.43' fill='%23ff5b00'%3E%3Cpolygon points='25.45 0 24.06 0 9.5 15.27 2.12 10.24 0 12.55 9.28 25.43 25.45 2.48 25.45 0'%3E%3C/polygon%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	flex-shrink: 0;
+}
+
+.btn-arw.sct-ebook__btn {
+	width: 100%;
+	font-weight: 800;
+	margin: 0 20px;
+}
+
+.btn-arw.sct-ebook__btn:hover {
+	padding-right: 0;
+}
+
+.btn-arw.sct-ebook__btn span {
+	transition: padding 0.3s ease;
+}
+
+.btn-arw.sct-ebook__btn:hover span {
+	padding-right: 55px;
+}
+
+@media (min-width: 48rem) {
+	.sct-ebook__top {
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+
+	.sct-ebook__top-image_box {
+		width: 35%;
+		align-self: center;
+	}
+
+	.sct-ebook__top-content {
+		width: 65%;
+		max-width: 100%;
+		padding: 30px;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: 990px) {
+	.sct-ebook__top-content {
+		padding: 60px 0 70px 70px;
+	}
+}
+
+@media (max-width: 47.9375rem) {
+	.sct-ebook__text {
+		text-align: center;
+	}
+
+	.sct-ebook__top-image_box {
+		max-width: 400px;
+    margin: 10px auto 30px;
+	}
+
+	.sct-ebook__top-content {
+		text-align: center;
+		margin: 0 0 55px;
+	}
+}
+
+/* section help */
+/* ========================================================================== */
+.sct-help {}
+.sct-help__content {
+
+}
+.sct-help__descr {
+	text-align: center;
+	margin-inline: auto;
+	text-wrap: balance;
+}
+.sct-help__title {
+	font-size: var(--step-6_5);
+	margin-inline: auto;
+	line-height: 1.2;
+	margin-bottom: var(--gap-xl);
+}
+.sct-help__text {
+	line-height: 1.75;
+}
+.sct-help__card {
+	max-width: 45rem;
+	margin-inline: auto;
+}
+
+/* section reviews */
+/* ========================================================================== */
+.sct-reviews {}
+.sct-reviews__title {
+	font-size: var(--step-5);
+	text-align: center;
+}
+.sct-reviews__content {}
 
 /* link (non-underlined) animation */
 /* ========================================================================== */
@@ -2211,6 +3082,81 @@ hr {
 	width: 3.9375rem;
 }
 
+/* bottom sticky bar */
+/* ========================================================================== */
+.sct-bar {
+	padding-inline: var(--padding);
+	padding-block: var(--gap-xxs);
+}
+.bottom-sticky-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	transform: translateY(100%);
+	opacity: 0;
+	transition: transform var(--transition-time, 0.25s) ease, opacity var(--transition-time, 0.25s) ease;
+	z-index: 999;
+
+	background-color: #fff;
+	box-shadow: 0 -0.25rem 1.25rem #0000000a;
+	border-top: .0625rem solid #9b969669;
+}
+.bottom-sticky-bar.visible {
+	transform: translateY(0);
+	opacity: 1;
+}
+.sct-bar__content {
+	display: grid;
+	grid-template-columns: auto minmax(auto, 21.875rem);
+	justify-content: space-between;
+	gap: 0.25em var(--gap-xxs);
+}
+.sct-bar__title {
+	font-weight: 700;
+	font-size: var(--step-2);
+	text-align: left;
+}
+.sct-bar__price {
+	display: flex;
+	align-items: center;
+	gap: var(--gap-xxs);
+	font-weight: 700;
+	font-size: var(--step-1);
+}
+.sct-bar__price-rp {
+	color: var(--clr-one, #ed2e38);
+}
+.sct-bar__price-op {
+	/* opacity: 0.5; */
+	/* font-size: 0.875em; */
+}
+.sct-bar__price-d {
+	display: flex;
+	gap: 1ch;
+	font-size: 0.75em;
+	color: #fff;
+	background-color: var(--clr-one);
+	padding: 0.25em 0.75em;
+	border-radius: var(--radius);
+}
+
+.sct-bar__btn {
+	font-size: var(--step-2);
+	grid-column: 2 / 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	max-width: unset;
+	flex-grow: 0;
+}
+
+/* @media (min-width: 64rem) {
+	.sct-bar {
+		display: none;
+	}
+} */
+
 .footer {
 	padding-bottom: calc(var(--padding) + var(--sticky-bar-height));
 }
@@ -2235,8 +3181,10 @@ hr {
 		gap: 0.35rem var(--gap-l);
 	}
 	.sct-bar__btn {
-		font-size: var(--step-0);
 		flex-grow: 1;
+		padding: 0.50em;
+		font-size: var(--step-4);
+		font-weight: 850;
 	}
 }
 
@@ -2251,8 +3199,6 @@ hr {
 /* fixes */
 /* ========================================================================== */
 @media (max-width: 63.9375rem) {
-	.sct-split__title,
-	.sct-standard__title,
 	.sct-hero__title,
 	.sct-cure__title,
 	.sct-comparison__title,
@@ -2261,33 +3207,31 @@ hr {
 	.sct-results__title,
 	.sct-special__title,
 	.sct-experts__title,
+	.sct-ebook__title,
 	.sct-help__title {
 		font-size: var(--step-6);
 	}
 }
-@media (max-width: 47.9375rem) {
-	.sct-1 .sct-split__descr {
-		text-align: center;
-		margin-inline: auto;
-	}
-	.sct-1 .sct-split__list-1 {
-		display: inline-block;
-		margin-inline: auto;
+
+@media (max-width: 538px) {
+	h2,
+	.seller-benefits,
+	.comparison-benefits {
+		hyphens: auto;
 	}
 
-	.sct-3 .sct-split__descr {
-		text-align: center;
-		margin-inline: auto;
+	.loockat-slider__wrapper.video {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 
-	.sct-4 .sct-split__descr {
-		text-align: center;
-		margin-inline: auto;
+	.loockat-slider__wrapper.image {
+		margin: 0 -14px;
 	}
-}
 
-.section:last-of-type {
-	padding-bottom: calc(var(--padding) * 1.75 * 2);
+	.loockat-video-slider__item {
+		margin: 20px 0;
+	}
 }</style><style>.phone-or-mesenger {
 	justify-content: center;
 }
@@ -2907,6 +3851,7 @@ hr {
   gap: 1ch;
   font-weight: 750;
   line-height: 1;
+	flex-wrap: wrap;
 }
 [data-tpl="stps"] .dynamic-cart-reduced-price-container {
   color: #ff5b00;
@@ -2983,11 +3928,11 @@ hr {
   position: absolute;
   top: -10%;
   right: -1ch;
-  transform: rotate(3deg);
+  transform: rotate(2deg);
   width: auto;
   color: #fff;
   background-color: #000;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   padding: 0.15em 0.5em;
   border-radius: 0.25em;
@@ -3004,8 +3949,7 @@ hr {
 [data-tpl="stps"] .choose-qty .qty-item {
   display: flex;
   cursor: pointer;
-  padding: 0.75em 0.75em;
-  padding: 1.125rem;
+  padding: .5rem 1.125rem;
   border-radius: 0.60em;
   border: 2px solid #FFCDBA;
   background-color: #FFFCFB;
@@ -3014,12 +3958,12 @@ hr {
 [data-tpl="stps"] .choose-qty input {
   display: none;
 }
-@media (hover: hover) {
+/* @media (hover: hover) {
 	[data-tpl="stps"] .choose-qty .qty-item:hover {
 		border: 2px solid #ff5b00;
 		background-color: #FFEEE8;
 	}
-}
+} */
 [data-tpl="stps"] .choose-qty input:checked ~ .qty-item {
   border: 2px solid #ff5b00;
   background-color: #FFEEE8;
@@ -3029,6 +3973,7 @@ hr {
   width: 100%;
   display: flex;
   justify-content: space-between;
+	gap: 0.25rem;
 }
 /* --- quantity left column */
 [data-tpl="stps"] .quantity-title {
@@ -3036,6 +3981,7 @@ hr {
   display: flex;
   align-items: center;
   gap: 0.5ch;
+	flex-wrap: wrap;
 }
 [data-tpl="stps"] .quantity-title .savebanner {
   font-size: 10px;
@@ -3045,9 +3991,14 @@ hr {
   background-color: #ff5b00;
   padding: 0.3em 0.5em;
   border-radius: 0.5em;
+	text-wrap: nowrap;
 }
 [data-tpl="stps"] .quantity-subtitle {
   font-size: 14px;
+	text-transform: lowercase;
+}
+[data-tpl="stps"] .quantity-subtitle span {
+  text-wrap: nowrap;
 }
 
 [data-tpl="stps"] .qty-item-left {
@@ -3090,10 +4041,12 @@ hr {
   font-weight: 800;
   color: #ff5b00;
   font-size: 1rem;
+	text-wrap: nowrap;
 }
 [data-tpl="stps"] .original-price {
   text-decoration: line-through;
   font-size: 14px;
+	text-wrap: nowrap;
 }
 
 /* --- checkout button */
@@ -3149,1309 +4102,378 @@ hr {
 
 /* ==== other ==== */
 [data-tpl="stps"] [id="5ed63a5973bd244d330178b7-60bf53402b27ec52a2a830c6-0"] {
-  background: #ff5b00;
+  background: #ff5b00!important;
 }
 
 [data-tpl="stps"] .modal-size {
 	margin-block: 1rem;
 }
-</style></head>
-<body data-tpl="stps" data-page="collection"><!-- Google Tag Manager (noscript) -->
+
+/* guarantees */
+/* ========================================================================== */
+.sct-guarantees {
+	background-color: #eee;
+	padding-block: 0.5rem;
+}
+
+.guarantees__list {
+	display: flex!important;
+	justify-content: space-between;
+	gap: var(--gap-xs) var(--gap-m);
+	padding-left: 0;
+	margin: 0;
+}
+.guarantees__item {
+	display: flex;
+	align-items: center;
+	column-gap: var(--gap-xs);
+	font-size: var(--step-0);
+}
+.guarantees__item img {
+	width: 2.25rem;
+	height: 2.25rem;
+}
+@media screen and (max-width: 539px){
+	.guarantees__item {
+		font-size: var(--step--1);
+	}
+	.guarantees__item img {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.free-ebook {
+	display: inline;
+	text-transform: none;
+}</style>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>STEPEASE - OrthoStep</title>
+	<link rel="canonical" href="https://ortowp.noriks.com/product/stepease/" />
+	<meta property="og:locale" content="sl_SI" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="STEPEASE - OrthoStep" />
+	<meta property="og:description" content="✔ Takojšnje olajšanje ✔ Klinično preizkušeno ✔ Priporočajo podiatri" />
+	<meta property="og:url" content="https://ortowp.noriks.com/product/stepease/" />
+	<meta property="og:site_name" content="OrthoStep" />
+	<meta property="article:modified_time" content="2026-02-28T18:43:16+00:00" />
+	<meta property="og:image" content="https://ortowp.noriks.com/wp-content/uploads/2026/02/84d4e066ce333_stepease_PP-EN_-_si-2.jpg" />
+	<meta property="og:image:width" content="800" />
+	<meta property="og:image:height" content="800" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://ortowp.noriks.com/product/stepease/","url":"https://ortowp.noriks.com/product/stepease/","name":"STEPEASE - OrthoStep","isPartOf":{"@id":"https://ortowp.noriks.com/#website"},"primaryImageOfPage":{"@id":"https://ortowp.noriks.com/product/stepease/#primaryimage"},"image":{"@id":"https://ortowp.noriks.com/product/stepease/#primaryimage"},"thumbnailUrl":"https://ortowp.noriks.com/wp-content/uploads/2026/02/84d4e066ce333_stepease_PP-EN_-_si-2.jpg","datePublished":"2026-02-28T18:43:14+00:00","dateModified":"2026-02-28T18:43:16+00:00","breadcrumb":{"@id":"https://ortowp.noriks.com/product/stepease/#breadcrumb"},"inLanguage":"sl-SI","potentialAction":[{"@type":"ReadAction","target":["https://ortowp.noriks.com/product/stepease/"]}]},{"@type":"ImageObject","inLanguage":"sl-SI","@id":"https://ortowp.noriks.com/product/stepease/#primaryimage","url":"https://ortowp.noriks.com/wp-content/uploads/2026/02/84d4e066ce333_stepease_PP-EN_-_si-2.jpg","contentUrl":"https://ortowp.noriks.com/wp-content/uploads/2026/02/84d4e066ce333_stepease_PP-EN_-_si-2.jpg","width":800,"height":800},{"@type":"BreadcrumbList","@id":"https://ortowp.noriks.com/product/stepease/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ortowp.noriks.com/"},{"@type":"ListItem","position":2,"name":"Shop","item":"https://ortowp.noriks.com/shop/"},{"@type":"ListItem","position":3,"name":"STEPEASE"}]},{"@type":"WebSite","@id":"https://ortowp.noriks.com/#website","url":"https://ortowp.noriks.com/","name":"OrthoStep","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ortowp.noriks.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"sl-SI"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="OrthoStep &raquo; STEPEASE Vir komentarjev" href="https://ortowp.noriks.com/product/stepease/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://ortowp.noriks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fortowp.noriks.com%2Fproduct%2Fstepease%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://ortowp.noriks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fortowp.noriks.com%2Fproduct%2Fstepease%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.5.3" id="wc-jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"Prika\u017ei ko\u0161arico","cart_url":"https://ortowp.noriks.com/kosarica/","is_cart":"","cart_redirect_after_add":"yes"};
+//# sourceURL=wc-add-to-cart-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.5.3" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-single-product-js-extra">
+/* <![CDATA[ */
+var wc_single_product_params = {"i18n_required_rating_text":"Ocenite izdelek","i18n_rating_options":["1 od 5 zvezdic","2 od 5 zvezdic","3 od 5 zvezdic","4 od 5 zvezdic","5 od 5 zvezdic"],"i18n_product_gallery_trigger_text":"Ogled galerije slik v celozaslonskem na\u010dinu","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"","zoom_options":[],"photoswipe_enabled":"","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":""};
+//# sourceURL=wc-single-product-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=10.5.3" id="wc-single-product-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.5.3" id="wc-js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Prika\u017ei geslo","i18n_password_hide":"Skrij geslo"};
+//# sourceURL=woocommerce-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.5.3" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://ortowp.noriks.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://ortowp.noriks.com/wp-json/wp/v2/product/19" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ortowp.noriks.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<meta name="generator" content="WooCommerce 10.5.3" />
+<link rel='shortlink' href='https://ortowp.noriks.com/?p=19' />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+</head><body data-tpl="stps" data-page="product"><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXS52LF"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --> 
+<!-- End Google Tag Manager (noscript) --> <style>
+    .free-shipping-2, .free-shipping, .free-ebook{
+        padding:1px 5px;
+        font-size:12px;
+        border-radius: 10px;
+    }
+    .free-shipping-2, .free-shipping{
+        background-color: #FFAD82;
+    }
 
-<div style="display: none;">        
-    <form class="hs-cf" id="checkout-form">
-        <div class="custom_qty">
+    .free-ebook{
+        background-color: #E1F4E8;
+        border-color: #B7E1C6;
+        color: #1F7A3F;
+        
+    }
+    .quantity-subtitle{
+        line-height:25px;
+    }
+</style>
 
-        
-        <div class="quantity scroll-target"><p>Izberite koli&#x10D;ino</p><span class="banner-save">IN PRIHRANI</span></div>
-        <span class="hs-rp-txt-top">Ve&#x10D;ja kot je koli&#x10D;ina, <strong>ve&#x10D;ji je popust na kos!</strong></span>
-        <table>
-            <tbody><tr>
-                <td class="product_price_basic" id="0-quantity-1-td">
-                    <button type="button" class="quantity_button active_quantity_button" id="0-quantity-1" name="0-quantity" value="1" ontouchstart="changeQuantity(0,1)" onclick="changeQuantityAndSelect(0,1)" checked="checked" style="cursor:pointer">
-                        <div class="quantity-button-container">
-                            
-                            <label class="qty-label" for="0-quantity-1"><strong>1x <br><span class="dp-rp1 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">18.99</span>&#x20AC;</strong><span class="quant-piece">/kos.</span></label>
-                        </div>
-                    </button>
-                </td>
-                <td class="product_price_basic" id="0-quantity-2-td">
-                    <button type="button" class="quantity_button" id="0-quantity-2" name="0-quantity" value="2" ontouchstart="changeQuantity(0,2)" onclick="changeQuantityAndSelect(0,2)" style="cursor:pointer">
-                    <div class="discount_banner" style>-22%</div> 
-                        <div class="quantity-button-container">
-                            <div class="quantity-top-banner best-offer-banner"><span class="customer-favorite">NAJLJUB&#x160;A IZBIRA</span></div>
-                            <label class="qty-label" for="0-quantity-2"><strong>2x <br><span class="dp-rp2 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">14.81</span>&#x20AC;</strong><span class="quant-piece">/kos.</span></label>
-                        </div>
-                    </button>
-                </td>
-                <td class="product_price_basic" id="0-quantity-3-td">
-                    <button type="button" class="quantity_button" id="0-quantity-3" name="0-quantity" value="3" ontouchstart="changeQuantity(0,3)" onclick="changeQuantityAndSelect(0,3)" style="cursor:pointer">                   
-                    <div class="discount_banner" style>-27%</div> 
-                        <div class="quantity-button-container">
-                            
-                            <label class="qty-label" for="0-quantity-3"><strong>3x <br><span class="dp-rp3 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">13.86</span>&#x20AC;</strong><span class="quant-piece">/kos.</span></label>
-                        </div>
-                    </button>
-                </td>
-            </tr>
-                            </tbody></table>
+        <style>
 
-        
-        
-        
-      <table id="custom_qty_variation" style="display:none">
-      <tbody>
-   
-        <tr class="custom_qty_tr">
-          <td class="custom_qty_product">
-          <div id="0-qty1" class="hs-cf-product-wrapper hs-cf-product-border">
-            <div>Izdelek  1:</div>
-      
-                      <!-- <div class="hs-cf-outofstock" id="0-hs-cf-outofstock-1" style="display:none;">Ni na zalogi</div> -->
-                  </div>
-              </td>
-          </tr>
-      
-        <tr class="custom_qty_tr">
-          <td class="custom_qty_product">
-          <div id="0-qty2" style="display:none" class="hs-cf-product-wrapper hs-cf-product-border">
-            <div>Izdelek  2:</div>
-      
-                      <!-- <div class="hs-cf-outofstock" id="0-hs-cf-outofstock-2" style="display:none;">Ni na zalogi</div> -->
-                  </div>
-              </td>
-          </tr>
-      
-        <tr class="custom_qty_tr">
-          <td class="custom_qty_product">
-          <div id="0-qty3" style="display:none" class="hs-cf-product-wrapper hs-cf-product-border">
-            <div>Izdelek  3:</div>
-      
-                      <!-- <div class="hs-cf-outofstock" id="0-hs-cf-outofstock-3" style="display:none;">Ni na zalogi</div> -->
-                  </div>
-              </td>
-          </tr>
-      
-           </tbody>
-       </table>
-   
+        </style>
+    
 
-        
-    <div class="hs-cf-row">
-        <div class="hs-cf-price-left">
-            <div class="hs-cf-pl-top">
-                
-            </div>
-            <div class="hs-cf-pl-bottom">
-                <div id="0-hs-cf-discount-qty1">
-                    -<span class="dp-d1 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">49</span>%
-                </div>
-                <div id="0-hs-cf-discount-qty2" style="display:none">
-                    -<span class="dp-d2 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">60</span>%
-                </div>
-                <div id="0-hs-cf-discount-qty3" style="display:none">
-                    -<span class="dp-d3 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">62</span>%
-                </div>
-                <div id="0-hs-cf-discount-qty4" style="display:none">
-                    -<span class="dp-d4 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">62</span>%
-                </div>
-                <div id="0-hs-cf-discount-qty5" style="display:none">
-                    -<span class="dp-d5 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">73</span>%
-                </div>
-                <div id="0-hs-cf-discount-qtyx" style="display:none">
-                    -<span class="dp-dx dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">73</span>%
-                </div>
-              
-            </div>
-        </div>
-        <div class="hs-cf-price-right">
-            <div id="0-hs-cf-price-qty1" class="price-calculator">
-                <div class="hs-cf-price-orig"> <span class="dp-op1t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">36.95</span>&#x20AC;</div><div class="hs-cf-price-red"><span class="dp-rp1t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">18.99&#x20AC;</span></div>
-            </div>
-            <div id="0-hs-cf-price-qty2" style="display:none" class="price-calculator">
-                <div class="hs-cf-price-orig"> <span class="dp-op2t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">73.90</span>&#x20AC;</div><div class="hs-cf-price-red"><span class="dp-rp2t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">29.62&#x20AC;</span></div>
-                
-            </div>
-            <div id="0-hs-cf-price-qty3" style="display:none" class="price-calculator">
-                <div class="hs-cf-price-orig"> <span class="dp-op3t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">110.85</span>&#x20AC;</div><div class="hs-cf-price-red"><span class="dp-rp3t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">41.59&#x20AC;</span></div>
-            </div>
-            <div id="0-hs-cf-price-qty4" style="display:none" class="price-calculator">
-                <div class="hs-cf-price-orig"> <span class="dp-op4t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">147.80</span>&#x20AC;</div><div class="hs-cf-price-red"><span class="dp-rp4t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">55.45&#x20AC;</span></div>
-            </div>
-            <div id="0-hs-cf-price-qty5" style="display:none" class="price-calculator">
-                <div class="hs-cf-price-orig"> <span class="dp-op5t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">184.75</span>&#x20AC;</div><div class="hs-cf-price-red"><span class="dp-rp5t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">49.37&#x20AC;</span></div>
-            </div>
-            <div id="0-hs-cf-price-qtyx" style="display:none" class="price-calculator">
-                <div class="hs-cf-price-orig"> <span class="dp-opxt dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">221.70</span>&#x20AC;</div><div class="hs-cf-price-red"><span class="dp-rpxt dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">59.25&#x20AC;</span></div>
-            </div>
-            <div class="shipping-price">
-               <!-- <p id="defaultShippingPrice">+ 2.99€ dostava</p>
-<style>#defaultShippingPrice{display:none;}</style>
-                <div id="dynshipprice">+ <p id="shippingprice"></p>€  dostava</div>
-<div id="freeshippingtxt">Brezplačna dostava</div>
+    <script>
+        const currentUrl = window.location.href;
+    
+    </script>
 
-<style>
-    #dynshipprice {display:none;}
-    #freeshippingtxt {display:none;}
-</style>-->
-            </div>
-        </div>
+
+
+	<header class="header">
+		<div class="horizontal-ticker horizontal-ticker-sections">
+			<div class="horizontal-ticker__container">
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5;NA&#x160;A  NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE  DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+			</div>
+		</div>
+		<div class="header__inner">
+			<div class="header__content container">
+				<input id="hamburger" class="header__hamburger-btn" type="checkbox">
+				<label for="hamburger" class="header__hamburger-icon"><span class="header__icon"></span></label>
+				<ul class="header__menu">
+					<li class="header__menu-item"><a class="header__menu-link link--nu" href="https://ortowp.noriks.com/">Domov</a></li>
+					<li class="header__menu-item"><a class="header__menu-link link--nu active" href="https://ortowp.noriks.com/trgovina/">Vlo&#x17E;ki</a></li>
+					<li class="header__menu-item"><a class="header__menu-link link--nu" href="https://ortowp.noriks.com/trgovina/">Vsi izdelki</a></li>
+				</ul>
+				<a class="header__logo" href="https://ortowp.noriks.com/">
+					<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg.svg" alt="logo">
+				</a>
+				<a class="header__cart" href="https://ortowp.noriks.com/kosarica/?add-more=">
+					<img class="header__cart-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/3ed463b233aa1_icon-cart.svg" alt="logo">
+				</a>
+			</div>
+		</div>
+		<!-- si -->
+<div id="sale-coupon-banner" style="display:none">
+	<p>V ko&#x161;arici te &#x10D;aka <span class="coupon-pointout"> 10% popusta </span> na celotni nakup.</p>
+</div>
+		<style>
+			#sale-coupon-banner {
+				/* background-image: linear-gradient(180deg, #00ac00, #3ec000); */
+				color: #fff;
+				background-color: var(--clr-one, #000);
+				padding: .3125rem .1875rem;
+				text-align: center;
+				font-size: clamp(0.875rem, 0.7644rem + 0.4914vw, 1rem);
+			}
+			#sale-coupon-banner p {margin: 0;}
+			.coupon-pointout {
+				display: inline-block;
+				color: #000;
+				background-color: #fff;
+				border-radius: .3125rem;
+				margin-left: 0.5ch;
+				margin-right: 0.5ch;
+				padding: .125rem .5rem;
+			}
+		</style>
+	</header>
+
+    <!-- WooCommerce hidden add-to-cart form -->
+<form id="wc-add-to-cart-form" method="post" action="https://ortowp.noriks.com/product/stepease/" style="display:none !important;">
+    <input type="hidden" name="product_id" value="19">
+    <input type="hidden" name="variation_id" id="wc-variation-id" value="">
+    <input type="hidden" name="quantity" id="wc-quantity" value="1">
+    <button type="submit" name="add-to-cart" value="19">Add</button>
+</form>
+<!-- Remap variationsArr external IDs to WC variation IDs -->
+<script>
+(function() {
+    var wcVarMap = {"Orange 35\/36":20,"Orange 35-36":20,"Orange 37\/38":21,"Orange 37-38":21,"Orange 39\/40":22,"Orange 39-40":22,"Orange 41\/42":23,"Orange 41-42":23,"Orange 43\/44":24,"Orange 43-44":24,"Orange 45\/46":25,"Orange 45-46":25,"Orange 47\/48":26,"Orange 47-48":26,"Orange 49\/50":27,"Orange 49-50":27,"Black 35\/36":28,"Black 35-36":28,"Black 37\/38":29,"Black 37-38":29,"Black 39\/40":30,"Black 39-40":30,"Black 41\/42":31,"Black 41-42":31,"Black 43\/44":32,"Black 43-44":32,"Black 45\/46":33,"Black 45-46":33,"Black 47\/48":34,"Black 47-48":34,"Black 49\/50":35,"Black 49-50":35,"Grey 35\/36":36,"Grey 35-36":36,"Grey 37\/38":37,"Grey 37-38":37,"Grey 39\/40":38,"Grey 39-40":38,"Grey 41\/42":39,"Grey 41-42":39,"Grey 43\/44":40,"Grey 43-44":40,"Grey 45\/46":41,"Grey 45-46":41,"Grey 47\/48":42,"Grey 47-48":42,"Grey 49\/50":43,"Grey 49-50":43};
+    // Wait for variationsArr to be defined, then remap
+    var _checkRemap = setInterval(function() {
+        if (typeof variationsArr !== 'undefined') {
+            clearInterval(_checkRemap);
+            for (var i = 0; i < variationsArr.length; i++) {
+                var wcId = wcVarMap[variationsArr[i].names];
+                if (wcId) {
+                    variationsArr[i].wcVariationId = wcId;
+                    variationsArr[i].variationId = String(wcId);
+                }
+            }
+            console.log('[ortowp] Remapped', variationsArr.length, 'variation IDs to WC IDs');
+        }
+    }, 100);
+    // Safety: clear after 5s
+    setTimeout(function() { clearInterval(_checkRemap); }, 5000);
+})();
+</script>
+
+
+	<main class="main">
+
+		<section class="section sct-hero">
+			<div class="sct-hero__content container">
+				<div class="sct-hero__content-row --sticky">
+					<div class="sct-hero__gallery">
+
+						<div class="gallery-container">
+							<!-- Swiper -->
+							<div class="swiper gallery-slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/84d4e066ce333_stepease_PP-EN_-_si-2.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/1b704871b6d6_stepease_PP-EN_-_si-5.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/0db2e820e6db5_stepease_PP-EN_-_si.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/04260de1979ae_stepease_PP-EN_-_si-1.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/cc8b1fcd4471_stepease_PP-EN_-_si-7.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/d82503b0fef5a_stepease_PP-EN_-_si-6.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/f3f10485dce06_stepease_PP-EN_-_si-3.jpg"></div>
+									<div class="swiper-slide gallery-slider__item"><img src="https://images.hs-plus.com/assets/shared-images/2f514ac962b58_stepease_PP-EN_-_si-4.jpg"></div>
+								</div>
+								<!-- <div class="swiper-nav-buttons">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div> -->
+							</div>
+							<!-- Thumbs Swiper -->
+							<div class="swiper gallery-thumbs">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/84d4e066ce333_stepease_PP-EN_-_si-2.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/1b704871b6d6_stepease_PP-EN_-_si-5.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/0db2e820e6db5_stepease_PP-EN_-_si.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/04260de1979ae_stepease_PP-EN_-_si-1.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/cc8b1fcd4471_stepease_PP-EN_-_si-7.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/d82503b0fef5a_stepease_PP-EN_-_si-6.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/f3f10485dce06_stepease_PP-EN_-_si-3.jpg"></div>
+									<div class="swiper-slide gallery-thumbs__item"><img src="https://images.hs-plus.com/assets/shared-images/2f514ac962b58_stepease_PP-EN_-_si-4.jpg"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="sct-hero__content-row">
+					<div class="product-rating">
+						<img class="product-rating__img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/196c785d39169_stars-5.svg" alt="5 stars">
+						<span class="product-rating__txt">Odli&#x10D;no 4,8&#xA0;|&#xA0;1169&#xA0;ocen</span>
+					</div>
+					<h1 class="sct-hero__title">STEPEASE&#xA0;|&#xA0;Masa&#x17E;ni vlo&#x17E;ki</h1>
+					<div class="sct-hero__price">
+						
+     <div class="dynamic-cart-reduced-price-container">
+      <span id="dynamic_cart_reduced_price_amount" class="dynamic-cart-reduced-price">
+        18.99
+      </span>
+
+      
     </div>
   
-
-        
-          <div class="hs-cf-cart">
-            <a id="0-hs-cf-add-to-cart" class="hs-cf-cart-btn" href="https://ortowp.noriks.com/cart/">
-                <span id="hs-cf-btn-text" class="hs-cf-cart-btn-text"><img src="https://images.hs-plus.com/assets/shared-images/adafec52191b3_cart_icon.svg"><p class="hs-cf-order-text">Dodaj v ko&#x161;arico</p></span>
-                <span id="hs-cf-btn-text-out-of-stock" class="hs-cf-cart-btn-text hs-cf-cart-text-hidden">Ni na zalogi</span>
-            </a>
-          </div>
-  
-
-        
-
-        <!-- shortcode "payment-methods" -->
-<!-- Payment and delivery features (styles in auto shared resourse "Cart CSS") -->
-<div class="paydel-features">
-	<div class="paydel-features__item">
-		<strong class="paydel-features__text" style="margin-inline: auto;">90-dnevna mo&#x17E;nost vra&#x10D;ila kupnine</strong>
-	</div>
-	<hr style="display: block; margin: 0.5rem 0; background-color: #dbdbdb; border: none; height: 0.0625rem;">
-
-	
-	<div class="paydel-features__item">
-		<img class="paydel-features__icon paydel-features__icon--country" src="https://images.vigo-shop.com/general/checkout/flag/si.svg" alt>
-		<span class="paydel-features__text">Skladi&#x161;&#x10D;e v Sloveniji</span>
-	</div>
-
-	<div class="paydel-features__item">
-		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/delivery-truck.svg" alt>
-		<span id="shipping-checkout" class="paydel-features__text --accent">Hitra dostava</span>
-		<span id="free-shipping-checkout" style="display: none;">Brezpla&#x10D;na dostava</span>
-		<div class="courier-badge">
-			<img class="courier-badge__item" src="https://images.vigo-shop.com/general/curriers/posta_slo.png" alt><!-- SI,RS,ES,FR,NL -->
-		</div>
-	</div>
-
-	<div class="paydel-features__item">
-		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/COD.svg" alt>
-		<span class="paydel-features__text">Pla&#x10D;ilo tudi po povzetju</span>
-	</div>
-
-	<!-- <div class="paydel-features__item">
-		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/back.svg" alt="">
-		<span class="paydel-features__text">14-dnevna možnost vračila kupnine</span>
-	</div>
-
-	<div class="paydel-features__item">
-		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/star.svg" alt="">
-		<span class="paydel-features__text">93% strank je ocenilo Stepease z odličnostjo</span>
-	</div> -->
-</div>
-<style>
-	.courier-badge {display: flex; gap: 0.5rem;}
-	.courier-badge__item {height: 22px;}
-</style>
-<!-- END Payment and delivery features --><div class="paymethods payship">
-	<div class="paymethods__box">
-		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/visa.svg" alt>
-		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/mastercard_icon.svg" alt>
-		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/general_cod_payment_icon.svg" alt>
-		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/paypal_icon.svg" alt>
-		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/maestro-icon.svg" alt>
-	</div>
-</div>
-
-<style>
-	.paymethods {
-		margin-top: 0.5rem;
-		/* max-width: 650px; */
-	}
-	.paymethods__box {
-		display: flex;
-		gap: .5rem;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-	.paymethods__item {}
-	.paymethods__item-img {
-		height: 1.875rem;
-		width: auto;
-		object-fit: contain;
-		vertical-align: middle;
-	}
-</style>
-        </div>
-        
-    </form>
-
-    
-    <style>
-        .quantity {
-            margin-bottom: 10px;
-            text-align: left;
-        }
-
-        .quantity p {
-            margin-bottom: 0;
-        }
-
-        .custom_qty > .quantity {
-            display:flex;
-            align-items: end;
-            text-transform: uppercase;
-            line-height: normal;
-            padding-left: 10px;
-            margin-bottom: 10px;
-            text-align: left;
-        }
-
-        .banner-save {
-            color: white;
-            background-color: #47b426; 
-            padding: 0rem .5rem;
-            font-size: 14px;
-            font-weight: bold; 
-            border-radius: 3px; 
-            display: inline-flex;
-            align-items: center;
-            position: relative;
-            height: 20px;
-            margin-left:1rem;
-          }
-          
-          .banner-save::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 50%;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid #47b426;
-            transform: translateY(-50%) rotate(180deg);
-            transform-origin: center;
-          }
-
-        .quantity_button {
-            background-color: #fff;
-            cursor: pointer;
-            width:100%;
-            outline:none;
-            border:none;
-        }
-
-        .quantity_button:hover {
-            background-color: #ffc7c7;
-        } 
-        
-        .active_quantity_button{
-            background-color: #ffc7c7;
-            box-shadow: inset 0 0 0 1px orange;
-        }
-
-        .custom_qty .quantity-button-container {
-            position: relative;
-        }
-
-        .custom_qty .product_price_basic.active_quantity_td {
-            border: 1px solid #ff4747;
-        }
-
-        .custom_qty .quantity-top-banner {
-            color:#fff;
-            position: absolute;
-            margin: auto;
-            left: 0;
-            right: 0;
-            text-align: center;
-            border-radius: 3px;
-            font-size: 11px;
-            font-weight: 500;
-            font-style: normal;
-            font-stretch: normal;
-            letter-spacing: normal;
-            text-align: center;
-            padding: 2px 0 0 0;
-        }
-
-        .custom_qty .top-seller-banner {
-            background-color: red;
-            color: white;
-        }
-
-        .custom_qty .best-offer-banner {
-            background-color: #47B426;
-            color: white;
-        }
-
-        .custom_qty .free-shipping-banner{
-            background-color: #47B426;
-            -webkit-text-fill-color: white;
-            width:20%;
-            border-radius:3px;
-            font-size: 11px;
-            font-weight:500;
-        }
-
-        @media (min-width: 769px) {
-        .custom_qty .free-shipping-banner{
-            font-size: 14px;        
-            }
-        }   
-
-        .custom_qty {
-            margin-top: 0;
-            padding: 20px 12px;
-        }
-
-        .quant-piece {
-            color:#000;
-        }
-        
-        .custom_qty table {
-            width:100%;
-            border-collapse: separate;
-            border-spacing: 10px 5px;
-        }
-        
-        .custom_qty table td {
-            padding: 0px 0px !important;
-            vertical-align: middle;
-        }
-        
-        #custom_qty_variation tbody {
-            display: block;
-        }
-        
-        
-        #custom_qty_variation table {
-            border-collapse: separate;
-            border-spacing: 10px 0px; 
-            width:33%;
-        }
-        
-        .custom_qty .per_qty {
-            font-size: 11px;
-        }
-
-        .qty-label {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        @media only screen and (max-width: 579px) {
-            .qty-label {
-                display:grid;
-            }
-        }
-
-        .qty-label strong {
-            color: #000;
-        }        
-        
-        .custom_qty .product_price_basic {
-            border: #f3ca66 solid 2px;
-            border-radius: 5px;
-            width: 33%;
-            cursor: pointer;
-            color:#000;
-            text-align: center
-        }
-        
-        .custom_qty .product_price_basic b {
-            font-size: 1.1em;
-        }
-        
-        .custom_qty .product_price_basic:hover {
-            background-color: #fff6e1;
-        }
-        
-        .custom_qty .product_price_top {
-            text-align: center;
-            border: #ff4747 solid 1.5px;
-            width: 33%;
-            box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.16);
-            background-color: #ffc7c7;
-            cursor: pointer;
-            color:#000;
-        }
-        .custom_qty .product_price_topb {
-            font-size: 1.1em;
-        }
-        
-        .custom_qty .product_price_top_up {
-            padding: 0;
-        }
-
-        input[name$='-quantity']:checked + label {
-            background-color: #ffc7c7;
-        }
-
-        div[class$='hs-cf-property-name'] {
-            padding: 15px 0px; 
-        }
-
-        .discount_banner {
-            border-radius: 5px;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 500;
-            padding: 4px 5px 4px 7px;
-            position: absolute;
-            right: 6px;
-            top: -13px;
-            background-color:#f09831;
-        }
-        .hs-cf-property-input:checked + .hs-cf-property-color {
-            border: 2px solid #fff;
-            box-shadow: 0 0 0 1.5px #f09831;
-        }
-
-        .hs-cf-property-input:checked + .hs-cf-property-icon {
-            box-shadow: 0 0 0 3px #f09831;
-            border-radius: 5px;
-        }
-        
-        .hs-cf-parent-property-bundle-color:has(>.hs-cf-property-input-bundle:checked) {
-            box-shadow: 0 0 0 1.5px #ff4747;
-            display:inline-flex;
-            height:3rem;
-            align-items:center;
-        }
-
-        input[type=radio]:checked{
-            display:none
-        }
-
-        .hs-cf-variation-bundle {
-            display: inline-flex;
-        }
-        
-        .custom_qty .best-seller {
-            font-size: 11px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            letter-spacing: normal;
-            text-align: center;
-            background-color: #ececec;
-            color: #232f3e;
-            padding: 2px 0 0 0 !important;
-        }
-        
-        .custom_qty_tr {
-            width: 100%;
-        }
-
-        .hs-cf tr:has(.product_price_basic){
-            margin-top: 20px;
-        }
-        
-        input[type=radio] {
-            display:none;
-        }
-                
-        .hs-cf-price-right {
-            margin-left:10px;
-            max-height: -webkit-fill-available;
-        }
-        
-        .price-calculator {
-            display: block;
-            justify-content: flex-start;
-        }
-
-        .hs-cf {
-            background-color: #f0f2f5;
-            border-radius: 10px;
-            margin-top: 0;
-        }
-    
-        .hs-cf-price-orig {
-            color: #707070;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 9px;
-            text-align: right;
-        }
-        
-        .hs-cf-price-orig span {
-            text-decoration: line-through !important;
-        }
-        
-        .hs-cf-price-red {
-            font-size: 35px;
-            color: #ca232c;
-            font-weight: 700;
-            text-align: left;
-        }
-    
-    
-        .hs-cf-cart {
+						
+      <div class="dynamic-cart-original-price-container"> 
+        <span id="dynamic_cart_original_price_amount" class="dynamic-cart-original-price">36.95</span>
+        <span id="dynamic_cart_original_price_currency_symbol" class="dynamic-cart-original-price-currency-symbol">&#x20AC;</span>
       
-            border-radius: 5px;
-            width:100%;
-            text-align: center;
-            padding:0px 0px;
-            font-size: 25px;
-            margin-top: 15px;
-        }
-
+        
+      </div>
+      
+						<!-- <div class="sct-hero__rp1t">[ rp1t ]</div> -->
+						<!-- <div class="sct-hero__op1t">[ op1t ]</div> -->
+						<style>
+							[data-tpl="stps"] .sct-hero__rp1t {
+								color: #ff5b00;
+								font-size: 1.5rem;
+							}
+							[data-tpl="stps"] .sct-hero__op1t {
+								display: flex;
+								color: #000;
+								text-wrap: nowrap;
+								text-decoration: line-through;
+								font-size: 1.25rem;
+							}
+						</style>
+						<span class="sct-hero__price-discount">
+							<svg aria-hidden="true" viewBox="0 0 12 12"><path fill="currentColor" fill-rule="evenodd" d="M7 0h3a2 2 0 0 1 2 2v3a1 1 0 0 1-.3.7l-6 6a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4l6-6A1 1 0 0 1 7 0m2 2a1 1 0 1 0 2 0 1 1 0 0 0-2 0" clip-rule="evenodd"/></svg>
+							
+      <div class="dynamic-cart-discount-percent-container">
+        <span id="dynamic_cart_discount_percentage_amount">49</span>
+        <span id="dynamic_cart_discount_percentage_symbol">%</span>
+      </div>
     
-        .hs-cf-cart-btn {
-            color:#fff;
-            background-color: #47b426;
-            margin:auto;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            border-radius: 5px;
-            height: 52px;
-          
-        }
-
-        .hs-cf-cart-btn-text {
-            position: relative;
-            display: flex !important;
-            justify-content: center;
-            margin: auto;
-            top: 8px;
-        }
-
-        .hs-cf-cart-btn-text img {
-            margin-right: 10px;
-        }
-
-        .hs-cf-cart-btn-text p {
-            font-size: 20px;
-            color:#fff;
-        }
-
-        /*.hs-cf-cart-btn::after {
-            position: relative;
-            content: "";
-            background-image: url(https://images.vigo-shop.com/general/checkout-form-icons.png);
-            background-size: cover;
-            float: left;
-            background-color: black;
-            height: 52px;
-            width: 50px;
-            padding-top: 8px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }*/
-
-        .hs-cf-cart-btn:hover {
-            color: #fff;
-            background-color: #ff4747;
-        }
-
-        .hs-add-to-cart-disabled {
-            pointer-events: none;
-            background-color: lightgray;
-        }
-
-        .hs-cf-cart-text-hidden{
-            display:none !important;
-        }
-        
-        .hs-cf-row {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            align-items: center;
-            height: 90px;
-        }
-
-        /*#.shipping-price {
-            padding-bottom: 5px;
-            text-align:left;
-        }*/
-
-        #free-shipping-checkout {
-            display:none;
-        }
-    
-        .custom_qty_product {
-            display: block;
-        }
-                
-        .hs-cf-product-wrapper {
-            width: 100%;
-            display: block;
-            text-align: left;
-            border-bottom: 1px solid #bfbfbf;
-            background-color: transparent;
-            padding-bottom:10px;
-        }
-        
-        .property-dropdown {
-            width:100%;
-            border:#bfbfbf solid 1px;
-            padding:10px 20px;
-            font-size: 16px;
-            font-weight: 600;
-            display:block;
-            background-color: #fff;
-
-        }
-        
-        .property-title {
-            color:#c1c1c1;
-            margin-top:1rem;
-            text-align: left;
-        }
-        
-        .product_num {
-            display: none !important
-        }
-        
-        .product_qty label {
-            width:100%;
-        }
-        
-        .hs-cf-property-color {
-            height: 2.5em;
-            width: 2.5em;
-            display: inline-block;
-            border-radius: 2em;
-            margin: 0 1px;
-            background-clip: content-box;
-            padding: 2px;
-            border: 1px solid #c1c1c1;
-        }
-
-        .hs-cf-property-icon {
-            height: 4.7em;
-            width: 4.7em;
-            display: inline-block;
-            margin: 0 1px;
-            background-clip: content-box;
-            padding: 2px;
-        }
-
-        .hs-cf-parent-property-bundle-color {
-            display:inline-flex;
-            height:3rem;
-            align-items:center;
-            background-color:#fff;
-            border:white;
-            margin-left:.5rem;
-            margin-bottom: 10px;
-        }
-
-        .first-circle {
-            margin-left: 10px;
-        }
-
-        .second-circle {
-            position: relative;
-            left: -0.5rem;
-        }
-
-        .hs-cf-property-bundle-color {
-            height: 2em;
-            width: 2em;
-            display: inline-block;
-            border-radius: 2em;
-            background-clip: content-box;
-            padding: 2px;
-            border: 1px solid #c1c1c1;
-        }
-
-        .hs-cf-outofstock {
-            font-size: 20px;
-            color: #ff4747;
-            padding-top: 20px;
-        }
-
-        .hs-cf-pl-bottom {
-            color: white;
-            background-color: #47b426; 
-            padding: 0rem .5rem;
-            font-size: 14px;
-            font-weight: bold; 
-            border-radius: 3px; 
-            display: inline-flex;
-            align-items: center;
-            position: relative;
-            height: 20px;
-            //margin-left:-0.5rem;
-          }
-          
-          .hs-cf-pl-bottom::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 50%;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid #47b426;
-            transform: translateY(-50%) rotate(180deg);
-            transform-origin: center;
-          }
-
-        .hs-property-button {
-            margin-right: 5px; 
-            margin-bottom: 5px;
-            background-color: white;
-            border: 1px solid #bfbfbf;
-            padding: 5px 10px;
-            outline: none;
-        }                    
-        
-        .hs-property-button.selected {
-            margin-right: 5px; 
-            margin-bottom: 5px;
-            background-color: #ffc7c7;
-            border: 1px solid #ff4747;
-            padding: 5px 10px;
-            outline: none;
-        }
-
-        .hs-rp-desc-wrapper-expanded{
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .hs-rp-desc-wrapper-collapsed{
-            max-height: 180px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .hs-rp-reduced-price {
-            color: #ca232c;
-            margin-right: .5rem;
-            font-size: 20px;
-        }
-
-        .hs-rp-original-price {
-            color: #99a0a7;
-            font-size: 15px;
-            text-decoration: line-through;
-        }
-
-        .hs-rp-both-prices {
-            display:flex;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .hs-rp-discount-value {
-            color: white;
-            background-color: #ca232c; 
-            padding: 0rem .5rem;
-            font-size: 14px;
-            font-weight: bold; 
-            border-radius: 3px; 
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            height: 20px;
-            margin-left:1rem;
-          }
-          
-          .hs-rp-discount-value::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 50%;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid #ca232c;
-            transform: translateY(-50%) rotate(180deg);
-            transform-origin: center;
-          }
-          
-          .hs-rp-discount-value span {
-            z-index: 1;
-            font-size:12px;
-            margin-top:1px;
-          }
-
-          .hs-rp-img-desc {
-            min-height: 100px;
-          }
-
-          .hs-rp-checkbox-container {
-            display: flex;
-            justify-content: start;
-            flex-direction: row;
-            align-items: center;
-            }
-            
-        .hs-rp-checkbox-description {
-            display:flex;
-            flex-direction: column;
-          }
-
-        .hs-fv-wrapper {
-            display:flex;
-            justify-content:start;
-            gap:10px;
-            margin-top:10px;
-        }
-
-        .swiper-wrapper{
-            margin-bottom:30px;
-        }
-
-        .hs-fv-no-slider{
-            display:flex;
-            justify-content:start;
-            margin-top:10px;
-        }
-
-        .hs-fv-all{
-            width:110px;
-            margin-right: 10px;
-            padding: 5px 10px;
-            background-color:#fff;
-            border:1px solid #ddd;
-            cursor: pointer;
-        }
-
-        .r-var {
-            border:2px solid #E68614;
-        }
-
-        .f-var{
-            opacity: 60%;
-        }
-
-        .hs-rv-imageurl{
-            border-bottom:1px solid #ddd;
-            border-radius:10px;
-            margin-bottom:10px
-        }
-
-        .hs-rv-imageurl img{
-            border-radius:10px;
-        }
-
-        .hs-fv-imageurl{
-            border-bottom:1px solid #ddd;
-            border-radius:10px;
-            margin-bottom:10px
-        }
-
-        .hs-fv-imageurl img{
-            border-radius:10px;
-        }
-
-        .hs-fv-price .hs-rv-price{
-            font-size:16px;
-            margin-bottom:5px;
-        }
-        
-        .hs-fv-stock .hs-rv-stock {
-            color:#47b426;
-            font-size:14px;
-        }
-
-        .hs-fv-no-stock {
-            color:#ca232c;
-            font-size:14px;
-        }
-
-        @media (max-width: 769px) {
-            .hs-rp-wrapper {
-                padding-right: 5px !important;
-                padding-left: 5px !important;
-                height: 100%}
-
-            .hs-rp-title {
-                font-size: 15px;
-                font-weight: 500;
-                height:fit-content;
-                padding-top: 0rem !important;
-            }            
-
-            .hsm-rp-container {
-                float: right;
-            }
-
-            .hs-rp-both-prices {
-                flex-wrap: wrap;
-                max-width: 120px;
-            }
-            
-            .hs-rp-discount-value{
-                margin-left: 9px;
-            }
-
-            .hs-rp-both-prices{
-                margin-top:2px;
-            }
-            .hs-fv-all{
-                width:100px;
-            }
-        }
-
-        @media (max-width: 375px) {
-            .hs-cf .hs-cf-price-orig {
-                font-size: 14px !important;
-            }
-            .hs-cf .hs-cf-pl-bottom div {
-                font-size: 14px !important;
-            }
-            .hs-cf-price-right {
-                margin-left:0;
-            }
-        }
-
-        .add-purchase-text {
-            width: fit-content;
-            font-size:14px;
-            position: relative;
-            display: block;
-            text-align: right;
-            margin-top:0px;
-            line-height:normal;
-        }
-
-        .add-related{
-            color: white;
-        }
-
-        .remove-related{
-            color:#5a5c57;
-            align-items: center;
-        }
-
-        .checkmark-added{
-            width: 25px;
-            height: 25px;
-            background-color: #25b800;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 15px;
-            font-weight: bold;
-            transform: rotate(40deg) scaleX(-1); /* Rotates and mirrors the "L" */
-            margin-right: 5px;
-        }
-
-        .hs-added-text {
-            margin-right: 10px;
-            align-items: center;
-            color:#25b800;
-            font-weight:500;
-        }
-
-        .remove-upsell-icon{
-            margin-right:5px;
-        }
-
-        .hs-rp-desc-wrapper-expanded{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transition: max-height 1s ease-in-out;
-        }
-
-        .hs-rp-desc-wrapper-collapsed{
-            max-height: 0px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transition: max-height 1s ease-in-out;
-        }
-
-
-        .hs-rp {
-            background-color: #fff;
-            margin-top: 10px;
-            border: solid 2px #ddd;
-            border-radius: 10px;
-            padding: 5px 10px;
-            min-height: 130px;
-        }
-
-        .hs-rp-wrapper {
-            display: grid;
-            width: 100%;
-        }
-
-        .hs-rp-img {
-            float: left;
-        }
-
-        .hs-rp-img-w {
-            float: left;
-            margin-right: 10px;
-            width: 45% !important; 
-        }
-
-        .hs-rp-title {
-            font-size: 1rem;
-            float: left;
-            width: 100%;
-            font-weight: 700;
-        }
-
-        .hs-rp-desc-text{
-            font-size:18px;
-        }
-
-        .hs-rp-description {
-            font-size: 16px;
-            margin: 10px 0px;
-        }
-
-        .hs-read-more-desc-wrapper{
-            text-align: center;
-            padding: 3px;
-        }
-
-        .hs-read-more-desc-button{
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .hs-rp-checkbox-w {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: auto;
-            float: right;
-            width: 100%;
-        }
-
-        form.hs-cf .hs-rp-checkbox-w {
-            height: 60px;
-            width: 100%;
-            margin-right:10px;
-            margin-top:10px;
-        }
-
-        .hs-rp-dropdown-quantity {
-            height:45px;
-            display:block;
-            margin-top:5px;
-            margin-bottom: 15px;
-            margin-right:10px;
-            text-align:right;
-        }
-
-        .quantity-picker {
-            float:right;
-            text-align:center;
-            width:60px;
-            height:40px;
-            color:#000;
-        }
-
-        .hs-rp-txt {
-            font-size: 14px;
-            display: block;
-            font-weight: 400;
-        }
-
-        .hs-rp-txt-top {
-            font-size: 14px;
-            display: block;
-            font-weight: 400;
-            margin:10px 0px;
-            text-align:left;
-        }
-
-        .hs-rp-txt-top strong {
-            color: #000;
-        }
-
-        /* The container */
-        .hsm-rp-container {
-          display: block;
-          position: relative;
-          cursor: pointer;
-          font-size: 22px;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-        }
-        
-        /* Hide the browser's default checkbox */
-        .hsm-rp-container input {
-          position: absolute;
-          opacity: 0;
-          cursor: pointer;
-          height: 0;
-          width: 0;
-        }
-        
-        /* Create a custom checkbox */
-        .checkmark {
-          display: block;
-          top: 0;
-          left: 0;
-          height: fit-content;
-          width: fit-content;
-          background-color: #25b800;
-          border: 2px solid #25b800;
-          color: #fff;
-        }
-
-        .checkmark-checked {
-            background-color:transparent;
-            border: none;        
-        }
-
-        .checkmark-checked p{
-            color: #4c4c4c;
-            justify-content: flex-start !important;
-        }
-
-        .hs-rp-checked{
-            background-color: #f2feee;
-            border-color:#32bc00;
-            border: 2px solid;
-        }
-
-        .checkmark p {
-            display:flex;
-            justify-content: space-around;
-            align-items:center;
-            height: 40px;
-            font-weight: 800;
-            line-height: 1;
-            color: #dddddd;
-            padding: 5px 10px;
-        }
-        
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-          content: "";
-          position: absolute;
-          display: none;
-        }
-        
-        /* Show the checkmark when checked */
-        .hsm-rp-container input:checked ~ .checkmark:after {
-          display: block;
-        }
-        
-        /* Style the checkmark/indicator */
-        .hsm-rp-container .checkmark:after {
-          color:white;
-        }
-
-        #custom_qty_variation tbody {
-            margin-top: 0.3rem;
-            gap: 10px;
-        }
-
-        .hs-read-more-desc-wrapper {
-            text-align:left;
-        }
-
-        .hs-read-more-desc-button {
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 12px;
-            text-decoration: underline;
-        }
-
-        @media only screen and (max-device-width: 768px) { 
-            .hs-cf button { 
-                -webkit-text-fill-color: black; /* Set the text color to black for iOS */ 
-            }
-            .hs-rp-desc-text {
-                font-size: 14px;
-            }
-            .hs-rp-description {
-                font-size: 12px;
-            }
-            .hs-rp-reduced-price {
-                font-size: 16px
-            }
-            .quantity-picker{
-                color: #fff;
-                width: 80px;
-                height: 40px;
-                background-color:#25b800;
-                border-color: #25b800;
-            }
-            .hs-added-text {
-                font-size: 14px;
-            }
-
-        }
-
-        div#\30 -qty2,div#\30 -qty3{
-            margin-top:8px;
-        }
-
-        .pick-variation strong{
-            font-size: 12px;
-            margin: auto;
-            vertical-align:inherit;
-        }
-
-        .payship__grid {
-            margin-top:10px;
-        }
-
-        .hide-sticky {
-            opacity: 0;
-            transform: translateY(100%);
-        }
-
-        #sticky_chat {
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        
-        .greyOut {
-            position: relative;
-            opacity: 0.3;
-        }
-        .greyOut::before  {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: red; 
-            transform: rotate(-45deg);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .hiddenvariation{
-        display:none;
-        }
-
-        [cart-css]
-
-    </style>
-  
-
-    
+						</span>
+						
     <script>
     var productSettings = {"estimate_delivery_date":"11.02.2026","retailPrice":"","reviewsTags":[],"productBrands":[],"woocommerceId":980183,"numberOfPiecesInSet":1};
     var countrySettings = {"countryCode":"SI","holidays":["1.1.","2.1.","8.2.","5.4.","6.4.","27.4.","1.5.","2.5.","24.5.","25.6.","15.8.","31.10.","1.11.","25.12.","26.12."],"currencySymbol":"€"};
     var brandSettings = {"name":"Stepease"};
-    var variationsArr = [{"ids":[],"names":"no-properties","sku":"","hide":null,"disable":null,"variationId":"","originalPrice":"","reducedPrice":"","priceOffset":0}];
-    var propertiesArr = [];
-    var enableOriginalPriceOffset = false;
-    var baseOriginalPrice = 36.95
-    var relatedArr = [];
-    var globalRetailPrice;
-    var globalMinimumPrice;
-    var selectedGlobalQuantity = 1;
+    var variationsArr = [{"ids":["60bf53402b27ec52a2a830c6","689c82ce601c20083023a417"],"names":"Orange 35/36","sku":"3831127616552","hide":false,"variationId":"980214","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82ce601c20083023a417"],"names":"Black 35/36","sku":"3831127616636","hide":false,"variationId":"980199","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82ce601c20083023a417"],"names":"Grey 35/36","sku":"3831127616594","hide":false,"variationId":"980212","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6481ca3c957fc4078ab8b886"],"names":"Orange 37/38","sku":"3831127616559","hide":false,"variationId":"980210","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6481ca3c957fc4078ab8b886"],"names":"Black 37/38","sku":"3831127616643","hide":false,"variationId":"980213","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6481ca3c957fc4078ab8b886"],"names":"Grey 37/38","sku":"3831127616601","hide":false,"variationId":"980204","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6481ca1f957fc4078ab8b883"],"names":"Orange 39/40","sku":"3831127616566","hide":false,"variationId":"980216","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6481ca1f957fc4078ab8b883"],"names":"Black 39/40","sku":"3831127616650","hide":false,"variationId":"980219","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6481ca1f957fc4078ab8b883"],"names":"Grey 39/40","sku":"3831127616608","hide":false,"variationId":"980185","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","689c82d3601c20083023a418"],"names":"Orange 41/42","sku":"3831127616573","hide":false,"variationId":"980217","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82d3601c20083023a418"],"names":"Black 41/42","sku":"3831127616657","hide":false,"variationId":"980187","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82d3601c20083023a418"],"names":"Grey 41/42","sku":"3831127616615","hide":false,"variationId":"980189","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","689c82d9601c20083023a419"],"names":"Orange 43/44","sku":"3831127616580","hide":false,"variationId":"980193","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82d9601c20083023a419"],"names":"Black 43/44","sku":"3831127616664","hide":false,"variationId":"980211","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82d9601c20083023a419"],"names":"Grey 43/44","sku":"3831127616622","hide":false,"variationId":"980208","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","689c82dd601c20083023a41a"],"names":"Orange 45/46","sku":"3831127616587","hide":false,"variationId":"980218","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82dd601c20083023a41a"],"names":"Black 45/46","sku":"3831127616671","hide":false,"variationId":"980192","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82dd601c20083023a41a"],"names":"Grey 45/46","sku":"3831127616629","hide":false,"variationId":"980215","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6941633d40e5fe5badc2a14b"],"names":"Orange 47/48","sku":"3831127626743","hide":false,"variationId":"982171","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6941633d40e5fe5badc2a14b"],"names":"Black 47/48","sku":"3831127626771","hide":false,"variationId":"982175","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6941633d40e5fe5badc2a14b"],"names":"Grey 47/48","sku":"3831127626757","hide":false,"variationId":"982176","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6941634f7de15237bd950d24"],"names":"Orange 49-50","sku":"3831127626750","hide":false,"variationId":"982174","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6941634f7de15237bd950d24"],"names":"Black 49-50","sku":"3831127626778","hide":false,"variationId":"982168","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6941634f7de15237bd950d24"],"names":"Grey 49-50","sku":"3831127626764","hide":false,"variationId":"982173","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0}];
+    var propertiesArr = [{"name":"Barva","code":"Color","type":"color","id":"5ed63a5973bd244d330178b7","options":[{"name":"Oranžna","code":"Orange","id":"60bf53402b27ec52a2a830c6","selected":true,"selectedPT":true,"value":"#e03e0d","urlLink":null},{"name":"Črna ","code":"Black","id":"5ed63c0b73bd244d330178b8","selected":false,"value":"#000000","urlLink":null},{"name":"Siva","code":"Grey","id":"644a43c195e8ca06d2c61eb0","selected":false,"value":"#a9a9a9","urlLink":null}],"showPriceForVariation":true},{"name":"Velikost","code":"Size","type":"basic","id":"5ed4f68873bd244d33016317","options":[{"name":"35/36","code":"35/36","id":"689c82ce601c20083023a417","selected":false,"selectedPT":false,"urlLink":null},{"name":"37/38","code":"37/38","id":"6481ca3c957fc4078ab8b886","selected":false,"selectedPT":false,"urlLink":null},{"name":"39/40","code":"39/40","id":"6481ca1f957fc4078ab8b883","selected":false,"selectedPT":false,"urlLink":null},{"name":"41/42","code":"41/42","id":"689c82d3601c20083023a418","selected":false,"selectedPT":false,"urlLink":null},{"name":"43/44","code":"43/44","id":"689c82d9601c20083023a419","selected":true,"selectedPT":true,"urlLink":null},{"name":"45/46","code":"45/46","id":"689c82dd601c20083023a41a","selected":false,"selectedPT":false,"urlLink":null},{"name":"47-48","code":"47/48","id":"6941633d40e5fe5badc2a14b","selected":false,"selectedPT":false,"urlLink":null},{"name":"49-50","code":"49-50","id":"6941634f7de15237bd950d24","selected":false,"selectedPT":false,"urlLink":null}],"showPriceForVariation":false}];
+    var relatedArr = [{"_id":"693040aa8f426861019e9c10","name":"STEPHEEL (UP)","sku":"3831127625931","longNames":[{"countryCode":"AL","longName":""},{"countryCode":"AT","longName":"2x Fersenkissen zur Linderung von Fersenschmerzen"},{"countryCode":"BA","longName":""},{"countryCode":"BE","longName":""},{"countryCode":"BG","longName":"2x подложка за пета за облекчаване на болката в петата"},{"countryCode":"CHD","longName":""},{"countryCode":"CHF","longName":""},{"countryCode":"CHI","longName":""},{"countryCode":"CY","longName":""},{"countryCode":"CZ","longName":"2x polštářek na patu pro snížení bolesti paty"},{"countryCode":"DE","longName":"2x Fersenkissen zur Linderung von Fersenschmerzen"},{"countryCode":"DK","longName":""},{"countryCode":"EE","longName":"2x kontsapadi kannavalu vähendamiseks"},{"countryCode":"ES","longName":"2x almohadilla para el talón que reduce el dolor"},{"countryCode":"FI","longName":""},{"countryCode":"FR","longName":"Coussin de talon pour réduire la douleur au talon"},{"countryCode":"GB","longName":""},{"countryCode":"GR","longName":"2x μαξιλαράκι φτέρνας για μείωση του πόνου στη φτέρνα"},{"countryCode":"HR","longName":"2x umetak za petu za smanjenje boli u peti"},{"countryCode":"HU","longName":"2x sarokpárna a sarokfájdalom csökkentésére"},{"countryCode":"IT","longName":"2x cuscinetto per ridurre il dolore al tallone"},{"countryCode":"LT","longName":"2x kulno pagalvėlė, mažinanti kulno skausmą"},{"countryCode":"LV","longName":"2x papēža spilventiņš sāpju mazināšanai papēža zonā"},{"countryCode":"MD","longName":""},{"countryCode":"MK","longName":"2x перница за пета за намалување на болката во петата"},{"countryCode":"NL","longName":"2x hielkussen voor minder hielpijn"},{"countryCode":"PL","longName":"2x poduszka na piętę zmniejszająca ból"},{"countryCode":"PT","longName":"2x almofada de calcanhar para reduzir as dores no calcanhar"},{"countryCode":"RO","longName":"2x talonetă pentru călcâi – reduce durerea la călcâi"},{"countryCode":"RS","longName":"2x uložak za petu za smanjenje bola u peti"},{"countryCode":"SE","longName":""},{"countryCode":"SI","longName":"2x blazinica za peto za zmanjšanje bolečin v peti"},{"countryCode":"SK","longName":"2x vankúšik na pätu na zmiernenie bolesti päty"},{"countryCode":"UA","longName":""},{"countryCode":"US","longName":""},{"countryCode":"XK","longName":""}],"productImageUrls":[{"countryCode":"AL","productImageUrl":""},{"countryCode":"AT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"BA","productImageUrl":""},{"countryCode":"BE","productImageUrl":""},{"countryCode":"BG","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"CHD","productImageUrl":""},{"countryCode":"CHF","productImageUrl":""},{"countryCode":"CHI","productImageUrl":""},{"countryCode":"CY","productImageUrl":""},{"countryCode":"CZ","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"DE","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"DK","productImageUrl":""},{"countryCode":"EE","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"ES","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"FI","productImageUrl":""},{"countryCode":"FR","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"GB","productImageUrl":""},{"countryCode":"GR","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"HR","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"HU","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"IT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"LT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"LV","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"MD","productImageUrl":""},{"countryCode":"MK","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"NL","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"PL","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"PT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"RO","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"RS","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"SE","productImageUrl":""},{"countryCode":"SI","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"SK","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"UA","productImageUrl":""},{"countryCode":"US","productImageUrl":""},{"countryCode":"XK","productImageUrl":""}],"shortNames":[{"countryCode":"AL","shortName":""},{"countryCode":"AT","shortName":""},{"countryCode":"BA","shortName":""},{"countryCode":"BE","shortName":""},{"countryCode":"BG","shortName":""},{"countryCode":"CHD","shortName":""},{"countryCode":"CHF","shortName":""},{"countryCode":"CHI","shortName":""},{"countryCode":"CY","shortName":""},{"countryCode":"CZ","shortName":""},{"countryCode":"DE","shortName":""},{"countryCode":"DK","shortName":""},{"countryCode":"EE","shortName":""},{"countryCode":"ES","shortName":""},{"countryCode":"FI","shortName":""},{"countryCode":"FR","shortName":""},{"countryCode":"GB","shortName":""},{"countryCode":"GR","shortName":""},{"countryCode":"HR","shortName":""},{"countryCode":"HU","shortName":""},{"countryCode":"IT","shortName":""},{"countryCode":"LT","shortName":""},{"countryCode":"LV","shortName":""},{"countryCode":"MD","shortName":""},{"countryCode":"MK","shortName":""},{"countryCode":"NL","shortName":""},{"countryCode":"PL","shortName":""},{"countryCode":"PT","shortName":""},{"countryCode":"RO","shortName":""},{"countryCode":"RS","shortName":""},{"countryCode":"SE","shortName":""},{"countryCode":"SI","shortName":""},{"countryCode":"SK","shortName":""},{"countryCode":"UA","shortName":""},{"countryCode":"US","shortName":""},{"countryCode":"XK","shortName":""}],"originalPrices":[{"countryCode":"IT","currencySymbol":"€","price":11.95},{"countryCode":"LT","currencySymbol":"€","price":11.95},{"countryCode":"PT","currencySymbol":"€","price":11.95},{"countryCode":"SI","currencySymbol":"€","price":11.95},{"countryCode":"LV","currencySymbol":"€","price":11.95},{"countryCode":"RS","currencySymbol":"rsd","price":1399},{"countryCode":"RO","currencySymbol":"lei","price":60.99},{"countryCode":"SK","currencySymbol":"€","price":11.95},{"countryCode":"PL","currencySymbol":"zł","price":51},{"countryCode":"MK","currencySymbol":"ден","price":739},{"countryCode":"NL","currencySymbol":"€","price":11.95},{"countryCode":"AT","currencySymbol":"€","price":11.95},{"countryCode":"BG","currencySymbol":"лв.","price":11.99},{"countryCode":"CZ","currencySymbol":"Kč","price":289},{"countryCode":"DE","currencySymbol":"€","price":11.95},{"countryCode":"EE","currencySymbol":"€","price":11.95},{"countryCode":"ES","currencySymbol":"€","price":11.95},{"countryCode":"FR","currencySymbol":"€","price":11.95},{"countryCode":"GR","currencySymbol":"€","price":11.95},{"countryCode":"HR","currencySymbol":"€","price":11.95},{"countryCode":"HU","currencySymbol":"Ft","price":4590}],"reducedPrices":[{"countryCode":"IT","currencySymbol":"€","price1":3.99},{"countryCode":"LT","currencySymbol":"€","price1":3.99},{"countryCode":"PT","currencySymbol":"€","price1":3.99},{"countryCode":"SI","currencySymbol":"€","price1":3.99},{"countryCode":"LV","currencySymbol":"€","price1":2.99},{"countryCode":"RS","currencySymbol":"rsd","price1":349},{"countryCode":"RO","currencySymbol":"lei","price1":14.99},{"countryCode":"SK","currencySymbol":"€","price1":3.99},{"countryCode":"PL","currencySymbol":"zł","price1":17},{"countryCode":"MK","currencySymbol":"ден","price1":189},{"countryCode":"NL","currencySymbol":"€","price1":3.99},{"countryCode":"AT","currencySymbol":"€","price1":3.99},{"countryCode":"BG","currencySymbol":"лв.","price1":2.99},{"countryCode":"CZ","currencySymbol":"Kč","price1":99},{"countryCode":"DE","currencySymbol":"€","price1":3.99},{"countryCode":"EE","currencySymbol":"€","price1":3.99},{"countryCode":"ES","currencySymbol":"€","price1":3.99},{"countryCode":"FR","currencySymbol":"€","price1":2.99},{"countryCode":"GR","currencySymbol":"€","price1":3.99},{"countryCode":"HR","currencySymbol":"€","price1":4.99},{"countryCode":"HU","currencySymbol":"Ft","price1":1099}],"retailPrices":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":""},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":""},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":""},{"countryCode":"DE","value":""},{"countryCode":"DK","value":""},{"countryCode":"EE","value":""},{"countryCode":"ES","value":""},{"countryCode":"FI","value":""},{"countryCode":"FR","value":""},{"countryCode":"GB","value":""},{"countryCode":"GR","value":""},{"countryCode":"HR","value":""},{"countryCode":"HU","value":""},{"countryCode":"IT","value":""},{"countryCode":"LT","value":""},{"countryCode":"LV","value":""},{"countryCode":"MD","value":""},{"countryCode":"MK","value":""},{"countryCode":"NL","value":""},{"countryCode":"PL","value":""},{"countryCode":"PT","value":""},{"countryCode":"RO","value":""},{"countryCode":"RS","value":""},{"countryCode":"SE","value":""},{"countryCode":"SI","value":""},{"countryCode":"SK","value":""},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"spMinimumPrices":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":""},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":""},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":""},{"countryCode":"DE","value":""},{"countryCode":"DK","value":""},{"countryCode":"EE","value":""},{"countryCode":"ES","value":""},{"countryCode":"FI","value":""},{"countryCode":"FR","value":""},{"countryCode":"GB","value":""},{"countryCode":"GR","value":""},{"countryCode":"HR","value":""},{"countryCode":"HU","value":""},{"countryCode":"IT","value":""},{"countryCode":"LT","value":""},{"countryCode":"LV","value":""},{"countryCode":"MD","value":""},{"countryCode":"MK","value":""},{"countryCode":"NL","value":""},{"countryCode":"PL","value":""},{"countryCode":"PT","value":""},{"countryCode":"RO","value":""},{"countryCode":"RS","value":""},{"countryCode":"SE","value":""},{"countryCode":"SI","value":""},{"countryCode":"SK","value":""},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"forcedMinimumPrices":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":""},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":""},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":""},{"countryCode":"DE","value":""},{"countryCode":"DK","value":""},{"countryCode":"EE","value":""},{"countryCode":"ES","value":""},{"countryCode":"FI","value":""},{"countryCode":"FR","value":""},{"countryCode":"GB","value":""},{"countryCode":"GR","value":""},{"countryCode":"HR","value":""},{"countryCode":"HU","value":""},{"countryCode":"IT","value":""},{"countryCode":"LT","value":""},{"countryCode":"LV","value":""},{"countryCode":"MD","value":""},{"countryCode":"MK","value":""},{"countryCode":"NL","value":""},{"countryCode":"PL","value":""},{"countryCode":"PT","value":""},{"countryCode":"RO","value":""},{"countryCode":"RS","value":""},{"countryCode":"SE","value":""},{"countryCode":"SI","value":""},{"countryCode":"SK","value":""},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"dateCreated":"2025-12-03T13:52:42.744Z","tags":["Related upsell"],"relatedProductDescriptions":[{"countryCode":"AL","relatedProductDescription":""},{"countryCode":"AT","relatedProductDescription":"Füllt einen zu großen Schuh aus, ohne zu reiben oder Blasen zu verursachen.\n"},{"countryCode":"BA","relatedProductDescription":""},{"countryCode":"BE","relatedProductDescription":""},{"countryCode":"BG","relatedProductDescription":"Попълва по-голяма обувка, без триене или причиняване на пришки.\n"},{"countryCode":"CHD","relatedProductDescription":""},{"countryCode":"CHF","relatedProductDescription":""},{"countryCode":"CHI","relatedProductDescription":""},{"countryCode":"CY","relatedProductDescription":""},{"countryCode":"CZ","relatedProductDescription":"Vyplní botu, která je příliš velká, aniž by dřela nebo způsobovala puchýře.\n"},{"countryCode":"DE","relatedProductDescription":"Füllt einen zu großen Schuh aus, ohne zu reiben oder Blasen zu verursachen.\n"},{"countryCode":"DK","relatedProductDescription":""},{"countryCode":"EE","relatedProductDescription":"Täidab liiga suure jalanõu ilma hõõrumise ja villide tekketa.\n"},{"countryCode":"ES","relatedProductDescription":"Ajusta el zapato que te queda demasiado grande, sin causar rozaduras ni ampollas.\n"},{"countryCode":"FI","relatedProductDescription":""},{"countryCode":"FR","relatedProductDescription":"Comble une chaussure trop grande, sans frottement ni ampoules.\n"},{"countryCode":"GB","relatedProductDescription":""},{"countryCode":"GR","relatedProductDescription":"Γεμίζει ένα παπούτσι που είναι πολύ μεγάλο, χωρίς να τρίβει ή να προκαλεί φουσκάλες.\n"},{"countryCode":"HR","relatedProductDescription":"Ispunjava cipelu koja je prevelika, bez trljanja ili stvaranja žuljeva.\n"},{"countryCode":"HU","relatedProductDescription":"Kitölti a túl nagy cipőt anélkül, hogy dörzsölne vagy vízhólyagot okozna.\n"},{"countryCode":"IT","relatedProductDescription":"Riempie una scarpa troppo grande, senza sfregare né causare vesciche.\n"},{"countryCode":"LT","relatedProductDescription":"Užpildo per didelį batą, netrinant ir nesukeliant pūslių.\n"},{"countryCode":"LV","relatedProductDescription":"Aizpilda pārāk lielu apavu, neradot berzi vai tulznas.\n"},{"countryCode":"MD","relatedProductDescription":""},{"countryCode":"MK","relatedProductDescription":"Го пополнува чевелот што е преголем, без триење или предизвикување плускавци.\n"},{"countryCode":"NL","relatedProductDescription":"Vult een schoen die te groot is, zonder te schuren of blaren te veroorzaken.\n"},{"countryCode":"PL","relatedProductDescription":"Wypełnia zbyt luźny but dla lepszego dopasowania bez otarć i pęcherzy.\n"},{"countryCode":"PT","relatedProductDescription":"Basta colocar no seu calçado, sem roçar nem causar bolhas.\n"},{"countryCode":"RO","relatedProductDescription":"Completează pantofii prea largi, fără a provoca frecare sau bătături.\n"},{"countryCode":"RS","relatedProductDescription":"Popunjava cipelu koja je prevelika, bez trenja ili stvaranja žuljeva.\n"},{"countryCode":"SE","relatedProductDescription":""},{"countryCode":"SI","relatedProductDescription":"Zapolni prevelik čevelj, ne da bi drgnila ali povzročala žulje.\n"},{"countryCode":"SK","relatedProductDescription":"Vyplní topánku, ktorá je príliš veľká, bez trenia alebo spôsobovania pľuzgierov.\n"},{"countryCode":"UA","relatedProductDescription":""},{"countryCode":"US","relatedProductDescription":""},{"countryCode":"XK","relatedProductDescription":""}],"isDeleted":false,"brandId":"68f0942607a0f5b28273c985","isRelatedProduct":true,"woocommerceCountrySkus":[{"countryCode":"AL","woocommerceCountrySku":""},{"countryCode":"AT","woocommerceCountrySku":""},{"countryCode":"BA","woocommerceCountrySku":""},{"countryCode":"BE","woocommerceCountrySku":""},{"countryCode":"BG","woocommerceCountrySku":""},{"countryCode":"CHD","woocommerceCountrySku":""},{"countryCode":"CHF","woocommerceCountrySku":""},{"countryCode":"CHI","woocommerceCountrySku":""},{"countryCode":"CY","woocommerceCountrySku":""},{"countryCode":"CZ","woocommerceCountrySku":""},{"countryCode":"DE","woocommerceCountrySku":""},{"countryCode":"DK","woocommerceCountrySku":""},{"countryCode":"EE","woocommerceCountrySku":""},{"countryCode":"ES","woocommerceCountrySku":""},{"countryCode":"FI","woocommerceCountrySku":""},{"countryCode":"FR","woocommerceCountrySku":""},{"countryCode":"GB","woocommerceCountrySku":""},{"countryCode":"GR","woocommerceCountrySku":""},{"countryCode":"HR","woocommerceCountrySku":""},{"countryCode":"HU","woocommerceCountrySku":""},{"countryCode":"IT","woocommerceCountrySku":""},{"countryCode":"LT","woocommerceCountrySku":""},{"countryCode":"LV","woocommerceCountrySku":""},{"countryCode":"MD","woocommerceCountrySku":""},{"countryCode":"MK","woocommerceCountrySku":""},{"countryCode":"NL","woocommerceCountrySku":""},{"countryCode":"PL","woocommerceCountrySku":""},{"countryCode":"PT","woocommerceCountrySku":""},{"countryCode":"RO","woocommerceCountrySku":""},{"countryCode":"RS","woocommerceCountrySku":""},{"countryCode":"SE","woocommerceCountrySku":""},{"countryCode":"SI","woocommerceCountrySku":""},{"countryCode":"SK","woocommerceCountrySku":""},{"countryCode":"UA","woocommerceCountrySku":""},{"countryCode":"US","woocommerceCountrySku":""},{"countryCode":"XK","woocommerceCountrySku":""}],"cart":{"btnQty1":"<strong>1 + 1 GRATIS</strong>","btnQty2":"<strong>2 + 2 GRATIS</strong>","btnQty3":"<strong>3 + 3 GRATIS</strong>"},"image":"67fb0394c5d0a_STEPHEEL-3831127625931-N-1.jpg","productBrands":[],"additionalVariations":[{"countryCode":"AL","countryId":"67ef6b8b5ab6730d795d527d","realVariations":[],"variations":[]},{"countryCode":"AT","countryId":"5da8661a4ca2c106ccdafa80","realVariations":[],"variations":[]},{"countryCode":"BA","countryId":"681b05544851b847384f0c8d","realVariations":[],"variations":[]},{"countryCode":"BE","countryId":"625423170a34cb2d21d80eb2","realVariations":[],"variations":[]},{"countryCode":"BG","countryId":"5e1475d7704e733d3ec7fae4","realVariations":[],"variations":[]},{"countryCode":"CHD","countryId":"60db0f6d9d62d24c3230951f","realVariations":[],"variations":[]},{"countryCode":"CHF","countryId":"60db0f7e9d62d24c32309523","realVariations":[],"variations":[]},{"countryCode":"CHI","countryId":"60db0f769d62d24c32309521","realVariations":[],"variations":[]},{"countryCode":"CY","countryId":"679c895de23ca17aaed5d6aa","realVariations":[],"variations":[]},{"countryCode":"CZ","countryId":"5e1475f0704e73d3c0c7fae6","realVariations":[],"variations":[]},{"countryCode":"DE","countryId":"5dca6943ac9d992456b69f8e","realVariations":[],"variations":[]},{"countryCode":"DK","countryId":"69145a8105bee56fe6b56506","realVariations":[],"variations":[]},{"countryCode":"EE","countryId":"621e2b44dc6bc1a6d8290dc7","realVariations":[],"variations":[]},{"countryCode":"ES","countryId":"5e147598704e738ff3c7fae0","realVariations":[],"variations":[]},{"countryCode":"FI","countryId":"6286160ec8ee262958e17186","realVariations":[],"variations":[]},{"countryCode":"FR","countryId":"5f89955741605719d21d15a5","realVariations":[],"variations":[]},{"countryCode":"GB","countryId":"613873bd3536f31b20fe1d92","realVariations":[],"variations":[]},{"countryCode":"GR","countryId":"5ed7a071a74c373c0d4ce615","realVariations":[],"variations":[]},{"countryCode":"HR","countryId":"5e14761b704e7345c1c7faeb","realVariations":[],"variations":[]},{"countryCode":"HU","countryId":"5e147642704e73e928c7faed","realVariations":[],"variations":[]},{"countryCode":"IT","countryId":"5d9c86730336b70cbd1315ba","realVariations":[],"variations":[]},{"countryCode":"LT","countryId":"621e2ac9dc6bc1a6d8290dc5","realVariations":[],"variations":[]},{"countryCode":"LV","countryId":"621e2b1edc6bc1a6d8290dc6","realVariations":[],"variations":[]},{"countryCode":"MD","countryId":"63fdbcd990e73c4ade0bf7fc","realVariations":[],"variations":[]},{"countryCode":"MK","countryId":"679c8a0fd52c906b3010917d","realVariations":[],"variations":[]},{"countryCode":"NL","countryId":"5f3ba871ab5e2237240d8c07","realVariations":[],"variations":[]},{"countryCode":"PL","countryId":"5dca6952ac9d99150db69f92","realVariations":[],"variations":[]},{"countryCode":"PT","countryId":"5e1475a0704e736a90c7fae2","realVariations":[],"variations":[]},{"countryCode":"RO","countryId":"5dca694aac9d997e30b69f90","realVariations":[],"variations":[]},{"countryCode":"RS","countryId":"66cd8dccea7d462f3d38146a","realVariations":[],"variations":[]},{"countryCode":"SE","countryId":"6254232c0a34cb2d21d80eb4","realVariations":[],"variations":[]},{"countryCode":"SI","countryId":"5d9c85fc0336b742021314d6","realVariations":[],"variations":[]},{"countryCode":"SK","countryId":"5e14758c704e7328bac7fade","realVariations":[],"variations":[]},{"countryCode":"UA","countryId":"67ac55b9a0d8edda0bdedc21","realVariations":[],"variations":[]},{"countryCode":"US","countryId":"6231edeb9398e11abe08a9f9","realVariations":[],"variations":[]},{"countryCode":"XK","countryId":"67f8a6fc14c174d4567c5da1","realVariations":[],"variations":[]}],"bundleProducts":"","checkoutExtra":"","customBtnQtyText":false,"isBundle":false,"outOfStockPT":false,"outOfStockRO":false,"outOfStockSI":false,"productCogs":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":0.99},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":0.99},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":0.99},{"countryCode":"DE","value":0.99},{"countryCode":"DK","value":""},{"countryCode":"EE","value":0.99},{"countryCode":"ES","value":0.99},{"countryCode":"FI","value":""},{"countryCode":"FR","value":0.99},{"countryCode":"GB","value":""},{"countryCode":"GR","value":0.99},{"countryCode":"HR","value":0.99},{"countryCode":"HU","value":0.99},{"countryCode":"IT","value":0.99},{"countryCode":"LT","value":0.99},{"countryCode":"LV","value":0.99},{"countryCode":"MD","value":""},{"countryCode":"MK","value":0.99},{"countryCode":"NL","value":0.99},{"countryCode":"PL","value":0.99},{"countryCode":"PT","value":0.99},{"countryCode":"RO","value":0.99},{"countryCode":"RS","value":0.99},{"countryCode":"SE","value":""},{"countryCode":"SI","value":0.99},{"countryCode":"SK","value":0.99},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"relatedProducts":[],"reviewsTags":[],"useDropdownForVariations":false,"woocommerceProductIds":[{"countryCode":"AL","woocommerceProductId":""},{"countryCode":"AT","woocommerceProductId":117566},{"countryCode":"BA","woocommerceProductId":""},{"countryCode":"BE","woocommerceProductId":""},{"countryCode":"BG","woocommerceProductId":781382},{"countryCode":"CHD","woocommerceProductId":""},{"countryCode":"CHF","woocommerceProductId":""},{"countryCode":"CHI","woocommerceProductId":""},{"countryCode":"CY","woocommerceProductId":""},{"countryCode":"CZ","woocommerceProductId":2090968},{"countryCode":"DE","woocommerceProductId":117873},{"countryCode":"DK","woocommerceProductId":""},{"countryCode":"EE","woocommerceProductId":90739},{"countryCode":"ES","woocommerceProductId":69545},{"countryCode":"FI","woocommerceProductId":""},{"countryCode":"FR","woocommerceProductId":27034},{"countryCode":"GB","woocommerceProductId":""},{"countryCode":"GR","woocommerceProductId":969990},{"countryCode":"HR","woocommerceProductId":910939},{"countryCode":"HU","woocommerceProductId":2291123},{"countryCode":"IT","woocommerceProductId":1554570},{"countryCode":"LT","woocommerceProductId":180947},{"countryCode":"LV","woocommerceProductId":91154},{"countryCode":"MD","woocommerceProductId":""},{"countryCode":"MK","woocommerceProductId":232915},{"countryCode":"NL","woocommerceProductId":194567},{"countryCode":"PL","woocommerceProductId":2243283},{"countryCode":"PT","woocommerceProductId":740141},{"countryCode":"RO","woocommerceProductId":1118252},{"countryCode":"RS","woocommerceProductId":205252},{"countryCode":"SE","woocommerceProductId":""},{"countryCode":"SI","woocommerceProductId":981495},{"countryCode":"SK","woocommerceProductId":1647687},{"countryCode":"UA","woocommerceProductId":""},{"countryCode":"US","woocommerceProductId":""},{"countryCode":"XK","woocommerceProductId":""}],"acfs":[{"countryCode":"IT","number_of_pieces_in_a_set":""},{"countryCode":"LT","number_of_pieces_in_a_set":""},{"countryCode":"PT","number_of_pieces_in_a_set":""},{"countryCode":"SI","number_of_pieces_in_a_set":""},{"countryCode":"LV","number_of_pieces_in_a_set":""},{"countryCode":"RS","number_of_pieces_in_a_set":""},{"countryCode":"RO","number_of_pieces_in_a_set":""},{"countryCode":"SK","number_of_pieces_in_a_set":""},{"countryCode":"PL","number_of_pieces_in_a_set":""},{"countryCode":"MK","number_of_pieces_in_a_set":""},{"countryCode":"NL","number_of_pieces_in_a_set":""},{"countryCode":"AT","number_of_pieces_in_a_set":""},{"countryCode":"BG","number_of_pieces_in_a_set":""},{"countryCode":"CZ","number_of_pieces_in_a_set":""},{"countryCode":"DE","number_of_pieces_in_a_set":""},{"countryCode":"EE","number_of_pieces_in_a_set":""},{"countryCode":"ES","number_of_pieces_in_a_set":""},{"countryCode":"FR","number_of_pieces_in_a_set":""},{"countryCode":"GR","number_of_pieces_in_a_set":""},{"countryCode":"HR","number_of_pieces_in_a_set":""},{"countryCode":"HU","number_of_pieces_in_a_set":""}],"additionalVariationsPriceOffsets":[{"countryCode":"IT","countryId":"5d9c86730336b70cbd1315ba","value":null},{"countryCode":"LT","countryId":"621e2ac9dc6bc1a6d8290dc5","value":null},{"countryCode":"PT","countryId":"5e1475a0704e736a90c7fae2","value":null},{"countryCode":"SI","countryId":"5d9c85fc0336b742021314d6","value":null},{"countryCode":"LV","countryId":"621e2b1edc6bc1a6d8290dc6","value":null},{"countryCode":"RS","countryId":"66cd8dccea7d462f3d38146a","value":null},{"countryCode":"RO","countryId":"5dca694aac9d997e30b69f90","value":null},{"countryCode":"SK","countryId":"5e14758c704e7328bac7fade","value":null},{"countryCode":"PL","countryId":"5dca6952ac9d99150db69f92","value":null},{"countryCode":"MK","countryId":"679c8a0fd52c906b3010917d","value":null},{"countryCode":"NL","countryId":"5f3ba871ab5e2237240d8c07","value":null},{"countryCode":"AT","countryId":"5da8661a4ca2c106ccdafa80","value":null},{"countryCode":"BG","countryId":"5e1475d7704e733d3ec7fae4","value":null},{"countryCode":"CZ","countryId":"5e1475f0704e73d3c0c7fae6","value":null},{"countryCode":"DE","countryId":"5dca6943ac9d992456b69f8e","value":null},{"countryCode":"EE","countryId":"621e2b44dc6bc1a6d8290dc7","value":null},{"countryCode":"ES","countryId":"5e147598704e738ff3c7fae0","value":null},{"countryCode":"FR","countryId":"5f89955741605719d21d15a5","value":null},{"countryCode":"GR","countryId":"5ed7a071a74c373c0d4ce615","value":null},{"countryCode":"HR","countryId":"5e14761b704e7345c1c7faeb","value":null},{"countryCode":"HU","countryId":"5e147642704e73e928c7faed","value":null}],"discounts":[{"countryCode":"IT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"LT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"PT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"SI","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"LV","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"RS","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"RO","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"SK","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"PL","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"MK","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"NL","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"AT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"BG","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"CZ","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"DE","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"EE","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"ES","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"FR","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"GR","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"HR","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"HU","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"}],"manualsLinks":[{"countryCode":"IT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"LT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"PT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"SI","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"LV","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"RS","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"RO","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"SK","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"PL","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"MK","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"NL","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"AT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"BG","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"CZ","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"DE","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"EE","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"ES","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"FR","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"GR","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"HR","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"HU","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"}],"variations":[],"templates":[],"id":"693040aa8f426861019e9c10","deliveryDates":[{"countryId":"5d9c86730336b70cbd1315ba","countryCode":"IT","date":"05.01.2026"},{"countryId":"621e2ac9dc6bc1a6d8290dc5","countryCode":"LT","date":"05.01.2026"},{"countryId":"5d9c85fc0336b742021314d6","countryCode":"SI","date":"05.01.2026"},{"countryId":"621e2b1edc6bc1a6d8290dc6","countryCode":"LV","date":"05.01.2026"},{"countryId":"66cd8dccea7d462f3d38146a","countryCode":"RS","date":"05.01.2026"},{"countryId":"5dca694aac9d997e30b69f90","countryCode":"RO","date":"05.01.2026"},{"countryId":"5e14758c704e7328bac7fade","countryCode":"SK","date":"05.01.2026"},{"countryId":"5dca6952ac9d99150db69f92","countryCode":"PL","date":"05.01.2026"},{"countryId":"679c8a0fd52c906b3010917d","countryCode":"MK","date":"05.01.2026"},{"countryId":"5f3ba871ab5e2237240d8c07","countryCode":"NL","date":"05.01.2026"},{"countryId":"5da8661a4ca2c106ccdafa80","countryCode":"AT","date":"05.01.2026"},{"countryId":"5e1475d7704e733d3ec7fae4","countryCode":"BG","date":"05.01.2026"},{"countryId":"5e1475f0704e73d3c0c7fae6","countryCode":"CZ","date":"05.01.2026"},{"countryId":"5dca6943ac9d992456b69f8e","countryCode":"DE","date":"05.01.2026"},{"countryId":"621e2b44dc6bc1a6d8290dc7","countryCode":"EE","date":"05.01.2026"},{"countryId":"5f89955741605719d21d15a5","countryCode":"FR","date":"05.01.2026"},{"countryId":"5ed7a071a74c373c0d4ce615","countryCode":"GR","date":"05.01.2026"},{"countryId":"5e14761b704e7345c1c7faeb","countryCode":"HR","date":"05.01.2026"},{"countryId":"5e147642704e73e928c7faed","countryCode":"HU","date":"05.01.2026"}],"enableOriginalPriceOffset":false}];
     var globalPrices = {
         op1: '36.95',
         op2: '73.90',
@@ -4464,1124 +4486,294 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         rp3: '41.59',
         rp4: '55.45',
         rp5: '49.37',
-        rpx: '59.25'
+        rpx: '59.25',
     };
-    //prices that are fixed and can't be changed
-    var fixedGlobalPrices = {
-        op1: '36.95',
-        op2: '73.90',
-        op3: '110.85',
-        op4: '147.80',
-        op5: '184.75',
-        opx: '221.70',
-        rp1: '18.99',
-        rp2: '29.62',
-        rp3: '41.59',
-        rp4: '55.45',
-        rp5: '49.37',
-        rpx: '59.25'
-    };
-    var pricePerPiece = 0;
-    let variationsWithPriceOffsets = false;
+    var decimals = 2;
+    var redPrice1 = 18.99;
+    dynPriceSet = false;
 
-    // Function to check if the URL contains specific substrings
-    function urlIncludesSubstrings(url, substrings) {
-        return substrings.some(substring => url.includes(substring));
-    }
+    var purchaseTypePickers = [];
+    var selectedPurchaseTypePicker = null;
+    
 
-    if (globalPrices.rp1 === '0' || globalPrices.rp1 === '' || globalPrices.rp1 === 'NaN'){
-        globalPrices.rp1 = globalPrices.op1;
+    (function () {
+        setTimeout(function() {
+            applyDynamicPrice();
+            modifyGlobalPrices(redPrice1);
+            setSelectedVariations();
+            toggleCartButtonStock();
+            dyncamicCheckoutHandlePrice();
+            if(typeof initPickerSelector === 'function'){
+             initPickerSelector();   
+            }
+            if(typeof initSubscriptionSelector === 'function'){
+             initSubscriptionSelector();   
+            }
+            markOutOfStock2();
+            recalculatePrices();
+            setLinkDynamicCart();
+        }, 1200);
+    })();
+
+    function dyncamicCheckoutHandlePrice(){
+      $('.dp-all').css('display', 'inline-block');
     }
     
-    if(globalPrices.rp1 === globalPrices.op1){
-        document.querySelector(".hs-cf-price-orig").style.display = "none";
-        document.querySelector(".hs-cf-price-left").style.display = "none";
+    function getCookieDynCheckout(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+        }
+        return "";
     }
-
-    var checkoutType = "checkout-form";
-    var shopLink = "https://ortowp.noriks.com/?add-to-cart=19&variation_id=24&attribute_pa_barva=oranzna&attribute_pa_velikost=43-44&quantity=1";
-    var globalQuantityValue = 1;
-
-        (function () {
-            setTimeout(function() {
-                setLink(0, 1, 0);
-                showAdditionalVaritationOnFb();
-                //setShippingPrice();
-                recalculatePricePerPiece()
-            }, 1000);
-        })();
-
-        function initSetLink(){
+    
+    
+    function initSetLink(){
             try{
-                setLink(0, 1, 0);
-                ensureValidDefault(0, 1);
+                setLinkDynamicCart();
             }catch(err){
                 throw err;
             } 
         }
+    function setLink(){
+        try{
+            setLinkDynamicCart();
+        }catch(err){
+            throw err;
+        } 
+    }
+    
+    
 
-        function changeQuantityAndSelect(rnd, value) {
-            changeQuantity(rnd, value);
-            markOutOfStock();
-            selectSameVariationAsQuantity1(rnd, value);
-            // setTimeout(function() {
-            //     markOutOfStock();
-            //     setTimeout(function() {
-            //         selectSameVariationAsQuantity1(rnd, value);
-            //     }, 40);
-            // }, 40);
+    function dynamicCheckoutColorVariationClicked(propertyId, optionId, p, variationIndex){
+      let property = propertiesArr.find(pr => pr.id === propertyId);
+      let option = property.options.find(opt => opt.id === optionId);
+
+      let selectedVariationValueLabel = document.getElementById("selected-color-variation-value");
+      selectedVariationValueLabel.innerText = option.name;
+
+      //remove borders on all variations
+      for(let opt = 0; opt < propertiesArr[p].options.length; opt++){
+        let optionElement = document.getElementById(propertiesArr[p].id + "-" + propertiesArr[p].options[opt].id + "-" + p);
+        if(!!optionElement){
+          optionElement.classList.remove('selected');
+          optionElement.setAttribute("selected-option", "false");
         }
-        
-
-        function changeQuantity(rnd, value) {
-            if (rnd === undefined) {
-                return;
-            }
-            var elements = document.getElementsByClassName("quantity_button");
-            var tdElement = document.getElementsByClassName("product_price_basic");
-            for(let i = 0; i < elements.length; i++) {
-                elements[i].classList.remove("active_quantity_button");
-            }
-            
-            for (let i = 0; i < tdElement.length; i++) {
-                tdElement[i].classList.remove("active_quantity_td");
-            }
-
-            var active_element = document.getElementById("0-quantity-" + value);
-            var active_element_td = document.getElementById("0-quantity-" + value + "-td");
-            active_element.classList.add('active_quantity_button');
-            active_element_td.classList.add('active_quantity_td');
-            
-            var n = value;
-            globalQuantityValue = value;
-
-            if (typeof qty_mp_push === 'function') {
-                qty_mp_push(n);
-            }
-
-            var quantities = 0;
-            var size = elements.length;
-            var quantityButtonsCount = elements.length;
-
-            if(checkoutType === "checkout-form" && quantityButtonsCount > 3){
-                quantityButtonsCount = 3;
-                size = 3;
-            }
-
-            //if 6 quantities
-            if(quantityButtonsCount === 6){
-                for(var i = 1; i <= size; i++){
-                    //hide all
-                    if(i < size){
-                        let el = document.getElementById(rnd + "-qty" + i);
-                        if(el){
-                            el.removeAttribute('style');
-                        }
-                    }else {
-                        //quantity X
-                        let xQntElm = document.getElementById(rnd + "-qty" + 'x');
-                        if (xQntElm){
-                            xQntElm.removeAttribute('style');
-                        }
-                    }
+      }
+      //add border to selected variation
+      let selectedVariationButtonElement = document.getElementById(propertyId + "-" + optionId + "-" + p);
+      selectedVariationButtonElement.classList.add('selected');
+      selectedVariationButtonElement.setAttribute("selected-option", "true");
+      
+      toggleCartButtonStock();
+      markOutOfStock2();
+      recalculatePrices();
+      setLinkDynamicCart();
+    }//dynamicCheckoutColorVariationClicked
     
-                    //set selected
-                    if((i == n) ){
-                        //normal quantity
-                        if(i < size){
-                            document.getElementById(rnd + "-hs-cf-price-qty" + i).removeAttribute('style');
-                            document.getElementById(rnd + "-hs-cf-discount-qty" + i).removeAttribute('style');
-                        }else {
-                            document.getElementById(rnd + "-hs-cf-price-qty" + 'x').removeAttribute('style');
-                            document.getElementById(rnd + "-hs-cf-discount-qty" + 'x').removeAttribute('style');
-                        }
-                        
-                    }else {
-                        if(i < quantityButtonsCount){
-                            document.getElementById(rnd + "-hs-cf-price-qty" + i).style.display = "none";
-                            document.getElementById(rnd + "-hs-cf-discount-qty" + i).style.display = "none";
-                        }else {
-                            //X quantity
-                            document.getElementById(rnd + "-hs-cf-price-qty" + 'x').style.display = "none";
-                            document.getElementById(rnd + "-hs-cf-discount-qty" + 'x').style.display = "none";
-                        }            
-                    }
-
-                    if(n >= size){
-                        // X quantity
-                        document.getElementById(rnd + "-hs-cf-price-qty" + 'x').removeAttribute('style');
-                        document.getElementById(rnd + "-hs-cf-discount-qty" + 'x').removeAttribute('style');
-                    }
     
-                }//for
-            }
+  async function recalculatePrices(){
+    var originalPrice = 36.95
+    var retail_price = 0;
+    globalRetailPrice = 0;
+    var forced_minimum_price = 0;
+    globalMinimumPrice = 0;
+    var sp_minimum_price = 0;
+    globalSpMinimumPrice = 0;
+    var countryMinimumPrice = 6.99;
+    var productCogs = 6.99;
+    var additionalVariationProductPrice = 0;
+    var additionalVariationsPrices = [];
+    var decimals = 2;
+    var altDecimals = 2;
+    var altCurrencySymbol = '€';
+    var defaultReducedPrice = 18.99;
+    price = setDefaultReducedPrice(price, defaultReducedPrice);
+    var countryCurrencySymbol = '€';
+    var showAltCurrencyPrice = false;
+    var altCurrencyPriceRate = 1;
+    var altCurrencyPriceSymbol = '€';
+    var enableOriginalPriceOffset = false;
 
-            if(quantityButtonsCount === 3){
-                /*START STARI*/
-                for (var i = 1; i < size + 1; i++) {
-                    if (i <= n) {
-                        document.getElementById(rnd + "-qty" + i).removeAttribute('style');
-                    } else {
-                        document.getElementById(rnd + "-qty" + i).style.display = "none";
-                    }
+    var skus = getAllSkus();
+    var pr2;
 
-                    if (i == n) {
-                        document.getElementById(rnd + "-hs-cf-price-qty" + i).removeAttribute('style');
-                        document.getElementById(rnd + "-hs-cf-discount-qty" + i).removeAttribute('style');
-                        
-                    } else {
-                        document.getElementById(rnd + "-hs-cf-price-qty" + i).style.display = "none";
-                        document.getElementById(rnd + "-hs-cf-discount-qty" + i).style.display = "none";
-                    }
-                }
+    if(country !== 'HR'){
+        pr2 = getPr(skus);
+    }else {
+        //ignore cookie price on HR
+        pr2 = '';
+    }
 
-                if (n == 1) {
-                    document.getElementById(rnd + '-qty1').classList.remove('hs-cf-product-border');
-                } else {
-                    document.getElementById(rnd + '-qty1').classList.add('hs-cf-product-border');
-                }
-                /*END STARI*/
-            }
-
-            
-            setLink(rnd);
-            handleManscavePriceView(rnd, value);
-        }
-        
-        function recalculatePricePerPiece(){
-            //ATM we have only pricePerPiece 1 2 3
-            for(let index = 1; index < 4; index++){
-                var newPrice = 0;
-                var numberOfPiecesInSet = parseFloat(productSettings?.numberOfPiecesInSet) || 1;
-                //so we can later add PPP for bundles 4 5 6 with minimal code changes
-                if (index < 6) {
-                    newPrice = parseFloat(globalPrices['rp'+index])
-                } else {
-                    newPrice = parseFloat(globalPrices['rpx'])
-                }
-                if (isNaN(newPrice)) {
-                    newPrice = 0;
-                }
-    
-                if(isNaN(numberOfPiecesInSet)) {
-                    numberOfPiecesInSet = 1;
-                }
-                let pricePerPiece = newPrice/(numberOfPiecesInSet*index);
-                pricePerPiece = pricePerPiece % 1 === 0 ? pricePerPiece : pricePerPiece.toString().slice(0, (pricePerPiece.toString().indexOf("."))+3);
-                const pricePerPieceElement= document.getElementById("pricePerPiece"+index);
-    
-                if(pricePerPieceElement) {
-                    pricePerPieceElement.textContent = pricePerPiece;
-                }
+    var pr2 = getPr(skus);
+    altDynPr = false;
+    if (pr2 === '') {
+        pr2 = getCookieDynCheckout('sp') || getParam('sp');
+        if(pr2 === 0){
+            pr2 = getCookieDynCheckout('spe') || getParam('spe');
+            spe = getCookieDynCheckout('spe') || getParam('spe');
+            altDynPr = true;
+            if(spe !== 0){
+                altDynPr = true;
             }
         }
-        
+    }
 
-        function handleManscavePriceView(rnd, value){
-            for(var i = 1; i <= 3; i++){
-                var elemId = "manscave-show-price-" + i.toString();
-                var elem = document.getElementById(elemId);
+    if(getCookieDynCheckout('sp') || getCookieDynCheckout('spe')) {
+        pr2 = psp(pr2)
+    }
 
-                if(!!elem){
-                    if(i === value){
-                        elem.style.display = "block";
-                    }
-                    else{
-                        elem.style.display = "none";
-                    }
-                }//if
-            }//for
-        }//handleManscavePriceView
+    sp = pr2;
+    spe = pr2;
+    if(urlIncludesSubstrings(currentUrl, substringsToCheck) || urlIncludesSubstrings(currentUrl, substringsToCheckMailing) 
+    || getCookieDynCheckout('utm_source') === 'mailing' || getCookieDynCheckout('utm_mp_source') === 'mailing'
+    || getCookieDynCheckout('utm_source') === 'google' || getCookieDynCheckout('utm_mp_source') === 'google'){
+        price = pr2;
+    }   else {
+        price = sp;
+        }    
 
-        function setLinkFromButton(rnd, name, value) {
-            let btnsSelector = 'button[name="' + rnd + '-' + name + '"]';
-            let buttons = document.querySelectorAll(btnsSelector);
-            for (let i = 0; i < buttons.length; i++) {
-              buttons[i].classList.remove('selected');
-              if (buttons[i].value === value) {
-                buttons[i].classList.add('selected');
+    if (country === 'HR' && altDynPr === false){
+        if(urlIncludesSubstrings(currentUrl, substringsToCheck) || getCookieDynCheckout('utm_source') === 'google' || getCookieDynCheckout('utm_mp_source') === 'google' ) {
+            price = price / 1;
+        }
+
+    }
+    
+    
+    let selectedOptions = [];
+    for(let pr = 0; pr < propertiesArr.length; pr++){
+      let propertyId = propertiesArr[pr].id;
+      let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+      if(selectedOptionElements.length > 0){
+        selectedOptions.push(propertiesArr[pr].options.find(opt => opt.id === selectedOptionElements[0].value));
+      } 
+    }
+    //find correct variation
+    let selectedVariation = variationsArr.find(vr => vr.ids.sort().join(',') === selectedOptions.map(sO => sO.id).sort().join(','));
+    //PRICE LOGIC--------------------------------------------------------------------------------------------
+    
+    var cookieUtmSource = getCookieDynCheckout('utm_source')
+    var cookieUtmMpSource = getCookieDynCheckout('utm_mp_source')
+    var cookiefbclid= getCookieDynCheckout('fbclid')
+    var cookieSaleCoupon = getCookieDynCheckout('coupon')
+
+    var globalRetailConverted = globalRetailPrice;
+    var globalMinimumConverted = globalMinimumPrice;
+    
+    var isUtmPresent = (
+    urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=', 'fbclid=']) || 
+    (cookieUtmMpSource && cookieUtmMpSource !== '') || 
+    (cookieUtmSource && cookieUtmSource !== '') ||
+    (cookiefbclid && cookiefbclid !== '')
+    );
+    var isGoogleSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=google', 'utm_source=google']) || cookieUtmMpSource === 'google' || cookieUtmSource === 'google';
+    var isNativeHsSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=nativehs', 'utm_source=nativehs']) || cookieUtmMpSource === 'nativehs' || cookieUtmSource === 'nativehs';
+    var isNewsLetterSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=newsletter', 'utm_source=newsletter']) || cookieUtmMpSource === 'newsletter' || cookieUtmSource === 'newsletter';
+    var isMailingSource = currentUrl.includes('utm_source=mailing', 'utm_mp_source=mailing') || cookieUtmMpSource === 'mailing' || cookieUtmSource === 'mailing';
+    var isTikTokSource = currentUrl.includes('utm_source=tiktok', 'utm_mp_source=tiktok') || cookieUtmMpSource === 'tiktok' || cookieUtmSource === 'tiktok';
+    var isOtherSource = (urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=']) || cookieUtmMpSource !== '' || cookieUtmSource !== '') && !isGoogleSource && !isMailingSource && !isNativeHsSource && !isNewsLetterSource && !isTikTokSource;
+    var hasFbclid = Boolean(urlIncludesSubstrings(currentUrl, ['fbclid=']) || (cookiefbclid && cookiefbclid !== ''));
+    var hasSaleCoupon = urlIncludesSubstrings(currentUrl, ['utm_content=sale10']) || getCookieDynCheckout('coupon') === 'sale10';
+
+
+    if (isUtmPresent) {
+      if (isOtherSource || hasFbclid) {
+          if (globalRetailPrice != '0') {
+              price = globalRetailPrice;
+          }else {
+              price = defaultReducedPrice >= countryMinimumPrice ? defaultReducedPrice : countryMinimumPrice;
+          }
+      } else if (isGoogleSource || isMailingSource || isNativeHsSource || isNewsLetterSource || isTikTokSource) {
+          if (sp) {
+              if (globalMinimumPrice) {
+                  price = sp >= globalSpMinimumPrice ? sp : globalSpMinimumPrice;
+              } else {
+                  price = sp >= countryMinimumPrice ? sp : defaultReducedPrice;
               }
-            }
-
-            setLink(rnd);
-        }
-
-        function setLinkFromDropdown(rnd, name, value){
-            let selectSelector = 'select[name="' + name + '"]';
-            let selects = document.querySelectorAll(selectSelector);
-
-            //console.log(selects);
-            for(let i = 0; i < selects.length; i++){
-                for(let o = 0; o < selects[i].options.length; o++){
-                    selects[i].options[o].classList.remove('selected');
-                    if(selects[i].options[o].value === value.value){
-                        selects[i].options[o].classList.add('selected');
-                    }
-                }//for
-            }//for
-
-            setLink(rnd);
-            
-        }//setLinkFromDropdown
-
-        function convertPriceToUrlType(priceString){
-            priceString = priceString.toString();
-            
-            if(priceString.includes('i')) {
-                return priceString;    
-            }
-            if(priceString.includes('.')){
-                priceString = priceString.replace('.', 'i');
-                priceString = '77' + priceString + '7'
-                return priceString;
-            }
-            if(priceString != '0' && !priceString.includes('.') && !priceString.includes('i')){
-                priceString = '77' + priceString + 'i' + '007';
-                return priceString;
-            }
-        
-            return '';
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            hsInitDisableImpossibleOptionsOnce()
-            const hsRpDivs = document.querySelectorAll('.hs-rp');
-        
-            hsRpDivs.forEach(function(div) {
-                div.addEventListener('click', function(event) {
-                    // Prevent the default behavior of the click event
-                    event.preventDefault();
-        
-                    // Find the checkbox element within the clicked div
-                    const checkbox = div.querySelector('.hsm-rp-container input[type="checkbox"]');
-        
-                    if (checkbox) {
-                        // Toggle the checkbox state
-                        checkbox.checked = !checkbox.checked;
-
-                        if (checkbox.checked) {
-                            setLink(0);
-
-                        }
-                        else {
-                            setLink(0);
-                        }
-                    }
-                });
-            });
-        });
-
-        function handleDropdownClick(event) {
-            event.stopPropagation(); // Stop propagation to the parent div
-        }
-
-        function markRelatedSelected(relatedId, type){
-            let relatedWrapper = document.getElementById("related-product-"+ relatedId);
-            let relatedCheckbox = document.getElementById("checkmark-"+ relatedId);
-
-           
-            switch (type) {
-                case "toggle": {
-                    if (relatedWrapper.classList.contains("hs-rp-checked")){
-                        relatedWrapper.classList.remove("hs-rp-checked")
-                    }
-                    else {
-                        relatedWrapper.classList.add("hs-rp-checked")
-                    }
-                    if (relatedCheckbox.classList.contains("checkmark-checked")){
-                        relatedCheckbox.classList.remove("checkmark-checked")
-                    }
-                    else {
-                        relatedCheckbox.classList.add("checkmark-checked")
-                    }
-                    break;
-                }
-                case "mark": {
-                    relatedWrapper.classList.add("hs-rp-checked");
-                    relatedCheckbox.classList.add("checkmark-checked");
-                    break;
-                }
-                case "unmark": {
-                    relatedWrapper.classList.remove("hs-rp-checked");
-                    relatedCheckbox.classList.remove("checkmark-checked");
-                    break;
-                }
-                default: break;
-            }
-        }
-
-        function relatedDropDownChanged(relatedId){
-            let checkbox = document.getElementById(relatedId);
-            checkbox.checked = true;
-            setLink(0);
-            markRelatedSelected(relatedId, "mark");
-        }
-
-        function showAdditionalVaritationOnFb(){
-            const fvElements = document.querySelectorAll('.hs-fv-wrapper');
-            if (urlIncludesSubstrings(currentUrl, ['utm_mp_source=facebook', 'utm_source=facebook', 'fbclid='])){
-                fvElements.forEach(fvElement =>{
-                    fvElement.style.display = 'block';
-                });
-            } else {
-                fvElements.forEach(fvElement => {
-                    fvElement.style.display = 'none';
-                });
-            }
-        }
-
-        function setLink(rnd, val) {
-            let selector = "input[name='" + rnd + "-quantity']:checked";
-            var n;
-            //variations
-            if(val === undefined){
-                n = globalQuantityValue;	
-            }else {
-                n = val;
-            }
-            
-            let selectedProperties = [];
-
-            let relatedData = getRelatedProductsData(relatedArr);
-
-            var isGoogleSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=google', 'utm_source=google']);
-            var isMailingSource = currentUrl.includes('utm_source=mailing', 'utm_mp_source=mailing');
-            var isNativeHsSource = currentUrl.includes('utm_source=nativehs', 'utm_mp_source=nativehs');
-            var isNewsLetterSource = currentUrl.includes('utm_source=newsletter', 'utm_mp_source=newsletter');
-            var isTikTokSource = currentUrl.includes('utm_source=tiktok', 'utm_mp_source=tiktok');
-            var isOtherSource = (
-                    urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=']) &&
-                    !isGoogleSource &&
-                    !isMailingSource &&
-                    !isNativeHsSource &&
-                    !isNewsLetterSource &&
-                    !isTikTokSource
-                );
-            var hasFbclid = urlIncludesSubstrings(currentUrl, ['fbclid=']);
-
-            if (propertiesArr.length > 0) {
-                for (let q = 0; q < n; q++) {
-                    selectedProperties[q] = [];
-                    let colorIndex = 0;
-                    for (let p = 0; p < propertiesArr.length; p++) {
-                        let name = propertiesArr[p].code + '-' + (q + 1);
-                        let selectedValue;
-                        if (propertiesArr[p].type === 'color') {
-                            let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                            selectedValue = document.querySelector(selector).value;
-                            setColorText(selectedValue, q, colorIndex);
-                            colorIndex++;
-                        } else if (propertiesArr[p].type === 'color-bundle'){
-                            let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                            selectedValue = document.querySelector(selector).value;
-                            setBundleColorText(selectedValue, q, colorIndex);
-                            colorIndex++;
-                        } else if (propertiesArr[p].type === 'icon'){
-                            let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                            selectedValue = document.querySelector(selector).value;
-                            setIconColorText(selectedValue, q, colorIndex);
-                            colorIndex++;
-                        } else {
-                            //let selector = 'button[name="' + rnd + '-' + name + '"].selected';
-                            let selector = 'button[name="' + rnd + '-' + name + '"].selected';
-                            selectedValue = document.querySelector(selector).value;
-                        }
-                        selectedProperties[q].push(selectedValue);
-                    }
-                }
-
-                let selectedVariationIds = [];
-
-                let stockQ = [];
-                for (let q = 0; q < selectedProperties.length; q++) {
-                    let inStock = false;
-                    for (let i = 0; i < variationsArr.length; i++) {
-                        let found = true;
-                        for (let j = 0; j < selectedProperties[q].length; j++) {
-                            if (!variationsArr[i].ids.includes(selectedProperties[q][j])) {
-                                found = false;
-                            }
-                        }
-                    
-                       if (found && variationsArr[i].sku != "" && !variationsArr[i].hide ) {
-                            selectedVariationIds.push(variationsArr[i].variationId.trim());
-                            inStock = true;
-                        } 
-                    }
-                    stockQ[q] = inStock
-                }
-
-                if (stockQ.includes(false)){
-                    handleAddToCartButton(rnd, true);
-                }
-                else {
-                    handleAddToCartButton(rnd, false);
-                }
-                
-                let linkArr = shopLink.split('=');
-                let link = linkArr[0] + '=' + selectedVariationIds.toString();
-                link = link + relatedData.wcIds;
-
-                
-
-                
-                if (sp === 0){
-                 link = link
-                } else if (price !== 0 && country === 'BG') {
-                    if(altDynPr){
-                        link = link + '&spe=' + convertPriceToUrlType(price);
-                    }else {
-                        link = link + '&sp=' + convertPriceToUrlType(spFixed);
-                    }
-                } else if (price !== 0 && country != 'BG'){
-                    if(altDynPr){
-                        link = link + '&spe=' + convertPriceToUrlType(price);
-                    }else {
-                        link = link + '&sp=' + convertPriceToUrlType(price);
-                    }
-                }
-                if ((isOtherSource && !isGoogleSource && !isMailingSource) || hasFbclid){
-                link = link + '&utm_source=other';
-                } else if (isGoogleSource) {
-                link = link + '&utm_source=google';
-                } else if (isMailingSource){
-                link = link + '&utm_source=mailing';
-                } else if (isNativeHsSource){
-                link = link + '&utm_source=nativehs';
-                } else if (isNewsLetterSource){
-                link = link + '&utm_source=newsletter';
-                } else if (isTikTokSource){
-                link = link + '&utm_source=isTikTokSource';
-                }
-
-                link = link + '&ism=' + isMobile();
-
-                document.getElementById(rnd + '-hs-cf-add-to-cart').href = link;
-            } else {
-                //let linkArr = shopLink;
-                //let link = shopLink + '&quantity=' + n;
-
-                let linkArr = shopLink.split('=');
-                let link = linkArr[0] + '=';
-
-                for (let qn = 0; qn < n; qn++) {
-                    if (qn !== 0) {
-                        link = link + ',';
-                    }
-                    link = link + linkArr[1];
-                }
-                link = link + relatedData.wcIds;
-
-                if (sp === 0){
-                 link = link
-                } else if (price !== 0 && country === 'BG') {
-                    if(altDynPr){
-                        link = link + '&spe=' + convertPriceToUrlType(price);
-                    }else {
-                        link = link + '&sp=' + convertPriceToUrlType(spFixed);
-                    }
-                } else if (price !== 0 && country != 'BG'){
-                    if(altDynPr){
-                        link = link + '&spe=' + convertPriceToUrlType(price);
-                    }else {
-                        link = link + '&sp=' + convertPriceToUrlType(price);
-                    }
-                }
-
-                if ((isOtherSource && !isGoogleSource && !isMailingSource && !isTikTokSource) || hasFbclid){
-                    link = link + '&utm_source=other';
-                    } else if (isGoogleSource) {
-                    link = link + '&utm_source=google';
-                    } else if (isMailingSource){
-                    link = link + '&utm_source=mailing';
-                    } else if (isNativeHsSource){
-                    link = link + '&utm_source=nativehs';
-                    } else if (isNewsLetterSource){
-                    link = link + '&utm_source=newsletter';
-                    } else if (isTikTokSource){
-                    link = link + '&utm_source=tiktok';
-                };
-
-                
-                link = link + '&ism=' + isMobile();
-                
-                document.getElementById(rnd + '-hs-cf-add-to-cart').href = link;
-
-                
-            }
-            markQuantityAsChanged(val);
-            enableStickyButton();
-            hideStickyButtonOnCF();
-            markOutOfStock();
-            fixDisabledSecondProperty(rnd);
-            addRelatedProductsPrice(relatedData.price);
-            handleDifferentVariationPrices();
-        }
-
-        ///////////////////////////////////////////////////////////////////
-        //START check on load if any variation is completely out of stock//
-        ///////////////////////////////////////////////////////////////////
-        function hsInitDisableImpossibleOptionsOnce() {
-            if (window.__hsInitDisableImpossibleOptionsDone) return;
-            window.__hsInitDisableImpossibleOptionsDone = true;
-
-            if (!window.propertiesArr || !window.variationsArr) return;
-
-            function isVariationAvailable(v) {
-                return v && v.hide === false && v.disable !== true;
-            }
-
-            var allOptionIds = {};
-            for (var p = 0; p < propertiesArr.length; p++) {
-                var prop = propertiesArr[p];
-                if (!prop || !prop.options) continue;
-
-                for (var o = 0; o < prop.options.length; o++) {
-                var opt = prop.options[o];
-                if (opt && opt.id != null) allOptionIds[String(opt.id)] = true;
-                }
-            }
-
-            var availableOptionIds = {};
-            for (var i = 0; i < variationsArr.length; i++) {
-                var v = variationsArr[i];
-                if (!isVariationAvailable(v) || !v.ids || !v.ids.length) continue;
-
-                for (var j = 0; j < v.ids.length; j++) {
-                var id = String(v.ids[j]);
-                if (allOptionIds[id]) availableOptionIds[id] = true;
-                }
-            }
-
-            function setOptionStateById(optionId, shouldDisable) {
-                var selector =
-                'input.hs-cf-property-input[value="' + optionId + '"],' +
-                'input.hs-cf-property-input-bundle[value="' + optionId + '"],' +
-                'button.hs-property-button[value="' + optionId + '"]';
-
-                var els = document.querySelectorAll(selector);
-
-                for (var k = 0; k < els.length; k++) {
-                    var el = els[k];
-
-                    if (shouldDisable) {
-                        el.classList.add('greyOut');
-                        el.disabled = true;
-                    } else {
-                        el.classList.remove('greyOut');
-                        el.disabled = false;
-                    }
-
-                    // label (no template literals)
-                    var label =
-                        (el.closest && el.closest('label.hs-cf-parent-property-bundle')) ||
-                        (el.id ? document.querySelector('label[for="' + el.id + '"]') : null);
-
-                    if (label) {
-                        if (shouldDisable) {
-                            label.classList.add('greyOut');
-                        } else {
-                            label.classList.remove('greyOut');
-                        }       
-                    }
-                }
-            }
-
-            // Disable options that are NEVER available in any available variation
-            for (var idKey in allOptionIds) {
-                if (!allOptionIds.hasOwnProperty(idKey)) continue;
-                var isEverAvailable = !!availableOptionIds[idKey];
-                setOptionStateById(idKey, !isEverAvailable);
-            }
-        }
-        /////////////////////////////////////////////////////////////////
-        //End check on load if any variation is completely out of stock//
-        /////////////////////////////////////////////////////////////////
-
-       function markOutOfStock() {
-            const qtyElements = document.querySelectorAll('[id^="0-qty"]');
-
-            qtyElements.forEach(div => {
-                const checkedRadio = div.querySelector('input[type="radio"]:checked');
-                const selectedRadio = checkedRadio ? checkedRadio.value : null;
-
-                const selectedButton = div.querySelector('button.hs-property-button.selected');
-                const selectedBtnValue = selectedButton ? selectedButton.value : null;
-
-                // Get all variations that include the selected "color"
-                const option1Variations = variationsArr.filter(variation => variation.ids.includes(selectedRadio));
-                const option2Variations = variationsArr.filter(variation => variation.ids.includes(selectedBtnValue));
-
-                if (option1Variations.length > 0 && option2Variations.length > 0) {
-                    option1Variations.forEach(variation => {
-                        variation.ids.forEach(id => {
-                            let el = div.querySelector('input.hs-cf-property-input[value="' + id + '"]') ||
-                                    div.querySelector('button.hs-property-button[value="' + id + '"]') ||
-                                    div.querySelector('input.hs-cf-property-input-bundle[value="' + id + '"]');
-                            const label = el ? el.closest('label.hs-cf-parent-property-bundle') || div.querySelector('label[for="' + el.id + '"]') : null;
-
-                            if (id !== selectedRadio) {
-                                if (el) {
-                                    if (variation.hide === false) {
-                                        el.classList.remove('greyOut');
-                                        el.disabled = false;
-                                    } else {
-                                        el.classList.add('greyOut');
-                                        el.disabled = true;
-                                    }
-                                    if (variation.disable === true) {
-                                        el.classList.add('hiddenvariation');
-                                    } else {
-                                        el.classList.remove('hiddenvariation');
-                                    }
-                                }
-                                if (label) {
-                                    if (variation.hide === false) {
-                                        label.classList.remove('greyOut');
-                                        label.disabled = false;
-                                    } else {
-                                        label.classList.add('greyOut');
-                                        label.disabled = true;
-                                    }
-                                    if (variation.disable === true) {
-                                        label.classList.add('hiddenvariation');
-                                    } else {
-                                        label.classList.remove('hiddenvariation');
-                                    }
-                                }
-                            }
-                        });
-                    });
-
-                    option2Variations.forEach(variation => {
-                        variation.ids.forEach(id => {
-                            if (id !== selectedBtnValue) {
-                                let el = div.querySelector('input.hs-cf-property-input[value="' + id + '"]') ||
-                                        div.querySelector('button.hs-property-button[value="' + id + '"]') ||
-                                        div.querySelector('input.hs-cf-property-input-bundle[value="' + id + '"]');
-                                const label = el ? el.closest('label.hs-cf-parent-property-bundle') || div.querySelector('label[for="' + el.id + '"]') : null;
-
-                                if (el) {
-                                    if (variation.hide === false) {
-                                        el.classList.remove('greyOut');
-                                    } else {
-                                        //el.classList.add('greyOut');
-                                    }
-                                }
-                                if (label) {
-                                    if (variation.hide === false) {
-                                        label.classList.remove('greyOut');
-                                    } else {
-                                        //label.classList.add('greyOut');
-                                    }
-                                }
-                            }
-                        });
-                    });
-
-                } else {
-                    variationsArr.forEach(variation => {
-                        variation.ids.forEach(id => {
-                            let el = div.querySelector('input.hs-cf-property-input[value="' + id + '"]') ||
-                                    div.querySelector('button.hs-property-button[value="' + id + '"]') ||
-                                    div.querySelector('input.hs-cf-property-input-bundle[value="' + id + '"]');
-                            const label = el ? el.closest('label.hs-cf-parent-property-bundle') || div.querySelector('label[for="' + el.id + '"]') : null;
-
-                            if (el) {
-                                if (variation.hide === false) {
-                                    el.classList.remove('greyOut');
-                                    el.disabled = false;
-                                } else {
-                                    el.classList.add('greyOut');
-                                    el.disabled = true;
-                                }
-                            }
-                            if (label) {
-                                if (variation.hide === false) {
-                                    label.classList.remove('greyOut');
-                                    label.disabled = false;
-                                } else {
-                                    label.classList.add('greyOut');
-                                    label.disabled = true;
-                                }
-                            }
-                        });
-                    });
-                }
-
-                const allOptions = div.querySelectorAll('input.hs-cf-property-input, button.hs-property-button, input.hs-cf-property-input-bundle');
-                allOptions.forEach(optionEl => {
-                    const optionValue = optionEl.value;
-                    const relatedVariations = variationsArr.filter(v => v.ids.includes(optionValue));
-                    if (relatedVariations.length === 0) return;
-
-                    const allUnavailable = relatedVariations.every(v => v.disable === true || v.hide !== false);
-                    if (allUnavailable && relatedVariations.every(v => v.disable === true)) {
-                        optionEl.classList.add('hiddenvariation');
-                        const label = optionEl.closest('label.hs-cf-parent-property-bundle') || div.querySelector('label[for="' + optionEl.id + '"]');
-                        if (label) label.classList.add('hiddenvariation');
-                    }
-                });
-            });
-        } //markOutOfStock
-
-        function getFirstValidVariation() {
-            if (!Array.isArray(variationsArr)) return null;
-            return variationsArr.find(v =>
-                v?.sku?.trim() &&
-                v.hide === false &&
-                v.disable !== true
-            ) || null;
-        }
-
-        function findValidVariationMatching(selectedValues) {
-            if (!Array.isArray(variationsArr)) return null;
-
-            return variationsArr.find(v => {
-                if (!v?.sku?.trim() || v.hide || v.disable) return false;
-                return selectedValues.every(val => !val || v.ids.includes(val));
-            }) || null;
-        }
-
-        function applyVariationIdsToDOM(ids, rnd) {
-            if (!Array.isArray(ids)) return;
-            for (var i = 0; i < ids.length; i++) {
-                var id = ids[i];
-                var el = document.querySelector(
-                    "input.hs-cf-property-input[value='" + id + "'], " +
-                    "button.hs-property-button[value='" + id + "'], " +
-                    "input.hs-cf-property-input-bundle[value='" + id + "']"
-                );
-                if (!el) continue;
-
-                // Prefer to clear by name (robust even if DOM structure differs)
-                var groupName = el.getAttribute('name');
-                if (groupName) {
-                    var groupEls = document.querySelectorAll("[name='" + groupName + "']");
-                    for (var g = 0; g < groupEls.length; g++) {
-                        var ge = groupEls[g];
-                        if (ge.tagName && ge.tagName.toLowerCase() === 'input') {
-                            // uncheck inputs
-                            ge.checked = false;
-                        } else {
-                            // remove selected from buttons
-                            ge.classList.remove('selected');
-                        }
-                        // also remove selected from any enclosing label (bundle case)
-                        var lbl = ge.closest && ge.closest('label');
-                        if (lbl) lbl.classList.remove('selected');
-                    }
-                } else {
-                    // fallback: clear by closest .hs-property-group as before
-                    var parent = el.closest && el.closest(".hs-property-group");
-                    if (parent) {
-                        var buttons = parent.querySelectorAll(".hs-property-button.selected");
-                        for (var b = 0; b < buttons.length; b++) {
-                            buttons[b].classList.remove("selected");
-                        }
-                        var inputs = parent.querySelectorAll("input.hs-cf-property-input:checked, input.hs-cf-property-input-bundle:checked");
-                        for (var ii = 0; ii < inputs.length; ii++) inputs[ii].checked = false;
-                        // remove selected from any labels inside parent too
-                        var lb = parent.querySelectorAll('label.selected');
-                        for (var li = 0; li < lb.length; li++) lb[li].classList.remove('selected');
-                    }
-                }
-
-                // Apply current selection
-                if (el.tagName.toLowerCase() === "input") {
-                    el.checked = true;
-                } else {
-                    el.classList.add("selected");
-                }
-                // ensure label wrapper (bundle) also shows selected if present
-                var wrapperLabel = el.closest && el.closest('label');
-                if (wrapperLabel) wrapperLabel.classList.add('selected');
-            }
-        }
-
-        function ensureValidDefault(rnd, quantityCount) {
-            if (!Array.isArray(propertiesArr) || propertiesArr.length === 0) return true;
-            if (!Array.isArray(variationsArr) || variationsArr.length === 0) return true;
-
-            for (var q = 0; q < quantityCount; q++) {
-                var selectedValues = [];
-                for (var p = 0; p < propertiesArr.length; p++) {
-                    var prop = propertiesArr[p];
-                    var name = prop.code + "-" + (q + 1);
-                    var value = null;
-                    if (prop.type === "color" || prop.type === "color-bundle" || prop.type === "icon") {
-                        var input = document.querySelector("input[name='" + rnd + "-" + name + "']:checked");
-                        if (input) value = input.value;
-                    } else {
-                        var btn = document.querySelector("button[name='" + rnd + "-" + name + "'].selected");
-                        if (btn) value = btn.value;
-                    }
-                    selectedValues.push(value);
-                }
-
-                var matched = findValidVariationMatching(selectedValues);
-                if (matched) continue;
-
-                var firstValid = getFirstValidVariation();
-                if (!firstValid) {
-                    handleAddToCartButton(rnd, true);
-                    return false;
-                }
-
-                applyVariationIdsToDOM(firstValid.ids, rnd);
-                markOutOfStock();
-            }
-
-            return true;
-        }
-
-        function ensureNotHidden(rnd) {
-            if (!Array.isArray(propertiesArr)) return;
-
-            for (var p = 0; p < propertiesArr.length; p++) {
-                var prop = propertiesArr[p];
-                var name = prop.code + "-1";
-                var selected = null;
-
-                if (prop.type === "color" || prop.type === "color-bundle" || prop.type === "icon") {
-                    selected = document.querySelector("input[name='" + rnd + "-" + name + "']:checked");
-                } else {
-                    selected = document.querySelector("button[name='" + rnd + "-" + name + "'].selected");
-                }
-
-                if (selected && (selected.disabled || selected.classList.contains("greyOut") || selected.classList.contains("hiddenvariation"))) {
-                     const all = document.querySelectorAll("[name='" + rnd + "-" + name + "']");
-
-                    //Clear all selected classes
-                    all.forEach(btn => btn.classList.remove("selected"));
-
-                    for (let i = 0; i < all.length; i++) {
-                        const el = all[i];
-                        if (!el.disabled && !el.classList.contains("greyOut") && !el.classList.contains("hiddenvariation")) {
-                            if (el.tagName.toLowerCase() === "input") {
-                                el.checked = true;
-                            } else {
-                                el.classList.add("selected");
-                            }
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        function selectSameVariationAsQuantity1(rnd, quantityValue) {
-            if (!Array.isArray(propertiesArr)) return;
-
-            //get selected IDs from quantity 1
-            let selectedIds = [];
-            propertiesArr.forEach((prop, i) => {
-                let baseName = prop.code + "-1";
-                let el = null;
-                if (prop.type === "color" || prop.type === "color-bundle" || prop.type === "icon") {
-                    el = document.querySelector("input[name='" + rnd + "-" + baseName + "']:checked");
-                } else {
-                    el = document.querySelector("button[name='" + rnd + "-" + baseName + "'].selected");
-                }
-                if (el) selectedIds.push(el.value);
-            });
-
-            if (selectedIds.length === 0) return;
-
-            //find variation in variationsArr that matches selectedIds
-            let variation = variationsArr.find(v => 
-                v.ids.length === selectedIds.length && 
-                selectedIds.every(id => v.ids.includes(id)) &&
-                v.hide === false &&
-                v.disable !== true
-            );
-
-           // which variation to apply
-            let variationToApply = variation || variationsArr.find(v => v.hide === false && v.disable !== true);
-            if (!variationToApply) return;
-
-            // Only apply to quantities that haven't been changed manually
-            for (let q = 2; q <= quantityValue; q++) {
-                if (!manuallyChangedQuantities.has(q)) {
-                    applyVariationIdsToDOMForQuantity(variationToApply.ids, rnd, q);
-                    setLink(rnd, q);
-                }
-            }
-        }
-
-        // Track which quantities the user manually modified
-            const manuallyChangedQuantities = new Set();
-
-            function markQuantityAsChanged(qtyValue) {
-                manuallyChangedQuantities.add(qtyValue);
-            }
-
-        function applyVariationIdsToDOMForQuantity(ids, rnd, quantityValue) {
-            propertiesArr.forEach(prop => {
-                let name = prop.code + "-" + quantityValue;
-                ids.forEach(id => {
-                    let el = document.querySelector("[name='" + rnd + "-" + name + "'][value='" + id + "']");
-                    if (!el) return;
-
-                    if (el.tagName.toLowerCase() === "input") {
-                        el.checked = true;
-                    } else {
-                        let siblings = el.parentNode.querySelectorAll(".hs-property-button");
-                        siblings.forEach(sib => sib.classList.remove("selected"));
-                        el.classList.add("selected");
-                    }
-                });
-            });
-        }
-
-        function fixDisabledSecondProperty(rnd) {
-            if (!Array.isArray(propertiesArr) || propertiesArr.length !== 2) return;
-
-            // determine which property changed (usually the first in the UI, e.g., color)  
-            const firstProp = propertiesArr[0];  
-            const secondProp = propertiesArr[1];  
-
-            // get selected value of second property  
-            let name = secondProp.code + '-1';  
-            let selected = null;  
-            if (secondProp.type === "color" || secondProp.type === "color-bundle" || secondProp.type === "icon") {  
-                selected = document.querySelector("input[name='" + rnd + "-" + name + "']:checked");  
-            } else {  
-                selected = document.querySelector("button[name='" + rnd + "-" + name + "'].selected");  
-            }  
-
-            if (!selected) return;  
-
-            // if currently selected is hidden, select first available  
-            if (selected.classList.contains('hiddenvariation')) {  
-                let all = document.querySelectorAll("[name='" + rnd + "-" + name + "']");  
-                for (let i = 0; i < all.length; i++) {  
-                    let el = all[i];  
-                    if (!el.classList.contains('hiddenvariation')) {  
-                        if (el.tagName.toLowerCase() === "input") {  
-                            el.checked = true;  
-                        } else {  
-                            let siblings = el.parentNode.querySelectorAll(".hs-property-button");  
-                            for (let s = 0; s < siblings.length; s++) {  
-                                siblings[s].classList.remove("selected");  
-                            }  
-                            el.classList.add("selected");  
-                        }  
-                        break;  
-                    }  
-                }  
-            }  
-
-
-        }
-                                                            
-        function addRelatedProductsPrice(price) {
-            let rp1s = document.getElementsByClassName('dp-rp1t');
-            let rp2s = document.getElementsByClassName('dp-rp2t');
-            let rp3s = document.getElementsByClassName('dp-rp3t');
-            //quantity 6
-            let rp4s = document.getElementsByClassName('dp-rp4t');
-            let rp5s = document.getElementsByClassName('dp-rp5t');
-            let rpxs = document.getElementsByClassName('dp-rpxt');
-
-            let op1s = document.getElementsByClassName('dp-op1t');
-            let op2s = document.getElementsByClassName('dp-op2t');
-            let op3s = document.getElementsByClassName('dp-op3t');
-            //quantity 6
-            let op4s = document.getElementsByClassName('dp-op4t');
-            let op5s = document.getElementsByClassName('dp-op5t');
-            let opxs = document.getElementsByClassName('dp-opxt');
-
-            let newRp1tPrice = Number(globalPrices.rp1) + price;
-            let newRp2tPrice = Number(globalPrices.rp2) + price;
-            let newRp3tPrice = Number(globalPrices.rp3) + price;
-            //quantity 6
-            let newRp4tPrice = Number(globalPrices.rp4) + price;
-            let newRp5tPrice = Number(globalPrices.rp5) + price;
-            let newRpxtPrice = Number(globalPrices.rpx) + price;
-
-            let newOp1tPrice = Number(globalPrices.op1) + price;
-            let newOp2tPrice = Number(globalPrices.op2) + price;
-            let newOp3tPrice = Number(globalPrices.op3) + price;
-            //quantity 6
-            let newOp4tPrice = Number(globalPrices.op4) + price;
-            let newOp5tPrice = Number(globalPrices.op5) + price;
-            let newOpxtPrice = Number(globalPrices.opx) + price;
-
-            setRelPrices(rp1s, newRp1tPrice, true);
-            setRelPrices(rp2s, newRp2tPrice, true);
-            setRelPrices(rp3s, newRp3tPrice, true);
-            //quanity 6
-            setRelPrices(rp4s, newRp4tPrice, true);
-            setRelPrices(rp5s, newRp5tPrice, true);
-            setRelPrices(rpxs, newRpxtPrice, true);
-
-            setRelPrices(op1s, newOp1tPrice);
-            setRelPrices(op2s, newOp2tPrice);
-            setRelPrices(op3s, newOp3tPrice);
-            //quantity 6
-            setRelPrices(op4s, newOp4tPrice);
-            setRelPrices(op5s, newOp5tPrice);
-            setRelPrices(opxs, newOpxtPrice);
-
-            //Remain for future for Bulgaria 
-            if(country === 'BG'){
-                let altOp1s = document.getElementsByClassName('hs-alt-price-op1t');
-                let altOp2s = document.getElementsByClassName('hs-alt-price-op2t');
-                let altOp3s = document.getElementsByClassName('hs-alt-price-op3t');
-                //quantity 6
-                let altOp4s = document.getElementsByClassName('hs-alt-price-op4t');
-                let altOp5s = document.getElementsByClassName('hs-alt-price-op5t');
-                let altOpxs = document.getElementsByClassName('hs-alt-price-opxt');
-
-                let altRp1s = document.getElementsByClassName('hs-alt-price-rp1t');
-                let altRp2s = document.getElementsByClassName('hs-alt-price-rp2t');
-                let altRp3s = document.getElementsByClassName('hs-alt-price-rp3t');
-                //quantity 6
-                let altRp4s = document.getElementsByClassName('hs-alt-price-rp4t');
-                let altRp5s = document.getElementsByClassName('hs-alt-price-rp5t');
-                let altRpxs = document.getElementsByClassName('hs-alt-price-rpxt');
-
-                setRelPrices(altOp1s, (newOp1tPrice * 1), false, true);
-                setRelPrices(altOp2s, (newOp2tPrice * 1), false, true);
-                setRelPrices(altOp3s, (newOp3tPrice * 1), false, true);
-                //quantity 6
-                setRelPrices(altOp4s, (newOp4tPrice * 1), false, true);
-                setRelPrices(altOp5s, (newOp5tPrice * 1), false, true);
-                setRelPrices(altOpxs, (newOpxtPrice * 1), false, true);
-
-                setRelPrices(altRp1s, (newRp1tPrice * 1), false, true);
-                setRelPrices(altRp2s, (newRp2tPrice * 1), false, true);
-                setRelPrices(altRp3s, (newRp3tPrice * 1), false, true);
-                //quantity 6
-                setRelPrices(altRp4s, (newRp4tPrice * 1), false, true);
-                setRelPrices(altRp5s, (newRp5tPrice * 1), false, true);
-                setRelPrices(altRpxs, (newRpxtPrice * 1), false, true);
-            }
-        }
-
-        const roundQuantityPrice = function (price, salePrice, countryCode){
+          } else {
+              price = defaultReducedPrice >= countryMinimumPrice ? defaultReducedPrice : countryMinimumPrice;
+          }
+      }
+
+    }else if (defaultReducedPrice > countryMinimumPrice){
+        price = defaultReducedPrice;
+    }else {
+        price = countryMinimumPrice; 
+    }
+
+    globalPrices.op1 = originalPrice.toString();
+    globalPrices.rp1 = price.toString();
+
+      
+    //--------------------------------------------------------------------------------------------------------
+    
+
+    initSetLink();
+    handleAdditionalVariations(price, countryCurrencySymbol, additionalVariationsPrices, additionalVariationProductPrice,country)
+
+    var wd = getParam('sd');
+    var ds = getDsc(wd)
+
+    if (price == 0 && globalPrices && globalPrices.rp1) {
+        price = Number(globalPrices.rp1);
+    }
+
+    //-------------------------------------------------- OFFSETS
+
+
+    if(selectedVariation && (selectedVariation.priceOffset > 0 || selectedVariation.priceOffset < 0)){
+      price = price + selectedVariation.priceOffset;
+      if (enableOriginalPriceOffset){
+      originalPrice = originalPrice + selectedVariation.priceOffset;
+      }
+    }
+    
+    //----------------------------------------------------------------------------OFFSETS
+
+
+    if (price !== 0 && typeof price == 'number') {
+      //if sd parameter exists, calculate OP, if not, set it default
+      var op = (!wd || wd === 0)
+        ? Number(originalPrice).toFixed(decimals)
+        : (Number(originalPrice) * ds).toFixed(decimals);
+
+    var rp1 = price.toFixed(decimals);
+    var rp2 = (price * 0.78).toFixed(decimals);
+    var rp3 = (price * 0.73).toFixed(decimals);
+    var rp4 = (price * 0.73).toFixed(decimals);
+    var rp5 = (price * 0.52).toFixed(decimals);
+    var rpx = (price * 0.52).toFixed(decimals);
+      const roundQuantityPrice = function (price, salePrice, countryCode){
     try {
-        switch(typeof price){
-            case 'number': {
-                price = price;
-                break;
-            }
-            case 'string': {
-                price = parseFloat(price);
-                break;
-            }
-        }
-        switch(typeof salePrice){
-            case 'number': {
-                salePrice = salePrice;
-                break;
-            }
-            case 'string': {
-                salePrice = parseFloat(salePrice);
-                break;
-            }
-        }
+    switch(typeof price){
+    case 'number': {
+        price = price;
+        break;
+    }
+    case 'string': {
+        price = parseFloat(price);
+        break;
+    }
+    }
+    switch(typeof salePrice){
+      case 'number': {
+          salePrice = salePrice;
+          break;
+      }
+      case 'string': {
+          salePrice = parseFloat(salePrice);
+          break;
+      }
+    }
     }catch(err){
         return price;
     }
@@ -5602,265 +4794,828 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // Apply rounding based on the country code
     switch (countryCode) {
-        case 'HU':
-            roundedPrice = Math.ceil(price / 100) * 100 + 90;
-            higherPrice = roundedPrice + 100;
-            price = (higherPrice <= maxPrice + 200) ? higherPrice : roundedPrice;
-            break;
-        case 'CZ':
-            roundedPrice = Math.ceil(price / 10) * 10 - 1;
-            higherPrice = roundedPrice + 10;
-            price = (higherPrice <= maxPrice + 12) ? higherPrice : roundedPrice;
-            break;
-        case 'RO':
-            roundedPrice = Math.floor(price) + 0.99;
-            higherPrice = Math.floor(price) + 1.99;
-            price = (higherPrice <= maxPrice + 2) ? higherPrice : roundedPrice;
-            break;
-        case 'PL':
-            roundedPrice = Math.floor(price) + 0.00;
-            higherPrice = Math.floor(price) + 2.00;
-            price = (higherPrice <= maxPrice + 2) ? higherPrice : roundedPrice;
-            break;
-        case 'RS':
-            roundedPrice = Math.floor(price / 10) * 10 + 9;
-            price = (roundedPrice <= maxPrice + 9) ? roundedPrice : maxPrice;
-            break;
-        case 'MK':
-            roundedPrice = Math.floor(price / 10) * 10 + 9;
-            price = (roundedPrice <= maxPrice + 9) ? roundedPrice : maxPrice;
-            break;
-        default:
-            const priceCents = Math.floor(price * multiplier);
-            const salePriceCents = Math.floor(salePrice * multiplier);
-            const fractionalPartCents = priceCents % multiplier;
-            const roundedFractionalPartCents = fractionalPartCents <= (49 * multiplier / 100) ? (49 * multiplier / 100) : (99 * multiplier / 100);
-            const finalPriceCents = Math.min(Math.floor(priceCents / multiplier) * multiplier + roundedFractionalPartCents, salePriceCents);
-            price = finalPriceCents / multiplier;
-            break;
+      case 'HU':
+        roundedPrice = Math.ceil(price / 100) * 100 + 90;
+        higherPrice = roundedPrice + 100;
+        price = (higherPrice <= maxPrice + 200) ? higherPrice : roundedPrice;
+        break;
+      case 'CZ':
+        roundedPrice = Math.ceil(price / 10) * 10 - 1;
+        higherPrice = roundedPrice + 10;
+        price = (higherPrice <= maxPrice + 12) ? higherPrice : roundedPrice;
+        break;
+      case 'RO':
+        roundedPrice = Math.floor(price) + 0.99;
+        higherPrice = Math.floor(price) + 1.99;
+        price = (higherPrice <= maxPrice + 2) ? higherPrice : roundedPrice;
+        break;
+      case 'PL':
+        roundedPrice = Math.floor(price) + 0.00;
+        higherPrice = Math.floor(price) + 2.00;
+        price = (higherPrice <= maxPrice + 2) ? higherPrice : roundedPrice;
+        break;
+      case 'RS':
+        roundedPrice = Math.floor(price / 10) * 10 + 9;
+        price = (roundedPrice <= maxPrice + 9) ? roundedPrice : maxPrice;
+        break;
+      case 'MK':
+        roundedPrice = Math.floor(price / 10) * 10 + 9;
+        price = (roundedPrice <= maxPrice + 9) ? roundedPrice : maxPrice;
+        break;
+      default:
+        const priceCents = Math.floor(price * multiplier);
+        const salePriceCents = Math.floor(salePrice * multiplier);
+        const fractionalPartCents = priceCents % multiplier;
+        const roundedFractionalPartCents = fractionalPartCents <= (49 * multiplier / 100) ? (49 * multiplier / 100) : (99 * multiplier / 100);
+        const finalPriceCents = Math.min(Math.floor(priceCents / multiplier) * multiplier + roundedFractionalPartCents, salePriceCents);
+        price = finalPriceCents / multiplier;
+        break;
     }
 
     return price;//.toFixed(originalDecimals);
-}
+    }
+        //round quantity prices
+        rp1 = rp1;
+        if(parseFloat(rp2) < parseFloat(rp1)){
+            rp2 = roundQuantityPrice(rp2, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rp3) < parseFloat(rp1)){
+            rp3 = roundQuantityPrice(rp3, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rp4) < parseFloat(rp1)){
+            rp4 = roundQuantityPrice(rp4, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rp5) < parseFloat(rp1)){
+            rp5 = roundQuantityPrice(rp5, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rpx) < parseFloat(rp1)){
+            rpx = roundQuantityPrice(rpx, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
 
-        function setRelPrices(elArr, price, addCurrency = false, addAltCurrency = false) {
-            for(let i = 0; i < elArr.length; i++) {
-                let priceTxt = price.toFixed(2);
-                if(addCurrency){
-                    priceTxt = priceTxt + '€';
-                }
-                if(addAltCurrency){
-                    priceTxt = price.toFixed(2);
-                    priceTxt = priceTxt + '€';
-                }
+        var rp2t = (rp2 * 2).toFixed(decimals);
+        var rp3t = (rp3 * 3).toFixed(decimals);
+        var rp4t = (rp4 * 4).toFixed(decimals);
+        var rp5t = (rp5 * 5).toFixed(decimals);
+        var rpxt = (rpx * 6).toFixed(decimals);
 
-                elArr[i].innerHTML = priceTxt; //price.toFixed(2);
+        var op2t = (op * 2).toFixed(decimals);
+        var op3t = (op * 3).toFixed(decimals);
+        var op4t = (op * 4).toFixed(decimals);
+        var op5t = (op * 5).toFixed(decimals);
+        var opxt = (op * 6).toFixed(decimals);
+
+        var d1 = 100 - Math.round((rp1 / op) * 100);
+        var d2 = 100 - Math.round((rp2 / op) * 100);
+        var d3 = 100 - Math.round((rp3 / op) * 100);
+        var d4 = 100 - Math.round((rp4 / op) * 100);
+        var d5 = 100 - Math.round((rp5 / op) * 100);
+        var dx = 100 - Math.round((rpx / op) * 100);
+
+        var pd1 = (op - rp1).toFixed(decimals);
+        var pd2 = ((2 * op) - (2 * rp2)).toFixed(decimals);
+        var pd3 = ((3 * op) - (3 * rp3)).toFixed(decimals);
+        var pd4 = ((4 * op) - (4 * rp4)).toFixed(decimals);
+        var pd5 = ((5 * op) - (5 * rp5)).toFixed(decimals);
+        var pdx = ((6 * op) - (6 * rpx)).toFixed(decimals);
+
+        //alternative dynamic price (double currency)
+        var altOp;
+        var altOp2t;
+        var altOp3t;
+        var altOp4t;
+        var altOp5t;
+        var altOpxt;
+
+        var altRp1t;
+        var altRp2t;
+        var altRp3t;
+        var altRp4t;
+        var altRp5t;
+        var altRpxt;
+
+        if(altDynPr){ 
+            altOp = (op * 1).toFixed(altDecimals);
+            altOp2t = (op2t * 1).toFixed(altDecimals);
+            altOp3t = (op3t * 1).toFixed(altDecimals);
+            altOp4t = (op4t * 1).toFixed(altDecimals);
+            altOp5t = (op5t * 1).toFixed(altDecimals);
+            altOpxt = (opxt * 1).toFixed(altDecimals);
+
+            altRp1t = (rp1 * 1).toFixed(altDecimals);
+            altRp2t = (rp2t * 1).toFixed(altDecimals);
+            altRp3t = (rp3t * 1).toFixed(altDecimals);
+            altRp4t = (rp4t * 1).toFixed(altDecimals);
+            altRp5t = (rp5t * 1).toFixed(altDecimals);
+            altRpxt = (rpxt * 1).toFixed(altDecimals);
+        }
+
+        else {
+            if(country === 'HR'){
+                altOp = (parseFloat(op)).toFixed(altDecimals);
+                altOp2t = (parseFloat(op2t)).toFixed(altDecimals);
+                altOp3t = (parseFloat(op3t)).toFixed(altDecimals);
+                altOp4t = (parseFloat(op4t)).toFixed(altDecimals);
+                altOp5t = (parseFloat(op5t)).toFixed(altDecimals);
+                altOpxt = (parseFloat(opxt)).toFixed(altDecimals);
+
+                altRp1t = (parseFloat(rp1)).toFixed(altDecimals);
+                altRp2t = (parseFloat(rp2t)).toFixed(altDecimals);
+                altRp3t = (parseFloat(rp3t)).toFixed(altDecimals);
+                altRp4t = (parseFloat(rp4t)).toFixed(altDecimals);
+                altRp5t = (parseFloat(rp5t)).toFixed(altDecimals);
+                altRpxt = (parseFloat(rpxt)).toFixed(altDecimals);
+            
+                op = (op / 1).toFixed(decimals);
+                op2t = (op2t / 1).toFixed(decimals);
+                op3t = (op3t / 1).toFixed(decimals);
+                op4t = (op4t / 1).toFixed(decimals);
+                op5t = (op5t / 1).toFixed(decimals);
+                opxt = (opxt / 1).toFixed(decimals);
+
             }
         }
+        //IF WE OVERRIDE GLOBAL PRICES WITH OFFSETS THE PRICE KEEPS INCREASING
+        if (globalPrices && selectedVariation && !selectedVariation.priceOffset > 0 && !selectedVariation.priceOffset < 0) {
+            globalPrices.rp1 = rp1;
+            globalPrices.rp2 = rp2t;
+            globalPrices.rp3 = rp3t;
+            globalPrices.rp4 = rp4t;
+            globalPrices.rp5 = rp5t;
+            globalPrices.rpx = rpxt;
 
-        function getRelatedProductsData(relatedArr) {
-            let related = '';
-            let price = 0;
-            let activeRelatedUpsellHighlighted = null;
+            globalPrices.op1 = op;
+            globalPrices.op2 = op2t;
+            globalPrices.op3 = op3t;
+            globalPrices.op4 = op4t;
+            globalPrices.op5 = op5t;
+            globalPrices.opx = opxt;
+        }
+
+        var p = {
+            'op': op,
+            'op_l': op+countryCurrencySymbol,
+            'opnc': op,
+            'opnc_l': op,
+            'rp1':  rp1,
+            'rp1_l':  rp1+countryCurrencySymbol,
+            'rp1nc': rp1,
+            'rp1nc_l': rp1,
+            'rp2': rp2,
+            'rp2_l': rp2+countryCurrencySymbol,
+            'rp2nc': rp2,
+            'rp2nc_l': rp2,
+            'rp3': rp3,
+            'rp3_l': rp3+countryCurrencySymbol,
+            'rp3nc': rp3,
+            'rp3nc_l': rp3,
+            'rp4': rp4,
+            'rp4_l': rp4+countryCurrencySymbol,
+            'rp4nc': rp4,
+            'rp4nc_l': rp4,
+            'rp5': rp5,
+            'rp5_l': rp5+countryCurrencySymbol,
+            'rp5nc': rp5,
+            'rp5nc_l': rp5,
+            'rpx': rpx,
+            'rpx_l': rpx+countryCurrencySymbol,
+            'rpxnc': rpx,
+            'rpxnc_l': rpx,
+            'rp1t': rp1+countryCurrencySymbol,
+            'rp1t_l': rp1+countryCurrencySymbol,
+            'rp1tnc': rp1,
+            'rp1tnc_l': rp1,
+            'altRp1t': altRp1t+altCurrencySymbol,
+            'rp2t': rp2t+countryCurrencySymbol,
+            'rp2t_l': rp2t+countryCurrencySymbol,
+            'rp2tnc': rp2t,
+            'rp2tnc_l': rp2t,
+            'altRp2t': altRp2t+altCurrencySymbol,
+            'rp3t': rp3t+countryCurrencySymbol,
+            'rp3t_l': rp3t+countryCurrencySymbol,
+            'rp3tnc': rp3t,
+            'rp3tnc_l': rp3t,
+            'altRp3t': altRp3t+altCurrencySymbol,
+            'rp4t': rp4t+countryCurrencySymbol,
+            'rp4t_l': rp4t+countryCurrencySymbol,
+            'rp4tnc': rp4t,
+            'rp4tnc_l': rp4t,
+            'altRp4t': altRp4t+altCurrencySymbol,
+            'rp5t': rp5t+countryCurrencySymbol,
+            'rp5t_l': rp5+countryCurrencySymbol,
+            'rp5tnc': rp5,
+            'rp5tnc_l': rp5,
+            'altRp5t': altRp5t+altCurrencySymbol,
+            'rpxt': rpxt+countryCurrencySymbol,
+            'rpxt_l': rpx+countryCurrencySymbol,
+            'rpxtnc': rpx,
+            'rpxtnc_l': rpx,
+            'altRpxt': altRpxt+altCurrencySymbol,
+            'op1t': op,
+            'op1t_l': op+countryCurrencySymbol,
+            'altOp1t': altOp+altCurrencySymbol,
+            'op2t': op2t,
+            'op2t_l': op2t+countryCurrencySymbol,
+            'altOp2t': altOp2t+altCurrencySymbol,
+            'op3t': op3t,
+            'op3t_l': op3t+countryCurrencySymbol,
+            'altOp3t': altOp3t+altCurrencySymbol,
+            'op4t': op4t,
+            'op4t_l': op4t+countryCurrencySymbol,
+            'altOp4t': altOp4t+altCurrencySymbol,
+            'op5t': op5t,
+            'op5t_l': op5t+countryCurrencySymbol,
+            'altOp5t': altOp5t+altCurrencySymbol,
+            'opxt': opxt,
+            'opxt_l': opxt+countryCurrencySymbol,
+            'altOpxt': altOpxt+altCurrencySymbol,
+            'd1': d1,
+            'd1_l': d1,
+            'd2': d2,
+            'd2_l': d2,
+            'd3': d3,
+            'd3_l': d3,
+            'd4': d4,
+            'd4_l': d4,
+            'd5': d5,
+            'd5_l': d5,
+            'dx': dx,
+            'dx_l': dx,
+            'pd1': pd1,
+            'pd2': pd2,
+            'pd3': pd3,
+            'pd4': pd4,
+            'pd5': pd5,
+            'pdx': pdx,
+        }
         
-            for (let r = 0; r < relatedArr.length; r++) {
-                let checkbox = document.getElementById(relatedArr[r].id);
-                let selectedQuantity = document.getElementById("quantity-picker-"+relatedArr[r].id);
-                let quantityPickerDisplay = document.getElementById("qty-picker-display-"+relatedArr[r].id);
-                let addToCartText = document.getElementById("atc-text-"+relatedArr[r].id);
-                let removeFromCartText = document.getElementById("rfc-text-"+relatedArr[r].id);
-                let addedToCart = document.getElementById("added-text-"+relatedArr[r].id);
-                let rpCheckboxW = document.getElementById("hs-rp-checkbox-w-"+relatedArr[r].id);
-                
-                if (checkbox && checkbox.checked) {
-                    markRelatedSelected(relatedArr[r].id, 'mark')
-                    let quantity = 0;
-                    selectedQuantity.classList.add("quantity-picker-checked");
-                    quantityPickerDisplay.style.display = 'flex';
-                    addedToCart.style.display = 'flex';
-                    addToCartText.style.display = 'none';
-                    removeFromCartText.style.display = 'flex';
-                    rpCheckboxW.style.justifyContent = 'flex-end';
-                    
-                    
-                    if (selectedQuantity != undefined){
-                        quantity = selectedQuantity.value;
-                    }
+        $('.dp-op').text(p.op);
+        $('.dp-opnc').text(p.opnc);
+        $('.dp-rp1').text(p.rp1);
+        $('.dp-rp2').text(p.rp2);
+        $('.dp-rp3').text(p.rp3);
+        $('.dp-rp4').text(p.rp4);
+        $('.dp-rp5').text(p.rp5);
+        $('.dp-rpx').text(p.rpx);
 
-                    for (let i = 0; i < quantity; i++) {
-                        
-                        related = related + ',' + relatedArr[r].wcId;
-                        price += Number(relatedArr[r].price);
-                    }
-                }
-                else {
-                    markRelatedSelected(relatedArr[r].id, 'unmark');
-                    selectedQuantity.classList.remove("quantity-picker-checked");
-                    quantityPickerDisplay.style.display = 'none';
-                    addToCartText.style.display = 'block';
-                    addedToCart.style.display = 'none';
-                    removeFromCartText.style.display = 'none';
-                    rpCheckboxW.style.justifyContent = 'center';
-                   
+        $('.dp-rp1nc').text(p.rp1nc);
+        $('.dp-rp2nc').text(p.rp2nc);
+        $('.dp-rp3nc').text(p.rp3nc);
+        $('.dp-rp4nc').text(p.rp4nc);
+        $('.dp-rp5nc').text(p.rp5nc);
+        $('.dp-rpxnc').text(p.rpxnc);
+
+        
+        $('.dp-rp1t').text(p.rp1t);
+        $('.dp-rp2t').text(p.rp2t);
+        $('.dp-rp3t').text(p.rp3t);
+        $('.dp-rp4t').text(p.rp4t);
+        $('.dp-rp5t').text(p.rp5t);
+        $('.dp-rpxt').text(p.rpxt);
+
+        $('.dp-rp1tnc').text(p.rp1tnc);
+        $('.dp-rp2tnc').text(p.rp2tnc);
+        $('.dp-rp3tnc').text(p.rp3tnc);
+        $('.dp-rp4tnc').text(p.rp4tnc);
+        $('.dp-rp5tnc').text(p.rp5tnc);
+        $('.dp-rpxtnc').text(p.rpxtnc);
+
+        $('.dp-op1t').text(p.op1t);
+        $('.dp-op2t').text(p.op2t);
+        $('.dp-op3t').text(p.op3t);
+        $('.dp-op4t').text(p.op4t);
+        $('.dp-op5t').text(p.op5t);
+        $('.dp-opxt').text(p.opxt);
+
+        $('.dp-d1').text(p.d1);
+        $('.dp-d2').text(p.d2);
+        $('.dp-d3').text(p.d3);
+        $('.dp-d4').text(p.d4);
+        $('.dp-d5').text(p.d5);
+        $('.dp-dx').text(p.dx);
+
+        $('.dp-pd').text(p.pd1);
+        $('.dp-pd2').text(p.pd2);
+        $('.dp-pd3').text(p.pd3);
+        $('.dp-pd4').text(p.pd4);
+        $('.dp-pd5').text(p.pd5);
+        $('.dp-pdx').text(p.pdx);
+
+        //dymamic elements
+        switch (selectedGlobalQuantity) {
+        case 1: {
+          // Reduced price
+          const reducedPrice = p.rp1t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+
+          // Reduced alt currency
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          // Original price
+          const originalPrice = p.op1t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+
+          // Original alt currency
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 2: {
+          const reducedPrice = p.rp2t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op2t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 3: {
+          const reducedPrice = p.rp3t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op3t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 4: {
+          const reducedPrice = p.rp4t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op4t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 5: {
+          const reducedPrice = p.rp5t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op5t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        default: {
+          const reducedPrice = p.rpxt;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.opxt;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+      }
+
+        $('a.h-dp').each(function(i, e) {
+            var url = $(this).attr('href');
+            var reg1 = /\<\*(.*)\*\>/gm;
+            var reg = new RegExp('\<\*(.*)\*\>', 'gm')
+            var n = url.match(reg1) || [];
+            if (n) {
+                for (let j = 0; j < n.length; j++) {
+                    var sub = n[j].substring(2, n[j].length - 2);
+                    var subarr = sub.split('#');
+                    var code = subarr[0];
+                    url = url.replace(n[j], p[code]);
+                    $(this).attr('href', url);
                 }
             }
         
-            return {
-                wcIds: related,
-                price: price
-            };
-        }
+        });
 
-        function setColorText(propertyId, colorIndex, colorPropertyIndex) {
-            let colorsCount = propertiesArr.filter(x => x.type.toLowerCase() === 'color').length;
-            let colorProperty = propertiesArr.find(x => x.type.toLowerCase() === 'color' && x.options.some(y => y.id === propertyId));
-            let colorPropertyText;
-            if(colorProperty && colorProperty.options.length > 0){
-                colorPropertyText = colorProperty.name;
-                let selectedColor = colorProperty.options.find(x => x.id === propertyId).name.toLowerCase();
-                let labelElements = document.getElementsByClassName("color-label");
-                if(labelElements.length >= colorIndex){
-                    let labelElement = labelElements[colorIndex];
-                    if(colorPropertyIndex != null && colorPropertyIndex != undefined && colorsCount > 1){//bundles, where same properties
+    } else if (price == 0) {
+        $('a.h-dp').each(function(i, e) {
+            var url = $(this).attr('href');
+            var reg1 = /\<\*(.*)\*\>/gm;
+            var reg = new RegExp('\<\*(.*)\*\>', 'gm')
+            var n = url.match(reg1) || [];
+            if (n) {
 
-                        labelElement = labelElements[(colorIndex * 2) + colorPropertyIndex];
-                    }
-                    labelElement.innerText = colorPropertyText + ": " + selectedColor;
+                for (let j = 0; j < n.length; j++) {
+                    var sub = n[j].substring(2, n[j].length - 2);
+                    var subarr = sub.split('#');
+                    var pr = subarr[1];
+                    url = url.replace(n[j], pr);
+                    $(this).attr('href', url);
                 }
-            } 
-        }
-
-        function setBundleColorText(propertyId, colorIndex, colorPropertyIndex) {
-            let colorsCount = propertiesArr.filter(x => x.type.toLowerCase() === 'color-bundle').length;
-            let colorProperty = propertiesArr.find(x => x.type.toLowerCase() === 'color-bundle' && x.options.some(y => y.id === propertyId));
-            let colorPropertyText;
-            if(colorProperty && colorProperty.options.length > 0){
-                colorPropertyText = colorProperty.name;
-                let selectedColor = colorProperty.options.find(x => x.id === propertyId).name.toLowerCase();
-                let labelElements = document.getElementsByClassName("color-label");
-                if(labelElements.length >= colorIndex){
-                    let labelElement = labelElements[colorIndex];
-                    if(colorPropertyIndex != null && colorPropertyIndex != undefined && colorsCount > 1){//bundles, where same properties
-
-                        labelElement = labelElements[(colorIndex * 2) + colorPropertyIndex];
-                    }
-                    labelElement.innerText = colorPropertyText + ": " + selectedColor;
-                }
-            } 
-        }
-
-        function setIconColorText(propertyId, colorIndex, colorPropertyIndex) {
-            let colorsCount = propertiesArr.filter(x => x.type.toLowerCase() === 'icon').length;
-            let colorProperty = propertiesArr.find(x => x.type.toLowerCase() === 'icon' && x.options.some(y => y.id === propertyId));
-            let colorPropertyText;
-            if(colorProperty && colorProperty.options.length > 0){
-                colorPropertyText = colorProperty.name;
-                let selectedColor = colorProperty.options.find(x => x.id === propertyId).name.toLowerCase();
-                let labelElements = document.getElementsByClassName("color-label");
-                if(labelElements.length >= colorIndex){
-                    let labelElement = labelElements[colorIndex];
-                    if(colorPropertyIndex != null && colorPropertyIndex != undefined && colorsCount > 1){//bundles, where same properties
-
-                        labelElement = labelElements[(colorIndex * 2) + colorPropertyIndex];
-                    }
-                    labelElement.innerText = colorPropertyText + ": " + selectedColor;
-                }
-            } 
-        }
-
-        function handleAddToCartButton(rnd, outOfStock){
-            var addToCartButton = document.getElementById(rnd + '-hs-cf-add-to-cart');
-            var addToCartText = document.getElementById('hs-cf-btn-text');
-            var addToCartTextOutOfStock = document.getElementById('hs-cf-btn-text-out-of-stock');
-            var stickyButton = document.getElementById('sticky-button-buy');
-
-            try {
-                if (outOfStock) {
-                    if (addToCartButton) addToCartButton.classList.add('hs-add-to-cart-disabled');
-                    if (addToCartText) addToCartText.classList.add('hs-cf-cart-text-hidden');
-                    if (addToCartTextOutOfStock) addToCartTextOutOfStock.classList.remove('hs-cf-cart-text-hidden');
-                    if (stickyButton) stickyButton.disabled = true;
-                } else {
-                    if (addToCartButton) addToCartButton.classList.remove('hs-add-to-cart-disabled');
-                    if (addToCartText) addToCartText.classList.remove('hs-cf-cart-text-hidden');
-                    if (addToCartTextOutOfStock) addToCartTextOutOfStock.classList.add('hs-cf-cart-text-hidden');
-                    if (stickyButton) stickyButton.disabled = false;
-                }
-            } catch (e) {
-                console.error("Error in handleAddToCartButton:", e);
             }
-        }
-
-        function isMobile(){
-            if(screen.width < 768){
-                return 1;
-            }else {
-                return 0;
-            }
-        }
-
-        function enableStickyButton(){
-            const stickyButtons = document.getElementsByClassName('sticky-button-buy');
-            for(let i = 0; i < stickyButtons.length; i++){
-                if(!!stickyButtons[i]){
-                    stickyButtons[i].disabled = false;
-
-                    //set scroll if variation, set submit if no variation
-                    try{
-                        if(!!stickyButtons[i])
-                        {
-                            if(variationsArr.length > 1){
-                                stickyButtons[i].removeAttribute('onclick');
-                                //stickyButtons[i].classList.add("will-scroll");
-                                stickyButtons[i].innerHTML = "<strong>Izberite<br/> različico</strong>";
-                                stickyButtons[i].classList.add("pick-variation");
-                                
-                                //scroll to target element 
-                                stickyButtons[i].addEventListener('click', function(e) {
-                                    document.querySelector('div.scroll-target').scrollIntoView({
-                                        behavior: 'smooth'
-                                      });
-                                }, false);
-                            }
-                            else
-                            {
-                                stickyButtons[i].onclick = submitproductform;
-                            }
-                        }
-                    }catch(e){
-                        throw e;
-                    }
-                }
-            }//for
-        }//enableStickyButton
-
-        function hideStickyButtonOnCF() {
-            let checkoutFormVisible = false;
         
-            window.addEventListener('scroll', () => {
-                if(!!document.getElementById('checkout-form')){
-                    const stickyBar = document.getElementById('sticky_chat');
-                    const checkoutFormPart = document.getElementById('checkout-form');
+        });
+    }
 
-                    if (!stickyBar) return;
+    $('.dp-all').css('display', 'inline-block');
+    setLinkDynamicCart();
+    }//recalculatePrices
+    
+    function markOutOfStock2() {
+        var selectedValues = {}; // {propertyId: value}
 
-                    const rect = checkoutFormPart.getBoundingClientRect();
-                    var distanceToCF = rect.top - window.innerHeight;
-        
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        stickyBar.classList.add('hide-sticky');
-                    } else {
-                        stickyBar.classList.remove('hide-sticky');
-                    }
+        document.querySelectorAll('button.color-variation-button, button.button-variation')
+            .forEach(function(el) {
+                if(el.getAttribute('selected-option') === 'true') {
+                    selectedValues[el.getAttribute('property-id')] = el.value;
                 }
             });
+
+        var allOptions = document.querySelectorAll('button.color-variation-button, button.button-variation');
+        allOptions.forEach(function(optionEl) {
+            var optionValue = optionEl.value;
+            var propertyId = optionEl.getAttribute('property-id');
+            var hasValidCombination = variationsArr.some(function(variation) {
+                if(variation.ids.indexOf(optionValue) === -1) return false;
+                for(var pid in selectedValues) {
+                    var selected = selectedValues[pid];
+                    if(pid !== propertyId && variation.ids.indexOf(selected) === -1) return false;
+                }
+                //if disabled is not define (missing in database), set as false    
+                if (typeof variation.disable === "undefined") variation.disable = false;
+                
+                return variation.hide === false && variation.disable !== true;
+            });
+            var completelyUnavailable = variationsArr.every(function(variation){
+                return variation.ids.indexOf(optionValue) === -1 ||
+                      variation.hide !== false ||
+                      variation.disable === true;
+            });
+            if(completelyUnavailable) {
+                // Completely unavailable: grey + disable + hide if needed
+                optionEl.classList.add('greyOut');
+                optionEl.classList.add('hiddenvariation');
+                optionEl.disabled = true;
+            } else if(!hasValidCombination) {
+                // Incompatible with current selection: grey only, still clickable
+                optionEl.classList.add('greyOut');
+                optionEl.classList.remove('hiddenvariation');
+                optionEl.disabled = false;
+            } else {
+                // Available
+                optionEl.classList.remove('greyOut');
+                optionEl.classList.remove('hiddenvariation');
+                optionEl.disabled = false;
+            }
+        });
+    }markOutOfStock2
+    
+
+    function handleAddToCartButton(inStock) {
+      //get all "add-to-cart" buttons
+      const addToCartButtons = document.getElementsByClassName("checkout-add-to-cart-btn");
+      for(const addToCartBtn of addToCartButtons){
+        var addToCartButton = addToCartBtn;
+        var inStockTextElements = addToCartBtn.querySelectorAll("checkout-add-to-cart-btn-text");
+        var outOfStockTextElements = addToCartBtn.querySelectorAll("checkout-add-to-cart-btn-text-out-of-stock");
+
+        try {
+          if(inStock){
+            //in stock
+            addToCartButton.classList.remove('checkout-add-to-cart-btn-disabled');
+            for(const inStockTextElm of inStockTextElements){
+              inStockTextElm.classList.remove('checkout-add-to-cart-btn-text-hidden');
+            }
+            for(const outOfStockTextElm of outOfStockTextElements){
+              outOfStockTextElm.classList.add('checkout-add-to-cart-btn-text-hidden');
+            }
+          }else {
+            //out of stock
+            addToCartButton.classList.add('checkout-add-to-cart-btn-disabled');
+            for(const inStockTextElm of inStockTextElements){
+              inStockTextElm.classList.add('checkout-add-to-cart-btn-text-hidden');
+            }
+            for(const outOfStockTextElm of outOfStockTextElements){
+              outOfStockTextElm.classList.remove('checkout-add-to-cart-btn-text-hidden');
+            }
+          }
+        }catch(err){
+          console.error(err);
+        }
+      }//for
+    }//handleAddToCartButton
+
+    function dynamicCheckoutOtherVariationButtonClicked(propertyId, optionId, p, variationIndex){
+      let property = propertiesArr.find(pr => pr.id === propertyId);
+      let option = property.options.find(opt => opt.id === optionId);
+
+      //remove borders on all variations
+      for(let opt = 0; opt < propertiesArr[p].options.length; opt++){
+        let optionElement = document.getElementById(propertiesArr[p].id + "-" + propertiesArr[p].options[opt].id + "-" + p);
+        if(!!optionElement){
+          optionElement.classList.remove('selected');
+          optionElement.setAttribute("selected-option", "false");
+        }
+      }
+      //add border to selected variation
+      let selectedVariationButtonElement = document.getElementById(propertyId + "-" + optionId + "-" + p);
+      selectedVariationButtonElement.classList.add('selected');
+      selectedVariationButtonElement.setAttribute("selected-option", "true");
+
+      
+      toggleCartButtonStock();
+      markOutOfStock2();
+      recalculatePrices();
+      setLinkDynamicCart();
+
+    }//dynamicCheckoutOtherVariationButtonClicked
+
+    function dynamicCheckoutVariationDropdownChanged(propertyId, p, dropdownElement, variationIndex){
+      let options = dropdownElement.options;
+      for(let opt = 0; opt < options.length; opt++){
+	      options[opt].setAttribute("selected-option", "false");
+        if(options[opt].value === dropdownElement.value){
+          options[opt].setAttribute("selected-option", "true");
+        }//if
+      }//for
+      setLinkDynamicCart();
+      toggleCartButtonStock();
+      recalculatePrices();
+    }//dynamicCheckoutVariationDropdownChanged
+
+
+    function setLinkDynamicCart(quantity = null) {
+      let linkIdsString = '';
+      let singleQuantityValue = 1;
+      let singleQuantityValueElement = document.getElementById("single-quantity-value");
+      if(!!singleQuantityValueElement){
+        singleQuantityValue = parseFloat(singleQuantityValueElement.value);
+      }
+      if(quantity === null){
+       const checkedElement = document.querySelector('[id^="qty"]:checked');
+        if (checkedElement) {
+          // Extract the number at the end of the ID
+          const id = checkedElement.id;
+          const number = id.match(/\d+$/)[0]; // gets the number at the end
+          singleQuantityValue = parseInt(number)
+        }   
+      } else {
+          singleQuantityValue = quantity;
+          }
+      
+      if(propertiesArr.length > 0){
+        //variation product
+        //get all selected options for variation
+        let selectedOptions = [];
+        for(let pr = 0; pr < propertiesArr.length; pr++){
+          let propertyId = propertiesArr[pr].id;
+          let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+          if(selectedOptionElements.length > 0){
+            selectedOptions.push(propertiesArr[pr].options.find(opt => opt.id === selectedOptionElements[0].value));
+          } 
+        }
+        //find correct variation
+        let selectedVariation = variationsArr.find(vr => vr.ids.sort().join(',') === selectedOptions.map(sO => sO.id).sort().join(','));
+        //set linkIds
+        if(!!selectedVariation){
+          for(let qnt = 0; qnt < singleQuantityValue; qnt++){
+            if((qnt + 1) === singleQuantityValue){
+              linkIdsString += selectedVariation.variationId;
+            }else {
+              linkIdsString += selectedVariation.variationId + ',';
+            }
+          }
+        }
+      }else {
+        //simple product
+        for(let qnt = 0; qnt < singleQuantityValue; qnt++){
+          if((qnt + 1) === singleQuantityValue){
+            linkIdsString += productSettings.woocommerceId;
+          }else {
+            linkIdsString += productSettings.woocommerceId + ',';
+          }
+        }
+      }
+      //related
+      let relatedData;
+      try {
+        relatedData = getRelatedProductsData();
+      }catch(err){
+        //console.log("No related products data");
+      }
+      if(!!relatedData){
+        linkIdsString = linkIdsString + relatedData.wcIds;
+      }
+      
+        //dynamic
+        let dynPriceParam = "";
+        if(!!redPrice1 && dynPriceSet){
+            var spCookie = getCookieDynCheckout('sp') || getParam('sp');
+            if(spCookie.length > 0){
+                dynPriceParam = "&sp=" + dynPriceToParam(redPrice1);
+            } else {
+                dynPriceParam = "&spe=" + dynPriceToParam(redPrice1);
+            }
         }
         
-        // Call the function to initialize the event listener
-        hideStickyButtonOnCF();
+        var cookieUtmSource = getCookieDynCheckout('utm_source')
+        var cookieUtmMpSource = getCookieDynCheckout('utm_mp_source')
+        var cookie = getCookieDynCheckout('coupon')
+        var cookiefbclid= getCookieDynCheckout('fbclid')
+
+        var isGoogleSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=google', 'utm_source=google']) || cookieUtmMpSource === 'google' || cookieUtmSource === 'google';
+        var isMailingSource = currentUrl.includes('utm_source=mailing', 'utm_mp_source=mailing') || cookieUtmMpSource === 'mailing' || cookieUtmSource === 'mailing';
+        var isTikTokSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=tiktok', 'utm_source=tiktok']) || cookieUtmMpSource === 'tiktok' || cookieUtmSource === 'tiktok';
+        var isOtherSource = (urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=']) || cookieUtmMpSource !== '' || cookieUtmSource !== '') && !isGoogleSource && !isMailingSource && !isTikTokSource;
+        var hasFbclid = urlIncludesSubstrings(currentUrl, ['fbclid=']) || cookiefbclid !== '';
+        var hasFbclid = Boolean(urlIncludesSubstrings(currentUrl, ['fbclid=']) || (cookiefbclid && cookiefbclid !== ''));
 
 
-        ////////////////////////////////////////
+        if ((isOtherSource && !isGoogleSource && !isMailingSource && !isTikTokSource) || hasFbclid){
+          dynPriceParam = dynPriceParam + '&utm_source=other';
+        } else if (isGoogleSource) {
+          dynPriceParam = dynPriceParam + '&utm_source=google';
+        } else if (isMailingSource){
+          dynPriceParam = dynPriceParam + '&utm_source=mailing';
+        } else if (isTikTokSource){
+          dynPriceParam = dynPriceParam + '&utm_source=tiktok';
+        }
+
+        var hasSaleCoupon = urlIncludesSubstrings(currentUrl, ['utm_content=sale10']) || getCookieDynCheckout('coupon') === 'sale10';
+        if (hasSaleCoupon) {
+          dynPriceParam += '&c=sale10';
+        }
+      
+      var addToCartButtons = document.getElementsByClassName("checkout-add-to-cart-btn");
+      for(const addToCartButton of addToCartButtons){
+        addToCartButton.href = "https://ortowp.noriks.com/kosarica/?add-more=" + linkIdsString + dynPriceParam;
+      }
+
+      // var postPurchaseButtons = document.getElementsByClassName("checkout-post-purchase-cart-btn");
+      // for(const btn of postPurchaseButtons){
+      //   btn.href = postPurchaseLink;
+      // }
+      //var addToCartButton = document.getElementById('checkout_add_to_cart_btn');
+      //addToCartButton.href = "https://ortowp.noriks.com/kosarica/?add-more=" + linkIdsString + dynPriceParam;
+    }//setLinkDynamicCart
+
+    function setSelectedVariations(){
+      for(let pr = 0; pr < propertiesArr.length; pr++){
+        let propertyId = propertiesArr[pr].id;
+        let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+        for(let sO = 0; sO < selectedOptionElements.length; sO++){
+          switch(propertiesArr[pr].type){
+            case 'color':
+            case 'icon': {
+              dynamicCheckoutColorVariationClicked(selectedOptionElements[sO].getAttribute('property-id'), selectedOptionElements[sO]['value'], pr,1);
+              break;
+            }
+            case 'basic': {
+              dynamicCheckoutOtherVariationButtonClicked(selectedOptionElements[sO].getAttribute('property-id'), selectedOptionElements[sO]['value'], pr,1);
+              break;
+            }
+            default: break;
+          }//switch
+        }
+      }
+    }//setSelectedVariations
+
+    function selectedVariationInStock(){
+      let inStock = false;
+      if (!variationsArr || variationsArr.length === 0) return inStock;
+
+      let selectedOptionIdsList = [];
+
+      for(let pr = 0; pr < propertiesArr.length; pr++){
+        let propertyId = propertiesArr[pr].id;
+        let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+        for(let sO = 0; sO < selectedOptionElements.length; sO++){
+          selectedOptionIdsList.push(selectedOptionElements[sO]['value']);
+        }
+      }
+      //find correct variation
+      let selectedVariation = variationsArr.find(vr => vr.ids.sort().join(',') === selectedOptionIdsList.map(sO => sO).sort().join(','));
+      if(!!selectedVariation && selectedVariation.hide !== true && selectedVariation.disable !== true){
+        inStock = true;
+      }
+      return inStock;
+    }//selectedVariationInStock
+
+    function toggleCartButtonStock(){
+      let inStock = false;
+      if(variationsArr.length > 0){
+        //variation product
+        inStock = selectedVariationInStock();
+      }else {
+        //simple product
+        inStock = true;
+      }
+      try {
+        handleAddToCartButton(inStock);
+      }catch(err){
+        console.error(err);
+      }
+    }//toggleCartButtonStock
+
+    function applyDynamicPrice(){
+      const dynPrice = getDynamicPrice();
+
+      if(!!dynPrice){
+        dynPriceSet = true;
+        redPrice1 = dynPrice;
+      }
+    }
+
+    function modifyGlobalPrices(dynamicPriceQnt1){
+      if(dynPriceSet){
+        let reducedPriceElem = document.getElementById('dynamic_cart_reduced_price_amount');
+        let origPriceElem = document.getElementById('dynamic_cart_original_price_amount');
+        let discValueElem = document.getElementById('dynamic_cart_discount_percentage_amount');
+        
+        let newRedPrice1 = parseFloat(dynamicPriceQnt1);
+        let newOrigPrice1 =  parseFloat(globalPrices.op1);
+        let redPrice1Disc = ((newOrigPrice1 - newRedPrice1) / newOrigPrice1) * 100;
+
+        try{
+          globalPrices.rp1 = newRedPrice1;
+          globalPrices.op1 = newOrigPrice1;
+          reducedPriceElem.innerHTML = Math.round((newRedPrice1 + Number.EPSILON) * 100) / 100;
+          origPriceElem.innerHTML = Math.round((newOrigPrice1 + Number.EPSILON) * 100) / 100;
+          discValueElem.innerHTML = Math.round(redPrice1Disc);
+        }catch(err){
+          //console.error("Cannot modify global prices");
+        }
+      }
+    }
+
+    function getDynamicPrice(){
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const dynamicPriceParam = urlParams.get("sp") || getCookieDynCheckout('sp') || urlParams.get("spe") || getCookieDynCheckout('spe');
+      
+      var dynamicPrice = null;
+
+      if(!!dynamicPriceParam){
+        dynamicPrice = dynamicPriceParam.replace("i", ".");
+        dynamicPrice = dynamicPrice.substring(2, dynamicPrice.length - 1);
+      }
+      return dynamicPrice;
+    }
+
+    function dynPriceToParam(price){
+      var paramPrice;
+      if(!!price){
+        paramPrice = "77" + price.toString().replace(".", "i") + "7";
+      }
+      return paramPrice;
+    }
+
+    function updateReducedPrices(mainPrice) {
+      // main price
+      $('#dynamic_cart_reduced_price_amount').text(mainPrice);
+
+      // alt currency
+      if (showAltCurrencyPrice) {
+        const altPrice = (parseFloat(mainPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+        $('#dynamic_cart_reduced_alt_price_amount')
+          .text(altPrice + ' ' + altCurrencyPriceSymbol)
+          .show();
+      }
+    }
+
+
+    ////////////////////////////////////////
         ///////// DELIVERY DATE ///////////////
         //////////////////////////////////////
 
@@ -5997,871 +5752,4191 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             return result;
         }//addDays
 
-        setDeliveryDate();
 
         ////////////////////////////////////////
         //////END DELIVERY DATE ///////////////
         //////////////////////////////////////
 
-        //////RELATED DESC FUNCTIONS////////
+  </script>
+					</div>
+					<div class="sct-hero__descr">
+						<!-- <p>Short description</p> -->
+						<ul style="list-style:none;padding-left:0;line-height:1.6;">
+							<li>&#x2714;&#xA0;Takoj&#x161;nje olaj&#x161;anje</li>
+							<li>&#x2714;&#xA0;Klini&#x10D;no preizku&#x161;eno</li>
+							<li>&#x2714;&#xA0;Priporo&#x10D;ajo podiatri</li>
+						</ul>
+					</div>
+
+					<div class="sct-hero__dyn-properties scroll-target">
+						<div id="dynamic-cart-variations-container">
+                      <div class="single-variation-container" variation-index="0">
+                      <div class="colors-container">
+                        <div class="color-name-wrapper">
+                          <label id="selected-color-variation-name" variation-index="0">Barva: </label><label id="selected-color-variation-value"></label>
+                        </div>
+                        <div class="color-variations-wrapper">
+                              <div class="color-variation">
+                                <button id="5ed63a5973bd244d330178b7-60bf53402b27ec52a2a830c6-0" variation-index="0" property-id="5ed63a5973bd244d330178b7" value="60bf53402b27ec52a2a830c6" class="color-variation-button" name="Color-0" selected-option="true" style="background:#e03e0d" ; onclick="dynamicCheckoutColorVariationClicked(&apos;5ed63a5973bd244d330178b7&apos;, &apos;60bf53402b27ec52a2a830c6&apos;, 0, 0);">
+                                <label for="5ed63a5973bd244d330178b7-60bf53402b27ec52a2a830c6-0" class="color-variation-button-label">
+                                  
+                                </label>
+                                </button>
+                              </div>
+                              <div class="color-variation">
+                                <button id="5ed63a5973bd244d330178b7-5ed63c0b73bd244d330178b8-0" variation-index="0" property-id="5ed63a5973bd244d330178b7" value="5ed63c0b73bd244d330178b8" class="color-variation-button" name="Color-1" selected-option="false" style="background:#000000" ; onclick="dynamicCheckoutColorVariationClicked(&apos;5ed63a5973bd244d330178b7&apos;, &apos;5ed63c0b73bd244d330178b8&apos;, 0, 0);">
+                                <label for="5ed63a5973bd244d330178b7-5ed63c0b73bd244d330178b8-0" class="color-variation-button-label">
+                                  
+                                </label>
+                                </button>
+                              </div>
+                              <div class="color-variation">
+                                <button id="5ed63a5973bd244d330178b7-644a43c195e8ca06d2c61eb0-0" variation-index="0" property-id="5ed63a5973bd244d330178b7" value="644a43c195e8ca06d2c61eb0" class="color-variation-button" name="Color-2" selected-option="false" style="background:#a9a9a9" ; onclick="dynamicCheckoutColorVariationClicked(&apos;5ed63a5973bd244d330178b7&apos;, &apos;644a43c195e8ca06d2c61eb0&apos;, 0, 0);">
+                                <label for="5ed63a5973bd244d330178b7-644a43c195e8ca06d2c61eb0-0" class="color-variation-button-label">
+                                  
+                                </label>
+                                </button>
+                              </div>
+                          </div>
+                        </div>
+              <div class="other-property-name">
+                <label class="other-property-label">Velikost
+                </label>
+              </div>
+              
+                  <button name="Size-0" id="5ed4f68873bd244d33016317-689c82ce601c20083023a417-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="689c82ce601c20083023a417" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;689c82ce601c20083023a417&apos;, 1, 0);">
+                      35/36
+                  </button>
+              
+                  <button name="Size-1" id="5ed4f68873bd244d33016317-6481ca3c957fc4078ab8b886-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="6481ca3c957fc4078ab8b886" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;6481ca3c957fc4078ab8b886&apos;, 1, 0);">
+                      37/38
+                  </button>
+              
+                  <button name="Size-2" id="5ed4f68873bd244d33016317-6481ca1f957fc4078ab8b883-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="6481ca1f957fc4078ab8b883" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;6481ca1f957fc4078ab8b883&apos;, 1, 0);">
+                      39/40
+                  </button>
+              
+                  <button name="Size-3" id="5ed4f68873bd244d33016317-689c82d3601c20083023a418-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="689c82d3601c20083023a418" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;689c82d3601c20083023a418&apos;, 1, 0);">
+                      41/42
+                  </button>
+              
+                  <button name="Size-4" id="5ed4f68873bd244d33016317-689c82d9601c20083023a419-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="true" selected value="689c82d9601c20083023a419" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;689c82d9601c20083023a419&apos;, 1, 0);">
+                      43/44
+                  </button>
+              
+                  <button name="Size-5" id="5ed4f68873bd244d33016317-689c82dd601c20083023a41a-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="689c82dd601c20083023a41a" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;689c82dd601c20083023a41a&apos;, 1, 0);">
+                      45/46
+                  </button>
+              
+                  <button name="Size-6" id="5ed4f68873bd244d33016317-6941633d40e5fe5badc2a14b-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="6941633d40e5fe5badc2a14b" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;6941633d40e5fe5badc2a14b&apos;, 1, 0);">
+                      47-48
+                  </button>
+              
+                  <button name="Size-7" id="5ed4f68873bd244d33016317-6941634f7de15237bd950d24-1" property-id="5ed4f68873bd244d33016317" type="button" class="button-variation" selected-option="false" value="6941634f7de15237bd950d24" onclick="dynamicCheckoutOtherVariationButtonClicked(&apos;5ed4f68873bd244d33016317&apos;, &apos;6941634f7de15237bd950d24&apos;, 1, 0);">
+                      49-50
+                  </button>
+              
+                        </div>
+                      </div>
+  <style>
+    #dynamic-cart-variations-container{
+		  touch-action: manipulation;
+	  }
+    .color-variations-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .color-variation-button{
+      background-size: 30px 30px; 
+      background-position: 0 0, 30px 30px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      margin: 4px;
+    }
+    .color-variation-button.selected{
+      border: 1px solid black;
+    }
+    .button-variation {
+      margin: 3px;
+      background-color: green;
+    }
+    .button-variation.selected{
+      margin: 3px;
+      background-color: yellow;
+    }
+    
+    .greyOut {
+            position: relative;
+            opacity: 0.3;
+    }
+            
+    .greyOut::before  {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red; 
+        transform: rotate(-45deg);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    // .hiddenvariation {
+    //     display:none !important;
+    // }
+
+    .dynamic-cart-alt-reduced-price, .dynamic-cart-alt-original-price{
+    margin-left: 5px;
+    }
+
+    #popup-overlay1, #popup-overlay-email, #popup-overlay-success {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
         
-        function initRelatedProductsDescription(){
-            Array.from(document.getElementsByClassName("hs-rp-desc-wrapper-collapsed")).forEach(
-                function(element, index, array) {
-                    let textElements = element.querySelectorAll('.hs-rp-description');
-                    if(textElements.length > 0){
-                        if(textElements[0].offsetHeight > element.clientHeight){
-                            let readMoreWrappers = element.parentElement.querySelectorAll(".hs-read-more-desc-wrapper");
-                            if(readMoreWrappers.length > 0){
-                                readMoreWrappers[0].style.display = "block";
-                            
-                                let readMoreButtons = readMoreWrappers[0].querySelectorAll(".hs-read-more-desc-button");
-                                if(readMoreButtons.length > 0){
-                                    //if (readMoreButtons[0].addEventListener) {  // all browsers except IE before version 9
-                                        readMoreButtons[0].addEventListener("click", function() {
-                                            toggleReadMoreRelatedDesc(element, readMoreButtons[0]);
-                                        }, false);
-                                    //} else {
-                                        /*if (readMoreButtons[0].attachEvent) {   // IE before version 9
-                                            readMoreButtons[0].attachEvent("click", function(){
-                                                toggleReadMoreRelatedDesc(element, readMoreButtons[0]);
-                                            });
-                                        }
-                                    }//else
-                                */}
-                            }
+        /* hidden by default */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    .popup1, .popup-email, .popup-success{
+        background: #ffffff;
+        width: 90%;
+        max-width: 620px;
+        padding: 32px 28px;
+        border-radius: 12px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    #popup-overlay1.active, #popup-overlay-email.active, #popup-overlay-success.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    
+    #popup-overlay1.active .popup1, #popup-overlay-email.active .popup-email, #popup-overlay-success.active, .popup-success {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    .popup-close1, .popup-close-email, .popup-close-success {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        border: none;
+        background: none;
+        font-size: 22px;
+        cursor: pointer;
+        color: #666;
+    }
+    
+    .popup-eyebrow1, .popup-eyebrow-email, .popup-eyebrow-success {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+    }
+    
+    .popup-title1, .popup-title-email, .popup-title-success {
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 24px;
+        color: #f36b21;
+    }
+    
+    .popup-email-input {
+        width: 100%;
+        padding: 12px 16px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-weight: 500;
+    }
+    
+    .popup-title1 span, .popup-title-email span, .popup-title-success span {
+        display: block;
+    }
+    
+    .popup-cta1, .popup-cta-email, .popup-cta-success {
+        background: #f36b21;
+        color: #fff;
+        border: none;
+        padding: 14px 28px;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 999px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .error-message-color {
+        color: red;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .popup-cta-email:disabled {
+        background-color: #d3d3d3;
+        color: #999999;
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    #userAlreadyExistsError, #countrynotFoundError, #enterEmailError, #enterValidEmailText, #unknownError {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    #userAlreadyExistsError.active, #countrynotFoundError.active, #enterEmailError.active, #enterValidEmailText.active, #unknownError.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+
+  </style>
+  
+
+						
+    <script>
+    var productSettings = {"estimate_delivery_date":"11.02.2026","retailPrice":"","reviewsTags":[],"productBrands":[],"woocommerceId":980183,"numberOfPiecesInSet":1};
+    var countrySettings = {"countryCode":"SI","holidays":["1.1.","2.1.","8.2.","5.4.","6.4.","27.4.","1.5.","2.5.","24.5.","25.6.","15.8.","31.10.","1.11.","25.12.","26.12."],"currencySymbol":"€"};
+    var brandSettings = {"name":"Stepease"};
+    var variationsArr = [{"ids":["60bf53402b27ec52a2a830c6","689c82ce601c20083023a417"],"names":"Orange 35/36","sku":"3831127616552","hide":false,"variationId":"980214","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82ce601c20083023a417"],"names":"Black 35/36","sku":"3831127616636","hide":false,"variationId":"980199","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82ce601c20083023a417"],"names":"Grey 35/36","sku":"3831127616594","hide":false,"variationId":"980212","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6481ca3c957fc4078ab8b886"],"names":"Orange 37/38","sku":"3831127616559","hide":false,"variationId":"980210","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6481ca3c957fc4078ab8b886"],"names":"Black 37/38","sku":"3831127616643","hide":false,"variationId":"980213","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6481ca3c957fc4078ab8b886"],"names":"Grey 37/38","sku":"3831127616601","hide":false,"variationId":"980204","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6481ca1f957fc4078ab8b883"],"names":"Orange 39/40","sku":"3831127616566","hide":false,"variationId":"980216","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6481ca1f957fc4078ab8b883"],"names":"Black 39/40","sku":"3831127616650","hide":false,"variationId":"980219","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6481ca1f957fc4078ab8b883"],"names":"Grey 39/40","sku":"3831127616608","hide":false,"variationId":"980185","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","689c82d3601c20083023a418"],"names":"Orange 41/42","sku":"3831127616573","hide":false,"variationId":"980217","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82d3601c20083023a418"],"names":"Black 41/42","sku":"3831127616657","hide":false,"variationId":"980187","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82d3601c20083023a418"],"names":"Grey 41/42","sku":"3831127616615","hide":false,"variationId":"980189","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","689c82d9601c20083023a419"],"names":"Orange 43/44","sku":"3831127616580","hide":false,"variationId":"980193","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82d9601c20083023a419"],"names":"Black 43/44","sku":"3831127616664","hide":false,"variationId":"980211","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82d9601c20083023a419"],"names":"Grey 43/44","sku":"3831127616622","hide":false,"variationId":"980208","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","689c82dd601c20083023a41a"],"names":"Orange 45/46","sku":"3831127616587","hide":false,"variationId":"980218","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","689c82dd601c20083023a41a"],"names":"Black 45/46","sku":"3831127616671","hide":false,"variationId":"980192","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","689c82dd601c20083023a41a"],"names":"Grey 45/46","sku":"3831127616629","hide":false,"variationId":"980215","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6941633d40e5fe5badc2a14b"],"names":"Orange 47/48","sku":"3831127626743","hide":false,"variationId":"982171","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6941633d40e5fe5badc2a14b"],"names":"Black 47/48","sku":"3831127626771","hide":false,"variationId":"982175","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6941633d40e5fe5badc2a14b"],"names":"Grey 47/48","sku":"3831127626757","hide":false,"variationId":"982176","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["60bf53402b27ec52a2a830c6","6941634f7de15237bd950d24"],"names":"Orange 49-50","sku":"3831127626750","hide":false,"variationId":"982174","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["5ed63c0b73bd244d330178b8","6941634f7de15237bd950d24"],"names":"Black 49-50","sku":"3831127626778","hide":false,"variationId":"982168","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0},{"ids":["644a43c195e8ca06d2c61eb0","6941634f7de15237bd950d24"],"names":"Grey 49-50","sku":"3831127626764","hide":false,"variationId":"982173","originalPrice":"36.95","reducedPrice":"18.99","priceOffset":0}];
+    var propertiesArr = [{"name":"Barva","code":"Color","type":"color","id":"5ed63a5973bd244d330178b7","options":[{"name":"Oranžna","code":"Orange","id":"60bf53402b27ec52a2a830c6","selected":true,"selectedPT":true,"value":"#e03e0d","urlLink":null},{"name":"Črna ","code":"Black","id":"5ed63c0b73bd244d330178b8","selected":false,"value":"#000000","urlLink":null},{"name":"Siva","code":"Grey","id":"644a43c195e8ca06d2c61eb0","selected":false,"value":"#a9a9a9","urlLink":null}],"showPriceForVariation":true},{"name":"Velikost","code":"Size","type":"basic","id":"5ed4f68873bd244d33016317","options":[{"name":"35/36","code":"35/36","id":"689c82ce601c20083023a417","selected":false,"selectedPT":false,"urlLink":null},{"name":"37/38","code":"37/38","id":"6481ca3c957fc4078ab8b886","selected":false,"selectedPT":false,"urlLink":null},{"name":"39/40","code":"39/40","id":"6481ca1f957fc4078ab8b883","selected":false,"selectedPT":false,"urlLink":null},{"name":"41/42","code":"41/42","id":"689c82d3601c20083023a418","selected":false,"selectedPT":false,"urlLink":null},{"name":"43/44","code":"43/44","id":"689c82d9601c20083023a419","selected":true,"selectedPT":true,"urlLink":null},{"name":"45/46","code":"45/46","id":"689c82dd601c20083023a41a","selected":false,"selectedPT":false,"urlLink":null},{"name":"47-48","code":"47/48","id":"6941633d40e5fe5badc2a14b","selected":false,"selectedPT":false,"urlLink":null},{"name":"49-50","code":"49-50","id":"6941634f7de15237bd950d24","selected":false,"selectedPT":false,"urlLink":null}],"showPriceForVariation":false}];
+    var relatedArr = [{"_id":"693040aa8f426861019e9c10","name":"STEPHEEL (UP)","sku":"3831127625931","longNames":[{"countryCode":"AL","longName":""},{"countryCode":"AT","longName":"2x Fersenkissen zur Linderung von Fersenschmerzen"},{"countryCode":"BA","longName":""},{"countryCode":"BE","longName":""},{"countryCode":"BG","longName":"2x подложка за пета за облекчаване на болката в петата"},{"countryCode":"CHD","longName":""},{"countryCode":"CHF","longName":""},{"countryCode":"CHI","longName":""},{"countryCode":"CY","longName":""},{"countryCode":"CZ","longName":"2x polštářek na patu pro snížení bolesti paty"},{"countryCode":"DE","longName":"2x Fersenkissen zur Linderung von Fersenschmerzen"},{"countryCode":"DK","longName":""},{"countryCode":"EE","longName":"2x kontsapadi kannavalu vähendamiseks"},{"countryCode":"ES","longName":"2x almohadilla para el talón que reduce el dolor"},{"countryCode":"FI","longName":""},{"countryCode":"FR","longName":"Coussin de talon pour réduire la douleur au talon"},{"countryCode":"GB","longName":""},{"countryCode":"GR","longName":"2x μαξιλαράκι φτέρνας για μείωση του πόνου στη φτέρνα"},{"countryCode":"HR","longName":"2x umetak za petu za smanjenje boli u peti"},{"countryCode":"HU","longName":"2x sarokpárna a sarokfájdalom csökkentésére"},{"countryCode":"IT","longName":"2x cuscinetto per ridurre il dolore al tallone"},{"countryCode":"LT","longName":"2x kulno pagalvėlė, mažinanti kulno skausmą"},{"countryCode":"LV","longName":"2x papēža spilventiņš sāpju mazināšanai papēža zonā"},{"countryCode":"MD","longName":""},{"countryCode":"MK","longName":"2x перница за пета за намалување на болката во петата"},{"countryCode":"NL","longName":"2x hielkussen voor minder hielpijn"},{"countryCode":"PL","longName":"2x poduszka na piętę zmniejszająca ból"},{"countryCode":"PT","longName":"2x almofada de calcanhar para reduzir as dores no calcanhar"},{"countryCode":"RO","longName":"2x talonetă pentru călcâi – reduce durerea la călcâi"},{"countryCode":"RS","longName":"2x uložak za petu za smanjenje bola u peti"},{"countryCode":"SE","longName":""},{"countryCode":"SI","longName":"2x blazinica za peto za zmanjšanje bolečin v peti"},{"countryCode":"SK","longName":"2x vankúšik na pätu na zmiernenie bolesti päty"},{"countryCode":"UA","longName":""},{"countryCode":"US","longName":""},{"countryCode":"XK","longName":""}],"productImageUrls":[{"countryCode":"AL","productImageUrl":""},{"countryCode":"AT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"BA","productImageUrl":""},{"countryCode":"BE","productImageUrl":""},{"countryCode":"BG","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"CHD","productImageUrl":""},{"countryCode":"CHF","productImageUrl":""},{"countryCode":"CHI","productImageUrl":""},{"countryCode":"CY","productImageUrl":""},{"countryCode":"CZ","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"DE","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"DK","productImageUrl":""},{"countryCode":"EE","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"ES","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"FI","productImageUrl":""},{"countryCode":"FR","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"GB","productImageUrl":""},{"countryCode":"GR","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"HR","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"HU","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"IT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"LT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"LV","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"MD","productImageUrl":""},{"countryCode":"MK","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"NL","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"PL","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"PT","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"RO","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"RS","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"SE","productImageUrl":""},{"countryCode":"SI","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"SK","productImageUrl":"https://ortowp.noriks.com/app/uploads/2025/11/STEPHEEL-3831127625931-N-1__191125.jpg"},{"countryCode":"UA","productImageUrl":""},{"countryCode":"US","productImageUrl":""},{"countryCode":"XK","productImageUrl":""}],"shortNames":[{"countryCode":"AL","shortName":""},{"countryCode":"AT","shortName":""},{"countryCode":"BA","shortName":""},{"countryCode":"BE","shortName":""},{"countryCode":"BG","shortName":""},{"countryCode":"CHD","shortName":""},{"countryCode":"CHF","shortName":""},{"countryCode":"CHI","shortName":""},{"countryCode":"CY","shortName":""},{"countryCode":"CZ","shortName":""},{"countryCode":"DE","shortName":""},{"countryCode":"DK","shortName":""},{"countryCode":"EE","shortName":""},{"countryCode":"ES","shortName":""},{"countryCode":"FI","shortName":""},{"countryCode":"FR","shortName":""},{"countryCode":"GB","shortName":""},{"countryCode":"GR","shortName":""},{"countryCode":"HR","shortName":""},{"countryCode":"HU","shortName":""},{"countryCode":"IT","shortName":""},{"countryCode":"LT","shortName":""},{"countryCode":"LV","shortName":""},{"countryCode":"MD","shortName":""},{"countryCode":"MK","shortName":""},{"countryCode":"NL","shortName":""},{"countryCode":"PL","shortName":""},{"countryCode":"PT","shortName":""},{"countryCode":"RO","shortName":""},{"countryCode":"RS","shortName":""},{"countryCode":"SE","shortName":""},{"countryCode":"SI","shortName":""},{"countryCode":"SK","shortName":""},{"countryCode":"UA","shortName":""},{"countryCode":"US","shortName":""},{"countryCode":"XK","shortName":""}],"originalPrices":[{"countryCode":"IT","currencySymbol":"€","price":11.95},{"countryCode":"LT","currencySymbol":"€","price":11.95},{"countryCode":"PT","currencySymbol":"€","price":11.95},{"countryCode":"SI","currencySymbol":"€","price":11.95},{"countryCode":"LV","currencySymbol":"€","price":11.95},{"countryCode":"RS","currencySymbol":"rsd","price":1399},{"countryCode":"RO","currencySymbol":"lei","price":60.99},{"countryCode":"SK","currencySymbol":"€","price":11.95},{"countryCode":"PL","currencySymbol":"zł","price":51},{"countryCode":"MK","currencySymbol":"ден","price":739},{"countryCode":"NL","currencySymbol":"€","price":11.95},{"countryCode":"AT","currencySymbol":"€","price":11.95},{"countryCode":"BG","currencySymbol":"лв.","price":11.99},{"countryCode":"CZ","currencySymbol":"Kč","price":289},{"countryCode":"DE","currencySymbol":"€","price":11.95},{"countryCode":"EE","currencySymbol":"€","price":11.95},{"countryCode":"ES","currencySymbol":"€","price":11.95},{"countryCode":"FR","currencySymbol":"€","price":11.95},{"countryCode":"GR","currencySymbol":"€","price":11.95},{"countryCode":"HR","currencySymbol":"€","price":11.95},{"countryCode":"HU","currencySymbol":"Ft","price":4590}],"reducedPrices":[{"countryCode":"IT","currencySymbol":"€","price1":3.99},{"countryCode":"LT","currencySymbol":"€","price1":3.99},{"countryCode":"PT","currencySymbol":"€","price1":3.99},{"countryCode":"SI","currencySymbol":"€","price1":3.99},{"countryCode":"LV","currencySymbol":"€","price1":2.99},{"countryCode":"RS","currencySymbol":"rsd","price1":349},{"countryCode":"RO","currencySymbol":"lei","price1":14.99},{"countryCode":"SK","currencySymbol":"€","price1":3.99},{"countryCode":"PL","currencySymbol":"zł","price1":17},{"countryCode":"MK","currencySymbol":"ден","price1":189},{"countryCode":"NL","currencySymbol":"€","price1":3.99},{"countryCode":"AT","currencySymbol":"€","price1":3.99},{"countryCode":"BG","currencySymbol":"лв.","price1":2.99},{"countryCode":"CZ","currencySymbol":"Kč","price1":99},{"countryCode":"DE","currencySymbol":"€","price1":3.99},{"countryCode":"EE","currencySymbol":"€","price1":3.99},{"countryCode":"ES","currencySymbol":"€","price1":3.99},{"countryCode":"FR","currencySymbol":"€","price1":2.99},{"countryCode":"GR","currencySymbol":"€","price1":3.99},{"countryCode":"HR","currencySymbol":"€","price1":4.99},{"countryCode":"HU","currencySymbol":"Ft","price1":1099}],"retailPrices":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":""},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":""},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":""},{"countryCode":"DE","value":""},{"countryCode":"DK","value":""},{"countryCode":"EE","value":""},{"countryCode":"ES","value":""},{"countryCode":"FI","value":""},{"countryCode":"FR","value":""},{"countryCode":"GB","value":""},{"countryCode":"GR","value":""},{"countryCode":"HR","value":""},{"countryCode":"HU","value":""},{"countryCode":"IT","value":""},{"countryCode":"LT","value":""},{"countryCode":"LV","value":""},{"countryCode":"MD","value":""},{"countryCode":"MK","value":""},{"countryCode":"NL","value":""},{"countryCode":"PL","value":""},{"countryCode":"PT","value":""},{"countryCode":"RO","value":""},{"countryCode":"RS","value":""},{"countryCode":"SE","value":""},{"countryCode":"SI","value":""},{"countryCode":"SK","value":""},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"spMinimumPrices":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":""},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":""},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":""},{"countryCode":"DE","value":""},{"countryCode":"DK","value":""},{"countryCode":"EE","value":""},{"countryCode":"ES","value":""},{"countryCode":"FI","value":""},{"countryCode":"FR","value":""},{"countryCode":"GB","value":""},{"countryCode":"GR","value":""},{"countryCode":"HR","value":""},{"countryCode":"HU","value":""},{"countryCode":"IT","value":""},{"countryCode":"LT","value":""},{"countryCode":"LV","value":""},{"countryCode":"MD","value":""},{"countryCode":"MK","value":""},{"countryCode":"NL","value":""},{"countryCode":"PL","value":""},{"countryCode":"PT","value":""},{"countryCode":"RO","value":""},{"countryCode":"RS","value":""},{"countryCode":"SE","value":""},{"countryCode":"SI","value":""},{"countryCode":"SK","value":""},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"forcedMinimumPrices":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":""},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":""},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":""},{"countryCode":"DE","value":""},{"countryCode":"DK","value":""},{"countryCode":"EE","value":""},{"countryCode":"ES","value":""},{"countryCode":"FI","value":""},{"countryCode":"FR","value":""},{"countryCode":"GB","value":""},{"countryCode":"GR","value":""},{"countryCode":"HR","value":""},{"countryCode":"HU","value":""},{"countryCode":"IT","value":""},{"countryCode":"LT","value":""},{"countryCode":"LV","value":""},{"countryCode":"MD","value":""},{"countryCode":"MK","value":""},{"countryCode":"NL","value":""},{"countryCode":"PL","value":""},{"countryCode":"PT","value":""},{"countryCode":"RO","value":""},{"countryCode":"RS","value":""},{"countryCode":"SE","value":""},{"countryCode":"SI","value":""},{"countryCode":"SK","value":""},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"dateCreated":"2025-12-03T13:52:42.744Z","tags":["Related upsell"],"relatedProductDescriptions":[{"countryCode":"AL","relatedProductDescription":""},{"countryCode":"AT","relatedProductDescription":"Füllt einen zu großen Schuh aus, ohne zu reiben oder Blasen zu verursachen.\n"},{"countryCode":"BA","relatedProductDescription":""},{"countryCode":"BE","relatedProductDescription":""},{"countryCode":"BG","relatedProductDescription":"Попълва по-голяма обувка, без триене или причиняване на пришки.\n"},{"countryCode":"CHD","relatedProductDescription":""},{"countryCode":"CHF","relatedProductDescription":""},{"countryCode":"CHI","relatedProductDescription":""},{"countryCode":"CY","relatedProductDescription":""},{"countryCode":"CZ","relatedProductDescription":"Vyplní botu, která je příliš velká, aniž by dřela nebo způsobovala puchýře.\n"},{"countryCode":"DE","relatedProductDescription":"Füllt einen zu großen Schuh aus, ohne zu reiben oder Blasen zu verursachen.\n"},{"countryCode":"DK","relatedProductDescription":""},{"countryCode":"EE","relatedProductDescription":"Täidab liiga suure jalanõu ilma hõõrumise ja villide tekketa.\n"},{"countryCode":"ES","relatedProductDescription":"Ajusta el zapato que te queda demasiado grande, sin causar rozaduras ni ampollas.\n"},{"countryCode":"FI","relatedProductDescription":""},{"countryCode":"FR","relatedProductDescription":"Comble une chaussure trop grande, sans frottement ni ampoules.\n"},{"countryCode":"GB","relatedProductDescription":""},{"countryCode":"GR","relatedProductDescription":"Γεμίζει ένα παπούτσι που είναι πολύ μεγάλο, χωρίς να τρίβει ή να προκαλεί φουσκάλες.\n"},{"countryCode":"HR","relatedProductDescription":"Ispunjava cipelu koja je prevelika, bez trljanja ili stvaranja žuljeva.\n"},{"countryCode":"HU","relatedProductDescription":"Kitölti a túl nagy cipőt anélkül, hogy dörzsölne vagy vízhólyagot okozna.\n"},{"countryCode":"IT","relatedProductDescription":"Riempie una scarpa troppo grande, senza sfregare né causare vesciche.\n"},{"countryCode":"LT","relatedProductDescription":"Užpildo per didelį batą, netrinant ir nesukeliant pūslių.\n"},{"countryCode":"LV","relatedProductDescription":"Aizpilda pārāk lielu apavu, neradot berzi vai tulznas.\n"},{"countryCode":"MD","relatedProductDescription":""},{"countryCode":"MK","relatedProductDescription":"Го пополнува чевелот што е преголем, без триење или предизвикување плускавци.\n"},{"countryCode":"NL","relatedProductDescription":"Vult een schoen die te groot is, zonder te schuren of blaren te veroorzaken.\n"},{"countryCode":"PL","relatedProductDescription":"Wypełnia zbyt luźny but dla lepszego dopasowania bez otarć i pęcherzy.\n"},{"countryCode":"PT","relatedProductDescription":"Basta colocar no seu calçado, sem roçar nem causar bolhas.\n"},{"countryCode":"RO","relatedProductDescription":"Completează pantofii prea largi, fără a provoca frecare sau bătături.\n"},{"countryCode":"RS","relatedProductDescription":"Popunjava cipelu koja je prevelika, bez trenja ili stvaranja žuljeva.\n"},{"countryCode":"SE","relatedProductDescription":""},{"countryCode":"SI","relatedProductDescription":"Zapolni prevelik čevelj, ne da bi drgnila ali povzročala žulje.\n"},{"countryCode":"SK","relatedProductDescription":"Vyplní topánku, ktorá je príliš veľká, bez trenia alebo spôsobovania pľuzgierov.\n"},{"countryCode":"UA","relatedProductDescription":""},{"countryCode":"US","relatedProductDescription":""},{"countryCode":"XK","relatedProductDescription":""}],"isDeleted":false,"brandId":"68f0942607a0f5b28273c985","isRelatedProduct":true,"woocommerceCountrySkus":[{"countryCode":"AL","woocommerceCountrySku":""},{"countryCode":"AT","woocommerceCountrySku":""},{"countryCode":"BA","woocommerceCountrySku":""},{"countryCode":"BE","woocommerceCountrySku":""},{"countryCode":"BG","woocommerceCountrySku":""},{"countryCode":"CHD","woocommerceCountrySku":""},{"countryCode":"CHF","woocommerceCountrySku":""},{"countryCode":"CHI","woocommerceCountrySku":""},{"countryCode":"CY","woocommerceCountrySku":""},{"countryCode":"CZ","woocommerceCountrySku":""},{"countryCode":"DE","woocommerceCountrySku":""},{"countryCode":"DK","woocommerceCountrySku":""},{"countryCode":"EE","woocommerceCountrySku":""},{"countryCode":"ES","woocommerceCountrySku":""},{"countryCode":"FI","woocommerceCountrySku":""},{"countryCode":"FR","woocommerceCountrySku":""},{"countryCode":"GB","woocommerceCountrySku":""},{"countryCode":"GR","woocommerceCountrySku":""},{"countryCode":"HR","woocommerceCountrySku":""},{"countryCode":"HU","woocommerceCountrySku":""},{"countryCode":"IT","woocommerceCountrySku":""},{"countryCode":"LT","woocommerceCountrySku":""},{"countryCode":"LV","woocommerceCountrySku":""},{"countryCode":"MD","woocommerceCountrySku":""},{"countryCode":"MK","woocommerceCountrySku":""},{"countryCode":"NL","woocommerceCountrySku":""},{"countryCode":"PL","woocommerceCountrySku":""},{"countryCode":"PT","woocommerceCountrySku":""},{"countryCode":"RO","woocommerceCountrySku":""},{"countryCode":"RS","woocommerceCountrySku":""},{"countryCode":"SE","woocommerceCountrySku":""},{"countryCode":"SI","woocommerceCountrySku":""},{"countryCode":"SK","woocommerceCountrySku":""},{"countryCode":"UA","woocommerceCountrySku":""},{"countryCode":"US","woocommerceCountrySku":""},{"countryCode":"XK","woocommerceCountrySku":""}],"cart":{"btnQty1":"<strong>1 + 1 GRATIS</strong>","btnQty2":"<strong>2 + 2 GRATIS</strong>","btnQty3":"<strong>3 + 3 GRATIS</strong>"},"image":"67fb0394c5d0a_STEPHEEL-3831127625931-N-1.jpg","productBrands":[],"additionalVariations":[{"countryCode":"AL","countryId":"67ef6b8b5ab6730d795d527d","realVariations":[],"variations":[]},{"countryCode":"AT","countryId":"5da8661a4ca2c106ccdafa80","realVariations":[],"variations":[]},{"countryCode":"BA","countryId":"681b05544851b847384f0c8d","realVariations":[],"variations":[]},{"countryCode":"BE","countryId":"625423170a34cb2d21d80eb2","realVariations":[],"variations":[]},{"countryCode":"BG","countryId":"5e1475d7704e733d3ec7fae4","realVariations":[],"variations":[]},{"countryCode":"CHD","countryId":"60db0f6d9d62d24c3230951f","realVariations":[],"variations":[]},{"countryCode":"CHF","countryId":"60db0f7e9d62d24c32309523","realVariations":[],"variations":[]},{"countryCode":"CHI","countryId":"60db0f769d62d24c32309521","realVariations":[],"variations":[]},{"countryCode":"CY","countryId":"679c895de23ca17aaed5d6aa","realVariations":[],"variations":[]},{"countryCode":"CZ","countryId":"5e1475f0704e73d3c0c7fae6","realVariations":[],"variations":[]},{"countryCode":"DE","countryId":"5dca6943ac9d992456b69f8e","realVariations":[],"variations":[]},{"countryCode":"DK","countryId":"69145a8105bee56fe6b56506","realVariations":[],"variations":[]},{"countryCode":"EE","countryId":"621e2b44dc6bc1a6d8290dc7","realVariations":[],"variations":[]},{"countryCode":"ES","countryId":"5e147598704e738ff3c7fae0","realVariations":[],"variations":[]},{"countryCode":"FI","countryId":"6286160ec8ee262958e17186","realVariations":[],"variations":[]},{"countryCode":"FR","countryId":"5f89955741605719d21d15a5","realVariations":[],"variations":[]},{"countryCode":"GB","countryId":"613873bd3536f31b20fe1d92","realVariations":[],"variations":[]},{"countryCode":"GR","countryId":"5ed7a071a74c373c0d4ce615","realVariations":[],"variations":[]},{"countryCode":"HR","countryId":"5e14761b704e7345c1c7faeb","realVariations":[],"variations":[]},{"countryCode":"HU","countryId":"5e147642704e73e928c7faed","realVariations":[],"variations":[]},{"countryCode":"IT","countryId":"5d9c86730336b70cbd1315ba","realVariations":[],"variations":[]},{"countryCode":"LT","countryId":"621e2ac9dc6bc1a6d8290dc5","realVariations":[],"variations":[]},{"countryCode":"LV","countryId":"621e2b1edc6bc1a6d8290dc6","realVariations":[],"variations":[]},{"countryCode":"MD","countryId":"63fdbcd990e73c4ade0bf7fc","realVariations":[],"variations":[]},{"countryCode":"MK","countryId":"679c8a0fd52c906b3010917d","realVariations":[],"variations":[]},{"countryCode":"NL","countryId":"5f3ba871ab5e2237240d8c07","realVariations":[],"variations":[]},{"countryCode":"PL","countryId":"5dca6952ac9d99150db69f92","realVariations":[],"variations":[]},{"countryCode":"PT","countryId":"5e1475a0704e736a90c7fae2","realVariations":[],"variations":[]},{"countryCode":"RO","countryId":"5dca694aac9d997e30b69f90","realVariations":[],"variations":[]},{"countryCode":"RS","countryId":"66cd8dccea7d462f3d38146a","realVariations":[],"variations":[]},{"countryCode":"SE","countryId":"6254232c0a34cb2d21d80eb4","realVariations":[],"variations":[]},{"countryCode":"SI","countryId":"5d9c85fc0336b742021314d6","realVariations":[],"variations":[]},{"countryCode":"SK","countryId":"5e14758c704e7328bac7fade","realVariations":[],"variations":[]},{"countryCode":"UA","countryId":"67ac55b9a0d8edda0bdedc21","realVariations":[],"variations":[]},{"countryCode":"US","countryId":"6231edeb9398e11abe08a9f9","realVariations":[],"variations":[]},{"countryCode":"XK","countryId":"67f8a6fc14c174d4567c5da1","realVariations":[],"variations":[]}],"bundleProducts":"","checkoutExtra":"","customBtnQtyText":false,"isBundle":false,"outOfStockPT":false,"outOfStockRO":false,"outOfStockSI":false,"productCogs":[{"countryCode":"AL","value":""},{"countryCode":"AT","value":0.99},{"countryCode":"BA","value":""},{"countryCode":"BE","value":""},{"countryCode":"BG","value":0.99},{"countryCode":"CHD","value":""},{"countryCode":"CHF","value":""},{"countryCode":"CHI","value":""},{"countryCode":"CY","value":""},{"countryCode":"CZ","value":0.99},{"countryCode":"DE","value":0.99},{"countryCode":"DK","value":""},{"countryCode":"EE","value":0.99},{"countryCode":"ES","value":0.99},{"countryCode":"FI","value":""},{"countryCode":"FR","value":0.99},{"countryCode":"GB","value":""},{"countryCode":"GR","value":0.99},{"countryCode":"HR","value":0.99},{"countryCode":"HU","value":0.99},{"countryCode":"IT","value":0.99},{"countryCode":"LT","value":0.99},{"countryCode":"LV","value":0.99},{"countryCode":"MD","value":""},{"countryCode":"MK","value":0.99},{"countryCode":"NL","value":0.99},{"countryCode":"PL","value":0.99},{"countryCode":"PT","value":0.99},{"countryCode":"RO","value":0.99},{"countryCode":"RS","value":0.99},{"countryCode":"SE","value":""},{"countryCode":"SI","value":0.99},{"countryCode":"SK","value":0.99},{"countryCode":"UA","value":""},{"countryCode":"US","value":""},{"countryCode":"XK","value":""}],"relatedProducts":[],"reviewsTags":[],"useDropdownForVariations":false,"woocommerceProductIds":[{"countryCode":"AL","woocommerceProductId":""},{"countryCode":"AT","woocommerceProductId":117566},{"countryCode":"BA","woocommerceProductId":""},{"countryCode":"BE","woocommerceProductId":""},{"countryCode":"BG","woocommerceProductId":781382},{"countryCode":"CHD","woocommerceProductId":""},{"countryCode":"CHF","woocommerceProductId":""},{"countryCode":"CHI","woocommerceProductId":""},{"countryCode":"CY","woocommerceProductId":""},{"countryCode":"CZ","woocommerceProductId":2090968},{"countryCode":"DE","woocommerceProductId":117873},{"countryCode":"DK","woocommerceProductId":""},{"countryCode":"EE","woocommerceProductId":90739},{"countryCode":"ES","woocommerceProductId":69545},{"countryCode":"FI","woocommerceProductId":""},{"countryCode":"FR","woocommerceProductId":27034},{"countryCode":"GB","woocommerceProductId":""},{"countryCode":"GR","woocommerceProductId":969990},{"countryCode":"HR","woocommerceProductId":910939},{"countryCode":"HU","woocommerceProductId":2291123},{"countryCode":"IT","woocommerceProductId":1554570},{"countryCode":"LT","woocommerceProductId":180947},{"countryCode":"LV","woocommerceProductId":91154},{"countryCode":"MD","woocommerceProductId":""},{"countryCode":"MK","woocommerceProductId":232915},{"countryCode":"NL","woocommerceProductId":194567},{"countryCode":"PL","woocommerceProductId":2243283},{"countryCode":"PT","woocommerceProductId":740141},{"countryCode":"RO","woocommerceProductId":1118252},{"countryCode":"RS","woocommerceProductId":205252},{"countryCode":"SE","woocommerceProductId":""},{"countryCode":"SI","woocommerceProductId":981495},{"countryCode":"SK","woocommerceProductId":1647687},{"countryCode":"UA","woocommerceProductId":""},{"countryCode":"US","woocommerceProductId":""},{"countryCode":"XK","woocommerceProductId":""}],"acfs":[{"countryCode":"IT","number_of_pieces_in_a_set":""},{"countryCode":"LT","number_of_pieces_in_a_set":""},{"countryCode":"PT","number_of_pieces_in_a_set":""},{"countryCode":"SI","number_of_pieces_in_a_set":""},{"countryCode":"LV","number_of_pieces_in_a_set":""},{"countryCode":"RS","number_of_pieces_in_a_set":""},{"countryCode":"RO","number_of_pieces_in_a_set":""},{"countryCode":"SK","number_of_pieces_in_a_set":""},{"countryCode":"PL","number_of_pieces_in_a_set":""},{"countryCode":"MK","number_of_pieces_in_a_set":""},{"countryCode":"NL","number_of_pieces_in_a_set":""},{"countryCode":"AT","number_of_pieces_in_a_set":""},{"countryCode":"BG","number_of_pieces_in_a_set":""},{"countryCode":"CZ","number_of_pieces_in_a_set":""},{"countryCode":"DE","number_of_pieces_in_a_set":""},{"countryCode":"EE","number_of_pieces_in_a_set":""},{"countryCode":"ES","number_of_pieces_in_a_set":""},{"countryCode":"FR","number_of_pieces_in_a_set":""},{"countryCode":"GR","number_of_pieces_in_a_set":""},{"countryCode":"HR","number_of_pieces_in_a_set":""},{"countryCode":"HU","number_of_pieces_in_a_set":""}],"additionalVariationsPriceOffsets":[{"countryCode":"IT","countryId":"5d9c86730336b70cbd1315ba","value":null},{"countryCode":"LT","countryId":"621e2ac9dc6bc1a6d8290dc5","value":null},{"countryCode":"PT","countryId":"5e1475a0704e736a90c7fae2","value":null},{"countryCode":"SI","countryId":"5d9c85fc0336b742021314d6","value":null},{"countryCode":"LV","countryId":"621e2b1edc6bc1a6d8290dc6","value":null},{"countryCode":"RS","countryId":"66cd8dccea7d462f3d38146a","value":null},{"countryCode":"RO","countryId":"5dca694aac9d997e30b69f90","value":null},{"countryCode":"SK","countryId":"5e14758c704e7328bac7fade","value":null},{"countryCode":"PL","countryId":"5dca6952ac9d99150db69f92","value":null},{"countryCode":"MK","countryId":"679c8a0fd52c906b3010917d","value":null},{"countryCode":"NL","countryId":"5f3ba871ab5e2237240d8c07","value":null},{"countryCode":"AT","countryId":"5da8661a4ca2c106ccdafa80","value":null},{"countryCode":"BG","countryId":"5e1475d7704e733d3ec7fae4","value":null},{"countryCode":"CZ","countryId":"5e1475f0704e73d3c0c7fae6","value":null},{"countryCode":"DE","countryId":"5dca6943ac9d992456b69f8e","value":null},{"countryCode":"EE","countryId":"621e2b44dc6bc1a6d8290dc7","value":null},{"countryCode":"ES","countryId":"5e147598704e738ff3c7fae0","value":null},{"countryCode":"FR","countryId":"5f89955741605719d21d15a5","value":null},{"countryCode":"GR","countryId":"5ed7a071a74c373c0d4ce615","value":null},{"countryCode":"HR","countryId":"5e14761b704e7345c1c7faeb","value":null},{"countryCode":"HU","countryId":"5e147642704e73e928c7faed","value":null}],"discounts":[{"countryCode":"IT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"LT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"PT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"SI","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"LV","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"RS","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"RO","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"SK","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"PL","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"MK","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"NL","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"AT","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"BG","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"CZ","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"DE","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"EE","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"ES","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"FR","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"GR","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"HR","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"},{"countryCode":"HU","discount2":"-1","discount3":"-1","discount4":"-1","discount5":"-1","discountX":"-1","chooseQuantityX":"6","bestOfferBanner":-1,"freeShippingAboveAmount":"0"}],"manualsLinks":[{"countryCode":"IT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"LT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"PT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"SI","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"LV","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"RS","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"RO","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"SK","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"PL","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"MK","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"NL","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"AT","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"BG","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"CZ","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"DE","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"EE","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"ES","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"FR","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"GR","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"HR","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"},{"countryCode":"HU","manualLink":"https://images.hs-plus.com/assets-dashboard/product-manuals-v2/TRAPKO_prirocnik_SI.pdf"}],"variations":[],"templates":[],"id":"693040aa8f426861019e9c10","deliveryDates":[{"countryId":"5d9c86730336b70cbd1315ba","countryCode":"IT","date":"05.01.2026"},{"countryId":"621e2ac9dc6bc1a6d8290dc5","countryCode":"LT","date":"05.01.2026"},{"countryId":"5d9c85fc0336b742021314d6","countryCode":"SI","date":"05.01.2026"},{"countryId":"621e2b1edc6bc1a6d8290dc6","countryCode":"LV","date":"05.01.2026"},{"countryId":"66cd8dccea7d462f3d38146a","countryCode":"RS","date":"05.01.2026"},{"countryId":"5dca694aac9d997e30b69f90","countryCode":"RO","date":"05.01.2026"},{"countryId":"5e14758c704e7328bac7fade","countryCode":"SK","date":"05.01.2026"},{"countryId":"5dca6952ac9d99150db69f92","countryCode":"PL","date":"05.01.2026"},{"countryId":"679c8a0fd52c906b3010917d","countryCode":"MK","date":"05.01.2026"},{"countryId":"5f3ba871ab5e2237240d8c07","countryCode":"NL","date":"05.01.2026"},{"countryId":"5da8661a4ca2c106ccdafa80","countryCode":"AT","date":"05.01.2026"},{"countryId":"5e1475d7704e733d3ec7fae4","countryCode":"BG","date":"05.01.2026"},{"countryId":"5e1475f0704e73d3c0c7fae6","countryCode":"CZ","date":"05.01.2026"},{"countryId":"5dca6943ac9d992456b69f8e","countryCode":"DE","date":"05.01.2026"},{"countryId":"621e2b44dc6bc1a6d8290dc7","countryCode":"EE","date":"05.01.2026"},{"countryId":"5f89955741605719d21d15a5","countryCode":"FR","date":"05.01.2026"},{"countryId":"5ed7a071a74c373c0d4ce615","countryCode":"GR","date":"05.01.2026"},{"countryId":"5e14761b704e7345c1c7faeb","countryCode":"HR","date":"05.01.2026"},{"countryId":"5e147642704e73e928c7faed","countryCode":"HU","date":"05.01.2026"}],"enableOriginalPriceOffset":false}];
+    var globalPrices = {
+        op1: '36.95',
+        op2: '73.90',
+        op3: '110.85',
+        op4: '147.80',
+        op5: '184.75',
+        opx: '221.70',
+        rp1: '18.99',
+        rp2: '29.62',
+        rp3: '41.59',
+        rp4: '55.45',
+        rp5: '49.37',
+        rpx: '59.25',
+    };
+    var decimals = 2;
+    var redPrice1 = 18.99;
+    dynPriceSet = false;
+
+    var purchaseTypePickers = [];
+    var selectedPurchaseTypePicker = null;
+    
+
+    (function () {
+        setTimeout(function() {
+            applyDynamicPrice();
+            modifyGlobalPrices(redPrice1);
+            setSelectedVariations();
+            toggleCartButtonStock();
+            dyncamicCheckoutHandlePrice();
+            if(typeof initPickerSelector === 'function'){
+             initPickerSelector();   
+            }
+            if(typeof initSubscriptionSelector === 'function'){
+             initSubscriptionSelector();   
+            }
+            markOutOfStock2();
+            recalculatePrices();
+            setLinkDynamicCart();
+        }, 1200);
+    })();
+
+    function dyncamicCheckoutHandlePrice(){
+      $('.dp-all').css('display', 'inline-block');
+    }
+    
+    function getCookieDynCheckout(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+        }
+        return "";
+    }
+    
+    
+    function initSetLink(){
+            try{
+                setLinkDynamicCart();
+            }catch(err){
+                throw err;
+            } 
+        }
+    function setLink(){
+        try{
+            setLinkDynamicCart();
+        }catch(err){
+            throw err;
+        } 
+    }
+    
+    
+
+    function dynamicCheckoutColorVariationClicked(propertyId, optionId, p, variationIndex){
+      let property = propertiesArr.find(pr => pr.id === propertyId);
+      let option = property.options.find(opt => opt.id === optionId);
+
+      let selectedVariationValueLabel = document.getElementById("selected-color-variation-value");
+      selectedVariationValueLabel.innerText = option.name;
+
+      //remove borders on all variations
+      for(let opt = 0; opt < propertiesArr[p].options.length; opt++){
+        let optionElement = document.getElementById(propertiesArr[p].id + "-" + propertiesArr[p].options[opt].id + "-" + p);
+        if(!!optionElement){
+          optionElement.classList.remove('selected');
+          optionElement.setAttribute("selected-option", "false");
+        }
+      }
+      //add border to selected variation
+      let selectedVariationButtonElement = document.getElementById(propertyId + "-" + optionId + "-" + p);
+      selectedVariationButtonElement.classList.add('selected');
+      selectedVariationButtonElement.setAttribute("selected-option", "true");
+      
+      toggleCartButtonStock();
+      markOutOfStock2();
+      recalculatePrices();
+      setLinkDynamicCart();
+    }//dynamicCheckoutColorVariationClicked
+    
+    
+  async function recalculatePrices(){
+    var originalPrice = 36.95
+    var retail_price = 0;
+    globalRetailPrice = 0;
+    var forced_minimum_price = 0;
+    globalMinimumPrice = 0;
+    var sp_minimum_price = 0;
+    globalSpMinimumPrice = 0;
+    var countryMinimumPrice = 6.99;
+    var productCogs = 6.99;
+    var additionalVariationProductPrice = 0;
+    var additionalVariationsPrices = [];
+    var decimals = 2;
+    var altDecimals = 2;
+    var altCurrencySymbol = '€';
+    var defaultReducedPrice = 18.99;
+    price = setDefaultReducedPrice(price, defaultReducedPrice);
+    var countryCurrencySymbol = '€';
+    var showAltCurrencyPrice = false;
+    var altCurrencyPriceRate = 1;
+    var altCurrencyPriceSymbol = '€';
+    var enableOriginalPriceOffset = false;
+
+    var skus = getAllSkus();
+    var pr2;
+
+    if(country !== 'HR'){
+        pr2 = getPr(skus);
+    }else {
+        //ignore cookie price on HR
+        pr2 = '';
+    }
+
+    var pr2 = getPr(skus);
+    altDynPr = false;
+    if (pr2 === '') {
+        pr2 = getCookieDynCheckout('sp') || getParam('sp');
+        if(pr2 === 0){
+            pr2 = getCookieDynCheckout('spe') || getParam('spe');
+            spe = getCookieDynCheckout('spe') || getParam('spe');
+            altDynPr = true;
+            if(spe !== 0){
+                altDynPr = true;
+            }
+        }
+    }
+
+    if(getCookieDynCheckout('sp') || getCookieDynCheckout('spe')) {
+        pr2 = psp(pr2)
+    }
+
+    sp = pr2;
+    spe = pr2;
+    if(urlIncludesSubstrings(currentUrl, substringsToCheck) || urlIncludesSubstrings(currentUrl, substringsToCheckMailing) 
+    || getCookieDynCheckout('utm_source') === 'mailing' || getCookieDynCheckout('utm_mp_source') === 'mailing'
+    || getCookieDynCheckout('utm_source') === 'google' || getCookieDynCheckout('utm_mp_source') === 'google'){
+        price = pr2;
+    }   else {
+        price = sp;
+        }    
+
+    if (country === 'HR' && altDynPr === false){
+        if(urlIncludesSubstrings(currentUrl, substringsToCheck) || getCookieDynCheckout('utm_source') === 'google' || getCookieDynCheckout('utm_mp_source') === 'google' ) {
+            price = price / 1;
+        }
+
+    }
+    
+    
+    let selectedOptions = [];
+    for(let pr = 0; pr < propertiesArr.length; pr++){
+      let propertyId = propertiesArr[pr].id;
+      let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+      if(selectedOptionElements.length > 0){
+        selectedOptions.push(propertiesArr[pr].options.find(opt => opt.id === selectedOptionElements[0].value));
+      } 
+    }
+    //find correct variation
+    let selectedVariation = variationsArr.find(vr => vr.ids.sort().join(',') === selectedOptions.map(sO => sO.id).sort().join(','));
+    //PRICE LOGIC--------------------------------------------------------------------------------------------
+    
+    var cookieUtmSource = getCookieDynCheckout('utm_source')
+    var cookieUtmMpSource = getCookieDynCheckout('utm_mp_source')
+    var cookiefbclid= getCookieDynCheckout('fbclid')
+    var cookieSaleCoupon = getCookieDynCheckout('coupon')
+
+    var globalRetailConverted = globalRetailPrice;
+    var globalMinimumConverted = globalMinimumPrice;
+    
+    var isUtmPresent = (
+    urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=', 'fbclid=']) || 
+    (cookieUtmMpSource && cookieUtmMpSource !== '') || 
+    (cookieUtmSource && cookieUtmSource !== '') ||
+    (cookiefbclid && cookiefbclid !== '')
+    );
+    var isGoogleSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=google', 'utm_source=google']) || cookieUtmMpSource === 'google' || cookieUtmSource === 'google';
+    var isNativeHsSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=nativehs', 'utm_source=nativehs']) || cookieUtmMpSource === 'nativehs' || cookieUtmSource === 'nativehs';
+    var isNewsLetterSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=newsletter', 'utm_source=newsletter']) || cookieUtmMpSource === 'newsletter' || cookieUtmSource === 'newsletter';
+    var isMailingSource = currentUrl.includes('utm_source=mailing', 'utm_mp_source=mailing') || cookieUtmMpSource === 'mailing' || cookieUtmSource === 'mailing';
+    var isTikTokSource = currentUrl.includes('utm_source=tiktok', 'utm_mp_source=tiktok') || cookieUtmMpSource === 'tiktok' || cookieUtmSource === 'tiktok';
+    var isOtherSource = (urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=']) || cookieUtmMpSource !== '' || cookieUtmSource !== '') && !isGoogleSource && !isMailingSource && !isNativeHsSource && !isNewsLetterSource && !isTikTokSource;
+    var hasFbclid = Boolean(urlIncludesSubstrings(currentUrl, ['fbclid=']) || (cookiefbclid && cookiefbclid !== ''));
+    var hasSaleCoupon = urlIncludesSubstrings(currentUrl, ['utm_content=sale10']) || getCookieDynCheckout('coupon') === 'sale10';
+
+
+    if (isUtmPresent) {
+      if (isOtherSource || hasFbclid) {
+          if (globalRetailPrice != '0') {
+              price = globalRetailPrice;
+          }else {
+              price = defaultReducedPrice >= countryMinimumPrice ? defaultReducedPrice : countryMinimumPrice;
+          }
+      } else if (isGoogleSource || isMailingSource || isNativeHsSource || isNewsLetterSource || isTikTokSource) {
+          if (sp) {
+              if (globalMinimumPrice) {
+                  price = sp >= globalSpMinimumPrice ? sp : globalSpMinimumPrice;
+              } else {
+                  price = sp >= countryMinimumPrice ? sp : defaultReducedPrice;
+              }
+          } else {
+              price = defaultReducedPrice >= countryMinimumPrice ? defaultReducedPrice : countryMinimumPrice;
+          }
+      }
+
+    }else if (defaultReducedPrice > countryMinimumPrice){
+        price = defaultReducedPrice;
+    }else {
+        price = countryMinimumPrice; 
+    }
+
+    globalPrices.op1 = originalPrice.toString();
+    globalPrices.rp1 = price.toString();
+
+      
+    //--------------------------------------------------------------------------------------------------------
+    
+
+    initSetLink();
+    handleAdditionalVariations(price, countryCurrencySymbol, additionalVariationsPrices, additionalVariationProductPrice,country)
+
+    var wd = getParam('sd');
+    var ds = getDsc(wd)
+
+    if (price == 0 && globalPrices && globalPrices.rp1) {
+        price = Number(globalPrices.rp1);
+    }
+
+    //-------------------------------------------------- OFFSETS
+
+
+    if(selectedVariation && (selectedVariation.priceOffset > 0 || selectedVariation.priceOffset < 0)){
+      price = price + selectedVariation.priceOffset;
+      if (enableOriginalPriceOffset){
+      originalPrice = originalPrice + selectedVariation.priceOffset;
+      }
+    }
+    
+    //----------------------------------------------------------------------------OFFSETS
+
+
+    if (price !== 0 && typeof price == 'number') {
+      //if sd parameter exists, calculate OP, if not, set it default
+      var op = (!wd || wd === 0)
+        ? Number(originalPrice).toFixed(decimals)
+        : (Number(originalPrice) * ds).toFixed(decimals);
+
+    var rp1 = price.toFixed(decimals);
+    var rp2 = (price * 0.78).toFixed(decimals);
+    var rp3 = (price * 0.73).toFixed(decimals);
+    var rp4 = (price * 0.73).toFixed(decimals);
+    var rp5 = (price * 0.52).toFixed(decimals);
+    var rpx = (price * 0.52).toFixed(decimals);
+      const roundQuantityPrice = function (price, salePrice, countryCode){
+    try {
+    switch(typeof price){
+    case 'number': {
+        price = price;
+        break;
+    }
+    case 'string': {
+        price = parseFloat(price);
+        break;
+    }
+    }
+    switch(typeof salePrice){
+      case 'number': {
+          salePrice = salePrice;
+          break;
+      }
+      case 'string': {
+          salePrice = parseFloat(salePrice);
+          break;
+      }
+    }
+    }catch(err){
+        return price;
+    }
+
+    // Convert price and sale price to float for calculation
+    price = parseFloat(price.toString().replace(',', '.'));
+    salePrice = parseFloat(salePrice.toString().replace(',', '.'));
+
+    // Ensure we don't exceed the original or sale price
+    const maxPrice = Math.min(price, salePrice);
+
+    // Determine number of decimals in the original price
+    const originalDecimals = price.toString().split('.')[1]?.length || 0;
+    const multiplier = Math.pow(10, originalDecimals);
+
+    let roundedPrice;
+    let higherPrice;
+
+    // Apply rounding based on the country code
+    switch (countryCode) {
+      case 'HU':
+        roundedPrice = Math.ceil(price / 100) * 100 + 90;
+        higherPrice = roundedPrice + 100;
+        price = (higherPrice <= maxPrice + 200) ? higherPrice : roundedPrice;
+        break;
+      case 'CZ':
+        roundedPrice = Math.ceil(price / 10) * 10 - 1;
+        higherPrice = roundedPrice + 10;
+        price = (higherPrice <= maxPrice + 12) ? higherPrice : roundedPrice;
+        break;
+      case 'RO':
+        roundedPrice = Math.floor(price) + 0.99;
+        higherPrice = Math.floor(price) + 1.99;
+        price = (higherPrice <= maxPrice + 2) ? higherPrice : roundedPrice;
+        break;
+      case 'PL':
+        roundedPrice = Math.floor(price) + 0.00;
+        higherPrice = Math.floor(price) + 2.00;
+        price = (higherPrice <= maxPrice + 2) ? higherPrice : roundedPrice;
+        break;
+      case 'RS':
+        roundedPrice = Math.floor(price / 10) * 10 + 9;
+        price = (roundedPrice <= maxPrice + 9) ? roundedPrice : maxPrice;
+        break;
+      case 'MK':
+        roundedPrice = Math.floor(price / 10) * 10 + 9;
+        price = (roundedPrice <= maxPrice + 9) ? roundedPrice : maxPrice;
+        break;
+      default:
+        const priceCents = Math.floor(price * multiplier);
+        const salePriceCents = Math.floor(salePrice * multiplier);
+        const fractionalPartCents = priceCents % multiplier;
+        const roundedFractionalPartCents = fractionalPartCents <= (49 * multiplier / 100) ? (49 * multiplier / 100) : (99 * multiplier / 100);
+        const finalPriceCents = Math.min(Math.floor(priceCents / multiplier) * multiplier + roundedFractionalPartCents, salePriceCents);
+        price = finalPriceCents / multiplier;
+        break;
+    }
+
+    return price;//.toFixed(originalDecimals);
+    }
+        //round quantity prices
+        rp1 = rp1;
+        if(parseFloat(rp2) < parseFloat(rp1)){
+            rp2 = roundQuantityPrice(rp2, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rp3) < parseFloat(rp1)){
+            rp3 = roundQuantityPrice(rp3, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rp4) < parseFloat(rp1)){
+            rp4 = roundQuantityPrice(rp4, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rp5) < parseFloat(rp1)){
+            rp5 = roundQuantityPrice(rp5, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+        if(parseFloat(rpx) < parseFloat(rp1)){
+            rpx = roundQuantityPrice(rpx, rp1, countrySettings.countryCode).toFixed(decimals);
+        }
+
+        var rp2t = (rp2 * 2).toFixed(decimals);
+        var rp3t = (rp3 * 3).toFixed(decimals);
+        var rp4t = (rp4 * 4).toFixed(decimals);
+        var rp5t = (rp5 * 5).toFixed(decimals);
+        var rpxt = (rpx * 6).toFixed(decimals);
+
+        var op2t = (op * 2).toFixed(decimals);
+        var op3t = (op * 3).toFixed(decimals);
+        var op4t = (op * 4).toFixed(decimals);
+        var op5t = (op * 5).toFixed(decimals);
+        var opxt = (op * 6).toFixed(decimals);
+
+        var d1 = 100 - Math.round((rp1 / op) * 100);
+        var d2 = 100 - Math.round((rp2 / op) * 100);
+        var d3 = 100 - Math.round((rp3 / op) * 100);
+        var d4 = 100 - Math.round((rp4 / op) * 100);
+        var d5 = 100 - Math.round((rp5 / op) * 100);
+        var dx = 100 - Math.round((rpx / op) * 100);
+
+        var pd1 = (op - rp1).toFixed(decimals);
+        var pd2 = ((2 * op) - (2 * rp2)).toFixed(decimals);
+        var pd3 = ((3 * op) - (3 * rp3)).toFixed(decimals);
+        var pd4 = ((4 * op) - (4 * rp4)).toFixed(decimals);
+        var pd5 = ((5 * op) - (5 * rp5)).toFixed(decimals);
+        var pdx = ((6 * op) - (6 * rpx)).toFixed(decimals);
+
+        //alternative dynamic price (double currency)
+        var altOp;
+        var altOp2t;
+        var altOp3t;
+        var altOp4t;
+        var altOp5t;
+        var altOpxt;
+
+        var altRp1t;
+        var altRp2t;
+        var altRp3t;
+        var altRp4t;
+        var altRp5t;
+        var altRpxt;
+
+        if(altDynPr){ 
+            altOp = (op * 1).toFixed(altDecimals);
+            altOp2t = (op2t * 1).toFixed(altDecimals);
+            altOp3t = (op3t * 1).toFixed(altDecimals);
+            altOp4t = (op4t * 1).toFixed(altDecimals);
+            altOp5t = (op5t * 1).toFixed(altDecimals);
+            altOpxt = (opxt * 1).toFixed(altDecimals);
+
+            altRp1t = (rp1 * 1).toFixed(altDecimals);
+            altRp2t = (rp2t * 1).toFixed(altDecimals);
+            altRp3t = (rp3t * 1).toFixed(altDecimals);
+            altRp4t = (rp4t * 1).toFixed(altDecimals);
+            altRp5t = (rp5t * 1).toFixed(altDecimals);
+            altRpxt = (rpxt * 1).toFixed(altDecimals);
+        }
+
+        else {
+            if(country === 'HR'){
+                altOp = (parseFloat(op)).toFixed(altDecimals);
+                altOp2t = (parseFloat(op2t)).toFixed(altDecimals);
+                altOp3t = (parseFloat(op3t)).toFixed(altDecimals);
+                altOp4t = (parseFloat(op4t)).toFixed(altDecimals);
+                altOp5t = (parseFloat(op5t)).toFixed(altDecimals);
+                altOpxt = (parseFloat(opxt)).toFixed(altDecimals);
+
+                altRp1t = (parseFloat(rp1)).toFixed(altDecimals);
+                altRp2t = (parseFloat(rp2t)).toFixed(altDecimals);
+                altRp3t = (parseFloat(rp3t)).toFixed(altDecimals);
+                altRp4t = (parseFloat(rp4t)).toFixed(altDecimals);
+                altRp5t = (parseFloat(rp5t)).toFixed(altDecimals);
+                altRpxt = (parseFloat(rpxt)).toFixed(altDecimals);
+            
+                op = (op / 1).toFixed(decimals);
+                op2t = (op2t / 1).toFixed(decimals);
+                op3t = (op3t / 1).toFixed(decimals);
+                op4t = (op4t / 1).toFixed(decimals);
+                op5t = (op5t / 1).toFixed(decimals);
+                opxt = (opxt / 1).toFixed(decimals);
+
+            }
+        }
+        //IF WE OVERRIDE GLOBAL PRICES WITH OFFSETS THE PRICE KEEPS INCREASING
+        if (globalPrices && selectedVariation && !selectedVariation.priceOffset > 0 && !selectedVariation.priceOffset < 0) {
+            globalPrices.rp1 = rp1;
+            globalPrices.rp2 = rp2t;
+            globalPrices.rp3 = rp3t;
+            globalPrices.rp4 = rp4t;
+            globalPrices.rp5 = rp5t;
+            globalPrices.rpx = rpxt;
+
+            globalPrices.op1 = op;
+            globalPrices.op2 = op2t;
+            globalPrices.op3 = op3t;
+            globalPrices.op4 = op4t;
+            globalPrices.op5 = op5t;
+            globalPrices.opx = opxt;
+        }
+
+        var p = {
+            'op': op,
+            'op_l': op+countryCurrencySymbol,
+            'opnc': op,
+            'opnc_l': op,
+            'rp1':  rp1,
+            'rp1_l':  rp1+countryCurrencySymbol,
+            'rp1nc': rp1,
+            'rp1nc_l': rp1,
+            'rp2': rp2,
+            'rp2_l': rp2+countryCurrencySymbol,
+            'rp2nc': rp2,
+            'rp2nc_l': rp2,
+            'rp3': rp3,
+            'rp3_l': rp3+countryCurrencySymbol,
+            'rp3nc': rp3,
+            'rp3nc_l': rp3,
+            'rp4': rp4,
+            'rp4_l': rp4+countryCurrencySymbol,
+            'rp4nc': rp4,
+            'rp4nc_l': rp4,
+            'rp5': rp5,
+            'rp5_l': rp5+countryCurrencySymbol,
+            'rp5nc': rp5,
+            'rp5nc_l': rp5,
+            'rpx': rpx,
+            'rpx_l': rpx+countryCurrencySymbol,
+            'rpxnc': rpx,
+            'rpxnc_l': rpx,
+            'rp1t': rp1+countryCurrencySymbol,
+            'rp1t_l': rp1+countryCurrencySymbol,
+            'rp1tnc': rp1,
+            'rp1tnc_l': rp1,
+            'altRp1t': altRp1t+altCurrencySymbol,
+            'rp2t': rp2t+countryCurrencySymbol,
+            'rp2t_l': rp2t+countryCurrencySymbol,
+            'rp2tnc': rp2t,
+            'rp2tnc_l': rp2t,
+            'altRp2t': altRp2t+altCurrencySymbol,
+            'rp3t': rp3t+countryCurrencySymbol,
+            'rp3t_l': rp3t+countryCurrencySymbol,
+            'rp3tnc': rp3t,
+            'rp3tnc_l': rp3t,
+            'altRp3t': altRp3t+altCurrencySymbol,
+            'rp4t': rp4t+countryCurrencySymbol,
+            'rp4t_l': rp4t+countryCurrencySymbol,
+            'rp4tnc': rp4t,
+            'rp4tnc_l': rp4t,
+            'altRp4t': altRp4t+altCurrencySymbol,
+            'rp5t': rp5t+countryCurrencySymbol,
+            'rp5t_l': rp5+countryCurrencySymbol,
+            'rp5tnc': rp5,
+            'rp5tnc_l': rp5,
+            'altRp5t': altRp5t+altCurrencySymbol,
+            'rpxt': rpxt+countryCurrencySymbol,
+            'rpxt_l': rpx+countryCurrencySymbol,
+            'rpxtnc': rpx,
+            'rpxtnc_l': rpx,
+            'altRpxt': altRpxt+altCurrencySymbol,
+            'op1t': op,
+            'op1t_l': op+countryCurrencySymbol,
+            'altOp1t': altOp+altCurrencySymbol,
+            'op2t': op2t,
+            'op2t_l': op2t+countryCurrencySymbol,
+            'altOp2t': altOp2t+altCurrencySymbol,
+            'op3t': op3t,
+            'op3t_l': op3t+countryCurrencySymbol,
+            'altOp3t': altOp3t+altCurrencySymbol,
+            'op4t': op4t,
+            'op4t_l': op4t+countryCurrencySymbol,
+            'altOp4t': altOp4t+altCurrencySymbol,
+            'op5t': op5t,
+            'op5t_l': op5t+countryCurrencySymbol,
+            'altOp5t': altOp5t+altCurrencySymbol,
+            'opxt': opxt,
+            'opxt_l': opxt+countryCurrencySymbol,
+            'altOpxt': altOpxt+altCurrencySymbol,
+            'd1': d1,
+            'd1_l': d1,
+            'd2': d2,
+            'd2_l': d2,
+            'd3': d3,
+            'd3_l': d3,
+            'd4': d4,
+            'd4_l': d4,
+            'd5': d5,
+            'd5_l': d5,
+            'dx': dx,
+            'dx_l': dx,
+            'pd1': pd1,
+            'pd2': pd2,
+            'pd3': pd3,
+            'pd4': pd4,
+            'pd5': pd5,
+            'pdx': pdx,
+        }
+        
+        $('.dp-op').text(p.op);
+        $('.dp-opnc').text(p.opnc);
+        $('.dp-rp1').text(p.rp1);
+        $('.dp-rp2').text(p.rp2);
+        $('.dp-rp3').text(p.rp3);
+        $('.dp-rp4').text(p.rp4);
+        $('.dp-rp5').text(p.rp5);
+        $('.dp-rpx').text(p.rpx);
+
+        $('.dp-rp1nc').text(p.rp1nc);
+        $('.dp-rp2nc').text(p.rp2nc);
+        $('.dp-rp3nc').text(p.rp3nc);
+        $('.dp-rp4nc').text(p.rp4nc);
+        $('.dp-rp5nc').text(p.rp5nc);
+        $('.dp-rpxnc').text(p.rpxnc);
+
+        
+        $('.dp-rp1t').text(p.rp1t);
+        $('.dp-rp2t').text(p.rp2t);
+        $('.dp-rp3t').text(p.rp3t);
+        $('.dp-rp4t').text(p.rp4t);
+        $('.dp-rp5t').text(p.rp5t);
+        $('.dp-rpxt').text(p.rpxt);
+
+        $('.dp-rp1tnc').text(p.rp1tnc);
+        $('.dp-rp2tnc').text(p.rp2tnc);
+        $('.dp-rp3tnc').text(p.rp3tnc);
+        $('.dp-rp4tnc').text(p.rp4tnc);
+        $('.dp-rp5tnc').text(p.rp5tnc);
+        $('.dp-rpxtnc').text(p.rpxtnc);
+
+        $('.dp-op1t').text(p.op1t);
+        $('.dp-op2t').text(p.op2t);
+        $('.dp-op3t').text(p.op3t);
+        $('.dp-op4t').text(p.op4t);
+        $('.dp-op5t').text(p.op5t);
+        $('.dp-opxt').text(p.opxt);
+
+        $('.dp-d1').text(p.d1);
+        $('.dp-d2').text(p.d2);
+        $('.dp-d3').text(p.d3);
+        $('.dp-d4').text(p.d4);
+        $('.dp-d5').text(p.d5);
+        $('.dp-dx').text(p.dx);
+
+        $('.dp-pd').text(p.pd1);
+        $('.dp-pd2').text(p.pd2);
+        $('.dp-pd3').text(p.pd3);
+        $('.dp-pd4').text(p.pd4);
+        $('.dp-pd5').text(p.pd5);
+        $('.dp-pdx').text(p.pdx);
+
+        //dymamic elements
+        switch (selectedGlobalQuantity) {
+        case 1: {
+          // Reduced price
+          const reducedPrice = p.rp1t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+
+          // Reduced alt currency
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          // Original price
+          const originalPrice = p.op1t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+
+          // Original alt currency
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 2: {
+          const reducedPrice = p.rp2t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op2t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 3: {
+          const reducedPrice = p.rp3t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op3t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 4: {
+          const reducedPrice = p.rp4t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op4t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        case 5: {
+          const reducedPrice = p.rp5t;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.op5t;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+
+        default: {
+          const reducedPrice = p.rpxt;
+          $('#dynamic_cart_reduced_price_amount').text(reducedPrice);
+          if (showAltCurrencyPrice) {
+            const altReduced = (parseFloat(reducedPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_reduced_alt_price_amount').text(altReduced + altCurrencyPriceSymbol).show();
+          }
+
+          const originalPrice = p.opxt;
+          $('#dynamic_cart_original_price_amount').text(originalPrice);
+          if (showAltCurrencyPrice) {
+            const altOriginal = (parseFloat(originalPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+            $('#dynamic_cart_original_alt_price_amount').text(altOriginal + altCurrencyPriceSymbol).show();
+          }
+          break;
+        }
+      }
+
+        $('a.h-dp').each(function(i, e) {
+            var url = $(this).attr('href');
+            var reg1 = /\<\*(.*)\*\>/gm;
+            var reg = new RegExp('\<\*(.*)\*\>', 'gm')
+            var n = url.match(reg1) || [];
+            if (n) {
+                for (let j = 0; j < n.length; j++) {
+                    var sub = n[j].substring(2, n[j].length - 2);
+                    var subarr = sub.split('#');
+                    var code = subarr[0];
+                    url = url.replace(n[j], p[code]);
+                    $(this).attr('href', url);
+                }
+            }
+        
+        });
+
+    } else if (price == 0) {
+        $('a.h-dp').each(function(i, e) {
+            var url = $(this).attr('href');
+            var reg1 = /\<\*(.*)\*\>/gm;
+            var reg = new RegExp('\<\*(.*)\*\>', 'gm')
+            var n = url.match(reg1) || [];
+            if (n) {
+
+                for (let j = 0; j < n.length; j++) {
+                    var sub = n[j].substring(2, n[j].length - 2);
+                    var subarr = sub.split('#');
+                    var pr = subarr[1];
+                    url = url.replace(n[j], pr);
+                    $(this).attr('href', url);
+                }
+            }
+        
+        });
+    }
+
+    $('.dp-all').css('display', 'inline-block');
+    setLinkDynamicCart();
+    }//recalculatePrices
+    
+    function markOutOfStock2() {
+        var selectedValues = {}; // {propertyId: value}
+
+        document.querySelectorAll('button.color-variation-button, button.button-variation')
+            .forEach(function(el) {
+                if(el.getAttribute('selected-option') === 'true') {
+                    selectedValues[el.getAttribute('property-id')] = el.value;
+                }
+            });
+
+        var allOptions = document.querySelectorAll('button.color-variation-button, button.button-variation');
+        allOptions.forEach(function(optionEl) {
+            var optionValue = optionEl.value;
+            var propertyId = optionEl.getAttribute('property-id');
+            var hasValidCombination = variationsArr.some(function(variation) {
+                if(variation.ids.indexOf(optionValue) === -1) return false;
+                for(var pid in selectedValues) {
+                    var selected = selectedValues[pid];
+                    if(pid !== propertyId && variation.ids.indexOf(selected) === -1) return false;
+                }
+                //if disabled is not define (missing in database), set as false    
+                if (typeof variation.disable === "undefined") variation.disable = false;
+                
+                return variation.hide === false && variation.disable !== true;
+            });
+            var completelyUnavailable = variationsArr.every(function(variation){
+                return variation.ids.indexOf(optionValue) === -1 ||
+                      variation.hide !== false ||
+                      variation.disable === true;
+            });
+            if(completelyUnavailable) {
+                // Completely unavailable: grey + disable + hide if needed
+                optionEl.classList.add('greyOut');
+                optionEl.classList.add('hiddenvariation');
+                optionEl.disabled = true;
+            } else if(!hasValidCombination) {
+                // Incompatible with current selection: grey only, still clickable
+                optionEl.classList.add('greyOut');
+                optionEl.classList.remove('hiddenvariation');
+                optionEl.disabled = false;
+            } else {
+                // Available
+                optionEl.classList.remove('greyOut');
+                optionEl.classList.remove('hiddenvariation');
+                optionEl.disabled = false;
+            }
+        });
+    }markOutOfStock2
+    
+
+    function handleAddToCartButton(inStock) {
+      //get all "add-to-cart" buttons
+      const addToCartButtons = document.getElementsByClassName("checkout-add-to-cart-btn");
+      for(const addToCartBtn of addToCartButtons){
+        var addToCartButton = addToCartBtn;
+        var inStockTextElements = addToCartBtn.querySelectorAll("checkout-add-to-cart-btn-text");
+        var outOfStockTextElements = addToCartBtn.querySelectorAll("checkout-add-to-cart-btn-text-out-of-stock");
+
+        try {
+          if(inStock){
+            //in stock
+            addToCartButton.classList.remove('checkout-add-to-cart-btn-disabled');
+            for(const inStockTextElm of inStockTextElements){
+              inStockTextElm.classList.remove('checkout-add-to-cart-btn-text-hidden');
+            }
+            for(const outOfStockTextElm of outOfStockTextElements){
+              outOfStockTextElm.classList.add('checkout-add-to-cart-btn-text-hidden');
+            }
+          }else {
+            //out of stock
+            addToCartButton.classList.add('checkout-add-to-cart-btn-disabled');
+            for(const inStockTextElm of inStockTextElements){
+              inStockTextElm.classList.add('checkout-add-to-cart-btn-text-hidden');
+            }
+            for(const outOfStockTextElm of outOfStockTextElements){
+              outOfStockTextElm.classList.remove('checkout-add-to-cart-btn-text-hidden');
+            }
+          }
+        }catch(err){
+          console.error(err);
+        }
+      }//for
+    }//handleAddToCartButton
+
+    function dynamicCheckoutOtherVariationButtonClicked(propertyId, optionId, p, variationIndex){
+      let property = propertiesArr.find(pr => pr.id === propertyId);
+      let option = property.options.find(opt => opt.id === optionId);
+
+      //remove borders on all variations
+      for(let opt = 0; opt < propertiesArr[p].options.length; opt++){
+        let optionElement = document.getElementById(propertiesArr[p].id + "-" + propertiesArr[p].options[opt].id + "-" + p);
+        if(!!optionElement){
+          optionElement.classList.remove('selected');
+          optionElement.setAttribute("selected-option", "false");
+        }
+      }
+      //add border to selected variation
+      let selectedVariationButtonElement = document.getElementById(propertyId + "-" + optionId + "-" + p);
+      selectedVariationButtonElement.classList.add('selected');
+      selectedVariationButtonElement.setAttribute("selected-option", "true");
+
+      
+      toggleCartButtonStock();
+      markOutOfStock2();
+      recalculatePrices();
+      setLinkDynamicCart();
+
+    }//dynamicCheckoutOtherVariationButtonClicked
+
+    function dynamicCheckoutVariationDropdownChanged(propertyId, p, dropdownElement, variationIndex){
+      let options = dropdownElement.options;
+      for(let opt = 0; opt < options.length; opt++){
+	      options[opt].setAttribute("selected-option", "false");
+        if(options[opt].value === dropdownElement.value){
+          options[opt].setAttribute("selected-option", "true");
+        }//if
+      }//for
+      setLinkDynamicCart();
+      toggleCartButtonStock();
+      recalculatePrices();
+    }//dynamicCheckoutVariationDropdownChanged
+
+
+    function setLinkDynamicCart(quantity = null) {
+      let linkIdsString = '';
+      let singleQuantityValue = 1;
+      let singleQuantityValueElement = document.getElementById("single-quantity-value");
+      if(!!singleQuantityValueElement){
+        singleQuantityValue = parseFloat(singleQuantityValueElement.value);
+      }
+      if(quantity === null){
+       const checkedElement = document.querySelector('[id^="qty"]:checked');
+        if (checkedElement) {
+          // Extract the number at the end of the ID
+          const id = checkedElement.id;
+          const number = id.match(/\d+$/)[0]; // gets the number at the end
+          singleQuantityValue = parseInt(number)
+        }   
+      } else {
+          singleQuantityValue = quantity;
+          }
+      
+      if(propertiesArr.length > 0){
+        //variation product
+        //get all selected options for variation
+        let selectedOptions = [];
+        for(let pr = 0; pr < propertiesArr.length; pr++){
+          let propertyId = propertiesArr[pr].id;
+          let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+          if(selectedOptionElements.length > 0){
+            selectedOptions.push(propertiesArr[pr].options.find(opt => opt.id === selectedOptionElements[0].value));
+          } 
+        }
+        //find correct variation
+        let selectedVariation = variationsArr.find(vr => vr.ids.sort().join(',') === selectedOptions.map(sO => sO.id).sort().join(','));
+        //set linkIds
+        if(!!selectedVariation){
+          for(let qnt = 0; qnt < singleQuantityValue; qnt++){
+            if((qnt + 1) === singleQuantityValue){
+              linkIdsString += selectedVariation.variationId;
+            }else {
+              linkIdsString += selectedVariation.variationId + ',';
+            }
+          }
+        }
+      }else {
+        //simple product
+        for(let qnt = 0; qnt < singleQuantityValue; qnt++){
+          if((qnt + 1) === singleQuantityValue){
+            linkIdsString += productSettings.woocommerceId;
+          }else {
+            linkIdsString += productSettings.woocommerceId + ',';
+          }
+        }
+      }
+      //related
+      let relatedData;
+      try {
+        relatedData = getRelatedProductsData();
+      }catch(err){
+        //console.log("No related products data");
+      }
+      if(!!relatedData){
+        linkIdsString = linkIdsString + relatedData.wcIds;
+      }
+      
+        //dynamic
+        let dynPriceParam = "";
+        if(!!redPrice1 && dynPriceSet){
+            var spCookie = getCookieDynCheckout('sp') || getParam('sp');
+            if(spCookie.length > 0){
+                dynPriceParam = "&sp=" + dynPriceToParam(redPrice1);
+            } else {
+                dynPriceParam = "&spe=" + dynPriceToParam(redPrice1);
+            }
+        }
+        
+        var cookieUtmSource = getCookieDynCheckout('utm_source')
+        var cookieUtmMpSource = getCookieDynCheckout('utm_mp_source')
+        var cookie = getCookieDynCheckout('coupon')
+        var cookiefbclid= getCookieDynCheckout('fbclid')
+
+        var isGoogleSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=google', 'utm_source=google']) || cookieUtmMpSource === 'google' || cookieUtmSource === 'google';
+        var isMailingSource = currentUrl.includes('utm_source=mailing', 'utm_mp_source=mailing') || cookieUtmMpSource === 'mailing' || cookieUtmSource === 'mailing';
+        var isTikTokSource = urlIncludesSubstrings(currentUrl, ['utm_mp_source=tiktok', 'utm_source=tiktok']) || cookieUtmMpSource === 'tiktok' || cookieUtmSource === 'tiktok';
+        var isOtherSource = (urlIncludesSubstrings(currentUrl, ['utm_mp_source=', 'utm_source=']) || cookieUtmMpSource !== '' || cookieUtmSource !== '') && !isGoogleSource && !isMailingSource && !isTikTokSource;
+        var hasFbclid = urlIncludesSubstrings(currentUrl, ['fbclid=']) || cookiefbclid !== '';
+        var hasFbclid = Boolean(urlIncludesSubstrings(currentUrl, ['fbclid=']) || (cookiefbclid && cookiefbclid !== ''));
+
+
+        if ((isOtherSource && !isGoogleSource && !isMailingSource && !isTikTokSource) || hasFbclid){
+          dynPriceParam = dynPriceParam + '&utm_source=other';
+        } else if (isGoogleSource) {
+          dynPriceParam = dynPriceParam + '&utm_source=google';
+        } else if (isMailingSource){
+          dynPriceParam = dynPriceParam + '&utm_source=mailing';
+        } else if (isTikTokSource){
+          dynPriceParam = dynPriceParam + '&utm_source=tiktok';
+        }
+
+        var hasSaleCoupon = urlIncludesSubstrings(currentUrl, ['utm_content=sale10']) || getCookieDynCheckout('coupon') === 'sale10';
+        if (hasSaleCoupon) {
+          dynPriceParam += '&c=sale10';
+        }
+      
+      var addToCartButtons = document.getElementsByClassName("checkout-add-to-cart-btn");
+      for(const addToCartButton of addToCartButtons){
+        addToCartButton.href = "https://ortowp.noriks.com/kosarica/?add-more=" + linkIdsString + dynPriceParam;
+      }
+
+      // var postPurchaseButtons = document.getElementsByClassName("checkout-post-purchase-cart-btn");
+      // for(const btn of postPurchaseButtons){
+      //   btn.href = postPurchaseLink;
+      // }
+      //var addToCartButton = document.getElementById('checkout_add_to_cart_btn');
+      //addToCartButton.href = "https://ortowp.noriks.com/kosarica/?add-more=" + linkIdsString + dynPriceParam;
+    }//setLinkDynamicCart
+
+    function setSelectedVariations(){
+      for(let pr = 0; pr < propertiesArr.length; pr++){
+        let propertyId = propertiesArr[pr].id;
+        let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+        for(let sO = 0; sO < selectedOptionElements.length; sO++){
+          switch(propertiesArr[pr].type){
+            case 'color':
+            case 'icon': {
+              dynamicCheckoutColorVariationClicked(selectedOptionElements[sO].getAttribute('property-id'), selectedOptionElements[sO]['value'], pr,1);
+              break;
+            }
+            case 'basic': {
+              dynamicCheckoutOtherVariationButtonClicked(selectedOptionElements[sO].getAttribute('property-id'), selectedOptionElements[sO]['value'], pr,1);
+              break;
+            }
+            default: break;
+          }//switch
+        }
+      }
+    }//setSelectedVariations
+
+    function selectedVariationInStock(){
+      let inStock = false;
+      if (!variationsArr || variationsArr.length === 0) return inStock;
+
+      let selectedOptionIdsList = [];
+
+      for(let pr = 0; pr < propertiesArr.length; pr++){
+        let propertyId = propertiesArr[pr].id;
+        let selectedOptionElements = document.querySelectorAll("[property-id=" + "'" + propertyId + "'][selected-option='true']");
+        for(let sO = 0; sO < selectedOptionElements.length; sO++){
+          selectedOptionIdsList.push(selectedOptionElements[sO]['value']);
+        }
+      }
+      //find correct variation
+      let selectedVariation = variationsArr.find(vr => vr.ids.sort().join(',') === selectedOptionIdsList.map(sO => sO).sort().join(','));
+      if(!!selectedVariation && selectedVariation.hide !== true && selectedVariation.disable !== true){
+        inStock = true;
+      }
+      return inStock;
+    }//selectedVariationInStock
+
+    function toggleCartButtonStock(){
+      let inStock = false;
+      if(variationsArr.length > 0){
+        //variation product
+        inStock = selectedVariationInStock();
+      }else {
+        //simple product
+        inStock = true;
+      }
+      try {
+        handleAddToCartButton(inStock);
+      }catch(err){
+        console.error(err);
+      }
+    }//toggleCartButtonStock
+
+    function applyDynamicPrice(){
+      const dynPrice = getDynamicPrice();
+
+      if(!!dynPrice){
+        dynPriceSet = true;
+        redPrice1 = dynPrice;
+      }
+    }
+
+    function modifyGlobalPrices(dynamicPriceQnt1){
+      if(dynPriceSet){
+        let reducedPriceElem = document.getElementById('dynamic_cart_reduced_price_amount');
+        let origPriceElem = document.getElementById('dynamic_cart_original_price_amount');
+        let discValueElem = document.getElementById('dynamic_cart_discount_percentage_amount');
+        
+        let newRedPrice1 = parseFloat(dynamicPriceQnt1);
+        let newOrigPrice1 =  parseFloat(globalPrices.op1);
+        let redPrice1Disc = ((newOrigPrice1 - newRedPrice1) / newOrigPrice1) * 100;
+
+        try{
+          globalPrices.rp1 = newRedPrice1;
+          globalPrices.op1 = newOrigPrice1;
+          reducedPriceElem.innerHTML = Math.round((newRedPrice1 + Number.EPSILON) * 100) / 100;
+          origPriceElem.innerHTML = Math.round((newOrigPrice1 + Number.EPSILON) * 100) / 100;
+          discValueElem.innerHTML = Math.round(redPrice1Disc);
+        }catch(err){
+          //console.error("Cannot modify global prices");
+        }
+      }
+    }
+
+    function getDynamicPrice(){
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const dynamicPriceParam = urlParams.get("sp") || getCookieDynCheckout('sp') || urlParams.get("spe") || getCookieDynCheckout('spe');
+      
+      var dynamicPrice = null;
+
+      if(!!dynamicPriceParam){
+        dynamicPrice = dynamicPriceParam.replace("i", ".");
+        dynamicPrice = dynamicPrice.substring(2, dynamicPrice.length - 1);
+      }
+      return dynamicPrice;
+    }
+
+    function dynPriceToParam(price){
+      var paramPrice;
+      if(!!price){
+        paramPrice = "77" + price.toString().replace(".", "i") + "7";
+      }
+      return paramPrice;
+    }
+
+    function updateReducedPrices(mainPrice) {
+      // main price
+      $('#dynamic_cart_reduced_price_amount').text(mainPrice);
+
+      // alt currency
+      if (showAltCurrencyPrice) {
+        const altPrice = (parseFloat(mainPrice) * altCurrencyPriceRate).toFixed(altDecimals);
+        $('#dynamic_cart_reduced_alt_price_amount')
+          .text(altPrice + ' ' + altCurrencyPriceSymbol)
+          .show();
+      }
+    }
+
+
+    ////////////////////////////////////////
+        ///////// DELIVERY DATE ///////////////
+        //////////////////////////////////////
+
+        function setDeliveryDate (){
+            try {
+                var daysToDeliver = deliveryDays;
+                const weekdays = deliveryWeekdays;
+
+                const productEstimateDelivery = productSettings.estimate_delivery_date;
+                const countryHolidays = countrySettings.holidays;
+                const countryCode = countrySettings.countryCode;
+
+                const now = new Date(Date.now());
+
+                var firstPossibleDeliveryDate;
+
+
+                var countryHolidaysDates = [];
+
+                //take today or estimate_delivery for starting date
+                if(productEstimateDelivery === ''){//if empty
+                    firstPossibleDeliveryDate = new Date(); //today
+                }else{
+                    var today_date = new Date();
+                    var deliv_date = convertStringToDate(productEstimateDelivery, '.');
+
+                    if(today_date <= deliv_date){
+                        firstPossibleDeliveryDate = deliv_date;
+                    }else{
+                        firstPossibleDeliveryDate = today_date;
+
+                        //if order after 18:00 hour, increase daysToDeliver by 1
+                        if(now.getHours() >= 18){
+                            daysToDeliver++;
                         }
                     }
-                    
-                }
-            );
-        }//initRelatedProductsDescription
-
-        function toggleReadMoreRelatedDesc(descParentElement, readMoreButton){
-            if(descParentElement.classList.contains("hs-rp-desc-wrapper-collapsed")){
-                descParentElement.classList.remove("hs-rp-desc-wrapper-collapsed");
-                descParentElement.classList.add("hs-rp-desc-wrapper-expanded");
-                readMoreButton.innerText = "manj...";
-            }else {
-                descParentElement.classList.remove("hs-rp-desc-wrapper-expanded");
-                descParentElement.classList.add("hs-rp-desc-wrapper-collapsed");
-                readMoreButton.innerText = "več...";
-            }
-        }//toggleReadMoreRelatedDesc
-        ///END RELATED DESC FUNCTIONS/////
-
-       /* function getDynamicalShippingPrice() {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            if (urlParams.has("psh")) {
-                const shippingPrice = urlParams.get("psh");
-                if (shippingPrice === "0"){
-                    return 0;
-                }
-                else {
-                    let priceString = shippingPrice.replace("i", ".");
-                    return Number(priceString);
-                }
-                return shippingPrice;
-            }
-            return null;
-        }//getDynamicalShippingPrice
-
-
-        function setShippingPrice() {
-            let shippingPrice = getDynamicalShippingPrice();
-            if (shippingPrice === null){
-                document.getElementById("defaultShippingPrice").style.display = "block";
-                document.getElementById("shipping-checkout").style.display = "block";
-
-            }
-            else if (shippingPrice === 0) {
-                document.getElementById("freeshippingtxt").style.display = "block";
-                document.getElementById("free-shipping-checkout").style.display = "block";
-                
-                var shippingIconText = document.getElementsByClassName("fast-shipping-icon-text");
-                var freeShippingIconText = document.getElementsByClassName("free-shipping-icon-text");
-
-                for (var i = 0; i < shippingIconText.length; i++) {
-                    shippingIconText[i].style.display = "none";
-                    freeShippingIconText[i].style.display = "block";
-                }
-            }
-            else if (isNaN(shippingPrice)){
-                document.getElementById("defaultShippingPrice").style.display = "block";
-                document.getElementById("shipping-checkout").style.display = "block";
-            }
-            else  {
-                document.getElementById("shippingprice").innerHTML = shippingPrice;
-                document.getElementById("dynshipprice").style.display = "flex";
-                document.getElementById("shipping-checkout").style.display = "block";
-            }
-        }//setShippingPrice*/
-
-        //// DIFFERENT PRICES FOR VARIATIONS ////
-        function handleDifferentVariationPrices () {
-            if(variationsArr.length > 0){
-                if(anyVariationHasPriceOffsetSet() === true){
-                    variationsWithPriceOffsets = true;
-
-                    let globalOriginalPrice;
-                    let globalReducedPrice = price; //use this as global reduced price
-                    
-                    //Check if any property has SHOW PRICE for this property === true?
-                    appendPriceTagToVariations(0, globalReducedPrice);
-                    setPriceCalculatorFieldsForDifferentVariationPrices(0);
-                    //get a sum of price for all selected variation IDs and add also price for upsell
-                    //
-
-                }
-            }
-        }//handleDifferentVariationPrices
-        
-        function appendPriceTagToVariations(rnd, globalReducedPrice, val) {
-            try {
-            	
-                var n;
-                if(val === undefined){
-                    n = globalQuantityValue;
-                }else {
-                    n = val;
-                }
-                let selectedOptions = [];
-                let quantityDiscount = 0;
-                let quantityDiscountIndex = 0;
-
-                //set quantity discount
-                if(n < 6){
-                	quantityDiscount = discountData['discount' + n];
-                	quantityDiscountIndex = discountData['discount' + n + 'Index'];
-                }else {
-                	quantityDiscount = discountData['discountX'];
-                	quantityDiscountIndex = discountData['discountXIndex'];
                 }
 
-                if (propertiesArr.length > 0) {
-                    for (let q = 0; q < n; q++) {
-                        //GET SELECTED OPTIONS for QUANTITY
-                        selectedOptions[q] = [];
-                        for (let p = 0; p < propertiesArr.length; p++) {
-                        	let colorIndex = 0;
-                            let name = propertiesArr[p].code + '-' + (q + 1);
-                            let selectedValue;
-                            if (propertiesArr[p].type === 'color') {
-                                let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                                selectedValue = document.querySelector(selector).value;
-                                colorIndex++;
-                            } else if (propertiesArr[p].type === 'color-bundle'){
-                                let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                                selectedValue = document.querySelector(selector).value;
-                                colorIndex++;
-                            } else if (propertiesArr[p].type === 'icon'){
-                                let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                                selectedValue = document.querySelector(selector).value;
-                                colorIndex++;
-                            } else {
 
-                                //let selector = 'button[name="' + rnd + '-' + name + '"].selected'; //This is not correct (only for testing)
-                                let selector = 'button[name="' + rnd + '-' + name + '"].selected';// this is the correct one !!!!!
-                                selectedValue = document.querySelector(selector).value;
-                            }
-                            selectedOptions[q].push(selectedValue);
-                        }//for
-                        //GET PROPERTIES where we have to show price
-	                     let propertiesWhereToShowPriceTag = propertiesArr.filter(pr => pr.showPriceForVariation === true);
-	                     for(prop = 0; prop < propertiesWhereToShowPriceTag.length; prop++){
-	                        let otherProps = propertiesArr.filter( prp => prp.id !== propertiesWhereToShowPriceTag[prop].id);
-	                        //let selectedOptionsForVariation
-	                        let selectedVariation = variationsArr.find(v => arraysAreEqual(v.ids, selectedOptions[q]) === true);
+                //convert strings to dates
+                for(let d = 0; d < countryHolidays.length; d++){
+                    countryHolidaysDates.push(convertStringToDate(countryHolidays[d], '.'));
+                }//for
 
-	                        //get all elements for current "propertiesWhereToShowPriceTag" variations
-	                        let name = propertiesWhereToShowPriceTag[prop].code + '-' + (q + 1);
-	                        let selectorForCurrentPropertyVariationsWhereToShowPrice = 'input[name="' + rnd + '-' + name + '"], button[name="' + rnd + '-' + name + '"]';
-	                        let currentPropertyVariationsElements = document.querySelectorAll(selectorForCurrentPropertyVariationsWhereToShowPrice);
-	                        
-	                        let arrayOfMatchingOptionsIds = [];
-	                        //for every variation for current property and quantity
-	                        for(let cV = 0; cV < currentPropertyVariationsElements.length; cV++){
-	                            let selectedOptionsCopy = JSON.parse(JSON.stringify(selectedOptions[q]));
-	                            //remove any optionId, that could match of current property (where price should be shown)
-	                            for(let opt = 0; opt < propertiesWhereToShowPriceTag[prop].options.length; opt++){
-	                            	//get correct price form variationsArr and set it
-	                            	//arrayOfMatchingOptionsIds.push(currentPropertyVariationsElements[cV].value);
-	                            	let deleteIndex = selectedOptionsCopy.findIndex(sC => sC === propertiesWhereToShowPriceTag[prop].options[opt].id);
-	                            	if(deleteIndex > -1){
-	                            		selectedOptionsCopy.splice(deleteIndex, 1);
-	                            	}
-                            	}//for
-                            	arrayOfMatchingOptionsIds.push(currentPropertyVariationsElements[cV].value);
-                            	arrayOfMatchingOptionsIds.push(...selectedOptionsCopy);
-                            	//console.log(arrayOfMatchingOptionsIds);
-                                //get price for those options Ids
-                                let matchingVariation = variationsArr.find(v => arraysAreEqual(v.ids, arrayOfMatchingOptionsIds) === true);
-                                //let reducedPrice = parseFloat(matchingVariation.reducedPrice);
-                                //reducedPrice = reducedPrice - (reducedPrice * quantityDiscount / 100); //reduce by discount
-                                let reducedPrice = parseFloat(globalReducedPrice);
-                                let priceOffset = !!matchingVariation?.priceOffset ? matchingVariation.priceOffset : 0;
-                                reducedPrice = parseFloat(reducedPrice) + parseFloat(priceOffset);
-                                reducedPrice = reducedPrice * quantityDiscountIndex;
-                                if(quantityDiscount === 0){
-                                    //reducedPrice = roundQuantityPrice(reducedPrice, parseFloat(matchingVariation.reducedPrice) + 1, countrySettings.countryCode);
-                                	//reducedPrice = roundQuantityPrice(reducedPrice, parseFloat(reducedPrice) + 1, countrySettings.countryCode);
-                                    reducedPrice = reducedPrice;
-                            	}else {                            		
-                                //reducedPrice = roundQuantityPrice(reducedPrice, matchingVariation.reducedPrice, countrySettings.countryCode);
-                                    reducedPrice = roundQuantityPrice(parseFloat(reducedPrice.toFixed(2)), parseFloat(globalReducedPrice), countrySettings.countryCode);
-                            	}
-                                reducedPrice = reducedPrice.toFixed(decimalsGlobal);
-                                //set additional field on variations (when having different variation prices, because their price is calculated differently)
-                                matchingVariation['differentVariations_reducedPrice'] = reducedPrice;
-                                setVariationLabelValue(currentPropertyVariationsElements[cV], (reducedPrice.toString() + countrySettings.currencySymbol));
-                                arrayOfMatchingOptionsIds = [];
-	                            
-	                        }//for
-	                     }//for
-                    }//for
-                }//if
-            }catch(err){
-                console.error(err);
-            }
-        }//appendPriceTagToVariations
-
-        function setPriceCalculatorFieldsForDifferentVariationPrices(rnd) {
-        	try {
-        		let finalPrice = 0;
-                let totalOriginalPrice = 0;
-        		let priceDifferencePercentage = 0;
-        		
-        		//get selected variations for every quantity and get their prices (get selected IDs, and with below function you get current setter price)
-        		let selectedOptions = [];
-        		if (propertiesArr.length > 0) {
-                    for (let q = 0; q < globalQuantityValue; q++) {
-                        //GET SELECTED OPTIONS for QUANTITY
-                        selectedOptions[q] = [];
-                        for (let p = 0; p < propertiesArr.length; p++) {
-                        	let colorIndex = 0;
-                            let name = propertiesArr[p].code + '-' + (q + 1);
-                            let selectedValue;
-                            if (propertiesArr[p].type === 'color') {
-                                let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                                selectedValue = document.querySelector(selector).value;
-                                colorIndex++;
-                            } else if (propertiesArr[p].type === 'color-bundle'){
-                                let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                                selectedValue = document.querySelector(selector).value;
-                                colorIndex++;
-                            } else if (propertiesArr[p].type === 'icon'){
-                                let selector = 'input[name="' + rnd + '-' + name + '"]:checked';
-                                selectedValue = document.querySelector(selector).value;
-                                colorIndex++;
-                            } else {
-
-                                //let selector = 'button[name="' + rnd + '-' + name + '"].selected'; //This is not correct (only for testing)
-                                let selector = 'button[name="' + rnd + '-' + name + '"].selected';// this is the correct one !!!!!
-                                selectedValue = document.querySelector(selector).value;
-                            }
-                            selectedOptions[q].push(selectedValue);
-                        }//for
-                   }//for
-                   //sum prices of all variations, add them up
-                   for (let q = 0; q < globalQuantityValue; q++) {
-                   		let selectedVariation = variationsArr.find(v => arraysAreEqual(v.ids, selectedOptions[q]) === true);
-                   		if(!!selectedVariation){
-                   			finalPrice = finalPrice + parseFloat(selectedVariation['differentVariations_reducedPrice']);
-                   		    let variationOriginalPrice = baseOriginalPrice;
-                            let variationPriceOffset = parseFloat(selectedVariation['priceOffset'] || 0);
-                            if (enableOriginalPriceOffset){
-                                variationOriginalPrice += variationPriceOffset;
-                            }
-
-                            totalOriginalPrice += variationOriginalPrice;
+                //calculate delivery date
+                for(let i = 0; i <= daysToDeliver;){
+                    if(isWeekend(firstPossibleDeliveryDate) ||
+                        isHoliday(firstPossibleDeliveryDate, countryHolidaysDates)){
+                        firstPossibleDeliveryDate = addDays(firstPossibleDeliveryDate, 1);
+                    }else{
+                        //decrease daysToDeliver (by increasing for loop counter)
+                        if(i < daysToDeliver){
+                            firstPossibleDeliveryDate = addDays(firstPossibleDeliveryDate, 1);
+                            i++;
+                        }else{
+                            i++;
                         }
-                   }//for
-                   //console.log("Final Price is: " + finalPrice);
-                }//if
+                        /*firstPossibleDeliveryDate = addDays(firstPossibleDeliveryDate, 1);
+                        i++;*/
+                    }
+                    //firstPossibleDeliveryDate = addDays(firstPossibleDeliveryDate, 1);
+                }//for
 
-        		
-        		//also get selected related products
-        		let relatedData = getRelatedProductsData(relatedArr);
-        		finalPrice = finalPrice + relatedData.price;
-                totalOriginalPrice += relatedData.price;
+                document.getElementById('delivery-at-day-name').innerHTML = weekdays[firstPossibleDeliveryDate.getDay()];
 
-                //calculate discount between original and reduced price
-                priceDifferencePercentage = totalOriginalPrice > 0 ? Math.floor(((totalOriginalPrice - finalPrice) / totalOriginalPrice) * 100) : 0;
-        		
-        		//set price on html elements
-        		let priceAndCurrency = finalPrice.toFixed(decimalsGlobal) + countrySettings.currencySymbol;
-                document.querySelectorAll('.dp-rp' + globalQuantityValue + 't').forEach(el => el.textContent = priceAndCurrency); //checkout price
-                document.querySelectorAll('.hs-alt-price-rp' + globalQuantityValue + 't')
-                    .forEach(el => {
-                        let bgn = finalPrice;  
-                        let eur = (bgn * 1)
-                                    .toFixed(decimalsGlobal);
-                        el.textContent = eur + '€'; 
-                    });
-                //document.querySelectorAll('.dp-rp1').forEach(el => el.textContent = finalPrice.toFixed(decimalsGlobal)); //hero price
-                //document.querySelectorAll('.dp-rp1nc').forEach(el => el.textContent = finalPrice.toFixed(decimalsGlobal)); //sticky button price
-        		
-                //set original price
-                let originalText = totalOriginalPrice.toFixed(decimalsGlobal)
-
-                document.querySelectorAll('.dp-op' + globalQuantityValue + 't').forEach(el => (el.textContent = originalText));
-                //we will add this once the prices we will also add the reduced price and it won't affect on QTY buttons
-                //document.querySelectorAll('.dp-op').forEach(el => (el.textContent = originalText));
-                document.querySelectorAll('.dp-opnc').forEach(el => (el.textContent = originalText));
-
-                // === ALT CURRENCY ===
-                document.querySelectorAll('.hs-alt-price-op' + globalQuantityValue + 't').forEach(el => {
-                    el.textContent =
-                    (totalOriginalPrice * 1).toFixed(decimalsGlobal) +
-                    '€';
-                });
-
-                //set discount
-        		document.querySelectorAll('.dp-d' + globalQuantityValue).forEach(el => el.textContent = priceDifferencePercentage); //hero discount
-        	}catch(err){
-        		console.log(err);
-        	}
-        }//setPriceCalculatorFieldsForDifferentVariationPrices
-
-        function arraysAreEqual(arr1, arr2) {
-            if (arr1.length !== arr2.length) return false;
-            
-            const sortedArr1 = arr1.slice().sort();
-            const sortedArr2 = arr2.slice().sort();
-
-            return sortedArr1.every((val, index) => val === sortedArr2[index]);
-        }//arraysAreEqual
-
-        function setVariationLabelValue(inputElement, newValue) {
-		    // Find the label associated with the input
-		    let label = document.getElementById(inputElement.id + '-price');
-		    
-		    // If the label exists, update its text content
-		    if (label) {
-		        label.textContent = newValue;
-		    } else {
-                let label = document.getElementById(inputElement.id);
-                if (label) {
-                    label.textContent = newValue;
-                }
-            }
-		}//setVariationLabelValue
-
-        function anyVariationHasPriceOffsetSet(){
-            if(variationsArr.length === 0){
-                return false;
-            }
-            try {
-                let varsWithPriceOffset = variationsArr.filter(v => !!v.priceOffset && v.priceOffset > 0 || v.priceOffset < 0);
-                if(varsWithPriceOffset.length > 0){
-                    return true;
-                }else {
-                    return false;
-                }
+                generateDeliveryDateText(countryCode, firstPossibleDeliveryDate, deliveryMonths);
             }catch(err){
-                return false;
+                console.error("Problem setting delivery date.");
             }
-        }//anyVariationHasPriceOffsetSet
+        }//setDeliveryDate
 
-        function allVariationPricesAreEqual(){
-            if(variationsArr.length === 0){
+        function generateDeliveryDateText(countryCode, deliveryDate, deliveryMonths){
+            try {
+                switch(countryCode){
+                    case 'HU': {
+                        let text = ' ' + deliveryMonths[deliveryDate.getMonth()] + ' ' + deliveryDate.getUTCDate().toString() + '.';
+
+                        document.getElementById('delivery-date').innerHTML = text;
+                        break;
+                    }
+                    default: {
+                        document.getElementById('delivery-date').innerHTML = deliveryDate.getUTCDate().toString() + '.' + 
+                                                                            (deliveryDate.getMonth() + 1).toString() + '.' + 
+                                                                            deliveryDate.getUTCFullYear().toString();
+                        break;
+                    }
+                }
+            }catch(e){
+                console.log(e);
+                console.error("Problem setting delivery date text for specific country.");
+            }
+
+        }//HtmlElementId
+
+        function convertStringToDate(stringDate, delimiter = '.'){
+
+            var year; // = new Date().getUTCFullYear().toString();
+            var day = stringDate.split(delimiter)[0];
+            var month = stringDate.split(delimiter)[1];
+
+            if(stringDate.split(delimiter)[2] === ''){
+                //date without year
+                year = new Date().getUTCFullYear().toString();
+            }else {
+                //date with year
+                year = stringDate.split(delimiter)[2];
+            }
+
+            //var date = new Date(month + '-' + day + '-' + year);
+            var date = new Date(year, month - 1, day, 10, 0, 0);
+            return date;
+        }//convertStringToDate
+
+        function isWeekend(date){
+            if(date.getDay() === 0 || date.getDay() > 5){
                 return true;
             }
-            try {
-                let referencePrice = variationsArr[0].reducedPrice;
-                for(let v = 0; v < variationsArr.length; v++){
-                    if(variationsArr[v].reducedPrice !== referencePrice){
-                        return false;
-                    }
-                }//for
-            }catch(err){
-                return false;
-            }
-            return true;
-        }//allVariationPricesAreEqual
-        //// END DIFFERENT PRICES FOR VARIATIONS ////
-    </script>
-  
-  </div>
+            return false;
+        }//isWeekend
 
-	<header class="header">
-		<div class="horizontal-ticker horizontal-ticker-sections">
-			<div class="horizontal-ticker__container">
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
-				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DOSLEJ</p>
-				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
-				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
-			</div>
-		</div>
-		<div class="header__inner">
-			<div class="header__content container">
-				<input id="hamburger" class="header__hamburger-btn" type="checkbox">
-				<label for="hamburger" class="header__hamburger-icon"><span class="header__icon"></span></label>
-				<ul class="header__menu">
-					<li class="header__menu-item"><a class="header__menu-link link--nu" href="https://ortowp.noriks.com/product/stepease/">Domov</a></li>
-					<li class="header__menu-item"><a class="header__menu-link link--nu" href="https://ortowp.noriks.com/product/stepease/">Vlo&#x17E;ki</a></li>
-					<li class="header__menu-item"><a class="header__menu-link link--nu active" href="https://ortowp.noriks.com/product/stepease/">Vsi izdelki</a></li>
-				</ul>
-				<a class="header__logo" href="https://ortowp.noriks.com/product/stepease/">
-					<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-1/e5b935897f162_logo-stepease-orange-bg.svg" alt="logo">
-				</a>
-				<a class="header__cart" href="https://ortowp.noriks.com/cart/">
-					<img class="header__cart-img" src="https://images.hs-plus.com/assets/STEPPER%20test-1/2c6bb086ca574_icon-cart.svg" alt="logo">
-				</a>
-			</div>
-		</div>
-		<!-- si -->
-<div id="sale-coupon-banner" style="display:none">
-	<p>V ko&#x161;arici te &#x10D;aka <span class="coupon-pointout"> 10% popusta </span> na celotni nakup.</p>
+        function isHoliday(date, holidays){
+            for(let i = 0; i < holidays.length; i++){
+                if(date.getDate() === holidays[i].getDate() &&
+                    date.getMonth() === holidays[i].getMonth()){
+                    return true;
+                }//if
+            }//for
+            return false;
+        }//isHoliday
+
+        function addDays(date, days){
+            var result = new Date(date);
+            result.setDate(result.getDate() + days);
+            return result;
+        }//addDays
+
+
+        ////////////////////////////////////////
+        //////END DELIVERY DATE ///////////////
+        //////////////////////////////////////
+
+  </script>
+						<div class="modal-size">
+							<a class="modal-size__btn" data-micromodal-trigger="modal-1" href="javascript:;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960"><path d="M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h120v240h80v-240h80v240h80v-240h80v240h80v-240h120q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240z"/></svg>
+								<strong class="modal-size__btn-text">TABELA VELIKOSTI</strong>
+							</a>
+							<div class="micromodal" id="modal-1" aria-hidden="true">
+								<div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
+									<div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+										<button class="micromodal__btn-close" aria-label="Close modal" data-micromodal-close>
+											<svg viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path d="M3 21.32L21 3.32001" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3 3.32001L21 21.32" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g></svg>
+										</button>
+										<h3 class="modal-size__title">Tabela velikosti &#x10D;evljev</h3>
+										
+    <style>
+      /* Table Styling */
+      .size-table {
+          width: 100%;
+          padding: 1rem 0;
+          border-collapse: collapse;
+          text-align: center;
+          background-color: #f9f9f9;
+          font-family: 'Arial', sans-serif;
+      }
+
+      .size-table th, .size-table td {
+          border: 1px solid #e3e3e3;
+          padding: 10px 5px;
+          line-height: 1.3;
+          vertical-align: middle;
+          white-space: pre-wrap;
+      }
+
+      .size-table th, .size-table td:first-child, .size-table tr:first-child td {
+          background-color: #292938;
+          color: #fff;
+          font-weight: 500;
+      }
+
+      .size-table td {
+          color: #292938;
+      }
+
+      .size-table tr:hover td:not(:first-child) {
+          background-color: #fff;
+          cursor: default;
+      }
+
+      .size-table tr:not(:first-child):hover td:first-child {
+          background-color: #292938;
+      }
+
+      /* Disable hover for the first row and first column */
+      .size-table tr:first-child:hover td,
+      .size-table td:first-child:hover,
+      .size-table th:hover {
+          background-color: #292938;
+          cursor: default;
+      }
+
+      /* Responsive Styling */
+      @media screen and (max-width: 991px) {
+          .size-table th, .size-table td {
+              font-size: 12px;
+              padding: 8px 4px;
+          }
+      }
+
+      @media screen and (max-width: 479px) {
+          .size-table th, .size-table td {
+              font-size: 10px;
+              padding: 6px 3px;
+          }
+      }
+    </style>
+    <table border="1" class="size-table"><tbody><tr><td class="header-cell first-column-cell" style="text-align: center;">EU (&#x1F1EA;&#x1F1FA;) </td><td class="header-cell" style="text-align: center;"> Dol&#x17E;ina cm</td></tr><tr><td class="first-column-cell" style="text-align: center;">35-36 </td><td style="text-align: center;">23.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">37-38 </td><td style="text-align: center;">24.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">39-40 </td><td style="text-align: center;">25.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">41-42 </td><td style="text-align: center;">26.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">43-44 </td><td style="text-align: center;">27.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">45-46 </td><td style="text-align: center;">28.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">47-48 </td><td style="text-align: center;">29.5 </td></tr><tr><td class="first-column-cell" style="text-align: center;">49-50 </td><td style="text-align: center;">30.5 </td></tr></tbody></table>
+										<p>Vlo&#x17E;ki imajo na zadnji strani ozna&#x10D;ene &#x10D;rte za rezanje. Po teh &#x10D;rtah jih s &#x161;karjami prire&#x17E;ite po meri.</p>
+										<p><em><strong>&#x10C;e ste med dvema velikostma, izberite ve&#x10D;jo.</strong></em></p>
+									</div>
+								</div>
+							</div>
+						</div>
+												
+						<div class="sct-hero__offer-ends">PONUDBA KMALU POTE&#x10C;E</div>
+						
+        <form id="paymentForm" class="payment-form">
+            <div class="choose-qty" data-pickername="quantityPickerBox">
+                <div class="row"><div class="col-12"><input type="radio" name="qty" id="qty1">
+      <label class="qty-item" for="qty1" onclick="setSelectedQuantityGlobal(1); handleAddToCartButton(true); regenerateCartLink({type: &apos;quantityPicker&apos;, quantity: 1})">
+    
+        <div>
+          <div class="qty-item-left">
+	<div class="quantity-title">1 par <span class="savebanner">Prihranite <span class="dp-d1 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">49</span>%</span></div>
+	<div class="quantity-subtitle">prihranite <span class="dp-pd dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">17.96</span>&#x20AC;</div>
 </div>
-		<style>
-			#sale-coupon-banner {
-				/* background-image: linear-gradient(180deg, #00ac00, #3ec000); */
-				color: #fff;
-				background-color: var(--clr-one, #000);
-				padding: .3125rem .1875rem;
-				text-align: center;
-				font-size: clamp(0.875rem, 0.7644rem + 0.4914vw, 1rem);
-			}
-			#sale-coupon-banner p {margin: 0;}
-			.coupon-pointout {
-				display: inline-block;
-				color: #000;
-				background-color: #fff;
-				border-radius: .3125rem;
-				margin-left: 0.5ch;
-				margin-right: 0.5ch;
-				padding: .125rem .5rem;
-			}
-		</style>
-	</header>
+<div class="qty-item-right">
+	<div class="reduced-price"><span class="dp-rp1t dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">18.99&#x20AC;</span> <span class="per_pair">/par</span></div>
+	<div class="original-price"><span class="dp-op dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">36.95</span>&#x20AC;</div>
+</div>
+<!-- <div class="quantity-banner">🔥 Najbolj priljubljeno</div> -->
+        </div>
+      </label>
+    </div></div><div class="row"><div class="col-12"><input type="radio" name="qty" id="qty2" checked>
+      <label class="qty-item" for="qty2" onclick="setSelectedQuantityGlobal(2); handleAddToCartButton(true); regenerateCartLink({type: &apos;quantityPicker&apos;, quantity: 2})">
+    <div class="popular"><span class="customer-favorite">NAJLJUB&#x160;A IZBIRA</span></div>
+        <div>
+          <div class="qty-item-left">
+	<div class="quantity-title">2 para <span class="savebanner">Prihranite <span class="dp-d2 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">60</span>%</span></div>
+	<div class="quantity-subtitle">prihranite <span class="dp-pd2 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">44.28</span>&#x20AC; <div><span class="free-shipping-2">Brezpla&#x10D;na dostava</span></div></div>
+</div>
+<div class="qty-item-right">
+	<div class="reduced-price"><span class="dp-rp2 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">14.81</span>&#x20AC; <span class="per_pair">/par</span></div>
+	<div class="original-price"><span class="dp-op dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">36.95</span>&#x20AC;</div>
+</div>
+<div class="quantity-banner all-countries">&#x1F525; Najbolj priljubljeno</div>
+        </div>
+      </label>
+    </div></div><div class="row"><div class="col-12"><input type="radio" name="qty" id="qty3">
+      <label class="qty-item" for="qty3" onclick="setSelectedQuantityGlobal(3); handleAddToCartButton(true); regenerateCartLink({type: &apos;quantityPicker&apos;, quantity: 3})">
+    
+        <div>
+          <div class="qty-item-left">
+	<div class="quantity-title">3 pari <span class="savebanner">Prihranite <span class="dp-d3 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">62</span>%</span></div>
+	<div class="quantity-subtitle">prihranite <span class="dp-pd3 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">69.26</span>&#x20AC; <div><span class="free-shipping">Brezpla&#x10D;na dostava</span></div></div>
+</div>
+<div class="qty-item-right">
+	<div class="reduced-price"><span class="dp-rp3 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">13.86</span>&#x20AC; <span class="per_pair">/par</span></div>
+	<div class="original-price"><span class="dp-op dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">36.95</span>&#x20AC;</div>
+</div>
+<div class="quantity-banner individual-countries">&#x1F525; Najbolj priljubljeno</div>
+        </div>
+      </label>
+    </div></div><div class="row"><div class="col-12"><input type="radio" name="qty" id="qty5">
+      <label class="qty-item" for="qty5" onclick="setSelectedQuantityGlobal(5); handleAddToCartButton(true); regenerateCartLink({type: &apos;quantityPicker&apos;, quantity: 5})">
+    
+        <div>
+          <div class="qty-item-left">
+	<div class="quantity-title">5 parov <span class="savebanner">Prihranite <span class="dp-d5 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">73</span>%</span></div>
+	<div class="quantity-subtitle">prihranite <span class="dp-pd5 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">135.38</span>&#x20AC; <div><span class="free-shipping">Brezpla&#x10D;na dostava</span></div></div>
+</div>
+<div class="qty-item-right">
+	<div class="reduced-price"><span class="dp-rp5 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">9.87</span>&#x20AC; <span class="per_pair">/par</span></div>
+	<div class="original-price"><span class="dp-op dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">36.95</span>&#x20AC;</div>
+</div>
+<div class="quantity-banner">Najbolj&#x161;a ponudba</div>
+        </div>
+      </label>
+    </div></div>
+            </div>
+        </form>
+        <script>
+            function getUrlParams() {
+              const params = new URLSearchParams(window.location.search);
+              return {
+                order_id: params.get("order_id"),
+                order_key: params.get("order_key"),
+                lp_upsell: params.get("lp_upsell")
+              };
+            }
+            const orderData = getUrlParams();
 
-	<main class="main">
+            purchaseTypePickers.push({
+              type: 'quantityPickerBox',
+              name: '[dyn-qty-picker-title]'
+            });
 
-		<!-- 6 -->
-		<section class="section sct-standard sct-6">
-			<div class="container">
+            function setSelectedQuantityGlobal(qnt){
+              selectedGlobalQuantity = qnt;
+              recalculatePrices();
+            }//setSelectedQuantityGlobal
 
+            //set global
+            setSelectedQuantityGlobal(1);
 
+            function regenerateCartLink({type = null, quantity, subscriptionDuration, subscriptionDiscount}) {
+              let addToCartButtons = document.getElementsByClassName('checkout-add-to-cart-btn');
+              let postPurchaseButtons = document.getElementsByClassName('checkout_post_purchase_cart_btn');
+              const isSubscription = 1;
 
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
+              const products = (productSettings.woocommerceId+',').repeat(quantity).slice(0,-1)//remove last ","
 
-				<h2 class="sct-standard__title">Ponudba</h2>
-				<div class="collection-list">
+              switch(type){
+                case 'quantityPicker': {
+                    // //if variation we need to set it diffrently then if simple
+                    // if (variationsArr.length > 0) {
+                    //     setLinkDynamicCart(quantity);//dynamical-checkout.js
+                    //     break;
+                    // }
+                  
+                  //standard Add to cart
+                  const link = "https://ortowp.noriks.com?add-more=" + products;
+                  //post purchase add to cart
+                  const postPurchaseLink =  "https://ortowp.noriks.com?add-more-lp=" + products +
+                                            "&order_id=" + encodeURIComponent(orderData.order_id) +
+                                            "&order_key=" + encodeURIComponent(orderData.order_key) +
+                                            "&lp_upsell=1";
 
-					<!-- ___product_0___ -->
-					<a href="https://ortowp.noriks.com/product/stepease/" class="collection-list__item">
-						<div class="collection-list__image-wrapper">
-							<div class="collection-list__badge">
-								<svg class="collection-list__badge-icon" viewBox="0 0 24 24">
-									<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
-								</svg>
-								<span>do 49% POPUSTA</span>
-							</div>
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/fb51b19dc3012_stepease-1.jpg" alt class="collection-list__img collection-list__img--main">
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/ca5024b4f9c1c_stepease-2.jpg" alt class="collection-list__img collection-list__img--hover">
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=stepease&font=poppins" alt="" class="collection-list__img collection-list__img--main"> -->
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=stepease-hover&font=poppins" alt="" class="collection-list__img collection-list__img--hover"> -->
-						</div>
-						<div class="collection-list__content">
-							<h3 class="collection-list__title">Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE</h3>
-							<div class="collection-list__prices">
-								<span class="collection-list__price collection-list__price--current"><span class="currency-symbol">&#x20AC;</span>18.99</span>
-								<span class="collection-list__price collection-list__price--old"><span class="currency-symbol">&#x20AC;</span>36.95</span>
-							</div>
-						</div>
-					</a>
+                  for(const addToCartButton of addToCartButtons){
+                    addToCartButton.href = link;
+                  }
+                  setLinkDynamicCart(quantity);
 
-					<!-- ___product_1___ -->
-					<a href="https://ortowp.noriks.com/product/stepease/" class="collection-list__item">
-						<div class="collection-list__image-wrapper">
-							<div class="collection-list__badge">
-								<svg class="collection-list__badge-icon" viewBox="0 0 24 24">
-									<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
-								</svg>
-								<span>do 53% POPUSTA</span>
-							</div>
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/268e309e51df2_steproll-1.jpg" alt class="collection-list__img collection-list__img--main">
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/a4750c35f8d59_steproll-2.jpg" alt class="collection-list__img collection-list__img--hover">
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=steproll&font=poppins" alt="" class="collection-list__img collection-list__img--main"> -->
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=steproll-hover&font=poppins" alt="" class="collection-list__img collection-list__img--hover"> -->
-						</div>
-						<div class="collection-list__content">
-							<h3 class="collection-list__title">Masa&#x17E;ni valj za sprostitev napetih stopal | STEPROLL</h3>
-							<div class="collection-list__prices">
-								<span class="collection-list__price collection-list__price--current"><span class="currency-symbol">&#x20AC;</span>19.99</span>
-								<span class="collection-list__price collection-list__price--old"><span class="currency-symbol">&#x20AC;</span>42.95</span>
-							</div>
-						</div>
-					</a>
+                  for (const addToCartButton of postPurchaseButtons){
+                    addToCartButton.href = postPurchaseLink;
+                    }
 
-					<!-- ___product_2___ -->
-					<a href="https://ortowp.noriks.com/product/stepease/" class="collection-list__item">
-						<div class="collection-list__image-wrapper">
-							<div class="collection-list__badge">
-								<svg class="collection-list__badge-icon" viewBox="0 0 24 24">
-									<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
-								</svg>
-								<span>do 33% POPUSTA</span>
-							</div>
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/5ae909aa857fe_stepheel-1.jpg" alt class="collection-list__img collection-list__img--main">
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/38ed3f6204a4_stepheel-2.jpg" alt class="collection-list__img collection-list__img--hover">
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=steptip&font=poppins" alt="" class="collection-list__img collection-list__img--main"> -->
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=steptip-hover&font=poppins" alt="" class="collection-list__img collection-list__img--hover"> -->
-						</div>
-						<div class="collection-list__content">
-							<h3 class="collection-list__title">Blazinice za prste | STEPTIP</h3>
-							<div class="collection-list__prices">
-								<span class="collection-list__price collection-list__price--current"><span class="currency-symbol">&#x20AC;</span>7.99</span>
-								<span class="collection-list__price collection-list__price--old"><span class="currency-symbol">&#x20AC;</span>11.95</span>
-							</div>
-						</div>
-					</a>
+                  break;
+                }
+                case 'subscriptionPicker': {
+                  //simple product id
+                  const products = (productSettings.woocommerceId+',').repeat(quantity).slice(0,-1)//remove last ","
+                  const link = "https://ortowp.noriks.com?add-more="+products +
+                                "&subsc=" + isSubscription + 
+                                "&subsc_dur=" + subscriptionDuration;
+                  
+                for(const addToCartButton of addToCartButtons){
+                    addToCartButton.href = link;
+                  }
+                  break;
+                }
+                default: {
+                  const products = (productSettings.woocommerceId+',').repeat(quantity).slice(0,-1)//remove last ","
+                  const link = "https://ortowp.noriks.com?add-more="+products;
+                  const postPurchaseLink = "https://ortowp.noriks.com?add-more-lp=" + products;
 
-					<!-- ___product_3___ -->
-					<a href="https://ortowp.noriks.com/product/stepease/" class="collection-list__item">
-						<div class="collection-list__image-wrapper">
-							<div class="collection-list__badge">
-								<svg class="collection-list__badge-icon" viewBox="0 0 24 24">
-									<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
-								</svg>
-								<span>do 48% POPUSTA</span>
-							</div>
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/4ef5f32bcebfa_stepslick-1.jpg" alt class="collection-list__img collection-list__img--main">
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/9dcd7363582ab_stepslick-2.jpg" alt class="collection-list__img collection-list__img--hover">
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=stepslick&font=poppins" alt="" class="collection-list__img collection-list__img--main"> -->
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=stepslick-hover&font=poppins" alt=" on Legs" class="collection-list__img collection-list__img--hover"> -->
-						</div>
-						<div class="collection-list__content">
-							<h3 class="collection-list__title">Kompresijske nogavice | STEPSLICK</h3>
-							<div class="collection-list__prices">
-								<span class="collection-list__price collection-list__price--current"><span class="currency-symbol">&#x20AC;</span>12.99</span>
-								<span class="collection-list__price collection-list__price--old"><span class="currency-symbol">&#x20AC;</span>24.95</span>
-							</div>
-						</div>
-					</a>
+                  for(const addToCartButton of addToCartButtons){
+                    addToCartButton.href = link;
+                  }
+                    for (const postPurchaseButton of postPurchaseButtons){
+                    postPurchaseButton.href = postPurchaseLink;
+                    }
+                  break;
+                }
+              }//switch
 
-					<!-- ___product_4___ -->
-					<a href="https://ortowp.noriks.com/product/stepease/" class="collection-list__item">
-						<div class="collection-list__image-wrapper">
-							<div class="collection-list__badge">
-								<svg class="collection-list__badge-icon" viewBox="0 0 24 24">
-									<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
-								</svg>
-								<span>do 54% POPUSTA</span>
-							</div>
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/1316c6030079_steptip-1.jpg" alt class="collection-list__img collection-list__img--main">
-							<img src="https://images.hs-plus.com/assets/STEPPER%20test-1/15c69ed149a2e_steptip-2.jpg" alt class="collection-list__img collection-list__img--hover">
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=stepheel&font=poppins" alt="" class="collection-list__img collection-list__img--main"> -->
-							<!-- <img src="https://placehold.co/400x400/ff5e00/white?text=stepheel-hover&font=poppins" alt="" class="collection-list__img collection-list__img--hover"> -->
-						</div>
-						<div class="collection-list__content">
-							<h3 class="collection-list__title">Blazinica za peto za zmanj&#x161;anje bole&#x10D;in v peti | STEPHEEL</h3>
-							<div class="collection-list__prices">
-								<span class="collection-list__price collection-list__price--current"><span class="currency-symbol">&#x20AC;</span>9.99</span>
-								<span class="collection-list__price collection-list__price--old"><span class="currency-symbol">&#x20AC;</span>21.95</span>
-							</div>
-						</div>
-					</a>
+            }//regenerateCartLink
+          
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(function() {
+                   
+                  const quantityNumber = document.querySelectorAll('[id^="qty"]').length
+                  for (let index = 1 ; index <= quantityNumber; index++) {
+                      const id ="#qty"+index;
+                      if($(id).is(":checked")){
+                          const products = (productSettings.woocommerceId+',').repeat(index).slice(0,-1)//remove last ","
+                          const link = "https://ortowp.noriks.com?add-more="+products;
+                          const postPurchaseLink =  "https://ortowp.noriks.com?add-more-lp=" + products +
+                                                    "&order_id=" + encodeURIComponent(orderData.order_id) +
+                                                    "&order_key=" + encodeURIComponent(orderData.order_key) +
+                                                    "&lp_upsell=1";
 
-				</div>
+                          let addToCartButtons = document.getElementsByClassName('checkout-add-to-cart-btn');
+                           let postPurchaseButtons = document.getElementsByClassName('checkout_post_purchase_cart_btn');
+                          
+                           for(const addToCartBtn of addToCartButtons){
+                            addToCartBtn.href = link;
+                          }
+                            for (const addToCartBtn of postPurchaseButtons){
+                            addToCartBtn.href = postPurchaseLink}
+                          break;
+                      }
+                  }
+                setLinkDynamicCart();
+              }, 1000); 
+            });
+        </script>
+        
+    
+						
+        <div class="add-to-cart-button-container">
+          <a id="checkout_add_to_cart_btn" class="checkout-add-to-cart-btn" href="https://ortowp.noriks.com/kosarica/?add-more=">
+              <span id="checkout_add_to_cart_btn_text" class="checkout-add-to-cart-btn-text"><img src="https://images.hs-plus.com/assets/shared-images/adafec52191b3_cart_icon.svg"><p class="checkout-add-to-cart-order-text">Dodaj v ko&#x161;arico</p></span>
+              <span id="checkout_add_to_cart_btn_text_out_of_stock" class="checkout-add-to-cart-btn-text-out-of-stock checkout-add-to-cart-btn-text checkout-add-to-cart-btn-text-hidden"><p class="checkout-add-to-cart-order-text">Ni na zalogi</p></span>
+          </a>
+        </div>
+        <style>
+          .checkout-add-to-cart-btn{
+            color: white;
+            background-color: #25b800;
+            margin: auto;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            display: inline-block;
+            linear-gradient(180deg, #3dc200 0, #00ac00 50% 100%);
+            height: 52px;
+            box-shadow: 0 2px 0 #009900;
+            border-radius: 10px;
+          }
+          .checkout-add-to-cart-btn-disabled {
+            pointer-events: none;
+          }
+          .checkout-add-to-cart-btn-text{
+            display: flex;
+            top: 50%;
+            transform: translateY(-50%);
+            width: calc(100% - 60px);
+            position: relative;
+            text-transform: none;
+            justify-content: center;
+            margin: auto;
+            font-size: 25px;
+          }
+          .checkout-add-to-cart-btn:hover .checkout-add-to-cart-btn-text{
+            color: #fff;
+          }
+          .checkout-add-to-cart-btn-text-hidden {
+            display: none;
+          }
+          .checkout-add-to-cart-btn-text img{
+            margin-right: 10px;
+          }
+          .checkout-add-to-cart-order-text{
+            font-size: 20px;
+            color: #fff;
+          }
+          .add-to-cart-button-container{
+          }
+          .related-product-original-price{
+            font-weight: 600;
+            text-decoration: line-through;
+          }
+        </style>
+						
+        
+          <div class="related-product-wrapper">
+            <span class="related-product-text">Kupi skupaj in prihrani:</span>
+          
+        <div class="related-product" id="related-product-rp-0">
+          <div class="related-product-img-desc">
+            <span class="related-product-image-wrapper">
+              <img class="related-product-image" src="https://images.hs-plus.com/product/product-image/67fb0394c5d0a_STEPHEEL-3831127625931-N-1.jpg">
+            </span>
+            <div class="related-product-checkbox-description">
+              <span class="related-product-title">
+                <div class="related-product-title-and-desc">
+                  <p class="related-product-title-text">
+                    2x blazinica za peto za zmanj&#x161;anje bole&#x10D;in v peti
+                    </p><div class="related-product-description">
+                      
+      <span class="related-product-description">
+        Zapolni prevelik &#x10D;evelj, ne da bi drgnila ali povzro&#x10D;ala &#x17E;ulje.
 
-				<style>
-					.collection-list {
-						display: grid;
-						grid-template-columns: repeat(4, 1fr);
-						gap: var(--gap-xl);
-						width: 100%;
-						max-width: 1400px;
-						margin: 0 auto;
-					}
-					@media (max-width: 1159px) {
-						.collection-list {
-							grid-template-columns: repeat(3, 1fr);
-							gap: var(--gap-m);
+      </span>
+      
+                    </div>
+                    <div class="related-product-both-prices">
+                      <span class="related-product-reduced-price">3.99&#x20AC;</span>
+                      <span class="related-product-original-price">11.95&#x20AC;</span>
+                    </div>
+                  <p></p>
+                </div>
+              </span>
+            </div>
+            <div class="related-product-checkbox-wrapper" id="related-product-checkbox-wrapper-rp-0">
+              <span class="added-text" id="added-text-rp-0" style="display:none">
+                <span class="checkmark-added">L</span>
+                Dodano
+              </span>
+              <label class="related-product-dropdown-quantity" id="qty-picker-display-rp-0" onclick="handleDropdownClick(event)" style="display:none;">
+                <select class="quantity-picker" id="quantity-picker-rp-0" onchange="relatedDropDownChanged(&apos;rp-0&apos;);">
+                  <option value="1" selected>1x</option>
+                  <option value="2">2x</option>
+                  <option value="3">3x</option>
+                </select>
+              </label>
+              <div class="related-product-checkbox-container">
+                <label class="related-product-container">
+                  <input type="checkbox" id="rp-0" name="rp-0" onclick="setLinkDynamicCart();">
+                  <span class="checkmark" id="checkmark-rp-0">
+                    <p>
+                      <span class="add-purchase-text add-related" id="atc-text-rp-0">Dodaj k nakupu</span>
+                      <span class="add-purchase-text remove-related" id="rfc-text-rp-0" style="display:none;">
+                      <span class="remove-upsell-icon"><img src="https://images.hs-plus.com/assets/shared-images/acedd549f8a4b_remove-from-cart.svg"></span>Odstrani</span>
+                    </p>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+          <script>
+            var relatedProductsData = [{"id":"rp-0","name":"2x blazinica za peto za zmanjšanje bolečin v peti","description":"Zapolni prevelik čevelj, ne da bi drgnila ali povzročala žulje.\n","price":3.99,"originalPrice":11.95,"discountPercentage":67,"wcId":981495,"imageUrl":"https://images.hs-plus.com/product/product-image/67fb0394c5d0a_STEPHEEL-3831127625931-N-1.jpg"}];
+            function handleDropdownClick(event) {
+                event.stopPropagation(); // Stop propagation to the parent div
+            }
+
+            function relatedDropDownChanged(relatedId){
+              let checkbox = document.getElementById(relatedId);
+              checkbox.checked = true;
+              markRelatedSelected(relatedId, "mark");
+              setLinkDynamicCart();
+            }
+
+            function markRelatedSelected(relatedId, type){
+              let relatedWrapper = document.getElementById("related-product-"+ relatedId);
+              let relatedCheckbox = document.getElementById("checkmark-"+ relatedId);
+
+            
+              switch (type) {
+                  case "toggle": {
+                      if (relatedWrapper.classList.contains("hs-rp-checked")){
+                          relatedWrapper.classList.remove("hs-rp-checked")
+                      }
+                      else {
+                          relatedWrapper.classList.add("hs-rp-checked")
+                      }
+                      if (relatedCheckbox.classList.contains("checkmark-checked")){
+                          relatedCheckbox.classList.remove("checkmark-checked")
+                      }
+                      else {
+                          relatedCheckbox.classList.add("checkmark-checked")
+                      }
+                      break;
+                  }
+                  case "mark": {
+                      relatedWrapper.classList.add("hs-rp-checked");
+                      relatedCheckbox.classList.add("checkmark-checked");
+                      break;
+                  }
+                  case "unmark": {
+                      relatedWrapper.classList.remove("hs-rp-checked");
+                      relatedCheckbox.classList.remove("checkmark-checked");
+                      break;
+                  }
+                  default: break;
+              }//switch
+            }
+
+            function getRelatedProductsData() {
+              let related = '';
+              let price = 0;
+              let activeRelatedUpsellHighlighted = null;
+          
+              for (let r = 0; r < relatedProductsData.length; r++) {
+                  let checkbox = document.getElementById(relatedProductsData[r].id);
+                  let selectedQuantity = document.getElementById("quantity-picker-" + relatedProductsData[r].id);
+                  let quantityPickerDisplay = document.getElementById("qty-picker-display-" + relatedProductsData[r].id);
+                  let addToCartText = document.getElementById("atc-text-" + relatedProductsData[r].id);
+                  let removeFromCartText = document.getElementById("rfc-text-" + relatedProductsData[r].id);
+                  let addedToCart = document.getElementById("added-text-" + relatedProductsData[r].id);
+                  let rpCheckboxW = document.getElementById("related-product-checkbox-wrapper-" + relatedProductsData[r].id);
+                  
+                  if (checkbox && checkbox.checked) {
+                      markRelatedSelected(relatedProductsData[r].id, 'mark')
+                      let quantity = 0;
+                      selectedQuantity.classList.add("quantity-picker-checked");
+                      quantityPickerDisplay.style.display = 'flex';
+                      addedToCart.style.display = 'flex';
+                      addToCartText.style.display = 'none';
+                      removeFromCartText.style.display = 'flex';
+                      rpCheckboxW.style.justifyContent = 'flex-end';
+                      
+                      
+                      if (selectedQuantity != undefined){
+                          quantity = selectedQuantity.value;
+                      }
+
+                      for (let i = 0; i < quantity; i++) {
+                          
+                          related = related + ',' + relatedProductsData[r].wcId;
+                          price += Number(relatedProductsData[r].price);
+                      }
+                  }
+                  else {
+                      markRelatedSelected('rp-' + r, 'unmark');
+                      selectedQuantity.classList.remove("quantity-picker-checked");
+                      quantityPickerDisplay.style.display = 'none';
+                      addToCartText.style.display = 'block';
+                      addedToCart.style.display = 'none';
+                      removeFromCartText.style.display = 'none';
+                      rpCheckboxW.style.justifyContent = 'center';
+                    
+                  }
+              }
+          
+              return {
+                  wcIds: related,
+                  price: price
+              };
+            }
+          </script>
+          
+						<style>
+							[data-tpl="stps"] .related-product-reduced-price {
+								color: #fff;
+							}
+							[data-tpl="stps"] .related-product {
+								--clr-accent: #ff5b01;
+								--clr-accent-light: #ffeee8;
+								--clr-accent-dark: #ff5b01;
+								--clr-secondary: #ff5b01;
+								hyphens: auto;
+								text-wrap: balance;
+							}
+						</style>
+						<div class="bckg-color">
+	<div class="delivery__date active_quantity_button">
+		<img src="https://images.vigo-shop.com/general/truck_icon_delivery.png"><p class="shipping-info">Danes naro&#x10D;i&#x161;, </p><div class="new_line"><p id="delivery-at-day-name"></p>, <p id="delivery-date"></p></div><p> dobi&#x161;.</p>
+  </div>
+</div>
+<script>
+var deliveryWeekdays = ['v nedeljo', 'v ponedeljek', 'v torek', 'v sredo', 'v četrtek', 'v petek', 'v soboto'];
+var deliveryDays = 2;
+var deliveryMonths = [];
+setDeliveryDate();
+</script>
+<style>
+.bckg-color {
+    background-color:white!important;
+    position:sticky;
+    top:3.3rem;
+    z-index:10;
+  }
+
+	.delivery__date p, #delivery-at-day-name p, .delivery-date p {
+		display: inline;
+	}
+
+	.delivery__date {
+		text-align:center;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    font-size: 14px;
+    position: sticky;
+    top:3.3rem;
+    z-index:299;
+    display:flex;
+    justify-content:center;
+    white-space:pre;
+    align-items:baseline;
+    flex-wrap:wrap;
+	}
+
+  #delivery-at-day-name, #delivery-date {
+    font-weight: 700 !important;
+    font-size:16px
+    }
+
+  @media screen and (min-width: 1000px) {
+    .delivery__date, .bckg-color{
+      top:3.75rem;
+      font-size:18px;
+    }
+  #delivery-at-day-name, #delivery-date {
+    font-weight: 700 !important;
+    font-size:20px;
+    }
+  }
+  .delivery__date img {
+    height:18px;
+    padding-right: .2rem;
+    padding-top: .2rem;
+  } 
+</style>
+						<style>
+							.sct-hero .bckg-color {
+								z-index: 1;
+							}
+							.sct-hero .delivery__date {
+								font-size: var(--step-0)!important;
+								margin-top: 0.5rem!important;
+							}
+							.sct-hero .delivery__date p {
+								font-size: inherit!important;
+								margin: 0!important;
+							}
+							.per_pair{
+								color:#000;
+								font-weight: 400;
+								font-size:14px;
+							}
+						</style>
+					</div>
+
+					<div class="sct-hero__payship">
+						<!-- shortcode "payment-methods" -->
+<!-- Payment and delivery features (styles in auto shared resourse "Cart CSS") -->
+<div class="paydel-features">
+	<div class="paydel-features__item">
+		<strong class="paydel-features__text" style="margin-inline: auto;">90-dnevna mo&#x17E;nost vra&#x10D;ila kupnine</strong>
+	</div>
+	<hr style="display: block; margin: 0.5rem 0; background-color: #dbdbdb; border: none; height: 0.0625rem;">
+
+	
+	<div class="paydel-features__item">
+		<img class="paydel-features__icon paydel-features__icon--country" src="https://images.vigo-shop.com/general/checkout/flag/si.svg" alt>
+		<span class="paydel-features__text">Skladi&#x161;&#x10D;e v Sloveniji</span>
+	</div>
+
+	<div class="paydel-features__item">
+		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/delivery-truck.svg" alt>
+		<span id="shipping-checkout" class="paydel-features__text --accent">Hitra dostava</span>
+		<span id="free-shipping-checkout" style="display: none;">Brezpla&#x10D;na dostava</span>
+		<div class="courier-badge">
+			<img class="courier-badge__item" src="https://images.vigo-shop.com/general/curriers/posta_slo.png" alt><!-- SI,RS,ES,FR,NL -->
+		</div>
+	</div>
+
+	<div class="paydel-features__item">
+		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/COD.svg" alt>
+		<span class="paydel-features__text">Pla&#x10D;ilo tudi po povzetju</span>
+	</div>
+
+	<!-- <div class="paydel-features__item">
+		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/back.svg" alt="">
+		<span class="paydel-features__text">14-dnevna možnost vračila kupnine</span>
+	</div>
+
+	<div class="paydel-features__item">
+		<img class="paydel-features__icon" src="https://images.vigo-shop.com/general/checkout/star.svg" alt="">
+		<span class="paydel-features__text">93% strank je ocenilo Stepease z odličnostjo</span>
+	</div> -->
+</div>
+<style>
+	.courier-badge {display: flex; gap: 0.5rem;}
+	.courier-badge__item {height: 22px;}
+</style>
+<!-- END Payment and delivery features --><div class="paymethods payship">
+	<div class="paymethods__box">
+		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/visa.svg" alt>
+		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/mastercard_icon.svg" alt>
+		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/general_cod_payment_icon.svg" alt>
+		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/paypal_icon.svg" alt>
+		<img class="paymethods__item paymethods__item-img" src="https://images.vigo-shop.com/general/payment/maestro-icon.svg" alt>
+	</div>
+</div>
+
+<style>
+	.paymethods {
+		margin-top: 0.5rem;
+		/* max-width: 650px; */
+	}
+	.paymethods__box {
+		display: flex;
+		gap: .5rem;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.paymethods__item {}
+	.paymethods__item-img {
+		height: 1.875rem;
+		width: auto;
+		object-fit: contain;
+		vertical-align: middle;
+	}
+</style>
+					</div>
+					<style>
+						.sct-hero__payship {
+							display: flex;
+							flex-direction: column-reverse;
 						}
-					}
-					@media (max-width: 767px) {
-						.collection-list {
-							grid-template-columns: repeat(2, 1fr);
-							gap: var(--gap-xs);
-						}
-					}
-					.collection-list__item {
-						display: flex;
-						flex-direction: column;
-						text-decoration: none;
-						color: inherit;
-						cursor: pointer;
-					}
-					.collection-list__image-wrapper {
-						position: relative;
-						background-color: #ff5e00;
-						border-radius: var(--radius-big);
-						aspect-ratio: 1 / 1;
-						overflow: hidden;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						margin-bottom: 16px;
-						box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15)
-						transition: transform 0.3s ease, box-shadow 0.3s ease;
-					}
-					.collection-list__item:hover .collection-list__image-wrapper {
-						/* transform: translateY(-2px); */
-						/* box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); */
-					}
-					.collection-list__badge {
-						position: absolute;
-						bottom: 0.75rem;
-						left: 0.75rem;
-						background-color: #ff5b01a6;
-						background: #ff5b01a6;
-						backdrop-filter: blur(2px);
-						color: #fff;
-						padding: 0.4em 0.8em;
-						border-radius: 5em;
-						font-size: var(--step--2);
-						font-weight: 700;
-						display: flex;
-						align-items: center;
-						gap: 0.5ch;
-						z-index: 10;
-					}
-					.collection-list__badge-icon {
-						width: 14px;
-						height: 14px;
-						fill: currentColor;
-						transform: rotate(90deg);
-					}
-					@media (max-width: 375px) {
-						.collection-list__badge {
+						.paydel-features__item:first-of-type {
 							display: none;
 						}
-					}
-					.collection-list__img {
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						object-fit: contain;
-						transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-						will-change: transform, opacity;
-					}
-					.collection-list__img--main {
-						opacity: 1;
-						z-index: 2;
-						/* transform: scale(1); */
-					}
-					.collection-list__img--hover {
-						opacity: 0;
-						z-index: 3;
-						/* transform: scale(1.05); */
-					}
-					.collection-list__item:hover .collection-list__img--main {
-						opacity: 0;
-						/* transform: scale(0.95); */
-					}
-					.collection-list__item:hover .collection-list__img--hover {
-						opacity: 1;
-						/* transform: scale(1); */
-					}
-					.collection-list__item:hover .collection-list__img--main:only-child {
-						opacity: 1;
-						/* transform: scale(1.08); */
-					}
+						.paydel-features>hr {
+							display: none!important;
+						}
+						.paymethods__box {
+							justify-content: center;
+							padding-bottom: 0.5rem;
+							border-bottom: .0625rem solid var(--clr-border)
+						}
+						.paymethods__item {
+							height: 1.37500rem;
+						}
+						.paydel-features {
+							margin-top: 0.5rem;
+							display: flex;
+							justify-content: center;
+							flex-direction: row;
+							column-gap: 1rem;
+							flex-wrap: wrap;
+						}
+					</style>
 
-					.collection-list__content {
-						text-align: center;
-					}
-					.collection-list__title {
-						font-size: var(--step-0);
-						font-weight: 800;
-						color: #000;
-						margin-bottom: 8px;
-						line-height: 1.2;
-						hyphens: auto;
-					}
-					.collection-list__prices {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						gap: 10px;
-						font-weight: 700;
-					}
-					.collection-list__price--current {
-						color: #ff5e00;
-						font-size: 20px;
-					}
-					.collection-list__price--old {
-						color: #1a1a1a;
-						font-size: 16px;
-						text-decoration: line-through;
-						text-decoration-thickness: 2px;
-						opacity: 0.8;
-						font-weight: 600;
-					}
-					.currency-symbol {
-						margin-right: 2px;
-					}
+					<div class="sct-hero__descr">
+						<p class="remains"><span class="remains__dot"></span><span class="remains__text">Na zalogi le &#x161;e 19&#xA0;parov!</span></p>
 
-				</style>
+						<ul class="seller-benefits">
+							<li class="seller-benefits__item">
+								<img class="seller-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/51274f1e1ac1a_local_shipping_36dp_000_FILL0_wght400_GRAD0_opsz40.svg" alt>
+								<!-- <span class="seller-benefits__item-icon material-symbols-outlined">local_shipping</span> -->
+								<span class="seller-benefits__item-text">Sledenje po&#x161;iljki z zavarovano dostavo</span>
+							</li>
+							<li class="seller-benefits__item">
+								<img class="seller-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/dc81f19ecd50b_sentiment_very_satisfied_36dp_000_FILL0_wght400_GRAD0_opsz40.svg" alt>
+								<!-- <span class="seller-benefits__item-icon material-symbols-outlined">sentiment_very_satisfied</span> -->
+								<span class="seller-benefits__item-text">Preizkusi 90 dni, brez tveganja</span>
+							</li>
+							<li class="seller-benefits__item">
+								<img class="seller-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/3f62b46e6d7db_support_agent_36dp_000_FILL0_wght400_GRAD0_opsz40.svg" alt>
+								<!-- <span class="seller-benefits__item-icon material-symbols-outlined">support_agent</span> -->
+								<span class="seller-benefits__item-text">Lokalna podpora strankam</span>
+							</li>
+						</ul>
+					</div>
 
-				<script>
-					document.addEventListener('DOMContentLoaded', () => {
-						const items = document.querySelectorAll('.collection-list__item');
-						items.forEach(item => {
-							item.addEventListener('mousedown', () => {
-								item.style.transform = 'scale(0.98)';
-								item.style.transition = 'transform 0.1s';
-							});
-							item.addEventListener('mouseup', () => {
-								item.style.transform = 'scale(1)';
-							});
-							item.addEventListener('mouseleave', () => {
-								item.style.transform = 'scale(1)';
-							});
-						});
-						console.log('Collection List initialized. Hover effects ready.');
-					});
-				</script>
+					<div class="acrd">
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">straighten</span>
+									<span>Manj&#x161;a velikost? Med velikostima?</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p><strong>Manj&#x161;a od na&#x161;e najmanj&#x161;e velikosti?</strong><br>Naro&#x10D;ite <strong>najmanj&#x161;o velikost</strong> in jo <strong>prire&#x17E;ite</strong> po ozna&#x10D;enih &#x10D;rtah na zadnji strani za popolno prileganje.</p>
+								<p><strong>Med velikostma?</strong><br>Vedno <strong>izberite ve&#x10D;jo</strong> in <strong>prire&#x17E;ite</strong> po ozna&#x10D;enih &#x10D;rtah.</p>
+								<p>Preprosto. Nastavljivo. Ustvarjeno zate.</p>
+							</div>
+						</details>
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">steps</span>
+									<span>Ali se STEPEASE prilegajo mojim &#x10D;evljem?</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p><strong>Da,</strong> zasnovani so tako, da se <strong>popolnoma prilegajo va&#x161;i obi&#x10D;ajni velikosti &#x10D;evljev</strong>.</p>
+								<ul>
+									<li><strong>Ni vam potrebno izbrati ve&#x10D;je &#x161;tevilke</strong> ali kupovati ve&#x10D;jih &#x10D;evljev</li>
+									<li><strong>Robovi, ki jih lahko prire&#x17E;ete</strong> za popolno prileganje</li>
+									<li><strong>Ne bodo zo&#x17E;ili va&#x161;ih &#x10D;evljev</strong></li>
+									<li>Zlahka se prilegajo <strong>delovnim &#x10D;evljem, supergam, &#x161;portnim copatom</strong> in drugim</li>
+								</ul>
+								<p>STEPEASE so ustvarjeni za vsakodnevno no&#x161;enje &#x2013; brez ti&#x161;&#x10D;anja, brez ugibanja. Samo &#x10D;isto udobje.</p>
+							</div>
+						</details>
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">emergency</span>
+									<span>Ali pomagajo pri bole&#x10D;inah v stopalih?</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p><strong>Da,</strong> STEPEASE pomagajo pri razli&#x10D;nih te&#x17E;avah s stopali, kot so <strong>plantarni fasciitis, bole&#x10D;ine v loku, peti in metatarzaliji.</strong></p>
+								<p>Na&#x161;i vlo&#x17E;ki nudijo vrhunsko oporo in bla&#x17E;enje, ki pomagata zmanj&#x161;ati nelagodje in izbolj&#x161;ati splo&#x161;no zdravje stopal.</p>
+							</div>
+						</details>
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">construction</span>
+									<span>Kako dolgo zdr&#x17E;ijo vlo&#x17E;ki STEPEASE?</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p><strong>Vlo&#x17E;ki STEPEASE so narejeni, da trajajo!</strong> Ob pravilni negi vam bodo nudili udobje in oporo ve&#x10D; kot <strong>12&#xA0;mesecev.</strong> Za dalj&#x161;o &#x17E;ivljenjsko dobo jih redno ro&#x10D;no operite.</p>
+							</div>
+						</details>
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">sell</span>
+									<span>Popust za razli&#x10D;ne velikosti</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p>Na&#x161; popust lahko uporabite tudi za razli&#x10D;ne barve in velikosti!</p>
+								<p><strong>Postopek:</strong></p>
+								<ol>
+									<li><strong>Dodajte eno velikost v ko&#x161;arico.</strong></li>
+									<li><strong>Dodajte &#x161;e drugo velikost v ko&#x161;arico.</strong></li>
+								</ol>
+								<p>Popust za 2,&#xA0;3&#xA0;ali&#xA0;5&#xA0;parov se bo samodejno obra&#x10D;unal pri skupni ceni.</p>
+							</div>
+						</details>
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">package_2</span>
+									<span>Dostava in po&#x161;iljanje</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p>U&#x17E;ivajte v sledenju po&#x161;iljke z zavarovano dostavo v <strong>2&#x2013;3&#xA0;delovnih dneh.</strong> Za va&#x161;e udobje bo prilo&#x17E;ena &#x161;tevilka za sledenje.</p>
+							</div>
+						</details>
+						<details class="acrd__item">
+							<summary>
+								<div class="acrd__heading">
+									<span class="material-symbols-outlined filled">paid</span>
+									<span>Politika vra&#x10D;il in povra&#x10D;il</span>
+								</div>
+							</summary>
+							<div class="acrd__body">
+								<p>Prepri&#x10D;ani smo, da vam bo udobje vlo&#x17E;kov STEPEASE v&#x161;e&#x10D;. Zato ponujamo 90&#x2011;dnevno garancijo vra&#x10D;ila denarja brez tveganja. &#x10C;e ne boste popolnoma zadovoljni, nam preprosto pi&#x161;ite in uredili bomo vra&#x10D;ilo.</p>
+								<p>Za vra&#x10D;ila nam pi&#x161;ite na <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="761f18101936051f580502130613170513581303">[email&#160;protected]</a></p>
+							</div>
+						</details>
+					</div>
 
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
-			<!-- =========================================================================== -->
+					<div class="timer">
+						<strong class="timer-title">EKSKLUZIVNA RAZPRODAJA&#xA0;&#x2013;&#xA0;ZADNJA PRILO&#x17D;NOST!</strong>
+						<div class="timer-body">
+							<div class="time-block">
+								<span id="hours">00</span>
+								<p>Ure</p>
+							</div>
+							<div class="time-block">
+								<span id="minutes">00</span>
+								<p>Minute</p>
+							</div>
+							<div class="time-block">
+								<span id="seconds">00</span>
+								<p>Sekunde</p>
+							</div>
+						</div>
+					</div>
 
+					<div class="swiper hero-reviews">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="hero-reviews-item">
+									<div class="hero-reviews__photo">
+										<img class="hero-reviews__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/dc84ff1836158_review-autor-1.jpg" alt>
+									</div>
+									<div class="hero-reviews__descr">
+										<div class="hero-reviews__descr-text">
+											<p>Dolga leta sem se spopadal s plantarno fascio, a STEPEASE so vse spremenili. Podpora loku je neverjetna in bole&#x10D;ina je kon&#x10D;no izginila!</p>
+										</div>
+										<div class="hero-reviews__descr-author">
+											<img class="hero-reviews__descr-rating" src="https://images.hs-plus.com/assets/STEPPER%20test-0/77916ce2372ed_stars-v2-5.svg" alt="5 stars">
+											<span>&#x2013;&#xA0;Jakob</span>
+											<img class="hero-reviews__descr-verif" src="https://images.hs-plus.com/assets/STEPPER%20test-0/1732fd3af3689_icon-verified.svg" alt="verified">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hero-reviews-item">
+									<div class="hero-reviews__photo">
+										<img class="hero-reviews__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/f5d8588d1923_review-autor-2.jpg" alt>
+									</div>
+									<div class="hero-reviews__descr">
+										<div class="hero-reviews__descr-text">
+											<p>V slu&#x17E;bi ves dan stojim in ti vlo&#x17E;ki so mi re&#x161;ili noge. Ob koncu dneva me stopala ne bolijo ve&#x10D;.</p>
+										</div>
+										<div class="hero-reviews__descr-author">
+											<img class="hero-reviews__descr-rating" src="https://images.hs-plus.com/assets/STEPPER%20test-0/9b273ca726803_stars-v2-5.svg" alt="5 stars">
+											<span>&#x2013;&#xA0;Sofija</span>
+											<img class="hero-reviews__descr-verif" src="https://images.hs-plus.com/assets/STEPPER%20test-0/946eb1cb9c3bc_icon-verified.svg" alt="verified">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="hero-reviews-item">
+									<div class="hero-reviews__photo">
+										<img class="hero-reviews__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/e48acee6b1eb3_review-autor-3.jpg" alt>
+									</div>
+									<div class="hero-reviews__descr">
+										<div class="hero-reviews__descr-text">
+											<p>Preizkusil sem ne&#x161;teto vlo&#x17E;kov, a nobeni se ne morejo primerjati s&#xA0;STEPEASE. Razlika v udobju in po&#x10D;utju je res opazna.</p>
+										</div>
+										<div class="hero-reviews__descr-author">
+											<img class="hero-reviews__descr-rating" src="https://images.hs-plus.com/assets/STEPPER%20test-0/9f614535da995_stars-v2-5.svg" alt="5 stars">
+											<span>&#x2013;&#xA0;Ivan</span>
+											<img class="hero-reviews__descr-verif" src="https://images.hs-plus.com/assets/STEPPER%20test-0/5e1a7c138bb3b_icon-verified.svg" alt="verified">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hero-reviews-pagination"></div>
+					</div>
 
+					<!-- <p class="urgency-text">
+						<strong>NI NA VOLJO NA ALIEXPRESS/TEMU</strong>
+					</p> -->
+
+					<ul class="product-benefits">
+						<li class="product-benefits__item">
+							<img class="product-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/00786c49ba9ea_icon-reduce_pain.png" alt>
+							<span class="product-benefits__item-text">Zmanj&#x161;aj bole&#x10D;ino</span>
+						</li>
+						<li class="product-benefits__item">
+							<img class="product-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/0c1cc53330fbc_icon-all_day_comfort.png" alt>
+							<span class="product-benefits__item-text">Udobje ves dan</span>
+						</li>
+						<li class="product-benefits__item">
+							<img class="product-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/0baa7b8771bec_icon-arch_support.png" alt>
+							<span class="product-benefits__item-text">Podpora loku</span>
+						</li>
+					</ul>
+
+					<!-- <a class="btn btn--bg sct-hero__btn" href="#">Learn More</a> -->
+				</div>
+			</div>
+		</section>
+
+		<section class="section sct-cure">
+			<div class="container">
+				
+				<div class="sct-cure__content">
+					<div class="sct-cure__descr">
+						<h2 class="sct-cure__title"><span class="accent">Olaj&#x161;aj</span> bole&#x10D;ine v stopalih</h2>
+						<p class="sct-cure__text">Spoznaj vlo&#x17E;ke STEPEASE &#x2013; popolno udobje za tvoja stopala. Ponovno odkrij veselje do stanja, hoje in &#x17E;ivljenja brez bole&#x10D;in v stopalih.</p>
+					</div>
+					<div class="sct-cure__illustr">
+						<img src="https://images.hs-plus.com/assets/STEPPER%20test-0/e07e5f3fd5613_stepease-animation.gif" alt>
+						<!-- <video poster="assets/img/cure/STEPPER-video-preview.jpg" width="400" loop muted autoplay playsinline webkit-playsinline>
+							<source type="video/webm" src="https://products.demo-salesgate.eu/app/uploads/2025/08/STEPPER-3831127614011-LPtest15__180825.webm">
+							<source type="video/mp4" src="https://products.demo-salesgate.eu/app/uploads/2025/08/STEPPER-3831127614011-LPtest15__180825.mp4">
+						</video> -->
+					</div>
+				</div>
 
 			</div>
 		</section>
 
-		<!-- 6 -->
-		<!-- <section class="section sct-standard sct-6">
+		<div class="horizontal-ticker horizontal-ticker-sections">
+			<div class="horizontal-ticker__container">
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+				<p class="horizontal-ticker__item">&#x1F30D; Sledenje po&#x161;iljki z zavarovano dostavo</p>
+				<p class="horizontal-ticker__item">&#x1F60A; Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank</p>
+				<p class="horizontal-ticker__item">&#x1F6E1;&#xFE0F; 90-dnevno jamstvo za vra&#x10D;ilo denarja</p>
+			</div>
+		</div>
+
+		<section class="section sct-comparison">
 			<div class="container">
-				<div class="sct-standard__content">
-					<div class="sct-standard__descr">
-						<h2 class="sct-standard__title"></h2>
-						<p class="sct-standard__text"></p>
-						<a class="btn-arw sct-standard__btn" href="https://ortowp.noriks.com/product/stepease/"></a>
-						<button class="btn-arw"><span></span></button>
-						<div class="sct-split__payship">
-							[ payment-methods ]
+				<div class="sct-comparison__content">
+					<div class="sct-comparison__illustr">
+						<div class="comparison">
+							<div class="comparison__container">
+								<img class="comparison__image before" src="https://images.hs-plus.com/assets/STEPPER%20test-0/a624d13e6cb5_comparison-before.jpg" alt="before">
+								<span class="comparison__text before">Pred</span>
+								<img class="comparison__image after" src="https://images.hs-plus.com/assets/STEPPER%20test-0/11ec4acb45091_comparison-after.jpg" alt="after">
+								<span class="comparison__text after">Po</span>
+								<div class="comparison__slider-line"></div>
+								<div class="comparison__slider-icon"></div>
+								<input type="range" class="comparison__range" min="0" max="100">
+							</div>
+						</div>
+					</div>
+					<div class="sct-comparison__descr">
+						<h2 class="sct-comparison__title">Razlika, ki jo prina&#x161;a <span class="accent">STEPEASE</span></h2>
+						<p class="sct-comparison__text">Preizkusite spremembo na lastnih stopalih in zakorakajte v svetlej&#x161;o, nebole&#x10D;o prihodnost &#x17E;e danes.</p>
+					</div>
+				</div>
+				<ul class="comparison-benefits">
+					<li class="comparison-benefits__item">
+						<img class="comparison-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/3f69429efc2c1_star_44dp_FF5B00_FILL1_wght400_GRAD0_opsz48.svg" alt>
+						<!-- <span class="comparison-benefits__item-icon material-symbols-outlined filled">star</span> -->
+						<h3 class="comparison-benefits__item-title">Izbolj&#x161;ajte dr&#x17E;o</h3>
+						<span class="comparison-benefits__item-text">Pravilna opora loka spodbuja bolj&#x161;o poravnavo hrbtenice.</span>
+					</li>
+					<li class="comparison-benefits__item">
+						<img class="comparison-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/4ccb9a26eeaaf_bolt_44dp_FF5B00_FILL1_wght400_GRAD0_opsz48.svg" alt>
+						<!-- <span class="comparison-benefits__item-icon material-symbols-outlined filled">bolt</span> -->
+						<h3 class="comparison-benefits__item-title">Pove&#x10D;ajte zmogljivost</h3>
+						<span class="comparison-benefits__item-text">Vsak korak je la&#x17E;ji in bolj pro&#x17E;en, hoja ter tek postaneta prijetnej&#x161;a.</span>
+					</li>
+					<li class="comparison-benefits__item">
+						<img class="comparison-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/4085f689fbaa9_straighten_44dp_FF5B00_FILL1_wght400_GRAD0_opsz48.svg" alt>
+						<!-- <span class="comparison-benefits__item-icon material-symbols-outlined filled">straighten</span> -->
+						<h3 class="comparison-benefits__item-title">Nastavljiva velikost</h3>
+						<span class="comparison-benefits__item-text">Preprosto odre&#x17E;ite po &#x10D;rtkani liniji s &#x161;karjami.</span>
+					</li>
+					<li class="comparison-benefits__item">
+						<img class="comparison-benefits__item-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/039dfb3291eee_wash_44dp_FF5B00_FILL1_wght400_GRAD0_opsz48.svg" alt>
+						<!-- <span class="comparison-benefits__item-icon material-symbols-outlined filled">wash</span> -->
+						<h3 class="comparison-benefits__item-title">Enostavno pranje</h3>
+						<span class="comparison-benefits__item-text">Ro&#x10D;no operite z milom in vodo.</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section sct-purposes">
+			<div class="container-wide">
+				<div class="sct-purposes__content">
+					<h2 class="sct-purposes__title">Ustvarjeni za <span class="accent">vse prilo&#x17E;nosti</span></h2>
+					<div class="swiper purposes-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/e54dd205a5d4e_purposes-1.jpg" alt><span>Ekstremni &#x161;porti</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/3f3a362b9ef86_purposes-2.jpg" alt><span>Izstopajte iz mno&#x17E;ice</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/94d87998d13fd_purposes-3.jpg" alt><span>Tek v naravi</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/b507d66504f75_purposes-4.jpg" alt><span>Re&#x161;evanje &#x17E;ivljenj</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/8263da3f16fba_purposes-5.jpg" alt><span>Avantura</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/02df5692c8645_purposes-6.jpg" alt><span>Nakupovanje</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/c565f489a2adc_purposes-7.jpg" alt><span>Ogled znamenitosti</span></div>
+							<div class="swiper-slide purposes-slider__item"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/97eea74cbf81_purposes-8.jpg" alt><span>Dolge izmene</span></div>
+						</div>
+						<div class="swiper-nav-buttons">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="purposes-slider-pagination"></div>
+				</div>
+			</div>
+		</section>
+
+		<div class="horizontal-ticker horizontal-ticker-sections">
+			<div class="horizontal-ticker__container">
+				<p class="horizontal-ticker__item">&#x1F9E1; Opora loka in masa&#x17E;ne to&#x10D;ke</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Uravnavanje temperature in zra&#x10D;nost</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Ve&#x10D; samozavesti pri vsakem koraku</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Odpravlja neprijeten vonj</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Laj&#x161;a bole&#x10D;ine, napetost in nelagodje</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Opora loka in masa&#x17E;ne to&#x10D;ke</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Uravnavanje temperature in zra&#x10D;nost</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Ve&#x10D; samozavesti pri vsakem koraku</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Odpravlja neprijeten vonj</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Laj&#x161;a bole&#x10D;ine, napetost in nelagodje</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Opora loka in masa&#x17E;ne to&#x10D;ke</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Uravnavanje temperature in zra&#x10D;nost</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Ve&#x10D; samozavesti pri vsakem koraku</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Odpravlja neprijeten vonj</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Laj&#x161;a bole&#x10D;ine, napetost in nelagodje</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Opora loka in masa&#x17E;ne to&#x10D;ke</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Uravnavanje temperature in zra&#x10D;nost</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Ve&#x10D; samozavesti pri vsakem koraku</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Odpravlja neprijeten vonj</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Laj&#x161;a bole&#x10D;ine, napetost in nelagodje</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Opora loka in masa&#x17E;ne to&#x10D;ke</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Uravnavanje temperature in zra&#x10D;nost</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Ve&#x10D; samozavesti pri vsakem koraku</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Odpravlja neprijeten vonj</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Laj&#x161;a bole&#x10D;ine, napetost in nelagodje</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Opora loka in masa&#x17E;ne to&#x10D;ke</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Uravnavanje temperature in zra&#x10D;nost</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Ve&#x10D; samozavesti pri vsakem koraku</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Odpravlja neprijeten vonj</p>
+				<p class="horizontal-ticker__item">&#x1F9E1; Laj&#x161;a bole&#x10D;ine, napetost in nelagodje</p>
+			</div>
+		</div>
+
+		<section class="section sct-loockat">
+			<div class="container">
+				<div class="sct-loockat__content">
+					<h2 class="sct-loockat__title">Poglejte, kako drugi <span class="accent">obu&#x17E;ujejo svoje vlo&#x17E;ke STEPEASE</span></h2>
+					<p class="sct-loockat__text">Resni&#x10D;ne ocene resni&#x10D;nih uporabnikov</p>
+
+					<!-- SLIDER ONE -->
+					<div class="loockat-slider__wrapper video">
+						<div class="swiper loockat-video-slider">
+							<div class="swiper-wrapper">
+								<!-- slide 1 -->
+								<div class="swiper-slide loockat-video-slider__item">
+									<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/wl5epz67sg.js" async type="module"></script><style>wistia-player[media-id='wl5epz67sg']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wl5epz67sg/swatch'); display: block; filter: blur(5px); padding-top:133.33333333333334%; }</style> <wistia-player media-id="wl5epz67sg" seo="false" aspect="0.75"></wistia-player>
+								</div>
+								<!-- slide 2 -->
+								<div class="swiper-slide loockat-video-slider__item">
+									<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/n4bf7vqjoh.js" async type="module"></script><style>wistia-player[media-id='n4bf7vqjoh']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/n4bf7vqjoh/swatch'); display: block; filter: blur(5px); padding-top:133.33333333333334%; }</style> <wistia-player media-id="n4bf7vqjoh" seo="false" aspect="0.75"></wistia-player>
+								</div>
+								<!-- slide 3 -->
+								<div class="swiper-slide loockat-video-slider__item">
+									<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/1pmx7n0i70.js" async type="module"></script><style>wistia-player[media-id='1pmx7n0i70']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/1pmx7n0i70/swatch'); display: block; filter: blur(5px); padding-top:133.33333333333334%; }</style> <wistia-player media-id="1pmx7n0i70" seo="false" aspect="0.75"></wistia-player>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-nav-buttons">
+							<div class="swiper-button-prev loockat-video-prev"></div>
+							<div class="swiper-button-next loockat-video-next"></div>
+						</div>
+						<div class="loockat-video-pagination"></div>
+					</div>
+
+					<!-- SLIDER TWO -->
+					<div class="loockat-slider__wrapper image">
+						<div class="swiper loockat-slider">
+							<div class="swiper-wrapper">
+
+								<div class="swiper-slide loockat-slider__item loockat-card">
+									<div class="loockat-card__photo">
+										<img class="loockat-card__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/0585ca918b355_Stepease_worker.jpg" alt>
+										<div class="loockat-card__photo-icon-wrapper">
+											<img class="loockat-card__photo-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/1e6d5f307f919_icon-quote.svg" alt>
+										</div>
+									</div>
+									<div class="loockat-card__info">
+										<img class="loockat-card__rating-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/223de4527c91b_stars-v2-5.svg" alt>
+										<h4 class="loockat-card__title">Gradbeni delavec</h4>
+										<p class="loockat-card__text">Svoje dni pre&#x17E;ivim na betonskih tleh v delovnih &#x10D;evljih s kovinsko kapico. Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE odli&#x10D;no bla&#x17E;ijo udarce in nudijo podporo, kar zmanj&#x161;uje obremenitev stopal in sklepov. Presene&#x10D;en sem, koliko so mi pomagali &#x2013; o njih sem povedal vsem sodelavcem.</p>
+										<span class="loockat-card__name">Nino</span>
+									</div>
+								</div>
+								<!--  -->
+								<div class="swiper-slide loockat-slider__item loockat-card">
+									<div class="loockat-card__photo">
+										<img class="loockat-card__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/3e6a94a56376b_Stepease_nurse.jpg" alt>
+										<div class="loockat-card__photo-icon-wrapper">
+											<img class="loockat-card__photo-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/c0e82bee8b0a3_icon-quote.svg" alt>
+										</div>
+									</div>
+									<div class="loockat-card__info">
+										<img class="loockat-card__rating-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/dd5ae1daa28d4_stars-v2-5.svg" alt>
+										<h4 class="loockat-card__title">Medicinska sestra</h4>
+										<p class="loockat-card__text">Kot medicinska sestra sem ves dan na nogah. Ko sem jih prvi&#x10D; vstavila, sem takoj za&#x10D;utila razliko. Podpora loka je odli&#x10D;na in prina&#x161;a prepotrebno olaj&#x161;anje. Mehka blazina popolno ubla&#x17E;i stalne pritiske na stopala.</p>
+										<span class="loockat-card__name">Lidija</span>
+									</div>
+								</div>
+								<!--  -->
+								<div class="swiper-slide loockat-slider__item loockat-card">
+									<div class="loockat-card__photo">
+										<img class="loockat-card__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/cc70e89aec408_Stepease_service.jpg" alt>
+										<div class="loockat-card__photo-icon-wrapper">
+											<img class="loockat-card__photo-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/13dbfb108cd5a_icon-quote.svg" alt>
+										</div>
+									</div>
+									<div class="loockat-card__info">
+										<img class="loockat-card__rating-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/a53e7aed2de02_stars-v2-5.svg" alt>
+										<h4 class="loockat-card__title">Zaposlen v gostinstvu</h4>
+										<p class="loockat-card__text">Vau, ti vlo&#x17E;ki so presegli vsa moja pri&#x10D;akovanja! Po dveh dneh no&#x161;enja med 12-urnimi izmenami sem ugotovil, da so resni&#x10D;no izjemni. So izredno udobni, nudijo oporo ves dan &#x2013; naro&#x10D;il sem &#x161;e dva para!</p>
+										<span class="loockat-card__name">Erik</span>
+									</div>
+								</div>
+								<!--  -->
+								<div class="swiper-slide loockat-slider__item loockat-card">
+									<div class="loockat-card__photo">
+										<img class="loockat-card__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/94b5200db8b78_Stepease_runner.jpg" alt>
+										<div class="loockat-card__photo-icon-wrapper">
+											<img class="loockat-card__photo-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/6e0f16ef1cae7_icon-quote.svg" alt>
+										</div>
+									</div>
+									<div class="loockat-card__info">
+										<img class="loockat-card__rating-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/c72597c7f4883_stars-v2-5.svg" alt>
+										<h4 class="loockat-card__title">Aktiven teka&#x10D;</h4>
+										<p class="loockat-card__text">Sem predan teka&#x10D; in preizkusil sem &#x17E;e veliko vlo&#x17E;kov. Odkar uporabljam ortopedske vlo&#x17E;ke z masa&#x17E;nimi to&#x10D;kami STEPEASE, opa&#x17E;am bolj&#x161;o zmogljivost in hitrej&#x161;e okrevanje. Toplo priporo&#x10D;am vsem teka&#x10D;em, ki &#x17E;elijo izbolj&#x161;ati rezultate in za&#x161;&#x10D;ititi svoja stopala.</p>
+										<span class="loockat-card__name">Nace</span>
+									</div>
+								</div>
+								<!--  -->
+								<div class="swiper-slide loockat-slider__item loockat-card">
+									<div class="loockat-card__photo">
+										<img class="loockat-card__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/3896d617c56ae_Stepease_dog_walker.jpg" alt>
+										<div class="loockat-card__photo-icon-wrapper">
+											<img class="loockat-card__photo-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/cef046065b9e2_icon-quote.svg" alt>
+										</div>
+									</div>
+									<div class="loockat-card__info">
+										<img class="loockat-card__rating-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/cbbb245c372fa_stars-v2-5.svg" alt>
+										<h4 class="loockat-card__title">Lastnica psa</h4>
+										<p class="loockat-card__text">Moji vsakodnevni sprehodi s psom so zdaj povsem druga&#x10D;ni. Prej sem imela bole&#x10D;a stopala in utrujene noge, zdaj pa brez te&#x17E;av sledim svojemu kosmatincu. Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami STEPEASE nudijo odli&#x10D;no oporo, udobje in izbolj&#x161;ajo dr&#x17E;o.</p>
+										<span class="loockat-card__name">Sanja</span>
+									</div>
+								</div>
+								<!--  -->
+
+							</div>
+						</div>
+						<div class="swiper-nav-buttons">
+							<div class="swiper-button-prev loockat-main-prev"></div>
+							<div class="swiper-button-next loockat-main-next"></div>
+						</div>
+						<div class="loockat-slider-pagination"></div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section sct-results">
+			<div class="container">
+				
+				<div class="sct-results__content">
+					<div class="sct-results__descr">
+						<h2 class="sct-results__title"><span class="accent">Prihodnost je </span>brez bole&#x10D;in v stopalih</h2>
+						<!-- <p class="sct-results__text"></p> -->
+					</div>
+					<div class="sct-results__illustr results">
+						<div class="results__rows-container">
+							<div class="results__row">
+								<div class="results__percentage" style="--percentage: 95%">
+									<p>95&#xA0;%</p>
+								</div>
+								<div class="results__text">
+									<p><strong>Manj bole&#x10D;in v stopalih: </strong>opora loka in bla&#x17E;enje ob&#x10D;utno zmanj&#x161;ata bole&#x10D;ine v stopalih.</p>
+								</div>
+							</div>
+							<div class="results__row">
+								<div class="results__percentage" style="--percentage: 94%">
+									<p>94&#xA0;%</p>
+								</div>
+								<div class="results__text">
+									<p><strong>Ve&#x10D;je udobje: </strong>udobje pri vsakem koraku, manj utrujenosti in nelagodja.</p>
+								</div>
+							</div>
+							<div class="results__row">
+								<div class="results__percentage" style="--percentage: 90%">
+									<p>90&#xA0;%</p>
+								</div>
+								<div class="results__text">
+									<p><strong>Manj&#x161;e tveganje za po&#x161;kodbe: </strong>bla&#x17E;enje in opora pomagata zmanj&#x161;ati mo&#x17E;nost po&#x161;kodb stopal.</p>
+								</div>
+							</div>
+						</div>
+						<div class="results__caption">
+							<p>* Rezultati temeljijo na klini&#x10D;nih in potro&#x161;ni&#x161;kih raziskavah.</p>
+						</div>
+						<button class="btn-arw results__btn" data-scroll=".scroll-target" data-scroll-offset="120"><span>Izkoristi ponudbo</span></button>
+						<!-- <button class="btn-arw results__btn" onclick="submitproductform()"><span>____</span></button> -->
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<div class="horizontal-ticker horizontal-ticker-sections">
+			<div class="horizontal-ticker__container">
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5;NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5;NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5;NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DO ZDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA SE KMALU IZTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANI DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NAJVE&#x10C;JA RAZPRODAJA DO ZDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA SE KMALU IZTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANI DO 60%</p>
+			</div>
+		</div>
+
+		<section class="section sct-special">
+			<div class="container">
+				<div class="sct-special__content">
+					<div class="sct-special__descr">
+						<h2 class="sct-special__title">Kaj dela STEPEASE tako <span class="accent">posebne</span>?</h2>
+						<p class="sct-special__text">Na&#x161;a predanost je va&#x161;emu udobju in zadovoljstvu &#x2013; trudimo se, da bi resni&#x10D;no izbolj&#x161;ali tvoje vsakdanje &#x17E;ivljenje.</p>
+					</div>
+					<div class="sct-special__table">
+						<table class="compar-table compar-table-template">
+							<thead>
+								<tr>
+									<th>&#xA0;</th>
+									<th class="compar-table__logo" style="width: 120px;padding-inline: 0;"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/099e02a69c373_logo-stepease-orange-bg.svg" alt="StepEase" width="100"></th>
+									<th class="compar-table__others" style="width: 100px;padding-inline: 0;">Drugi</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Bla&#x17E;enje</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Zra&#x10D;no</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Takoj&#x161;nje olaj&#x161;anje</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Podpora loka stopala</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Absorpcija udarcev</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Odprava neprijetnega vonja</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="compar-table__row-name highlighted-cell">
+										<strong>Drago</strong>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#121212;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+												<path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+											</svg>
+										</div>
+									</td>
+									<td class="regular-cell">
+										<div class="compar-table__icon" style="--icon-color:#53af01;">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+												<path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+											</svg>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section sct-experts">
+			<div class="container">
+				<div class="sct-experts__content">
+					<div class="sct-experts__descr">
+						<h2 class="sct-experts__title">Odkrijte, zakaj <span class="accent">strokovnjaki priporo&#x10D;ajo</span> STEPEASE</h2>
+						<!-- <p class="sct-experts__text"></p> -->
+						<div class="sct-experts__card">
+							<div class="loockat-card">
+								<div class="loockat-card__photo">
+									<img class="loockat-card__photo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/d9f0fad94b90a_doctor.jpg" alt>
+									<div class="loockat-card__photo-icon-wrapper">
+										<img class="loockat-card__photo-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/3d856237fa094_icon-quote.svg" alt>
+									</div>
+								</div>
+								<div class="loockat-card__info">
+									<!-- <img class="loockat-card__rating-img" src="assets/img/icons/stars-v2-5.svg" alt=""> -->
+									<h4 class="loockat-card__title">Ciljno olaj&#x161;anje</h4>
+									<p class="loockat-card__text">Kot podolog z dolgoletnimi izku&#x161;njami pri zdravljenju te&#x17E;av, kot sta plosko stopalo in plantarni fasciitis, priporo&#x10D;am ortopedske vlo&#x17E;ke z masa&#x17E;nimi to&#x10D;kami STEPEASE. Njihova edinstvena zasnova nudi ciljno podporo stopalnim lokom, enakomerno porazdeli pritisk in zmanj&#x161;a obremenitev plantarne fascije. Ob redni uporabi pacienti opazijo ob&#x10D;utno izbolj&#x161;anje simptomov. Z zaupanjem priporo&#x10D;am Ortopedske vlo&#x17E;ke z masa&#x17E;nimi to&#x10D;kami | STEPEASE kot nepogre&#x161;ljiv dodatek tvoji obutvi.</p>
+									<span class="loockat-card__name">Dr. Toma&#x17E; Novak &#x2013; Podiater</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
+
+		<section class="section sct-ebook">
+			<div class="container">
+				<div class="sct-ebook__content">
+					<div class="sct-ebook__top">
+						<div class="sct-ebook__top-image_box">
+							<div class="sct-ebook__top-image"><img src="https://images.hs-plus.com/assets/shared-images/42c652c613426_batch_stepease_cover_SI.jpg"></div>
+						</div>
+						<div class="sct-ebook__top-content">
+							<h2 class="sct-ebook__title">Ponudba <span class="accent">brezpla&#x10D;ne</span> e-knjige</h2>
+							<p class="sct-ebook__text">Odkrijte skrivnosti z na&#x161;o ekskluzivno e-knjigo, popolnoma brezpla&#x10D;no ob vsakem naro&#x10D;ilu!</p>
+						</div>
+					</div>
+					<div class="sct-ebook__card">
+						<span class="sct-ebook__card-badge">e-knjiga</span>
+						<div class="sct-ebook__card-title_box">
+							<h3 class="sct-ebook__card-title">Obvladovanje zdravja stopal: Va&#x161; vodnik do sre&#x10D;nih stopal</h3>	
+						</div>
+						<p class="sct-ebook__card-text"><span>BREZPLA&#x10C;NO</span> ob vsakem nakupu</p>
+						<ul class="sct-ebook__card-list">
+							<li class="sct-ebook__card-item">Celovito znanje o stopalih</li>
+							<li class="sct-ebook__card-item">Razlaga prednosti vlo&#x17E;kov</li>
+							<li class="sct-ebook__card-item">Uporaba tehnik zdravljenja stopal</li>
+							<li class="sct-ebook__card-item">Smernice za vsakodnevno nego</li>
+							<li class="sct-ebook__card-item">Celotno dobro po&#x10D;utje stopal</li>
+						</ul>
+						<button class="btn-arw results__btn sct-ebook__btn" data-scroll=".scroll-target" data-scroll-offset="120"><span>ZAHTEVAJTE PONUDBO</span></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section sct-reviews">
+			<div class="container">
+				<!-- <h2 class="sct-reviews__title">Zadovoljni uporabniki</h2> -->
+
+				<div class="sct-reviews__content">
+					<div class="whole_reviews_section">    <div class="trustpilot-title" id="reviewsTop">
+    <!---->
+    <h2 class="happy-customers">Zadovoljni uporabniki</h2>
+    </div>
+        <div id="product__reviews" class="user-reviews" data-masonry="{ &quot;itemSelector&quot;: &quot;.products__review&quot;, &quot;columnWidth&quot;: 200}"></div>
+        <div id="pagination" class="reviews__pagination"></div>
+        <button id="review-button" class="review-button">Oddaj mnenje</button><!-- Trigger/Open The Modal -->
+
+<!-- Review sent -->
+<div id="review-sent" class="review-sent" style="display: none;"><p>Va&#x161;e mnenje je bilo uspe&#x161;no poslano</p></div>
+
+<!-- The Modal -->
+<div id="review-modal" class="review-modal">
+    <!-- Modal content -->
+    <div class="review-modal-content">
+        <div class="review-modal-header">
+            <h3 class="review-modal-title">Vpi&#x161;i mnenje</h3>
+            <span class="review-modal-close">&#xD7;</span>
+        </div>
+        <div class="review-modal-body">
+            <!-- review-form -->
+            <form id="review-form" action="https://diwpk57gr7.execute-api.eu-central-1.amazonaws.com/prod/submitReview" enctype="multipart/form-data" method="POST" target="formFrame">
+                <p><label class="review-form__label" for="name">Ime:</label></p>
+                <p><input class="review-form__input" name="name" type="text" maxlength="40" placeholder="Ime (javno vidno)" required></p>
+                <p><label class="review-form__label" for="email">E-mail:</label></p>
+                <p><input class="review-form__input" name="email" maxlength="60" type="email" placeholder="E-mail (ni javno viden)" required></p>
+                <p><label class="review-form__label">Ocena:</label></p>
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5"><label for="star5" title="5">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4"><label for="star4" title="4">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3"><label for="star3" title="3">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2"><label for="star2" title="2">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1"><label for="star1" title="1">1 star</label>
+                </div>
+                <p><label class="review-form__label clearfix" for="message">Mnenje:</label></p>
+                <p><textarea id="review-form__message" class="review-form__textarea" name="message" maxlength="2000" placeholder="Napi&#x161;i mnenje"></textarea></p>
+                <p><input class="review-form__input review-form__input-file" id="review-image" type="file" name="photo" multiple accept="image/*">
+                </p><p><input class="review-form__input review-form__btn" type="submit" value="Po&#x161;lji mnenje"></p>
+                <input id="reviewFormSku" style="display:none" name="ProductSku" value>
+                <input id="reviewFormCountry" style="display:none" name="landingCountry" value>
+            </form>
+            <!-- END review-form -->
+        </div>
+    </div>
+</div>
+<iframe name="formFrame" id="formFrame" style="display:none"></iframe>
+
+<style>
+/* ============================== */
+/* ======= Write a review ======= */
+/* ============================== */
+
+/* ======= review sent ======= */
+.review-sent {
+	position: fixed;
+	top: 5rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.review-sent p {				
+	background-color: lightgreen;
+	padding: 10px 15px;
+	text-align: center;
+	color: #000;
+	border-radius: 2em;
+	font-size: 1rem;
+}
+
+/* ======= star rating ======= */
+.rate {
+	float: left;
+	height: 46px;
+	/* padding: 0 10px; */
+}
+.rate:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+}
+.rate:not(:checked) > label {
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 2rem;
+	color: #ccc;
+}
+.rate:not(:checked) > label:before {
+	content: "★ ";
+}
+.rate > input:checked ~ label {
+	color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+	color: #ffae00;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+	color: #ffae00;
+}
+
+/* clearfix */
+.clearfix::before {
+	content: "";
+	clear: both;
+	display: table;
+}
+/* ======= END star rating ======= */
+
+
+/* ======= modal window ======= */
+/* The Modal (background) */
+.review-modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1000000; /* Sit on top */
+	padding-top: 7vw; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	color: #000;
+}
+/* Modal Content */
+.review-modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	/* border: 1px solid #888; */
+	border-radius: .2em;
+	width: 100%;
+	max-width: 500px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+/* The Close Button */
+.review-modal-close {
+	color: white;
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+.review-modal-close:hover,
+.review-modal-close:focus {
+	color: #ccc;
+	text-decoration: none;
+	cursor: pointer;
+}
+.review-modal-title {
+	font-size: 1.2rem;
+	margin: 0;
+}
+.review-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+	background-color: #222;
+	color: white;
+}
+.review-modal-body {
+	padding: 15px;
+}
+/* ======= END modal window ======= */
+
+
+/* ======= form style ======= */
+.review-form {
+	font-size: 0.875rem;
+}
+.review-form p {
+	margin: 0;
+	line-height: 1;
+}
+
+.review-form__label,
+.review-form__input,
+.review-form__textarea {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+.review-form__input,
+.review-form__textarea {
+	width: 100%;
+	padding: .5rem;
+	border: 1px solid #ccc;
+}
+
+.review-form__input-file {
+	border: none;
+	padding: 0;
+	margin-top: 0;
+}
+
+.review-form__textarea {
+	min-height: 5ch;
+	height: 12ch;
+	resize: vertical;
+}
+.review-form__btn {
+	cursor: pointer;
+	border: none;
+	color: #fff;
+	background-color: #222;
+	padding: 15px;
+	border-radius: .2em;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.875rem;
+}
+.review-form__btn:hover {
+	background-color: #000;
+}
+
+.review-button {
+	display: block;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0;
+    border: none;
+    text-transform: uppercase;
+	font-size: 0.875rem;
+    font-weight: 700;
+    background: none;
+    margin-right: auto;
+    margin-left: auto;
+	color: inherit;
+	background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+.review-button:hover {
+	background-size: 100% 2px;
+}
+/* ======= END form style ======= */
+
+/* ============================== */
+/* ===== END Write a review ===== */
+/* ============================== */
+</style>
+
+<script>
+	var modal = document.getElementById("review-modal"); // Get the modal
+	var btn = document.getElementById("review-button"); // Get the button that opens the modal
+	var span = document.getElementsByClassName("review-modal-close")[0]; // Get the <span> element that closes the modal
+	var sentMessage = document.querySelector(".review-sent");
+	btn.onclick = function () { modal.style.display = "block"; } // When the user clicks the button, open the modal 
+	span.onclick = function () { modal.style.display = "none"; } // When the user clicks on <span> (x), close the modal
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none"; // When the user clicks anywhere outside of the modal, close it
+			sentMessage.style.display = "block";
+			setInterval(function () { sentMessage.style.display = "none"; }, 3000);
+		}
+	}
+
+
+	//review Form
+	/*var url = 'http://localhost:3012/dev/submitReview';*/
+
+	/*function initReviewForm(method) {
+    	if (window.jQuery && 
+			window.dataLayer[1] != undefined && 
+			window.dataLayer[1]["product SKUs"] != undefined) {
+        	
+			method();
+    	} else {
+        	setTimeout(function() { initReviewForm(method) }, 50);
+    	}
+	}
+
+
+	initReviewForm(function(){
+		initReviewFormAdditionalFields();
+		$('#review-form').submit(function(e){
+			setTimeout(function() {
+				$('#review-modal').attr('style', 'display: none');
+				$('#review-sent').attr('style', 'display: block');
+				setTimeout(function(e){
+					$('#review-sent').attr('style', 'display: none')
+				}, 3000);
+			},1000);
+		});
+	});
+
+	function initReviewFormAdditionalFields(){
+		var sku = 'not_in_data_layer';
+		var country = 'not_in_data_layer';
+
+		if(window.dataLayer[1]['product SKUs'].length > 0){
+			sku = window.dataLayer[1]['product SKUs'][0];
+		}
+
+		if(window.dataLayer[1]['country_code']){
+			country = window.dataLayer[1]['country_code'];
+		}
+
+		$('#reviewFormSku').val(sku);
+		$('#reviewFormCountry').val(country);
+	}*/
+
+	//review Form
+    /*var url = 'http://localhost:3012/dev/submitReview';*/
+
+	function initReviewForm(method) {
+    	if (window.jQuery && 
+			window.dataLayer[1] != undefined && 
+			window.dataLayer[1]["product SKUs"] != undefined) {
+        	
+			method();
+    	} else {
+        	setTimeout(function() { initReviewForm(method) }, 50);
+    	}
+	}//initReviewForm
+
+    initReviewForm(function() {
+        initReviewFormAdditionalFields();
+
+        var imageBase64String;
+        var reader = new FileReader();
+
+        reader.onload = function () {
+            imageBase64String = reader.result;
+            sendReviewForm(imageBase64String);
+            //console.log(reader.result);//base64encoded string
+        };
+        reader.onerror = function (error) {
+            imageBase64String = "";
+            sendReviewForm(imageBase64String);
+            //console.log('Error: ', error);
+        };
+        
+        $('#review-form').submit(function(e){
+            e.preventDefault();
+
+            setTimeout(function() {
+                $('#review-modal').attr('style', 'display: none');
+                $('#review-sent').attr('style', 'display: block');
+                setTimeout(function(e){
+                    $('#review-sent').attr('style', 'display: none')
+                }, 3000);
+            },1000);
+            var fileInput = document.getElementById('review-image');
+            
+			if(fileInput.files.length === 1){
+            	reader.readAsDataURL(fileInput.files[0]);
+			}else {
+				sendReviewForm(imageBase64String);
+			}
+        });
+
+        function sendReviewForm(imageBase64String){
+            let formData = "";
+            let boundary = "----WebKitFormBoundaryBuncsLkGs9zPqF9n";
+            let dataBoundary = 'multipart/form-data' + ";boundary=" + boundary;
+            //let formData = $('#review-form').serialize();
+            let inputs = [];
+            
+            //$('#review-form :input').each(inp)
+
+            let index = 0;
+            $('#review-form *').filter('input').each(function() {
+                let property;
+                if(this.type === 'file'){
+                    property = this.name + "=" + imageBase64String;
+                }
+				else if(this.name === 'rate'){
+					if(this.checked == true){
+						property = this.name + "=" + this.value;
+					}else{}
+				}
+				else if(this.name === '' || this.name === 'undefined'){
+					
+				}   
+                else {
+                    property = this.name + "=" + this.value;
+                }
+
+				if(property != undefined){
+					if(index === 0){
+						formData = property;
+					}else {
+						formData = formData + boundary + property;
+					}
+				}
+                index++;
+            });
+
+			//message
+			property = $("#review-form__message").attr('name') + "=" + $("#review-form__message").val();
+			if(property != undefined){
+				formData = formData + boundary + property;
+			}
+
+            //console.log(formData);
+            
+            //let dataType = 'multipart/form-data'; //boundary=----WebKitFormBoundaryBuncsLkGs9zPqF9n'
+            $.ajax({
+                type: "POST",
+				//url: 'http://localhost:3012/dev/submitReview',
+				url: "https://diwpk57gr7.execute-api.eu-central-1.amazonaws.com/prod/submitReview",
+                beforeSend: function(request) {
+                    request.setRequestHeader("Content-Type", dataBoundary)
+                },
+                data: formData,
+                success: true,
+                dataType: "text"
+            });
+        }//sendReviewForm
+
+        function initReviewFormAdditionalFields(){
+            var sku = 'not_in_data_layer';
+            var country = 'not_in_data_layer';
+
+            if(window.dataLayer[1]['product SKUs'].length > 0){
+                sku = window.dataLayer[1]['product SKUs'][0];
+            }
+
+            if(window.dataLayer[1]['country_code']){
+                country = window.dataLayer[1]['country_code'];
+            }
+
+            $('#reviewFormSku').val(sku);
+            $('#reviewFormCountry').val(country);
+	    }//initReviewFormAdditionalFields
+
+    });//initReviewForm 
+
+</script><div class="back-to-top">
+            <div class="go-to-cart will-scroll" id="backToTopButton" data-scroll=".scroll-target">
+                <img class="back-to-top-button" title="Back to Top" src="https://images.vigo-shop.com/general/reviews/back-to-top.png">
+                <p>Nazaj na izdelek</p>
+            </div> 
+        </div>
+        <div id="imagePopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+    background: rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+    <span id="closePopup" style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;">&#xD7;</span>
+    <img id="popupImage" src style="max-width:90%; max-height:90%; border-radius:8px;">
+        </div>
+<style> 
+.trustpilot-title {
+    margin-top:1rem;
+    pointer-events: none !important;
+    cursor: default !important;
+    }
+
+@media(min-width: 799px){
+    .trustpilot-title {
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        }
+    }
+    
+.happy-customers{
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem;
+    margin-top:0;
+    font-size:clamp(1.5rem, (2.2vw*var(--rem))/11.92, 1.8rem);
+    }
+
+/* Style for the whole reviews section */
+.whole_reviews_section {
+    margin: 40px auto;
+    text-align: left;
+}
+/* Style for the reviews container */
+.user-reviews {
+    margin-top: 20px;
+}
+
+#product__reviews, .user-reviews {
+    display:block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Force each review to occupy full width */
+.products__review {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  margin-bottom: 20px;
+}
+
+.products__review.hidden {
+    display:none!important;
+}
+
+@media (min-width: 768px) {
+  /* če želiš drugačne širine na večjih zaslonih, jih tu definiraj */
+  .products__review.fullwidth-desktop {
+    width: 100% !important;
+  }
+}
+
+/* Style for individual review items */
+.products__review {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden; 
+    border-bottom: 1px #ff5b0040 solid;
+}
+/* Style for review images */
+.img__review {
+    max-width: 150px;
+    height: 150px;
+}
+/* Style for description review*/
+.description__review {
+    padding: 0px 10px 10px 10px;
+}
+/* Style for review name */
+.name__review {
+    color:#ff5b00;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom:10px;
+}
+
+/* .name__review::after {
+    content: url('https://images.vigo-shop.com/general/reviews/verifying-icon-black.png');
+    margin-left: 5px;
+    } */
+
+/* Style for review rating */
+.rating__review {
+    font-size: 18px;
+    color: #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.rating__review img {
+    height: .8rem;
+}
+
+/* Style for review text */
+.text__review {
+    font-size: var(--step-0, 1rem);
+    line-height:19px;
+}
+
+.cal-stars-link {
+	display: inline-block;
+	margin-top:.5rem !important;
+	color: inherit;
+}
+
+.cal-stars-link:hover {
+	color: inherit;
+}
+
+.cal-stars {
+	display: flex;
+    align-items: center;
+}
+
+.star-ratings {
+	unicode-bidi: bidi-override;
+	color: #d4d4d4;
+	font-size: 1.75rem;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.fill-ratings::before,
+.empty-ratings::before {
+	content: '★★★★★';
+}
+
+.fill-ratings {
+    margin:auto;
+    text-align:center;
+	color: #fbc83d;
+	padding: 0;
+	position: absolute;
+	z-index: 1;
+	display: block;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.empty-ratings {
+	padding: 0;
+	display: block;
+	z-index: 0;
+}
+
+.product-rating__text {
+	margin-left: .5rem;
+    color: inherit;
+}
+
+.product-rating__text strong{
+    color: inherit;
+}
+   img[src=""]{
+    display: none !important;
+}
+
+.products__review {
+    /* Style for desktop - 5 reviews in a row */
+    width: calc(100%);
+    /* Style for tablet - 4 reviews in a row */
+    @media (max-width: 1024px) {
+        width: calc(100%);
+    }
+    /* Style for mobile - 2 reviews in a row */
+    @media (max-width: 768px) {
+        width: calc(100%);
+    }
+}
+
+@media(max-width: 799px){
+    .cal-stars-link {
+		margin: auto;
+	}
+    .star-ratings {
+        margin:auto;
+		width: fit-content;
+		text-align: center;
+    }
+    .cal-stars {
+        display: block !important;
+    }
+    .buy_star-ratings {
+        margin-left: 0.5rem;
+    }
+}
+
+.reviews__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 1.5rem auto;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 4px 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn.active {
+    background-color: #000;
+    color: #fff;
+    cursor: default;
+}
+
+.pagination-btn:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.back-to-top {
+    text-align:center;
+}
+.go-to-cart{
+    display:inline-flex;
+    align-items:center;
+    box-shadow:3px 3px 3px 3px #00000017;
+    border-radius:30px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color:#fff;
+    box-sizing:border-box;
+    border:none;
+    margin-top:1rem;
+    }
+.back-to-top-button {
+  width:50px;
+  cursor:pointer;
+  margin-right:5px;
+}
+.go-to-cart p{
+    margin-right:5px
+}
+
+.image__video{
+    margin: 0px 10px 20px 10px;
+    max-height: 150px !important;
+    max-width: 150px !important;
+}
+</style>
+<script>
+    async function getReviewsFromUrl(url){
+        let result = {
+            reviews: [],
+            averageRating: 0,
+            allReviewsCount: 0
+        };
+        return new Promise(async (resolve, reject) => {  
+            try {
+                let reviewsResponse = await fetch(url, {
+                    mode: 'cors',
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' },
+                });
+                let reviewsData = await reviewsResponse.json();
+                if (reviewsData.reviews && reviewsData.averageRating && reviewsData.allReviewsCount) {
+                    result = reviewsData;
+                }
+                resolve(result);
+            } catch(err){
+                resolve(result);
+            }
+        });
+    }
+
+    function getAppropriateBrandReviews(brandReviews){
+        let filteredBrandReviews = [];
+        try {
+            if  (productSettings.reviewsTags.length === 0){
+                filteredBrandReviews.push(...brandReviews.filter(x=>Array.from(x.tags).length === 0));
+            } else if (productSettings.reviewsTags.length > 0){
+                for (let i = 0; i  <  productSettings.reviewsTags.length; i++) {
+                    for(let r = 0; r < brandReviews.length; r++){
+                        let tags = Array.from(brandReviews[r].tags, x => x.name);
+                        if(tags.includes(productSettings.reviewsTags[i])){
+                            filteredBrandReviews.push(brandReviews[r]);
+                            brandReviews.splice(r, 1);
+                            r--;
+                        }
+                    }
+                }
+                filteredBrandReviews.push(...brandReviews.filter(x=>Array.from(x.tags).length === 0));
+            }   
+            return filteredBrandReviews;
+        }catch(err){
+            return [];
+        }
+    }
+
+    function getHash(sku){
+        var hash = 0, i, chr;
+        if (sku.length === 0) return hash;
+        for (i = 0; i < sku.length; i++) {
+            chr = sku.charCodeAt(i);
+            hash = ((hash << 5) - hash) + chr;
+            hash |= 0;
+        }
+        return hash;
+    }
+
+    function generateRandomNumber(sku, min, max) {
+        const hash = getHash(sku.toString());
+        return min + (Math.abs(hash) % (max - min + 1));
+    }
+
+    let masonryGrid;
+
+    function jQueryLoaded() {
+        if (window.jQuery) {
+            setTimeout(function () {
+                try {
+                    initRating();
+                    setTimeout(function() {
+                        masonryGrid.layout();
+                    }, 300);
+                } catch (e) {
+                    console.error(e);
+                }
+            }, 300);
+        } else {
+            window.setTimeout("jQueryLoaded();", 500);
+        }
+    }
+
+    // --- PAGINATION ---
+    const reviewsPerPage = 10;
+    let currentPage = 1;
+    let totalPages = 1;
+
+    function showPage(pageNum, shouldScroll = true) {
+        const reviews = document.querySelectorAll('.products__review');
+        totalPages = Math.ceil(reviews.length / reviewsPerPage);
+
+        if (pageNum < 1) pageNum = 1;
+        if (pageNum > totalPages) pageNum = totalPages;
+        currentPage = pageNum;
+
+        reviews.forEach((review, i) => {
+            review.style.display =
+                i >= (pageNum - 1) * reviewsPerPage && i < pageNum * reviewsPerPage
+                    ? 'block'
+                    : 'none';
+        });
+
+        masonryGrid.layout();
+        renderPagination();
+
+        if (shouldScroll) {
+            const scrollTarget = document.getElementById('reviewsTop');
+            if (scrollTarget) {
+                const offset = 80; // pixels
+                window.scrollTo({
+                    top: scrollTarget.getBoundingClientRect().top + window.scrollY - offset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    function renderPagination() {
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+
+        totalPages = Math.ceil(document.querySelectorAll('.products__review').length / reviewsPerPage);
+        if (totalPages <= 1) return;
+
+        const createBtn = (text, page, disabled = false, active = false) => {
+            const btn = document.createElement('span');
+            btn.classList.add('pagination-btn');
+            if (active) btn.classList.add('active');
+            btn.textContent = text;
+            if (!disabled && !active) {
+                btn.addEventListener('click', () => showPage(page));
+            } else if (disabled) {
+                btn.style.visibility = 'hidden';
+            }
+            return btn;
+        };
+
+        const buttons = [];
+
+        buttons.push(createBtn('<<', 1, currentPage === 1));
+        buttons.push(createBtn('<', currentPage - 1, currentPage === 1));
+
+        const start = Math.max(1, currentPage - 2);
+        const end = Math.min(totalPages, start + 4);
+
+        for (let i = start; i <= end; i++) {
+            buttons.push(createBtn(i, i, false, i === currentPage));
+        }
+
+        buttons.push(createBtn('>', currentPage + 1, currentPage === totalPages));
+        buttons.push(createBtn('>>', totalPages, currentPage === totalPages));
+
+        buttons.forEach(b => paginationContainer.appendChild(b));
+    }
+
+    function initPagination() {
+        showPage(1, false);
+    }
+
+    // --- STARS ---
+    function initRating() {
+        const starsContainers = document.querySelectorAll(".rating__review");
+        starsContainers.forEach(container => {
+            const rating = parseInt(container.innerText);
+            container.innerHTML = "";
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                star.setAttribute("viewBox", "0 0 24 24");
+                star.setAttribute("width", "20");
+                star.setAttribute("height", "20");
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute("d", "M12 .587l3.668 7.431 8.21 1.193-5.938 5.787 1.402 8.178L12 18.896l-7.342 3.86 1.402-8.178-5.938-5.787 8.21-1.193L12 .587z");
+                path.setAttribute("fill", i <= rating ? "#ff5b00" : "#dedede");
+                star.appendChild(path);
+                container.appendChild(star);
+            }
+        });
+    }
+
+    (async function () {
+        let allReviews = [];
+        let allRating = 0;
+        let allReviewsCount = 0;
+
+        const productReviewsUrl = 'https://images.hs-plus.com/assets/reviews-v2/68f61cb507c783c77a1547ab_SI.json';
+        const brandReviewsUrl = "https://images.hs-plus.com/assets/reviews-v2/" + brandSettings.name.toLowerCase() + "_"  + countrySettings.countryCode.toUpperCase() + ".json";
+        const generalReviewsUrl = "https://images.hs-plus.com/assets/reviews-v2/general_product_reviews_" + countrySettings.countryCode.toUpperCase() + ".json";
+
+        const getReviewsCalls = [
+            getReviewsFromUrl(productReviewsUrl),
+            getReviewsFromUrl(brandReviewsUrl),
+            getReviewsFromUrl(generalReviewsUrl)
+        ];
+
+        function getSingleSku() {
+            var sku = "";
+            if (sku === ""){
+                var skus = "['3831127616552','3831127616636','3831127616594','3831127616559','3831127616643','3831127616601','3831127616566','3831127616650','3831127616608','3831127616573','3831127616657','3831127616615','3831127616580','3831127616664','3831127616622','3831127616587','3831127616671','3831127616629','3831127626743','3831127626771','3831127626757','3831127626750','3831127626778','3831127626764']";
+                if (skus.length > 0){
+                    return skus[0];
+                } else {
+                    return "12345678";
+                } 
+            } else {
+                return sku;
+            }
+        }
+
+        await Promise.all(getReviewsCalls).then(results => {
+            let productReviews  = results[0];
+            let brandReviews = results[1];
+            let generalReviews = results[2];
+
+            let endIndex = generateRandomNumber(getSingleSku(), 0, Math.floor(generalReviews.reviews.length / 5));
+
+            if(productReviews.reviews.length > 0){
+                allReviews = productReviews.reviews;
+                allReviews.push(...getAppropriateBrandReviews(brandReviews.reviews));
+                allRating = productReviews.averageRating;
+                allReviewsCount = productReviews.allReviewsCount;
+            } else {
+                allReviews.push(...getAppropriateBrandReviews(brandReviews.reviews));
+                if(generalReviews.reviews.length > 0){
+                    generalReviews.reviews = generalReviews.reviews.slice(endIndex);
+                    allReviews.push(...generalReviews.reviews);
+                }
+                allRating = generalReviews.averageRating;
+                allReviewsCount = generalReviews.allReviewsCount;                                        
+            }
+        });
+        
+        let revHtml = "";
+        for (let i = 0; i < allReviews.length; i++) {
+            let imageVideo = "";
+            if (allReviews[i].imageUrl === "https://images.hs-plus.com/assets/review-images/") {
+                imageVideo = `<div class="image__video"><img class="img__review" src=""><div class="video_review">${allReviews[i].script}</div></div>`;
+            } else {
+                imageVideo = `<div class="image__video"><img class="img__review" src="${allReviews[i].imageUrl}"><div class="video_review">${allReviews[i].script}</div></div>`;
+            }
+            revHtml += `<div class="products__review">
+                            <div class="whole__review">
+                                <div class="description__review">
+                                    <div class="rating__review">${allReviews[i].rating}</div>
+                                    <div class="name__review">${allReviews[i].name}</div>
+                                    <div class="text__review"><p>${allReviews[i].text}</p></div>
+                                </div>
+                                ${imageVideo}
+                            </div>
+                        </div>`;
+        }
+
+        document.getElementById('product__reviews').innerHTML = revHtml;
+
+        masonryGrid = new Masonry('.user-reviews', {
+            itemSelector: '.products__review',
+            columnWidth: '.products__review',
+            gutter: 20,
+            percentPosition: true
+        });
+
+        imagesLoaded(document.querySelector("#product__reviews"), function(){
+            masonryGrid.layout();
+        });
+
+        initPagination();
+
+        // Random rating text setup
+        const randomReviewsCount = generateRandomNumber(getSingleSku(), 1050, 1700);
+        const randomPercentageFromHash = generateRandomNumber(getSingleSku(), 45, 49) / 10;
+        const starWidthPercentage  = (randomPercentageFromHash / 5) * 100;
+
+        document.querySelectorAll('.fill-ratings').forEach(el => el.style.width = starWidthPercentage + '%');
+        document.querySelectorAll('.product-rating__text').forEach(el => {
+            el.innerHTML = `${randomPercentageFromHash} / 5 - <strong>${randomReviewsCount}</strong> ocen kupcev`;
+        });
+
+        document.getElementById('backToTopButton').addEventListener('click', function() {
+            showPage(1);
+            masonryGrid.layout();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Popup for images
+        const popup = document.getElementById('imagePopup');
+        const popupImage = document.getElementById('popupImage');
+        const closePopup = document.getElementById('closePopup');
+
+        document.querySelectorAll('.img__review').forEach(img => {
+            img.addEventListener('click', function() {
+                if (this.src) {
+                    popupImage.src = this.src;
+                    popup.style.display = 'flex';
+                }
+            });
+        });
+
+        closePopup.addEventListener('click', () => popup.style.display = 'none');
+        popup.addEventListener('click', (e) => { if (e.target === popup) popup.style.display = 'none'; });
+
+        jQueryLoaded();
+    })();
+</script></div>
+				</div>
+				<style>
+					.whole_reviews_section {
+						margin-block: 0;
+					}
+					.happy-customers {
+						font-size: var(--step-6_5);
+						font-weight: 850;
+						line-height: 1.2;
+						margin-inline: auto;
+						margin-bottom: var(--gap-s);
+					}
+				</style>
+
+			</div>
+		</section>
+
+		<div class="horizontal-ticker horizontal-ticker-sections">
+			<div class="horizontal-ticker__container">
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+				<p class="horizontal-ticker__item">&#x2744;&#xFE0F; ZIMSKA RAZPRODAJA</p>
+				<p class="horizontal-ticker__item">&#x1F4A5; NA&#x160;A NAJVE&#x10C;JA RAZPRODAJA DO SEDAJ</p>
+				<p class="horizontal-ticker__item">&#x231B; PONUDBA KMALU POTE&#x10C;E</p>
+				<p class="horizontal-ticker__item">&#x1F525; PRIHRANITE DO 60%</p>
+			</div>
+		</div>
+
+		<section class="section sct-help">
+			<div class="container">
+				<div class="sct-help__content">
+					<div class="sct-help__descr">
+						<h2 class="sct-help__title">Poskrbite za svoja stopala <span class="accent">&#x161;e danes</span>!</h2>
+						<p class="sct-help__text">Ne glede na to, ali ste zaposlen strokovnjak ali &#x161;portnik, ki premika svoje meje &#x2013; ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami STEPEASE vam zagotavljajo vrhunsko oporo in olaj&#x161;anje. Vzemite si trenutek zase, vlo&#x17E;ite v udobje in ob&#x10D;utite razliko na lastnih stopalih.</p>
+						
+						<button class="btn-arw" data-scroll=".scroll-target" data-scroll-offset="120"><span>Izkoristite ponudbo</span></button>
+						<!-- <button class="btn btn--bg" onclick="submitproductform()">Claim Offer</button> -->
+						<!-- <button class="btn-arw" onclick="submitproductform()"><span></span></button> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section sct-guarantees">
+			<div class="container">
+				<div class="guarantees">
+	<ul class="guarantees__list">
+		<li class="guarantees__item"><img src="https://images.hs-plus.com/assets/Lumipalm-0/b851179f48034_delivery-svgrepo-com.svg"><span>Hitra dostava</span></li>
+		<li class="guarantees__item"><img src="https://images.hs-plus.com/assets/Lumipalm-0/b3683f84bf812_cash-on-delivery-icon.svg"><span>Pla&#x10D;ilo po povzetju</span></li>
+		<li class="guarantees__item"><img src="https://images.vigo-shop.com/general/flags/flag-icon-si.svg"><span>Slovensko skladi&#x161;&#x10D;e</span></li>
+	</ul>
+</div>
+<style>
+	@media screen and (max-width: 1023px) {
+        .guarantees__list {display: grid;grid-template-columns: repeat(3, 1fr);}
+        .guarantees__item {flex-direction: column;text-align: center;}
+    }
+</style>
+			</div>
+		</section>
 
 	</main>
 
-	<div class="waves-container">
-		<svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" aria-hidden="true">
-			<defs><path id="wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs>
-			<g class="parallax">
-				<use href="#wave" x="50" y="3" fill="currentColor"/>
-				<use href="#wave" x="50" y="0" fill="currentColor"/>
-				<use href="#wave" x="50" y="9" fill="currentColor"/>
-				<use href="#wave" x="50" y="6" fill="currentColor"/>
-			</g>
-		</svg>
-	</div>
-	<style>
-	.waves-container {
-		--wave-color: #000;
-		--bg-color: transparent;
-		
-		background-color: var(--bg-color, transparent);
-		color: var(--wave-color, #000);
-		
-		position: relative;
-		width: 100%;
-		overflow: hidden;
-		line-height: 0;
-	}
-	.waves {
-		display: block;
-		width: 100%;
-		height: 60px;
-		margin-bottom: -1px;
-	}
-	.parallax > use {
-		animation: move-wave 25s cubic-bezier(.55,.5,.45,.5) infinite;
-	}
-	.parallax > use:nth-child(1) {
-		animation-delay: -2s;
-		animation-duration: 7s;
-		opacity: 0.7;
-	}
-	.parallax > use:nth-child(2) {
-		animation-delay: -3s;
-		animation-duration: 10s;
-		opacity: 0.5;
-	}
-	.parallax > use:nth-child(3) {
-		animation-delay: -4s;
-		animation-duration: 13s;
-		opacity: 0.3;
-	}
-	.parallax > use:nth-child(4) {
-		animation-delay: -5s;
-		animation-duration: 20s;
-		opacity: 1;
-	}
-	@keyframes move-wave {
-		0% { transform: translate3d(-90px, 0, 0); }
-		100% { transform: translate3d(85px, 0, 0); }
-	}
-	@media (min-width: 768px) {
-		.waves {
-			height: 100px;
-		}
-	}
-	</style>
-
 	<!-- Footer brand -->
+
 <footer class="footer">
 	<div class="footer__content container">
 		<div class="footer__col">
 			<div class="footer__brand">
-				<a class="footer__brand-link" href="https://ortowp.noriks.com/">
+				<a class="footer__brand-link" href="https://ortowp.noriks.com">
 					<!-- <img class="footer__brand-logo" src="https://images.hs-plus.com/assets/shared-images/ea33512470c1f_logo-stepease-orange-bg.svg" alt=""> -->
-					<img src="https://images.hs-plus.com/assets/shared-images/c36ec022a3c36_logo-stepease-orange-bg.svg">
+					<img src="https://images.hs-plus.com/assets/shared-images/85789311ef02d_logo-stepease-orange-bg.svg">
 					<style>.footer__brand-link img {width: 8.125rem;}</style>
 				</a>
 			</div>
@@ -6881,9 +9956,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img class="footer__contacts-icon" src="https://images.hs-plus.com/assets/%20FLASHFLEX-1/5f156a7d4dff_icon-call.svg" alt="Phone number">
 						<span>Pokli&#x10D;ite in naro&#x10D;ite<br><strong></strong></span>
 					</a>
-					<a class="footer__contacts-link" href="/cdn-cgi/l/email-protection#6d04030b022d1e04431e19081d080c1e08430818">
+					<a class="footer__contacts-link" href="/cdn-cgi/l/email-protection#c8a1a6aea788bba1e6bbbcadb8ada9bbade6adbd">
 						<img class="footer__contacts-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/f56e109fa32ac_icon-mail.svg" alt="E-mail">
-						<span>Po&#x161;ljite e-po&#x161;to na naslov: <strong><span class="__cf_email__" data-cfemail="86efe8e0e9c6f5efa8f5f2e3f6e3e7f5e3a8e3f3">[email&#160;protected]</span></strong></span>
+						<span>Po&#x161;ljite e-po&#x161;to na naslov: <strong><span class="__cf_email__" data-cfemail="6f060109002f1c06411c1b0a1f0a0e1c0a410a1a">[email&#160;protected]</span></strong></span>
 					</a>
 					<a class="footer__contacts-link" href>
 						<img class="footer__contacts-icon" src="https://images.hs-plus.com/assets/STEPPER%20test-0/467ccc21f2c2d_icon-headset.svg" alt="Help contact">
@@ -6895,13 +9970,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="footer__col">
 			<div class="footer__info">
 				<h4 class="footer__title">Koristne informacije</h4>
-				<div class="footer__info-links"><a href="https://ortowp.noriks.com/">Splo&#x161;ni pogoji poslovanja</a>
-<a href="https://ortowp.noriks.com/">Varnostna politika</a>
-<a href="https://ortowp.noriks.com/">Politika uporabe pi&#x161;kotkov</a>
-<a href="https://ortowp.noriks.com/">Pravica do odstopa od nakupa</a>
-<a href="https://ortowp.noriks.com/">Reklamacije in prito&#x17E;be</a>
-<a href="https://ortowp.noriks.com/">Menjava v garanciji</a>
-<a href="https://ortowp.noriks.com/">O podjetju</a>
+				<div class="footer__info-links"><a href="https://ortowp.noriks.com/splosni-pogoji-poslovanja/">Splo&#x161;ni pogoji poslovanja</a>
+<a href="https://ortowp.noriks.com/varnostna-politika/">Varnostna politika</a>
+<a href="https://ortowp.noriks.com/politika-uporabe-piskotkov/">Politika uporabe pi&#x161;kotkov</a>
+<a href="https://ortowp.noriks.com/pravica-do-odstopa-od-nakupa/">Pravica do odstopa od nakupa</a>
+<a href="https://ortowp.noriks.com/reklamacije-in-pritozbe/">Reklamacije in prito&#x17E;be</a>
+<a href="https://ortowp.noriks.com/menjava-v-garanciji/">Menjava v garanciji</a>
+<a href="https://ortowp.noriks.com/o-podjetju/">O podjetju</a>
 <!-- <a href="https://manuals.hs-plus.com/si?brand=stepease">Navodila za uporabo</a> --></div>
 			</div>
 		</div>
@@ -6919,6 +9994,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 </footer>
+
+	<section class="sct-bar bottom-sticky-bar" id="bottomStickyBar">
+		<div class="sct-bar__content container">
+			<div class="sct-bar__title">Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE</div>
+			<div class="sct-bar__price">
+				<span class="sct-bar__price-rp"><span class="dp-rp1 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">18.99</span>&#x20AC;</span>
+				<span class="sct-bar__price-op"><s><span class="dp-op dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">36.95</span>&#x20AC;</s></span>
+				<span class="sct-bar__price-d"><svg style="width: 12px;" viewBox="0 0 12 12"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0h3a2 2 0 012 2v3a1 1 0 01-.3.7l-6 6a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l6-6A1 1 0 017 0zm2 2a1 1 0 102 0 1 1 0 00-2 0z" fill="#fff"/></svg><span class="dp-d1 dp-all" style="display: none; white-space:inherit; text-decoration: inherit;">49</span>%</span>
+
+			</div>
+			<button class="btn btn--bg sct-bar__btn" data-scroll=".scroll-target" data-scroll-offset="120"><span>Naro&#x10D;ite zdaj</span></button>
+			<!-- <button class="btn btn--bg sct-bar__btn" onclick="submitproductform()"><span>Naročite zdaj</span></button> -->
+			<!-- <a class="btn btn--bg sct-bar__btn" data-scroll=".scroll-target" data-scroll-offset="120" href="#">Naročite zdaj</a> -->
+		</div>
+	</section>
 
 	<div></div><div></div><div></div><div></div>
 	<div></div><div></div><div></div><div></div>
@@ -7020,6 +10110,296 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
+// Hero timer
+/* ========================================================================== */
+// const hoursElement = document.getElementById('hours');
+// const minutesElement = document.getElementById('minutes');
+// const secondsElement = document.getElementById('seconds');
+// function updateTimer() {
+// 	let endTime = localStorage.getItem('endTime');
+// 	if (!endTime) {
+// 		const now = new Date().getTime();
+// 		endTime = now + (90 * 60) * 1000; // 90 minutes
+// 		localStorage.setItem('endTime', endTime);
+// 	}
+// 	const remainingTime = endTime - new Date().getTime();
+// 	if (remainingTime <= 0) {
+// 		clearInterval(timerInterval);
+// 		hoursElement.textContent = '00';
+// 		minutesElement.textContent = '00';
+// 		secondsElement.textContent = '00';
+// 		return;
+// 	}
+// 	const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+// 	const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+// 	const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+// 	hoursElement.textContent = formatTime(hours);
+// 	minutesElement.textContent = formatTime(minutes);
+// 	secondsElement.textContent = formatTime(seconds);
+// }
+// function formatTime(time) {
+// 	return time < 10 ? `0${time}` : time.toString();
+// }
+// let timerInterval = setInterval(updateTimer, 1000);
+// updateTimer();
+
+
+// Hero timer (after the ending it starts again)
+/* ========================================================================== */
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+const timerDuration = (2 * 60 * 60 + 27 * 60 + 24) * 1000;
+function updateTimer() {
+	let endTime = localStorage.getItem('endTime');
+	if (!endTime) {
+		const now = new Date().getTime();
+		endTime = now + timerDuration;
+		localStorage.setItem('endTime', endTime);
+	}
+	const remainingTime = endTime - new Date().getTime();
+	if (remainingTime <= 0) {
+		const now = new Date().getTime();
+		endTime = now + timerDuration;
+		localStorage.setItem('endTime', endTime);
+		const newRemainingTime = endTime - now;
+		const seconds = Math.floor((newRemainingTime % (1000 * 60)) / 1000);
+		const minutes = Math.floor((newRemainingTime % (1000 * 60 * 60)) / (1000 * 60));
+		const hours = Math.floor((newRemainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		hoursElement.textContent = formatTime(hours);
+		minutesElement.textContent = formatTime(minutes);
+		secondsElement.textContent = formatTime(seconds);
+		return;
+	}
+	const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+	const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+	const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	hoursElement.textContent = formatTime(hours);
+	minutesElement.textContent = formatTime(minutes);
+	secondsElement.textContent = formatTime(seconds);
+}
+function formatTime(time) {
+	return time < 10 ? `0${time}` : time.toString();
+}
+let timerInterval = setInterval(updateTimer, 1000);
+updateTimer();
+
+
+// Hero gallery slider
+/* ========================================================================== */
+// if (window.matchMedia('(max-width: 1023px)').matches) {
+
+	// Initialize Swiper for thumbnails first
+	var thumbsSwiper = new Swiper(".gallery-thumbs", {
+		slidesPerView: 6, // Number of visible thumbnails
+		spaceBetween: 10, // Space between thumbnails
+		watchSlidesProgress: true, // Required for correct interaction with the main slider
+		// freeMode: true, // Allows free scrolling
+		cssMode: true, // Commented out if conflict with thumbs
+	});
+
+	// Then initialize the main Swiper
+	var mainSwiper = new Swiper(".gallery-slider", {
+		// freeMode: true, // Allows free scrolling
+		// cssMode: true, // Commented out if conflict with thumbs
+		slidesPerView: 1, // Number of visible slides
+		spaceBetween: 10, // Added a small space, if needed
+		navigation: {
+			nextEl: ".swiper-button-next", // Selector for the "next" button
+			prevEl: ".swiper-button-prev", // Selector for the "previous" button
+		},
+		// mousewheel: true, // Allow scrolling with the mouse wheel
+		keyboard: true, // Allow control with the keyboard
+		thumbs: {
+			swiper: thumbsSwiper, // Link with the thumbnails Swiper
+		},
+		// loop: true, // Uncomment if an infinite loop is needed (may require additional synchronization settings)
+		breakpoints: {
+			767: {
+				enabled: false,
+				slidesPerView: 'auto',
+				spaceBetween: 0,
+			}
+		}
+	});
+
+// }
+
+
+
+
+
+// Hero review slider
+// var newThumbsSwiper = new Swiper(".hero-rw-thumbs", {
+// 	slidesPerView: 4,
+// 	spaceBetween: 15,
+// 	watchSlidesProgress: true,
+// 	// freeMode: true,
+// 	// cssMode: true,
+// });
+
+var heroReviewSwiper = new Swiper(".hero-rw-slider", {
+	// freeMode: true,
+	// cssMode: true,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	// navigation: {
+	// 	nextEl: ".hero-rw-swiper-button-next",
+	// 	prevEl: ".hero-rw-swiper-button-prev",
+	// },
+	mousewheel: true,
+	keyboard: true,
+	// thumbs: {
+	// 	swiper: newThumbsSwiper,
+	// },
+	loop: true,
+});
+
+
+var swiper = new Swiper(".hero-reviews", {
+	pagination: {
+		el: ".hero-reviews-pagination",
+		clickable: true,
+		// dynamicBullets: true,
+	},
+});
+
+
+
+
+
+var mainSwiper = new Swiper(".purposes-slider", {
+	// freeMode: true, // Allows free scrolling
+	// cssMode: true, // Commented out if conflict with thumbs
+	slidesPerView: 2, // Number of visible slides
+	spaceBetween: 10, // Added a small space, if needed
+	centeredSlides: true,
+	navigation: {
+		nextEl: ".swiper-button-next", // Selector for the "next" button
+		prevEl: ".swiper-button-prev", // Selector for the "previous" button
+	},
+	// mousewheel: true, // Allow scrolling with the mouse wheel
+	keyboard: true, // Allow control with the keyboard
+	loop: true, // Uncomment if an infinite loop is needed (may require additional synchronization settings)
+	pagination: {
+		el: ".purposes-slider-pagination",
+		clickable: true,
+		// dynamicBullets: true,
+	},
+	breakpoints: {
+		767: {
+			slidesPerView: 4, // Number of visible slides
+			spaceBetween: 20, // Added a small space, if needed
+		}
+	},
+});
+
+
+
+
+var videoSwiper = new Swiper(".loockat-video-slider", {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	navigation: {
+		nextEl: ".loockat-video-next",
+		prevEl: ".loockat-video-prev",
+	},
+	keyboard: true,
+	loop: true,
+	pagination: {
+		el: ".loockat-video-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+		539: {
+			slidesPerView: 1.5,
+		},
+		767: {
+			slidesPerView: 2.5,
+			spaceBetween: 30,
+		}
+	},
+});
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+var mainSwiper = new Swiper(".loockat-slider", {
+	slidesPerView: '1.2',
+	centeredSlides: true,
+	spaceBetween: 15,
+	navigation: {
+		nextEl: ".loockat-main-next",
+		prevEl: ".loockat-main-prev",
+	},
+	keyboard: true,
+	loop: true,
+	pagination: {
+		el: ".loockat-slider-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+		400: {
+			spaceBetween: 20,
+		},
+		539: {
+			slidesPerView: 1.5,
+			centeredSlides: false,
+		},
+		767: {
+			slidesPerView: 2.5,
+			spaceBetween: 30,
+		}
+	},
+});
+
+
+/* comparison */
+/* ========================================================================== */
+const range = document.querySelector(".comparison__range");
+const beforeImage = document.querySelector(".comparison__image.before");
+const sliderLine = document.querySelector(".comparison__slider-line");
+const sliderIcon = document.querySelector(".comparison__slider-icon");
+const container = document.querySelector(".comparison__container");
+
+let isDragging = false;
+
+function updateSliderPosition(x) {
+  const rect = container.getBoundingClientRect();
+  const offsetX = Math.min(Math.max(x - rect.left, 0), rect.width);
+  const percent = (offsetX / rect.width) * 100;
+
+  beforeImage.style.width = `${percent}%`;
+  sliderLine.style.left = `${percent}%`;
+  sliderIcon.style.left = `${percent}%`;
+  range.value = percent;
+}
+
+// Support normal input events (desktop)
+range.addEventListener("input", (e) => {
+  updateSliderPosition(container.getBoundingClientRect().left + (container.offsetWidth * e.target.value) / 100);
+});
+
+// Start dragging
+["mousedown", "touchstart"].forEach(eventName => {
+  [sliderIcon, sliderLine, container].forEach(el => {
+    el.addEventListener(eventName, (e) => {
+      isDragging = true;
+      updateSliderPosition(e.touches ? e.touches[0].clientX : e.clientX);
+      e.preventDefault();
+    });
+  });
+});
+
+// Drag move
+["mousemove", "touchmove"].forEach(eventName => {
+  window.addEventListener(eventName, (e) => {
+    if (!isDragging) return;
+    updateSliderPosition(e.touches ? e.touches[0].clientX : e.clientX);
+  });
+});
+
+// End drag
+["mouseup", "touchend", "touchcancel"].forEach(eventName => {
+  window.addEventListener(eventName, () => (isDragging = false));
+});
 
 
 // ------------
@@ -7103,6 +10483,101 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });</script>
 
+	<!-- START change image variation -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// --- 1. Get all required elements ---
+			const mainSliderElement = document.querySelector('.gallery-slider');
+			if (!mainSliderElement || !mainSliderElement.swiper) {
+				console.error('Swiper was not found on the ".gallery-slider" element.');
+				return;
+			}
+			const mainSwiper = mainSliderElement.swiper;
+			const colorButtons = document.querySelectorAll('.color-variation-button');
+			if (colorButtons.length === 0) {
+				console.error('Buttons with class ".color-variation-button" were not found.');
+				return;
+			}
+
+			// --- 2. Dynamically create the correspondence "maps" ---
+			// Map for mobile: button index -> slide index (remains unchanged)
+			const slideMapping = [
+				0, // First button -> slide 0
+				6, // Second button -> slide 6
+				7  // Third button -> slide 7
+			];
+
+			// Automatically create the imageMap for desktop
+			const imageMap = {};
+			const allSlides = mainSwiper.slides; // Get all slides
+			colorButtons.forEach((button, index) => {
+				const buttonValue = button.getAttribute('value');
+				const targetSlideIndex = slideMapping[index];
+				// Check if such a slide exists
+				if (allSlides[targetSlideIndex]) {
+					const imageInSlide = allSlides[targetSlideIndex].querySelector('img');
+					if (imageInSlide) {
+						// Add a "button value: image URL" pair to our map
+						imageMap[buttonValue] = imageInSlide.src;
+					} else {
+						console.warn(`Could not find an <img> tag in the slide with index ${targetSlideIndex}`);
+					}
+				} else {
+					console.warn(`Could not find the slide with index ${targetSlideIndex} to create the imageMap`);
+				}
+			});
+			console.log('Automatically created image map:', imageMap); // For checking in the console
+			// Media query to determine desktop mode
+			const desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+
+			// --- 3. Define the logic for each mode (unchanged) ---
+			// Handler function for DESKTOP
+			const handleDesktopClick = (event) => {
+				const button = event.currentTarget;
+				const variationValue = button.getAttribute('value');
+				const newImageUrl = imageMap[variationValue];
+				const mainImage = mainSwiper.el.querySelector('.swiper-slide-active img');
+
+				if (newImageUrl && mainImage) {
+					mainImage.src = newImageUrl;
+				} else if (!newImageUrl) {
+					console.warn(`Image for variation ID "${variationValue}" was not found in imageMap.`);
+				} else {
+					console.error('Could not find the active image to update.');
+				}
+			};
+			// Handler function for MOBILE
+			const handleMobileClick = (event) => {
+				const buttonIndex = Array.from(colorButtons).indexOf(event.currentTarget);
+				const targetSlideIndex = slideMapping[buttonIndex];
+				if (targetSlideIndex !== undefined) {
+					mainSwiper.slideTo(targetSlideIndex);
+				}
+			};
+
+			// --- 4. Create the logic "switcher" (unchanged) ---
+			const setupListeners = (e) => {
+				if (e.matches) { // DESKTOP
+					colorButtons.forEach(button => {
+						button.removeEventListener('click', handleMobileClick);
+						button.addEventListener('click', handleDesktopClick);
+					});
+				} else { // MOBILE
+					colorButtons.forEach(button => {
+						button.removeEventListener('click', handleDesktopClick);
+						button.addEventListener('click', handleMobileClick);
+					});
+				}
+			};
+
+			// --- 5. Run our mechanism (unchanged) ---
+			setupListeners(desktopMediaQuery);
+			desktopMediaQuery.addEventListener('change', setupListeners);
+		});
+	</script>
+	<!-- END change image variation -->
+	
+	
 	<!--  -->
 	<script>
   var shouldInitialize = true;
@@ -7159,7 +10634,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="close">×</span>
               <div class="split">
                   <div class="img-wrapper">
-                      <div class="img"><img src="https://images.hs-plus.com/assets/STEPPER%20test-1/fb51b19dc3012_stepease-1.jpg"></div>
+                      <div class="img"><img src="https://images.hs-plus.com/assets/STEPPER%20test-0/f5c4995943c42_hero-2.jpg"></div>
                   </div>
                   <div class="data">
                       <div class="row">
@@ -7172,7 +10647,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
               </div>
               <div class="product">
-                  <span>  </span>
+                  <span> StepEase </span>
                   <strong></strong>
               </div>
           </div>
@@ -7498,6 +10973,7 @@ $("#order_link").attr("href",$(".buy").find(".container").find(".columns").find(
 </script>
 
 
+
     <script>
     var sp;
     var sd;
@@ -7599,11 +11075,11 @@ $("#order_link").attr("href",$(".buy").find(".container").find(".columns").find(
     }
 
     function getAllSkus() {
-        var single_sku = ['3831127616552'];
+        var single_sku = [''];
         if (single_sku[0] !== '') {
             return single_sku;
         } else {
-            var var_skus = [];
+            var var_skus = ['3831127616552','3831127616636','3831127616594','3831127616559','3831127616643','3831127616601','3831127616566','3831127616650','3831127616608','3831127616573','3831127616657','3831127616615','3831127616580','3831127616664','3831127616622','3831127616587','3831127616671','3831127616629','3831127626743','3831127626771','3831127626757','3831127626750','3831127626778','3831127626764'];
             return var_skus;
         }
     }
@@ -8337,24 +11813,24 @@ $("#order_link").attr("href",$(".buy").find(".container").find(".columns").find(
           'product_price': '18.99',
           'currency': 'EUR',
           'product SKUs': get_product_skus(),
-          'fb_userId_PageView': 'PageView_710273156',
+          'fb_userId_PageView': 'PageView_521585746',
           'country_code':'SI'
           });
 
 function get_sku() {
-    var product_sku = '3831127616552';
+    var product_sku = '';
     if (product_sku == '') {
-        product_sku = '3831127616552';
+        product_sku = '';
     }
     return product_sku;
 }
 
 function get_product_skus() {
-    var product_skus = ['3831127616552'];
+    var product_skus = [''];
     if (product_skus.length > 0 && product_skus[0] !== '') {
         return product_skus;
     } else {
-        var product_skus2 = [];
+        var product_skus2 = ['3831127616552','3831127616636','3831127616594','3831127616559','3831127616643','3831127616601','3831127616566','3831127616650','3831127616608','3831127616573','3831127616657','3831127616615','3831127616580','3831127616664','3831127616622','3831127616587','3831127616671','3831127616629','3831127626743','3831127626771','3831127626757','3831127626750','3831127626778','3831127626764'];
         return product_skus2;
     }
 }
@@ -8381,6 +11857,27 @@ function qty_mp_push(selected_qty){
             });
 }
         </script>
-    <script src="<?php echo get_template_directory_uri(); ?>/wc-atc-fix.js?v=1.0"></script>
-<script src="/wp-content/themes/ortostep/homepage-atc-fix.js?v=1.0"></script>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/ortostep/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/themes/ortostep/js/main.js?ver=2.0.0" id="ortostep-wc-js"></script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/themes/ortostep/wc-atc-fix.js?ver=1.0" id="wc-atc-fix-js"></script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.5.3" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://ortowp.noriks.com/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ortowp.noriks.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.5.3" id="wc-order-attribution-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://ortowp.noriks.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://ortowp.noriks.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
 </body></html>
