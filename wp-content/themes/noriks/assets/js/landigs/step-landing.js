@@ -35,6 +35,82 @@
     button.classList.remove("hiddenvariation");
   }
 
+  function allowedSecondaryNames() {
+    var groups = config.optionGroups || {};
+    var secondary = groups.secondary || {};
+    var options = secondary.options || [];
+
+    return options.map(function (option) {
+      return option && option.name ? option.name.trim() : "";
+    }).filter(Boolean);
+  }
+
+  function filterSourceVariationData() {
+    var allowedNames = allowedSecondaryNames();
+
+    if (!allowedNames.length) {
+      return;
+    }
+
+    var allowedSet = {};
+    allowedNames.forEach(function (name) {
+      allowedSet[normalizeValue(name)] = true;
+    });
+
+    if (typeof propertiesArr !== "undefined" && Array.isArray(propertiesArr)) {
+      propertiesArr.forEach(function (property) {
+        var propertyName = normalizeValue(property && (property.name || property.code));
+
+        if (propertyName !== "velikost" && propertyName !== "size") {
+          return;
+        }
+
+        if (Array.isArray(property.options)) {
+          property.options = property.options.filter(function (option) {
+            return !!allowedSet[normalizeValue(option && (option.name || option.code))];
+          });
+        }
+      });
+    }
+
+    if (typeof variationsArr !== "undefined" && Array.isArray(variationsArr)) {
+      variationsArr = variationsArr.filter(function (variation) {
+        var variationName = String((variation && variation.names) || "");
+        var parts = variationName.split(" ");
+        var sizePart = parts[parts.length - 1] || "";
+        return !!allowedSet[normalizeValue(sizePart)];
+      });
+    }
+  }
+
+  function pruneSizeTable() {
+    var allowedNames = allowedSecondaryNames();
+
+    if (!allowedNames.length) {
+      return;
+    }
+
+    var allowedSet = {};
+    allowedNames.forEach(function (name) {
+      allowedSet[normalizeValue(name)] = true;
+    });
+
+    document.querySelectorAll(".size-table tr").forEach(function (row, index) {
+      if (index === 0) {
+        return;
+      }
+
+      var firstCell = row.querySelector("td.first-column-cell");
+      if (!firstCell) {
+        return;
+      }
+
+      if (!allowedSet[normalizeValue(firstCell.textContent)]) {
+        row.remove();
+      }
+    });
+  }
+
   function applyConfiguredOptionGroups() {
     var groups = config.optionGroups || {};
     var primary = groups.primary || {};
@@ -584,9 +660,11 @@
   }
 
   function refresh() {
+    filterSourceVariationData();
     applyConfiguredOptionGroups();
     normalizeSecondaryButtons();
     applyConfiguredOffers();
+    pruneSizeTable();
     initRelatedProductSizes();
     applyReviewFeedImages();
     rewriteAnchors();
