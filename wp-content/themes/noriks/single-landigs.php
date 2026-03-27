@@ -868,6 +868,7 @@ if ($configured_product && $configured_product->is_type('variable')) {
             'velikost'   => $size_slug,
             'barvaLabel' => $color_name,
             'sizeLabel'  => $size_name,
+            'attributes' => array_map('strval', $variation->get_variation_attributes()),
         );
     }
 }

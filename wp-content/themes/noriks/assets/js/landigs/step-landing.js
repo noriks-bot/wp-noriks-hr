@@ -447,8 +447,10 @@
     var url = new URL(config.homeUrl);
     url.searchParams.set("add-to-cart", String(config.productId));
     url.searchParams.set("variation_id", String(mapped.id));
-    url.searchParams.set("attribute_pa_barva", mapped.barva || "");
-    url.searchParams.set("attribute_pa_velikost", mapped.velikost || "");
+    var mappedAttributes = mapped.attributes || {};
+    Object.keys(mappedAttributes).forEach(function (key) {
+      url.searchParams.set(key, mappedAttributes[key] || "");
+    });
     url.searchParams.set("quantity", String(selectedQuantity()));
     return url.toString();
   }
@@ -499,8 +501,9 @@
     var formData = new FormData();
     var quantity = selectedQuantity();
 
-    formData.append("action", "xoo_wsc_add_to_cart");
+    formData.append("action", "noriks_add_to_cart");
     formData.append("add-to-cart", String(config.productId));
+    formData.append("product_id", String(config.productId));
     formData.append("quantity", String(quantity));
 
     if (!config.simpleProduct) {
@@ -510,10 +513,12 @@
         return null;
       }
 
-      formData.append("product_id", String(config.productId));
       formData.append("variation_id", String(mapped.id));
-      formData.append("attribute_pa_barva", mapped.barva || "");
-      formData.append("attribute_pa_velikost", mapped.velikost || "");
+
+      var mappedAttributes = mapped.attributes || {};
+      Object.keys(mappedAttributes).forEach(function (key) {
+        formData.append(key, mappedAttributes[key] || "");
+      });
     }
 
     return formData;
@@ -527,7 +532,7 @@
   }
 
   function addToCartAjax(trigger) {
-    var endpoint = getAjaxEndpoint("xoo_wsc_add_to_cart");
+    var endpoint = window.woocommerce_params ? window.woocommerce_params.ajax_url : null;
     var payload = buildAddToCartPayload();
 
     if (!endpoint || !payload) {
