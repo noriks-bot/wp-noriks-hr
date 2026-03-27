@@ -252,6 +252,8 @@ function noriks_render_landigs_meta_box($post) {
             'L',
             'XL',
             'XXL',
+            '3XL',
+            '4XL',
         ));
     }
 

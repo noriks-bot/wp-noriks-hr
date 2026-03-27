@@ -254,6 +254,8 @@ if ($secondary_options === '') {
         'L',
         'XL',
         'XXL',
+        '3XL',
+        '4XL',
     ));
 }
 
@@ -264,6 +266,8 @@ if (noriks_landigs_use_apparel_sizes($secondary_options)) {
         'L',
         'XL',
         'XXL',
+        '3XL',
+        '4XL',
     ));
 }
 
