@@ -329,7 +329,7 @@ span.xoo-wsc-sp-atc a.noriks-upsell-btn:active {
 }
 
 if (!function_exists('noriks_customize_step_landing_markup')) {
-    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url, $hero_image_url) {
+    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url, $hero_image_url, $landing_image_urls) {
         $markup = preg_replace(
             '#<div class="loockat-slider__wrapper video">.*?</div>\s*</div>\s*<!-- SLIDER TWO -->#s',
             '<!-- SLIDER TWO -->',
@@ -370,6 +370,41 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
             ),
             $markup
         );
+
+        $image_replacements = array(
+            'https://images.hs-plus.com/assets/shared-images/84d4e066ce333_stepease_PP-EN_-_si-2.jpg' => $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/1b704871b6d6_stepease_PP-EN_-_si-5.jpg' => $landing_image_urls[1] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/0db2e820e6db5_stepease_PP-EN_-_si.jpg' => $landing_image_urls[2] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/04260de1979ae_stepease_PP-EN_-_si-1.jpg' => $landing_image_urls[3] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/cc8b1fcd4471_stepease_PP-EN_-_si-7.jpg' => $landing_image_urls[4] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/d82503b0fef5a_stepease_PP-EN_-_si-6.jpg' => $landing_image_urls[5] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/f3f10485dce06_stepease_PP-EN_-_si-3.jpg' => $landing_image_urls[6] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/2f514ac962b58_stepease_PP-EN_-_si-4.jpg' => $landing_image_urls[7] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/e07e5f3fd5613_stepease-animation.gif' => $landing_image_urls[1] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/a624d13e6cb5_comparison-before.jpg' => $landing_image_urls[2] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/11ec4acb45091_comparison-after.jpg' => $landing_image_urls[3] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/e54dd205a5d4e_purposes-1.jpg' => $landing_image_urls[0] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/3f3a362b9ef86_purposes-2.jpg' => $landing_image_urls[1] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/94d87998d13fd_purposes-3.jpg' => $landing_image_urls[2] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/b507d66504f75_purposes-4.jpg' => $landing_image_urls[3] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/8263da3f16fba_purposes-5.jpg' => $landing_image_urls[4] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/02df5692c8645_purposes-6.jpg' => $landing_image_urls[5] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/c565f489a2adc_purposes-7.jpg' => $landing_image_urls[6] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/97eea74cbf81_purposes-8.jpg' => $landing_image_urls[7] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/dc84ff1836158_review-autor-1.jpg' => $landing_image_urls[0] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/f5d8588d1923_review-autor-2.jpg' => $landing_image_urls[1] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/e48acee6b1eb3_review-autor-3.jpg' => $landing_image_urls[2] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/0585ca918b355_Stepease_worker.jpg' => $landing_image_urls[3] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/3e6a94a56376b_Stepease_nurse.jpg' => $landing_image_urls[4] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/cc70e89aec408_Stepease_service.jpg' => $landing_image_urls[5] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/94b5200db8b78_Stepease_runner.jpg' => $landing_image_urls[6] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/3896d617c56ae_Stepease_dog_walker.jpg' => $landing_image_urls[7] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/d9f0fad94b90a_doctor.jpg' => $landing_image_urls[2] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/shared-images/42c652c613426_batch_stepease_cover_SI.jpg' => $landing_image_urls[4] ?? $hero_image_url,
+            'https://images.hs-plus.com/assets/STEPPER%20test-0/f5c4995943c42_hero-2.jpg' => $landing_image_urls[5] ?? $hero_image_url,
+        );
+
+        $markup = str_replace(array_keys($image_replacements), array_map('esc_url', array_values($image_replacements)), $markup);
 
         $markup = preg_replace(
             '#<a class="header__logo" href="https://ortowp\.noriks\.com/">\s*<img class="header__logo-img" src="https://images\.hs-plus\.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg\.svg" alt="logo">\s*</a>#',
@@ -610,6 +645,16 @@ $target_product_url = get_post_meta(get_the_ID(), '_landigs_target_product_url',
 $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product_id', true);
 $boxers_image_url   = trailingslashit(get_template_directory_uri()) . 'lander2/images/noriks_boxers_gif_1.gif';
 $hero_image_url     = trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-majice-garancija.jpg';
+$landing_image_urls = array(
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-1.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-2.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-3.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-4.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-5.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-6.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-7.jpg',
+    trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-8.png',
+);
 
 if (!$target_product_url) {
     $target_product_url = home_url('/hr/product/noriks-majica/');
@@ -761,7 +806,7 @@ $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.nor
 $markup = preg_replace('#<script type="text/javascript" id="wc-order-attribution-js-extra">.*?</script>#s', '', $markup);
 $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.noriks\.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution\.min\.js\?ver=[^"]*" id="wc-order-attribution-js"></script>#', '', $markup);
 
-$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url, $hero_image_url);
+$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url, $hero_image_url, $landing_image_urls);
 
 $markup = preg_replace('/<html\b([^>]*)>/', '<html$1 class="noriks-landings-pending">', $markup, 1);
 
