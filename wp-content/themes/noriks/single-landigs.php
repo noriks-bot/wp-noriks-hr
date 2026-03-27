@@ -342,6 +342,18 @@ span.xoo-wsc-sp-atc a.noriks-upsell-btn:active {
   height: auto !important;
   object-fit: contain !important;
 }
+[data-tpl="stps"] .gallery-thumbs__item {
+  aspect-ratio: 1 / 1 !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+[data-tpl="stps"] .gallery-thumbs__item img {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  display: block !important;
+}
 </style>';
     }
 }
