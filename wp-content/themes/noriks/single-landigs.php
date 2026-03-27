@@ -368,8 +368,10 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
         );
 
         $markup = str_replace(
-            '<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg.svg" alt="logo">',
-            '<span class="header__logo-img noriks-landing-logo">NORIKS</span><style>.noriks-landing-logo{display:inline-flex;align-items:center;justify-content:flex-start;width:8.125rem;min-height:1.75rem;color:#111;font-family:\'Roboto\',sans-serif;font-size:33px;font-weight:700;letter-spacing:1.75px;line-height:1;white-space:nowrap;opacity:1 !important;visibility:visible !important;}</style>',
+            '<a class="header__logo" href="https://ortowp.noriks.com/">
+					<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg.svg" alt="logo">
+				</a>',
+            '<a class="header__logo noriks-landing-logo-link" href="' . esc_url($home_url) . '"><span class="noriks-landing-logo-text">NORIKS</span></a><style>.noriks-landing-logo-link{display:flex !important;align-items:center;justify-content:center;text-decoration:none;width:8.125rem;min-height:2rem;margin:0 auto;opacity:1 !important;visibility:visible !important;}.noriks-landing-logo-text{display:inline-block !important;color:#111 !important;font-family:\'Roboto\',sans-serif !important;font-size:33px !important;font-weight:700 !important;letter-spacing:1.75px !important;line-height:1 !important;white-space:nowrap;opacity:1 !important;visibility:visible !important;}</style>',
             $markup
         );
 
