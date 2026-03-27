@@ -2,6 +2,22 @@
   var config = window.noriksStepLandingConfig || {};
   var skuMap = config.skuMap || {};
 
+  function enableOptionButton(button) {
+    button.disabled = false;
+    button.removeAttribute("disabled");
+    button.setAttribute("aria-disabled", "false");
+    button.style.pointerEvents = "auto";
+    button.style.opacity = "1";
+    button.style.textDecoration = "none";
+    button.style.filter = "none";
+    button.style.cursor = "pointer";
+    button.classList.remove("disabled");
+    button.classList.remove("out-of-stock");
+    button.classList.remove("unavailable");
+    button.classList.remove("deactivated");
+    button.classList.remove("button-variation-disabled");
+  }
+
   function applyConfiguredOptionGroups() {
     var groups = config.optionGroups || {};
     var primary = groups.primary || {};
@@ -89,6 +105,7 @@
 
         button.style.display = "";
         button.textContent = option.name || "";
+        enableOptionButton(button);
         button.classList.toggle("selected", index === 0);
         button.setAttribute("selected-option", index === 0 ? "true" : "false");
         button.removeAttribute("selected");
