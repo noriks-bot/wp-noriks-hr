@@ -214,6 +214,131 @@ function noriks_maybe_flush_landigs_rewrite() {
     update_option('noriks_landigs_rewrite_flushed', 1);
 }
 
+function noriks_add_landigs_meta_box() {
+    add_meta_box(
+        'noriks-landigs-settings',
+        __('Landing Settings', 'textdomain'),
+        'noriks_render_landigs_meta_box',
+        'landigs',
+        'normal',
+        'high'
+    );
+}
+
+function noriks_render_landigs_meta_box($post) {
+    wp_nonce_field('noriks_landigs_meta_box', 'noriks_landigs_meta_nonce');
+
+    $target_product_id  = get_post_meta($post->ID, '_landigs_target_product_id', true);
+    $target_product_url = get_post_meta($post->ID, '_landigs_target_product_url', true);
+    $primary_label      = get_post_meta($post->ID, '_landigs_primary_label', true);
+    $primary_options    = get_post_meta($post->ID, '_landigs_primary_options', true);
+    $secondary_label    = get_post_meta($post->ID, '_landigs_secondary_label', true);
+    $secondary_options  = get_post_meta($post->ID, '_landigs_secondary_options', true);
+    $hide_secondary     = get_post_meta($post->ID, '_landigs_hide_secondary', true);
+    $offer_options      = get_post_meta($post->ID, '_landigs_offer_options', true);
+
+    if ($primary_label === '') {
+        $primary_label = 'Boja';
+    }
+
+    if ($secondary_label === '') {
+        $secondary_label = 'Varijanta';
+    }
+
+    if ($primary_options === '') {
+        $primary_options = implode("\n", array(
+            'Crna|#000000',
+            'Bijela|#f3f4f6',
+            'Siva|#9ca3af',
+            'Tamnoplava|#203240',
+            'Smeđa|#6b4f3a',
+            'Zelena|#556b2f',
+        ));
+    }
+
+    if ($offer_options === '') {
+        $offer_options = implode("\n", array(
+            '1|1 majica|Odličan ulazni paket|',
+            '2|2 majice|Najbolji omjer cijene i količine|NAJPOPULARNIJE',
+            '3|3 majice|Najveća ušteda po komadu|',
+        ));
+    }
+
+    ?>
+    <p>
+        <label for="noriks-landigs-target-product-id"><strong><?php esc_html_e('Target Product ID', 'textdomain'); ?></strong></label><br>
+        <input type="number" id="noriks-landigs-target-product-id" name="noriks_landigs_target_product_id" value="<?php echo esc_attr($target_product_id); ?>" style="width: 100%; max-width: 280px;">
+    </p>
+    <p>
+        <label for="noriks-landigs-target-product-url"><strong><?php esc_html_e('Target Product URL', 'textdomain'); ?></strong></label><br>
+        <input type="url" id="noriks-landigs-target-product-url" name="noriks_landigs_target_product_url" value="<?php echo esc_attr($target_product_url); ?>" style="width: 100%;">
+    </p>
+    <p>
+        <label for="noriks-landigs-primary-label"><strong><?php esc_html_e('Primary Option Label', 'textdomain'); ?></strong></label><br>
+        <input type="text" id="noriks-landigs-primary-label" name="noriks_landigs_primary_label" value="<?php echo esc_attr($primary_label); ?>" style="width: 100%; max-width: 280px;">
+    </p>
+    <p>
+        <label for="noriks-landigs-primary-options"><strong><?php esc_html_e('Primary Options', 'textdomain'); ?></strong></label><br>
+        <textarea id="noriks-landigs-primary-options" name="noriks_landigs_primary_options" rows="8" style="width: 100%;"><?php echo esc_textarea($primary_options); ?></textarea><br>
+        <small><?php esc_html_e('One option per line in format: Name|#HEX', 'textdomain'); ?></small>
+    </p>
+    <p>
+        <label for="noriks-landigs-secondary-label"><strong><?php esc_html_e('Secondary Option Label', 'textdomain'); ?></strong></label><br>
+        <input type="text" id="noriks-landigs-secondary-label" name="noriks_landigs_secondary_label" value="<?php echo esc_attr($secondary_label); ?>" style="width: 100%; max-width: 280px;">
+    </p>
+    <p>
+        <label for="noriks-landigs-secondary-options"><strong><?php esc_html_e('Secondary Options', 'textdomain'); ?></strong></label><br>
+        <textarea id="noriks-landigs-secondary-options" name="noriks_landigs_secondary_options" rows="6" style="width: 100%;"><?php echo esc_textarea($secondary_options); ?></textarea><br>
+        <small><?php esc_html_e('One option per line. Leave empty if you want to hide the second picker.', 'textdomain'); ?></small>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" name="noriks_landigs_hide_secondary" value="1" <?php checked($hide_secondary, '1'); ?>>
+            <?php esc_html_e('Hide secondary options block', 'textdomain'); ?>
+        </label>
+    </p>
+    <p>
+        <label for="noriks-landigs-offer-options"><strong><?php esc_html_e('Offer Options', 'textdomain'); ?></strong></label><br>
+        <textarea id="noriks-landigs-offer-options" name="noriks_landigs_offer_options" rows="6" style="width: 100%;"><?php echo esc_textarea($offer_options); ?></textarea><br>
+        <small><?php esc_html_e('One offer per line in format: Quantity|Title|Subtitle|Badge', 'textdomain'); ?></small>
+    </p>
+    <?php
+}
+
+function noriks_save_landigs_meta_box($post_id) {
+    if (!isset($_POST['noriks_landigs_meta_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['noriks_landigs_meta_nonce'])), 'noriks_landigs_meta_box')) {
+        return;
+    }
+
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    $fields = array(
+        '_landigs_target_product_id'  => isset($_POST['noriks_landigs_target_product_id']) ? sanitize_text_field(wp_unslash($_POST['noriks_landigs_target_product_id'])) : '',
+        '_landigs_target_product_url' => isset($_POST['noriks_landigs_target_product_url']) ? esc_url_raw(wp_unslash($_POST['noriks_landigs_target_product_url'])) : '',
+        '_landigs_primary_label'      => isset($_POST['noriks_landigs_primary_label']) ? sanitize_text_field(wp_unslash($_POST['noriks_landigs_primary_label'])) : '',
+        '_landigs_primary_options'    => isset($_POST['noriks_landigs_primary_options']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_landigs_primary_options'])) : '',
+        '_landigs_secondary_label'    => isset($_POST['noriks_landigs_secondary_label']) ? sanitize_text_field(wp_unslash($_POST['noriks_landigs_secondary_label'])) : '',
+        '_landigs_secondary_options'  => isset($_POST['noriks_landigs_secondary_options']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_landigs_secondary_options'])) : '',
+        '_landigs_offer_options'      => isset($_POST['noriks_landigs_offer_options']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_landigs_offer_options'])) : '',
+    );
+
+    foreach ($fields as $meta_key => $value) {
+        if ($value === '') {
+            delete_post_meta($post_id, $meta_key);
+        } else {
+            update_post_meta($post_id, $meta_key, $value);
+        }
+    }
+
+    update_post_meta($post_id, '_landigs_hide_secondary', isset($_POST['noriks_landigs_hide_secondary']) ? '1' : '0');
+}
+
 
 add_action('init', 'register_custom_post_type_lander');
 add_action('init', 'register_custom_post_type_product_reviews');
@@ -221,4 +346,5 @@ add_action('init', 'register_custom_post_type_lander2');
 add_action('init', 'register_custom_post_type_landigs');
 add_action('init', 'noriks_seed_step_landing_post', 20);
 add_action('init', 'noriks_maybe_flush_landigs_rewrite', 30);
-
+add_action('add_meta_boxes', 'noriks_add_landigs_meta_box');
+add_action('save_post_landigs', 'noriks_save_landigs_meta_box');
