@@ -16,6 +16,8 @@
     button.classList.remove("unavailable");
     button.classList.remove("deactivated");
     button.classList.remove("button-variation-disabled");
+    button.classList.remove("greyOut");
+    button.classList.remove("hiddenvariation");
   }
 
   function applyConfiguredOptionGroups() {
@@ -127,6 +129,12 @@
         });
       });
     }
+  }
+
+  function normalizeSecondaryButtons() {
+    document.querySelectorAll(".single-variation-container .button-variation").forEach(function (button) {
+      enableOptionButton(button);
+    });
   }
 
   function applyConfiguredOffers() {
@@ -444,6 +452,7 @@
 
   function refresh() {
     applyConfiguredOptionGroups();
+    normalizeSecondaryButtons();
     applyConfiguredOffers();
     initRelatedProductSizes();
     rewriteAnchors();

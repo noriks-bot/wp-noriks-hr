@@ -161,6 +161,99 @@ if (!function_exists('noriks_get_sidecart_assets_markup')) {
     }
 }
 
+if (!function_exists('noriks_get_landing_override_styles')) {
+    function noriks_get_landing_override_styles() {
+        return '<style id="noriks-landigs-overrides">
+html.noriks-landings-pending .sct-hero__dyn-properties,
+html.noriks-landings-pending .choose-qty,
+html.noriks-landings-pending #dynamic-cart-variations-container {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+[data-tpl="stps"] .button-variation,
+[data-tpl="stps"] .button-variation:hover,
+[data-tpl="stps"] .button-variation:focus,
+[data-tpl="stps"] .button-variation:active,
+[data-tpl="stps"] .button-variation:disabled {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  filter: none !important;
+  text-decoration: none !important;
+  color: #000 !important;
+  background: #fff !important;
+  border: 2px solid #000 !important;
+  box-shadow: none !important;
+}
+[data-tpl="stps"] .button-variation.selected,
+[data-tpl="stps"] .button-variation[selected-option="true"] {
+  color: #fff !important;
+  background: #ff5b00 !important;
+  border-color: #000 !important;
+}
+[data-tpl="stps"] .button-variation.greyOut,
+[data-tpl="stps"] .button-variation.hiddenvariation {
+  opacity: 1 !important;
+}
+[data-tpl="stps"] .button-variation.greyOut::before,
+[data-tpl="stps"] .button-variation.hiddenvariation::before,
+[data-tpl="stps"] .button-variation.greyOut::after,
+[data-tpl="stps"] .button-variation.hiddenvariation::after {
+  content: none !important;
+  display: none !important;
+}
+.xoo-wsc-footer {
+  padding: 5px 20px 25px 20px !important;
+}
+span.xoo-wsc-footer-txt {
+  font-size: 70% !important;
+}
+.xoo-wsc-ft-btn-checkout {
+  background: #c00 !important;
+  background-color: #c00 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+  font-family: "Roboto", sans-serif !important;
+  letter-spacing: 0.2px !important;
+  text-transform: none !important;
+  border: none !important;
+  height: auto !important;
+  padding: 18px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 0 10px !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+}
+.xoo-wsc-ft-btn-checkout:hover,
+.xoo-wsc-ft-btn-checkout:focus,
+.xoo-wsc-ft-btn-checkout:active,
+.xoo-wsc-ft-btn-checkout:visited {
+  background: #c00 !important;
+  background-color: #c00 !important;
+  color: #fff !important;
+}
+.xoo-wsc-ft-btn-checkout span {
+  color: #fff !important;
+}
+.xoo-wsc-ft-buttons-cont {
+  grid-template-columns: 1fr !important;
+}
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.xoo-wsc-sm-sales {
+  display: none !important;
+}
+</style>';
+    }
+}
+
 if (!function_exists('noriks_customize_step_landing_markup')) {
     function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url) {
         $markup = preg_replace(
@@ -175,13 +268,54 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
                 'https://ortowp.noriks.com/product/stepease/',
                 'https://ortowp.noriks.com/cart/',
                 'https://ortowp.noriks.com/kosarica/?add-more=',
+                'https://ortowp.noriks.com/splosni-pogoji-poslovanja/',
+                'https://ortowp.noriks.com/varnostna-politika/',
+                'https://ortowp.noriks.com/politika-uporabe-piskotkov/',
+                'https://ortowp.noriks.com/pravica-do-odstopa-od-nakupa/',
+                'https://ortowp.noriks.com/reklamacije-in-pritozbe/',
+                'https://ortowp.noriks.com/menjava-v-garanciji/',
+                'https://ortowp.noriks.com/o-podjetju/',
                 'https://ortowp.noriks.com/',
             ),
             array(
                 esc_url($landing_url),
                 esc_url($cart_url),
                 esc_url($cart_url),
+                esc_url(home_url('/splosni-pogoji-poslovanja/')),
+                esc_url(home_url('/varnostna-politika/')),
+                esc_url(home_url('/politika-uporabe-piskotkov/')),
+                esc_url(home_url('/pravica-do-odstopa-od-nakupa/')),
+                esc_url(home_url('/reklamacije-in-pritozbe/')),
+                esc_url(home_url('/menjava-v-garanciji/')),
+                esc_url(home_url('/o-podjetju/')),
                 esc_url($home_url),
+            ),
+            $markup
+        );
+
+        $markup = str_replace(
+            '<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg.svg" alt="logo">',
+            '<span class="header__logo-img noriks-landing-logo">NORIKS</span><style>.noriks-landing-logo{display:inline-block;color:#fff;font-family:\'Roboto\',sans-serif;font-size:33px;font-weight:700;letter-spacing:1.75px;line-height:1;}</style>',
+            $markup
+        );
+
+        $markup = preg_replace(
+            '#<a class="footer__contacts-link h-dp" href="viber://chat\?number=%2B38651762806">.*?</a>#s',
+            '',
+            $markup,
+            1
+        );
+
+        $markup = str_replace(
+            array(
+                '/cdn-cgi/l/email-protection#c8a1a6aea788bba1e6bbbcadb8ada9bbade6adbd',
+                '<span>Po&#x161;ljite e-po&#x161;to na naslov: <strong><span class="__cf_email__" data-cfemail="6f060109002f1c06411c1b0a1f0a0e1c0a410a1a">[email&#160;protected]</span></strong></span>',
+                'Copyright &#xA9; 2017 - 2026 Spletna trgovina Stepease',
+            ),
+            array(
+                'mailto:info@noriks.com',
+                '<span>Po&#x161;ljite e-po&#x161;to na naslov: <strong>info@noriks.com</strong></span>',
+                'Copyright &#xA9; 2017 - 2026 Spletna trgovina NORIKS',
             ),
             $markup
         );
@@ -443,12 +577,12 @@ $markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url,
 
 $markup = preg_replace('/<html\b([^>]*)>/', '<html$1 class="noriks-landings-pending">', $markup, 1);
 
-$hide_until_ready_css = '<style id="noriks-landigs-pending-style">html.noriks-landings-pending .sct-hero__dyn-properties, html.noriks-landings-pending .choose-qty, html.noriks-landings-pending #dynamic-cart-variations-container { opacity: 0 !important; visibility: hidden !important; }</style>';
+$landing_override_styles = noriks_get_landing_override_styles();
 
 if (strpos($markup, '</head>') !== false) {
-    $markup = str_replace('</head>', $hide_until_ready_css . "\n" . $sidecart_assets['head'] . "\n</head>", $markup);
+    $markup = str_replace('</head>', $landing_override_styles . "\n" . $sidecart_assets['head'] . "\n</head>", $markup);
 } else {
-    $markup = $hide_until_ready_css . $sidecart_assets['head'] . $markup;
+    $markup = $landing_override_styles . $sidecart_assets['head'] . $markup;
 }
 
 $markup = str_replace(
