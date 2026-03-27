@@ -369,7 +369,7 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 
         $markup = str_replace(
             '<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg.svg" alt="logo">',
-            '<span class="header__logo-img noriks-landing-logo">NORIKS</span><style>.noriks-landing-logo{display:inline-block;color:#fff;font-family:\'Roboto\',sans-serif;font-size:33px;font-weight:700;letter-spacing:1.75px;line-height:1;}</style>',
+            '<span class="header__logo-img noriks-landing-logo">NORIKS</span><style>.noriks-landing-logo{display:inline-flex;align-items:center;justify-content:flex-start;width:8.125rem;min-height:1.75rem;color:#111;font-family:\'Roboto\',sans-serif;font-size:33px;font-weight:700;letter-spacing:1.75px;line-height:1;white-space:nowrap;opacity:1 !important;visibility:visible !important;}</style>',
             $markup
         );
 
