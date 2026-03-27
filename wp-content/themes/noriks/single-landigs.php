@@ -162,7 +162,7 @@ if (!function_exists('noriks_get_sidecart_assets_markup')) {
 }
 
 if (!function_exists('noriks_customize_step_landing_markup')) {
-    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url) {
+    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url) {
         $markup = preg_replace(
             '#<div class="loockat-slider__wrapper video">.*?</div>\s*</div>\s*<!-- SLIDER TWO -->#s',
             '<!-- SLIDER TWO -->',
@@ -183,6 +183,70 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
                 esc_url($cart_url),
                 esc_url($home_url),
             ),
+            $markup
+        );
+
+        $related_size_markup = '
+                    <div class="related-product-size-options" id="related-product-sizes-rp-0">
+                      <span class="related-product-size-label">Veličina:</span>
+                      <div class="related-product-size-list">
+                        <button type="button" class="related-product-size-button is-selected" data-size="S">S</button>
+                        <button type="button" class="related-product-size-button" data-size="M">M</button>
+                        <button type="button" class="related-product-size-button" data-size="L">L</button>
+                        <button type="button" class="related-product-size-button" data-size="XL">XL</button>
+                        <button type="button" class="related-product-size-button" data-size="2XL">2XL</button>
+                        <button type="button" class="related-product-size-button" data-size="3XL">3XL</button>
+                        <button type="button" class="related-product-size-button" data-size="4XL">4XL</button>
+                      </div>
+                      <input type="hidden" id="related-product-size-value-rp-0" value="S">
+                    </div>
+                    <style>
+                      [data-tpl="stps"] .related-product-size-options { margin-top: .75rem; }
+                      [data-tpl="stps"] .related-product-size-label { display:block; font-weight:700; margin-bottom:.4rem; }
+                      [data-tpl="stps"] .related-product-size-list { display:flex; flex-wrap:wrap; gap:.35rem; }
+                      [data-tpl="stps"] .related-product-size-button {
+                        border: 2px solid #d1d5db;
+                        background: #fff;
+                        color: #111827;
+                        border-radius: .55rem;
+                        min-width: 3rem;
+                        height: 2.4rem;
+                        padding: 0 .65rem;
+                        font-weight: 700;
+                        font-size: .95rem;
+                        line-height: 1;
+                        cursor: pointer;
+                      }
+                      [data-tpl="stps"] .related-product-size-button.is-selected {
+                        border-color: #ff5b01;
+                        background: #fff3ec;
+                        color: #ff5b01;
+                      }
+                    </style>';
+
+        $markup = str_replace(
+            array(
+                '<img class="related-product-image" src="https://images.hs-plus.com/product/product-image/67fb0394c5d0a_STEPHEEL-3831127625931-N-1.jpg">',
+                '2x blazinica za peto za zmanjšanje bolečin v peti',
+                'Zapolni prevelik čevelj, ne da bi drgnila ali povzročala žulje.',
+                '3.99&#x20AC;',
+                '11.95&#x20AC;',
+                'var relatedProductsData = [{"id":"rp-0","name":"2x blazinica za peto za zmanjšanje bolečin v peti","description":"Zapolni prevelik čevelj, ne da bi drgnila ali povzročala žulje.\n","price":3.99,"originalPrice":11.95,"discountPercentage":67,"wcId":981495,"imageUrl":"https://images.hs-plus.com/product/product-image/67fb0394c5d0a_STEPHEEL-3831127625931-N-1.jpg"}];',
+            ),
+            array(
+                '<img class="related-product-image" src="' . esc_url($boxers_image_url) . '" alt="NORIKS bokserice">',
+                'NORIKS crne bokserice',
+                'Mekane, elastične i udobne bokserice za nošenje kroz cijeli dan.',
+                '7.99&#x20AC;',
+                '15.99&#x20AC;',
+                'var relatedProductsData = [{"id":"rp-0","name":"NORIKS crne bokserice","description":"Mekane, elastične i udobne bokserice za nošenje kroz cijeli dan.","price":7.99,"originalPrice":15.99,"discountPercentage":50,"wcId":981495,"imageUrl":"' . esc_js($boxers_image_url) . '"}];',
+            ),
+            $markup
+        );
+
+        $markup = str_replace(
+            '<div class="related-product-checkbox-wrapper" id="related-product-checkbox-wrapper-rp-0">',
+            $related_size_markup . "\n" . '<div class="related-product-checkbox-wrapper" id="related-product-checkbox-wrapper-rp-0">',
             $markup
         );
 
@@ -223,6 +287,7 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 
 $target_product_url = get_post_meta(get_the_ID(), '_landigs_target_product_url', true);
 $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product_id', true);
+$boxers_image_url   = trailingslashit(get_template_directory_uri()) . 'lander2/images/noriks_boxers_gif_1.gif';
 
 if (!$target_product_url) {
     $target_product_url = home_url('/hr/product/noriks-majica/');
@@ -374,7 +439,7 @@ $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.nor
 $markup = preg_replace('#<script type="text/javascript" id="wc-order-attribution-js-extra">.*?</script>#s', '', $markup);
 $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.noriks\.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution\.min\.js\?ver=[^"]*" id="wc-order-attribution-js"></script>#', '', $markup);
 
-$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url);
+$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url);
 
 $markup = preg_replace('/<html\b([^>]*)>/', '<html$1 class="noriks-landings-pending">', $markup, 1);
 

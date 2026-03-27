@@ -207,6 +207,37 @@
     });
   }
 
+  function initRelatedProductSizes() {
+    document.querySelectorAll(".related-product-size-options").forEach(function (group) {
+      var hiddenInput = group.querySelector("input[type='hidden']");
+      var buttons = group.querySelectorAll(".related-product-size-button");
+
+      buttons.forEach(function (button, index) {
+        if (button.dataset.noriksBound === "true") {
+          return;
+        }
+
+        button.dataset.noriksBound = "true";
+
+        if (index === 0 && hiddenInput && !hiddenInput.value) {
+          hiddenInput.value = button.dataset.size || button.textContent.trim();
+        }
+
+        button.addEventListener("click", function () {
+          buttons.forEach(function (other) {
+            other.classList.remove("is-selected");
+          });
+
+          button.classList.add("is-selected");
+
+          if (hiddenInput) {
+            hiddenInput.value = button.dataset.size || button.textContent.trim();
+          }
+        });
+      });
+    });
+  }
+
   function currentVariation() {
     if (typeof propertiesArr === "undefined" || typeof variationsArr === "undefined") {
       return null;
@@ -414,6 +445,7 @@
   function refresh() {
     applyConfiguredOptionGroups();
     applyConfiguredOffers();
+    initRelatedProductSizes();
     rewriteAnchors();
     syncBuyButtons();
 
