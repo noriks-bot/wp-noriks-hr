@@ -337,6 +337,13 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
             1
         );
 
+        $markup = preg_replace(
+            '#<section class="section sct-ebook">.*?</section>#s',
+            '',
+            $markup,
+            1
+        );
+
         $markup = str_replace(
             array(
                 'https://ortowp.noriks.com/product/stepease/',
@@ -422,7 +429,7 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 
         $markup = preg_replace(
             '#</head>#i',
-            '<style>.noriks-landing-logo-link{display:inline-flex !important;align-items:center;justify-content:flex-start;text-decoration:none;opacity:1 !important;visibility:visible !important;}.noriks-landing-logo-link--footer{justify-content:flex-start;}.noriks-landing-logo-text{display:inline-block !important;color:#111 !important;font-family:Roboto,sans-serif !important;font-size:33px !important;font-weight:700 !important;letter-spacing:1.75px !important;line-height:1 !important;white-space:nowrap;opacity:1 !important;visibility:visible !important;}.noriks-landing-logo-text--footer{font-size:32px !important;}.header__logo-img,.footer__brand-link img,.footer__brand-logo{display:none !important;}</style></head>',
+            '<style>.noriks-landing-logo-link{display:inline-flex !important;align-items:center;justify-content:flex-start;text-decoration:none;opacity:1 !important;visibility:visible !important;}.noriks-landing-logo-link--footer{justify-content:flex-start;}.noriks-landing-logo-text{display:inline-block !important;color:#111 !important;font-family:Roboto,sans-serif !important;font-size:33px !important;font-weight:700 !important;letter-spacing:1.75px !important;line-height:1 !important;white-space:nowrap;opacity:1 !important;visibility:visible !important;}.noriks-landing-logo-text--footer{font-size:32px !important;color:#fff !important;}.header__logo-img,.footer__brand-link img,.footer__brand-logo{display:none !important;}</style></head>',
             $markup,
             1
         );
@@ -657,7 +664,7 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 
 $target_product_url = get_post_meta(get_the_ID(), '_landigs_target_product_url', true);
 $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product_id', true);
-$boxers_image_url   = trailingslashit(get_template_directory_uri()) . 'lander2/images/noriks_boxers_gif_1.gif';
+$boxers_image_url   = home_url('/hr/wp-content/themes/noriks/lander2/images/noriks_boxers_gif_1.gif');
 $hero_image_url     = trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-majice-garancija.jpg';
 $landing_image_urls = array(
     trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-1.jpg',
@@ -679,14 +686,14 @@ $review_image_urls = array(
     'https://noriks.com/hr/wp-content/themes/noriks/auto_reviews/majice-slike/Generated%20Image%20January%2019%2C%202026%20-%2010_50AM.jpeg',
 );
 $purpose_image_urls = array(
-    'https://noriks.com/hr/wp-content/uploads/2025/08/Soulstudio_light-3-min.jpg',
-    'https://noriks.com/hr/wp-content/uploads/2025/08/Soulstudio_light-27-min.jpg',
-    'https://noriks.com/hr/wp-content/uploads/2025/08/Soulstudio_light-39-min.jpg',
-    'https://noriks.com/hr/wp-content/uploads/2025/08/Soulstudio_light-33-min-600x600.jpg',
-    'https://noriks.com/hr/wp-content/uploads/2025/08/Soulstudio_light-30-min-600x600.jpg',
-    'https://noriks.com/hr/wp-content/uploads/2025/08/Soulstudio_light-2-min-600x600.jpg',
-    'https://noriks.com/hr/wp-content/uploads/2025/09/everyday-6X-600x600.jpg',
+    'https://noriks.com/hr/wp-content/uploads/2025/11/crna-in-siva-majica-vse-barve-gat-bundle-600x600.png',
     'https://noriks.com/hr/wp-content/uploads/2025/11/crna-in-modra-majica-vse-barve-gat-bundle-600x600.png',
+    'https://noriks.com/hr/wp-content/uploads/2025/11/crna-in-bela-majica-vse-barve-gat-bundle-600x600.png',
+    'https://noriks.com/hr/wp-content/uploads/2025/11/bela-in-siva-majica-vse-barve-gat-bundle-600x600.png',
+    'https://noriks.com/hr/wp-content/uploads/2025/09/monochrome-3x-600x600.jpg',
+    'https://noriks.com/hr/wp-content/uploads/2025/09/city-6x-600x600.jpg',
+    'https://noriks.com/hr/wp-content/uploads/2025/09/everyday-6X-600x600.jpg',
+    'https://noriks.com/hr/wp-content/uploads/2025/09/urban-earth-6x-600x600.jpg',
 );
 
 if (!$target_product_url) {
@@ -846,6 +853,7 @@ $runtime_config = array(
     'simpleProduct'    => $is_simple_product,
     'skuMap'           => $sku_map,
     'variationMap'     => $variation_map,
+    'reviewFeedImages' => $review_image_urls,
     'optionGroups'     => array(
         'primary' => array(
             'label'   => $primary_label,

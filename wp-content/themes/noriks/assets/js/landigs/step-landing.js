@@ -2,6 +2,7 @@
   var config = window.noriksStepLandingConfig || {};
   var skuMap = config.skuMap || {};
   var variationMap = config.variationMap || [];
+  var reviewFeedImages = config.reviewFeedImages || [];
   var landingState = {
     primaryName: null,
     secondaryName: null,
@@ -314,6 +315,28 @@
     });
   }
 
+  function applyReviewFeedImages() {
+    if (!reviewFeedImages.length) {
+      return;
+    }
+
+    var reviewImages = document.querySelectorAll("#product__reviews .img__review");
+    if (!reviewImages.length) {
+      return;
+    }
+
+    reviewImages.forEach(function (img, index) {
+      var replacement = reviewFeedImages[index % reviewFeedImages.length];
+      if (!replacement) {
+        return;
+      }
+
+      if (img.getAttribute("src") !== replacement) {
+        img.setAttribute("src", replacement);
+      }
+    });
+  }
+
   function currentVariation() {
     if (typeof propertiesArr === "undefined" || typeof variationsArr === "undefined") {
       return null;
@@ -560,6 +583,7 @@
     normalizeSecondaryButtons();
     applyConfiguredOffers();
     initRelatedProductSizes();
+    applyReviewFeedImages();
     rewriteAnchors();
     syncBuyButtons();
 
