@@ -105,6 +105,27 @@ if (!function_exists('noriks_ensure_default_landing_offers')) {
     }
 }
 
+if (!function_exists('noriks_landigs_use_apparel_sizes')) {
+    function noriks_landigs_use_apparel_sizes($raw_options) {
+        $lines = preg_split('/\r\n|\r|\n/', (string) $raw_options);
+        $lines = array_values(array_filter(array_map('trim', $lines)));
+
+        if (empty($lines)) {
+            return true;
+        }
+
+        $numeric_like = 0;
+
+        foreach ($lines as $line) {
+            if (preg_match('/^\d+(?:\s*\/\s*\d+)?(?:\s*-\s*\d+)?$/', $line)) {
+                $numeric_like++;
+            }
+        }
+
+        return $numeric_like === count($lines);
+    }
+}
+
 if (!function_exists('noriks_get_sidecart_assets_markup')) {
     function noriks_get_sidecart_assets_markup() {
         if (!function_exists('xoo_wsc') || !function_exists('xoo_wsc_frontend') || !function_exists('xoo_wsc_helper')) {
@@ -227,6 +248,16 @@ if ($secondary_label === '') {
 }
 
 if ($secondary_options === '') {
+    $secondary_options = implode("\n", array(
+        'S',
+        'M',
+        'L',
+        'XL',
+        'XXL',
+    ));
+}
+
+if (noriks_landigs_use_apparel_sizes($secondary_options)) {
     $secondary_options = implode("\n", array(
         'S',
         'M',
