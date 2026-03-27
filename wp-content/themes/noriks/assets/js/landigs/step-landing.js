@@ -279,6 +279,7 @@
 
     document.querySelectorAll("a[href='https://ortowp.noriks.com/kosarica/?add-more='], a.header__cart").forEach(function (link) {
       link.href = config.cartUrl;
+      link.classList.add("xoo-wsc-cart-trigger");
     });
 
     document.querySelectorAll("a[href='https://ortowp.noriks.com/']").forEach(function (link) {
@@ -287,13 +288,88 @@
   }
 
   function syncBuyButtons() {
-    var url = addToCartUrl();
     var buttons = document.querySelectorAll(".hs-cf-cart-btn, [id$='-hs-cf-add-to-cart'], .checkout-add-to-cart-btn");
 
     buttons.forEach(function (button) {
-      button.setAttribute("href", url || "#");
+      button.setAttribute("href", "#");
       button.style.cursor = "pointer";
     });
+  }
+
+  function getAjaxEndpoint(endpoint) {
+    if (window.xoo_wsc_params && window.xoo_wsc_params.wc_ajax_url) {
+      return window.xoo_wsc_params.wc_ajax_url.toString().replace("%%endpoint%%", endpoint);
+    }
+
+    return null;
+  }
+
+  function buildAddToCartPayload() {
+    var formData = new FormData();
+    var quantity = selectedQuantity();
+
+    formData.append("action", "xoo_wsc_add_to_cart");
+    formData.append("add-to-cart", String(config.productId));
+    formData.append("quantity", String(quantity));
+
+    if (!config.simpleProduct) {
+      var variation = currentVariation();
+      var mapped = variation && variation.sku ? skuMap[variation.sku] : null;
+
+      if (!mapped) {
+        return null;
+      }
+
+      formData.append("product_id", String(config.productId));
+      formData.append("variation_id", String(mapped.id));
+      formData.append("attribute_pa_barva", mapped.b || "");
+      formData.append("attribute_pa_velikost", mapped.v || "");
+    }
+
+    return formData;
+  }
+
+  function openSidecart(trigger) {
+    var cartTrigger = document.querySelector(".xoo-wsc-cart-trigger");
+    if (cartTrigger) {
+      cartTrigger.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true }));
+    }
+  }
+
+  function addToCartAjax(trigger) {
+    var endpoint = getAjaxEndpoint("xoo_wsc_add_to_cart");
+    var payload = buildAddToCartPayload();
+
+    if (!endpoint || !payload) {
+      return Promise.reject(new Error("missing-endpoint"));
+    }
+
+    trigger.classList.add("loading");
+
+    return fetch(endpoint, {
+      method: "POST",
+      credentials: "same-origin",
+      body: payload
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (response) {
+        if (response && response.fragments && window.jQuery) {
+          window.jQuery(document.body).trigger("added_to_cart", [response.fragments, response.cart_hash || "", window.jQuery(trigger)]);
+          return response;
+        }
+
+        if (response && response.error) {
+          throw new Error("cart-error");
+        }
+
+        throw new Error("invalid-response");
+      })
+      .finally(function () {
+        trigger.classList.remove("loading");
+        trigger.classList.add("added");
+      });
   }
 
   function handleBuyClick(event) {
@@ -310,7 +386,13 @@
     }
 
     event.preventDefault();
-    window.location.href = url;
+    addToCartAjax(trigger)
+      .then(function () {
+        openSidecart(trigger);
+      })
+      .catch(function () {
+        window.alert("Dodavanje u košaricu trenutno nije dostupno. Provjeri sidecart/plugin konfiguraciju.");
+      });
   }
 
   function refresh() {
@@ -318,6 +400,8 @@
     applyConfiguredOffers();
     rewriteAnchors();
     syncBuyButtons();
+
+    document.documentElement.classList.remove("noriks-landings-pending");
   }
 
   document.addEventListener("click", handleBuyClick, true);

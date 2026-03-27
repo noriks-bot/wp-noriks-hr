@@ -80,6 +80,124 @@ if (!function_exists('noriks_parse_landigs_offer_options')) {
     }
 }
 
+if (!function_exists('noriks_ensure_default_landing_offers')) {
+    function noriks_ensure_default_landing_offers($offers) {
+        $has_five = false;
+
+        foreach ($offers as $offer) {
+            if (!empty($offer['quantity']) && (int) $offer['quantity'] === 5) {
+                $has_five = true;
+                break;
+            }
+        }
+
+        if (!$has_five) {
+            $offers[] = array(
+                'quantity' => 5,
+                'title'    => '5 majic',
+                'subtitle' => 'Najveći paket za maksimalnu uštedu',
+                'badge'    => '',
+                'selected' => false,
+            );
+        }
+
+        return $offers;
+    }
+}
+
+if (!function_exists('noriks_get_sidecart_assets_markup')) {
+    function noriks_get_sidecart_assets_markup() {
+        if (!function_exists('xoo_wsc') || !function_exists('xoo_wsc_frontend') || !function_exists('xoo_wsc_helper')) {
+            return array(
+                'head' => '',
+                'body' => '',
+            );
+        }
+
+        $loader = xoo_wsc();
+        $previous_is_sidecart_page = isset($loader->isSideCartPage) ? $loader->isSideCartPage : null;
+        $loader->isSideCartPage = true;
+
+        xoo_wsc_frontend()->enqueue_styles();
+        xoo_wsc_frontend()->enqueue_scripts();
+
+        ob_start();
+        wp_print_styles(array('xoo-wsc-fonts', 'xoo-wsc-style'));
+        wp_print_scripts(array('xoo-wsc-main-js'));
+        $head_assets = ob_get_clean();
+
+        ob_start();
+        xoo_wsc_helper()->get_template('/global/markup-notice.php');
+        xoo_wsc_helper()->get_template('xoo-wsc-markup.php');
+        $body_markup = ob_get_clean();
+
+        $loader->isSideCartPage = $previous_is_sidecart_page;
+
+        return array(
+            'head' => $head_assets,
+            'body' => $body_markup,
+        );
+    }
+}
+
+if (!function_exists('noriks_customize_step_landing_markup')) {
+    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url) {
+        $markup = preg_replace(
+            '#<div class="loockat-slider__wrapper video">.*?</div>\s*</div>\s*<!-- SLIDER TWO -->#s',
+            '<!-- SLIDER TWO -->',
+            $markup,
+            1
+        );
+
+        $text_replacements = array(
+            'STEPEASE' => 'NORIKS',
+            'Stepease' => 'NORIKS',
+            'stepease' => 'noriks',
+            'OrthoStep' => 'NORIKS',
+            'vlo&#x17E;ki' => 'majica',
+            'Vlo&#x17E;ki' => 'Majica',
+            'vlo&#x17E;ke' => 'majice',
+            'Vlo&#x17E;ke' => 'Majice',
+            'vlo&#x17E;kov' => 'majic',
+            'Vlo&#x17E;kov' => 'Majic',
+            'vlo&#x17E;kom' => 'majici',
+            'Vlo&#x17E;kom' => 'Majici',
+            'vlo&#x17E;ka' => 'majice',
+            'Vlo&#x17E;ka' => 'Majice',
+            'vložki' => 'majica',
+            'Vložki' => 'Majica',
+            'vložke' => 'majice',
+            'Vložke' => 'Majice',
+            'vložkov' => 'majic',
+            'Vložkov' => 'Majic',
+            'vložkom' => 'majici',
+            'Vložkom' => 'Majici',
+            'vložka' => 'majice',
+            'Vložka' => 'Majice',
+        );
+
+        $markup = strtr($markup, $text_replacements);
+
+        $markup = str_replace(
+            array(
+                'https://ortowp.noriks.com/product/stepease/',
+                'https://ortowp.noriks.com/cart/',
+                'https://ortowp.noriks.com/kosarica/?add-more=',
+                'https://ortowp.noriks.com/',
+            ),
+            array(
+                esc_url($landing_url),
+                esc_url($cart_url),
+                esc_url($cart_url),
+                esc_url($home_url),
+            ),
+            $markup
+        );
+
+        return $markup;
+    }
+}
+
 $target_product_url = get_post_meta(get_the_ID(), '_landigs_target_product_url', true);
 $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product_id', true);
 
@@ -122,6 +240,7 @@ if ($offer_options === '') {
         '1|1 majica|Odličan ulazni paket|',
         '2|2 majice|Najbolji omjer cijene i količine|NAJPOPULARNIJE',
         '3|3 majice|Najveća ušteda po komadu|',
+        '5|5 majic|Najveći paket za maksimalnu uštedu|',
     ));
 }
 
@@ -181,11 +300,13 @@ $runtime_config = array(
             'hidden'  => $hide_secondary === '1' || trim((string) $secondary_options) === '',
         ),
     ),
-    'offers'           => noriks_parse_landigs_offer_options($offer_options),
+    'offers'           => noriks_ensure_default_landing_offers(noriks_parse_landigs_offer_options($offer_options)),
 );
 
+$sidecart_assets = noriks_get_sidecart_assets_markup();
+
 $runtime_script = sprintf(
-    '<script>window.dataLayer = window.dataLayer || []; window.noriksStepLandingConfig = %s;</script>' . "\n" .
+    '<script>window.dataLayer = window.dataLayer || []; window.noriksStepLandingConfig = %s; document.documentElement.classList.add("noriks-landings-pending");</script>' . "\n" .
     '<script src="%s?v=1.0"></script>',
     wp_json_encode($runtime_config),
     esc_url($asset_base_url . '/step-landing.js')
@@ -206,22 +327,26 @@ $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.nor
 $markup = preg_replace('#<script type="text/javascript" id="wc-order-attribution-js-extra">.*?</script>#s', '', $markup);
 $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.noriks\.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution\.min\.js\?ver=[^"]*" id="wc-order-attribution-js"></script>#', '', $markup);
 
+$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url);
+
+$markup = preg_replace('/<html\b([^>]*)>/', '<html$1 class="noriks-landings-pending">', $markup, 1);
+
+$hide_until_ready_css = '<style id="noriks-landigs-pending-style">html.noriks-landings-pending .sct-hero__dyn-properties, html.noriks-landings-pending .choose-qty, html.noriks-landings-pending #dynamic-cart-variations-container { opacity: 0 !important; visibility: hidden !important; }</style>';
+
+if (strpos($markup, '</head>') !== false) {
+    $markup = str_replace('</head>', $hide_until_ready_css . "\n" . $sidecart_assets['head'] . "\n</head>", $markup);
+} else {
+    $markup = $hide_until_ready_css . $sidecart_assets['head'] . $markup;
+}
+
 $markup = str_replace(
     array(
-        'https://ortowp.noriks.com/product/stepease/',
-        'https://ortowp.noriks.com/cart/',
-        'https://ortowp.noriks.com/kosarica/?add-more=',
-        'https://ortowp.noriks.com/',
         $legacy_wc_fix_tag . "\n" . $legacy_homepage_fix_tag,
         $legacy_wc_fix_tag,
         $legacy_homepage_fix_tag,
         $legacy_orto_wc_fix_tag,
     ),
     array(
-        esc_url($landing_url),
-        esc_url($cart_url),
-        esc_url($cart_url),
-        esc_url($home_url),
         '',
         '',
         '',
@@ -231,9 +356,9 @@ $markup = str_replace(
 );
 
 if (strpos($markup, '</body>') !== false) {
-    $markup = str_replace('</body>', $runtime_script . "\n</body>", $markup);
+    $markup = str_replace('</body>', $sidecart_assets['body'] . "\n" . $runtime_script . "\n</body>", $markup);
 } else {
-    $markup .= $runtime_script;
+    $markup .= $sidecart_assets['body'] . $runtime_script;
 }
 
 echo $markup; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
