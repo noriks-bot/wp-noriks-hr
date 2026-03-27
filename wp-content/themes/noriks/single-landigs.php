@@ -332,6 +332,16 @@ span.xoo-wsc-sp-atc a.noriks-upsell-btn:active {
 .xoo-wsc-sm-sales {
   display: none !important;
 }
+[data-tpl="stps"] .sct-experts .loockat-card__photo {
+  display: flex !important;
+  justify-content: center !important;
+}
+[data-tpl="stps"] .sct-experts .loockat-card__photo-img {
+  width: 50% !important;
+  max-width: 50% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
 </style>';
     }
 }
