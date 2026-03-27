@@ -1,6 +1,10 @@
 (function () {
   var config = window.noriksStepLandingConfig || {};
   var skuMap = config.skuMap || {};
+  var landingState = {
+    primaryName: null,
+    secondaryName: null
+  };
 
   function enableOptionButton(button) {
     button.disabled = false;
@@ -40,22 +44,32 @@
     if (primary.options && primary.options.length) {
       var primaryValue = document.getElementById("selected-color-variation-value");
       var primaryWrapper = root.querySelector(".color-variations-wrapper");
+      var currentPrimarySelection = landingState.primaryName;
+
+      if (!currentPrimarySelection && primaryValue && primaryValue.textContent.trim()) {
+        currentPrimarySelection = primaryValue.textContent.trim();
+      }
+
+      if (!currentPrimarySelection && primary.options[0]) {
+        currentPrimarySelection = primary.options[0].name || "";
+      }
 
       if (primaryValue) {
-        primaryValue.textContent = primary.options[0].name || "";
+        primaryValue.textContent = currentPrimarySelection || primary.options[0].name || "";
       }
 
       if (primaryWrapper) {
         primaryWrapper.innerHTML = "";
 
         primary.options.forEach(function (option, index) {
+          var isSelected = (option.name || "") === currentPrimarySelection || (!currentPrimarySelection && index === 0);
           var item = document.createElement("div");
           item.className = "color-variation";
 
           var button = document.createElement("button");
           button.type = "button";
-          button.className = "color-variation-button" + (index === 0 ? " selected" : "");
-          button.setAttribute("selected-option", index === 0 ? "true" : "false");
+          button.className = "color-variation-button" + (isSelected ? " selected" : "");
+          button.setAttribute("selected-option", isSelected ? "true" : "false");
           button.style.background = option.value || "#111111";
           button.title = option.name || "";
 
@@ -67,6 +81,7 @@
 
             button.classList.add("selected");
             button.setAttribute("selected-option", "true");
+            landingState.primaryName = option.name || "";
 
             if (primaryValue) {
               primaryValue.textContent = option.name || "";
@@ -97,6 +112,20 @@
     }
 
     if (secondary.options && secondary.options.length && secondaryButtons.length) {
+      var currentSecondarySelection = landingState.secondaryName;
+
+      if (!currentSecondarySelection) {
+        secondaryButtons.forEach(function (button) {
+          if (button.getAttribute("selected-option") === "true" && button.textContent.trim()) {
+            currentSecondarySelection = button.textContent.trim();
+          }
+        });
+      }
+
+      if (!currentSecondarySelection && secondary.options[0]) {
+        currentSecondarySelection = secondary.options[0].name || "";
+      }
+
       secondaryButtons.forEach(function (button, index) {
         var option = secondary.options[index];
 
@@ -108,25 +137,30 @@
         button.style.display = "";
         button.textContent = option.name || "";
         enableOptionButton(button);
-        button.classList.toggle("selected", index === 0);
-        button.setAttribute("selected-option", index === 0 ? "true" : "false");
+        var isSelected = (option.name || "") === currentSecondarySelection || (!currentSecondarySelection && index === 0);
+        button.classList.toggle("selected", isSelected);
+        button.setAttribute("selected-option", isSelected ? "true" : "false");
         button.removeAttribute("selected");
-        if (index === 0) {
+        if (isSelected) {
           button.setAttribute("selected", "selected");
         }
 
         button.onclick = null;
-        button.addEventListener("click", function () {
-          secondaryButtons.forEach(function (btn) {
-            btn.classList.remove("selected");
-            btn.setAttribute("selected-option", "false");
-            btn.removeAttribute("selected");
-          });
+        if (button.dataset.noriksBound !== "true") {
+          button.dataset.noriksBound = "true";
+          button.addEventListener("click", function () {
+            secondaryButtons.forEach(function (btn) {
+              btn.classList.remove("selected");
+              btn.setAttribute("selected-option", "false");
+              btn.removeAttribute("selected");
+            });
 
-          button.classList.add("selected");
-          button.setAttribute("selected-option", "true");
-          button.setAttribute("selected", "selected");
-        });
+            button.classList.add("selected");
+            button.setAttribute("selected-option", "true");
+            button.setAttribute("selected", "selected");
+            landingState.secondaryName = button.textContent.trim();
+          });
+        }
       });
     }
   }
