@@ -185,6 +185,14 @@ html.noriks-landings-pending #dynamic-cart-variations-container {
   border: 2px solid #000 !important;
   box-shadow: none !important;
 }
+[data-tpl="stps"] .button-variation {
+  min-width: 3.85rem !important;
+  width: 3.85rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-inline: 0 !important;
+}
 [data-tpl="stps"] .button-variation.selected,
 [data-tpl="stps"] .button-variation[selected-option="true"] {
   color: #fff !important;
