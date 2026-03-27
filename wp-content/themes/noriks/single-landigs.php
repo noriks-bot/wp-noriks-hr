@@ -694,7 +694,7 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 
 $target_product_url = get_post_meta(get_the_ID(), '_landigs_target_product_url', true);
 $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product_id', true);
-$boxers_image_url   = home_url('/hr/wp-content/themes/noriks/lander2/images/noriks_boxers_gif_1.gif');
+$boxers_image_url   = 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne-600x600.png';
 $hero_image_url     = trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-majice-garancija.jpg';
 $landing_image_urls = array(
     trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-shirt-1.jpg',
