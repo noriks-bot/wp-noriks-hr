@@ -242,7 +242,17 @@ function noriks_render_landigs_meta_box($post) {
     }
 
     if ($secondary_label === '') {
-        $secondary_label = 'Varijanta';
+        $secondary_label = 'Veličina';
+    }
+
+    if ($secondary_options === '') {
+        $secondary_options = implode("\n", array(
+            'S',
+            'M',
+            'L',
+            'XL',
+            'XXL',
+        ));
     }
 
     if ($primary_options === '') {

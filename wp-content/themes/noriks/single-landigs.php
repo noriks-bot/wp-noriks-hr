@@ -223,7 +223,17 @@ if ($primary_label === '') {
 }
 
 if ($secondary_label === '') {
-    $secondary_label = 'Varijanta';
+    $secondary_label = 'Veličina';
+}
+
+if ($secondary_options === '') {
+    $secondary_options = implode("\n", array(
+        'S',
+        'M',
+        'L',
+        'XL',
+        'XXL',
+    ));
 }
 
 if ($primary_options === '') {
@@ -299,7 +309,7 @@ $runtime_config = array(
         'secondary' => array(
             'label'   => $secondary_label,
             'options' => noriks_parse_landigs_visual_options($secondary_options, 'secondary'),
-            'hidden'  => $hide_secondary === '1' || trim((string) $secondary_options) === '',
+            'hidden'  => $hide_secondary === '1' ? true : false,
         ),
     ),
     'offers'           => noriks_ensure_default_landing_offers(noriks_parse_landigs_offer_options($offer_options)),
