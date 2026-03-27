@@ -149,35 +149,6 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
             1
         );
 
-        $text_replacements = array(
-            'STEPEASE' => 'NORIKS',
-            'Stepease' => 'NORIKS',
-            'stepease' => 'noriks',
-            'OrthoStep' => 'NORIKS',
-            'vlo&#x17E;ki' => 'majica',
-            'Vlo&#x17E;ki' => 'Majica',
-            'vlo&#x17E;ke' => 'majice',
-            'Vlo&#x17E;ke' => 'Majice',
-            'vlo&#x17E;kov' => 'majic',
-            'Vlo&#x17E;kov' => 'Majic',
-            'vlo&#x17E;kom' => 'majici',
-            'Vlo&#x17E;kom' => 'Majici',
-            'vlo&#x17E;ka' => 'majice',
-            'Vlo&#x17E;ka' => 'Majice',
-            'vložki' => 'majica',
-            'Vložki' => 'Majica',
-            'vložke' => 'majice',
-            'Vložke' => 'Majice',
-            'vložkov' => 'majic',
-            'Vložkov' => 'Majic',
-            'vložkom' => 'majici',
-            'Vložkom' => 'Majici',
-            'vložka' => 'majice',
-            'Vložka' => 'Majice',
-        );
-
-        $markup = strtr($markup, $text_replacements);
-
         $markup = str_replace(
             array(
                 'https://ortowp.noriks.com/product/stepease/',
@@ -193,6 +164,37 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
             ),
             $markup
         );
+
+        $text_replacements = array(
+            'STEPEASE - OrthoStep' => 'NORIKS - NORIKS',
+            'Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE' => 'NORIKS MAJICA | NORIKS',
+            'Ortopedski vložki z masažnimi točkami | STEPEASE' => 'NORIKS MAJICA | NORIKS',
+            'STEPEASE&#xA0;|&#xA0;Masa&#x17E;ni vlo&#x17E;ki' => 'NORIKS&#xA0;|&#xA0;Majica',
+            'STEPEASE | Masažni vložki' => 'NORIKS | Majica',
+            '93% strank je ocenilo Stepease z odličnostjo' => '93% strank je ocenilo NORIKS z odličnostjo',
+            'Ali se STEPEASE prilegajo mojim &#x10D;evljem?' => 'Ali se NORIKS majica prilega meni?',
+            'Kako dolgo zdr&#x17E;ijo vlo&#x17E;ki STEPEASE?' => 'Kako dolgo traju NORIKS majice?',
+            'Kako dolgo zdržijo vložki STEPEASE?' => 'Kako dolgo traju NORIKS majice?',
+            'Spoznaj vlo&#x17E;ke STEPEASE &#x2013; popolno udobje za tvoja stopala.' => 'Spoznaj NORIKS majicu za vsakodnevnu udobnost.',
+            'Razlika, ki jo prina&#x161;a <span class="accent">STEPEASE</span>' => 'Razlika, ki jo prinaša <span class="accent">NORIKS</span>',
+            'Poglejte, kako drugi <span class="accent">obu&#x17E;ujejo svoje vlo&#x17E;ke STEPEASE</span>' => 'Poglejte, kako drugi <span class="accent">nose svoju NORIKS majicu</span>',
+            'Kaj dela STEPEASE tako <span class="accent">posebne</span>?' => 'Kaj dela NORIKS tako <span class="accent">posebnim</span>?',
+            'Odkrijte, zakaj <span class="accent">strokovnjaki priporo&#x10D;ajo</span> STEPEASE' => 'Odkrijte, zakaj <span class="accent">kupci priporočajo</span> NORIKS',
+            'Spletna trgovina Stepease' => 'Spletna trgovina NORIKS',
+            'var brand = \'Stepease\';' => 'var brand = \'NORIKS\';',
+            'var brandSettings = {"name":"Stepease"};' => 'var brandSettings = {"name":"NORIKS"};',
+            'OrthoStep &raquo; STEPEASE Vir komentarjev' => 'NORIKS &raquo; NORIKS Vir komentarjev',
+            'name":"STEPEASE"' => 'name":"NORIKS"',
+            'name":"STEPEASE - OrthoStep"' => 'name":"NORIKS - NORIKS"',
+            'Ortopedski vlo&#x17E;ki' => 'Majica',
+            'Ortopedski vložki' => 'Majica',
+            'vlo&#x17E;ki' => 'majice',
+            'Vlo&#x17E;ki' => 'Majice',
+            'vložki' => 'majice',
+            'Vložki' => 'Majice',
+        );
+
+        $markup = str_replace(array_keys($text_replacements), array_values($text_replacements), $markup);
 
         return $markup;
     }

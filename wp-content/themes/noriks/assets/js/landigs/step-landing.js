@@ -293,6 +293,12 @@
     buttons.forEach(function (button) {
       button.setAttribute("href", "#");
       button.style.cursor = "pointer";
+      button.style.pointerEvents = "auto";
+      button.style.opacity = "1";
+      button.classList.remove("checkout-add-to-cart-btn-disabled");
+      button.classList.remove("hs-add-to-cart-disabled");
+      button.removeAttribute("disabled");
+      button.setAttribute("aria-disabled", "false");
     });
   }
 
@@ -375,13 +381,6 @@
   function handleBuyClick(event) {
     var trigger = event.target.closest(".hs-cf-cart-btn, [id$='-hs-cf-add-to-cart'], .checkout-add-to-cart-btn");
     if (!trigger) {
-      return;
-    }
-
-    var url = addToCartUrl();
-    if (!url) {
-      event.preventDefault();
-      window.alert("Povezava izdelka trenutno ni pripravljena. Preveri SKU-je oziroma variacije v WooCommerce.");
       return;
     }
 
