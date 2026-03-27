@@ -3,7 +3,8 @@
   var skuMap = config.skuMap || {};
   var landingState = {
     primaryName: null,
-    secondaryName: null
+    secondaryName: null,
+    offerQuantity: null
   };
 
   function enableOptionButton(button) {
@@ -182,6 +183,22 @@
       return;
     }
 
+    var currentOfferQuantity = landingState.offerQuantity;
+
+    if (!currentOfferQuantity) {
+      var currentChecked = document.querySelector("[id^='qty']:checked");
+      if (currentChecked) {
+        currentOfferQuantity = currentChecked.dataset.qty || currentChecked.value || currentChecked.id;
+      }
+    }
+
+    if (!currentOfferQuantity) {
+      var selectedOffer = offers.find(function (offer) {
+        return !!offer.selected;
+      });
+      currentOfferQuantity = selectedOffer ? String(selectedOffer.quantity) : null;
+    }
+
     rows.forEach(function (row, index) {
       var offer = offers[index];
       var input = row.querySelector("input[type='radio']");
@@ -200,7 +217,7 @@
 
       if (input) {
         input.dataset.qty = String(offer.quantity);
-        input.checked = !!offer.selected;
+        input.checked = String(offer.quantity) === String(currentOfferQuantity);
       }
 
       if (title) {
@@ -231,20 +248,28 @@
 
       if (label) {
         label.removeAttribute("onclick");
-        label.addEventListener("click", function () {
-          rows.forEach(function (innerRow) {
-            var innerInput = innerRow.querySelector("input[type='radio']");
-            if (innerInput) {
-              innerInput.checked = false;
+        if (label.dataset.noriksBound !== "true") {
+          label.dataset.noriksBound = "true";
+          label.addEventListener("click", function () {
+            rows.forEach(function (innerRow) {
+              var innerInput = innerRow.querySelector("input[type='radio']");
+              if (innerInput) {
+                innerInput.checked = false;
+              }
+            });
+
+            if (input) {
+              input.checked = true;
+              landingState.offerQuantity = input.dataset.qty || String(offer.quantity);
             }
+
+            syncBuyButtons();
           });
+        }
+      }
 
-          if (input) {
-            input.checked = true;
-          }
-
-          syncBuyButtons();
-        });
+      if (input && input.checked) {
+        landingState.offerQuantity = input.dataset.qty || String(offer.quantity);
       }
     });
   }

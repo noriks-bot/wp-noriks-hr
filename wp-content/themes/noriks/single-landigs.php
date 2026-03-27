@@ -329,7 +329,7 @@ span.xoo-wsc-sp-atc a.noriks-upsell-btn:active {
 }
 
 if (!function_exists('noriks_customize_step_landing_markup')) {
-    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url) {
+    function noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url, $hero_image_url) {
         $markup = preg_replace(
             '#<div class="loockat-slider__wrapper video">.*?</div>\s*</div>\s*<!-- SLIDER TWO -->#s',
             '<!-- SLIDER TWO -->',
@@ -342,6 +342,8 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
                 'https://ortowp.noriks.com/product/stepease/',
                 'https://ortowp.noriks.com/cart/',
                 'https://ortowp.noriks.com/kosarica/?add-more=',
+                'https://ortowp.noriks.com/wp-content/uploads/2026/02/84d4e066ce333_stepease_PP-EN_-_si-2.jpg',
+                'https://images.hs-plus.com/assets/shared-images/84d4e066ce333_stepease_PP-EN_-_si-2.jpg',
                 'https://ortowp.noriks.com/splosni-pogoji-poslovanja/',
                 'https://ortowp.noriks.com/varnostna-politika/',
                 'https://ortowp.noriks.com/politika-uporabe-piskotkov/',
@@ -355,6 +357,8 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
                 esc_url($landing_url),
                 esc_url($cart_url),
                 esc_url($cart_url),
+                esc_url($hero_image_url),
+                esc_url($hero_image_url),
                 esc_url(home_url('/splosni-pogoji-poslovanja/')),
                 esc_url(home_url('/varnostna-politika/')),
                 esc_url(home_url('/politika-uporabe-piskotkov/')),
@@ -367,12 +371,11 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
             $markup
         );
 
-        $markup = str_replace(
-            '<a class="header__logo" href="https://ortowp.noriks.com/">
-					<img class="header__logo-img" src="https://images.hs-plus.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg.svg" alt="logo">
-				</a>',
+        $markup = preg_replace(
+            '#<a class="header__logo" href="https://ortowp\.noriks\.com/">\s*<img class="header__logo-img" src="https://images\.hs-plus\.com/assets/STEPPER%20test-0/62260f0233272_logo-stepease-orange-bg\.svg" alt="logo">\s*</a>#',
             '<a class="header__logo noriks-landing-logo-link" href="' . esc_url($home_url) . '"><span class="noriks-landing-logo-text">NORIKS</span></a><style>.noriks-landing-logo-link{display:flex !important;align-items:center;justify-content:center;text-decoration:none;width:8.125rem;min-height:2rem;margin:0 auto;opacity:1 !important;visibility:visible !important;}.noriks-landing-logo-text{display:inline-block !important;color:#111 !important;font-family:\'Roboto\',sans-serif !important;font-size:33px !important;font-weight:700 !important;letter-spacing:1.75px !important;line-height:1 !important;white-space:nowrap;opacity:1 !important;visibility:visible !important;}</style>',
-            $markup
+            $markup,
+            1
         );
 
         $markup = preg_replace(
@@ -469,27 +472,80 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
             'STEPEASE&#xA0;|&#xA0;Masa&#x17E;ni vlo&#x17E;ki' => 'NORIKS&#xA0;|&#xA0;Majica',
             'STEPEASE | Masažni vložki' => 'NORIKS | Majica',
             '93% strank je ocenilo Stepease z odličnostjo' => '93% strank je ocenilo NORIKS z odličnostjo',
+            '93% strank je ocenilo NORIKS z odličnostjo' => '93% kupaca ocijenilo je NORIKS odličnim',
+            'Odli&#x10D;no 4,8&#xA0;|&#xA0;1169&#xA0;ocen' => 'Odlično 4,8 | 1169 ocjena',
+            'ocen kupcev' => 'ocjena kupaca',
             'Ali se STEPEASE prilegajo mojim &#x10D;evljem?' => 'Ali mi NORIKS majica odgovara?',
             'Ali se STEPEASE prilegajo mojim čevljem?' => 'Ali mi NORIKS majica odgovara?',
             'Kako dolgo zdr&#x17E;ijo vlo&#x17E;ki STEPEASE?' => 'Kako dolgo traju NORIKS majice?',
             'Kako dolgo zdržijo vložki STEPEASE?' => 'Kako dolgo traju NORIKS majice?',
+            'Domov' => 'Početna',
+            'Vsi izdelki' => 'Svi proizvodi',
+            'Koristne informacije' => 'Korisne informacije',
+            'Splo&#x161;ni pogoji poslovanja' => 'Opći uvjeti poslovanja',
+            'Splošni pogoji poslovanja' => 'Opći uvjeti poslovanja',
+            'Varnostna politika' => 'Sigurnosna politika',
+            'Politika uporabe pi&#x161;kotkov' => 'Politika kolačića',
+            'Politika uporabe piškotkov' => 'Politika kolačića',
+            'Pravica do odstopa od nakupa' => 'Pravo na odustanak od kupnje',
+            'Reklamacije in prito&#x17E;be' => 'Reklamacije i pritužbe',
+            'Reklamacije in pritožbe' => 'Reklamacije i pritužbe',
+            'Menjava v garanciji' => 'Zamjena u jamstvu',
+            'O podjetju' => 'O tvrtki',
+            'Po&#x161;ljite e-po&#x161;to na naslov:' => 'Pošaljite e-mail na adresu:',
+            'Prihranite' => 'Uštedite',
+            'Ponudba kmalu pote&#x10D;e' => 'Ponuda uskoro istječe',
+            'Ponudba kmalu poteče' => 'Ponuda uskoro istječe',
             'Spoznaj vlo&#x17E;ke STEPEASE &#x2013; popolno udobje za tvoja stopala.' => 'Spoznaj NORIKS majicu za vsakodnevnu udobnost.',
             'Spoznaj vložke STEPEASE – popolno udobje za tvoja stopala.' => 'Spoznaj NORIKS majicu za svakodnevnu udobnost.',
             '✔ Takojšnje olajšanje ✔ Klinično preizkušeno ✔ Priporočajo podiatri' => '✔ Udoban kroj ✔ Kvalitetna izrada ✔ NORIKS stil',
             '✔ Takoj&#x161;nje olaj&#x161;anje ✔ Klini&#x10D;no preizku&#x161;eno ✔ Priporo&#x10D;ajo podiatri' => '✔ Udoban kroj ✔ Kvalitetna izrada ✔ NORIKS stil',
+            'Poglejte, kako drugi' => 'Pogledajte kako drugi',
+            'Resni&#x10D;ne ocene resni&#x10D;nih uporabnikov' => 'Stvarne recenzije stvarnih kupaca',
+            'Resnične ocene resničnih uporabnikov' => 'Stvarne recenzije stvarnih kupaca',
             'Razlika, ki jo prina&#x161;a <span class="accent">STEPEASE</span>' => 'Razlika, ki jo prinaša <span class="accent">NORIKS</span>',
             'Razlika, ki jo prinaša <span class="accent">STEPEASE</span>' => 'Razlika, ki jo prinaša <span class="accent">NORIKS</span>',
+            'Razlika, ki jo prinaša' => 'Razlika koju donosi',
             'Poglejte, kako drugi <span class="accent">obu&#x17E;ujejo svoje vlo&#x17E;ke STEPEASE</span>' => 'Poglejte, kako drugi <span class="accent">nose svoju NORIKS majicu</span>',
             'Poglejte, kako drugi <span class="accent">obužujejo svoje vložke STEPEASE</span>' => 'Poglejte, kako drugi <span class="accent">nose svoju NORIKS majicu</span>',
             'Kaj dela STEPEASE tako <span class="accent">posebne</span>?' => 'Kaj dela NORIKS tako <span class="accent">posebnim</span>?',
+            'Kaj dela NORIKS tako <span class="accent">posebnim</span>?' => 'Što NORIKS čini tako <span class="accent">posebnim</span>?',
             'Odkrijte, zakaj <span class="accent">strokovnjaki priporo&#x10D;ajo</span> STEPEASE' => 'Odkrijte, zakaj <span class="accent">kupci priporočajo</span> NORIKS',
             'Odkrijte, zakaj <span class="accent">strokovnjaki priporočajo</span> STEPEASE' => 'Odkrijte, zakaj <span class="accent">kupci priporočajo</span> NORIKS',
+            'Odkrijte, zakaj <span class="accent">kupci priporočajo</span> NORIKS' => 'Otkrijte zašto <span class="accent">kupci preporučuju</span> NORIKS',
             'Spletna trgovina Stepease' => 'Spletna trgovina NORIKS',
             'var brand = \'Stepease\';' => 'var brand = \'NORIKS\';',
             'var brandSettings = {"name":"Stepease"};' => 'var brandSettings = {"name":"NORIKS"};',
             'OrthoStep &raquo; STEPEASE Vir komentarjev' => 'NORIKS &raquo; NORIKS Vir komentarjev',
             'name":"STEPEASE"' => 'name":"NORIKS"',
             'name":"STEPEASE - OrthoStep"' => 'name":"NORIKS - NORIKS"',
+            'Ve&#x10D; kot 200&#xA0;000 zadovoljnih strank' => 'Više od 200 000 zadovoljnih kupaca',
+            'Več kot 200 000 zadovoljnih strank' => 'Više od 200 000 zadovoljnih kupaca',
+            'Sledenje po&#x161;iljki z zavarovano dostavo' => 'Praćenje pošiljke s osiguranom dostavom',
+            'Sledenje pošiljki z zavarovano dostavo' => 'Praćenje pošiljke s osiguranom dostavom',
+            '90-dnevno jamstvo za vra&#x10D;ilo denarja' => '90-dnevno jamstvo povrata novca',
+            'Pravilna opora loka spodbuja bolj&#x161;o poravnavo hrbtenice.' => 'Dobro krojena majica pruža čišći izgled i bolju siluetu.',
+            'Pove&#x10D;ajte zmogljivost' => 'Poboljšajte dojam',
+            'Povečajte zmogljivost' => 'Poboljšajte dojam',
+            'Enostavno pranje' => 'Jednostavno održavanje',
+            'Ro&#x10D;no operite z milom in vodo.' => 'Perite prema uputama za dugotrajnu kvalitetu.',
+            'Izstopajte iz mno&#x17E;ice' => 'Istaknite se iz mase',
+            'Izstopajte iz množice' => 'Istaknite se iz mase',
+            'Ogled znamenitosti' => 'Razgledavanje',
+            'Dolge izmene' => 'Duge smjene',
+            'Dostava in po&#x161;iljanje' => 'Dostava i slanje',
+            'Dostava in pošiljanje' => 'Dostava i slanje',
+            'Politika vra&#x10D;il in povra&#x10D;il' => 'Politika povrata i refundacija',
+            'Politika vračil in povračil' => 'Politika povrata i refundacija',
+            'Popust za razli&#x10D;ne velikosti' => 'Popust za različite veličine',
+            'Popust za različne velikosti' => 'Popust za različite veličine',
+            'Na&#x161; popust lahko uporabite tudi za razli&#x10D;ne barve in velikosti!' => 'Naš popust možete iskoristiti i za različite boje i veličine!',
+            'Postopek:' => 'Postupak:',
+            'Dodajte eno velikost v ko&#x161;arico.' => 'Dodajte jednu veličinu u košaricu.',
+            'Dodajte &#x161;e drugo velikost v ko&#x161;arico.' => 'Dodajte još jednu veličinu u košaricu.',
+            'Popust za 2,&#xA0;3&#xA0;ali&#xA0;5&#xA0;parov se bo samodejno obra&#x10D;unal pri skupni ceni.' => 'Popust za 2, 3 ili 5 komada automatski će se obračunati u ukupnoj cijeni.',
+            'U&#x17E;ivajte v sledenju po&#x161;iljke z zavarovano dostavo v <strong>2&#x2013;3&#xA0;delovnih dneh.</strong> Za va&#x161;e udobje bo prilo&#x17E;ena &#x161;tevilka za sledenje.' => 'Uživajte u praćenju pošiljke s osiguranom dostavom u <strong>2–3 radna dana.</strong> Radi vaše sigurnosti bit će priložen broj za praćenje.',
+            'Prepri&#x10D;ani smo, da vam bo udobje vlo&#x17E;kov STEPEASE v&#x161;e&#x10D;. Zato ponujamo 90&#x2011;dnevno garancijo vra&#x10D;ila denarja brez tveganja. &#x10C;e ne boste popolnoma zadovoljni, nam preprosto pi&#x161;ite in uredili bomo vra&#x10D;ilo.' => 'Sigurni smo da će vam se svidjeti udobnost NORIKS majica. Zato nudimo 90-dnevno jamstvo povrata novca bez rizika. Ako ne budete potpuno zadovoljni, samo nam se javite i riješit ćemo povrat.',
             'Olaj&#x161;aj</span> bole&#x10D;ine v stopalih' => 'Istakni</span> svoj stil',
             'Olajšaj</span> bolečine v stopalih' => 'Istakni</span> svoj stil',
             'Prihodnost je </span>brez bole&#x10D;in v stopalih' => 'Budućnost je </span>u NORIKS majicama',
@@ -553,6 +609,7 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 $target_product_url = get_post_meta(get_the_ID(), '_landigs_target_product_url', true);
 $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product_id', true);
 $boxers_image_url   = trailingslashit(get_template_directory_uri()) . 'lander2/images/noriks_boxers_gif_1.gif';
+$hero_image_url     = trailingslashit(get_template_directory_uri()) . 'assets/images/landigs/noriks-majice-garancija.jpg';
 
 if (!$target_product_url) {
     $target_product_url = home_url('/hr/product/noriks-majica/');
@@ -704,7 +761,7 @@ $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.nor
 $markup = preg_replace('#<script type="text/javascript" id="wc-order-attribution-js-extra">.*?</script>#s', '', $markup);
 $markup = preg_replace('#<script type="text/javascript" src="https://ortowp\.noriks\.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution\.min\.js\?ver=[^"]*" id="wc-order-attribution-js"></script>#', '', $markup);
 
-$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url);
+$markup = noriks_customize_step_landing_markup($markup, $landing_url, $cart_url, $home_url, $boxers_image_url, $hero_image_url);
 
 $markup = preg_replace('/<html\b([^>]*)>/', '<html$1 class="noriks-landings-pending">', $markup, 1);
 
