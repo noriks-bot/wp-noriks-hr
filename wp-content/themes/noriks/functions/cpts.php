@@ -269,6 +269,87 @@ function noriks_collection_order_ids_from_string($value) {
     return array_values(array_unique($parts));
 }
 
+function noriks_get_collection_product_choices() {
+    $products = get_posts(array(
+        'post_type'      => 'product',
+        'post_status'    => 'publish',
+        'posts_per_page' => -1,
+        'orderby'        => 'title',
+        'order'          => 'ASC',
+        'fields'         => 'ids',
+    ));
+
+    $choices = array();
+
+    foreach ($products as $product_id) {
+        $title = get_the_title($product_id);
+        $sku = get_post_meta($product_id, '_sku', true);
+
+        $choices[] = array(
+            'id'    => (int) $product_id,
+            'title' => $title ? $title : sprintf(__('Product #%d', 'textdomain'), $product_id),
+            'sku'   => $sku ? $sku : '',
+        );
+    }
+
+    return $choices;
+}
+
+function noriks_render_collection_product_order_ui($selected_raw = '') {
+    $selected_ids = noriks_collection_order_ids_from_string($selected_raw);
+    $choices = noriks_get_collection_product_choices();
+    $choice_map = array();
+
+    foreach ($choices as $choice) {
+        $choice_map[$choice['id']] = $choice;
+    }
+
+    echo '<div class="noriks-product-order-ui">';
+    echo '<input type="hidden" class="noriks-product-order-value" name="noriks_collection_product_order" value="' . esc_attr(implode("\n", $selected_ids)) . '">';
+    echo '<div class="noriks-product-order-columns">';
+
+    echo '<div class="noriks-product-order-column noriks-product-order-column--available">';
+    echo '<h4>' . esc_html__('All Products', 'textdomain') . '</h4>';
+    echo '<input type="search" class="regular-text noriks-product-order-search" placeholder="' . esc_attr__('Search by name or SKU', 'textdomain') . '">';
+    echo '<ul class="noriks-product-order-list noriks-product-order-list--available">';
+    foreach ($choices as $choice) {
+        $is_selected = in_array($choice['id'], $selected_ids, true);
+        echo '<li class="noriks-product-order-item' . ($is_selected ? ' is-selected' : '') . '" data-id="' . esc_attr($choice['id']) . '" data-title="' . esc_attr(strtolower($choice['title'])) . '" data-sku="' . esc_attr(strtolower($choice['sku'])) . '">';
+        echo '<div class="noriks-product-order-item__meta">';
+        echo '<strong>' . esc_html($choice['title']) . '</strong>';
+        echo '<span>' . esc_html($choice['sku'] ? $choice['sku'] : 'No SKU') . '</span>';
+        echo '</div>';
+        echo '<button type="button" class="button button-small noriks-product-order-add">' . esc_html__('Add', 'textdomain') . '</button>';
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '</div>';
+
+    echo '<div class="noriks-product-order-column noriks-product-order-column--selected">';
+    echo '<h4>' . esc_html__('Selected Order', 'textdomain') . '</h4>';
+    echo '<p class="description">' . esc_html__('Drag to reorder the products shown in this collection.', 'textdomain') . '</p>';
+    echo '<ul class="noriks-product-order-list noriks-product-order-list--selected">';
+    foreach ($selected_ids as $selected_id) {
+        if (empty($choice_map[$selected_id])) {
+            continue;
+        }
+        $choice = $choice_map[$selected_id];
+        echo '<li class="noriks-product-order-item is-active" data-id="' . esc_attr($choice['id']) . '">';
+        echo '<span class="noriks-product-order-handle">⋮⋮</span>';
+        echo '<div class="noriks-product-order-item__meta">';
+        echo '<strong>' . esc_html($choice['title']) . '</strong>';
+        echo '<span>' . esc_html($choice['sku'] ? $choice['sku'] : 'No SKU') . '</span>';
+        echo '</div>';
+        echo '<button type="button" class="button button-small noriks-product-order-remove">' . esc_html__('Remove', 'textdomain') . '</button>';
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '</div>';
+
+    echo '</div>';
+    echo '</div>';
+}
+
 function noriks_add_collection_term_fields() {
     ?>
     <div class="form-field term-group">
@@ -313,8 +394,7 @@ function noriks_add_collection_term_fields() {
     </div>
     <div class="form-field term-group">
         <label for="noriks-collection-product-order"><?php esc_html_e('Manual Product Order', 'textdomain'); ?></label>
-        <textarea id="noriks-collection-product-order" name="noriks_collection_product_order" rows="6" placeholder="3421, 3550, 4001"></textarea>
-        <p class="description"><?php esc_html_e('Enter product IDs in the exact order you want them shown. Separate with commas or new lines.', 'textdomain'); ?></p>
+        <?php noriks_render_collection_product_order_ui(''); ?>
     </div>
     <div class="form-field term-group">
         <label><input type="checkbox" name="noriks_collection_show_bottom_products" value="1"> <?php esc_html_e('Show Bottom Products', 'textdomain'); ?></label>
@@ -395,8 +475,7 @@ function noriks_edit_collection_term_fields($term) {
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-product-order"><?php esc_html_e('Manual Product Order', 'textdomain'); ?></label></th>
         <td>
-            <textarea id="noriks-collection-product-order" name="noriks_collection_product_order" rows="8" class="large-text"><?php echo esc_textarea($product_order); ?></textarea>
-            <p class="description"><?php esc_html_e('Enter product IDs in the exact order you want them shown. Separate with commas or new lines.', 'textdomain'); ?></p>
+            <?php noriks_render_collection_product_order_ui($product_order); ?>
         </td>
     </tr>
     <tr class="form-field term-group-wrap">
@@ -447,9 +526,77 @@ function noriks_enqueue_collection_term_admin_assets($hook) {
     }
 
     wp_enqueue_media();
+    wp_enqueue_script('jquery-ui-sortable');
 
     $script = <<<JS
 (function($){
+  function updateProductOrderField(ui){
+    var selected = [];
+    ui.find('.noriks-product-order-list--selected .noriks-product-order-item').each(function(){
+      selected.push($(this).data('id'));
+    });
+    ui.find('.noriks-product-order-value').val(selected.join("\\n"));
+  }
+
+  function createSelectedItem(id, title, sku){
+    return $('<li class="noriks-product-order-item is-active" data-id="' + id + '">' +
+      '<span class="noriks-product-order-handle">⋮⋮</span>' +
+      '<div class="noriks-product-order-item__meta"><strong></strong><span></span></div>' +
+      '<button type="button" class="button button-small noriks-product-order-remove">Remove</button>' +
+    '</li>')
+      .find('strong').text(title).end()
+      .find('span:last').text(sku || 'No SKU').end();
+  }
+
+  function bindProductOrderUi(){
+    $('.noriks-product-order-ui').each(function(){
+      var ui = $(this);
+      var available = ui.find('.noriks-product-order-list--available');
+      var selected = ui.find('.noriks-product-order-list--selected');
+
+      selected.sortable({
+        handle: '.noriks-product-order-handle',
+        update: function(){
+          updateProductOrderField(ui);
+        }
+      });
+
+      available.on('click', '.noriks-product-order-add', function(e){
+        e.preventDefault();
+        var item = $(this).closest('.noriks-product-order-item');
+        var id = item.data('id');
+        if (selected.find('[data-id="' + id + '"]').length) {
+          return;
+        }
+        var title = item.find('strong').text();
+        var sku = item.find('span').text();
+        item.addClass('is-selected');
+        selected.append(createSelectedItem(id, title, sku));
+        updateProductOrderField(ui);
+      });
+
+      selected.on('click', '.noriks-product-order-remove', function(e){
+        e.preventDefault();
+        var item = $(this).closest('.noriks-product-order-item');
+        var id = item.data('id');
+        item.remove();
+        available.find('[data-id="' + id + '"]').removeClass('is-selected');
+        updateProductOrderField(ui);
+      });
+
+      ui.find('.noriks-product-order-search').on('input', function(){
+        var needle = $(this).val().toLowerCase().trim();
+        available.find('.noriks-product-order-item').each(function(){
+          var item = $(this);
+          var haystack = (item.data('title') + ' ' + item.data('sku')).toLowerCase();
+          item.toggle(!needle || haystack.indexOf(needle) !== -1);
+        });
+      });
+
+      updateProductOrderField(ui);
+    });
+  }
+
   function bindCollectionMedia(){
     var frame;
     $('.noriks-collection-upload').off('click').on('click', function(e){
@@ -472,7 +619,10 @@ function noriks_enqueue_collection_term_admin_assets($hook) {
       container.find('.noriks-collection-banner-preview').empty();
     });
   }
-  $(bindCollectionMedia);
+  $(function(){
+    bindCollectionMedia();
+    bindProductOrderUi();
+  });
 })(jQuery);
 JS;
 
@@ -481,6 +631,69 @@ JS;
       .taxonomy-collections .term-description-wrap,
       .taxonomy-collections .term-parent-wrap {
         display: none !important;
+      }
+      .noriks-product-order-columns {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+      }
+      .noriks-product-order-column {
+        border: 1px solid #dcdcde;
+        background: #fff;
+        padding: 12px;
+      }
+      .noriks-product-order-column h4 {
+        margin: 0 0 12px;
+      }
+      .noriks-product-order-search {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      .noriks-product-order-list {
+        margin: 0;
+        max-height: 420px;
+        overflow: auto;
+      }
+      .noriks-product-order-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 0 0 8px;
+        padding: 10px 12px;
+        border: 1px solid #dcdcde;
+        background: #fff;
+      }
+      .noriks-product-order-item.is-selected {
+        opacity: 0.45;
+      }
+      .noriks-product-order-item__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+        flex: 1;
+      }
+      .noriks-product-order-item__meta strong,
+      .noriks-product-order-item__meta span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .noriks-product-order-item__meta span {
+        color: #50575e;
+      }
+      .noriks-product-order-handle {
+        cursor: move;
+        color: #50575e;
+        font-size: 18px;
+        line-height: 1;
+      }
+      @media (max-width: 1200px) {
+        .noriks-product-order-columns {
+          grid-template-columns: 1fr;
+        }
       }
     ');
 }
