@@ -248,11 +248,8 @@ function noriks_ensure_default_collection_akcija() {
     }
 
     $term_id = (int) $created['term_id'];
-    update_term_meta($term_id, 'noriks_collection_banner_title', 'AKCIJA');
-    update_term_meta($term_id, 'noriks_collection_banner_subtitle', 'Posebno odabrani proizvodi i ponude');
     update_term_meta($term_id, 'noriks_collection_promo_title', 'AKCIJA');
     update_term_meta($term_id, 'noriks_collection_promo_subtitle', 'Posebno odabrani proizvodi i ponude');
-    update_term_meta($term_id, 'noriks_collection_promo_image_id', 0);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_title', 'Tražiš još ponuda?');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', 'NORIKS rasprodaja, popust do 50 % 🔥');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', 'Kupi više i uštedi →');
@@ -271,34 +268,12 @@ function noriks_collection_order_ids_from_string($value) {
 function noriks_add_collection_term_fields() {
     ?>
     <div class="form-field term-group">
-        <label for="noriks-collection-banner-title"><?php esc_html_e('Banner Title', 'textdomain'); ?></label>
-        <input type="text" id="noriks-collection-banner-title" name="noriks_collection_banner_title" value="">
-    </div>
-    <div class="form-field term-group">
-        <label for="noriks-collection-banner-subtitle"><?php esc_html_e('Banner Subtitle', 'textdomain'); ?></label>
-        <textarea id="noriks-collection-banner-subtitle" name="noriks_collection_banner_subtitle" rows="3"></textarea>
-    </div>
-    <div class="form-field term-group">
-        <label for="noriks-collection-banner-image-id"><?php esc_html_e('Top Hero Image', 'textdomain'); ?></label>
-        <input type="hidden" id="noriks-collection-banner-image-id" name="noriks_collection_banner_image_id" value="">
-        <div class="noriks-collection-banner-preview" style="margin:10px 0;"></div>
-        <button type="button" class="button noriks-collection-upload"><?php esc_html_e('Select Image', 'textdomain'); ?></button>
-        <button type="button" class="button noriks-collection-remove"><?php esc_html_e('Remove Image', 'textdomain'); ?></button>
-    </div>
-    <div class="form-field term-group">
         <label for="noriks-collection-promo-title"><?php esc_html_e('Black Banner Title', 'textdomain'); ?></label>
         <input type="text" id="noriks-collection-promo-title" name="noriks_collection_promo_title" value="AKCIJA">
     </div>
     <div class="form-field term-group">
         <label for="noriks-collection-promo-subtitle"><?php esc_html_e('Black Banner Subtitle', 'textdomain'); ?></label>
         <input type="text" id="noriks-collection-promo-subtitle" name="noriks_collection_promo_subtitle" value="Posebno odabrani proizvodi i ponude">
-    </div>
-    <div class="form-field term-group">
-        <label for="noriks-collection-promo-image-id"><?php esc_html_e('Black Banner Image', 'textdomain'); ?></label>
-        <input type="hidden" id="noriks-collection-promo-image-id" name="noriks_collection_promo_image_id" value="">
-        <div class="noriks-collection-banner-preview" style="margin:10px 0;"></div>
-        <button type="button" class="button noriks-collection-upload"><?php esc_html_e('Select Image', 'textdomain'); ?></button>
-        <button type="button" class="button noriks-collection-remove"><?php esc_html_e('Remove Image', 'textdomain'); ?></button>
     </div>
     <div class="form-field term-group">
         <label for="noriks-collection-bottom-banner-title"><?php esc_html_e('Bottom Banner Title', 'textdomain'); ?></label>
@@ -337,12 +312,8 @@ function noriks_add_collection_term_fields() {
 }
 
 function noriks_edit_collection_term_fields($term) {
-    $banner_title    = get_term_meta($term->term_id, 'noriks_collection_banner_title', true);
-    $banner_subtitle = get_term_meta($term->term_id, 'noriks_collection_banner_subtitle', true);
-    $banner_image_id = get_term_meta($term->term_id, 'noriks_collection_banner_image_id', true);
     $promo_title = get_term_meta($term->term_id, 'noriks_collection_promo_title', true);
     $promo_subtitle = get_term_meta($term->term_id, 'noriks_collection_promo_subtitle', true);
-    $promo_image_id = get_term_meta($term->term_id, 'noriks_collection_promo_image_id', true);
     $bottom_banner_title = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_title', true);
     $bottom_banner_subtitle = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_subtitle', true);
     $bottom_banner_button_text = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_button_text', true);
@@ -350,31 +321,8 @@ function noriks_edit_collection_term_fields($term) {
     $bottom_banner_image_id = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_image_id', true);
     $product_order   = get_term_meta($term->term_id, 'noriks_collection_product_order', true);
     $bottom_products = get_term_meta($term->term_id, 'noriks_collection_bottom_product_ids', true);
-    $image_url       = $banner_image_id ? wp_get_attachment_image_url((int) $banner_image_id, 'medium') : '';
-    $promo_image_url = $promo_image_id ? wp_get_attachment_image_url((int) $promo_image_id, 'medium') : '';
     $bottom_image_url = $bottom_banner_image_id ? wp_get_attachment_image_url((int) $bottom_banner_image_id, 'medium') : '';
     ?>
-    <tr class="form-field term-group-wrap">
-        <th scope="row"><label for="noriks-collection-banner-title"><?php esc_html_e('Banner Title', 'textdomain'); ?></label></th>
-        <td><input type="text" id="noriks-collection-banner-title" name="noriks_collection_banner_title" value="<?php echo esc_attr($banner_title); ?>"></td>
-    </tr>
-    <tr class="form-field term-group-wrap">
-        <th scope="row"><label for="noriks-collection-banner-subtitle"><?php esc_html_e('Banner Subtitle', 'textdomain'); ?></label></th>
-        <td><textarea id="noriks-collection-banner-subtitle" name="noriks_collection_banner_subtitle" rows="4" class="large-text"><?php echo esc_textarea($banner_subtitle); ?></textarea></td>
-    </tr>
-    <tr class="form-field term-group-wrap">
-        <th scope="row"><label for="noriks-collection-banner-image-id"><?php esc_html_e('Top Hero Image', 'textdomain'); ?></label></th>
-        <td>
-            <input type="hidden" id="noriks-collection-banner-image-id" name="noriks_collection_banner_image_id" value="<?php echo esc_attr($banner_image_id); ?>">
-            <div class="noriks-collection-banner-preview" style="margin:10px 0;">
-                <?php if ($image_url) : ?>
-                    <img src="<?php echo esc_url($image_url); ?>" alt="" style="max-width:240px;height:auto;">
-                <?php endif; ?>
-            </div>
-            <button type="button" class="button noriks-collection-upload"><?php esc_html_e('Select Image', 'textdomain'); ?></button>
-            <button type="button" class="button noriks-collection-remove"><?php esc_html_e('Remove Image', 'textdomain'); ?></button>
-        </td>
-    </tr>
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-promo-title"><?php esc_html_e('Black Banner Title', 'textdomain'); ?></label></th>
         <td><input type="text" id="noriks-collection-promo-title" name="noriks_collection_promo_title" value="<?php echo esc_attr($promo_title); ?>" class="large-text"></td>
@@ -382,19 +330,6 @@ function noriks_edit_collection_term_fields($term) {
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-promo-subtitle"><?php esc_html_e('Black Banner Subtitle', 'textdomain'); ?></label></th>
         <td><input type="text" id="noriks-collection-promo-subtitle" name="noriks_collection_promo_subtitle" value="<?php echo esc_attr($promo_subtitle); ?>" class="large-text"></td>
-    </tr>
-    <tr class="form-field term-group-wrap">
-        <th scope="row"><label for="noriks-collection-promo-image-id"><?php esc_html_e('Black Banner Image', 'textdomain'); ?></label></th>
-        <td>
-            <input type="hidden" id="noriks-collection-promo-image-id" name="noriks_collection_promo_image_id" value="<?php echo esc_attr($promo_image_id); ?>">
-            <div class="noriks-collection-banner-preview" style="margin:10px 0;">
-                <?php if ($promo_image_url) : ?>
-                    <img src="<?php echo esc_url($promo_image_url); ?>" alt="" style="max-width:240px;height:auto;">
-                <?php endif; ?>
-            </div>
-            <button type="button" class="button noriks-collection-upload"><?php esc_html_e('Select Image', 'textdomain'); ?></button>
-            <button type="button" class="button noriks-collection-remove"><?php esc_html_e('Remove Image', 'textdomain'); ?></button>
-        </td>
     </tr>
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-bottom-banner-title"><?php esc_html_e('Bottom Banner Title', 'textdomain'); ?></label></th>
@@ -443,12 +378,8 @@ function noriks_edit_collection_term_fields($term) {
 }
 
 function noriks_save_collection_term_meta($term_id) {
-    $banner_title = isset($_POST['noriks_collection_banner_title']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_banner_title'])) : '';
-    $banner_subtitle = isset($_POST['noriks_collection_banner_subtitle']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_collection_banner_subtitle'])) : '';
-    $banner_image_id = isset($_POST['noriks_collection_banner_image_id']) ? absint($_POST['noriks_collection_banner_image_id']) : 0;
     $promo_title = isset($_POST['noriks_collection_promo_title']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_promo_title'])) : '';
     $promo_subtitle = isset($_POST['noriks_collection_promo_subtitle']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_promo_subtitle'])) : '';
-    $promo_image_id = isset($_POST['noriks_collection_promo_image_id']) ? absint($_POST['noriks_collection_promo_image_id']) : 0;
     $bottom_banner_title = isset($_POST['noriks_collection_bottom_banner_title']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_title'])) : '';
     $bottom_banner_subtitle = isset($_POST['noriks_collection_bottom_banner_subtitle']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_subtitle'])) : '';
     $bottom_banner_button_text = isset($_POST['noriks_collection_bottom_banner_button_text']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_button_text'])) : '';
@@ -459,12 +390,8 @@ function noriks_save_collection_term_meta($term_id) {
     $product_order_ids = noriks_collection_order_ids_from_string($product_order_raw);
     $bottom_product_ids = array_slice(noriks_collection_order_ids_from_string($bottom_product_raw), 0, 4);
 
-    update_term_meta($term_id, 'noriks_collection_banner_title', $banner_title);
-    update_term_meta($term_id, 'noriks_collection_banner_subtitle', $banner_subtitle);
-    update_term_meta($term_id, 'noriks_collection_banner_image_id', $banner_image_id);
     update_term_meta($term_id, 'noriks_collection_promo_title', $promo_title);
     update_term_meta($term_id, 'noriks_collection_promo_subtitle', $promo_subtitle);
-    update_term_meta($term_id, 'noriks_collection_promo_image_id', $promo_image_id);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_title', $bottom_banner_title);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', $bottom_banner_subtitle);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', $bottom_banner_button_text);
@@ -510,6 +437,12 @@ function noriks_enqueue_collection_term_admin_assets($hook) {
 JS;
 
     wp_add_inline_script('jquery-core', $script);
+    wp_add_inline_style('wp-admin', '
+      .taxonomy-collections .term-description-wrap,
+      .taxonomy-collections .term-parent-wrap {
+        display: none !important;
+      }
+    ');
 }
 
 function noriks_hide_collections_from_product_list_admin() {

@@ -217,9 +217,9 @@ if (!$bottom_banner_button_url) {
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  align-items: center;
-  gap: 72px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
   overflow: hidden;
 }
 
@@ -231,14 +231,19 @@ if (!$bottom_banner_button_url) {
 .tax-collections .noriks-collection-bottom-banner__image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 0;
 }
 
 .tax-collections .noriks-collection-bottom-banner__content {
   background: #f3f3f3;
   text-align: center;
-  padding: 10px 24px 10px 0;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tax-collections .noriks-collection-bottom-banner__content h2 {
