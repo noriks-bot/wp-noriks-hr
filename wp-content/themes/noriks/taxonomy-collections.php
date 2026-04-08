@@ -197,9 +197,10 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
 .tax-collections .noriks-collection-intro__inner p {
   margin: 0;
-  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(18px, 2.1vw, 28px);
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.12;
   color: #202124;
 }
 
@@ -401,7 +402,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-intro__inner p {
-    font-size: 18px;
+    font-size: 17px;
     text-align: center;
   }
 
