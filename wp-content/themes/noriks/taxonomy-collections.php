@@ -167,16 +167,16 @@ if (!$bottom_banner_button_url) {
 
 .tax-collections .noriks-collection-hero__content {
   max-width: 1760px;
-  padding: 42px 28px;
+  padding: 34px 24px 34px 24px;
   color: #fff;
 }
 
 .tax-collections .noriks-collection-hero__title {
   margin: 0;
   color: #fff;
-  font-size: clamp(32px, 5vw, 56px);
+  font-size: clamp(28px, 4vw, 56px);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -365,6 +365,20 @@ if (!$bottom_banner_button_url) {
   z-index: 999;
   opacity: 1;
   font-size: 10px;
+}
+
+@media (max-width: 1280px) {
+  .tax-collections .noriks-collection-hero {
+    padding: 12px 15px;
+  }
+
+  .tax-collections .noriks-collection-hero__content {
+    padding: 28px 20px;
+  }
+
+  .tax-collections .noriks-collection-hero__title {
+    font-size: clamp(24px, 3.8vw, 46px);
+  }
 }
 
 @media (max-width: 991px) {
