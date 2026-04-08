@@ -152,22 +152,21 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero {
-  padding: 14px 0;
+  padding: 14px 20px;
 }
 
 .tax-collections .noriks-collection-hero__inner {
   width: 100%;
-  max-width: none;
+  max-width: 1800px;
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
-  border-radius: 0;
+  border-radius: 5px;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  align-items: stretch;
+  display: block;
 }
 
 .tax-collections .noriks-collection-hero__content {
+  max-width: 1760px;
   padding: 42px 28px;
   color: #fff;
 }
@@ -190,15 +189,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero__media {
-  min-height: 280px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.tax-collections .noriks-collection-hero__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  display: none;
 }
 
 .tax-collections .noriks-collection-products {
@@ -393,7 +384,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .noriks-collection-hero {
-    padding: 5px 0;
+    padding: 5px 15px;
   }
 
   .tax-collections .noriks-collection-hero__inner {
@@ -402,10 +393,6 @@ if (!$bottom_banner_button_url) {
 
   .tax-collections .noriks-collection-hero__content {
     padding: 28px 28px;
-  }
-
-  .tax-collections .noriks-collection-hero__media {
-    min-height: 220px;
   }
 
   .tax-collections .noriks-collection-bottom-banner__inner {
