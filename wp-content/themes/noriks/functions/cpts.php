@@ -250,12 +250,14 @@ function noriks_ensure_default_collection_akcija() {
     $term_id = (int) $created['term_id'];
     update_term_meta($term_id, 'noriks_collection_show_promo', '0');
     update_term_meta($term_id, 'noriks_collection_show_intro_text', '0');
+    update_term_meta($term_id, 'noriks_collection_show_bottom_intro_text', '0');
     update_term_meta($term_id, 'noriks_collection_show_bottom_banner', '0');
     update_term_meta($term_id, 'noriks_collection_show_bottom_banner_button', '0');
     update_term_meta($term_id, 'noriks_collection_show_bottom_products', '0');
     update_term_meta($term_id, 'noriks_collection_promo_title', '');
     update_term_meta($term_id, 'noriks_collection_promo_subtitle', '');
     update_term_meta($term_id, 'noriks_collection_intro_text', '');
+    update_term_meta($term_id, 'noriks_collection_bottom_intro_text', '');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_title', '');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', '');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', '');
@@ -461,6 +463,13 @@ function noriks_add_collection_term_fields() {
         <label><input type="checkbox" name="noriks_collection_show_bottom_products" value="1"> <?php esc_html_e('Show Bottom Products', 'textdomain'); ?></label>
     </div>
     <div class="form-field term-group">
+        <label><input type="checkbox" name="noriks_collection_show_bottom_intro_text" value="1"> <?php esc_html_e('Show Bottom Intro Text', 'textdomain'); ?></label>
+    </div>
+    <div class="form-field term-group">
+        <label for="noriks-collection-bottom-intro-text"><?php esc_html_e('Bottom Intro Text', 'textdomain'); ?></label>
+        <textarea id="noriks-collection-bottom-intro-text" name="noriks_collection_bottom_intro_text" rows="4"></textarea>
+    </div>
+    <div class="form-field term-group">
         <label for="noriks-collection-bottom-product-ids"><?php esc_html_e('Bottom Products', 'textdomain'); ?></label>
         <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="4" placeholder="5001, 5002, 5003, 5004"></textarea>
         <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 4 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
@@ -474,9 +483,11 @@ function noriks_edit_collection_term_fields($term) {
     $show_bottom_banner = get_term_meta($term->term_id, 'noriks_collection_show_bottom_banner', true);
     $show_bottom_banner_button = get_term_meta($term->term_id, 'noriks_collection_show_bottom_banner_button', true);
     $show_bottom_products = get_term_meta($term->term_id, 'noriks_collection_show_bottom_products', true);
+    $show_bottom_intro_text = get_term_meta($term->term_id, 'noriks_collection_show_bottom_intro_text', true);
     $promo_title = get_term_meta($term->term_id, 'noriks_collection_promo_title', true);
     $promo_subtitle = get_term_meta($term->term_id, 'noriks_collection_promo_subtitle', true);
     $intro_text = get_term_meta($term->term_id, 'noriks_collection_intro_text', true);
+    $bottom_intro_text = get_term_meta($term->term_id, 'noriks_collection_bottom_intro_text', true);
     $bottom_banner_title = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_title', true);
     $bottom_banner_subtitle = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_subtitle', true);
     $bottom_banner_button_text = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_button_text', true);
@@ -566,6 +577,14 @@ function noriks_edit_collection_term_fields($term) {
         <td><label><input type="checkbox" name="noriks_collection_show_bottom_products" value="1" <?php checked($show_bottom_products, '1'); ?>> <?php esc_html_e('Enable section', 'textdomain'); ?></label></td>
     </tr>
     <tr class="form-field term-group-wrap">
+        <th scope="row"><?php esc_html_e('Show Bottom Intro Text', 'textdomain'); ?></th>
+        <td><label><input type="checkbox" name="noriks_collection_show_bottom_intro_text" value="1" <?php checked($show_bottom_intro_text, '1'); ?>> <?php esc_html_e('Enable section', 'textdomain'); ?></label></td>
+    </tr>
+    <tr class="form-field term-group-wrap">
+        <th scope="row"><label for="noriks-collection-bottom-intro-text"><?php esc_html_e('Bottom Intro Text', 'textdomain'); ?></label></th>
+        <td><textarea id="noriks-collection-bottom-intro-text" name="noriks_collection_bottom_intro_text" rows="5" class="large-text"><?php echo esc_textarea($bottom_intro_text); ?></textarea></td>
+    </tr>
+    <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-bottom-product-ids"><?php esc_html_e('Bottom Products', 'textdomain'); ?></label></th>
         <td>
             <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="5" class="large-text"><?php echo esc_textarea($bottom_products); ?></textarea>
@@ -581,9 +600,11 @@ function noriks_save_collection_term_meta($term_id) {
     update_term_meta($term_id, 'noriks_collection_show_bottom_banner', isset($_POST['noriks_collection_show_bottom_banner']) ? '1' : '0');
     update_term_meta($term_id, 'noriks_collection_show_bottom_banner_button', isset($_POST['noriks_collection_show_bottom_banner_button']) ? '1' : '0');
     update_term_meta($term_id, 'noriks_collection_show_bottom_products', isset($_POST['noriks_collection_show_bottom_products']) ? '1' : '0');
+    update_term_meta($term_id, 'noriks_collection_show_bottom_intro_text', isset($_POST['noriks_collection_show_bottom_intro_text']) ? '1' : '0');
     $promo_title = isset($_POST['noriks_collection_promo_title']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_promo_title'])) : '';
     $promo_subtitle = isset($_POST['noriks_collection_promo_subtitle']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_promo_subtitle'])) : '';
     $intro_text = isset($_POST['noriks_collection_intro_text']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_collection_intro_text'])) : '';
+    $bottom_intro_text = isset($_POST['noriks_collection_bottom_intro_text']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_collection_bottom_intro_text'])) : '';
     $bottom_banner_title = isset($_POST['noriks_collection_bottom_banner_title']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_title'])) : '';
     $bottom_banner_subtitle = isset($_POST['noriks_collection_bottom_banner_subtitle']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_subtitle'])) : '';
     $bottom_banner_button_text = isset($_POST['noriks_collection_bottom_banner_button_text']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_button_text'])) : '';
@@ -600,6 +621,7 @@ function noriks_save_collection_term_meta($term_id) {
     update_term_meta($term_id, 'noriks_collection_promo_title', $promo_title);
     update_term_meta($term_id, 'noriks_collection_promo_subtitle', $promo_subtitle);
     update_term_meta($term_id, 'noriks_collection_intro_text', $intro_text);
+    update_term_meta($term_id, 'noriks_collection_bottom_intro_text', $bottom_intro_text);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_title', $bottom_banner_title);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', $bottom_banner_subtitle);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', $bottom_banner_button_text);

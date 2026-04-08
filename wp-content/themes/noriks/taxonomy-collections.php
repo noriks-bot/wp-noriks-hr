@@ -13,9 +13,11 @@ $show_intro_text = $term_id ? get_term_meta($term_id, 'noriks_collection_show_in
 $show_bottom_banner = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_banner', true) : '0';
 $show_bottom_banner_button = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_banner_button', true) : '0';
 $show_bottom_products = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_products', true) : '0';
+$show_bottom_intro_text = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_intro_text', true) : '0';
 $promo_title = $term_id ? get_term_meta($term_id, 'noriks_collection_promo_title', true) : '';
 $promo_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_promo_subtitle', true) : '';
 $intro_text = $term_id ? get_term_meta($term_id, 'noriks_collection_intro_text', true) : '';
+$bottom_intro_text = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_intro_text', true) : '';
 $bottom_banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_title', true) : '';
 $bottom_banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', true) : '';
 $bottom_banner_button_text = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', true) : '';
@@ -115,6 +117,14 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
       <a class="noriks-collection-bottom-banner__button" href="<?php echo esc_url($bottom_banner_button_url); ?>"><?php echo esc_html($bottom_banner_button_text); ?></a>
       <?php endif; ?>
     </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<?php if ($show_bottom_intro_text === '1' && $bottom_intro_text) : ?>
+<section class="noriks-collection-intro noriks-collection-intro--bottom">
+  <div class="noriks-collection-intro__inner">
+    <p><?php echo nl2br(esc_html($bottom_intro_text)); ?></p>
   </div>
 </section>
 <?php endif; ?>
