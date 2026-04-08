@@ -762,15 +762,50 @@ function custom_loop_columns() {
     return 4; // 4 products per row
 }
 
+function noriks_should_use_gallery_image_for_loop($product_id) {
+    return get_post_meta($product_id, '_noriks_use_gallery_image_for_loop', true) === 'yes';
+}
+
+add_action('woocommerce_product_options_general_product_data', function() {
+    echo '<div class="options_group">';
+    woocommerce_wp_checkbox(array(
+        'id'          => '_noriks_use_gallery_image_for_loop',
+        'label'       => __('Use first gallery image in product cards', 'textdomain'),
+        'description' => __('If enabled, archive/category/collection cards will show the first gallery image instead of the featured image.', 'textdomain'),
+    ));
+    echo '</div>';
+});
+
+add_action('woocommerce_process_product_meta', function($post_id) {
+    $value = isset($_POST['_noriks_use_gallery_image_for_loop']) ? 'yes' : 'no';
+    update_post_meta($post_id, '_noriks_use_gallery_image_for_loop', $value);
+});
 
 
 
 add_action( 'woocommerce_before_shop_loop_item_title', 'add_second_product_thumbnail', 11 );
 function add_second_product_thumbnail() {
     global $product;
+    if ( ! $product ) {
+        return;
+    }
+
+    $product_id = $product->get_id();
     $gallery = $product->get_gallery_image_ids();
-    if ( ! empty( $gallery ) ) {
-        $second = wp_get_attachment_image_src( $gallery[0], 'woocommerce_thumbnail' );
+    if ( empty( $gallery ) && ! noriks_should_use_gallery_image_for_loop( $product_id ) ) {
+        return;
+    }
+
+    $secondary_image_id = 0;
+
+    if ( noriks_should_use_gallery_image_for_loop( $product_id ) ) {
+        $secondary_image_id = get_post_thumbnail_id( $product_id );
+    } elseif ( ! empty( $gallery ) ) {
+        $secondary_image_id = (int) $gallery[0];
+    }
+
+    if ( $secondary_image_id ) {
+        $second = wp_get_attachment_image_src( $secondary_image_id, 'woocommerce_thumbnail' );
         if ( $second ) {
             echo '<img class="secondary-image" src="' . esc_url( $second[0] ) . '" alt="" />';
         }
@@ -885,6 +920,23 @@ function my_alt_loop_product_thumbnail() {
     }
 
     $product_id = $product->get_id();
+
+    if ( noriks_should_use_gallery_image_for_loop( $product_id ) ) {
+        $gallery = $product->get_gallery_image_ids();
+        if ( ! empty( $gallery ) ) {
+            echo wp_get_attachment_image(
+                (int) $gallery[0],
+                'woocommerce_thumbnail',
+                false,
+                array(
+                    'class'   => 'attachment-woocommerce_thumbnail size-woocommerce_thumbnail',
+                    'loading' => 'lazy',
+                    'alt'     => esc_attr( $product->get_name() ),
+                )
+            );
+            return;
+        }
+    }
 
     // Get your ACF image field (adjust field name if needed)
     // If the field returns an image ID:
