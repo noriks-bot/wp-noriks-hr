@@ -406,7 +406,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
   .tax-collections .noriks-collection-bottom-banner__content {
     padding: 0;
-    background: #f3f3f3;
+    background: #fff;
   }
 
   .tax-collections .noriks-collection-bottom-banner__content h2 {
