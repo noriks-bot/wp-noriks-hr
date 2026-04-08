@@ -210,7 +210,7 @@ function noriks_register_collections_taxonomy() {
         'hierarchical'      => true,
         'labels'            => $labels,
         'show_ui'           => true,
-        'show_admin_column' => true,
+        'show_admin_column' => false,
         'query_var'         => true,
         'show_in_rest'      => true,
         'rewrite'           => array(
@@ -373,6 +373,21 @@ JS;
     wp_add_inline_script('jquery-core', $script);
 }
 
+function noriks_hide_collections_from_product_list_admin() {
+    $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+    if (!$screen || $screen->id !== 'edit-product') {
+        return;
+    }
+
+    echo '<style>
+    .column-taxonomy-collections,
+    #dropdown_taxonomy_collections {
+      display: none !important;
+    }
+    </style>';
+}
+
 
 function register_custom_post_type_lander() {
     $labels = array(
@@ -524,3 +539,4 @@ add_action('collections_edit_form_fields', 'noriks_edit_collection_term_fields')
 add_action('created_collections', 'noriks_save_collection_term_meta');
 add_action('edited_collections', 'noriks_save_collection_term_meta');
 add_action('admin_enqueue_scripts', 'noriks_enqueue_collection_term_admin_assets');
+add_action('admin_head-edit.php', 'noriks_hide_collections_from_product_list_admin');
