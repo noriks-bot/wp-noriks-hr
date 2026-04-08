@@ -513,7 +513,7 @@ if (!$bottom_banner_button_url) {
 @media (max-width: 768px) {
   .tax-collections ul.products {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
+    gap: 5px !important;
   }
 
   .tax-collections .top-liked,
