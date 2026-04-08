@@ -152,14 +152,15 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero {
-  padding: 14px 20px;
+  padding: 14px 0;
 }
 
 .tax-collections .noriks-collection-hero__inner {
-  max-width: 1760px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
-  border-radius: 5px;
+  border-radius: 0;
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
@@ -392,7 +393,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .noriks-collection-hero {
-    padding: 14px 15px;
+    padding: 5px 0;
   }
 
   .tax-collections .noriks-collection-hero__inner {
