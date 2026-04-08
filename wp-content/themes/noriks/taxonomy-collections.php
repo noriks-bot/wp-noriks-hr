@@ -162,21 +162,35 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   width: 100%;
   max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
-  background: linear-gradient(135deg, #111 0%, #2a2a2a 41%, #971b1b 100%);
+  position: relative;
   border-radius: 5px;
   overflow: hidden;
   display: block;
 }
 
+.tax-collections .noriks-collection-hero__inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://devhr.noriks.com/wp-content/uploads/2025/08/Soulstudio_light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  opacity: 0.6;
+  z-index: 0;
+}
+
 .tax-collections .noriks-collection-hero__content {
   max-width: none;
   padding: 34px var(--noriks-collection-gutter);
-  color: #fff;
+  color: #000;
+  position: relative;
+  z-index: 1;
 }
 
 .tax-collections .noriks-collection-hero__title {
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: clamp(28px, 4vw, 56px);
   font-weight: 700;
   line-height: 1;
@@ -188,7 +202,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   margin: 8px 0 0;
   font-size: 17px;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.84);
+  color: #000;
 }
 
 .tax-collections .noriks-collection-hero__media {
