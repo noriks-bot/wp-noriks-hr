@@ -274,6 +274,25 @@ function noriks_collection_order_ids_from_string($value) {
     return array_values(array_unique($parts));
 }
 
+function noriks_collection_gallery_image_map_from_string($value) {
+    $map = array();
+    $lines = preg_split('/[\r\n,]+/', (string) $value);
+
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if ($line === '' || strpos($line, ':') === false) {
+            continue;
+        }
+
+        list($product_id, $image_id) = array_map('absint', explode(':', $line, 2));
+        if ($product_id > 0 && $image_id > 0) {
+            $map[$product_id] = $image_id;
+        }
+    }
+
+    return $map;
+}
+
 function noriks_get_collection_product_choices($term_id = 0) {
     $query_args = array(
         'post_type'      => 'product',
@@ -375,26 +394,52 @@ function noriks_render_collection_product_order_ui($selected_raw = '', $term_id 
 
 function noriks_render_collection_gallery_image_ui($selected_raw = '', $term_id = 0) {
     if ($term_id <= 0) {
-        echo '<p class="description">' . esc_html__('Save the collection first, then you can choose which collection products should use a gallery image in the cards.', 'textdomain') . '</p>';
+        echo '<p class="description">' . esc_html__('Save the collection first, then you can choose exactly which gallery image each collection product should use in the cards.', 'textdomain') . '</p>';
         return;
     }
 
-    $selected_ids = noriks_collection_order_ids_from_string($selected_raw);
+    $selected_map = noriks_collection_gallery_image_map_from_string($selected_raw);
     $choices = noriks_get_collection_product_choices($term_id);
 
     echo '<div class="noriks-collection-gallery-image-ui">';
     echo '<ul class="noriks-collection-gallery-image-list">';
     foreach ($choices as $choice) {
-        $checked = in_array($choice['id'], $selected_ids, true);
+        $product = wc_get_product($choice['id']);
+        $gallery_ids = $product ? $product->get_gallery_image_ids() : array();
+        $selected_image_id = isset($selected_map[$choice['id']]) ? (int) $selected_map[$choice['id']] : 0;
+        $preview_image_id = $selected_image_id ? $selected_image_id : get_post_thumbnail_id($choice['id']);
+        $preview_url = $preview_image_id ? wp_get_attachment_image_url($preview_image_id, 'thumbnail') : '';
+
         echo '<li class="noriks-collection-gallery-image-item">';
-        echo '<label>';
-        echo '<input type="checkbox" name="noriks_collection_gallery_image_product_ids[]" value="' . esc_attr($choice['id']) . '" ' . checked($checked, true, false) . '>';
-        echo '<span><strong>' . esc_html($choice['title']) . '</strong> <em>' . esc_html($choice['sku'] ? $choice['sku'] : 'No SKU') . '</em></span>';
-        echo '</label>';
+        echo '<div class="noriks-collection-gallery-image-item__head">';
+        echo '<div class="noriks-collection-gallery-image-item__preview">';
+        if ($preview_url) {
+            echo '<img src="' . esc_url($preview_url) . '" alt="">';
+        } else {
+            echo '<span class="noriks-collection-gallery-image-item__placeholder">No image</span>';
+        }
+        echo '</div>';
+        echo '<div class="noriks-collection-gallery-image-item__meta">';
+        echo '<strong>' . esc_html($choice['title']) . '</strong> <em>' . esc_html($choice['sku'] ? $choice['sku'] : 'No SKU') . '</em>';
+        echo '</div>';
+        echo '</div>';
+
+        if (!empty($gallery_ids)) {
+            echo '<select class="noriks-collection-gallery-image-select" name="noriks_collection_gallery_image_map[' . esc_attr($choice['id']) . ']">';
+            echo '<option value="">' . esc_html__('Use featured image', 'textdomain') . '</option>';
+            foreach ($gallery_ids as $index => $gallery_id) {
+                $thumb_url = wp_get_attachment_image_url($gallery_id, 'thumbnail');
+                $label = sprintf(__('Gallery image %d', 'textdomain'), $index + 1);
+                echo '<option value="' . esc_attr($gallery_id) . '" data-preview-url="' . esc_url($thumb_url ? $thumb_url : '') . '" ' . selected($selected_image_id, (int) $gallery_id, false) . '>' . esc_html($label) . '</option>';
+            }
+            echo '</select>';
+        } else {
+            echo '<p class="description">' . esc_html__('This product has no gallery images.', 'textdomain') . '</p>';
+        }
         echo '</li>';
     }
     echo '</ul>';
-    echo '<p class="description">' . esc_html__('Checked products will use the first gallery image instead of the featured image on this collection page only.', 'textdomain') . '</p>';
+    echo '<p class="description">' . esc_html__('Choose any gallery image per product. This affects only this collection page.', 'textdomain') . '</p>';
     echo '</div>';
 }
 
@@ -495,7 +540,7 @@ function noriks_edit_collection_term_fields($term) {
     $bottom_banner_image_id = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_image_id', true);
     $bottom_banner_bg_color = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_bg_color', true);
     $product_order   = get_term_meta($term->term_id, 'noriks_collection_product_order', true);
-    $gallery_image_products = get_term_meta($term->term_id, 'noriks_collection_gallery_image_product_ids', true);
+    $gallery_image_products = get_term_meta($term->term_id, 'noriks_collection_gallery_image_map', true);
     $bottom_products = get_term_meta($term->term_id, 'noriks_collection_bottom_product_ids', true);
     $bottom_image_url = $bottom_banner_image_id ? wp_get_attachment_image_url((int) $bottom_banner_image_id, 'medium') : '';
     ?>
@@ -612,10 +657,27 @@ function noriks_save_collection_term_meta($term_id) {
     $bottom_banner_image_id = isset($_POST['noriks_collection_bottom_banner_image_id']) ? absint($_POST['noriks_collection_bottom_banner_image_id']) : 0;
     $bottom_banner_bg_color = isset($_POST['noriks_collection_bottom_banner_bg_color']) ? sanitize_hex_color(wp_unslash($_POST['noriks_collection_bottom_banner_bg_color'])) : '#f0eaea';
     $product_order_raw = isset($_POST['noriks_collection_product_order']) ? wp_unslash($_POST['noriks_collection_product_order']) : '';
-    $gallery_image_raw = isset($_POST['noriks_collection_gallery_image_product_ids']) ? (array) wp_unslash($_POST['noriks_collection_gallery_image_product_ids']) : array();
+    $gallery_image_raw = isset($_POST['noriks_collection_gallery_image_map']) ? (array) wp_unslash($_POST['noriks_collection_gallery_image_map']) : array();
     $bottom_product_raw = isset($_POST['noriks_collection_bottom_product_ids']) ? wp_unslash($_POST['noriks_collection_bottom_product_ids']) : '';
     $product_order_ids = noriks_collection_order_ids_from_string($product_order_raw);
-    $gallery_image_ids = array_values(array_unique(array_filter(array_map('absint', $gallery_image_raw))));
+    $gallery_image_map = array();
+    foreach ($gallery_image_raw as $product_id => $image_id) {
+        $product_id = absint($product_id);
+        $image_id = absint($image_id);
+        if ($product_id <= 0 || $image_id <= 0) {
+            continue;
+        }
+
+        $product = wc_get_product($product_id);
+        if (!$product) {
+            continue;
+        }
+
+        $gallery_ids = array_map('absint', $product->get_gallery_image_ids());
+        if (in_array($image_id, $gallery_ids, true)) {
+            $gallery_image_map[$product_id] = $image_id;
+        }
+    }
     $bottom_product_ids = array_slice(noriks_collection_order_ids_from_string($bottom_product_raw), 0, 4);
 
     update_term_meta($term_id, 'noriks_collection_promo_title', $promo_title);
@@ -629,7 +691,11 @@ function noriks_save_collection_term_meta($term_id) {
     update_term_meta($term_id, 'noriks_collection_bottom_banner_image_id', $bottom_banner_image_id);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_bg_color', $bottom_banner_bg_color ? $bottom_banner_bg_color : '#f0eaea');
     update_term_meta($term_id, 'noriks_collection_product_order', implode("\n", $product_order_ids));
-    update_term_meta($term_id, 'noriks_collection_gallery_image_product_ids', implode("\n", $gallery_image_ids));
+    $gallery_image_lines = array();
+    foreach ($gallery_image_map as $product_id => $image_id) {
+        $gallery_image_lines[] = $product_id . ':' . $image_id;
+    }
+    update_term_meta($term_id, 'noriks_collection_gallery_image_map', implode("\n", $gallery_image_lines));
     update_term_meta($term_id, 'noriks_collection_bottom_product_ids', implode("\n", $bottom_product_ids));
 }
 
@@ -732,9 +798,26 @@ function noriks_enqueue_collection_term_admin_assets($hook) {
       container.find('.noriks-collection-banner-preview').empty();
     });
   }
+
+  function bindCollectionGallerySelectors(){
+    $('.noriks-collection-gallery-image-select').off('change').on('change', function(){
+      var select = $(this);
+      var item = select.closest('.noriks-collection-gallery-image-item');
+      var preview = item.find('.noriks-collection-gallery-image-item__preview');
+      var selected = select.find('option:selected');
+      var previewUrl = selected.data('preview-url');
+
+      if (previewUrl) {
+        preview.html('<img src="' + previewUrl + '" alt="">');
+      } else {
+        preview.html('<span class="noriks-collection-gallery-image-item__placeholder">Featured</span>');
+      }
+    });
+  }
   $(function(){
     bindCollectionMedia();
     bindProductOrderUi();
+    bindCollectionGallerySelectors();
   });
 })(jQuery);
 JS;
@@ -809,18 +892,54 @@ JS;
       }
       .noriks-collection-gallery-image-item {
         margin: 0 0 8px;
-        padding: 8px 10px;
+        padding: 10px 12px;
         border: 1px solid #dcdcde;
         background: #fff;
       }
-      .noriks-collection-gallery-image-item label {
+      .noriks-collection-gallery-image-item__head {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      .noriks-collection-gallery-image-item__preview {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+        background: #f6f7f7;
+        border: 1px solid #dcdcde;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .noriks-collection-gallery-image-item__preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .noriks-collection-gallery-image-item__placeholder {
+        font-size: 11px;
+        color: #50575e;
+        text-align: center;
+        padding: 4px;
+      }
+      .noriks-collection-gallery-image-item__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .noriks-collection-gallery-image-item__meta strong,
+      .noriks-collection-gallery-image-item__meta em {
+        display: block;
       }
       .noriks-collection-gallery-image-item em {
         color: #50575e;
         font-style: normal;
+      }
+      .noriks-collection-gallery-image-select {
+        min-width: 280px;
       }
       @media (max-width: 1200px) {
         .noriks-product-order-columns {

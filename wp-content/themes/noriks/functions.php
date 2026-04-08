@@ -763,22 +763,30 @@ function custom_loop_columns() {
 }
 
 function noriks_should_use_collection_gallery_image_for_loop($product_id) {
+    return noriks_get_collection_gallery_image_for_loop($product_id) > 0;
+}
+
+function noriks_get_collection_gallery_image_for_loop($product_id) {
     if ( ! is_tax( 'collections' ) ) {
-        return false;
+        return 0;
     }
 
     $term = get_queried_object();
     if ( ! ( $term instanceof WP_Term ) ) {
-        return false;
+        return 0;
     }
 
-    $raw = get_term_meta( $term->term_id, 'noriks_collection_gallery_image_product_ids', true );
+    $raw = get_term_meta( $term->term_id, 'noriks_collection_gallery_image_map', true );
     if ( empty( $raw ) || ! function_exists( 'noriks_collection_order_ids_from_string' ) ) {
-        return false;
+        return 0;
     }
 
-    $ids = noriks_collection_order_ids_from_string( $raw );
-    return in_array( (int) $product_id, $ids, true );
+    if ( ! function_exists( 'noriks_collection_gallery_image_map_from_string' ) ) {
+        return 0;
+    }
+
+    $map = noriks_collection_gallery_image_map_from_string( $raw );
+    return isset( $map[ $product_id ] ) ? (int) $map[ $product_id ] : 0;
 }
 
 
@@ -922,10 +930,10 @@ function my_alt_loop_product_thumbnail() {
     $product_id = $product->get_id();
 
     if ( noriks_should_use_collection_gallery_image_for_loop( $product_id ) ) {
-        $gallery = $product->get_gallery_image_ids();
-        if ( ! empty( $gallery ) ) {
+        $selected_gallery_image_id = noriks_get_collection_gallery_image_for_loop( $product_id );
+        if ( $selected_gallery_image_id ) {
             echo wp_get_attachment_image(
-                (int) $gallery[0],
+                $selected_gallery_image_id,
                 'woocommerce_thumbnail',
                 false,
                 array(
