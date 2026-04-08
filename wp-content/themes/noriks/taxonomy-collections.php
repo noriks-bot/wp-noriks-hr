@@ -60,6 +60,7 @@ $products = new WP_Query($query_args);
 <section class="noriks-collection-products">
   <div class="noriks-collection-products__inner">
     <?php if ($products->have_posts()) : ?>
+      <?php wc_set_loop_prop('columns', 4); ?>
       <?php woocommerce_product_loop_start(); ?>
       <?php while ($products->have_posts()) : $products->the_post(); ?>
         <?php wc_get_template_part('content', 'product'); ?>
@@ -133,6 +134,14 @@ $products = new WP_Query($query_args);
 }
 .tax-collections ul.products {
   margin-top: 0;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: start !important;
+}
+.tax-collections ul.products li.product {
+  width: 100% !important;
+  margin: 0 !important;
 }
 @media (max-width: 880px) {
   .noriks-collection-hero__inner {
@@ -143,6 +152,9 @@ $products = new WP_Query($query_args);
   }
   .noriks-collection-hero__media {
     min-height: 220px;
+  }
+  .tax-collections ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
 </style>
