@@ -109,7 +109,14 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 
 <section class="noriks-collection-bottom-banner">
   <div class="noriks-collection-bottom-banner__inner">
-    <img src="<?php echo esc_url($bottom_banner_url); ?>" alt="Hero balicky banner">
+    <div class="noriks-collection-bottom-banner__image">
+      <img src="<?php echo esc_url($bottom_banner_url); ?>" alt="Hero balicky banner">
+    </div>
+    <div class="noriks-collection-bottom-banner__content">
+      <h2>Hledáš další nabídky?</h2>
+      <p>HERO výprodej sleva až 50 % 🔥</p>
+      <a class="noriks-collection-bottom-banner__button" href="/collections/akcija/">Nakup víc a ušetři →</a>
+    </div>
   </div>
 </section>
 
@@ -198,18 +205,61 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 }
 
 .tax-collections .noriks-collection-bottom-banner {
-  padding: 0 20px 40px;
+  padding: 10px 20px 56px;
 }
 
 .tax-collections .noriks-collection-bottom-banner__inner {
   max-width: 1800px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: 72px;
 }
 
-.tax-collections .noriks-collection-bottom-banner img {
+.tax-collections .noriks-collection-bottom-banner__image img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 0;
+}
+
+.tax-collections .noriks-collection-bottom-banner__content {
+  text-align: center;
+  padding: 10px 24px 10px 0;
+}
+
+.tax-collections .noriks-collection-bottom-banner__content h2 {
+  margin: 0 0 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(42px, 4vw, 60px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #202124;
+}
+
+.tax-collections .noriks-collection-bottom-banner__content p {
+  margin: 0 0 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
+  line-height: 1.45;
+  color: #3c4043;
+}
+
+.tax-collections .noriks-collection-bottom-banner__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 340px;
+  min-height: 64px;
+  padding: 16px 28px;
+  background: #2b2b2b;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 6px 6px 0 #bdf1ea;
 }
 
 .tax-collections ul.products {
@@ -307,7 +357,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
   }
 
   .tax-collections .noriks-collection-bottom-banner {
-    padding: 0 15px 32px;
+    padding: 8px 15px 40px;
   }
 
   .tax-collections .noriks-collection-banner {
@@ -332,6 +382,31 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 
   .tax-collections .noriks-collection-hero__media {
     min-height: 220px;
+  }
+
+  .tax-collections .noriks-collection-bottom-banner__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tax-collections .noriks-collection-bottom-banner__content {
+    padding: 0;
+  }
+
+  .tax-collections .noriks-collection-bottom-banner__content h2 {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .tax-collections .noriks-collection-bottom-banner__content p {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+
+  .tax-collections .noriks-collection-bottom-banner__button {
+    min-width: 280px;
+    min-height: 56px;
+    font-size: 16px;
   }
 }
 
