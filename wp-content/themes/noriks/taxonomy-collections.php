@@ -156,7 +156,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   width: 100%;
   max-width: 1790px;
   margin: 0 auto;
-  background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
+  background: linear-gradient(135deg, #111 0%, #2a2a2a 41%, #971b1b 100%);
   border-radius: 5px;
   overflow: hidden;
   display: block;
