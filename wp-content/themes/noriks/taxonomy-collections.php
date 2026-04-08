@@ -513,7 +513,32 @@ if (!$bottom_banner_button_url) {
 @media (max-width: 768px) {
   .tax-collections ul.products {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 5px !important;
+    column-gap: 4px !important;
+    row-gap: 0 !important;
+  }
+
+  .tax-collections ul.products li.product,
+  .tax-collections ul.products .wc-block-grid__product,
+  .tax-collections .wc-block-grid__products li.product,
+  .tax-collections .wc-block-grid__products .wc-block-grid__product {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .tax-collections ul.products li.product img,
+  .tax-collections ul.products .wc-block-grid__product img,
+  .tax-collections .wc-block-grid__products li.product img,
+  .tax-collections .wc-block-grid__products .wc-block-grid__product img {
+    margin: 0 auto 2px;
+  }
+
+  .tax-collections .woocommerce-loop-product__title {
+    margin-bottom: 0 !important;
+    line-height: 1.15;
+  }
+
+  .tax-collections .price {
+    margin-bottom: 2px !important;
   }
 
   .tax-collections .top-liked,
