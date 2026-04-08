@@ -157,7 +157,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
   max-width: 1760px;
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
-  border-radius: 6px;
+  border-radius: 3px;
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
