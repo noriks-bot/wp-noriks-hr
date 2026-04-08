@@ -372,7 +372,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-bottom-products {
-    padding: 0 0 20px;
+    padding: 0 15px 20px;
   }
 
   .tax-collections ul.products {
