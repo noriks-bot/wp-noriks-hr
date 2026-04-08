@@ -76,6 +76,22 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   </div>
 </section>
 
+<section class="noriks-collection-hero">
+  <div class="noriks-collection-hero__inner">
+    <div class="noriks-collection-hero__content">
+      <h2 class="noriks-collection-hero__title"><?php echo esc_html($banner_title); ?></h2>
+      <?php if ($banner_subtitle) : ?>
+        <p class="noriks-collection-hero__subtitle"><?php echo esc_html($banner_subtitle); ?></p>
+      <?php endif; ?>
+    </div>
+    <?php if ($banner_image_url) : ?>
+      <div class="noriks-collection-hero__media">
+        <img src="<?php echo esc_url($banner_image_url); ?>" alt="<?php echo esc_attr($banner_title); ?>">
+      </div>
+    <?php endif; ?>
+  </div>
+</section>
+
 <section class="noriks-collection-products">
   <?php if ($products->have_posts()) : ?>
     <?php wc_set_loop_prop('columns', 4); ?>
@@ -118,6 +134,55 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   text-align: center;
 }
 
+.tax-collections .noriks-collection-hero {
+  padding: 28px 20px 20px;
+}
+
+.tax-collections .noriks-collection-hero__inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: stretch;
+}
+
+.tax-collections .noriks-collection-hero__content {
+  padding: 42px 32px;
+  color: #fff;
+}
+
+.tax-collections .noriks-collection-hero__title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.tax-collections .noriks-collection-hero__subtitle {
+  max-width: 38ch;
+  margin: 16px 0 0;
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.tax-collections .noriks-collection-hero__media {
+  min-height: 280px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tax-collections .noriks-collection-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .tax-collections .noriks-collection-products {
   max-width: 1800px;
   margin: 0 auto;
@@ -125,6 +190,10 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
 }
 
 .tax-collections ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: start !important;
   margin: 0 auto;
   padding: 0;
 }
@@ -137,6 +206,7 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
 }
 
 .tax-collections ul.products li.product {
+  width: 100% !important;
   position: relative;
   overflow: hidden;
 }
@@ -212,9 +282,33 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   .tax-collections .noriks-collection-products {
     padding: 0 15px 32px;
   }
+
+  .tax-collections ul.products {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .tax-collections .noriks-collection-hero {
+    padding: 18px 15px 20px;
+  }
+
+  .tax-collections .noriks-collection-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .tax-collections .noriks-collection-hero__content {
+    padding: 28px 22px;
+  }
+
+  .tax-collections .noriks-collection-hero__media {
+    min-height: 220px;
+  }
 }
 
 @media (max-width: 768px) {
+  .tax-collections ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
   .tax-collections .top-liked,
   .tax-collections .badge {
     font-size: 8px !important;
