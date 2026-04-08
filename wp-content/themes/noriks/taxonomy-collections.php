@@ -433,7 +433,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
   .tax-collections .noriks-collection-bottom-banner__inner {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 0;
   }
 
   .tax-collections .noriks-collection-bottom-banner__image {
@@ -441,7 +441,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-bottom-banner__content {
-    padding: 0;
+    padding: 24px 20px 24px;
     background: <?php echo esc_html($bottom_banner_bg_color ? $bottom_banner_bg_color : '#f0eaea'); ?>;
   }
 
