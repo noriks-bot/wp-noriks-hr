@@ -12,6 +12,10 @@ $banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_tit
 $banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_subtitle', true) : '';
 $banner_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_banner_image_id', true) : 0;
 $banner_image_url = $banner_image_id ? wp_get_attachment_image_url($banner_image_id, 'full') : '';
+$promo_title = $term_id ? get_term_meta($term_id, 'noriks_collection_promo_title', true) : '';
+$promo_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_promo_subtitle', true) : '';
+$promo_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_promo_image_id', true) : 0;
+$promo_image_url = $promo_image_id ? wp_get_attachment_image_url($promo_image_id, 'full') : '';
 $bottom_banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_title', true) : '';
 $bottom_banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', true) : '';
 $bottom_banner_button_text = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', true) : '';
@@ -25,6 +29,14 @@ $bottom_product_ids = function_exists('noriks_collection_order_ids_from_string')
 
 if (!$banner_title && $term instanceof WP_Term) {
     $banner_title = $term->name;
+}
+
+if (!$promo_title) {
+    $promo_title = $banner_title;
+}
+
+if (!$promo_subtitle) {
+    $promo_subtitle = $banner_subtitle;
 }
 
 $query_args = array(
@@ -115,14 +127,14 @@ if (!$bottom_banner_button_url) {
 <section class="noriks-collection-hero">
   <div class="noriks-collection-hero__inner">
     <div class="noriks-collection-hero__content">
-      <h2 class="noriks-collection-hero__title"><?php echo esc_html($banner_title); ?></h2>
-      <?php if ($banner_subtitle) : ?>
-        <p class="noriks-collection-hero__subtitle"><?php echo esc_html($banner_subtitle); ?></p>
+      <h2 class="noriks-collection-hero__title"><?php echo esc_html($promo_title); ?></h2>
+      <?php if ($promo_subtitle) : ?>
+        <p class="noriks-collection-hero__subtitle"><?php echo esc_html($promo_subtitle); ?></p>
       <?php endif; ?>
     </div>
-    <?php if ($banner_image_url) : ?>
+    <?php if ($promo_image_url ?: $banner_image_url) : ?>
       <div class="noriks-collection-hero__media">
-        <img src="<?php echo esc_url($banner_image_url); ?>" alt="<?php echo esc_attr($banner_title); ?>">
+        <img src="<?php echo esc_url($promo_image_url ?: $banner_image_url); ?>" alt="<?php echo esc_attr($promo_title); ?>">
       </div>
     <?php endif; ?>
   </div>
