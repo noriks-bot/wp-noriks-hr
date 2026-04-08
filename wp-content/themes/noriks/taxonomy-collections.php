@@ -210,15 +210,17 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-products {
-  max-width: var(--noriks-collection-max-width);
+  max-width: calc(var(--noriks-collection-max-width) + (var(--noriks-collection-gutter) * 2));
   margin: 0 auto;
-  padding: 0;
+  padding: 0 var(--noriks-collection-gutter);
+  box-sizing: border-box;
 }
 
 .tax-collections .noriks-collection-intro {
-  max-width: var(--noriks-collection-max-width);
+  max-width: calc(var(--noriks-collection-max-width) + (var(--noriks-collection-gutter) * 2));
   margin: 0 auto;
   padding: 0 var(--noriks-collection-gutter) 14px;
+  box-sizing: border-box;
 }
 
 .tax-collections .noriks-collection-hero + .noriks-collection-intro {
@@ -248,9 +250,10 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-bottom-products {
-  max-width: var(--noriks-collection-max-width);
+  max-width: calc(var(--noriks-collection-max-width) + (var(--noriks-collection-gutter) * 2));
   margin: 0 auto;
-  padding: 0 0 56px;
+  padding: 0 var(--noriks-collection-gutter) 56px;
+  box-sizing: border-box;
 }
 
 .tax-collections .noriks-collection-bottom-products__inner {
