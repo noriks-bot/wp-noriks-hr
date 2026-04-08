@@ -8,14 +8,12 @@ do_action('woocommerce_before_main_content');
 $term = get_queried_object();
 $term_id = $term instanceof WP_Term ? (int) $term->term_id : 0;
 
-$banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_title', true) : '';
-$banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_subtitle', true) : '';
-$banner_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_banner_image_id', true) : 0;
-$banner_image_url = $banner_image_id ? wp_get_attachment_image_url($banner_image_id, 'full') : '';
+$show_promo = $term_id ? get_term_meta($term_id, 'noriks_collection_show_promo', true) : '0';
+$show_bottom_banner = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_banner', true) : '0';
+$show_bottom_banner_button = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_banner_button', true) : '0';
+$show_bottom_products = $term_id ? get_term_meta($term_id, 'noriks_collection_show_bottom_products', true) : '0';
 $promo_title = $term_id ? get_term_meta($term_id, 'noriks_collection_promo_title', true) : '';
 $promo_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_promo_subtitle', true) : '';
-$promo_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_promo_image_id', true) : 0;
-$promo_image_url = $promo_image_id ? wp_get_attachment_image_url($promo_image_id, 'full') : '';
 $bottom_banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_title', true) : '';
 $bottom_banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', true) : '';
 $bottom_banner_button_text = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', true) : '';
@@ -26,18 +24,6 @@ $product_order_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_produ
 $bottom_product_ids_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_product_ids', true) : '';
 $ordered_product_ids = function_exists('noriks_collection_order_ids_from_string') ? noriks_collection_order_ids_from_string($product_order_raw) : array();
 $bottom_product_ids = function_exists('noriks_collection_order_ids_from_string') ? array_slice(noriks_collection_order_ids_from_string($bottom_product_ids_raw), 0, 4) : array();
-
-if (!$banner_title && $term instanceof WP_Term) {
-    $banner_title = $term->name;
-}
-
-if (!$promo_title) {
-    $promo_title = $banner_title;
-}
-
-if (!$promo_subtitle) {
-    $promo_subtitle = $banner_subtitle;
-}
 
 $query_args = array(
     'post_type'      => 'product',
@@ -59,7 +45,7 @@ if (!empty($ordered_product_ids)) {
 
 $products = new WP_Query($query_args);
 $bottom_products = null;
-if (!empty($bottom_product_ids)) {
+if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
     $bottom_products = new WP_Query(array(
         'post_type'      => 'product',
         'post_status'    => 'publish',
@@ -68,42 +54,22 @@ if (!empty($bottom_product_ids)) {
         'orderby'        => 'post__in',
     ));
 }
-
-$default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/noriks-shop.png';
-$bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/images/collections/bundles-offer-category-cz.webp';
-
-if (!$bottom_banner_title) {
-    $bottom_banner_title = 'Tražiš još ponuda?';
-}
-
-if (!$bottom_banner_subtitle) {
-    $bottom_banner_subtitle = 'NORIKS rasprodaja, popust do 50 % 🔥';
-}
-
-if (!$bottom_banner_button_text) {
-    $bottom_banner_button_text = 'Kupi više i uštedi →';
-}
-
-if (!$bottom_banner_button_url) {
-    $bottom_banner_button_url = home_url('/collections/akcija/');
-}
 ?>
 
+<?php if ($show_promo === '1' && ($promo_title || $promo_subtitle)) : ?>
 <section class="noriks-collection-hero">
   <div class="noriks-collection-hero__inner">
     <div class="noriks-collection-hero__content">
+      <?php if ($promo_title) : ?>
       <h2 class="noriks-collection-hero__title"><?php echo esc_html($promo_title); ?></h2>
+      <?php endif; ?>
       <?php if ($promo_subtitle) : ?>
         <p class="noriks-collection-hero__subtitle"><?php echo esc_html($promo_subtitle); ?></p>
       <?php endif; ?>
     </div>
-    <?php if ($promo_image_url ?: $banner_image_url) : ?>
-      <div class="noriks-collection-hero__media">
-        <img src="<?php echo esc_url($promo_image_url ?: $banner_image_url); ?>" alt="<?php echo esc_attr($promo_title); ?>">
-      </div>
-    <?php endif; ?>
   </div>
 </section>
+<?php endif; ?>
 
 <section class="noriks-collection-products">
   <?php if ($products->have_posts()) : ?>
@@ -119,18 +85,28 @@ if (!$bottom_banner_button_url) {
   <?php endif; ?>
 </section>
 
+<?php if ($show_bottom_banner === '1' && ($bottom_banner_title || $bottom_banner_subtitle || $bottom_banner_image_url)) : ?>
 <section class="noriks-collection-bottom-banner">
   <div class="noriks-collection-bottom-banner__inner">
     <div class="noriks-collection-bottom-banner__image">
-      <img src="<?php echo esc_url($bottom_banner_image_url ?: $bottom_banner_url); ?>" alt="<?php echo esc_attr($bottom_banner_title); ?>">
+      <?php if ($bottom_banner_image_url) : ?>
+      <img src="<?php echo esc_url($bottom_banner_image_url); ?>" alt="<?php echo esc_attr($bottom_banner_title); ?>">
+      <?php endif; ?>
     </div>
     <div class="noriks-collection-bottom-banner__content">
+      <?php if ($bottom_banner_title) : ?>
       <h2><?php echo esc_html($bottom_banner_title); ?></h2>
+      <?php endif; ?>
+      <?php if ($bottom_banner_subtitle) : ?>
       <p><?php echo esc_html($bottom_banner_subtitle); ?></p>
+      <?php endif; ?>
+      <?php if ($show_bottom_banner_button === '1' && $bottom_banner_button_text && $bottom_banner_button_url) : ?>
       <a class="noriks-collection-bottom-banner__button" href="<?php echo esc_url($bottom_banner_button_url); ?>"><?php echo esc_html($bottom_banner_button_text); ?></a>
+      <?php endif; ?>
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <?php if ($bottom_products && $bottom_products->have_posts()) : ?>
 <section class="noriks-collection-bottom-products">
