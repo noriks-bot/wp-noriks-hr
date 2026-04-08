@@ -113,9 +113,9 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
       <img src="<?php echo esc_url($bottom_banner_url); ?>" alt="Hero balicky banner">
     </div>
     <div class="noriks-collection-bottom-banner__content">
-      <h2>Hledáš další nabídky?</h2>
-      <p>HERO výprodej sleva až 50 % 🔥</p>
-      <a class="noriks-collection-bottom-banner__button" href="/collections/akcija/">Nakup víc a ušetři →</a>
+      <h2>Tražiš još ponuda?</h2>
+      <p>HERO rasprodaja, popust do 50 % 🔥</p>
+      <a class="noriks-collection-bottom-banner__button" href="/collections/akcija/">Kupi više i uštedi →</a>
     </div>
   </div>
 </section>
@@ -201,7 +201,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 .tax-collections .noriks-collection-products {
   max-width: 1800px;
   margin: 0 auto;
-  padding: 0 20px 40px;
+  padding: 0 20px 20px;
 }
 
 .tax-collections .noriks-collection-bottom-banner {
@@ -259,7 +259,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 6px 6px 0 #bdf1ea;
+  box-shadow: none;
 }
 
 .tax-collections ul.products {
@@ -353,7 +353,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
   }
 
   .tax-collections .noriks-collection-products {
-    padding: 0 15px 32px;
+    padding: 0 15px 16px;
   }
 
   .tax-collections .noriks-collection-bottom-banner {
@@ -413,6 +413,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 @media (max-width: 768px) {
   .tax-collections ul.products {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
   }
 
   .tax-collections .top-liked,
