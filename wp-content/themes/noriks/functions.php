@@ -762,24 +762,24 @@ function custom_loop_columns() {
     return 4; // 4 products per row
 }
 
-function noriks_should_use_gallery_image_for_loop($product_id) {
-    return get_post_meta($product_id, '_noriks_use_gallery_image_for_loop', true) === 'yes';
+function noriks_should_use_collection_gallery_image_for_loop($product_id) {
+    if ( ! is_tax( 'collections' ) ) {
+        return false;
+    }
+
+    $term = get_queried_object();
+    if ( ! ( $term instanceof WP_Term ) ) {
+        return false;
+    }
+
+    $raw = get_term_meta( $term->term_id, 'noriks_collection_gallery_image_product_ids', true );
+    if ( empty( $raw ) || ! function_exists( 'noriks_collection_order_ids_from_string' ) ) {
+        return false;
+    }
+
+    $ids = noriks_collection_order_ids_from_string( $raw );
+    return in_array( (int) $product_id, $ids, true );
 }
-
-add_action('woocommerce_product_options_general_product_data', function() {
-    echo '<div class="options_group">';
-    woocommerce_wp_checkbox(array(
-        'id'          => '_noriks_use_gallery_image_for_loop',
-        'label'       => __('Use first gallery image in product cards', 'textdomain'),
-        'description' => __('If enabled, archive/category/collection cards will show the first gallery image instead of the featured image.', 'textdomain'),
-    ));
-    echo '</div>';
-});
-
-add_action('woocommerce_process_product_meta', function($post_id) {
-    $value = isset($_POST['_noriks_use_gallery_image_for_loop']) ? 'yes' : 'no';
-    update_post_meta($post_id, '_noriks_use_gallery_image_for_loop', $value);
-});
 
 
 
@@ -792,13 +792,13 @@ function add_second_product_thumbnail() {
 
     $product_id = $product->get_id();
     $gallery = $product->get_gallery_image_ids();
-    if ( empty( $gallery ) && ! noriks_should_use_gallery_image_for_loop( $product_id ) ) {
+    if ( empty( $gallery ) && ! noriks_should_use_collection_gallery_image_for_loop( $product_id ) ) {
         return;
     }
 
     $secondary_image_id = 0;
 
-    if ( noriks_should_use_gallery_image_for_loop( $product_id ) ) {
+    if ( noriks_should_use_collection_gallery_image_for_loop( $product_id ) ) {
         $secondary_image_id = get_post_thumbnail_id( $product_id );
     } elseif ( ! empty( $gallery ) ) {
         $secondary_image_id = (int) $gallery[0];
@@ -921,7 +921,7 @@ function my_alt_loop_product_thumbnail() {
 
     $product_id = $product->get_id();
 
-    if ( noriks_should_use_gallery_image_for_loop( $product_id ) ) {
+    if ( noriks_should_use_collection_gallery_image_for_loop( $product_id ) ) {
         $gallery = $product->get_gallery_image_ids();
         if ( ! empty( $gallery ) ) {
             echo wp_get_attachment_image(

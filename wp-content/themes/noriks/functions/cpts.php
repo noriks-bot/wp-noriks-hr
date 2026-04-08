@@ -368,6 +368,31 @@ function noriks_render_collection_product_order_ui($selected_raw = '', $term_id 
     echo '</div>';
 }
 
+function noriks_render_collection_gallery_image_ui($selected_raw = '', $term_id = 0) {
+    if ($term_id <= 0) {
+        echo '<p class="description">' . esc_html__('Save the collection first, then you can choose which collection products should use a gallery image in the cards.', 'textdomain') . '</p>';
+        return;
+    }
+
+    $selected_ids = noriks_collection_order_ids_from_string($selected_raw);
+    $choices = noriks_get_collection_product_choices($term_id);
+
+    echo '<div class="noriks-collection-gallery-image-ui">';
+    echo '<ul class="noriks-collection-gallery-image-list">';
+    foreach ($choices as $choice) {
+        $checked = in_array($choice['id'], $selected_ids, true);
+        echo '<li class="noriks-collection-gallery-image-item">';
+        echo '<label>';
+        echo '<input type="checkbox" name="noriks_collection_gallery_image_product_ids[]" value="' . esc_attr($choice['id']) . '" ' . checked($checked, true, false) . '>';
+        echo '<span><strong>' . esc_html($choice['title']) . '</strong> <em>' . esc_html($choice['sku'] ? $choice['sku'] : 'No SKU') . '</em></span>';
+        echo '</label>';
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '<p class="description">' . esc_html__('Checked products will use the first gallery image instead of the featured image on this collection page only.', 'textdomain') . '</p>';
+    echo '</div>';
+}
+
 function noriks_add_collection_term_fields() {
     ?>
     <div class="form-field term-group">
@@ -415,6 +440,10 @@ function noriks_add_collection_term_fields() {
         <?php noriks_render_collection_product_order_ui('', 0); ?>
     </div>
     <div class="form-field term-group">
+        <label><?php esc_html_e('Use Gallery Image In Collection Cards', 'textdomain'); ?></label>
+        <?php noriks_render_collection_gallery_image_ui('', 0); ?>
+    </div>
+    <div class="form-field term-group">
         <label><input type="checkbox" name="noriks_collection_show_bottom_products" value="1"> <?php esc_html_e('Show Bottom Products', 'textdomain'); ?></label>
     </div>
     <div class="form-field term-group">
@@ -438,6 +467,7 @@ function noriks_edit_collection_term_fields($term) {
     $bottom_banner_button_url = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_button_url', true);
     $bottom_banner_image_id = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_image_id', true);
     $product_order   = get_term_meta($term->term_id, 'noriks_collection_product_order', true);
+    $gallery_image_products = get_term_meta($term->term_id, 'noriks_collection_gallery_image_product_ids', true);
     $bottom_products = get_term_meta($term->term_id, 'noriks_collection_bottom_product_ids', true);
     $bottom_image_url = $bottom_banner_image_id ? wp_get_attachment_image_url((int) $bottom_banner_image_id, 'medium') : '';
     ?>
@@ -497,6 +527,12 @@ function noriks_edit_collection_term_fields($term) {
         </td>
     </tr>
     <tr class="form-field term-group-wrap">
+        <th scope="row"><?php esc_html_e('Use Gallery Image In Collection Cards', 'textdomain'); ?></th>
+        <td>
+            <?php noriks_render_collection_gallery_image_ui($gallery_image_products, (int) $term->term_id); ?>
+        </td>
+    </tr>
+    <tr class="form-field term-group-wrap">
         <th scope="row"><?php esc_html_e('Show Bottom Products', 'textdomain'); ?></th>
         <td><label><input type="checkbox" name="noriks_collection_show_bottom_products" value="1" <?php checked($show_bottom_products, '1'); ?>> <?php esc_html_e('Enable section', 'textdomain'); ?></label></td>
     </tr>
@@ -523,8 +559,10 @@ function noriks_save_collection_term_meta($term_id) {
     $bottom_banner_button_url = isset($_POST['noriks_collection_bottom_banner_button_url']) ? esc_url_raw(wp_unslash($_POST['noriks_collection_bottom_banner_button_url'])) : '';
     $bottom_banner_image_id = isset($_POST['noriks_collection_bottom_banner_image_id']) ? absint($_POST['noriks_collection_bottom_banner_image_id']) : 0;
     $product_order_raw = isset($_POST['noriks_collection_product_order']) ? wp_unslash($_POST['noriks_collection_product_order']) : '';
+    $gallery_image_raw = isset($_POST['noriks_collection_gallery_image_product_ids']) ? (array) wp_unslash($_POST['noriks_collection_gallery_image_product_ids']) : array();
     $bottom_product_raw = isset($_POST['noriks_collection_bottom_product_ids']) ? wp_unslash($_POST['noriks_collection_bottom_product_ids']) : '';
     $product_order_ids = noriks_collection_order_ids_from_string($product_order_raw);
+    $gallery_image_ids = array_values(array_unique(array_filter(array_map('absint', $gallery_image_raw))));
     $bottom_product_ids = array_slice(noriks_collection_order_ids_from_string($bottom_product_raw), 0, 4);
 
     update_term_meta($term_id, 'noriks_collection_promo_title', $promo_title);
@@ -535,6 +573,7 @@ function noriks_save_collection_term_meta($term_id) {
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_url', $bottom_banner_button_url);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_image_id', $bottom_banner_image_id);
     update_term_meta($term_id, 'noriks_collection_product_order', implode("\n", $product_order_ids));
+    update_term_meta($term_id, 'noriks_collection_gallery_image_product_ids', implode("\n", $gallery_image_ids));
     update_term_meta($term_id, 'noriks_collection_bottom_product_ids', implode("\n", $bottom_product_ids));
 }
 
@@ -707,6 +746,25 @@ JS;
         color: #50575e;
         font-size: 18px;
         line-height: 1;
+      }
+      .noriks-collection-gallery-image-list {
+        margin: 0;
+        max-width: 900px;
+      }
+      .noriks-collection-gallery-image-item {
+        margin: 0 0 8px;
+        padding: 8px 10px;
+        border: 1px solid #dcdcde;
+        background: #fff;
+      }
+      .noriks-collection-gallery-image-item label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .noriks-collection-gallery-image-item em {
+        color: #50575e;
+        font-style: normal;
       }
       @media (max-width: 1200px) {
         .noriks-product-order-columns {
