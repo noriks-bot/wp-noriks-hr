@@ -12,6 +12,12 @@ $banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_tit
 $banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_subtitle', true) : '';
 $banner_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_banner_image_id', true) : 0;
 $banner_image_url = $banner_image_id ? wp_get_attachment_image_url($banner_image_id, 'full') : '';
+$bottom_banner_title = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_title', true) : '';
+$bottom_banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_subtitle', true) : '';
+$bottom_banner_button_text = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', true) : '';
+$bottom_banner_button_url = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_url', true) : '';
+$bottom_banner_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_bottom_banner_image_id', true) : 0;
+$bottom_banner_image_url = $bottom_banner_image_id ? wp_get_attachment_image_url($bottom_banner_image_id, 'full') : '';
 $product_order_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_product_order', true) : '';
 $bottom_product_ids_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_product_ids', true) : '';
 $ordered_product_ids = function_exists('noriks_collection_order_ids_from_string') ? noriks_collection_order_ids_from_string($product_order_raw) : array();
@@ -53,6 +59,22 @@ if (!empty($bottom_product_ids)) {
 
 $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/noriks-shop.png';
 $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/images/collections/bundles-offer-category-cz.webp';
+
+if (!$bottom_banner_title) {
+    $bottom_banner_title = 'Tražiš još ponuda?';
+}
+
+if (!$bottom_banner_subtitle) {
+    $bottom_banner_subtitle = 'NORIKS rasprodaja, popust do 50 % 🔥';
+}
+
+if (!$bottom_banner_button_text) {
+    $bottom_banner_button_text = 'Kupi više i uštedi →';
+}
+
+if (!$bottom_banner_button_url) {
+    $bottom_banner_button_url = home_url('/collections/akcija/');
+}
 ?>
 
 <section class="one-banner-shop noriks-collection-banner" style="position: relative; margin: 0 auto; padding: 0;">
@@ -123,12 +145,12 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 <section class="noriks-collection-bottom-banner">
   <div class="noriks-collection-bottom-banner__inner">
     <div class="noriks-collection-bottom-banner__image">
-      <img src="<?php echo esc_url($bottom_banner_url); ?>" alt="Hero balicky banner">
+      <img src="<?php echo esc_url($bottom_banner_image_url ?: $bottom_banner_url); ?>" alt="<?php echo esc_attr($bottom_banner_title); ?>">
     </div>
     <div class="noriks-collection-bottom-banner__content">
-      <h2>Tražiš još ponuda?</h2>
-      <p>HERO rasprodaja, popust do 50 % 🔥</p>
-      <a class="noriks-collection-bottom-banner__button" href="/collections/akcija/">Kupi više i uštedi →</a>
+      <h2><?php echo esc_html($bottom_banner_title); ?></h2>
+      <p><?php echo esc_html($bottom_banner_subtitle); ?></p>
+      <a class="noriks-collection-bottom-banner__button" href="<?php echo esc_url($bottom_banner_button_url); ?>"><?php echo esc_html($bottom_banner_button_text); ?></a>
     </div>
   </div>
 </section>
@@ -246,7 +268,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 }
 
 .tax-collections .noriks-collection-bottom-banner__inner {
-  max-width: 1800px;
+  max-width: 1760px;
   margin: 0 auto;
   width: 100%;
   display: grid;
