@@ -218,7 +218,7 @@ if (!$bottom_banner_button_url) {
   max-width: 1760px;
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
