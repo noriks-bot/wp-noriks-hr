@@ -136,7 +136,7 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
 }
 
 .tax-collections .noriks-collection-hero {
-  padding: 28px 20px;
+  padding: 14px 20px;
 }
 
 .tax-collections .noriks-collection-hero__inner {
@@ -293,7 +293,7 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   }
 
   .tax-collections .noriks-collection-hero {
-    padding: 18px 15px;
+    padding: 9px 15px;
   }
 
   .tax-collections .noriks-collection-hero__inner {
