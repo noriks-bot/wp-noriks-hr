@@ -168,7 +168,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero__content {
-  padding: 42px 32px;
+  padding: 42px 28px;
   color: #fff;
 }
 
@@ -401,7 +401,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 28px 22px;
+    padding: 28px 28px;
   }
 
   .tax-collections .noriks-collection-hero__media {
