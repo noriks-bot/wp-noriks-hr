@@ -163,34 +163,41 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
   position: relative;
+  background: #111;
   border-radius: 5px;
   overflow: hidden;
   display: block;
+  min-height: 220px;
 }
 
 .tax-collections .noriks-collection-hero__inner::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("https://devhr.noriks.com/wp-content/uploads/2025/08/Soulstudio_light.jpg");
+  top: 50%;
+  right: 36px;
+  width: min(24vw, 280px);
+  height: min(24vw, 280px);
+  transform: translateY(-50%);
+  background-image: url("https://mensbestbasics.com/cdn/shop/files/crew-neck.png?v=1774426538&width=220");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
-  opacity: 0.6;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.95;
   z-index: 0;
+  pointer-events: none;
 }
 
 .tax-collections .noriks-collection-hero__content {
-  max-width: none;
+  max-width: min(760px, calc(100% - 340px));
   padding: 34px var(--noriks-collection-gutter);
-  color: #000;
+  color: #fff;
   position: relative;
   z-index: 1;
 }
 
 .tax-collections .noriks-collection-hero__title {
   margin: 0;
-  color: #000;
+  color: #fff;
   font-size: clamp(28px, 4vw, 56px);
   font-weight: 700;
   line-height: 1;
@@ -202,7 +209,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   margin: 8px 0 0;
   font-size: 17px;
   line-height: 1.45;
-  color: #000;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .tax-collections .noriks-collection-hero__media {
@@ -429,6 +436,12 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
     padding: 28px var(--noriks-collection-gutter);
   }
 
+  .tax-collections .noriks-collection-hero__inner::before {
+    right: 24px;
+    width: min(24vw, 220px);
+    height: min(24vw, 220px);
+  }
+
   .tax-collections .noriks-collection-hero__title {
     font-size: clamp(24px, 3.8vw, 46px);
   }
@@ -478,10 +491,18 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
   .tax-collections .noriks-collection-hero__content {
     padding: 28px var(--noriks-collection-mobile-gutter);
+    max-width: 100%;
   }
 
   .tax-collections .noriks-collection-hero__subtitle {
     max-width: 100%;
+  }
+
+  .tax-collections .noriks-collection-hero__inner::before {
+    right: 14px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.45;
   }
 
   .tax-collections .noriks-collection-bottom-banner__inner {
