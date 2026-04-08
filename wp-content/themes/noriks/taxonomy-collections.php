@@ -157,7 +157,7 @@ if (!$bottom_banner_button_url) {
 
 .tax-collections .noriks-collection-hero__inner {
   width: 100%;
-  max-width: 1760px;
+  max-width: 1790px;
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
   border-radius: 5px;
@@ -193,7 +193,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-products {
-  max-width: 1800px;
+  max-width: 1790px;
   margin: 0 auto;
   padding: 0 20px 20px;
 }
@@ -203,7 +203,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-bottom-products {
-  max-width: 1800px;
+  max-width: 1790px;
   margin: 0 auto;
   padding: 0 20px 56px;
 }
@@ -213,7 +213,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-bottom-banner__inner {
-  max-width: 1760px;
+  max-width: 1790px;
   margin: 0 auto;
   width: 100%;
   display: grid;
