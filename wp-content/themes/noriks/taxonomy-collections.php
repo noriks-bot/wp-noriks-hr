@@ -236,6 +236,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-bottom-banner__content {
+  background: #f3f3f3;
   text-align: center;
   padding: 10px 24px 10px 0;
 }
