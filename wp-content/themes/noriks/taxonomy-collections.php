@@ -112,12 +112,8 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
 }
 
 .tax-collections .noriks-collection-banner {
-  max-width: 1800px;
-  padding: 0 20px !important;
-}
-
-.tax-collections .noriks-collection-banner > img {
-  border-radius: 0;
+  max-width: none;
+  padding: 0 !important;
 }
 
 .tax-collections .noriks-collection-banner__content {
@@ -140,7 +136,7 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
 }
 
 .tax-collections .noriks-collection-hero {
-  padding: 28px 20px 20px;
+  padding: 28px 20px;
 }
 
 .tax-collections .noriks-collection-hero__inner {
@@ -289,7 +285,7 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   }
 
   .tax-collections .noriks-collection-banner {
-    padding: 0 15px !important;
+    padding: 0 !important;
   }
 
   .tax-collections ul.products {
@@ -297,7 +293,7 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   }
 
   .tax-collections .noriks-collection-hero {
-    padding: 18px 15px 20px;
+    padding: 18px 15px;
   }
 
   .tax-collections .noriks-collection-hero__inner {
