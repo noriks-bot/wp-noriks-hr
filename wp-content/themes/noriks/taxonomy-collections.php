@@ -167,7 +167,7 @@ if (!$bottom_banner_button_url) {
 
 .tax-collections .noriks-collection-hero__content {
   max-width: none;
-  padding: 34px 20px;
+  padding: 34px 20px 34px 50px;
   color: #fff;
 }
 
