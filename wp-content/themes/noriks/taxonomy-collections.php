@@ -38,123 +38,186 @@ if (!empty($ordered_product_ids)) {
 }
 
 $products = new WP_Query($query_args);
+$default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/noriks-shop.png';
 ?>
 
-<section class="noriks-collection-hero">
-  <div class="noriks-collection-hero__inner">
-    <div class="noriks-collection-hero__content">
-      <p class="noriks-collection-hero__eyebrow">Collection</p>
-      <h1 class="noriks-collection-hero__title"><?php echo esc_html($banner_title); ?></h1>
-      <?php if ($banner_subtitle) : ?>
-        <p class="noriks-collection-hero__subtitle"><?php echo esc_html($banner_subtitle); ?></p>
-      <?php endif; ?>
-    </div>
-    <?php if ($banner_image_url) : ?>
-      <div class="noriks-collection-hero__media">
-        <img src="<?php echo esc_url($banner_image_url); ?>" alt="<?php echo esc_attr($banner_title); ?>">
-      </div>
+<section class="one-banner-shop noriks-collection-banner" style="position: relative; margin: 0 auto; padding: 0;">
+  <img
+    src="<?php echo esc_url($banner_image_url ?: $default_banner_url); ?>"
+    style="display:block; width:100%; min-height:105px; border-radius:0;"
+    alt="<?php echo esc_attr($banner_title); ?>"
+  >
+
+  <div class="noriks-collection-banner__content">
+    <h1
+      class="h1"
+      style="
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        font-size:2.5rem;
+        font-weight:800;
+        width:100%;
+        font-family:'Barlow', sans-serif;
+        letter-spacing:0.5px;
+        color:white;
+        text-align:center;
+        text-transform: uppercase;
+        margin: 0;
+      "
+    >
+      <?php echo esc_html($banner_title); ?>
+    </h1>
+
+    <?php if ($banner_subtitle) : ?>
+      <p class="noriks-collection-banner__subtitle"><?php echo esc_html($banner_subtitle); ?></p>
     <?php endif; ?>
   </div>
 </section>
 
 <section class="noriks-collection-products">
-  <div class="noriks-collection-products__inner">
-    <?php if ($products->have_posts()) : ?>
-      <?php wc_set_loop_prop('columns', 4); ?>
-      <?php woocommerce_product_loop_start(); ?>
-      <?php while ($products->have_posts()) : $products->the_post(); ?>
-        <?php wc_get_template_part('content', 'product'); ?>
-      <?php endwhile; ?>
-      <?php woocommerce_product_loop_end(); ?>
-      <?php wp_reset_postdata(); ?>
-    <?php else : ?>
-      <p class="woocommerce-info"><?php esc_html_e('No products found in this collection.', 'textdomain'); ?></p>
-    <?php endif; ?>
-  </div>
+  <?php if ($products->have_posts()) : ?>
+    <?php wc_set_loop_prop('columns', 4); ?>
+    <?php woocommerce_product_loop_start(); ?>
+    <?php while ($products->have_posts()) : $products->the_post(); ?>
+      <?php wc_get_template_part('content', 'product'); ?>
+    <?php endwhile; ?>
+    <?php woocommerce_product_loop_end(); ?>
+    <?php wp_reset_postdata(); ?>
+  <?php else : ?>
+    <p class="woocommerce-info"><?php esc_html_e('No products found in this collection.', 'textdomain'); ?></p>
+  <?php endif; ?>
 </section>
 
 <style>
 .tax-collections .site-main {
   margin-bottom: 0;
 }
-.noriks-collection-hero {
-  padding: 28px 16px 12px;
+
+.tax-collections .noriks-collection-banner {
+  max-width: 1800px;
 }
-.noriks-collection-hero__inner {
-  max-width: 1320px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
-  border-radius: 18px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
-  align-items: stretch;
+
+.tax-collections .noriks-collection-banner__content {
+  position: absolute;
+  inset: 0;
 }
-.noriks-collection-hero__content {
-  padding: 42px 32px;
-  color: #fff;
-}
-.noriks-collection-hero__eyebrow {
-  margin: 0 0 10px;
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  opacity: .7;
-}
-.noriks-collection-hero__title {
-  margin: 0;
-  color: #fff;
-  font-size: clamp(32px, 5vw, 56px);
-  font-weight: 700;
-  line-height: .95;
-}
-.noriks-collection-hero__subtitle {
-  max-width: 38ch;
-  margin: 16px 0 0;
-  font-size: 17px;
-  line-height: 1.45;
-  color: rgba(255,255,255,.84);
-}
-.noriks-collection-hero__media {
-  min-height: 280px;
-  background: rgba(255,255,255,.06);
-}
-.noriks-collection-hero__media img {
+
+.tax-collections .noriks-collection-banner__subtitle {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 38px);
+  transform: translateX(-50%);
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
 }
-.noriks-collection-products {
-  padding: 24px 16px 56px;
-}
-.noriks-collection-products__inner {
-  max-width: 1320px;
+
+.tax-collections .noriks-collection-products {
+  max-width: 1800px;
   margin: 0 auto;
+  padding: 0 20px 40px;
 }
+
 .tax-collections ul.products {
-  margin-top: 0;
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 16px !important;
-  align-items: start !important;
+  margin: 0 auto;
+  padding: 0;
 }
+
+.tax-collections ul.products li.product,
+.tax-collections ul.products .wc-block-grid__product,
+.tax-collections .wc-block-grid__products li.product,
+.tax-collections .wc-block-grid__products .wc-block-grid__product {
+  margin-bottom: 0 !important;
+}
+
 .tax-collections ul.products li.product {
-  width: 100% !important;
-  margin: 0 !important;
+  position: relative;
+  overflow: hidden;
 }
-@media (max-width: 880px) {
-  .noriks-collection-hero__inner {
-    grid-template-columns: 1fr;
+
+.tax-collections ul.products li.product img,
+.tax-collections ul.products .wc-block-grid__product img,
+.tax-collections .wc-block-grid__products li.product img,
+.tax-collections .wc-block-grid__products .wc-block-grid__product img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.tax-collections .woocommerce ul.products li.product img {
+  display: block;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  backface-visibility: hidden;
+}
+
+.tax-collections .secondary-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.tax-collections .woocommerce ul.products li.product:hover .secondary-image {
+  opacity: 1;
+}
+
+.tax-collections .woocommerce ul.products li.product:hover .woocommerce-loop-product__link img:first-child {
+  opacity: 0;
+}
+
+.tax-collections .woocommerce-loop-product__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+
+.tax-collections .price {
+  margin-bottom: 22px !important;
+  text-align: center;
+}
+
+.tax-collections .onsale {
+  display: none;
+}
+
+.tax-collections .top-liked,
+.tax-collections .badge {
+  z-index: 999;
+  opacity: 1;
+  font-size: 10px;
+}
+
+@media (max-width: 991px) {
+  .tax-collections .h1 {
+    font-size: 1.5rem !important;
   }
-  .noriks-collection-hero__content {
-    padding: 28px 22px;
+
+  .tax-collections .noriks-collection-banner__subtitle {
+    top: calc(50% + 26px);
+    font-size: 13px;
+    padding: 0 16px;
   }
-  .noriks-collection-hero__media {
-    min-height: 220px;
+
+  .tax-collections .noriks-collection-products {
+    padding: 0 15px 32px;
   }
-  .tax-collections ul.products {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 768px) {
+  .tax-collections .top-liked,
+  .tax-collections .badge {
+    font-size: 8px !important;
   }
 }
 </style>
