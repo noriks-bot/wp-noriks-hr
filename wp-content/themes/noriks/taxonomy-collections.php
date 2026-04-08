@@ -180,7 +180,7 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 
 .tax-collections .noriks-collection-hero__subtitle {
   max-width: 38ch;
-  margin: 16px 0 0;
+  margin: 8px 0 0;
   font-size: 17px;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.84);
