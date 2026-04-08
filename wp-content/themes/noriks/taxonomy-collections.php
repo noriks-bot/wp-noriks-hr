@@ -39,6 +39,7 @@ if (!empty($ordered_product_ids)) {
 
 $products = new WP_Query($query_args);
 $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/noriks-shop.png';
+$bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/images/collections/bundles-offer-category-cz.webp';
 ?>
 
 <section class="one-banner-shop noriks-collection-banner" style="position: relative; margin: 0 auto; padding: 0;">
@@ -104,6 +105,12 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   <?php else : ?>
     <p class="woocommerce-info"><?php esc_html_e('No products found in this collection.', 'textdomain'); ?></p>
   <?php endif; ?>
+</section>
+
+<section class="noriks-collection-bottom-banner">
+  <div class="noriks-collection-bottom-banner__inner">
+    <img src="<?php echo esc_url($bottom_banner_url); ?>" alt="Hero balicky banner">
+  </div>
 </section>
 
 <style>
@@ -188,6 +195,21 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 20px 40px;
+}
+
+.tax-collections .noriks-collection-bottom-banner {
+  padding: 0 20px 40px;
+}
+
+.tax-collections .noriks-collection-bottom-banner__inner {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.tax-collections .noriks-collection-bottom-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .tax-collections ul.products {
@@ -281,6 +303,10 @@ $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/norik
   }
 
   .tax-collections .noriks-collection-products {
+    padding: 0 15px 32px;
+  }
+
+  .tax-collections .noriks-collection-bottom-banner {
     padding: 0 15px 32px;
   }
 
