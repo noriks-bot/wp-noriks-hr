@@ -181,7 +181,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero__subtitle {
-  max-width: 38ch;
+  max-width: 60%;
   margin: 8px 0 0;
   font-size: 17px;
   line-height: 1.45;
@@ -408,6 +408,10 @@ if (!$bottom_banner_button_url) {
 
   .tax-collections .noriks-collection-hero__content {
     padding: 28px 15px;
+  }
+
+  .tax-collections .noriks-collection-hero__subtitle {
+    max-width: 100%;
   }
 
   .tax-collections .noriks-collection-bottom-banner__inner {
