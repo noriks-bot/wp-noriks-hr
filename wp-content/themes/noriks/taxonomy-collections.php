@@ -164,6 +164,10 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   margin: 0 auto;
   position: relative;
   background: #111;
+  background-image: url("https://devhr.noriks.com/wp-content/uploads/2025/08/IMG_9369.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 5px;
   overflow: hidden;
   display: block;
@@ -171,20 +175,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-hero__inner::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 36px;
-  width: min(24vw, 280px);
-  height: min(24vw, 280px);
-  transform: translateY(-50%);
-  background-image: url("https://mensbestbasics.com/cdn/shop/files/crew-neck.png?v=1774426538&width=220");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  opacity: 0.95;
-  z-index: 0;
-  pointer-events: none;
+  content: none;
 }
 
 .tax-collections .noriks-collection-hero__content {
@@ -437,9 +428,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero__inner::before {
-    right: 24px;
-    width: min(24vw, 220px);
-    height: min(24vw, 220px);
+    content: none;
   }
 
   .tax-collections .noriks-collection-hero__title {
@@ -499,10 +488,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero__inner::before {
-    right: 14px;
-    width: 120px;
-    height: 120px;
-    opacity: 0.45;
+    content: none;
   }
 
   .tax-collections .noriks-collection-bottom-banner__inner {
