@@ -13,7 +13,9 @@ $banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_banner_
 $banner_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_banner_image_id', true) : 0;
 $banner_image_url = $banner_image_id ? wp_get_attachment_image_url($banner_image_id, 'full') : '';
 $product_order_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_product_order', true) : '';
+$bottom_product_ids_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_product_ids', true) : '';
 $ordered_product_ids = function_exists('noriks_collection_order_ids_from_string') ? noriks_collection_order_ids_from_string($product_order_raw) : array();
+$bottom_product_ids = function_exists('noriks_collection_order_ids_from_string') ? array_slice(noriks_collection_order_ids_from_string($bottom_product_ids_raw), 0, 4) : array();
 
 if (!$banner_title && $term instanceof WP_Term) {
     $banner_title = $term->name;
@@ -38,6 +40,17 @@ if (!empty($ordered_product_ids)) {
 }
 
 $products = new WP_Query($query_args);
+$bottom_products = null;
+if (!empty($bottom_product_ids)) {
+    $bottom_products = new WP_Query(array(
+        'post_type'      => 'product',
+        'post_status'    => 'publish',
+        'posts_per_page' => count($bottom_product_ids),
+        'post__in'       => $bottom_product_ids,
+        'orderby'        => 'post__in',
+    ));
+}
+
 $default_banner_url = trailingslashit(get_template_directory_uri()) . 'img/noriks-shop.png';
 $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/images/collections/bundles-offer-category-cz.webp';
 ?>
@@ -119,6 +132,20 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
     </div>
   </div>
 </section>
+
+<?php if ($bottom_products && $bottom_products->have_posts()) : ?>
+<section class="noriks-collection-bottom-products">
+  <div class="noriks-collection-bottom-products__inner">
+    <?php wc_set_loop_prop('columns', 4); ?>
+    <?php woocommerce_product_loop_start(); ?>
+    <?php while ($bottom_products->have_posts()) : $bottom_products->the_post(); ?>
+      <?php wc_get_template_part('content', 'product'); ?>
+    <?php endwhile; ?>
+    <?php woocommerce_product_loop_end(); ?>
+    <?php wp_reset_postdata(); ?>
+  </div>
+</section>
+<?php endif; ?>
 
 <style>
 .tax-collections .site-main {
@@ -206,6 +233,16 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 
 .tax-collections .noriks-collection-bottom-banner {
   padding: 10px 20px 56px;
+}
+
+.tax-collections .noriks-collection-bottom-products {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px 56px;
+}
+
+.tax-collections .noriks-collection-bottom-products__inner {
+  margin: 0 auto;
 }
 
 .tax-collections .noriks-collection-bottom-banner__inner {
@@ -358,6 +395,10 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 
   .tax-collections .noriks-collection-bottom-banner {
     padding: 8px 15px 40px;
+  }
+
+  .tax-collections .noriks-collection-bottom-products {
+    padding: 0 15px 40px;
   }
 
   .tax-collections .noriks-collection-banner {

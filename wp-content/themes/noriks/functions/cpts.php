@@ -251,6 +251,7 @@ function noriks_ensure_default_collection_akcija() {
     update_term_meta($term_id, 'noriks_collection_banner_title', 'AKCIJA');
     update_term_meta($term_id, 'noriks_collection_banner_subtitle', 'Posebno odabrani proizvodi i ponude');
     update_term_meta($term_id, 'noriks_collection_product_order', '');
+    update_term_meta($term_id, 'noriks_collection_bottom_product_ids', '');
 }
 
 function noriks_collection_order_ids_from_string($value) {
@@ -281,6 +282,11 @@ function noriks_add_collection_term_fields() {
         <textarea id="noriks-collection-product-order" name="noriks_collection_product_order" rows="6" placeholder="3421, 3550, 4001"></textarea>
         <p class="description"><?php esc_html_e('Enter product IDs in the exact order you want them shown. Separate with commas or new lines.', 'textdomain'); ?></p>
     </div>
+    <div class="form-field term-group">
+        <label for="noriks-collection-bottom-product-ids"><?php esc_html_e('Bottom Products', 'textdomain'); ?></label>
+        <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="4" placeholder="5001, 5002, 5003, 5004"></textarea>
+        <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 4 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
+    </div>
     <?php
 }
 
@@ -289,6 +295,7 @@ function noriks_edit_collection_term_fields($term) {
     $banner_subtitle = get_term_meta($term->term_id, 'noriks_collection_banner_subtitle', true);
     $banner_image_id = get_term_meta($term->term_id, 'noriks_collection_banner_image_id', true);
     $product_order   = get_term_meta($term->term_id, 'noriks_collection_product_order', true);
+    $bottom_products = get_term_meta($term->term_id, 'noriks_collection_bottom_product_ids', true);
     $image_url       = $banner_image_id ? wp_get_attachment_image_url((int) $banner_image_id, 'medium') : '';
     ?>
     <tr class="form-field term-group-wrap">
@@ -319,6 +326,13 @@ function noriks_edit_collection_term_fields($term) {
             <p class="description"><?php esc_html_e('Enter product IDs in the exact order you want them shown. Separate with commas or new lines.', 'textdomain'); ?></p>
         </td>
     </tr>
+    <tr class="form-field term-group-wrap">
+        <th scope="row"><label for="noriks-collection-bottom-product-ids"><?php esc_html_e('Bottom Products', 'textdomain'); ?></label></th>
+        <td>
+            <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="5" class="large-text"><?php echo esc_textarea($bottom_products); ?></textarea>
+            <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 4 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
+        </td>
+    </tr>
     <?php
 }
 
@@ -327,12 +341,15 @@ function noriks_save_collection_term_meta($term_id) {
     $banner_subtitle = isset($_POST['noriks_collection_banner_subtitle']) ? sanitize_textarea_field(wp_unslash($_POST['noriks_collection_banner_subtitle'])) : '';
     $banner_image_id = isset($_POST['noriks_collection_banner_image_id']) ? absint($_POST['noriks_collection_banner_image_id']) : 0;
     $product_order_raw = isset($_POST['noriks_collection_product_order']) ? wp_unslash($_POST['noriks_collection_product_order']) : '';
+    $bottom_product_raw = isset($_POST['noriks_collection_bottom_product_ids']) ? wp_unslash($_POST['noriks_collection_bottom_product_ids']) : '';
     $product_order_ids = noriks_collection_order_ids_from_string($product_order_raw);
+    $bottom_product_ids = array_slice(noriks_collection_order_ids_from_string($bottom_product_raw), 0, 4);
 
     update_term_meta($term_id, 'noriks_collection_banner_title', $banner_title);
     update_term_meta($term_id, 'noriks_collection_banner_subtitle', $banner_subtitle);
     update_term_meta($term_id, 'noriks_collection_banner_image_id', $banner_image_id);
     update_term_meta($term_id, 'noriks_collection_product_order', implode("\n", $product_order_ids));
+    update_term_meta($term_id, 'noriks_collection_bottom_product_ids', implode("\n", $bottom_product_ids));
 }
 
 function noriks_enqueue_collection_term_admin_assets($hook) {
