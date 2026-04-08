@@ -148,13 +148,19 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   margin-bottom: 0;
 }
 
+.tax-collections {
+  --noriks-collection-max-width: 1790px;
+  --noriks-collection-gutter: 20px;
+  --noriks-collection-mobile-gutter: 15px;
+}
+
 .tax-collections .noriks-collection-hero {
-  padding: 14px 20px;
+  padding: 14px var(--noriks-collection-gutter);
 }
 
 .tax-collections .noriks-collection-hero__inner {
   width: 100%;
-  max-width: 1790px;
+  max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 41%, #971b1b 100%);
   border-radius: 5px;
@@ -164,7 +170,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
 .tax-collections .noriks-collection-hero__content {
   max-width: none;
-  padding: 34px 20px;
+  padding: 34px var(--noriks-collection-gutter);
   color: #fff;
 }
 
@@ -190,15 +196,15 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-products {
-  max-width: 1790px;
+  max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--noriks-collection-gutter);
 }
 
 .tax-collections .noriks-collection-intro {
-  max-width: 1790px;
+  max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
-  padding: 0 20px 14px;
+  padding: 0 var(--noriks-collection-gutter) 14px;
 }
 
 .tax-collections .noriks-collection-hero + .noriks-collection-intro {
@@ -224,13 +230,13 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-bottom-banner {
-  padding: 10px 20px 56px;
+  padding: 10px var(--noriks-collection-gutter) 56px;
 }
 
 .tax-collections .noriks-collection-bottom-products {
-  max-width: 1790px;
+  max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
-  padding: 0 20px 56px;
+  padding: 0 var(--noriks-collection-gutter) 56px;
 }
 
 .tax-collections .noriks-collection-bottom-products__inner {
@@ -238,7 +244,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-bottom-banner__inner {
-  max-width: 1790px;
+  max-width: var(--noriks-collection-max-width);
   margin: 0 auto;
   width: 100%;
   display: grid;
@@ -399,11 +405,11 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
 @media (max-width: 1280px) {
   .tax-collections .noriks-collection-hero {
-    padding: 12px 20px;
+    padding: 12px var(--noriks-collection-gutter);
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 28px 20px;
+    padding: 28px var(--noriks-collection-gutter);
   }
 
   .tax-collections .noriks-collection-hero__title {
@@ -413,11 +419,11 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
 @media (max-width: 991px) {
   .tax-collections .noriks-collection-products {
-    padding: 0 15px 9px;
+    padding: 0 var(--noriks-collection-mobile-gutter) 9px;
   }
 
   .tax-collections .noriks-collection-intro {
-    padding: 0 15px 14px;
+    padding: 0 var(--noriks-collection-mobile-gutter) 14px;
   }
 
   .tax-collections .noriks-collection-hero + .noriks-collection-intro {
@@ -434,11 +440,11 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-bottom-banner {
-    padding: 0 15px 40px;
+    padding: 0 var(--noriks-collection-mobile-gutter) 40px;
   }
 
   .tax-collections .noriks-collection-bottom-products {
-    padding: 0 15px 20px;
+    padding: 0 var(--noriks-collection-mobile-gutter) 20px;
   }
 
   .tax-collections ul.products {
@@ -446,7 +452,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero {
-    padding: 10px 15px;
+    padding: 10px var(--noriks-collection-mobile-gutter);
   }
 
   .tax-collections .noriks-collection-hero__inner {
@@ -454,7 +460,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 28px 15px;
+    padding: 28px var(--noriks-collection-mobile-gutter);
   }
 
   .tax-collections .noriks-collection-hero__subtitle {
