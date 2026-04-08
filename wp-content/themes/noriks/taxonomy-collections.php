@@ -89,41 +89,6 @@ if (!$bottom_banner_button_url) {
 }
 ?>
 
-<section class="one-banner-shop noriks-collection-banner" style="position: relative; margin: 0 auto; padding: 0;">
-  <img
-    src="<?php echo esc_url($banner_image_url ?: $default_banner_url); ?>"
-    style="display:block; width:100%; min-height:105px; border-radius:0;"
-    alt="<?php echo esc_attr($banner_title); ?>"
-  >
-
-  <div class="noriks-collection-banner__content">
-    <h1
-      class="h1"
-      style="
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%, -50%);
-        font-size:2.5rem;
-        font-weight:800;
-        width:100%;
-        font-family:'Barlow', sans-serif;
-        letter-spacing:0.5px;
-        color:white;
-        text-align:center;
-        text-transform: uppercase;
-        margin: 0;
-      "
-    >
-      <?php echo esc_html($banner_title); ?>
-    </h1>
-
-    <?php if ($banner_subtitle) : ?>
-      <p class="noriks-collection-banner__subtitle"><?php echo esc_html($banner_subtitle); ?></p>
-    <?php endif; ?>
-  </div>
-</section>
-
 <section class="noriks-collection-hero">
   <div class="noriks-collection-hero__inner">
     <div class="noriks-collection-hero__content">
@@ -184,30 +149,6 @@ if (!$bottom_banner_button_url) {
 <style>
 .tax-collections .site-main {
   margin-bottom: 0;
-}
-
-.tax-collections .noriks-collection-banner {
-  max-width: none;
-  padding: 0 !important;
-}
-
-.tax-collections .noriks-collection-banner__content {
-  position: absolute;
-  inset: 0;
-}
-
-.tax-collections .noriks-collection-banner__subtitle {
-  position: absolute;
-  left: 50%;
-  top: calc(50% + 38px);
-  transform: translateX(-50%);
-  width: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  text-align: center;
 }
 
 .tax-collections .noriks-collection-hero {
@@ -434,16 +375,6 @@ if (!$bottom_banner_button_url) {
 }
 
 @media (max-width: 991px) {
-  .tax-collections .h1 {
-    font-size: 1.5rem !important;
-  }
-
-  .tax-collections .noriks-collection-banner__subtitle {
-    top: calc(50% + 26px);
-    font-size: 13px;
-    padding: 0 16px;
-  }
-
   .tax-collections .noriks-collection-products {
     padding: 0 15px 9px;
   }
@@ -454,10 +385,6 @@ if (!$bottom_banner_button_url) {
 
   .tax-collections .noriks-collection-bottom-products {
     padding: 0 15px 20px;
-  }
-
-  .tax-collections .noriks-collection-banner {
-    padding: 0 !important;
   }
 
   .tax-collections ul.products {
