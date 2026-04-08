@@ -269,15 +269,27 @@ function noriks_collection_order_ids_from_string($value) {
     return array_values(array_unique($parts));
 }
 
-function noriks_get_collection_product_choices() {
-    $products = get_posts(array(
+function noriks_get_collection_product_choices($term_id = 0) {
+    $query_args = array(
         'post_type'      => 'product',
         'post_status'    => 'publish',
         'posts_per_page' => -1,
         'orderby'        => 'title',
         'order'          => 'ASC',
         'fields'         => 'ids',
-    ));
+    );
+
+    if ($term_id > 0) {
+        $query_args['tax_query'] = array(
+            array(
+                'taxonomy' => 'collections',
+                'field'    => 'term_id',
+                'terms'    => $term_id,
+            ),
+        );
+    }
+
+    $products = get_posts($query_args);
 
     $choices = array();
 
@@ -295,9 +307,15 @@ function noriks_get_collection_product_choices() {
     return $choices;
 }
 
-function noriks_render_collection_product_order_ui($selected_raw = '') {
+function noriks_render_collection_product_order_ui($selected_raw = '', $term_id = 0) {
     $selected_ids = noriks_collection_order_ids_from_string($selected_raw);
-    $choices = noriks_get_collection_product_choices();
+    if ($term_id <= 0) {
+        echo '<p class="description">' . esc_html__('Save the collection first, then you can drag products that already belong to this collection.', 'textdomain') . '</p>';
+        echo '<input type="hidden" class="noriks-product-order-value" name="noriks_collection_product_order" value="">';
+        return;
+    }
+
+    $choices = noriks_get_collection_product_choices($term_id);
     $choice_map = array();
 
     foreach ($choices as $choice) {
@@ -394,7 +412,7 @@ function noriks_add_collection_term_fields() {
     </div>
     <div class="form-field term-group">
         <label for="noriks-collection-product-order"><?php esc_html_e('Manual Product Order', 'textdomain'); ?></label>
-        <?php noriks_render_collection_product_order_ui(''); ?>
+        <?php noriks_render_collection_product_order_ui('', 0); ?>
     </div>
     <div class="form-field term-group">
         <label><input type="checkbox" name="noriks_collection_show_bottom_products" value="1"> <?php esc_html_e('Show Bottom Products', 'textdomain'); ?></label>
@@ -475,7 +493,7 @@ function noriks_edit_collection_term_fields($term) {
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-product-order"><?php esc_html_e('Manual Product Order', 'textdomain'); ?></label></th>
         <td>
-            <?php noriks_render_collection_product_order_ui($product_order); ?>
+            <?php noriks_render_collection_product_order_ui($product_order, (int) $term->term_id); ?>
         </td>
     </tr>
     <tr class="form-field term-group-wrap">
