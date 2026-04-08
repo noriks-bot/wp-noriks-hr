@@ -317,6 +317,10 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
 .tax-collections ul.products .wc-block-grid__product,
 .tax-collections .wc-block-grid__products li.product,
 .tax-collections .wc-block-grid__products .wc-block-grid__product {
+  clear: none !important;
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   margin-bottom: 0 !important;
 }
 
