@@ -152,7 +152,7 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero {
-  padding: 14px 20px;
+  padding: 14px 28px;
 }
 
 .tax-collections .noriks-collection-hero__inner {
