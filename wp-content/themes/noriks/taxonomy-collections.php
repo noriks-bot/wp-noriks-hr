@@ -253,10 +253,12 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
   align-items: center;
   gap: 72px;
+  overflow: hidden;
 }
 
 .tax-collections .noriks-collection-bottom-banner__image {
   width: 100%;
+  overflow: hidden;
 }
 
 .tax-collections .noriks-collection-bottom-banner__image img {
@@ -322,6 +324,16 @@ $bottom_banner_url = trailingslashit(get_template_directory_uri()) . 'assets/ima
   margin-left: 0 !important;
   margin-right: 0 !important;
   margin-bottom: 0 !important;
+}
+
+.tax-collections .site-main ul.products.columns-4 li.product,
+.tax-collections .site-main ul.products.columns-3 li.product,
+.tax-collections .site-main ul.products.columns-2 li.product,
+.tax-collections .site-main ul.products.columns-1 li.product {
+  width: 100% !important;
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .tax-collections ul.products li.product {
