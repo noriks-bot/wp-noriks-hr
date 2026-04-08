@@ -11,6 +11,7 @@
 namespace Google\Site_Kit\Core\Email_Reporting;
 
 use Google\Site_Kit\Core\Email\Email;
+use Google\Site_Kit\Core\Golinks\Golinks;
 use Google\Site_Kit\Core\Modules\Modules;
 use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\REST_API\REST_Route;
@@ -88,6 +89,14 @@ class REST_Email_Reporting_Controller {
 	private $email_log_batch_query;
 
 	/**
+	 * Cron health check instance.
+	 *
+	 * @since 1.176.0
+	 * @var Cron_Health_Check
+	 */
+	private $health_check;
+
+	/**
 	 * Email sender instance.
 	 *
 	 * @since 1.173.0
@@ -96,24 +105,38 @@ class REST_Email_Reporting_Controller {
 	private $email_sender;
 
 	/**
+	 * Golinks instance.
+	 *
+	 * @since 1.174.0
+	 * @var Golinks
+	 */
+	private $golinks;
+
+	/**
 	 * Constructor.
 	 *
 	 * @since 1.162.0
 	 * @since 1.170.0 Added modules and user email reporting settings dependencies.
 	 * @since 1.173.0 Added eligible subscribers query and email sender dependencies and removed unused user options dependency.
+	 * @since 1.174.0 Added golinks dependency.
+	 * @since 1.176.0 Added cron health check dependency.
 	 *
 	 * @param Email_Reporting_Settings      $settings                       Email_Reporting_Settings instance.
 	 * @param Modules                       $modules                        Modules instance.
 	 * @param User_Email_Reporting_Settings $user_email_reporting_settings  User email reporting settings instance.
 	 * @param Eligible_Subscribers_Query    $eligible_subscribers_query     Eligible subscribers query instance.
 	 * @param Email                         $email_sender                   Email sender instance.
+	 * @param Golinks                       $golinks                        Golinks instance.
+	 * @param Cron_Health_Check             $health_check                   Cron health check instance.
 	 */
 	public function __construct(
 		Email_Reporting_Settings $settings,
 		Modules $modules,
 		User_Email_Reporting_Settings $user_email_reporting_settings,
 		Eligible_Subscribers_Query $eligible_subscribers_query,
-		Email $email_sender
+		Email $email_sender,
+		Golinks $golinks,
+		Cron_Health_Check $health_check
 	) {
 		$this->settings                      = $settings;
 		$this->modules                       = $modules;
@@ -121,6 +144,8 @@ class REST_Email_Reporting_Controller {
 		$this->eligible_subscribers_query    = $eligible_subscribers_query;
 		$this->email_log_batch_query         = new Email_Log_Batch_Query();
 		$this->email_sender                  = $email_sender;
+		$this->golinks                       = $golinks;
+		$this->health_check                  = $health_check;
 	}
 
 	/**
@@ -144,6 +169,7 @@ class REST_Email_Reporting_Controller {
 					array(
 						'/' . REST_Routes::REST_ROOT . '/core/site/data/email-reporting',
 						'/' . REST_Routes::REST_ROOT . '/core/site/data/email-reporting-eligible-subscribers',
+						'/' . REST_Routes::REST_ROOT . '/core/site/data/email-reporting-errors',
 					)
 				);
 			}
@@ -183,7 +209,7 @@ class REST_Email_Reporting_Controller {
 
 							return new WP_REST_Response( $this->settings->get() );
 						},
-						'permission_callback' => $can_access,
+						'permission_callback' => $can_manage,
 						'args'                => array(
 							'data' => array(
 								'type'       => 'object',
@@ -212,9 +238,22 @@ class REST_Email_Reporting_Controller {
 				array(
 					array(
 						'methods'             => WP_REST_Server::READABLE,
-						'callback'            => function () {
-							$meta_key       = $this->user_email_reporting_settings->get_meta_key();
-							$eligible_users = $this->eligible_subscribers_query->get_eligible_users( get_current_user_id() );
+						'callback'            => function ( WP_REST_Request $request ) {
+							$page            = (int) $request['page'];
+							$per_page        = (int) $request['per_page'];
+							$search          = (string) $request['search'];
+							$current_user_id = get_current_user_id();
+							$meta_key        = $this->user_email_reporting_settings->get_meta_key();
+							$eligible_users  = $this->eligible_subscribers_query->get_eligible_users(
+								$current_user_id,
+								array(
+									'page'     => $page,
+									'per_page' => $per_page,
+									'search'   => $search,
+								)
+							);
+							$total          = $this->eligible_subscribers_query->get_eligible_users_count( $current_user_id, $search );
+							$total_pages    = $total > 0 ? (int) ceil( $total / $per_page ) : 0;
 
 							$data = array_map(
 								function ( WP_User $user ) use ( $meta_key ) {
@@ -223,9 +262,33 @@ class REST_Email_Reporting_Controller {
 								$eligible_users
 							);
 
-							return new WP_REST_Response( array_values( $data ) );
+							return new WP_REST_Response(
+								array(
+									'users'      => array_values( $data ),
+									'total'      => $total,
+									'totalPages' => $total_pages,
+								)
+							);
 						},
 						'permission_callback' => $can_manage,
+						'args'                => array(
+							'page'     => array(
+								'type'    => 'integer',
+								'default' => 1,
+								'minimum' => 1,
+							),
+							'per_page' => array(
+								'type'    => 'integer',
+								'default' => Eligible_Subscribers_Query::PER_PAGE,
+								'minimum' => 1,
+								'maximum' => Eligible_Subscribers_Query::MAX_PER_PAGE,
+							),
+							'search'   => array(
+								'type'              => 'string',
+								'default'           => '',
+								'sanitize_callback' => 'sanitize_text_field',
+							),
+						),
 					),
 				)
 			),
@@ -235,6 +298,7 @@ class REST_Email_Reporting_Controller {
 					array(
 						'methods'             => WP_REST_Server::READABLE,
 						'callback'            => function () {
+							$this->health_check->check_stale_tasks();
 							$errors = $this->email_log_batch_query->get_latest_batch_error();
 
 							return new WP_REST_Response( is_string( $errors ) ? json_decode( $errors, true ) : array() );
@@ -297,18 +361,18 @@ class REST_Email_Reporting_Controller {
 			);
 		}
 
-		if ( ! $this->is_user_eligible_for_invite( $user_id ) ) {
-			return $this->invite_error(
-				'email_reporting_ineligible_user',
-				__( 'The provided user is not eligible for invitation.', 'google-site-kit' ),
-				400
-			);
-		}
-
 		if ( $this->is_user_subscribed( $user_id ) ) {
 			return $this->invite_error(
 				'email_reporting_user_already_subscribed',
 				__( 'The user is already subscribed to email reports.', 'google-site-kit' ),
+				400
+			);
+		}
+
+		if ( ! $this->is_user_eligible_for_invite( $user_id ) ) {
+			return $this->invite_error(
+				'email_reporting_ineligible_user',
+				__( 'The provided user is not eligible for invitation.', 'google-site-kit' ),
 				400
 			);
 		}
@@ -323,8 +387,8 @@ class REST_Email_Reporting_Controller {
 
 		$template_renderer = new Email_Template_Renderer();
 		$template_data     = $this->prepare_invitation_template_data();
-		$html_content      = $template_renderer->render( 'invitation-email', $template_data );
-		$text_content      = $template_renderer->render_text( 'invitation-email', $template_data );
+		$html_content      = $template_renderer->render( 'simple-email', $template_data );
+		$text_content      = $template_renderer->render_text( 'simple-email', $template_data );
 
 		if ( '' === trim( $html_content ) || '' === trim( $text_content ) ) {
 			return $this->invite_error(
@@ -381,6 +445,7 @@ class REST_Email_Reporting_Controller {
 			'email'       => $user->user_email,
 			'role'        => $this->get_primary_role( $user ),
 			'subscribed'  => is_array( $settings ) && ! empty( $settings['subscribed'] ),
+			'invited'     => $this->is_invite_rate_limited( $user->ID ),
 		);
 	}
 
@@ -411,10 +476,7 @@ class REST_Email_Reporting_Controller {
 	 * @return bool
 	 */
 	private function is_user_eligible_for_invite( $user_id ) {
-		$eligible_users = $this->eligible_subscribers_query->get_eligible_users( get_current_user_id() );
-		$eligible_ids   = wp_list_pluck( $eligible_users, 'ID' );
-
-		return in_array( $user_id, array_map( 'intval', $eligible_ids ), true );
+		return $this->eligible_subscribers_query->is_user_eligible( get_current_user_id(), $user_id );
 	}
 
 	/**
@@ -508,16 +570,26 @@ class REST_Email_Reporting_Controller {
 				'domain' => $site_domain,
 				'url'    => home_url( '/' ),
 			),
-			'body'                   => Body_Content_Map::get_body( 'invitation-email' ),
+			'title'                  => Content_Map::get_title_with_args(
+				'invitation-email',
+				array(
+					'<a class="text-primary" href="mailto:' . $inviter_email . '" style="color: #161B18; text-decoration: none; font-weight: 500;">',
+					$inviter_email,
+					'</a>',
+				)
+			),
+			'body'                   => Content_Map::get_body( 'invitation-email' ),
 			'inviter_email'          => $inviter_email,
 			'learn_more_url'         => 'https://sitekit.withgoogle.com/documentation/email-reports/',
 			'primary_call_to_action' => array(
 				'label' => __( 'Get your report', 'google-site-kit' ),
-				'url'   => admin_url( 'admin.php?page=googlesitekit-dashboard' ),
+				'url'   => $this->golinks->get_url( 'manage-subscription-email-reporting' ),
 			),
 			'footer'                 => array(
 				'copy' => __( 'You received this email because your site admin invited you to use Site Kit email reports feature', 'google-site-kit' ),
 			),
+			'graphic'                => Content_Map::get_graphic_config( 'invitation-email' ),
+			'footer_type'            => 'inline',
 		);
 	}
 

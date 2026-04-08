@@ -461,7 +461,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        <h3>Tablice veličina</h3>
+        <h3>Tablica veličina</h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
@@ -481,13 +481,13 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="https://noriks.com/hr/wp-content/uploads/2025/08/Izdelek-brez-naslova-8-1-e1755177806475.png">
+     <img src="https://noriks.com/hr/wp-content/uploads/2026/04/hr_majice.jpeg">
 <img src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
         
           <?php else: ?>
       
       
-       <img src="https://noriks.com/hr/wp-content/uploads/2025/08/Izdelek-brez-naslova-8-1-e1755177806475.png">
+       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/hr_majice.jpeg">
         
             
         <?php endif; ?>

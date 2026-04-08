@@ -10,6 +10,7 @@
 
 namespace Google\Site_Kit\Core\Email_Reporting;
 
+use Google\Site_Kit\Core\Util\BC_Functions;
 use Google\Site_Kit\Core\User\Email_Reporting_Settings;
 
 /**
@@ -73,13 +74,13 @@ class Email_Reporting_Scheduler {
 	 * @param string $frequency Frequency slug.
 	 */
 	public function schedule_initiator_once( $frequency ) {
-		if ( wp_next_scheduled( self::ACTION_INITIATOR, array( $frequency ) ) ) {
+		if ( $this->is_initiator_scheduled( $frequency ) ) {
 			return;
 		}
 
-		$next = $this->frequency_planner->next_occurrence( $frequency, time(), wp_timezone() );
+		$next = $this->frequency_planner->next_occurrence( $frequency, time(), BC_Functions::wp_timezone() );
 
-		wp_schedule_single_event( $next, self::ACTION_INITIATOR, array( $frequency ) );
+		wp_schedule_single_event( $next, self::ACTION_INITIATOR, array( $frequency, $next ) );
 	}
 
 	/**
@@ -91,9 +92,65 @@ class Email_Reporting_Scheduler {
 	 * @param int    $timestamp Base timestamp used to calculate the next run.
 	 */
 	public function schedule_next_initiator( $frequency, $timestamp ) {
-		$next = $this->frequency_planner->next_occurrence( $frequency, $timestamp, wp_timezone() );
+		$next = $this->frequency_planner->next_occurrence( $frequency, $timestamp, BC_Functions::wp_timezone() );
 
-		wp_schedule_single_event( $next, self::ACTION_INITIATOR, array( $frequency ) );
+		wp_schedule_single_event( $next, self::ACTION_INITIATOR, array( $frequency, $next ) );
+	}
+
+	/**
+	 * Checks whether an initiator event exists for the provided frequency.
+	 *
+	 * @since 1.176.0
+	 *
+	 * @param string $frequency Frequency slug.
+	 * @return bool Whether an initiator event is already scheduled for this frequency.
+	 */
+	public function is_initiator_scheduled( $frequency ) {
+		return false !== $this->get_initiator_timestamp( $frequency );
+	}
+
+	/**
+	 * Gets the timestamp of the next initiator event for a frequency.
+	 *
+	 * We intentionally scan cron entries instead of using `wp_next_scheduled()`
+	 * because initiators are scheduled with dynamic args:
+	 * `[ $frequency, $scheduled_timestamp ]`. `wp_next_scheduled()` requires an
+	 * exact args match, but here we only need to know whether *any* initiator
+	 * exists for a given frequency regardless of its scheduled timestamp.
+	 *
+	 * @since 1.176.0
+	 *
+	 * @param string $frequency Frequency slug.
+	 * @return int|false Timestamp if found, otherwise false.
+	 */
+	public function get_initiator_timestamp( $frequency ) {
+		// Private function is used here but there are tests covering this
+		// method in case it changes.
+		//
+		// See: https://developer.wordpress.org/reference/functions/_get_cron_array/ and https://github.com/google/site-kit-wp/pull/12303#discussion_r2949495702.
+		$cron = _get_cron_array();
+
+		if ( ! is_array( $cron ) ) {
+			return false;
+		}
+
+		foreach ( $cron as $timestamp => $hooks ) {
+			if ( empty( $hooks[ self::ACTION_INITIATOR ] ) || ! is_array( $hooks[ self::ACTION_INITIATOR ] ) ) {
+				continue;
+			}
+
+			foreach ( $hooks[ self::ACTION_INITIATOR ] as $event ) {
+				$args = isset( $event['args'] ) && is_array( $event['args'] )
+					? $event['args']
+					: array();
+
+				if ( isset( $args[0] ) && $frequency === $args[0] ) {
+					return (int) $timestamp;
+				}
+			}
+		}
+
+		return false;
 	}
 
 	/**
@@ -160,6 +217,50 @@ class Email_Reporting_Scheduler {
 		}
 
 		wp_schedule_event( time(), 'monthly', self::ACTION_CLEANUP );
+	}
+
+	/**
+	 * Schedules subscription confirmation delivery via existing worker and fallback pipeline.
+	 *
+	 * @since 1.174.0
+	 *
+	 * @param int   $user_id           User ID.
+	 * @param array $previous_settings Previous settings.
+	 * @param array $updated_settings  Updated settings.
+	 * @return true|\WP_Error True on success, WP_Error on failure.
+	 */
+	public function schedule_email_confirmation( $user_id, array $previous_settings, array $updated_settings ) {
+		$task  = new Subscription_Confirmation_Task( $this->frequency_planner );
+		$batch = $task->maybe_schedule(
+			$user_id,
+			$previous_settings,
+			$updated_settings
+		);
+
+		if ( false === $batch ) {
+			return true;
+		}
+
+		if ( is_wp_error( $batch ) ) {
+			return $batch;
+		}
+
+		if ( empty( $batch['batch_id'] ) || empty( $batch['frequency'] ) || ! isset( $batch['timestamp'] ) ) {
+			return new \WP_Error(
+				'email_reporting_invalid_confirmation_batch',
+				__( 'Subscription confirmation batch payload is invalid.', 'google-site-kit' ),
+				array( 'status' => 500 )
+			);
+		}
+
+		$batch_id  = (string) $batch['batch_id'];
+		$frequency = (string) $batch['frequency'];
+		$timestamp = (int) $batch['timestamp'];
+
+		$this->schedule_worker( $batch_id, $frequency, $timestamp, 0 );
+		$this->schedule_fallback( $batch_id, $frequency, $timestamp, 0 );
+
+		return true;
 	}
 
 	/**

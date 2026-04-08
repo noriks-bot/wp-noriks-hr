@@ -12,6 +12,7 @@ namespace Google\Site_Kit\Core\Email_Reporting;
 
 use DateInterval;
 use DateTimeImmutable;
+use Google\Site_Kit\Core\Util\BC_Functions;
 use Google\Site_Kit\Core\User\Email_Reporting_Settings;
 
 /**
@@ -55,17 +56,22 @@ class Initiator_Task {
 	 *
 	 * @since 1.167.0
 	 *
-	 * @param string $frequency Frequency slug.
+	 * @param string   $frequency           Frequency slug.
+	 * @param int|null $scheduled_timestamp Scheduled initiator timestamp.
 	 */
-	public function handle_callback_action( $frequency ) {
-		$timestamp = time();
+	public function handle_callback_action( $frequency, $scheduled_timestamp = null ) {
+		$timestamp = (int) $scheduled_timestamp;
+
+		if ( $timestamp <= 0 ) {
+			$timestamp = time();
+		}
 
 		$this->scheduler->schedule_next_initiator( $frequency, $timestamp );
 
 		$batch_id = wp_generate_uuid4();
 		$user_ids = $this->subscribed_users_query->for_frequency( $frequency );
 
-		$reference_dates = $this->build_reference_dates( $frequency, $timestamp );
+		$reference_dates = self::build_reference_dates( $frequency, $timestamp );
 
 		foreach ( $user_ids as $user_id ) {
 			wp_insert_post(
@@ -80,6 +86,7 @@ class Initiator_Task {
 						Email_Log::META_REPORT_REFERENCE_DATES => $reference_dates,
 						Email_Log::META_SEND_ATTEMPTS    => 0,
 						Email_Log::META_SITE_ID          => get_current_blog_id(),
+						Email_Log::META_TEMPLATE_TYPE    => Email_Log::TEMPLATE_TYPE_EMAIL_REPORT,
 					),
 				)
 			);
@@ -92,15 +99,21 @@ class Initiator_Task {
 	/**
 	 * Builds the report reference dates for a batch.
 	 *
+	 * @since 1.167.0
+	 * @since 1.174.0 Made method static.
+	 *
 	 * @param string $frequency Frequency slug.
 	 * @param int    $timestamp Base timestamp.
 	 * @return array Reference date payload.
 	 */
-	private function build_reference_dates( $frequency, $timestamp ) {
-		$time_zone = wp_timezone();
-		$send_date = ( new DateTimeImmutable( '@' . $timestamp ) )
+	public static function build_reference_dates( $frequency, $timestamp ) {
+		$time_zone      = BC_Functions::wp_timezone();
+		$scheduled_date = ( new DateTimeImmutable( '@' . $timestamp ) )
 			->setTimezone( $time_zone )
 			->setTime( 0, 0, 0 );
+		// Initiators are scheduled at period-boundary midnight in site timezone.
+		// The reporting window should end on "yesterday" (inclusive end date), so subtract one day.
+		$send_date = $scheduled_date->sub( new DateInterval( 'P1D' ) );
 
 		$period_lengths = array(
 			Email_Reporting_Settings::FREQUENCY_WEEKLY    => 7,
@@ -110,7 +123,8 @@ class Initiator_Task {
 
 		$period_days = isset( $period_lengths[ $frequency ] ) ? $period_lengths[ $frequency ] : $period_lengths[ Email_Reporting_Settings::FREQUENCY_WEEKLY ];
 
-		$start_date         = $send_date->sub( new DateInterval( sprintf( 'P%dD', $period_days ) ) );
+		// endDate is inclusive, so startDate must be endDate - (period_days - 1) for an exact period-length window.
+		$start_date         = $send_date->sub( new DateInterval( sprintf( 'P%dD', max( $period_days - 1, 0 ) ) ) );
 		$compare_end_date   = $start_date->sub( new DateInterval( 'P1D' ) );
 		$compare_start_date = $compare_end_date->sub(
 			new DateInterval( sprintf( 'P%dD', max( $period_days - 1, 0 ) ) )
