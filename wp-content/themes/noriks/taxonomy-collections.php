@@ -192,7 +192,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 .tax-collections .noriks-collection-products {
   max-width: 1790px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .tax-collections .noriks-collection-intro {
@@ -230,7 +230,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 .tax-collections .noriks-collection-bottom-products {
   max-width: 1790px;
   margin: 0 auto;
-  padding: 0 0 56px;
+  padding: 0 20px 56px;
 }
 
 .tax-collections .noriks-collection-bottom-products__inner {
