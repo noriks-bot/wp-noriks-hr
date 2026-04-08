@@ -152,12 +152,12 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero {
-  padding: 14px 15px;
+  padding: 14px 20px;
 }
 
 .tax-collections .noriks-collection-hero__inner {
   width: 100%;
-  max-width: 1800px;
+  max-width: 1760px;
   margin: 0 auto;
   background: linear-gradient(135deg, #111 0%, #2a2a2a 45%, #4b4b4b 100%);
   border-radius: 5px;
@@ -166,8 +166,8 @@ if (!$bottom_banner_button_url) {
 }
 
 .tax-collections .noriks-collection-hero__content {
-  max-width: 1760px;
-  padding: 34px 24px 34px 24px;
+  max-width: none;
+  padding: 34px 20px;
   color: #fff;
 }
 
@@ -369,7 +369,7 @@ if (!$bottom_banner_button_url) {
 
 @media (max-width: 1280px) {
   .tax-collections .noriks-collection-hero {
-    padding: 12px 15px;
+    padding: 12px 20px;
   }
 
   .tax-collections .noriks-collection-hero__content {
@@ -407,7 +407,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 28px 28px;
+    padding: 28px 15px;
   }
 
   .tax-collections .noriks-collection-bottom-banner__inner {
@@ -421,6 +421,7 @@ if (!$bottom_banner_button_url) {
 
   .tax-collections .noriks-collection-bottom-banner__content {
     padding: 0;
+    background: #f3f3f3;
   }
 
   .tax-collections .noriks-collection-bottom-banner__content h2 {
