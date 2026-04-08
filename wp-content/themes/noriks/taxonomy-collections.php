@@ -445,7 +445,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .noriks-collection-products {
-    padding: 0 15px 4px;
+    padding: 0 15px 9px;
   }
 
   .tax-collections .noriks-collection-bottom-banner {
@@ -465,7 +465,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .noriks-collection-hero {
-    padding: 9px 15px;
+    padding: 14px 15px;
   }
 
   .tax-collections .noriks-collection-hero__inner {
@@ -514,7 +514,7 @@ if (!$bottom_banner_button_url) {
   .tax-collections ul.products {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     column-gap: 4px !important;
-    row-gap: 0 !important;
+    row-gap: 5px !important;
   }
 
   .tax-collections ul.products li.product,
@@ -538,7 +538,7 @@ if (!$bottom_banner_button_url) {
   }
 
   .tax-collections .price {
-    margin-bottom: 2px !important;
+    margin-bottom: 7px !important;
   }
 
   .tax-collections .top-liked,
