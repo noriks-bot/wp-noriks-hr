@@ -21,6 +21,7 @@ $bottom_banner_subtitle = $term_id ? get_term_meta($term_id, 'noriks_collection_
 $bottom_banner_button_text = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', true) : '';
 $bottom_banner_button_url = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_button_url', true) : '';
 $bottom_banner_image_id = $term_id ? (int) get_term_meta($term_id, 'noriks_collection_bottom_banner_image_id', true) : 0;
+$bottom_banner_bg_color = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_banner_bg_color', true) : '';
 $bottom_banner_image_url = $bottom_banner_image_id ? wp_get_attachment_image_url($bottom_banner_image_id, 'full') : '';
 $product_order_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_product_order', true) : '';
 $bottom_product_ids_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_product_ids', true) : '';
@@ -240,7 +241,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 }
 
 .tax-collections .noriks-collection-bottom-banner__content {
-  background: #f3f3f3;
+  background: <?php echo esc_html($bottom_banner_bg_color ? $bottom_banner_bg_color : '#f0eaea'); ?>;
   text-align: center;
   padding: 40px 32px;
   display: flex;

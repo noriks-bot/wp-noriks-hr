@@ -261,6 +261,7 @@ function noriks_ensure_default_collection_akcija() {
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', '');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_url', '');
     update_term_meta($term_id, 'noriks_collection_bottom_banner_image_id', 0);
+    update_term_meta($term_id, 'noriks_collection_bottom_banner_bg_color', '#f0eaea');
     update_term_meta($term_id, 'noriks_collection_product_order', '');
     update_term_meta($term_id, 'noriks_collection_bottom_product_ids', '');
 }
@@ -438,6 +439,10 @@ function noriks_add_collection_term_fields() {
         <input type="text" id="noriks-collection-bottom-banner-button-url" name="noriks_collection_bottom_banner_button_url" value="">
     </div>
     <div class="form-field term-group">
+        <label for="noriks-collection-bottom-banner-bg-color"><?php esc_html_e('Bottom Banner Background Color', 'textdomain'); ?></label>
+        <input type="color" id="noriks-collection-bottom-banner-bg-color" name="noriks_collection_bottom_banner_bg_color" value="#f0eaea">
+    </div>
+    <div class="form-field term-group">
         <label for="noriks-collection-bottom-banner-image-id"><?php esc_html_e('Bottom Banner Image', 'textdomain'); ?></label>
         <input type="hidden" id="noriks-collection-bottom-banner-image-id" name="noriks_collection_bottom_banner_image_id" value="">
         <div class="noriks-collection-banner-preview" style="margin:10px 0;"></div>
@@ -477,6 +482,7 @@ function noriks_edit_collection_term_fields($term) {
     $bottom_banner_button_text = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_button_text', true);
     $bottom_banner_button_url = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_button_url', true);
     $bottom_banner_image_id = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_image_id', true);
+    $bottom_banner_bg_color = get_term_meta($term->term_id, 'noriks_collection_bottom_banner_bg_color', true);
     $product_order   = get_term_meta($term->term_id, 'noriks_collection_product_order', true);
     $gallery_image_products = get_term_meta($term->term_id, 'noriks_collection_gallery_image_product_ids', true);
     $bottom_products = get_term_meta($term->term_id, 'noriks_collection_bottom_product_ids', true);
@@ -525,6 +531,10 @@ function noriks_edit_collection_term_fields($term) {
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-bottom-banner-button-url"><?php esc_html_e('Bottom Banner Button URL', 'textdomain'); ?></label></th>
         <td><input type="text" id="noriks-collection-bottom-banner-button-url" name="noriks_collection_bottom_banner_button_url" value="<?php echo esc_attr($bottom_banner_button_url); ?>" class="large-text"></td>
+    </tr>
+    <tr class="form-field term-group-wrap">
+        <th scope="row"><label for="noriks-collection-bottom-banner-bg-color"><?php esc_html_e('Bottom Banner Background Color', 'textdomain'); ?></label></th>
+        <td><input type="color" id="noriks-collection-bottom-banner-bg-color" name="noriks_collection_bottom_banner_bg_color" value="<?php echo esc_attr($bottom_banner_bg_color ? $bottom_banner_bg_color : '#f0eaea'); ?>"></td>
     </tr>
     <tr class="form-field term-group-wrap">
         <th scope="row"><label for="noriks-collection-bottom-banner-image-id"><?php esc_html_e('Bottom Banner Image', 'textdomain'); ?></label></th>
@@ -579,6 +589,7 @@ function noriks_save_collection_term_meta($term_id) {
     $bottom_banner_button_text = isset($_POST['noriks_collection_bottom_banner_button_text']) ? sanitize_text_field(wp_unslash($_POST['noriks_collection_bottom_banner_button_text'])) : '';
     $bottom_banner_button_url = isset($_POST['noriks_collection_bottom_banner_button_url']) ? esc_url_raw(wp_unslash($_POST['noriks_collection_bottom_banner_button_url'])) : '';
     $bottom_banner_image_id = isset($_POST['noriks_collection_bottom_banner_image_id']) ? absint($_POST['noriks_collection_bottom_banner_image_id']) : 0;
+    $bottom_banner_bg_color = isset($_POST['noriks_collection_bottom_banner_bg_color']) ? sanitize_hex_color(wp_unslash($_POST['noriks_collection_bottom_banner_bg_color'])) : '#f0eaea';
     $product_order_raw = isset($_POST['noriks_collection_product_order']) ? wp_unslash($_POST['noriks_collection_product_order']) : '';
     $gallery_image_raw = isset($_POST['noriks_collection_gallery_image_product_ids']) ? (array) wp_unslash($_POST['noriks_collection_gallery_image_product_ids']) : array();
     $bottom_product_raw = isset($_POST['noriks_collection_bottom_product_ids']) ? wp_unslash($_POST['noriks_collection_bottom_product_ids']) : '';
@@ -594,6 +605,7 @@ function noriks_save_collection_term_meta($term_id) {
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_text', $bottom_banner_button_text);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_button_url', $bottom_banner_button_url);
     update_term_meta($term_id, 'noriks_collection_bottom_banner_image_id', $bottom_banner_image_id);
+    update_term_meta($term_id, 'noriks_collection_bottom_banner_bg_color', $bottom_banner_bg_color ? $bottom_banner_bg_color : '#f0eaea');
     update_term_meta($term_id, 'noriks_collection_product_order', implode("\n", $product_order_ids));
     update_term_meta($term_id, 'noriks_collection_gallery_image_product_ids', implode("\n", $gallery_image_ids));
     update_term_meta($term_id, 'noriks_collection_bottom_product_ids', implode("\n", $bottom_product_ids));
