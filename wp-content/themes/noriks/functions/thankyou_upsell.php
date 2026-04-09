@@ -72,13 +72,36 @@ function noriks_transition_to_processing( $order_id ) {
 }
 
 
-// ─── FAILSAFE: sweep stuck primary-hold orders on every page load ────────
-// wp_cron depends on page visits — this catches any orders that slipped through
+// ─── FAILSAFE: scheduled background sweep for stuck primary-hold orders ───
 
-add_action( 'init', 'noriks_failsafe_primary_hold_sweep' );
+add_filter( 'cron_schedules', 'noriks_add_five_minute_cron_schedule' );
+function noriks_add_five_minute_cron_schedule( $schedules ) {
+    if ( ! isset( $schedules['noriks_every_five_minutes'] ) ) {
+        $schedules['noriks_every_five_minutes'] = array(
+            'interval' => 300,
+            'display'  => __( 'Every 5 Minutes', 'textdomain' ),
+        );
+    }
+
+    return $schedules;
+}
+
+add_action( 'init', 'noriks_schedule_primary_hold_failsafe_cron' );
+function noriks_schedule_primary_hold_failsafe_cron() {
+    if ( wp_next_scheduled( 'noriks_primary_hold_failsafe_cron' ) ) {
+        return;
+    }
+
+    wp_schedule_event( time() + 300, 'noriks_every_five_minutes', 'noriks_primary_hold_failsafe_cron' );
+}
+
+add_action( 'noriks_primary_hold_failsafe_cron', 'noriks_failsafe_primary_hold_sweep' );
 function noriks_failsafe_primary_hold_sweep() {
-    // Only run once per minute (transient lock)
-    if ( get_transient( 'noriks_ph_sweep_lock' ) ) return;
+    // Only run once per minute in case multiple cron runners overlap.
+    if ( get_transient( 'noriks_ph_sweep_lock' ) ) {
+        return;
+    }
+
     set_transient( 'noriks_ph_sweep_lock', 1, 60 );
 
     $orders = wc_get_orders( array(
@@ -93,15 +116,9 @@ function noriks_failsafe_primary_hold_sweep() {
 }
 
 
-// ─── FAILSAFE 2: WooCommerce order list hook (catches admin visits) ──────
+// ─── FAILSAFE 2: if an overdue primary-hold order is manually saved, resolve it ───
 
-add_action( 'woocommerce_order_list_table_prepare_items_query_args', 'noriks_failsafe_on_admin_orders' );
 add_action( 'woocommerce_before_order_object_save', 'noriks_failsafe_on_order_save' );
-
-function noriks_failsafe_on_admin_orders( $args ) {
-    noriks_failsafe_primary_hold_sweep();
-    return $args;
-}
 
 function noriks_failsafe_on_order_save( $order ) {
     // When any order is saved, also check for stuck primary-holds
