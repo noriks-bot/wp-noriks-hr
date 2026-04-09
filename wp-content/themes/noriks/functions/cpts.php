@@ -516,8 +516,8 @@ function noriks_add_collection_term_fields() {
     </div>
     <div class="form-field term-group">
         <label for="noriks-collection-bottom-product-ids"><?php esc_html_e('Bottom Products', 'textdomain'); ?></label>
-        <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="4" placeholder="5001, 5002, 5003, 5004"></textarea>
-        <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 4 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
+        <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="4" placeholder="5001, 5002, 5003, 5004, 5005, 5006, 5007, 5008"></textarea>
+        <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 8 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
     </div>
     <?php
 }
@@ -633,7 +633,7 @@ function noriks_edit_collection_term_fields($term) {
         <th scope="row"><label for="noriks-collection-bottom-product-ids"><?php esc_html_e('Bottom Products', 'textdomain'); ?></label></th>
         <td>
             <textarea id="noriks-collection-bottom-product-ids" name="noriks_collection_bottom_product_ids" rows="5" class="large-text"><?php echo esc_textarea($bottom_products); ?></textarea>
-            <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 4 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
+            <p class="description"><?php esc_html_e('Optional extra products shown at the very bottom of the collection. Enter up to 8 product IDs, separated by commas or new lines.', 'textdomain'); ?></p>
         </td>
     </tr>
     <?php
@@ -678,7 +678,7 @@ function noriks_save_collection_term_meta($term_id) {
             $gallery_image_map[$product_id] = $image_id;
         }
     }
-    $bottom_product_ids = array_slice(noriks_collection_order_ids_from_string($bottom_product_raw), 0, 4);
+    $bottom_product_ids = array_slice(noriks_collection_order_ids_from_string($bottom_product_raw), 0, 8);
 
     update_term_meta($term_id, 'noriks_collection_promo_title', $promo_title);
     update_term_meta($term_id, 'noriks_collection_promo_subtitle', $promo_subtitle);

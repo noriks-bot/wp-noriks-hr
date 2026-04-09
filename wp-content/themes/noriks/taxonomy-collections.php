@@ -28,7 +28,7 @@ $bottom_banner_image_url = $bottom_banner_image_id ? wp_get_attachment_image_url
 $product_order_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_product_order', true) : '';
 $bottom_product_ids_raw = $term_id ? get_term_meta($term_id, 'noriks_collection_bottom_product_ids', true) : '';
 $ordered_product_ids = function_exists('noriks_collection_order_ids_from_string') ? noriks_collection_order_ids_from_string($product_order_raw) : array();
-$bottom_product_ids = function_exists('noriks_collection_order_ids_from_string') ? array_slice(noriks_collection_order_ids_from_string($bottom_product_ids_raw), 0, 4) : array();
+$bottom_product_ids = function_exists('noriks_collection_order_ids_from_string') ? array_slice(noriks_collection_order_ids_from_string($bottom_product_ids_raw), 0, 8) : array();
 
 $query_args = array(
     'post_type'      => 'product',
