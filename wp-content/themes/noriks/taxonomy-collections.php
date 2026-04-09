@@ -456,7 +456,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero + .noriks-collection-intro {
-    padding-top: 8px;
+    padding-top: 0;
   }
 
   .tax-collections .noriks-collection-bottom-banner + .noriks-collection-intro--bottom {
