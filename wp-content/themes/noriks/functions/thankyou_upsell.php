@@ -53,15 +53,29 @@ function noriks_set_cod_primary_hold( $order_id ) {
 
     $order->update_status( 'primary-hold', 'Upsell window: 5 min hold for post-purchase offers.' );
 
-    // Schedule auto-transition to processing after 5 minutes
+    // Schedule auto-transition to processing after 5 minutes.
+    // Use Action Scheduler when available because it is more reliable than plain WP-Cron.
     if ( ! wp_next_scheduled( 'noriks_primary_hold_to_processing', array( $order_id ) ) ) {
         wp_schedule_single_event( time() + 300, 'noriks_primary_hold_to_processing', array( $order_id ) );
+    }
+
+    if ( function_exists( 'as_next_scheduled_action' ) && function_exists( 'as_schedule_single_action' ) ) {
+        if ( ! as_next_scheduled_action( 'noriks_primary_hold_to_processing', array( 'order_id' => $order_id ), 'noriks-primary-hold' ) ) {
+            as_schedule_single_action( time() + 300, 'noriks_primary_hold_to_processing', array( 'order_id' => $order_id ), 'noriks-primary-hold' );
+        }
     }
 }
 
 // Auto-transition: primary-hold → processing after 5 min
 add_action( 'noriks_primary_hold_to_processing', 'noriks_transition_to_processing' );
 function noriks_transition_to_processing( $order_id ) {
+    if ( is_array( $order_id ) ) {
+        $order_id = isset( $order_id['order_id'] ) ? absint( $order_id['order_id'] ) : 0;
+    }
+
+    $order_id = absint( $order_id );
+    if ( ! $order_id ) return;
+
     $order = wc_get_order( $order_id );
     if ( ! $order ) return;
 
@@ -89,10 +103,20 @@ function noriks_add_five_minute_cron_schedule( $schedules ) {
 add_action( 'init', 'noriks_schedule_primary_hold_failsafe_cron' );
 function noriks_schedule_primary_hold_failsafe_cron() {
     if ( wp_next_scheduled( 'noriks_primary_hold_failsafe_cron' ) ) {
+        // Keep Action Scheduler fallback in place even if WP-Cron is already scheduled.
+        if ( function_exists( 'as_next_scheduled_action' ) && ! as_next_scheduled_action( 'noriks_primary_hold_failsafe_cron', array(), 'noriks-primary-hold' ) ) {
+            as_schedule_recurring_action( time() + 300, 300, 'noriks_primary_hold_failsafe_cron', array(), 'noriks-primary-hold' );
+        }
         return;
     }
 
     wp_schedule_event( time() + 300, 'noriks_every_five_minutes', 'noriks_primary_hold_failsafe_cron' );
+
+    if ( function_exists( 'as_next_scheduled_action' ) && function_exists( 'as_schedule_recurring_action' ) ) {
+        if ( ! as_next_scheduled_action( 'noriks_primary_hold_failsafe_cron', array(), 'noriks-primary-hold' ) ) {
+            as_schedule_recurring_action( time() + 300, 300, 'noriks_primary_hold_failsafe_cron', array(), 'noriks-primary-hold' );
+        }
+    }
 }
 
 add_action( 'noriks_primary_hold_failsafe_cron', 'noriks_failsafe_primary_hold_sweep' );
