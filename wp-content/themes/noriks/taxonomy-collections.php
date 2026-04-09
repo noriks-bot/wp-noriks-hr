@@ -180,7 +180,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
 .tax-collections .noriks-collection-hero__content {
   max-width: 70%;
-  padding: 42px var(--noriks-collection-gutter);
+  padding: 42px var(--noriks-collection-gutter) 42px 40px;
   color: #fff;
   position: relative;
   z-index: 1;
