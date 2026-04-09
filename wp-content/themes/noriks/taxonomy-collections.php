@@ -486,6 +486,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
   .tax-collections .noriks-collection-hero__inner {
     grid-template-columns: 1fr;
+    min-height: 0;
   }
 
   .tax-collections .noriks-collection-hero__content {
