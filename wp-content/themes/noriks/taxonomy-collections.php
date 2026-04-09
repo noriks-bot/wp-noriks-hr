@@ -489,10 +489,10 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 32px var(--noriks-collection-mobile-gutter);
+    padding: 24px var(--noriks-collection-mobile-gutter);
     max-width: 100%;
     min-height: 0;
-    gap: 12px;
+    gap: 10px;
   }
 
   .tax-collections .noriks-collection-hero__subtitle {
