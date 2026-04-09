@@ -180,7 +180,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
 
 .tax-collections .noriks-collection-hero__content {
   max-width: 70%;
-  padding: 34px var(--noriks-collection-gutter);
+  padding: 42px var(--noriks-collection-gutter);
   color: #fff;
   position: relative;
   z-index: 1;
@@ -424,7 +424,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 28px var(--noriks-collection-gutter);
+    padding: 36px var(--noriks-collection-gutter);
     max-width: 70%;
   }
 
@@ -480,7 +480,7 @@ if ($show_bottom_products === '1' && !empty($bottom_product_ids)) {
   }
 
   .tax-collections .noriks-collection-hero__content {
-    padding: 28px var(--noriks-collection-mobile-gutter);
+    padding: 32px var(--noriks-collection-mobile-gutter);
     max-width: 100%;
   }
 
