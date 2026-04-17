@@ -30,9 +30,36 @@ defined( 'ABSPATH' ) || exit;
       <?php endforeach; ?>
 
       <!-- Shipping -->
+      <?php
+        $shipping_label = 'Dostava';
+        $shipping_total = WC()->cart->get_shipping_total();
+        $shipping_tax   = WC()->cart->get_shipping_tax();
+        $shipping_cost  = (float) $shipping_total + (float) $shipping_tax;
+        $shipping_packages = WC()->shipping()->get_packages();
+        if ( ! empty( $shipping_packages ) ) {
+          foreach ( $shipping_packages as $pkg ) {
+            if ( ! empty( $pkg['rates'] ) ) {
+              $chosen = WC()->session->get('chosen_shipping_methods');
+              $chosen_id = isset($chosen[0]) ? $chosen[0] : '';
+              foreach ( $pkg['rates'] as $rate ) {
+                if ( $rate->get_id() === $chosen_id || empty($chosen_id) ) {
+                  $shipping_label = $rate->get_label();
+                  break 2;
+                }
+              }
+            }
+          }
+        }
+      ?>
       <div class="c--darkgray review-section-container review-addons shipping_order_review">
-        <div class="review-addons-title"><div>Paket24 Hrvatske pošte</div></div>
-        <div class="review-addons-price review-sale-price" id="noriks-shipping-price"><span style="display:inline-block;padding:3px 10px;border-radius:5px;background:#9ce79c;color:#228b22;font-size:14px;font-weight:500;">Besplatno</span></div>
+        <div class="review-addons-title"><div><?php echo esc_html($shipping_label); ?></div></div>
+        <div class="review-addons-price review-sale-price" id="noriks-shipping-price">
+          <?php if ( $shipping_cost > 0 ) : ?>
+            <?php echo wc_price( $shipping_cost ); ?>
+          <?php else : ?>
+            <span class="shipping-free-badge">Besplatno</span>
+          <?php endif; ?>
+        </div>
       </div>
 
       <!-- Coupon discounts -->
