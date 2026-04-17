@@ -57,6 +57,7 @@ defined( 'ABSPATH' ) || exit;
       <div class="c--darkgray review-section-container review-addons shipping_order_review">
         <div class="review-addons-title"><div><?php echo esc_html($shipping_label); ?></div></div>
         <div class="review-addons-price review-sale-price" id="noriks-shipping-price">
+          <!-- DEBUG: cost=<?php echo $shipping_cost; ?> chosen=<?php echo $chosen_id; ?> cart_total=<?php echo WC()->cart->get_shipping_total(); ?> -->
           <?php if ( $shipping_cost > 0 ) : ?>
             <?php echo wc_price( $shipping_cost ); ?>
           <?php else : ?>
