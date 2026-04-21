@@ -366,6 +366,8 @@ if (  has_term( array( 'majice', 'orto-majice' ), 'product_cat', get_the_id() ) 
 
 
 
+
+
 <style>
     .why-container  {
     max-width: 1440px !important;
@@ -389,6 +391,134 @@ endif;
 
 
 
+<?php if ( has_term( array( 'bokserice-savrsene-za-ispod-kupacih' ), 'product_cat', get_the_ID() )  && !has_term( 'black-friday', 'product_cat', get_the_ID() ) ): ?>
+
+
+
+<!-- 1  morska  boksarica -->
+
+
+<section class="why-section">
+  <div class="container why-container">
+
+    <!-- Left Video -->
+    <div class="why-col">
+       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.28.03-2.jpg">
+    </div>
+
+    <!-- Right Content -->
+    <div class="why-col why-content">
+      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
+       Stvorene za ljeto i plažu
+      </h2>
+
+      <div style="margin-left: 20px;" class="why-point">
+        <p><strong>Ispod kupaćih — kao da ništa ne nosite
+</strong></p>
+        <p class="description">Posebno dizajnirano za muškarce koji žele udobnost ispod kupaćih hlača. Ultralagan materijal ne upija vodu i suši se u minutama — nema više onog neugodnog mokrog osjećaja ispod. Bokserice ostaju na mjestu i ne skupljaju se ispod kupaćih, pa uživajte u kupanju bez brige.</p>
+      </div>
+
+    
+    
+    </div>
+
+  </div>
+</section>
+<style>
+/* your styles */
+</style>
+
+
+
+
+
+<!-- 2 morska boksarica -->
+
+<section  style="background: white;" class="why-section">
+  <div class="container why-container">
+
+    <!-- Left Video -->
+    <div class="why-col">
+       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.27.36-1.jpg">
+    </div>
+
+    <!-- Right Content -->
+    <div class="why-col why-content">
+      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
+      Suhe za par minuta
+      </h2>
+
+      <div style="margin-left: 20px;" class="why-point">
+        <p><strong>Super izdržljivo 💪
+</strong></p>
+        <p class="description">aboravite na teške, mokre bokserice koje se suše satima nakon kupanja. NORIKS bokserice izrađene su od brzosušećeg materijala — izađete iz vode i za par minuta ste potpuno suhi.
+</p>
+      </div>
+
+      <div style="margin-left: 20px;" class="why-point">
+        
+        
+        <p class="description">
+        
+      ✅  Suše se u minutama <br/>
+      ✅   Lagane kao zrak <br/>
+       ✅  Savršene ispod kupaćih i za svaki dan
+      <br/>
+                
+        </p>
+      </div>
+
+     
+    </div>
+
+  </div>
+</section>
+<style>
+/* your styles */
+</style>
+
+
+
+
+<!-- 3 morska boksarica -->
+
+<section class="why-section">
+  <div class="container why-container">
+
+    <!-- Left Video -->
+    <div class="why-col">
+       <img style="width: 100%;       
+    aspect-ratio: 1/1; 
+    object-fit: cover;  " src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.27.22-1.jpg">
+    </div>
+
+    <!-- Right Content -->
+    <div class="why-col why-content">
+      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
+      Jedne bokserice za cijelo ljeto
+      </h2>
+
+      <div style="margin-left: 20px;" class="why-point">
+        <p><strong>Plaža, bazen ili običan dan — uvijek iste.
+</strong></p>
+        <p class="description">NORIKS bokserice pružaju podršku cijeli dan, a da pritom ne gube oblik. Nebeski lagan materijal diše i rasteže se savršeno na pravim mjestima. Nosite ih ispod kupaćih na plaži ili kao svakodnevno donje rublje — jednako su savršene u obje uloge.</p>
+      </div>
+
+   
+   
+    </div>
+
+  </div>
+</section>
+<style>
+/* your styles */
+</style>
+
+
+
+
+
+<?php else: ?>
 
 
 
@@ -514,6 +644,8 @@ endif;
 </style>
 
 
+
+<?php endif; ?>
 
 
 
@@ -982,11 +1114,18 @@ a:hover {
       <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
       <h1 style="color:black;     margin-bottom: 4px;">
           
-          <?php if ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket' ), 'product_cat', get_the_ID() ) ): ?>
+          
+          <?php if ( has_term( array( 'bokserice-savrsene-za-ispod-kupacih' ), 'product_cat', get_the_ID() )  ): ?>
+          
+          
+          Nisi sam u potrazi za savršenim boksericama za ljeto.
+          
+          
+          <?php elseif ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket' ), 'product_cat', get_the_ID() ) ): ?>
           
           <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
           
-          <?php else: ?>
+        
           
           Nisi sam u potrazi za savršenim boksericama.
           
@@ -994,7 +1133,20 @@ a:hover {
           
           
           </h1>
-    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?></p>
+    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;">
+        
+           <?php if ( has_term( array( 'bokserice-savrsene-za-ispod-kupacih' ), 'product_cat', get_the_ID() )  ): ?>
+           
+           Više od 120.000 kupaca već je potvrdilo: NORIKS je rješenje koje spaja udobnost na plaži, brzo sušenje i kroj koji konačno odgovara stvarnim muškarcima.
+           
+           <?php else: ?>
+        
+        
+        <?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?>
+        
+        <?php endif; ?>
+        
+        </p>
     </div>
   </section>
   </div>
