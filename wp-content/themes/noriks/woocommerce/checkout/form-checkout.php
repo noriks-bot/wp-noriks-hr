@@ -31,6 +31,7 @@ if ( WC()->cart->is_empty() ) return;
       <div class="woocommerce-additional-fields">
 
         <!-- SHIPPING -->
+        <?php WC()->cart->calculate_totals(); ?>
         <div id="custom_shipping">
           <h3>Dostava</h3>
           <ul class="shipping_method_custom">
@@ -44,16 +45,7 @@ if ( WC()->cart->is_empty() ) return;
                     <strong class="hs-custom-date" id="js-delivery-dates"></strong>
                   </div>
                   <div class="inner-wrapper-img">
-                    <span class="shipping_method_delivery_price tag tag--red">
-                      <?php
-                        $ship = (float) WC()->cart->get_shipping_total();
-                        if ( $ship > 0 ) {
-                          echo wc_price( $ship );
-                        } else {
-                          echo 'Besplatno';
-                        }
-                      ?>
-                    </span>
+                    <span class="shipping_method_delivery_price tag tag--red"><?php $ship = (float) WC()->cart->get_shipping_total(); echo $ship > 0 ? wc_price($ship) : 'Besplatno'; ?></span>
                     <span class="delivery_img"><img decoding="async" class="hrvatska_posta standard" src="https://images.vigo-shop.com/general/curriers/home_small_paket24@2x.png"/></span>
                   </div>
                 </div>
