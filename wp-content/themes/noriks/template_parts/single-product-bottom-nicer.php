@@ -533,7 +533,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img src="/hr/wp-content/uploads/2025/12/recreate_without_photo_equipment_98300wkq98yf4jbkroa5.jpg">
+       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-09.28.40-1.jpg">
     </div>
 
     <!-- Right Content -->
@@ -569,7 +569,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img src="/hr/wp-content/uploads/2025/12/recreate_this_picture_to_look_more_real_same_text_on_it_zidddz68sbcgp6wmizbl.jpg">
+       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/hr.jpg">
     </div>
 
     <!-- Right Content -->
@@ -618,7 +618,7 @@ endif;
     <div class="why-col">
        <img style="width: 100%;       
     aspect-ratio: 1/1; 
-    object-fit: cover;  " src="/hr/wp-content/uploads/2025/12/create_same_style_studio_photo_with_younger_guy_30_years_normal_look_and_croatian_can_look_midldle__e99c86vy07c57mjd38f6.jpg">
+    object-fit: cover;  " src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-09.28.49-1.jpg">
     </div>
 
     <!-- Right Content -->
