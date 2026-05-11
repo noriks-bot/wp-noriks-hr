@@ -252,10 +252,8 @@ class BrandAgent_Endpoint {
      * Receives configuration updates from the backend server
      */
     private static function handle_config_update() {
-        // Only accept POST requests
-        if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
-            wp_send_json_error( array( 'message' => 'Method not allowed' ), 405 );
-        }
+        // Prevent caching of this state-changing endpoint
+        header( 'Cache-Control: no-store' );
 
         // Get authentication headers
         $signature = isset( $_SERVER['HTTP_X_BA_SIGNATURE'] )
@@ -280,59 +278,66 @@ class BrandAgent_Endpoint {
             wp_send_json_error( array( 'message' => 'Store URL mismatch' ), 403 );
         }
 
-        // Get raw request body
-        $request_body = file_get_contents( 'php://input' );
+        // Read BAInjectFrontendScript from query parameter (GET) or JSON body (POST, legacy)
+        $ba_value = null;
+        $hmac_payload = '';
+        if ( isset( $_GET['BAInjectFrontendScript'] ) ) {
+            $ba_value = sanitize_text_field( $_GET['BAInjectFrontendScript'] );
+            // HMAC signs the query string (same string the C# sender hashes)
+            $hmac_payload = 'BAInjectFrontendScript=' . $ba_value;
+        } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+            // Legacy POST support for backward compatibility during rollout
+            $hmac_payload = file_get_contents( 'php://input' );
+            $data = json_decode( $hmac_payload, true );
+            if ( json_last_error() === JSON_ERROR_NONE && isset( $data['BAInjectFrontendScript'] ) ) {
+                $ba_value = $data['BAInjectFrontendScript'] === true || $data['BAInjectFrontendScript'] === 'true' ? 'true' : 'false';
+            }
+        }
+
+        if ( $ba_value === null ) {
+            wp_send_json_error( array( 'message' => 'Missing BAInjectFrontendScript parameter' ), 400 );
+        }
 
         // Verify HMAC signature
-        if ( ! brandagent_verify_incoming_hmac_signature( $signature, $timestamp, $request_body ) ) {
+        if ( ! brandagent_verify_incoming_hmac_signature( $signature, $timestamp, $hmac_payload ) ) {
             error_log( 'BrandAgent: HMAC signature verification failed' );
             wp_send_json_error( array( 'message' => 'Invalid signature' ), 401 );
         }
 
-        // Parse request body
-        $data = json_decode( $request_body, true );
-        if ( json_last_error() !== JSON_ERROR_NONE ) {
-            wp_send_json_error( array( 'message' => 'Invalid JSON body' ), 400 );
-        }
-
         // Handle BAInjectFrontendScript update
-        if ( isset( $data['BAInjectFrontendScript'] ) ) {
-            $old_value = get_option( 'BAInjectFrontendScript', 'false' );
-            $new_value = $data['BAInjectFrontendScript'] === true || $data['BAInjectFrontendScript'] === 'true';
-            update_option( 'BAInjectFrontendScript', $new_value ? 'true' : 'false' );
+        $old_value = get_option( 'BAInjectFrontendScript', 'false' );
+        $new_value = ( $ba_value === 'true' );
+        update_option( 'BAInjectFrontendScript', $new_value ? 'true' : 'false' );
 
-            error_log( 'BrandAgent: BAInjectFrontendScript updated to: ' . ( $new_value ? 'true' : 'false' ) );
+        error_log( 'BrandAgent: BAInjectFrontendScript updated to: ' . ( $new_value ? 'true' : 'false' ) );
 
-            // If changed to true and agent is enabled, create webhooks and trigger sync
-            if ( $old_value !== 'true' && $new_value && get_option( 'BAOauthSuccess' ) == 1 ) {
-                // Complete onboarding (HMAC-signed request through Clarity proxy)
-                $clarity_domain = BrandAgent_Config::get_clarity_server_url();
-                $complete_onboarding_endpoint = $clarity_domain . '/woocommerce/complete-onboarding';
-                $response = brandagent_sign_outbound_request( $complete_onboarding_endpoint, wp_json_encode( array( 'storeUrl' => home_url() ) ) );
+        // If changed to true and agent is enabled, create webhooks and trigger sync
+        if ( $old_value !== 'true' && $new_value && get_option( 'BAOauthSuccess' ) == 1 ) {
+            // Complete onboarding (HMAC-signed request through Clarity proxy)
+            $clarity_domain = BrandAgent_Config::get_clarity_server_url();
+            $complete_onboarding_endpoint = $clarity_domain . '/woocommerce/complete-onboarding';
+            $response = brandagent_sign_outbound_request( $complete_onboarding_endpoint, wp_json_encode( array( 'storeUrl' => home_url() ) ) );
 
-                if ( is_wp_error( $response ) ) {
-                    error_log( 'BrandAgent: Failed to notify complete-onboarding: ' . $response->get_error_message() );
-                } else {
-                    $status_code = wp_remote_retrieve_response_code( $response );
-                    if ( $status_code === 200 ) {
-                        // Create/update all webhooks only on successful onboarding
-                        if ( class_exists( 'BrandAgent_Webhooks' ) ) {
-                            $results = BrandAgent_Webhooks::create_webhooks();
-                            error_log( 'BrandAgent: Webhooks created on store approval: ' . print_r( $results, true ) );
-                        }
-                    } else {
-                        error_log( 'BrandAgent: complete-onboarding returned status ' . $status_code . ', skipping webhook creation' );
+            if ( is_wp_error( $response ) ) {
+                error_log( 'BrandAgent: Failed to notify complete-onboarding: ' . $response->get_error_message() );
+            } else {
+                $status_code = wp_remote_retrieve_response_code( $response );
+                if ( $status_code === 200 ) {
+                    // Create/update all webhooks only on successful onboarding
+                    if ( class_exists( 'BrandAgent_Webhooks' ) ) {
+                        $results = BrandAgent_Webhooks::create_webhooks();
+                        error_log( 'BrandAgent: Webhooks created on store approval: ' . print_r( $results, true ) );
                     }
+                } else {
+                    error_log( 'BrandAgent: complete-onboarding returned status ' . $status_code . ', skipping webhook creation' );
                 }
             }
-
-            wp_send_json_success( array(
-                'message' => 'Configuration updated',
-                'BAInjectFrontendScript' => $new_value ? 'true' : 'false'
-            ) );
         }
 
-        wp_send_json_error( array( 'message' => 'No valid configuration key provided' ), 400 );
+        wp_send_json_success( array(
+            'message' => 'Configuration updated',
+            'BAInjectFrontendScript' => $new_value ? 'true' : 'false'
+        ) );
     }
 
     /**
@@ -346,6 +351,7 @@ class BrandAgent_Endpoint {
         wp_send_json_success( array(
             'BAInjectFrontendScript' => $ba_inject_enabled,
             'BAOauthSuccess' => $ba_oauth_success,
+            'pluginVersion' => get_installed_plugin_version(),
         ) );
     }
 }

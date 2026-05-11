@@ -600,8 +600,27 @@ function gck_render_bundle_selector() {
                 <li><span class="gck-check">✔</span> <strong>Savršeno pristajanje</strong></li>
             <?php endif; ?>
 
-            <li><strong>✔ Vrhunski materiali precizan kroj</strong></li>
+
+     <?php if ( has_term( array( 'bokserice-savrsene-za-ispod-kupacih' ), 'product_cat', get_the_ID() )  ): ?>
+     
+     
+  <li><strong>✔ Brzosušeći materijal — savršen za ispod kupaćih</strong></li>
+            <li><strong>✔ Lagane kao zrak, udobne cijeli dan na plaži</strong></li>
+       
+            
+            
+            <?php else:?>
+            
+           
+            
+            
+                 <li><strong>✔ Vrhunski materiali precizan kroj</strong></li>
             <li><strong>✔ Udobnost bez kompromisa</strong></li>
+            
+            
+            <?php endif; ?>
+            
+            
 
             <?php if ( has_term( array( 'orto-starter' ), 'product_cat', $product_id ) ) : ?>
                 <li style="color: #c00;"><strong>✔ Starter paket dostupan samo jednom po osobi</strong></li>

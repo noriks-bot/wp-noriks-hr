@@ -4,7 +4,7 @@
  * Plugin Name:       Microsoft Clarity
  * Plugin URI:        https://clarity.microsoft.com/
  * Description:       With data and session replay from Clarity, you'll see how people are using your site — where they get stuck and what they love.
- * Version:           0.10.22
+ * Version:           0.10.23
  * Author:            Microsoft
  * Author URI:        https://www.microsoft.com/en-us/
  * License:           MIT
@@ -157,6 +157,8 @@ function clrt_update_clarity_options_handler($action, $network_wide)
 			delete_option('clarity_project_id');
 			delete_option( 'BAOauthSuccess' );
             delete_option( 'BAInjectFrontendScript' );
+			delete_option( 'BAOauthRepairDone' );
+			delete_option( 'clarity_ba_eligible_triggered' );
 			// Cleanup for the option used up to version 0.10.16. Should remove this after users migrate to 0.10.17+ where this option is no longer used.
 			delete_option('clarity_collect_batch');
 			clarity_flush_and_clear_collect_recurring();
@@ -282,6 +284,26 @@ function get_latest_plugin_version_from_api()
 	}
 
 	return false;
+}
+
+/**
+ * One-time migration: repair BAOauthSuccess if it was cleared by the
+ * register_setting('general') bug (fixed in 0.10.23) while
+ * BAInjectFrontendScript remained true and the HMAC secret is still present.
+ */
+add_action('admin_init', 'clarity_repair_oauth_status');
+function clarity_repair_oauth_status() {
+	if ( get_option('BAOauthRepairDone') ) {
+		return;
+	}
+
+	if ( get_option('BAInjectFrontendScript') === 'true'
+		 && brandagent_get_hmac_secret()
+		 && get_option('BAOauthSuccess') != 1 ) {
+		update_option('BAOauthSuccess', true);
+	}
+
+	update_option('BAOauthRepairDone', true);
 }
 
 /**
