@@ -481,13 +481,13 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="https://noriks.com/hr/wp-content/uploads/2026/04/hr_majice.jpeg">
+     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
 <img src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
         
           <?php else: ?>
       
       
-       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/hr_majice.jpeg">
+       <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
             
         <?php endif; ?>
