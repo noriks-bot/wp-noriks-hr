@@ -455,6 +455,11 @@ function gck_render_bundle_selector() {
     // "4-attribute case" in your implementation means we have 2 selector groups (majica + bokserica)
     $show_group_titles = ( count($attr_groups) > 1 );
 
+    // Special product (SKU NORIKS-ORTO-SHBOX): show the two garment groups as separate
+    // gratis-style sections ("Izaberi N majice" + "Izaberi još N bokserice gratis")
+    // instead of interleaved pairs. Saved data structure stays identical (same field keys/indices).
+    $gck_split_garments = ( strtoupper( (string) $product->get_sku() ) === 'NORIKS-ORTO-SHBOX' && count( $attr_groups ) >= 2 );
+
     ?>
     <style>
       .single_add_to_cart_button {
@@ -1107,15 +1112,32 @@ function gck_render_bundle_selector() {
                     }
                     $gck_show_sections = ( $show_gratis && ! $show_group_titles && ( $gck_paid + $gck_free ) > 0 );
                     ?>
+                    <?php
+                    // Render passes. Normal: single pass, all groups interleaved per pair.
+                    // SHBOX split (SKU NORIKS-ORTO-SHBOX): two sections — paid majice, then gratis bokserice.
+                    if ( $gck_split_garments ) {
+                        $gck_passes = array(
+                            array( 'group' => 0, 'label' => 'Izaberi ' . (int) $pairs . ' ' . gck_hr_majice_phrase( $pairs, false, 'majica' ), 'gratis' => false ),
+                            array( 'group' => 1, 'label' => 'Izaberi još ' . (int) $pairs . ' ' . gck_hr_majice_phrase( $pairs, true, 'bokserica' ), 'gratis' => true ),
+                        );
+                    } else {
+                        $gck_passes = array( array( 'group' => null, 'label' => null, 'gratis' => false ) );
+                    }
+                    ?>
+                    <?php foreach ( $gck_passes as $gck_pass ) : ?>
+                        <?php if ( $gck_pass['label'] !== null ) : ?>
+                            <div class="gck-pair-label<?php echo $gck_pass['gratis'] ? ' is-gratis' : ''; ?>"><?php echo esc_html( $gck_pass['label'] ); ?></div>
+                        <?php endif; ?>
                     <?php for ( $i = 1; $i <= $pairs; $i++ ) : ?>
-                        <?php if ( $gck_show_sections && $gck_paid > 0 && $i === 1 ) : ?>
+                        <?php if ( $gck_pass['group'] === null && $gck_show_sections && $gck_paid > 0 && $i === 1 ) : ?>
                             <div class="gck-pair-label">Izaberi <?php echo (int) $gck_paid; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_paid, false, $gck_garment ) ); ?></div>
                         <?php endif; ?>
-                        <?php if ( $gck_show_sections && $gck_free > 0 && $i === ( $gck_paid + 1 ) ) : ?>
+                        <?php if ( $gck_pass['group'] === null && $gck_show_sections && $gck_free > 0 && $i === ( $gck_paid + 1 ) ) : ?>
                             <div class="gck-pair-label is-gratis">Izaberi još <?php echo (int) $gck_free; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_free, true, $gck_garment ) ); ?></div>
                         <?php endif; ?>
                         <div class="bundle-pair">
                             <?php foreach ( $attr_groups as $g_index => $group ) :
+                                if ( $gck_pass['group'] !== null && $g_index !== $gck_pass['group'] ) continue;
 
                                 // Target group (field keys used for saving)
                                 $target_c = $group['color'] ?? null;
@@ -1148,7 +1170,7 @@ function gck_render_bundle_selector() {
                                     if ( $g_index === 1 && $offer_p2 !== '' ) $group_title = $offer_p2;
                                 }
                             ?>
-                                <?php if ( $show_group_titles && $group_title !== '' ) : ?>
+                                <?php if ( $show_group_titles && ! $gck_split_garments && $group_title !== '' ) : ?>
                                     <div class="gck-group-title"><?php echo esc_html($group_title); ?></div>
                                 <?php endif; ?>
 
@@ -1191,6 +1213,7 @@ function gck_render_bundle_selector() {
                             <?php endforeach; ?>
                         </div>
                     <?php endfor; ?>
+                    <?php endforeach; ?>
 
                     <small style="display: block; line-height: 1;"><?php esc_html_e( 'Nudimo 30 dana za povrat novca ili besplatnu zamjenu proizvoda – bezbrižna kupovina!
 ', 'gift-card-kompetentnost' ); ?></small>
