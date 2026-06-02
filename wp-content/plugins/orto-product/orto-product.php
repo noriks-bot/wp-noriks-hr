@@ -986,7 +986,7 @@ function gck_render_bundle_selector() {
     </div>
     <?php endif; ?>
 
-    <div id="bundle-selector" class="bundle-box">
+    <div id="bundle-selector" class="bundle-box" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 1 ) ? 1 : 0;
         $loop_index    = 0;
@@ -1372,11 +1372,16 @@ document.addEventListener('DOMContentLoaded', function () {
 /* Size sync per size attribute */
 document.addEventListener("DOMContentLoaded", function () {
     function activateSizeSync() {
-        document.querySelectorAll('.bundle-pairs').forEach(pairBlock => {
-            const firstPair = pairBlock.querySelector('.bundle-pair');
-            if (!firstPair) return;
+        const selectorEl = document.getElementById('bundle-selector');
+        const splitMode  = !!(selectorEl && selectorEl.dataset.splitGarments === '1');
 
-            firstPair.querySelectorAll('select.gck-size-select').forEach(firstSelect => {
+        document.querySelectorAll('.bundle-pairs').forEach(pairBlock => {
+            // Normal: bind only the first pair's size selects (one per size attribute).
+            // Split (SHBOX): bind every size select so picking any size links majice + bokserice.
+            const scope = splitMode ? pairBlock : pairBlock.querySelector('.bundle-pair');
+            if (!scope) return;
+
+            scope.querySelectorAll('select.gck-size-select').forEach(firstSelect => {
                 const sizeKey = firstSelect.dataset.sizeKey || '';
                 if (!sizeKey) return;
 
@@ -1388,10 +1393,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     const selector = document.getElementById('bundle-selector');
                     if (!selector) return;
 
-                    // Sync this size across ALL pairs in ALL offers (e.g. 4+4 -> 2+2)
+                    // Normal: sync this size across same-attribute selects in ALL pairs/offers.
+                    // Split: sync across ALL size selects (majice + bokserice share one size).
+                    const sel = splitMode
+                        ? 'select.gck-size-select'
+                        : 'select.gck-size-select[data-size-key="' + CSS.escape(sizeKey) + '"]';
+
                     selector
-                        .querySelectorAll('select.gck-size-select[data-size-key="' + CSS.escape(sizeKey) + '"]')
-                        .forEach(sel => { if (sel !== this) sel.value = newSize; });
+                        .querySelectorAll(sel)
+                        .forEach(s => { if (s !== this) s.value = newSize; });
                 });
             });
         });
