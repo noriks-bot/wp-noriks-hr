@@ -1016,7 +1016,13 @@ function gck_render_bundle_selector() {
             }
 
             // Price highlights: per-piece regular price + discount %.
-            $per_regular  = ( $pairs > 0 ) ? ( (float) $data['regular'] / $pairs ) : 0;
+            // SHBOX split: real piece count is pairs * 2 (majice + bokserice), so per-piece
+            // must use total pieces, not just the paid pairs.
+            $gck_pieces   = $gck_split_garments ? ( $pairs * 2 ) : $pairs;
+            $per_regular  = ( $gck_pieces > 0 ) ? ( (float) $data['regular'] / $gck_pieces ) : 0;
+            $gck_per_new  = $gck_split_garments
+                ? ( ( $gck_pieces > 0 ) ? ( floor( ( (float) $data['total'] / $gck_pieces ) * 100 ) / 100 ) : 0 )
+                : (float) $data['per'];
             $discount_pct = ( (float) $data['regular'] > 0 )
                 ? (int) round( ( ( (float) $data['regular'] - (float) $data['total'] ) / (float) $data['regular'] ) * 100 )
                 : 0;
@@ -1058,16 +1064,16 @@ function gck_render_bundle_selector() {
                 <?php if ( $show_price_highlights ) : ?>
                     <br class="gck-hl-break">
                     <span class="gck-per-chip">
-                        <?php if ( $per_regular > (float) $data['per'] ) : ?>
+                        <?php if ( $per_regular > $gck_per_new ) : ?>
                             <span class="gck-per-old"><?php echo number_format( $per_regular, 2 ); ?>€</span>
                         <?php endif; ?>
-                        <span class="gck-per-new"><?php echo number_format( (float) $data['per'], 2 ); ?>€ / kom</span>
+                        <span class="gck-per-new"><?php echo number_format( $gck_per_new, 2 ); ?>€ / kom</span>
                     </span>
                     <?php if ( $discount_pct > 0 ) : ?>
                         <span class="gck-discount-badge">−<?php echo (int) $discount_pct; ?>%</span>
                     <?php endif; ?>
                 <?php else : ?>
-                    — <span class="bundle-option-title"><?php echo number_format( (float) $data['per'], 2 ); ?>€ / kom</span>
+                    — <span class="bundle-option-title"><?php echo number_format( $gck_per_new, 2 ); ?>€ / kom</span>
                 <?php endif; ?>
 
                 
