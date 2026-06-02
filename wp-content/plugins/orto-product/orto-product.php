@@ -372,22 +372,30 @@ function gck_register_orto_countdown_fields() {
 }
 
 /**
- * Croatian declension for "majica" (t-shirt) used in gratis labels.
- * 1 majica, 2-4 majice, 5+ majica. Free adjective: besplatna/besplatne/besplatnih.
+ * Croatian declension for garment nouns used in gratis labels.
+ * Both "majica" (t-shirt) and "bokserica" (boxers) are -ica feminine nouns that
+ * decline identically; only the stem differs (majic- vs bokseric-).
+ * 1 -icu, 2-4 -ice, 5+ -ica. Free adjective: besplatnu/besplatne/besplatnih.
+ *
+ * @param int    $n    Count.
+ * @param bool   $free Prefix the "free" adjective when true.
+ * @param string $type Garment type: 'majica' (default) or 'bokserica'.
  */
-function gck_hr_majice_phrase( int $n, bool $free = false ) : string {
+function gck_hr_majice_phrase( int $n, bool $free = false, string $type = 'majica' ) : string {
     $m100 = $n % 100;
     $m10  = $n % 10;
 
     $is1   = ( $m10 === 1 && $m100 !== 11 );
     $is234 = ( in_array( $m10, array( 2, 3, 4 ), true ) && ! in_array( $m100, array( 12, 13, 14 ), true ) );
 
+    $stem = ( $type === 'bokserica' ) ? 'bokseric' : 'majic';
+
     if ( $is1 ) {
-        $adj = 'besplatnu'; $noun = 'majicu';
+        $adj = 'besplatnu'; $noun = $stem . 'u';
     } elseif ( $is234 ) {
-        $adj = 'besplatne'; $noun = 'majice';
+        $adj = 'besplatne'; $noun = $stem . 'e';
     } else {
-        $adj = 'besplatnih'; $noun = 'majica';
+        $adj = 'besplatnih'; $noun = $stem . 'a';
     }
 
     return $free ? ( $adj . ' ' . $noun ) : $noun;
@@ -410,6 +418,17 @@ function gck_render_bundle_selector() {
     $precheck_second       = (bool) get_field( 'orto_precheck_second', $product_id );
     $show_gratis           = (bool) get_field( 'orto_show_gratis_labels', $product_id );
     $show_price_highlights = (bool) get_field( 'orto_show_price_highlights', $product_id );
+
+    // Garment type for gratis labels: "bokserica" (boxers) vs default "majica" (t-shirt).
+    // Detect via product category or slug/name so each product gets the correct noun.
+    $gck_garment = 'majica';
+    if (
+        has_term( array( 'orto-bokserice', 'orto-bokserice2' ), 'product_cat', $product_id )
+        || ( stripos( (string) $product->get_slug(), 'bokseric' ) !== false )
+        || ( stripos( (string) $product->get_name(), 'bokseric' ) !== false )
+    ) {
+        $gck_garment = 'bokserica';
+    }
 
     // Countdown / scarcity element (registered in code, per-product toggle).
     $show_countdown    = (bool) get_field( 'orto_show_countdown', $product_id );
@@ -1090,10 +1109,10 @@ function gck_render_bundle_selector() {
                     ?>
                     <?php for ( $i = 1; $i <= $pairs; $i++ ) : ?>
                         <?php if ( $gck_show_sections && $gck_paid > 0 && $i === 1 ) : ?>
-                            <div class="gck-pair-label">Izaberi <?php echo (int) $gck_paid; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_paid ) ); ?></div>
+                            <div class="gck-pair-label">Izaberi <?php echo (int) $gck_paid; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_paid, false, $gck_garment ) ); ?></div>
                         <?php endif; ?>
                         <?php if ( $gck_show_sections && $gck_free > 0 && $i === ( $gck_paid + 1 ) ) : ?>
-                            <div class="gck-pair-label is-gratis">Izaberi još <?php echo (int) $gck_free; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_free, true ) ); ?></div>
+                            <div class="gck-pair-label is-gratis">Izaberi još <?php echo (int) $gck_free; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_free, true, $gck_garment ) ); ?></div>
                         <?php endif; ?>
                         <div class="bundle-pair">
                             <?php foreach ( $attr_groups as $g_index => $group ) :
