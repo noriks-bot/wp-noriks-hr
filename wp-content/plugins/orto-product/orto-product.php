@@ -1206,6 +1206,7 @@ function gck_render_bundle_selector() {
                                         <select
                                             class="gck-size-select"
                                             data-size-key="<?php echo esc_attr($target_size_attr_key); ?>"
+                                            data-garment-group="<?php echo (int) $g_index; ?>"
                                             name="pairs[<?php echo esc_attr( $offer_id ); ?>][<?php echo $i; ?>][<?php echo esc_attr( $target_size_field_key ); ?>]">
                                             <?php foreach ( $size_values as $val ) : ?>
                                                 <option value="<?php echo esc_attr( $val ); ?>">
@@ -1394,10 +1395,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (!selector) return;
 
                     // Normal: sync this size across same-attribute selects in ALL pairs/offers.
-                    // Split: sync across ALL size selects (majice + bokserice share one size).
-                    const sel = splitMode
-                        ? 'select.gck-size-select'
-                        : 'select.gck-size-select[data-size-key="' + CSS.escape(sizeKey) + '"]';
+                    // Split (SHBOX): majica (garment group 0) drives ALL selects, but other
+                    // garments (e.g. bokserice) sync only within their own garment group so the
+                    // customer can pick a different size for them.
+                    let sel;
+                    if (splitMode) {
+                        const grp = this.dataset.garmentGroup || '';
+                        sel = (grp === '0')
+                            ? 'select.gck-size-select'
+                            : 'select.gck-size-select[data-garment-group="' + CSS.escape(grp) + '"]';
+                    } else {
+                        sel = 'select.gck-size-select[data-size-key="' + CSS.escape(sizeKey) + '"]';
+                    }
 
                     selector
                         .querySelectorAll(sel)
