@@ -1187,7 +1187,7 @@ body.single-product {
    and switch from float to flexbox for even, tight spacing. */
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
   width: 100% !important;
-  margin: 10px 0 0 !important;
+  margin: 10px 0 10px !important;
   padding: 0 !important;
   text-indent: 0 !important;
   display: flex !important;
