@@ -1185,8 +1185,11 @@ body.single-product {
 .single-product div.product .woocommerce-product-gallery .flex-viewport,
 .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper,
 .single-product div.product .woocommerce-product-gallery figure,
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper > a,
 .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__image {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 0 !important;
 }
 
 /* ===== Thumbnails: override Storefront's tiny-width + huge-margin layout =====
@@ -1195,9 +1198,10 @@ body.single-product {
    and switch from float to flexbox for even, tight spacing. */
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
   width: 100% !important;
-  margin: 2px 0 18px !important;
+  margin: -6px 0 18px !important;
   padding: 0 !important;
   text-indent: 0 !important;
+  line-height: normal !important;
   display: flex !important;
   flex-wrap: nowrap !important;
   justify-content: flex-start !important;
