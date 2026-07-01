@@ -1158,6 +1158,48 @@ body.single-product {
 
 
 
+/* ===== Gallery: prevent layout shift while FlexSlider initializes ===== */
+/* Reserve the hero image space (1:1) so nothing jumps when JS loads. */
+.woocommerce-product-gallery {
+  position: relative;
+}
+.woocommerce-product-gallery__wrapper {
+  margin: 0;
+}
+/* Main (first) image keeps a square box even before FlexSlider runs. */
+.woocommerce-product-gallery .woocommerce-product-gallery__image:first-child,
+.woocommerce-product-gallery .flex-viewport {
+  aspect-ratio: 1 / 1;
+}
+.woocommerce-product-gallery .woocommerce-product-gallery__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Before FlexSlider adds .flex-viewport, hide all but the first image to
+   avoid the tall "stacked" flash of unstyled content. */
+.woocommerce-product-gallery:not(.flexslider) .woocommerce-product-gallery__image:not(:first-child) {
+  display: none;
+}
+
+/* Discount badge overlay (moved out of the template inline style). */
+.badge-on-img {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  z-index: 16;
+  display: inline-block;
+  background-color: #971b1b;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 2px 8px 1px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
 /* Move arrows to bottom-right corner of gallery */
 .woocommerce-product-gallery .flex-direction-nav {
   position: absolute;
