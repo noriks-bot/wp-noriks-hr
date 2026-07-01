@@ -1208,6 +1208,16 @@ body.single-product {
   opacity: 1;
 }
 
+/* Mobile: bigger thumbnails, tighter gap (4 per row) */
+@media (max-width: 768px) {
+  .woocommerce-product-gallery .flex-control-thumbs {
+    gap: 4px;
+  }
+  .woocommerce-product-gallery .flex-control-thumbs li {
+    width: calc((100% - 3 * 4px) / 4); /* 4 thumbs per row, 4px gaps */
+  }
+}
+
 
 
 
