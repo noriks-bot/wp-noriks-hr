@@ -1207,8 +1207,8 @@ body.single-product {
   line-height: normal !important;
   display: flex !important;
   flex-wrap: nowrap !important;
-  justify-content: flex-start !important;
-  gap: 8px;
+  justify-content: space-between !important;
+  gap: 0 !important;
   list-style: none;
   box-sizing: border-box;
 }
@@ -1217,8 +1217,8 @@ body.single-product {
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
-  width: calc((100% - 4 * 8px) / 5) !important; /* 5 per row, single line */
-  flex: 0 0 calc((100% - 4 * 8px) / 5) !important;
+  width: 19% !important; /* 5 per row; space-between fills the 4 gaps */
+  flex: 0 0 19% !important;
   float: none !important;
   margin: 0 !important;
   padding: 0 !important; /* kill vigoshop core .flex-control-nav li{padding:5px} */
@@ -1237,18 +1237,11 @@ body.single-product {
   opacity: 1;
 }
 
-/* Mobile: keep all thumbnails in a single row, tighter gap */
+/* Mobile: same single-row space-between layout (inherits desktop rules) */
 @media (max-width: 768px) {
   .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
-    gap: 5px;
-    flex-wrap: nowrap;
-  }
-  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li,
-  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li,
-  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
-  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
-  .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
-    width: calc((100% - 4 * 5px) / 5) !important; /* 5 per row, single line */
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
   }
 }
 
