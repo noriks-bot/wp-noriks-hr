@@ -1181,13 +1181,21 @@ body.single-product {
   display: none !important;
 }
 
+/* Kill the big bottom gap under the main hero image so thumbnails sit close */
+.single-product div.product .woocommerce-product-gallery .flex-viewport,
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper,
+.single-product div.product .woocommerce-product-gallery figure,
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__image {
+  margin-bottom: 0 !important;
+}
+
 /* ===== Thumbnails: override Storefront's tiny-width + huge-margin layout =====
    Storefront sets e.g. columns-5 -> width:8.57% + margin-right:14.28% with a
    very specific selector, so we must match/beat that specificity + !important
    and switch from float to flexbox for even, tight spacing. */
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
   width: 100% !important;
-  margin: 4px 0 18px !important;
+  margin: 2px 0 18px !important;
   padding: 0 !important;
   text-indent: 0 !important;
   display: flex !important;
