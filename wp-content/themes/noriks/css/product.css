@@ -1216,17 +1216,18 @@ body.single-product {
   opacity: 1;
 }
 
-/* Mobile: bigger thumbnails (4 per row), tighter gap */
+/* Mobile: keep all thumbnails in a single row, tighter gap */
 @media (max-width: 768px) {
   .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
-    gap: 6px;
+    gap: 5px;
+    flex-wrap: nowrap;
   }
   .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li,
   .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li,
   .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
   .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
   .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
-    width: calc((100% - 3 * 6px) / 4) !important; /* 4 per row */
+    width: calc((100% - 4 * 5px) / 5) !important; /* 5 per row, single line */
   }
 }
 
