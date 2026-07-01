@@ -1186,12 +1186,16 @@ body.single-product {
    very specific selector, so we must match/beat that specificity + !important
    and switch from float to flexbox for even, tight spacing. */
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+  width: 100% !important;
   margin: 10px 0 0 !important;
   padding: 0 !important;
+  text-indent: 0 !important;
   display: flex !important;
   flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
   gap: 8px;
   list-style: none;
+  box-sizing: border-box;
 }
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li,
