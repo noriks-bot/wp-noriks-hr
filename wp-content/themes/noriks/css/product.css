@@ -1196,9 +1196,12 @@ body.single-product {
    Storefront sets e.g. columns-5 -> width:8.57% + margin-right:14.28% with a
    very specific selector, so we must match/beat that specificity + !important
    and switch from float to flexbox for even, tight spacing. */
+.single-product div.product .woocommerce-product-gallery .flex-control-nav.flex-control-thumbs,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
   width: 100% !important;
   margin: 8px 0 18px !important;
+  margin-left: 0 !important;  /* kill vigoshop core -5px side margins */
+  margin-right: 0 !important;
   padding: 0 !important;
   text-indent: 0 !important;
   line-height: normal !important;
@@ -1218,6 +1221,7 @@ body.single-product {
   flex: 0 0 calc((100% - 4 * 8px) / 5) !important;
   float: none !important;
   margin: 0 !important;
+  padding: 0 !important; /* kill vigoshop core .flex-control-nav li{padding:5px} */
   list-style: none;
 }
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs img {
