@@ -1181,40 +1181,52 @@ body.single-product {
   display: none !important;
 }
 
-/* Thumbnails: tighter native spacing (default WooCommerce leaves big gaps) */
-.woocommerce-product-gallery .flex-control-thumbs {
-  margin: 8px 0 0;
-  padding: 0;
-  display: flex;
+/* ===== Thumbnails: override Storefront's tiny-width + huge-margin layout =====
+   Storefront sets e.g. columns-5 -> width:8.57% + margin-right:14.28% with a
+   very specific selector, so we must match/beat that specificity + !important
+   and switch from float to flexbox for even, tight spacing. */
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+  margin: 10px 0 0 !important;
+  padding: 0 !important;
+  display: flex !important;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   list-style: none;
 }
-.woocommerce-product-gallery .flex-control-thumbs li {
-  width: calc((100% - 4 * 6px) / 5); /* 5 thumbs per row, 6px gaps */
-  margin: 0;
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li,
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li,
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
+  width: calc((100% - 4 * 8px) / 5) !important; /* 5 per row */
+  float: none !important;
+  margin: 0 !important;
   list-style: none;
 }
-.woocommerce-product-gallery .flex-control-thumbs img {
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs img {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
+  opacity: .6;
   cursor: pointer;
   transition: opacity .2s ease;
 }
-.woocommerce-product-gallery .flex-control-thumbs img.flex-active,
-.woocommerce-product-gallery .flex-control-thumbs img:hover {
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs img.flex-active,
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs img:hover {
   opacity: 1;
 }
 
-/* Mobile: bigger thumbnails, tighter gap (4 per row) */
+/* Mobile: bigger thumbnails (4 per row), tighter gap */
 @media (max-width: 768px) {
-  .woocommerce-product-gallery .flex-control-thumbs {
-    gap: 4px;
+  .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+    gap: 6px;
   }
-  .woocommerce-product-gallery .flex-control-thumbs li {
-    width: calc((100% - 3 * 4px) / 4); /* 4 thumbs per row, 4px gaps */
+  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li,
+  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li,
+  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
+  .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
+  .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
+    width: calc((100% - 3 * 6px) / 4) !important; /* 4 per row */
   }
 }
 
