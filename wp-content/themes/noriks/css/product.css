@@ -1199,30 +1199,39 @@ body.single-product {
 .single-product div.product .woocommerce-product-gallery .flex-control-nav.flex-control-thumbs,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
   width: 100% !important;
-  margin: 8px 0 18px !important;
-  margin-left: 0 !important;  /* kill vigoshop core -5px side margins */
-  margin-right: 0 !important;
+  margin: 8px 0 18px !important;   /* no side margins: flush with hero */
   padding: 0 !important;
   text-indent: 0 !important;
   line-height: normal !important;
   display: flex !important;
   flex-wrap: nowrap !important;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
   gap: 0 !important;
   list-style: none;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
+/* Each thumbnail is exactly 20% wide with an internal 5px padding gutter,
+   box-sizing:border-box so 5 x 20% = 100% and the row spans hero edge-to-edge. */
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
-  width: 19% !important; /* 5 per row; space-between fills the 4 gaps */
-  flex: 0 0 19% !important;
+  width: 20% !important;
+  flex: 0 0 20% !important;
   float: none !important;
   margin: 0 !important;
-  padding: 0 !important; /* kill vigoshop core .flex-control-nav li{padding:5px} */
+  padding: 3px !important;
+  box-sizing: border-box !important;
   list-style: none;
+}
+/* Remove the padding on the very first/last thumbnail edges so the row is
+   perfectly flush with the hero image left and right borders. */
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li:first-child {
+  padding-left: 0 !important;
+}
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li:last-child {
+  padding-right: 0 !important;
 }
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs img {
   width: 100%;
@@ -1237,11 +1246,11 @@ body.single-product {
   opacity: 1;
 }
 
-/* Mobile: same single-row space-between layout (inherits desktop rules) */
+/* Mobile: identical single-row edge-to-edge layout (inherits desktop rules) */
 @media (max-width: 768px) {
   .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
     flex-wrap: nowrap !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
   }
 }
 
