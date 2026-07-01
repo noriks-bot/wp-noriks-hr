@@ -1189,7 +1189,7 @@ body.single-product {
   margin: 10px 0 0 !important;
   padding: 0 !important;
   display: flex !important;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
   gap: 8px;
   list-style: none;
 }
@@ -1198,7 +1198,8 @@ body.single-product {
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
-  width: calc((100% - 4 * 8px) / 5) !important; /* 5 per row */
+  width: calc((100% - 4 * 8px) / 5) !important; /* 5 per row, single line */
+  flex: 0 0 calc((100% - 4 * 8px) / 5) !important;
   float: none !important;
   margin: 0 !important;
   list-style: none;
