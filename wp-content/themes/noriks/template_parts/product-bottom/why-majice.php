@@ -10,7 +10,7 @@
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-        <video 
+        <video preload="metadata" 
           autoplay muted loop playsinline 
           class="why-video">
           <source src="https://noriks.com/hr/wp-content/uploads/2025/09/noriks_gif_hr_2-1.mp4" type="video/mp4">
@@ -114,7 +114,7 @@
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-          <img style="width: 100%;       
+          <img loading="lazy" decoding="async" style="width: 100%;       
     aspect-ratio: 1/1; 
     object-fit: cover;  " src="<?php echo get_template_directory_uri(); ?>/img/majice-3 (1).jpeg">
       </div>

@@ -8,7 +8,7 @@
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-          <img style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-1.png
+          <img loading="lazy" decoding="async" style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-1.png
 ">
       </div>
     </div>
@@ -72,7 +72,7 @@ ZAŠTO LJUDI BIRAJU STARTER PAKET?
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-           <img style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-2.png
+           <img loading="lazy" decoding="async" style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-2.png
 ">
       </div>
     </div>
@@ -132,7 +132,7 @@ KOMBINACIJA KOJA SE NOSI SVAKI DAN
     <!-- Left Video -->
     <div class="why-col">
       <div class="video-wrapper">
-          <img style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-3.png
+          <img loading="lazy" decoding="async" style="" src="<?php echo get_template_directory_uri(); ?>/img/starter-3.png
 ">
       </div>
     </div>

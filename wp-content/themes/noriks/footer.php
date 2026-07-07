@@ -19,19 +19,19 @@
 	<section class="info-banner">
 	     <div class="info-items-container">
   <div class="info-item">
-    <img src="<?php echo get_field("footer_top_icon_1","option"); ?>" alt="Shirt Icon" class="info-icon">
+    <img loading="lazy" decoding="async" src="<?php echo get_field("footer_top_icon_1","option"); ?>" alt="Shirt Icon" class="info-icon">
     <h3><?php echo get_field("footer_top_heading_1", "option"); ?></h3>
     <p><?php echo get_field("footer_top_text_1", "option"); ?></p>
   </div>
   <div style="" class="info-item">
-    <img src="<?php echo get_field("footer_top_icon_2","option"); ?>" alt="Customer Support Icon" class="info-icon">
+    <img loading="lazy" decoding="async" src="<?php echo get_field("footer_top_icon_2","option"); ?>" alt="Customer Support Icon" class="info-icon">
     <h3><?php echo get_field("footer_top_heading_2", "option"); ?></h3>
     <p><?php echo get_field("footer_top_text_2", "option"); ?></p>
     
     
   </div>
   <div style="" class="info-item">
-    <img src="<?php echo get_field("footer_top_icon_3","option"); ?>" alt="Shipping Icon" class="info-icon">
+    <img loading="lazy" decoding="async" src="<?php echo get_field("footer_top_icon_3","option"); ?>" alt="Shipping Icon" class="info-icon">
     <h3><?php echo get_field("footer_top_heading_3", "option"); ?></h3>
     <p><?php echo get_field("footer_top_text_3", "option"); ?></p>
   </div>
@@ -85,7 +85,7 @@
        <li role="listitem">
            
             <a target="_blank" rel="noreferrer noopener" href="<?php echo $item['link']; ?>" title="">
-            <img src="<?php echo $item['icon']; ?>">
+            <img loading="lazy" decoding="async" src="<?php echo $item['icon']; ?>">
             </a>
             
        </li>

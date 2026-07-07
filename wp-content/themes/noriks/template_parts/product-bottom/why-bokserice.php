@@ -39,7 +39,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.28.03-2.jpg">
+       <img loading="lazy" decoding="async" src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.28.03-2.jpg">
     </div>
 
     <!-- Right Content -->
@@ -75,7 +75,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.27.36-1.jpg">
+       <img loading="lazy" decoding="async" src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.27.36-1.jpg">
     </div>
 
     <!-- Right Content -->
@@ -123,7 +123,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img style="width: 100%;       
+       <img loading="lazy" decoding="async" style="width: 100%;       
     aspect-ratio: 1/1; 
     object-fit: cover;  " src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-21-10.27.22-1.jpg">
     </div>
@@ -169,7 +169,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-09.28.40-1.jpg">
+       <img loading="lazy" decoding="async" src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-09.28.40-1.jpg">
     </div>
 
     <!-- Right Content -->
@@ -205,7 +205,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img src="https://noriks.com/hr/wp-content/uploads/2026/04/hr.jpg">
+       <img loading="lazy" decoding="async" src="https://noriks.com/hr/wp-content/uploads/2026/04/hr.jpg">
     </div>
 
     <!-- Right Content -->
@@ -252,7 +252,7 @@ endif;
 
     <!-- Left Video -->
     <div class="why-col">
-       <img style="width: 100%;       
+       <img loading="lazy" decoding="async" style="width: 100%;       
     aspect-ratio: 1/1; 
     object-fit: cover;  " src="https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-09.28.49-1.jpg">
     </div>

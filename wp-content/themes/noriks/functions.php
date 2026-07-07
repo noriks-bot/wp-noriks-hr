@@ -6,6 +6,7 @@
  */
 
 include(get_template_directory() . '/functions/product-type.php'); // central product-type resolver (load first)
+include(get_template_directory() . '/functions/performance.php');  // safe front-end performance tweaks
 include(get_template_directory() . '/functions/checkout_mods.php');
 include(get_template_directory() . '/functions/thankyou_upsell.php');
 include(get_template_directory() . '/functions/cpts.php');
