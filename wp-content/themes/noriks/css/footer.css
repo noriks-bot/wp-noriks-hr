@@ -438,3 +438,15 @@ margin: 0;
   .nf-meta, .nf-brandbar { flex-direction:column; align-items:flex-start; }
   .nf-wordmark { font-size:28px; }
 }
+
+/* --- background image band (Huel-style) --- */
+.nf-bg { position:relative; }
+.nf-bg.has-img { background-size:cover; background-position:center; background-repeat:no-repeat; }
+.nf-bg.has-img::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,12,12,.85), rgba(12,12,12,.93)); pointer-events:none; }
+.nf-bg > * { position:relative; z-index:1; }
+
+/* --- legal fine print row --- */
+.nf-legal { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 24px 40px; border-top:1px solid #232323; flex-wrap:wrap; max-width:1280px; margin:0 auto; }
+.nf-legal-text { color:#7d7d7d; font-size:11px; line-height:1.6; margin:0; max-width:760px; }
+.nf-legal-btn { height:40px; font-size:13px; flex:0 0 auto; }
+@media (max-width:768px) { .nf-legal { flex-direction:column; align-items:flex-start; } }

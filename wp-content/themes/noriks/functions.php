@@ -278,6 +278,22 @@ function enqueue_main_styles() {
         'all'
     );
 
+    // Brand fonts (Huel-style): Inter (grotesk) + Fraunces (serif italic accents).
+    wp_enqueue_style(
+        'noriks-fonts',
+        'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap',
+        array(),
+        null
+    );
+    // Typography overrides — must load after main.css to win.
+    wp_enqueue_style(
+        'noriks-typography',
+        get_template_directory_uri() . '/css/typography.css',
+        array( 'main-style', 'noriks-fonts' ),
+        filemtime(get_template_directory() . '/css/typography.css'),
+        'all'
+    );
+
     // Enqueue header.js (load everywhere)
     wp_enqueue_script(
         'header-js',

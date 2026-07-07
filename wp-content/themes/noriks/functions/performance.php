@@ -47,11 +47,9 @@ add_filter( 'wp_resource_hints', function ( $hints, $relation ) {
         // Country flags in the header + newsletter popup — present site-wide.
         $hints[] = 'https://static.devit.software';
         $hints[] = 'https://6096.squalomail.net';
-    }
-    if ( 'dns-prefetch' === $relation ) {
-        // Google Fonts (used on checkout).
+        // Brand fonts load site-wide now.
         $hints[] = 'https://fonts.googleapis.com';
-        $hints[] = 'https://fonts.gstatic.com';
+        $hints[] = array( 'href' => 'https://fonts.gstatic.com', 'crossorigin' );
     }
     return $hints;
 }, 10, 2 );

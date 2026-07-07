@@ -66,6 +66,11 @@
 	if ( ! $nf_brand ) {
 		$nf_brand = 'NORIKS dizajnira bezvremenske komade za snažniju građu — duže, udobnije i promišljeno izrađene tamo gdje je najvažnije.';
 	}
+	$nf_bg      = get_field( 'footer_bg_image', 'option' ); // background photo behind the brand band
+	$nf_legal   = get_field( 'footer_legal_text', 'option' );
+	if ( ! $nf_legal ) {
+		$nf_legal = 'NORIKS BRAND. Sva prava pridržana. Cijene uključuju PDV. Slike su ilustrativne prirode.';
+	}
 	?>
 
 	<footer class="nf">
@@ -93,6 +98,8 @@
 				</div>
 			</div>
 		</section>
+
+		<div class="nf-bg<?php echo $nf_bg ? ' has-img' : ''; ?>"<?php if ( $nf_bg ) : ?> style="background-image:url('<?php echo esc_url( $nf_bg ); ?>')"<?php endif; ?>>
 
 		<!-- ============ Main: brand + link columns ============ -->
 		<section class="nf-main">
@@ -170,6 +177,14 @@
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
+		</div>
+
+		</div><!-- .nf-bg -->
+
+		<!-- ============ Legal fine print ============ -->
+		<div class="nf-wrap nf-legal">
+			<p class="nf-legal-text"><?php echo wp_kses_post( $nf_legal ); ?></p>
+			<a class="nf-btn nf-btn-outline nf-legal-btn" href="/hr/uvjeti-koristenja/">Uvjeti i reklamacije</a>
 		</div>
 
 	</footer>

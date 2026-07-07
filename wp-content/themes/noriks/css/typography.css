@@ -1,0 +1,57 @@
+/* ============================================================
+   NORIKS typography — Huel-style
+   Grotesk (Inter) for everything, serif italic (Fraunces) for accents.
+   Loaded site-wide, after main.css, so it overrides inline fonts.
+   Suisse Int'l / Tiempos are proprietary — Inter + Fraunces are the
+   closest free matches. Swap the @font-face src if licensed files exist.
+   ============================================================ */
+
+:root {
+  --font-grotesk: 'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-em: 'Fraunces', Georgia, 'Times New Roman', serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-grotesk);
+}
+
+/* Headings + section titles + menu → grotesk, Huel weight */
+h1, h2, h3, h4, h5, h6,
+.hero__title,
+.collections__title,
+.collection-card__name,
+.product-name,
+.main-navigation a,
+.primary-navigation a,
+#site-navigation a,
+.menu a,
+nav ul li a {
+  font-family: var(--font-grotesk);
+}
+
+h1, h2, h3,
+.hero__title,
+.collections__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Override inline font-family declarations across the theme */
+[style*="Barlow"],
+[style*="barlow"],
+[style*="Roboto"],
+[style*="roboto"] {
+  font-family: var(--font-grotesk) !important;
+}
+
+/* Serif italic accent — wrap a word: <em class="hl-em">word</em> */
+.hl-em {
+  font-family: var(--font-em) !important;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
