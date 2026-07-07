@@ -106,7 +106,6 @@
 			<div class="nf-wrap nf-main-grid">
 
 				<div class="nf-brand-col">
-					<a class="nf-badge" href="<?php echo home_url(); ?>" aria-label="NORIKS">NORIKS</a>
 					<p class="nf-brand-tagline">Odjeća za snažniju građu, krojena da stvarno pristaje.</p>
 					<p class="nf-brand-desc"><?php echo esc_html( $nf_brand ); ?></p>
 					<a class="nf-btn nf-btn-outline" href="/hr/shop">Pogledaj kolekciju</a>
