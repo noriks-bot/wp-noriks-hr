@@ -196,13 +196,13 @@ global $product;
 
 <?php 
 
-$is_singles_boxers = has_term( 'singles-boxers', 'product_cat', $current_product_id );
+$is_singles_boxers = noriks_is_type( 'singles-boxers', $current_product_id );
 
-$is_boxers = has_term( array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $current_product_id ) && ! has_term( array( 'black-friday', 'majice-i-bokserice-paketi	' ), 'product_cat', $current_product_id );
+$is_boxers = noriks_is_type( 'bokserice', $current_product_id ) && ! noriks_is_black_friday( $current_product_id );
 
-$is_carape = has_term( array( 'carape', 'zimske-carape' ), 'product_cat', $current_product_id );
+$is_carape = noriks_is_type( 'carape', $current_product_id );
 
-$is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	', 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id );
+$is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
 ?>
 
@@ -435,7 +435,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
         
         
-        <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
+        <?php elseif(  noriks_is_type( 'starter', $current_product_id )  ): ?>
         
         
         
@@ -506,7 +506,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
         
          
-        <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
+        <?php elseif(  noriks_is_type( 'starter', $current_product_id )  ): ?>
         
         
         

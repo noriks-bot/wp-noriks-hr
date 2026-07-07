@@ -166,7 +166,7 @@
 </style>
 
 
-<?php if ( has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', get_the_ID() ) ): ?>  
+<?php if ( noriks_is_type( 'starter' ) ): ?>
 
 <style>
 
@@ -195,11 +195,11 @@
   </div>
 
   <div class="size-chart-body">
-  <div  style="<?php if ( has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', get_the_ID() ) ): ?>  display: block; <?php endif; ?>"
+  <div  style="<?php if ( noriks_is_type( 'starter' ) ): ?>  display: block; <?php endif; ?>"
         class="size-chart-left">
       
-      <?php if ( has_term( array( 'bokserice', 'orto-bokserice' , 'bokserice-sastavi-paket' ), 'product_cat', get_the_ID() )   && 
-       !has_term( 'black-friday', 'product_cat', get_the_ID() )   ): ?>
+      <?php if ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ): ?>
+
       
     <img
     
@@ -210,7 +210,7 @@
       
       
        
-      <?php elseif ( has_term( array( 'carape', 'zimske-carape	' ), 'product_cat', get_the_ID() ) ): ?>
+      <?php elseif ( noriks_is_type( 'carape' ) ): ?>
       
       
        <img
@@ -221,7 +221,7 @@
       alt="Size Guide">
       
       
-      <?php elseif ( has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', get_the_ID() ) ): ?>
+      <?php elseif ( noriks_is_type( 'starter' ) ): ?>
       
       
       

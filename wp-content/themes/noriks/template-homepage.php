@@ -669,10 +669,10 @@ a:hover {
                   if ( $alt_output == false ):
 
                     $current_product_id = $product->get_id();
-                    $is_boxers = has_term( array('bokserice','bokserice-sastavi-paket'), 'product_cat', $current_product_id );
+                    $is_boxers = noriks_is_type( 'bokserice', $current_product_id );
 
                     if ( $is_boxers ):
-                      if ( has_term('black-friday', 'product_cat', $current_product_id ) ):
+                      if ( noriks_is_black_friday( $current_product_id ) ):
                         $topseler_text = "Black Friday ";
                       else:
                         $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " " . "€ po boksericama";

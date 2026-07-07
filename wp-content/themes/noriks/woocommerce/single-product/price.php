@@ -159,9 +159,9 @@ if( get_field('multipack_option_1', get_the_ID())  == true  ) {
   <?php
   
 // Check if current product is in category "singles-boxers"
-$is_singles_boxers = has_term( '1-komad-bokserice', 'product_cat', $current_product_id );
+$is_singles_boxers = noriks_is_type( 'bokserice-1-komad', $current_product_id );
 
-$is_singles_majice = has_term( '1-komad-majice', 'product_cat', $current_product_id );
+$is_singles_majice = noriks_is_type( 'majice-1-komad', $current_product_id );
 
 
 
