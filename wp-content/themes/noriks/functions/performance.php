@@ -55,3 +55,60 @@ add_filter( 'wp_resource_hints', function ( $hints, $relation ) {
     }
     return $hints;
 }, 10, 2 );
+
+/**
+ * 4) Drop Gutenberg / WooCommerce *block* CSS where it is not used.
+ *
+ *    This theme renders the shop, product, home and archive pages with
+ *    its own CSS (main/product/homepage.css), not the block editor, so
+ *    the block stylesheets are dead weight there. Regular posts/pages,
+ *    the cart and the checkout are left untouched so any block content
+ *    or the WooCommerce cart/checkout blocks keep their styles.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+    if ( is_admin() ) {
+        return;
+    }
+
+    $is_woo_listing = ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) // shop / product / product taxonomy
+        || ( function_exists( 'is_product' ) && is_product() )
+        || is_front_page();
+
+    // Never strip on cart / checkout (they may rely on WC block styles).
+    $is_cart_checkout = ( function_exists( 'is_cart' ) && is_cart() )
+        || ( function_exists( 'is_checkout' ) && is_checkout() );
+
+    if ( $is_woo_listing && ! $is_cart_checkout ) {
+        wp_dequeue_style( 'wp-block-library' );        // Gutenberg core blocks
+        wp_dequeue_style( 'wp-block-library-theme' );  // Gutenberg theme blocks
+        wp_dequeue_style( 'wc-blocks-style' );         // WooCommerce blocks
+        wp_dequeue_style( 'global-styles' );           // theme.json global styles
+        wp_dequeue_style( 'classic-theme-styles' );    // WP 6.1+ classic styles shim
+    }
+}, 100 );
+
+/**
+ * 5) Remove jQuery Migrate on the front-end (modern plugins don't need it).
+ *    jQuery itself is untouched.
+ */
+add_action( 'wp_default_scripts', function ( $scripts ) {
+    if ( is_admin() ) {
+        return;
+    }
+    if ( ! empty( $scripts->registered['jquery'] ) ) {
+        $deps = $scripts->registered['jquery']->deps;
+        $scripts->registered['jquery']->deps = array_diff( $deps, array( 'jquery-migrate' ) );
+    }
+} );
+
+/**
+ * 6) Add defer to the theme's own (dependency-free) scripts so they never
+ *    block parsing. jQuery-dependent scripts are intentionally excluded.
+ */
+add_filter( 'script_loader_tag', function ( $tag, $handle ) {
+    $defer = array( 'header-js', 'price-update-js' );
+    if ( in_array( $handle, $defer, true ) && strpos( $tag, ' defer' ) === false ) {
+        $tag = str_replace( ' src=', ' defer src=', $tag );
+    }
+    return $tag;
+}, 10, 2 );
