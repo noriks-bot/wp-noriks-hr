@@ -289,8 +289,8 @@ color: white;
     margin: 0 15px;
     font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.59px !important;
+    text-transform: none;
+    letter-spacing: 0.3px !important;
 }
 
 .header .navbar-center a:hover {
