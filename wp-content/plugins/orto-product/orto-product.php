@@ -719,7 +719,7 @@ function gck_render_bundle_selector() {
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
-          .bundle-option.active { border: 2px solid #f39c12 !important;  background: #f39c1217  !important; }
+          .bundle-option.active { border-color: #969696 !important;  background: #62626217  !important; border: none !important; }
           .color-swatches .swatch.active { border-color: black  !important; }
           .bundle-box select { border: 2px solid black !important; }
         </style>
