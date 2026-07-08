@@ -48,12 +48,9 @@
 	<?php do_action( 'storefront_before_footer' ); ?>
 
 	<?php
-	// ===== Klaviyo newsletter (fill these two in) =====
-	// List ID from Klaviyo (Lists & Segments -> your list -> Settings -> List ID).
-	$nf_klaviyo_list    = get_field( 'klaviyo_list_id', 'option' );    // e.g. 'XyZ789'
-	$nf_klaviyo_account = get_field( 'klaviyo_account_id', 'option' ); // Public API key, optional
-	if ( ! $nf_klaviyo_list )    { $nf_klaviyo_list    = 'REPLACE_LIST_ID'; }
-	if ( ! $nf_klaviyo_account ) { $nf_klaviyo_account = ''; }
+	// ===== Klaviyo newsletter =====
+	// List: "footer-subscribed" (Lists & Segments -> Settings -> List ID).
+	$nf_klaviyo_list = 'YupWfE';
 
 	$nf_social  = get_field( 'social_list', 'options' );
 	$nf_col2_h  = get_field( 'footer_midle_col2_header', 'option' );
