@@ -403,3 +403,20 @@ color: white;
     object-fit: cover;
     max-width: none;
 }
+
+
+/* Last menu item ("Ljetna rasprodaja") as a pill button (inverse of Huel: white pill, black text) */
+.navbar-center .nav-link[href*="rasprodaja"],
+.navbar-center .nav-link[href*="razprodaja"] {
+  background: #fff;
+  color: #111 !important;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.navbar-center .nav-link[href*="rasprodaja"]:hover,
+.navbar-center .nav-link[href*="razprodaja"]:hover {
+  background: #e9e9e9;
+  text-decoration: none;
+}
