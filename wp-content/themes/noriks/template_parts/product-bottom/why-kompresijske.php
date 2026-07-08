@@ -183,3 +183,82 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
   .knc-table tbody tr:last-child td.us { border-bottom-left-radius:10px; border-bottom-right-radius:10px; }
   @media (max-width:600px){ .knc-table th, .knc-table td { padding:11px 6px; font-size:13px; } .knc-table tbody td:first-child{ font-size:12.5px; } }
 </style>
+
+<?php $knv = get_template_directory_uri() . '/img/kompresijske-videos/'; ?>
+
+<!-- Kako funkcionira u praksi (product demo videos, autoplay on view) -->
+<section class="why-section knc-demo">
+  <div class="knc-demo-wrap">
+    <h2 class="knc-demo-title">Kako to funkcionira u praksi</h2>
+    <div class="knc-demo-grid">
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-1.mp4" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-2.mp4" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-3.mp4" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-4.mp4" muted loop playsinline preload="none"></video>
+    </div>
+  </div>
+</section>
+
+<!-- Što kažu naši kupci (UGC testimonial videos, load on click) -->
+<section class="why-section knc-ugc">
+  <div class="knc-ugc-wrap">
+    <h2 class="knc-ugc-title">Što kažu naši kupci</h2>
+    <div class="knc-ugc-grid">
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-1.mp4"><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-2.mp4"><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-3.mp4"><span class="knc-ugc-play" aria-label="Play"></span></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .knc-demo { background:#fff; padding:30px 0 22px; }
+  .knc-demo-wrap, .knc-ugc-wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+  .knc-demo-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 22px; }
+  .knc-demo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .knc-lazyvid { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:14px; background:#eceae4; display:block; }
+  .knc-ugc { background:#12305a; padding:34px 0 42px; }
+  .knc-ugc-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#fff; margin:0 0 24px; }
+  .knc-ugc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:820px; margin:0 auto; }
+  .knc-ugc-item { position:relative; aspect-ratio:9/16; border-radius:14px; overflow:hidden; background:#0d2444; cursor:pointer; }
+  .knc-ugc-item video { width:100%; height:100%; object-fit:cover; display:block; }
+  .knc-ugc-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,.92); }
+  .knc-ugc-play::after { content:""; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%); border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #12305a; }
+  @media (max-width:768px){
+    .knc-demo-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  }
+  @media (max-width:560px){
+    .knc-ugc-grid { grid-template-columns:1fr; max-width:320px; }
+  }
+</style>
+
+<script>
+(function(){
+  var lazy = document.querySelectorAll('.knc-lazyvid');
+  if ('IntersectionObserver' in window && lazy.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var v = en.target;
+        if (en.isIntersecting){
+          if (!v.src){ v.src = v.dataset.src; }
+          var p = v.play(); if (p && p.catch) p.catch(function(){});
+        } else { v.pause(); }
+      });
+    }, { threshold:0.25 });
+    lazy.forEach(function(v){ io.observe(v); });
+  } else {
+    lazy.forEach(function(v){ if(!v.src){ v.src = v.dataset.src; v.play&&v.play(); } });
+  }
+  document.querySelectorAll('.knc-ugc-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      if (item.dataset.loaded) return;
+      item.dataset.loaded = '1';
+      var play = item.querySelector('.knc-ugc-play'); if (play) play.remove();
+      var v = document.createElement('video');
+      v.src = item.dataset.src; v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+      item.appendChild(v);
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    });
+  });
+})();
+</script>
