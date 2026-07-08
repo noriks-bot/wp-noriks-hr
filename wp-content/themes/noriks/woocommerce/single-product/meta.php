@@ -440,7 +440,11 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
         
         
                 Naše premium majice izrađene su od vrhunske mješavine 60% prstenasto predenog pamuka i 40% poliestera, što osigurava izuzetno mekanu tkaninu otpornu na gužvanje.  <br><br>NORIKS bokserice izrađene su od vrhunske mješavine 95% modala i 5% elastana, što osigurava izuzetno mekanu i elastičnu tkaninu koja se savršeno prilagođava tijelu. Elastičan pojas dizajniran je za optimalno pristajanje, pružajući udobnost bez stezanja i savršen izgled ispod odjeć   <br>
-        
+
+        <?php elseif( noriks_is_type( 'kompresijske-nogavice', $current_product_id ) ): ?>
+
+                S graduiranom kompresijom od 15–20 mmHg, NORIKS kompresijske čarape pomažu poboljšati cirkulaciju, smanjiti oticanje i ublažiti napetost u umornim ili teškim nogama. Bočni patentni zatvarač čini ih jednostavnima za obuvanje i izuvanje – idealno za osobe smanjene pokretljivosti ili s artritisom. Meka unutarnja podstava štiti kožu od zatvarača i osigurava udobnost bez nadražaja.
+
         <?php else: ?>
         
         
@@ -467,13 +471,23 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
       <div class="accordion-content">
           
            <?php if( $is_boxers ): ?>
-       
-        
+
+
           <img src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
-          
-          
-          
-        
+
+
+
+
+        <?php elseif( noriks_is_type( 'kompresijske-nogavice', $current_product_id ) ): ?>
+
+          <div style="line-height:1.9;">
+            <strong>S/M</strong> : broj obuće 36–40 / opseg lista : 23–36 cm<br>
+            <strong>L/XL</strong> : broj obuće 40–44 / opseg lista : 36–45 cm<br>
+            <strong>XXL</strong> : broj obuće 44–48 / opseg lista : 45–56 cm<br><br>
+            Molimo izmjerite opseg lista na najširem mjestu kako biste pronašli svoju veličinu.<br><br>
+            Preporučujemo da veličinu odaberete prema opsegu lista, a ne prema uobičajenom broju obuće.
+          </div>
+
         <?php elseif(  $is_carape ): ?>
         
         
@@ -510,9 +524,12 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
         
         
         
-                         Perite boje s bojama.  Program za nježno pranje na hladnoj vodi.  Sušite ravno položeno ili u sušilici na niskoj temperaturi.  Ne izbjeljivati              
-        
-        
+                         Perite boje s bojama.  Program za nježno pranje na hladnoj vodi.  Sušite ravno položeno ili u sušilici na niskoj temperaturi.  Ne izbjeljivati
+
+        <?php elseif( noriks_is_type( 'kompresijske-nogavice', $current_product_id ) ): ?>
+
+                Ručno pranje u hladnoj vodi ili strojno pranje na programu za osjetljivo rublje. Ne koristiti izbjeljivač.<br><br>Sušiti isključivo na zraku – ne koristiti sušilicu, kako bi se očuvala elastičnost i učinkovitost kompresije.
+
           <?php else: ?>
             <?php echo get_field("__overwrite_sekcije_bellow_3"); ?>
         <?php endif; ?>
