@@ -39,7 +39,7 @@
   display: inline-flex;
   align-items: center;
   line-height: 1;
-  gap: 10px;
+  gap: 6px;
 }
 
 .marquee-content .mq-ico {

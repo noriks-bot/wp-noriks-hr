@@ -580,7 +580,7 @@ a:hover {
 .product-info { padding: 16px 4px 8px; text-align: left; }
 .product-name { font-size: 18px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 12px; }
 .pc-specs { border-top: 1px solid #e6e3dc; padding-top: 8px; }
-.pc-spec { display: flex; align-items: center; gap: 10px; color: #555; font-size: 13.5px; padding: 6px 0; }
+.pc-spec { display: flex; align-items: center; gap: 7px; color: #555; font-size: 13.5px; padding: 6px 0; }
 .pc-spec svg { width: 18px; height: 18px; flex: 0 0 auto; color: #a29d92; }
 .pc-spec-hl { color: #111; }
 .pc-spec-hl strong { font-weight: 600; }

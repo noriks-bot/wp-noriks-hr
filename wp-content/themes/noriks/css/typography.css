@@ -75,3 +75,17 @@ body *:not(svg):not(path):not(i):not(.hl-em):not([class*="dashicons"]):not([clas
   font-family: var(--font-grotesk) !important;
   font-style: normal !important;
 }
+
+/* Comfortable side padding on smaller screens, on all sections.
+   (Full-bleed hero excluded.) */
+@media (max-width: 768px) {
+  section:not(.hero),
+  .col-full,
+  .nf-wrap,
+  .basic-reviews-section-container,
+  .info-items-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+  }
+}
