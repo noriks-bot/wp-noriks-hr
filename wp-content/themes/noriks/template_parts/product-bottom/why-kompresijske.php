@@ -109,27 +109,27 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
 <style>
   .knc-compare-section { background:#fff; padding:34px 0 46px; }
   .knc-compare-wrap { max-width:940px; margin:0 auto; padding:0 16px; }
-  .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#12305a; margin:0 0 24px; }
+  .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#111; margin:0 0 24px; }
   .knc-table-scroll { border-radius:16px; overflow:hidden; box-shadow:0 12px 34px rgba(18,48,90,.12); border:1px solid #edf0f4; }
   .knc-table { width:100%; border-collapse:collapse; table-layout:fixed; }
   .knc-table th, .knc-table td { padding:15px 12px; text-align:center; font-size:15px; }
   .knc-table thead th { color:#fff; font-weight:700; vertical-align:middle; font-size:14px; }
   .knc-table thead th:first-child { width:34%; background:#fff; }
-  .knc-table .knc-comp { background:#12305a; }
+  .knc-table .knc-comp { background:#767676; }
   .knc-table .knc-comp span { display:block; font-weight:400; font-size:11.5px; opacity:.8; margin-top:3px; }
-  .knc-table .knc-us { background:#d64525; }
-  .knc-badge { display:inline-block; margin-left:6px; background:#fff; color:#d64525; font-style:normal; font-weight:700; font-size:10.5px; padding:2px 8px; border-radius:999px; vertical-align:middle; }
-  .knc-table tbody td:first-child { text-align:left; font-weight:600; color:#1e2a3a; font-size:14px; line-height:1.3; padding-left:18px; }
+  .knc-table .knc-us { background:#111; }
+  .knc-badge { display:inline-block; margin-left:6px; background:#fff; color:#111; font-style:normal; font-weight:700; font-size:10.5px; padding:2px 8px; border-radius:999px; vertical-align:middle; }
+  .knc-table tbody td:first-child { text-align:left; font-weight:600; color:#111; font-size:14px; line-height:1.3; padding-left:18px; }
   .knc-table tbody tr { border-bottom:1px solid #eef0f4; }
   .knc-table tbody tr:nth-child(even) { background:#fafbfc; }
   .knc-table td.ok { color:#1a9e5f; font-size:19px; font-weight:700; }
   .knc-table td.no { color:#cdd2da; font-size:18px; }
   .knc-table td.mid { color:#e0a52e; font-size:18px; font-weight:700; }
-  .knc-table td.us { background:#fdefe9 !important; }
+  .knc-table td.us { background:#f3f3f3 !important; }
   .knc-table td.us.ok { color:#1a9e5f; }
   .knc-table .knc-price td { font-weight:700; color:#4a5568; }
   .knc-table .knc-price td:first-child { color:#1e2a3a; }
-  .knc-table .knc-price td.us { color:#d64525; font-size:16px; }
+  .knc-table .knc-price td.us { color:#111; font-size:16px; }
   @media (max-width:640px){
     .knc-table th, .knc-table td { padding:12px 6px; font-size:13px; }
     .knc-table thead th { font-size:12px; }
@@ -156,14 +156,14 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
   .knc-demo-wrap, .knc-ugc-wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
   .knc-demo-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 22px; }
   .knc-demo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-  .knc-lazyvid { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:0; background:#eceae4; display:block; }
-  .knc-ugc { background:#f4f4f4; padding:34px 0 42px; }
+  .knc-lazyvid { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:8px; background:#eceae4; display:block; }
+  .knc-ugc { background:#fff; padding:34px 0 42px; }
   .knc-ugc-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 24px; }
   .knc-ugc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:820px; margin:0 auto; }
-  .knc-ugc-item { position:relative; aspect-ratio:9/16; border-radius:0; overflow:hidden; background:#0d2444; cursor:pointer; }
+  .knc-ugc-item { position:relative; aspect-ratio:9/16; border-radius:8px; overflow:hidden; background:#0d2444; cursor:pointer; }
   .knc-ugc-item video { width:100%; height:100%; object-fit:cover; display:block; }
   .knc-ugc-play { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,.92); }
-  .knc-ugc-play::after { content:""; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%); border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #12305a; }
+  .knc-ugc-play::after { content:""; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%); border-style:solid; border-width:11px 0 11px 18px; border-color:transparent transparent transparent #111; }
   @media (max-width:768px){
     .knc-demo-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
   }
