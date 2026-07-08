@@ -254,7 +254,7 @@
       ];
 
       if ( $is_nogavice ) {
-          $args['category'] = [ 'kompresijske-nogavice' ];
+          $args['category'] = [ 'kompresijske-carape' ];
       } elseif ( $is_bokserice ) {
           $args['category'] = [ 'bokserice' ];
       } else {
@@ -262,7 +262,7 @@
               [
                   'taxonomy' => 'product_cat',
                   'field'    => 'slug',
-                  'terms'    => [ 'bokserice', 'kompresijske-nogavice' ],
+                  'terms'    => [ 'bokserice', 'kompresijske-carape' ],
                   'operator' => 'NOT IN',
               ],
           ];

@@ -35,10 +35,10 @@ function noriks_product_type_map() : array {
         'starter'   => array( 'starter-paketi', 'orto-starter', 'orto-majica-bokserica' ),
         'majice'    => array( 'majice', 'orto-majice' ),
         'bokserice' => array( 'bokserice', 'orto-bokserice', 'bokserice-sastavi-paket' ),
-        'carape'    => array( 'carape', 'zimske-carape', 'kompresijske-nogavice', 'orto-kompresijske' ),
+        'carape'    => array( 'carape', 'zimske-carape', 'kompresijske-carape', 'orto-kompresijske-carape' ),
 
         // --- sub-variants / special buckets ---
-        'kompresijske-nogavice'   => array( 'kompresijske-nogavice', 'orto-kompresijske' ),
+        'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),
