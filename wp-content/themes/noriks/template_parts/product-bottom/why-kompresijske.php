@@ -128,3 +128,58 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
 
   </div>
 </section>
+
+<!-- Usporedba: NORIKS vs ostali -->
+<section class="why-section knc-compare-section">
+  <div class="knc-compare-wrap">
+    <h2 class="knc-compare-title">NORIKS vs ostali</h2>
+    <div class="knc-table-scroll">
+      <table class="knc-table">
+        <thead>
+          <tr>
+            <th class="knc-feat"></th>
+            <th class="knc-comp">Klasične čarape<span>(Bauerfeind, medi…)</span></th>
+            <th class="knc-comp">TV-čarape<span>(Zip Sox &amp; Co.)</span></th>
+            <th class="knc-us">NORIKS<em class="knc-badge">Br. 1</em></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Medicinska kompresija</td><td class="ok">✓</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Patentni zatvarač za jednostavno obuvanje</td><td class="no">✕</td><td class="ok">✓</td><td class="us ok">✓</td></tr>
+          <tr><td>Samostalno obuvanje bez pomoći</td><td class="no">✕</td><td class="mid">~</td><td class="us ok">✓</td></tr>
+          <tr><td>Ojačani zatvarač, nikad se ne zaglavi</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Prozračna tkanina</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Udobnost cijeli dan (+12 sati)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Jamstvo povrata novca 60 dana</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr class="knc-price"><td>Cijena po paru</td><td>od 85 €</td><td>~15 €</td><td class="us">od 29,90 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .knc-compare-section { background:#fff; padding:30px 0 40px; }
+  .knc-compare-wrap { max-width:1000px; margin:0 auto; padding:0 16px; }
+  .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#12305a; margin:0 0 22px; }
+  .knc-table-scroll { overflow-x:auto; }
+  .knc-table { width:100%; border-collapse:collapse; min-width:560px; }
+  .knc-table th, .knc-table td { padding:14px 10px; text-align:center; font-size:15px; }
+  .knc-table thead th { color:#fff; font-weight:700; vertical-align:middle; }
+  .knc-table .knc-feat { background:transparent; }
+  .knc-table .knc-comp { background:#12305a; }
+  .knc-table .knc-comp span { display:block; font-weight:400; font-size:12px; opacity:.85; margin-top:2px; }
+  .knc-table .knc-us { background:#d64525; position:relative; border-top-left-radius:10px; border-top-right-radius:10px; }
+  .knc-badge { display:inline-block; margin-top:6px; background:#fff; color:#d64525; font-style:normal; font-weight:700; font-size:11px; padding:2px 10px; border-radius:999px; }
+  .knc-table tbody td:first-child { text-align:left; font-weight:600; color:#12305a; }
+  .knc-table tbody tr { border-bottom:1px solid #eef0f4; }
+  .knc-table td.ok { color:#1a9e5f; font-size:18px; font-weight:700; }
+  .knc-table td.no { color:#c9c9c9; font-size:18px; }
+  .knc-table td.mid { color:#c79a2e; font-size:18px; }
+  .knc-table td.us { background:#fdefe9; }
+  .knc-table td.us.ok { color:#1a9e5f; }
+  .knc-table .knc-price td { font-weight:700; }
+  .knc-table .knc-price td.us { color:#d64525; }
+  .knc-table tbody tr:last-child td.us { border-bottom-left-radius:10px; border-bottom-right-radius:10px; }
+  @media (max-width:600px){ .knc-table th, .knc-table td { padding:11px 6px; font-size:13px; } .knc-table tbody td:first-child{ font-size:12.5px; } }
+</style>

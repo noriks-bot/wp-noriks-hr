@@ -864,8 +864,10 @@ function noriks_render_size_chart_once() {
 // Keep it available where variations render (fires first when present).
 add_action( 'woocommerce_before_variations_form', 'noriks_render_size_chart_once' );
 
-// Ensure the modal is on EVERY single product page (once).
-add_action( 'woocommerce_after_single_product_summary', function() {
+// Ensure the modal is on EVERY single product page (once). wp_footer always
+// fires (the custom template has woocommerce_after_single_product_summary
+// commented out).
+add_action( 'wp_footer', function() {
     if ( function_exists( 'is_product' ) && is_product() ) {
         noriks_render_size_chart_once();
     }
