@@ -483,7 +483,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
           <div style="line-height:1.9;">
             <strong>S/M</strong> : broj obuće 36–40 / opseg lista : 23–36 cm<br>
             <strong>L/XL</strong> : broj obuće 40–44 / opseg lista : 36–45 cm<br>
-            <strong>XXL</strong> : broj obuće 44–48 / opseg lista : 45–56 cm<br><br>
+            <strong>2XL</strong> : broj obuće 44–48 / opseg lista : 45–56 cm<br><br>
             Molimo izmjerite opseg lista na najširem mjestu kako biste pronašli svoju veličinu.<br><br>
             Preporučujemo da veličinu odaberete prema opsegu lista, a ne prema uobičajenom broju obuće.
           </div>
