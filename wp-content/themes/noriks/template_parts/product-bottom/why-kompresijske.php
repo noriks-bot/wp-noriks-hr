@@ -159,29 +159,36 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
 </section>
 
 <style>
-  .knc-compare-section { background:#fff; padding:30px 0 40px; }
-  .knc-compare-wrap { max-width:1000px; margin:0 auto; padding:0 16px; }
-  .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#12305a; margin:0 0 22px; }
-  .knc-table-scroll { overflow-x:auto; }
-  .knc-table { width:100%; border-collapse:collapse; min-width:560px; }
-  .knc-table th, .knc-table td { padding:14px 10px; text-align:center; font-size:15px; }
-  .knc-table thead th { color:#fff; font-weight:700; vertical-align:middle; }
-  .knc-table .knc-feat { background:transparent; }
+  .knc-compare-section { background:#fff; padding:34px 0 46px; }
+  .knc-compare-wrap { max-width:940px; margin:0 auto; padding:0 16px; }
+  .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#12305a; margin:0 0 24px; }
+  .knc-table-scroll { border-radius:16px; overflow:hidden; box-shadow:0 12px 34px rgba(18,48,90,.12); border:1px solid #edf0f4; }
+  .knc-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+  .knc-table th, .knc-table td { padding:15px 12px; text-align:center; font-size:15px; }
+  .knc-table thead th { color:#fff; font-weight:700; vertical-align:middle; font-size:14px; }
+  .knc-table thead th:first-child { width:34%; background:#fff; }
   .knc-table .knc-comp { background:#12305a; }
-  .knc-table .knc-comp span { display:block; font-weight:400; font-size:12px; opacity:.85; margin-top:2px; }
-  .knc-table .knc-us { background:#d64525; position:relative; border-top-left-radius:10px; border-top-right-radius:10px; }
-  .knc-badge { display:inline-block; margin-top:6px; background:#fff; color:#d64525; font-style:normal; font-weight:700; font-size:11px; padding:2px 10px; border-radius:999px; }
-  .knc-table tbody td:first-child { text-align:left; font-weight:600; color:#12305a; }
+  .knc-table .knc-comp span { display:block; font-weight:400; font-size:11.5px; opacity:.8; margin-top:3px; }
+  .knc-table .knc-us { background:#d64525; }
+  .knc-badge { display:inline-block; margin-left:6px; background:#fff; color:#d64525; font-style:normal; font-weight:700; font-size:10.5px; padding:2px 8px; border-radius:999px; vertical-align:middle; }
+  .knc-table tbody td:first-child { text-align:left; font-weight:600; color:#1e2a3a; font-size:14px; line-height:1.3; padding-left:18px; }
   .knc-table tbody tr { border-bottom:1px solid #eef0f4; }
-  .knc-table td.ok { color:#1a9e5f; font-size:18px; font-weight:700; }
-  .knc-table td.no { color:#c9c9c9; font-size:18px; }
-  .knc-table td.mid { color:#c79a2e; font-size:18px; }
-  .knc-table td.us { background:#fdefe9; }
+  .knc-table tbody tr:nth-child(even) { background:#fafbfc; }
+  .knc-table td.ok { color:#1a9e5f; font-size:19px; font-weight:700; }
+  .knc-table td.no { color:#cdd2da; font-size:18px; }
+  .knc-table td.mid { color:#e0a52e; font-size:18px; font-weight:700; }
+  .knc-table td.us { background:#fdefe9 !important; }
   .knc-table td.us.ok { color:#1a9e5f; }
-  .knc-table .knc-price td { font-weight:700; }
-  .knc-table .knc-price td.us { color:#d64525; }
-  .knc-table tbody tr:last-child td.us { border-bottom-left-radius:10px; border-bottom-right-radius:10px; }
-  @media (max-width:600px){ .knc-table th, .knc-table td { padding:11px 6px; font-size:13px; } .knc-table tbody td:first-child{ font-size:12.5px; } }
+  .knc-table .knc-price td { font-weight:700; color:#4a5568; }
+  .knc-table .knc-price td:first-child { color:#1e2a3a; }
+  .knc-table .knc-price td.us { color:#d64525; font-size:16px; }
+  @media (max-width:640px){
+    .knc-table th, .knc-table td { padding:12px 6px; font-size:13px; }
+    .knc-table thead th { font-size:12px; }
+    .knc-table thead th:first-child { width:40%; }
+    .knc-table tbody td:first-child { font-size:12px; padding-left:10px; }
+    .knc-badge { display:block; margin:4px auto 0; width:-moz-max-content; width:max-content; }
+  }
 </style>
 
 <?php $knv = get_template_directory_uri() . '/img/kompresijske-videos/'; ?>
