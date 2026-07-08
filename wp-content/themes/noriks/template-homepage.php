@@ -295,7 +295,7 @@ Probaj NORIKS po boljoj cijeni.
     <!-- Card 6 -->
     <a class="collection-card" href="/hr/product-category/ljetna-rasprodaja/">
       <div class="collection-card__media">
-        <img src="https://noriks.com/hr/wp-content/uploads/2026/07/ChatGPT-Image-Jul-8-2026-02_52_55-PM.png" alt="Ljetna rasprodaja" />
+        <img src="https://noriks.com/hr/wp-content/uploads/2026/07/ChatGPT-Image-Jul-8-2026-03_04_27-PM-1.png" alt="Ljetna rasprodaja" />
       </div>
       <div class="collection-card__body">
         <div class="collection-card__text">
