@@ -380,6 +380,7 @@ margin: 0;
 .nf-signup-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch; }
 .nf-signup-copy { display:flex; flex-direction:column; justify-content:center; }
 .nf-signup-form-col { display:flex; flex-direction:column; justify-content:center; }
+@media (min-width:769px){ .nf-signup-form-col { margin-top:16px; } }
 .nf-signup-title { color:#fff; font-family:'Barlow',sans-serif; font-size:32px; font-weight:700; margin:0 0 8px; }
 .nf-signup-sub { color:#b3b3b3; font-size:15px; margin:0; }
 .nf-field-label { display:block; color:#dcdcdc; font-size:13px; margin:0 0 8px; }

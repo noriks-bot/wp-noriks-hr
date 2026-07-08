@@ -160,7 +160,7 @@
   $is_nogavice_page   = noriks_is_type( 'kompresijske-nogavice', $current_product_id );
 
   // Fallback product name shown in review cards (socks have no products yet).
-  $rv_fallback_title = $is_nogavice_page ? 'Kompresijske čarape' : 'Jedna Siva Majica';
+  $rv_fallback_title = $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica';
 
   // Include review pools (own pool per product group)
   if ( $is_nogavice_page ) {
