@@ -80,12 +80,19 @@ body *:not(svg):not(path):not(i):not(.hl-em):not([class*="dashicons"]):not([clas
    Applied at ONE level (section / footer wrap) so all content lines up.
    (Full-bleed hero excluded; .col-full not padded to avoid double gutter.) */
 @media (max-width: 768px) {
-  section:not(.hero),
+  /* .most-popular is excluded — it pads via its own inner .container,
+     adding the gutter here would double it. */
+  section:not(.hero):not(.most-popular),
   .nf-wrap,
   .basic-reviews-section-container,
   .info-items-container {
     padding-left: 14px !important;
     padding-right: 14px !important;
     box-sizing: border-box;
+  }
+  /* align .most-popular's inner container gutter with the rest */
+  .most-popular > .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
   }
 }
