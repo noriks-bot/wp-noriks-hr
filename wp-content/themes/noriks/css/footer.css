@@ -458,3 +458,13 @@ margin: 0;
 .nf-legal-text { color:#7d7d7d; font-size:11px; line-height:1.6; margin:0; max-width:760px; }
 .nf-legal-btn { height:40px; font-size:13px; flex:0 0 auto; }
 @media (max-width:768px) { .nf-legal { flex-direction:column; align-items:flex-start; } }
+
+
+/* Protect footer text from page-content overrides like h1,h2,h3,p{color:black!important} */
+.nf .nf-signup-title,
+.nf .nf-brand-tagline { color:#fff !important; }
+.nf .nf-signup-sub { color:#b3b3b3 !important; }
+.nf .nf-brand-desc { color:#a9a9a9 !important; }
+.nf .nf-signup-note { color:#8f8f8f !important; }
+.nf .nf-signup-note a { color:#cfcfcf !important; }
+.nf .nf-legal-text { color:#7d7d7d !important; }
