@@ -47,7 +47,7 @@ get_header(); ?>
 
   <div class="hero__content">
     <!--<p class="hero__eyebrow">NOVO: NORIKS </p>-->
-    <h1 class="hero__title">Majica koja <em class="hl-em">rješava</em> sve probleme.</h1>
+    <h1 class="hero__title">Majica koja rješava sve probleme.</h1>
 
     <a class="hero__btn" href="/hr/shop">KUPUJTE SADA</a>
   </div>
@@ -171,7 +171,7 @@ get_header(); ?>
   
   <section class="collections">
   <div class="collections__header">
-    <h2 class="collections__title">Kupujte po <em class="hl-em">kolekciji</em></h2>
+    <h2 class="collections__title">Kupujte po kolekciji</h2>
 
     <a class="collections__cta" href="/hr/shop">
       Svi produkti <span aria-hidden="true">›</span>

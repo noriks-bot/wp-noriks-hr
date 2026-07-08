@@ -29,7 +29,13 @@ h1, h2, h3, h4, h5, h6,
 .primary-navigation a,
 #site-navigation a,
 .menu a,
-nav ul li a {
+nav ul li a,
+.navbar,
+.navbar-center,
+.navbar-center a,
+.nav-link,
+.dropdown-menu a,
+.mobile-only-menu-item {
   font-family: var(--font-grotesk);
 }
 
@@ -54,4 +60,10 @@ h1, h2, h3,
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
+}
+
+/* No cursive/serif-italic accents anywhere on the homepage */
+.home .hl-em {
+  font-family: var(--font-grotesk) !important;
+  font-style: normal !important;
 }
