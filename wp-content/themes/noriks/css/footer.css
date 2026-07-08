@@ -376,8 +376,8 @@ margin: 0;
 .nf-wrap { max-width:1800px; margin:0 auto; padding:0 20px; }
 
 /* --- newsletter signup --- */
-.nf-signup { padding:56px 0 44px; }
-.nf-signup-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+.nf-signup { padding:30px 0 26px; }
+.nf-signup-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
 .nf-signup-title { color:#fff; font-family:'Barlow',sans-serif; font-size:32px; font-weight:700; margin:0 0 8px; }
 .nf-signup-sub { color:#b3b3b3; font-size:15px; margin:0; }
 .nf-field-label { display:block; color:#dcdcdc; font-size:13px; margin:0 0 8px; }
