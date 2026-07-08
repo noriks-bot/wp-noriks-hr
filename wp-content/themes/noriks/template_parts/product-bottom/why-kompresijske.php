@@ -191,10 +191,10 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
   <div class="knc-demo-wrap">
     <h2 class="knc-demo-title">Kako to funkcionira u praksi</h2>
     <div class="knc-demo-grid">
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-1.mp4" muted loop playsinline preload="none"></video>
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-2.mp4" muted loop playsinline preload="none"></video>
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-3.mp4" muted loop playsinline preload="none"></video>
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-4.mp4" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-1.mp4" poster="<?php echo esc_url( $knv ); ?>demo-1-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-2.mp4" poster="<?php echo esc_url( $knv ); ?>demo-2-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-3.mp4" poster="<?php echo esc_url( $knv ); ?>demo-3-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-4.mp4" poster="<?php echo esc_url( $knv ); ?>demo-4-poster.jpg" muted loop playsinline preload="none"></video>
     </div>
   </div>
 </section>
@@ -204,9 +204,9 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
   <div class="knc-ugc-wrap">
     <h2 class="knc-ugc-title">Što kažu naši kupci</h2>
     <div class="knc-ugc-grid">
-      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-1.mp4"><span class="knc-ugc-play" aria-label="Play"></span></div>
-      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-2.mp4"><span class="knc-ugc-play" aria-label="Play"></span></div>
-      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-3.mp4"><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-1.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-1-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-2.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-2-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
+      <div class="knc-ugc-item" data-src="<?php echo esc_url( $knv ); ?>review-3.mp4"><video class="knc-ugc-video" poster="<?php echo esc_url( $knv ); ?>review-3-poster.jpg" preload="none" playsinline></video><span class="knc-ugc-play" aria-label="Play"></span></div>
     </div>
   </div>
 </section>
@@ -254,9 +254,9 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
       if (item.dataset.loaded) return;
       item.dataset.loaded = '1';
       var play = item.querySelector('.knc-ugc-play'); if (play) play.remove();
-      var v = document.createElement('video');
+      var v = item.querySelector('.knc-ugc-video');
+      if (!v){ v = document.createElement('video'); v.className = 'knc-ugc-video'; item.appendChild(v); }
       v.src = item.dataset.src; v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
-      item.appendChild(v);
       var p = v.play(); if (p && p.catch) p.catch(function(){});
     });
   });
