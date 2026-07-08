@@ -107,11 +107,11 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
 
 
 <style>
-  .knc-compare-section { background:#fff; padding:30px 0 8px; }
+  .knc-compare-section { background:#fff; padding:30px 0 40px; }
   .knc-compare-wrap { max-width:940px; margin:0 auto; padding:0 16px; }
   .knc-compare-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:700; color:#111; margin:0 0 24px; }
   .knc-table-scroll { border-radius:16px; overflow:hidden; box-shadow:0 12px 34px rgba(18,48,90,.12); border:1px solid #edf0f4; }
-  .knc-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+  .knc-table { width:100%; border-collapse:collapse; table-layout:fixed; margin:0 !important; }
   .knc-table th, .knc-table td { padding:15px 12px; text-align:center; font-size:15px; }
   .knc-table thead th { color:#fff; font-weight:700; vertical-align:middle; font-size:14px; }
   .knc-table thead th:first-child { width:34%; background:#fff; }
