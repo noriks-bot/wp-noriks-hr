@@ -76,16 +76,16 @@ body *:not(svg):not(path):not(i):not(.hl-em):not([class*="dashicons"]):not([clas
   font-style: normal !important;
 }
 
-/* Comfortable side padding on smaller screens, on all sections.
-   (Full-bleed hero excluded.) */
+/* Consistent, tighter side gutter on smaller screens.
+   Applied at ONE level (section / footer wrap) so all content lines up.
+   (Full-bleed hero excluded; .col-full not padded to avoid double gutter.) */
 @media (max-width: 768px) {
   section:not(.hero),
-  .col-full,
   .nf-wrap,
   .basic-reviews-section-container,
   .info-items-container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
     box-sizing: border-box;
   }
 }
