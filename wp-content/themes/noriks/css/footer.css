@@ -377,7 +377,9 @@ margin: 0;
 
 /* --- newsletter signup --- */
 .nf-signup { padding:30px 0 26px; }
-.nf-signup-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+.nf-signup-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch; }
+.nf-signup-copy { display:flex; flex-direction:column; justify-content:center; }
+.nf-signup-form-col { display:flex; flex-direction:column; justify-content:center; }
 .nf-signup-title { color:#fff; font-family:'Barlow',sans-serif; font-size:32px; font-weight:700; margin:0 0 8px; }
 .nf-signup-sub { color:#b3b3b3; font-size:15px; margin:0; }
 .nf-field-label { display:block; color:#dcdcdc; font-size:13px; margin:0 0 8px; }

@@ -83,7 +83,7 @@
 					<form class="nf-signup-form" data-klaviyo-list="<?php echo esc_attr( $nf_klaviyo_list ); ?>" novalidate>
 						<label class="nf-field-label" for="nf-email">Tvoj e-mail *</label>
 						<div class="nf-field-row">
-							<input type="email" id="nf-email" name="email" class="nf-input" placeholder="primjer@domena.com" required autocomplete="email">
+							<input type="email" id="nf-email" name="email" class="nf-input" placeholder="Vaš email naslov" required autocomplete="email">
 							<button type="submit" class="nf-btn nf-btn-light">Prijavi se</button>
 						</div>
 						<p class="nf-signup-note">
@@ -180,7 +180,6 @@
 		<!-- ============ Legal fine print ============ -->
 		<div class="nf-wrap nf-legal">
 			<p class="nf-legal-text"><?php echo wp_kses_post( $nf_legal ); ?></p>
-			<a class="nf-btn nf-btn-outline nf-legal-btn" href="/hr/uvjeti-koristenja/">Uvjeti i reklamacije</a>
 		</div>
 
 	</footer>
