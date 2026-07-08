@@ -54,6 +54,14 @@ h1, h2, h3,
   font-family: var(--font-grotesk) !important;
 }
 
+/* Brand font EVERYWHERE. Icon fonts are excluded so glyphs don't break:
+   <i> tags (Tabler/FontAwesome), dashicons, WooCommerce star-rating,
+   svg/path, and anything with an icon-ish class. */
+body,
+body *:not(svg):not(path):not(i):not(.hl-em):not([class*="dashicons"]):not([class*="star-rating"]):not([class*="ti-"]):not([class*="fa-"]):not([class^="fa"]):not([class*="icon"]) {
+  font-family: var(--font-grotesk) !important;
+}
+
 /* Serif italic accent — wrap a word: <em class="hl-em">word</em> */
 .hl-em {
   font-family: var(--font-em) !important;

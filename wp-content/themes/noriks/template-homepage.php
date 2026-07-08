@@ -576,7 +576,7 @@ a:hover {
 
 /* ===== Huel-style product cards ===== */
 .product-card { background: transparent; }
-.image-wrapper { background: #f4f1ec; border-radius: 16px; }
+.image-wrapper { background: #f4f1ec; border-radius: 0; }
 .product-info { padding: 16px 4px 8px; text-align: left; }
 .product-name { font-size: 18px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 12px; }
 .pc-specs { border-top: 1px solid #e6e3dc; padding-top: 8px; }
