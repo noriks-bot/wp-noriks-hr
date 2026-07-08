@@ -473,7 +473,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
            <?php if( $is_boxers ): ?>
 
 
-          <img src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
+          <img class="js-open-size-chart" style="cursor:pointer;" src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
 
 
 
@@ -491,17 +491,17 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
         <?php elseif(  $is_carape ): ?>
         
         
-                  <img src="/hr/wp-content/uploads/2025/11/Nogavice_tabela_velikosti.jpg">
+                  <img class="js-open-size-chart" style="cursor:pointer;" src="/hr/wp-content/uploads/2025/11/Nogavice_tabela_velikosti.jpg">
                   
     <?php elseif(  $is_mixed_bundle ): ?>
     
-     <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
-<img src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
+     <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
+<img class="js-open-size-chart" style="cursor:pointer;" src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
         
           <?php else: ?>
       
       
-       <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
+       <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
             
         <?php endif; ?>
