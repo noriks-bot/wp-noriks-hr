@@ -38,6 +38,7 @@ function noriks_product_type_map() : array {
         'carape'    => array( 'carape', 'zimske-carape', 'kompresijske-nogavice' ),
 
         // --- sub-variants / special buckets ---
+        'kompresijske-nogavice'   => array( 'kompresijske-nogavice' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),

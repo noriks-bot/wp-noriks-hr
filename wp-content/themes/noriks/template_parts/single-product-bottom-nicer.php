@@ -33,5 +33,10 @@ if ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ) {
     include $noriks_pb_dir . 'why-bokserice.php';
 }
 
+// KOMPRESIJSKE NOGAVICE (compression socks)
+if ( noriks_is_type( 'kompresijske-nogavice' ) ) {
+    include $noriks_pb_dir . 'why-kompresijske.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
