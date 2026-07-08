@@ -1,10 +1,9 @@
 <!-- product-bottom: KOMPRESIJSKE NOGAVICE (kompresijske-nogavice) -->
 <?php
-// Images are ACF option fields so they can be set without editing code.
-// If empty, a neutral placeholder panel is shown instead of a broken image.
-$kn_img_1 = get_field( 'komp_nogavice_img_1', 'option' );
-$kn_img_2 = get_field( 'komp_nogavice_img_2', 'option' );
-$kn_img_3 = get_field( 'komp_nogavice_img_3', 'option' );
+// Hardcoded image URLs — paste the 3 real image URLs here.
+$kn_img_1 = ''; // <-- URL slike 1
+$kn_img_2 = ''; // <-- URL slike 2
+$kn_img_3 = ''; // <-- URL slike 3
 
 $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;"></div>';
 ?>
