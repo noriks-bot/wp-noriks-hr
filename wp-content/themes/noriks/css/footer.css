@@ -440,10 +440,11 @@ margin: 0;
   .nf-links { grid-template-columns:1fr 1fr; }
   .nf-meta, .nf-brandbar { flex-direction:column; align-items:flex-start; }
   .nf-wordmark { font-size:28px; }
-  /* tighter vertical rhythm on mobile */
-  .nf-signup { padding:22px 0 18px; }
-  .nf-main { padding:22px 0; }
-  .nf-main-grid { gap:22px; }
+  /* tighter vertical rhythm on mobile (less gap around the divider line) */
+  .nf-signup { padding:18px 0 12px; }
+  .nf-main { padding:14px 0; }
+  .nf-main-grid { gap:20px; }
+  .nf-meta { padding-top:12px; padding-bottom:12px; }
 }
 
 /* --- background image band (Huel-style) --- */

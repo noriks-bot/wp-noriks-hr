@@ -152,13 +152,13 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
 </section>
 
 <style>
-  .knc-demo { background:#fff; padding:30px 0 22px; }
+  .knc-demo { background:#f4f4f4; padding:30px 0 22px; }
   .knc-demo-wrap, .knc-ugc-wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
   .knc-demo-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 22px; }
   .knc-demo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
   .knc-lazyvid { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:14px; background:#eceae4; display:block; }
-  .knc-ugc { background:#12305a; padding:34px 0 42px; }
-  .knc-ugc-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#fff; margin:0 0 24px; }
+  .knc-ugc { background:#f4f4f4; padding:34px 0 42px; }
+  .knc-ugc-title { text-align:center; font-size:clamp(22px,3vw,30px); font-weight:700; color:#222; margin:0 0 24px; }
   .knc-ugc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:820px; margin:0 auto; }
   .knc-ugc-item { position:relative; aspect-ratio:9/16; border-radius:14px; overflow:hidden; background:#0d2444; cursor:pointer; }
   .knc-ugc-item video { width:100%; height:100%; object-fit:cover; display:block; }
