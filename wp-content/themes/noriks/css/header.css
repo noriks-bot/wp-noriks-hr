@@ -18,11 +18,14 @@
   align-items: center;
    color: black;
   gap: 70px;
+  line-height: 1;
   animation: marqueeScroll 28s linear infinite;
 }
 
 .marquee-content span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
     color: black;
 }
 
@@ -35,6 +38,7 @@
     text-transform: uppercase;
   display: inline-flex;
   align-items: center;
+  line-height: 1;
   gap: 10px;
 }
 
