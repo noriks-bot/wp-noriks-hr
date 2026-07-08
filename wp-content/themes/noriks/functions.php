@@ -849,9 +849,38 @@ function add_second_product_thumbnail() {
 
 /* Slick/Glide carousel assets removed */
 
-add_action( 'woocommerce_before_variations_form', function() {
+/**
+ * Size chart modal — render exactly once per product page.
+ */
+function noriks_render_size_chart_once() {
+    static $done = false;
+    if ( $done ) {
+        return;
+    }
+    $done = true;
     get_template_part( 'template_parts/size-chart-modal' );
-});
+}
+
+// Keep it available where variations render (fires first when present).
+add_action( 'woocommerce_before_variations_form', 'noriks_render_size_chart_once' );
+
+// Ensure the modal is on EVERY single product page (once).
+add_action( 'woocommerce_after_single_product_summary', function() {
+    if ( function_exists( 'is_product' ) && is_product() ) {
+        noriks_render_size_chart_once();
+    }
+}, 5 );
+
+// Global "Tablica veličina" trigger on every product page. It hides itself
+// (via JS) when the product already renders its own #open-size-chart trigger.
+add_action( 'woocommerce_single_product_summary', function() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+        return;
+    }
+    echo '<a href="#" class="js-open-size-chart noriks-global-sizechart" style="display:inline-flex;align-items:center;gap:8px;margin:8px 0;color:#222;font-weight:700;font-size:15px;text-decoration:underline;cursor:pointer;">'
+        . '<svg width="20" height="20" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.9"/></svg>'
+        . 'Tablica veličina</a>';
+}, 11 );
 
 add_filter('woocommerce_get_image_size_thumbnail', 'custom_large_shop_thumbnail');
 function custom_large_shop_thumbnail($size) {

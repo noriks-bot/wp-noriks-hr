@@ -655,27 +655,37 @@
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("custom-size-chart-modal");
   const backdrop = document.getElementById("custom-size-chart-backdrop");
-  const openBtn = document.getElementById("open-size-chart");
-  const closeX = document.getElementById("close-size-chart-x");
 
   function openModal(e) {
     if (e) e.preventDefault();
+    if (!modal) return;
     modal.classList.add("show");
     if (backdrop) backdrop.classList.add("show");
     document.body.style.overflow = "hidden";
   }
   function closeModal() {
+    if (!modal) return;
     modal.classList.remove("show");
     if (backdrop) backdrop.classList.remove("show");
     document.body.style.overflow = "";
   }
 
-  openBtn?.addEventListener("click", openModal);
-  closeX?.addEventListener("click", closeModal);
-  backdrop?.addEventListener("click", closeModal);
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeModal();
+  // Delegated: ANY trigger (existing ids or the global link/image) opens it.
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("#open-size-chart, #open-size-chart-secondary, .js-open-size-chart")) {
+      openModal(e);
+      return;
+    }
+    if (e.target.closest("#close-size-chart-x")) closeModal();
   });
+
+  if (backdrop) backdrop.addEventListener("click", closeModal);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+
+  // Avoid a duplicate: if the product already renders its own trigger,
+  // hide the global size-chart link.
+  if (document.getElementById("open-size-chart") || document.getElementById("open-size-chart-secondary")) {
+    document.querySelectorAll(".noriks-global-sizechart").forEach(function (el) { el.style.display = "none"; });
+  }
 });
 </script>
