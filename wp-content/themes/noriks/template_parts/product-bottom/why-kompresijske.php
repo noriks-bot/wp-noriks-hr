@@ -5,14 +5,20 @@
 //   wp-content/themes/noriks/img/kompresijske-2.jpg
 //   wp-content/themes/noriks/img/kompresijske-3.jpg
 // Until a file exists, a neutral placeholder is shown.
+// Fastest option: paste the 3 image URLs here (from WP Media Library).
+$kn_url_1 = '';
+$kn_url_2 = '';
+$kn_url_3 = '';
+
+// Or drop the files into wp-content/themes/noriks/img/ with these names.
 $kn_dir_path = get_template_directory() . '/img/';
 $kn_dir_uri  = get_template_directory_uri() . '/img/';
 $kn_pick = function( $file ) use ( $kn_dir_path, $kn_dir_uri ) {
     return file_exists( $kn_dir_path . $file ) ? ( $kn_dir_uri . $file ) : '';
 };
-$kn_img_1 = $kn_pick( 'kompresijske-1.jpg' );
-$kn_img_2 = $kn_pick( 'kompresijske-2.jpg' );
-$kn_img_3 = $kn_pick( 'kompresijske-3.jpg' );
+$kn_img_1 = $kn_url_1 ?: $kn_pick( 'kompresijske-1.jpg' );
+$kn_img_2 = $kn_url_2 ?: $kn_pick( 'kompresijske-2.jpg' );
+$kn_img_3 = $kn_url_3 ?: $kn_pick( 'kompresijske-3.jpg' );
 
 $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;"></div>';
 ?>
