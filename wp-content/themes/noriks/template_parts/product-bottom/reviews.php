@@ -48,12 +48,16 @@
       <h1 style="color:black;     margin-bottom: 4px;">
           
           
-          <?php if ( noriks_is_type( 'bokserice' ) ): ?>
-          
+          <?php if ( noriks_is_type( 'kompresijske-nogavice' ) ): ?>
+
+           Nisi sam u potrazi za savršenim kompresijskim čarapama.
+
+          <?php elseif ( noriks_is_type( 'bokserice' ) ): ?>
+
            Nisi sam u potrazi za savršenim boksericama za ljeto.
-         
-           
-          
+
+
+
           <?php else: ?>
           
          
@@ -68,10 +72,14 @@
           </h1>
     <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;">
         
-           <?php if ( noriks_is_type( 'bokserice-ispod-kupacih' ) ): ?>
-           
+           <?php if ( noriks_is_type( 'kompresijske-nogavice' ) ): ?>
+
+           Tisuće muškaraca već nose NORIKS kompresijske čarape za lakše i odmornije noge – na poslu, putovanjima i treningu.
+
+           <?php elseif ( noriks_is_type( 'bokserice-ispod-kupacih' ) ): ?>
+
            Više od 120.000 kupaca već je potvrdilo: NORIKS je rješenje koje spaja udobnost na plaži, brzo sušenje i kroj koji konačno odgovara stvarnim muškarcima.
-           
+
            <?php else: ?>
         
         
