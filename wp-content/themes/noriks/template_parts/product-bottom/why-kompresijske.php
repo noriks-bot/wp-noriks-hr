@@ -39,6 +39,35 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
   </div>
 </section>
 
+<!-- Usporedba: NORIKS vs ostali -->
+<section class="why-section knc-compare-section">
+  <div class="knc-compare-wrap">
+    <h2 class="knc-compare-title">NORIKS vs ostali</h2>
+    <div class="knc-table-scroll">
+      <table class="knc-table">
+        <thead>
+          <tr>
+            <th class="knc-feat"></th>
+            <th class="knc-comp">Klasične čarape<span>(Bauerfeind, medi…)</span></th>
+            <th class="knc-comp">TV-čarape<span>(Zip Sox &amp; Co.)</span></th>
+            <th class="knc-us">NORIKS<em class="knc-badge">Br. 1</em></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Medicinska kompresija</td><td class="ok">✓</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Patentni zatvarač za jednostavno obuvanje</td><td class="no">✕</td><td class="ok">✓</td><td class="us ok">✓</td></tr>
+          <tr><td>Samostalno obuvanje bez pomoći</td><td class="no">✕</td><td class="mid">~</td><td class="us ok">✓</td></tr>
+          <tr><td>Ojačani zatvarač, nikad se ne zaglavi</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Prozračna tkanina</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Udobnost cijeli dan (+12 sati)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Jamstvo povrata novca 60 dana</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr class="knc-price"><td>Cijena po paru</td><td>od 85 €</td><td>~15 €</td><td class="us">od 29,90 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <section class="why-section">
   <div style="max-width: 1440px;" class="container why-container">
 
@@ -76,101 +105,6 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
   </div>
 </section>
 
-<section style="background: white;" class="why-section">
-  <div style="max-width: 1440px;" class="container why-container">
-
-    <!-- Left media -->
-    <div class="why-col">
-      <div class="video-wrapper">
-        <?php if ( $kn_img_2 ) : ?>
-          <img loading="lazy" decoding="async" style="width:100%; aspect-ratio:1/1; object-fit:cover;" src="<?php echo esc_url( $kn_img_2 ); ?>" alt="Kompresijske nogavice - sport">
-        <?php else : echo $kn_placeholder; endif; ?>
-      </div>
-    </div>
-
-    <!-- Right content -->
-    <div class="why-col why-content">
-      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-        ZA SPORT, RAD I OPORAVAK
-      </h2>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong>Više energije tijekom aktivnosti</strong></p>
-        <p class="description">Kompresija podupire mišiće i smanjuje vibracije tijekom trčanja, treninga ili dugog hodanja — manje zamora, više izdržljivosti.</p>
-      </div>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p class="description">
-          ✅ Brži oporavak nakon treninga <br/>
-          ✅ Manje grčeva i težine u nogama <br/>
-          ✅ Savršene za posao na nogama i putovanja
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="why-section">
-  <div style="max-width: 1440px;" class="container why-container">
-
-    <!-- Left media -->
-    <div class="why-col">
-      <div class="video-wrapper">
-        <?php if ( $kn_img_3 ) : ?>
-          <img loading="lazy" decoding="async" style="width:100%; aspect-ratio:1/1; object-fit:cover;" src="<?php echo esc_url( $kn_img_3 ); ?>" alt="Kompresijske nogavice - materijal">
-        <?php else : echo $kn_placeholder; endif; ?>
-      </div>
-    </div>
-
-    <!-- Right content -->
-    <div class="why-col why-content">
-      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-        UDOBNOST KOJA TRAJE
-      </h2>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong>Prozračan, mekan materijal</strong></p>
-        <p class="description">Prozračno tkanje odvodi vlagu i drži stopala suhima, a mekana pletiva ne žuljaju i ne stežu — ugodne za nošenje od jutra do večeri.</p>
-      </div>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong>Ojačana peta i prsti</strong></p>
-        <p class="description">Pojačane zone na peti i prstima produžuju trajnost, a ravni šav sprječava nadražaje. Kvaliteta koja se osjeti već pri prvom nošenju.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Usporedba: NORIKS vs ostali -->
-<section class="why-section knc-compare-section">
-  <div class="knc-compare-wrap">
-    <h2 class="knc-compare-title">NORIKS vs ostali</h2>
-    <div class="knc-table-scroll">
-      <table class="knc-table">
-        <thead>
-          <tr>
-            <th class="knc-feat"></th>
-            <th class="knc-comp">Klasične čarape<span>(Bauerfeind, medi…)</span></th>
-            <th class="knc-comp">TV-čarape<span>(Zip Sox &amp; Co.)</span></th>
-            <th class="knc-us">NORIKS<em class="knc-badge">Br. 1</em></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Medicinska kompresija</td><td class="ok">✓</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>Patentni zatvarač za jednostavno obuvanje</td><td class="no">✕</td><td class="ok">✓</td><td class="us ok">✓</td></tr>
-          <tr><td>Samostalno obuvanje bez pomoći</td><td class="no">✕</td><td class="mid">~</td><td class="us ok">✓</td></tr>
-          <tr><td>Ojačani zatvarač, nikad se ne zaglavi</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>Prozračna tkanina</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>Udobnost cijeli dan (+12 sati)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>Jamstvo povrata novca 60 dana</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr class="knc-price"><td>Cijena po paru</td><td>od 85 €</td><td>~15 €</td><td class="us">od 29,90 €</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
 
 <style>
   .knc-compare-section { background:#fff; padding:34px 0 46px; }
