@@ -276,7 +276,38 @@ Probaj NORIKS po boljoj cijeni.
       </div>
     </a>
 
-   
+    <!-- Card 5 -->
+    <a class="collection-card" href="/hr/product-category/carape/">
+      <div class="collection-card__media">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/noriks-carape.jpeg" alt="Čarape" />
+      </div>
+      <div class="collection-card__body">
+        <div class="collection-card__text">
+          <div class="collection-card__topline">
+            <h3 class="collection-card__name">Čarape</h3>
+          </div>
+          <p class="collection-card__desc">Za lakše i odmornije noge.</p>
+        </div>
+        <span class="collection-card__arrow" aria-hidden="true">›</span>
+      </div>
+    </a>
+
+    <!-- Card 6 -->
+    <a class="collection-card" href="/hr/product-category/ljetna-rasprodaja/">
+      <div class="collection-card__media">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/noriks-poletna.jpeg" alt="Ljetna rasprodaja" />
+      </div>
+      <div class="collection-card__body">
+        <div class="collection-card__text">
+          <div class="collection-card__topline">
+            <h3 class="collection-card__name">Ljetna rasprodaja</h3>
+          </div>
+          <p class="collection-card__desc">Najbolje cijene ovog ljeta.</p>
+        </div>
+        <span class="collection-card__arrow" aria-hidden="true">›</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
@@ -328,7 +359,7 @@ Probaj NORIKS po boljoj cijeni.
 /* ---- Grid ---- */
 .collections__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 10px;
 }
 
