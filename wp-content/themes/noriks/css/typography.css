@@ -82,7 +82,7 @@ body *:not(svg):not(path):not(i):not(.hl-em):not([class*="dashicons"]):not([clas
 @media (max-width: 768px) {
   /* .most-popular is excluded — it pads via its own inner .container,
      adding the gutter here would double it. */
-  section:not(.hero):not(.most-popular):not(.basic-reviews-section),
+  section:not(.hero):not(.most-popular):not(.basic-reviews-section):not(.one-banner-shop),
   .nf-wrap,
   .basic-reviews-section-container,
   .info-items-container {
