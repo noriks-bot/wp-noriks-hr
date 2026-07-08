@@ -125,6 +125,7 @@
 .navbar-center {
   display: flex;
   gap: 5px;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -134,6 +135,7 @@
 
   .navbar-center {
     flex-direction: column;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     left: -350px;
@@ -407,9 +409,12 @@ color: white;
 
 /* Last menu item as a pill button (inverse of Huel: white pill, black text) */
 .header .navbar-center a.nav-link--pill {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
   background: #fff;
   color: #111 !important;
-  padding: 6px 16px;
+  padding: 4px 16px;
   border-radius: 999px;
   font-weight: 600;
   letter-spacing: 0 !important;
