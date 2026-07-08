@@ -405,18 +405,16 @@ color: white;
 }
 
 
-/* Last menu item ("Ljetna rasprodaja") as a pill button (inverse of Huel: white pill, black text) */
-.navbar-center .nav-link[href*="rasprodaja"],
-.navbar-center .nav-link[href*="razprodaja"] {
+/* Last menu item as a pill button (inverse of Huel: white pill, black text) */
+.header .navbar-center a.nav-link--pill {
   background: #fff;
   color: #111 !important;
   padding: 6px 16px;
   border-radius: 999px;
   font-weight: 600;
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
 }
-.navbar-center .nav-link[href*="rasprodaja"]:hover,
-.navbar-center .nav-link[href*="razprodaja"]:hover {
+.header .navbar-center a.nav-link--pill:hover {
   background: #e9e9e9;
   text-decoration: none;
 }

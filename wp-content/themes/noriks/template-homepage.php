@@ -295,7 +295,7 @@ Probaj NORIKS po boljoj cijeni.
     <!-- Card 6 -->
     <a class="collection-card" href="/hr/product-category/ljetna-rasprodaja/">
       <div class="collection-card__media">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/noriks-poletna.jpeg" alt="Ljetna rasprodaja" />
+        <img src="https://noriks.com/hr/wp-content/uploads/2026/07/Screenshot-2026-07-08-at-14.33.56.png" alt="Ljetna rasprodaja" />
       </div>
       <div class="collection-card__body">
         <div class="collection-card__text">

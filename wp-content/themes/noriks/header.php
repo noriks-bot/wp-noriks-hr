@@ -159,7 +159,7 @@
                 
             <?php else: ?>
                 <!-- NORMAL ITEMS -->
-                <a href="<?php echo esc_url($link); ?>" class="nav-link">
+                <a href="<?php echo esc_url($link); ?>" class="nav-link<?php echo ( $i === count($header_nav) - 1 ) ? ' nav-link--pill' : ''; ?>">
                     <?php echo esc_html($text); ?>
                 </a>
             <?php endif; ?>
