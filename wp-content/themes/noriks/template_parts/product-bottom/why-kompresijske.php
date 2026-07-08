@@ -23,7 +23,21 @@ $kn_img_2 = $kn_url( 1 );
 $kn_img_3 = $kn_url( 2 );
 
 $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;"></div>';
+$knv = get_template_directory_uri() . '/img/kompresijske-videos/';
 ?>
+
+<!-- Kako funkcionira u praksi (product demo videos, autoplay on view) — FIRST -->
+<section class="why-section knc-demo">
+  <div class="knc-demo-wrap">
+    <h2 class="knc-demo-title">Kako to funkcionira u praksi</h2>
+    <div class="knc-demo-grid">
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-1.mp4" poster="<?php echo esc_url( $knv ); ?>demo-1-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-2.mp4" poster="<?php echo esc_url( $knv ); ?>demo-2-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-3.mp4" poster="<?php echo esc_url( $knv ); ?>demo-3-poster.jpg" muted loop playsinline preload="none"></video>
+      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-4.mp4" poster="<?php echo esc_url( $knv ); ?>demo-4-poster.jpg" muted loop playsinline preload="none"></video>
+    </div>
+  </div>
+</section>
 
 <section class="why-section">
   <div style="max-width: 1440px;" class="container why-container">
@@ -190,21 +204,6 @@ $kn_placeholder = '<div style="width:100%;aspect-ratio:1/1;background:#f1f1f1;">
     .knc-badge { display:block; margin:4px auto 0; width:-moz-max-content; width:max-content; }
   }
 </style>
-
-<?php $knv = get_template_directory_uri() . '/img/kompresijske-videos/'; ?>
-
-<!-- Kako funkcionira u praksi (product demo videos, autoplay on view) -->
-<section class="why-section knc-demo">
-  <div class="knc-demo-wrap">
-    <h2 class="knc-demo-title">Kako to funkcionira u praksi</h2>
-    <div class="knc-demo-grid">
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-1.mp4" poster="<?php echo esc_url( $knv ); ?>demo-1-poster.jpg" muted loop playsinline preload="none"></video>
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-2.mp4" poster="<?php echo esc_url( $knv ); ?>demo-2-poster.jpg" muted loop playsinline preload="none"></video>
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-3.mp4" poster="<?php echo esc_url( $knv ); ?>demo-3-poster.jpg" muted loop playsinline preload="none"></video>
-      <video class="knc-lazyvid" data-src="<?php echo esc_url( $knv ); ?>demo-4.mp4" poster="<?php echo esc_url( $knv ); ?>demo-4-poster.jpg" muted loop playsinline preload="none"></video>
-    </div>
-  </div>
-</section>
 
 <!-- Što kažu naši kupci (UGC testimonial videos, load on click) -->
 <section class="why-section knc-ugc">
