@@ -210,13 +210,23 @@
       
       
        
+      <?php elseif ( noriks_is_type( 'kompresijske-nogavice' ) ): ?>
+
+      <div style="line-height:1.9; text-align:left; margin:40px 0; padding:0 6px; font-size:15px; color:#111;">
+        <strong>S/M</strong> : broj obuće 36–40 / opseg lista : 23–36 cm<br>
+        <strong>L/XL</strong> : broj obuće 40–44 / opseg lista : 36–45 cm<br>
+        <strong>XXL</strong> : broj obuće 44–48 / opseg lista : 45–56 cm<br><br>
+        Molimo izmjerite opseg lista na najširem mjestu kako biste pronašli svoju veličinu.<br><br>
+        Preporučujemo da veličinu odaberete prema opsegu lista, a ne prema uobičajenom broju obuće.
+      </div>
+
       <?php elseif ( noriks_is_type( 'carape' ) ): ?>
-      
-      
+
+
        <img
-    
+
     style="margin-top: 70px;margin-bottom: 70px;"
-    
+
       src="/hr/wp-content/uploads/2025/11/Nogavice_tabela_velikosti.jpg"
       alt="Size Guide">
       
