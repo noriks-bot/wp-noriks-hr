@@ -35,7 +35,7 @@ function noriks_product_type_map() : array {
         'starter'   => array( 'starter-paketi', 'orto-starter', 'orto-majica-bokserica' ),
         'majice'    => array( 'majice', 'orto-majice' ),
         'bokserice' => array( 'bokserice', 'orto-bokserice', 'bokserice-sastavi-paket' ),
-        'carape'    => array( 'carape', 'zimske-carape' ),
+        'carape'    => array( 'carape', 'zimske-carape', 'kompresijske-nogavice' ),
 
         // --- sub-variants / special buckets ---
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
