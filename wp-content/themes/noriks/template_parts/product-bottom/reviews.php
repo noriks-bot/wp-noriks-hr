@@ -970,6 +970,47 @@ $faq_list3 = get_field('faq_list_3', 'option');
 
 
 
+<?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ):
+  $knc_faq = array(
+    array(
+      'q' => 'Teške i umorne noge',
+      'a' => 'NORIKS kompresijske čarape koriste graduiranu kompresiju od 15–20 mmHg kako bi potaknule cirkulaciju od gležnja prema gore. Umjesto da se krv zadržava u nogama, postupni pritisak podupire prirodni povratni tok. Vaše noge osjećaju se lakše već nakon nekoliko sati.'
+    ),
+    array(
+      'q' => 'Proširene vene i venski problemi',
+      'a' => 'Kada cirkulacija oslabi, vene se šire te postaju vidljive i bolne. NORIKS čarape vrše blag, ali konstantan pritisak koji podupire stijenke vena i olakšava protok krvi. Idealne su kao dopuna medicinskom tretmanu ili za prevenciju kod osoba sklonih venskim problemima.'
+    ),
+    array(
+      'q' => 'Otekline i zadržavanje vode',
+      'a' => 'Dugotrajno sjedenje ili stajanje uzrokuje nakupljanje tekućine u gležnjevima i listovima. NORIKS čarape vrše najjači pritisak na gležnju, koji se prema gore postupno smanjuje — ta graduirana kompresija pomaže smanjiti otekline i sprječava da se zadržavanje vode tijekom dana ustali.'
+    ),
+    array(
+      'q' => 'Utrnulost i trnci',
+      'a' => 'Preuske ili loše prilagođene čarape pritišću krvne žile i uzrokuju taj neugodni osjećaj trnaca. NORIKS čarape osmišljene su s prozračnom tkaninom i uravnoteženom kompresijom koja potiče cirkulaciju bez prekidanja protoka krvi. Vaše noge ostaju vitalne i osjetljive, bez utrnulosti ili trnaca.'
+    ),
+    array(
+      'q' => 'Udobnost za osjetljivu kožu',
+      'a' => 'Čak i blag pritisak može postati neugodan na osjetljivoj ili nadraženoj koži. NORIKS čarape kombiniraju mekanu i prozračnu tkaninu, zaštitnu unutarnju podstavu uz zatvarač te umjerenu kompresiju za učinkovitu potporu bez trenja ili nadraživanja. Nosite ih cijeli dan bez brige.'
+    ),
+  );
+?>
+<section class="faq-section">
+  <h2>Za koje tegobe pomažu NORIKS kompresijske čarape?</h2>
+  <div class="faq-container">
+    <?php foreach ( $knc_faq as $faq_item ): ?>
+      <div class="faq-item">
+        <button class="faq-question">
+          <?php echo $faq_item['q']; ?>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <p><?php echo $faq_item['a']; ?></p>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
+<?php else: ?>
 <section class="faq-section">
   <h2><?php echo get_field("singlepp_content_part_faq_h1","options"); ?></h2>
   
@@ -1049,9 +1090,10 @@ $faq_list3 = get_field('faq_list_3', 'option');
             endif;
             ?>
       </div>
-  <!-- 3 faq container --> 
-  
+  <!-- 3 faq container -->
+
 </section>
+<?php endif; ?>
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
