@@ -146,15 +146,18 @@
   $reviews_language = get_field("webshop_language", "options");
   if (!$reviews_language) { $reviews_language = "EN"; }
 
-  // Detect if current product belongs to bokserice group
+  // Detect product group for the review pool
   $current_product_id = (function_exists('is_product') && is_product()) ? get_queried_object_id() : get_the_id();
   $is_bokserice_page  = noriks_is_type( 'bokserice', $current_product_id );
+  $is_nogavice_page   = noriks_is_type( 'kompresijske-nogavice', $current_product_id );
 
-  // Include review pools
-  if ( ! $is_bokserice_page )  {
-    include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
-  } else {
+  // Include review pools (own pool per product group)
+  if ( $is_nogavice_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_nogavice.php';
+  } elseif ( $is_bokserice_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_bokserice.php';
+  } else {
+    include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
 
   include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'-2.php';
@@ -216,11 +219,13 @@
       }
 
       $is_bokserice = false;
+      $is_nogavice  = false;
       if ( $product_id ) {
           $is_bokserice = noriks_is_type( 'bokserice', $product_id );
+          $is_nogavice  = noriks_is_type( 'kompresijske-nogavice', $product_id );
       }
 
-      $cache_key = $transient_key . ( $is_bokserice ? '_bokserice' : '_all' );
+      $cache_key = $transient_key . ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) );
 
       if ( function_exists( 'get_transient' ) ) {
           $cached = get_transient( $cache_key );
@@ -237,14 +242,16 @@
           'order'   => 'DESC',
       ];
 
-      if ( $is_bokserice ) {
+      if ( $is_nogavice ) {
+          $args['category'] = [ 'kompresijske-nogavice' ];
+      } elseif ( $is_bokserice ) {
           $args['category'] = [ 'bokserice' ];
       } else {
           $args['tax_query'] = [
               [
                   'taxonomy' => 'product_cat',
                   'field'    => 'slug',
-                  'terms'    => [ 'bokserice' ],
+                  'terms'    => [ 'bokserice', 'kompresijske-nogavice' ],
                   'operator' => 'NOT IN',
               ],
           ];
@@ -280,7 +287,7 @@
    *  - /auto_reviews/majice-slike/
    */
   function get_review_avatar_pool(string $type = 'majice'): array {
-    $type = ($type === 'bokserice') ? 'bokserice' : 'majice';
+    $type = in_array( $type, array( 'bokserice', 'nogavice', 'majice' ), true ) ? $type : 'majice';
 
     $dir_path = trailingslashit(get_stylesheet_directory()) . 'auto_reviews/' . $type . '-slike/';
     $dir_url  = trailingslashit(get_stylesheet_directory_uri()) . 'auto_reviews/' . $type . '-slike/';
@@ -481,7 +488,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
   $daily_seed = $today_obj->format('Y-m-d');
 
   // Avatar pools based on page category
-  $avatar_type = $is_bokserice_page ? 'bokserice' : 'majice';
+  $avatar_type = $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' );
   $avatar_pool = get_review_avatar_pool($avatar_type);
 
   $product_pool = get_wc_product_pool();
