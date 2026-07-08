@@ -388,7 +388,13 @@ function gck_hr_majice_phrase( int $n, bool $free = false, string $type = 'majic
     $is1   = ( $m10 === 1 && $m100 !== 11 );
     $is234 = ( in_array( $m10, array( 2, 3, 4 ), true ) && ! in_array( $m100, array( 12, 13, 14 ), true ) );
 
-    $stem = ( $type === 'bokserica' ) ? 'bokseric' : 'majic';
+    if ( $type === 'bokserica' ) {
+        $stem = 'bokseric';
+    } elseif ( $type === 'carapa' ) {
+        $stem = 'čarap'; // čarapu / čarape / čarapa
+    } else {
+        $stem = 'majic';
+    }
 
     if ( $is1 ) {
         $adj = 'besplatnu'; $noun = $stem . 'u';
@@ -419,8 +425,9 @@ function gck_render_bundle_selector() {
     $show_gratis           = (bool) get_field( 'orto_show_gratis_labels', $product_id );
     $show_price_highlights = (bool) get_field( 'orto_show_price_highlights', $product_id );
 
-    // Garment type for gratis labels: "bokserica" (boxers) vs default "majica" (t-shirt).
-    // Detect via product category or slug/name so each product gets the correct noun.
+    // Garment type for gratis labels: "bokserica" (boxers), "carapa"
+    // (compression socks) vs default "majica" (t-shirt). Detect via product
+    // category or slug/name so each product gets the correct noun.
     $gck_garment = 'majica';
     if (
         has_term( array( 'orto-bokserice', 'orto-bokserice2' ), 'product_cat', $product_id )
@@ -428,6 +435,12 @@ function gck_render_bundle_selector() {
         || ( stripos( (string) $product->get_name(), 'bokseric' ) !== false )
     ) {
         $gck_garment = 'bokserica';
+    } elseif (
+        has_term( array( 'orto-kompresijske' ), 'product_cat', $product_id )
+        || ( stripos( (string) $product->get_slug(), 'kompresij' ) !== false )
+        || ( stripos( (string) $product->get_name(), 'kompresij' ) !== false )
+    ) {
+        $gck_garment = 'carapa';
     }
 
     // Countdown / scarcity element (registered in code, per-product toggle).
