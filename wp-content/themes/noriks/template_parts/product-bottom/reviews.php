@@ -151,6 +151,9 @@
   $is_bokserice_page  = noriks_is_type( 'bokserice', $current_product_id );
   $is_nogavice_page   = noriks_is_type( 'kompresijske-nogavice', $current_product_id );
 
+  // Fallback product name shown in review cards (socks have no products yet).
+  $rv_fallback_title = $is_nogavice_page ? 'Kompresijske čarape' : 'Jedna Siva Majica';
+
   // Include review pools (own pool per product group)
   if ( $is_nogavice_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_nogavice.php';
@@ -551,7 +554,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
       <?php if (!empty($initial_product)) : foreach ($initial_product as $review) :
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
-        $title = !empty($review['product_title']) ? $review['product_title'] : 'Jedna Siva Majica';
+        $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
         $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
@@ -568,10 +571,12 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ($avatar_url) : ?>
-              <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
-            <?php else : ?>
-              <div class="avatar">👤</div>
+            <?php if ( ! $is_nogavice_page ) : ?>
+              <?php if ($avatar_url) : ?>
+                <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
+              <?php else : ?>
+                <div class="avatar">👤</div>
+              <?php endif; ?>
             <?php endif; ?>
             <div class="name"><?php echo esc_html($name); ?></div>
             <span class="verified"><?php _e('Potvrđeno','your-textdomain'); ?></span>
@@ -586,7 +591,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
       <?php if (!empty($initial_ship)) : foreach ($initial_ship as $review) :
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
-        $title = !empty($review['product_title']) ? $review['product_title'] : 'Jedna Siva Majica';
+        $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
         $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
@@ -605,10 +610,12 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ($avatar_url) : ?>
-              <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
-            <?php else : ?>
-              <div class="avatar">👤</div>
+            <?php if ( ! $is_nogavice_page ) : ?>
+              <?php if ($avatar_url) : ?>
+                <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
+              <?php else : ?>
+                <div class="avatar">👤</div>
+              <?php endif; ?>
             <?php endif; ?>
             <div class="name"><?php echo esc_html($name); ?></div>
             <span class="verified"><?php _e('Potvrđeno','your-textdomain'); ?></span>
@@ -641,6 +648,8 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
+    const isNogavice    = <?php echo $is_nogavice_page ? 'true' : 'false'; ?>;
+    const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
     let nextShip    = 0;
@@ -677,6 +686,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     }[s]));
 
     function avatarHtml(avatarUrl){
+      if(isNogavice){ return ''; }
       if(avatarUrl){
         return `<div class="avatar"><img src="${esc(avatarUrl)}" alt="" loading="lazy" /></div>`;
       }
@@ -690,7 +700,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
         article.className = 'review-card is-new';
 
         const url       = review.product_url   || '#';
-        const title     = review.product_title || 'Jedna Siva Majica';
+        const title     = review.product_title || rvFallback;
         const name      = review.name          || 'Anonymní';
         const text      = review.text          || '';
         const headline  = review.headline      || '';

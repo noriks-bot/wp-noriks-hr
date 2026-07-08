@@ -574,23 +574,6 @@ a:hover {
   color: inherit !important;
 }
 
-/* ===== Huel-style product cards ===== */
-.product-card { background: transparent; }
-.image-wrapper { background: #f4f1ec; border-radius: 0; }
-.product-info { padding: 16px 4px 8px; text-align: left; }
-.product-name { font-size: 18px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 12px; }
-.pc-specs { border-top: 1px solid #e6e3dc; padding-top: 8px; }
-.pc-spec { display: flex; align-items: center; gap: 7px; color: #555; font-size: 13.5px; padding: 6px 0; }
-.pc-spec svg { width: 18px; height: 18px; flex: 0 0 auto; color: #a29d92; }
-.pc-spec-hl { color: #111; }
-.pc-spec-hl strong { font-weight: 600; }
-.pc-price { border-top: 1px solid #e6e3dc; padding-top: 12px; margin-top: 6px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-.pc-from { color: #111; font-size: 14px; }
-.pc-total { font-size: 18px; font-weight: 600; color: #111; }
-.pc-total .amount, .pc-total bdi { font-weight: 600; }
-.pc-old { color: #9a9a9a; text-decoration: line-through; font-size: 14px; }
-.pc-btn { display: inline-block; margin-top: 14px; background: #111; color: #fff; border-radius: 999px; font-size: 14px; font-weight: 600; padding: 11px 22px; }
-.product-card:hover .pc-btn { background: #000; }
 </style>
 
 <section class="most-popular">
@@ -754,46 +737,17 @@ a:hover {
             </div><!-- /.image-wrapper -->
 
             <div class="product-info">
+            <!--  <h3 style="font-size: 15px; margin-bottom: 0px; font-weight: 500;">NORIKS</h3>-->
               <h3 class="product-name"><?php echo esc_html($product_name); ?></h3>
 
-              <?php
-                $pc_material = get_field('product_material', $product->get_id());
-                if ( ! $pc_material ) { $pc_material = '100% pamuk'; }
-
-                $pc_per = $tmp_price;
-                if ( ! $pc_per ) {
-                  $pc_base = (float) ( $is_on_sale ? $sale_price : $regular_price );
-                  $pc_sc   = ( ! empty($shirt_count) && $shirt_count > 0 ) ? $shirt_count : 1;
-                  if ( $pc_base > 0 ) { $pc_per = ceil( ( $pc_base / $pc_sc ) * 100 ) / 100; }
-                }
-                $pc_per_label = get_field("singlepp_priceper_after","options");
-                if ( ! $pc_per_label ) { $pc_per_label = 'po komadu'; }
-              ?>
-
-              <div class="pc-specs">
-                <div class="pc-spec">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4l4 3 4-3 4 3-2 3v9H6v-9L4 7z"/></svg>
-                  <span>Materijal: <?php echo esc_html($pc_material); ?></span>
-                </div>
-                <?php if ( $pc_per ): ?>
-                <div class="pc-spec pc-spec-hl">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5 12 3H4v8l8.5 8.5z"/><circle cx="8.5" cy="7.5" r="1.4"/></svg>
-                  <span><strong><?php echo number_format((float)$pc_per, 2); ?> €</strong> / <?php echo esc_html($pc_per_label); ?></span>
-                </div>
-                <?php endif; ?>
-              </div>
-
-              <div class="pc-price">
-                <span class="pc-from">Od</span>
+              <div class="price">
                 <?php if ( $is_on_sale ): ?>
-                  <span class="pc-total"><?php echo wc_price($sale_price); ?></span>
-                  <span class="pc-old"><?php echo wc_price($regular_price); ?></span>
+                  <span class="old-price"><?php echo wc_price($regular_price); ?></span>
+                  <span class="current-price"><?php echo wc_price($sale_price); ?></span>
                 <?php else: ?>
-                  <span class="pc-total"><?php echo wc_price($regular_price); ?></span>
+                  <span class="current-price"><?php echo wc_price($regular_price); ?></span>
                 <?php endif; ?>
               </div>
-
-              <span class="pc-btn">Pogledaj proizvod</span>
             </div>
 
           </a>
