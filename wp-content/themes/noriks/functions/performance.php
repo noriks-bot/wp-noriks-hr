@@ -86,18 +86,8 @@ add_action( 'wp_enqueue_scripts', function () {
 }, 100 );
 
 /**
- * 5) Remove jQuery Migrate on the front-end (modern plugins don't need it).
- *    jQuery itself is untouched.
+ * 5) (jQuery Migrate removal disabled — some checkout/gateway JS relies on it.)
  */
-add_action( 'wp_default_scripts', function ( $scripts ) {
-    if ( is_admin() ) {
-        return;
-    }
-    if ( ! empty( $scripts->registered['jquery'] ) ) {
-        $deps = $scripts->registered['jquery']->deps;
-        $scripts->registered['jquery']->deps = array_diff( $deps, array( 'jquery-migrate' ) );
-    }
-} );
 
 /**
  * 6) Add defer to the theme's own (dependency-free) scripts so they never
