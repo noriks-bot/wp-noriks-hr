@@ -970,130 +970,99 @@ $faq_list3 = get_field('faq_list_3', 'option');
 
 
 
-<?php if ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ):
-  $knc_faq = array(
-    array(
-      'q' => 'Teške i umorne noge',
-      'a' => 'NORIKS kompresijske čarape koriste graduiranu kompresiju od 15–20 mmHg kako bi potaknule cirkulaciju od gležnja prema gore. Umjesto da se krv zadržava u nogama, postupni pritisak podupire prirodni povratni tok. Vaše noge osjećaju se lakše već nakon nekoliko sati.'
-    ),
-    array(
-      'q' => 'Proširene vene i venski problemi',
-      'a' => 'Kada cirkulacija oslabi, vene se šire te postaju vidljive i bolne. NORIKS čarape vrše blag, ali konstantan pritisak koji podupire stijenke vena i olakšava protok krvi. Idealne su kao dopuna medicinskom tretmanu ili za prevenciju kod osoba sklonih venskim problemima.'
-    ),
-    array(
-      'q' => 'Otekline i zadržavanje vode',
-      'a' => 'Dugotrajno sjedenje ili stajanje uzrokuje nakupljanje tekućine u gležnjevima i listovima. NORIKS čarape vrše najjači pritisak na gležnju, koji se prema gore postupno smanjuje — ta graduirana kompresija pomaže smanjiti otekline i sprječava da se zadržavanje vode tijekom dana ustali.'
-    ),
-    array(
-      'q' => 'Utrnulost i trnci',
-      'a' => 'Preuske ili loše prilagođene čarape pritišću krvne žile i uzrokuju taj neugodni osjećaj trnaca. NORIKS čarape osmišljene su s prozračnom tkaninom i uravnoteženom kompresijom koja potiče cirkulaciju bez prekidanja protoka krvi. Vaše noge ostaju vitalne i osjetljive, bez utrnulosti ili trnaca.'
-    ),
-    array(
-      'q' => 'Udobnost za osjetljivu kožu',
-      'a' => 'Čak i blag pritisak može postati neugodan na osjetljivoj ili nadraženoj koži. NORIKS čarape kombiniraju mekanu i prozračnu tkaninu, zaštitnu unutarnju podstavu uz zatvarač te umjerenu kompresiju za učinkovitu potporu bez trenja ili nadraživanja. Nosite ih cijeli dan bez brige.'
-    ),
-  );
-?>
-<section class="faq-section">
-  <h2>Za koje tegobe pomažu NORIKS kompresijske čarape?</h2>
-  <div class="faq-container">
-    <?php foreach ( $knc_faq as $faq_item ): ?>
+<?php
+$is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
+
+// Compression-sock benefit content — replaces ONLY the "Informacije o Proizvodu"
+// container on sock products. Dostava/Povrati stay as they are.
+$knc_faq = array(
+  array(
+    'questioon' => 'Teške i umorne noge',
+    'answer'    => 'NORIKS kompresijske čarape koriste graduiranu kompresiju od 15–20 mmHg kako bi potaknule cirkulaciju od gležnja prema gore. Umjesto da se krv zadržava u nogama, postupni pritisak podupire prirodni povratni tok. Vaše noge osjećaju se lakše već nakon nekoliko sati.'
+  ),
+  array(
+    'questioon' => 'Proširene vene i venski problemi',
+    'answer'    => 'Kada cirkulacija oslabi, vene se šire te postaju vidljive i bolne. NORIKS čarape vrše blag, ali konstantan pritisak koji podupire stijenke vena i olakšava protok krvi. Idealne su kao dopuna medicinskom tretmanu ili za prevenciju kod osoba sklonih venskim problemima.'
+  ),
+  array(
+    'questioon' => 'Otekline i zadržavanje vode',
+    'answer'    => 'Dugotrajno sjedenje ili stajanje uzrokuje nakupljanje tekućine u gležnjevima i listovima. NORIKS čarape vrše najjači pritisak na gležnju, koji se prema gore postupno smanjuje — ta graduirana kompresija pomaže smanjiti otekline i sprječava da se zadržavanje vode tijekom dana ustali.'
+  ),
+  array(
+    'questioon' => 'Utrnulost i trnci',
+    'answer'    => 'Preuske ili loše prilagođene čarape pritišću krvne žile i uzrokuju taj neugodni osjećaj trnaca. NORIKS čarape osmišljene su s prozračnom tkaninom i uravnoteženom kompresijom koja potiče cirkulaciju bez prekidanja protoka krvi. Vaše noge ostaju vitalne i osjetljive, bez utrnulosti ili trnaca.'
+  ),
+  array(
+    'questioon' => 'Udobnost za osjetljivu kožu',
+    'answer'    => 'Čak i blag pritisak može postati neugodan na osjetljivoj ili nadraženoj koži. NORIKS čarape kombiniraju mekanu i prozračnu tkaninu, zaštitnu unutarnju podstavu uz zatvarač te umjerenu kompresiju za učinkovitu potporu bez trenja ili nadraživanja. Nosite ih cijeli dan bez brige.'
+  ),
+);
+
+// On sock products, swap the list only for the "Informacije o Proizvodu" container.
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq ) {
+  if ( $is_knc && stripos( (string) $title, 'Informacije o Proizvodu' ) !== false ) {
+    return $knc_faq;
+  }
+  return $list;
+};
+
+// Shared item renderer.
+$render_faq_items = function( $list ) {
+  if ( $list && is_array( $list ) ):
+    foreach ( $list as $faq_item ): ?>
       <div class="faq-item">
         <button class="faq-question">
-          <?php echo $faq_item['q']; ?>
+          <?php echo $faq_item["questioon"]; ?>
           <span class="arrow">&#9660;</span>
         </button>
         <div class="faq-answer">
-          <p><?php echo $faq_item['a']; ?></p>
+          <p><?php echo $faq_item["answer"]; ?></p>
         </div>
       </div>
-    <?php endforeach; ?>
-  </div>
-</section>
-<?php else: ?>
+    <?php endforeach;
+  endif;
+};
+
+$faq_title_1 = get_field('faq_title_1', 'option');
+$faq_title_2 = get_field('faq_title_2', 'option');
+$faq_title_3 = get_field('faq_title_3', 'option');
+?>
 <section class="faq-section">
   <h2><?php echo get_field("singlepp_content_part_faq_h1","options"); ?></h2>
-  
 
-   <!-- first faq container --> 
+   <!-- first faq container -->
       <div class="faq-container">
          <h4 style="text-align:left; font-size: 1rem;
             font-weight: 700;
             color: #222223;
-            margin-bottom: 10px; "><?php echo get_field('faq_title_1', 'option'); ?></h4>
-            <?php 
-              if( $faq_list && is_array($faq_list) ): 
-                      foreach( $faq_list as $faq_item ):
-              ?>
-                    <div class="faq-item">
-                      <button class="faq-question">
-                         <?php echo $faq_item["questioon"]; ?>
-                        <span class="arrow">&#9660;</span>
-                      </button>
-                      <div class="faq-answer">
-                        <p>  <?php echo $faq_item["answer"]; ?></p>
-                      </div>
-                    </div>
-          <?php endforeach;
-            endif;
-            ?>
+            margin-bottom: 10px; "><?php echo $faq_title_1; ?></h4>
+         <?php $render_faq_items( $faq_pick( $faq_title_1, $faq_list ) ); ?>
       </div>
-    <!-- first faq container --> 
-  
-     <!-- 2 faq container --> 
+    <!-- first faq container -->
+
+     <!-- 2 faq container -->
       <div class="faq-container">
           <br/>
          <h4 style="text-align:left; font-size: 1rem;
             font-weight: 700;
             color: #001e36;
-            margin-bottom: 10px; "><?php echo get_field('faq_title_2', 'option'); ?></h4>
-            <?php 
-              if( $faq_list2 && is_array($faq_list2) ): 
-                      foreach( $faq_list2 as $faq_item ):
-              ?>
-                    <div class="faq-item">
-                      <button class="faq-question">
-                         <?php echo $faq_item["questioon"]; ?>
-                        <span class="arrow">&#9660;</span>
-                      </button>
-                      <div class="faq-answer">
-                        <p>  <?php echo $faq_item["answer"]; ?></p>
-                      </div>
-                    </div>
-          <?php endforeach;
-            endif;
-            ?>
+            margin-bottom: 10px; "><?php echo $faq_title_2; ?></h4>
+         <?php $render_faq_items( $faq_pick( $faq_title_2, $faq_list2 ) ); ?>
       </div>
-        <!-- 2 faq container --> 
-  
-     <!-- 3 faq container --> 
+        <!-- 2 faq container -->
+
+     <!-- 3 faq container -->
       <div class="faq-container">
           <br/>
          <h4 style="text-align:left; font-size: 1rem;
             font-weight: 700;
             color: #001e36;
-            margin-bottom: 10px; "><?php echo get_field('faq_title_3', 'option'); ?></h4>
-            <?php 
-              if( $faq_list3 && is_array($faq_list3) ): 
-                      foreach( $faq_list3 as $faq_item ):
-              ?>
-                    <div class="faq-item">
-                      <button class="faq-question">
-                         <?php echo $faq_item["questioon"]; ?>
-                        <span class="arrow">&#9660;</span>
-                      </button>
-                      <div class="faq-answer">
-                        <p>  <?php echo $faq_item["answer"]; ?></p>
-                      </div>
-                    </div>
-          <?php endforeach;
-            endif;
-            ?>
+            margin-bottom: 10px; "><?php echo $faq_title_3; ?></h4>
+         <?php $render_faq_items( $faq_pick( $faq_title_3, $faq_list3 ) ); ?>
       </div>
   <!-- 3 faq container -->
 
 </section>
-<?php endif; ?>
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
