@@ -724,6 +724,15 @@ function gck_render_bundle_selector() {
           .bundle-box select { border: 2px solid black !important; }
         </style>
     <?php endif; ?>
+
+    <?php
+    // Wider size select ONLY for compression socks (longer labels like "S/M 36-40").
+    if ( has_term( array( 'orto-kompresijske-carape' ), 'product_cat', $product_id ) ) :
+    ?>
+        <style>
+          .bundle-box select { max-width: 195px !important; min-width: 92px !important; padding-right: 26px !important; }
+        </style>
+    <?php endif; ?>
     
     
     
