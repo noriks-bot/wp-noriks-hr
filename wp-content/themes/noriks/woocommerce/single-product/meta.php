@@ -420,7 +420,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
  <div class="accordion">
 
 
-    <!-- 1 - detajli -->
+    <!-- 1 - detajli --> <!-- skriveno na ortopas pojasu -->
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_1","options"); ?></h3>
@@ -466,6 +467,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
     
     
      
+     <?php endif; /* end skrivanje detalja na ortopasu */ ?>
+
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -521,7 +524,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
     </div>
 
 
-    <!-- 3 - savjeti za pranje-->
+    <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu -->
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
@@ -549,6 +553,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
     </div>
 
 
+
+    <?php endif; /* end skrivanje savjeta za pranje na ortopasu */ ?>
 
     <!-- 4 povrati in menjave -->
     <div class="accordion-item">
