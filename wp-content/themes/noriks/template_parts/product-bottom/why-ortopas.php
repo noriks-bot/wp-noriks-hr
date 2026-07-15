@@ -16,6 +16,7 @@ $opz_vid_dir      = get_template_directory_uri() . '/img/ortopas-videos/';
 $opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-9.png'; // 1) zadovoljni kupci (slika)
 $opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodno oslobađanje (video)
 $opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) pravi uzrok (video)
+$opz_img_indik    = 'https://noriks.com/hr/wp-content/uploads/2026/07/noriks_static_indikacije_HR_1x1.png'; // 5) kako funkcionira (slika)
 
 /* Kartice (kružni videi) — 4) sekcija s 3 kartice */
 $opz_cards = array(
@@ -99,6 +100,22 @@ $opz_cards = array(
           <p class="opz-card-text"><?php echo esc_html( $opz_card['text'] ); ?></p>
         </div>
       <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5) Kako funkcionira NORIKS pojas? ============ -->
+<section class="opz-why">
+  <div class="opz-wrap opz-row">
+    <div class="opz-col opz-media">
+      <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_img_indik ); ?>" alt="Indikacije — kod čega pomaže NORIKS ortopedski pojas" />
+    </div>
+    <div class="opz-col opz-copy">
+      <h2 class="opz-title">Kako funkcionira NORIKS pojas?</h2>
+      <p>NORIKS pojas <strong>ciljano stabilizira</strong> područje L5 kralježnice pomoću <strong>ciljane kompresije</strong>, pravilno poravnava zdjelicu i vraća SI-zglob u njegov prirodni raspon kretanja.</p>
+      <p><strong>Podupire problematično područje</strong>, može rasteretiti međukralježničke diskove i time smanjiti pritisak na išijasni živac.</p>
+      <p>Ciljana kompresija potiče cirkulaciju, čime se može poduprijeti proces samoizlječenja.</p>
+      <p>Ova kombinacija može pružiti brzo olakšanje kod išijasa, bolova u leđima i SI-problema, kao i <strong>dugotrajno ublažavanje boli</strong> uz redovitu primjenu.</p>
     </div>
   </div>
 </section>
