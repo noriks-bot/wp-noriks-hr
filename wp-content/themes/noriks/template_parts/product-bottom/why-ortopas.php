@@ -203,7 +203,8 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
   .opz-card-title { font-size: 18px; font-weight: 800; color: #1c1c1c; margin: 0; line-height: 1.2; }
   .opz-card-text { font-size: 14px; line-height: 1.55; color: #555; margin: 0; }
 
-  /* --- 6) usporedna tablica (noriks zeleni stil) --- */
+  /* --- usporedna tablica (noriks zeleni stil) --- */
+  .opz-why.opz-compare { background: #f7f7f7; }
   .opz-table { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
   .opz-table th, .opz-table td { padding: 13px 14px; text-align: center; vertical-align: middle; }
   .opz-table thead th { background: #22a45d; color: #fff; font-size: 15px; font-weight: 800; }
