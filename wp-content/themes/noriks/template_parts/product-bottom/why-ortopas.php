@@ -221,6 +221,20 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
 </section>
 
 <style>
+  /* Kratki opis (short description) pojasa: sakrij standardne točke (•),
+     ostaje samo ✅ iz teksta; malo razmaka između "Prednosti:" i liste.
+     (Ovaj se predložak učitava samo na orto-ortopas stranicama.) */
+  .woocommerce-product-details__short-description ul {
+      list-style: none;
+      margin: 12px 0 0;
+      padding-left: 0;
+  }
+  .woocommerce-product-details__short-description ul li {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+  }
+
   .opz-why { padding: 44px 0; }
   .opz-why.opz-customers { background: #f7f7f7; }
   .opz-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
