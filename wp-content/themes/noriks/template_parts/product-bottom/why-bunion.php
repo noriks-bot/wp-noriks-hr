@@ -23,6 +23,16 @@ $bun_results = array(
     array( 'pct' => 88, 'text' => 'korisnika vidjelo je vidljiva poboljšanja u poravnanju prstiju nakon samo 30 dana dosljedne uporabe (30 min/dan)' ),
 );
 
+// Zašto odabrati nas — usporedba (isti stil kao knc-table na čarapama sa zatvaračem)
+$bun_cmp = array(
+    '90-dnevno jamstvo povrata novca',
+    'Ublažava nelagodu',
+    'Sprječava rast čuklja',
+    'Poboljšava stanje čuklja s vremenom',
+    'Pokretni dizajn — možete hodati s njim',
+    'Izdržljiv i dugotrajan',
+);
+
 // Kako se koristi — 3 koraka (video + opis)
 $bun_steps = array(
     array( 'video' => $bun_vid_dir . 'step-1.mp4', 'caption' => 'Pričvrstite NORIKS korektor na palac i stopalo' ),
@@ -140,6 +150,35 @@ $bun_steps = array(
   </div>
 </section>
 
+<!-- ============ 6) Zašto odabrati nas? (usporedna tablica, knc stil) ============ -->
+<section class="bun-cmp-section">
+  <div class="bun-cmp-wrap">
+    <h2 class="bun-cmp-title">Zašto odabrati nas?</h2>
+    <p class="bun-cmp-lead">Ne nasjedajte na <span class="bun-hl">JEFTINE imitacije</span></p>
+    <p class="bun-cmp-sub">Kako se <strong>NORIKS korektor čukljeva</strong> uspoređuje s ostalima:</p>
+    <div class="bun-cmp-scroll">
+      <table class="bun-cmp-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="bun-us">NORIKS</th>
+            <th class="bun-comp">Ostali korektori</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ( $bun_cmp as $bun_row ) : ?>
+            <tr>
+              <td><?php echo esc_html( $bun_row ); ?></td>
+              <td class="us ok">✓</td>
+              <td class="no">✕</td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <style>
   /* Kratki opis (short description): sakrij standardne točke (•), ostaje samo ✅;
      razmak iznad "Prednosti:" i više prostora ispod liste.
@@ -204,6 +243,32 @@ $bun_steps = array(
   .bun-ring { width: 70px; height: 70px; flex: 0 0 70px; }
   .bun-ring-txt { font-size: 16px; font-weight: 800; fill: #1a86d0; }
   .bun-result-text { font-size: 14.5px; line-height: 1.5; color: #333; margin: 0; }
+
+  /* 6) Zašto odabrati nas — usporedna tablica (isti stil kao knc-table) */
+  .bun-cmp-section { background:#fff; padding:44px 0; }
+  .bun-cmp-wrap { max-width:940px; margin:0 auto; padding:0 16px; }
+  .bun-cmp-title { text-align:center; font-size:clamp(24px,3vw,34px); font-weight:800; color:#111; margin:0 0 8px; }
+  .bun-cmp-lead { text-align:center; font-size:18px; font-weight:800; color:#111; margin:0 0 6px; }
+  .bun-cmp-sub { text-align:center; font-size:14px; color:#444; margin:0 0 24px; }
+  .bun-cmp-scroll { border-radius:16px; overflow:hidden; box-shadow:0 12px 34px rgba(18,48,90,.12); border:1px solid #edf0f4; }
+  .bun-cmp-table { width:100%; border-collapse:collapse; table-layout:fixed; margin:0 !important; }
+  .bun-cmp-table th, .bun-cmp-table td { padding:15px 12px; text-align:center; font-size:15px; }
+  .bun-cmp-table thead th { color:#fff; font-weight:700; vertical-align:middle; font-size:14px; }
+  .bun-cmp-table thead th:first-child { width:52%; background:#fff; }
+  .bun-cmp-table .bun-comp { background:#767676; }
+  .bun-cmp-table .bun-us { background:#111; }
+  .bun-cmp-table tbody td:first-child { text-align:left; font-weight:600; color:#111; font-size:14px; line-height:1.3; padding-left:18px; }
+  .bun-cmp-table tbody tr { border-bottom:1px solid #eef0f4; }
+  .bun-cmp-table tbody tr:nth-child(even) { background:#fafbfc; }
+  .bun-cmp-table td.ok { color:#1a9e5f; font-size:19px; font-weight:700; }
+  .bun-cmp-table td.no { color:#d64545; font-size:18px; font-weight:700; }
+  .bun-cmp-table td.us { background:#f3f3f3 !important; }
+  .bun-cmp-table td.us.ok { color:#1a9e5f; }
+  @media (max-width:600px) {
+    .bun-cmp-table th, .bun-cmp-table td { padding:12px 6px; font-size:13px; }
+    .bun-cmp-table thead th { font-size:12px; }
+    .bun-cmp-table tbody td:first-child { font-size:12px; padding-left:10px; }
+  }
 
   @media (max-width: 820px) {
     .bun-row { grid-template-columns: 1fr; gap: 22px; }
