@@ -54,6 +54,24 @@ $bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
 </section>
 
 <style>
+  /* Kratki opis (short description): sakrij standardne točke (•), ostaje samo ✅;
+     razmak iznad "Prednosti:" i više prostora ispod liste.
+     (Ovaj se predložak učitava samo na orto-bunion stranicama.) */
+  .woocommerce-product-details__short-description ul {
+      list-style: none;
+      margin: 8px 0 26px;
+      padding-left: 0;
+  }
+  .woocommerce-product-details__short-description ul li {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+  }
+  .woocommerce-product-details__short-description p:has(+ ul) {
+      margin-top: 20px;
+      margin-bottom: 4px;
+  }
+
   .bun-why { padding: 44px 0; }
   .bun-why.bun-intro { background: #fbf9f4; }
   .bun-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
