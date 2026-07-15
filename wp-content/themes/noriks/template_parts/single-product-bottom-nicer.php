@@ -33,9 +33,15 @@ if ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ) {
     include $noriks_pb_dir . 'why-bokserice.php';
 }
 
-// KOMPRESIJSKE NOGAVICE (compression socks)
-if ( noriks_is_type( 'kompresijske-nogavice' ) ) {
+// KOMPRESIJSKE NOGAVICE (compression socks) — not the back belt
+// (the belt may still carry the socks category from being duplicated)
+if ( noriks_is_type( 'kompresijske-nogavice' ) && ! noriks_is_type( 'ortopas' ) ) {
     include $noriks_pb_dir . 'why-kompresijske.php';
+}
+
+// ORTOPEDSKI POJAS ZA LEĐA (orthopedic back belt)
+if ( noriks_is_type( 'ortopas' ) ) {
+    include $noriks_pb_dir . 'why-ortopas.php';
 }
 
 // SHARED reviews / social proof (all products)
