@@ -226,13 +226,18 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
      (Ovaj se predložak učitava samo na orto-ortopas stranicama.) */
   .woocommerce-product-details__short-description ul {
       list-style: none;
-      margin: 12px 0 0;
+      margin: 8px 0 26px;   /* više razmaka ispod liste */
       padding-left: 0;
   }
   .woocommerce-product-details__short-description ul li {
       list-style: none;
       padding-left: 0;
       margin-left: 0;
+  }
+  /* razmak iznad "Prednosti:" (paragraf neposredno prije liste) */
+  .woocommerce-product-details__short-description p:has(+ ul) {
+      margin-top: 20px;
+      margin-bottom: 4px;
   }
 
   .opz-why { padding: 44px 0; }

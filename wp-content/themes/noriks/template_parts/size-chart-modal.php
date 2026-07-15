@@ -198,13 +198,21 @@
   <div  style="<?php if ( noriks_is_type( 'starter' ) ): ?>  display: block; <?php endif; ?>"
         class="size-chart-left">
       
-      <?php if ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ): ?>
+      <?php if ( noriks_is_type( 'ortopas' ) ): ?>
 
-      
+      <div style="line-height:1.9; text-align:left; margin:40px 0; padding:0 6px; font-size:15px; color:#111;">
+        <strong>S/M</strong> : opseg bokova 75–110 cm<br>
+        <strong>L/XL</strong> : opseg bokova 110–140 cm<br><br>
+        Molimo izmjerite opseg bokova na najširem mjestu kako biste pronašli svoju veličinu.
+      </div>
+
+      <?php elseif ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ): ?>
+
+
     <img
-    
+
     style="margin-top: 70px;margin-bottom: 70px;"
-    
+
       src="/hr/wp-content/uploads/2025/12/boxers_size.jpg"
       alt="Size Guide">
       

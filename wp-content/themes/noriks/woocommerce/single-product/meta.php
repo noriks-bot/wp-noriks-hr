@@ -470,7 +470,15 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
       </div>
       <div class="accordion-content">
           
-           <?php if( $is_boxers ): ?>
+           <?php if( noriks_is_type( 'ortopas', $current_product_id ) ): ?>
+
+          <div style="line-height:1.9;">
+            <strong>S/M</strong> : opseg bokova 75–110 cm<br>
+            <strong>L/XL</strong> : opseg bokova 110–140 cm<br><br>
+            Molimo izmjerite opseg bokova na najširem mjestu kako biste pronašli svoju veličinu.
+          </div>
+
+        <?php elseif( $is_boxers ): ?>
 
 
           <img class="js-open-size-chart" style="cursor:pointer;" src="/hr/wp-content/uploads/2025/12/boxers_size.jpg">
