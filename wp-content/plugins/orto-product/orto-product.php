@@ -1033,16 +1033,22 @@ function gck_render_bundle_selector() {
       #bundle-selector.is-ortopas .bundle-attr-row { width: 100% !important; display: block !important; }
       #bundle-selector.is-ortopas .gck-size-select {
           display: block !important;
-          width: 100% !important;
-          max-width: 100% !important;   /* pobijedi bazni .bundle-box select { max-width:150px } */
+          width: 50% !important;        /* desktop: 50% */
+          max-width: 50% !important;    /* pobijedi bazni .bundle-box select { max-width:150px } */
           min-width: 0 !important;
-          flex: 1 1 auto !important;    /* pobijedi bazni flex: 0 0 auto */
+          flex: 0 0 auto !important;
           box-sizing: border-box;
-          font-size: 13px;
-          padding: 11px 32px 11px 12px;
+          font-size: 12px;
+          padding: 11px 30px 11px 12px;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+      }
+      @media (max-width: 767px) {
+          #bundle-selector.is-ortopas .gck-size-select {
+              width: 80% !important;    /* mobitel: 80% */
+              max-width: 80% !important;
+          }
       }
     </style>
     <?php endif; ?>
