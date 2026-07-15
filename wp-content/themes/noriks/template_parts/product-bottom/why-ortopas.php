@@ -8,12 +8,11 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /* ------------------------------------------------------------------
- * SLIKE — zamenjaj s pravimi (kolaž kupaca / osoba s pojasom / anatomija).
- * Za zdaj so nastavljene začasne devhr slike; naloži prave in vstavi URL.
+ * MEDIJI po sekcijama.
  * ------------------------------------------------------------------ */
-$opz_img_collage = 'https://devhr.noriks.com/wp-content/uploads/2026/07/img4_reviews_HR.png'; // TODO: kolaž zadovoljnih kupaca + zvjezdice
-$opz_img_relief  = 'https://devhr.noriks.com/wp-content/uploads/2026/07/img1_zones_HR.png';   // TODO: osoba koja nosi pojas
-$opz_img_cause   = 'https://devhr.noriks.com/wp-content/uploads/2026/07/img6_callouts_HR.png'; // TODO: anatomija (kralježnica / išijasni živac)
+$opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-9.png'; // 1) zadovoljni kupci
+$opz_video_relief = 'https://noriks.com/hr/wp-content/uploads/2026/07/video_1_HR.mp4';   // 2) prirodno oslobađanje (video)
+$opz_img_cause    = 'https://noriks.com/hr/wp-content/uploads/2026/07/back_HR.png';       // 3) pravi uzrok (anatomija)
 ?>
 
 <!-- ============ 1) Preko 14.000 zadovoljnih kupaca ============ -->
@@ -34,7 +33,7 @@ $opz_img_cause   = 'https://devhr.noriks.com/wp-content/uploads/2026/07/img6_cal
 <section class="opz-why">
   <div class="opz-wrap opz-row">
     <div class="opz-col opz-media">
-      <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_img_relief ); ?>" alt="NORIKS ortopedski pojas na tijelu" />
+      <video src="<?php echo esc_url( $opz_video_relief ); ?>" muted autoplay loop playsinline preload="metadata"></video>
     </div>
     <div class="opz-col opz-copy">
       <h2 class="opz-title">Prirodno oslobađanje od boli</h2>
@@ -64,7 +63,8 @@ $opz_img_cause   = 'https://devhr.noriks.com/wp-content/uploads/2026/07/img6_cal
   .opz-why.opz-customers { background: #f7f7f7; }
   .opz-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
   .opz-row { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
-  .opz-media img { width: 100%; height: auto; border-radius: 12px; display: block; }
+  .opz-media img,
+  .opz-media video { width: 100%; height: auto; border-radius: 12px; display: block; }
   .opz-stars { color: #f5a623; font-size: 24px; letter-spacing: 2px; margin-bottom: 10px; }
   .opz-title { font-size: clamp(26px,3.2vw,40px); font-weight: 800; color: #1c1c1c; line-height: 1.15; margin: 0 0 16px; }
   .opz-copy p { font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 14px; }
