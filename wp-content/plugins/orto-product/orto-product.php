@@ -1024,7 +1024,21 @@ function gck_render_bundle_selector() {
     </div>
     <?php endif; ?>
 
-    <div id="bundle-selector" class="bundle-box" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
+    <?php if ( $gck_is_ortopas ) : ?>
+    <style>
+      /* Ortopas: duga imena veličina ("S/M (Opseg bokova 75–110 cm)") — širi select, manji font. */
+      #bundle-selector.is-ortopas .bundle-attr-row { width: 100%; }
+      #bundle-selector.is-ortopas .gck-size-select {
+          width: 100%;
+          min-width: 0;
+          max-width: 100%;
+          font-size: 12px;
+          padding: 8px 28px 8px 10px;
+          white-space: normal;
+      }
+    </style>
+    <?php endif; ?>
+    <div id="bundle-selector" class="bundle-box<?php echo $gck_is_ortopas ? ' is-ortopas' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
         $loop_index    = 0;
