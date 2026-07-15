@@ -36,6 +36,19 @@ $opz_cards = array(
         'text'  => 'Temelji se na ciljanoj kompresijskoj tehnologiji',
     ),
 );
+
+/* Usporedna tablica — 6) sekcija. array( naziv, NORIKS(bool), Physio(bool) ) */
+$opz_cmp_rows = array(
+    array( 'Oslobađanje od boli',            true,  true  ),
+    array( 'Dugotrajan učinak',              true,  false ),
+    array( 'Povoljno',                       true,  false ),
+    array( 'Trenutno opuštanje',             true,  false ),
+    array( 'Bez čekanja',                    true,  false ),
+    array( '60 dana jamstva povrata novca',  true,  false ),
+    array( 'Dugoročni troškovi',             false, true  ),
+);
+$opz_yes = '<svg class="opz-yes" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4 4 10-10" fill="none" stroke="#22a45d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+$opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" fill="none" stroke="#dc3545" stroke-width="2.4" stroke-linecap="round"/></svg>';
 ?>
 
 <!-- ============ 1) Preko 14.000 zadovoljnih kupaca ============ -->
@@ -120,6 +133,36 @@ $opz_cards = array(
   </div>
 </section>
 
+<!-- ============ 6) NORIKS pojas u usporedbi (tablica) ============ -->
+<section class="opz-why opz-compare">
+  <div class="opz-wrap opz-row">
+    <div class="opz-col opz-copy">
+      <h2 class="opz-title">NORIKS pojas u usporedbi</h2>
+      <p class="opz-sub">Ciljano djeluje na donji dio leđa kako bi smanjio opterećenja.</p>
+    </div>
+    <div class="opz-col">
+      <table class="opz-table">
+        <thead>
+          <tr>
+            <th class="opz-th-feat"></th>
+            <th class="opz-th-brand">NORIKS</th>
+            <th class="opz-th-alt">Physio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ( $opz_cmp_rows as $opz_r ) : ?>
+            <tr>
+              <th class="opz-feat"><?php echo esc_html( $opz_r[0] ); ?></th>
+              <td class="opz-brand"><?php echo $opz_r[1] ? $opz_yes : $opz_no; ?></td>
+              <td class="opz-alt"><?php echo $opz_r[2] ? $opz_yes : $opz_no; ?></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <style>
   .opz-why { padding: 44px 0; }
   .opz-why.opz-customers { background: #f7f7f7; }
@@ -144,9 +187,24 @@ $opz_cards = array(
   .opz-card-title { font-size: 18px; font-weight: 800; color: #1c1c1c; margin: 0; line-height: 1.2; }
   .opz-card-text { font-size: 14px; line-height: 1.55; color: #555; margin: 0; }
 
+  /* --- 6) usporedna tablica (noriks zeleni stil) --- */
+  .opz-table { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
+  .opz-table th, .opz-table td { padding: 13px 14px; text-align: center; vertical-align: middle; }
+  .opz-table thead th { background: #22a45d; color: #fff; font-size: 15px; font-weight: 800; }
+  .opz-table thead .opz-th-feat { background: #22a45d; }
+  .opz-table .opz-feat { background: #22a45d; color: #fff; font-weight: 700; text-align: left; font-size: 14px; line-height: 1.25; width: 55%; }
+  .opz-table tbody tr td { border-bottom: 1px solid #eee; background: #fff; }
+  .opz-table tbody tr:last-child td,
+  .opz-table tbody tr:last-child .opz-feat { border-bottom: 0; }
+  .opz-table .opz-brand { background: #f2fbf6; }
+  .opz-yes, .opz-no { display: inline-block; vertical-align: middle; }
+
   @media (max-width: 820px) {
     .opz-row { grid-template-columns: 1fr; gap: 22px; }
     .opz-title { text-align: left; }
     .opz-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+    .opz-table th, .opz-table td { padding: 11px 10px; }
+    .opz-table .opz-feat { font-size: 13px; }
+    .opz-table thead th { font-size: 14px; }
   }
 </style>
