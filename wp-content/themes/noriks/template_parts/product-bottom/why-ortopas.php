@@ -9,10 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /* ------------------------------------------------------------------
  * MEDIJI po sekcijama.
+ * Slika 1 ostaje na WP mediji; videi 2 i 3 su u temi (git) i pozivaju se
+ * relativno preko get_template_directory_uri() — /img/ortopas-videos/.
  * ------------------------------------------------------------------ */
-$opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-9.png'; // 1) zadovoljni kupci
-$opz_video_relief = 'https://noriks.com/hr/wp-content/uploads/2026/07/video_1_HR.mp4';   // 2) prirodno oslobađanje (video)
-$opz_img_cause    = 'https://noriks.com/hr/wp-content/uploads/2026/07/back_HR.png';       // 3) pravi uzrok (anatomija)
+$opz_vid_dir      = get_template_directory_uri() . '/img/ortopas-videos/';
+$opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-9.png'; // 1) zadovoljni kupci (slika)
+$opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodno oslobađanje (video)
+$opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) pravi uzrok (video)
 ?>
 
 <!-- ============ 1) Preko 14.000 zadovoljnih kupaca ============ -->
@@ -48,7 +51,7 @@ $opz_img_cause    = 'https://noriks.com/hr/wp-content/uploads/2026/07/back_HR.pn
 <section class="opz-why opz-cause">
   <div class="opz-wrap opz-row opz-reverse">
     <div class="opz-col opz-media">
-      <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_img_cause ); ?>" alt="Uzrok bolova u leđima — pritisak na išijasni živac" />
+      <video src="<?php echo esc_url( $opz_video_cause ); ?>" muted autoplay loop playsinline preload="metadata"></video>
     </div>
     <div class="opz-col opz-copy">
       <h2 class="opz-title">Pravi uzrok bolova u leđima i išijasa</h2>
