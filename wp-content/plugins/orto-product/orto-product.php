@@ -455,13 +455,24 @@ function gck_render_bundle_selector() {
     }
 
     $custom_attrs = gck_get_custom_attributes_in_order( $product );
-    if ( count( $custom_attrs ) < 2 ) return;
+
+    // Orthopedic back belt (orto-ortopas) is the ONLY product sold with a single
+    // "Veličina" attribute and no colour. Every other product keeps the original
+    // 2-attribute (colour + size) requirement unchanged.
+    $gck_is_ortopas = has_term( 'orto-ortopas', 'product_cat', $product_id );
+
+    if ( ! $gck_is_ortopas && count( $custom_attrs ) < 2 ) return;
 
     $split  = gck_split_attrs_color_size( $custom_attrs );
     $colors = $split['colors'];
     $sizes  = $split['sizes'];
 
-    if ( empty($colors) || empty($sizes) ) return;
+    if ( $gck_is_ortopas ) {
+        // Belt only needs a selectable size.
+        if ( empty($sizes) ) return;
+    } else {
+        if ( empty($colors) || empty($sizes) ) return;
+    }
 
     $attr_groups = gck_pair_color_size_groups( $colors, $sizes );
 
