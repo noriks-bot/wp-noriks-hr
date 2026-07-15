@@ -1026,15 +1026,22 @@ function gck_render_bundle_selector() {
 
     <?php if ( $gck_is_ortopas ) : ?>
     <style>
-      /* Ortopas: duga imena veličina ("S/M (Opseg bokova 75–110 cm)") — širi select, manji font. */
-      #bundle-selector.is-ortopas .bundle-attr-row { width: 100%; }
+      /* Ortopas: duga imena veličina ("S/M (Opseg bokova 75–110 cm)") — puni širine select,
+         manji font, jedan red (bez lomljenja). */
+      #bundle-selector.is-ortopas .bundle-pairs,
+      #bundle-selector.is-ortopas .bundle-pair,
+      #bundle-selector.is-ortopas .bundle-attr-row { width: 100%; display: block; }
       #bundle-selector.is-ortopas .gck-size-select {
+          display: block;
           width: 100%;
           min-width: 0;
-          max-width: 100%;
-          font-size: 12px;
-          padding: 8px 28px 8px 10px;
-          white-space: normal;
+          max-width: none;
+          box-sizing: border-box;
+          font-size: 11.5px;
+          padding: 10px 30px 10px 12px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
       }
     </style>
     <?php endif; ?>

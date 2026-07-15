@@ -17,6 +17,7 @@ $opz_img_collage  = 'https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr
 $opz_video_relief = $opz_vid_dir . 'relief.mp4';                                          // 2) prirodno oslobađanje (video)
 $opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                           // 3) pravi uzrok (video)
 $opz_img_indik    = 'https://noriks.com/hr/wp-content/uploads/2026/07/noriks_static_indikacije_HR_1x1.png'; // 5) kako funkcionira (slika)
+$opz_video_feat   = $opz_vid_dir . 'features.mp4';                                        // 6) inovativne značajke (video)
 
 /* Kartice (kružni videi) — 4) sekcija s 3 kartice */
 $opz_cards = array(
@@ -133,7 +134,22 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
   </div>
 </section>
 
-<!-- ============ 6) NORIKS pojas u usporedbi (tablica) ============ -->
+<!-- ============ 6) Inovativne značajke ============ -->
+<section class="opz-why">
+  <div class="opz-wrap opz-row">
+    <div class="opz-col opz-media">
+      <video src="<?php echo esc_url( $opz_video_feat ); ?>" muted autoplay loop playsinline preload="metadata"></video>
+    </div>
+    <div class="opz-col opz-copy">
+      <h2 class="opz-title">Inovativne značajke</h2>
+      <p><strong>Tanak i praktičan:</strong> Razvijen za svakodnevnu upotrebu i udobno pristaje ispod većine odjeće, tako da nitko ne primijeti da ga nosite!</p>
+      <p><strong>Podesiva kompresija:</strong> Omogućuje vam da prilagodite stupanj potpore svojim potrebama i pruža maksimalnu udobnost.</p>
+      <p>Pristup fizioterapeutima i stručnjacima za bol često je ograničen te povezan s visokim troškovima i utroškom vremena. <strong>NORIKS pojas nudi profesionalno rješenje na najvišoj razini</strong> i predstavlja učinkovitu i pristupačnu alternativu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7) NORIKS pojas u usporedbi (tablica) ============ -->
 <section class="opz-why opz-compare">
   <div class="opz-wrap opz-row">
     <div class="opz-col opz-copy">
