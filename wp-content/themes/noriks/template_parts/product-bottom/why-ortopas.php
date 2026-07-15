@@ -49,7 +49,7 @@ $opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                 
 
 <!-- ============ 3) Pravi uzrok bolova u leđima i išijasa ============ -->
 <section class="opz-why opz-cause">
-  <div class="opz-wrap opz-row opz-reverse">
+  <div class="opz-wrap opz-row">
     <div class="opz-col opz-media">
       <video src="<?php echo esc_url( $opz_video_cause ); ?>" muted autoplay loop playsinline preload="metadata"></video>
     </div>
@@ -73,14 +73,8 @@ $opz_video_cause  = $opz_vid_dir . 'cause.mp4';                                 
   .opz-copy p { font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 14px; }
   .opz-sub { font-size: 17px; line-height: 1.6; color: #333; margin: 0; }
 
-  /* section 3: image on the right */
-  .opz-reverse .opz-media { order: 2; }
-  .opz-reverse .opz-copy { order: 1; }
-
   @media (max-width: 820px) {
     .opz-row { grid-template-columns: 1fr; gap: 22px; }
-    .opz-reverse .opz-media { order: 0; }
-    .opz-reverse .opz-copy { order: 0; }
     .opz-title { text-align: left; }
   }
 </style>
