@@ -48,6 +48,28 @@ $opz_cmp_rows = array(
     array( '60 dana jamstva povrata novca',  true,  false ),
     array( 'Dugoročni troškovi',             false, true  ),
 );
+/* Recenzije sa slikom — 8) sekcija */
+$opz_reviews = array(
+    array(
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp',
+        'title' => 'Velika pomoć protiv bolova u donjem dijelu leđa',
+        'text'  => 'NORIKS pojas mi je uistinu jako olakšao život. Radi točno ono što obećava. Ponovno se mogu sagnuti bez bolova.',
+        'name'  => 'Elizabeta M.',
+    ),
+    array(
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.jpg',
+        'title' => 'Mekan i udoban',
+        'text'  => 'Moj fizioterapeut mi je preporučio pojas protiv bolova u leđima. Prije sam probao i druge pojaseve, ali ovaj je puno udobniji za sjedenje i saginjanje. Ipak pruža izvrsnu potporu!',
+        'name'  => 'Julija U.',
+    ),
+    array(
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp',
+        'title' => 'Top!',
+        'text'  => 'Pomaže mi da sjedim uspravno i imam osjećaj da hodam uspravnije. Bolovi su se višestruko smanjili i konačno mogu bezbolno ustati i nakon duljeg sjedenja. Nosim pojas otprilike 2-3 sata dnevno – uglavnom na poslu.',
+        'name'  => 'Ivan D.',
+    ),
+);
+
 $opz_yes = '<svg class="opz-yes" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4 4 10-10" fill="none" stroke="#22a45d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" fill="none" stroke="#dc3545" stroke-width="2.4" stroke-linecap="round"/></svg>';
 ?>
@@ -179,6 +201,25 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
   </div>
 </section>
 
+<!-- ============ 8) Recenzije kupaca (sa slikom) ============ -->
+<section class="opz-why opz-reviews">
+  <div class="opz-wrap">
+    <div class="opz-reviews-grid">
+      <?php foreach ( $opz_reviews as $opz_rev ) : ?>
+        <div class="opz-review">
+          <div class="opz-review-media">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_rev['img'] ); ?>" alt="NORIKS pojas — recenzija kupca <?php echo esc_attr( $opz_rev['name'] ); ?>" />
+          </div>
+          <div class="opz-review-stars" aria-hidden="true">★★★★★</div>
+          <h3 class="opz-review-title"><?php echo esc_html( $opz_rev['title'] ); ?></h3>
+          <p class="opz-review-text"><?php echo esc_html( $opz_rev['text'] ); ?></p>
+          <div class="opz-review-name"><?php echo esc_html( $opz_rev['name'] ); ?></div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <style>
   .opz-why { padding: 44px 0; }
   .opz-why.opz-customers { background: #f7f7f7; }
@@ -216,10 +257,21 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
   .opz-table .opz-brand { background: #f2fbf6; }
   .opz-yes, .opz-no { display: inline-block; vertical-align: middle; }
 
+  /* --- 8) recenzije kupaca (sa slikom) --- */
+  .opz-reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .opz-review { background: #fafafa; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+  .opz-review-media { width: 100%; aspect-ratio: 1 / 1; background: #eee; }
+  .opz-review-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .opz-review-stars { color: #f5b301; font-size: 20px; letter-spacing: 2px; margin: 16px 0 8px; }
+  .opz-review-title { font-size: 17px; font-weight: 800; color: #1c1c1c; margin: 0 14px 10px; line-height: 1.25; }
+  .opz-review-text { font-size: 14px; line-height: 1.6; color: #444; margin: 0 16px 14px; }
+  .opz-review-name { font-size: 13px; font-style: italic; font-weight: 700; color: #333; border-top: 1px solid #e6e6e6; margin: 0 16px; padding: 12px 0 18px; }
+
   @media (max-width: 820px) {
     .opz-row { grid-template-columns: 1fr; gap: 22px; }
     .opz-title { text-align: left; }
     .opz-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+    .opz-reviews-grid { grid-template-columns: 1fr; gap: 18px; }
     .opz-table th, .opz-table td { padding: 11px 10px; }
     .opz-table .opz-feat { font-size: 13px; }
     .opz-table thead th { font-size: 14px; }
