@@ -456,18 +456,18 @@ function gck_render_bundle_selector() {
 
     $custom_attrs = gck_get_custom_attributes_in_order( $product );
 
-    // Orthopedic back belt (orto-ortopas) is the ONLY product sold with a single
-    // "Veličina" attribute and no colour. Every other product keeps the original
-    // 2-attribute (colour + size) requirement unchanged.
-    $gck_is_ortopas = has_term( 'orto-ortopas', 'product_cat', $product_id );
+    // Single-size orto products (back belt orto-ortopas, bunion corrector orto-bunion)
+    // are sold with a single "Veličina" attribute and no colour. Every other product
+    // keeps the original 2-attribute (colour + size) requirement unchanged.
+    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-bunion' ), 'product_cat', $product_id );
 
-    if ( ! $gck_is_ortopas && count( $custom_attrs ) < 2 ) return;
+    if ( ! $gck_single_size && count( $custom_attrs ) < 2 ) return;
 
     $split  = gck_split_attrs_color_size( $custom_attrs );
     $colors = $split['colors'];
     $sizes  = $split['sizes'];
 
-    if ( $gck_is_ortopas ) {
+    if ( $gck_single_size ) {
         // Belt only needs a selectable size.
         if ( empty($sizes) ) return;
     } else {
@@ -726,7 +726,7 @@ function gck_render_bundle_selector() {
 
     <?php
     // Your extra conditional style block (kept)
-    if (  !has_term( array( 'orto-starter', 'orto-majice', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas' ), 'product_cat', $product_id )  )   :
+    if (  !has_term( array( 'orto-starter', 'orto-majice', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-bunion' ), 'product_cat', $product_id )  )   :
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
@@ -1024,14 +1024,14 @@ function gck_render_bundle_selector() {
     </div>
     <?php endif; ?>
 
-    <?php if ( $gck_is_ortopas ) : ?>
+    <?php if ( $gck_single_size ) : ?>
     <style>
       /* Ortopas: duga imena veličina ("S/M (Opseg bokova 75–110 cm)") — puni širine select,
          manji font, jedan red (bez lomljenja). */
-      #bundle-selector.is-ortopas .bundle-pairs,
-      #bundle-selector.is-ortopas .bundle-pair,
-      #bundle-selector.is-ortopas .bundle-attr-row { width: 100% !important; display: block !important; }
-      #bundle-selector.is-ortopas .gck-size-select {
+      #bundle-selector.is-single-size .bundle-pairs,
+      #bundle-selector.is-single-size .bundle-pair,
+      #bundle-selector.is-single-size .bundle-attr-row { width: 100% !important; display: block !important; }
+      #bundle-selector.is-single-size .gck-size-select {
           display: block !important;
           width: 50% !important;        /* desktop: 50% */
           max-width: 50% !important;    /* pobijedi bazni .bundle-box select { max-width:150px } */
@@ -1045,14 +1045,14 @@ function gck_render_bundle_selector() {
           overflow: hidden;
       }
       @media (max-width: 767px) {
-          #bundle-selector.is-ortopas .gck-size-select {
+          #bundle-selector.is-single-size .gck-size-select {
               width: 80% !important;    /* mobitel: 80% */
               max-width: 80% !important;
           }
       }
     </style>
     <?php endif; ?>
-    <div id="bundle-selector" class="bundle-box<?php echo $gck_is_ortopas ? ' is-ortopas' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
+    <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
         $loop_index    = 0;

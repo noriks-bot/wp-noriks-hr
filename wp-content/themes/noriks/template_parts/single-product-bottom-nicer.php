@@ -33,15 +33,20 @@ if ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ) {
     include $noriks_pb_dir . 'why-bokserice.php';
 }
 
-// KOMPRESIJSKE NOGAVICE (compression socks) — not the back belt
-// (the belt may still carry the socks category from being duplicated)
-if ( noriks_is_type( 'kompresijske-nogavice' ) && ! noriks_is_type( 'ortopas' ) ) {
+// KOMPRESIJSKE NOGAVICE (compression socks) — not the back belt / bunion corrector
+// (those may still carry the socks category from being duplicated)
+if ( noriks_is_type( 'kompresijske-nogavice' ) && ! noriks_is_type( 'ortopas' ) && ! noriks_is_type( 'bunion' ) ) {
     include $noriks_pb_dir . 'why-kompresijske.php';
 }
 
 // ORTOPEDSKI POJAS ZA LEĐA (orthopedic back belt)
 if ( noriks_is_type( 'ortopas' ) ) {
     include $noriks_pb_dir . 'why-ortopas.php';
+}
+
+// KOREKTOR ČUKLJEVA (bunion corrector)
+if ( noriks_is_type( 'bunion' ) ) {
+    include $noriks_pb_dir . 'why-bunion.php';
 }
 
 // SHARED reviews / social proof (all products)
