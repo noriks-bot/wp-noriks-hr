@@ -1030,15 +1030,16 @@ function gck_render_bundle_selector() {
          manji font, jedan red (bez lomljenja). */
       #bundle-selector.is-ortopas .bundle-pairs,
       #bundle-selector.is-ortopas .bundle-pair,
-      #bundle-selector.is-ortopas .bundle-attr-row { width: 100%; display: block; }
+      #bundle-selector.is-ortopas .bundle-attr-row { width: 100% !important; display: block !important; }
       #bundle-selector.is-ortopas .gck-size-select {
-          display: block;
-          width: 100%;
-          min-width: 0;
-          max-width: none;
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;   /* pobijedi bazni .bundle-box select { max-width:150px } */
+          min-width: 0 !important;
+          flex: 1 1 auto !important;    /* pobijedi bazni flex: 0 0 auto */
           box-sizing: border-box;
-          font-size: 11.5px;
-          padding: 10px 30px 10px 12px;
+          font-size: 13px;
+          padding: 11px 32px 11px 12px;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
