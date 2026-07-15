@@ -456,18 +456,24 @@ function gck_render_bundle_selector() {
 
     $custom_attrs = gck_get_custom_attributes_in_order( $product );
 
-    // Single-size orto products (back belt orto-ortopas, bunion corrector orto-bunion)
-    // are sold with a single "Veličina" attribute and no colour. Every other product
-    // keeps the original 2-attribute (colour + size) requirement unchanged.
-    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-bunion' ), 'product_cat', $product_id );
+    // Special orto products that don't use the standard colour + size selectors:
+    //  - orto-bunion  : quantity-only bundle, NO colour and NO size selectors.
+    //  - orto-ortopas : single "Veličina" attribute, no colour (size selector only).
+    // Every other product keeps the original 2-attribute (colour + size) requirement.
+    $gck_no_attrs    = has_term( 'orto-bunion', 'product_cat', $product_id );
+    $gck_single_size = has_term( 'orto-ortopas', 'product_cat', $product_id );
 
-    if ( ! $gck_single_size && count( $custom_attrs ) < 2 ) return;
+    if ( ! $gck_no_attrs && ! $gck_single_size && count( $custom_attrs ) < 2 ) return;
 
     $split  = gck_split_attrs_color_size( $custom_attrs );
     $colors = $split['colors'];
     $sizes  = $split['sizes'];
 
-    if ( $gck_single_size ) {
+    if ( $gck_no_attrs ) {
+        // Bunion: quantity-only, render offers with no colour/size pickers at all.
+        $colors = array();
+        $sizes  = array();
+    } elseif ( $gck_single_size ) {
         // Belt only needs a selectable size.
         if ( empty($sizes) ) return;
     } else {
@@ -1012,7 +1018,7 @@ function gck_render_bundle_selector() {
         </script>
     <?php endif; ?>
 
-    <?php if ( $show_countdown ) : ?>
+    <?php if ( $show_countdown && ! $gck_no_attrs ) : ?>
     <div class="gck-size-link-wrap" style="text-align:right; margin:0 0 8px 0;">
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right: 5px; width: 23px; height: 23px; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
@@ -1182,7 +1188,7 @@ function gck_render_bundle_selector() {
                         $gck_paid = (int) $gck_m[1];
                         $gck_free = (int) $gck_m[2];
                     }
-                    $gck_show_sections = ( $show_gratis && ! $show_group_titles && ( $gck_paid + $gck_free ) > 0 );
+                    $gck_show_sections = ( $show_gratis && ! $show_group_titles && ( $gck_paid + $gck_free ) > 0 && ! $gck_no_attrs );
                     ?>
                     <?php
                     // Render passes. Normal: single pass, all groups interleaved per pair.
