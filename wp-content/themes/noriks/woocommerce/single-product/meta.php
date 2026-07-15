@@ -98,7 +98,15 @@ global $product;
       </div>
     </section>
 
-
+    <?php if ( noriks_is_type( 'ortopas' ) ) : ?>
+    <!-- Ortopas: kartica "Provjereno od strane liječnika" (slika) -->
+    <div class="ortopas-doctor-card" style="margin:14px 0;">
+      <img src="https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-11.png"
+           alt="Provjereno od strane liječnika — NORIKS ortopedski pojas"
+           style="width:100%; height:auto; display:block; border-radius:10px;"
+           loading="lazy" decoding="async">
+    </div>
+    <?php endif; ?>
 
 
 <!-- date and countdown section -->
