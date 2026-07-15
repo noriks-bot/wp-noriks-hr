@@ -14,6 +14,15 @@ $bun_vid_dir = get_template_directory_uri() . '/img/bunion-videos/';
 $bun_video_1 = $bun_vid_dir . 'section-1.mp4'; // 1) One foot away
 $bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
 
+$bun_img_features = get_template_directory_uri() . '/img/bunion/features.png';
+
+// Pravi rezultati — postotci
+$bun_results = array(
+    array( 'pct' => 91, 'text' => 'korisnika prijavilo je smanjenje boli od čukljeva već od 2. sesije' ),
+    array( 'pct' => 90, 'text' => 'korisnika potpuno je uklonilo bol od čukljeva nakon samo 14 dana dosljedne uporabe (30 min/dan)' ),
+    array( 'pct' => 88, 'text' => 'korisnika vidjelo je vidljiva poboljšanja u poravnanju prstiju nakon samo 30 dana dosljedne uporabe (30 min/dan)' ),
+);
+
 // Kako se koristi — 3 koraka (video + opis)
 $bun_steps = array(
     array( 'video' => $bun_vid_dir . 'step-1.mp4', 'caption' => 'Pričvrstite NORIKS korektor na palac i stopalo' ),
@@ -84,6 +93,53 @@ $bun_steps = array(
   </div>
 </section>
 
+<!-- ============ 4) 8 razloga zašto ćete ga voljeti ============ -->
+<section class="bun-why">
+  <div class="bun-wrap bun-row">
+    <div class="bun-col bun-copy">
+      <h2 class="bun-title">8 razloga zašto ćete ga voljeti</h2>
+      <ul class="bun-reasons">
+        <li><strong>Olakšanje nelagode</strong> pri hodu, vježbanju, stajanju i spavanju</li>
+        <li><strong>Sprječava</strong> daljnji rast čuklja</li>
+        <li><strong>Nekirurška opcija</strong> za olakšanje</li>
+        <li>Čvrsto poravnanje zgloba koje <strong>uistinu poboljšava vaše stanje</strong></li>
+        <li><strong>Podesiv</strong> intenzitet istezanja</li>
+        <li>Osmišljen i preporučen od strane <strong>medicinskih stručnjaka</strong></li>
+        <li><strong>Jednostavan za uporabu</strong> i prijenosan</li>
+        <li><strong>90-dnevno jamstvo povrata novca</strong> („rezultati ili puni povrat") jer smo toliko sigurni u svoj proizvod i znamo da će vam pomoći</li>
+      </ul>
+    </div>
+    <div class="bun-col bun-media">
+      <img loading="lazy" decoding="async" src="<?php echo esc_url( $bun_img_features ); ?>" alt="Zašto je NORIKS korektor čukljeva drukčiji" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5) Pravi rezultati, pravi ljudi ============ -->
+<section class="bun-why bun-results-sec">
+  <div class="bun-wrap bun-row">
+    <div class="bun-col bun-copy">
+      <h2 class="bun-title">Pravi <span class="bun-hl">rezultati</span>, pravi ljudi</h2>
+      <p>Proveli smo potrošački test u kojem smo NORIKS korektor čukljeva poslali u više od <strong>37 podijatrijskih ordinacija</strong>. Ukupno ga je testiralo <strong>432 pacijenata</strong> s čukljevima. Evo rezultata.</p>
+    </div>
+    <div class="bun-col">
+      <div class="bun-results">
+        <?php foreach ( $bun_results as $bun_r ) : $bun_dash = round( $bun_r['pct'] * 1.6336, 1 ); ?>
+          <div class="bun-result">
+            <svg class="bun-ring" viewBox="0 0 60 60" aria-hidden="true">
+              <circle cx="30" cy="30" r="26" fill="none" stroke="#dfe6ee" stroke-width="5"/>
+              <circle cx="30" cy="30" r="26" fill="none" stroke="#1a86d0" stroke-width="5" stroke-linecap="round"
+                      stroke-dasharray="<?php echo esc_attr( $bun_dash ); ?> 163.4" transform="rotate(-90 30 30)"/>
+              <text x="30" y="34" text-anchor="middle" class="bun-ring-txt"><?php echo (int) $bun_r['pct']; ?>%</text>
+            </svg>
+            <p class="bun-result-text"><?php echo esc_html( $bun_r['text'] ); ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</section>
+
 <style>
   /* Kratki opis (short description): sakrij standardne točke (•), ostaje samo ✅;
      razmak iznad "Prednosti:" i više prostora ispod liste.
@@ -131,6 +187,23 @@ $bun_steps = array(
   .bun-step-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .bun-step-num { font-size: 22px; font-weight: 800; color: #1c1c1c; margin: 14px 0 6px; }
   .bun-step-caption { font-size: 15px; line-height: 1.5; color: #333; margin: 0 8px; }
+
+  /* 4) 8 razloga */
+  .bun-media img { width: 100%; height: auto; border-radius: 12px; display: block; }
+  .bun-reasons { list-style: none; margin: 0; padding: 0; }
+  .bun-reasons li { position: relative; padding: 0 0 16px 34px; font-size: 15.5px; line-height: 1.5; color: #333; }
+  .bun-reasons li:before {
+      content: ""; position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%;
+      background: #1a86d0 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6 12.5l4 4 8-8' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/15px no-repeat;
+  }
+
+  /* 5) Pravi rezultati */
+  .bun-results { display: flex; flex-direction: column; gap: 18px; }
+  .bun-result { display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #e6e6e6; padding-bottom: 16px; }
+  .bun-result:last-child { border-bottom: 0; padding-bottom: 0; }
+  .bun-ring { width: 70px; height: 70px; flex: 0 0 70px; }
+  .bun-ring-txt { font-size: 16px; font-weight: 800; fill: #1a86d0; }
+  .bun-result-text { font-size: 14.5px; line-height: 1.5; color: #333; margin: 0; }
 
   @media (max-width: 820px) {
     .bun-row { grid-template-columns: 1fr; gap: 22px; }
