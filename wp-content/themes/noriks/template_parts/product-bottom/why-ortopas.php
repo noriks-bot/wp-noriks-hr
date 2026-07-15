@@ -4,7 +4,6 @@
  *
  * Dedicated bottom-nicer for the NORIKS orthopedic back belt.
  * Shown via single-product-bottom-nicer.php when noriks_is_type('ortopas').
- * NOTE: copy/images are a starting point — refine with real content.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
