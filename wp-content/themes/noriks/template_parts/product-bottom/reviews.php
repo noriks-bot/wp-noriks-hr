@@ -990,7 +990,42 @@ $faq_list3 = get_field('faq_list_3', 'option');
 
 
 <?php
+$is_ortopas = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
+if ( $is_ortopas ) { $is_knc = false; } // belt carries the sock cat but is NOT socks
+
+// Orthopedic back belt (ortopas) — product FAQ, replaces ONLY the
+// "Informacije o Proizvodu" container. (Prijevod s njemačke reference, NORIKS.)
+$ortopas_faq = array(
+  array(
+    'questioon' => 'Koliko brzo osjetim olakšanje boli?',
+    'answer'    => 'Mnogi korisnici osjete primjetno olakšanje išijasa i križobolje odmah nakon stavljanja NORIKS pojasa. Njegova ciljana kompresija pruža trenutnu potporu, stabilizira kralježnicu i smanjuje pritisak na živce. Za dugotrajan učinak preporučujemo da pojas nosite dosljedno prema uputama najmanje dva tjedna. S vremenom ćete, uz pravilnu primjenu i zdrave navike, moći osjetiti trajno olakšanje i poboljšanu pokretljivost.'
+  ),
+  array(
+    'questioon' => 'Kako pravilno postaviti pojas?',
+    'answer'    => 'NORIKS pojas treba nositi oko bokova, malo ispod linije pojasa. Trebao bi sjediti iznad sakralnog područja (donjeg dijela leđa, neposredno iznad stražnjice) i ispod grebena zdjelice (gornjeg dijela bočnih kukova). Za više informacija možete pogledati upute za uporabu.'
+  ),
+  array(
+    'questioon' => 'Slabi li pojas moje mišiće?',
+    'answer'    => 'Ne, NORIKS pojas neće oslabiti vaše mišiće poput lumbalnog steznika. Dok lumbalni steznik zamjenjuje mišiće trupa i može ih pri duljem nošenju oslabiti, NORIKS pojas samo pomaže držati SI-zglobove zajedno i vraća vaše ligamente u njihovu normalnu napetost. Možete ga nositi tjednima ili mjesecima bez straha od atrofije mišića.'
+  ),
+  array(
+    'questioon' => 'Mogu li nositi pojas i tijekom spavanja?',
+    'answer'    => 'Da, pojas možete nositi i noću. Nema ograničenja u trajanju nošenja pojasa, a dulje nošenje neće imati negativnih učinaka.'
+  ),
+  array(
+    'questioon' => 'Koliko čvrsto treba stajati?',
+    'answer'    => 'Pojas bi trebao čvrsto prianjati, ali ne prestegnuto, kako bi se izbjegla nelagoda ili mjesta pritiska. Trebali biste se moći bez problema kretati, a da vas pojas neugodno ne reže niti klizi. Čvrstoća se lako podešava elastičnim zateznim trakama.'
+  ),
+  array(
+    'questioon' => 'Za koga je NORIKS pojas namijenjen?',
+    'answer'    => 'Za svakoga tko pati od bolova u donjem dijelu leđa, išijasa, mišićne napetosti, hernije diska, bolova u kukovima ili zdjelici te problema sa SI-zglobom. Neovisno o dobi, spolu, visini i tjelesnoj težini.'
+  ),
+  array(
+    'questioon' => 'Postoji li jamstvo povrata novca ako pojas ne pomogne?',
+    'answer'    => 'Nudimo jamstvo zadovoljstva! Ako niste zadovoljni NORIKS pojasom, kontaktirajte nas na info@noriks.com za povrat i povrat novca unutar 90 dana. Rok počinje od primitka pojasa.<br><br>U središtu nam je podrška u svakodnevnom ublažavanju vaših bolova. Zato vas potičemo da NORIKS pojas najprije dva tjedna testirate svakodnevno prije nego što donesete odluku.'
+  ),
+);
 
 // Compression-sock benefit content — replaces ONLY the "Informacije o Proizvodu"
 // container on sock products. Dostava/Povrati stay as they are.
@@ -1018,8 +1053,12 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq ) {
-  if ( $is_knc && stripos( (string) $title, 'Informacije o Proizvodu' ) !== false ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq ) {
+  $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_ortopas && $is_info ) {
+    return $ortopas_faq;
+  }
+  if ( $is_knc && $is_info ) {
     return $knc_faq;
   }
   return $list;
