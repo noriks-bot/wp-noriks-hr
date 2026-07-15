@@ -13,6 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $bun_vid_dir = get_template_directory_uri() . '/img/bunion-videos/';
 $bun_video_1 = $bun_vid_dir . 'section-1.mp4'; // 1) One foot away
 $bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
+
+// Kako se koristi — 3 koraka (video + opis)
+$bun_steps = array(
+    array( 'video' => $bun_vid_dir . 'step-1.mp4', 'caption' => 'Pričvrstite NORIKS korektor na palac i stopalo' ),
+    array( 'video' => $bun_vid_dir . 'step-2.mp4', 'caption' => 'Podesite intenzitet istezanja po želji' ),
+    array( 'video' => $bun_vid_dir . 'step-3.mp4', 'caption' => 'Opustite se i pustite da NORIKS korektor odradi svoj posao' ),
+);
 ?>
 
 <!-- ============ 1) Samo ste jedan korak udaljeni… ============ -->
@@ -53,6 +60,30 @@ $bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
   </div>
 </section>
 
+<!-- ============ 3) Kako se koristi (sivo, 3 koraka) ============ -->
+<section class="bun-why bun-howto">
+  <div class="bun-wrap">
+    <h2 class="bun-howto-title">Kako se koristi</h2>
+    <div class="bun-howto-intro">
+      <p>Preporučujemo da započnete s 30 minuta dnevno i postupno povećavate do sesije od 1 do 3 sata.</p>
+      <p>Kada se osjećate ugodno, možete ga početi nositi i tijekom spavanja svake noći.</p>
+      <p>Najbolji je za mirovanje — dok ležite na kauču, gledate TV, čitate ili spavate.</p>
+      <p>No, za razliku od drugih proizvoda na tržištu, možete se i kretati, a da vas NORIKS korektor ne ograničava u pokretu, zahvaljujući svojem pokretnom dizajnu.</p>
+    </div>
+    <div class="bun-steps-grid">
+      <?php $bun_n = 0; foreach ( $bun_steps as $bun_step ) : $bun_n++; ?>
+        <div class="bun-step">
+          <div class="bun-step-media">
+            <video src="<?php echo esc_url( $bun_step['video'] ); ?>" muted autoplay loop playsinline preload="metadata"></video>
+          </div>
+          <div class="bun-step-num"><?php echo (int) $bun_n; ?></div>
+          <p class="bun-step-caption"><?php echo esc_html( $bun_step['caption'] ); ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <style>
   /* Kratki opis (short description): sakrij standardne točke (•), ostaje samo ✅;
      razmak iznad "Prednosti:" i više prostora ispod liste.
@@ -89,9 +120,22 @@ $bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
   .bun-reverse .bun-media { order: 2; }
   .bun-reverse .bun-copy { order: 1; }
 
+  /* 3) Kako se koristi (sivo ozadje) */
+  .bun-why.bun-howto { background: #f0f2f5; }
+  .bun-howto-title { text-align: center; font-size: clamp(24px,2.9vw,34px); font-weight: 800; color: #1c1c1c; margin: 0 0 18px; }
+  .bun-howto-intro { max-width: 820px; margin: 0 auto 34px; text-align: center; }
+  .bun-howto-intro p { font-size: 16px; line-height: 1.6; color: #333; margin: 0 0 12px; }
+  .bun-steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .bun-step { text-align: center; }
+  .bun-step-media { width: 100%; aspect-ratio: 1 / 1; border-radius: 14px; overflow: hidden; background: #e6e9ee; }
+  .bun-step-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bun-step-num { font-size: 22px; font-weight: 800; color: #1c1c1c; margin: 14px 0 6px; }
+  .bun-step-caption { font-size: 15px; line-height: 1.5; color: #333; margin: 0 8px; }
+
   @media (max-width: 820px) {
     .bun-row { grid-template-columns: 1fr; gap: 22px; }
     .bun-reverse .bun-media { order: 0; }
     .bun-reverse .bun-copy { order: 0; }
+    .bun-steps-grid { grid-template-columns: 1fr; gap: 18px; }
   }
 </style>
