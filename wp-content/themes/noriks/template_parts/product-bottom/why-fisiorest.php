@@ -16,6 +16,7 @@ $fis_science = array(
     array( 'title' => 'Kvalitetan san',       'text' => 'Umirujuća terapija <strong>opušta vrat i kralježnicu</strong> za dubok i okrepljujući san.' ),
     array( 'title' => 'Oslobađanje od stresa','text' => 'Topla masaža i istezanje <strong>oslobađaju nakupljenu napetost</strong> za veću udobnost.' ),
 );
+$fis_hero_video = get_template_directory_uri() . '/img/fisiorest-videos/hero.mp4';
 ?>
 
 <!-- ============ 1) Znanstveno potkrijepljeno ============ -->
@@ -35,7 +36,24 @@ $fis_science = array(
   </div>
 </section>
 
+<!-- ============ 2) Video hero + naslov ============ -->
+<section class="fis-hero">
+  <video class="fis-hero-vid" src="<?php echo esc_url( $fis_hero_video ); ?>" muted autoplay loop playsinline preload="metadata"></video>
+  <div class="fis-hero-overlay"></div>
+  <div class="fis-hero-inner">
+    <h2 class="fis-hero-title">Otključajte duboki reset uz kombiniranu snagu poravnanja i opuštanja</h2>
+  </div>
+</section>
+
 <style>
+  /* 2) Video hero */
+  .fis-hero { position: relative; width: 100vw; left: 50%; margin-left: -50vw; min-height: 520px; display: flex; align-items: center; overflow: hidden; }
+  .fis-hero-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .fis-hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.05) 55%); }
+  .fis-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 0 40px; width: 100%; box-sizing: border-box; }
+  .fis-hero-title { color: #fff; font-weight: 800; font-size: clamp(27px,4vw,46px); line-height: 1.15; max-width: 640px; margin: 0; text-shadow: 0 2px 14px rgba(0,0,0,0.4); }
+  @media (max-width: 768px) { .fis-hero { min-height: 380px; } .fis-hero-inner { padding: 0 22px; } }
+
   /* 1) Znanstveno potkrijepljeno — siva kartica */
   .fis-science { padding: 40px 0; }
   .fis-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
