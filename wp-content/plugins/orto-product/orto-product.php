@@ -1058,7 +1058,13 @@ function gck_render_bundle_selector() {
       }
     </style>
     <?php endif; ?>
-    <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
+    <?php if ( $gck_no_attrs ) : ?>
+    <style>
+      /* Bunion (no-attrs): nema selektora — makni divider iznad prazne .bundle-pairs. */
+      #bundle-selector.is-no-attrs .bundle-pairs { border-top: 0 !important; padding-top: 0 !important; margin-top: 0 !important; }
+    </style>
+    <?php endif; ?>
+    <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?><?php echo $gck_no_attrs ? ' is-no-attrs' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
         $loop_index    = 0;
@@ -1294,8 +1300,10 @@ function gck_render_bundle_selector() {
                     <?php endfor; ?>
                     <?php endforeach; ?>
 
+                    <?php if ( ! $gck_no_attrs ) : ?>
                     <small style="display: block; line-height: 1;"><?php esc_html_e( 'Nudimo 30 dana za povrat novca ili besplatnu zamjenu proizvoda – bezbrižna kupovina!
 ', 'gift-card-kompetentnost' ); ?></small>
+                    <?php endif; ?>
                 </div>
             </label>
         <?php
