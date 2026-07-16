@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 $bun_vid_dir = get_template_directory_uri() . '/img/bunion-videos/';
 $bun_video_1 = $bun_vid_dir . 'section-1.mp4'; // 1) One foot away
-$bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
+$bun_video_2 = $bun_vid_dir . 'funkcionira.mp4'; // 2) Kako funkcionira
 
 $bun_img_features = get_template_directory_uri() . '/img/bunion/why.png';
 
