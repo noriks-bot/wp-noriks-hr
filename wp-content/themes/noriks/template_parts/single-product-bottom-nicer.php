@@ -35,7 +35,7 @@ if ( noriks_is_type( 'bokserice' ) && ! noriks_is_black_friday() ) {
 
 // KOMPRESIJSKE NOGAVICE (compression socks) — not the back belt / bunion corrector
 // (those may still carry the socks category from being duplicated)
-if ( noriks_is_type( 'kompresijske-nogavice' ) && ! noriks_is_type( 'ortopas' ) && ! noriks_is_type( 'bunion' ) ) {
+if ( noriks_is_type( 'kompresijske-nogavice' ) && ! noriks_is_type( 'ortopas' ) && ! noriks_is_type( 'bunion' ) && ! noriks_is_type( 'fisiorest' ) ) {
     include $noriks_pb_dir . 'why-kompresijske.php';
 }
 
@@ -47,6 +47,11 @@ if ( noriks_is_type( 'ortopas' ) ) {
 // KOREKTOR ČUKLJEVA (bunion corrector)
 if ( noriks_is_type( 'bunion' ) ) {
     include $noriks_pb_dir . 'why-bunion.php';
+}
+
+// FISIOREST (novi proizvod)
+if ( noriks_is_type( 'fisiorest' ) ) {
+    include $noriks_pb_dir . 'why-fisiorest.php';
 }
 
 // SHARED reviews / social proof (all products)

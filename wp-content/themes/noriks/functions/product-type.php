@@ -43,6 +43,8 @@ function noriks_product_type_map() : array {
         'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         // Bunion corrector (korektor čukljeva / halux valgus).
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
+        // FisioRest (novi proizvod).
+        'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),
