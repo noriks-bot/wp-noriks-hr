@@ -14,7 +14,7 @@ $bun_vid_dir = get_template_directory_uri() . '/img/bunion-videos/';
 $bun_video_1 = $bun_vid_dir . 'section-1.mp4'; // 1) One foot away
 $bun_video_2 = $bun_vid_dir . 'section-2.mp4'; // 2) Kako funkcionira
 
-$bun_img_features = get_template_directory_uri() . '/img/bunion/features.png';
+$bun_img_features = get_template_directory_uri() . '/img/bunion/why.png';
 
 // Pravi rezultati — postotci
 $bun_results = array(
