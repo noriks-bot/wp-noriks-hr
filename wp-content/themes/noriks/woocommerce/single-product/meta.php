@@ -481,7 +481,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) ) : // hide size accordion on bunion ?>
+     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) ) : // hide size accordion on bunion + fisiorest ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">

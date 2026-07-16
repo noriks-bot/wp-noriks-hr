@@ -880,7 +880,7 @@ add_action( 'woocommerce_single_product_summary', function() {
         return;
     }
     // No size-chart link on compression socks, back belt or bunion corrector.
-    if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'kompresijske-nogavice' ) || noriks_is_type( 'ortopas' ) || noriks_is_type( 'bunion' ) ) ) {
+    if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'kompresijske-nogavice' ) || noriks_is_type( 'ortopas' ) || noriks_is_type( 'bunion' ) || noriks_is_type( 'fisiorest' ) ) ) {
         return;
     }
     echo '<a href="#" class="js-open-size-chart noriks-global-sizechart" style="display:inline-flex;align-items:center;gap:8px;margin:8px 0;color:#222;font-weight:700;font-size:15px;text-decoration:underline;cursor:pointer;">'
