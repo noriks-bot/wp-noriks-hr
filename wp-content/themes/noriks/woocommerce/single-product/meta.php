@@ -437,7 +437,11 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
       </div>
       <div class="accordion-content">
           
-         <?php if( noriks_is_type( 'ortopas', $current_product_id ) ): ?>
+         <?php if( noriks_is_type( 'bunion', $current_product_id ) ): ?>
+
+                NORIKS korektor čukljeva koristi patentirani zglobni mehanizam koji nježno vraća nožni palac u njegov prirodan položaj i primjenjuje ciljanu, podesivu kompresiju. Time se rasterećuje bolno izbočenje, smanjuje upala i ublažava nelagoda pri hodu, stajanju i tijekom mirovanja.<br><br>Mekana unutarnja podloga štiti kožu i osigurava udobnost pri duljem nošenju, a intenzitet istezanja jednostavno se prilagođava elastičnim trakama.<br><br>Neinvazivan je i prilagodljiv — nema strana, jednako odgovara lijevom i desnom stopalu te svim veličinama stopala, od dječjih do najvećih odraslih. Dovoljno je od 30 minuta do nekoliko sati dnevne uporabe za postupno, prirodno poravnanje.
+
+         <?php elseif( noriks_is_type( 'ortopas', $current_product_id ) ): ?>
 
                 NORIKS ortopedski pojas za leđa koristi dvije ciljane kompresijske zone koje stabiliziraju područje L5 kralježnice, pravilno poravnavaju zdjelicu i rasterećuju SI-zglob. Time se smanjuje pritisak na išijasni živac te se ublažavaju bolovi u donjem dijelu leđa i išijas.<br><br>Kompresija se jednostavno podešava elastičnim zateznim trakama, pa potporu prilagođavate vlastitim potrebama. Tanak i prozračan dizajn omogućuje da se pojas neprimjetno nosi ispod odjeće – na poslu, u vožnji ili kod kuće.<br><br>Dostupan u dvije veličine (S/M: opseg bokova 75–110 cm i L/XL: opseg bokova 110–140 cm) te prikladan za svakoga, neovisno o dobi, spolu ili tjelesnoj građi.
 
