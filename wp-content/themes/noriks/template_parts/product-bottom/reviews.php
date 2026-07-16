@@ -1007,8 +1007,41 @@ $faq_list3 = get_field('faq_list_3', 'option');
 
 <?php
 $is_ortopas = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
+$is_bunion  = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas ) { $is_knc = false; } // belt carries the sock cat but is NOT socks
+if ( $is_ortopas || $is_bunion ) { $is_knc = false; } // belt/bunion carry the sock cat but are NOT socks
+
+// Bunion corrector — product FAQ (prijevod engleske reference, NORIKS).
+$bunion_faq = array(
+  array(
+    'questioon' => 'Koliko brzo ću se osjećati bolje?',
+    'answer'    => 'Otprilike 30 minuta — toliko je potrebno da se ublaži nelagoda. Uz redovitu uporabu tijekom dva tjedna osjetit ćete znatno olakšanje pri svakodnevnim aktivnostima poput hodanja, stajanja ili spavanja.'
+  ),
+  array(
+    'questioon' => 'Koliko brzo ću primijetiti razliku na čuklju?',
+    'answer'    => 'Ovisno o težini čuklja, većina kupaca vidi vidljivo poboljšanje nakon 4–8 tjedana. Blaži čukalj: 4 tjedna. Umjereni čukalj: 4 tjedna. Teži čukalj: 8 tjedana.'
+  ),
+  array(
+    'questioon' => 'Može li se nositi u cipelama? Mogu li hodati s njim?',
+    'answer'    => 'Ne, ne stane u cipele. Da, možete hodati s njim. No, namijenjen je za mirovanje — dok ležite na kauču, gledate TV, čitate ili spavate.'
+  ),
+  array(
+    'questioon' => 'Što ako mi bude neugodno?',
+    'answer'    => 'To je potpuno normalno! NORIKS korektor osmišljen je dovoljno čvrsto da poravna zglob nožnog palca, zaustavi upalu i smanji nelagodu. Možda će trebati 1–2 sesije da se naviknete, ali nakon toga osjećat ćete se puno bolje!'
+  ),
+  array(
+    'questioon' => 'Koliko dugo bih ga trebao koristiti?',
+    'answer'    => 'Preporučujemo da započnete s 30 minuta dnevno i postupno povećavate do sesije od 1 do 3 sata. Kada vam bude ugodno, možete ga početi nositi i tijekom spavanja. Nosite ga dok se opuštate — na kauču, uz TV, čitanje ili spavanje.'
+  ),
+  array(
+    'questioon' => 'Hoće li pomoći kod mog specifičnog stanja?',
+    'answer'    => 'NORIKS korektor idealan je za: ublažavanje nelagode koja utječe na svakodnevne aktivnosti poput hodanja ili stajanja; olakšanje nelagode od čuklja tijekom odmora ili spavanja; zbrinjavanje čukljeva u ranoj fazi koji možda napreduju; čukljeve koji su se vratili nakon operacije; pomoć kod teških čukljeva spremnih za operaciju; te kao učinkovita nekirurška opcija.'
+  ),
+  array(
+    'questioon' => 'Hoće li odgovarati mom stopalu? Postoji li lijeva i desna strana?',
+    'answer'    => 'Bez obzira na veličinu stopala — od najmanjeg dječjeg do velikog stopala odrasle osobe — NORIKS korektor udobno pristaje. Nema strana! Zahvaljujući prilagodljivom dizajnu jednako se lako prilagođava lijevom ili desnom stopalu.'
+  ),
+);
 
 // Orthopedic back belt (ortopas) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s njemačke reference, NORIKS.)
@@ -1069,8 +1102,11 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_bunion && $is_info ) {
+    return $bunion_faq;
+  }
   if ( $is_ortopas && $is_info ) {
     return $ortopas_faq;
   }

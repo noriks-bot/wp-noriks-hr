@@ -477,6 +477,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
+     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) ) : // hide size accordion on bunion ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -532,8 +533,10 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
     </div>
 
 
-    <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) ) : ?>
+    <?php endif; // /hide size accordion on bunion ?>
+
+    <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion -->
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
