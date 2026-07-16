@@ -21,9 +21,9 @@ $fis_hero_video = $fis_v . 'hero.mp4';
 
 // 3) Preporučuju stručnjaci
 $fis_experts = array(
-    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Joannie Lee',    'role' => 'Certificirana masažna terapeutkinja', 'org' => 'The Ergo Expert' ),
+    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Joannie Lee',    'role' => 'Certificirana masažna terapeutkinja', 'org' => '' ),
     array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Erin Cooper','role' => 'Doktorica fizikalne terapije',        'org' => '' ),
-    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. David Kulla','role' => 'Doktor kiropraktike',                 'org' => 'Synergy Wellness NYC' ),
+    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. David Kulla','role' => 'Doktor kiropraktike',                 'org' => '' ),
 );
 // 4) Iskustva korisnika
 $fis_ugc = array(
@@ -80,7 +80,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Preporučuju stručnjaci</h2>
       <p>„NORIKS je jedan od najboljih jastuka za vrat trenutno na tržištu. Budući da sam u wellness zajednici više od 25 godina, isprobala sam različite jastuke za vrat, a ono što NORIKS izdvaja jest funkcija trakcije…</p>
       <p>Ako imate isturenu glavu ili 'pognuto držanje', trakcija može pomoći da se kralješci ponovno poravnaju i potpuno podupru tijelo. Sama ga koristim i preporučujem svojim klijentima!"</p>
-      <p class="fis-exp-author"><strong>Joannie Lee</strong><br>CMT, The Ergo Expert</p>
+      <p class="fis-exp-author"><strong>Joannie Lee</strong><br>Certificirana masažna terapeutkinja</p>
     </div>
     <div class="fis-exp-cards">
       <?php foreach ( $fis_experts as $e ) : ?>
@@ -236,9 +236,9 @@ $fis_upgrades = array(
   }
 
   /* 1) Znanstveno potkrijepljeno — siva kartica */
-  .fis-science { padding: 40px 0; }
+  .fis-science { background: #f4f4f4; padding: 44px 0; }
   .fis-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
-  .fis-box { background: #f4f4f4; border-radius: 16px; padding: 36px 30px; }
+  .fis-box { background: transparent; border-radius: 0; padding: 0; }
   .fis-title { font-size: clamp(23px,2.9vw,32px); font-weight: 800; color: #1c1c1c; line-height: 1.2; margin: 0 0 26px; }
   .fis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
   .fis-card { padding: 0 22px; border-left: 1px solid #dcdcdc; }
