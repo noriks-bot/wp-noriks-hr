@@ -837,7 +837,7 @@ function gck_render_bundle_selector() {
     
 
     <div class="gck-benefits-box">
-        <?php if ( ! has_term( array( 'orto-kompresijske-carape', 'orto-ortopas', 'orto-bunion' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion ?>
+        <?php if ( ! has_term( array( 'orto-kompresijske-carape', 'orto-ortopas', 'orto-bunion', 'orto-fisiorest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest ?>
         <ul class="gck-benefits-list">
             <?php if ( !has_term( array( 'orto-bokserice', 'orto-bokserice2', 'starter-paketi' ), 'product_cat', $product_id ) ) : ?>
                 <li><span class="gck-check">✔</span> <strong>Savršeno pristajanje</strong></li>
