@@ -48,7 +48,11 @@
       <h1 style="color:black;     margin-bottom: 4px;">
           
           
-          <?php if ( noriks_is_type( 'bunion' ) ): ?>
+          <?php if ( noriks_is_type( 'fisiorest' ) ): ?>
+
+           Nisi sam u potrazi za olakšanjem napetosti u vratu.
+
+          <?php elseif ( noriks_is_type( 'bunion' ) ): ?>
 
            Nisi sam u potrazi za olakšanjem od čukljeva.
 
@@ -80,7 +84,11 @@
           </h1>
     <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;">
         
-           <?php if ( noriks_is_type( 'bunion' ) ): ?>
+           <?php if ( noriks_is_type( 'fisiorest' ) ): ?>
+
+           Tisuće ljudi već koristi NORIKS FisioRest za manje bolova i napetosti u vratu – trakcija, vibracija i toplina u jednom uređaju.
+
+           <?php elseif ( noriks_is_type( 'bunion' ) ): ?>
 
            Tisuće ljudi već koristi NORIKS korektor čukljeva za manje boli i pravilnije poravnanje palca – kod kuće, uz gledanje TV-a i tijekom spavanja.
 
@@ -176,16 +184,20 @@
   $is_nogavice_page   = noriks_is_type( 'kompresijske-nogavice', $current_product_id );
   $is_ortopas_page    = noriks_is_type( 'ortopas', $current_product_id );
   $is_bunion_page     = noriks_is_type( 'bunion', $current_product_id );
-  // Back belt / bunion corrector take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page ) { $is_nogavice_page = false; }
+  $is_fisiorest_page  = noriks_is_type( 'fisiorest', $current_product_id );
+  // Back belt / bunion / fisiorest take precedence even if they still carry the socks category.
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_bunion_page ? 'NORIKS korektor čukljeva'
+  $rv_fallback_title = $is_fisiorest_page ? 'NORIKS FisioRest'
+                     : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_bunion_page ) {
+  if ( $is_fisiorest_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_fisiorest.php';
+  } elseif ( $is_bunion_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_bunion.php';
   } elseif ( $is_ortopas_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_ortopas.php';
@@ -259,15 +271,17 @@
       $is_nogavice  = false;
       $is_ortopas   = false;
       $is_bunion    = false;
+      $is_fisiorest = false;
       if ( $product_id ) {
           $is_bokserice = noriks_is_type( 'bokserice', $product_id );
           $is_nogavice  = noriks_is_type( 'kompresijske-nogavice', $product_id );
           $is_ortopas   = noriks_is_type( 'ortopas', $product_id );
           $is_bunion    = noriks_is_type( 'bunion', $product_id );
-          if ( $is_ortopas || $is_bunion ) { $is_nogavice = false; }
+          $is_fisiorest = noriks_is_type( 'fisiorest', $product_id );
+          if ( $is_ortopas || $is_bunion || $is_fisiorest ) { $is_nogavice = false; }
       }
 
-      $cache_key = $transient_key . ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) );
+      $cache_key = $transient_key . ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) );
 
       if ( function_exists( 'get_transient' ) ) {
           $cached = get_transient( $cache_key );
@@ -284,7 +298,9 @@
           'order'   => 'DESC',
       ];
 
-      if ( $is_bunion ) {
+      if ( $is_fisiorest ) {
+          $args['category'] = [ 'orto-fisiorest' ];
+      } elseif ( $is_bunion ) {
           $args['category'] = [ 'orto-bunion' ];
       } elseif ( $is_ortopas ) {
           $args['category'] = [ 'orto-ortopas' ];
@@ -614,7 +630,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -653,7 +669,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -691,7 +707,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page ) ? 'true' : 'false'; ?>; // text-only (socks + back belt + bunion)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
