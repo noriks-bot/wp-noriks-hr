@@ -221,6 +221,10 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
 </section>
 
 <style>
+  /* Nema "Tablica veličina" linka na pojasu (ni plugin ni globalni). */
+  .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
+  #open-size-chart, #open-size-chartCustom { display: none !important; }
+
   /* Kratki opis (short description) pojasa: sakrij standardne točke (•),
      ostaje samo ✅ iz teksta; malo razmaka između "Prednosti:" i liste.
      (Ovaj se predložak učitava samo na orto-ortopas stranicama.) */

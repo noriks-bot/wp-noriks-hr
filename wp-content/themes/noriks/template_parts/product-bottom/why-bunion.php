@@ -180,6 +180,10 @@ $bun_steps = array(
 </section>
 
 <style>
+  /* Nema "Tablica veličina" linka na korektoru čukljeva (ni plugin ni globalni). */
+  .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
+  #open-size-chart, #open-size-chartCustom { display: none !important; }
+
   /* Kratki opis (short description): sakrij standardne točke (•), ostaje samo ✅;
      razmak iznad "Prednosti:" i više prostora ispod liste.
      (Ovaj se predložak učitava samo na orto-bunion stranicama.) */
