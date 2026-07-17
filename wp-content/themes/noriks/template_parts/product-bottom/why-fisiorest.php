@@ -265,3 +265,25 @@ $fis_upgrades = array(
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin-left: 0; }
   .woocommerce-product-details__short-description p:has(+ ul) { margin-top: 20px; margin-bottom: 4px; }
 </style>
+
+<script>
+/* Narancasti active bundle-option preko inline !important (preživljava LiteSpeed UCSS). */
+(function(){
+  function paintOrto(){
+    var sel = document.getElementById('bundle-selector');
+    if(!sel) return;
+    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); });
+    var checked = sel.querySelector('input[name="bundle_option"]:checked');
+    var card = checked ? checked.closest('.bundle-option')
+             : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
+    if(card){ card.style.setProperty('border-color','#f39c12','important'); card.style.setProperty('background','#f39c1217','important'); }
+  }
+  function bindOrto(){
+    var sel = document.getElementById('bundle-selector');
+    if(!sel) return;
+    paintOrto();
+    sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintOrto); });
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindOrto); } else { bindOrto(); }
+})();
+</script>
