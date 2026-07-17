@@ -21,9 +21,9 @@ $fis_hero_video = $fis_v . 'hero.mp4';
 
 // 3) Preporučuju stručnjaci
 $fis_experts = array(
-    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Joannie Lee',    'role' => 'Certificirana masažna terapeutkinja', 'org' => '' ),
-    array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Erin Cooper','role' => 'Doktorica fizikalne terapije',        'org' => '' ),
-    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. David Kulla','role' => 'Doktor kiropraktike',                 'org' => '' ),
+    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Marina Jurić',    'role' => 'Certificirana masažna terapeutkinja', 'org' => '' ),
+    array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Ana Kovačević','role' => 'Doktorica fizikalne terapije',        'org' => '' ),
+    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. Ivan Horvat','role' => 'Doktor kiropraktike',                 'org' => '' ),
 );
 // 4) Iskustva korisnika
 $fis_ugc = array(
@@ -80,7 +80,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Preporučuju stručnjaci</h2>
       <p>„NORIKS je jedan od najboljih jastuka za vrat trenutno na tržištu. Budući da sam u wellness zajednici više od 25 godina, isprobala sam različite jastuke za vrat, a ono što NORIKS izdvaja jest funkcija trakcije…</p>
       <p>Ako imate isturenu glavu ili 'pognuto držanje', trakcija može pomoći da se kralješci ponovno poravnaju i potpuno podupru tijelo. Sama ga koristim i preporučujem svojim klijentima!"</p>
-      <p class="fis-exp-author"><strong>Joannie Lee</strong><br>Certificirana masažna terapeutkinja</p>
+      <p class="fis-exp-author"><strong>Marina Jurić</strong><br>Certificirana masažna terapeutkinja</p>
     </div>
     <div class="fis-exp-cards">
       <?php foreach ( $fis_experts as $e ) : ?>
