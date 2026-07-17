@@ -40,10 +40,10 @@ $fis_thermo = array(
 );
 // 6) Četiri poboljšanja
 $fis_upgrades = array(
-    array( 't' => 'Punjiva baterija',             'd' => 'Ponesite ga bilo kamo — baterija od 2500 mAh traje do 2 sata.' , 'ico' => 'battery.png' ),
-    array( 't' => 'Navlaka od dudove svile',      'd' => 'Omotan u rashlađujuću svilu za mekan, luksuzan osjećaj.' , 'ico' => 'silk.png' ),
-    array( 't' => 'Isključivanje nakon 30 min',   'd' => 'Četiri sesije po 30 minuta na jedno punjenje, bez brige.' , 'ico' => 'timer.png' ),
-    array( 't' => 'Regulirana toplina',           'd' => 'Grijanje na 50 °C uz naprednu ThermoTrac tehnologiju.' , 'ico' => 'heat.png' ),
+    array( 't' => 'Punjiva baterija',             'd' => 'Ponesite ga bilo kamo — baterija od 2500 mAh traje do 2 sata.' , 'ico' => 'battery-v2.png' ),
+    array( 't' => 'Navlaka od dudove svile',      'd' => 'Omotan u rashlađujuću svilu za mekan, luksuzan osjećaj.' , 'ico' => 'silk-v2.png' ),
+    array( 't' => 'Isključivanje nakon 30 min',   'd' => 'Četiri sesije po 30 minuta na jedno punjenje, bez brige.' , 'ico' => 'timer-v2.png' ),
+    array( 't' => 'Regulirana toplina',           'd' => 'Grijanje na 50 °C uz naprednu ThermoTrac tehnologiju.' , 'ico' => 'heat-v2.png' ),
 );
 ?>
 
