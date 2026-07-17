@@ -40,10 +40,10 @@ $fis_thermo = array(
 );
 // 6) Četiri poboljšanja
 $fis_upgrades = array(
-    array( 't' => 'Punjiva baterija',             'd' => 'Ponesite ga bilo kamo — baterija od 2500 mAh traje do 2 sata.' ),
-    array( 't' => 'Navlaka od dudove svile',      'd' => 'Omotan u rashlađujuću svilu za mekan, luksuzan osjećaj.' ),
-    array( 't' => 'Isključivanje nakon 30 min',   'd' => 'Četiri sesije po 30 minuta na jedno punjenje, bez brige.' ),
-    array( 't' => 'Regulirana toplina',           'd' => 'Grijanje na 50 °C uz naprednu ThermoTrac tehnologiju.' ),
+    array( 't' => 'Punjiva baterija',             'd' => 'Ponesite ga bilo kamo — baterija od 2500 mAh traje do 2 sata.' , 'ico' => 'battery.png' ),
+    array( 't' => 'Navlaka od dudove svile',      'd' => 'Omotan u rashlađujuću svilu za mekan, luksuzan osjećaj.' , 'ico' => 'silk.png' ),
+    array( 't' => 'Isključivanje nakon 30 min',   'd' => 'Četiri sesije po 30 minuta na jedno punjenje, bez brige.' , 'ico' => 'timer.png' ),
+    array( 't' => 'Regulirana toplina',           'd' => 'Grijanje na 50 °C uz naprednu ThermoTrac tehnologiju.' , 'ico' => 'heat.png' ),
 );
 ?>
 
@@ -134,7 +134,7 @@ $fis_upgrades = array(
     <div class="fis-upg-grid">
       <?php foreach ( $fis_upgrades as $g ) : ?>
         <div class="fis-upg-card">
-          <div class="fis-upg-dot" aria-hidden="true"></div>
+          <img class="fis-upg-ico" src="<?php echo esc_url( get_template_directory_uri() . '/img/fisiorest-icons/' . $g['ico'] ); ?>" alt="" loading="lazy" width="120" height="120">
           <div class="fis-upg-title"><?php echo esc_html( $g['t'] ); ?></div>
           <p class="fis-upg-text"><?php echo esc_html( $g['d'] ); ?></p>
         </div>
@@ -210,7 +210,7 @@ $fis_upgrades = array(
   /* 6) Upgrades */
   .fis-upg { padding: 44px 0; }
   .fis-upg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-  .fis-upg-dot { width: 46px; height: 46px; border-radius: 50%; background: #223047; margin: 0 auto 14px; }
+  .fis-upg-ico { width: 56px; height: 56px; object-fit: contain; display: block; margin: 0 auto 14px; }
   .fis-upg-title { font-weight: 800; color: #1c1c1c; margin: 0 0 8px; font-size: 16px; }
   .fis-upg-text { font-size: 14px; line-height: 1.5; color: #444; margin: 0; }
 

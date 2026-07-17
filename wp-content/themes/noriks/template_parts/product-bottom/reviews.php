@@ -1022,10 +1022,47 @@ $faq_list3 = get_field('faq_list_3', 'option');
 
 
 <?php
-$is_ortopas = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
-$is_bunion  = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
+$is_ortopas   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
+$is_bunion    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
+$is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion ) { $is_knc = false; } // belt/bunion carry the sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest ) { $is_knc = false; } // belt/bunion/pillow carry the sock cat but are NOT socks
+
+// FisioRest — product FAQ (prijevod engleske reference, NORIKS).
+$fisiorest_faq = array(
+  array(
+    'questioon' => 'Kako NORIKS FisioRest djeluje?',
+    'answer'    => 'FisioRest kombinira trakciju, toplinu i vibracijsku masažu s ergonomskim dizajnom od memorijske pjene. Ova tehnologija isteže vrat pod točno pravim kutom i rasterećuje vratnu kralježnicu. Zatim umirujuća topla masaža potiče dotok krvi bogate kisikom i hranjivim tvarima u mišiće te tako pomaže regeneraciji tkiva.'
+  ),
+  array(
+    'questioon' => 'Po čemu je FisioRest bolji od drugih uređaja?',
+    'answer'    => 'NORIKS FisioRest poseban je jer objedinjuje <strong>tri terapije u jednoj</strong> — toplinu, masažu i nježnu trakciju — koje opuštaju mišiće i ponovno poravnavaju vrat za dugotrajno olakšanje. Uz to je <strong>bežičan, siguran za spavanje i omotan rashlađujućom svilom</strong> za udobnost kakvu drugdje nećete pronaći.'
+  ),
+  array(
+    'questioon' => 'Kako se koristi FisioRest?',
+    'answer'    => '1. Napunite ga priloženim USB-C kabelom i punjačem otprilike 4 do 6 sati. 2. Držite tipku za masažu ili toplinu 5 sekundi dok se lampica ne upali. 3. Ponovnim pritiskom tipki mijenjate brzinu masaže i postavke topline. 4. Uživajte u opuštajućoj masaži!'
+  ),
+  array(
+    'questioon' => 'Koliko dugo bih trebao koristiti FisioRest?',
+    'answer'    => 'Preporučujemo da započnete s 15 minuta kako bi se vrat privikao. S vremenom možete napredovati do pune sesije. Za orijentaciju: ciklus nježne topline, masaže i trakcije traje 30 minuta, što je obično idealno vrijeme da se vrat opusti i vrati svoju prirodnu krivinu.'
+  ),
+  array(
+    'questioon' => 'Je li FisioRest bežičan?',
+    'answer'    => 'Da! NORIKS FisioRest je potpuno bežičan i punjiv za svakodnevnu uporabu.'
+  ),
+  array(
+    'questioon' => 'Kako se čisti FisioRest?',
+    'answer'    => 'Tkanina je otporna na masnoće i prašinu, no preporučujemo da FisioRest nakon uporabe obrišete dezinfekcijskom maramicom jer navlaka jastuka nije periva.'
+  ),
+  array(
+    'questioon' => 'Je li siguran za sve?',
+    'answer'    => 'NORIKS FisioRest osmišljen je tako da odgovara svima, bez obzira na dob ili spol. No svaka je situacija drukčija. Za detaljne smjernice prilagođene vašim potrebama preporučujemo savjetovanje s liječnikom.'
+  ),
+  array(
+    'questioon' => 'Mogu li ga vratiti ako ne vidim rezultate?',
+    'answer'    => 'Naravno! Nudimo puno jamstvo povrata novca unutar 90 dana od isporuke ako niste zadovoljni proizvodom. Javite nam se na info@noriks.com i odgovorit ćemo u roku od 12 sati od primitka poruke!'
+  ),
+);
 
 // Bunion corrector — product FAQ (prijevod engleske reference, NORIKS).
 $bunion_faq = array(
@@ -1118,8 +1155,11 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_fisiorest && $is_info ) {
+    return $fisiorest_faq;
+  }
   if ( $is_bunion && $is_info ) {
     return $bunion_faq;
   }
