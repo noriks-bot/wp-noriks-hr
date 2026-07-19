@@ -27,10 +27,10 @@ $fis_experts = array(
 );
 // 4) Iskustva korisnika
 $fis_ugc = array(
-    array( 'vid' => $fis_v.'v09.mp4', 'cap' => '„Prvi put u dugo vremena napokon sam bez bolova…"' ),
+    array( 'vid' => $fis_v.'v09c.mp4', 'cap' => '„Prvi put u dugo vremena napokon sam bez bolova…"' ),
     array( 'vid' => $fis_v.'v06.mp4', 'cap' => '„NORIKS jastuk je moja nova svakodnevna nužnost…"' ),
-    array( 'vid' => $fis_v.'v11.mp4', 'cap' => '„Jako mi pomaže u ublažavanju napetosti u vratu i ramenima."' ),
-    array( 'vid' => $fis_v.'v02.mp4', 'cap' => '„Ako ste tek postali mama, ovo bi moglo biti baš ono što trebate…"' ),
+    array( 'vid' => $fis_v.'v11c.mp4', 'cap' => '„Jako mi pomaže u ublažavanju napetosti u vratu i ramenima."' ),
+    array( 'vid' => $fis_v.'v02c.mp4', 'cap' => '„Ako ste tek postali mama, ovo bi moglo biti baš ono što trebate…"' ),
 );
 // 5) ThermoTrac 3-u-1
 $fis_thermo = array(
