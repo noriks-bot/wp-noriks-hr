@@ -113,10 +113,10 @@ if ( ! $short_description ) {
   .nhs-usp { margin: 6px 0 2px; }
   .nhs-usp-guarantee { display: inline-flex; align-items: center; gap: 9px; background: #f6f2ff; border: 1px dashed #c3aef0; border-radius: 999px; padding: 8px 18px; font-size: 13.5px; font-weight: 600; color: #180D33; margin-bottom: 18px; }
   .nhs-usp-guarantee span { color: #7c3aed; }
-  .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
+  .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 7px; }
   .nhs-usp-grid > div { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #2a2340; }
   .nhs-usp-ic { flex: 0 0 auto; width: 20px; text-align: center; color: #180D33; font-size: 15px; }
-  @media (max-width: 560px) { .nhs-usp-grid { gap: 12px 14px; } .nhs-usp-grid > div { font-size: 13px; } .nhs-usp-ic { width: 18px; font-size: 14px; } }
+  @media (max-width: 560px) { .nhs-usp-grid { gap: 5px 8px; } .nhs-usp-grid > div { font-size: 13px; } .nhs-usp-ic { width: 18px; font-size: 14px; } }
   /* Countdown na ovom proizvodu: neutralno sivo (bez crvenog). */
   .gck-countdown { background: #ededed !important; border: 1px solid #f7f7f7 !important; border-radius: 0 !important; color: #333 !important; text-align: left !important; }
   .gck-countdown * { color: #333 !important; }
