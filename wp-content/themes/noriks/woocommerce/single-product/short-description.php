@@ -99,21 +99,21 @@ if ( ! $short_description ) {
 
 <?php if ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ) : ?>
 <div class="nhs-usp">
-  <div class="nhs-usp-guarantee"><span>◈</span> 99-dnevno jamstvo povrata novca</div>
+  <div class="nhs-usp-guarantee"><svg width="15" height="15" viewBox="0 0 24 24" style="flex:0 0 auto;"><circle cx="12" cy="12" r="12" fill="#7c3aed"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 30-dnevno jamstvo povrata novca</div>
   <div class="nhs-usp-grid">
     <div><span class="nhs-usp-ic">≈</span> Smanjuje bore</div>
     <div><span class="nhs-usp-ic">↓</span> Smanjuje fine linije</div>
-    <div><span class="nhs-usp-ic">☾</span> Blijedi ožiljke preko noći</div>
+    <div><span class="nhs-usp-ic">♡</span> Blijedi ožiljke preko noći</div>
     <div><span class="nhs-usp-ic">✚</span> Dodatno ljepljivo</div>
-    <div><span class="nhs-usp-ic">↻</span> Višekratno i izdržljivo</div>
+    <div><span class="nhs-usp-ic">✓</span> Višekratno i izdržljivo</div>
     <div><span class="nhs-usp-ic">↗</span> Potiče proizvodnju kolagena</div>
   </div>
 </div>
 <style>
   .nhs-usp { margin: 14px 0 8px; }
-  .nhs-usp-guarantee { display: inline-flex; align-items: center; gap: 8px; border: 1px dashed #b79cf0; border-radius: 999px; padding: 7px 16px; font-size: 13.5px; font-weight: 600; color: #180D33; margin-bottom: 16px; }
+  .nhs-usp-guarantee { display: inline-flex; align-items: center; gap: 9px; background: #f6f2ff; border: 1px dashed #c3aef0; border-radius: 999px; padding: 8px 18px; font-size: 13.5px; font-weight: 600; color: #180D33; margin-bottom: 18px; }
   .nhs-usp-guarantee span { color: #7c3aed; }
-  .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
+  .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
   .nhs-usp-grid > div { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #2a2340; }
   .nhs-usp-ic { flex: 0 0 auto; width: 20px; text-align: center; color: #180D33; font-size: 15px; }
   @media (max-width: 480px) { .nhs-usp-grid { grid-template-columns: 1fr; } }

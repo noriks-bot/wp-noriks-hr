@@ -12,7 +12,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
 <section class="nhs-reason">
   <div class="nhs-wrap">
     <p class="nhs-eyebrow-i">Pravi razlog</p>
-    <h2 class="nhs-h1">zašto linije i ožiljci ne blijede</h2>
+    <h2 class="nhs-h1">Zašto linije i ožiljci ne blijede</h2>
     <p class="nhs-lead">Probali ste kreme koje su obećavale čuda.<br>Razmišljali ste i o botoxu, ali je zastrašujuć, skup ili jednostavno nije za vas.</p>
     <div class="nhs-reason-grid">
       <div class="nhs-col nhs-cons">
@@ -55,7 +55,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-sci-copy">
       <p class="nhs-eyebrow-i">Znanost</p>
-      <h2 class="nhs-h2">iza glatkoće</h2>
+      <h2 class="nhs-h2">Iza glatkoće</h2>
       <p><strong>Silikonske trake koriste se u dermatologiji</strong> za pomoć pri zacjeljivanju kože i obnovi kolagena.</p>
       <p><strong>NORIKS HERS koristi istu provjerenu metodu</strong>, obogaćenu kolagenom za izglađivanje linija i ublažavanje ožiljaka — sigurno i nježno.</p>
       <ul class="nhs-check">
@@ -146,7 +146,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
           <p><?php echo wp_kses_post($s['t']); ?></p>
         </div>
       <?php endforeach; ?>
-      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Isprobaj bez rizika 99 dana</a>
+      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Isprobaj bez rizika 30 dana</a>
       <p class="nhs-cta-note"><em>Niste oduševljeni? Puni povrat!</em></p>
     </div>
   </div>

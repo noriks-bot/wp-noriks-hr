@@ -1048,7 +1048,7 @@ $norikshers_faq = array(
   array( 'questioon' => 'Hoće li ostati na mjestu dok spavam?', 'answer' => 'Da! NORIKS HERS je izrađena s ljepilom sigurnim za kožu i dugotrajnim prianjanjem koje se prilagođava vašim pokretima. Prozračna je i ostaje na mjestu, čak i za one koji spavaju na boku.' ),
   array( 'questioon' => 'Na kojim područjima je mogu koristiti?', 'answer' => 'Bilo gdje! Većina kupaca koristi NORIKS HERS na: borama na čelu, borama između obrva, borama od osmijeha, borama na vratu, tragovima nakon akni, ožiljcima od carskog reza, strijama te kirurškim ožiljcima ili ožiljcima od ozljeda.' ),
   array( 'questioon' => 'Po čemu je NORIKS HERS bolja od jeftinih traka s interneta?', 'answer' => 'Mnoge trake koje se prodaju online niske su kvalitete, tanke ili koriste loša ljepila. NORIKS HERS koristi vrhunski silikon, laboratorijski je testirana na sigurnost i izdržljivost te ostaje na mjestu cijelu noć. Uz to nudimo posvećenu podršku i bržu zamjenu ako vam zatreba pomoć.' ),
-  array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, nudimo 99-dnevno jamstvo bez rizika. Ako niste zadovoljni, samo nas kontaktirajte i riješit ćemo to.' ),
+  array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, nudimo 30-dnevno jamstvo bez rizika. Ako niste zadovoljni, samo nas kontaktirajte i riješit ćemo to.' ),
 );
 
 // FisioRest — product FAQ (prijevod engleske reference, NORIKS).
