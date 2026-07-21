@@ -62,6 +62,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 
+if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'norikshers' ) ) {
+	echo '<p class="nhs-title-eyebrow" style="font-family:Georgia,\'Times New Roman\',serif;font-size:15px;color:#7c3aed;margin:0 0 2px;font-weight:600;">Nagrađivana alternativa botoksu</p>';
+}
+
 the_title( '<h1 id="title-buy-now" class="product_title entry-title">', '</h1>' );
 
 
