@@ -1025,8 +1025,23 @@ $faq_list3 = get_field('faq_list_3', 'option');
 $is_ortopas   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
 $is_bunion    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
 $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
+$is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest ) { $is_knc = false; } // belt/bunion/pillow carry the sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers ) { $is_knc = false; } // carry sock cat but are NOT socks
+
+// NORIKS HERS (silikonske kolagenske trake za bore) — product FAQ (prijevod, NORIKS HERS).
+$norikshers_faq = array(
+  array( 'questioon' => 'Po čemu se razlikuje od običnih flastera za bore ili krema za ožiljke?', 'answer' => 'Većina flastera za bore izrađena je od papira ili hidrokoloida, a kreme za ožiljke često samo stoje na površini kože. NORIKS HERS koristi silikon kliničke kvalitete, kojem dermatolozi vjeruju već godinama za vidljivo poboljšanje teksture ožiljaka i elastičnosti kože — a sada je prilagođen i za smanjenje bora.' ),
+  array( 'questioon' => 'Može li jedna traka stvarno djelovati i na bore i na ožiljke?', 'answer' => 'Da, jer su i bore i ožiljci znak razgradnje kolagena ili slabe regeneracije kože. Silikon podupire zadržavanje vlage, obnovu kolagena i izglađivanje teksture kože, što koristi za oboje.' ),
+  array( 'questioon' => 'Za koliko vremena vidim rezultate?', 'answer' => 'Većina korisnica vidi vidljivo izglađivanje već nakon 1–3 uporabe za sitne linije, a poboljšanje izgleda ožiljaka unutar 2–3 tjedna dosljedne uporabe. Dublji ožiljci i bore mogu potrajati dulje, ali rezultati se grade s vremenom.' ),
+  array( 'questioon' => 'Je li sigurno za osjetljivu kožu ili područja sklona aknama?', 'answer' => 'Apsolutno. NORIKS HERS je hipoalergen, bez lateksa i dovoljno nježan za osjetljiva područja poput oko očiju, usta ili čak tragova akni koji zacjeljuju. Ako imate vrlo reaktivnu kožu, uvijek prvo testirajte na malom području.' ),
+  array( 'questioon' => 'Koliko dugo je mogu nositi?', 'answer' => 'Za najbolje rezultate preporučujemo nošenje NORIKS HERS 6–8 sati preko noći. Možete je koristiti i tijekom dana — samo pazite da je koža čista i bez ulja ili seruma ispod.' ),
+  array( 'questioon' => 'Koliko traje jedna rola?', 'answer' => 'Ovisno o tome koliko često i gdje je koristite, jedna rola može trajati 3 do 6 tjedana. Budući da je za višekratnu uporabu, znatno je isplativija od flastera za jednokratnu uporabu ili krema.' ),
+  array( 'questioon' => 'Hoće li ostati na mjestu dok spavam?', 'answer' => 'Da! NORIKS HERS je izrađena s ljepilom sigurnim za kožu i dugotrajnim prianjanjem koje se prilagođava vašim pokretima. Prozračna je i ostaje na mjestu, čak i za one koji spavaju na boku.' ),
+  array( 'questioon' => 'Na kojim područjima je mogu koristiti?', 'answer' => 'Bilo gdje! Većina kupaca koristi NORIKS HERS na: borama na čelu, borama između obrva, borama od osmijeha, borama na vratu, tragovima nakon akni, ožiljcima od carskog reza, strijama te kirurškim ožiljcima ili ožiljcima od ozljeda.' ),
+  array( 'questioon' => 'Po čemu je NORIKS HERS bolja od jeftinih traka s interneta?', 'answer' => 'Mnoge trake koje se prodaju online niske su kvalitete, tanke ili koriste loša ljepila. NORIKS HERS koristi vrhunski silikon, laboratorijski je testirana na sigurnost i izdržljivost te ostaje na mjestu cijelu noć. Uz to nudimo posvećenu podršku i bržu zamjenu ako vam zatreba pomoć.' ),
+  array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, nudimo 99-dnevno jamstvo bez rizika. Ako niste zadovoljni, samo nas kontaktirajte i riješit ćemo to.' ),
+);
 
 // FisioRest — product FAQ (prijevod engleske reference, NORIKS).
 $fisiorest_faq = array(
@@ -1155,8 +1170,11 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_norikshers && $is_info ) {
+    return $norikshers_faq;
+  }
   if ( $is_fisiorest && $is_info ) {
     return $fisiorest_faq;
   }
