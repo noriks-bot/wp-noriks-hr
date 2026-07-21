@@ -122,5 +122,9 @@ if ( ! $short_description ) {
   .gck-countdown * { color: #333 !important; }
   /* Discount badge (−33% …): vijolicno na ovom proizvodu. */
   .gck-discount-badge { background: #7c3aed !important; color: #fff !important; }
+  /* Bundle radio gumbi: vijolicno na ovom proizvodu. */
+  .bundle-option input[type="radio"] { border-color: #7c3aed !important; }
+  .bundle-option input[type="radio"]::before { background: #7c3aed !important; }
+  .bundle-option input[type="radio"]:checked::before { background: #7c3aed !important; }
 </style>
 <?php endif; ?>

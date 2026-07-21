@@ -428,8 +428,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
  <div class="accordion">
 
 
-    <!-- 1 - detajli --> <!-- skriveno na ortopas pojasu + fisiorest -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) ) : ?>
+    <!-- 1 - detajli --> <!-- skriveno na ortopas pojasu + fisiorest + norikshers -->
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_1","options"); ?></h3>
