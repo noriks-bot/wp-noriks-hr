@@ -39,12 +39,12 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-media"><img src="<?php echo esc_url( $nh.'15.png' ); ?>" alt="NORIKS HERS nanošenje" loading="lazy"></div>
     <div class="nhs-b-list">
-      <div class="nhs-chip"><span>✨</span> Izglađuje bore na čelu, oko očiju i od osmijeha preko noći</div>
-      <div class="nhs-chip"><span>🔄</span> Pomaže koži da izgleda čvršće i svježije</div>
-      <div class="nhs-chip"><span>🛡️</span> Pomaže spriječiti nastanak novih bora</div>
-      <div class="nhs-chip"><span>💧</span> Pojačava vlagu pa je koža punija</div>
-      <div class="nhs-chip"><span>✔️</span> Za višekratnu uporabu do 5 puta</div>
-      <div class="nhs-chip"><span>🌙</span> Nježno za svakodnevnu noćnu uporabu na svim tipovima kože</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Izglađuje bore na čelu, oko očiju i od osmijeha preko noći</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Pomaže koži da izgleda čvršće i svježije</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Pomaže spriječiti nastanak novih bora</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Pojačava vlagu pa je koža punija</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Za višekratnu uporabu do 5 puta</div>
+      <div class="nhs-chip"><span class="nhs-ic">✓</span> Nježno za svakodnevnu noćnu uporabu na svim tipovima kože</div>
       <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Izbriši moje bore noćas →</a>
     </div>
   </div>
@@ -188,9 +188,10 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
 
   /* 2) Benefits */
   .nhs-benefits { padding: 44px 0; }
-  .nhs-b-list { display: flex; flex-direction: column; gap: 12px; }
-  .nhs-chip { display: flex; align-items: center; gap: 12px; background: #f4efff; border: 1px solid #e4d9fb; border-radius: 12px; padding: 14px 16px; font-size: 15px; color: #180D33; line-height: 1.35; }
-  .nhs-chip span { font-size: 18px; }
+  .nhs-b-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .nhs-b-list > a { grid-column: 1 / -1; }
+  .nhs-chip { display: flex; align-items: center; gap: 11px; background: #f7f3ff; border: 1px solid #e7dcfb; border-radius: 14px; padding: 14px 15px; font-size: 14px; color: #180D33; line-height: 1.35; }
+  .nhs-ic { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: #ede6fb; color: #7c3aed; font-size: 13px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; }
   .nhs-cta-solid { margin-top: 8px; text-align: center; }
 
   /* 3) Science + 4 checklist */
@@ -244,6 +245,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
     .nhs-cons p, .nhs-pros p { margin-bottom: 12px; }
     .nhs-reason-grid .nhs-media { order: -1; }
     .nhs-proof-grid { grid-template-columns: 1fr; }
+    .nhs-b-list { grid-template-columns: 1fr; }
   }
 
   /* Nema "Tablica veličina" (no-attrs). */
