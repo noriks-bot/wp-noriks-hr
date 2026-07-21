@@ -228,7 +228,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   .nhs-res-copy .nhs-cta { margin-top: 8px; }
 
   /* NORIKS HERS: ljubičasti bundle gumbi (umjesto narančastih). */
-  #bundle-selector .bundle-option.active { border-color: #7c3aed !important; background: #7c3aed14 !important; }
+  #bundle-selector .bundle-option.active { position: relative; border-color: rgb(228 152 230) !important; background: rgba(124, 58, 237, 0.08) !important; }
 
   @media (max-width: 860px) {
     .nhs-row2 { grid-template-columns: 1fr; gap: 22px; }
@@ -255,7 +255,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
     sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); });
     var checked = sel.querySelector('input[name="bundle_option"]:checked');
     var card = checked ? checked.closest('.bundle-option') : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
-    if(card){ card.style.setProperty('border-color','#7c3aed','important'); card.style.setProperty('background','#7c3aed14','important'); }
+    if(card){ card.style.setProperty('border-color','rgb(228 152 230)','important'); card.style.setProperty('background','rgba(124, 58, 237, 0.08)','important'); }
   }
   function bindOrto(){
     var sel = document.getElementById('bundle-selector'); if(!sel) return;
