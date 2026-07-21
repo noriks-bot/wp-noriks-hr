@@ -481,7 +481,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) ) : // hide size accordion on bunion + fisiorest ?>
+     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -540,7 +540,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
