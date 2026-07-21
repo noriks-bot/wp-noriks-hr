@@ -220,7 +220,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   .nhs-cmp-table td.us.ok { color: #1a9e5f; }
 
   /* 9) Results */
-  .nhs-results { padding: 44px 0; }
+  .nhs-results { padding: 40px 0; background: linear-gradient(160deg,#efe9fb,#e7ddfb); }
   .nhs-stat { display: flex; align-items: center; gap: 16px; margin: 0 0 18px; }
   .nhs-ring { width: 58px; height: 58px; flex: 0 0 58px; }
   .nhs-ring-t { font-size: 17px; font-weight: 700; fill: #180D33; font-family: Georgia,'Times New Roman',serif; font-style: italic; }

@@ -110,7 +110,7 @@ if ( ! $short_description ) {
   </div>
 </div>
 <style>
-  .nhs-usp { margin: 14px 0 8px; }
+  .nhs-usp { margin: 6px 0 2px; }
   .nhs-usp-guarantee { display: inline-flex; align-items: center; gap: 9px; background: #f6f2ff; border: 1px dashed #c3aef0; border-radius: 999px; padding: 8px 18px; font-size: 13.5px; font-weight: 600; color: #180D33; margin-bottom: 18px; }
   .nhs-usp-guarantee span { color: #7c3aed; }
   .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
@@ -120,5 +120,7 @@ if ( ! $short_description ) {
   /* Countdown na ovom proizvodu: neutralno sivo (bez crvenog). */
   .gck-countdown { background: #ededed !important; border: 1px solid #f7f7f7 !important; border-radius: 0 !important; color: #333 !important; text-align: left !important; }
   .gck-countdown * { color: #333 !important; }
+  /* Discount badge (−33% …): vijolicno na ovom proizvodu. */
+  .gck-discount-badge { background: #7c3aed !important; color: #fff !important; }
 </style>
 <?php endif; ?>
