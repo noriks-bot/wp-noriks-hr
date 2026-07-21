@@ -116,6 +116,9 @@ if ( ! $short_description ) {
   .nhs-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
   .nhs-usp-grid > div { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: #2a2340; }
   .nhs-usp-ic { flex: 0 0 auto; width: 20px; text-align: center; color: #180D33; font-size: 15px; }
-  @media (max-width: 480px) { .nhs-usp-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .nhs-usp-grid { gap: 12px 14px; } .nhs-usp-grid > div { font-size: 13px; } .nhs-usp-ic { width: 18px; font-size: 14px; } }
+  /* Countdown na ovom proizvodu: neutralno sivo (bez crvenog). */
+  .gck-countdown { background: #ededed !important; border: 1px solid #f7f7f7 !important; border-radius: 0 !important; color: #333 !important; text-align: left !important; }
+  .gck-countdown * { color: #333 !important; }
 </style>
 <?php endif; ?>
