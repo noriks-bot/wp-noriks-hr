@@ -87,12 +87,6 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   </div>
 </section>
 
-<!-- ============ 5) S kojim ožiljcima pomaže (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'06.png' ); ?>" alt="S kojim ožiljcima NORIKS HERS pomaže" loading="lazy"></div></section>
-
-<!-- ============ 6) Iskustva korisnica (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'07.png' ); ?>" alt="Iskustva korisnica NORIKS HERS" loading="lazy"></div></section>
-
 <!-- ============ 7) Bez nuspojava ============ -->
 <section class="nhs-zero">
   <div class="nhs-wrap nhs-row2">
@@ -129,9 +123,6 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
     <div class="nhs-cta-wrap"><a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Isprobaj ono što stvarno djeluje</a></div>
   </div>
 </section>
-
-<!-- ============ 9) Kako koristiti (grafika) ============ -->
-<section class="nhs-img-sec"><div class="nhs-wrap-img"><img src="<?php echo esc_url( $nh.'14.png' ); ?>" alt="Kako koristiti NORIKS HERS" loading="lazy"></div></section>
 
 <!-- ============ 10) Rezultati za 30 dana (zadnja) ============ -->
 <section class="nhs-results">
@@ -196,6 +187,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
 
   /* 3) Science + 4 checklist */
   .nhs-science { background: #faf8ff; padding: 44px 0; }
+  .nhs-science .nhs-eyebrow-i { text-align: left; }
   .nhs-science p { font-size: 15.5px; line-height: 1.6; color: #333; margin: 0 0 12px; }
   .nhs-check { list-style: none; margin: 16px 0 0; padding: 0; }
   .nhs-check li { position: relative; padding: 0 0 12px 30px; font-size: 15.5px; color: #180D33; }
