@@ -1184,7 +1184,7 @@ function gck_render_bundle_selector() {
       #bundle-selector.is-no-attrs .bundle-pairs { border-top: 0 !important; padding-top: 0 !important; margin-top: 0 !important; }
     </style>
     <?php endif; ?>
-    <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?><?php echo $gck_no_attrs ? ' is-no-attrs' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
+    <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?><?php echo $gck_no_attrs ? ' is-no-attrs' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>" data-shgifts="<?php echo $gck_shgifts ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
         $loop_index    = 0;
@@ -1664,6 +1664,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function activateSizeSync() {
         const selectorEl = document.getElementById('bundle-selector');
         const splitMode  = !!(selectorEl && selectorEl.dataset.splitGarments === '1');
+
+        // SHGIFTS: each of the 4 majice + bokserica + čarapa is chosen independently
+        // (own card, own size select), so do NOT auto-sync sizes across them.
+        if ( selectorEl && selectorEl.dataset.shgifts === '1' ) return;
 
         document.querySelectorAll('.bundle-pairs').forEach(pairBlock => {
             // Which selects act as "drivers" (their change syncs the others):
