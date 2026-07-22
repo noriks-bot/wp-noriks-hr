@@ -1729,13 +1729,13 @@ function gck_shgifts_free_gifts_notice() {
     <style>
       .gck-fg{
           margin:16px 0 6px;
-          background:#f7f1e6;
-          border:1px solid #e6ddcb;
+          background:#f4f4f4;
+          border:1px solid #e2e2e2;
           border-radius:12px;
           overflow:hidden;
       }
       .gck-fg__head{
-          background:linear-gradient(90deg,#4a3f34 0%,#6f6050 55%,#8a7a63 100%);
+          background:linear-gradient(90deg,#111 0%,#2b2b2b 55%,#3d3d3d 100%);
           color:#fff;
           font-weight:700;
           font-size:15px;
@@ -1755,8 +1755,8 @@ function gck_shgifts_free_gifts_notice() {
           min-width:100px;
           max-width:150px;
           box-sizing:border-box;
-          background:#fdfaf3;
-          border:1.5px dashed #d5c7ac;
+          background:#fff;
+          border:1.5px dashed #c9c9c9;
           border-radius:8px;
           padding:16px 8px 10px;
           text-align:center;
@@ -1765,7 +1765,7 @@ function gck_shgifts_free_gifts_notice() {
       .gck-fg__badge{
           position:absolute;
           top:-10px; left:50%; transform:translateX(-50%);
-          background:#ef9a2e;
+          background:#111;
           color:#fff;
           font-size:11px;
           font-weight:800;
@@ -1774,7 +1774,7 @@ function gck_shgifts_free_gifts_notice() {
           border-radius:6px;
           text-transform:uppercase;
           white-space:nowrap;
-          box-shadow:0 1px 2px rgba(0,0,0,.12);
+          box-shadow:0 1px 2px rgba(0,0,0,.18);
       }
       .gck-fg__img{
           width:100%;
@@ -1784,9 +1784,9 @@ function gck_shgifts_free_gifts_notice() {
           margin:6px auto 10px;
           display:block;
       }
-      .gck-fg__label{ font-weight:600; font-size:14px; color:#5f5342; }
+      .gck-fg__label{ font-weight:600; font-size:14px; color:#222; }
       .gck-fg__price{ font-size:13px; margin-top:2px; }
-      .gck-fg__price s{ color:#8a7a63; }
+      .gck-fg__price s{ color:#8c8c8c; }
       @media (max-width:560px){
           .gck-fg__card{ flex-basis:28%; min-width:88px; padding-top:14px; }
           .gck-fg__img{ height:64px; }
