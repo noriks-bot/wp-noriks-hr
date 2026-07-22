@@ -1714,106 +1714,93 @@ function gck_shgifts_free_gifts_notice() {
         return;
     }
 
-    // Card data. Images reuse existing product image URLs; crossed-out reference
-    // prices are editable placeholders.
+    // Gifts shown: 1x bokserica + 5x par carapa. Images + crossed-out reference
+    // prices are editable placeholders — adjust to real photos/prices.
+    $boxer_img = 'https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-10.00.57.jpg';
+    $socks_img = 'https://noriks.com/hr/wp-content/uploads/2026/07/Socks_Compression_Zip_HR.png';
+
     $gifts = array(
-        array(
-            'label' => '4× Majica',
-            'img'   => 'https://noriks.com/hr/wp-content/uploads/2025/09/everyday-6X.jpg',
-            'price' => '99,96 €',
-        ),
-        array(
-            'label' => '1× Bokserica',
-            'img'   => 'https://noriks.com/hr/wp-content/uploads/2026/04/2026-04-24-10.00.57.jpg',
-            'price' => '19,99 €',
-        ),
-        array(
-            'label' => '1× Čarapa',
-            'img'   => 'https://noriks.com/hr/wp-content/uploads/2026/07/Socks_Compression_Zip_HR.png',
-            'price' => '12,99 €',
-        ),
+        array( 'label' => 'Bokserica', 'img' => $boxer_img, 'price' => '19,99 €' ),
     );
+    for ( $i = 0; $i < 5; $i++ ) {
+        $gifts[] = array( 'label' => 'Par čarapa', 'img' => $socks_img, 'price' => '12,99 €' );
+    }
     ?>
     <style>
-      .gck-freegifts{
-          margin:16px 0 4px;
-          padding:14px 12px 12px;
-          border:1px solid #e6e0d4;
-          background:#faf7f1;
-          border-radius:10px;
+      .gck-fg{
+          margin:16px 0 6px;
+          background:#f7f1e6;
+          border:1px solid #e6ddcb;
+          border-radius:12px;
+          overflow:hidden;
       }
-      .gck-freegifts__title{
-          font-weight:800;
+      .gck-fg__head{
+          background:linear-gradient(90deg,#4a3f34 0%,#6f6050 55%,#8a7a63 100%);
+          color:#fff;
+          font-weight:700;
           font-size:15px;
-          color:#2f2a22;
-          margin:0 0 10px;
           text-align:center;
-          letter-spacing:.2px;
+          letter-spacing:.3px;
+          padding:12px 14px;
       }
-      .gck-freegifts__grid{
+      .gck-fg__grid{
           display:flex;
-          gap:8px;
-          justify-content:center;
           flex-wrap:wrap;
+          gap:10px;
+          justify-content:center;
+          padding:20px 14px 16px;
       }
-      .gck-freegifts__card{
-          flex:1 1 0;
-          min-width:96px;
+      .gck-fg__card{
+          flex:1 1 120px;
+          min-width:100px;
           max-width:150px;
           box-sizing:border-box;
-          background:#fff;
-          border:1px solid #ece6da;
+          background:#fdfaf3;
+          border:1.5px dashed #d5c7ac;
           border-radius:8px;
-          padding:10px 8px 9px;
+          padding:16px 8px 10px;
           text-align:center;
           position:relative;
       }
-      .gck-freegifts__badge{
+      .gck-fg__badge{
           position:absolute;
-          top:-8px; left:50%; transform:translateX(-50%);
-          background:#2e7d32;
+          top:-10px; left:50%; transform:translateX(-50%);
+          background:#ef9a2e;
           color:#fff;
-          font-size:10px;
+          font-size:11px;
           font-weight:800;
-          letter-spacing:.5px;
-          padding:2px 9px;
-          border-radius:20px;
+          letter-spacing:1px;
+          padding:3px 12px;
+          border-radius:6px;
           text-transform:uppercase;
           white-space:nowrap;
+          box-shadow:0 1px 2px rgba(0,0,0,.12);
       }
-      .gck-freegifts__img{
+      .gck-fg__img{
           width:100%;
-          max-width:96px;
-          height:66px;
+          max-width:110px;
+          height:86px;
           object-fit:contain;
-          margin:4px auto 6px;
+          margin:6px auto 10px;
           display:block;
       }
-      .gck-freegifts__label{
-          font-weight:700;
-          font-size:13px;
-          color:#2f2a22;
-          line-height:1.15;
-      }
-      .gck-freegifts__price{
-          font-size:12px;
-          margin-top:2px;
-      }
-      .gck-freegifts__price s{ color:#b23b3b; font-weight:700; }
-      @media (max-width:400px){
-          .gck-freegifts__card{ min-width:88px; }
-          .gck-freegifts__img{ height:58px; }
+      .gck-fg__label{ font-weight:600; font-size:14px; color:#5f5342; }
+      .gck-fg__price{ font-size:13px; margin-top:2px; }
+      .gck-fg__price s{ color:#8a7a63; }
+      @media (max-width:560px){
+          .gck-fg__card{ flex-basis:28%; min-width:88px; padding-top:14px; }
+          .gck-fg__img{ height:64px; }
       }
     </style>
-    <div class="gck-freegifts">
-        <div class="gck-freegifts__title">🎁 Uz kupnju besplatno dobivaš:</div>
-        <div class="gck-freegifts__grid">
+    <div class="gck-fg">
+        <div class="gck-fg__head">6 BESPLATNIH poklona uz prvu kupnju</div>
+        <div class="gck-fg__grid">
             <?php foreach ( $gifts as $g ) : ?>
-                <div class="gck-freegifts__card">
-                    <span class="gck-freegifts__badge">Gratis</span>
-                    <img class="gck-freegifts__img" src="<?php echo esc_url( $g['img'] ); ?>" alt="<?php echo esc_attr( $g['label'] ); ?>" loading="lazy">
-                    <div class="gck-freegifts__label"><?php echo esc_html( $g['label'] ); ?></div>
-                    <div class="gck-freegifts__price"><s><?php echo esc_html( $g['price'] ); ?></s></div>
+                <div class="gck-fg__card">
+                    <span class="gck-fg__badge">Free</span>
+                    <img class="gck-fg__img" src="<?php echo esc_url( $g['img'] ); ?>" alt="<?php echo esc_attr( $g['label'] ); ?>" loading="lazy">
+                    <div class="gck-fg__label"><?php echo esc_html( $g['label'] ); ?></div>
+                    <div class="gck-fg__price"><s><?php echo esc_html( $g['price'] ); ?></s></div>
                 </div>
             <?php endforeach; ?>
         </div>
