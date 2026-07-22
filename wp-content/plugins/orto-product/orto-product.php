@@ -437,9 +437,13 @@ function gck_render_bundle_selector() {
         $gck_garment = 'bokserica';
     } elseif (
         has_term( array( 'orto-kompresijske-carape' ), 'product_cat', $product_id )
-        || ( stripos( (string) $product->get_slug(), 'kompresij' ) !== false )
-        || ( stripos( (string) $product->get_name(), 'kompresij' ) !== false )
+        || ( stripos( (string) $product->get_slug(), 'nogavic' ) !== false )
+        || ( stripos( (string) $product->get_slug(), 'carap' ) !== false )
+        || ( stripos( (string) $product->get_name(), 'čarap' ) !== false )
+        || ( stripos( (string) $product->get_name(), 'nogavic' ) !== false )
     ) {
+        // Compression SOCKS only. Note: the compression MAJICA (orto-kompresijske-majice)
+        // must NOT match here — it keeps the default "majica" noun.
         $gck_garment = 'carapa';
     }
 
