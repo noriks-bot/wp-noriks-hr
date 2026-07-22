@@ -62,13 +62,21 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
   </div>
 </section>
 
-<!-- ============ 3b) Prije / Poslije ============ -->
+<!-- ============ 3b) Prije / Poslije (tekst + slika) ============ -->
 <section class="kmf-sec">
-  <div class="kmf-wrap">
-    <p class="kmf-eyebrow kmf-center">Vidljiva razlika</p>
-    <h2 class="kmf-h2 kmf-center">Prije i poslije NORIKS FIT-a</h2>
-    <p class="kmf-sub kmf-center">Uspravnije držanje, zaglađen trbuh i oštrija silueta — čim ga obučete.</p>
-    <div class="kmf-ba"><img src="<?php echo esc_url( $km.'prije-poslije.jpg' ); ?>" alt="Prije i poslije NORIKS FIT" loading="lazy"></div>
+  <div class="kmf-wrap kmf-row2">
+    <div class="kmf-copy">
+      <p class="kmf-eyebrow">Vidljiva razlika</p>
+      <h2 class="kmf-h2">Prije i poslije NORIKS FIT-a</h2>
+      <p>Uspravnije držanje, zaglađen trbuh i oštrija silueta — čim ga obučete.</p>
+      <ul class="kmf-check">
+        <li>Vidljivo uspravnije držanje</li>
+        <li>Zaglađen trbuh i „love handles“</li>
+        <li>Oštrija silueta ispod svake majice</li>
+      </ul>
+      <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
+    </div>
+    <div class="kmf-media"><img src="<?php echo esc_url( $km.'prije-poslije.jpg' ); ?>" alt="Prije i poslije NORIKS FIT" loading="lazy"></div>
   </div>
 </section>
 
