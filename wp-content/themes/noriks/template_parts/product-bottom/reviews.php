@@ -68,6 +68,10 @@
 
            Nisi sam u potrazi za savršenim boksericama za ljeto.
 
+          <?php elseif ( noriks_is_type( 'norikshers' ) ): ?>
+
+           Nisi sama u potrazi za vidljivo glađom i zategnutijom kožom.
+
 
 
           <?php else: ?>
@@ -103,6 +107,10 @@
            <?php elseif ( noriks_is_type( 'bokserice-ispod-kupacih' ) ): ?>
 
            Više od 120.000 kupaca već je potvrdilo: NORIKS je rješenje koje spaja udobnost na plaži, brzo sušenje i kroj koji konačno odgovara stvarnim muškarcima.
+
+           <?php elseif ( noriks_is_type( 'norikshers' ) ): ?>
+
+           Tisuće žena već koristi NORIKS Hers silikonske kolagenske trakove za vidljivo manje bora i finih linija – jednostavno, dok spavaju.
 
            <?php else: ?>
         
