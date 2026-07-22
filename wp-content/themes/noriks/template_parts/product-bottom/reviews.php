@@ -70,7 +70,7 @@
 
           <?php elseif ( noriks_is_type( 'norikshers' ) ): ?>
 
-           Nisi sama u potrazi za vidljivo glađom i zategnutijom kožom.
+           Niste jedini u potrazi za glatkom kožom bez bora.
 
 
 
@@ -110,7 +110,7 @@
 
            <?php elseif ( noriks_is_type( 'norikshers' ) ): ?>
 
-           Tisuće žena već koristi NORIKS Hers silikonske kolagenske trakove za vidljivo manje bora i finih linija – jednostavno, dok spavaju.
+           Tisuće žena već koriste HERS silikonske kolagenske trake za glađu, čvršću i mlađe izgledajuću kožu.
 
            <?php else: ?>
         
