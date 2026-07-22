@@ -445,6 +445,14 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
                 NORIKS ortopedski pojas za leđa koristi dvije ciljane kompresijske zone koje stabiliziraju područje L5 kralježnice, pravilno poravnavaju zdjelicu i rasterećuju SI-zglob. Time se smanjuje pritisak na išijasni živac te se ublažavaju bolovi u donjem dijelu leđa i išijas.<br><br>Kompresija se jednostavno podešava elastičnim zateznim trakama, pa potporu prilagođavate vlastitim potrebama. Tanak i prozračan dizajn omogućuje da se pojas neprimjetno nosi ispod odjeće – na poslu, u vožnji ili kod kuće.<br><br>Dostupan u dvije veličine (S/M: opseg bokova 75–110 cm i L/XL: opseg bokova 110–140 cm) te prikladan za svakoga, neovisno o dobi, spolu ili tjelesnoj građi.
 
+         <?php elseif( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+
+                NORIKS inkontinencijske bokserice izrađene su od mekanog antibakterijskog bambusovog vlakna s vodoodbojnim vanjskim slojem. U središtu je 7-slojna PureDry™ jezgra koja trenutno upija i zaključava do 300 ml tekućine, pa koža ostaje suha, a curenje ostaje unutra.<br><br>Kroj je tanak i diskretan — izgleda i osjeća se kao obično rublje, bez glomaznosti i bez osjećaja „pelene“. Zaštita uz noge sprječava bočno curenje, a kontrola mirisa održava svježinu tijekom cijelog dana.<br><br>Perive su i za višekratnu uporabu — zadržavaju upijajuću moć kroz stotine pranja, kao ekološka i isplativa alternativa jednokratnim ulošcima i pelenama.
+
+         <?php elseif( noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
+
+                Naše premium majice izrađene su od vrhunske mješavine 70% prstenasto predenog pamuka i 30% poliestera, što osigurava izuzetno mekanu tkaninu otpornu na gužvanje.<br><br>Okrugli izrez osmišljen je za idealno pristajanje, pružajući besprijekoran i udoban izgled.<br><br>Ono što naše majice čini posebnima jest njihov klasični dizajn i fokus na sitnice. S tradicionalnim bočnim šavom za prilagođeno krojenje i sitotiskanom etiketom koja sprječava nadražaj na vratu, ove majice spajaju maksimalnu udobnost s jednostavnim stilom.
+
          <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
 
 

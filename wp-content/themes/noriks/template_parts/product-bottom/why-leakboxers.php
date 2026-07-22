@@ -63,7 +63,7 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
 </section>
 
 <!-- ============ 4) 3 kartice — upijaju ============ -->
-<section class="lbx-sec">
+<section class="lbx-sec lbx-alt">
   <div class="lbx-wrap">
     <p class="lbx-eyebrow lbx-center">Zavoljet ćete ih</p>
     <h2 class="lbx-h2 lbx-center">Perive <em>inkontinencijske bokserice</em></h2>
@@ -71,18 +71,6 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
       <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'boxer-black.jpg' ); ?>" alt="Elegantna zaštita" loading="lazy"><figcaption>Elegantna zaštita</figcaption></figure>
       <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'absorption.jpg' ); ?>" alt="Nenadmašna apsorpcija" loading="lazy"><figcaption>Nenadmašna apsorpcija</figcaption></figure>
       <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'hydrofuge.jpg' ); ?>" alt="Hidrofobna tehnologija" loading="lazy"><figcaption>Hidrofobna tehnologija</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5) Tri boje ============ -->
-<section class="lbx-sec lbx-alt">
-  <div class="lbx-wrap">
-    <h2 class="lbx-h2 lbx-center">Tri elegantne boje, <em>ista upijajuća moć</em></h2>
-    <div class="lbx-colors-grid">
-      <figure><img src="<?php echo esc_url( $lb.'boxer-black.jpg' ); ?>" alt="Crne NORIKS bokserice" loading="lazy"><figcaption>Crna</figcaption></figure>
-      <figure><img src="<?php echo esc_url( $lb.'boxer-navy.jpg' ); ?>" alt="Tamnoplave NORIKS bokserice" loading="lazy"><figcaption>Tamnoplava</figcaption></figure>
-      <figure><img src="<?php echo esc_url( $lb.'boxer-gray.jpg' ); ?>" alt="Sive NORIKS bokserice" loading="lazy"><figcaption>Svijetlo siva</figcaption></figure>
     </div>
   </div>
 </section>
