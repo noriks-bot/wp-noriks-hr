@@ -1230,43 +1230,73 @@ function gck_render_bundle_selector() {
                     // ---- SHGIFTS: SHBOX-style split-garment selector, 3 groups (4+1+1) ----
                     // SAME markup/CSS as the SHBOX split path (.gck-pair-label section
                     // headers + .bundle-pair rows with .color-swatches + .gck-size-select).
-                    // Options are hardcoded (the site merges product attributes), and each
-                    // item gets its own pair index so all 6 selections reach the cart.
+                    // Colour/size OPTIONS come from the product's REAL (admin-managed)
+                    // attributes — "Boja majice"/"Veličina majice", "Boja bokserice"/
+                    // "Veličina bokserice", "Boja čarape"/"Veličina čarape" — grouped by
+                    // the garment word via the same helper SHBOX uses ($attr_groups).
+                    // Form field names stay stable (majica_color …) so cart/label capture
+                    // and the socks-width CSS are unaffected. Falls back to hardcoded
+                    // options if a garment group can't be resolved, so it never breaks.
+                    // Each item gets its own pair index so all 6 selections reach the cart.
                     $gck_sections = array(
                         array(
-                            'label'  => 'Izaberi 4 ' . gck_hr_majice_phrase( 4, false, 'majica' ),
-                            'gratis' => false, 'count' => 4, 'gg' => 0,
-                            'ckey'   => 'majica_color', 'skey' => 'majica_size',
-                            'colors' => array( 'Crna', 'Bijela', 'Siva', 'Bez', 'Tamnoplava', 'Smeđa', 'Zelena' ),
-                            'sizes'  => array( 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL' ),
+                            'label'   => 'Izaberi 4 ' . gck_hr_majice_phrase( 4, false, 'majica' ),
+                            'gratis'  => false, 'count' => 4, 'gg' => 0, 'garment' => 'majica',
+                            'ckey'    => 'majica_color', 'skey' => 'majica_size',
+                            'colors'  => array( 'Crna', 'Bijela', 'Siva', 'Bez', 'Tamnoplava', 'Smeđa', 'Zelena' ),
+                            'sizes'   => array( 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL' ),
                         ),
                         array(
-                            'label'  => 'Izaberi 1 ' . gck_hr_majice_phrase( 1, false, 'bokserica' ) . ' gratis',
-                            'gratis' => true, 'count' => 1, 'gg' => 1,
-                            'ckey'   => 'bokserica_color', 'skey' => 'bokserica_size',
-                            'colors' => array( 'Crna', 'Plava', 'Siva', 'Zelena', 'Crvena' ),
-                            'sizes'  => array( 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL' ),
+                            'label'   => 'Izaberi 1 ' . gck_hr_majice_phrase( 1, false, 'bokserica' ) . ' gratis',
+                            'gratis'  => true, 'count' => 1, 'gg' => 1, 'garment' => 'bokserica',
+                            'ckey'    => 'bokserica_color', 'skey' => 'bokserica_size',
+                            'colors'  => array( 'Crna', 'Plava', 'Siva', 'Zelena', 'Crvena' ),
+                            'sizes'   => array( 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL' ),
                         ),
                         array(
-                            'label'  => 'Izaberi boju čarapa (5 parova)',
-                            'gratis' => true, 'count' => 1, 'gg' => 2,
-                            'ckey'   => 'carapa_color', 'skey' => 'carapa_size',
-                            'colors' => array( 'Crna', 'Bijela' ),
-                            'sizes'  => array( '39-43', '43-46' ),
+                            'label'   => 'Izaberi boju čarapa (5 parova)',
+                            'gratis'  => true, 'count' => 1, 'gg' => 2, 'garment' => 'carapa',
+                            'ckey'    => 'carapa_color', 'skey' => 'carapa_size',
+                            'colors'  => array( 'Crna', 'Bijela' ),
+                            'sizes'   => array( '39-43', '43-46' ),
                         ),
                     );
+
+                    // Real, admin-managed option lists per garment from the grouped
+                    // attributes ($attr_groups was built earlier with the SHBOX helper).
+                    $gck_real = array();
+                    foreach ( (array) $attr_groups as $grp ) {
+                        $c   = $grp['color'] ?? null;
+                        $s   = $grp['size'] ?? null;
+                        $hay = strtolower(
+                            (string) ( $c['label'] ?? '' ) . ' ' . (string) ( $c['key'] ?? '' ) . ' ' .
+                            (string) ( $s['label'] ?? '' ) . ' ' . (string) ( $s['key'] ?? '' ) . ' ' .
+                            (string) ( $grp['token'] ?? '' )
+                        );
+                        $cv = $c ? array_values( array_filter( array_map( 'strval', (array) ( $c['values'] ?? array() ) ), 'strlen' ) ) : array();
+                        $sv = $s ? array_values( array_filter( array_map( 'strval', (array) ( $s['values'] ?? array() ) ), 'strlen' ) ) : array();
+                        if ( strpos( $hay, 'majic' ) !== false )        { $gck_real['majica']    = array( 'colors' => $cv, 'sizes' => $sv ); }
+                        elseif ( strpos( $hay, 'bokseric' ) !== false ) { $gck_real['bokserica'] = array( 'colors' => $cv, 'sizes' => $sv ); }
+                        elseif ( strpos( $hay, 'carap' ) !== false )    { $gck_real['carapa']    = array( 'colors' => $cv, 'sizes' => $sv ); }
+                    }
+
                     $gck_run = 0;
                     ?>
-                    <?php foreach ( $gck_sections as $sec ) : ?>
+                    <?php foreach ( $gck_sections as $sec ) :
+                        $garment    = (string) $sec['garment'];
+                        // Prefer real attribute options; fall back to hardcoded per group.
+                        $colors_use = ( ! empty( $gck_real[ $garment ]['colors'] ) ) ? $gck_real[ $garment ]['colors'] : $sec['colors'];
+                        $sizes_use  = ( ! empty( $gck_real[ $garment ]['sizes'] ) )  ? $gck_real[ $garment ]['sizes']  : $sec['sizes'];
+                    ?>
                         <div class="gck-pair-label<?php echo $sec['gratis'] ? ' is-gratis' : ''; ?>"><?php echo esc_html( $sec['label'] ); ?></div>
                         <?php for ( $k = 1; $k <= (int) $sec['count']; $k++ ) : $gck_run++; ?>
                         <div class="bundle-pair">
                             <div class="bundle-attr-row">
-                                <?php if ( ! empty( $sec['colors'] ) && $sec['ckey'] !== '' ) : ?>
+                                <?php if ( ! empty( $colors_use ) && $sec['ckey'] !== '' ) : ?>
                                     <div class="color-swatches"
                                          data-attr-key="<?php echo esc_attr( $sec['ckey'] ); ?>"
                                          data-name="pairs[<?php echo esc_attr( $offer_id ); ?>][<?php echo (int) $gck_run; ?>][<?php echo esc_attr( $sec['ckey'] ); ?>]">
-                                        <?php foreach ( $sec['colors'] as $val ) : $slug = sanitize_title( $val ); ?>
+                                        <?php foreach ( $colors_use as $val ) : $slug = sanitize_title( $val ); ?>
                                             <div class="swatch" data-value="<?php echo esc_attr( $val ); ?>" title="<?php echo esc_attr( $val ); ?>">
                                                 <span class="swatch-circle color-<?php echo esc_attr( $slug ); ?>"></span>
                                             </div>
@@ -1277,12 +1307,12 @@ function gck_render_bundle_selector() {
                                                value="">
                                     </div>
                                 <?php endif; ?>
-                                <?php if ( ! empty( $sec['sizes'] ) && $sec['skey'] !== '' ) : ?>
+                                <?php if ( ! empty( $sizes_use ) && $sec['skey'] !== '' ) : ?>
                                     <select class="gck-size-select"
                                             data-size-key="<?php echo esc_attr( $sec['skey'] ); ?>"
                                             data-garment-group="<?php echo (int) $sec['gg']; ?>"
                                             name="pairs[<?php echo esc_attr( $offer_id ); ?>][<?php echo (int) $gck_run; ?>][<?php echo esc_attr( $sec['skey'] ); ?>]">
-                                        <?php foreach ( $sec['sizes'] as $val ) : ?>
+                                        <?php foreach ( $sizes_use as $val ) : ?>
                                             <option value="<?php echo esc_attr( $val ); ?>"><?php echo esc_html( $val ); ?></option>
                                         <?php endforeach; ?>
                                     </select>
