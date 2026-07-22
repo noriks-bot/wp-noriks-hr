@@ -62,6 +62,40 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
   </div>
 </section>
 
+<!-- ============ 3b) Prije / Poslije ============ -->
+<section class="kmf-sec">
+  <div class="kmf-wrap">
+    <p class="kmf-eyebrow kmf-center">Vidljiva razlika</p>
+    <h2 class="kmf-h2 kmf-center">Prije i poslije NORIKS FIT-a</h2>
+    <p class="kmf-sub kmf-center">Uspravnije držanje, zaglađen trbuh i oštrija silueta — čim ga obučete.</p>
+    <div class="kmf-ba"><img src="<?php echo esc_url( $km.'prije-poslije.jpg' ); ?>" alt="Prije i poslije NORIKS FIT" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ============ 3c) Kako djeluje (ikone) ============ -->
+<section class="kmf-sec kmf-alt">
+  <div class="kmf-wrap">
+    <h2 class="kmf-h2 kmf-center">Kako NORIKS FIT djeluje</h2>
+    <div class="kmf-icons">
+      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-get.png' ); ?>" alt="" loading="lazy"><p>Rješava se trbuščića</p></div>
+      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-shape.webp' ); ?>" alt="" loading="lazy"><p>Oblikuje torzo</p></div>
+      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-flat.png' ); ?>" alt="" loading="lazy"><p>Izravnava prsa i držanje</p></div>
+      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-smooth.png' ); ?>" alt="" loading="lazy"><p>Zaglađuje siluetu</p></div>
+    </div>
+  </div>
+</section>
+
+<style>
+.kmf-sub{color:#5b5b5b;font-size:16px;line-height:1.6;max-width:620px;margin:0 auto 22px;text-align:center;}
+.kmf-ba{max-width:760px;margin:22px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);}
+.kmf-ba img{width:100%;height:auto;display:block;}
+.kmf-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:28px;}
+.kmf-ic{text-align:center;}
+.kmf-ic img{width:56px;height:56px;object-fit:contain;margin:0 auto 12px;display:block;}
+.kmf-ic p{margin:0;font-weight:700;font-size:15px;color:#141414;line-height:1.35;}
+@media(max-width:700px){.kmf-icons{grid-template-columns:repeat(2,1fr);gap:18px;}}
+</style>
+
 <!-- ============ 4) Zašto NORIKS FIT? (usporedba) ============ -->
 <section class="kmf-sec kmf-alt">
   <div class="kmf-wrap">
