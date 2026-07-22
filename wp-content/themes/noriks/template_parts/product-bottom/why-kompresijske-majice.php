@@ -74,6 +74,46 @@ $km = get_template_directory_uri() . '/img/kompsfit/';
       </div>
     </div>
 
+    <!-- ============ 3b) FAQ ============ -->
+    <div class="kmf-faq">
+      <h2 class="kmf-h2 kmf-center">Često postavljana pitanja</h2>
+
+      <details class="kmf-q" open>
+        <summary>Za koga je NORIKS FIT namijenjen?</summary>
+        <div class="kmf-a"><p>NORIKS FIT stvoren je za muškarce koji žele vitkiji izgled, vratiti samopouzdanje u vlastito tijelo, ispraviti držanje, osjećati se energičnije tijekom dana i izgledati vitkije ispod bilo koje odjeće.</p></div>
+      </details>
+
+      <details class="kmf-q">
+        <summary>Kako NORIKS FIT majica zapravo djeluje?</summary>
+        <div class="kmf-a"><p>NORIKS FIT koristi naprednu ionsku kompresijsku tkaninu koja aktivira prirodni odgovor tijela. Mikro-tkana vlakna potiču zdravu cirkulaciju i pomažu vam održati uspravno, budno držanje od jutra do večeri. Uz redovito nošenje daje vidljivo oblikovaniji torzo, bolju poravnatost kralježnice i osjećaj samopouzdanja u tome kako izgledate i kako se osjećate.</p></div>
+      </details>
+
+      <details class="kmf-q">
+        <summary>Koliko brzo ću primijetiti rezultate?</summary>
+        <div class="kmf-a"><p>Svako tijelo je različito, ali većina kupaca prijavljuje vidljivu promjenu unutar prvih 30 dana. Za najbolji učinak nosite NORIKS FIT svakodnevno i kombinirajte ga s uravnoteženom prehranom i redovitim kretanjem.</p></div>
+      </details>
+
+      <details class="kmf-q">
+        <summary>Što ako mi veličina ne odgovara?</summary>
+        <div class="kmf-a"><p>Nema problema. Kontaktirajte nas na <a href="mailto:info@noriks.com">info@noriks.com</a> i naš tim će odmah organizirati zamjenu.</p></div>
+      </details>
+
+      <details class="kmf-q">
+        <summary>Koliko traje dostava?</summary>
+        <div class="kmf-a"><p>Narudžbe obično stižu unutar 2–5 radnih dana iz našeg europskog skladišta.</p></div>
+      </details>
+
+      <details class="kmf-q">
+        <summary>Mogu li majicu prati u perilici?</summary>
+        <div class="kmf-a"><p>Apsolutno — koristite hladni, nježni program kako biste sačuvali kompresiju i produžili vijek trajanja tkanine.</p></div>
+      </details>
+
+      <details class="kmf-q">
+        <summary>Od čega je NORIKS FIT izrađen?</summary>
+        <div class="kmf-a"><p>80 % najlon, 20 % elastan.</p></div>
+      </details>
+    </div>
+
     <!-- ============ 4) Recenzije ============ -->
     <div class="kmf-reviews">
       <div class="kmf-rev-top">
@@ -155,6 +195,18 @@ $km = get_template_directory_uri() . '/img/kompsfit/';
 .kmf-rev-foot{padding:0 16px 16px;display:flex;flex-direction:column;gap:4px;}
 .kmf-rev-badge{color:#00b67a;font-size:13px;font-weight:700;}
 .kmf-rev-name{font-weight:700;font-size:14px;color:#141414;}
+
+/* faq */
+.kmf-faq{margin-bottom:56px;}
+.kmf-faq .kmf-h2{margin-bottom:22px;}
+.kmf-q{border:1px solid #ececec;border-radius:12px;margin-bottom:10px;overflow:hidden;background:#fff;}
+.kmf-q summary{cursor:pointer;list-style:none;padding:16px 44px 16px 18px;font-weight:700;font-size:16px;position:relative;color:#141414;font-family:Georgia,'Times New Roman',serif;}
+.kmf-q summary::-webkit-details-marker{display:none;}
+.kmf-q summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:22px;color:#888;}
+.kmf-q[open] summary::after{content:"–";}
+.kmf-a{padding:0 18px 18px;font-size:15px;line-height:1.6;color:#3a3a3a;}
+.kmf-a p{margin:0;}
+.kmf-a a{color:#141414;font-weight:700;}
 
 @media(max-width:860px){
   .kmf-hero{grid-template-columns:1fr;gap:20px;}
