@@ -59,5 +59,10 @@ if ( noriks_is_type( 'norikshers' ) ) {
     include $noriks_pb_dir . 'why-norikshers.php';
 }
 
+// MAJICA DARILA / SHGIFTS (orto-majica-darila) — uses the same why-section as majice
+if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
+    include $noriks_pb_dir . 'why-majice.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
