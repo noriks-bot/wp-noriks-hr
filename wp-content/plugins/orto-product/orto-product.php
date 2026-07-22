@@ -1731,7 +1731,7 @@ function gck_shgifts_free_gifts_notice() {
           margin:16px 0 6px;
           background:#f4f4f4;
           border:1px solid #e2e2e2;
-          border-radius:12px;
+          border-radius:4px;
           overflow:hidden;
       }
       .gck-fg__head{
@@ -1745,20 +1745,19 @@ function gck_shgifts_free_gifts_notice() {
       }
       .gck-fg__grid{
           display:flex;
-          flex-wrap:wrap;
-          gap:10px;
+          flex-wrap:nowrap;
+          gap:8px;
           justify-content:center;
-          padding:20px 14px 16px;
+          padding:18px 12px 14px;
       }
       .gck-fg__card{
-          flex:1 1 120px;
-          min-width:100px;
-          max-width:150px;
+          flex:1 1 0;
+          min-width:0;
           box-sizing:border-box;
           background:#fff;
           border:1.5px dashed #c9c9c9;
-          border-radius:8px;
-          padding:16px 8px 10px;
+          border-radius:4px;
+          padding:16px 6px 9px;
           text-align:center;
           position:relative;
       }
@@ -1767,29 +1766,30 @@ function gck_shgifts_free_gifts_notice() {
           top:-10px; left:50%; transform:translateX(-50%);
           background:#111;
           color:#fff;
-          font-size:11px;
+          font-size:10px;
           font-weight:800;
           letter-spacing:1px;
-          padding:3px 12px;
-          border-radius:6px;
+          padding:3px 10px;
+          border-radius:4px;
           text-transform:uppercase;
           white-space:nowrap;
           box-shadow:0 1px 2px rgba(0,0,0,.18);
       }
       .gck-fg__img{
           width:100%;
-          max-width:110px;
-          height:86px;
+          max-width:100%;
+          height:74px;
           object-fit:contain;
-          margin:6px auto 10px;
+          margin:6px auto 8px;
           display:block;
       }
-      .gck-fg__label{ font-weight:600; font-size:14px; color:#222; }
-      .gck-fg__price{ font-size:13px; margin-top:2px; }
+      .gck-fg__label{ font-weight:600; font-size:13px; color:#222; }
+      .gck-fg__price{ font-size:12px; margin-top:2px; }
       .gck-fg__price s{ color:#8c8c8c; }
-      @media (max-width:560px){
-          .gck-fg__card{ flex-basis:28%; min-width:88px; padding-top:14px; }
-          .gck-fg__img{ height:64px; }
+      @media (max-width:600px){
+          .gck-fg__grid{ flex-wrap:wrap; }
+          .gck-fg__card{ flex:1 1 28%; min-width:88px; }
+          .gck-fg__img{ height:60px; }
       }
     </style>
     <div class="gck-fg">
