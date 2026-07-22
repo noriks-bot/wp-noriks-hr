@@ -506,9 +506,9 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#12233b;color:#fff;">
-                  <th style="padding:8px 10px;text-align:left;">Veličina</th>
-                  <th style="padding:8px 10px;text-align:left;">Bokovi (cm)</th>
-                  <th style="padding:8px 10px;text-align:left;">Bokovi (inč)</th>
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Veličina</th>
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Bokovi (cm)</th>
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Bokovi (inč)</th>
                 </tr>
               </thead>
               <tbody>
@@ -545,8 +545,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
             <table style="width:100%;border-collapse:collapse;font-size:15px;">
               <thead>
                 <tr style="background:#111;color:#fff;">
-                  <th style="padding:9px 12px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 12px;text-align:left;">Odgovarajuća težina</th>
+                  <th style="padding:9px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Veličina</th>
+                  <th style="padding:9px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Odgovarajuća težina</th>
                 </tr>
               </thead>
               <tbody>

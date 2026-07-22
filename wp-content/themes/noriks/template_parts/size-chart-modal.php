@@ -267,7 +267,7 @@
         <p style="margin:0 0 14px;line-height:1.6;font-size:14px;color:#333;">Omotajte mjernu traku oko najšireg dijela bokova (preko stražnjice), bez zatezanja, te zabilježite mjeru u centimetrima.</p>
         <table style="width:100%;border-collapse:collapse;font-size:14px;">
           <thead><tr style="background:#12233b;color:#fff;">
-            <th style="padding:9px 10px;text-align:left;">Veličina</th><th style="padding:9px 10px;text-align:left;">Bokovi (cm)</th><th style="padding:9px 10px;text-align:left;">Bokovi (inč)</th>
+            <th style="padding:9px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Veličina</th><th style="padding:9px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Bokovi (cm)</th><th style="padding:9px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Bokovi (inč)</th>
           </tr></thead>
           <tbody>
           <?php foreach ( array(array('S','do 76 cm','do 30"'),array('M','77 – 85 cm','30 – 33"'),array('L','86 – 94 cm','34 – 37"'),array('XL','95 – 102 cm','37 – 40"'),array('2XL','103 – 114 cm','41 – 45"'),array('3XL','115 – 121 cm','45 – 48"'),array('4XL','122 – 129 cm','48 – 51"'),array('5XL','130 – 137 cm','51 – 54"'),array('6XL','138 – 145 cm','54 – 57"'),array('7XL','146 – 153 cm','57 – 60"'),array('8XL','154 cm i više','61" i više') ) as $i=>$r): ?>
@@ -285,7 +285,7 @@
       <div style="margin:30px 0;padding:0 6px;">
         <table style="width:100%;border-collapse:collapse;font-size:16px;">
           <thead><tr style="background:#111;color:#fff;">
-            <th style="padding:11px 12px;text-align:left;">Veličina</th><th style="padding:11px 12px;text-align:left;">Odgovarajuća težina</th>
+            <th style="padding:11px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Veličina</th><th style="padding:11px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Odgovarajuća težina</th>
           </tr></thead>
           <tbody>
           <?php foreach ( array(array('S','50 – 70 kg'),array('M','70 – 90 kg'),array('L','90 – 110 kg'),array('XL','110 – 130 kg'),array('2XL','130 – 150 kg'),array('3XL','150 – 170 kg'),array('4XL','170 – 190 kg'),array('5XL','190 – 210 kg') ) as $i=>$r): ?>
