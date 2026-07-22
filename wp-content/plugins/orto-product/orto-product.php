@@ -1861,10 +1861,10 @@ function gck_shgifts_free_gifts_notice() {
     $socks_img = 'https://noriks.com/hr/wp-content/uploads/2025/11/stumfi_crni3942-683x1024.jpg.webp';
 
     $gifts = array(
-        array( 'label' => 'Bokserica', 'img' => $boxer_img, 'price' => '19,99 €' ),
+        array( 'label' => '1x bokserice', 'img' => $boxer_img, 'price' => '19,99 €' ),
     );
     for ( $i = 0; $i < 5; $i++ ) {
-        $gifts[] = array( 'label' => 'Par čarapa', 'img' => $socks_img, 'price' => '12,99 €' );
+        $gifts[] = array( 'label' => '1x par čarapa', 'img' => $socks_img, 'price' => '12,99 €' );
     }
     ?>
     <style>
