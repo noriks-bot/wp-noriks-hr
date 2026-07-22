@@ -211,20 +211,24 @@
   $is_fisiorest_page  = noriks_is_type( 'fisiorest', $current_product_id );
   $is_norikshers_page = noriks_is_type( 'norikshers', $current_product_id );
   $is_leakboxers_page = noriks_is_type( 'leakboxers', $current_product_id );
-  // Back belt / bunion / fisiorest / norikshers / leak boxers take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page ) { $is_nogavice_page = false; }
+  $is_kompmajice_page = noriks_is_type( 'kompresijske-majice', $current_product_id );
+  // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice take precedence even if they still carry the socks category.
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_norikshers_page ? 'NORIKS HERS'
                      : ( $is_leakboxers_page ? 'NORIKS upijajuće bokserice'
+                     : ( $is_kompmajice_page ? 'NORIKS FIT kompresijska majica'
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
   if ( $is_leakboxers_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_leakboxers.php';
+  } elseif ( $is_kompmajice_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_kompresijske-majice.php';
   } elseif ( $is_norikshers_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_norikshers.php';
   } elseif ( $is_fisiorest_page ) {
@@ -586,10 +590,13 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
   $daily_seed = $today_obj->format('Y-m-d');
 
   // Avatar pools based on page category
-  $avatar_type = $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' );
-  $avatar_pool = get_review_avatar_pool($avatar_type);
+  // Leak boxers: text-only (no photos). Kompresijske majice: own photo pool. Others: existing pools.
+  $avatar_type = $is_leakboxers_page ? '' : ( $is_kompmajice_page ? 'kompresijske-majice' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) ) );
+  $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
-  $product_pool = get_wc_product_pool();
+  // On single-product landing pages (leak boxers / kompresijske majice) the cards should
+  // reference THIS product (via $rv_fallback_title), not random pool products.
+  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -1063,8 +1070,34 @@ $is_bunion    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') 
 $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
 $is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
 $is_leakboxers = ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') );
+$is_kompmajice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice ) { $is_knc = false; } // carry sock cat but are NOT socks
+
+// NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
+// "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
+$kompmajice_faq = array(
+  array(
+    'questioon' => 'Za koga je NORIKS FIT namijenjen?',
+    'answer'    => 'NORIKS FIT stvoren je za muškarce koji žele vitkiji izgled, vratiti samopouzdanje u vlastito tijelo, ispraviti držanje, osjećati se energičnije tijekom dana i izgledati vitkije ispod bilo koje odjeće.'
+  ),
+  array(
+    'questioon' => 'Kako NORIKS FIT majica zapravo djeluje?',
+    'answer'    => 'NORIKS FIT koristi naprednu ionsku kompresijsku tkaninu koja aktivira prirodni odgovor tijela. Mikro-tkana vlakna potiču zdravu cirkulaciju i pomažu vam održati uspravno držanje od jutra do večeri. Uz redovito nošenje daje vidljivo oblikovaniji torzo, bolju poravnatost kralježnice i više samopouzdanja.'
+  ),
+  array(
+    'questioon' => 'Koliko brzo ću primijetiti rezultate?',
+    'answer'    => 'Svako tijelo je različito, ali većina kupaca prijavljuje vidljivu promjenu unutar prvih 30 dana. Za najbolji učinak nosite NORIKS FIT svakodnevno i kombinirajte ga s uravnoteženom prehranom i redovitim kretanjem.'
+  ),
+  array(
+    'questioon' => 'Vidi li se ispod košulje?',
+    'answer'    => 'Ne. NORIKS FIT je tanak, diskretan i nevidljiv ispod bilo koje košulje, a istovremeno oblikuje trbuh i prsa te podupire držanje.'
+  ),
+  array(
+    'questioon' => 'Kako se pere i od čega je izrađen?',
+    'answer'    => 'Izrađen je od 80 % najlona i 20 % elastana. Perite ga na hladnom, nježnom programu kako biste sačuvali kompresiju i produžili vijek trajanja tkanine.'
+  ),
+);
 
 // NORIKS LEAK BOXERS (inkontinencijske bokserice) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS.)
@@ -1236,10 +1269,13 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_leakboxers && $is_info ) {
     return $leakboxers_faq;
+  }
+  if ( $is_kompmajice && $is_info ) {
+    return $kompmajice_faq;
   }
   if ( $is_norikshers && $is_info ) {
     return $norikshers_faq;
