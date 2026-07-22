@@ -46,6 +46,9 @@ function noriks_product_type_map() : array {
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
+        'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
+        'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
+        'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),
         'bokserice-ispod-kupacih' => array( 'bokserice-savrsene-za-ispod-kupacih' ),
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),
