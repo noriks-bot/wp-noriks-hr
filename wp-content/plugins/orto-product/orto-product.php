@@ -1252,7 +1252,7 @@ function gck_render_bundle_selector() {
                             'gratis' => true, 'count' => 1, 'gg' => 2,
                             'ckey'   => 'carapa_color', 'skey' => 'carapa_size',
                             'colors' => array( 'Crna', 'Bijela' ),
-                            'sizes'  => array( '35-38', '39-42', '43-46' ),
+                            'sizes'  => array( '39-43', '43-46' ),
                         ),
                     );
                     $gck_run = 0;
