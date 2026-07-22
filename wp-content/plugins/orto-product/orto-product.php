@@ -1248,7 +1248,7 @@ function gck_render_bundle_selector() {
                             'sizes'  => array( 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL' ),
                         ),
                         array(
-                            'label'  => 'Izaberi 1 par čarapa gratis',
+                            'label'  => 'Izaberi boju čarapa (5 parova)',
                             'gratis' => true, 'count' => 1, 'gg' => 2,
                             'ckey'   => 'carapa_color', 'skey' => 'carapa_size',
                             'colors' => array( 'Crna', 'Bijela' ),
@@ -1872,7 +1872,7 @@ function gck_shgifts_free_gifts_notice() {
           margin:16px 0 6px;
           background:#f4f4f4;
           border:1px solid #e2e2e2;
-          border-radius:4px;
+          border-radius:9px;
           overflow:hidden;
       }
       .gck-fg__head{
@@ -1934,11 +1934,11 @@ function gck_shgifts_free_gifts_notice() {
       }
     </style>
     <div class="gck-fg">
-        <div class="gck-fg__head">6 BESPLATNIH poklona uz prvu kupnju</div>
+        <div class="gck-fg__head">6 BESPLATNIH komada uz svaku kupnju</div>
         <div class="gck-fg__grid">
             <?php foreach ( $gifts as $g ) : ?>
                 <div class="gck-fg__card">
-                    <span class="gck-fg__badge">Free</span>
+                    <span class="gck-fg__badge">Gratis</span>
                     <img class="gck-fg__img" src="<?php echo esc_url( $g['img'] ); ?>" alt="<?php echo esc_attr( $g['label'] ); ?>" loading="lazy">
                     <div class="gck-fg__label"><?php echo esc_html( $g['label'] ); ?></div>
                     <div class="gck-fg__price"><s><?php echo esc_html( $g['price'] ); ?></s></div>
