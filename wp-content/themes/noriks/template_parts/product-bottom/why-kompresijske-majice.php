@@ -95,6 +95,49 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
   </div>
 </section>
 
+<!-- ============ 5) Recenzije (testimonijali sa slikama) ============ -->
+<section class="kmf-sec kmf-alt">
+  <div class="kmf-wrap">
+    <div class="kmf-rev-top">
+      <span class="kmf-rev-stars">★★★★★</span>
+      <span class="kmf-rev-head">3.575 provjerenih recenzija — izvrsno, 4,8 od 5 zvjezdica</span>
+    </div>
+    <div class="kmf-rev-cards">
+      <div class="kmf-rev-card">
+        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="lazy"></div>
+        <p class="kmf-rev-txt">„Bit ću iskren — bio sam skeptičan. Uvijek sam imao onaj trbuščić koji sam skrivao pod širokim majicama. Nakon 4 tjedna nošenja NORIKS-a 4 sata dnevno, skinuo sam nekoliko centimetara u struku i počeo stajati uspravno bez razmišljanja. Ramena su se otvorila, a djevojka je rekla da izgledam kao da 'blistam'.“</p>
+        <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Ivan M. — 34 g.</span></div>
+      </div>
+      <div class="kmf-rev-card">
+        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'persona.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="lazy"></div>
+        <p class="kmf-rev-txt">„Cijeli dan sjedim za stolom. Pogrbljen, napuhnut, bez samopouzdanja. NORIKS me doslovno natjerao da sjedim uspravno bez ikakvog truda. Za 10 dana napetost u leđima je nestala, a košulje su počele bolje pristajati. Sad ga nosim u ured — diskretan je, prozračan, i iskreno? Prestao sam se skrivati od kamera.“</p>
+        <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Marko P. — 42 g.</span></div>
+      </div>
+      <div class="kmf-rev-card">
+        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="lazy"></div>
+        <p class="kmf-rev-txt">„Tri godine sam odbijao izlaske jer sam mrzio ono što vidim u ogledalu dok se oblačim. NORIKS je prvi put da sam prestao ratovati s vlastitim odrazom. Jutros sam se obukao za 5 minuta. Bez namještanja. Bez izbjegavanja ogledala. To je to.“</p>
+        <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Tomislav K. — 27 g.</span></div>
+      </div>
+    </div>
+    <div class="kmf-cta-wrap"><a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a></div>
+  </div>
+</section>
+
+<style>
+/* 5) testimonijali */
+.kmf-rev-top{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:26px;}
+.kmf-rev-top .kmf-rev-stars{color:#00b67a;font-size:22px;letter-spacing:2px;}
+.kmf-rev-head{font-weight:700;font-size:17px;color:#141414;text-align:center;}
+.kmf-rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.kmf-rev-card{border:1px solid #e4e4e4;border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+.kmf-rev-photo img{width:100%;height:300px;object-fit:cover;display:block;}
+.kmf-rev-txt{padding:16px 16px 8px;margin:0;font-size:14px;line-height:1.55;color:#333;flex:1;}
+.kmf-rev-foot{padding:0 16px 16px;display:flex;flex-direction:column;gap:4px;}
+.kmf-rev-badge{color:#00b67a;font-size:13px;font-weight:700;}
+.kmf-rev-name{font-weight:700;font-size:14px;color:#141414;}
+@media(max-width:860px){.kmf-rev-cards{grid-template-columns:1fr;}}
+</style>
+
 <style>
 .kmf-sec{padding:48px 0;background:#fff;}
 .kmf-alt{background:#f5f6f7;}
