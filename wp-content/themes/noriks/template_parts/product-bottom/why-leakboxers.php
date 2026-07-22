@@ -29,6 +29,17 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
   </div>
 </section>
 
+<!-- ============ 1b) Brand video (preko cijele širine) ============ -->
+<section class="lbx-sec lbx-alt">
+  <div class="lbx-wrap">
+    <h2 class="lbx-h2 lbx-center">Dostojanstvo koje zaslužujete</h2>
+    <p class="lbx-sub lbx-center">Pogledajte zašto se više od 123.000 muškaraca nikad nije vratilo na jednokratne zaštite.</p>
+    <div class="lbx-brandvideo">
+      <video src="<?php echo esc_url( $lbv.'brand.mp4' ); ?>" controls muted loop playsinline preload="metadata"></video>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 2) PureDry™ 7 slojeva (slika + tekst) ============ -->
 <section class="lbx-sec lbx-alt">
   <div class="lbx-wrap lbx-row2 lbx-rev">
@@ -146,6 +157,9 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
   .lbx-h2{font-size:clamp(23px,3.2vw,34px);font-weight:800;color:#12233b;line-height:1.15;margin:0 0 14px;}
   .lbx-h2 em{color:#1f8a9c;font-style:normal;}
   .lbx-center{text-align:center;}
+  .lbx-sub{color:#5b6b7b;font-size:16px;line-height:1.6;max-width:640px;margin:0 auto 24px;}
+  .lbx-brandvideo{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(18,35,59,.12);}
+  .lbx-brandvideo video{width:100%;height:auto;display:block;background:#000;}
   .lbx-copy p{font-size:16px;line-height:1.6;color:#33465a;margin:0 0 14px;}
   .lbx-media img,.lbx-media video{width:100%;height:auto;display:block;border-radius:16px;}
   .lbx-media video{background:#000;}
