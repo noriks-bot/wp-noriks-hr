@@ -80,19 +80,6 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
   </div>
 </section>
 
-<!-- ============ 3c) Kako djeluje (ikone) ============ -->
-<section class="kmf-sec kmf-alt">
-  <div class="kmf-wrap">
-    <h2 class="kmf-h2 kmf-center">Kako NORIKS FIT djeluje</h2>
-    <div class="kmf-icons">
-      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-get.png' ); ?>" alt="" loading="lazy"><p>Rješava se trbuščića</p></div>
-      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-shape.webp' ); ?>" alt="" loading="lazy"><p>Oblikuje torzo</p></div>
-      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-flat.png' ); ?>" alt="" loading="lazy"><p>Izravnava prsa i držanje</p></div>
-      <div class="kmf-ic"><img src="<?php echo esc_url( $km.'ic-smooth.png' ); ?>" alt="" loading="lazy"><p>Zaglađuje siluetu</p></div>
-    </div>
-  </div>
-</section>
-
 <style>
 .kmf-sub{color:#5b5b5b;font-size:16px;line-height:1.6;max-width:620px;margin:0 auto 22px;text-align:center;}
 .kmf-ba{max-width:760px;margin:22px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);}
@@ -138,7 +125,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
 </section>
 
 <!-- ============ 5) Recenzije (testimonijali sa slikama) ============ -->
-<section class="kmf-sec kmf-alt">
+<section class="kmf-sec">
   <div class="kmf-wrap">
     <div class="kmf-rev-top">
       <span class="kmf-rev-stars">★★★★★</span>
