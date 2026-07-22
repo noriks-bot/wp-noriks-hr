@@ -95,6 +95,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
 <section class="kmf-sec kmf-alt">
   <div class="kmf-wrap">
     <h2 class="kmf-h2 kmf-center">Zašto NORIKS FIT?</h2>
+    <p class="kmf-sub">Usporedite NORIKS FIT s običnim kompresijskim majicama i vidite razliku koja se osjeti čim ga obučete.</p>
     <div class="kmf-cmp-row">
       <div class="kmf-cmp-media"><img src="<?php echo esc_url( $km.'compare.webp' ); ?>" alt="NORIKS FIT u odnosu na obične majice" loading="lazy"></div>
       <div class="kmf-table">

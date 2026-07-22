@@ -508,7 +508,6 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
                 <tr style="background:#12233b;color:#fff;">
                   <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Veličina</th>
                   <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Bokovi (cm)</th>
-                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Bokovi (inč)</th>
                 </tr>
               </thead>
               <tbody>
@@ -531,7 +530,6 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:8px 10px;font-weight:700;"><?php echo esc_html($r[0]); ?></td>
                     <td style="padding:8px 10px;"><?php echo esc_html($r[1]); ?></td>
-                    <td style="padding:8px 10px;color:#667;"><?php echo esc_html($r[2]); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
