@@ -35,13 +35,13 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
     <h2 class="lbx-h2 lbx-center">Dostojanstvo koje zaslužujete</h2>
     <p class="lbx-sub lbx-center">Pogledajte zašto se više od 123.000 muškaraca nikad nije vratilo na jednokratne zaštite.</p>
     <div class="lbx-brandvideo">
-      <video src="<?php echo esc_url( $lbv.'brand.mp4' ); ?>" controls muted loop playsinline preload="metadata"></video>
+      <video src="<?php echo esc_url( $lbv.'brand.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video>
     </div>
   </div>
 </section>
 
 <!-- ============ 2) PureDry™ 7 slojeva (slika + tekst) ============ -->
-<section class="lbx-sec lbx-alt">
+<section class="lbx-sec">
   <div class="lbx-wrap lbx-row2 lbx-rev">
     <div class="lbx-media"><img src="<?php echo esc_url( $lb.'features.png' ); ?>" alt="NORIKS PureDry — 7-slojna tehnologija upijanja" loading="lazy"></div>
     <div class="lbx-copy">
@@ -59,7 +59,7 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
 </section>
 
 <!-- ============ 3) Video demo — nula curenja ============ -->
-<section class="lbx-sec lbx-video">
+<section class="lbx-sec lbx-video lbx-alt">
   <div class="lbx-wrap lbx-row2">
     <div class="lbx-copy">
       <p class="lbx-eyebrow">NORIKS razlika</p>
@@ -74,7 +74,7 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
 </section>
 
 <!-- ============ 4) 3 kartice — upijaju ============ -->
-<section class="lbx-sec lbx-alt">
+<section class="lbx-sec">
   <div class="lbx-wrap">
     <p class="lbx-eyebrow lbx-center">Zavoljet ćete ih</p>
     <h2 class="lbx-h2 lbx-center">Perive <em>inkontinencijske bokserice</em></h2>
@@ -139,9 +139,9 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
     <p class="lbx-eyebrow lbx-center">Iskustva kupaca</p>
     <h2 class="lbx-h2 lbx-center">Rublje kojem već vjeruje <em>123.000+ muškaraca</em></h2>
     <div class="lbx-tst-grid">
-      <video src="<?php echo esc_url( $lbv.'tst1.mp4' ); ?>" controls muted loop playsinline preload="metadata"></video>
-      <video src="<?php echo esc_url( $lbv.'tst2.mp4' ); ?>" controls muted loop playsinline preload="metadata"></video>
-      <video src="<?php echo esc_url( $lbv.'tst3.mp4' ); ?>" controls muted loop playsinline preload="metadata"></video>
+      <video src="<?php echo esc_url( $lbv.'tst1.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video>
+      <video src="<?php echo esc_url( $lbv.'tst2.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video>
+      <video src="<?php echo esc_url( $lbv.'tst3.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video>
     </div>
     <div class="lbx-cta-wrap"><a class="lbx-cta lbx-cta-solid" href="#bundle-selector">Naruči diskretno →</a></div>
   </div>
