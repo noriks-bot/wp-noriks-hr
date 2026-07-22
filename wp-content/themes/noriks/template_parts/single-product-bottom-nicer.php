@@ -64,6 +64,11 @@ if ( noriks_is_type( 'leakboxers' ) ) {
     include $noriks_pb_dir . 'why-leakboxers.php';
 }
 
+// KOMPRESIJSKE MAJICE (orto-kompresijske-majice) — muška kompresijska/oblikujuća majica
+if ( noriks_is_type( 'kompresijske-majice' ) ) {
+    include $noriks_pb_dir . 'why-kompresijske-majice.php';
+}
+
 // MAJICA DARILA / SHGIFTS (orto-majica-darila) — uses the same why-section as majice
 if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
     include $noriks_pb_dir . 'why-majice.php';

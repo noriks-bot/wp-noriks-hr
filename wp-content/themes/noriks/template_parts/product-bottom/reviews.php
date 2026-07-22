@@ -76,6 +76,10 @@
 
            Niste jedini u potrazi za pouzdanom zaštitom od curenja mokraće.
 
+          <?php elseif ( noriks_is_type( 'kompresijske-majice' ) ): ?>
+
+           Niste jedini u potrazi za oštrijom siluetom i boljim držanjem.
+
 
 
           <?php else: ?>
@@ -119,6 +123,10 @@
            <?php elseif ( noriks_is_type( 'leakboxers' ) ): ?>
 
            Tisuće muškaraca već nosi NORIKS upijajuće bokserice za suhoću i samopouzdanje – bez uložaka i pelena.
+
+           <?php elseif ( noriks_is_type( 'kompresijske-majice' ) ): ?>
+
+           Tisuće muškaraca već nosi NORIKS kompresijsku majicu za zaglađen trbuh, bolje držanje i više samopouzdanja.
 
            <?php else: ?>
         
