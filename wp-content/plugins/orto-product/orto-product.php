@@ -1350,8 +1350,8 @@ function gck_render_bundle_selector() {
                         ),
                         array(
                             'base'   => 'Čarapa', 'count' => 1, 'img' => $gck_img_carapa, 'price' => '12,99',
-                            'ckey'   => '', 'skey' => 'carapa_size',
-                            'colors' => array(),
+                            'ckey'   => 'carapa_color', 'skey' => 'carapa_size',
+                            'colors' => array( 'Crna', 'Bijela' ),
                             'sizes'  => array( '35-38', '39-42', '43-46' ),
                         ),
                     );
