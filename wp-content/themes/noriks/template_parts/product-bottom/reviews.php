@@ -72,6 +72,10 @@
 
            Niste jedini u potrazi za glatkom kožom bez bora.
 
+          <?php elseif ( noriks_is_type( 'leakboxers' ) ): ?>
+
+           Niste jedini u potrazi za pouzdanom zaštitom od curenja mokraće.
+
 
 
           <?php else: ?>
@@ -111,6 +115,10 @@
            <?php elseif ( noriks_is_type( 'norikshers' ) ): ?>
 
            Tisuće žena već koriste HERS silikonske kolagenske trake za glađu, čvršću i mlađe izgledajuću kožu.
+
+           <?php elseif ( noriks_is_type( 'leakboxers' ) ): ?>
+
+           Tisuće muškaraca već nosi NORIKS upijajuće bokserice za suhoću i samopouzdanje – bez uložaka i pelena.
 
            <?php else: ?>
         
