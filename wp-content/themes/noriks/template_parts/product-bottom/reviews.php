@@ -210,18 +210,22 @@
   $is_bunion_page     = noriks_is_type( 'bunion', $current_product_id );
   $is_fisiorest_page  = noriks_is_type( 'fisiorest', $current_product_id );
   $is_norikshers_page = noriks_is_type( 'norikshers', $current_product_id );
-  // Back belt / bunion / fisiorest / norikshers take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page ) { $is_nogavice_page = false; }
+  $is_leakboxers_page = noriks_is_type( 'leakboxers', $current_product_id );
+  // Back belt / bunion / fisiorest / norikshers / leak boxers take precedence even if they still carry the socks category.
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_norikshers_page ? 'NORIKS HERS'
+                     : ( $is_leakboxers_page ? 'NORIKS upijajuće bokserice'
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_norikshers_page ) {
+  if ( $is_leakboxers_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_leakboxers.php';
+  } elseif ( $is_norikshers_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_norikshers.php';
   } elseif ( $is_fisiorest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_fisiorest.php';
@@ -1058,8 +1062,38 @@ $is_ortopas   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas')
 $is_bunion    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
 $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
 $is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
+$is_leakboxers = ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers ) { $is_knc = false; } // carry sock cat but are NOT socks
+
+// NORIKS LEAK BOXERS (inkontinencijske bokserice) — product FAQ, replaces ONLY the
+// "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS.)
+$leakboxers_faq = array(
+  array(
+    'questioon' => 'Zašto je više od 123.000 muškaraca odabralo NORIKS?',
+    'answer'    => 'NORIKS su najupijajuće perive bokserice za muško curenje mokraće: drže do 300 ml, Oeko-Tex® su certificirane i bez štetnih tvari, perive i višekratne (ekološka alternativa jednokratnim ulošcima), dizajnirane za cjelodnevnu udobnost i samopouzdanje. Čak 87 % kupaca ponovno naruči nakon prve kupnje.'
+  ),
+  array(
+    'questioon' => 'Koliko upijaju?',
+    'answer'    => 'Do 300 ml — gotovo 3 puta više od većine proizvoda na tržištu. Zahvaljujući 7-slojnoj PureDry™ jezgri tekućina se trenutno upija i zaključava duboko unutra, pa koža ostaje suha, a vanjski sloj je vodoodbojan.'
+  ),
+  array(
+    'questioon' => 'Vidi li se ispod odjeće?',
+    'answer'    => 'Ne. NORIKS bokserice tanke su, diskretne i fleksibilne — izgledaju i osjećaju se kao obično rublje, bez glomaznosti i bez osjećaja „pelene“.'
+  ),
+  array(
+    'questioon' => 'Kako se peru?',
+    'answer'    => 'Perite na 30–40 °C, bez omekšivača i izbjeljivača, sušite na zraku. Zadržavaju upijajuću moć kroz stotine pranja.'
+  ),
+  array(
+    'questioon' => 'Je li dostava diskretna?',
+    'answer'    => 'Da. Sve narudžbe šaljemo u neutralnoj, diskretnoj ambalaži bez vidljivih oznaka sadržaja, kako bismo zaštitili vašu privatnost.'
+  ),
+  array(
+    'questioon' => 'Od čega su izrađene?',
+    'answer'    => 'Vanjski sloj od bambusovog vlakna s elastanom, 7-slojna upijajuća jezgra od tehničkih mikrovlakana te vodoodbojna prozračna membrana.'
+  ),
+);
 
 // NORIKS HERS (silikonske kolagenske trake za bore) — product FAQ (prijevod, NORIKS HERS).
 $norikshers_faq = array(
@@ -1202,8 +1236,11 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_leakboxers && $is_info ) {
+    return $leakboxers_faq;
+  }
   if ( $is_norikshers && $is_info ) {
     return $norikshers_faq;
   }

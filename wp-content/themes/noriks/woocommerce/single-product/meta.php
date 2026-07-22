@@ -489,8 +489,49 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
-           <?php if( noriks_is_type( 'ortopas', $current_product_id ) ): ?>
+
+           <?php if( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+
+          <div class="lbx-size">
+            <p style="margin:0 0 6px;font-weight:700;">Kako izmjeriti bokove</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Omotajte mjernu traku oko najšireg dijela bokova (preko stražnjice), bez zatezanja. Stojte opušteno i uspravno te zabilježite mjeru u centimetrima.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#12233b;color:#fff;">
+                  <th style="padding:8px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:8px 10px;text-align:left;">Bokovi (cm)</th>
+                  <th style="padding:8px 10px;text-align:left;">Bokovi (inč)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $lbx_sizes = array(
+                  array('S','do 76 cm','do 30"'),
+                  array('M','77 – 85 cm','30 – 33"'),
+                  array('L','86 – 94 cm','34 – 37"'),
+                  array('XL','95 – 102 cm','37 – 40"'),
+                  array('2XL','103 – 114 cm','41 – 45"'),
+                  array('3XL','115 – 121 cm','45 – 48"'),
+                  array('4XL','122 – 129 cm','48 – 51"'),
+                  array('5XL','130 – 137 cm','51 – 54"'),
+                  array('6XL','138 – 145 cm','54 – 57"'),
+                  array('7XL','146 – 153 cm','57 – 60"'),
+                  array('8XL','154 cm i više','61" i više'),
+                );
+                foreach ( $lbx_sizes as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7fafb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:8px 10px;font-weight:700;"><?php echo esc_html($r[0]); ?></td>
+                    <td style="padding:8px 10px;"><?php echo esc_html($r[1]); ?></td>
+                    <td style="padding:8px 10px;color:#667;"><?php echo esc_html($r[2]); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Između dvije veličine?</strong> Uvijek preporučujemo veći broj za optimalnu udobnost i maksimalno upijanje.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'ortopas', $current_product_id ) ): ?>
 
           <div style="line-height:1.9;">
             <strong>S/M</strong> : opseg bokova 75–110 cm<br>
