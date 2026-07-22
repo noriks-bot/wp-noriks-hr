@@ -596,10 +596,18 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
+             <?php if( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+
+                Perite na 30–40 °C, na programu za osjetljivo rublje. Bez omekšivača i izbjeljivača. Sušite na zraku. Zadržavaju upijajuću moć kroz stotine pranja.
+
+             <?php elseif( noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
+
+                Strojno pranje na hladnom, nježnom programu. Bez izbjeljivača i omekšivača. Ne sušiti u sušilici — sušite na zraku kako bi se očuvala kompresija i oblik.
+
+             <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
-        
-         
+
+
         <?php elseif(  noriks_is_type( 'starter', $current_product_id )  ): ?>
         
         

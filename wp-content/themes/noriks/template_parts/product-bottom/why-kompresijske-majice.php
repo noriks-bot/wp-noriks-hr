@@ -11,22 +11,8 @@ $km  = get_template_directory_uri() . '/img/kompsfit/';
 $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
 ?>
 
-<!-- ============ 1) Vratite samopouzdanje i snagu (tekst + slika) ============ -->
+<!-- ============ 1) Video demo (slika/video + tekst) ============ -->
 <section class="kmf-sec">
-  <div class="kmf-wrap kmf-row2">
-    <div class="kmf-copy">
-      <p class="kmf-eyebrow">NORIKS FIT</p>
-      <h2 class="kmf-h2">Vratite samopouzdanje i snagu</h2>
-      <p>Ako želite da vam odjeća bolje pristaje i da se cijeli dan osjećate podržano, NORIKS FIT je stvoren za vas.</p>
-      <p>Izrađen od <strong>ionske kompresijske tkanine</strong>, pruža pripijen, potporni kroj koji izglađuje siluetu i nudi cjelodnevnu udobnost — oštriji izgled, bolja svjesnost o držanju i samopouzdanje koje dolazi kad se osjećate dobro u onome što nosite.</p>
-      <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
-    </div>
-    <div class="kmf-media"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT kompresijska majica ispod košulje" loading="lazy"></div>
-  </div>
-</section>
-
-<!-- ============ 2) Video demo (slika/video + tekst) ============ -->
-<section class="kmf-sec kmf-alt">
   <div class="kmf-wrap kmf-row2 kmf-rev">
     <div class="kmf-media"><video src="<?php echo esc_url( $kmv.'demo.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
     <div class="kmf-copy">
@@ -39,6 +25,20 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
         <li>Nevidljivo ispod bilo koje košulje</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- ============ 2) Vratite samopouzdanje i snagu (tekst + slika) ============ -->
+<section class="kmf-sec kmf-alt">
+  <div class="kmf-wrap kmf-row2">
+    <div class="kmf-copy">
+      <p class="kmf-eyebrow">NORIKS FIT</p>
+      <h2 class="kmf-h2">Vratite samopouzdanje i snagu</h2>
+      <p>Ako želite da vam odjeća bolje pristaje i da se cijeli dan osjećate podržano, NORIKS FIT je stvoren za vas.</p>
+      <p>Izrađen od <strong>ionske kompresijske tkanine</strong>, pruža pripijen, potporni kroj koji izglađuje siluetu i nudi cjelodnevnu udobnost — oštriji izgled, bolja svjesnost o držanju i samopouzdanje koje dolazi kad se osjećate dobro u onome što nosite.</p>
+      <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
+    </div>
+    <div class="kmf-media kmf-hero-media"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT kompresijska majica ispod košulje" loading="lazy"></div>
   </div>
 </section>
 
@@ -108,6 +108,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
 .kmf-copy p{font-size:16px;line-height:1.65;color:#3a3a3a;margin:0 0 14px;}
 .kmf-media img,.kmf-media video{width:100%;height:auto;display:block;border-radius:16px;}
 .kmf-media video{background:#000;}
+.kmf-hero-media img{max-height:460px;object-fit:cover;object-position:center 18%;}
 .kmf-check{list-style:none;margin:6px 0 0;padding:0;}
 .kmf-check li{position:relative;padding:0 0 10px 28px;font-size:15.5px;color:#141414;}
 .kmf-check li:before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;background:#141414;color:#fff;border-radius:50%;font-size:12px;text-align:center;line-height:20px;}

@@ -590,8 +590,8 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
   $daily_seed = $today_obj->format('Y-m-d');
 
   // Avatar pools based on page category
-  // Leak boxers: text-only (no photos). Kompresijske majice: own photo pool. Others: existing pools.
-  $avatar_type = $is_leakboxers_page ? '' : ( $is_kompmajice_page ? 'kompresijske-majice' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) ) );
+  // Leak boxers + kompresijske majice: text-only (no photos). Others: existing pools.
+  $avatar_type = ( $is_leakboxers_page || $is_kompmajice_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
