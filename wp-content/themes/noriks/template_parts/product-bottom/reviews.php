@@ -80,6 +80,10 @@
 
            Niste jedini u potrazi za oštrijom siluetom i boljim držanjem.
 
+          <?php elseif ( noriks_is_type( 'ortopedski-jastuk' ) ): ?>
+
+           Niste jedini u potrazi za sjedenjem bez boli.
+
 
 
           <?php else: ?>
@@ -127,6 +131,10 @@
            <?php elseif ( noriks_is_type( 'kompresijske-majice' ) ): ?>
 
            Tisuće muškaraca već nosi NORIKS kompresijsku majicu za zaglađen trbuh, bolje držanje i više samopouzdanja.
+
+           <?php elseif ( noriks_is_type( 'ortopedski-jastuk' ) ): ?>
+
+           Tisuće kupaca već koristi NORIKS ErgoSit ortopedski jastuk za sjedenje bez boli u trtici, leđima i kukovima – u autu, uredu i kod kuće.
 
            <?php else: ?>
         

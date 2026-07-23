@@ -1,10 +1,15 @@
 <?php
 /**
  * product-bottom: NORIKS ErgoSit — ORTOPEDSKI JASTUK ZA SJEDENJE (orto-ortopedski-jastuk)
- * No-attrs proizvod (bez boje/veličine), quantity-only bundle. "Tablica veličina" sakrivena.
- * Koncept + sadržaj kopiran s originalne stranice (celinva), prijevod HR + rebrand NORIKS ErgoSit.
- * Postavitev: sekcije lijevo-desno, isti redoslijed kao original. Lokalizirane HR grafike.
- * Boja bundle gumba: pink #e5157e (iz artworka). Slike: img/ortopedski-jastuk/ | Videi: /videos/
+ * 1:1 kopija originalne stranice (celinva.com/products/orthopedic-cushion):
+ * iste sekcije, isti redoslijed, iste postavitve (lijevo-desno), sadržaj preveden HR,
+ * rebrand NORIKS ErgoSit, lokalizirane HR grafike. Pink akcent #e5157e, navy #1b1533.
+ * Redoslijed (original):
+ *   1. marquee  2. "#1 Orthopedic Seat Cushion" + UGC  3. End Tailbone (img L / txt R)
+ *   4. Improve Posture (txt L / img R)  5. Relief That Adapts (grid L / txt R)
+ *   6. UGC reviews traka  7. Engineered (img L / txt R + CTA)
+ *   8. Effective Against (akordeon, puna širina)  9. 20x Cheaper (img L / txt R + CTA)
+ *   10. Won't Quit (txt L / tablica R)  11. 60 Days (tamna, značka L / txt R)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $oj  = get_template_directory_uri() . '/img/ortopedski-jastuk/';
@@ -14,19 +19,21 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 };
 ?>
 
-<!-- ============ 1) Marquee + hero + UGC ============ -->
-<section class="oj-hero">
-  <div class="oj-marquee" aria-hidden="true">
-    <div class="oj-marquee-track">
-      <?php $oj_ticker = array('PROZRAČNO I PERIVO','SAVRŠENO PORAVNANJE','STABILITYCORE™ PJENA','OEKO-TEX® CERTIFICIRANO','HIPOALERGENO','SILKFLEX™ NAVLAKA');
-      for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_ticker as $t ) { echo '<span class="oj-tick">'.esc_html($t).'</span><span class="oj-dot">•</span>'; } } ?>
-    </div>
+<!-- ============ 1) Marquee (tamna traka, vrti se) ============ -->
+<div class="oj-marquee" aria-hidden="true">
+  <div class="oj-marquee-track">
+    <?php $oj_ticker = array('PROZRAČNO I PERIVO','SAVRŠENO PORAVNANJE','STABILITYCORE™ PJENA','OEKO-TEX® CERTIFICIRANO','HIPOALERGENO','SILKFLEX™ NAVLAKA');
+    for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_ticker as $t ) { echo '<span class="oj-tick">'.esc_html($t).'</span><span class="oj-dot">•</span>'; } } ?>
   </div>
+</div>
+
+<!-- ============ 2) "Svjetski #1" + UGC karusel ============ -->
+<section class="oj-sec">
   <div class="oj-wrap">
     <h2 class="oj-hero-h">Svjetski <em>#1 ortopedski jastuk za sjedenje</em> za svakodnevnu udobnost</h2>
     <p class="oj-hero-sub">Vjeruju mu tisuće zadovoljnih kupaca — od <strong>vozača na cesti do uredskih radnika i obitelji kod kuće.</strong></p>
-    <div class="oj-ugc-grid">
-      <?php for ( $i = 1; $i <= 6; $i++ ) : ?>
+    <div class="oj-ugc-grid oj-ugc-3">
+      <?php for ( $i = 1; $i <= 3; $i++ ) : ?>
         <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'ugc-'.$i.'.mp4' ); ?>">
           <video class="oj-ugc-video" preload="metadata" playsinline muted></video>
           <span class="oj-ugc-play" aria-label="Reproduciraj"></span>
@@ -36,23 +43,20 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 2) Benefit grafika (full) ============ -->
-<section class="oj-full"><div class="oj-full-in"><?php echo $oj_img('02_bolecine_HR.png','Sjedite satima bez boli i ukočenosti'); ?></div></section>
-
-<!-- ============ 3) Kraj boli u trtici (slika lijevo, tekst desno) ============ -->
-<section class="oj-sec">
+<!-- ============ 3) Kraj boli u trtici — slika LIJEVO, tekst DESNO ============ -->
+<section class="oj-sec oj-alt">
   <div class="oj-wrap oj-row2">
     <div class="oj-media"><?php echo $oj_img('07_lifestyle_HR.png','Prije i poslije — bol u trtici pri vožnji'); ?></div>
     <div class="oj-copy">
-      <h2 class="oj-h2"><em>Kraj boli u trtici, išijasu i leđima</em> od sjedenja</h2>
+      <h2 class="oj-h2"><em class="oj-pink-i">Kraj boli u trtici, išijasu i leđima</em> od sjedenja</h2>
       <p>Većina stolica uništi vaše tijelo unutar 30 minuta. <strong>Kukovi se naginju, kralježnica se povija, a pritisak raste na trtici i išijasnom živcu.</strong> Zato duge vožnje, uredski rad ili večera za stolom ostavljaju bolna, ukočena ili utrnula leđa.</p>
-      <p>NORIKS <strong>ErgoSit jastuk</strong> građen je drukčije. Izrez za trticu uklanja izravan pritisak, dok konturirani dizajn podupire kralježnicu i vraća zdravo držanje. Memory pjena visoke gustoće ravnomjerno raspoređuje težinu po kukovima i bedrima te održava protok krvi da noge ne utrnu.</p>
+      <p>NORIKS <strong>ErgoSit ortopedski jastuk</strong> građen je drukčije. Izrez za trticu uklanja izravan pritisak na trtičnu kost, dok konturirani dizajn podupire kralježnicu i vraća zdravo držanje. Memory pjena visoke gustoće ravnomjerno raspoređuje težinu po kukovima i bedrima te održava protok krvi da noge ne utrnu.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ 4) Bolje držanje + cirkulacija (tekst lijevo, slika desno) ============ -->
-<section class="oj-sec oj-alt">
+<!-- ============ 4) Poboljšajte držanje — tekst LIJEVO, slika DESNO ============ -->
+<section class="oj-sec">
   <div class="oj-wrap oj-row2">
     <div class="oj-copy">
       <h2 class="oj-h2">Poboljšajte držanje i potaknite cirkulaciju</h2>
@@ -63,46 +67,53 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 5) Znanost (full grafika) ============ -->
-<section class="oj-full"><div class="oj-full-in"><?php echo $oj_img('06_znanost_HR.png','Znanost iza NORIKS olakšanja'); ?></div></section>
-
-<!-- ============ 6) Prilagođava se gdje god sjedite (grid slika lijevo, tekst desno) ============ -->
-<section class="oj-sec">
+<!-- ============ 5) Prilagođava se gdje god sjedite — grid 4 LIJEVO, tekst DESNO ============ -->
+<section class="oj-sec oj-alt">
   <div class="oj-wrap oj-row2">
     <div class="oj-grid2">
       <?php echo $oj_img('08_lifestyle_HR.png','NORIKS ErgoSit u svakodnevnoj uporabi'); ?>
-      <?php echo $oj_img('09_lifestyle_HR.png','NORIKS ErgoSit prilagođava se svakom sjedalu'); ?>
+      <?php echo $oj_img('09_lifestyle_HR.png','NORIKS ErgoSit na različitim sjedalima'); ?>
+      <?php echo $oj_img('02_bolecine_HR.png','Sjedite satima bez boli i ukočenosti'); ?>
+      <?php echo $oj_img('03_embalaza_HR.png','NORIKS ErgoSit — proizvod'); ?>
     </div>
     <div class="oj-copy">
-      <h2 class="oj-h2">Olakšanje koje se prilagođava gdje god sjedite</h2>
+      <h2 class="oj-h2">Olakšanje koje se prilagođava gdje god sjedite.</h2>
       <p>NORIKS <strong>ErgoSit</strong> prilagođava se svakom mjestu na kojem sjedite. Stabilna baza protiv klizanja drži ga na mjestu na <strong>autosjedalima, uredskim stolicama, stolicama za blagovanje i invalidskim kolicima</strong> — pa udobnost ide s vama cijeli dan.</p>
       <p>Memory pjena visoke gustoće podupire tijelo bez splošnjavanja, dok periva navlaka koja se skida ostaje svježa, čista i spremna za svakodnevnu uporabu.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ 7) Osmišljen s ortopedskim znanjem (slika lijevo, tekst desno) ============ -->
-<section class="oj-sec oj-alt">
-  <div class="oj-wrap oj-row2">
-    <div class="oj-media"><?php echo $oj_img('04_lijecnik_HR.png','Preporuka liječnika — NORIKS ErgoSit'); ?></div>
-    <div class="oj-copy">
-      <h2 class="oj-h2">Osmišljen s ortopedskim znanjem, stvoren za svakodnevno sjedenje</h2>
-      <p>Uz uvid ortopedskih stručnjaka i mjesece ergonomskog testiranja, NORIKS <strong>ErgoSit</strong> osmišljen je da ublaži najčešće bolove uzrokovane dugim sjedenjem — od pritiska na trtici do nelagode u donjem dijelu leđa i kukovima.</p>
-      <a class="oj-cta" href="#bundle-selector">👉 Naruči odmah</a>
+<!-- ============ 6) UGC reviews traka ============ -->
+<section class="oj-sec">
+  <div class="oj-wrap">
+    <div class="oj-ugc-grid oj-ugc-3">
+      <?php for ( $i = 4; $i <= 6; $i++ ) : ?>
+        <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'ugc-'.$i.'.mp4' ); ?>">
+          <video class="oj-ugc-video" preload="metadata" playsinline muted></video>
+          <span class="oj-ugc-play" aria-label="Reproduciraj"></span>
+        </div>
+      <?php endfor; ?>
     </div>
   </div>
 </section>
 
-<!-- ============ 8) Dimenzije + sadržaj (full grafike) ============ -->
-<section class="oj-full"><div class="oj-full-in"><?php echo $oj_img('10_MERE_cm_HR.png','Dimenzije NORIKS ErgoSit jastuka'); ?></div></section>
-<section class="oj-full oj-alt"><div class="oj-full-in"><?php echo $oj_img('03_embalaza_HR.png','NORIKS ErgoSit — pakiranje'); ?></div></section>
-<section class="oj-full"><div class="oj-full-in"><?php echo $oj_img('11_vsebina_HR.png','Što dobivate u paketu'); ?></div></section>
-<section class="oj-full oj-alt"><div class="oj-full-in"><?php echo $oj_img('14_vsebina_HR.png','NORIKS ErgoSit — sadržaj paketa'); ?></div></section>
+<!-- ============ 7) Osmišljen s ortopedskim znanjem — slika LIJEVO, tekst DESNO + CTA ============ -->
+<section class="oj-sec oj-alt">
+  <div class="oj-wrap oj-row2">
+    <div class="oj-media"><?php echo $oj_img('04_lijecnik_HR.png','Preporuka liječnika — NORIKS ErgoSit'); ?></div>
+    <div class="oj-copy">
+      <h2 class="oj-h2">Osmišljen s ortopedskim znanjem, stvoren za svakodnevno sjedenje.</h2>
+      <p>Uz uvid ortopedskih stručnjaka i mjesece ergonomskog testiranja, NORIKS <strong>ErgoSit</strong> osmišljen je da ublaži najčešće bolove uzrokovane dugim sjedenjem — od pritiska na trtici do nelagode u donjem dijelu leđa i kukovima.</p>
+      <a class="oj-cta" href="#bundle-selector">👉 NARUČI ODMAH</a>
+    </div>
+  </div>
+</section>
 
-<!-- ============ 9) Učinkovito protiv čestih problema (akordeon) ============ -->
+<!-- ============ 8) Učinkovito protiv čestih problema — akordeon, PUNA ŠIRINA ============ -->
 <section class="oj-sec">
   <div class="oj-wrap-narrow">
-    <h2 class="oj-h2 oj-center"><em>Učinkovito protiv</em> čestih problema pri sjedenju</h2>
+    <h2 class="oj-h2 oj-center"><em class="oj-pink-i">Učinkovito protiv</em> čestih problema pri sjedenju</h2>
     <div class="oj-acc">
       <?php
       $oj_probs = array(
@@ -125,22 +136,26 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 10) 20x jeftinije (tekst) ============ -->
+<!-- ============ 9) 20x jeftinije — slika LIJEVO, tekst DESNO + CTA ============ -->
 <section class="oj-sec oj-alt">
-  <div class="oj-wrap-narrow oj-center">
-    <h2 class="oj-h2 oj-center"><em>20× jeftinije</em> od skupih rješenja</h2>
-    <p class="oj-lead">Većina ljudi <strong>potroši tisuće</strong> pokušavajući riješiti bol od sjedenja:</p>
-    <ul class="oj-x">
-      <li><span>✕</span> Ergonomska stolica: <strong>750–1.100 €</strong></li>
-      <li><span>✕</span> Tjedni odlasci kiropraktičaru: <strong>70–140 € po posjetu</strong> (3.000+ € godišnje)</li>
-      <li><span>✕</span> Fizikalna terapija: <strong>190 €+ po posjetu</strong>, često tjedni termina</li>
-    </ul>
-    <p><strong>NORIKS ErgoSit ortopedski jastuk</strong> — jednokratna kupnja koja ublažava bol u trtici, leđima i kukovima, a da ne isprazni novčanik.</p>
-    <a class="oj-cta" href="#bundle-selector">Naruči odmah</a>
+  <div class="oj-wrap oj-row2">
+    <div class="oj-media"><?php echo $oj_img('11_vsebina_HR.png','NORIKS ErgoSit — sjedi bolje, živi bolje'); ?></div>
+    <div class="oj-copy">
+      <h2 class="oj-h2"><em class="oj-pink-i">20× jeftinije</em> od skupih rješenja</h2>
+      <p>Većina ljudi <strong>potroši tisuće</strong> pokušavajući riješiti bol od sjedenja:</p>
+      <ul class="oj-x">
+        <li><span>✕</span> Ergonomska stolica: <strong>750–1.100 €</strong></li>
+        <li><span>✕</span> Tjedni odlasci kiropraktičaru: <strong>70–140 € po posjetu</strong> (3.000+ € godišnje)</li>
+        <li><span>✕</span> Fizikalna terapija: <strong>190 €+ po posjetu</strong>, često tjedni termina</li>
+      </ul>
+      <p><strong>NORIKS ErgoSit ortopedski jastuk</strong></p>
+      <p>Jednokratna kupnja koja ublažava bol u trtici, leđima i kukovima, a da ne isprazni novčanik.</p>
+      <a class="oj-cta" href="#bundle-selector">Naruči odmah</a>
+    </div>
   </div>
 </section>
 
-<!-- ============ 11) Jastuk koji ne odustaje (usporedna tablica) ============ -->
+<!-- ============ 10) Jastuk koji ne odustaje — tekst LIJEVO, tablica DESNO ============ -->
 <section class="oj-sec">
   <div class="oj-wrap oj-row2">
     <div class="oj-copy">
@@ -149,7 +164,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
     </div>
     <div class="oj-cmp-scroll">
       <table class="oj-cmp">
-        <thead><tr><th></th><th class="oj-us">NORIKS ErgoSit</th><th>Drugi</th></tr></thead>
+        <thead><tr><th></th><th class="oj-us">NORIKS<br>ErgoSit</th><th>Drugi</th></tr></thead>
         <tbody>
           <tr><td>Rasterećuje trticu i leđa</td><td class="us ok">✓</td><td class="no">✕</td></tr>
           <tr><td>Podupire uspravno, zdravo držanje</td><td class="us ok">✓</td><td class="no">✕</td></tr>
@@ -161,16 +176,15 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 12) 60 dana bez brige (tamna + značka) ============ -->
+<!-- ============ 11) Isprobajte 60 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
 <section class="oj-guarantee">
   <div class="oj-wrap oj-row2">
     <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_60_dana_HR.png','60 dana jamstva povrata novca'); ?></div>
     <div class="oj-guar-copy">
-      <h2 class="oj-h2 oj-h2-light">Isprobajte <em>60 dana</em>, bez brige</h2>
-      <p>Pronaći pravi jastuk nije lako — mnogi splošnjaju ili jednostavno ne donesu pravo olakšanje. Zato svaki NORIKS <strong>ErgoSit</strong> dolazi s našim jamstvom udobnosti od 60 dana.</p>
+      <h2 class="oj-h2 oj-h2-light">Isprobajte <em class="oj-pink-i">60 dana</em>, bez brige</h2>
+      <p>Pronaći pravi jastuk nije lako — mnogi splošnjaju ili jednostavno ne donesu pravo olakšanje. Zato svaki NORIKS <strong>ErgoSit</strong> dolazi s našim <strong>jamstvom udobnosti od 60 dana</strong>.</p>
       <p>Ponesite ga u ured, u auto ili za duge sate kod kuće. Ako ne osjetite manje boli i više udobnosti u svakodnevnom sjedenju, naš tim će se pobrinuti da bude kako treba.</p>
       <p>Jer kada je riječ o vašem zdravlju i udobnosti, vjerujemo da razliku trebate <strong>osjetiti</strong>, a ne samo priželjkivati.</p>
-      <a class="oj-cta" href="#bundle-selector">Naruči bez rizika</a>
     </div>
   </div>
 </section>
@@ -178,36 +192,32 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <style>
   .oj-wrap { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
   .oj-wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 18px; }
-  .oj-sec { padding: 46px 0; }
+  .oj-sec { padding: 44px 0; }
   .oj-alt { background: #faf6f9; }
   .oj-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
   .oj-h2 { font-size: clamp(24px,3vw,36px); font-weight: 800; color: #1b1533; line-height: 1.15; margin: 0 0 16px; }
-  .oj-h2 em { color: #e5157e; font-style: normal; }
   .oj-h2-light { color: #fff; }
+  .oj-pink-i { color: #e5157e; font-style: italic; }
   .oj-center { text-align: center; }
   .oj-copy p, .oj-lead { font-size: 15.5px; line-height: 1.6; color: #3a3450; margin: 0 0 14px; }
   .oj-lead { font-size: 16px; color: #55506b; }
   .oj-media img, .oj-grid2 img { width: 100%; height: auto; display: block; border-radius: 16px; }
 
-  /* full-width grafike */
-  .oj-full { padding: 8px 0; }
-  .oj-full.oj-alt { background: transparent; }
-  .oj-full-in { max-width: 980px; margin: 0 auto; padding: 8px 18px; }
-  .oj-full-in img { width: 100%; height: auto; display: block; border-radius: 16px; }
-
-  /* Marquee + hero */
-  .oj-hero { padding: 0 0 34px; }
+  /* 1) Marquee */
   .oj-marquee { background: #1b1533; overflow: hidden; white-space: nowrap; }
   .oj-marquee-track { display: inline-block; padding: 13px 0; animation: ojScroll 26s linear infinite; }
   .oj-tick { color: #fff; font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
   .oj-dot { color: #e5157e; margin: 0 22px; font-weight: 800; }
   @keyframes ojScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .oj-hero-h { text-align: center; font-size: clamp(26px,3.4vw,42px); font-weight: 800; color: #1b1533; line-height: 1.12; margin: 34px auto 12px; max-width: 900px; }
+
+  /* 2) hero */
+  .oj-hero-h { text-align: center; font-size: clamp(26px,3.4vw,42px); font-weight: 800; color: #1b1533; line-height: 1.12; margin: 0 auto 12px; max-width: 900px; }
   .oj-hero-h em { color: #e5157e; font-style: italic; }
   .oj-hero-sub { text-align: center; font-size: 16px; color: #55506b; max-width: 660px; margin: 0 auto 28px; line-height: 1.55; }
 
-  /* UGC videi */
-  .oj-ugc-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; }
+  /* UGC */
+  .oj-ugc-grid { display: grid; gap: 12px; }
+  .oj-ugc-3 { grid-template-columns: repeat(3,1fr); max-width: 760px; margin: 0 auto; }
   .oj-ugc-item { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: #1b1533; cursor: pointer; }
   .oj-ugc-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .oj-ugc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,.92); }
@@ -215,14 +225,14 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 
   .oj-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-  /* CTA */
-  .oj-cta { display: inline-block; background: #e5157e; color: #fff; font-weight: 800; font-size: 16px; padding: 15px 34px; border-radius: 10px; text-decoration: none; margin-top: 8px; }
-  .oj-cta:hover { background: #1b1533; }
+  /* CTA — tamni navy gumb kao original */
+  .oj-cta { display: inline-block; background: #1b1533; color: #fff; font-weight: 800; font-size: 15px; letter-spacing: .04em; padding: 15px 34px; border-radius: 8px; text-decoration: none; margin-top: 8px; }
+  .oj-cta:hover { background: #e5157e; color: #fff; }
 
-  /* akordeon */
-  .oj-acc { margin-top: 22px; }
+  /* 8) akordeon */
+  .oj-acc { margin-top: 18px; border-top: 1px solid #ecdfe8; }
   .oj-acc-item { border-bottom: 1px solid #ecdfe8; }
-  .oj-acc-head { width: 100%; background: none; border: 0; display: flex; align-items: center; gap: 12px; padding: 16px 4px; cursor: pointer; font-size: 16px; font-weight: 700; color: #1b1533; text-align: left; }
+  .oj-acc-head { width: 100%; background: none; border: 0; display: flex; align-items: center; gap: 12px; padding: 16px 4px; cursor: pointer; font-size: 15.5px; font-weight: 700; color: #1b1533; text-align: left; }
   .oj-acc-tick { color: #22b573; font-weight: 800; }
   .oj-acc-title { flex: 1; }
   .oj-acc-chev { transition: transform .2s; color: #b39aab; }
@@ -231,31 +241,32 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-acc-item.open .oj-acc-body { max-height: 260px; }
   .oj-acc-body p { font-size: 14.5px; line-height: 1.6; color: #4a4560; margin: 0 0 16px; padding-left: 28px; }
 
-  /* 20x lista */
-  .oj-x { list-style: none; margin: 4px auto 16px; padding: 0; max-width: 520px; text-align: left; }
+  /* 9) X lista */
+  .oj-x { list-style: none; margin: 0 0 14px; padding: 0; }
   .oj-x li { font-size: 15px; color: #3a3450; margin: 0 0 10px; }
   .oj-x li span { color: #d64545; font-weight: 800; margin-right: 8px; }
 
-  /* usporedna tablica */
-  .oj-cmp-scroll { overflow-x: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(27,21,51,.12); }
-  .oj-cmp { width: 100%; border-collapse: collapse; min-width: 340px; background: #fff; }
-  .oj-cmp th, .oj-cmp td { padding: 15px 14px; text-align: center; font-size: 14px; border-bottom: 1px solid #eee; }
+  /* 10) tablica — pink stupac kao original */
+  .oj-cmp-scroll { overflow-x: auto; }
+  .oj-cmp { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 340px; background: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(27,21,51,.10); overflow: hidden; }
+  .oj-cmp th, .oj-cmp td { padding: 16px 14px; text-align: center; font-size: 14px; border-bottom: 1px solid #f0eaf0; }
   .oj-cmp thead th { font-weight: 800; color: #1b1533; font-size: 13px; }
-  .oj-cmp thead th.oj-us { background: #e5157e; color: #fff; border-radius: 12px 12px 0 0; }
-  .oj-cmp tbody td:first-child { text-align: left; font-weight: 600; color: #1b1533; }
-  .oj-cmp td.us { background: #fdeef6; }
-  .oj-cmp td.ok { color: #1a9e5f; font-size: 18px; font-weight: 700; }
-  .oj-cmp td.no { color: #d64545; font-size: 17px; }
+  .oj-cmp thead th.oj-us { background: #e5157e; color: #fff; }
+  .oj-cmp tbody td:first-child { text-align: left; font-weight: 700; color: #1b1533; }
+  .oj-cmp td.us { background: #e5157e; }
+  .oj-cmp td.us.ok { color: #fff; font-size: 18px; font-weight: 800; }
+  .oj-cmp td.no { color: #d64545; font-size: 17px; font-weight: 700; }
 
-  /* jamstvo (tamna) */
-  .oj-guarantee { background: #1b1533; padding: 50px 0; }
+  /* 11) jamstvo (tamna) */
+  .oj-guarantee { background: #1b1533; padding: 50px 0; margin: 24px 0 0; border-radius: 22px; max-width: 1160px; margin-left: auto; margin-right: auto; }
   .oj-guar-copy p { color: #cfc9e0; font-size: 15px; line-height: 1.6; margin: 0 0 12px; }
-  .oj-guar-badge img { width: 260px; max-width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 0; }
+  .oj-guar-badge img { width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block; }
 
   @media (max-width: 860px) {
     .oj-row2 { grid-template-columns: 1fr; gap: 24px; }
-    .oj-ugc-grid { grid-template-columns: repeat(3,1fr); }
+    .oj-ugc-3 { grid-template-columns: repeat(3,1fr); }
     .oj-row2 .oj-media, .oj-row2 .oj-grid2 { order: -1; }
+    .oj-guarantee { border-radius: 0; }
     .oj-guarantee .oj-guar-badge { order: -1; }
   }
 
