@@ -159,7 +159,7 @@ if ( ! $short_description ) {
   /* Sakrij veliki crveni countdown box na ovom proizvodu */
   .gck-countdown { display: none !important; }
   /* Discount badge (−33% …): outline chip kao original */
-  .gck-discount-badge { background: #fff !important; color: #ED5E95 !important; border: 1px solid #ED5E95 !important; border-radius: 6px !important; padding: 3px 7.5px !important; font-size: 10px !important; font-weight: 700 !important; }
+  .gck-discount-badge { background: #fff !important; color: #ED5E95 !important; border: 1px solid #ED5E95 !important; border-radius: 6px !important; padding: 5px 9px !important; font-size: 11px !important; font-weight: 700 !important; line-height: 1 !important; }
   /* Sakrij SAMO riječ "Ukupno:" u ponudama (cijene ostaju) */
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
   /* Sakrij crveni "€/kom" chip u ponudama */
@@ -192,9 +192,10 @@ if ( ! $short_description ) {
   /* Jedan red: naziv+chip lijevo, cijene desno u stupcu, vertikalno centrirano */
   .bundle-option { display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 72px; padding: 14px 18px !important; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
   .bundle-option .bundle-option-title { display: inline-flex; align-items: center; font-weight: 700; color: rgba(18,16,48,0.9); font-size: 16px; }
-  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 1px; font-size: 16px; font-weight: 700; color: #ED5E95; }
+  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: inline-flex; flex-direction: row; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: #ED5E95; }
   .bundle-option .gck-regular-price { font-weight: 400 !important; font-size: 14px !important; color: rgba(18,16,48,0.6) !important; text-decoration: line-through; }
-  .bundle-option input[type="radio"] { margin-right: 12px; border-color: #ED5E95 !important; }
+  .bundle-option input[type="radio"] { margin-right: 14px !important; border-color: #ED5E95 !important; }
+  .bundle-option .bundle-option-title { margin-left: 2px; }
   .bundle-option input[type="radio"]::before, .bundle-option input[type="radio"]:checked::before { background: #ED5E95 !important; }
   .bundle-option .gck-discount-badge { margin-left: 8px; }
   /* No-attrs proizvod: prazan bundle-pairs gura sadržaj prema gore — sakrij ga */
