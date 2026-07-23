@@ -84,8 +84,14 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 6) UGC traka — SLIKE kupaca (stillovi, kao original) ============ -->
+<!-- ============ 6) Trust traka (kao original press-bar, ali s pravim NORIKS oznakama) + SLIKE kupaca ============ -->
 <section class="oj-sec oj-stills-sec">
+  <div class="oj-trustbar" aria-hidden="true">
+    <div class="oj-trustbar-track">
+      <?php $oj_trust = array('120.000+ ZADOVOLJNIH KUPACA','OCJENA 4,8 / 5','OEKO-TEX® STANDARD 100','PREPORUKA LIJEČNIKA','60 DANA JAMSTVA POVRATA NOVCA','ORTOPEDSKI DIZAJN');
+      for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item">'.esc_html($t).'</span>'; } } ?>
+    </div>
+  </div>
   <div class="oj-wrap">
     <div class="oj-stills">
       <?php for ( $i = 1; $i <= 6; $i++ ) : ?>
@@ -244,6 +250,11 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-x { list-style: none; margin: 0 0 14px; padding: 0; }
   .oj-x li { font-size: 15px; color: #3a3450; margin: 0 0 10px; }
   .oj-x li span { color: #d64545; font-weight: 800; margin-right: 8px; }
+
+  /* 6) Trust traka — svijetla, "logotip" stil kao original press-bar */
+  .oj-trustbar { background: #f7f0f2; overflow: hidden; white-space: nowrap; width: 100vw; margin-left: calc(50% - 50vw); margin-bottom: 8px; }
+  .oj-trustbar-track { display: inline-block; padding: 20px 0; animation: ojScroll 32s linear infinite; }
+  .oj-trust-item { color: #8f8a99; font-weight: 800; font-size: 20px; letter-spacing: .02em; margin: 0 34px; }
 
   /* 6) UGC stillovi (slike kupaca) — full-bleed kao original */
   .oj-stills-sec { padding: 20px 0 40px; }
