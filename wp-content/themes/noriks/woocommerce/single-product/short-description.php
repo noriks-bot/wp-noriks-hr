@@ -158,8 +158,8 @@ if ( ! $short_description ) {
   .oj-stockpill em { font-style: italic; font-size: 11.5px; font-weight: 600; color: #e5344a; }
   /* Sakrij veliki crveni countdown box na ovom proizvodu */
   .gck-countdown { display: none !important; }
-  /* Discount badge (−33% …): pink na ovom proizvodu (usklađeno s temom) */
-  .gck-discount-badge { background: #e5157e !important; color: #fff !important; }
+  /* Discount badge (−33% …): outline chip kao original */
+  .gck-discount-badge { background: #fff !important; color: #ED5E95 !important; border: 1px solid #ED5E95 !important; border-radius: 6px !important; padding: 3px 7.5px !important; font-size: 10px !important; font-weight: 700 !important; }
   /* Sakrij SAMO riječ "Ukupno:" u ponudama (cijene ostaju) */
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
   /* Sakrij crveni "€/kom" chip u ponudama */
@@ -186,18 +186,19 @@ if ( ! $short_description ) {
   .summary .price > .woocommerce-Price-amount:last-child {
     color: #fd4f93 !important;
   }
-  /* Ponude: neaktivne = bijela pozadina + svijetlo-pink border (kao original) */
-  .bundle-option { background: #fff !important; border: 1.5px solid #f6c6da !important; border-radius: 10px !important; }
-  .bundle-option.active { border-width: 2px !important; }
-  /* Jedan red: naziv lijevo, cijena desno, vertikalno centrirano, iste visine kartica */
-  .bundle-option { display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 64px; }
-  .bundle-option .bundle-option-title { display: inline-flex; align-items: center; }
-  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: inline-flex; align-items: center; gap: 6px; }
-  .bundle-option .bundle-pairs { flex-basis: 100%; }
-  /* Radio krugovi: pink */
-  .bundle-option input[type="radio"] { border-color: #e5157e !important; }
-  .bundle-option input[type="radio"]::before { background: #e5157e !important; }
-  .bundle-option input[type="radio"]:checked::before { background: #e5157e !important; }
+  /* Ponude — TOCNO po originalu (izmjereno): #ED5E95, border 2px .3, radius 6px */
+  .bundle-option { background: rgba(237,94,149,0.02) !important; border: 2px solid rgba(237,94,149,0.3) !important; border-radius: 6px !important; }
+  .bundle-option.active { border-color: #ED5E95 !important; background: rgba(237,94,149,0.1) !important; }
+  /* Jedan red: naziv+chip lijevo, cijene desno u stupcu, vertikalno centrirano */
+  .bundle-option { display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 72px; padding: 14px 18px !important; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+  .bundle-option .bundle-option-title { display: inline-flex; align-items: center; font-weight: 700; color: rgba(18,16,48,0.9); font-size: 16px; }
+  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 1px; font-size: 16px; font-weight: 700; color: #ED5E95; }
+  .bundle-option .gck-regular-price { font-weight: 400 !important; font-size: 14px !important; color: rgba(18,16,48,0.6) !important; text-decoration: line-through; }
+  .bundle-option input[type="radio"] { margin-right: 12px; border-color: #ED5E95 !important; }
+  .bundle-option input[type="radio"]::before, .bundle-option input[type="radio"]:checked::before { background: #ED5E95 !important; }
+  .bundle-option .gck-discount-badge { margin-left: 8px; }
+  /* No-attrs proizvod: prazan bundle-pairs gura sadržaj prema gore — sakrij ga */
+  .bundle-option .bundle-pairs { display: none !important; }
   /* "narudžbe u 24h" red (zeleni pulsirajući krug) */
   .oj-orders { display: flex; align-items: center; gap: 9px; margin: 12px 0 10px; }
   .oj-orders em { font-style: italic; font-size: 14px; color: #121030; }
