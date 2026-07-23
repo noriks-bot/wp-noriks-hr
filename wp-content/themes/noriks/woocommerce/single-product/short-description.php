@@ -161,6 +161,8 @@ if ( ! $short_description ) {
   .gck-discount-badge { background: #e5157e !important; color: #fff !important; }
   /* Sakrij SAMO riječ "Ukupno:" u ponudama (cijene ostaju) */
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
+  /* Sakrij crveni "€/kom" chip u ponudama */
+  .gck-per-chip { display: none !important; }
   /* Ujednačen vertikalni ritam u summary (cijena → pilula → ponude → gumb): 12px svugdje */
   .summary .price { margin: 0 0 18px !important; }
   .oj-recpill { margin: 6px 0 12px !important; }
