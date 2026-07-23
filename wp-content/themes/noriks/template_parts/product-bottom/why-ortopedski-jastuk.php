@@ -88,15 +88,8 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-stills-sec">
   <div class="oj-trustbar" aria-hidden="true">
     <div class="oj-trustbar-track">
-      <?php $oj_trust = array(
-        array('120.000+ kupaca','v1'),
-        array('OCJENA 4,8/5','v2'),
-        array('OEKO-TEX®','v3'),
-        array('preporuka liječnika','v4'),
-        array('60 DANA JAMSTVA','v5'),
-        array('ortopedski dizajn','v6'),
-      );
-      for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item oj-tv-'.esc_attr($t[1]).'">'.esc_html($t[0]).'</span>'; } } ?>
+      <?php $oj_trust = array('120.000+ KUPACA','OCJENA 4,8/5','OEKO-TEX®','PREPORUKA LIJEČNIKA','60 DANA JAMSTVA','ORTOPEDSKI DIZAJN');
+      for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item">'.esc_html($t).'</span><span class="oj-trust-dot">•</span>'; } } ?>
     </div>
   </div>
   <div class="oj-wrap">
@@ -260,14 +253,9 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 
   /* 6) Trust traka — svijetla, "logotip" stil kao original press-bar (mijesana tipografija) */
   .oj-trustbar { background: #f7f0f2; overflow: hidden; white-space: nowrap; width: 100vw; margin-left: calc(50% - 50vw); }
-  .oj-trustbar-track { display: inline-block; padding: 22px 0; animation: ojScroll 34s linear infinite; }
-  .oj-trust-item { color: #9b96a6; margin: 0 44px; vertical-align: middle; }
-  .oj-tv-v1 { font-family: Georgia,'Times New Roman',serif; font-weight: 700; font-size: 27px; }
-  .oj-tv-v2 { font-weight: 800; font-size: 22px; letter-spacing: .04em; }
-  .oj-tv-v3 { font-weight: 800; font-size: 26px; letter-spacing: .02em; }
-  .oj-tv-v4 { font-family: Georgia,'Times New Roman',serif; font-style: italic; font-weight: 700; font-size: 26px; }
-  .oj-tv-v5 { font-weight: 800; font-size: 21px; letter-spacing: .08em; }
-  .oj-tv-v6 { font-family: Georgia,'Times New Roman',serif; font-weight: 700; font-size: 26px; letter-spacing: .01em; }
+  .oj-trustbar-track { display: inline-block; padding: 14px 0; animation: ojScroll 34s linear infinite; }
+  .oj-trust-item { color: #9b96a6; font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
+  .oj-trust-dot { color: #e5157e; margin: 0 22px; font-weight: 800; }
 
   /* 6) UGC stillovi (slike kupaca) — full-bleed kao original */
   .oj-stills-sec { padding: 20px 0 40px; }
