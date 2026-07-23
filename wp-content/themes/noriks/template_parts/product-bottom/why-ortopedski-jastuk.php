@@ -33,7 +33,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
     <h2 class="oj-hero-h">Svjetski <em>#1 ortopedski jastuk za sjedenje</em> za svakodnevnu udobnost</h2>
     <p class="oj-hero-sub">Vjeruju mu tisuće zadovoljnih kupaca — od <strong>vozača na cesti do uredskih radnika i obitelji kod kuće.</strong></p>
     <div class="oj-ugc-grid oj-ugc-5">
-      <?php for ( $i = 1; $i <= 5; $i++ ) : ?>
+      <?php for ( $i = 1; $i <= 4; $i++ ) : ?>
         <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'ugc-'.$i.'.mp4' ); ?>">
           <video class="oj-ugc-video" preload="metadata" playsinline muted></video>
           <span class="oj-ugc-play" aria-label="Reproduciraj"></span>
@@ -217,7 +217,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   /* UGC */
   .oj-ugc-grid { display: grid; gap: 12px; }
   .oj-ugc-3 { grid-template-columns: repeat(3,1fr); max-width: 760px; margin: 0 auto; }
-  .oj-ugc-5 { grid-template-columns: repeat(5,1fr); }
+  .oj-ugc-5 { grid-template-columns: repeat(4,1fr); max-width: 1000px; margin: 0 auto; }
   .oj-ugc-item { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: #121030; cursor: pointer; }
   .oj-ugc-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .oj-ugc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,.92); }
