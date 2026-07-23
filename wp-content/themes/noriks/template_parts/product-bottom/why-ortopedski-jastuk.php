@@ -70,12 +70,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <!-- ============ 5) Prilagođava se gdje god sjedite — grid 4 LIJEVO, tekst DESNO ============ -->
 <section class="oj-sec oj-alt">
   <div class="oj-wrap oj-row2">
-    <div class="oj-grid2">
-      <?php echo $oj_img('08_lifestyle_HR.png','NORIKS ErgoSit u svakodnevnoj uporabi'); ?>
-      <?php echo $oj_img('09_lifestyle_HR.png','NORIKS ErgoSit na različitim sjedalima'); ?>
-      <?php echo $oj_img('02_bolecine_HR.png','Sjedite satima bez boli i ukočenosti'); ?>
-      <?php echo $oj_img('03_embalaza_HR.png','NORIKS ErgoSit — proizvod'); ?>
-    </div>
+    <div class="oj-media"><?php echo $oj_img('prilagodba.webp','NORIKS ErgoSit — prilagođava se gdje god sjedite'); ?></div>
     <div class="oj-copy">
       <h2 class="oj-h2">Olakšanje koje se prilagođava gdje god sjedite.</h2>
       <p>NORIKS <strong>ErgoSit</strong> prilagođava se svakom mjestu na kojem sjedite. Stabilna baza protiv klizanja drži ga na mjestu na <strong>autosjedalima, uredskim stolicama, stolicama za blagovanje i invalidskim kolicima</strong> — pa udobnost ide s vama cijeli dan.</p>
