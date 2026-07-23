@@ -141,6 +141,11 @@ if ( ! $short_description ) {
   <svg width="15" height="15" viewBox="0 0 24 24" style="flex:0 0 auto;"><circle cx="12" cy="12" r="12" fill="#e5344a"/><path d="M12 6.5v7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17" r="1.5" fill="#fff"/></svg>
   <em>Ostalo je još samo nekoliko komada!</em>
 </div>
+<!-- ErgoSit: "narudžbe u 24h" red kao original (zeleni pulsirajući krug), JS ga stavi iznad ADD TO CART -->
+<div class="oj-orders">
+  <span class="oj-orders-dot"></span>
+  <em><strong>128 narudžbi</strong> u posljednja <strong>24 sata!</strong></em>
+</div>
 <style>
   .oj-recpill { display: inline-flex; align-items: center; gap: 9px; background: #e9f8f0; border-radius: 999px; padding: 6px 16px 6px 7px; font-size: 13.5px; color: #1b1533; margin: 8px 0 12px; }
   .oj-recpill strong { font-weight: 800; }
@@ -156,6 +161,32 @@ if ( ! $short_description ) {
   .gck-discount-badge { background: #e5157e !important; color: #fff !important; }
   /* Sakrij "Ukupno: …" red u ponudama na ovom proizvodu */
   .bundle-total-line { display: none !important; }
+  /* ADD TO CART gumb: rose-pink kao original */
+  .single-product .single_add_to_cart_button,
+  .single-product button.single_add_to_cart_button.alt {
+    background: #ef4266 !important; border-color: #ef4266 !important; color: #fff !important;
+  }
+  .single-product .single_add_to_cart_button:hover,
+  .single-product button.single_add_to_cart_button.alt:hover {
+    background: #d92f55 !important; border-color: #d92f55 !important;
+  }
+  /* Akcijska (sale) cijena: pink kao original */
+  .summary .price ins,
+  .summary .price ins .woocommerce-Price-amount,
+  .summary .price > .woocommerce-Price-amount:last-child {
+    color: #fd4f93 !important;
+  }
+  /* Ponude: neaktivne = bijela pozadina + svijetlo-pink border (kao original) */
+  .bundle-option { background: #fff !important; border: 1.5px solid #f6c6da !important; border-radius: 10px !important; }
+  /* Radio krugovi: pink */
+  .bundle-option input[type="radio"] { border-color: #e5157e !important; }
+  .bundle-option input[type="radio"]::before { background: #e5157e !important; }
+  .bundle-option input[type="radio"]:checked::before { background: #e5157e !important; }
+  /* "narudžbe u 24h" red (zeleni pulsirajući krug) */
+  .oj-orders { display: flex; align-items: center; gap: 9px; margin: 12px 0 10px; }
+  .oj-orders em { font-style: italic; font-size: 14px; color: #121030; }
+  .oj-orders-dot { flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: #17c964; box-shadow: 0 0 0 3px rgba(23,201,100,.25); animation: ojPulse 1.6s ease-in-out infinite; }
+  @keyframes ojPulse { 0%,100% { box-shadow: 0 0 0 3px rgba(23,201,100,.25); } 50% { box-shadow: 0 0 0 6px rgba(23,201,100,.12); } }
   /* Checklista u kratkom opisu — čisto kao original (bez bullet točkica) */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
@@ -172,6 +203,10 @@ if ( ! $short_description ) {
     var price = document.querySelector('.summary .price');
     var anchor = badge || price; /* iza "Najniža cena" badgea, da cijena+badge ostanu u istom redu */
     if ( stock && anchor && anchor.nextSibling !== stock ) { anchor.parentNode.insertBefore(stock, anchor.nextSibling); }
+    /* "narudžbe u 24h" iznad ADD TO CART gumba */
+    var orders = document.querySelector('.oj-orders');
+    var cartBtn = document.querySelector('.single_add_to_cart_button');
+    if ( orders && cartBtn && cartBtn.previousElementSibling !== orders ) { cartBtn.parentNode.insertBefore(orders, cartBtn); }
   }
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', movePills); } else { movePills(); }
 })();
