@@ -289,7 +289,10 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
     .oj-stills-sec { padding: 10px 0 20px; }
     .oj-guar-sec { padding-top: 10px; }
     .oj-row2 { grid-template-columns: 1fr; gap: 18px; }
-    .oj-ugc-3, .oj-ugc-5 { grid-template-columns: repeat(3,1fr); }
+    .oj-ugc-3 { grid-template-columns: repeat(3,1fr); }
+    /* hero videi: horizontalni slider u jednom redu (kao original) */
+    .oj-ugc-5 { display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 0 4px 6px; }
+    .oj-ugc-5 .oj-ugc-item { flex: 0 0 46%; scroll-snap-align: center; }
     .oj-stills { grid-template-columns: repeat(3,1fr); }
     .oj-row2 .oj-media, .oj-row2 .oj-grid2 { order: -1; }
     .oj-guarantee { padding: 34px 22px; }
