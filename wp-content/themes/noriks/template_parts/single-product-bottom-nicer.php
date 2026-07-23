@@ -59,6 +59,11 @@ if ( noriks_is_type( 'norikshers' ) ) {
     include $noriks_pb_dir . 'why-norikshers.php';
 }
 
+// ERGOSIT ORTOPEDSKI JASTUK (orto-ortopedski-jastuk) — novi proizvod, why-sekcije po uputama
+if ( noriks_is_type( 'ortopedski-jastuk' ) ) {
+    include $noriks_pb_dir . 'why-ortopedski-jastuk.php';
+}
+
 // LEAK BOXERS (orto-leak-boxers) — muško rublje za inkontinenciju
 if ( noriks_is_type( 'leakboxers' ) ) {
     include $noriks_pb_dir . 'why-leakboxers.php';
