@@ -428,8 +428,38 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
  <div class="accordion">
 
 
-    <!-- 1 - detajli --> <!-- skriveno na ortopas pojasu + fisiorest + norikshers -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) ) : ?>
+    <!-- ErgoSit ortopedski jastuk: prva dva accordion mjesta (kopija originala, HR) -->
+    <?php if ( noriks_is_type( 'ortopedski-jastuk', $current_product_id ) ) : ?>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Specifikacije proizvoda</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <ul style="margin:8px 0 12px; padding-left:18px;">
+          <li style="margin:0 0 8px;"><strong>Vanjska navlaka:</strong> Prozračna pletenina, skida se i pere u perilici, hipoalergena</li>
+          <li style="margin:0 0 8px;"><strong>Jezgra:</strong> OrthoFlex™ adaptivna pjena | Netoksična, OEKO-TEX® certificirana | Dizajnirana za rasterećenje pritiska + poravnanje držanja</li>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Po čemu je tako poseban?</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <ul style="margin:8px 0 12px; padding-left:18px;">
+          <li style="margin:0 0 10px;"><strong>OrthoFlex™ memorijska pjena:</strong> Pjena visoke gustoće koja rasterećuje pritisak i prilagođava se bez splošnjavanja — podupire trticu, kukove i kralježnicu za cjelodnevnu udobnost.</li>
+          <li style="margin:0 0 10px;"><strong>BreatheEase™ navlaka:</strong> Mekana, prozračna i nježna prema koži. Skida se i pere u perilici da jastuk uvijek ostane svjež.</li>
+          <li style="margin:0 0 10px;"><strong>Uravnotežena potpora:</strong> Ni premekano, ni prekruto. Dizajnirano da poravna držanje i ublaži bolne točke od dugih sati sjedenja.</li>
+        </ul>
+      </div>
+    </div>
+    <?php endif; ?>
+
+
+    <!-- 1 - detajli --> <!-- skriveno na ortopas pojasu + fisiorest + norikshers + ortopedski jastuk -->
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_1","options"); ?></h3>
@@ -614,8 +644,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
     <?php endif; // /hide size accordion on bunion ?>
 
-    <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) ) : ?>
+    <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk -->
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
