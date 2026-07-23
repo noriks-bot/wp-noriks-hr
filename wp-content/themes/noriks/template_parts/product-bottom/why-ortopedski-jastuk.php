@@ -290,10 +290,10 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   /* Pink active bundle-option (preživljava LiteSpeed UCSS). */
   function paintOj(){
     var sel = document.getElementById('bundle-selector'); if(!sel) return;
-    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); });
+    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); c.style.removeProperty('border-width'); });
     var checked = sel.querySelector('input[name="bundle_option"]:checked');
     var card = checked ? checked.closest('.bundle-option') : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
-    if(card){ card.style.setProperty('border-color','#e5157e','important'); card.style.setProperty('background','rgba(229,21,126,0.07)','important'); }
+    if(card){ card.style.setProperty('border-color','#e5157e','important'); card.style.setProperty('background','rgba(229,21,126,0.07)','important'); card.style.setProperty('border-width','2px','important'); }
   }
   function bindOj(){ var sel=document.getElementById('bundle-selector'); if(!sel) return; paintOj(); sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintOj); }); }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindOj); } else { bindOj(); }

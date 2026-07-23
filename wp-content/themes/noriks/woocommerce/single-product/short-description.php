@@ -185,6 +185,7 @@ if ( ! $short_description ) {
   }
   /* Ponude: neaktivne = bijela pozadina + svijetlo-pink border (kao original) */
   .bundle-option { background: #fff !important; border: 1.5px solid #f6c6da !important; border-radius: 10px !important; }
+  .bundle-option.active { border-width: 2px !important; }
   /* Radio krugovi: pink */
   .bundle-option input[type="radio"] { border-color: #e5157e !important; }
   .bundle-option input[type="radio"]::before { background: #e5157e !important; }
