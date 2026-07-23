@@ -295,6 +295,8 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-guar-badge img { width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 50%; }
 
   @media (max-width: 860px) {
+    /* manji razmak izmedju marquee trake i "Svjetski #1" naslova */
+    .oj-marquee + section.oj-sec { padding-top: 22px; }
     .oj-row2 { grid-template-columns: 1fr; gap: 26px; }
     .oj-ugc-3, .oj-ugc-5 { grid-template-columns: repeat(3,1fr); }
     .oj-stills { grid-template-columns: repeat(3,1fr); }
