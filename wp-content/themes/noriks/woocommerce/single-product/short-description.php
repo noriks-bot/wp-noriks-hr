@@ -206,7 +206,7 @@ if ( ! $short_description ) {
     .oj-recpill { margin: 4px 0 8px !important; }
     .oj-stockpill { margin: 0 0 8px !important; }
     #bundle-selector .bundle-option { margin: 0 0 8px !important; }
-    .bundle-option { min-height: 58px; padding: 11px 12px !important; }
+    .bundle-option { min-height: 64px; padding: 14px 12px !important; }
     .bundle-option input[type="radio"] { margin-right: 6px !important; }
     .bundle-option .bundle-option-title { font-size: 14.5px; }
     .bundle-option .gck-discount-badge { margin-left: 6px; padding: 4px 7px !important; font-size: 10px !important; }
@@ -222,7 +222,7 @@ if ( ! $short_description ) {
   @keyframes ojPulse { 0%,100% { box-shadow: 0 0 0 3px rgba(23,201,100,.25); } 50% { box-shadow: 0 0 0 6px rgba(23,201,100,.12); } }
   /* Checklista u kratkom opisu — čisto kao original (bez bullet točkica) */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
-  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 24px; text-indent: -24px; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
+  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 18px; text-indent: -18px; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
 </style>
 <script>
 (function(){
