@@ -159,8 +159,8 @@ if ( ! $short_description ) {
   .gck-countdown { display: none !important; }
   /* Discount badge (−33% …): pink na ovom proizvodu (usklađeno s temom) */
   .gck-discount-badge { background: #e5157e !important; color: #fff !important; }
-  /* Sakrij "Ukupno: …" red u ponudama na ovom proizvodu */
-  .bundle-total-line { display: none !important; }
+  /* Sakrij SAMO riječ "Ukupno:" u ponudama (cijene ostaju) */
+  .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
   /* ADD TO CART gumb: rose-pink kao original */
   .single-product .single_add_to_cart_button,
   .single-product button.single_add_to_cart_button.alt {
