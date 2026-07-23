@@ -887,6 +887,8 @@ add_action( 'woocommerce_single_product_summary', function() {
     echo '<a href="#" class="js-open-size-chart noriks-global-sizechart" style="display:inline-flex;align-items:center;gap:8px;margin:8px 0;color:#222;font-weight:700;font-size:15px;text-decoration:underline;cursor:pointer;">'
         . '<svg width="20" height="20" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.9"/></svg>'
         . 'Tablica veličina</a>';
+    // Plugin (orto) na bundle proizvodima renderira svoj size-link iznad ponuda — tada sakrij globalnog (duplikat).
+    echo '<script>document.addEventListener("DOMContentLoaded",function(){if(document.querySelector(".gck-size-link")){document.querySelectorAll(".noriks-global-sizechart").forEach(function(a){a.style.display="none";});}});</script>';
 }, 11 );
 
 add_filter('woocommerce_get_image_size_thumbnail', 'custom_large_shop_thumbnail');
