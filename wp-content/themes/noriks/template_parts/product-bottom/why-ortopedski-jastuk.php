@@ -3,7 +3,7 @@
  * product-bottom: NORIKS ErgoSit — ORTOPEDSKI JASTUK ZA SJEDENJE (orto-ortopedski-jastuk)
  * 1:1 kopija originalne stranice (celinva.com/products/orthopedic-cushion):
  * iste sekcije, isti redoslijed, iste postavitve (lijevo-desno), sadržaj preveden HR,
- * rebrand NORIKS ErgoSit, lokalizirane HR grafike. Pink akcent #e5157e, navy #1b1533.
+ * rebrand NORIKS ErgoSit, lokalizirane HR grafike. Pink akcent #e5157e, navy #121030.
  * Redoslijed (original):
  *   1. marquee  2. "#1 Orthopedic Seat Cushion" + UGC  3. End Tailbone (img L / txt R)
  *   4. Improve Posture (txt L / img R)  5. Relief That Adapts (grid L / txt R)
@@ -134,7 +134,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 </section>
 
 <!-- ============ 9) 20x jeftinije — slika LIJEVO, tekst DESNO + CTA ============ -->
-<section class="oj-sec oj-alt">
+<section class="oj-sec">
   <div class="oj-wrap oj-row2">
     <div class="oj-media"><?php echo $oj_img('11_vsebina_HR.png','NORIKS ErgoSit — sjedi bolje, živi bolje'); ?></div>
     <div class="oj-copy">
@@ -193,7 +193,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-sec { padding: 60px 0; }
   .oj-alt { background: #faf6f9; }
   .oj-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .oj-h2 { font-size: clamp(24px,3vw,36px); font-weight: 800; color: #1b1533; line-height: 1.15; margin: 0 0 16px; }
+  .oj-h2 { font-size: clamp(24px,3vw,36px); font-weight: 800; color: #121030; line-height: 1.15; margin: 0 0 16px; }
   .oj-h2-light { color: #fff; }
   .oj-pink-i { color: #e5157e; font-style: italic; }
   .oj-center { text-align: center; }
@@ -202,14 +202,14 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-media img, .oj-grid2 img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 14px 40px rgba(27,21,51,.10); }
 
   /* 1) Marquee */
-  .oj-marquee { background: #1b1533; overflow: hidden; white-space: nowrap; }
+  .oj-marquee { background: #121030; overflow: hidden; white-space: nowrap; }
   .oj-marquee-track { display: inline-block; padding: 13px 0; animation: ojScroll 26s linear infinite; }
-  .oj-tick { color: #fff; font-weight: 800; font-style: italic; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+  .oj-tick { color: #fff; font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
   .oj-dot { color: #e5157e; margin: 0 22px; font-weight: 800; }
   @keyframes ojScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* 2) hero */
-  .oj-hero-h { text-align: center; font-size: clamp(26px,3.4vw,42px); font-weight: 800; color: #1b1533; line-height: 1.12; margin: 0 auto 12px; max-width: 900px; }
+  .oj-hero-h { text-align: center; font-size: clamp(26px,3.4vw,42px); font-weight: 800; color: #121030; line-height: 1.12; margin: 0 auto 12px; max-width: 900px; }
   .oj-hero-h em { color: #e5157e; font-style: italic; }
   .oj-hero-sub { text-align: center; font-size: 16px; color: #55506b; max-width: 660px; margin: 0 auto 28px; line-height: 1.55; }
 
@@ -217,21 +217,21 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-ugc-grid { display: grid; gap: 12px; }
   .oj-ugc-3 { grid-template-columns: repeat(3,1fr); max-width: 760px; margin: 0 auto; }
   .oj-ugc-5 { grid-template-columns: repeat(5,1fr); }
-  .oj-ugc-item { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: #1b1533; cursor: pointer; }
+  .oj-ugc-item { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: #121030; cursor: pointer; }
   .oj-ugc-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .oj-ugc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,.92); }
-  .oj-ugc-play::after { content: ""; position: absolute; top: 50%; left: 54%; transform: translate(-50%,-50%); border-style: solid; border-width: 10px 0 10px 16px; border-color: transparent transparent transparent #1b1533; }
+  .oj-ugc-play::after { content: ""; position: absolute; top: 50%; left: 54%; transform: translate(-50%,-50%); border-style: solid; border-width: 10px 0 10px 16px; border-color: transparent transparent transparent #121030; }
 
   .oj-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
   /* CTA — tamni navy gumb kao original */
-  .oj-cta { display: inline-block; background: #1b1533; color: #fff; font-weight: 800; font-size: 15px; letter-spacing: .04em; padding: 15px 34px; border-radius: 8px; text-decoration: none; margin-top: 8px; }
+  .oj-cta { display: inline-block; background: #121030; color: #fff; font-weight: 800; font-size: 15px; letter-spacing: .04em; padding: 15px 34px; border-radius: 8px; text-decoration: none; margin-top: 8px; }
   .oj-cta:hover { background: #e5157e; color: #fff; }
 
   /* 8) akordeon */
   .oj-acc { max-width: 880px; margin: 18px auto 0; border-top: 1px solid #ecdfe8; }
   .oj-acc-item { border-bottom: 1px solid #ecdfe8; }
-  .oj-acc-head { width: 100%; background: none; border: 0; display: flex; align-items: center; gap: 12px; padding: 16px 4px; cursor: pointer; font-size: 15.5px; font-weight: 700; color: #1b1533; text-align: left; }
+  .oj-acc-head { width: 100%; background: none; border: 0; display: flex; align-items: center; gap: 12px; padding: 16px 4px; cursor: pointer; font-size: 15.5px; font-weight: 700; color: #121030; text-align: left; }
   .oj-acc-tick { color: #22b573; font-weight: 800; }
   .oj-acc-title { flex: 1; }
   .oj-acc-chev { transition: transform .2s; color: #b39aab; }
@@ -245,26 +245,27 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-x li { font-size: 15px; color: #3a3450; margin: 0 0 10px; }
   .oj-x li span { color: #d64545; font-weight: 800; margin-right: 8px; }
 
-  /* 6) UGC stillovi (slike kupaca) */
+  /* 6) UGC stillovi (slike kupaca) — full-bleed kao original */
   .oj-stills-sec { padding: 20px 0 40px; }
-  .oj-stills { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
-  .oj-stills img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border-radius: 12px; }
+  .oj-stills-sec .oj-wrap { max-width: none; padding: 0; }
+  .oj-stills { display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; width: 100vw; margin-left: calc(50% - 50vw); }
+  .oj-stills img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border-radius: 0; }
 
   /* 10) usporedba — bijela kartica + plavajuća pink pilula (kao original) */
   .oj-cmp-wrap { position: relative; padding: 40px 0 30px; }
-  .oj-cmp-others { position: absolute; top: 8px; right: 0; width: 88px; text-align: center; font-weight: 800; color: #1b1533; font-size: 14px; }
+  .oj-cmp-others { position: absolute; top: 8px; right: 0; width: 88px; text-align: center; font-weight: 800; color: #121030; font-size: 14px; }
   .oj-cmp-pill { position: absolute; top: 0; bottom: 0; right: 96px; width: 100px; background: #e5157e; border-radius: 28px; box-shadow: 0 16px 36px rgba(229,21,126,.35); z-index: 1; display: flex; justify-content: center; align-items: flex-start; padding-top: 14px; }
   .oj-cmp-pill span { color: #fff; font-weight: 800; font-size: 10.5px; letter-spacing: .14em; }
   .oj-cmp-card { position: relative; background: #fff; border-radius: 16px; box-shadow: 0 12px 34px rgba(27,21,51,.10); border: 1px solid #f1edf3; }
   .oj-cmp-row { display: grid; grid-template-columns: 1fr 100px 88px; align-items: center; border-bottom: 1px solid #f2eff4; min-height: 62px; }
   .oj-cmp-row:last-child { border-bottom: 0; }
-  .oj-cmp-row .f { padding: 14px 16px; text-align: center; font-weight: 800; color: #1b1533; font-size: 15px; line-height: 1.3; }
+  .oj-cmp-row .f { padding: 14px 16px; text-align: center; font-weight: 800; color: #121030; font-size: 15px; line-height: 1.3; }
   .oj-cmp-row .us { position: relative; z-index: 2; text-align: center; color: #fff; font-weight: 800; font-size: 18px; }
   .oj-cmp-row .no { text-align: center; color: #e23a3a; font-weight: 800; font-size: 16px; }
 
   /* 11) jamstvo — zaobljena tamna kartica (kao original) */
   .oj-guar-sec { padding-top: 20px; }
-  .oj-guarantee { background: #1b1533; border-radius: 18px; padding: 52px 48px; }
+  .oj-guarantee { background: #121030; border-radius: 18px; padding: 52px 48px; }
   .oj-guar-copy p { color: #cfc9e0; font-size: 15px; line-height: 1.6; margin: 0 0 12px; }
   .oj-guar-badge img { width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block; }
 

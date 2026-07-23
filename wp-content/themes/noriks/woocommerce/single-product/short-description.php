@@ -154,6 +154,8 @@ if ( ! $short_description ) {
   .gck-countdown { display: none !important; }
   /* Discount badge (−33% …): pink na ovom proizvodu (usklađeno s temom) */
   .gck-discount-badge { background: #e5157e !important; color: #fff !important; }
+  /* Sakrij "Ukupno: …" red u ponudama na ovom proizvodu */
+  .bundle-total-line { display: none !important; }
   /* Checklista u kratkom opisu — čisto kao original (bez bullet točkica) */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
@@ -166,8 +168,10 @@ if ( ! $short_description ) {
     var title = document.querySelector('.product_title');
     if ( pill && title && title.nextSibling !== pill ) { title.parentNode.insertBefore(pill, title.nextSibling); }
     var stock = document.querySelector('.oj-stockpill');
+    var badge = document.querySelector('.summary .price-badge');
     var price = document.querySelector('.summary .price');
-    if ( stock && price && price.nextSibling !== stock ) { price.parentNode.insertBefore(stock, price.nextSibling); }
+    var anchor = badge || price; /* iza "Najniža cena" badgea, da cijena+badge ostanu u istom redu */
+    if ( stock && anchor && anchor.nextSibling !== stock ) { anchor.parentNode.insertBefore(stock, anchor.nextSibling); }
   }
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', movePills); } else { movePills(); }
 })();
