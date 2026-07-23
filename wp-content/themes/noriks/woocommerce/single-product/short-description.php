@@ -200,6 +200,21 @@ if ( ! $short_description ) {
   .bundle-option .gck-discount-badge { margin-left: 8px; }
   /* No-attrs proizvod: prazan bundle-pairs gura sadržaj prema gore — sakrij ga */
   .bundle-option .bundle-pairs { display: none !important; }
+  /* Mobilni: tjesnji razmaci i kompaktnije kartice */
+  @media (max-width: 600px) {
+    .summary .price { margin: 0 0 12px !important; }
+    .oj-recpill { margin: 4px 0 8px !important; }
+    .oj-stockpill { margin: 0 0 8px !important; }
+    #bundle-selector .bundle-option { margin: 0 0 8px !important; }
+    .bundle-option { min-height: 54px; padding: 9px 12px !important; }
+    .bundle-option input[type="radio"] { margin-right: 9px !important; }
+    .bundle-option .bundle-option-title { font-size: 14.5px; }
+    .bundle-option .gck-discount-badge { margin-left: 6px; padding: 4px 7px !important; font-size: 10px !important; }
+    .bundle-option .bundle-total-line { gap: 6px; font-size: 15px; }
+    .bundle-option .gck-regular-price { font-size: 12.5px !important; }
+    .oj-orders { margin: 0 0 8px !important; }
+    .oj-orders em { font-size: 13px; }
+  }
   /* "narudžbe u 24h" red (zeleni pulsirajući krug) */
   .oj-orders { display: flex; align-items: center; gap: 9px; margin: 12px 0 10px; }
   .oj-orders em { font-style: italic; font-size: 14px; color: #121030; }
