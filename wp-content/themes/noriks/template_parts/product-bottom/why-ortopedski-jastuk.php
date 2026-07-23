@@ -137,7 +137,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <!-- ============ 9) 20x jeftinije — slika LIJEVO, tekst DESNO + CTA ============ -->
 <section class="oj-sec">
   <div class="oj-wrap oj-row2">
-    <div class="oj-media"><?php echo $oj_img('11_vsebina_HR.png','NORIKS ErgoSit — sjedi bolje, živi bolje'); ?></div>
+    <div class="oj-media"><?php echo $oj_img('14_vsebina_HR.png','NORIKS ErgoSit — sjedi bolje, živi bolje'); ?></div>
     <div class="oj-copy">
       <h2 class="oj-h2"><em class="oj-pink-i">20× jeftinije</em> od skupih rješenja</h2>
       <p>Većina ljudi <strong>potroši tisuće</strong> pokušavajući riješiti bol od sjedenja:</p>
