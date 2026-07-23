@@ -88,8 +88,8 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-stills-sec">
   <div class="oj-wrap">
     <div class="oj-stills">
-      <?php for ( $i = 2; $i <= 6; $i++ ) : ?>
-        <img src="<?php echo esc_url( $ojv.'still-'.$i.'.jpg' ); ?>" alt="NORIKS ErgoSit — zadovoljni kupci" loading="lazy" onerror="this.style.display='none'">
+      <?php for ( $i = 1; $i <= 6; $i++ ) : ?>
+        <img src="<?php echo esc_url( $oj.'galerija/li'.$i.'.webp' ); ?>" alt="NORIKS ErgoSit — zadovoljni kupci" loading="lazy" onerror="this.style.display='none'">
       <?php endfor; ?>
     </div>
   </div>
@@ -248,7 +248,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   /* 6) UGC stillovi (slike kupaca) — full-bleed kao original */
   .oj-stills-sec { padding: 20px 0 40px; }
   .oj-stills-sec .oj-wrap { max-width: none; padding: 0; }
-  .oj-stills { display: grid; grid-template-columns: repeat(5,1fr); gap: 8px; width: 100vw; margin-left: calc(50% - 50vw); }
+  .oj-stills { display: grid; grid-template-columns: repeat(6,1fr); gap: 8px; width: 100vw; margin-left: calc(50% - 50vw); }
   .oj-stills img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border-radius: 0; }
 
   /* 10) usporedba — bijela kartica + plavajuća pink pilula (kao original) */
