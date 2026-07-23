@@ -152,6 +152,8 @@ if ( ! $short_description ) {
   .oj-stockpill em { font-style: italic; font-size: 13.5px; font-weight: 600; color: #e5344a; }
   /* Sakrij veliki crveni countdown box na ovom proizvodu */
   .gck-countdown { display: none !important; }
+  /* Discount badge (−33% …): pink na ovom proizvodu (usklađeno s temom) */
+  .gck-discount-badge { background: #e5157e !important; color: #fff !important; }
   /* Checklista u kratkom opisu — čisto kao original (bez bullet točkica) */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
