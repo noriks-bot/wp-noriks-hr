@@ -133,8 +133,13 @@ if ( ! $short_description ) {
 <!-- ErgoSit: zelena "preporuka" pilula (JS je premjesti odmah ispod naslova) + original-style checklista -->
 <div class="oj-recpill">
   <img src="<?php echo esc_url( get_template_directory_uri().'/img/ortopedski-jastuk/04_lijecnik_HR.png' ); ?>" alt="Liječnik" class="oj-recpill-av" onerror="this.style.display='none'">
-  <span><strong>Preporuka liječnika</strong>&nbsp;|&nbsp;<em>Specijalist za kralježnicu</em></span>
+  <span><strong>Preporučuje dr. Marić</strong>&nbsp;|&nbsp;<em>Specijalist za kralježnicu</em></span>
   <svg class="oj-recpill-check" width="14" height="14" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#22b573"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<!-- ErgoSit: mala "zaliha" pilula kao original (umjesto velikog crvenog countdown boxa) -->
+<div class="oj-stockpill">
+  <svg width="15" height="15" viewBox="0 0 24 24" style="flex:0 0 auto;"><circle cx="12" cy="12" r="12" fill="#e5344a"/><path d="M12 6.5v7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17" r="1.5" fill="#fff"/></svg>
+  <em>Ostalo je još samo nekoliko komada!</em>
 </div>
 <style>
   .oj-recpill { display: inline-flex; align-items: center; gap: 9px; background: #e9f8f0; border-radius: 999px; padding: 6px 16px 6px 7px; font-size: 13.5px; color: #1b1533; margin: 8px 0 12px; }
@@ -142,19 +147,27 @@ if ( ! $short_description ) {
   .oj-recpill em { font-style: italic; color: #4a6155; }
   .oj-recpill-av { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; object-position: 50% 12%; flex: 0 0 auto; }
   .oj-recpill-check { flex: 0 0 auto; }
+  /* Mala zaliha-pilula (original: "Only a few are left in stock!") */
+  .oj-stockpill { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1.5px solid #f3b8c6; border-radius: 999px; padding: 7px 16px; margin: 4px 0 12px; }
+  .oj-stockpill em { font-style: italic; font-size: 13.5px; font-weight: 600; color: #e5344a; }
+  /* Sakrij veliki crveni countdown box na ovom proizvodu */
+  .gck-countdown { display: none !important; }
   /* Checklista u kratkom opisu — čisto kao original (bez bullet točkica) */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
 </style>
 <script>
 (function(){
-  /* Premjesti pilulu točno ispod naslova proizvoda */
-  function movePill(){
+  /* Premjesti pilule: preporuka ispod naslova, zaliha ispod cijene */
+  function movePills(){
     var pill = document.querySelector('.oj-recpill');
     var title = document.querySelector('.product_title');
     if ( pill && title && title.nextSibling !== pill ) { title.parentNode.insertBefore(pill, title.nextSibling); }
+    var stock = document.querySelector('.oj-stockpill');
+    var price = document.querySelector('.summary .price');
+    if ( stock && price && price.nextSibling !== stock ) { price.parentNode.insertBefore(stock, price.nextSibling); }
   }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', movePill); } else { movePill(); }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', movePills); } else { movePills(); }
 })();
 </script>
 <?php endif; ?>

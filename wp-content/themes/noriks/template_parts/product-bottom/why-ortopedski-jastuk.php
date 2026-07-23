@@ -32,8 +32,8 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   <div class="oj-wrap">
     <h2 class="oj-hero-h">Svjetski <em>#1 ortopedski jastuk za sjedenje</em> za svakodnevnu udobnost</h2>
     <p class="oj-hero-sub">Vjeruju mu tisuće zadovoljnih kupaca — od <strong>vozača na cesti do uredskih radnika i obitelji kod kuće.</strong></p>
-    <div class="oj-ugc-grid oj-ugc-3">
-      <?php for ( $i = 1; $i <= 3; $i++ ) : ?>
+    <div class="oj-ugc-grid oj-ugc-5">
+      <?php for ( $i = 1; $i <= 5; $i++ ) : ?>
         <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'ugc-'.$i.'.mp4' ); ?>">
           <video class="oj-ugc-video" preload="metadata" playsinline muted></video>
           <span class="oj-ugc-play" aria-label="Reproduciraj"></span>
@@ -84,15 +84,12 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 6) UGC reviews traka ============ -->
-<section class="oj-sec">
+<!-- ============ 6) UGC traka — SLIKE kupaca (stillovi, kao original) ============ -->
+<section class="oj-sec oj-stills-sec">
   <div class="oj-wrap">
-    <div class="oj-ugc-grid oj-ugc-3">
-      <?php for ( $i = 4; $i <= 6; $i++ ) : ?>
-        <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'ugc-'.$i.'.mp4' ); ?>">
-          <video class="oj-ugc-video" preload="metadata" playsinline muted></video>
-          <span class="oj-ugc-play" aria-label="Reproduciraj"></span>
-        </div>
+    <div class="oj-stills">
+      <?php for ( $i = 2; $i <= 6; $i++ ) : ?>
+        <img src="<?php echo esc_url( $ojv.'still-'.$i.'.jpg' ); ?>" alt="NORIKS ErgoSit — zadovoljni kupci" loading="lazy" onerror="this.style.display='none'">
       <?php endfor; ?>
     </div>
   </div>
@@ -112,7 +109,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 
 <!-- ============ 8) Učinkovito protiv čestih problema — akordeon, PUNA ŠIRINA ============ -->
 <section class="oj-sec">
-  <div class="oj-wrap-narrow">
+  <div class="oj-wrap">
     <h2 class="oj-h2 oj-center"><em class="oj-pink-i">Učinkovito protiv</em> čestih problema pri sjedenju</h2>
     <div class="oj-acc">
       <?php
@@ -162,23 +159,23 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
       <h2 class="oj-h2">Jastuk koji ne odustaje</h2>
       <p class="oj-lead">Ostaje čvrst, ublažava bol i drži oslonac ondje gdje drugi zakažu.</p>
     </div>
-    <div class="oj-cmp-scroll">
-      <table class="oj-cmp">
-        <thead><tr><th></th><th class="oj-us">NORIKS<br>ErgoSit</th><th>Drugi</th></tr></thead>
-        <tbody>
-          <tr><td>Rasterećuje trticu i leđa</td><td class="us ok">✓</td><td class="no">✕</td></tr>
-          <tr><td>Podupire uspravno, zdravo držanje</td><td class="us ok">✓</td><td class="no">✕</td></tr>
-          <tr><td>Zadržava oblik s vremenom</td><td class="us ok">✓</td><td class="no">✕</td></tr>
-          <tr><td>Baza protiv klizanja</td><td class="us ok">✓</td><td class="no">✕</td></tr>
-        </tbody>
-      </table>
+    <div class="oj-cmp-wrap">
+      <span class="oj-cmp-others">Drugi</span>
+      <div class="oj-cmp-pill"><span>NORIKS</span></div>
+      <div class="oj-cmp-card">
+        <div class="oj-cmp-row"><div class="f">Rasterećuje trticu i leđa</div><div class="us">✓</div><div class="no">✕</div></div>
+        <div class="oj-cmp-row"><div class="f">Podupire uspravno, zdravo držanje</div><div class="us">✓</div><div class="no">✕</div></div>
+        <div class="oj-cmp-row"><div class="f">Zadržava oblik s vremenom</div><div class="us">✓</div><div class="no">✕</div></div>
+        <div class="oj-cmp-row"><div class="f">Baza protiv klizanja</div><div class="us">✓</div><div class="no">✕</div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ 11) Isprobajte 60 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
-<section class="oj-guarantee">
-  <div class="oj-wrap oj-row2">
+<section class="oj-sec oj-guar-sec">
+  <div class="oj-wrap">
+  <div class="oj-guarantee oj-row2">
     <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_60_dana_HR.png','60 dana jamstva povrata novca'); ?></div>
     <div class="oj-guar-copy">
       <h2 class="oj-h2 oj-h2-light">Isprobajte <em class="oj-pink-i">60 dana</em>, bez brige</h2>
@@ -187,26 +184,27 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
       <p>Jer kada je riječ o vašem zdravlju i udobnosti, vjerujemo da razliku trebate <strong>osjetiti</strong>, a ne samo priželjkivati.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <style>
-  .oj-wrap { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+  .oj-wrap { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
   .oj-wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 18px; }
-  .oj-sec { padding: 44px 0; }
+  .oj-sec { padding: 60px 0; }
   .oj-alt { background: #faf6f9; }
-  .oj-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .oj-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
   .oj-h2 { font-size: clamp(24px,3vw,36px); font-weight: 800; color: #1b1533; line-height: 1.15; margin: 0 0 16px; }
   .oj-h2-light { color: #fff; }
   .oj-pink-i { color: #e5157e; font-style: italic; }
   .oj-center { text-align: center; }
   .oj-copy p, .oj-lead { font-size: 15.5px; line-height: 1.6; color: #3a3450; margin: 0 0 14px; }
   .oj-lead { font-size: 16px; color: #55506b; }
-  .oj-media img, .oj-grid2 img { width: 100%; height: auto; display: block; border-radius: 16px; }
+  .oj-media img, .oj-grid2 img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 14px 40px rgba(27,21,51,.10); }
 
   /* 1) Marquee */
   .oj-marquee { background: #1b1533; overflow: hidden; white-space: nowrap; }
   .oj-marquee-track { display: inline-block; padding: 13px 0; animation: ojScroll 26s linear infinite; }
-  .oj-tick { color: #fff; font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+  .oj-tick { color: #fff; font-weight: 800; font-style: italic; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
   .oj-dot { color: #e5157e; margin: 0 22px; font-weight: 800; }
   @keyframes ojScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
@@ -218,6 +216,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   /* UGC */
   .oj-ugc-grid { display: grid; gap: 12px; }
   .oj-ugc-3 { grid-template-columns: repeat(3,1fr); max-width: 760px; margin: 0 auto; }
+  .oj-ugc-5 { grid-template-columns: repeat(5,1fr); }
   .oj-ugc-item { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: #1b1533; cursor: pointer; }
   .oj-ugc-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .oj-ugc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,.92); }
@@ -230,7 +229,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-cta:hover { background: #e5157e; color: #fff; }
 
   /* 8) akordeon */
-  .oj-acc { margin-top: 18px; border-top: 1px solid #ecdfe8; }
+  .oj-acc { max-width: 880px; margin: 18px auto 0; border-top: 1px solid #ecdfe8; }
   .oj-acc-item { border-bottom: 1px solid #ecdfe8; }
   .oj-acc-head { width: 100%; background: none; border: 0; display: flex; align-items: center; gap: 12px; padding: 16px 4px; cursor: pointer; font-size: 15.5px; font-weight: 700; color: #1b1533; text-align: left; }
   .oj-acc-tick { color: #22b573; font-weight: 800; }
@@ -246,28 +245,39 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-x li { font-size: 15px; color: #3a3450; margin: 0 0 10px; }
   .oj-x li span { color: #d64545; font-weight: 800; margin-right: 8px; }
 
-  /* 10) tablica — pink stupac kao original */
-  .oj-cmp-scroll { overflow-x: auto; }
-  .oj-cmp { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 340px; background: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(27,21,51,.10); overflow: hidden; }
-  .oj-cmp th, .oj-cmp td { padding: 16px 14px; text-align: center; font-size: 14px; border-bottom: 1px solid #f0eaf0; }
-  .oj-cmp thead th { font-weight: 800; color: #1b1533; font-size: 13px; }
-  .oj-cmp thead th.oj-us { background: #e5157e; color: #fff; }
-  .oj-cmp tbody td:first-child { text-align: left; font-weight: 700; color: #1b1533; }
-  .oj-cmp td.us { background: #e5157e; }
-  .oj-cmp td.us.ok { color: #fff; font-size: 18px; font-weight: 800; }
-  .oj-cmp td.no { color: #d64545; font-size: 17px; font-weight: 700; }
+  /* 6) UGC stillovi (slike kupaca) */
+  .oj-stills-sec { padding: 20px 0 40px; }
+  .oj-stills { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
+  .oj-stills img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; border-radius: 12px; }
 
-  /* 11) jamstvo (tamna) */
-  .oj-guarantee { background: #1b1533; padding: 50px 0; margin: 24px 0 0; border-radius: 22px; max-width: 1160px; margin-left: auto; margin-right: auto; }
+  /* 10) usporedba — bijela kartica + plavajuća pink pilula (kao original) */
+  .oj-cmp-wrap { position: relative; padding: 40px 0 30px; }
+  .oj-cmp-others { position: absolute; top: 8px; right: 0; width: 88px; text-align: center; font-weight: 800; color: #1b1533; font-size: 14px; }
+  .oj-cmp-pill { position: absolute; top: 0; bottom: 0; right: 96px; width: 100px; background: #e5157e; border-radius: 28px; box-shadow: 0 16px 36px rgba(229,21,126,.35); z-index: 1; display: flex; justify-content: center; align-items: flex-start; padding-top: 14px; }
+  .oj-cmp-pill span { color: #fff; font-weight: 800; font-size: 10.5px; letter-spacing: .14em; }
+  .oj-cmp-card { position: relative; background: #fff; border-radius: 16px; box-shadow: 0 12px 34px rgba(27,21,51,.10); border: 1px solid #f1edf3; }
+  .oj-cmp-row { display: grid; grid-template-columns: 1fr 100px 88px; align-items: center; border-bottom: 1px solid #f2eff4; min-height: 62px; }
+  .oj-cmp-row:last-child { border-bottom: 0; }
+  .oj-cmp-row .f { padding: 14px 16px; text-align: center; font-weight: 800; color: #1b1533; font-size: 15px; line-height: 1.3; }
+  .oj-cmp-row .us { position: relative; z-index: 2; text-align: center; color: #fff; font-weight: 800; font-size: 18px; }
+  .oj-cmp-row .no { text-align: center; color: #e23a3a; font-weight: 800; font-size: 16px; }
+
+  /* 11) jamstvo — zaobljena tamna kartica (kao original) */
+  .oj-guar-sec { padding-top: 20px; }
+  .oj-guarantee { background: #1b1533; border-radius: 18px; padding: 52px 48px; }
   .oj-guar-copy p { color: #cfc9e0; font-size: 15px; line-height: 1.6; margin: 0 0 12px; }
   .oj-guar-badge img { width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block; }
 
   @media (max-width: 860px) {
-    .oj-row2 { grid-template-columns: 1fr; gap: 24px; }
-    .oj-ugc-3 { grid-template-columns: repeat(3,1fr); }
+    .oj-row2 { grid-template-columns: 1fr; gap: 26px; }
+    .oj-ugc-3, .oj-ugc-5 { grid-template-columns: repeat(3,1fr); }
+    .oj-stills { grid-template-columns: repeat(3,1fr); }
     .oj-row2 .oj-media, .oj-row2 .oj-grid2 { order: -1; }
-    .oj-guarantee { border-radius: 0; }
+    .oj-guarantee { padding: 34px 22px; }
     .oj-guarantee .oj-guar-badge { order: -1; }
+    .oj-cmp-others { width: 72px; }
+    .oj-cmp-pill { right: 78px; width: 84px; }
+    .oj-cmp-row { grid-template-columns: 1fr 84px 72px; }
   }
 
   /* No-attrs: sakrij "Tablica veličina" ako se negdje pojavi */
