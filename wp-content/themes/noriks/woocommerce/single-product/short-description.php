@@ -222,7 +222,7 @@ if ( ! $short_description ) {
   @keyframes ojPulse { 0%,100% { box-shadow: 0 0 0 3px rgba(23,201,100,.25); } 50% { box-shadow: 0 0 0 6px rgba(23,201,100,.12); } }
   /* Checklista u kratkom opisu — čisto kao original (bez bullet točkica) */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
-  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
+  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 24px; text-indent: -24px; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #1b1533; }
 </style>
 <script>
 (function(){
