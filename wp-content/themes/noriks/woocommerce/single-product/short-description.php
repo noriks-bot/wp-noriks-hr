@@ -206,7 +206,7 @@ if ( ! $short_description ) {
     .oj-recpill { margin: 4px 0 8px !important; }
     .oj-stockpill { margin: 0 0 8px !important; }
     #bundle-selector .bundle-option { margin: 0 0 8px !important; }
-    .bundle-option { min-height: 54px; padding: 9px 12px !important; }
+    .bundle-option { min-height: 58px; padding: 11px 12px !important; }
     .bundle-option input[type="radio"] { margin-right: 6px !important; }
     .bundle-option .bundle-option-title { font-size: 14.5px; }
     .bundle-option .gck-discount-badge { margin-left: 6px; padding: 4px 7px !important; font-size: 10px !important; }
