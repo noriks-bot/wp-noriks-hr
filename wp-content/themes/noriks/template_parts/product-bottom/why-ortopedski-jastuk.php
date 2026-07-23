@@ -286,6 +286,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
     /* mobilni: prepolovljeni razmaci medju sekcijama */
     .oj-sec { padding: 30px 0; }
     .oj-marquee + section.oj-sec { padding-top: 20px; }
+    .oj-hero-h { font-size: 2rem !important; }
     .oj-stills-sec { padding: 10px 0 20px; }
     .oj-guar-sec { padding-top: 10px; }
     .oj-row2 { grid-template-columns: 1fr; gap: 18px; }
