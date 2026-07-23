@@ -188,7 +188,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 </section>
 
 <style>
-  .oj-wrap { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+  .oj-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; } /* ista širina kao gornji .product container */
   .oj-wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 18px; }
   .oj-sec { padding: 60px 0; }
   .oj-alt { background: #faf6f9; }
