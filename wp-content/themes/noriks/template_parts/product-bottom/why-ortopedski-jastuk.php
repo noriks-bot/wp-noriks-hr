@@ -63,7 +63,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
       <p>Autosjedala i uredske stolice rađeni su za trajnost, ne za vaše tijelo. Njihov oblik tjera kukove da tonu, bedra u sjedalo, a cirkulacija usporava — noge postaju nemirne, a leđa bolna i dugo nakon što ustanete.</p>
       <p>NORIKS <strong>ErgoSit</strong> osmišljen je za duge sate. Oblikovana baza drži kukove u razini, konturirani rubovi smanjuju pritisak na bedra, a uzdignuće podupire kralježnicu kilometar za kilometrom. Rezultat? Uspravno držanje, zdrava cirkulacija i sati sjedenja bez boli i ukočenosti.</p>
     </div>
-    <div class="oj-media"><?php echo $oj_img('05_drzanje_HR.png','NORIKS ErgoSit automatski ispravlja držanje'); ?></div>
+    <div class="oj-media"><video class="oj-secvid" src="<?php echo esc_url( $ojv.'drzanje.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
@@ -205,7 +205,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-center { text-align: center; }
   .oj-copy p, .oj-lead { font-size: 15.5px; line-height: 1.6; color: #3a3450; margin: 0 0 14px; }
   .oj-lead { font-size: 16px; color: #55506b; }
-  .oj-media img, .oj-grid2 img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 14px 40px rgba(27,21,51,.10); }
+  .oj-media img, .oj-grid2 img, .oj-media video.oj-secvid { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 14px 40px rgba(27,21,51,.10); }
 
   /* 1) Marquee */
   .oj-marquee { background: #121030; overflow: hidden; white-space: nowrap; }
