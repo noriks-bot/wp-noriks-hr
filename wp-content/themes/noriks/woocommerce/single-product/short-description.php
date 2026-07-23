@@ -153,7 +153,7 @@ if ( ! $short_description ) {
   .oj-recpill-av { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; object-position: 50% 12%; flex: 0 0 auto; }
   .oj-recpill-check { flex: 0 0 auto; }
   /* Mala zaliha-pilula (original: "Only a few are left in stock!") */
-  .oj-stockpill { display: flex; width: max-content; max-width: 100%; align-items: center; gap: 6px; background: #fff; border: 1px solid #f3b8c6; border-radius: 999px; padding: 3px 10px; margin: 10px 0 14px; }
+  .oj-stockpill { display: flex; width: max-content; max-width: 100%; align-items: center; gap: 6px; background: #fff; border: 1px solid #f3b8c6; border-radius: 11px; padding: 4px 9px; }
   .oj-stockpill svg { width: 12px; height: 12px; }
   .oj-stockpill em { font-style: italic; font-size: 11.5px; font-weight: 600; color: #e5344a; }
   /* Sakrij veliki crveni countdown box na ovom proizvodu */
