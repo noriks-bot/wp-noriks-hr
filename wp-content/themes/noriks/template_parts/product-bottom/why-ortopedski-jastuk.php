@@ -267,7 +267,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   .oj-guar-sec { padding-top: 20px; }
   .oj-guarantee { background: #121030; border-radius: 18px; padding: 52px 48px; }
   .oj-guar-copy p { color: #cfc9e0; font-size: 15px; line-height: 1.6; margin: 0 0 12px; }
-  .oj-guar-badge img { width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block; }
+  .oj-guar-badge img { width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 50%; }
 
   @media (max-width: 860px) {
     .oj-row2 { grid-template-columns: 1fr; gap: 26px; }
