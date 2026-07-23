@@ -34,7 +34,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
     <p class="oj-hero-sub">Vjeruju mu tisuće zadovoljnih kupaca — od <strong>vozača na cesti do uredskih radnika i obitelji kod kuće.</strong></p>
     <div class="oj-ugc-grid oj-ugc-5">
       <?php for ( $i = 1; $i <= 4; $i++ ) : ?>
-        <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'ugc-'.$i.'.mp4' ); ?>">
+        <div class="oj-ugc-item" data-src="<?php echo esc_url( $ojv.'nasi-'.$i.'.mp4' ); ?>">
           <video class="oj-ugc-video" preload="metadata" playsinline muted></video>
           <span class="oj-ugc-play" aria-label="Reproduciraj"></span>
         </div>
