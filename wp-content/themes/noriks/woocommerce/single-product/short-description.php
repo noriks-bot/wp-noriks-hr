@@ -189,6 +189,11 @@ if ( ! $short_description ) {
   /* Ponude: neaktivne = bijela pozadina + svijetlo-pink border (kao original) */
   .bundle-option { background: #fff !important; border: 1.5px solid #f6c6da !important; border-radius: 10px !important; }
   .bundle-option.active { border-width: 2px !important; }
+  /* Jedan red: naziv lijevo, cijena desno, vertikalno centrirano, iste visine kartica */
+  .bundle-option { display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 64px; }
+  .bundle-option .bundle-option-title { display: inline-flex; align-items: center; }
+  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: inline-flex; align-items: center; gap: 6px; }
+  .bundle-option .bundle-pairs { flex-basis: 100%; }
   /* Radio krugovi: pink */
   .bundle-option input[type="radio"] { border-color: #e5157e !important; }
   .bundle-option input[type="radio"]::before { background: #e5157e !important; }
