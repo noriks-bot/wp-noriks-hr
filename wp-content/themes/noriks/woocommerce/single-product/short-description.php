@@ -162,7 +162,7 @@ if ( ! $short_description ) {
   /* Sakrij SAMO riječ "Ukupno:" u ponudama (cijene ostaju) */
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
   /* Ujednačen vertikalni ritam u summary (cijena → pilula → ponude → gumb): 12px svugdje */
-  .summary .price { margin: 0 0 12px !important; }
+  .summary .price { margin: 0 0 18px !important; }
   .oj-recpill { margin: 6px 0 12px !important; }
   .oj-stockpill { margin: 0 0 12px !important; }
   #bundle-selector { margin-top: 0 !important; }
