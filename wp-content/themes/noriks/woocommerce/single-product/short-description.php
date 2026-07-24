@@ -385,10 +385,8 @@ if ( ! $short_description ) {
   .bundle-option .gck-regular-price { font-weight: 400 !important; font-size: 13.5px !important; color: #8a90a3 !important; text-decoration: line-through; }
   .bundle-option input[type="radio"] { margin-right: 10px !important; border-color: #2b3fb0 !important; }
   .bundle-option input[type="radio"]::before, .bundle-option input[type="radio"]:checked::before { background: #2b3fb0 !important; }
-  /* per-cijena pod naslovom (kot original "€46,78 / per pillow") */
-  .bundle-option .gck-per-chip { display: block !important; background: none !important; color: #6a7186 !important; font-size: 13px !important; font-weight: 400 !important; padding: 0 !important; margin: 2px 0 0 0 !important; flex-basis: 100%; order: 5; }
-  .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
-  .bundle-option .gck-per-chip .gck-per-new { color: #6a7186 !important; background: none !important; font-weight: 400 !important; padding: 0 !important; }
+  /* per-cijena chip: skrit (uporabnik ne zeli cene v gumbih) */
+  .bundle-option .gck-per-chip { display: none !important; }
   /* Velikost dropdown: kot original (bel, siv rob, brez oranzne) */
   #bundle-selector select, .bundle-box select, .bundle-option select {
     border: 1px solid #c9cfdd !important; border-radius: 8px !important; background-color: #fff !important;
