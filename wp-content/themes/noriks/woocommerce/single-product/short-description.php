@@ -419,12 +419,7 @@ if ( ! $short_description ) {
     /* Badge iznad naslova */
     var badge=document.querySelector('.kn2-badge'), title=document.querySelector('.product_title');
     if(badge&&title&&title.previousElementSibling!==badge){ title.parentNode.insertBefore(badge,title); }
-    /* Divider nad ponudama */
     var sel=document.getElementById('bundle-selector');
-    if(sel && !document.querySelector('.kn2-divider')){
-      var dv=document.createElement('div'); dv.className='kn2-divider'; dv.textContent='LJETNA AKCIJA';
-      sel.parentNode.insertBefore(dv, sel);
-    }
     /* Ribboni: strip ogenj + dodaj "Najbolja vrijednost" na 3. karto */
     document.querySelectorAll('.gck-popular-badge, .gck-popular-badge-2').forEach(function(b){ b.textContent=b.textContent.replace('🔥','').trim(); if(/Najpopularnije/i.test(b.textContent)) b.textContent='Najpopularnije'; });
     var cards=sel?sel.querySelectorAll('.bundle-option'):[];
