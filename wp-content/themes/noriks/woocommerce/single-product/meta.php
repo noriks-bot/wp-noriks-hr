@@ -467,7 +467,11 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
       </div>
       <div class="accordion-content">
           
-         <?php if( noriks_is_type( 'bunion', $current_product_id ) ): ?>
+         <?php if( noriks_is_type( 'nosilka', $current_product_id ) ): ?>
+
+                NORIKS BabyGo nosiljka izrađena je od mekane, prozračne i izdržljive tkanine s pojačanim šavovima, koja ravnomjerno raspoređuje težinu djeteta preko ramena i leđa — umjesto da sve nosi vaša ruka.<br><br>Ergonomski kroj drži mališana sigurno priljubljenog uz vaše tijelo u prirodnom položaju, dok široki, podstavljeni dio preko ramena sprječava urezivanje i pritisak čak i pri duljem nošenju.<br><br>Ono što BabyGo čini posebnom jest jednostavnost: navuče se u nekoliko sekundi, bez kompliciranih kopči i podešavanja, a dovoljno je lagana i kompaktna da uvijek bude uz vas u torbi. Periva u perilici — spremna za svaku svakodnevicu.
+
+         <?php elseif( noriks_is_type( 'bunion', $current_product_id ) ): ?>
 
                 NORIKS korektor čukljeva koristi patentirani zglobni mehanizam koji nježno vraća nožni palac u njegov prirodan položaj i primjenjuje ciljanu, podesivu kompresiju. Time se rasterećuje bolno izbočenje, smanjuje upala i ublažava nelagoda pri hodu, stajanju i tijekom mirovanja.<br><br>Mekana unutarnja podloga štiti kožu i osigurava udobnost pri duljem nošenju, a intenzitet istezanja jednostavno se prilagođava elastičnim trakama.<br><br>Neinvazivan je i prilagodljiv — nema strana, jednako odgovara lijevom i desnom stopalu te svim veličinama stopala, od dječjih do najvećih odraslih. Dovoljno je od 30 minuta do nekoliko sati dnevne uporabe za postupno, prirodno poravnanje.
 

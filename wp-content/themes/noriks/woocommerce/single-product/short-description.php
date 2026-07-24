@@ -256,6 +256,8 @@ if ( ! $short_description ) {
   /* Mala zaliha-pilula umjesto velikog crvenog countdown boxa */
   .nsb-stockpill { display: flex; width: max-content; max-width: 100%; align-items: center; gap: 6px; background: #fff; border: 1px solid #b9d2ea; border-radius: 11px; padding: 4px 9px; }
   .nsb-stockpill em { font-style: italic; font-size: 11.5px; font-weight: 600; color: #e5344a; }
+  /* Nosiljka nema velicina: sakrij SVE size-chart triggere */
+  .gck-size-link, .gck-size-link-wrap, #open-size-chartCustom, #open-size-chart, .noriks-global-sizechart { display: none !important; }
   .gck-countdown { display: none !important; }
   /* Sakrij crveni per-kom chip i rijec "Ukupno:" (cijene ostaju) */
   .gck-per-chip { display: none !important; }
