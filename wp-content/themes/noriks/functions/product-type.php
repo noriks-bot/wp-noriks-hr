@@ -46,6 +46,8 @@ function noriks_product_type_map() : array {
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
+        // Bambelle nosiljka za bebe/malisane (sling carrier).
+        'nosilka'                 => array( 'orto-nosilka', 'nosilka', 'nosiljka' ),
         // ErgoSit orthopedic pillow (ortopedski jastuk) — no colour/size, quantity-only bundle.
         'ortopedski-jastuk'       => array( 'orto-ortopedski-jastuk', 'ortopedski-jastuk' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),

@@ -64,6 +64,11 @@ if ( noriks_is_type( 'ortopedski-jastuk' ) ) {
     include $noriks_pb_dir . 'why-ortopedski-jastuk.php';
 }
 
+// NOSILJKA (orto-nosilka) — Bambelle sling carrier, why-sekcije (kopija en-bambelle stranice)
+if ( noriks_is_type( 'nosilka' ) ) {
+    include $noriks_pb_dir . 'why-nosilka.php';
+}
+
 // LEAK BOXERS (orto-leak-boxers) — muško rublje za inkontinenciju
 if ( noriks_is_type( 'leakboxers' ) ) {
     include $noriks_pb_dir . 'why-leakboxers.php';
