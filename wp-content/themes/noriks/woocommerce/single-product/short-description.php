@@ -367,11 +367,13 @@ if ( ! $short_description ) {
 <style>
   /* Badge iznad naslova */
   .kn2-badge { display: inline-flex; align-items: center; gap: 7px; background: #e8ecfb; border-radius: 6px; padding: 5px 12px; font-size: 13px; font-weight: 600; color: #121212; margin: 0 0 10px; }
-  /* Checklista (kratki opis): plave kvacice, brez bulletov */
-  .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
-  .woocommerce-product-details__short-description ul li { list-style: none; position: relative; padding-left: 26px; text-indent: 0; margin: 0 0 8px; font-size: 15px; line-height: 1.45; color: #121212; }
-  .woocommerce-product-details__short-description ul li::before { content: ""; position: absolute; left: 0; top: 2px; width: 17px; height: 17px; border-radius: 50%; border: 1.8px solid #2b7de0; background: transparent; }
-  .woocommerce-product-details__short-description ul li::after { content: ""; position: absolute; left: 4.5px; top: 7px; width: 8px; height: 5px; border-left: 1.8px solid #2b7de0; border-bottom: 1.8px solid #2b7de0; transform: rotate(-45deg); }
+  /* Checklista (kratki opis): BREZ bulletov, emoji iz vsebine je ikona, hanging indent poravnava */
+  .summary .woocommerce-product-details__short-description ul,
+  .woocommerce-product-details__short-description ul { list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
+  .summary .woocommerce-product-details__short-description ul li,
+  .woocommerce-product-details__short-description ul li { list-style: none !important; padding-left: 26px !important; text-indent: -26px !important; margin: 0 0 8px !important; font-size: 15px; line-height: 1.5; color: #121212; }
+  .summary .woocommerce-product-details__short-description ul li::marker,
+  .woocommerce-product-details__short-description ul li::marker { content: '' !important; }
   /* Divider "LJETNA AKCIJA" nad ponudama */
   .kn2-divider { display: flex; align-items: center; gap: 14px; margin: 14px 0 12px; color: #1b2450; font-size: 13px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
   .kn2-divider::before, .kn2-divider::after { content: ""; flex: 1; height: 1px; background: #c9d2f0; }
