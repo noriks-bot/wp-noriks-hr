@@ -452,8 +452,10 @@ if ( ! $short_description ) {
     function numberSelects(){
       if(!sel) return;
       sel.querySelectorAll('.bundle-pairs').forEach(function(wrap){
+        var sels=wrap.querySelectorAll('select');
+        if(sels.length<2){ wrap.querySelectorAll('.kn2-selnum').forEach(function(l){ l.remove(); }); return; }
         var i=0;
-        wrap.querySelectorAll('select').forEach(function(sl){
+        sels.forEach(function(sl){
           i++;
           if(sl.previousElementSibling && sl.previousElementSibling.classList && sl.previousElementSibling.classList.contains('kn2-selnum')){ sl.previousElementSibling.textContent='#'+i; return; }
           var lab=document.createElement('span'); lab.className='kn2-selnum'; lab.textContent='#'+i;
