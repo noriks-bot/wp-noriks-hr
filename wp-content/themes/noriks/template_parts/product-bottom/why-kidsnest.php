@@ -116,6 +116,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 
   /* 1) marquee */
   .kn-marquee { background: #2b3fb0; overflow: hidden; white-space: nowrap; margin-top: 26px; }
+  @media (min-width: 861px) { .kn-marquee { margin-top: -20px; } } /* desktop: prepolovljen razmik do vsebine zgoraj */
   .kn-marquee + .kn-sec { padding-top: 26px; }
   .kn-marquee-track { display: inline-block; padding: 13px 0; animation: knScroll 28s linear infinite; }
   .kn-tick { color: #fff; font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
