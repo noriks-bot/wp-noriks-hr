@@ -396,17 +396,18 @@ if ( ! $short_description ) {
     padding: 9px 34px 9px 12px !important; box-shadow: none !important;
   }
   #bundle-selector select:focus, .bundle-box select:focus { border-color: #2b3fb0 !important; outline: none !important; }
-  /* skrij % chip, "Ukupno:" in countdown */
+  /* skrij % chip, "Ukupno:", countdown in "Nudimo 30 dana..." noto */
   .gck-discount-badge { display: none !important; }
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
   .gck-countdown { display: none !important; }
+  #bundle-selector small { display: none !important; }
   /* privzete plugin znacke -> plavi ribboni gor-desno */
   .gck-popular-badge, .gck-popular-badge-2, .kn2-ribbon { position: absolute; top: -11px; right: 12px; left: auto !important; background: #2b3fb0 !important; color: #fff !important; font-size: 11px !important; font-weight: 700 !important; border-radius: 4px !important; padding: 3px 10px !important; line-height: 1.4 !important; transform: none !important; }
   /* ADD TO CART: plavi pill (izmjereno: radius 42px, 19px/700, uppercase, ls 1px) */
   .single-product .single_add_to_cart_button,
   .single-product button.single_add_to_cart_button.alt {
     background: #2b3fb0 !important; border-color: #2b3fb0 !important; color: #fff !important;
-    border-radius: 42px !important; font-size: 19px !important; font-weight: 700 !important;
+    font-size: 19px !important; font-weight: 700 !important;
     text-transform: uppercase !important; letter-spacing: 1px !important; padding-top: 16px !important; padding-bottom: 16px !important;
   }
   .single-product .single_add_to_cart_button:hover { background: #1b2450 !important; border-color: #1b2450 !important; }
