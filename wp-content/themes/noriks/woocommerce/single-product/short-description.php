@@ -371,7 +371,9 @@ if ( ! $short_description ) {
     padding: 9px 34px 9px 12px !important; box-shadow: none !important;
   }
   #bundle-selector select:focus, .bundle-box select:focus { border-color: #2b3fb0 !important; outline: none !important; }
-  .kn2-selnum { display: inline-block; min-width: 26px; font-weight: 700; font-size: 14px; color: #121212; margin-right: 6px; }
+  .kn2-selnum { display: inline-block; min-width: 24px; font-weight: 700; font-size: 14px; color: #121212; }
+  .kn2-selrow { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; }
+  .kn2-selrow select { flex: 1 1 auto; margin: 0 !important; }
   /* skrij % chip, "Ukupno:", countdown in "Nudimo 30 dana..." noto */
   .gck-discount-badge { display: none !important; }
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
@@ -457,9 +459,11 @@ if ( ! $short_description ) {
         var i=0;
         sels.forEach(function(sl){
           i++;
-          if(sl.previousElementSibling && sl.previousElementSibling.classList && sl.previousElementSibling.classList.contains('kn2-selnum')){ sl.previousElementSibling.textContent='#'+i; return; }
+          if(sl.parentNode.classList && sl.parentNode.classList.contains('kn2-selrow')){ sl.parentNode.querySelector('.kn2-selnum').textContent='#'+i; return; }
+          var row=document.createElement('div'); row.className='kn2-selrow';
           var lab=document.createElement('span'); lab.className='kn2-selnum'; lab.textContent='#'+i;
-          sl.parentNode.insertBefore(lab, sl);
+          sl.parentNode.insertBefore(row, sl);
+          row.appendChild(lab); row.appendChild(sl);
         });
       });
     }
