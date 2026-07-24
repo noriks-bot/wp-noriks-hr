@@ -333,36 +333,6 @@ if ( ! $short_description ) {
     <p class="kn2-red-title"><svg width="14" height="13" viewBox="0 0 24 22" style="vertical-align:-2px;margin-right:6px;"><path d="M12 1L23 21H1L12 1z" fill="none" stroke="#c0452f" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 8v6" stroke="#c0452f" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17.4" r="1.3" fill="#c0452f"/></svg>ZA RODITELJE DJECE MLAĐE OD 9 GODINA</p>
     <p class="kn2-red-body">Svake noći na pogrešnom jastuku <strong class="kn2-red">lice vašeg djeteta se oblikuje — u pogrešnom smjeru.</strong> Slinjenje. Hrkanje. Otvorena usta. Do <strong class="kn2-red">9. godine</strong> promjene se učvršćuju. Do <strong class="kn2-red">14.</strong> — skupi aparatić za zube. Do <strong class="kn2-red">18.</strong> — razgovor o ozbiljnijim zahvatima. Pedijatrijski stomatolozi za dišne putove to viđaju svakodnevno — prestali su to zvati rijetkim. <strong class="kn2-red">Promijenite jastuk večeras.</strong></p>
   </div>
-  <div class="kn2-accs">
-    <details class="kn2-acc">
-      <summary>Lice vašeg djeteta oblikuje se upravo sada — a vrijeme imate do 9. godine<span class="kn2-chev">⌄</span></summary>
-      <div class="kn2-acc-body">
-        <p>Istraživači dišnih putova i pedijatrijski stomatolozi godinama upozoravaju na isti obrazac — a većina roditelja za njega nikad nije čula. Zove se <strong>sindrom izduženog lica</strong> (adenoidno lice).</p>
-        <p>Svake noći kada dijete spava otvorenih usta na pogrešnom jastuku, događaju se četiri stvari odjednom: jezik pada unatrag, čeljust se povlači, nepce se sužava u visoki luk, a lice počinje rasti vertikalno umjesto horizontalno. Nakon tisuća takvih noći između 3. i 9. godine, promjene se učvršćuju.</p>
-        <p>Zato se 9-godišnjaci danas pojavljuju kod ortodonta s povučenom bradom, podočnjacima, zbijenim zubima — i skupim računom za aparatić. Način na koji dijete diše između 3. i 9. godine snažno utječe na lice koje će nositi cijeli život.</p>
-        <p>NORIKS <strong>KidsNest</strong> dizajniran je da djeluje na temeljni uzrok — pogrešan položaj glave i čeljusti tijekom 9 sati sna — s <strong>3-zonskom ergonomskom strukturom</strong> koja glavu, vrat i čeljust drži u pravilnom poravnanju od prve noći.</p>
-        <p><strong>Što ćete vidjeti kod svog djeteta:</strong></p>
-        <ul>
-          <li><strong>Manje disanja na usta:</strong> usnice zatvorene tijekom noći, povratak disanja kroz nos, kraj suhih usta ujutro.</li>
-          <li><strong>Tiše noći:</strong> hrkanje se kod većine djece smiruje unutar 1–2 tjedna.</li>
-          <li><strong>Podrška čeljusti u razvoju:</strong> pravilan položaj noć za noći, u godinama kada je to najvažnije.</li>
-          <li><strong>Pametna preventiva:</strong> jedan jastuk danas — umjesto skupih korekcija sutra.</li>
-        </ul>
-        <p><strong>Jedan jastuk večeras. Ili tisuće kasnije.</strong></p>
-      </div>
-    </details>
-    <details class="kn2-acc">
-      <summary>Starije od 9? Prozor se sužava. Šteta ne staje.<span class="kn2-chev">⌄</span></summary>
-      <div class="kn2-acc-body">
-        <p>Savjet koji ste čuli samo je napola točan. Da, gornje nepce se učvrsti oko 9. godine. Ali lice se razvija do 20., donja čeljust raste do 17., a dišni putovi se stalno prilagođavaju.</p>
-        <p>Zato svaka noć disanja na usta nakon 9. godine slaže novu štetu na staru: škrgutanje zubima, glavobolje, san koji ne odmara, pad koncentracije — i umor koji svi zamjenjuju s lijenošću. Vaš tinejdžer nije lijen. On jedva diše šest sati svake noći.</p>
-        <p>KidsNest u veličini <strong>9–18 godina</strong> izrađen je za stariju glavu, vrat i ramena. Drugačija kontura, druga visina, druga potpora. Isti temeljni mehanizam: pravilno poravnanje glave, vrata i čeljusti, cijelu noć, na tijelu koje još raste.</p>
-        <p>Što roditelji primjećuju: hrkanje se smiruje u 7 do 14 noći, vraća se prava jutarnja energija, glavobolje blijede, fokus se vraća.</p>
-        <p>Najbolji prozor i dalje je od 3. do 9. godine. Snažan prozor je od 8. do 18. Nijedan nije potpuno zatvoren — ali svaka noć čekanja dodaje pritisak tijelu koje se pokušava oporaviti.</p>
-        <p><strong>Jučer je prošlo. Večeras je još uvijek vaše.</strong></p>
-      </div>
-    </details>
-  </div>
 </div>
 <style>
   /* Badge iznad naslova */
