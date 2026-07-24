@@ -92,7 +92,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 6) Kvaliteta materijala — slika LIJEVO, tekst DESNO ============ -->
 <section class="kn-sec">
   <div class="kn-wrap kn-row2">
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'03-materijal.webp' ); ?>" alt="KidsNest — 3-zonska struktura i prozračna tkanina izbliza" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'03-detalj.webp' ); ?>" alt="KidsNest — 3-zonska struktura i prozračna tkanina izbliza" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Kvaliteta koja se osjeti — noć za noći.</h2>
       <p>Gusta, prozračna pletenina i pažljivo oblikovana površina nisu tu zbog izgleda — <strong>svaka zona ima svoju ulogu</strong>. Sredina nježno prihvaća glavu, rubovi podupiru vrat, a struktura zadržava oblik i nakon mjeseci svakodnevne uporabe.</p>
