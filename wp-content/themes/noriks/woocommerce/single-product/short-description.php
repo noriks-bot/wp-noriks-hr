@@ -351,7 +351,7 @@ if ( ! $short_description ) {
   .kn2-divider { display: flex; align-items: center; gap: 14px; margin: 14px 0 12px; color: #1b2450; font-size: 13px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
   .kn2-divider::before, .kn2-divider::after { content: ""; flex: 1; height: 1px; background: #c9d2f0; }
   /* Ponude: plava shema */
-  .bundle-option { position: relative; background: #fff !important; border: 1.5px solid #d9dff5 !important; border-radius: 10px !important; display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 72px; padding: 16px 18px !important; cursor: pointer; transition: border-color .15s ease, background .15s ease; overflow: visible !important; }
+  .bundle-option { position: relative; background: #fff !important; border: 1.5px solid #d9dff5 !important; border-radius: 10px !important; display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 58px; padding: 10px 18px !important; cursor: pointer; transition: border-color .15s ease, background .15s ease; overflow: visible !important; }
   .bundle-option.active { border: 2px solid #2b3fb0 !important; background: #e8ecfb !important; }
   .bundle-option .bundle-option-title { display: inline-flex; align-items: center; font-weight: 700; color: #121212; font-size: 16px; }
   .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 1px; font-size: 16px; font-weight: 700; color: #121212; }
@@ -361,6 +361,7 @@ if ( ! $short_description ) {
   /* per-cijena chip: skrit (uporabnik ne zeli cene v gumbih) */
   .bundle-option .gck-per-chip { display: none !important; }
   /* Velikost dropdown: kot original (bel, siv rob, brez oranzne) */
+  .bundle-option hr, .bundle-option .gck-divider { margin: 8px 0 !important; }
   #bundle-selector select, .bundle-box select, .bundle-option select {
     border: 1px solid #c9cfdd !important; border-radius: 8px !important; background-color: #fff !important;
     color: #121212 !important; font-size: 14px !important; font-weight: 500 !important;
