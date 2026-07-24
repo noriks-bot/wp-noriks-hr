@@ -124,7 +124,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
   .kn-strip { overflow: hidden; width: 100vw; margin-left: calc(50% - 50vw); padding-bottom: 34px; }
   .kn-strip-track { display: flex; gap: 8px; width: max-content; animation: knScroll 60s linear infinite; }
   .kn-strip:hover .kn-strip-track { animation-play-state: paused; }
-  .kn-strip-track img { width: 280px; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; display: block; flex: 0 0 auto; }
+  .kn-strip-track img { width: 350px; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; display: block; flex: 0 0 auto; }
 
   @media (max-width: 860px) {
     .kn-sec { padding: 30px 0; }
@@ -133,6 +133,6 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
     .kn-h2 { font-size: 2rem; }
     .kn-stats { grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
     .kn-ring { width: 120px; height: 120px; }
-    .kn-strip-track img { width: 190px; }
+    .kn-strip-track img { width: 240px; }
   }
 </style>
