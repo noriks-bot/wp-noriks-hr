@@ -415,7 +415,7 @@ if ( ! $short_description ) {
   #bundle-selector { margin-top: 0 !important; }
   #bundle-selector .bundle-option { margin: 0 0 14px !important; }
   @media (max-width: 600px) {
-    .single-product .product_title { font-size: 2rem !important; line-height: 1.15 !important; }
+    .single-product .product_title { font-size: 1.8rem !important; line-height: 1.18 !important; }
     #bundle-selector .bundle-option { margin: 0 0 10px !important; }
     .bundle-option { min-height: 64px; padding: 13px 12px !important; }
     .bundle-option .bundle-option-title { font-size: 14.5px; }
