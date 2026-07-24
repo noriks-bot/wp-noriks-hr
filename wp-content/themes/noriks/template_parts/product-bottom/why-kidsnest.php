@@ -89,6 +89,19 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
   </div>
 </section>
 
+<!-- ============ 6) Kvaliteta materijala — slika LIJEVO, tekst DESNO ============ -->
+<section class="kn-sec">
+  <div class="kn-wrap kn-row2">
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'03-materijal.webp' ); ?>" alt="KidsNest — 3-zonska struktura i prozračna tkanina izbliza" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-copy">
+      <h2 class="kn-h2 kn-h2-blue">Kvaliteta koja se osjeti — noć za noći.</h2>
+      <p>Gusta, prozračna pletenina i pažljivo oblikovana površina nisu tu zbog izgleda — <strong>svaka zona ima svoju ulogu</strong>. Sredina nježno prihvaća glavu, rubovi podupiru vrat, a struktura zadržava oblik i nakon mjeseci svakodnevne uporabe.</p>
+      <p>Navlaka se skida i pere u perilici, pjena je <strong>hipoalergena i otporna na grinje</strong> — pa jastuk ostaje svjež, čist i spreman za svaku noć. Bez udubljenja, bez splošnjavanja, bez kompromisa.</p>
+      <p><strong>Jastuk koji i nakon godinu dana izgleda — i podupire — kao prvi dan.</strong></p>
+    </div>
+  </div>
+</section>
+
 <style>
   .kn-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; } /* isti container kao gornji .product */
   .kn-sec { padding: 60px 0; }
