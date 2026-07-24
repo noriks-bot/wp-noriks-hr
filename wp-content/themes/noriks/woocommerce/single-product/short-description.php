@@ -317,3 +317,154 @@ if ( ! $short_description ) {
 })();
 </script>
 <?php endif; ?>
+
+<?php if ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ) : ?>
+<!-- KidsNest: summary paket po tryneedo originalu (plava #2b3fb0, rdeca #c0452f) -->
+<div class="kn2-badge">
+  <svg width="15" height="15" viewBox="0 0 24 24" style="flex:0 0 auto;"><circle cx="12" cy="12" r="12" fill="#2b7de0"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span>Preporuka pedijatara</span>
+</div>
+<div class="kn2-below">
+  <div class="kn2-trust">
+    <span><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z" fill="#2b3fb0"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 90 noći isprobavanja</span>
+    <span><svg width="18" height="14" viewBox="0 0 24 18"><rect x="1" y="3" width="13" height="10" rx="1.5" fill="#2b3fb0"/><path d="M14 6h4l4 4v3h-8z" fill="#2b3fb0"/><circle cx="6" cy="15" r="2.4" fill="#1b2450"/><circle cx="18" cy="15" r="2.4" fill="#1b2450"/></svg> Brza dostava</span>
+  </div>
+  <div class="kn2-redbox">
+    <p class="kn2-red-title"><svg width="14" height="13" viewBox="0 0 24 22" style="vertical-align:-2px;margin-right:6px;"><path d="M12 1L23 21H1L12 1z" fill="none" stroke="#c0452f" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 8v6" stroke="#c0452f" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17.4" r="1.3" fill="#c0452f"/></svg>ZA RODITELJE DJECE MLAĐE OD 9 GODINA</p>
+    <p class="kn2-red-body">Svake noći na pogrešnom jastuku <strong class="kn2-red">lice vašeg djeteta se oblikuje — u pogrešnom smjeru.</strong> Slinjenje. Hrkanje. Otvorena usta. Do <strong class="kn2-red">9. godine</strong> promjene se učvršćuju. Do <strong class="kn2-red">14.</strong> — skupi aparatić za zube. Do <strong class="kn2-red">18.</strong> — razgovor o ozbiljnijim zahvatima. Pedijatrijski stomatolozi za dišne putove to viđaju svakodnevno — prestali su to zvati rijetkim. <strong class="kn2-red">Promijenite jastuk večeras.</strong></p>
+  </div>
+  <div class="kn2-accs">
+    <details class="kn2-acc">
+      <summary>Lice vašeg djeteta oblikuje se upravo sada — a vrijeme imate do 9. godine<span class="kn2-chev">⌄</span></summary>
+      <div class="kn2-acc-body">
+        <p>Istraživači dišnih putova i pedijatrijski stomatolozi godinama upozoravaju na isti obrazac — a većina roditelja za njega nikad nije čula. Zove se <strong>sindrom izduženog lica</strong> (adenoidno lice).</p>
+        <p>Svake noći kada dijete spava otvorenih usta na pogrešnom jastuku, događaju se četiri stvari odjednom: jezik pada unatrag, čeljust se povlači, nepce se sužava u visoki luk, a lice počinje rasti vertikalno umjesto horizontalno. Nakon tisuća takvih noći između 3. i 9. godine, promjene se učvršćuju.</p>
+        <p>Zato se 9-godišnjaci danas pojavljuju kod ortodonta s povučenom bradom, podočnjacima, zbijenim zubima — i skupim računom za aparatić. Način na koji dijete diše između 3. i 9. godine snažno utječe na lice koje će nositi cijeli život.</p>
+        <p>NORIKS <strong>KidsNest</strong> dizajniran je da djeluje na temeljni uzrok — pogrešan položaj glave i čeljusti tijekom 9 sati sna — s <strong>3-zonskom ergonomskom strukturom</strong> koja glavu, vrat i čeljust drži u pravilnom poravnanju od prve noći.</p>
+        <p><strong>Što ćete vidjeti kod svog djeteta:</strong></p>
+        <ul>
+          <li><strong>Manje disanja na usta:</strong> usnice zatvorene tijekom noći, povratak disanja kroz nos, kraj suhih usta ujutro.</li>
+          <li><strong>Tiše noći:</strong> hrkanje se kod većine djece smiruje unutar 1–2 tjedna.</li>
+          <li><strong>Podrška čeljusti u razvoju:</strong> pravilan položaj noć za noći, u godinama kada je to najvažnije.</li>
+          <li><strong>Pametna preventiva:</strong> jedan jastuk danas — umjesto skupih korekcija sutra.</li>
+        </ul>
+        <p><strong>Jedan jastuk večeras. Ili tisuće kasnije.</strong></p>
+      </div>
+    </details>
+    <details class="kn2-acc">
+      <summary>Starije od 9? Prozor se sužava. Šteta ne staje.<span class="kn2-chev">⌄</span></summary>
+      <div class="kn2-acc-body">
+        <p>Savjet koji ste čuli samo je napola točan. Da, gornje nepce se učvrsti oko 9. godine. Ali lice se razvija do 20., donja čeljust raste do 17., a dišni putovi se stalno prilagođavaju.</p>
+        <p>Zato svaka noć disanja na usta nakon 9. godine slaže novu štetu na staru: škrgutanje zubima, glavobolje, san koji ne odmara, pad koncentracije — i umor koji svi zamjenjuju s lijenošću. Vaš tinejdžer nije lijen. On jedva diše šest sati svake noći.</p>
+        <p>KidsNest u veličini <strong>9–18 godina</strong> izrađen je za stariju glavu, vrat i ramena. Drugačija kontura, druga visina, druga potpora. Isti temeljni mehanizam: pravilno poravnanje glave, vrata i čeljusti, cijelu noć, na tijelu koje još raste.</p>
+        <p>Što roditelji primjećuju: hrkanje se smiruje u 7 do 14 noći, vraća se prava jutarnja energija, glavobolje blijede, fokus se vraća.</p>
+        <p>Najbolji prozor i dalje je od 3. do 9. godine. Snažan prozor je od 8. do 18. Nijedan nije potpuno zatvoren — ali svaka noć čekanja dodaje pritisak tijelu koje se pokušava oporaviti.</p>
+        <p><strong>Jučer je prošlo. Večeras je još uvijek vaše.</strong></p>
+      </div>
+    </details>
+  </div>
+</div>
+<style>
+  /* Badge iznad naslova */
+  .kn2-badge { display: inline-flex; align-items: center; gap: 7px; background: #e8ecfb; border-radius: 6px; padding: 5px 12px; font-size: 13px; font-weight: 600; color: #121212; margin: 0 0 10px; }
+  /* Checklista (kratki opis): plave kvacice, brez bulletov */
+  .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
+  .woocommerce-product-details__short-description ul li { list-style: none; position: relative; padding-left: 26px; text-indent: 0; margin: 0 0 8px; font-size: 15px; line-height: 1.45; color: #121212; }
+  .woocommerce-product-details__short-description ul li::before { content: ""; position: absolute; left: 0; top: 2px; width: 17px; height: 17px; border-radius: 50%; border: 1.8px solid #2b7de0; background: transparent; }
+  .woocommerce-product-details__short-description ul li::after { content: ""; position: absolute; left: 4.5px; top: 7px; width: 8px; height: 5px; border-left: 1.8px solid #2b7de0; border-bottom: 1.8px solid #2b7de0; transform: rotate(-45deg); }
+  /* Divider "LJETNA AKCIJA" nad ponudama */
+  .kn2-divider { display: flex; align-items: center; gap: 14px; margin: 14px 0 12px; color: #1b2450; font-size: 13px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+  .kn2-divider::before, .kn2-divider::after { content: ""; flex: 1; height: 1px; background: #c9d2f0; }
+  /* Ponude: plava shema */
+  .bundle-option { position: relative; background: #fff !important; border: 1.5px solid #d9dff5 !important; border-radius: 10px !important; display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 72px; padding: 16px 18px !important; cursor: pointer; transition: border-color .15s ease, background .15s ease; overflow: visible !important; }
+  .bundle-option.active { border: 2px solid #2b3fb0 !important; background: #e8ecfb !important; }
+  .bundle-option .bundle-option-title { display: inline-flex; align-items: center; font-weight: 700; color: #121212; font-size: 16px; }
+  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: flex; flex-direction: column-reverse; align-items: flex-end; gap: 1px; font-size: 16px; font-weight: 700; color: #121212; }
+  .bundle-option .gck-regular-price { font-weight: 400 !important; font-size: 13.5px !important; color: #8a90a3 !important; text-decoration: line-through; }
+  .bundle-option input[type="radio"] { margin-right: 10px !important; border-color: #2b3fb0 !important; }
+  .bundle-option input[type="radio"]::before, .bundle-option input[type="radio"]:checked::before { background: #2b3fb0 !important; }
+  /* per-cijena pod naslovom (kot original "€46,78 / per pillow") */
+  .bundle-option .gck-per-chip { display: block !important; background: none !important; color: #6a7186 !important; font-size: 13px !important; font-weight: 400 !important; padding: 0 !important; margin: 2px 0 0 0 !important; flex-basis: 100%; order: 5; }
+  .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
+  .bundle-option .gck-per-chip .gck-per-new { color: #6a7186 !important; background: none !important; font-weight: 400 !important; padding: 0 !important; }
+  /* skrij % chip, "Ukupno:" in countdown */
+  .gck-discount-badge { display: none !important; }
+  .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
+  .gck-countdown { display: none !important; }
+  /* privzete plugin znacke -> plavi ribboni gor-desno */
+  .gck-popular-badge, .gck-popular-badge-2, .kn2-ribbon { position: absolute; top: -11px; right: 12px; left: auto !important; background: #2b3fb0 !important; color: #fff !important; font-size: 11px !important; font-weight: 700 !important; border-radius: 4px !important; padding: 3px 10px !important; line-height: 1.4 !important; transform: none !important; }
+  /* ADD TO CART: plavi pill (izmjereno: radius 42px, 19px/700, uppercase, ls 1px) */
+  .single-product .single_add_to_cart_button,
+  .single-product button.single_add_to_cart_button.alt {
+    background: #2b3fb0 !important; border-color: #2b3fb0 !important; color: #fff !important;
+    border-radius: 42px !important; font-size: 19px !important; font-weight: 700 !important;
+    text-transform: uppercase !important; letter-spacing: 1px !important; padding-top: 16px !important; padding-bottom: 16px !important;
+  }
+  .single-product .single_add_to_cart_button:hover { background: #1b2450 !important; border-color: #1b2450 !important; }
+  /* Trust vrstica pod gumbom */
+  .kn2-trust { display: flex; justify-content: center; gap: 28px; margin: 12px 0 4px; }
+  .kn2-trust span { display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600; color: #121212; }
+  /* Rdeci box */
+  .kn2-redbox { background: #fdf1ee; border: 1px solid #f5cfc5; border-left: 3px solid #c0452f; border-radius: 8px; padding: 15px 18px; margin: 16px 0 10px; }
+  .kn2-red-title { margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: .12em; color: #c0452f; }
+  .kn2-red-body { margin: 0; font-size: 14.5px; line-height: 1.6; color: #3b3b3b; }
+  .kn2-red { color: #c0452f; }
+  /* Akordeona pod boxom */
+  .kn2-accs { border-top: 1px solid #e5e5e5; margin-top: 6px; }
+  .kn2-acc { border-bottom: 1px solid #e5e5e5; }
+  .kn2-acc summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 2px; cursor: pointer; font-size: 15px; font-weight: 700; color: #121212; list-style: none; }
+  .kn2-acc summary::-webkit-details-marker { display: none; }
+  .kn2-chev { color: #9aa0b4; transition: transform .2s; }
+  .kn2-acc[open] .kn2-chev { transform: rotate(180deg); }
+  .kn2-acc-body { padding: 0 2px 14px; }
+  .kn2-acc-body p { font-size: 14.5px; line-height: 1.65; color: #3b4052; margin: 0 0 11px; }
+  .kn2-acc-body ul { margin: 0 0 12px; padding-left: 20px; }
+  .kn2-acc-body li { font-size: 14.5px; line-height: 1.6; color: #3b4052; margin: 0 0 7px; }
+  /* Vertikalni ritam */
+  .summary .price { margin: 0 0 14px !important; }
+  #bundle-selector { margin-top: 0 !important; }
+  #bundle-selector .bundle-option { margin: 0 0 14px !important; }
+  @media (max-width: 600px) {
+    #bundle-selector .bundle-option { margin: 0 0 10px !important; }
+    .bundle-option { min-height: 64px; padding: 13px 12px !important; }
+    .bundle-option .bundle-option-title { font-size: 14.5px; }
+    .bundle-option .bundle-total-line { font-size: 15px; }
+    .kn2-trust { gap: 16px; flex-wrap: wrap; }
+  }
+</style>
+<script>
+(function(){
+  function init(){
+    /* Badge iznad naslova */
+    var badge=document.querySelector('.kn2-badge'), title=document.querySelector('.product_title');
+    if(badge&&title&&title.previousElementSibling!==badge){ title.parentNode.insertBefore(badge,title); }
+    /* Divider nad ponudama */
+    var sel=document.getElementById('bundle-selector');
+    if(sel && !document.querySelector('.kn2-divider')){
+      var dv=document.createElement('div'); dv.className='kn2-divider'; dv.textContent='LJETNA AKCIJA';
+      sel.parentNode.insertBefore(dv, sel);
+    }
+    /* Ribboni: strip ogenj + dodaj "Najbolja vrijednost" na 3. karto */
+    document.querySelectorAll('.gck-popular-badge, .gck-popular-badge-2').forEach(function(b){ b.textContent=b.textContent.replace('🔥','').trim(); if(/Najpopularnije/i.test(b.textContent)) b.textContent='Najpopularnije'; });
+    var cards=sel?sel.querySelectorAll('.bundle-option'):[];
+    if(cards.length>=3 && !cards[2].querySelector('.kn2-ribbon') && !cards[2].querySelector('.gck-popular-badge, .gck-popular-badge-2')){
+      var rb=document.createElement('div'); rb.className='kn2-ribbon'; rb.textContent='Najbolja vrijednost'; cards[2].appendChild(rb);
+    }
+    /* Blok (trust + redbox + akordeoni) pod ADD TO CART */
+    var below=document.querySelector('.kn2-below'), btn=document.querySelector('.single_add_to_cart_button');
+    if(below&&btn&&btn.nextElementSibling!==below){ btn.parentNode.insertBefore(below, btn.nextSibling); }
+    /* Plava aktivna karta (prezivi cache) */
+    function paint(){
+      if(!sel) return;
+      sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border'); c.style.removeProperty('background'); });
+      var checked=sel.querySelector('input[name="bundle_option"]:checked');
+      var card=checked?checked.closest('.bundle-option'):(sel.querySelector('.bundle-option.active')||sel.querySelector('.bundle-option'));
+      if(card){ card.style.setProperty('border','2px solid #2b3fb0','important'); card.style.setProperty('background','#e8ecfb','important'); }
+    }
+    if(sel){ paint(); sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paint); }); }
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+<?php endif; ?>
+

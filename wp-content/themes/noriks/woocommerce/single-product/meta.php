@@ -467,7 +467,11 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
       </div>
       <div class="accordion-content">
           
-         <?php if( noriks_is_type( 'nosilka', $current_product_id ) ): ?>
+         <?php if( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+
+                NORIKS KidsNest izrađen je od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA — s prozračnom, perivom navlakom koja se jednostavno skida.<br><br>Njegova 3-zonska ergonomska struktura nježno prihvaća glavu, podupire vrat i pomaže održati kralježnicu u prirodnom poravnanju — čak i kad se dijete tijekom noći puno okreće. Tako potiče disanje kroz nos i mirniji, dublji san.<br><br>Dostupan u tri veličine (1–3, 3–9 i 9–18 godina), raste s vašim djetetom i pruža pravu visinu potpore u svakoj fazi razvoja.
+
+         <?php elseif( noriks_is_type( 'nosilka', $current_product_id ) ): ?>
 
                 NORIKS BabyGo nosiljka izrađena je od mekane, prozračne i izdržljive tkanine s pojačanim šavovima, koja ravnomjerno raspoređuje težinu djeteta preko ramena i leđa — umjesto da sve nosi vaša ruka.<br><br>Ergonomski kroj drži mališana sigurno priljubljenog uz vaše tijelo u prirodnom položaju, dok široki, podstavljeni dio preko ramena sprječava urezivanje i pritisak čak i pri duljem nošenju.<br><br>Ono što BabyGo čini posebnom jest jednostavnost: navuče se u nekoliko sekundi, bez kompliciranih kopči i podešavanja, a dovoljno je lagana i kompaktna da uvijek bude uz vas u torbi. Periva u perilici — spremna za svaku svakodnevicu.
 
@@ -532,7 +536,14 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
       </div>
       <div class="accordion-content">
 
-           <?php if( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+           <?php if( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+
+          <div class="kn-size">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest veličine po dobi" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <p style="margin:0;line-height:1.6;"><strong>Dijete je između dvije veličine?</strong> Uvijek odaberite veću. Jastuk je dizajniran da podupire zdravo poravnanje dok dijete raste — veća veličina daje više prostora i dulje razdoblje korištenja.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
 
           <div class="lbx-size">
             <p style="margin:0 0 6px;font-weight:700;">Kako izmjeriti bokove</p>

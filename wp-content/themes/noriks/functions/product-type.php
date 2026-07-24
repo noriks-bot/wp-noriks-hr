@@ -48,6 +48,8 @@ function noriks_product_type_map() : array {
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
         'nosilka'                 => array( 'orto-nosilka', 'nosilka', 'nosiljka' ),
+        // KidsNest djecji jastuk za pravilno disanje/drzanje (Needo-style).
+        'kidsnest'                => array( 'orto-kidsnest', 'kidsnest' ),
         // ErgoSit orthopedic pillow (ortopedski jastuk) — no colour/size, quantity-only bundle.
         'ortopedski-jastuk'       => array( 'orto-ortopedski-jastuk', 'ortopedski-jastuk' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),

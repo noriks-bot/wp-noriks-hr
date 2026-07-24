@@ -69,6 +69,11 @@ if ( noriks_is_type( 'nosilka' ) ) {
     include $noriks_pb_dir . 'why-nosilka.php';
 }
 
+// KIDSNEST (orto-kidsnest) — djecji jastuk za pravilno disanje, why-sekcije (Needo referenca)
+if ( noriks_is_type( 'kidsnest' ) ) {
+    include $noriks_pb_dir . 'why-kidsnest.php';
+}
+
 // LEAK BOXERS (orto-leak-boxers) — muško rublje za inkontinenciju
 if ( noriks_is_type( 'leakboxers' ) ) {
     include $noriks_pb_dir . 'why-leakboxers.php';

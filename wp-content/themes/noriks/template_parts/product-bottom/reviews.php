@@ -88,6 +88,10 @@
 
            Niste jedini u potrazi za nošenjem bez boli u leđima.
 
+          <?php elseif ( noriks_is_type( 'kidsnest' ) ): ?>
+
+           Niste jedini u potrazi za mirnim dječjim snom.
+
 
 
           <?php else: ?>
@@ -143,6 +147,10 @@
            <?php elseif ( noriks_is_type( 'nosilka' ) ): ?>
 
            Tisuće roditelja već nosi svoje mališane u NORIKS BabyGo nosiljci – slobodne ruke, rasterećena leđa i beba priljubljena uz vas.
+
+           <?php elseif ( noriks_is_type( 'kidsnest' ) ): ?>
+
+           Tisuće roditelja već je zamijenilo obični jastuk NORIKS KidsNestom – tiše noći, disanje kroz nos i san koji stvarno odmara.
 
            <?php else: ?>
         
@@ -230,11 +238,13 @@
   $is_kompmajice_page = noriks_is_type( 'kompresijske-majice', $current_product_id );
   $is_jastuk_page     = noriks_is_type( 'ortopedski-jastuk', $current_product_id );
   $is_nosilka_page    = noriks_is_type( 'nosilka', $current_product_id );
+  $is_kidsnest_page   = noriks_is_type( 'kidsnest', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_nosilka_page ? 'NORIKS BabyGo nosiljka'
+  $rv_fallback_title = $is_kidsnest_page ? 'NORIKS KidsNest jastuk'
+                     : ( $is_nosilka_page ? 'NORIKS BabyGo nosiljka'
                      : ( $is_jastuk_page ? 'NORIKS ErgoSit ortopedski jastuk'
                      : ( $is_norikshers_page ? 'NORIKS HERS'
                      : ( $is_leakboxers_page ? 'NORIKS upijajuće bokserice'
@@ -242,10 +252,12 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_nosilka_page ) {
+  if ( $is_kidsnest_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_kidsnest.php';
+  } elseif ( $is_nosilka_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_nosilka.php';
   } elseif ( $is_jastuk_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_ortopedski_jastuk.php';
@@ -335,6 +347,7 @@
       $is_norikshers = false;
       $is_jastuk    = false;
       $is_nosilka   = false;
+      $is_kidsnest  = false;
       if ( $product_id ) {
           $is_bokserice = noriks_is_type( 'bokserice', $product_id );
           $is_nogavice  = noriks_is_type( 'kompresijske-nogavice', $product_id );
@@ -344,10 +357,11 @@
           $is_norikshers = noriks_is_type( 'norikshers', $product_id );
           $is_jastuk    = noriks_is_type( 'ortopedski-jastuk', $product_id );
           $is_nosilka   = noriks_is_type( 'nosilka', $product_id );
-          if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_jastuk || $is_nosilka ) { $is_nogavice = false; }
+          $is_kidsnest  = noriks_is_type( 'kidsnest', $product_id );
+          if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_jastuk || $is_nosilka || $is_kidsnest ) { $is_nogavice = false; }
       }
 
-      $cache_key = $transient_key . ( $is_nosilka ? '_nosilka' : ( $is_jastuk ? '_jastuk' : ( $is_norikshers ? '_norikshers' : ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) ) ) ) );
+      $cache_key = $transient_key . ( $is_kidsnest ? '_kidsnest' : ( $is_nosilka ? '_nosilka' : ( $is_jastuk ? '_jastuk' : ( $is_norikshers ? '_norikshers' : ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_nogavice ? '_nogavice' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) ) ) ) ) );
 
       if ( function_exists( 'get_transient' ) ) {
           $cached = get_transient( $cache_key );
@@ -364,7 +378,9 @@
           'order'   => 'DESC',
       ];
 
-      if ( $is_nosilka ) {
+      if ( $is_kidsnest ) {
+          $args['category'] = [ 'orto-kidsnest' ];
+      } elseif ( $is_nosilka ) {
           $args['category'] = [ 'orto-nosilka' ];
       } elseif ( $is_jastuk ) {
           $args['category'] = [ 'orto-ortopedski-jastuk' ];
@@ -705,7 +721,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -744,7 +760,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -782,7 +798,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1105,8 +1121,9 @@ $is_leakboxers = ( function_exists('noriks_is_type') && noriks_is_type('leakboxe
 $is_kompmajice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') );
 $is_jastuk    = ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') );
 $is_nosilka   = ( function_exists('noriks_is_type') && noriks_is_type('nosilka') );
+$is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -1185,6 +1202,16 @@ $jastuk_faq = array(
   array( 'questioon' => 'Odgovara li mojoj stolici ili sjedalu?', 'answer' => 'ErgoSit je univerzalnog oblika i pristaje većini autosjedala, uredskih i kuhinjskih stolica te invalidskih kolica. Nema veličina — jedan model odgovara svima.' ),
   array( 'questioon' => 'Za koliko vremena osjetim razliku?', 'answer' => 'Većina korisnika osjeti manje pritiska na trtici i udobnije sjedenje već od prvog dana. Za bolje držanje i manje boli u leđima učinak se dodatno gradi kroz redovitu uporabu.' ),
   array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, svaki NORIKS ErgoSit dolazi s jamstvom udobnosti od 60 dana. Ako ne osjetite manje boli i više udobnosti, kontaktirajte nas i riješit ćemo to.' ),
+);
+
+// KidsNest djecji jastuk — product FAQ (NORIKS, ublazene tvrdnje).
+$kidsnest_faq = array(
+  array( 'questioon' => 'Koliko brzo ću vidjeti da disanje na usta prestaje?', 'answer' => 'Većina roditelja primjećuje tiše disanje i manje buđenja s otvorenim ustima unutar prvih 5–7 noći. Do 14. noći kod većine djece hrkanje se smiruje, a usnice ostaju zatvorene. Punu razliku — vidljivo bolji položaj i mirniji san — roditelji najčešće opisuju oko 21. do 30. dana. Koristite ga svaku noć.' ),
+  array( 'questioon' => 'Za koju dob je KidsNest namijenjen?', 'answer' => 'KidsNest dolazi u tri veličine: 1–3, 3–9 i 9–18 godina. Najvažniji prozor je između 3. i 9. godine, kada se nepce i čeljust najintenzivnije razvijaju — ali svaka dob ima svoju veličinu i svoju korist.' ),
+  array( 'questioon' => 'Je li siguran? Što je unutra?', 'answer' => 'KidsNest je izrađen od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA. Otporan je na grinje i prozračan, a navlaka se skida i pere u perilici.' ),
+  array( 'questioon' => 'Hoće li ga moje dijete stvarno koristiti?', 'answer' => 'Da. Ergonomski oblik osjeća se kao podrška, ne kao nešto čudno — većina djece navikne se u 1–2 noći. Roditelji često javljaju da djeca nakon prvog tjedna ne žele spavati bez njega. 3-zonska struktura prirodno prihvaća glavu — nema "pravilnog načina", nema borbe prije spavanja.' ),
+  array( 'questioon' => 'Djeluje li ako moje dijete već diše na usta?', 'answer' => 'Da — upravo za takvu djecu je dizajniran. 3-zonska struktura pomaže spriječiti naginjanje glave unatrag, zbog kojeg se usta otvaraju u snu. Kod većine djece unutar 7–14 noći usnice se prirodno zatvaraju i disanje kroz nos se vraća.' ),
+  array( 'questioon' => 'Što ako mom djetetu ne pomogne?', 'answer' => 'Neka dijete spava na KidsNestu 30 noći. Ako ne vidite razliku — manje disanja na usta, tiše noći, mirniji san — javite nam se i vraćamo novac. Bez pitanja i bez sitnih slova.' ),
 );
 
 // BabyGo nosiljka — product FAQ (NORIKS).
@@ -1325,8 +1352,11 @@ $knc_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_kidsnest && $is_info ) {
+    return $kidsnest_faq;
+  }
   if ( $is_nosilka && $is_info ) {
     return $nosilka_faq;
   }
