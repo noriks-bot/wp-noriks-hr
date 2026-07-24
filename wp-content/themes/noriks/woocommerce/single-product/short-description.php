@@ -245,3 +245,73 @@ if ( ! $short_description ) {
 })();
 </script>
 <?php endif; ?>
+
+<?php if ( function_exists('noriks_is_type') && noriks_is_type('nosilka') ) : ?>
+<!-- BabyGo nosiljka: klasicni paket (kao ErgoSit), PLAVA shema -->
+<div class="nsb-stockpill">
+  <svg width="12" height="12" viewBox="0 0 24 24" style="flex:0 0 auto;"><circle cx="12" cy="12" r="12" fill="#e5344a"/><path d="M12 6.5v7" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17" r="1.5" fill="#fff"/></svg>
+  <em>Ostalo je još samo nekoliko komada!</em>
+</div>
+<style>
+  /* Mala zaliha-pilula umjesto velikog crvenog countdown boxa */
+  .nsb-stockpill { display: flex; width: max-content; max-width: 100%; align-items: center; gap: 6px; background: #fff; border: 1px solid #b9d2ea; border-radius: 11px; padding: 4px 9px; }
+  .nsb-stockpill em { font-style: italic; font-size: 11.5px; font-weight: 600; color: #e5344a; }
+  .gck-countdown { display: none !important; }
+  /* Sakrij crveni per-kom chip i rijec "Ukupno:" (cijene ostaju) */
+  .gck-per-chip { display: none !important; }
+  .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
+  /* Discount chip: outline plavi */
+  .gck-discount-badge { background: #fff !important; color: #3d76b4 !important; border: 1px solid #3d76b4 !important; border-radius: 6px !important; padding: 5px 9px !important; font-size: 11px !important; font-weight: 700 !important; line-height: 1 !important; display: inline-flex !important; align-items: center !important; align-self: center !important; }
+  /* Ponude: bijele s plavim borderom, jedan red, iste visine, centrirano */
+  .bundle-option { background: #fff !important; border: 2px solid rgba(61,118,180,0.30) !important; border-radius: 6px !important; display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 72px; padding: 14px 18px !important; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+  .bundle-option.active { border-color: #3d76b4 !important; background: rgba(61,118,180,0.08) !important; }
+  .bundle-option .bundle-option-title { display: inline-flex; align-items: center; font-weight: 700; color: rgba(18,16,48,0.9); font-size: 16px; }
+  .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: inline-flex; flex-direction: row; align-items: center; gap: 4px; font-size: 16px; font-weight: 700; color: #20283a; }
+  .bundle-option .gck-regular-price { font-weight: 400 !important; font-size: 14px !important; color: rgba(18,16,48,0.6) !important; text-decoration: line-through; }
+  .bundle-option input[type="radio"] { margin-right: 7px !important; border-color: #3d76b4 !important; }
+  .bundle-option input[type="radio"]::before, .bundle-option input[type="radio"]:checked::before { background: #3d76b4 !important; }
+  .bundle-option .gck-discount-badge { margin-left: 8px; }
+  /* Vertikalni ritam */
+  .summary .price { margin: 0 0 18px !important; }
+  .nsb-stockpill { margin: 0 0 12px !important; }
+  #bundle-selector { margin-top: 0 !important; }
+  #bundle-selector .bundle-option { margin: 0 0 12px !important; }
+  /* Checklista: hanging indent */
+  .woocommerce-product-details__short-description ul { list-style: none; margin: 10px 0 14px; padding-left: 0; }
+  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 18px; text-indent: -18px; margin: 0 0 7px; font-size: 15px; line-height: 1.45; color: #20283a; }
+  @media (max-width: 600px) {
+    .summary .price { margin: 0 0 12px !important; }
+    .nsb-stockpill { margin: 0 0 8px !important; }
+    #bundle-selector .bundle-option { margin: 0 0 8px !important; }
+    .bundle-option { min-height: 64px; padding: 14px 12px !important; }
+    .bundle-option input[type="radio"] { margin-right: 6px !important; }
+    .bundle-option .bundle-option-title { font-size: 14.5px; }
+    .bundle-option .gck-discount-badge { margin-left: 6px; padding: 4px 7px !important; font-size: 10px !important; }
+    .bundle-option .bundle-total-line { gap: 3px; font-size: 15px; }
+    .bundle-option .gck-regular-price { font-size: 12.5px !important; }
+  }
+</style>
+<script>
+(function(){
+  /* Plava aktivna ponuda (prezivi LiteSpeed UCSS) */
+  function paintNsb(){
+    var sel = document.getElementById('bundle-selector'); if(!sel) return;
+    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); c.style.removeProperty('border-width'); });
+    var checked = sel.querySelector('input[name="bundle_option"]:checked');
+    var card = checked ? checked.closest('.bundle-option') : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
+    if(card){ card.style.setProperty('border-color','#3d76b4','important'); card.style.setProperty('background','rgba(61,118,180,0.08)','important'); card.style.setProperty('border-width','2px','important'); }
+  }
+  function bindNsb(){ var sel=document.getElementById('bundle-selector'); if(!sel) return; paintNsb(); sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintNsb); }); }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindNsb); } else { bindNsb(); }
+  /* Zaliha-pilula ispod cijene (iza "Najniza cena" badgea) */
+  function movePill(){
+    var stock=document.querySelector('.nsb-stockpill');
+    var badge=document.querySelector('.summary .price-badge');
+    var price=document.querySelector('.summary .price');
+    var anchor=badge||price;
+    if(stock&&anchor&&anchor.nextSibling!==stock){ anchor.parentNode.insertBefore(stock, anchor.nextSibling); }
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', movePill); } else { movePill(); }
+})();
+</script>
+<?php endif; ?>
