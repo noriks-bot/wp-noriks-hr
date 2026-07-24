@@ -328,6 +328,7 @@ if ( ! $short_description ) {
   <div class="kn2-trust">
     <span><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z" fill="#2b3fb0"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 90 noći isprobavanja</span>
     <span><svg width="18" height="14" viewBox="0 0 24 18"><rect x="1" y="3" width="13" height="10" rx="1.5" fill="#2b3fb0"/><path d="M14 6h4l4 4v3h-8z" fill="#2b3fb0"/><circle cx="6" cy="15" r="2.4" fill="#1b2450"/><circle cx="18" cy="15" r="2.4" fill="#1b2450"/></svg> Brza dostava</span>
+    <span><svg width="17" height="15" viewBox="0 0 24 20"><rect x="3" y="2" width="18" height="11" rx="2" fill="none" stroke="#2b3fb0" stroke-width="2"/><circle cx="12" cy="7.5" r="2.6" fill="#2b3fb0"/><path d="M2 17c3 2 7 3 10 3s7-1 10-3" fill="none" stroke="#2b3fb0" stroke-width="2" stroke-linecap="round"/></svg> Plaćanje i pouzećem</span>
   </div>
   <div class="kn2-redbox">
     <p class="kn2-red-title"><svg width="14" height="13" viewBox="0 0 24 22" style="vertical-align:-2px;margin-right:6px;"><path d="M12 1L23 21H1L12 1z" fill="none" stroke="#c0452f" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 8v6" stroke="#c0452f" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17.4" r="1.3" fill="#c0452f"/></svg>ZA RODITELJE DJECE MLAĐE OD 9 GODINA</p>
@@ -337,6 +338,8 @@ if ( ! $short_description ) {
 <style>
   /* Badge iznad naslova */
   .kn2-badge { display: inline-flex; align-items: center; gap: 7px; background: #e8ecfb; border-radius: 6px; padding: 5px 12px; font-size: 13px; font-weight: 600; color: #121212; margin: 0 0 10px; }
+  /* Skrij staro vrstico ikon (features2) — vsebina je v trust vrstici */
+  .features2 { display: none !important; }
   /* Razmik med naslovom in kratkim opisom */
   .single-product .product_title { margin-bottom: 14px !important; }
   .summary .woocommerce-product-details__short-description { margin-top: 10px; }
@@ -432,13 +435,8 @@ if ( ! $short_description ) {
     }
     /* Ikone (pouzece/30dni/dostava) + dostava-box prestavi POD accordion */
     var acc=document.querySelector('.summary .accordion')||document.querySelector('.accordion');
-    var feats=document.querySelector('.features2');
     var ship=document.querySelector('.shipping-box');
-    if(acc){
-      var ref=acc.nextSibling;
-      if(feats) acc.parentNode.insertBefore(feats, ref);
-      if(ship)  acc.parentNode.insertBefore(ship, ref);
-    }
+    if(acc && ship){ acc.parentNode.insertBefore(ship, acc.nextSibling); }
     /* Blok (trust + redbox + akordeoni) pod ADD TO CART */
     var below=document.querySelector('.kn2-below'), btn=document.querySelector('.single_add_to_cart_button');
     if(below&&btn&&btn.nextElementSibling!==below){ btn.parentNode.insertBefore(below, btn.nextSibling); }
