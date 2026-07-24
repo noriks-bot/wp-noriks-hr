@@ -389,6 +389,13 @@ if ( ! $short_description ) {
   .bundle-option .gck-per-chip { display: block !important; background: none !important; color: #6a7186 !important; font-size: 13px !important; font-weight: 400 !important; padding: 0 !important; margin: 2px 0 0 0 !important; flex-basis: 100%; order: 5; }
   .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
   .bundle-option .gck-per-chip .gck-per-new { color: #6a7186 !important; background: none !important; font-weight: 400 !important; padding: 0 !important; }
+  /* Velikost dropdown: kot original (bel, siv rob, brez oranzne) */
+  #bundle-selector select, .bundle-box select, .bundle-option select {
+    border: 1px solid #c9cfdd !important; border-radius: 8px !important; background-color: #fff !important;
+    color: #121212 !important; font-size: 14px !important; font-weight: 500 !important;
+    padding: 9px 34px 9px 12px !important; box-shadow: none !important;
+  }
+  #bundle-selector select:focus, .bundle-box select:focus { border-color: #2b3fb0 !important; outline: none !important; }
   /* skrij % chip, "Ukupno:" in countdown */
   .gck-discount-badge { display: none !important; }
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
