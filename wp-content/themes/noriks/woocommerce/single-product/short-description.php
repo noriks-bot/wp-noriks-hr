@@ -337,6 +337,9 @@ if ( ! $short_description ) {
 <style>
   /* Badge iznad naslova */
   .kn2-badge { display: inline-flex; align-items: center; gap: 7px; background: #e8ecfb; border-radius: 6px; padding: 5px 12px; font-size: 13px; font-weight: 600; color: #121212; margin: 0 0 10px; }
+  /* Razmik med naslovom in kratkim opisom */
+  .single-product .product_title { margin-bottom: 14px !important; }
+  .summary .woocommerce-product-details__short-description { margin-top: 10px; }
   /* Checklista (kratki opis): BREZ bulletov, emoji iz vsebine je ikona, hanging indent poravnava */
   .summary .woocommerce-product-details__short-description ul,
   .woocommerce-product-details__short-description ul { list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
