@@ -115,7 +115,8 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
   .kn-media img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 14px 40px rgba(27,36,80,.10); }
 
   /* 1) marquee */
-  .kn-marquee { background: #2b3fb0; overflow: hidden; white-space: nowrap; }
+  .kn-marquee { background: #2b3fb0; overflow: hidden; white-space: nowrap; margin-top: 26px; }
+  .kn-marquee + .kn-sec { padding-top: 26px; }
   .kn-marquee-track { display: inline-block; padding: 13px 0; animation: knScroll 28s linear infinite; }
   .kn-tick { color: #fff; font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
   .kn-dot { color: #aebafe; margin: 0 22px; font-weight: 800; }
