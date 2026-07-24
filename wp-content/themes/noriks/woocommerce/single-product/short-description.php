@@ -430,6 +430,15 @@ if ( ! $short_description ) {
     if(cards.length>=3 && !cards[2].querySelector('.kn2-ribbon') && !cards[2].querySelector('.gck-popular-badge, .gck-popular-badge-2')){
       var rb=document.createElement('div'); rb.className='kn2-ribbon'; rb.textContent='Najbolja vrijednost'; cards[2].appendChild(rb);
     }
+    /* Ikone (pouzece/30dni/dostava) + dostava-box prestavi POD accordion */
+    var acc=document.querySelector('.summary .accordion')||document.querySelector('.accordion');
+    var feats=document.querySelector('.features2');
+    var ship=document.querySelector('.shipping-box');
+    if(acc){
+      var ref=acc.nextSibling;
+      if(feats) acc.parentNode.insertBefore(feats, ref);
+      if(ship)  acc.parentNode.insertBefore(ship, ref);
+    }
     /* Blok (trust + redbox + akordeoni) pod ADD TO CART */
     var below=document.querySelector('.kn2-below'), btn=document.querySelector('.single_add_to_cart_button');
     if(below&&btn&&btn.nextElementSibling!==below){ btn.parentNode.insertBefore(below, btn.nextSibling); }
