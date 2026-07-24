@@ -371,6 +371,7 @@ if ( ! $short_description ) {
     padding: 9px 34px 9px 12px !important; box-shadow: none !important;
   }
   #bundle-selector select:focus, .bundle-box select:focus { border-color: #2b3fb0 !important; outline: none !important; }
+  .kn2-selnum { display: inline-block; min-width: 26px; font-weight: 700; font-size: 14px; color: #121212; margin-right: 6px; }
   /* skrij % chip, "Ukupno:", countdown in "Nudimo 30 dana..." noto */
   .gck-discount-badge { display: none !important; }
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
@@ -448,7 +449,19 @@ if ( ! $short_description ) {
       var card=checked?checked.closest('.bundle-option'):(sel.querySelector('.bundle-option.active')||sel.querySelector('.bundle-option'));
       if(card){ card.style.setProperty('border','2px solid #2b3fb0','important'); card.style.setProperty('background','#e8ecfb','important'); }
     }
-    if(sel){ paint(); sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paint); }); }
+    function numberSelects(){
+      if(!sel) return;
+      sel.querySelectorAll('.bundle-pairs').forEach(function(wrap){
+        var i=0;
+        wrap.querySelectorAll('select').forEach(function(sl){
+          i++;
+          if(sl.previousElementSibling && sl.previousElementSibling.classList && sl.previousElementSibling.classList.contains('kn2-selnum')){ sl.previousElementSibling.textContent='#'+i; return; }
+          var lab=document.createElement('span'); lab.className='kn2-selnum'; lab.textContent='#'+i;
+          sl.parentNode.insertBefore(lab, sl);
+        });
+      });
+    }
+    if(sel){ paint(); numberSelects(); sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', function(){ paint(); numberSelects(); }); }); }
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
