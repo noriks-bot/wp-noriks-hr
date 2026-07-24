@@ -98,7 +98,7 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
   .nsl-gal { overflow: hidden; width: 100vw; margin-left: calc(50% - 50vw); }
   .nsl-gal-track { display: flex; gap: 8px; width: max-content; animation: nslGal 70s linear infinite; }
   .nsl-gal:hover .nsl-gal-track { animation-play-state: paused; }
-  .nsl-gal-track img { width: 210px; aspect-ratio: 3/4; object-fit: cover; border-radius: 10px; display: block; flex: 0 0 auto; }
+  .nsl-gal-track img { width: 280px; aspect-ratio: 3/4; object-fit: cover; border-radius: 10px; display: block; flex: 0 0 auto; }
   @keyframes nslGal { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   @media (max-width: 860px) {
@@ -106,7 +106,7 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
     .nsl-row2 { grid-template-columns: 1fr; gap: 18px; }
     .nsl-row2 .nsl-media { order: -1; }
     .nsl-h2 { font-size: 2rem; }
-    .nsl-gal-track img { width: 150px; }
+    .nsl-gal-track img { width: 190px; }
     .nsl-gal-sec { padding: 6px 0 24px; }
     .nsl-gal-top { padding: 14px 0 6px; }
   }
