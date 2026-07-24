@@ -50,6 +50,17 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
   </div>
 </section>
 
+<!-- ============ 4) Galerija — full-bleed drseca traka (17 fotk zajednice) ============ -->
+<section class="nsl-gal-sec">
+  <div class="nsl-gal">
+    <div class="nsl-gal-track">
+      <?php for ( $r = 0; $r < 2; $r++ ) : for ( $i = 1; $i <= 17; $i++ ) : ?>
+        <img src="<?php echo esc_url( $ns.'galerija/g'.$i.'.jpg' ); ?>" alt="NORIKS BabyGo — zadovoljni roditelji" loading="lazy" onerror="this.style.display='none'">
+      <?php endfor; endfor; ?>
+    </div>
+  </div>
+</section>
+
 <style>
   .nsl-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; } /* isti container kao gornji .product */
   .nsl-sec { padding: 60px 0; }
@@ -59,10 +70,20 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
   .nsl-copy p { font-size: 15.5px; line-height: 1.65; color: #3c4354; margin: 0 0 14px; }
   .nsl-media img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 14px 40px rgba(32,40,58,.10); }
 
+  /* 4) galerija — full-bleed, pocasno drsenje, pauza na hover */
+  .nsl-gal-sec { padding: 10px 0 40px; }
+  .nsl-gal { overflow: hidden; width: 100vw; margin-left: calc(50% - 50vw); }
+  .nsl-gal-track { display: flex; gap: 8px; width: max-content; animation: nslGal 70s linear infinite; }
+  .nsl-gal:hover .nsl-gal-track { animation-play-state: paused; }
+  .nsl-gal-track img { width: 210px; aspect-ratio: 3/4; object-fit: cover; border-radius: 10px; display: block; flex: 0 0 auto; }
+  @keyframes nslGal { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
   @media (max-width: 860px) {
     .nsl-sec { padding: 30px 0; }
     .nsl-row2 { grid-template-columns: 1fr; gap: 18px; }
     .nsl-row2 .nsl-media { order: -1; }
     .nsl-h2 { font-size: 2rem; }
+    .nsl-gal-track img { width: 150px; }
+    .nsl-gal-sec { padding: 6px 0 24px; }
   }
 </style>
