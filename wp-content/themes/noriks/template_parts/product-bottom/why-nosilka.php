@@ -21,7 +21,7 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
     <div class="nsl-copy">
       <h2 class="nsl-h2">Nikad više umornih ruku i bolova u leđima!</h2>
       <p>Cjelodnevno nošenje bebe koja traži naručje brzo iscrpljuje… <strong>Bolne ruke, umorna ramena, bol u leđima</strong> — i nikad slobodnih ruku.</p>
-      <p>Ova nosiljka <strong>ravnomjerno raspoređuje težinu</strong> pa se roditelji mogu slobodno kretati bez naprezanja. Najlakši je način da ostanete blizu — i <strong>bez boli</strong>!</p>
+      <p>NORIKS <strong>BabyGo nosiljka</strong> <strong>ravnomjerno raspoređuje težinu</strong> pa se roditelji mogu slobodno kretati bez naprezanja. Najlakši je način da ostanete blizu — i <strong>bez boli</strong>!</p>
     </div>
     <div class="nsl-media"><?php echo $ns_img('01-ruke-leda.png','Nosiljka — bez umornih ruku i bolova u leđima'); ?></div>
   </div>
@@ -34,7 +34,7 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
     <div class="nsl-copy">
       <h2 class="nsl-h2">Stvorena za praktičnost</h2>
       <p>Kad beba želi biti u naručju, a život ne staje — tu uskače nosiljka.</p>
-      <p>Drži vašeg mališana priljubljenog uz vas, dok vi možete <strong>kupovati, kuhati, pospremati ili jednostavno popiti svoju kavu.</strong></p>
+      <p>BabyGo drži vašeg mališana priljubljenog uz vas, dok vi možete <strong>kupovati, kuhati, pospremati ili jednostavno popiti svoju kavu.</strong></p>
     </div>
   </div>
 </section>
