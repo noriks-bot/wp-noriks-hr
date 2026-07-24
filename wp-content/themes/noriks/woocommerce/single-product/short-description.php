@@ -401,6 +401,8 @@ if ( ! $short_description ) {
   .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
   .gck-countdown { display: none !important; }
   #bundle-selector small { display: none !important; }
+  /* skrij samostojni "Tablica velicina" link (tablica je v akordeonu) */
+  .noriks-global-sizechart, #open-size-chart { display: none !important; }
   /* privzete plugin znacke -> plavi ribboni gor-desno */
   .gck-popular-badge, .gck-popular-badge-2, .kn2-ribbon { position: absolute; top: -11px; right: 12px; left: auto !important; background: #2b3fb0 !important; color: #fff !important; font-size: 11px !important; font-weight: 700 !important; border-radius: 4px !important; padding: 3px 10px !important; line-height: 1.4 !important; transform: none !important; }
   /* ADD TO CART: plavi pill (izmjereno: radius 42px, 19px/700, uppercase, ls 1px) */

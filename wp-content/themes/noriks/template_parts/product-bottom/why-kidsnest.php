@@ -82,7 +82,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
   </div>
   <div class="kn-strip">
     <div class="kn-strip-track">
-      <?php for ( $r = 0; $r < 2; $r++ ) : for ( $i = 1; $i <= 7; $i++ ) : ?>
+      <?php for ( $r = 0; $r < 2; $r++ ) : for ( $i = 1; $i <= 5; $i++ ) : ?>
         <img src="<?php echo esc_url( $kn.'traka/t'.$i.'.webp' ); ?>" alt="NORIKS KidsNest — djeca i roditelji" loading="lazy" onerror="this.style.display='none'">
       <?php endfor; endfor; ?>
     </div>
