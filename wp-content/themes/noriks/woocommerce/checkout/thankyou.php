@@ -51,14 +51,14 @@ if ( $upsell_is_majice ) {
     );
     $upsell_title_text = 'Dodaj majice sada – 50% popusta';
 } else {
-    $upsell_product_id = 2781; // Crne Bokserice
-    $upsell_name       = 'Crne Bokserice';
+    $upsell_product_id = 2829; // Sive Bokserice (siva verzija, ista struktura kot crna)
+    $upsell_name       = 'Sive Bokserice';
     $upsell_qty_prices = array( 1 => 4.99, 3 => 14.97, 5 => 24.95 );
-    $upsell_qty_names  = array( 1 => '1x Crne Bokserice', 3 => '3x Crne Bokserice', 5 => '5x Crnih Bokseric' );
+    $upsell_qty_names  = array( 1 => '1x Sive Bokserice', 3 => '3x Sive Bokserice', 5 => '5x Sivih Bokserica' );
     $upsell_qty_images = array(
-        1 => 'https://noriks.com/hr/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
-        3 => 'https://noriks.com/hr/wp-content/uploads/2025/11/boksarice_3x_crne.png',
-        5 => 'https://noriks.com/hr/wp-content/uploads/2026/01/boksarice_5x_crne.png',
+        1 => 'https://noriks.com/hr/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg',
+        3 => 'https://noriks.com/hr/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg', // TODO: 3x siva kompozitna, ko obstaja
+        5 => 'https://noriks.com/hr/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg', // TODO: 5x siva kompozitna, ko obstaja
     );
     $upsell_title_text = 'Dodaj bokserice sada – 50% popusta';
 }
