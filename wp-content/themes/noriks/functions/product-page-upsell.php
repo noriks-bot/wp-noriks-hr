@@ -204,10 +204,20 @@ function noriks_pp_upsell_render() {
 	}
 	.npu-wrap .npu-box.npu-checked { background-color: var(--npu-accent-light); }
 	.npu-wrap .npu-grid { display: grid; grid-template-columns: auto minmax(0,1fr); column-gap: 14px; row-gap: 12px; }
-	.npu-wrap .npu-img-wrap { grid-column: 1 / 2; grid-row: 1 / 3; align-self: center; }
+	/* slika ide do samog ruba okvira: negativne margine ponistavaju padding kutije,
+	   a lijevi kutovi prate unutarnji radijus (10px - 2px obrub = 8px) */
+	.npu-wrap .npu-img-wrap {
+		grid-column: 1 / 2; grid-row: 1 / 3; align-self: stretch;
+		margin: -10px 0 -10px -10px;
+		width: clamp(104px, 30vw, 160px);
+		background-color: #f2f2f4;
+		border-radius: 8px 0 0 8px;
+		overflow: hidden;
+		display: block;
+	}
 	.npu-wrap .npu-img {
-		display: block; width: clamp(96px, 27vw, 150px); height: auto;
-		aspect-ratio: 1 / 1; object-fit: contain; border-radius: 6px;
+		display: block; width: 100%; height: 100%; min-height: 100%;
+		object-fit: cover; border-radius: 0;
 	}
 	.npu-wrap .npu-info { grid-column: 2 / -1; }   /* auto-placement -> 1. red */
 	.npu-wrap .npu-title {
@@ -273,6 +283,7 @@ function noriks_pp_upsell_render() {
 
 	@media (max-width: 560px) {
 		.npu-wrap .npu-grid { column-gap: 10px; row-gap: 10px; }
+		.npu-wrap .npu-img-wrap { width: clamp(96px, 28vw, 130px); }
 		.npu-wrap .npu-title { font-size: 16px !important; }
 		.npu-wrap .npu-desc { font-size: 14px !important; }
 		.npu-wrap .npu-price { font-size: 16px !important; }
