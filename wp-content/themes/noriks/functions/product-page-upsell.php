@@ -62,8 +62,8 @@ function noriks_pp_upsell_config() {
 		'title'      => '3x Sive Bokserice',
 		'desc'       => 'Prozračne i mekane — dodajte ih uz narudžbu uz 69% popusta.',
 		'size_attr'  => 'Veličina',
-		// Kompozitna slika 3 komada na bijeloj podlozi (kvadratna, kao na referenci).
-		'image'      => get_template_directory_uri() . '/img/upsell/upsell-3x-sive.png',
+		// Kompozitna slika 3 komada na svijetlo sivoj podlozi (kvadratna).
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-3x-sive-v2.png',
 	) );
 }
 
