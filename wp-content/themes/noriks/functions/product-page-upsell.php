@@ -179,71 +179,105 @@ function noriks_pp_upsell_render() {
 	</div>
 
 	<style>
-	/* 1:1 preslikano s referentne stranice (izmjerene computed vrijednosti):
-	   --gap .5rem, --radius .5em, narančasta shema #ff5b01, svijetla #ffeee8 */
-	.npu-wrap { margin-top: 1rem; }
-	.npu-label { font-weight: 400; }                       /* obično, nasljeđuje veličinu i boju */
-	.npu-box {
-		--npu-gap: 0.5rem;
-		--npu-radius: .5em;
+	/* Sve vrijednosti eksplicitne — tema inače nameće svoju boju (#6d6d6d),
+	   liniju (1.618) i težinu (400) pa je izgled odstupao od reference. */
+	.npu-wrap {
 		--npu-accent: #ff5b01;
 		--npu-accent-light: #ffeee8;
+		--npu-ink: #1a1a1a;
+		margin: 18px 0 6px;
+	}
+	.npu-wrap .npu-label {
+		display: block; font-size: 16px !important; font-weight: 400 !important;
+		line-height: 1.4 !important; color: var(--npu-ink) !important; margin: 0 0 8px;
+	}
+	.npu-wrap .npu-box {
 		border: 2px solid var(--npu-accent);
-		border-radius: var(--npu-radius);
+		border-radius: 10px;
 		box-shadow: 0 2px 3px 0 #00000029;
-		margin-top: var(--npu-gap);
-		padding: var(--npu-gap);
-		hyphens: auto;
-		text-wrap: balance;
+		padding: 10px;
+		background-color: #fff;
+		color: var(--npu-ink);
+		font-size: 16px;
+		line-height: 1.4;
+		transition: background-color .15s ease;
 	}
-	.npu-box.npu-checked { background-color: var(--npu-accent-light); }
-	.npu-grid { display: grid; grid-template-columns: auto 1fr; gap: var(--npu-gap); }
-	.npu-img-wrap { grid-column: 1 / 2; grid-row: 1 / 3; }
-	.npu-img { max-height: clamp(6.25rem, -3.75rem + 50vw, 9.375rem); width: auto; }
-	.npu-info { grid-column: 2 / -1; }        /* auto-placement -> 1. red (kao original) */
-	.npu-title { font-weight: 700; margin-top: 0; margin-bottom: var(--npu-gap); }
-	.npu-desc { font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem); }
-	.npu-prices { margin-top: var(--npu-gap); line-height: 1.5; }
-	.npu-price {
-		font-weight: 700; color: #fff; background-color: var(--npu-accent);
-		border-radius: 5px; padding: .3em .6em .2em .6em; white-space: nowrap;
+	.npu-wrap .npu-box.npu-checked { background-color: var(--npu-accent-light); }
+	.npu-wrap .npu-grid { display: grid; grid-template-columns: auto minmax(0,1fr); column-gap: 14px; row-gap: 12px; }
+	.npu-wrap .npu-img-wrap { grid-column: 1 / 2; grid-row: 1 / 3; align-self: center; }
+	.npu-wrap .npu-img {
+		display: block; width: clamp(96px, 27vw, 150px); height: auto;
+		aspect-ratio: 1 / 1; object-fit: contain; border-radius: 6px;
 	}
-	.npu-price .woocommerce-Price-amount, .npu-price bdi { color: #fff !important; }
-	.npu-price-old { font-weight: 600; text-decoration: line-through; }
-	.npu-price-old .woocommerce-Price-amount, .npu-price-old bdi { text-decoration: line-through; }
-	.npu-box p:last-child { margin: 0; }
+	.npu-wrap .npu-info { grid-column: 2 / -1; }   /* auto-placement -> 1. red */
+	.npu-wrap .npu-title {
+		font-size: 17px !important; font-weight: 700 !important; line-height: 1.3 !important;
+		color: var(--npu-ink) !important; margin: 0 0 6px !important; padding: 0;
+	}
+	.npu-wrap .npu-desc {
+		font-size: 15px !important; line-height: 1.45 !important; color: #3d3d3d !important; margin: 0;
+	}
+	.npu-wrap .npu-prices { margin-top: 10px; line-height: 1; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+	.npu-wrap .npu-price {
+		display: inline-block; font-size: 17px !important; font-weight: 700 !important; line-height: 1.15 !important;
+		color: #fff !important; background-color: var(--npu-accent);
+		border-radius: 6px; padding: 6px 11px 5px; white-space: nowrap;
+	}
+	.npu-wrap .npu-price .woocommerce-Price-amount,
+	.npu-wrap .npu-price bdi { color: #fff !important; font-weight: 700 !important; }
+	.npu-wrap .npu-price-old {
+		font-size: 16px !important; font-weight: 600 !important; line-height: 1.15 !important;
+		color: var(--npu-ink) !important; text-decoration: line-through;
+	}
+	.npu-wrap .npu-price-old .woocommerce-Price-amount,
+	.npu-wrap .npu-price-old bdi { color: var(--npu-ink) !important; text-decoration: line-through; }
+	.npu-wrap .npu-box p:last-child { margin: 0; }
 
-	.npu-actions {
-		grid-column: 2 / -1; margin-top: auto;   /* bez grid-row: auto-placement -> 2. red */
-		display: flex; align-items: center; justify-content: start;
-		gap: var(--npu-gap); font-weight: 700;
+	.npu-wrap .npu-actions {
+		grid-column: 2 / -1;                    /* bez grid-row: auto-placement -> 2. red */
+		display: flex; align-items: center; justify-content: flex-start;
+		gap: 14px; flex-wrap: wrap;
 	}
-	.npu-check { display: flex; align-items: center; gap: var(--npu-gap); cursor: pointer; margin: 0; }
-	.npu-check input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
-	.npu-box-mark {
-		width: 25px; height: 25px; flex: 0 0 25px; display: inline-block; position: relative;
-		background-color: #fff; border: 1px solid #ddd;
-		border-radius: calc(var(--npu-radius) / 1.5); vertical-align: middle;
+	.npu-wrap .npu-check { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; margin: 0; padding: 0; }
+	.npu-wrap .npu-check input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
+	.npu-wrap .npu-box-mark {
+		width: 30px; height: 30px; flex: 0 0 30px; display: inline-block; position: relative;
+		background-color: #fff; border: 2px solid #d9d9d9; border-radius: 7px; box-sizing: border-box;
 	}
-	.npu-check input[type="checkbox"]:checked + .npu-box-mark::before {
-		content: ""; position: absolute; left: 7px; top: 2px; width: 9px; height: 15px;
+	.npu-wrap .npu-check input[type="checkbox"]:checked + .npu-box-mark { border-color: var(--npu-accent); }
+	.npu-wrap .npu-check input[type="checkbox"]:checked + .npu-box-mark::before {
+		content: ""; position: absolute; left: 9px; top: 3px; width: 9px; height: 16px;
 		border-right: 4px solid var(--npu-accent); border-bottom: 4px solid var(--npu-accent);
 		transform: rotate(40deg); -webkit-backface-visibility: hidden;
 	}
-	.npu-check input[type="checkbox"]:focus-visible + .npu-box-mark { outline: 2px solid var(--npu-accent); outline-offset: 2px; }
+	.npu-wrap .npu-check input[type="checkbox"]:focus-visible + .npu-box-mark { outline: 2px solid var(--npu-accent); outline-offset: 2px; }
+	.npu-wrap .npu-check-text {
+		font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important;
+		color: var(--npu-ink) !important;
+	}
 
-	/* izbornik veličine — stil postojećih izbornika u bundle selectoru */
-	.npu-size {
-		flex: 0 0 auto; max-width: 150px; min-width: 78px;
-		padding: 3px 26px 3px 10px; border-radius: 4px; border: 2px solid #ff6d2e;
-		background-color: #ffffff; font-size: 18px; font-weight: 600; color: #333;
+	/* izbornik veličine — stil postojećih izbornika u bundle selectoru,
+	   visina usklađena s kvačicom (30px) da red bude poravnat */
+	.npu-wrap .npu-size {
+		flex: 0 0 auto; max-width: 150px; min-width: 84px;
+		height: 30px; line-height: 1; box-sizing: border-box;
+		margin: 0; padding: 0 28px 0 11px; border-radius: 6px; border: 2px solid #ff6d2e;
+		background-color: #ffffff; font-size: 16px !important; font-weight: 700 !important; color: #333 !important;
 		appearance: none; -webkit-appearance: none; -moz-appearance: none;
 		background-image: linear-gradient(45deg, transparent 50%, #444 50%),
 		                  linear-gradient(135deg, #444 50%, transparent 50%);
-		background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+		background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
 		background-size: 6px 6px, 6px 6px; background-repeat: no-repeat;
 	}
-	@media (max-width: 480px) { .npu-size { font-size: 16px; } }
+	.npu-wrap .npu-size:focus { outline: 2px solid var(--npu-accent); outline-offset: 1px; }
+
+	@media (max-width: 560px) {
+		.npu-wrap .npu-grid { column-gap: 10px; row-gap: 10px; }
+		.npu-wrap .npu-title { font-size: 16px !important; }
+		.npu-wrap .npu-desc { font-size: 14px !important; }
+		.npu-wrap .npu-price { font-size: 16px !important; }
+		.npu-wrap .npu-actions { gap: 10px; }
+	}
 	</style>
 
 	<script>
