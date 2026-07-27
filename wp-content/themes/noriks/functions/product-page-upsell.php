@@ -196,7 +196,7 @@ function noriks_pp_upsell_render() {
 		border-radius: 10px;
 		box-shadow: 0 2px 3px 0 #00000029;
 		padding: 10px;
-		background-color: #fff;
+		background-color: #fafafb;   /* svjetlije od podloge slike (#f2f2f4) */
 		color: var(--npu-ink);
 		font-size: 16px;
 		line-height: 1.4;
