@@ -62,6 +62,8 @@ function noriks_pp_upsell_config() {
 		'title'      => '3x Sive Bokserice',
 		'desc'       => 'Prozračne i mekane — dodajte ih uz narudžbu uz 69% popusta.',
 		'size_attr'  => 'Veličina',
+		// Kompozitna slika 3 komada na bijeloj podlozi (kvadratna, kao na referenci).
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-3x-sive.png',
 	) );
 }
 
@@ -134,7 +136,7 @@ function noriks_pp_upsell_render() {
 		}
 	}
 	$regular_total = $unit_regular * (int) $cfg['qty'];
-	$image         = wp_get_attachment_image_url( $product->get_image_id(), 'medium' );
+	$image = ! empty( $cfg['image'] ) ? $cfg['image'] : wp_get_attachment_image_url( $product->get_image_id(), 'medium' );
 	if ( ! $image ) {
 		$image = wc_placeholder_img_src( 'medium' );
 	}
@@ -198,7 +200,7 @@ function noriks_pp_upsell_render() {
 	.npu-grid { display: grid; grid-template-columns: auto 1fr; gap: var(--npu-gap); }
 	.npu-img-wrap { grid-column: 1 / 2; grid-row: 1 / 3; }
 	.npu-img { max-height: clamp(6.25rem, -3.75rem + 50vw, 9.375rem); width: auto; }
-	.npu-info { grid-column: 2 / -1; grid-row: 1 / 2; }
+	.npu-info { grid-column: 2 / -1; }        /* auto-placement -> 1. red (kao original) */
 	.npu-title { font-weight: 700; margin-top: 0; margin-bottom: var(--npu-gap); }
 	.npu-desc { font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem); }
 	.npu-prices { margin-top: var(--npu-gap); line-height: 1.5; }
@@ -212,7 +214,7 @@ function noriks_pp_upsell_render() {
 	.npu-box p:last-child { margin: 0; }
 
 	.npu-actions {
-		grid-column: 2 / -1; grid-row: 2 / -1; margin-top: auto;
+		grid-column: 2 / -1; margin-top: auto;   /* bez grid-row: auto-placement -> 2. red */
 		display: flex; align-items: center; justify-content: start;
 		gap: var(--npu-gap); font-weight: 700;
 	}
