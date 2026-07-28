@@ -2,14 +2,14 @@
 /**
  * NORIKS — upsell na stranici proizvoda ("Kupi zajedno i uštedi").
  *
- * Okvir se prikazuje ODMAH ISPOD gumba "Dodaj u košaricu" i nudi 3x Sive Bokserice
+ * Okvir se prikazuje ODMAH ISPOD gumba "Dodaj u košaricu" i nudi 3x Plave Bokserice
  * po istoj cijeni kao post-purchase upsell na thank you stranici (14,97 € za 3 kom).
  *
  * - Uključuje se ACF prekidačem `noriks_pp_upsell` (polje registrirano u KODU, dolje).
  *   Prekidač je per-proizvod, pa se upsell može uključiti samo tamo gdje ga želimo.
  * - Kupac bira SAMO veličinu (jedan izbornik, sva 3 komada iste veličine).
  * - Kad je kvačica označena, uz glavni proizvod se u košaricu dodaje zasebna stavka
- *   (varijacija sivih bokserica) s upsell cijenom.
+ *   (varijacija plavih bokserica) s upsell cijenom.
  * - Stavka se u narudžbi označava meta poljem `_noriks_upsell` = 'product_page_upsell'
  *   (isti mehanizam kao sidecart i thank you upsell).
  *
@@ -35,7 +35,7 @@ function noriks_pp_upsell_register_fields() {
 		'fields' => array(
 			array(
 				'key'          => 'field_noriks_pp_upsell',
-				'label'        => 'Prikaži upsell ispod gumba (3x Sive Bokserice)',
+				'label'        => 'Prikaži upsell ispod gumba (3x Plave Bokserice)',
 				'name'         => 'noriks_pp_upsell',
 				'type'         => 'true_false',
 				'instructions' => 'Dodaje okvir "Kupi zajedno i uštedi" odmah ispod gumba Dodaj u košaricu. Kupac bira veličinu, a 3 komada se dodaju po upsell cijeni. Vrijedi samo za ovaj proizvod.',
@@ -56,14 +56,14 @@ function noriks_pp_upsell_register_fields() {
  * ============================================================ */
 function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
-		'product_id' => 2829,                    // Sive Bokserice (varijabilni proizvod)
+		'product_id' => 2793,                    // Plave Bokserice (varijabilni proizvod)
 		'qty'        => 3,                       // uvijek 3 komada, iste veličine
 		'total'      => 14.97,                   // ista cijena kao thank you upsell (3 x 4,99)
-		'title'      => '3x Sive Bokserice',
-		'desc'       => 'Prozračne i mekane — dodajte ih uz narudžbu uz 69% popusta.',
+		'title'      => '3x Plave Bokserice',
+		'desc'       => 'Prozračne i mekane — dodajte ih uz narudžbu uz %s%% popusta.', // %s = izracunati popust
 		'size_attr'  => 'Veličina',
 		// Kompozitna slika 3 komada na svijetlo sivoj podlozi (kvadratna).
-		'image'      => get_template_directory_uri() . '/img/upsell/upsell-3x-sive-v2.png',
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-3x-modre.png',
 	) );
 }
 
@@ -136,6 +136,10 @@ function noriks_pp_upsell_render() {
 		}
 	}
 	$regular_total = $unit_regular * (int) $cfg['qty'];
+	// Popust se racuna iz stvarnih cijena (postotak se razlikuje po trzistu).
+	$discount = ( $regular_total > 0 ) ? (int) round( ( 1 - ( (float) $cfg['total'] / $regular_total ) ) * 100 ) : 0;
+	$desc     = ( strpos( $cfg['desc'], '%s' ) !== false ) ? sprintf( $cfg['desc'], $discount ) : $cfg['desc'];
+
 	$image = ! empty( $cfg['image'] ) ? $cfg['image'] : wp_get_attachment_image_url( $product->get_image_id(), 'medium' );
 	if ( ! $image ) {
 		$image = wc_placeholder_img_src( 'medium' );
@@ -152,7 +156,7 @@ function noriks_pp_upsell_render() {
 
 				<div class="npu-info">
 					<p class="npu-title"><?php echo esc_html( $cfg['title'] ); ?></p>
-					<div class="npu-desc"><?php echo esc_html( $cfg['desc'] ); ?></div>
+					<div class="npu-desc"><?php echo esc_html( $desc ); ?></div>
 					<div class="npu-prices">
 						<span class="npu-price"><?php echo wc_price( (float) $cfg['total'] ); ?></span>
 						<?php if ( $regular_total > 0 ) : ?>
