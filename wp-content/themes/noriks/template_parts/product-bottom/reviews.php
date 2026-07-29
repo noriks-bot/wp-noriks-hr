@@ -239,11 +239,13 @@
   $is_jastuk_page     = noriks_is_type( 'ortopedski-jastuk', $current_product_id );
   $is_nosilka_page    = noriks_is_type( 'nosilka', $current_product_id );
   $is_kidsnest_page   = noriks_is_type( 'kidsnest', $current_product_id );
+  $is_kneefix_page    = noriks_is_type( 'kneefix', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_kidsnest_page ? 'NORIKS KidsNest jastuk'
+  $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix steznica za koljeno'
+                     : ( $is_kidsnest_page ? 'NORIKS KidsNest jastuk'
                      : ( $is_nosilka_page ? 'NORIKS BabyGo nosiljka'
                      : ( $is_jastuk_page ? 'NORIKS ErgoSit ortopedski jastuk'
                      : ( $is_norikshers_page ? 'NORIKS HERS'
@@ -252,10 +254,12 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_kidsnest_page ) {
+  if ( $is_kneefix_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_kneefix.php';
+  } elseif ( $is_kidsnest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_kidsnest.php';
   } elseif ( $is_nosilka_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_nosilka.php';
@@ -721,7 +725,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -760,7 +764,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -798,7 +802,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
