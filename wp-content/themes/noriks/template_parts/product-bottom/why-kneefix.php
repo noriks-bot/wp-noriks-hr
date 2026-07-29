@@ -12,9 +12,32 @@
  * Slike: img/kneefix/ (ako datoteka ne postoji, slika se sakrije i tekst ostaje čitljiv)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$kf = get_template_directory_uri() . '/img/kneefix/';
-$kf_img = function( $file, $alt ) use ( $kf ) {
-  return '<img src="'.esc_url($kf.$file).'" alt="'.esc_attr($alt).'" loading="lazy" onerror="this.style.display=\'none\'">';
+$kf      = get_template_directory_uri() . '/img/kneefix/';
+$kf_path = get_template_directory() . '/img/kneefix/';
+
+/* Dok prave slike sekcije ne budu gotove, koristi se galerija samog proizvoda
+   (redom), pa stranica nije prazna. Cim datoteka u /img/kneefix/ postoji,
+   ona ima prednost — nista se ne mijenja u kodu. */
+$kf_fallback = array();
+if ( function_exists( 'wc_get_product' ) ) {
+    $kf_prod = wc_get_product( get_the_ID() );
+    if ( $kf_prod ) {
+        $ids = array_merge( array( $kf_prod->get_image_id() ), (array) $kf_prod->get_gallery_image_ids() );
+        foreach ( $ids as $id ) {
+            $u = $id ? wp_get_attachment_image_url( $id, 'large' ) : '';
+            if ( $u ) { $kf_fallback[] = $u; }
+        }
+    }
+}
+$kf_i = 0;
+$kf_img = function( $file, $alt ) use ( $kf, $kf_path, $kf_fallback, &$kf_i ) {
+  $src = file_exists( $kf_path . $file ) ? ( $kf . $file ) : '';
+  if ( ! $src && ! empty( $kf_fallback ) ) {
+      $src = $kf_fallback[ $kf_i % count( $kf_fallback ) ];
+      $kf_i++;
+  }
+  if ( ! $src ) { return ''; }
+  return '<img src="'.esc_url($src).'" alt="'.esc_attr($alt).'" loading="lazy" onerror="this.style.display=\'none\'">';
 };
 ?>
 
