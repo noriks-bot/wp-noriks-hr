@@ -1097,6 +1097,7 @@ function gck_render_bundle_selector() {
           display: flex !important;
           flex-wrap: nowrap !important;
           align-items: center;
+          justify-content: flex-start;
           gap: 8px;
           width: 100%;
       }
@@ -1105,27 +1106,32 @@ function gck_render_bundle_selector() {
           flex: 0 0 auto;
           font-size: 13px; font-weight: 700; color: #6b6b6b;
       }
-      /* Veličina prva (šira), Stranica druga (uža) — kao na referenci. */
-      #bundle-selector .bundle-pair .gck-size-select {
+      /* Stranica prva, Veličina druga; oba uska (širina po sadržaju), ne rastežu se. */
+      #bundle-selector .bundle-pair .gck-side-select {
           order: 1;
-          flex: 1 1 auto;
+          flex: 0 0 auto;
           display: inline-block !important;
           width: auto !important;
-          max-width: none !important;
+          max-width: 40% !important;
           min-width: 0 !important;
           font-size: 14px;
           padding: 9px 26px 9px 10px;
       }
-      #bundle-selector .bundle-pair .gck-side-select {
+      #bundle-selector .bundle-pair .gck-size-select {
           order: 2;
-          flex: 0 0 34%;
+          flex: 0 1 auto;
+          display: inline-block !important;
           width: auto !important;
-          max-width: none !important;
+          max-width: 60% !important;
+          min-width: 0 !important;
+          font-size: 14px;
+          padding: 9px 26px 9px 10px;
+          text-overflow: ellipsis;
       }
       @media (max-width: 600px) {
           #bundle-selector .bundle-pair .bundle-attr-row { gap: 6px; }
+          #bundle-selector .bundle-pair .gck-side-select,
           #bundle-selector .bundle-pair .gck-size-select { font-size: 13px; padding: 9px 22px 9px 8px; }
-          #bundle-selector .bundle-pair .gck-side-select { flex: 0 0 36%; }
       }
     </style>
     <?php endif; ?>
