@@ -15,29 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $kf      = get_template_directory_uri() . '/img/kneefix/';
 $kf_path = get_template_directory() . '/img/kneefix/';
 
-/* Dok prave slike sekcije ne budu gotove, koristi se galerija samog proizvoda
-   (redom), pa stranica nije prazna. Cim datoteka u /img/kneefix/ postoji,
-   ona ima prednost — nista se ne mijenja u kodu. */
-$kf_fallback = array();
-if ( function_exists( 'wc_get_product' ) ) {
-    $kf_prod = wc_get_product( get_the_ID() );
-    if ( $kf_prod ) {
-        $ids = array_merge( array( $kf_prod->get_image_id() ), (array) $kf_prod->get_gallery_image_ids() );
-        foreach ( $ids as $id ) {
-            $u = $id ? wp_get_attachment_image_url( $id, 'large' ) : '';
-            if ( $u ) { $kf_fallback[] = $u; }
-        }
-    }
-}
-$kf_i = 0;
-$kf_img = function( $file, $alt ) use ( $kf, $kf_path, $kf_fallback, &$kf_i ) {
-  $src = file_exists( $kf_path . $file ) ? ( $kf . $file ) : '';
-  if ( ! $src && ! empty( $kf_fallback ) ) {
-      $src = $kf_fallback[ $kf_i % count( $kf_fallback ) ];
-      $kf_i++;
+/* Dok prave slike sekcije ne budu gotove, prikazuje se neutralni sivi
+   placeholder s nazivom slike, da se vidi raspored. Cim datoteka u
+   /img/kneefix/ postoji, automatski se koristi ona. */
+$kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
+  if ( file_exists( $kf_path . $file ) ) {
+    return '<img src="'.esc_url($kf.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
   }
-  if ( ! $src ) { return ''; }
-  return '<img src="'.esc_url($src).'" alt="'.esc_attr($alt).'" loading="lazy" onerror="this.style.display=\'none\'">';
+  return '<div class="kfx-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };
 ?>
 
@@ -202,6 +187,10 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path, $kf_fallback, &$kf_i ) {
   .kfx-lead { font-weight: 700; color: #141414; }
   .kfx-strong { font-weight: 700; color: #141414; }
   .kfx-media img { width: 100%; height: auto; display: block; border-radius: 16px; }
+  .kfx-ph { width: 100%; aspect-ratio: 1/1; background: #ededed; border: 1px dashed #d3d3d3; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center; padding: 18px; box-sizing: border-box; }
+  .kfx-ph span { font-size: 13px; line-height: 1.45; color: #9a9a9a; text-align: center; }
+  .kfx-card-media .kfx-ph { aspect-ratio: 4/3; border-radius: 12px; margin-bottom: 14px; }
 
   .kfx-list { margin: 0 0 16px; padding-left: 20px; }
   .kfx-list li { font-size: 16px; line-height: 1.6; color: #3a3a3a; margin: 0 0 6px; }
