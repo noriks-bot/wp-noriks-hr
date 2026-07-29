@@ -92,6 +92,10 @@
 
            Niste jedini u potrazi za mirnim dječjim snom.
 
+          <?php elseif ( noriks_is_type( 'kneefix' ) ): ?>
+
+           Niste jedini u potrazi za stabilnijim koljenom.
+
 
 
           <?php else: ?>
@@ -151,6 +155,10 @@
            <?php elseif ( noriks_is_type( 'kidsnest' ) ): ?>
 
            Tisuće roditelja već je zamijenilo obični jastuk NORIKS KidsNestom – tiše noći, disanje kroz nos i san koji stvarno odmara.
+
+           <?php elseif ( noriks_is_type( 'kneefix' ) ): ?>
+
+           Tisuće kupaca već nosi NORIKS KneeFix steznicu za stabilnije koljeno – na stepenicama, u šetnji i tijekom dugog stajanja.
 
            <?php else: ?>
         
@@ -648,7 +656,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
