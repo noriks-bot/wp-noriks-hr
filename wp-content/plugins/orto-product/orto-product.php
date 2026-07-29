@@ -1090,18 +1090,42 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
     <?php if ( $gck_side_select ) : ?>
     <style>
-      /* KneeFix: dva izbornika u redu (Veličina + Stranica), s brojem komada ispred. */
+      /* KneeFix: Veličina + Stranica jedan uz drugi u istom redu, s brojem komada. */
       #bundle-selector .bundle-pairs { counter-reset: kfxpair; }
-      #bundle-selector .bundle-pair { counter-increment: kfxpair; }
-      #bundle-selector .bundle-pair .bundle-attr-row { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; }
+      #bundle-selector .bundle-pair  { counter-increment: kfxpair; }
+      #bundle-selector .bundle-pair .bundle-attr-row {
+          display: flex !important;
+          flex-wrap: nowrap !important;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+      }
       #bundle-selector .bundle-pair .bundle-attr-row:before {
           content: "#" counter(kfxpair);
-          flex: 0 0 auto; font-size: 13px; font-weight: 700; color: #6b6b6b; min-width: 24px;
+          flex: 0 0 auto;
+          font-size: 13px; font-weight: 700; color: #6b6b6b;
       }
-      #bundle-selector .gck-size-select { max-width: none !important; min-width: 0 !important; flex: 1 1 0; font-size: 14px; padding: 9px 26px 9px 10px; }
-      #bundle-selector .gck-side-select { flex: 0 0 40%; }
+      /* Veličina prva (šira), Stranica druga (uža) — kao na referenci. */
+      #bundle-selector .bundle-pair .gck-size-select {
+          order: 1;
+          flex: 1 1 auto;
+          display: inline-block !important;
+          width: auto !important;
+          max-width: none !important;
+          min-width: 0 !important;
+          font-size: 14px;
+          padding: 9px 26px 9px 10px;
+      }
+      #bundle-selector .bundle-pair .gck-side-select {
+          order: 2;
+          flex: 0 0 34%;
+          width: auto !important;
+          max-width: none !important;
+      }
       @media (max-width: 600px) {
-          #bundle-selector .gck-size-select { font-size: 13px; padding: 9px 22px 9px 8px; }
+          #bundle-selector .bundle-pair .bundle-attr-row { gap: 6px; }
+          #bundle-selector .bundle-pair .gck-size-select { font-size: 13px; padding: 9px 22px 9px 8px; }
+          #bundle-selector .bundle-pair .gck-side-select { flex: 0 0 36%; }
       }
     </style>
     <?php endif; ?>
