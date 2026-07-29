@@ -4,8 +4,8 @@
  * Sekcije i redoslijed preslikani s referentne stranice, tekst na HR,
  * slike su NORIKS kreative iz img/kneefix/. Svaka sekcija ima sliku s jedne
  * i tekst s druge strane (naizmjenično) — nema sekcija koje su samo slika.
- *   1. Kad svaki korak postane neugodan   slika lijevo   01_hero
- *   2. Možda nije riječ samo o trošenju   slika desno    10_review-1
+ *   1. Kad svaki korak postane neugodan   slika lijevo   13_stepenice
+ *   2. Možda nije riječ samo o trošenju   slika desno    14_zglob
  *   3. Podrška za aktivna koljena         slika desno    08_aktivno
  *   4. 4 funkcije. Stabilniji osjećaj.    slika lijevo   03_funkcije
  *   5. Udoban oslonac u 3 koraka          slika desno    04_koraki
@@ -31,7 +31,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
 <!-- ============ 1) Kad svaki korak postane neugodan ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('01_hero.jpg','NORIKS KneeFix steznica za koljeno'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('13_stepenice.jpg','Bol u koljenu pri silasku niz stepenice'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Kad svaki korak postane neugodan</h2>
       <p class="kfx-lead">Na početku je to često samo blago potezanje.</p>
@@ -63,7 +63,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       </ul>
       <p>Mnoge klasične ortoze pokušavaju problem riješiti krutom stabilizacijom. No tvrde ortoze znaju biti neudobne, kliziti ili ograničavati prirodan pokret. Upravo zato je <strong>NORIKS KneeFix</strong> razvijen drukčije.</p>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('10_review-1.jpg','Muškarac stoji s NORIKS KneeFix steznicom na koljenu'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('14_zglob.jpg','Nadražena zglobna ovojnica koljenog zgloba'); ?></div>
   </div>
 </section>
 
