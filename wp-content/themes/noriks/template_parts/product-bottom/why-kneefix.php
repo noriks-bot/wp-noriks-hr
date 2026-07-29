@@ -12,7 +12,7 @@
  *   6. Više udobnosti u svakodnevici      slika lijevo   05_lifestyle
  *   7. Preporučeno za potporu koljena     slika desno    06_zdravnik
  *   8. Razlika se osjeti                  slika lijevo   07_vs
- *   9. Što kažu naši kupci                3 kartice      10/11/12 + trust bar
+ *   9. Što kažu naši kupci                3 kartice      10/11/12
  * Recenzije i FAQ renderira zajednički reviews.php (ne ovdje).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -192,7 +192,6 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
         </article>
       <?php endforeach; ?>
     </div>
-    <div class="kfx-trustbar"><?php echo $kf_img('09_trustbar.png','Besplatna dostava, 60 dana jamstvo povrata novca, korisnička podrška 24/7'); ?></div>
   </div>
 </section>
 
@@ -236,8 +235,6 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
   .kfx-rev-title { font-weight: 700; color: #141414; font-size: 15px; margin: 8px 0 8px; }
   .kfx-rev-text { font-size: 14px; line-height: 1.6; color: #4a4a4a; margin: 0 0 12px; }
   .kfx-rev-name { font-size: 13px; font-style: italic; font-weight: 700; color: #6b6b6b; margin: 0; padding-top: 10px; border-top: 1px solid #ededed; }
-  .kfx-trustbar { margin-top: 30px; }
-  .kfx-trustbar img { width: 100%; max-width: 860px; height: auto; display: block; margin: 0 auto; }
 
   @media (max-width: 820px) {
     .kfx-sec { padding: 30px 0; }
@@ -251,6 +248,27 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
   /* Nema "Tablica veličina" linka na KneeFixu (ni plugin ni globalni). */
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
+
+  /* Kratki opis (short description): sakrij standardne točke (•), ostaje samo ✅
+     iz teksta; razmak između "Prednosti:" i liste te ispod liste.
+     (Ovaj se predložak učitava samo na orto-kneefix stranicama.) */
+  .woocommerce-product-details__short-description ul {
+      list-style: none;
+      margin: 8px 0 26px;
+      padding-left: 0;
+  }
+  .woocommerce-product-details__short-description ul li {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+      line-height: 1.55;
+      margin-bottom: 6px;
+  }
+  /* razmak iznad "Prednosti:" (paragraf neposredno prije liste) */
+  .woocommerce-product-details__short-description p:has(+ ul) {
+      margin-top: 20px;
+      margin-bottom: 4px;
+  }
 </style>
 
 <script>
