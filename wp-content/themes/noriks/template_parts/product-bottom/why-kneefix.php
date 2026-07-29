@@ -6,12 +6,12 @@
  * i tekst s druge strane (naizmjenično) — nema sekcija koje su samo slika.
  *   1. Kad svaki korak postane neugodan   slika lijevo   13_stepenice
  *   2. Možda nije riječ samo o trošenju   slika desno    14_zglob
- *   3. Podrška za aktivna koljena         slika desno    08_aktivno
- *   4. 4 funkcije. Stabilniji osjećaj.    slika lijevo   03_funkcije
- *   5. Udoban oslonac u 3 koraka          slika desno    04_koraki
- *   6. Više udobnosti u svakodnevici      slika lijevo   05_lifestyle
- *   7. Preporučeno za potporu koljena     slika desno    06_zdravnik
- *   8. Razlika se osjeti                  slika lijevo   07_vs
+ *   3. Podrška za aktivna koljena         slika lijevo   08_aktivno
+ *   4. 4 funkcije. Stabilniji osjećaj.    slika desno    03_funkcije
+ *   5. Udoban oslonac u 3 koraka          slika lijevo   04_koraki
+ *   6. Više udobnosti u svakodnevici      slika desno    05_lifestyle
+ *   7. Preporučeno za potporu koljena     slika lijevo   06_zdravnik
+ *   8. Razlika se osjeti                  slika desno    07_vs
  *   9. Što kažu naši kupci                3 kartice      10/11/12
  * Recenzije i FAQ renderira zajednički reviews.php (ne ovdje).
  */
@@ -70,6 +70,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
 <!-- ============ 3) Podrška za aktivna koljena ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
+    <div class="kfx-media"><?php echo $kf_img('08_aktivno.jpg','Ostanite aktivni — bez ograničenja u koljenima'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Podrška za aktivna koljena</h2>
       <p><strong>NORIKS KneeFix</strong> spaja više funkcija u jednom fleksibilnom sustavu podrške za svakodnevicu. Umjesto teške ortoze dobivate:</p>
@@ -81,14 +82,12 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       </ul>
       <p>Cilj nije ukočiti vaše koljeno. KneeFix je razvijen da koljeno ugodnije podupre pri svakodnevnom kretanju — u hodu, na poslu, u kupovini ili na putu.</p>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('08_aktivno.jpg','Ostanite aktivni — bez ograničenja u koljenima'); ?></div>
   </div>
 </section>
 
 <!-- ============ 4) 4 funkcije. Stabilniji osjećaj. ============ -->
 <section class="kfx-sec kfx-alt">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('03_funkcije.jpg','Četiri funkcije NORIKS KneeFix steznice'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">4 funkcije. Stabilniji osjećaj.</h2>
       <p>KneeFix ne radi samo jedno — više sustava podrške djeluje istovremeno:</p>
@@ -99,12 +98,14 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
         <li><strong>Silikonski grip protiv klizanja</strong> — meka silikonska tekstura sprječava klizanje i uvijanje</li>
       </ul>
     </div>
+    <div class="kfx-media"><?php echo $kf_img('03_funkcije.jpg','Četiri funkcije NORIKS KneeFix steznice'); ?></div>
   </div>
 </section>
 
 <!-- ============ 5) Udoban oslonac u 3 koraka ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
+    <div class="kfx-media"><?php echo $kf_img('04_koraki.jpg','Udoban oslonac u tri koraka — navucite, poravnajte, prilagodite'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Udoban oslonac u 3 koraka</h2>
       <ol class="kfx-steps">
@@ -114,14 +115,12 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       </ol>
       <p>Bez kompliciranih remena i namještanja — spremni ste u nekoliko sekundi.</p>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('04_koraki.jpg','Udoban oslonac u tri koraka — navucite, poravnajte, prilagodite'); ?></div>
   </div>
 </section>
 
 <!-- ============ 6) Više udobnosti u svakodnevici ============ -->
 <section class="kfx-sec kfx-alt">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('05_lifestyle.jpg','KneeFix u svakodnevici — šetnja, bicikl, trening'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Više udobnosti u svakodnevici</h2>
       <p>Mnogi ne žele tešku sportsku ortozu. Žele jednostavno:</p>
@@ -134,12 +133,14 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       <p>NORIKS KneeFix razvijen je da svakodnevne pokrete učini ugodnijima — bez nepotrebnih ograničenja. Fleksibilan materijal bolje se prilagođava vašem danu i podupire koljeno ondje gdje vam je potrebno.</p>
       <a class="kfx-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
     </div>
+    <div class="kfx-media"><?php echo $kf_img('05_lifestyle.jpg','KneeFix u svakodnevici — šetnja, bicikl, trening'); ?></div>
   </div>
 </section>
 
 <!-- ============ 7) Preporučeno za svakodnevnu potporu koljena ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
+    <div class="kfx-media"><?php echo $kf_img('06_zdravnik.jpg','Preporučeno za svakodnevnu potporu koljena'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Preporučeno za svakodnevnu potporu koljena</h2>
       <ul class="kfx-check">
@@ -149,14 +150,12 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       </ul>
       <p>KneeFix je zamišljen kao svakodnevna potpora, a ne kao medicinski tretman. Ako imate akutnu ozljedu ili trajne tegobe, o nošenju se posavjetujte sa svojim liječnikom.</p>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('06_zdravnik.jpg','Preporučeno za svakodnevnu potporu koljena'); ?></div>
   </div>
 </section>
 
 <!-- ============ 8) Razlika se osjeti ============ -->
 <section class="kfx-sec kfx-alt">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('07_vs.jpg','NORIKS steznik za koljeno u odnosu na tradicionalnu ortozu'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Razlika se osjeti</h2>
       <p>Tradicionalne ortoze problem često rješavaju tako da koljeno ukoče. KneeFix ide drugim putem — podupire pokret umjesto da ga blokira.</p>
@@ -167,6 +166,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       </ul>
       <a class="kfx-cta" href="#bundle-selector">Naruči KneeFix</a>
     </div>
+    <div class="kfx-media"><?php echo $kf_img('07_vs.jpg','NORIKS steznik za koljeno u odnosu na tradicionalnu ortozu'); ?></div>
   </div>
 </section>
 
