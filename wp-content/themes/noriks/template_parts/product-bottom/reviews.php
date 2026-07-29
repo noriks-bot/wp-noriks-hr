@@ -1122,8 +1122,9 @@ $is_kompmajice = ( function_exists('noriks_is_type') && noriks_is_type('kompresi
 $is_jastuk    = ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') );
 $is_nosilka   = ( function_exists('noriks_is_type') && noriks_is_type('nosilka') );
 $is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') );
+$is_kneefix   = ( function_exists('noriks_is_type') && noriks_is_type('kneefix') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -1351,9 +1352,44 @@ $knc_faq = array(
   ),
 );
 
+// NORIKS KneeFix (ortopedska steznica za koljeno) — FAQ za "Informacije o Proizvodu".
+$kneefix_faq = array(
+  array(
+    'questioon' => 'Je li KneeFix prikladan za svakodnevnu uporabu?',
+    'answer'    => 'Da. NORIKS KneeFix razvijen je upravo za svakodnevne pokrete — hodanje, rad, penjanje stepenicama ili dulje stajanje.',
+  ),
+  array(
+    'questioon' => 'Mogu li sam podesiti kompresiju?',
+    'answer'    => 'Da. Ugrađenim preciznim kotačićem kompresiju podešavate sami — onoliko podrške koliko vam je ugodno.',
+  ),
+  array(
+    'questioon' => 'Klizi li steznica pri hodanju?',
+    'answer'    => 'KneeFix ima protuklizni silikonski rub koji pomaže smanjiti klizanje i uvijanje steznice tijekom nošenja.',
+  ),
+  array(
+    'questioon' => 'Mogu li steznicu nositi ispod odjeće?',
+    'answer'    => 'Da. Fleksibilan i tanak kroj omogućuje ugodno nošenje ispod većine svakodnevne odjeće.',
+  ),
+  array(
+    'questioon' => 'Odgovara li steznica za oba koljena?',
+    'answer'    => 'Pri narudžbi birate stranu (lijevo ili desno), pa steznica pristaje upravo onom koljenu koje želite poduprijeti.',
+  ),
+  array(
+    'questioon' => 'Mogu li steznicu nositi dulje vrijeme?',
+    'answer'    => 'Steznica je razvijena za svakodnevnu uporabu. Mnogi je kupci nose na poslu, u šetnji i pri svakodnevnim aktivnostima.',
+  ),
+  array(
+    'questioon' => 'Kako odabrati veličinu?',
+    'answer'    => 'Veličine su određene prema tjelesnoj težini: S (50–60 kg), M (61–75 kg), L (76–90 kg), XL (91–110 kg) i 2XL (110 kg+).',
+  ),
+);
+
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_kneefix && $is_info ) {
+    return $kneefix_faq;
+  }
   if ( $is_kidsnest && $is_info ) {
     return $kidsnest_faq;
   }

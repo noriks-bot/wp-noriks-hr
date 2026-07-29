@@ -89,5 +89,10 @@ if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
     include $noriks_pb_dir . 'why-majice.php';
 }
 
+// KNEEFIX (orto-kneefix) — ortopedska steznica za koljeno
+if ( noriks_is_type( 'kneefix' ) ) {
+    include $noriks_pb_dir . 'why-kneefix.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';

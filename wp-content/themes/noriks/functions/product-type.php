@@ -52,6 +52,8 @@ function noriks_product_type_map() : array {
         'kidsnest'                => array( 'orto-kidsnest', 'kidsnest' ),
         // ErgoSit orthopedic pillow (ortopedski jastuk) — no colour/size, quantity-only bundle.
         'ortopedski-jastuk'       => array( 'orto-ortopedski-jastuk', 'ortopedski-jastuk' ),
+        // KneeFix ortopedska steznica za koljeno.
+        'kneefix'                 => array( 'orto-kneefix' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),
