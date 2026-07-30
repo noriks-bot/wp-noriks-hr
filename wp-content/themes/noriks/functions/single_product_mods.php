@@ -96,3 +96,42 @@ add_filter( 'woocommerce_single_product_carousel_options', function ( $options )
 } );
 
 
+
+
+/**
+ * ControlPro: kartica jedne recenzije neposredno ispod ADD TO CART gumba
+ * (kao na referentnoj stranici). Gated na orto-controlpro.
+ */
+add_action( 'woocommerce_after_add_to_cart_button', 'noriks_controlpro_atc_testimonial', 25 );
+function noriks_controlpro_atc_testimonial() {
+    if ( ! function_exists( 'noriks_is_type' ) || ! noriks_is_type( 'controlpro' ) ) {
+        return;
+    }
+    $avatar = get_template_directory_uri() . '/img/controlpro/10-kupac-avatar.jpg';
+    ?>
+    <div class="cpr-atc-rev">
+        <img class="cpr-atc-avatar" src="<?php echo esc_url( $avatar ); ?>" alt="Zadovoljan kupac NORIKS ControlPro" loading="lazy">
+        <div class="cpr-atc-body">
+            <p class="cpr-atc-text">„Redovno sam radio Kegelove vježbe dvije godine nakon operacije prostate i nisam vidio veći napredak. Mislio sam da ću do kraja života nositi uloške. Četiri tjedna s ovim uređajem i s 5 uložaka dnevno sam pao na nula. Za mene je to promijenilo život."</p>
+            <div class="cpr-atc-foot">
+                <span class="cpr-atc-name">Robert T. 73</span>
+                <span class="cpr-atc-stars" aria-label="Ocjena 5 od 5">★★★★★</span>
+            </div>
+        </div>
+    </div>
+    <style>
+        .cpr-atc-rev { display: flex; gap: 14px; align-items: flex-start; margin: 18px 0 6px; clear: both; }
+        .cpr-atc-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: 0 0 56px; display: block; margin: 2px 0 0; }
+        .cpr-atc-body { flex: 1 1 auto; min-width: 0; }
+        .cpr-atc-text { font-size: 14.5px; line-height: 1.5; font-style: italic; color: #222; margin: 0 0 8px; }
+        .cpr-atc-foot { display: flex; align-items: center; gap: 12px; border-top: 1px solid #e6e6e6; padding-top: 8px; }
+        .cpr-atc-name { font-size: 13.5px; font-style: italic; color: #7a7a7a; }
+        .cpr-atc-stars { color: #f5b301; font-size: 15px; letter-spacing: 1px; }
+        @media (max-width: 600px) {
+            .cpr-atc-rev { gap: 10px; }
+            .cpr-atc-avatar { width: 46px; height: 46px; flex: 0 0 46px; }
+            .cpr-atc-text { font-size: 13.5px; }
+        }
+    </style>
+    <?php
+}
