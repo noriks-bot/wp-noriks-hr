@@ -94,5 +94,10 @@ if ( noriks_is_type( 'kneefix' ) ) {
     include $noriks_pb_dir . 'why-kneefix.php';
 }
 
+// CONTROLPRO (orto-controlpro) — trener dna zdjelice
+if ( noriks_is_type( 'controlpro' ) ) {
+    include $noriks_pb_dir . 'why-controlpro.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';

@@ -96,6 +96,10 @@
 
            Niste jedini u potrazi za stabilnijim koljenom.
 
+          <?php elseif ( noriks_is_type( 'controlpro' ) ): ?>
+
+           Niste jedini u potrazi za povratkom kontrole nad mjehurom.
+
 
 
           <?php else: ?>
@@ -159,6 +163,10 @@
            <?php elseif ( noriks_is_type( 'kneefix' ) ): ?>
 
            Tisuće kupaca već nosi NORIKS KneeFix steznicu za stabilnije koljeno – na stepenicama, u šetnji i tijekom dugog stajanja.
+
+           <?php elseif ( noriks_is_type( 'controlpro' ) ): ?>
+
+           Više od 112.000 muškaraca koristi NORIKS ControlPro za jačanje dna zdjelice – pet minuta dnevno, bez sondi i bez aplikacija.
 
            <?php else: ?>
         
@@ -248,11 +256,13 @@
   $is_nosilka_page    = noriks_is_type( 'nosilka', $current_product_id );
   $is_kidsnest_page   = noriks_is_type( 'kidsnest', $current_product_id );
   $is_kneefix_page    = noriks_is_type( 'kneefix', $current_product_id );
+  $is_controlpro_page = noriks_is_type( 'controlpro', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix steznica za koljeno'
+  $rv_fallback_title = $is_controlpro_page ? 'NORIKS ControlPro trener dna zdjelice'
+                     : ( $is_kneefix_page ? 'NORIKS KneeFix steznica za koljeno'
                      : ( $is_kidsnest_page ? 'NORIKS KidsNest jastuk'
                      : ( $is_nosilka_page ? 'NORIKS BabyGo nosiljka'
                      : ( $is_jastuk_page ? 'NORIKS ErgoSit ortopedski jastuk'
@@ -262,10 +272,12 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_kneefix_page ) {
+  if ( $is_controlpro_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_controlpro.php';
+  } elseif ( $is_kneefix_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_kneefix.php';
   } elseif ( $is_kidsnest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_kidsnest.php';
@@ -656,7 +668,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -733,7 +745,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -772,7 +784,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -810,7 +822,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1135,8 +1147,9 @@ $is_jastuk    = ( function_exists('noriks_is_type') && noriks_is_type('ortopedsk
 $is_nosilka   = ( function_exists('noriks_is_type') && noriks_is_type('nosilka') );
 $is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') );
 $is_kneefix   = ( function_exists('noriks_is_type') && noriks_is_type('kneefix') );
+$is_controlpro = ( function_exists('noriks_is_type') && noriks_is_type('controlpro') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -1396,9 +1409,40 @@ $kneefix_faq = array(
   ),
 );
 
+// NORIKS ControlPro (trener dna zdjelice) — FAQ za "Informacije o Proizvodu".
+$controlpro_faq = array(
+  array(
+    'questioon' => 'Hoće li pomoći kod moje vrste curenja?',
+    'answer'    => 'Bez obzira na to javlja li se curenje pri ustajanju, kašljanju, kihanju, smijehu ili naporu, odnosno kao stalno kapanje i nagli nagon — u podlozi su najčešće oslabljeni mišići dna zdjelice. Jačanjem te skupine mišića vraća se pritisak potreban za zatvaranje, neovisno o dobi.'
+  ),
+  array(
+    'questioon' => 'Koliko treba do prvih rezultata?',
+    'answer'    => 'Većina muškaraca prijavljuje bolju kontrolu, manju potrošnju uložaka i manje noćnih ustajanja unutar 2 do 4 tjedna redovnog vježbanja od pet minuta dnevno. Rezultati se razlikuju od osobe do osobe.'
+  ),
+  array(
+    'questioon' => 'Kako se koristi?',
+    'answer'    => 'Sjednete na stolicu, postavite ControlPro između koljena i stišćete protiv otpora — 3 serije od 10 ponavljanja dnevno. Bez sondi, bez umetanja, bez žica i aplikacija. Ugrađeni brojač prati ponavljanja.'
+  ),
+  array(
+    'questioon' => 'Je li dostava diskretna?',
+    'answer'    => 'Da. Svaku narudžbu šaljemo u neutralnoj kartonskoj kutiji bez oznaka i bez opisa proizvoda na vanjskoj strani.'
+  ),
+  array(
+    'questioon' => 'Treba li baterije ili aplikaciju?',
+    'answer'    => 'Ne. ControlPro radi mehanički, na pravi fizički otpor. Nema baterija, punjenja, gela ni aplikacije koju treba postavljati.'
+  ),
+  array(
+    'questioon' => 'Što ako mi ne pomogne?',
+    'answer'    => 'Pokriva vas jamstvo povrata novca u 30 dana. Ako ne osjetite napredak u kontroli, javite nam se za povrat cijelog iznosa.'
+  ),
+);
+
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_controlpro && $is_info ) {
+    return $controlpro_faq;
+  }
   if ( $is_kneefix && $is_info ) {
     return $kneefix_faq;
   }
