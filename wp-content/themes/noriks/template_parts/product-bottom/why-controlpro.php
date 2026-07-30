@@ -115,6 +115,7 @@ $cp_img = function( $file, $alt ) use ( $cp, $cp_path ) {
 
   @media (max-width: 820px) {
     .cpr-sec { padding: 28px 0; }
+    .cpr-wrap { padding-left: 0; padding-right: 0; }
     .cpr-row2 { grid-template-columns: 1fr; gap: 20px; }
     .cpr-h2 { font-size: 1.9rem; }
     .cpr-rev-grid { grid-template-columns: 1fr; }
