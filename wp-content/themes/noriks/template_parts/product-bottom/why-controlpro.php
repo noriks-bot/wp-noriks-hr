@@ -124,10 +124,17 @@ $cp_img = function( $file, $alt ) use ( $cp, $cp_path ) {
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
 
-  /* Kratki opis: sakrij standardne točke (•), ostaje samo ✅ iz teksta. */
-  .woocommerce-product-details__short-description ul { list-style: none; margin: 8px 0 26px; padding-left: 0; }
-  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin-left: 0; line-height: 1.55; margin-bottom: 6px; }
-  .woocommerce-product-details__short-description p:has(+ ul) { margin-top: 20px; margin-bottom: 4px; }
+  /* Kratki opis: skupljeni razmaci — i kad su točke <li> i kad su odvojeni <p>.
+     (Ovaj se predložak učitava samo na orto-controlpro stranicama.) */
+  .woocommerce-product-details__short-description { margin-bottom: 10px !important; }
+  .woocommerce-product-details__short-description ul { list-style: none; margin: 4px 0 8px; padding-left: 0; }
+  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 4px; line-height: 1.4; }
+  .woocommerce-product-details__short-description p { margin: 0 0 5px !important; line-height: 1.4; }
+  .woocommerce-product-details__short-description p:last-child { margin-bottom: 0 !important; }
+  .woocommerce-product-details__short-description br { line-height: 0.9; }
+  /* manji odmak između kratkog opisa i cijene */
+  .single-product .summary .price,
+  .single-product div.product p.price { margin-top: 6px !important; margin-bottom: 10px !important; }
 </style>
 
 <script>
