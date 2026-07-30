@@ -130,6 +130,9 @@ $cp_img = function( $file, $alt ) use ( $cp, $cp_path ) {
   .woocommerce-product-details__short-description ul { list-style: none; margin: 4px 0 8px; padding-left: 0; }
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin: 0 0 4px; line-height: 1.4; }
   .woocommerce-product-details__short-description p { margin: 0 0 5px !important; line-height: 1.4; }
+  /* viseći uvod: prijelom u drugi red poravnan s tekstom, ne s ✓ */
+  .woocommerce-product-details__short-description ul li,
+  .woocommerce-product-details__short-description p { padding-left: 1.6em; text-indent: -1.6em; }
   .woocommerce-product-details__short-description p:last-child { margin-bottom: 0 !important; }
   .woocommerce-product-details__short-description br { line-height: 0.9; }
   /* prazni odstavci/prijelomi u kratkom opisu ne smiju stvarati praznine */
