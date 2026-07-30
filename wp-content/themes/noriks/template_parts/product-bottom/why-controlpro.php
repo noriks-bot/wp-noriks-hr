@@ -132,13 +132,33 @@ $cp_img = function( $file, $alt ) use ( $cp, $cp_path ) {
   .woocommerce-product-details__short-description p { margin: 0 0 5px !important; line-height: 1.4; }
   .woocommerce-product-details__short-description p:last-child { margin-bottom: 0 !important; }
   .woocommerce-product-details__short-description br { line-height: 0.9; }
-  /* manji odmak između kratkog opisa i cijene */
+  /* prazni odstavci/prijelomi u kratkom opisu ne smiju stvarati praznine */
+  .woocommerce-product-details__short-description p:empty,
+  .woocommerce-product-details__short-description br:first-child,
+  .woocommerce-product-details__short-description br + br { display: none !important; }
+
+  /* manji odmak između kratkog opisa i cijene te između cijene i scarcity bara */
   .single-product .summary .price,
-  .single-product div.product p.price { margin-top: 6px !important; margin-bottom: 10px !important; }
+  .single-product div.product p.price { margin-top: 4px !important; margin-bottom: 8px !important; }
+  .single-product .gck-countdown { margin-top: 8px !important; }
+  .single-product .summary > p:empty, .single-product .summary > br { display: none !important; }
 </style>
 
 <script>
 (function(){
+  /* Kratki opis iz admina cesto sadrzi prazne odstavke (<p>&nbsp;</p>) koji rade
+     velike praznine iznad cijene — CSS ih ne moze uhvatiti, pa ih uklonimo. */
+  function cprTrimDesc(){
+    var box = document.querySelector('.woocommerce-product-details__short-description');
+    if (!box) { return; }
+    box.querySelectorAll('p, div').forEach(function(el){
+      if (el.querySelector('img, ul, ol, svg')) { return; }
+      var t = (el.textContent || '').replace(/\u00a0/g, ' ').trim();
+      if (t === '') { el.remove(); }
+    });
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', cprTrimDesc); } else { cprTrimDesc(); }
+
   document.querySelectorAll('a.cpr-cta[href="#bundle-selector"]').forEach(function(a){
     a.addEventListener('click', function(e){ e.preventDefault(); var t=document.getElementById('bundle-selector')||document.querySelector('.single_add_to_cart_button'); if(t) t.scrollIntoView({behavior:'smooth',block:'center'}); });
   });

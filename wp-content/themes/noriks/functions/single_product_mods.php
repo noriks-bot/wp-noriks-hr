@@ -120,15 +120,16 @@ function noriks_controlpro_atc_testimonial() {
         </div>
     </div>
     <style>
-        .cpr-atc-rev { display: flex; gap: 14px; align-items: flex-start; margin: 18px 0 6px; clear: both; }
+        .cpr-atc-rev { display: flex; gap: 14px; align-items: flex-start; margin: 16px 0 6px; clear: both;
+                       background: #f6f6f6; border-radius: 12px; padding: 16px 18px; }
         .cpr-atc-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: 0 0 56px; display: block; margin: 2px 0 0; }
         .cpr-atc-body { flex: 1 1 auto; min-width: 0; }
         .cpr-atc-text { font-size: 14.5px; line-height: 1.5; font-style: italic; color: #222; margin: 0 0 8px; }
-        .cpr-atc-foot { display: flex; align-items: center; gap: 12px; border-top: 1px solid #e6e6e6; padding-top: 8px; }
+        .cpr-atc-foot { display: flex; align-items: center; gap: 12px; border-top: 1px solid #e2e2e2; padding-top: 8px; }
         .cpr-atc-name { font-size: 13.5px; font-style: italic; color: #7a7a7a; }
         .cpr-atc-stars { color: #f5b301; font-size: 15px; letter-spacing: 1px; }
         @media (max-width: 600px) {
-            .cpr-atc-rev { gap: 10px; }
+            .cpr-atc-rev { gap: 10px; padding: 13px 14px; border-radius: 10px; }
             .cpr-atc-avatar { width: 46px; height: 46px; flex: 0 0 46px; }
             .cpr-atc-text { font-size: 13.5px; }
         }
