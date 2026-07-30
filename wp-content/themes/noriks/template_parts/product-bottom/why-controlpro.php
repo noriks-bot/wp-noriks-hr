@@ -114,11 +114,15 @@ $cp_img = function( $file, $alt ) use ( $cp, $cp_path ) {
   .cpr-rev-name { font-size: 13px; font-style: italic; color: #6b6b6b; margin: 0; }
 
   @media (max-width: 820px) {
-    .cpr-sec { padding: 28px 0; }
+    /* enakomeren razmik: med sekcijama isto kao med sliku i tekst (18px) */
+    .cpr-sec { padding: 9px 0; }
+    .cpr-sec:first-of-type { padding-top: 0; }
     .cpr-wrap { padding-left: 0; padding-right: 0; }
-    .cpr-row2 { grid-template-columns: 1fr; gap: 20px; }
-    .cpr-h2 { font-size: 1.9rem; }
-    .cpr-rev-grid { grid-template-columns: 1fr; }
+    .cpr-row2 { grid-template-columns: 1fr; gap: 18px; }
+    .cpr-h2 { font-size: 1.9rem; margin-bottom: 12px; }
+    .cpr-copy p { margin-bottom: 12px; }
+    .cpr-cta { margin-top: 2px; }
+    .cpr-rev-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 18px; }
   }
 
   /* Nema "Tablica veličina" linka na ControlPro uređaju (ni plugin ni globalni). */
