@@ -91,7 +91,7 @@ for ( $i = 1; $i <= 3; $i++ ) {   // cetrti video (Did You Know) se ne prikazuje
 if ( ! empty( $nvk_videos ) ) : ?>
 <section class="nvk-sec nvk-alt">
   <div class="nvk-wrap">
-    <h2 class="nvk-h2 nvk-center">Pogledajte Cards na djelu</h2>
+    <h2 class="nvk-h2 nvk-center">Pogledajte NORIKS Cards na djelu</h2>
     <p class="nvk-sub nvk-center">Kratki isječci pokazuju kako djeca sama koriste uređaj — kliknite za reprodukciju.</p>
     <div class="nvk-vid-grid">
       <?php foreach ( $nvk_videos as $src ) : ?>
@@ -251,7 +251,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
   .nvk-cta:hover { background: #E8450E; color: #fff; }
 
   /* 9) video traka */
-  .nvk-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; max-width: 900px; margin: 0 auto; }
+  .nvk-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
   .nvk-vid { position: relative; border-radius: 14px; overflow: hidden; background: #000; aspect-ratio: 9/16; cursor: pointer; }
   .nvk-vid-el { width: 100%; height: 100%; object-fit: cover; display: block; }
   .nvk-vid-play { position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
