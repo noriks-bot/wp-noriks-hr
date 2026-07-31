@@ -55,7 +55,7 @@ $nk_img = function( $file, $alt ) use ( $nk, $nk_path ) {
         <li><strong>Dijete ponovi.</strong> Vidi sliku, čuje riječ i izgovori je — tako riječ i ostane.</li>
       </ol>
       <p>Bez aplikacija, bez postavljanja i bez interneta. Uređaj je dovoljno jednostavan da ga dijete koristi samo.</p>
-      <a class="nvk-cta" href="#bundle-selector">Odaberi paket →</a>
+      <a class="nvk-cta" href="#bundle-selector">Naruči NORIKS Cards →</a>
     </div>
     <div class="nvk-media"><?php echo $nk_img('02-uporaba.jpg','Umetanje kartice u NORIKS Cards uređaj'); ?></div>
   </div>
@@ -84,9 +84,9 @@ $nk_img = function( $file, $alt ) use ( $nk, $nk_path ) {
       <h2 class="nvk-h2">Do 510 riječi i više od 20 kategorija</h2>
       <p>Životinje, hrana, boje, brojevi, emocije, zanimanja, priroda, svakodnevni predmeti — kategorije prate ono što dijete zaista susreće.</p>
       <ul class="nvk-check">
-        <li>Početni paket: 224 kartice</li>
-        <li>Prošireni paket: 510 kartica</li>
+        <li>Komplet kartica dolazi uz uređaj — ništa se ne dokupljuje</li>
         <li>Kartice su označene brojem i kategorijom, pa je slaganje jednostavno</li>
+        <li>Ojačane kartice otporne na trganje</li>
       </ul>
       <p>Zato jedan uređaj traje godinama: dijete najprije uči imenovati, kasnije povezivati i opisivati.</p>
     </div>

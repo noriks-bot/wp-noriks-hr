@@ -1457,8 +1457,8 @@ $noriks_cards_faq = array(
     'answer'    => 'Najviše ga koriste djeca od otprilike 2 do 7 godina. Mlađa djeca uče imenovati pojmove, starija povezuju riječi u rečenice i uče čitati napisanu riječ na kartici.'
   ),
   array(
-    'questioon' => 'Koliko kartica dolazi u paketu?',
-    'answer'    => 'Početni paket sadrži 224 kartice, a prošireni 510 kartica. Kartice pokrivaju više od 20 kategorija — životinje, hranu, boje, brojeve, emocije, zanimanja, prirodu i svakodnevne predmete.'
+    'questioon' => 'Što sve dolazi u kompletu?',
+    'answer'    => 'U kompletu su uređaj i set kartica koje pokrivaju više od 20 kategorija — životinje, hranu, boje, brojeve, emocije, zanimanja, prirodu i svakodnevne predmete. Ništa se ne dokupljuje naknadno.'
   ),
   array(
     'questioon' => 'Treba li aplikacija, internet ili mobitel?',
