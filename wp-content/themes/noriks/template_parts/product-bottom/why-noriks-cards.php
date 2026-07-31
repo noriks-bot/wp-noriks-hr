@@ -275,7 +275,9 @@ if ( ! empty( $nvk_videos ) ) : ?>
     .nvk-row2 .nvk-media { order: -1; }
     .nvk-h2 { font-size: 1.9rem; margin-bottom: 12px; }
     .nvk-rev-grid { grid-template-columns: 1fr; gap: 18px; }
-    .nvk-vid-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    /* na mobilcu en video pod drugim, cez celotno sirino */
+    .nvk-vid-grid { grid-template-columns: 1fr; gap: 14px; }
+    .nvk-vid { aspect-ratio: 4/5; }
   }
 
   /* Nema "Tablica veličina" linka na ovom proizvodu (ni plugin ni globalni). */
