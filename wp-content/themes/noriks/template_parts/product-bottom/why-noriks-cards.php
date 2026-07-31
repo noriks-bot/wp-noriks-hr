@@ -167,7 +167,10 @@ $nk_img = function( $file, $alt ) use ( $nk, $nk_path ) {
 $nvk_videos = array();
 for ( $i = 1; $i <= 4; $i++ ) {
 	if ( file_exists( $nkv_path . 'ugc-' . $i . '.mp4' ) ) {
-		$nvk_videos[] = $nkv . 'ugc-' . $i . '.mp4';
+		$nvk_videos[] = array(
+			'src'    => $nkv . 'ugc-' . $i . '.mp4',
+			'poster' => file_exists( $nkv_path . 'poster-' . $i . '.jpg' ) ? $nkv . 'poster-' . $i . '.jpg' : '',
+		);
 	}
 }
 if ( ! empty( $nvk_videos ) ) : ?>
@@ -177,8 +180,9 @@ if ( ! empty( $nvk_videos ) ) : ?>
     <p class="nvk-sub nvk-center">Kratki isječci pokazuju kako djeca sama koriste uređaj — kliknite za reprodukciju.</p>
     <div class="nvk-vid-grid">
       <?php foreach ( $nvk_videos as $src ) : ?>
-        <div class="nvk-vid" data-src="<?php echo esc_url( $src ); ?>">
-          <video class="nvk-vid-el" preload="metadata" playsinline muted controlslist="nodownload"></video>
+        <div class="nvk-vid" data-src="<?php echo esc_url( $src['src'] ); ?>">
+          <video class="nvk-vid-el" preload="none" playsinline muted controlslist="nodownload"
+                 poster="<?php echo esc_url( $src['poster'] ); ?>"></video>
           <span class="nvk-vid-play" aria-label="Reproduciraj"></span>
         </div>
       <?php endforeach; ?>
