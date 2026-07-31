@@ -99,9 +99,9 @@ if ( noriks_is_type( 'controlpro' ) ) {
     include $noriks_pb_dir . 'why-controlpro.php';
 }
 
-// SMARTPLAY (orto-smartplay) — zvucni uredaj s karticama
-if ( noriks_is_type( 'smartplay' ) ) {
-    include $noriks_pb_dir . 'why-smartplay.php';
+// NORIKS CARDS (noriks-cards) — zvucni uredaj s karticama
+if ( noriks_is_type( 'noriks-cards' ) ) {
+    include $noriks_pb_dir . 'why-noriks-cards.php';
 }
 
 // SHARED reviews / social proof (all products)

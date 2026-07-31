@@ -522,9 +522,9 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
                 NORIKS ortopedski pojas za leđa koristi dvije ciljane kompresijske zone koje stabiliziraju područje L5 kralježnice, pravilno poravnavaju zdjelicu i rasterećuju SI-zglob. Time se smanjuje pritisak na išijasni živac te se ublažavaju bolovi u donjem dijelu leđa i išijas.<br><br>Kompresija se jednostavno podešava elastičnim zateznim trakama, pa potporu prilagođavate vlastitim potrebama. Tanak i prozračan dizajn omogućuje da se pojas neprimjetno nosi ispod odjeće – na poslu, u vožnji ili kod kuće.<br><br>Dostupan u dvije veličine (S/M: opseg bokova 75–110 cm i L/XL: opseg bokova 110–140 cm) te prikladan za svakoga, neovisno o dobi, spolu ili tjelesnoj građi.
 
-         <?php elseif( noriks_is_type( 'smartplay', $current_product_id ) ): ?>
+         <?php elseif( noriks_is_type( 'noriks-cards', $current_product_id ) ): ?>
 
-                NORIKS SmartPlay je zvučni uređaj s karticama koji djetetu naglas izgovori riječ s kartice. Dijete umetne karticu, pritisne gumb, čuje jasno izgovorenu riječ i ponovi je — bez ekrana, bez aplikacije i bez pomoći odrasle osobe.<br><br>Kartice pokrivaju više od 20 kategorija: životinje, hranu, boje, brojeve, emocije, zanimanja, prirodu i svakodnevne predmete. Početni paket ima 224 kartice, prošireni 510, pa uređaj prati dijete kroz nekoliko godina — od prvog imenovanja do povezivanja i opisivanja.<br><br>Zvuk je glasan i čist, s mirnim tempom koji djetetu daje vremena da ponovi riječ. Glasnoća se podešava.<br><br>Kartice su tiskane na ojačanom materijalu otpornom na trganje, a uređaj je lagan, zaobljen i bez oštrih rubova — prilagođen dječjim rukama i svakodnevnoj upotrebi.
+                NORIKS Cards je zvučni uređaj s karticama koji djetetu naglas izgovori riječ s kartice. Dijete umetne karticu, pritisne gumb, čuje jasno izgovorenu riječ i ponovi je — bez ekrana, bez aplikacije i bez pomoći odrasle osobe.<br><br>Kartice pokrivaju više od 20 kategorija: životinje, hranu, boje, brojeve, emocije, zanimanja, prirodu i svakodnevne predmete. Početni paket ima 224 kartice, prošireni 510, pa uređaj prati dijete kroz nekoliko godina — od prvog imenovanja do povezivanja i opisivanja.<br><br>Zvuk je glasan i čist, s mirnim tempom koji djetetu daje vremena da ponovi riječ. Glasnoća se podešava.<br><br>Kartice su tiskane na ojačanom materijalu otpornom na trganje, a uređaj je lagan, zaobljen i bez oštrih rubova — prilagođen dječjim rukama i svakodnevnoj upotrebi.
 
          <?php elseif( noriks_is_type( 'controlpro', $current_product_id ) ): ?>
 
@@ -578,7 +578,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'smartplay', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
+     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -711,7 +711,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk + kidsnest + kneefix -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'smartplay', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>

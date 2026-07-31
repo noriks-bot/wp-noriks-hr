@@ -1,5 +1,5 @@
 <?php
-// Review pool for NORIKS SmartPlay — zvučni uređaj s karticama za učenje riječi (orto-smartplay).
+// Review pool for NORIKS Cards — zvučni uređaj s karticama za učenje riječi (noriks-cards).
 // Text-only (no images), Croatian.
 $auto_reviews_en = array(
     array("name" => "Martina K.",  "text" => "Sin ima tri godine i dugo je govorio jako malo. Uređaj mu je odmah bio zanimljiv jer sam pritišće gumb. U mjesec dana počeo je ponavljati riječi koje prije nije ni pokušavao."),

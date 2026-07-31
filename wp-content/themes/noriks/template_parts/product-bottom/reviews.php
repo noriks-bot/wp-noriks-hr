@@ -100,7 +100,7 @@
 
            Niste jedini u potrazi za povratkom kontrole nad mjehurom.
 
-          <?php elseif ( noriks_is_type( 'smartplay' ) ): ?>
+          <?php elseif ( noriks_is_type( 'noriks-cards' ) ): ?>
 
            Niste jedini u potrazi za učenjem koje djetetu bude igra.
 
@@ -172,9 +172,9 @@
 
            Više od 112.000 muškaraca koristi NORIKS ControlPro za jačanje dna zdjelice – pet minuta dnevno, bez sondi i bez aplikacija.
 
-           <?php elseif ( noriks_is_type( 'smartplay' ) ): ?>
+           <?php elseif ( noriks_is_type( 'noriks-cards' ) ): ?>
 
-           Tisuće roditelja već koristi NORIKS SmartPlay za učenje riječi bez ekrana – dijete vidi sliku, čuje riječ i ponovi je samo.
+           Tisuće roditelja već koristi NORIKS Cards za učenje riječi bez ekrana – dijete vidi sliku, čuje riječ i ponovi je samo.
 
            <?php else: ?>
         
@@ -265,12 +265,12 @@
   $is_kidsnest_page   = noriks_is_type( 'kidsnest', $current_product_id );
   $is_kneefix_page    = noriks_is_type( 'kneefix', $current_product_id );
   $is_controlpro_page = noriks_is_type( 'controlpro', $current_product_id );
-  $is_smartplay_page  = noriks_is_type( 'smartplay', $current_product_id );
+  $is_noriks_cards_page  = noriks_is_type( 'noriks-cards', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_smartplay_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_smartplay_page ? 'NORIKS SmartPlay uređaj s karticama'
+  $rv_fallback_title = $is_noriks_cards_page ? 'NORIKS Cards uređaj s karticama'
                      : ( $is_controlpro_page ? 'NORIKS ControlPro trener dna zdjelice'
                      : ( $is_kneefix_page ? 'NORIKS KneeFix steznica za koljeno'
                      : ( $is_kidsnest_page ? 'NORIKS KidsNest jastuk'
@@ -285,8 +285,8 @@
                      : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_smartplay_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_smartplay.php';
+  if ( $is_noriks_cards_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_noriks_cards.php';
   } elseif ( $is_controlpro_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_controlpro.php';
   } elseif ( $is_kneefix_page ) {
@@ -680,7 +680,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_smartplay_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -757,7 +757,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_smartplay_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -796,7 +796,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_smartplay_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -834,7 +834,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_smartplay_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1160,9 +1160,9 @@ $is_nosilka   = ( function_exists('noriks_is_type') && noriks_is_type('nosilka')
 $is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') );
 $is_kneefix   = ( function_exists('noriks_is_type') && noriks_is_type('kneefix') );
 $is_controlpro = ( function_exists('noriks_is_type') && noriks_is_type('controlpro') );
-$is_smartplay  = ( function_exists('noriks_is_type') && noriks_is_type('smartplay') );
+$is_noriks_cards  = ( function_exists('noriks_is_type') && noriks_is_type('noriks-cards') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_smartplay ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -1450,8 +1450,8 @@ $controlpro_faq = array(
   ),
 );
 
-// NORIKS SmartPlay (zvucni uredaj s karticama) — FAQ za "Informacije o Proizvodu".
-$smartplay_faq = array(
+// NORIKS Cards (zvucni uredaj s karticama) — FAQ za "Informacije o Proizvodu".
+$noriks_cards_faq = array(
   array(
     'questioon' => 'Za koju je dob namijenjen?',
     'answer'    => 'Najviše ga koriste djeca od otprilike 2 do 7 godina. Mlađa djeca uče imenovati pojmove, starija povezuju riječi u rečenice i uče čitati napisanu riječ na kartici.'
@@ -1483,10 +1483,10 @@ $smartplay_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_smartplay, $smartplay_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
-  if ( $is_smartplay && $is_info ) {
-    return $smartplay_faq;
+  if ( $is_noriks_cards && $is_info ) {
+    return $noriks_cards_faq;
   }
   if ( $is_controlpro && $is_info ) {
     return $controlpro_faq;
