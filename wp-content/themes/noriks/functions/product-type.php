@@ -56,6 +56,8 @@ function noriks_product_type_map() : array {
         'kneefix'                 => array( 'orto-kneefix' ),
         // ControlPro trener dna zdjelice (Kegel trainer s otporom) — bez atributa.
         'controlpro'              => array( 'orto-controlpro', 'controlpro' ),
+        // SmartPlay zvucni uredaj s karticama za ucenje rijeci.
+        'smartplay'               => array( 'orto-smartplay', 'smartplay' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),

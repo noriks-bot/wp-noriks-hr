@@ -882,7 +882,7 @@ add_action( 'woocommerce_single_product_summary', function() {
     }
     // No top size-chart link on socks, back belt, bunion, fisiorest, gifts set, incontinence boxers or
     // kompresijske majice. Leak boxers + kompresijske majice show it right above the add-to-cart button instead.
-    if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'kompresijske-nogavice' ) || noriks_is_type( 'ortopas' ) || noriks_is_type( 'bunion' ) || noriks_is_type( 'fisiorest' ) || noriks_is_type( 'majica-darila' ) || noriks_is_type( 'leakboxers' ) || noriks_is_type( 'kompresijske-majice' ) || noriks_is_type( 'kneefix' ) || noriks_is_type( 'controlpro' ) ) ) {
+    if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'kompresijske-nogavice' ) || noriks_is_type( 'ortopas' ) || noriks_is_type( 'bunion' ) || noriks_is_type( 'fisiorest' ) || noriks_is_type( 'majica-darila' ) || noriks_is_type( 'leakboxers' ) || noriks_is_type( 'kompresijske-majice' ) || noriks_is_type( 'kneefix' ) || noriks_is_type( 'controlpro' ) || noriks_is_type( 'smartplay' ) ) ) {
         return;
     }
     echo '<a href="#" class="js-open-size-chart noriks-global-sizechart" style="display:inline-flex;align-items:center;gap:8px;margin:8px 0;color:#222;font-weight:700;font-size:15px;text-decoration:underline;cursor:pointer;">'
