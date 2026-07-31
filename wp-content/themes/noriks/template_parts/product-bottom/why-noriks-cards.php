@@ -165,7 +165,7 @@ $nk_img = function( $file, $alt ) use ( $nk, $nk_path ) {
 <!-- ============ 9) Pogledajte na djelu (video) ============ -->
 <?php
 $nvk_videos = array();
-for ( $i = 1; $i <= 4; $i++ ) {
+for ( $i = 1; $i <= 3; $i++ ) {   // cetrti video (Did You Know) se ne prikazuje
 	if ( file_exists( $nkv_path . 'ugc-' . $i . '.mp4' ) ) {
 		$nvk_videos[] = array(
 			'src'    => $nkv . 'ugc-' . $i . '.mp4',
@@ -251,7 +251,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
   .nvk-cta:hover { background: #E8450E; color: #fff; }
 
   /* 9) video traka */
-  .nvk-vid-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+  .nvk-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; max-width: 900px; margin: 0 auto; }
   .nvk-vid { position: relative; border-radius: 14px; overflow: hidden; background: #000; aspect-ratio: 9/16; cursor: pointer; }
   .nvk-vid-el { width: 100%; height: 100%; object-fit: cover; display: block; }
   .nvk-vid-play { position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
