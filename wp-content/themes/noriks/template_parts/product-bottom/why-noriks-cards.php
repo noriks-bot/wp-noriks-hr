@@ -77,92 +77,7 @@ $nk_img = function( $file, $alt ) use ( $nk, $nk_path ) {
   </div>
 </section>
 
-<!-- ============ 4) Do 510 riječi i više od 20 kategorija ============ -->
-<section class="nvk-sec nvk-alt">
-  <div class="nvk-wrap nvk-row2">
-    <div class="nvk-copy">
-      <h2 class="nvk-h2">Do 510 riječi i više od 20 kategorija</h2>
-      <p>Životinje, hrana, boje, brojevi, emocije, zanimanja, priroda, svakodnevni predmeti — kategorije prate ono što dijete zaista susreće.</p>
-      <ul class="nvk-check">
-        <li>Komplet kartica dolazi uz uređaj — ništa se ne dokupljuje</li>
-        <li>Kartice su označene brojem i kategorijom, pa je slaganje jednostavno</li>
-        <li>Ojačane kartice otporne na trganje</li>
-      </ul>
-      <p>Zato jedan uređaj traje godinama: dijete najprije uči imenovati, kasnije povezivati i opisivati.</p>
-    </div>
-    <div class="nvk-media"><?php echo $nk_img('03-kartice.jpg','Kartice NORIKS Cards po kategorijama'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 5) Gradi rječnik i samopouzdanje ============ -->
-<section class="nvk-sec">
-  <div class="nvk-wrap nvk-row2">
-    <div class="nvk-media"><?php echo $nk_img('10-rjecnik-hr.jpg','NORIKS Cards gradi rječnik i samopouzdanje'); ?></div>
-    <div class="nvk-copy">
-      <h2 class="nvk-h2">Gradi rječnik i samopouzdanje</h2>
-      <p>Kad dijete riječ izgovori naglas i čuje da zvuči kao na uređaju, dobiva potvrdu koja mu daje sigurnost. Zato se javlja češće — i u vrtiću i pred nepoznatim ljudima.</p>
-      <ul class="nvk-check">
-        <li>100% engleske riječi i izgovor</li>
-        <li>Ponavljanje naglas umjesto pasivnog gledanja</li>
-        <li>Napredak koji roditelj čuje već nakon nekoliko tjedana</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6) Kartice koje izdrže dječje ruke ============ -->
-<section class="nvk-sec nvk-alt">
-  <div class="nvk-wrap nvk-row2">
-    <div class="nvk-copy">
-      <h2 class="nvk-h2">Kartice koje izdrže dječje ruke</h2>
-      <p>Kartice su tiskane na debljem, ojačanom materijalu — ne gužvaju se i ne trgaju pri svakodnevnoj upotrebi. Uređaj je zaobljen, lagan i bez oštrih rubova, pa ga dijete lako drži i nosi sa sobom.</p>
-      <ul class="nvk-check">
-        <li>Ojačane kartice otporne na trganje</li>
-        <li>Lagan uređaj s mekim, zaobljenim rubovima</li>
-        <li>Površina koja se lako obriše</li>
-      </ul>
-    </div>
-    <div class="nvk-media"><?php echo $nk_img('05-trpezne.jpg','Čvrste kartice NORIKS Cards'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 7) Razlika se čuje i vidi ============ -->
-<section class="nvk-sec">
-  <div class="nvk-wrap nvk-row2">
-    <div class="nvk-media"><?php echo $nk_img('11-prije-poslije-hr.jpg','Usporedba: obični uređaji i NORIKS Cards'); ?></div>
-    <div class="nvk-copy">
-      <h2 class="nvk-h2">Razlika se čuje i vidi</h2>
-      <p>Slični uređaji često imaju generički izgovor, manje kategorija i tanke kartice koje brzo stradaju. NORIKS Cards razvijen je upravo na tim točkama.</p>
-      <ul class="nvk-check">
-        <li>Pravi engleski izgovor umjesto generičkog</li>
-        <li>Više kategorija učenja</li>
-        <li>Bolja kvaliteta zvuka</li>
-        <li>Čvršće kartice otporne na trganje</li>
-      </ul>
-      <a class="nvk-cta" href="#bundle-selector">Naruči NORIKS Cards</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8) Poslušali smo roditelje ============ -->
-<section class="nvk-sec nvk-alt">
-  <div class="nvk-wrap nvk-row2">
-    <div class="nvk-copy">
-      <h2 class="nvk-h2">Poslušali smo roditelje — i isporučili</h2>
-      <p>Ono što su roditelji najčešće tražili, ugrađeno je u uređaj:</p>
-      <ul class="nvk-check">
-        <li>Bolja kvaliteta zvuka</li>
-        <li>Kartice otporne na trganje — trajne</li>
-        <li>Pametnije kategorije učenja</li>
-        <li>100% engleske riječi i izgovor</li>
-        <li>Osmišljeno za djecu — jednostavno i sigurno</li>
-      </ul>
-    </div>
-    <div class="nvk-media"><?php echo $nk_img('12-roditelji-hr.jpg','Poslušali smo roditelje — NORIKS Cards'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 9) Pogledajte na djelu (video) ============ -->
+<!-- ============ 4) Pogledajte na djelu (video) ============ -->
 <?php
 $nvk_videos = array();
 for ( $i = 1; $i <= 3; $i++ ) {   // cetrti video (Did You Know) se ne prikazuje
@@ -190,6 +105,91 @@ if ( ! empty( $nvk_videos ) ) : ?>
   </div>
 </section>
 <?php endif; ?>
+
+<!-- ============ 5) Do 510 riječi i više od 20 kategorija ============ -->
+<section class="nvk-sec nvk-alt">
+  <div class="nvk-wrap nvk-row2">
+    <div class="nvk-copy">
+      <h2 class="nvk-h2">Do 510 riječi i više od 20 kategorija</h2>
+      <p>Životinje, hrana, boje, brojevi, emocije, zanimanja, priroda, svakodnevni predmeti — kategorije prate ono što dijete zaista susreće.</p>
+      <ul class="nvk-check">
+        <li>Komplet kartica dolazi uz uređaj — ništa se ne dokupljuje</li>
+        <li>Kartice su označene brojem i kategorijom, pa je slaganje jednostavno</li>
+        <li>Ojačane kartice otporne na trganje</li>
+      </ul>
+      <p>Zato jedan uređaj traje godinama: dijete najprije uči imenovati, kasnije povezivati i opisivati.</p>
+    </div>
+    <div class="nvk-media"><?php echo $nk_img('03-kartice.jpg','Kartice NORIKS Cards po kategorijama'); ?></div>
+  </div>
+</section>
+
+<!-- ============ 6) Gradi rječnik i samopouzdanje ============ -->
+<section class="nvk-sec">
+  <div class="nvk-wrap nvk-row2">
+    <div class="nvk-media"><?php echo $nk_img('10-rjecnik-hr.jpg','NORIKS Cards gradi rječnik i samopouzdanje'); ?></div>
+    <div class="nvk-copy">
+      <h2 class="nvk-h2">Gradi rječnik i samopouzdanje</h2>
+      <p>Kad dijete riječ izgovori naglas i čuje da zvuči kao na uređaju, dobiva potvrdu koja mu daje sigurnost. Zato se javlja češće — i u vrtiću i pred nepoznatim ljudima.</p>
+      <ul class="nvk-check">
+        <li>100% engleske riječi i izgovor</li>
+        <li>Ponavljanje naglas umjesto pasivnog gledanja</li>
+        <li>Napredak koji roditelj čuje već nakon nekoliko tjedana</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7) Kartice koje izdrže dječje ruke ============ -->
+<section class="nvk-sec nvk-alt">
+  <div class="nvk-wrap nvk-row2">
+    <div class="nvk-copy">
+      <h2 class="nvk-h2">Kartice koje izdrže dječje ruke</h2>
+      <p>Kartice su tiskane na debljem, ojačanom materijalu — ne gužvaju se i ne trgaju pri svakodnevnoj upotrebi. Uređaj je zaobljen, lagan i bez oštrih rubova, pa ga dijete lako drži i nosi sa sobom.</p>
+      <ul class="nvk-check">
+        <li>Ojačane kartice otporne na trganje</li>
+        <li>Lagan uređaj s mekim, zaobljenim rubovima</li>
+        <li>Površina koja se lako obriše</li>
+      </ul>
+    </div>
+    <div class="nvk-media"><?php echo $nk_img('05-trpezne.jpg','Čvrste kartice NORIKS Cards'); ?></div>
+  </div>
+</section>
+
+<!-- ============ 8) Razlika se čuje i vidi ============ -->
+<section class="nvk-sec">
+  <div class="nvk-wrap nvk-row2">
+    <div class="nvk-media"><?php echo $nk_img('11-prije-poslije-hr.jpg','Usporedba: obični uređaji i NORIKS Cards'); ?></div>
+    <div class="nvk-copy">
+      <h2 class="nvk-h2">Razlika se čuje i vidi</h2>
+      <p>Slični uređaji često imaju generički izgovor, manje kategorija i tanke kartice koje brzo stradaju. NORIKS Cards razvijen je upravo na tim točkama.</p>
+      <ul class="nvk-check">
+        <li>Pravi engleski izgovor umjesto generičkog</li>
+        <li>Više kategorija učenja</li>
+        <li>Bolja kvaliteta zvuka</li>
+        <li>Čvršće kartice otporne na trganje</li>
+      </ul>
+      <a class="nvk-cta" href="#bundle-selector">Naruči NORIKS Cards</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9) Poslušali smo roditelje ============ -->
+<section class="nvk-sec nvk-alt">
+  <div class="nvk-wrap nvk-row2">
+    <div class="nvk-copy">
+      <h2 class="nvk-h2">Poslušali smo roditelje — i isporučili</h2>
+      <p>Ono što su roditelji najčešće tražili, ugrađeno je u uređaj:</p>
+      <ul class="nvk-check">
+        <li>Bolja kvaliteta zvuka</li>
+        <li>Kartice otporne na trganje — trajne</li>
+        <li>Pametnije kategorije učenja</li>
+        <li>100% engleske riječi i izgovor</li>
+        <li>Osmišljeno za djecu — jednostavno i sigurno</li>
+      </ul>
+    </div>
+    <div class="nvk-media"><?php echo $nk_img('12-roditelji-hr.jpg','Poslušali smo roditelje — NORIKS Cards'); ?></div>
+  </div>
+</section>
 
 <!-- ============ 10) Učenje bez ekrana ============ -->
 <section class="nvk-sec nvk-alt">
