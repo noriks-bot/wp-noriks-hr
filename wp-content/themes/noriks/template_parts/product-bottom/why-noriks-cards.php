@@ -89,7 +89,7 @@ for ( $i = 1; $i <= 3; $i++ ) {   // cetrti video (Did You Know) se ne prikazuje
 	}
 }
 if ( ! empty( $nvk_videos ) ) : ?>
-<section class="nvk-sec">
+<section class="nvk-sec nvk-alt">
   <div class="nvk-wrap">
     <h2 class="nvk-h2 nvk-center">Pogledajte Cards na djelu</h2>
     <p class="nvk-sub nvk-center">Kratki isječci pokazuju kako djeca sama koriste uređaj — kliknite za reprodukciju.</p>
@@ -107,7 +107,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
 <?php endif; ?>
 
 <!-- ============ 5) Do 510 riječi i više od 20 kategorija ============ -->
-<section class="nvk-sec nvk-alt">
+<section class="nvk-sec">
   <div class="nvk-wrap nvk-row2">
     <div class="nvk-copy">
       <h2 class="nvk-h2">Do 510 riječi i više od 20 kategorija</h2>
@@ -124,7 +124,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
 </section>
 
 <!-- ============ 6) Gradi rječnik i samopouzdanje ============ -->
-<section class="nvk-sec">
+<section class="nvk-sec nvk-alt">
   <div class="nvk-wrap nvk-row2">
     <div class="nvk-media"><?php echo $nk_img('10-rjecnik-hr.jpg','NORIKS Cards gradi rječnik i samopouzdanje'); ?></div>
     <div class="nvk-copy">
@@ -140,7 +140,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
 </section>
 
 <!-- ============ 7) Kartice koje izdrže dječje ruke ============ -->
-<section class="nvk-sec nvk-alt">
+<section class="nvk-sec">
   <div class="nvk-wrap nvk-row2">
     <div class="nvk-copy">
       <h2 class="nvk-h2">Kartice koje izdrže dječje ruke</h2>
@@ -156,7 +156,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
 </section>
 
 <!-- ============ 8) Razlika se čuje i vidi ============ -->
-<section class="nvk-sec">
+<section class="nvk-sec nvk-alt">
   <div class="nvk-wrap nvk-row2">
     <div class="nvk-media"><?php echo $nk_img('11-prije-poslije-hr.jpg','Usporedba: obični uređaji i NORIKS Cards'); ?></div>
     <div class="nvk-copy">
@@ -174,7 +174,7 @@ if ( ! empty( $nvk_videos ) ) : ?>
 </section>
 
 <!-- ============ 9) Poslušali smo roditelje ============ -->
-<section class="nvk-sec nvk-alt">
+<section class="nvk-sec">
   <div class="nvk-wrap nvk-row2">
     <div class="nvk-copy">
       <h2 class="nvk-h2">Poslušali smo roditelje — i isporučili</h2>
