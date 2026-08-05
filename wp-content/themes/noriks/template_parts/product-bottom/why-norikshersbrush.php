@@ -9,8 +9,9 @@
  *   4. 5 temperatura i glatko klizanje            slika desno    05
  *   5. Kako uključiti                             4 kartice (kao original)
  *   6. Usporedba s drugim uređajima               tablica
- *   7. Specifikacije i sadržaj pakiranja          tablica + lista
- *   8. Što kažu kupci                             3 kartice recenzija
+ *   7. Specifikacije                              kartice
+ *   8. U pakiranju                                slika + lista
+ *   9. Što kažu kupci                             3 kartice recenzija
  * FAQ i recenzije renderira zajednički reviews.php (ne ovdje).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -178,42 +179,54 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 7) Specifikacije i sadržaj pakiranja ============ -->
-<section class="nhb-sec">
-  <div class="nhb-wrap-narrow">
+<!-- ============ 7) Specifikacije ============ -->
+<section class="nhb-sec nhb-spec-sec">
+  <div class="nhb-wrap">
     <h2 class="nhb-h2 nhb-center">Specifikacije</h2>
-    <div class="nhb-spec">
+    <p class="nhb-sub nhb-center">Sve što uređaj nosi ispod poklopca — bez sitnog tiska.</p>
+    <div class="nhb-spec-grid">
       <?php foreach ( array(
-        array( 'Širina ploče',             '94,5 × 10,0 mm (profil 1,7 cm)' ),
-        array( 'Temperature',              '5 postavki: 140 · 160 · 180 · 200 · 220 °C' ),
-        array( 'Hladni protok zraka',      '104 otvora, 360° oko pramena' ),
-        array( 'Napajanje',                '100–240 V, 50–60 Hz (dvostruki napon)' ),
-        array( 'Snaga',                    '46 W' ),
-        array( 'Duljina kabela',           '2 m' ),
-        array( 'Automatsko isključivanje', 'nakon 60 minuta' ),
-        array( 'Boje',                     'crna i roza' ),
+        array( '📏', 'Širina ploče',             '94,5 × 10,0 mm', 'profil 1,7 cm' ),
+        array( '🌡️', 'Temperature',              '140 – 220 °C',   '5 postavki' ),
+        array( '💨', 'Hladni protok zraka',      '104 otvora',     '360° oko pramena' ),
+        array( '🔌', 'Napajanje',                '100 – 240 V',    'dvostruki napon, 50–60 Hz' ),
+        array( '⚡', 'Snaga',                     '46 W',           'brzo zagrijavanje' ),
+        array( '🧵', 'Duljina kabela',            '2 m',            'okretni priključak' ),
+        array( '⏱️', 'Automatsko isključivanje',  '60 minuta',      'bez brige ako zaboravite' ),
+        array( '🎨', 'Boje',                      'crna i roza',    'ista tehnologija' ),
       ) as $sp ) : ?>
-        <div class="nhb-spec-row"><span><?php echo esc_html( $sp[0] ); ?></span><strong><?php echo esc_html( $sp[1] ); ?></strong></div>
+        <div class="nhb-spec-card">
+          <span class="nhb-spec-ico" aria-hidden="true"><?php echo $sp[0]; ?></span>
+          <div>
+            <p class="nhb-spec-label"><?php echo esc_html( $sp[1] ); ?></p>
+            <p class="nhb-spec-val"><?php echo esc_html( $sp[2] ); ?></p>
+            <p class="nhb-spec-note"><?php echo esc_html( $sp[3] ); ?></p>
+          </div>
+        </div>
       <?php endforeach; ?>
-    </div>
-
-    <div class="nhb-pack">
-      <div class="nhb-pack-media"><?php echo $nb_img('09_sadrzaj-pakiranja_pink.jpg','Sadržaj pakiranja'); ?></div>
-      <div>
-        <h3 class="nhb-h3">U pakiranju</h3>
-        <ul class="nhb-check">
-          <li>NORIKSHERS Cool Curl Pencil stiler</li>
-          <li>Rukavica otporna na toplinu</li>
-          <li>Vodič za izradu kovrča</li>
-        </ul>
-        <a class="nhb-cta" href="#bundle-selector">Naruči NORIKSHERS</a>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 8) Što kažu kupci ============ -->
-<section class="nhb-sec nhb-alt">
+<!-- ============ 8) U pakiranju ============ -->
+<section class="nhb-sec nhb-pack-sec">
+  <div class="nhb-wrap nhb-row2">
+    <div class="nhb-pack-media"><?php echo $nb_img('09_sadrzaj-pakiranja_pink.jpg','Sadržaj pakiranja'); ?></div>
+    <div class="nhb-copy">
+      <h2 class="nhb-h2">Što dobivate u pakiranju</h2>
+      <p>Sve je već unutra — ništa se ne dokupljuje.</p>
+      <ul class="nhb-check">
+        <li><strong>NORIKSHERS Cool Curl Pencil</strong> — stiler za ravnanje i kovrčanje</li>
+        <li><strong>Rukavica otporna na toplinu</strong> — za sigurno oblikovanje u početku</li>
+        <li><strong>Vodič za izradu kovrča</strong> — koraci i savjeti za svaki tip kose</li>
+      </ul>
+      <a class="nhb-cta" href="#bundle-selector">Naruči NORIKSHERS</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9) Što kažu kupci ============ -->
+<section class="nhb-sec">
   <div class="nhb-wrap">
     <h2 class="nhb-h2 nhb-center">Što kažu kupci</h2>
     <div class="nhb-rev-grid">
@@ -287,14 +300,21 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-yes { background: #e6f6ea; color: #1f7a3d; }
   .nhb-no  { background: #f2f2f2; color: #9a9a9a; }
 
-  /* specifikacije + pakiranje */
-  .nhb-spec { border: 1px solid #e8e6f0; border-radius: 12px; overflow: hidden; background: #fff; margin-top: 20px; }
-  .nhb-spec-row { display: grid; grid-template-columns: 1fr 1.3fr; gap: 12px; padding: 12px 16px; border-top: 1px solid #f0eef6; font-size: 14.5px; }
-  .nhb-spec-row:first-child { border-top: 0; }
-  .nhb-spec-row span { color: #6b6b6b; }
-  .nhb-spec-row strong { color: #141414; font-weight: 700; }
-  .nhb-pack { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; margin-top: 34px; }
-  .nhb-pack-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
+  /* specifikacije — kartice na mekom prijelazu */
+  .nhb-spec-sec { background: linear-gradient(180deg,#f6f4fa 0%,#efeaf9 100%); }
+  .nhb-sub { font-size: 15.5px; color: #6b6b6b; max-width: 620px; margin: 0 auto 30px; }
+  .nhb-spec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+  .nhb-spec-card { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 16px;
+                   padding: 20px 18px; box-shadow: 0 2px 10px rgba(28,22,48,.05); }
+  .nhb-spec-ico { font-size: 20px; line-height: 1.1; }
+  .nhb-spec-label { font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; color: #8a86a0; margin: 0 0 4px; }
+  .nhb-spec-val { font-size: 17px; font-weight: 800; color: #141414; margin: 0 0 2px; }
+  .nhb-spec-note { font-size: 12.5px; color: #8a8a8a; margin: 0; }
+
+  /* pakiranje — svijetla sekcija sa slikom u okviru */
+  .nhb-pack-sec { background: #fff; }
+  .nhb-pack-media { background: #f6f4fa; border-radius: 18px; padding: 22px; }
+  .nhb-pack-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 
   /* recenzije */
   .nhb-rev-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 26px; }
@@ -314,7 +334,9 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
     .nhb-panel { padding: 20px 14px; border-radius: 16px; margin-top: 20px; }
     .nhb-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
     .nhb-rev-grid { grid-template-columns: 1fr; gap: 18px; }
-    .nhb-spec-row { grid-template-columns: 1fr; gap: 2px; }
+    .nhb-spec-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .nhb-spec-card { padding: 14px 12px; }
+    .nhb-pack-media { padding: 12px; }
     .nhb-cmp-box { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
     .nhb-cmp-head, .nhb-cmp-row { grid-template-columns: 1.1fr .5fr .5fr .5fr; }
     .nhb-cmp-head span, .nhb-cmp-label { font-size: 12.5px; }
