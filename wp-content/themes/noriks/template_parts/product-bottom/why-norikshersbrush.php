@@ -239,8 +239,9 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   /* Kratki opis: skupljeni razmaci, viseći uvod kod ✓ redaka. */
   .woocommerce-product-details__short-description { margin-bottom: 10px !important; }
   .woocommerce-product-details__short-description ul { list-style: none; margin: 4px 0 8px; padding-left: 0; }
-  .woocommerce-product-details__short-description ul li,
-  .woocommerce-product-details__short-description p { padding-left: 1.6em; text-indent: -1.6em; line-height: 1.4; margin: 0 0 5px !important; }
+  /* Viseci uvod SAMO na ✓ retcima; obicni odstavci ostaju poravnani po lijevom rubu. */
+  .woocommerce-product-details__short-description ul li { padding-left: 1.6em; text-indent: -1.6em; line-height: 1.45; margin: 0 0 6px; }
+  .woocommerce-product-details__short-description p { padding-left: 0; text-indent: 0; line-height: 1.5; margin: 0 0 10px !important; }
 </style>
 
 <script>
