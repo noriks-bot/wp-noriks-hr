@@ -251,8 +251,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
 <style>
   .nhb-sec { padding: 46px 0; }
   .nhb-alt { background: #f6f4fa; }
-  .nhb-wrap { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
-  .nhb-wrap-narrow { max-width: 940px; margin: 0 auto; padding: 0 18px; }
+  .nhb-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }   /* isti container kao gornji .product */
+  .nhb-wrap-narrow { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
   .nhb-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .nhb-h2 { font-size: clamp(24px,3.1vw,34px); font-weight: 800; color: #141414; line-height: 1.2; margin: 0 0 16px; }
   .nhb-h3 { font-size: 18px; font-weight: 800; color: #141414; margin: 0 0 12px; }
