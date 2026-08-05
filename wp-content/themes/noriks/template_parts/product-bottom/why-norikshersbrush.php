@@ -226,7 +226,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
 </section>
 
 <!-- ============ 9) Što kažu kupci ============ -->
-<section class="nhb-sec nhb-alt">
+<section class="nhb-sec nhb-rev-sec">
   <div class="nhb-wrap">
     <h2 class="nhb-h2 nhb-center">Što kažu kupci</h2>
     <div class="nhb-rev-grid">
@@ -316,6 +316,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-pack-media { background: #f6f4fa; border-radius: 18px; padding: 22px; }
   .nhb-pack-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 
+  /* recenzije — izrazitija lila podlaga, da dvije bijele sekcije ne budu jedna do druge */
+  .nhb-rev-sec { background: linear-gradient(180deg,#efeaf9 0%,#e9e2f7 100%); }
   /* recenzije */
   .nhb-rev-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 26px; }
   .nhb-rev { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 22px 20px; text-align: center; }
