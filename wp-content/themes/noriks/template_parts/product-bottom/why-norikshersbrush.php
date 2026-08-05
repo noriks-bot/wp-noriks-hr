@@ -317,10 +317,10 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-pack-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 
   /* recenzije — izrazitija lila podlaga, da dvije bijele sekcije ne budu jedna do druge */
-  .nhb-rev-sec { background: linear-gradient(180deg,#efeaf9 0%,#e9e2f7 100%); }
+  .nhb-rev-sec { background: #fff; }
   /* recenzije */
   .nhb-rev-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 26px; }
-  .nhb-rev { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 22px 20px; text-align: center; }
+  .nhb-rev { background: #faf9fd; border: 1px solid #ece8f6; border-radius: 12px; padding: 22px 20px; text-align: center; }
   .nhb-stars { color: #f5b301; font-size: 16px; letter-spacing: 1px; }
   .nhb-rev-title { font-weight: 800; color: #141414; font-size: 15px; margin: 10px 0; }
   .nhb-rev-text { font-size: 14px; line-height: 1.6; color: #4a4a4a; margin: 0 0 14px; }
