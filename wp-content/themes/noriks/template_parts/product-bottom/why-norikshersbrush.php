@@ -226,7 +226,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
 </section>
 
 <!-- ============ 9) Što kažu kupci ============ -->
-<section class="nhb-sec">
+<section class="nhb-sec nhb-alt">
   <div class="nhb-wrap">
     <h2 class="nhb-h2 nhb-center">Što kažu kupci</h2>
     <div class="nhb-rev-grid">
@@ -366,9 +366,18 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   #bundle-selector .bundle-option .gck-regular-price {
       font-weight: 400 !important; font-size: 14px !important; color: rgba(28,22,48,.55) !important; text-decoration: line-through;
   }
-  #bundle-selector .bundle-option input[type="radio"] { margin-right: 8px !important; border-color: #A76FE0 !important; }
-  #bundle-selector .bundle-option input[type="radio"]::before,
-  #bundle-selector .bundle-option input[type="radio"]:checked::before { background: #A76FE0 !important; }
+  /* Radio: tocno centrirana pika (flex centriranje umjesto inset pozicioniranja). */
+  #bundle-selector .bundle-option input[type="radio"] {
+      margin: 0 9px 0 0 !important; width: 18px !important; height: 18px !important; flex: 0 0 18px;
+      box-sizing: border-box !important; border-color: #A76FE0 !important;
+      display: inline-flex !important; align-items: center !important; justify-content: center !important;
+      vertical-align: middle !important; position: relative;
+  }
+  #bundle-selector .bundle-option input[type="radio"]::before {
+      position: static !important; inset: auto !important;
+      width: 8px !important; height: 8px !important; border-radius: 50% !important;
+      background: #A76FE0 !important;
+  }
   #bundle-selector .bundle-pairs { display: none !important; }   /* nema varijacija */
 
   .single-product .single_add_to_cart_button,
