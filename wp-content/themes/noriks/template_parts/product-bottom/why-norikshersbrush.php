@@ -342,6 +342,16 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
     .nhb-cmp-head span, .nhb-cmp-label { font-size: 12.5px; }
   }
 
+  /* Orto ponude i gumb u boji proizvoda (roza/lila) — u stilu kreativa. */
+  #bundle-selector .bundle-option.active { border-color: #C9A7F0 !important; background: rgba(201,167,240,.14) !important; border-width: 2px !important; }
+  #bundle-selector .bundle-option input[type="radio"] { accent-color: #A76FE0; }
+  .single-product .single_add_to_cart_button,
+  .single-product button.single_add_to_cart_button,
+  .single-product .single_add_to_cart_button:hover {
+      background: #A76FE0 !important; border-color: #A76FE0 !important; color: #fff !important;
+  }
+  .single-product .single_add_to_cart_button:hover { background: #9459d4 !important; }
+
   /* Nema "Tablica veličina" linka na uređaju (ni plugin ni globalni). */
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
@@ -358,6 +368,28 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   document.querySelectorAll('a.nhb-cta[href="#bundle-selector"]').forEach(function(a){
     a.addEventListener('click', function(e){ e.preventDefault(); var t=document.getElementById('bundle-selector')||document.querySelector('.single_add_to_cart_button'); if(t) t.scrollIntoView({behavior:'smooth',block:'center'}); });
   });
+
+  /* Aktivna ponuda u boji proizvoda (preživljava LiteSpeed UCSS). */
+  function paintNhb(){
+    var sel = document.getElementById('bundle-selector'); if(!sel) return;
+    sel.querySelectorAll('.bundle-option').forEach(function(c){
+      c.style.removeProperty('border-color'); c.style.removeProperty('background'); c.style.removeProperty('border-width');
+    });
+    var checked = sel.querySelector('input[name="bundle_option"]:checked');
+    var card = checked ? checked.closest('.bundle-option')
+                       : (sel.querySelector('.bundle-option.active') || sel.querySelector('.bundle-option'));
+    if(card){
+      card.style.setProperty('border-color','#A76FE0','important');
+      card.style.setProperty('background','rgba(167,111,224,0.12)','important');
+      card.style.setProperty('border-width','2px','important');
+    }
+  }
+  function bindNhb(){
+    var sel=document.getElementById('bundle-selector'); if(!sel) return;
+    paintNhb();
+    sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintNhb); });
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindNhb); } else { bindNhb(); }
 
   /* Slike u sekcijama prate odabranu boju (crna / roza). */
   function nhbSetColour(c){
