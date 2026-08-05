@@ -343,7 +343,12 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   }
 
   /* Orto ponude i gumb u boji proizvoda (roza/lila) — u stilu kreativa. */
-  #bundle-selector .bundle-option.active { border-color: #C9A7F0 !important; background: rgba(201,167,240,.14) !important; border-width: 2px !important; }
+  /* Okvir je UVIJEK 2px, mijenja se samo boja -> kartica ne "poskoči" pri kliku. */
+  #bundle-selector .bundle-option { border: 2px solid #e6e2ef !important; border-radius: 12px !important; transition: border-color .15s ease, background .15s ease; }
+  #bundle-selector .bundle-option.active { border-color: #A76FE0 !important; background: rgba(167,111,224,.10) !important; }
+  /* Bez riječi "Ukupno" — ostaje samo prekrižena stara i nova cijena, desno. */
+  #bundle-selector .bundle-total-line > span:first-child { display: none !important; }
+  #bundle-selector .bundle-total-line { margin-top: 2px !important; }
   #bundle-selector .bundle-option input[type="radio"] { accent-color: #A76FE0; }
   .single-product .single_add_to_cart_button,
   .single-product button.single_add_to_cart_button,
@@ -373,7 +378,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   function paintNhb(){
     var sel = document.getElementById('bundle-selector'); if(!sel) return;
     sel.querySelectorAll('.bundle-option').forEach(function(c){
-      c.style.removeProperty('border-color'); c.style.removeProperty('background'); c.style.removeProperty('border-width');
+      c.style.removeProperty('border-color'); c.style.removeProperty('background');
     });
     var checked = sel.querySelector('input[name="bundle_option"]:checked');
     var card = checked ? checked.closest('.bundle-option')
@@ -381,7 +386,6 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
     if(card){
       card.style.setProperty('border-color','#A76FE0','important');
       card.style.setProperty('background','rgba(167,111,224,0.12)','important');
-      card.style.setProperty('border-width','2px','important');
     }
   }
   function bindNhb(){
