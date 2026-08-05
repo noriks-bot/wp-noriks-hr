@@ -345,8 +345,14 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   /* Ponude u stilu KidsNesta, u lila boji proizvoda:
      naslov lijevo, JEDNA cijena desno (nova + prekrizena ispod), bez chipa i bez "Ukupno". */
   #bundle-selector .gck-per-chip,
-  #bundle-selector .gck-discount-badge,
   #bundle-selector .gck-hl-break { display: none !important; }
+  /* ostaje samo oznaka popusta (−%) uz naslov ponude */
+  #bundle-selector .gck-discount-badge {
+      display: inline-flex !important; align-items: center; margin-left: 10px;
+      background: #e8f6ec !important; color: #1f7a3d !important; border: 1px solid #bfe6cb !important;
+      border-radius: 6px !important; padding: 4px 8px !important; font-size: 12px !important;
+      font-weight: 700 !important; line-height: 1 !important;
+  }
   #bundle-selector .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
 
   #bundle-selector .bundle-option {
@@ -379,13 +385,6 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
       background: #A76FE0 !important;
   }
   #bundle-selector .bundle-pairs { display: none !important; }   /* nema varijacija */
-
-  .single-product .single_add_to_cart_button,
-  .single-product button.single_add_to_cart_button {
-      background: #A76FE0 !important; border-color: #A76FE0 !important; color: #fff !important;
-      border-radius: 10px !important;
-  }
-  .single-product .single_add_to_cart_button:hover { background: #9459d4 !important; }
 
   @media (max-width: 600px) {
     #bundle-selector .bundle-option { min-height: 64px; padding: 13px 12px !important; margin: 0 0 8px !important; }
