@@ -301,19 +301,19 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-no  { background: #f2f2f2; color: #9a9a9a; }
 
   /* specifikacije — kartice na mekom prijelazu */
-  .nhb-spec-sec { background: linear-gradient(180deg,#f6f4fa 0%,#efeaf9 100%); }
+  .nhb-spec-sec { background: #fff; }
   .nhb-sub { font-size: 15.5px; color: #6b6b6b; max-width: 620px; margin: 0 auto 30px; }
   .nhb-spec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-  .nhb-spec-card { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 16px;
-                   padding: 20px 18px; box-shadow: 0 2px 10px rgba(28,22,48,.05); }
+  .nhb-spec-card { display: flex; gap: 12px; align-items: flex-start; background: #faf9fd; border: 1px solid #ece8f6;
+                   border-radius: 16px; padding: 20px 18px; }
   .nhb-spec-ico { font-size: 20px; line-height: 1.1; }
   .nhb-spec-label { font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; color: #8a86a0; margin: 0 0 4px; }
   .nhb-spec-val { font-size: 17px; font-weight: 800; color: #141414; margin: 0 0 2px; }
   .nhb-spec-note { font-size: 12.5px; color: #8a8a8a; margin: 0; }
 
   /* pakiranje — svijetla sekcija sa slikom u okviru */
-  .nhb-pack-sec { background: #fff; }
-  .nhb-pack-media { background: #f6f4fa; border-radius: 18px; padding: 22px; }
+  .nhb-pack-sec { background: #f6f4fa; }
+  .nhb-pack-media { background: #fff; border-radius: 18px; padding: 22px; }
   .nhb-pack-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 
   /* recenzije — izrazitija lila podlaga, da dvije bijele sekcije ne budu jedna do druge */
