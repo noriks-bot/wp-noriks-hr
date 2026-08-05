@@ -68,8 +68,10 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
           <article class="nhb-card">
             <?php $f = $st[2] . '.jpg'; if ( file_exists( $nb_path . $f ) ) : ?>
               <div class="nhb-card-media"><img src="<?php echo esc_url( $nb . $f ); ?>" alt="<?php echo esc_attr( $st[1] ); ?>" loading="lazy"></div>
+            <?php else : ?>
+              <div class="nhb-card-num"><?php echo esc_html( $st[0] ); ?></div>
             <?php endif; ?>
-            <p class="nhb-card-text"><strong><?php echo esc_html( $st[0] ); ?>.</strong> <?php echo esc_html( $st[1] ); ?></p>
+            <p class="nhb-card-text"><?php echo esc_html( $st[1] ); ?></p>
           </article>
         <?php endforeach; ?>
       </div>
@@ -280,6 +282,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
   .nhb-card { background: #fff; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
   .nhb-card-media img { width: 100%; height: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+  .nhb-card-num { width: 42px; height: 42px; border-radius: 50%; background: #A76FE0; color: #fff; font-weight: 800;
+                  font-size: 18px; display: flex; align-items: center; justify-content: center; margin: 18px 16px 10px; }
   .nhb-card-title { font-weight: 800; color: #141414; font-size: 14.5px; margin: 14px 16px 4px; }
   .nhb-card-text { font-size: 13.5px; line-height: 1.5; color: #4a4a4a; margin: 0 16px 14px; }
   .nhb-card-help { justify-content: center; padding: 22px 4px; }
@@ -398,6 +402,16 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   /* Nema "Tablica veličina" linka na uređaju (ni plugin ni globalni). */
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
+
+  /* Dugacak naziv proizvoda — manji font da ne dominira stranicom. */
+  .single-product .summary .product_title,
+  .single-product .entry-summary .product_title,
+  .single-product h1.product_title { font-size: 26px !important; line-height: 1.25 !important; }
+  @media (max-width: 600px) {
+    .single-product .summary .product_title,
+    .single-product .entry-summary .product_title,
+    .single-product h1.product_title { font-size: 20px !important; line-height: 1.3 !important; }
+  }
 
   /* Kratki opis: viseci uvod samo na ✓ retcima, odstavci poravnani. */
   .woocommerce-product-details__short-description { margin-bottom: 10px !important; }
