@@ -104,6 +104,10 @@
 
            Niste jedini u potrazi za učenjem koje djetetu bude igra.
 
+          <?php elseif ( noriks_is_type( 'norikshersbrush' ) ): ?>
+
+           Niste jedine u potrazi za oblikovanjem koje kosu ne uništava.
+
 
 
           <?php else: ?>
@@ -175,6 +179,10 @@
            <?php elseif ( noriks_is_type( 'noriks-cards' ) ): ?>
 
            Tisuće roditelja već koristi NORIKS Cards za učenje riječi bez ekrana – dijete vidi sliku, čuje riječ i ponovi je samo.
+
+           <?php elseif ( noriks_is_type( 'norikshersbrush' ) ): ?>
+
+           Tisuće žena već oblikuje kosu s NORIKSHERS Cool Curl Pencil – hladni protok zraka fiksira stil uz manje topline i manje oštećenja.
 
            <?php else: ?>
         
@@ -266,11 +274,13 @@
   $is_kneefix_page    = noriks_is_type( 'kneefix', $current_product_id );
   $is_controlpro_page = noriks_is_type( 'controlpro', $current_product_id );
   $is_noriks_cards_page  = noriks_is_type( 'noriks-cards', $current_product_id );
+  $is_brush_page      = noriks_is_type( 'norikshersbrush', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_noriks_cards_page ? 'NORIKS Cards uređaj s karticama'
+  $rv_fallback_title = $is_brush_page ? 'NORIKSHERS Cool Curl Pencil'
+                     : ( $is_noriks_cards_page ? 'NORIKS Cards uređaj s karticama'
                      : ( $is_controlpro_page ? 'NORIKS ControlPro trener dna zdjelice'
                      : ( $is_kneefix_page ? 'NORIKS KneeFix steznica za koljeno'
                      : ( $is_kidsnest_page ? 'NORIKS KidsNest jastuk'
@@ -282,10 +292,12 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_noriks_cards_page ) {
+  if ( $is_brush_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_norikshersbrush.php';
+  } elseif ( $is_noriks_cards_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_noriks_cards.php';
   } elseif ( $is_controlpro_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_controlpro.php';
@@ -680,7 +692,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -757,7 +769,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -796,7 +808,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -834,7 +846,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1161,8 +1173,9 @@ $is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest'
 $is_kneefix   = ( function_exists('noriks_is_type') && noriks_is_type('kneefix') );
 $is_controlpro = ( function_exists('noriks_is_type') && noriks_is_type('controlpro') );
 $is_noriks_cards  = ( function_exists('noriks_is_type') && noriks_is_type('noriks-cards') );
+$is_brush         = ( function_exists('noriks_is_type') && noriks_is_type('norikshersbrush') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -1482,9 +1495,44 @@ $noriks_cards_faq = array(
   ),
 );
 
+// NORIKSHERS Cool Curl Pencil — FAQ za "Informacije o Proizvodu".
+$brush_faq = array(
+  array(
+    'questioon' => 'Za koju je duljinu kose namijenjen?',
+    'answer'    => 'Razvijen je za kratku kosu — pixie, bob, šiške i rubne vlasi. Na dugoj kosi odlično radi za podizanje korijena i sitne detalje, ali za oblikovanje cijele duljine je zbog uske ploče sporiji.'
+  ),
+  array(
+    'questioon' => 'Zašto se pri hladnom zraku čuje zujanje?',
+    'answer'    => 'To je normalno — zvuk dolazi od ugrađenog motorčića ventilatora. Otvori neprestano puhaju hladan zrak koji fiksira oblik i sprječava pregrijavanje kose.'
+  ),
+  array(
+    'questioon' => 'Postane li uređaj prevruć za držanje?',
+    'answer'    => 'Vrh je toplinski izoliran, pa je pri normalnoj uporabi siguran. Na početku slobodno koristite rukavicu iz pakiranja dok se ne naviknete na rukovanje.'
+  ),
+  array(
+    'questioon' => 'Mogu li ga koristiti na mokroj kosi?',
+    'answer'    => 'Ne. Kosa mora biti potpuno suha — i zbog zdravlja kose i zbog toga da stil uopće drži.'
+  ),
+  array(
+    'questioon' => 'Koju temperaturu odabrati?',
+    'answer'    => 'Tanka i fina kosa 140–160 °C, normalna kosa 180 °C, gusta i gruba kosa 200–220 °C. Uvijek počnite nižom postavkom i podignite je samo ako je potrebno.'
+  ),
+  array(
+    'questioon' => 'Radi li u inozemstvu?',
+    'answer'    => 'Da, uređaj podržava 100–240 V, pa radi svugdje — potreban je eventualno samo adapter za utičnicu. Kompaktan je i lako stane u ručnu prtljagu.'
+  ),
+  array(
+    'questioon' => 'Isključuje li se sam?',
+    'answer'    => 'Da, automatski se isključuje nakon 60 minuta. Ima i sigurnosnu bravu koja sprječava slučajno uključivanje u torbici.'
+  ),
+);
+
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_brush && $is_info ) {
+    return $brush_faq;
+  }
   if ( $is_noriks_cards && $is_info ) {
     return $noriks_cards_faq;
   }

@@ -104,5 +104,10 @@ if ( noriks_is_type( 'noriks-cards' ) ) {
     include $noriks_pb_dir . 'why-noriks-cards.php';
 }
 
+// NORIKSHERS BRUSH (orto-norikshersbrush) — stiler za kosu
+if ( noriks_is_type( 'norikshersbrush' ) ) {
+    include $noriks_pb_dir . 'why-norikshersbrush.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
