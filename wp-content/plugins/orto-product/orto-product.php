@@ -1367,9 +1367,9 @@ function gck_render_bundle_selector() {
         var btn = document.createElement('button');
         btn.type = 'button'; btn.className = 'gck-dd-btn';
         btn.setAttribute('aria-haspopup','listbox'); btn.setAttribute('aria-expanded','false');
-        /* isti stil kao stari <select>: narancasti okvir 2px, radius 4px, 18px/600 */
+        /* isti stil kao stari <select>: narancasti okvir 1px, radius 4px, 18px/600 */
         css(btn, {'display':'flex','align-items':'center','gap':'8px','width':'100%','box-sizing':'border-box',
-                  'border':'2px solid ' + ORANGE,'border-radius':'4px','background':'#fff','cursor':'pointer',
+                  'border':'1px solid ' + ORANGE,'border-radius':'4px','background':'#fff','cursor':'pointer',
                   'padding':'4px 26px 4px 10px','font-size':'18px','font-weight':'600','color':'#333',
                   'text-align':'left','min-height':'38px','line-height':'1.3'});
         var sw = document.createElement('span');
