@@ -1149,8 +1149,8 @@ function gck_render_bundle_selector() {
           /* kartica + radio gumb lijevo (bez preklapanja s naslovom) */
           css(lab, {'display':'block','position':'relative','box-sizing':'border-box',
                     'border':'1px solid #e0e0e0','border-radius':'10px','background':'#fff',
-                    'padding':'14px 16px 14px 46px','margin':'0 0 12px','min-height':'0','cursor':'pointer'});
-          css(radio, {'position':'absolute','left':'16px','top':'16px','margin':'0','flex':'0 0 auto',
+                    'padding':'11px 16px 11px 46px','margin':'0 0 10px','min-height':'0','cursor':'pointer'});
+          css(radio, {'position':'absolute','left':'16px','top':'13px','margin':'0','flex':'0 0 auto',
                       'width':'18px','height':'18px','box-sizing':'border-box','border-color':PURPLE,
                       'padding':'0','line-height':'0','display':'grid','place-items':'center','place-content':'center'});
 
@@ -1183,7 +1183,8 @@ function gck_render_bundle_selector() {
             css(perO, {'display':'none'});
             css(perN, {'font-size':'13.5px','font-weight':'500','color':'#6d6d6d','background':'none','padding':'0','white-space':'nowrap'});
           }
-          var hb = lab.querySelector('.gck-hl-break'); if(hb) css(hb, {'display':'none'});
+          /* prazni <br> u kartici prave veliki razmak — sve ih maknemo */
+          lab.querySelectorAll('br').forEach(function(b){ css(b, {'display':'none'}); });
 
           /* ljubicaste kartuse gore desno */
           var badge = lab.querySelector('.gck-popular-badge');
@@ -1200,12 +1201,14 @@ function gck_render_bundle_selector() {
           /* red s nijansom: [slicica] [uski dropdown s tockom boje] */
           var pairs = lab.querySelector('.bundle-pairs');
           if(pairs){
-            css(pairs, {'border-top':'0','margin-top':'8px','padding-top':'0'});
+            /* blok nijanse poravnat lijevo s radio gumbom (kartica ima padding-left 46px) */
+            css(pairs, {'border-top':'0','margin-top':'6px','padding-top':'0','padding-bottom':'0',
+                        'margin-bottom':'0','margin-left':'-30px','width':'auto'});
             if(!pairs.querySelector('.hgm-collab')){
               var lbl = document.createElement('div');
               lbl.className = 'hgm-collab'; lbl.textContent = 'Nijansa';
               pairs.insertBefore(lbl, pairs.firstChild);
-              css(lbl, {'margin':'0 0 5px','font-size':'12.5px','font-weight':'700','color':'#6d6d6d'});
+              css(lbl, {'margin':'0 0 5px','font-size':'13px','font-weight':'400','color':'#1c1c1c'});
             }
             /* "Nudimo 30 dana..." — ne treba u kartici ponude */
             pairs.querySelectorAll('small').forEach(function(n){ css(n, {'display':'none'}); });
@@ -1214,6 +1217,7 @@ function gck_render_bundle_selector() {
             var sel = row.querySelector('.gck-size-select');
             if(!sel || row.querySelector('.hgm-thumb')) return;
             css(row, {'display':'flex','align-items':'center','justify-content':'flex-start','gap':'10px','width':'100%','margin':'0 0 6px'});
+            if(row === row.parentNode.parentNode.querySelector('.bundle-pair:last-child .bundle-attr-row')) css(row, {'margin':'0'});
 
             var img = document.createElement('img');
             img.className = 'hgm-thumb'; img.src = THUMB; img.alt = ''; img.loading = 'lazy';
@@ -1311,8 +1315,8 @@ function gck_render_bundle_selector() {
         function paint(){
           labs.forEach(function(l){
             var on = !!l.querySelector('input[name="bundle_option"]:checked');
-            css(l, on ? {'border':'2px solid ' + PURPLE, 'background':'#f7f3fc', 'padding':'13px 15px 13px 45px'}
-                      : {'border':'1px solid #e0e0e0', 'background':'#fff', 'padding':'14px 16px 14px 46px'});
+            css(l, on ? {'border':'2px solid ' + PURPLE, 'background':'#f7f3fc', 'padding':'10px 15px 10px 45px'}
+                      : {'border':'1px solid #e0e0e0', 'background':'#fff', 'padding':'11px 16px 11px 46px'});
           });
         }
         box.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paint); });
