@@ -1361,10 +1361,10 @@ function gck_render_bundle_selector() {
       function makeDD(opts){
         var wrap = document.createElement('span');
         wrap.className = 'gck-dd';
-        css(wrap, {'position':'relative','display':'inline-block',
-                   'flex': opts.grow ? '1 1 ' + opts.width : '0 0 ' + opts.width,
-                   'width':opts.width,'min-width': opts.grow ? '140px' : opts.width,
-                   'max-width':'100%','vertical-align':'middle'});
+        /* fiksne sirine — izbornik boje se NE rasteze preko cijele kartice.
+           Na uskim zaslonima red se prelomi (flex-wrap), pa nista ne ispada. */
+        css(wrap, {'position':'relative','display':'inline-block','flex':'0 0 auto',
+                   'width':opts.width,'max-width':'100%','vertical-align':'middle'});
 
         var btn = document.createElement('button');
         btn.type = 'button'; btn.className = 'gck-dd-btn';
@@ -1492,7 +1492,7 @@ function gck_render_bundle_selector() {
                             slusac na swatchu (postavi hidden input + .active). */
                          pick: function(){ sw.dispatchEvent(new MouseEvent('click', { bubbles: false })); } };
               });
-              var colorDD = makeDD({ items: colorItems, width: '196px', hasColor: true, grow: true });
+              var colorDD = makeDD({ items: colorItems, width: '176px', hasColor: true, grow: false });
               /* boja ide ODMAH IZA velicine */
               var sizeEl = row.querySelector('.gck-dd');
               if(sizeEl && sizeEl.nextSibling) row.insertBefore(colorDD, sizeEl.nextSibling);
