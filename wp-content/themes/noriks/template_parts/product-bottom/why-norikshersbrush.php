@@ -379,6 +379,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
     .nhb-h2 { font-size: 1.9rem; margin-bottom: 12px; }
     .nhb-panel { padding: 20px 14px; border-radius: 16px; margin-top: 20px; }
     .nhb-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .nhb-cta { display: block; width: max-content; max-width: 100%; margin: 10px auto 0; text-align: center; }
     .nhb-vid-grid { grid-template-columns: 1fr; gap: 14px; }
     .nhb-vid { max-width: 420px; margin: 0 auto; }
     .nhb-rev-grid { grid-template-columns: 1fr; gap: 18px; }
