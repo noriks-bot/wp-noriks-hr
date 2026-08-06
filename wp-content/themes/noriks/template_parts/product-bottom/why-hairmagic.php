@@ -4,7 +4,7 @@
  * Struktura preslikana s referentne stranice (rumicosmetiques HairMagic+):
  *   1. Trenutačno prekrivanje i rezultati     slika 02
  *   2. Zašto ga žene vole — 6 prednosti       kartice + slika 04
- *   3. Prije i poslije                        6 fotografija u mreži
+ *   3. HairMagic+ transformacije               6 kartic (slika + recenzija)
  *   4. Pronađite svoju nijansu                slika 03 + lista nijansi
  *   5. Kako nanijeti — 3 koraka               slika 14 + kartice
  *   6. Brojke                                 97 / 94 / 100 %
@@ -25,7 +25,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 ?>
 
 <!-- ============ 1) Trenutačno prekrivanje i rezultati ============ -->
-<section class="hgm-sec">
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_02_instant-prekrivanje-rezultati.webp','Prije i poslije — trenutačno prekrivanje'); ?></div>
     <div class="hgm-copy">
@@ -43,7 +43,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- ============ 2) Zašto ga žene vole ============ -->
-<section class="hgm-sec hgm-alt">
+<section class="hgm-sec">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-copy">
       <h2 class="hgm-h2">Zašto ga žene vole</h2>
@@ -70,24 +70,40 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- ============ 3) Prije i poslije ============ -->
-<section class="hgm-sec">
+<!-- ============ 3) HairMagic+ transformacije (kartice kao na originalu) ============ -->
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap">
-    <h2 class="hgm-h2 hgm-center">Prije i poslije</h2>
-    <p class="hgm-sub hgm-center">Fotografije stvarnih korisnica — bez retuširanja, ista rasvjeta.</p>
-    <div class="hgm-ba-grid">
+    <h2 class="hgm-h2 hgm-center">HairMagic+ transformacije</h2>
+    <div class="hgm-tr-grid">
       <?php foreach ( array(
-        'hm_05_prije-poslije-1','hm_06_prije-poslije-2','hm_07_prije-poslije-3',
-        'hm_08_prije-poslije-4','hm_10_prije-poslije-6','hm_11_prije-poslije-7',
-      ) as $f ) : ?>
-        <div class="hgm-ba"><?php echo $hm_img( $f . '.webp', 'Prije i poslije — HairMagic+' ); ?></div>
+        array( 'hm_05_prije-poslije-1', 'Moje tajno oružje između odlazaka frizeru',
+               'Prije sam svaka tri tjedna trčala frizeru zbog izrasta. S HairMagic+ bez problema izdržim šest tjedana — nanošenje traje minutu i nitko ne primijeti razliku, čak ni pod uredskim svjetlom.', 'Jasna B.' ),
+        array( 'hm_07_prije-poslije-3', 'Punija linija kose i samopouzdanje natrag',
+               'Prorijeđena linija kose mi je godinama smetala. Probala sam sprejeve koji su izgledali lažno i bili ljepljivi. Ovaj puder popuni rijetka mjesta tako prirodno da mi ni frizerka nije primijetila.', 'Lidija P.' ),
+        array( 'hm_10_prije-poslije-6', 'Konačno prekrivanje koje ne nadražuje',
+               'Moje osjetljivo vlasište reagiralo je na svaki korektor koji sam probala — do HairMagic+. Prekrivanje je besprijekorno, drži i nakon joge, a vlasište me ne svrbi.', 'Emilija R.' ),
+        array( 'hm_06_prije-poslije-2', 'Sijede nestanu u dvije minute',
+               'Ujutro nemam vremena za bojanje. Utapkam puder na razdjeljak i gotova sam prije kave. Sijede se jednostavno više ne vide.', 'Vesna M.' ),
+        array( 'hm_08_prije-poslije-4', 'Razdjeljak izgleda gušće',
+               'Najviše me smetao široki razdjeljak. Sada izgleda uže i punije, a kosa se i dalje normalno pomiče — nema tvrdog ruba ni ljepljivosti.', 'Ivana K.' ),
+        array( 'hm_11_prije-poslije-7', 'Nitko ne primijeti da nešto koristim',
+               'Koristim ga i na obrvama. Kolegice su primijetile samo da izgledam odmornije — nitko nije pogodio zbog čega.', 'Maja T.' ),
+      ) as $tr ) : ?>
+        <article class="hgm-tr">
+          <div class="hgm-tr-media"><?php echo $hm_img( $tr[0] . '.webp', $tr[1] ); ?></div>
+          <div class="hgm-tr-body">
+            <p class="hgm-tr-title"><?php echo esc_html( $tr[1] ); ?></p>
+            <p class="hgm-tr-text">„<?php echo esc_html( $tr[2] ); ?>"</p>
+            <p class="hgm-tr-foot"><span class="hgm-stars">★★★★★</span> <?php echo esc_html( $tr[3] ); ?></p>
+          </div>
+        </article>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
 <!-- ============ 4) Pronađite svoju nijansu ============ -->
-<section class="hgm-sec hgm-alt">
+<section class="hgm-sec">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_03_pronadite-nijansu.webp','Pronađite svoju nijansu'); ?></div>
     <div class="hgm-copy">
@@ -112,7 +128,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- ============ 5) Kako nanijeti ============ -->
-<section class="hgm-sec">
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-copy">
       <h2 class="hgm-h2">Od prorijeđenog do savršenog — za manje od 2 minute</h2>
@@ -128,7 +144,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- ============ 6) Brojke ============ -->
-<section class="hgm-sec hgm-alt">
+<section class="hgm-sec">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_12_statistika-97-94-100.webp','Rezultati istraživanja'); ?></div>
     <div class="hgm-copy">
@@ -144,7 +160,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- ============ 7) Recenzija + obrve ============ -->
-<section class="hgm-sec">
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_15_recenzija-sarah.webp','Recenzija korisnice'); ?></div>
     <div class="hgm-media"><?php echo $hm_img('hm_13_znacajke-obrve.webp','Djeluje i na obrvama'); ?></div>
@@ -152,7 +168,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- ============ 8) Jamstvo ============ -->
-<section class="hgm-sec hgm-alt">
+<section class="hgm-sec">
   <div class="hgm-wrap-narrow hgm-center">
     <h2 class="hgm-h2 hgm-center">100 % jamstvo povrata novca</h2>
     <p>Isprobajte HairMagic+ bez rizika. Ako niste zadovoljni, javite nam se u roku od 30 dana i vraćamo vam novac.</p>
@@ -191,6 +207,16 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .hgm-ba-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 22px; }
   .hgm-ba img { border-radius: 12px; }
 
+  /* transformacije — kartica: slika, naslov, citat, zvjezdice + ime */
+  .hgm-tr-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 26px; }
+  .hgm-tr { background: #fff; border: 1px solid #ece6f3; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+  .hgm-tr-media img { width: 100%; height: auto; display: block; border-radius: 0; }
+  .hgm-tr-body { padding: 18px 20px 20px; text-align: center; }
+  .hgm-tr-title { font-size: 17px; font-weight: 800; color: #2a1b34; margin: 0 0 10px; line-height: 1.3; }
+  .hgm-tr-text { font-size: 14.5px; line-height: 1.6; color: #4a4a4a; margin: 0 0 14px; }
+  .hgm-tr-foot { font-size: 14px; font-weight: 700; color: #2a1b34; margin: 0; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .hgm-stars { color: #f5b301; letter-spacing: 1px; }
+
   .hgm-shades { list-style: none; margin: 0; padding: 0; }
   .hgm-shades li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid #ece6f3; font-size: 15px; color: #3a3a3a; }
   .hgm-swatch { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.12); flex: 0 0 22px; }
@@ -215,7 +241,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
     .hgm-row2 .hgm-media { order: -1; }
     .hgm-h2 { font-size: 1.9rem; margin-bottom: 12px; }
     .hgm-benefits { grid-template-columns: 1fr; gap: 10px; }
-    .hgm-ba-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hgm-tr-grid { grid-template-columns: 1fr; gap: 14px; }
     .hgm-cta { display: block; width: max-content; margin: 10px auto 0; }
   }
 
