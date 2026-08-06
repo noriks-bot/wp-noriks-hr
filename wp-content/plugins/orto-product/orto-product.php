@@ -1208,9 +1208,12 @@ function gck_render_bundle_selector() {
             lab.insertBefore(badge, lab.firstChild);
           }
           if(badge && badgeTxt) badge.textContent = badgeTxt;
-          css(badge, {'position':'absolute','top':'-11px','right':'12px','left':'auto','z-index':'2',
-                      'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700',
-                      'padding':'4px 10px','border-radius':'6px','white-space':'nowrap','line-height':'1.4','transform':'none'});
+          /* osnovni CSS ima .gck-popular-badge { display:none !important } — zato display MORA biti ovdje */
+          css(badge, {'display': badgeTxt ? 'inline-block' : 'none',
+                      'position':'absolute','top':'-11px','right':'12px','left':'auto','bottom':'auto','z-index':'3',
+                      'background':PURPLE,'color':'#fff','font-size':'11.5px','font-weight':'700',
+                      'padding':'4px 10px','border-radius':'6px','white-space':'nowrap','line-height':'1.4',
+                      'transform':'none','box-shadow':'none','border':'0'});
 
           /* red s nijansom: [slicica] [uski dropdown s tockom boje] */
           var pairs = lab.querySelector('.bundle-pairs');
