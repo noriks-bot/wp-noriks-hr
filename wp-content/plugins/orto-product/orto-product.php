@@ -1364,12 +1364,14 @@ function gck_render_bundle_selector() {
         var btn = document.createElement('button');
         btn.type = 'button'; btn.className = 'gck-dd-btn';
         btn.setAttribute('aria-haspopup','listbox'); btn.setAttribute('aria-expanded','false');
+        /* isti stil kao stari <select>: narancasti okvir 2px, radius 4px, 18px/600 */
         css(btn, {'display':'flex','align-items':'center','gap':'8px','width':'100%','box-sizing':'border-box',
-                  'border':'1px solid #d8d8d8','border-radius':'8px','background':'#fff','cursor':'pointer',
-                  'padding':'8px 26px 8px 10px','font-size':'14px','color':'#1c1c1c','text-align':'left','min-height':'40px'});
+                  'border':'2px solid ' + ORANGE,'border-radius':'4px','background':'#fff','cursor':'pointer',
+                  'padding':'4px 26px 4px 10px','font-size':'18px','font-weight':'600','color':'#333',
+                  'text-align':'left','min-height':'38px','line-height':'1.3'});
         var sw = document.createElement('span');
-        css(sw, {'flex':'0 0 18px','width':'18px','height':'18px','border-radius':'4px',
-                 'border':'1px solid rgba(0,0,0,.15)','display':opts.hasColor ? 'block' : 'none'});
+        css(sw, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'4px',
+                 'border':'1px solid rgba(0,0,0,.2)','display':opts.hasColor ? 'block' : 'none'});
         var lab = document.createElement('span');
         css(lab, {'flex':'1 1 auto','overflow':'hidden','text-overflow':'ellipsis','white-space':'nowrap','line-height':'1.2'});
         btn.appendChild(sw); btn.appendChild(lab);
@@ -1377,7 +1379,7 @@ function gck_render_bundle_selector() {
         var car = document.createElement('span');
         css(car, {'position':'absolute','right':'10px','top':'50%','transform':'translateY(-50%)','pointer-events':'none',
                   'width':'0','height':'0','border-left':'5px solid transparent','border-right':'5px solid transparent',
-                  'border-top':'6px solid #5a5a5a'});
+                  'border-top':'6px solid #444'});
 
         var list = document.createElement('div');
         list.className = 'gck-dd-list'; list.setAttribute('role','listbox');
@@ -1387,7 +1389,7 @@ function gck_render_bundle_selector() {
 
         wrap.appendChild(btn); wrap.appendChild(car); wrap.appendChild(list);
 
-        function close(){ css(list, {'display':'none'}); btn.setAttribute('aria-expanded','false'); css(btn, {'border-color':'#d8d8d8'}); }
+        function close(){ css(list, {'display':'none'}); btn.setAttribute('aria-expanded','false'); css(btn, {'border-color':ORANGE}); }
         function open(){
           document.querySelectorAll('#bundle-selector .gck-dd-list').forEach(function(o){ o.style.setProperty('display','none','important'); });
           css(list, {'display':'block'}); btn.setAttribute('aria-expanded','true'); css(btn, {'border-color':ORANGE});
@@ -1400,8 +1402,8 @@ function gck_render_bundle_selector() {
         opts.items.forEach(function(o){
           var it = document.createElement('div');
           it.setAttribute('role','option'); it.dataset.val = o.value;
-          css(it, {'display':'flex','align-items':'center','gap':'10px','padding':'8px 12px 8px 10px','border-radius':'6px',
-                   'cursor':'pointer','font-size':'14px','color':'#1c1c1c','line-height':'1.25','white-space':'nowrap'});
+          css(it, {'display':'flex','align-items':'center','gap':'10px','padding':'8px 12px 8px 10px','border-radius':'4px',
+                   'cursor':'pointer','font-size':'16px','font-weight':'600','color':'#333','line-height':'1.25','white-space':'nowrap'});
           if(o.color){
             var c = document.createElement('span');
             css(c, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'4px','border':'1px solid rgba(0,0,0,.15)'});
@@ -1448,7 +1450,7 @@ function gck_render_bundle_selector() {
               return { value: o.value, label: o.text.trim(), color: null,
                        pick: function(){ sel.value = o.value; sel.dispatchEvent(new Event('change', { bubbles: true })); } };
             });
-            var sizeDD = makeDD({ items: sizeItems, width: '104px', hasColor: false });
+            var sizeDD = makeDD({ items: sizeItems, width: '96px', hasColor: false });
             row.insertBefore(sizeDD, row.firstChild);
             css(sel, {'display':'none'});
             var cur = sizeItems.filter(function(i){ return i.value === sel.value; })[0] || sizeItems[0];
@@ -1470,7 +1472,7 @@ function gck_render_bundle_selector() {
                 return { value: sw.dataset.value || '', label: sw.dataset.value || sw.title || '', color: bg,
                          pick: function(){ sw.click(); } };
               });
-              var colorDD = makeDD({ items: colorItems, width: '188px', hasColor: true });
+              var colorDD = makeDD({ items: colorItems, width: '196px', hasColor: true });
               /* boja ide ODMAH IZA velicine */
               var sizeEl = row.querySelector('.gck-dd');
               if(sizeEl && sizeEl.nextSibling) row.insertBefore(colorDD, sizeEl.nextSibling);
