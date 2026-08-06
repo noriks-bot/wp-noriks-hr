@@ -60,6 +60,8 @@ function noriks_product_type_map() : array {
         'noriks-cards'            => array( 'orto-cards', 'noriks-cards', 'orto-noriks-cards' ),
         // NORIKSHERS Cool Curl Pencil — stiler za ravnanje i kovrcanje.
         'norikshersbrush'         => array( 'orto-norikshersbrush', 'norikshersbrush' ),
+        // NORIKS HERS HairMagic+ — puder za liniju kose.
+        'hairmagic'               => array( 'orto-norikshershairmagic', 'hairmagic' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),

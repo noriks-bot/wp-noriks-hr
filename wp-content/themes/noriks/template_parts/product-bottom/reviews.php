@@ -108,6 +108,10 @@
 
            Niste jedine u potrazi za oblikovanjem koje kosu ne uništava.
 
+          <?php elseif ( noriks_is_type( 'hairmagic' ) ): ?>
+
+           Niste jedine u potrazi za punijom linijom kose bez odlaska u salon.
+
 
 
           <?php else: ?>
@@ -183,6 +187,10 @@
            <?php elseif ( noriks_is_type( 'norikshersbrush' ) ): ?>
 
            Tisuće žena već oblikuje kosu s NORIKSHERS Cool Curl Pencil – hladni protok zraka fiksira stil uz manje topline i manje oštećenja.
+
+           <?php elseif ( noriks_is_type( 'hairmagic' ) ): ?>
+
+           Tisuće žena već koristi NORIKS HERS HairMagic+ za prekrivanje sijedih i izrasta – rezultat u manje od dvije minute, bez odlaska u salon.
 
            <?php else: ?>
         
@@ -275,11 +283,13 @@
   $is_controlpro_page = noriks_is_type( 'controlpro', $current_product_id );
   $is_noriks_cards_page  = noriks_is_type( 'noriks-cards', $current_product_id );
   $is_brush_page      = noriks_is_type( 'norikshersbrush', $current_product_id );
+  $is_hairmagic_page  = noriks_is_type( 'hairmagic', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_brush_page ? 'NORIKSHERS Cool Curl Pencil'
+  $rv_fallback_title = $is_hairmagic_page ? 'NORIKS HERS HairMagic+ puder za liniju kose'
+                     : ( $is_brush_page ? 'NORIKSHERS Cool Curl Pencil'
                      : ( $is_noriks_cards_page ? 'NORIKS Cards uređaj s karticama'
                      : ( $is_controlpro_page ? 'NORIKS ControlPro trener dna zdjelice'
                      : ( $is_kneefix_page ? 'NORIKS KneeFix steznica za koljeno'
@@ -292,10 +302,12 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_brush_page ) {
+  if ( $is_hairmagic_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_hairmagic.php';
+  } elseif ( $is_brush_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_norikshersbrush.php';
   } elseif ( $is_noriks_cards_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_noriks_cards.php';
@@ -692,7 +704,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -769,7 +781,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -808,7 +820,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -846,7 +858,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1174,8 +1186,9 @@ $is_kneefix   = ( function_exists('noriks_is_type') && noriks_is_type('kneefix')
 $is_controlpro = ( function_exists('noriks_is_type') && noriks_is_type('controlpro') );
 $is_noriks_cards  = ( function_exists('noriks_is_type') && noriks_is_type('noriks-cards') );
 $is_brush         = ( function_exists('noriks_is_type') && noriks_is_type('norikshersbrush') );
+$is_hairmagic     = ( function_exists('noriks_is_type') && noriks_is_type('hairmagic') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -1527,9 +1540,44 @@ $brush_faq = array(
   ),
 );
 
+// NORIKS HERS HairMagic+ — FAQ za "Informacije o Proizvodu" (po originalu).
+$hairmagic_faq = array(
+  array(
+    'questioon' => 'Kako se nanosi?',
+    'answer'    => 'Na čistu i suhu kosu. Kistom iz pakiranja utapkajte puder na liniju kose, razdjeljak ili prorijeđena mjesta i lagano rasporedite. Cijeli postupak traje manje od dvije minute.'
+  ),
+  array(
+    'questioon' => 'Kako odabrati pravu nijansu?',
+    'answer'    => 'Odaberite nijansu najbližu vašoj boji kose. Ako ste između dvije, uzmite <strong>svjetliju</strong> — puder je nadogradiv, pa tamniji ton uvijek možete dodati u još jednom sloju.'
+  ),
+  array(
+    'questioon' => 'Koliko traje jedno pakiranje?',
+    'answer'    => 'Uz svakodnevnu upotrebu obično 2 do 4 mjeseca, ovisno o veličini površine koju prekrivate.'
+  ),
+  array(
+    'questioon' => 'Drži li po kiši i znoju?',
+    'answer'    => 'Da, formula je otporna na vodu i prijenos — ne razmazuje se i ne prlja ovratnik ni jastučnicu. Skida se običnim pranjem kose šamponom.'
+  ),
+  array(
+    'questioon' => 'Je li prikladan za osjetljivo vlasište?',
+    'answer'    => 'Jest. Formula je obogaćena arganovim uljem, panthenolom i vitaminom E te je namijenjena i osjetljivom vlasištu. Ne izaziva svrbež ni osjećaj zatezanja.'
+  ),
+  array(
+    'questioon' => 'Mogu li ga koristiti na obrvama?',
+    'answer'    => 'Da. Malom količinom popunite praznine u obrvama — rezultat je prirodan, bez oštrih linija kao kod olovke.'
+  ),
+  array(
+    'questioon' => 'Vidi li se da je nešto naneseno?',
+    'answer'    => 'Ne. Prilagodljivi pigmenti stapaju se s vašom bojom kose, tekstura je lagana i ne stvara naslage. Kosa se i dalje normalno pomiče i češlja.'
+  ),
+);
+
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_hairmagic, $hairmagic_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_hairmagic && $is_info ) {
+    return $hairmagic_faq;
+  }
   if ( $is_brush && $is_info ) {
     return $brush_faq;
   }

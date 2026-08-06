@@ -109,5 +109,10 @@ if ( noriks_is_type( 'norikshersbrush' ) ) {
     include $noriks_pb_dir . 'why-norikshersbrush.php';
 }
 
+// HAIRMAGIC (orto-norikshershairmagic) — puder za liniju kose
+if ( noriks_is_type( 'hairmagic' ) ) {
+    include $noriks_pb_dir . 'why-hairmagic.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
