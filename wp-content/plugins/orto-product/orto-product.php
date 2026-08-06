@@ -1113,9 +1113,11 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option.active { border: 2px solid #6b3fa0 !important; background: #f7f3fc !important; padding: 13px 15px 13px 43px; }
       /* radio gumb lijevo, kao na originalu */
       #bundle-selector .bundle-option > input[type="radio"] {
-          position: absolute !important; left: 15px; top: 18px; margin: 0 !important;
-          width: 18px; height: 18px; accent-color: #6b3fa0;
+          position: absolute !important; left: 15px; top: 17px; margin: 0 !important;
+          width: 18px !important; height: 18px !important;
+          border-color: #6b3fa0 !important; vertical-align: top !important;
       }
+      #bundle-selector .bundle-option > input[type="radio"]::before { background: #6b3fa0 !important; inset: 3px; }
       #bundle-selector .hgm-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
       #bundle-selector .hgm-l { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
       #bundle-selector .hgm-r { text-align: right; white-space: nowrap; }
