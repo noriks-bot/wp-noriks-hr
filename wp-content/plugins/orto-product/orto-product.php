@@ -1176,12 +1176,12 @@ function gck_render_bundle_selector() {
                       'text-decoration':'line-through','margin':'2px 0 0','line-height':'1.2'});
           css(tline, {'display':'none'});
 
-          /* cijena po komadu ispod naziva */
+          /* cijena po komadu — u istom redu, odmah iza SAVE cipa */
           if(per){
-            head.parentNode.insertBefore(per, head.nextSibling);
-            css(per, {'display':'block','margin':'3px 0 0','padding':'0','background':'none','border':'0'});
+            L.appendChild(per);
+            css(per, {'display':'inline-flex','align-items':'center','margin':'0','padding':'0','background':'none','border':'0','line-height':'1.25'});
             css(perO, {'display':'none'});
-            css(perN, {'font-size':'13.5px','font-weight':'500','color':'#6d6d6d','background':'none','padding':'0'});
+            css(perN, {'font-size':'13.5px','font-weight':'500','color':'#6d6d6d','background':'none','padding':'0','white-space':'nowrap'});
           }
           var hb = lab.querySelector('.gck-hl-break'); if(hb) css(hb, {'display':'none'});
 
