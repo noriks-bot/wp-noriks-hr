@@ -311,6 +311,14 @@ function gck_register_orto_countdown_fields() {
                 'ui'           => 1,
             ),
             array(
+                'key'          => 'field_orto_alt_dropdowns',
+                'label'        => 'Alternativni izbornici (Veličina + Boja kao dropdown)',
+                'name'         => 'orto_alt_dropdowns',
+                'type'         => 'true_false',
+                'instructions' => 'Umjesto trake krugova s bojama prikazuje dva prilagođena izbornika: prvo VELIČINA, zatim BOJA (s uzorkom boje uz svaki naziv). Vrijedi samo za ovaj proizvod.',
+                'ui'           => 1,
+            ),
+            array(
                 'key'          => 'field_orto_show_price_highlights',
                 'label'        => 'Prikaži isticanje cijene (cijena/kom + popust)',
                 'name'         => 'orto_show_price_highlights',
@@ -426,6 +434,10 @@ function gck_render_bundle_selector() {
     $precheck_second       = (bool) get_field( 'orto_precheck_second', $product_id );
     $show_gratis           = (bool) get_field( 'orto_show_gratis_labels', $product_id );
     $show_price_highlights = (bool) get_field( 'orto_show_price_highlights', $product_id );
+    // Alternativni izbornici (Velicina + Boja kao dropdown) — ukljucuje se po proizvodu.
+    $gck_alt_dropdowns     = function_exists( 'get_field' )
+        ? (bool) get_field( 'orto_alt_dropdowns', $product_id )
+        : (bool) get_post_meta( $product_id, 'orto_alt_dropdowns', true );
 
     // Garment type for gratis labels: "bokserica" (boxers), "carapa"
     // (compression socks) vs default "majica" (t-shirt). Detect via product
@@ -1328,10 +1340,11 @@ function gck_render_bundle_selector() {
     })();
     </script>
     <?php endif; ?>
-    <?php // Majice + bokserice: umjesto trake swatcheva -> DVA prilagodena dropdowna
+    <?php // Alternativni izbornici: umjesto trake swatcheva -> DVA prilagodena dropdowna
           // (prvo Velicina, zatim Boja s uzorkom boje), isti stil kao na HairMagic+.
-          // Ostali proizvodi (KOMPSFIT, LEAKBOX, carape, starter...) ostaju nepromijenjeni.
-    if ( has_term( array( 'orto-majice', 'majice', 'orto-bokserice', 'bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $product_id ) ) : ?>
+          // Ukljucuje se PO PROIZVODU preko ACF prekidaca "Alternativni izbornici"
+          // (Orto Bundle – countdown), pa svi ostali proizvodi ostaju nepromijenjeni.
+    if ( $gck_alt_dropdowns ) : ?>
     <style>
       #bundle-selector .gck-dd-list::-webkit-scrollbar { width: 8px; }
       #bundle-selector .gck-dd-list::-webkit-scrollbar-thumb { background: #d8d8d8; border-radius: 8px; }
