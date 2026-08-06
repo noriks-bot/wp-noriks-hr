@@ -1186,14 +1186,16 @@ function gck_render_bundle_selector() {
           /* prazni <br> u kartici prave veliki razmak — sve ih maknemo */
           lab.querySelectorAll('br').forEach(function(b){ css(b, {'display':'none'}); });
 
-          /* ljubicaste kartuse gore desno */
+          /* ljubicaste kartuse gore desno: 2. ponuda "Najpopularnije", 3. "Najpovoljniji izbor" */
           var badge = lab.querySelector('.gck-popular-badge');
-          if(!badge && i === labs.length - 1 && labs.length > 2){
+          var badgeTxt = ( i === 1 ) ? 'Najpopularnije'
+                       : ( i === labs.length - 1 && labs.length > 2 ) ? 'Najpovoljniji izbor' : '';
+          if(!badge && badgeTxt){
             badge = document.createElement('div');
             badge.className = 'gck-popular-badge';
-            badge.textContent = 'Najbolja vrijednost';
             lab.insertBefore(badge, lab.firstChild);
           }
+          if(badge && badgeTxt) badge.textContent = badgeTxt;
           css(badge, {'position':'absolute','top':'-11px','right':'12px','left':'auto','z-index':'2',
                       'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700',
                       'padding':'4px 10px','border-radius':'6px','white-space':'nowrap','line-height':'1.4','transform':'none'});
