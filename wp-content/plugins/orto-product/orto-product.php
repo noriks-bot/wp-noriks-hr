@@ -1326,6 +1326,155 @@ function gck_render_bundle_selector() {
     })();
     </script>
     <?php endif; ?>
+    <?php // Majice + bokserice: umjesto trake swatcheva -> DVA prilagodena dropdowna
+          // (prvo Velicina, zatim Boja s uzorkom boje), isti stil kao na HairMagic+.
+          // Ostali proizvodi (KOMPSFIT, LEAKBOX, carape, starter...) ostaju nepromijenjeni.
+    if ( has_term( array( 'orto-majice', 'majice', 'orto-bokserice', 'bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      #bundle-selector .gck-dd-list::-webkit-scrollbar { width: 8px; }
+      #bundle-selector .gck-dd-list::-webkit-scrollbar-thumb { background: #d8d8d8; border-radius: 8px; }
+    </style>
+    <script>
+    (function(){
+      var ORANGE = '#ff6d2e';
+      function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
+
+      /* Jedan prilagodeni dropdown. items = [{value, label, color|null, pick()}] */
+      function makeDD(opts){
+        var wrap = document.createElement('span');
+        wrap.className = 'gck-dd';
+        css(wrap, {'position':'relative','display':'inline-block','flex':'0 0 auto',
+                   'width':opts.width,'max-width':'100%','vertical-align':'middle'});
+
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'gck-dd-btn';
+        btn.setAttribute('aria-haspopup','listbox'); btn.setAttribute('aria-expanded','false');
+        css(btn, {'display':'flex','align-items':'center','gap':'8px','width':'100%','box-sizing':'border-box',
+                  'border':'1px solid #d8d8d8','border-radius':'8px','background':'#fff','cursor':'pointer',
+                  'padding':'8px 26px 8px 10px','font-size':'14px','color':'#1c1c1c','text-align':'left','min-height':'40px'});
+        var sw = document.createElement('span');
+        css(sw, {'flex':'0 0 18px','width':'18px','height':'18px','border-radius':'4px',
+                 'border':'1px solid rgba(0,0,0,.15)','display':opts.hasColor ? 'block' : 'none'});
+        var lab = document.createElement('span');
+        css(lab, {'flex':'1 1 auto','overflow':'hidden','text-overflow':'ellipsis','white-space':'nowrap','line-height':'1.2'});
+        btn.appendChild(sw); btn.appendChild(lab);
+
+        var car = document.createElement('span');
+        css(car, {'position':'absolute','right':'10px','top':'50%','transform':'translateY(-50%)','pointer-events':'none',
+                  'width':'0','height':'0','border-left':'5px solid transparent','border-right':'5px solid transparent',
+                  'border-top':'6px solid #5a5a5a'});
+
+        var list = document.createElement('div');
+        list.className = 'gck-dd-list'; list.setAttribute('role','listbox');
+        css(list, {'display':'none','position':'absolute','left':'0','top':'calc(100% + 4px)','z-index':'60',
+                   'width':'max-content','min-width':'100%','max-height':'268px','overflow-y':'auto','background':'#fff',
+                   'border':'1px solid #e0e0e0','border-radius':'8px','box-shadow':'0 10px 26px rgba(0,0,0,.16)','padding':'4px'});
+
+        wrap.appendChild(btn); wrap.appendChild(car); wrap.appendChild(list);
+
+        function close(){ css(list, {'display':'none'}); btn.setAttribute('aria-expanded','false'); css(btn, {'border-color':'#d8d8d8'}); }
+        function open(){
+          document.querySelectorAll('#bundle-selector .gck-dd-list').forEach(function(o){ o.style.setProperty('display','none','important'); });
+          css(list, {'display':'block'}); btn.setAttribute('aria-expanded','true'); css(btn, {'border-color':ORANGE});
+        }
+        btn.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); (list.style.display === 'block') ? close() : open(); });
+        document.addEventListener('click', function(e){ if(!wrap.contains(e.target)) close(); });
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+
+        var items = [];
+        opts.items.forEach(function(o){
+          var it = document.createElement('div');
+          it.setAttribute('role','option'); it.dataset.val = o.value;
+          css(it, {'display':'flex','align-items':'center','gap':'10px','padding':'8px 12px 8px 10px','border-radius':'6px',
+                   'cursor':'pointer','font-size':'14px','color':'#1c1c1c','line-height':'1.25','white-space':'nowrap'});
+          if(o.color){
+            var c = document.createElement('span');
+            css(c, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'4px','border':'1px solid rgba(0,0,0,.15)'});
+            c.style.setProperty('background', o.color, 'important');
+            it.appendChild(c);
+          }
+          var tx = document.createElement('span'); tx.textContent = o.label; it.appendChild(tx);
+          it.addEventListener('mouseenter', function(){ if(it.dataset.val !== wrap.dataset.val) css(it, {'background':'#f6f6f6'}); });
+          it.addEventListener('mouseleave', function(){ if(it.dataset.val !== wrap.dataset.val) css(it, {'background':'transparent'}); });
+          it.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); o.pick(); setCurrent(o); close(); });
+          list.appendChild(it); items.push({ o: o, el: it });
+        });
+
+        function setCurrent(o){
+          wrap.dataset.val = o.value;
+          lab.textContent = o.label;
+          if(o.color) sw.style.setProperty('background', o.color, 'important');
+          items.forEach(function(x){
+            var on = x.o.value === o.value;
+            x.el.setAttribute('aria-selected', on ? 'true' : 'false');
+            css(x.el, {'background': on ? '#fff1e9' : 'transparent', 'font-weight': on ? '700' : '500'});
+          });
+        }
+        wrap.setCurrent = setCurrent;
+        return wrap;
+      }
+
+      function build(){
+        var box = document.getElementById('bundle-selector');
+        if(!box || box.dataset.gckDdDone) return;
+        box.dataset.gckDdDone = '1';
+
+        box.querySelectorAll('.bundle-attr-row').forEach(function(row){
+          if(row.querySelector('.gck-dd')) return;
+          var sel   = row.querySelector('.gck-size-select');
+          var swGrp = row.querySelector('.color-swatches');
+          if(!sel && !swGrp) return;
+
+          css(row, {'display':'flex','align-items':'center','gap':'8px','flex-wrap':'wrap','width':'100%'});
+
+          /* 1) VELICINA */
+          if(sel){
+            var sizeItems = Array.prototype.map.call(sel.options, function(o){
+              return { value: o.value, label: o.text.trim(), color: null,
+                       pick: function(){ sel.value = o.value; sel.dispatchEvent(new Event('change', { bubbles: true })); } };
+            });
+            var sizeDD = makeDD({ items: sizeItems, width: '104px', hasColor: false });
+            row.insertBefore(sizeDD, row.firstChild);
+            css(sel, {'display':'none'});
+            var cur = sizeItems.filter(function(i){ return i.value === sel.value; })[0] || sizeItems[0];
+            if(cur) sizeDD.setCurrent(cur);
+            sel.addEventListener('change', function(){
+              var c = sizeItems.filter(function(i){ return i.value === sel.value; })[0];
+              if(c) sizeDD.setCurrent(c);
+            });
+          }
+
+          /* 2) BOJA — uzorci se citaju iz postojecih .swatch-circle elemenata */
+          if(swGrp){
+            var swatches = Array.prototype.slice.call(swGrp.querySelectorAll('.swatch'));
+            if(swatches.length){
+              var colorItems = swatches.map(function(sw){
+                var circle = sw.querySelector('.swatch-circle');
+                var bg = circle ? getComputedStyle(circle).backgroundColor : '';
+                if(!bg || bg === 'rgba(0, 0, 0, 0)') bg = '#cccccc';
+                return { value: sw.dataset.value || '', label: sw.dataset.value || sw.title || '', color: bg,
+                         pick: function(){ sw.click(); } };
+              });
+              var colorDD = makeDD({ items: colorItems, width: '188px', hasColor: true });
+              /* boja ide ODMAH IZA velicine */
+              var sizeEl = row.querySelector('.gck-dd');
+              if(sizeEl && sizeEl.nextSibling) row.insertBefore(colorDD, sizeEl.nextSibling);
+              else if(sizeEl) row.appendChild(colorDD);
+              else row.insertBefore(colorDD, row.firstChild);
+              css(swGrp, {'display':'none'});
+              var active = swGrp.querySelector('.swatch.active') || swatches[0];
+              var cc = colorItems.filter(function(i){ return i.value === (active.dataset.value || ''); })[0] || colorItems[0];
+              if(cc){ cc.pick(); colorDD.setCurrent(cc); }
+            }
+          }
+        });
+      }
+      /* radi tek kad je osnovni skript vec postavio pocetne swatcheve */
+      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', function(){ setTimeout(build, 0); }); }
+      else { setTimeout(build, 0); }
+    })();
+    </script>
+    <?php endif; ?>
     <?php if ( $gck_side_select ) : ?>
     <style>
       /* KneeFix: Veličina + Stranica jedan uz drugi u istom redu, s brojem komada. */
