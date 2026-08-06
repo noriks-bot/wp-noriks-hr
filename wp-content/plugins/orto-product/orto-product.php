@@ -1161,7 +1161,7 @@ function gck_render_bundle_selector() {
           /* kartica + radio gumb lijevo (bez preklapanja s naslovom) */
           css(lab, {'display':'block','position':'relative','box-sizing':'border-box',
                     'border':'1px solid #e0e0e0','border-radius':'10px','background':'#fff',
-                    'padding':'11px 16px 11px 46px','margin':'0 0 10px','min-height':'0','cursor':'pointer'});
+                    'padding':'11px 16px 11px 46px','margin':'0 0 20px','min-height':'0','cursor':'pointer','overflow':'visible'});
           css(radio, {'position':'absolute','left':'16px','top':'13px','margin':'0','flex':'0 0 auto',
                       'width':'18px','height':'18px','box-sizing':'border-box','border-color':PURPLE,
                       'padding':'0','line-height':'0','display':'grid','place-items':'center','place-content':'center'});
@@ -1210,10 +1210,10 @@ function gck_render_bundle_selector() {
           if(badge && badgeTxt) badge.textContent = badgeTxt;
           /* osnovni CSS ima .gck-popular-badge { display:none !important } — zato display MORA biti ovdje */
           css(badge, {'display': badgeTxt ? 'inline-block' : 'none',
-                      'position':'absolute','top':'-11px','right':'12px','left':'auto','bottom':'auto','z-index':'3',
-                      'background':PURPLE,'color':'#fff','font-size':'11.5px','font-weight':'700',
-                      'padding':'4px 10px','border-radius':'6px','white-space':'nowrap','line-height':'1.4',
-                      'transform':'none','box-shadow':'none','border':'0'});
+                      'position':'absolute','top':'-10px','right':'10px','left':'auto','bottom':'auto','z-index':'3',
+                      'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700',
+                      'padding':'3px 9px','border-radius':'5px','white-space':'nowrap','line-height':'1.35',
+                      'transform':'none','box-shadow':'0 0 0 3px #fff','border':'0'});
 
           /* red s nijansom: [slicica] [uski dropdown s tockom boje] */
           var pairs = lab.querySelector('.bundle-pairs');
@@ -1332,8 +1332,8 @@ function gck_render_bundle_selector() {
         function paint(){
           labs.forEach(function(l){
             var on = !!l.querySelector('input[name="bundle_option"]:checked');
-            css(l, on ? {'border':'2px solid ' + PURPLE, 'background':'#f7f3fc', 'padding':'10px 15px 10px 45px'}
-                      : {'border':'1px solid #e0e0e0', 'background':'#fff', 'padding':'11px 16px 11px 46px'});
+            css(l, on ? {'border':'2px solid ' + PURPLE, 'background':'#f7f3fc', 'padding':'10px 15px 10px 45px', 'margin':'0 0 20px'}
+                      : {'border':'1px solid #e0e0e0', 'background':'#fff', 'padding':'11px 16px 11px 46px', 'margin':'0 0 20px'});
           });
         }
         box.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paint); });
