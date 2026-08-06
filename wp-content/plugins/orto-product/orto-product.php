@@ -1108,8 +1108,9 @@ function gck_render_bundle_selector() {
     <style>
       /* Samo ono sto se ne da postaviti inline (pseudo-elementi, hover, media). */
       #bundle-selector .bundle-option > input[type="radio"]::before {
-          position: static !important; inset: auto !important;
-          width: 9px !important; height: 9px !important; border-radius: 50% !important;
+          position: static !important; inset: auto !important; margin: 0 !important;
+          grid-area: 1 / 1 !important; place-self: center !important;
+          width: 8px !important; height: 8px !important; border-radius: 50% !important;
           background: #6b3fa0 !important;
       }
       #bundle-selector .bundle-option:hover { border-color: #b79fd6 !important; }
@@ -1152,7 +1153,7 @@ function gck_render_bundle_selector() {
                     'padding':'14px 16px 14px 46px','margin':'0 0 12px','min-height':'0','cursor':'pointer'});
           css(radio, {'position':'absolute','left':'16px','top':'16px','margin':'0','flex':'0 0 auto',
                       'width':'18px','height':'18px','box-sizing':'border-box','border-color':PURPLE,
-                      'display':'inline-flex','align-items':'center','justify-content':'center'});
+                      'padding':'0','line-height':'0','display':'grid','place-items':'center','place-content':'center'});
 
           /* zaglavlje: lijevo naziv + SAVE, DESNO cijena */
           var head = document.createElement('div');
@@ -1200,20 +1201,20 @@ function gck_render_bundle_selector() {
           /* red s nijansom: [slicica] [uski dropdown s tockom boje] */
           var pairs = lab.querySelector('.bundle-pairs');
           if(pairs){
-            css(pairs, {'border-top':'1px solid #ece6f3','margin-top':'12px','padding-top':'2px'});
+            css(pairs, {'border-top':'0','margin-top':'8px','padding-top':'0'});
             if(!pairs.querySelector('.hgm-collab')){
               var lbl = document.createElement('div');
               lbl.className = 'hgm-collab'; lbl.textContent = 'Nijansa';
               pairs.insertBefore(lbl, pairs.firstChild);
-              css(lbl, {'margin':'10px 0 6px','font-size':'12.5px','font-weight':'700','color':'#6d6d6d'});
+              css(lbl, {'margin':'0 0 5px','font-size':'12.5px','font-weight':'700','color':'#6d6d6d'});
             }
-            var note = pairs.querySelector('small');
-            css(note, {'color':'#8a8a8a','font-size':'11.5px','margin-top':'8px','line-height':'1.35'});
+            /* "Nudimo 30 dana..." — ne treba u kartici ponude */
+            pairs.querySelectorAll('small').forEach(function(n){ css(n, {'display':'none'}); });
           }
           lab.querySelectorAll('.bundle-attr-row').forEach(function(row){
             var sel = row.querySelector('.gck-size-select');
             if(!sel || row.querySelector('.hgm-thumb')) return;
-            css(row, {'display':'flex','align-items':'center','justify-content':'flex-start','gap':'10px','width':'100%'});
+            css(row, {'display':'flex','align-items':'center','justify-content':'flex-start','gap':'10px','width':'100%','margin':'0 0 6px'});
 
             var img = document.createElement('img');
             img.className = 'hgm-thumb'; img.src = THUMB; img.alt = ''; img.loading = 'lazy';
