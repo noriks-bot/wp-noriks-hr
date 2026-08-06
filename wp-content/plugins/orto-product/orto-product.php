@@ -1122,7 +1122,7 @@ function gck_render_bundle_selector() {
       var PURPLE = '#6b3fa0';
       var SHADES = {
         'platinasto plava':'#e8dcc4','prirodno plava':'#d8bb85','srednje smeđa':'#8a5a3b',
-        'čokoladno smeđa':'#5a3524','grafitno smeđa':'#3a3330','tamno smeđa':'#2a1d16','bakrena':'#a55a2a'
+        'čokoladno smeđa':'#5a3524','grafitno smeđa':'#3a3330','tamno smeđa':'#2a1d16','bakrena':'#a55a2a','svijetlo siva':'#d9d9d9'
       };
       var THUMB = '<?php echo esc_js( $hgm_thumb ); ?>';
       function css(el, obj){ if(!el) return; for(var k in obj){ el.style.setProperty(k, obj[k], 'important'); } }

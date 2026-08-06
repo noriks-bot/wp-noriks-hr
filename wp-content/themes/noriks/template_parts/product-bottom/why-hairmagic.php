@@ -66,7 +66,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="hgm-media"><?php echo $hm_img('hm_04_znacajke-7-nijansi.webp','Značajke HairMagic+ i 7 nijansi'); ?></div>
+    <div class="hgm-media"><?php echo $hm_img('hm_04_znacajke-7-nijansi.webp','Značajke HairMagic+ i nijanse'); ?></div>
   </div>
 </section>
 
@@ -117,16 +117,17 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
     <div class="hgm-media"><?php echo $hm_img('hm_03_pronadite-nijansu.webp','Pronađite svoju nijansu'); ?></div>
     <div class="hgm-copy">
       <h2 class="hgm-h2">Pronađite svoju nijansu</h2>
-      <p>Dostupno u 7 nijansi. Ako ste između dvije, odaberite <strong>svjetliju</strong> — puder se nadograđuje, pa tamniji ton uvijek možete dodati.</p>
+      <p>Dostupno u 8 nijansi. Ako ste između dvije, odaberite <strong>svjetliju</strong> — puder se nadograđuje, pa tamniji ton uvijek možete dodati.</p>
       <ul class="hgm-shades">
         <?php foreach ( array(
-          array( 'Platinasto plava', '#e8dcc4', 'svijetlo ledeno plava' ),
-          array( 'Prirodno plava',   '#d8bb85', 'topla prirodno plava' ),
           array( 'Srednje smeđa',    '#8a5a3b', 'srednja topla smeđa' ),
+          array( 'Tamno smeđa',      '#2a1d16', 'najtamnija smeđa' ),
+          array( 'Prirodno plava',   '#d8bb85', 'topla prirodno plava' ),
           array( 'Čokoladno smeđa',  '#5a3524', 'topla čokoladno smeđa' ),
           array( 'Grafitno smeđa',   '#3a3330', 'duboka, hladno smeđa' ),
-          array( 'Tamno smeđa',      '#2a1d16', 'najtamnija smeđa' ),
           array( 'Bakrena',          '#9c4b2f', 'bakreno crvena' ),
+          array( 'Platinasto plava', '#e8dcc4', 'svijetlo ledeno plava' ),
+          array( 'Svijetlo siva',    '#d9d9d9', 'svijetlo siva / sijeda' ),
         ) as $sh ) : ?>
           <li><span class="hgm-swatch" style="background:<?php echo esc_attr( $sh[1] ); ?>"></span>
               <strong><?php echo esc_html( $sh[0] ); ?></strong> — <?php echo esc_html( $sh[2] ); ?></li>
