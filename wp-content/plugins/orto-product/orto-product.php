@@ -1434,6 +1434,17 @@ function gck_render_bundle_selector() {
         return wrap;
       }
 
+      /* registar svih izbornika velicine — osnovni skript sinkronizira velicine
+         tako da drugim <select>-ima postavi .value BEZ 'change' dogadaja, pa
+         gumbe moramo osvjeziti sami. */
+      var sizeRegs = [];
+      function syncAllSizes(){
+        sizeRegs.forEach(function(r){
+          var cur = r.items.filter(function(i){ return i.value === r.sel.value; })[0];
+          if(cur) r.dd.setCurrent(cur);
+        });
+      }
+
       function build(){
         var box = document.getElementById('bundle-selector');
         if(!box || box.dataset.gckDdDone) return;
@@ -1458,6 +1469,7 @@ function gck_render_bundle_selector() {
             css(sel, {'display':'none'});
             var cur = sizeItems.filter(function(i){ return i.value === sel.value; })[0] || sizeItems[0];
             if(cur) sizeDD.setCurrent(cur);
+            sizeRegs.push({ sel: sel, dd: sizeDD, items: sizeItems });
             sel.addEventListener('change', function(){
               var c = sizeItems.filter(function(i){ return i.value === sel.value; })[0];
               if(c) sizeDD.setCurrent(c);
@@ -1487,6 +1499,16 @@ function gck_render_bundle_selector() {
               if(cc){ cc.pick(); colorDD.setCurrent(cc); }
             }
           }
+        });
+
+        /* promjena velicine u 1. redu -> osnovni skript prepise ostale selectove:
+           nakon toga osvjezimo sve gumbe (u sljedecem tick-u). */
+        box.addEventListener('change', function(e){
+          var t = e.target;
+          if(t && t.classList && t.classList.contains('gck-size-select')) setTimeout(syncAllSizes, 0);
+        }, true);
+        box.querySelectorAll('input[name="bundle_option"]').forEach(function(r){
+          r.addEventListener('change', function(){ setTimeout(syncAllSizes, 60); });
         });
       }
       /* radi tek kad je osnovni skript vec postavio pocetne swatcheve */
