@@ -5,7 +5,8 @@
  * su kartice s koracima, usporedna tablica i specifikacije.
  *   1. Precizno oblikovanje — dva stila           slika lijevo   01
  *   2. Podizanje korijena + 4 koraka              slika desno    03 + kartice
- *   3. 360° hladni protok i manje topline         slika lijevo   04
+ *   3. Video recenzije kupaca                      3 videa
+ *   4. 360° hladni protok i manje topline         slika lijevo   04
  *   4. 5 temperatura i glatko klizanje            slika desno    05
  *   5. Kako uključiti                             4 kartice (kao original)
  *   6. Usporedba s drugim uređajima               tablica
@@ -79,8 +80,37 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 3) 360° hladni protok zraka i manje topline ============ -->
+<!-- ============ 3) Video recenzije kupaca ============ -->
 <section class="nhb-sec">
+  <div class="nhb-wrap">
+    <h2 class="nhb-h2 nhb-center">Kupci pokazuju rezultat</h2>
+    <p class="nhb-sub nhb-center">Kratki isječci iz stvarne upotrebe — kliknite za reprodukciju.</p>
+    <?php
+    $nhb_videos = array();
+    for ( $i = 1; $i <= 3; $i++ ) {
+        if ( file_exists( $nb_path . 'videos/rev-' . $i . '.mp4' ) ) {
+            $nhb_videos[] = array(
+                'src'    => $nb . 'videos/rev-' . $i . '.mp4',
+                'poster' => file_exists( $nb_path . 'videos/rev-' . $i . '-poster.jpg' ) ? $nb . 'videos/rev-' . $i . '-poster.jpg' : '',
+            );
+        }
+    }
+    if ( ! empty( $nhb_videos ) ) : ?>
+      <div class="nhb-vid-grid">
+        <?php foreach ( $nhb_videos as $v ) : ?>
+          <div class="nhb-vid" data-src="<?php echo esc_url( $v['src'] ); ?>">
+            <video class="nhb-vid-el" preload="none" playsinline muted controlslist="nodownload"
+                   poster="<?php echo esc_url( $v['poster'] ); ?>"></video>
+            <span class="nhb-vid-play" aria-label="Reproduciraj"></span>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
+  </div>
+</section>
+
+<!-- ============ 4) 360° hladni protok zraka i manje topline ============ -->
+<section class="nhb-sec nhb-alt">
   <div class="nhb-wrap nhb-row2">
     <div class="nhb-media"><?php echo $nb_img('04_hladni-protok_pink.jpg','360 stupnjeva hladni protok zraka'); ?></div>
     <div class="nhb-copy">
@@ -96,8 +126,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 4) 5 temperaturnih postavki i glatko klizanje ============ -->
-<section class="nhb-sec nhb-alt">
+<!-- ============ 5) 5 temperaturnih postavki i glatko klizanje ============ -->
+<section class="nhb-sec">
   <div class="nhb-wrap nhb-row2">
     <div class="nhb-copy">
       <h2 class="nhb-h2">5 temperaturnih postavki i glatko klizanje</h2>
@@ -118,8 +148,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 5) Kako uključiti (kao na originalu: panel + 4 kartice) ============ -->
-<section class="nhb-sec">
+<!-- ============ 6) Kako uključiti (kao na originalu: panel + 4 kartice) ============ -->
+<section class="nhb-sec nhb-alt">
   <div class="nhb-wrap">
     <div class="nhb-panel">
       <h3 class="nhb-panel-h">Kako uključiti NORIKSHERS</h3>
@@ -147,8 +177,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 6) Usporedba s drugim uređajima ============ -->
-<section class="nhb-sec nhb-alt">
+<!-- ============ 7) Usporedba s drugim uređajima ============ -->
+<section class="nhb-sec">
   <div class="nhb-wrap">
     <div class="nhb-cmp-box">
       <div class="nhb-cmp-media"><?php echo $nb_img('07_izravnaj-ukovrcaj_pink.jpg','NORIKSHERS Cool Curl Pencil'); ?></div>
@@ -181,8 +211,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 7) Specifikacije ============ -->
-<section class="nhb-sec nhb-spec-sec">
+<!-- ============ 8) Specifikacije ============ -->
+<section class="nhb-sec nhb-spec-sec nhb-alt">
   <div class="nhb-wrap">
     <h2 class="nhb-h2 nhb-center">Specifikacije</h2>
     <p class="nhb-sub nhb-center">Sve što uređaj nosi ispod poklopca — bez sitnog tiska.</p>
@@ -210,7 +240,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 8) U pakiranju ============ -->
+<!-- ============ 9) U pakiranju ============ -->
 <section class="nhb-sec nhb-pack-sec">
   <div class="nhb-wrap nhb-row2">
     <div class="nhb-pack-media"><?php echo $nb_img('09_sadrzaj-pakiranja_pink.jpg','Sadržaj pakiranja'); ?></div>
@@ -227,8 +257,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   </div>
 </section>
 
-<!-- ============ 9) Što kažu kupci ============ -->
-<section class="nhb-sec nhb-rev-sec">
+<!-- ============ 10) Što kažu kupci ============ -->
+<section class="nhb-sec nhb-rev-sec nhb-alt">
   <div class="nhb-wrap">
     <h2 class="nhb-h2 nhb-center">Što kažu kupci</h2>
     <div class="nhb-rev-grid">
@@ -276,6 +306,16 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-cta { display: inline-block; margin-top: 6px; background: #141414; color: #fff; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 8px; text-decoration: none; }
   .nhb-cta:hover { background: #E8450E; color: #fff; }
 
+  /* video recenzije — tri u redu, 9:16 */
+  .nhb-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 24px; }
+  .nhb-vid { position: relative; border-radius: 16px; overflow: hidden; background: #000; aspect-ratio: 9/16; cursor: pointer; }
+  .nhb-vid-el { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .nhb-vid-play { position: absolute; inset: 0; margin: auto; width: 60px; height: 60px; border-radius: 50%;
+                  background: rgba(255,255,255,.92); pointer-events: none; transition: opacity .15s ease; }
+  .nhb-vid-play:after { content: ""; position: absolute; top: 50%; left: 55%; transform: translate(-50%,-50%);
+                        border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent #1c1630; }
+  .nhb-vid.is-playing .nhb-vid-play { opacity: 0; }
+
   /* panel s karticama — kao na originalu (svijetlo ljubičasta ploha, bijele kartice) */
   .nhb-panel { background: #e9e6f8; border-radius: 22px; padding: 34px 28px; margin-top: 34px; }
   .nhb-panel-h { text-align: center; font-size: clamp(22px,2.6vw,32px); font-weight: 800; color: #1c1630; margin: 0 0 26px; }
@@ -305,7 +345,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-no  { background: #f2f2f2; color: #9a9a9a; }
 
   /* specifikacije — kartice na mekom prijelazu */
-  .nhb-spec-sec { background: #fff; }
+  .nhb-spec-sec { }
   .nhb-sub { font-size: 15.5px; color: #6b6b6b; max-width: 620px; margin: 0 auto 30px; }
   .nhb-spec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
   .nhb-spec-card { display: flex; gap: 12px; align-items: flex-start; background: #faf9fd; border: 1px solid #ece8f6;
@@ -316,12 +356,12 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   .nhb-spec-note { font-size: 12.5px; color: #8a8a8a; margin: 0; }
 
   /* pakiranje — svijetla sekcija sa slikom u okviru */
-  .nhb-pack-sec { background: #f6f4fa; }
+  .nhb-pack-sec { }
   .nhb-pack-media { background: #fff; border-radius: 18px; padding: 22px; }
   .nhb-pack-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 
   /* recenzije — izrazitija lila podlaga, da dvije bijele sekcije ne budu jedna do druge */
-  .nhb-rev-sec { background: #fff; }
+  .nhb-rev-sec { }
   /* recenzije */
   .nhb-rev-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 26px; }
   .nhb-rev { background: #faf9fd; border: 1px solid #ece8f6; border-radius: 12px; padding: 22px 20px; text-align: center; }
@@ -339,6 +379,8 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
     .nhb-h2 { font-size: 1.9rem; margin-bottom: 12px; }
     .nhb-panel { padding: 20px 14px; border-radius: 16px; margin-top: 20px; }
     .nhb-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .nhb-vid-grid { grid-template-columns: 1fr; gap: 14px; }
+    .nhb-vid { max-width: 420px; margin: 0 auto; }
     .nhb-rev-grid { grid-template-columns: 1fr; gap: 18px; }
     .nhb-spec-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .nhb-spec-card { padding: 14px 12px; }
@@ -446,6 +488,19 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
     sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintNhb); });
   }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindNhb); } else { bindNhb(); }
+
+  /* Video recenzije: video se ucita tek na klik. */
+  document.querySelectorAll('.nhb-vid').forEach(function(box){
+    var v = box.querySelector('video');
+    box.addEventListener('click', function(){
+      if (!v.getAttribute('src')) { v.setAttribute('src', box.dataset.src); v.setAttribute('controls',''); }
+      if (v.paused) {
+        document.querySelectorAll('.nhb-vid video').forEach(function(o){ if (o!==v) { o.pause(); o.closest('.nhb-vid').classList.remove('is-playing'); } });
+        v.muted = false; v.play(); box.classList.add('is-playing');
+      } else { v.pause(); box.classList.remove('is-playing'); }
+    });
+    v.addEventListener('ended', function(){ box.classList.remove('is-playing'); });
+  });
 
   /* Slike u sekcijama prate odabranu boju (crna / roza). */
   function nhbSetColour(c){
