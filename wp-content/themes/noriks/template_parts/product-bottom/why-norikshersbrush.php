@@ -280,6 +280,12 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
 
 <style>
   .nhb-sec { padding: 46px 0; }
+  /* Manji razmak izmedu prodajnog dijela i prve why-sekcije (samo desktop). */
+  @media (min-width: 821px) {
+    .nhb-sec:first-of-type { padding-top: 23px; }
+    .single-product div.product .woocommerce-tabs,
+    .single-product div.product .summary { margin-bottom: 0 !important; }
+  }
   .nhb-alt { background: #f6f4fa; }
   .nhb-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }   /* isti container kao gornji .product */
   .nhb-wrap-narrow { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
