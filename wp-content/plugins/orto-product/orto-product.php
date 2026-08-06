@@ -1097,6 +1097,127 @@ function gck_render_bundle_selector() {
       }
     </style>
     <?php endif; ?>
+    <?php // HairMagic+: izbornik paketa 1:1 kao na originalu (rumicosmetiques) —
+          // zaglavlje "naziv + SAVE %" lijevo, cijena desno, po komadu ispod,
+          // te red "Nijansa" sa sličicom proizvoda i točkom boje za svaki komad.
+    if ( has_term( 'orto-norikshershairmagic', 'product_cat', $product_id ) ) :
+        $hgm_thumb = get_stylesheet_directory_uri() . '/img/hairmagic/hm_16_pakiranje-1.webp';
+    ?>
+    <style>
+      #bundle-selector .bundle-option {
+          display: block; position: relative;
+          border: 1px solid #e0e0e0; border-radius: 10px;
+          padding: 14px 16px 14px 44px; margin: 0 0 12px !important;
+          background: #fff; overflow: visible;
+      }
+      #bundle-selector .bundle-option.active { border: 2px solid #6b3fa0 !important; background: #f7f3fc !important; padding: 13px 15px 13px 43px; }
+      /* radio gumb lijevo, kao na originalu */
+      #bundle-selector .bundle-option > input[type="radio"] {
+          position: absolute !important; left: 15px; top: 18px; margin: 0 !important;
+          width: 18px; height: 18px; accent-color: #6b3fa0;
+      }
+      #bundle-selector .hgm-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+      #bundle-selector .hgm-l { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+      #bundle-selector .hgm-r { text-align: right; white-space: nowrap; }
+      #bundle-selector .bundle-option-title { font-size: 16px; font-weight: 700; color: #1c1c1c; margin: 0 !important; }
+      #bundle-selector .gck-discount-badge {
+          position: static !important; display: inline-block; background: #d7f5e2 !important; color: #12703f !important;
+          font-size: 11.5px; font-weight: 800; letter-spacing: .2px; padding: 3px 8px; border-radius: 5px;
+          margin: 0 !important; top: auto !important; right: auto !important; transform: none !important;
+      }
+      #bundle-selector .line-total { display: block; font-size: 16px; font-weight: 800; color: #1c1c1c; }
+      #bundle-selector .gck-regular-price { display: block; font-size: 13.5px; color: #9a9a9a; text-decoration: line-through; margin-top: 2px; }
+      #bundle-selector .bundle-total-line { display: none !important; }
+      #bundle-selector .gck-per-chip { display: block; margin: 3px 0 0 !important; }
+      #bundle-selector .gck-per-old { display: none !important; }
+      #bundle-selector .gck-per-new { font-size: 13.5px; color: #6d6d6d; font-weight: 500; }
+      #bundle-selector .gck-hl-break { display: none; }
+      #bundle-selector .gck-popular-badge {
+          position: absolute; top: -11px; right: 12px; z-index: 2;
+          background: #6b3fa0; color: #fff; font-size: 11px; font-weight: 700;
+          padding: 4px 10px; border-radius: 6px; letter-spacing: .2px; white-space: nowrap;
+      }
+      #bundle-selector .hgm-collab { font-size: 12.5px; font-weight: 700; color: #6d6d6d; margin: 12px 0 6px; }
+      #bundle-selector.is-single-size .bundle-pairs { border-top: 1px solid #ece6f3 !important; margin-top: 10px !important; padding-top: 2px !important; }
+      #bundle-selector .bundle-pair { margin: 0 0 8px; }
+      #bundle-selector.is-single-size .bundle-attr-row { display: flex !important; align-items: center; gap: 10px; }
+      #bundle-selector .hgm-thumb {
+          flex: 0 0 40px; width: 40px; height: 40px; border-radius: 6px; object-fit: cover;
+          border: 1px solid #ece6f3; background: #faf7fd;
+      }
+      #bundle-selector .hgm-selwrap { position: relative; flex: 1 1 auto; display: flex; align-items: center; gap: 0; }
+      #bundle-selector .hgm-color-dot {
+          position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+          width: 16px; height: 16px; border-radius: 4px; border: 1px solid rgba(0,0,0,.15); pointer-events: none;
+      }
+      #bundle-selector.is-single-size .gck-size-select {
+          width: 100% !important; max-width: none !important; flex: 1 1 auto !important;
+          border: 1px solid #d8d8d8 !important; border-radius: 8px !important;
+          padding: 11px 32px 11px 36px !important; font-size: 14px !important; background-color: #fff !important;
+      }
+      #bundle-selector .bundle-pairs small { color: #8a8a8a; font-size: 11.5px; margin-top: 6px; }
+      @media (max-width: 767px) {
+          #bundle-selector.is-single-size .gck-size-select { width: 100% !important; max-width: none !important; font-size: 13.5px !important; }
+          #bundle-selector .bundle-option-title { font-size: 15px; }
+      }
+    </style>
+    <script>
+    (function(){
+      var SHADES = {
+        'platinasto plava':'#e8dcc4','prirodno plava':'#d8bb85','srednje smeđa':'#8a5a3b',
+        'čokoladno smeđa':'#5a3524','grafitno smeđa':'#3a3330','tamno smeđa':'#2a1d16','bakrena':'#a55a2a'
+      };
+      var THUMB = '<?php echo esc_js( $hgm_thumb ); ?>';
+      function tint(sel, dot){
+        var v = (sel.value || '').toLowerCase();
+        dot.style.background = SHADES[v] || '#c9c9c9';
+      }
+      function build(){
+        var box = document.getElementById('bundle-selector'); if(!box || box.dataset.hgmDone) return;
+        box.dataset.hgmDone = '1';
+        box.querySelectorAll('.bundle-option').forEach(function(lab, i, all){
+          var title = lab.querySelector('.bundle-option-title');
+          var save  = lab.querySelector('.gck-discount-badge');
+          var per   = lab.querySelector('.gck-per-chip');
+          var total = lab.querySelector('.line-total');
+          var reg   = lab.querySelector('.gck-regular-price');
+          if(!title) return;
+          var head = document.createElement('div'); head.className = 'hgm-head';
+          var L = document.createElement('div'); L.className = 'hgm-l';
+          var R = document.createElement('div'); R.className = 'hgm-r';
+          head.appendChild(L); head.appendChild(R);
+          title.parentNode.insertBefore(head, title);
+          L.appendChild(title); if(save) L.appendChild(save);
+          if(total) R.appendChild(total); if(reg) R.appendChild(reg);
+          if(per) head.parentNode.insertBefore(per, head.nextSibling);
+          /* najbolja vrijednost na zadnjoj ponudi */
+          if(i === all.length - 1 && all.length > 2 && !lab.querySelector('.gck-popular-badge')){
+            var b = document.createElement('div'); b.className = 'gck-popular-badge';
+            b.textContent = 'Najbolja vrijednost'; lab.insertBefore(b, lab.firstChild);
+          }
+          var pairs = lab.querySelector('.bundle-pairs');
+          if(pairs && !pairs.querySelector('.hgm-collab')){
+            var lbl = document.createElement('div'); lbl.className = 'hgm-collab'; lbl.textContent = 'Nijansa';
+            pairs.insertBefore(lbl, pairs.firstChild);
+          }
+          lab.querySelectorAll('.bundle-attr-row').forEach(function(row){
+            if(row.querySelector('.hgm-thumb')) return;
+            var sel = row.querySelector('.gck-size-select'); if(!sel) return;
+            var img = document.createElement('img');
+            img.className = 'hgm-thumb'; img.src = THUMB; img.alt = ''; img.loading = 'lazy';
+            var wrap = document.createElement('span'); wrap.className = 'hgm-selwrap';
+            row.insertBefore(img, sel); row.insertBefore(wrap, sel); wrap.appendChild(sel);
+            var dot = document.createElement('span'); dot.className = 'hgm-color-dot';
+            wrap.insertBefore(dot, sel);
+            tint(sel, dot);
+            sel.addEventListener('change', function(){ tint(sel, dot); });
+          });
+        });
+      }
+      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', build); } else { build(); }
+    })();
+    </script>
+    <?php endif; ?>
     <?php if ( $gck_side_select ) : ?>
     <style>
       /* KneeFix: Veličina + Stranica jedan uz drugi u istom redu, s brojem komada. */

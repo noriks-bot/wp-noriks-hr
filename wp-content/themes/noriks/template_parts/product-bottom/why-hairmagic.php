@@ -74,7 +74,11 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 <section class="hgm-sec hgm-alt">
   <div class="hgm-wrap">
     <h2 class="hgm-h2 hgm-center">HairMagic+ transformacije</h2>
-    <div class="hgm-tr-grid">
+    <div class="hgm-tr-slider">
+      <button type="button" class="hgm-tr-arrow hgm-tr-prev" aria-label="Prethodno">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="hgm-tr-track">
       <?php foreach ( array(
         array( 'hm_05_prije-poslije-1', 'Moje tajno oružje između odlazaka frizeru',
                'Prije sam svaka tri tjedna trčala frizeru zbog izrasta. S HairMagic+ bez problema izdržim šest tjedana — nanošenje traje minutu i nitko ne primijeti razliku, čak ni pod uredskim svjetlom.', 'Jasna B.' ),
@@ -98,7 +102,12 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
           </div>
         </article>
       <?php endforeach; ?>
+      </div>
+      <button type="button" class="hgm-tr-arrow hgm-tr-next" aria-label="Sljedeće">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
+    <div class="hgm-tr-dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -207,9 +216,32 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .hgm-ba-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 22px; }
   .hgm-ba img { border-radius: 12px; }
 
-  /* transformacije — kartica: slika, naslov, citat, zvjezdice + ime */
-  .hgm-tr-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 26px; }
-  .hgm-tr { background: #fff; border: 1px solid #ece6f3; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+  /* transformacije — slider (kao na originalu): strelice + tocke, scroll-snap */
+  .hgm-tr-slider { position: relative; margin-top: 26px; }
+  .hgm-tr-track {
+      display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory;
+      scroll-behavior: smooth; padding: 4px 2px 6px; margin: 0 -2px;
+      scrollbar-width: none; -ms-overflow-style: none;
+  }
+  .hgm-tr-track::-webkit-scrollbar { display: none; }
+  .hgm-tr-arrow {
+      position: absolute; top: 38%; transform: translateY(-50%); z-index: 3;
+      width: 44px; height: 44px; border-radius: 50%; border: 1px solid #e2d8ee;
+      background: #fff; color: #6b3fa0; cursor: pointer; padding: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(42,27,52,.14); transition: opacity .15s, background .15s;
+  }
+  .hgm-tr-arrow:hover { background: #f6f2fb; }
+  .hgm-tr-arrow[disabled] { opacity: .35; cursor: default; }
+  .hgm-tr-prev { left: -18px; }
+  .hgm-tr-next { right: -18px; }
+  .hgm-tr-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+  .hgm-tr-dots button {
+      width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%;
+      background: #d8cde6; cursor: pointer; transition: background .15s, width .15s;
+  }
+  .hgm-tr-dots button.is-active { background: #6b3fa0; width: 22px; border-radius: 5px; }
+  .hgm-tr { flex: 0 0 calc((100% - 44px) / 3); scroll-snap-align: start; background: #fff; border: 1px solid #ece6f3; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
   .hgm-tr-media img { width: 100%; height: auto; display: block; border-radius: 0; }
   .hgm-tr-body { padding: 18px 20px 20px; text-align: center; }
   .hgm-tr-title { font-size: 17px; font-weight: 800; color: #2a1b34; margin: 0 0 10px; line-height: 1.3; }
@@ -233,6 +265,15 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .hgm-cta { display: inline-block; margin-top: 6px; background: #6b3fa0; color: #fff; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 10px; text-decoration: none; }
   .hgm-cta:hover { background: #57318a; color: #fff; }
 
+  @media (max-width: 1100px) {
+    .hgm-tr-prev { left: 4px; }
+    .hgm-tr-next { right: 4px; }
+  }
+  @media (max-width: 820px) {
+    .hgm-tr-track { gap: 14px; scroll-padding-left: 2px; }
+    .hgm-tr { flex: 0 0 84%; }
+    .hgm-tr-arrow { width: 38px; height: 38px; }
+  }
   @media (max-width: 820px) {
     .hgm-sec { padding: 9px 0; }
     .hgm-sec:first-of-type { padding-top: 0; }
@@ -304,5 +345,71 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   function bindHgm(){ var sel=document.getElementById('bundle-selector'); if(!sel) return; paintHgm();
     sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintHgm); }); }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindHgm); } else { bindHgm(); }
+
+  /* ---- Slider transformacija (strelice + tocke, kao na originalu) ---- */
+  function initHgmSlider(){
+    var box = document.querySelector('.hgm-tr-slider'); if(!box) return;
+    var track = box.querySelector('.hgm-tr-track');
+    var prev  = box.querySelector('.hgm-tr-prev');
+    var next  = box.querySelector('.hgm-tr-next');
+    var dots  = box.parentNode.querySelector('.hgm-tr-dots');
+    var cards = Array.prototype.slice.call(track.querySelectorAll('.hgm-tr'));
+    if(!cards.length) return;
+
+    function step(){
+      var a = cards[0].getBoundingClientRect();
+      var b = cards[1] ? cards[1].getBoundingClientRect() : null;
+      return b ? (b.left - a.left) : (a.width + 22);
+    }
+    function pages(){
+      var per = Math.max(1, Math.round(track.clientWidth / step()));
+      return Math.max(1, Math.ceil(cards.length / per));
+    }
+    function current(){
+      var per = Math.max(1, Math.round(track.clientWidth / step()));
+      return Math.min(pages() - 1, Math.round(track.scrollLeft / (step() * per)));
+    }
+    function buildDots(){
+      if(!dots) return;
+      var n = pages();
+      if(dots.children.length !== n){
+        dots.innerHTML = '';
+        for(var i=0;i<n;i++){
+          (function(i){
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Prikaz ' + (i+1));
+            b.addEventListener('click', function(){
+              var per = Math.max(1, Math.round(track.clientWidth / step()));
+              track.scrollTo({ left: i * step() * per, behavior: 'smooth' });
+            });
+            dots.appendChild(b);
+          })(i);
+        }
+      }
+    }
+    function sync(){
+      buildDots();
+      var c = current();
+      if(dots){ Array.prototype.forEach.call(dots.children, function(d,i){ d.classList.toggle('is-active', i===c); }); }
+      var max = track.scrollWidth - track.clientWidth - 2;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max;
+      var oneScreen = track.scrollWidth <= track.clientWidth + 4;
+      prev.style.display = next.style.display = oneScreen ? 'none' : '';
+      if(dots) dots.style.display = oneScreen ? 'none' : '';
+    }
+    function move(dir){
+      var per = Math.max(1, Math.round(track.clientWidth / step()));
+      track.scrollBy({ left: dir * step() * per, behavior: 'smooth' });
+    }
+    prev.addEventListener('click', function(){ move(-1); });
+    next.addEventListener('click', function(){ move(1); });
+    var t; track.addEventListener('scroll', function(){ clearTimeout(t); t = setTimeout(sync, 90); });
+    window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(sync, 150); });
+    window.addEventListener('load', sync);
+    sync();
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', initHgmSlider); } else { initHgmSlider(); }
 })();
 </script>
