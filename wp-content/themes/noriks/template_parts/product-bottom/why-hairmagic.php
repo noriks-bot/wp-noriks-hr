@@ -290,38 +290,8 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
   #open-size-chart, #open-size-chartCustom { display: none !important; }
 
-  /* Ponude u ljubičastoj boji brenda; naslov lijevo, jedna cijena desno. */
-  #bundle-selector .gck-per-chip, #bundle-selector .gck-hl-break { display: none !important; }
-  #bundle-selector .bundle-total-line > span[style*="font-weight:normal"] { display: none !important; }
-  #bundle-selector .bundle-option {
-      background: #fff !important; border: 2px solid rgba(107,63,160,.28) !important; border-radius: 10px !important;
-      display: flex !important; flex-wrap: wrap; align-items: center !important; min-height: 74px;
-      padding: 14px 18px !important; margin: 0 0 12px !important; cursor: pointer;
-      transition: border-color .15s ease, background .15s ease;
-  }
-  #bundle-selector .bundle-option.active { border-color: #6b3fa0 !important; background: rgba(107,63,160,.08) !important; }
-  #bundle-selector .bundle-option .bundle-option-title { display: inline-flex; align-items: center; font-weight: 700; color: #2a1b34; font-size: 16px; }
-  #bundle-selector .bundle-option .bundle-total-line { margin: 0 0 0 auto !important; display: inline-flex; flex-direction: column; align-items: flex-end; gap: 2px; font-size: 17px; font-weight: 800; color: #2a1b34; }
-  #bundle-selector .bundle-option .gck-regular-price { font-weight: 400 !important; font-size: 14px !important; color: rgba(42,27,52,.55) !important; text-decoration: line-through; }
-  #bundle-selector .gck-discount-badge {
-      display: inline-flex !important; align-items: center; margin-left: 10px;
-      background: #f1e9fa !important; color: #6b3fa0 !important; border: 1px solid #d9c9ee !important;
-      border-radius: 6px !important; padding: 4px 8px !important; font-size: 12px !important; font-weight: 700 !important; line-height: 1 !important;
-  }
-  #bundle-selector .bundle-option input[type="radio"] {
-      margin: 0 9px 0 0 !important; width: 18px !important; height: 18px !important; flex: 0 0 18px;
-      box-sizing: border-box !important; border-color: #6b3fa0 !important;
-      display: inline-flex !important; align-items: center !important; justify-content: center !important;
-  }
-  #bundle-selector .bundle-option input[type="radio"]::before {
-      position: static !important; inset: auto !important; width: 8px !important; height: 8px !important;
-      border-radius: 50% !important; background: #6b3fa0 !important;
-  }
-  /* Izbornik nijanse — kao dropdown na originalu */
-  #bundle-selector .gck-size-select {
-      width: 100% !important; max-width: none !important; border: 1px solid rgba(107,63,160,.35) !important;
-      border-radius: 8px !important; padding: 11px 32px 11px 12px !important; font-size: 14.5px !important;
-  }
+  /* Stil izbornika paketa (kartice, cijene, nijansa) živi SAMO u orto-product.php
+     — ovdje je nekad bila druga verzija koja se s njim tukla. */
 
   /* Kratki opis: viseci uvod samo na ✓ retcima. */
   .woocommerce-product-details__short-description ul { list-style: none; margin: 4px 0 8px; padding-left: 0; }
@@ -334,17 +304,8 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   document.querySelectorAll('a.hgm-cta[href="#bundle-selector"]').forEach(function(a){
     a.addEventListener('click', function(e){ e.preventDefault(); var t=document.getElementById('bundle-selector')||document.querySelector('.single_add_to_cart_button'); if(t) t.scrollIntoView({behavior:'smooth',block:'center'}); });
   });
-  /* Aktivna ponuda u ljubičastoj (preživljava LiteSpeed UCSS). */
-  function paintHgm(){
-    var sel=document.getElementById('bundle-selector'); if(!sel) return;
-    sel.querySelectorAll('.bundle-option').forEach(function(c){ c.style.removeProperty('border-color'); c.style.removeProperty('background'); });
-    var ch=sel.querySelector('input[name="bundle_option"]:checked');
-    var card=ch?ch.closest('.bundle-option'):(sel.querySelector('.bundle-option.active')||sel.querySelector('.bundle-option'));
-    if(card){ card.style.setProperty('border-color','#6b3fa0','important'); card.style.setProperty('background','rgba(107,63,160,0.08)','important'); }
-  }
-  function bindHgm(){ var sel=document.getElementById('bundle-selector'); if(!sel) return; paintHgm();
-    sel.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paintHgm); }); }
-  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindHgm); } else { bindHgm(); }
+  /* Bojanje aktivne ponude radi orto-product.php (inline stilovi) — ovdje NE diramo
+     .bundle-option jer bi removeProperty() obrisao te inline stilove. */
 
   /* ---- Slider transformacija (strelice + tocke, kao na originalu) ---- */
   function initHgmSlider(){

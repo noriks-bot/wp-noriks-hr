@@ -1098,123 +1098,161 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
     <?php // HairMagic+: izbornik paketa 1:1 kao na originalu (rumicosmetiques) —
-          // zaglavlje "naziv + SAVE %" lijevo, cijena desno, po komadu ispod,
-          // te red "Nijansa" sa sličicom proizvoda i točkom boje za svaki komad.
+          // naziv + SAVE cip lijevo, cijena DESNO, po komadu ispod, red "Nijansa"
+          // sa slicicom i uskim dropdownom za svaki komad.
+          // Kriticni layout se postavlja INLINE iz JS-a jer LiteSpeed UCSS brise
+          // pravila za klase kojih nema u statickom HTML-u (.hgm-*).
     if ( has_term( 'orto-norikshershairmagic', 'product_cat', $product_id ) ) :
         $hgm_thumb = get_stylesheet_directory_uri() . '/img/hairmagic/hm_16_pakiranje-1.webp';
     ?>
     <style>
-      #bundle-selector .bundle-option {
-          display: block; position: relative;
-          border: 1px solid #e0e0e0; border-radius: 10px;
-          padding: 14px 16px 14px 44px; margin: 0 0 12px !important;
-          background: #fff; overflow: visible;
+      /* Samo ono sto se ne da postaviti inline (pseudo-elementi, hover, media). */
+      #bundle-selector .bundle-option > input[type="radio"]::before {
+          position: static !important; inset: auto !important;
+          width: 9px !important; height: 9px !important; border-radius: 50% !important;
+          background: #6b3fa0 !important;
       }
-      #bundle-selector .bundle-option.active { border: 2px solid #6b3fa0 !important; background: #f7f3fc !important; padding: 13px 15px 13px 43px; }
-      /* radio gumb lijevo, kao na originalu */
-      #bundle-selector .bundle-option > input[type="radio"] {
-          position: absolute !important; left: 15px; top: 17px; margin: 0 !important;
-          width: 18px !important; height: 18px !important;
-          border-color: #6b3fa0 !important; vertical-align: top !important;
-      }
-      #bundle-selector .bundle-option > input[type="radio"]::before { background: #6b3fa0 !important; inset: 3px; }
-      #bundle-selector .hgm-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-      #bundle-selector .hgm-l { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-      #bundle-selector .hgm-r { text-align: right; white-space: nowrap; }
-      #bundle-selector .bundle-option-title { font-size: 16px; font-weight: 700; color: #1c1c1c; margin: 0 !important; }
-      #bundle-selector .gck-discount-badge {
-          position: static !important; display: inline-block; background: #d7f5e2 !important; color: #12703f !important;
-          font-size: 11.5px; font-weight: 800; letter-spacing: .2px; padding: 3px 8px; border-radius: 5px;
-          margin: 0 !important; top: auto !important; right: auto !important; transform: none !important;
-      }
-      #bundle-selector .line-total { display: block; font-size: 16px; font-weight: 800; color: #1c1c1c; }
-      #bundle-selector .gck-regular-price { display: block; font-size: 13.5px; color: #9a9a9a; text-decoration: line-through; margin-top: 2px; }
-      #bundle-selector .bundle-total-line { display: none !important; }
-      #bundle-selector .gck-per-chip { display: block; margin: 3px 0 0 !important; }
-      #bundle-selector .gck-per-old { display: none !important; }
-      #bundle-selector .gck-per-new { font-size: 13.5px; color: #6d6d6d; font-weight: 500; }
-      #bundle-selector .gck-hl-break { display: none; }
-      #bundle-selector .gck-popular-badge {
-          position: absolute; top: -11px; right: 12px; z-index: 2;
-          background: #6b3fa0; color: #fff; font-size: 11px; font-weight: 700;
-          padding: 4px 10px; border-radius: 6px; letter-spacing: .2px; white-space: nowrap;
-      }
-      #bundle-selector .hgm-collab { font-size: 12.5px; font-weight: 700; color: #6d6d6d; margin: 12px 0 6px; }
-      #bundle-selector.is-single-size .bundle-pairs { border-top: 1px solid #ece6f3 !important; margin-top: 10px !important; padding-top: 2px !important; }
-      #bundle-selector .bundle-pair { margin: 0 0 8px; }
-      #bundle-selector.is-single-size .bundle-attr-row { display: flex !important; align-items: center; gap: 10px; }
-      #bundle-selector .hgm-thumb {
-          flex: 0 0 40px; width: 40px; height: 40px; border-radius: 6px; object-fit: cover;
-          border: 1px solid #ece6f3; background: #faf7fd;
-      }
-      #bundle-selector .hgm-selwrap { position: relative; flex: 1 1 auto; display: flex; align-items: center; gap: 0; }
-      #bundle-selector .hgm-color-dot {
-          position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
-          width: 16px; height: 16px; border-radius: 4px; border: 1px solid rgba(0,0,0,.15); pointer-events: none;
-      }
-      #bundle-selector.is-single-size .gck-size-select {
-          width: 100% !important; max-width: none !important; flex: 1 1 auto !important;
-          border: 1px solid #d8d8d8 !important; border-radius: 8px !important;
-          padding: 11px 32px 11px 36px !important; font-size: 14px !important; background-color: #fff !important;
-      }
-      #bundle-selector .bundle-pairs small { color: #8a8a8a; font-size: 11.5px; margin-top: 6px; }
-      @media (max-width: 767px) {
-          #bundle-selector.is-single-size .gck-size-select { width: 100% !important; max-width: none !important; font-size: 13.5px !important; }
-          #bundle-selector .bundle-option-title { font-size: 15px; }
+      #bundle-selector .bundle-option:hover { border-color: #b79fd6 !important; }
+      @media (max-width: 600px) {
+          #bundle-selector .hgm-selwrap { flex: 1 1 auto !important; width: auto !important; }
       }
     </style>
     <script>
     (function(){
+      var PURPLE = '#6b3fa0';
       var SHADES = {
         'platinasto plava':'#e8dcc4','prirodno plava':'#d8bb85','srednje smeđa':'#8a5a3b',
         'čokoladno smeđa':'#5a3524','grafitno smeđa':'#3a3330','tamno smeđa':'#2a1d16','bakrena':'#a55a2a'
       };
       var THUMB = '<?php echo esc_js( $hgm_thumb ); ?>';
-      function tint(sel, dot){
-        var v = (sel.value || '').toLowerCase();
-        dot.style.background = SHADES[v] || '#c9c9c9';
-      }
+      function css(el, obj){ if(!el) return; for(var k in obj){ el.style.setProperty(k, obj[k], 'important'); } }
+      function tint(sel, dot){ dot.style.setProperty('background', SHADES[(sel.value||'').toLowerCase()] || '#c9c9c9', 'important'); }
+
       function build(){
-        var box = document.getElementById('bundle-selector'); if(!box || box.dataset.hgmDone) return;
+        var box = document.getElementById('bundle-selector');
+        if(!box || box.dataset.hgmDone) return;
         box.dataset.hgmDone = '1';
-        box.querySelectorAll('.bundle-option').forEach(function(lab, i, all){
+
+        var labs = Array.prototype.slice.call(box.querySelectorAll('.bundle-option'));
+        labs.forEach(function(lab, i){
           var title = lab.querySelector('.bundle-option-title');
           var save  = lab.querySelector('.gck-discount-badge');
           var per   = lab.querySelector('.gck-per-chip');
+          var perN  = lab.querySelector('.gck-per-new');
+          var perO  = lab.querySelector('.gck-per-old');
           var total = lab.querySelector('.line-total');
           var reg   = lab.querySelector('.gck-regular-price');
+          var tline = lab.querySelector('.bundle-total-line');
+          var radio = lab.querySelector('input[type="radio"]');
           if(!title) return;
-          var head = document.createElement('div'); head.className = 'hgm-head';
-          var L = document.createElement('div'); L.className = 'hgm-l';
-          var R = document.createElement('div'); R.className = 'hgm-r';
+
+          /* kartica + radio gumb lijevo (bez preklapanja s naslovom) */
+          css(lab, {'display':'block','position':'relative','box-sizing':'border-box',
+                    'border':'1px solid #e0e0e0','border-radius':'10px','background':'#fff',
+                    'padding':'14px 16px 14px 46px','margin':'0 0 12px','min-height':'0','cursor':'pointer'});
+          css(radio, {'position':'absolute','left':'16px','top':'16px','margin':'0','flex':'0 0 auto',
+                      'width':'18px','height':'18px','box-sizing':'border-box','border-color':PURPLE,
+                      'display':'inline-flex','align-items':'center','justify-content':'center'});
+
+          /* zaglavlje: lijevo naziv + SAVE, DESNO cijena */
+          var head = document.createElement('div');
+          var L = document.createElement('div'), R = document.createElement('div');
+          css(head, {'display':'flex','align-items':'flex-start','justify-content':'space-between','gap':'12px','width':'100%'});
+          css(L, {'display':'flex','align-items':'center','gap':'8px','flex':'1 1 auto','flex-wrap':'wrap','min-width':'0'});
+          css(R, {'flex':'0 0 auto','margin-left':'auto','text-align':'right','white-space':'nowrap'});
           head.appendChild(L); head.appendChild(R);
           title.parentNode.insertBefore(head, title);
-          L.appendChild(title); if(save) L.appendChild(save);
-          if(total) R.appendChild(total); if(reg) R.appendChild(reg);
-          if(per) head.parentNode.insertBefore(per, head.nextSibling);
-          /* najbolja vrijednost na zadnjoj ponudi */
-          if(i === all.length - 1 && all.length > 2 && !lab.querySelector('.gck-popular-badge')){
-            var b = document.createElement('div'); b.className = 'gck-popular-badge';
-            b.textContent = 'Najbolja vrijednost'; lab.insertBefore(b, lab.firstChild);
+          L.appendChild(title);
+          if(save) L.appendChild(save);
+          if(total) R.appendChild(total);
+          if(reg)   R.appendChild(reg);
+
+          css(title, {'display':'inline-block','margin':'0','font-size':'16px','font-weight':'700','color':'#1c1c1c','line-height':'1.25'});
+          css(save,  {'position':'static','display':'inline-block','margin':'0','padding':'3px 8px',
+                      'background':'#d7f5e2','color':'#12703f','border':'0','border-radius':'5px',
+                      'font-size':'11.5px','font-weight':'800','line-height':'1.35','transform':'none','top':'auto','right':'auto'});
+          css(total, {'display':'block','font-size':'16px','font-weight':'800','color':'#1c1c1c','line-height':'1.25','margin':'0'});
+          css(reg,   {'display':'block','font-size':'13.5px','font-weight':'400','color':'#9a9a9a',
+                      'text-decoration':'line-through','margin':'2px 0 0','line-height':'1.2'});
+          css(tline, {'display':'none'});
+
+          /* cijena po komadu ispod naziva */
+          if(per){
+            head.parentNode.insertBefore(per, head.nextSibling);
+            css(per, {'display':'block','margin':'3px 0 0','padding':'0','background':'none','border':'0'});
+            css(perO, {'display':'none'});
+            css(perN, {'font-size':'13.5px','font-weight':'500','color':'#6d6d6d','background':'none','padding':'0'});
           }
+          var hb = lab.querySelector('.gck-hl-break'); if(hb) css(hb, {'display':'none'});
+
+          /* ljubicaste kartuse gore desno */
+          var badge = lab.querySelector('.gck-popular-badge');
+          if(!badge && i === labs.length - 1 && labs.length > 2){
+            badge = document.createElement('div');
+            badge.className = 'gck-popular-badge';
+            badge.textContent = 'Najbolja vrijednost';
+            lab.insertBefore(badge, lab.firstChild);
+          }
+          css(badge, {'position':'absolute','top':'-11px','right':'12px','left':'auto','z-index':'2',
+                      'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700',
+                      'padding':'4px 10px','border-radius':'6px','white-space':'nowrap','line-height':'1.4','transform':'none'});
+
+          /* red s nijansom: [slicica] [uski dropdown s tockom boje] */
           var pairs = lab.querySelector('.bundle-pairs');
-          if(pairs && !pairs.querySelector('.hgm-collab')){
-            var lbl = document.createElement('div'); lbl.className = 'hgm-collab'; lbl.textContent = 'Nijansa';
-            pairs.insertBefore(lbl, pairs.firstChild);
+          if(pairs){
+            css(pairs, {'border-top':'1px solid #ece6f3','margin-top':'12px','padding-top':'2px'});
+            if(!pairs.querySelector('.hgm-collab')){
+              var lbl = document.createElement('div');
+              lbl.className = 'hgm-collab'; lbl.textContent = 'Nijansa';
+              pairs.insertBefore(lbl, pairs.firstChild);
+              css(lbl, {'margin':'10px 0 6px','font-size':'12.5px','font-weight':'700','color':'#6d6d6d'});
+            }
+            var note = pairs.querySelector('small');
+            css(note, {'color':'#8a8a8a','font-size':'11.5px','margin-top':'8px','line-height':'1.35'});
           }
           lab.querySelectorAll('.bundle-attr-row').forEach(function(row){
-            if(row.querySelector('.hgm-thumb')) return;
-            var sel = row.querySelector('.gck-size-select'); if(!sel) return;
+            var sel = row.querySelector('.gck-size-select');
+            if(!sel || row.querySelector('.hgm-thumb')) return;
+            css(row, {'display':'flex','align-items':'center','justify-content':'flex-start','gap':'10px','width':'100%'});
+
             var img = document.createElement('img');
             img.className = 'hgm-thumb'; img.src = THUMB; img.alt = ''; img.loading = 'lazy';
-            var wrap = document.createElement('span'); wrap.className = 'hgm-selwrap';
-            row.insertBefore(img, sel); row.insertBefore(wrap, sel); wrap.appendChild(sel);
-            var dot = document.createElement('span'); dot.className = 'hgm-color-dot';
+            css(img, {'flex':'0 0 40px','width':'40px','height':'40px','border-radius':'6px',
+                      'object-fit':'cover','border':'1px solid #ece6f3','background':'#faf7fd','margin':'0'});
+
+            var wrap = document.createElement('span');
+            wrap.className = 'hgm-selwrap';
+            css(wrap, {'position':'relative','display':'inline-flex','align-items':'center',
+                       'flex':'0 0 auto','width':'232px','max-width':'100%'});
+
+            row.insertBefore(img, sel);
+            row.insertBefore(wrap, sel);
+            wrap.appendChild(sel);
+
+            var dot = document.createElement('span');
+            dot.className = 'hgm-color-dot';
+            css(dot, {'position':'absolute','left':'10px','top':'50%','transform':'translateY(-50%)',
+                      'width':'16px','height':'16px','border-radius':'4px','border':'1px solid rgba(0,0,0,.15)','pointer-events':'none'});
             wrap.insertBefore(dot, sel);
+
+            css(sel, {'width':'100%','max-width':'100%','min-width':'0','flex':'1 1 auto','margin':'0',
+                      'border':'1px solid #d8d8d8','border-radius':'8px','background-color':'#fff',
+                      'padding':'11px 30px 11px 34px','font-size':'14px','text-overflow':'ellipsis'});
             tint(sel, dot);
             sel.addEventListener('change', function(){ tint(sel, dot); });
           });
         });
+
+        /* aktivna kartica u ljubicastoj */
+        function paint(){
+          labs.forEach(function(l){
+            var on = !!l.querySelector('input[name="bundle_option"]:checked');
+            css(l, on ? {'border':'2px solid ' + PURPLE, 'background':'#f7f3fc', 'padding':'13px 15px 13px 45px'}
+                      : {'border':'1px solid #e0e0e0', 'background':'#fff', 'padding':'14px 16px 14px 46px'});
+          });
+        }
+        box.querySelectorAll('input[name="bundle_option"]').forEach(function(r){ r.addEventListener('change', paint); });
+        paint();
       }
       if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', build); } else { build(); }
     })();
