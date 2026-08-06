@@ -216,8 +216,8 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
 
 
-<?php // NORIKS Cards: bez tri ikone (majica/pristajanje) — nisu relevantne za ovaj proizvod.
-if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_product_id ) ): ?>
+<?php // NORIKS Cards i HairMagic: bez tri ikone (majica/pristajanje) — nisu relevantne za te proizvode.
+if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) ): ?>
 
 
 <!-- my thre icons content -->
