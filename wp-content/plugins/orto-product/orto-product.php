@@ -1232,7 +1232,7 @@ function gck_render_bundle_selector() {
           }
           lab.querySelectorAll('.bundle-attr-row').forEach(function(row){
             var sel = row.querySelector('.gck-size-select');
-            if(!sel || row.querySelector('.hgm-thumb')) return;
+            if(!sel || row.querySelector('.hgm-thumb') || row.querySelector('.gck-dd')) return;
             css(row, {'display':'flex','align-items':'center','justify-content':'flex-start','gap':'10px','width':'100%','margin':'0 0 6px'});
             if(row === row.parentNode.parentNode.querySelector('.bundle-pair:last-child .bundle-attr-row')) css(row, {'margin':'0'});
 
@@ -1361,8 +1361,10 @@ function gck_render_bundle_selector() {
       function makeDD(opts){
         var wrap = document.createElement('span');
         wrap.className = 'gck-dd';
-        css(wrap, {'position':'relative','display':'inline-block','flex':'0 0 auto',
-                   'width':opts.width,'max-width':'100%','vertical-align':'middle'});
+        css(wrap, {'position':'relative','display':'inline-block',
+                   'flex': opts.grow ? '1 1 ' + opts.width : '0 0 ' + opts.width,
+                   'width':opts.width,'min-width': opts.grow ? '140px' : opts.width,
+                   'max-width':'100%','vertical-align':'middle'});
 
         var btn = document.createElement('button');
         btn.type = 'button'; btn.className = 'gck-dd-btn';
@@ -1451,7 +1453,7 @@ function gck_render_bundle_selector() {
         box.dataset.gckDdDone = '1';
 
         box.querySelectorAll('.bundle-attr-row').forEach(function(row){
-          if(row.querySelector('.gck-dd')) return;
+          if(row.querySelector('.gck-dd') || row.querySelector('.hgm-selwrap')) return;
           var sel   = row.querySelector('.gck-size-select');
           var swGrp = row.querySelector('.color-swatches');
           if(!sel && !swGrp) return;
@@ -1464,7 +1466,7 @@ function gck_render_bundle_selector() {
               return { value: o.value, label: o.text.trim(), color: null,
                        pick: function(){ sel.value = o.value; sel.dispatchEvent(new Event('change', { bubbles: true })); } };
             });
-            var sizeDD = makeDD({ items: sizeItems, width: '96px', hasColor: false });
+            var sizeDD = makeDD({ items: sizeItems, width: '96px', hasColor: false, grow: false });
             row.insertBefore(sizeDD, row.firstChild);
             css(sel, {'display':'none'});
             var cur = sizeItems.filter(function(i){ return i.value === sel.value; })[0] || sizeItems[0];
@@ -1485,9 +1487,12 @@ function gck_render_bundle_selector() {
                 var bg = circle ? getComputedStyle(circle).backgroundColor : '';
                 if(!bg || bg === 'rgba(0, 0, 0, 0)') bg = '#cccccc';
                 return { value: sw.dataset.value || '', label: sw.dataset.value || sw.title || '', color: bg,
-                         pick: function(){ sw.click(); } };
+                         /* NE sw.click(): klik bi doplovio do <label class="bundle-option">
+                            i prebacio odabranu ponudu. Ne-bubbling klik pokrece samo
+                            slusac na swatchu (postavi hidden input + .active). */
+                         pick: function(){ sw.dispatchEvent(new MouseEvent('click', { bubbles: false })); } };
               });
-              var colorDD = makeDD({ items: colorItems, width: '196px', hasColor: true });
+              var colorDD = makeDD({ items: colorItems, width: '196px', hasColor: true, grow: true });
               /* boja ide ODMAH IZA velicine */
               var sizeEl = row.querySelector('.gck-dd');
               if(sizeEl && sizeEl.nextSibling) row.insertBefore(colorDD, sizeEl.nextSibling);
