@@ -313,7 +313,15 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
     .hgm-tr-next { right: 4px; }
   }
   @media (max-width: 820px) {
-    .hgm-vid-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    /* mobitel: video recenzije kao slider (swipe), bez praznog polja u mrezi */
+    .hgm-vid-grid {
+        display: flex !important; grid-template-columns: none !important;
+        gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+        padding: 2px 2px 6px; margin: 24px -2px 0;
+        scrollbar-width: none; -ms-overflow-style: none;
+    }
+    .hgm-vid-grid::-webkit-scrollbar { display: none; }
+    .hgm-vid { flex: 0 0 74%; scroll-snap-align: center; }
     .hgm-vid-play { width: 48px; height: 48px; }
     .hgm-tr-track { gap: 14px; scroll-padding-left: 2px; }
     .hgm-tr { flex: 0 0 84%; }
