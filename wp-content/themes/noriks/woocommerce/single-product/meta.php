@@ -696,11 +696,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
             Preporučujemo da veličinu odaberete prema opsegu lista, a ne prema uobičajenom broju obuće.
           </div>
 
-        <?php // KOMZIPS: vlastna lokalizirana tabela velikosti (sicer pade v else = tabela za majice).
-        elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $current_product_id) ): ?>
-
-                  <img class="js-open-size-chart" style="cursor:pointer;" src="<?php echo get_template_directory_uri(); ?>/img/kompresijske-tabela-hr.webp" alt="Tablica veličina — kompresijske čarape">
-
         <?php elseif(  $is_carape ): ?>
         
         
