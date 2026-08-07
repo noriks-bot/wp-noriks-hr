@@ -4,12 +4,13 @@
  * Struktura preslikana s referentne stranice (rumicosmetiques HairMagic+):
  *   1. Trenutačno prekrivanje i rezultati     slika 02
  *   2. Zašto ga žene vole — 6 prednosti       kartice + slika 04
- *   3. HairMagic+ transformacije               6 kartic (slika + recenzija)
- *   4. Pronađite svoju nijansu                slika 03 + lista nijansi
- *   5. Kako nanijeti — 3 koraka               slika 14 + kartice
- *   6. Brojke                                 97 / 94 / 100 %
- *   7. Recenzija + djeluje i na obrve         slike 15 i 13
- *   8. 100 % jamstvo povrata novca
+ *   3. HairMagic+ transformacije               slider kartic (slika + recenzija)
+ *   4. Video recenzije kupaca                 3 videa (rev-1..3, ucita se na klik)
+ *   5. Pronađite svoju nijansu                slika 03 + lista nijansi
+ *   6. Kako nanijeti — 3 koraka               slika 14 + kartice
+ *   7. Brojke                                 97 / 94 / 100 %
+ *   8. Recenzija + djeluje i na obrve         slike 15 i 13
+ *   9. 100 % jamstvo povrata novca
  * FAQ i recenzije renderira zajednički reviews.php (ne ovdje).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -111,8 +112,39 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- ============ 4) Pronađite svoju nijansu ============ -->
+<!-- ============ 4) Video recenzije kupaca ============ -->
 <section class="hgm-sec">
+  <div class="hgm-wrap">
+    <h2 class="hgm-h2 hgm-center">Kupci pokazuju rezultat</h2>
+    <p class="hgm-sub hgm-center">Kratki isječci iz stvarne upotrebe — kliknite za reprodukciju.</p>
+    <?php
+    $hgm_vdir = get_stylesheet_directory() . '/img/hairmagic/videos/';
+    $hgm_vuri = get_stylesheet_directory_uri() . '/img/hairmagic/videos/';
+    $hgm_vids = array();
+    for ( $i = 1; $i <= 3; $i++ ) {
+        if ( file_exists( $hgm_vdir . 'rev-' . $i . '.mp4' ) ) {
+            $hgm_vids[] = array(
+                'src'    => $hgm_vuri . 'rev-' . $i . '.mp4',
+                'poster' => file_exists( $hgm_vdir . 'rev-' . $i . '-poster.jpg' ) ? $hgm_vuri . 'rev-' . $i . '-poster.jpg' : '',
+            );
+        }
+    }
+    if ( ! empty( $hgm_vids ) ) : ?>
+      <div class="hgm-vid-grid">
+        <?php foreach ( $hgm_vids as $v ) : ?>
+          <div class="hgm-vid" data-src="<?php echo esc_url( $v['src'] ); ?>">
+            <video class="hgm-vid-el" preload="none" playsinline muted controlslist="nodownload"
+                   poster="<?php echo esc_url( $v['poster'] ); ?>"></video>
+            <span class="hgm-vid-play" aria-label="Reproduciraj"></span>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
+  </div>
+</section>
+
+<!-- ============ 5) Pronađite svoju nijansu ============ -->
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_03_pronadite-nijansu.webp','Pronađite svoju nijansu'); ?></div>
     <div class="hgm-copy">
@@ -137,8 +169,8 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- ============ 5) Kako nanijeti ============ -->
-<section class="hgm-sec hgm-alt">
+<!-- ============ 6) Kako nanijeti ============ -->
+<section class="hgm-sec">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-copy">
       <h2 class="hgm-h2">Od prorijeđenog do savršenog — za manje od 2 minute</h2>
@@ -153,8 +185,8 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- ============ 6) Brojke ============ -->
-<section class="hgm-sec">
+<!-- ============ 7) Brojke ============ -->
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_12_statistika-97-94-100.webp','Rezultati istraživanja'); ?></div>
     <div class="hgm-copy">
@@ -169,16 +201,16 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- ============ 7) Recenzija + obrve ============ -->
-<section class="hgm-sec hgm-alt">
+<!-- ============ 8) Recenzija + obrve ============ -->
+<section class="hgm-sec">
   <div class="hgm-wrap hgm-row2">
     <div class="hgm-media"><?php echo $hm_img('hm_15_recenzija-sarah.webp','Recenzija korisnice'); ?></div>
     <div class="hgm-media"><?php echo $hm_img('hm_13_znacajke-obrve.webp','Djeluje i na obrvama'); ?></div>
   </div>
 </section>
 
-<!-- ============ 8) Jamstvo ============ -->
-<section class="hgm-sec">
+<!-- ============ 9) Jamstvo ============ -->
+<section class="hgm-sec hgm-alt">
   <div class="hgm-wrap-narrow hgm-center">
     <h2 class="hgm-h2 hgm-center">100 % jamstvo povrata novca</h2>
     <p>Isprobajte HairMagic+ bez rizika. Ako niste zadovoljni, javite nam se u roku od 30 dana i vraćamo vam novac.</p>
@@ -250,6 +282,16 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .hgm-tr-foot { font-size: 14px; font-weight: 700; color: #2a1b34; margin: 0; display: flex; align-items: center; justify-content: center; gap: 8px; }
   .hgm-stars { color: #f5b301; letter-spacing: 1px; }
 
+  /* video recenzije — tri u redu, 9:16, video se ucita tek na klik */
+  .hgm-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 24px; }
+  .hgm-vid { position: relative; border-radius: 16px; overflow: hidden; background: #000; aspect-ratio: 9/16; cursor: pointer; }
+  .hgm-vid-el { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hgm-vid-play { position: absolute; inset: 0; margin: auto; width: 60px; height: 60px; border-radius: 50%;
+                  background: rgba(255,255,255,.92); pointer-events: none; transition: opacity .15s ease; }
+  .hgm-vid-play:after { content: ""; position: absolute; top: 50%; left: 55%; transform: translate(-50%,-50%);
+                        border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent #6b3fa0; }
+  .hgm-vid.is-playing .hgm-vid-play { opacity: 0; }
+
   .hgm-shades { list-style: none; margin: 0; padding: 0; }
   .hgm-shades li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid #ece6f3; font-size: 15px; color: #3a3a3a; }
   .hgm-swatch { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.12); flex: 0 0 22px; }
@@ -271,6 +313,8 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
     .hgm-tr-next { right: 4px; }
   }
   @media (max-width: 820px) {
+    .hgm-vid-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hgm-vid-play { width: 48px; height: 48px; }
     .hgm-tr-track { gap: 14px; scroll-padding-left: 2px; }
     .hgm-tr { flex: 0 0 84%; }
     .hgm-tr-arrow { width: 38px; height: 38px; }
@@ -307,6 +351,19 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   });
   /* Bojanje aktivne ponude radi orto-product.php (inline stilovi) — ovdje NE diramo
      .bundle-option jer bi removeProperty() obrisao te inline stilove. */
+
+  /* Video recenzije: video se ucita tek na klik (bez preuzimanja na load). */
+  document.querySelectorAll('.hgm-vid').forEach(function(box){
+    var v = box.querySelector('video');
+    box.addEventListener('click', function(){
+      if (!v.getAttribute('src')) { v.setAttribute('src', box.dataset.src); v.setAttribute('controls',''); }
+      if (v.paused) {
+        document.querySelectorAll('.hgm-vid video').forEach(function(o){ if (o!==v) { o.pause(); o.closest('.hgm-vid').classList.remove('is-playing'); } });
+        v.muted = false; v.play(); box.classList.add('is-playing');
+      } else { v.pause(); box.classList.remove('is-playing'); }
+    });
+    v.addEventListener('ended', function(){ box.classList.remove('is-playing'); });
+  });
 
   /* ---- Slider transformacija (strelice + tocke, kao na originalu) ---- */
   function initHgmSlider(){
