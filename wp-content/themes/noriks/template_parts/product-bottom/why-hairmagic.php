@@ -130,15 +130,24 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
         }
     }
     if ( ! empty( $hgm_vids ) ) : ?>
-      <div class="hgm-vid-grid">
-        <?php foreach ( $hgm_vids as $v ) : ?>
-          <div class="hgm-vid" data-src="<?php echo esc_url( $v['src'] ); ?>">
-            <video class="hgm-vid-el" preload="none" playsinline muted controlslist="nodownload"
-                   poster="<?php echo esc_url( $v['poster'] ); ?>"></video>
-            <span class="hgm-vid-play" aria-label="Reproduciraj"></span>
-          </div>
-        <?php endforeach; ?>
+      <div class="hgm-vid-slider">
+        <button type="button" class="hgm-tr-arrow hgm-vid-prev" aria-label="Prethodno">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="hgm-vid-grid">
+          <?php foreach ( $hgm_vids as $v ) : ?>
+            <div class="hgm-vid" data-src="<?php echo esc_url( $v['src'] ); ?>">
+              <video class="hgm-vid-el" preload="none" playsinline muted controlslist="nodownload"
+                     poster="<?php echo esc_url( $v['poster'] ); ?>"></video>
+              <span class="hgm-vid-play" aria-label="Reproduciraj"></span>
+            </div>
+          <?php endforeach; ?>
+        </div>
+        <button type="button" class="hgm-tr-arrow hgm-vid-next" aria-label="Sljedeće">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
+      <div class="hgm-vid-dots hgm-tr-dots" aria-hidden="true"></div>
     <?php endif; ?>
   </div>
 </section>
@@ -283,7 +292,10 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .hgm-stars { color: #f5b301; letter-spacing: 1px; }
 
   /* video recenzije — tri u redu, 9:16, video se ucita tek na klik */
-  .hgm-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 24px; }
+  .hgm-vid-slider { position: relative; margin-top: 24px; }
+  .hgm-vid-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .hgm-vid-prev { left: -18px; }
+  .hgm-vid-next { right: -18px; }
   .hgm-vid { position: relative; border-radius: 16px; overflow: hidden; background: #000; aspect-ratio: 9/16; cursor: pointer; }
   .hgm-vid-el { width: 100%; height: 100%; object-fit: cover; display: block; }
   .hgm-vid-play { position: absolute; inset: 0; margin: auto; width: 60px; height: 60px; border-radius: 50%;
@@ -309,20 +321,22 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   .hgm-cta:hover { background: #57318a; color: #fff; }
 
   @media (max-width: 1100px) {
-    .hgm-tr-prev { left: 4px; }
-    .hgm-tr-next { right: 4px; }
+    .hgm-tr-prev, .hgm-vid-prev { left: 4px; }
+    .hgm-tr-next, .hgm-vid-next { right: 4px; }
   }
   @media (max-width: 820px) {
-    /* mobitel: video recenzije kao slider (swipe), bez praznog polja u mrezi */
+    /* mobitel: video recenzije kao slider (strelice + tocke), isto kao transformacije */
     .hgm-vid-grid {
         display: flex !important; grid-template-columns: none !important;
         gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
-        padding: 2px 2px 6px; margin: 24px -2px 0;
+        padding: 2px 2px 6px; margin: 0 -2px;
         scrollbar-width: none; -ms-overflow-style: none;
     }
     .hgm-vid-grid::-webkit-scrollbar { display: none; }
-    .hgm-vid { flex: 0 0 74%; scroll-snap-align: center; }
+    .hgm-vid { flex: 0 0 74%; scroll-snap-align: start; }
     .hgm-vid-play { width: 48px; height: 48px; }
+    .hgm-vid-prev { left: 4px; }
+    .hgm-vid-next { right: 4px; }
     .hgm-tr-track { gap: 14px; scroll-padding-left: 2px; }
     .hgm-tr { flex: 0 0 84%; }
     .hgm-tr-arrow { width: 38px; height: 38px; }
@@ -374,19 +388,21 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   });
 
   /* ---- Slider transformacija (strelice + tocke, kao na originalu) ---- */
-  function initHgmSlider(){
-    var box = document.querySelector('.hgm-tr-slider'); if(!box) return;
-    var track = box.querySelector('.hgm-tr-track');
-    var prev  = box.querySelector('.hgm-tr-prev');
-    var next  = box.querySelector('.hgm-tr-next');
-    var dots  = box.parentNode.querySelector('.hgm-tr-dots');
-    var cards = Array.prototype.slice.call(track.querySelectorAll('.hgm-tr'));
-    if(!cards.length) return;
+  function initHgmSlider(sel){
+    sel = sel || { box: '.hgm-tr-slider', track: '.hgm-tr-track', prev: '.hgm-tr-prev',
+                   next: '.hgm-tr-next', dots: '.hgm-tr-dots', card: '.hgm-tr', gap: 22 };
+    var box = document.querySelector(sel.box); if(!box) return;
+    var track = box.querySelector(sel.track);
+    var prev  = box.querySelector(sel.prev);
+    var next  = box.querySelector(sel.next);
+    var dots  = box.parentNode.querySelector(sel.dots);
+    var cards = Array.prototype.slice.call(track.querySelectorAll(sel.card));
+    if(!track || !prev || !next || !cards.length) return;
 
     function step(){
       var a = cards[0].getBoundingClientRect();
       var b = cards[1] ? cards[1].getBoundingClientRect() : null;
-      return b ? (b.left - a.left) : (a.width + 22);
+      return b ? (b.left - a.left) : (a.width + (sel.gap || 22));
     }
     function pages(){
       var per = Math.max(1, Math.round(track.clientWidth / step()));
@@ -437,6 +453,11 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
     window.addEventListener('load', sync);
     sync();
   }
-  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', initHgmSlider); } else { initHgmSlider(); }
+  function initHgmSliders(){
+    initHgmSlider();
+    initHgmSlider({ box: '.hgm-vid-slider', track: '.hgm-vid-grid', prev: '.hgm-vid-prev',
+                    next: '.hgm-vid-next', dots: '.hgm-vid-dots', card: '.hgm-vid', gap: 12 });
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', initHgmSliders); } else { initHgmSliders(); }
 })();
 </script>
