@@ -525,16 +525,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
 
          <?php elseif( noriks_is_type( 'dental', $current_product_id ) ): ?>
 
-                <strong>Ključne prednosti</strong>
-                <ul style="margin:8px 0 14px 18px; padding:0; line-height:1.6;">
-                  <li>Čišćenje kliničke razine iz udobnosti doma</li>
-                  <li>Ultrazvučna tehnologija (43.000 Hz) za dubinsko čišćenje bez truda</li>
-                  <li>UV-C sterilizacija koja neutralizira bakterije i neugodne mirise</li>
-                  <li>Sigurno za folije, retainere, proteze, noćne udlage i ostala oralna pomagala</li>
-                  <li>Blistavo čisto u samo 3 minute</li>
-                  <li>Uz 1 godinu jamstva i 30 dana povrata novca</li>
-                </ul>
-
                 NORIKS Pro je ultrazvučni čistač s UV-C sterilizacijom za sva odvojiva zubna pomagala — prozirne folije i Invisalign, retainere, proteze, noćne udlage i štitnike te glave električnih četkica.<br><br>Ultrazvuk frekvencije <strong>43.000 Hz</strong> stvara milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s mjesta do kojih četkica ne dolazi — bez struganja koje ogrebe folije. Istovremeno <strong>UV-C svjetlo (200–280 nm)</strong> uklanja do 99,9 % bakterija, virusa i gljivica; učinkovitost je laboratorijski potvrđena na E. coli, Staphylococcus aureusu i Candidi albicans.<br><br>Upotreba je jednostavna: spremnik (165 ml) napunite hladnom vodom, stavite pomagalo unutra i odaberite ciklus od 3 ili 5 minuta. Tablete i kemikalije nisu potrebne. Uređaj radi tiho (≤ 65 dB), upravlja se na dodir i dimenzija je 122 × 122 × 100 mm, pa stane na svaku policu u kupaonici.<br><br>U pakiranju: uređaj NORIKS Pro, adapter za napajanje i upute. Uz proizvod idu <strong>1 godina jamstva</strong> i <strong>30 dana povrata novca</strong>.
 
          <?php elseif( noriks_is_type( 'hairmagic', $current_product_id ) ): ?>
@@ -594,6 +584,26 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
         
         
       </div>
+
+    <?php // NORIKS Dental: zasebni akordeon s ključnim prednostima (drugo mjesto).
+    if ( noriks_is_type( 'dental', $current_product_id ) ) : ?>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Ključne prednosti</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <ul style="margin:6px 0 4px 18px; padding:0; line-height:1.7;">
+          <li>Čišćenje kliničke razine iz udobnosti doma</li>
+          <li>Ultrazvučna tehnologija (43.000 Hz) za dubinsko čišćenje bez truda</li>
+          <li>UV-C sterilizacija koja neutralizira bakterije i neugodne mirise</li>
+          <li>Sigurno za folije, retainere, proteze, noćne udlage i ostala oralna pomagala</li>
+          <li>Blistavo čisto u samo 3 minute</li>
+          <li>Uz 1 godinu jamstva i 30 dana povrata novca</li>
+        </ul>
+      </div>
+    </div>
+    <?php endif; ?>
     </div>
     
     
