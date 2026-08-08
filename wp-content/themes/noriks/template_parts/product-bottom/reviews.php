@@ -194,7 +194,7 @@
 
            <?php elseif ( noriks_is_type( 'dental' ) ): ?>
 
-           Tisuće ljudi već čisti folije, retainere i proteze s NORIKS Pro – ultrazvuk i UV-C svjetlo u 3 minute, bez kemikalija.
+           Tisuće ljudi već čisti folije, retainere i proteze s NORIKS ProSonic – ultrazvuk i UV-C svjetlo u 3 minute, bez kemikalija.
 
            <?php elseif ( noriks_is_type( 'hairmagic' ) ): ?>
 
@@ -297,7 +297,7 @@
   if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_dental_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_dental_page ? 'NORIKS Pro ultrazvučni čistač zubnih pomagala'
+  $rv_fallback_title = $is_dental_page ? 'NORIKS ProSonic ultrazvučni čistač zubnih pomagala'
                      : ( $is_hairmagic_page ? 'NORIKS HERS HairMagic+ puder za liniju kose'
                      : ( $is_brush_page ? 'NORIKSHERS Cool Curl Pencil'
                      : ( $is_noriks_cards_page ? 'NORIKS Cards uređaj s karticama'
@@ -1553,10 +1553,10 @@ $brush_faq = array(
   ),
 );
 
-// NORIKS Pro (noriks-dental) — FAQ za "Informacije o Proizvodu" (po originalu sonicdental.co).
+// NORIKS ProSonic (noriks-dental) — FAQ za "Informacije o Proizvodu" (po originalu sonicdental.co).
 $dental_faq = array(
   array(
-    'questioon' => 'Što sve NORIKS Pro može očistiti?',
+    'questioon' => 'Što sve NORIKS ProSonic može očistiti?',
     'answer'    => 'Retainere, proteze, prozirne folije (npr. Invisalign), noćne udlage i sportske štitnike, izbjeljivačke folije te glave električnih četkica — dakle sva odvojiva zubna pomagala.'
   ),
   array(
@@ -1573,7 +1573,7 @@ $dental_faq = array(
   ),
   array(
     'questioon' => 'Je li bolji od četkice?',
-    'answer'    => 'Četkica ne dolazi do svih udubljenja, a pastom se prozirne folije izgrebu i s vremenom postanu mutne. NORIKS Pro čisti bez dodira — dubinski, brzo i bez oštećenja.'
+    'answer'    => 'Četkica ne dolazi do svih udubljenja, a pastom se prozirne folije izgrebu i s vremenom postanu mutne. NORIKS ProSonic čisti bez dodira — dubinski, brzo i bez oštećenja.'
   ),
   array(
     'questioon' => 'Koliko traje ciklus i koliko je glasan?',

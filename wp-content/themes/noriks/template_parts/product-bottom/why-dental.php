@@ -1,12 +1,12 @@
 <?php
 /**
- * product-bottom: NORIKS Pro — ultrazvučni čistač zubnih pomagala (noriks-dental)
+ * product-bottom: NORIKS ProSonic — ultrazvučni čistač zubnih pomagala (noriks-dental)
  *
  * Sekcije (redoslijed kao na originalu sonicdental.co):
  *   1. Ultrazvuk 43.000 Hz + UV-C            slika 05 (tamna)
- *   2. Što NORIKS Pro može čistiti           slika 06 + popis pomagala
+ *   2. Što NORIKS ProSonic može čistiti           slika 06 + popis pomagala
  *   3. Kako se koristi — 4 koraka            slika 07 / 08
- *   4. Usporedna tablica                     NORIKS Pro vs. ostali
+ *   4. Usporedna tablica                     NORIKS ProSonic vs. ostali
  *   5. Laboratorijski testirano i dokazano   izvještaj S. aureus (3 ponavljanja)
  *   6. Nagrada + The Telegraph               slike 02 i 04
  *   7. Tehnički podaci                       tablica specifikacija
@@ -38,15 +38,15 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <li><strong>2 ciklusa</strong>: 3 minute (svakodnevno) i 5 minuta (dubinsko)</li>
       </ul>
     </div>
-    <div class="ndn-media"><?php echo $nd_img( 'nd_05_znacilnosti.webp', 'NORIKS Pro — ultrazvuk 43.000 Hz i UV-C svjetlo' ); ?></div>
+    <div class="ndn-media"><?php echo $nd_img( 'nd_05_znacilnosti.webp', 'NORIKS ProSonic — ultrazvuk 43.000 Hz i UV-C svjetlo' ); ?></div>
   </div>
 </section>
 
-<!-- ============ 2) Što NORIKS Pro može čistiti (jedna crna sekcija) ============ -->
+<!-- ============ 2) Što NORIKS ProSonic može čistiti (jedna crna sekcija) ============ -->
 <section class="ndn-clean">
   <div class="ndn-wrap">
-    <h2 class="ndn-clean-h">Što <strong>NORIKS Pro</strong> može čistiti?</h2>
-    <p class="ndn-clean-sub">Ako se stavlja u usta, NORIKS Pro će to očistiti — postupak je uvijek isti i traje 3 minute.</p>
+    <h2 class="ndn-clean-h">Što <strong>NORIKS ProSonic</strong> može čistiti?</h2>
+    <p class="ndn-clean-sub">Ako se stavlja u usta, NORIKS ProSonic će to očistiti — postupak je uvijek isti i traje 3 minute.</p>
     <div class="ndn-clean-row">
       <?php
       $ndn_ico = array(
@@ -103,7 +103,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <li>Upravljanje <strong>na dodir</strong> — jedan gumb i gotovo</li>
       </ul>
     </div>
-    <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS Pro — koraci čišćenja' ); ?></div>
+    <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS ProSonic — koraci čišćenja' ); ?></div>
   </div>
 </section>
 
@@ -140,7 +140,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 <!-- ============ Svakodnevna upotreba — tekst lijevo, slika desno ============ -->
 <section class="ndn-sec ndn-alt">
   <div class="ndn-wrap ndn-row2">
-    <div class="ndn-media"><?php echo $nd_img( 'nd_08_uporaba.webp', 'NORIKS Pro u svakodnevnoj upotrebi' ); ?></div>
+    <div class="ndn-media"><?php echo $nd_img( 'nd_08_uporaba.webp', 'NORIKS ProSonic u svakodnevnoj upotrebi' ); ?></div>
     <div class="ndn-copy">
       <h2 class="ndn-h2">Dio jutarnje rutine, ne dodatni posao</h2>
       <p class="ndn-lead">Stavite pomagalo u uređaj dok se tuširate ili spremate — kad se vratite, čeka vas čisto i dezinficirano pomagalo. Bez namakanja preko noći, bez posudica po kupaonici i bez mirisa tableta.</p>
@@ -157,14 +157,14 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 <!-- ============ 4) Usporedna tablica ============ -->
 <section class="ndn-sec">
   <div class="ndn-wrap">
-    <h2 class="ndn-h2 ndn-center">Zašto NORIKS Pro, a ne nešto drugo?</h2>
+    <h2 class="ndn-h2 ndn-center">Zašto NORIKS ProSonic, a ne nešto drugo?</h2>
     <p class="ndn-lead ndn-center">Isti test, četiri načina čišćenja zubnih pomagala.</p>
     <div class="ndn-cmp-scroll ndn-cmp-narrow">
       <table class="ndn-cmp">
         <thead>
           <tr>
             <th class="ndn-cmp-empty"></th>
-            <th class="ndn-cmp-us">NORIKS Pro</th>
+            <th class="ndn-cmp-us">NORIKS ProSonic</th>
             <th>Drugi ultrazvučni uređaji</th>
             <th>Četkica</th>
             <th>Tablete za sterilizaciju</th>
@@ -239,10 +239,10 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     <h2 class="ndn-h2 ndn-center">Tehnički podaci</h2>
     <p class="ndn-lead ndn-center">Sve što uređaj zna, na jednom mjestu.</p>
     <div class="ndn-spec-card">
-      <div class="ndn-spec-media"><?php echo $nd_img( 'nd_03_pakiranje.webp', 'NORIKS Pro — pakiranje i sadržaj' ); ?></div>
+      <div class="ndn-spec-media"><?php echo $nd_img( 'nd_03_pakiranje.webp', 'NORIKS ProSonic — pakiranje i sadržaj' ); ?></div>
       <div class="ndn-spec-grid">
         <?php foreach ( array(
-          array( 'Model', 'NORIKS Pro' ),
+          array( 'Model', 'NORIKS ProSonic' ),
           array( 'Ultrazvučna frekvencija', '43 kHz' ),
           array( 'UV-C svjetlo', '200–280 nm' ),
           array( 'Ciklusi čišćenja', '3 min / 5 min' ),
@@ -262,7 +262,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <?php endforeach; ?>
       </div>
     </div>
-    <p class="ndn-note ndn-center">U pakiranju: uređaj NORIKS Pro, adapter za napajanje i upute na hrvatskom.</p>
+    <p class="ndn-note ndn-center">U pakiranju: uređaj NORIKS ProSonic, adapter za napajanje i upute na hrvatskom.</p>
   </div>
 </section>
 

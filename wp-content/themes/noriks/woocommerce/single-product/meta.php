@@ -525,7 +525,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
 
          <?php elseif( noriks_is_type( 'dental', $current_product_id ) ): ?>
 
-                NORIKS Pro je ultrazvučni čistač s UV-C sterilizacijom za sva odvojiva zubna pomagala — prozirne folije i Invisalign, retainere, proteze, noćne udlage i štitnike te glave električnih četkica.<br><br>Ultrazvuk frekvencije <strong>43.000 Hz</strong> stvara milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s mjesta do kojih četkica ne dolazi — bez struganja koje ogrebe folije. Istovremeno <strong>UV-C svjetlo (200–280 nm)</strong> uklanja do 99,9 % bakterija, virusa i gljivica; učinkovitost je laboratorijski potvrđena na E. coli, Staphylococcus aureusu i Candidi albicans.<br><br>Upotreba je jednostavna: spremnik (165 ml) napunite hladnom vodom, stavite pomagalo unutra i odaberite ciklus od 3 ili 5 minuta. Tablete i kemikalije nisu potrebne. Uređaj radi tiho (≤ 65 dB), upravlja se na dodir i dimenzija je 122 × 122 × 100 mm, pa stane na svaku policu u kupaonici.<br><br>U pakiranju: uređaj NORIKS Pro, adapter za napajanje i upute. Uz proizvod idu <strong>1 godina jamstva</strong> i <strong>30 dana povrata novca</strong>.
+                NORIKS ProSonic je ultrazvučni čistač s UV-C sterilizacijom za sva odvojiva zubna pomagala — prozirne folije i Invisalign, retainere, proteze, noćne udlage i štitnike te glave električnih četkica.<br><br>Ultrazvuk frekvencije <strong>43.000 Hz</strong> stvara milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s mjesta do kojih četkica ne dolazi — bez struganja koje ogrebe folije. Istovremeno <strong>UV-C svjetlo (200–280 nm)</strong> uklanja do 99,9 % bakterija, virusa i gljivica; učinkovitost je laboratorijski potvrđena na E. coli, Staphylococcus aureusu i Candidi albicans.<br><br>Upotreba je jednostavna: spremnik (165 ml) napunite hladnom vodom, stavite pomagalo unutra i odaberite ciklus od 3 ili 5 minuta. Tablete i kemikalije nisu potrebne. Uređaj radi tiho (≤ 65 dB), upravlja se na dodir i dimenzija je 122 × 122 × 100 mm, pa stane na svaku policu u kupaonici.<br><br>U pakiranju: uređaj NORIKS ProSonic, adapter za napajanje i upute. Uz proizvod idu <strong>1 godina jamstva</strong> i <strong>30 dana povrata novca</strong>.
 
          <?php elseif( noriks_is_type( 'hairmagic', $current_product_id ) ): ?>
 
@@ -585,6 +585,9 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
         
       </div>
 
+
+    </div>
+
     <?php // NORIKS Dental: zasebni akordeon s ključnim prednostima (drugo mjesto).
     if ( noriks_is_type( 'dental', $current_product_id ) ) : ?>
     <div class="accordion-item">
@@ -604,7 +607,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
       </div>
     </div>
     <?php endif; ?>
-    </div>
     
     
     

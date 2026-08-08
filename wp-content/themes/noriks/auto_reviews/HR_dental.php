@@ -1,5 +1,5 @@
 <?php
-// Review pool za NORIKS Pro — ultrazvučni čistač zubnih pomagala (noriks-dental).
+// Review pool za NORIKS ProSonic — ultrazvučni čistač zubnih pomagala (noriks-dental).
 // Samo tekst (bez fotografija), hrvatski.
 $auto_reviews_en = array(
     array("name" => "Ivana M.", "text" => "Nosim Invisalign osmi mjesec i folije su uvijek imale onaj mliječni sloj koji se četkicom nije dao skinuti. Nakon prvog ciklusa od 3 minute bile su prozirne kao prvi dan."),
