@@ -1349,6 +1349,17 @@ function gck_render_bundle_selector() {
           // + boja kao prilagođeni dropdown s uzorkom. Sve kritično se postavlja
           // inline iz JS-a (LiteSpeed UCSS briše pravila za klase kojih nema u HTML-u).
     if ( has_term( 'noriks-dental', 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* unutarnja točka radio gumba (pseudo-element se ne da postaviti inline) */
+      #bundle-selector .bundle-option > input[type="radio"]::before {
+          position: static !important; inset: auto !important; margin: 0 !important;
+          grid-area: 1 / 1 !important; place-self: center !important;
+          width: 9px !important; height: 9px !important; border-radius: 50% !important;
+          background: #ffffff !important;
+      }
+      /* na ovom proizvodu nema tablice veličina */
+      .js-open-size-chart, .noriks-global-sizechart, #open-size-chartCustom, .gck-size-link-wrap { display: none !important; }
+    </style>
     <script>
     (function(){
       var PURPLE = '#7c5cbf', PURPLE_BG = '#efeafa', LINE = '#111111';
@@ -1403,8 +1414,8 @@ function gck_render_bundle_selector() {
           if(total) R.appendChild(total); if(reg) R.appendChild(reg);
 
           css(title, {'display':'inline-block','margin':'0','font-size':'16.5px','font-weight':'800','color':'#111','line-height':'1.25'});
-          css(save,  {'position':'static','display':'inline-block','margin':'0','padding':'3px 8px','background':'#e6def8',
-                      'color':'#553a99','border':'0','border-radius':'5px','font-size':'11.5px','font-weight':'800',
+          css(save,  {'position':'static','display':'inline-block','margin':'0','padding':'3px 9px','background':'#c0392b',
+                      'color':'#fff','border':'0','border-radius':'5px','font-size':'12px','font-weight':'800',
                       'line-height':'1.35','transform':'none','top':'auto','right':'auto'});
           css(total, {'display':'block','font-size':'19px','font-weight':'800','color':'#111','line-height':'1.2','margin':'0'});
           css(reg,   {'display':'block','font-size':'13.5px','font-weight':'400','color':'#9a9a9a',
@@ -1424,7 +1435,7 @@ function gck_render_bundle_selector() {
           /* boja — prilagođeni dropdown s uzorkom */
           var pairs = lab.querySelector('.bundle-pairs');
           if(pairs){
-            css(pairs, {'border-top':'1px solid #e6e6e6','margin-top':'12px','padding-top':'10px','margin-left':'-36px'});
+            css(pairs, {'border-top':'0','margin-top':'10px','padding-top':'0','margin-left':'-36px'});
             if(!pairs.querySelector('.ndn-lbl')){
               var lbl = document.createElement('div');
               lbl.className = 'ndn-lbl'; lbl.textContent = 'Boja';
