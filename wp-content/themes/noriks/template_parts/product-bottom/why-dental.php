@@ -267,7 +267,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <style>
-  .ndn-sec { padding: 54px 0; background: #fff; }
+  .ndn-sec { padding: 54px 0; background: #fff; overflow-x: hidden; }
   .ndn-sec.ndn-alt { background: #f5f7f8; }
   .ndn-sec.ndn-dark { background: #12181d; }
   .ndn-sec.ndn-soft { background: #f1f3f5; }
@@ -429,8 +429,15 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     .ndn-guarantee { padding: 24px 18px; }
     .ndn-tiles, .ndn-tiles-3 { grid-template-columns: 1fr; }
     .ndn-how { padding: 30px 0 26px; }
-    .ndn-how-row { flex-wrap: wrap; gap: 16px 0; }
+    .ndn-how-row { flex-wrap: wrap; justify-content: center; gap: 18px 0; }
     .ndn-how-step { flex: 0 0 50%; }
+    .ndn-how-step:last-child { flex: 0 0 100%; }
+    /* laboratorijska tablica: vodoravno drsanje unutar kartice, bez razbijanja stranice */
+    .ndn-lab { overflow: hidden; }
+    .ndn-lab-left, .ndn-lab-right { min-width: 0; }
+    .ndn-cmp-scroll { max-width: 100%; -webkit-overflow-scrolling: touch; }
+    .ndn-lab-table { min-width: 430px; }
+    .ndn-lab-table th, .ndn-lab-table td { padding: 9px 8px; font-size: 12.5px; }
     .ndn-how-arrow { display: none; }
     .ndn-how-dot { width: 56px; height: 56px; }
     .ndn-clean { padding: 26px 0 22px; }
