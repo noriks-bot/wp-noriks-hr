@@ -50,12 +50,28 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     <div class="ndn-clean-row">
       <?php
       $ndn_ico = array(
-        'aligner'  => '<svg viewBox="0 0 64 64" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 46c-3-12-2-24 4-30 5-5 27-5 32 0 6 6 7 18 4 30" stroke-linecap="round"/><path d="M19 45c-2-10-1-20 3-24 4-4 16-4 20 0 4 4 5 14 3 24" stroke-linecap="round"/></svg>',
-        'retainer' => '<svg viewBox="0 0 64 64" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2"><path d="M32 16v14M14 44c-2-12 0-22 6-25 5-3 9 1 12 6 3-5 7-9 12-6 6 3 8 13 6 25" stroke-linecap="round"/><path d="M9 46a5 5 0 1 0 8-4M55 46a5 5 0 1 1-8-4" stroke-linecap="round"/></svg>',
-        'denture'  => '<svg viewBox="0 0 64 64" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 24c4-6 40-6 44 0 2 3-2 8-6 8H16c-4 0-8-5-6-8Z" stroke-linejoin="round"/><path d="M10 42c4-6 40-6 44 0 2 3-2 8-6 8H16c-4 0-8-5-6-8Z" stroke-linejoin="round"/><path d="M20 24v8M28 24v8M36 24v8M44 24v8M20 42v8M28 42v8M36 42v8M44 42v8"/></svg>',
-        'guard'    => '<svg viewBox="0 0 64 64" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 44c-3-12-2-22 4-27 5-4 23-4 28 0 6 5 7 15 4 27" stroke-linecap="round"/><path d="M18 46c-2-10-1-18 3-22 4-3 18-3 22 0 4 4 5 12 3 22" stroke-linecap="round"/><path d="M14 44c2 4 8 6 18 6s16-2 18-6" stroke-linecap="round"/></svg>',
-        'whiten'   => '<svg viewBox="0 0 64 64" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 42c-2-11-1-20 4-24 5-4 23-4 28 0 5 4 6 13 4 24" stroke-linecap="round"/><path d="M24 20l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z" stroke-linejoin="round"/></svg>',
-        'brush'    => '<svg viewBox="0 0 64 64" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="14" width="16" height="16" rx="8"/><path d="M26 22h10c3 0 5 2 5 5v20c0 3-2 5-5 5h-2c-3 0-5-2-5-5V27" stroke-linejoin="round"/></svg>',
+        // Obrisi zubnih pomagala — bijeli obris + siva ispuna (kao na originalu).
+        'aligner'  => '<svg viewBox="0 0 72 72" width="54" height="54" aria-hidden="true">'
+          . '<path d="M12 54C7 32 17 14 36 14s24 18 19 40c-4 3-8-2-9-9-1-8-4-13-10-13s-9 5-10 13c-1 7-5 12-9 9Z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
+          . '<path d="M18 48c-3-17 4-30 18-30s21 13 18 30" fill="none" stroke="#fff" stroke-width="1.4" opacity=".55"/></svg>',
+        'retainer' => '<svg viewBox="0 0 72 72" width="54" height="54" aria-hidden="true">'
+          . '<path d="M16 50C11 30 20 16 36 16s25 14 20 34c-4 2-7-3-8-9-1-7-5-11-12-11s-11 4-12 11c-1 6-4 11-8 9Z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
+          . '<path d="M14 34c8-6 36-6 44 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>'
+          . '<circle cx="13" cy="52" r="5" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="59" cy="52" r="5" fill="none" stroke="#fff" stroke-width="1.8"/></svg>',
+        'denture'  => '<svg viewBox="0 0 72 72" width="54" height="54" aria-hidden="true">'
+          . '<path d="M10 26c8-7 44-7 52 0 2 2-1 8-6 8H16c-5 0-8-6-6-8Z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
+          . '<path d="M10 46c8-7 44-7 52 0 2 2-1 8-6 8H16c-5 0-8-6-6-8Z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
+          . '<path d="M20 27v6M28 26v7M36 26v7M44 26v7M52 27v6M20 47v6M28 46v7M36 46v7M44 46v7M52 47v6" stroke="#fff" stroke-width="1.2" opacity=".7"/></svg>',
+        'guard'    => '<svg viewBox="0 0 72 72" width="54" height="54" aria-hidden="true">'
+          . '<path d="M14 50C9 30 19 16 36 16s27 14 22 34c-5 4-9-1-10-8-1-8-5-12-12-12s-11 4-12 12c-1 7-5 12-10 8Z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
+          . '<path d="M20 52C15 34 23 22 36 22s21 12 16 30" fill="none" stroke="#fff" stroke-width="1.6" opacity=".65"/></svg>',
+        'whiten'   => '<svg viewBox="0 0 72 72" width="54" height="54" aria-hidden="true">'
+          . '<path d="M14 52C9 32 19 16 36 16s27 16 22 36c-4 3-8-2-9-9-1-8-5-12-13-12s-12 4-13 12c-1 7-5 12-9 9Z" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
+          . '<path d="M36 24l2.6 6.4L45 33l-6.4 2.6L36 42l-2.6-6.4L27 33l6.4-2.6L36 24Z" fill="#fff"/></svg>',
+        'brush'    => '<svg viewBox="0 0 72 72" width="54" height="54" aria-hidden="true">'
+          . '<rect x="12" y="14" width="20" height="20" rx="10" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="1.8"/>'
+          . '<path d="M16 18v-5M22 17v-6M28 18v-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>'
+          . '<path d="M30 26h11c4 0 7 3 7 7v20c0 4-3 7-7 7h-2c-4 0-7-3-7-7V32" fill="rgba(255,255,255,.10)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>',
       );
       foreach ( array(
         array( 'aligner',  'Invisalign / folije',      'bez mliječnih naslaga' ),
