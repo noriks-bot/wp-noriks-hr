@@ -44,7 +44,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 
 <!-- ============ 2) Što NORIKS Pro može čistiti (jedna crna sekcija) ============ -->
 <section class="ndn-clean">
-  <div class="ndn-wrap ndn-wrap-mid">
+  <div class="ndn-wrap">
     <h2 class="ndn-clean-h">Što <strong>NORIKS Pro</strong> može čistiti?</h2>
     <p class="ndn-clean-sub">Ako se stavlja u usta, NORIKS Pro će to očistiti — postupak je uvijek isti i traje 3 minute.</p>
     <div class="ndn-clean-row">
