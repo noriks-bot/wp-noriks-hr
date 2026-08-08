@@ -108,13 +108,29 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <li>Spremnik od <strong>165 ml</strong> i tiho djelovanje (≤ 65 dB)</li>
         <li>Upravljanje <strong>na dodir</strong> — jedan gumb i gotovo</li>
       </ul>
-      <div class="ndn-media ndn-media-wide"><?php echo $nd_img( 'nd_08_uporaba.webp', 'NORIKS Pro u svakodnevnoj upotrebi' ); ?></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 4) Usporedna tablica ============ -->
+<!-- ============ Svakodnevna upotreba — tekst lijevo, slika desno ============ -->
 <section class="ndn-sec">
+  <div class="ndn-wrap ndn-row2">
+    <div class="ndn-copy">
+      <h2 class="ndn-h2">Dio jutarnje rutine, ne dodatni posao</h2>
+      <p class="ndn-lead">Stavite pomagalo u uređaj dok se tuširate ili spremate — kad se vratite, čeka vas čisto i dezinficirano pomagalo. Bez namakanja preko noći, bez posudica po kupaonici i bez mirisa tableta.</p>
+      <ul class="ndn-check">
+        <li>Jedan gumb — <strong>bez postavki i bez učenja</strong></li>
+        <li>Spremnik se prazni i ispire za nekoliko sekundi</li>
+        <li>Kompaktan (122 × 122 × 100 mm) — stane i u putnu torbu</li>
+        <li>Radi na 100–240 V, pa ga možete nositi na put</li>
+      </ul>
+    </div>
+    <div class="ndn-media"><?php echo $nd_img( 'nd_08_uporaba.webp', 'NORIKS Pro u svakodnevnoj upotrebi' ); ?></div>
+  </div>
+</section>
+
+<!-- ============ 4) Usporedna tablica ============ -->
+<section class="ndn-sec ndn-alt">
   <div class="ndn-wrap">
     <h2 class="ndn-h2 ndn-center">Zašto NORIKS Pro, a ne nešto drugo?</h2>
     <p class="ndn-lead ndn-center">Isti test, četiri načina čišćenja zubnih pomagala.</p>
@@ -157,7 +173,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ 5) Laboratorijski testirano i dokazano ============ -->
-<section class="ndn-sec ndn-alt">
+<section class="ndn-sec">
   <div class="ndn-wrap">
     <div class="ndn-lab">
       <div class="ndn-lab-left">
@@ -193,7 +209,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ 6) Nagrada + The Telegraph ============ -->
-<section class="ndn-sec">
+<section class="ndn-sec ndn-alt">
   <div class="ndn-wrap">
     <h2 class="ndn-h2 ndn-center">Priznat tamo gdje se najviše koristi</h2>
     <div class="ndn-trust">
@@ -217,7 +233,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ 7) Tehnički podaci ============ -->
-<section class="ndn-sec ndn-alt">
+<section class="ndn-sec">
   <div class="ndn-wrap ndn-row2">
     <div class="ndn-media"><?php echo $nd_img( 'nd_03_pakiranje.webp', 'NORIKS Pro — pakiranje i sadržaj' ); ?></div>
     <div class="ndn-copy">
@@ -246,7 +262,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ 8) Jamstvo ============ -->
-<section class="ndn-sec">
+<section class="ndn-sec ndn-alt">
   <div class="ndn-wrap ndn-wrap-narrow ndn-center">
     <h2 class="ndn-h2">Bez rizika: 30 dana povrata novca</h2>
     <p class="ndn-lead">Isprobajte NORIKS Pro mjesec dana. Ako niste zadovoljni, vraćamo cijeli iznos — bez pitanja. Uz to dobivate <strong>godinu dana jamstva</strong> na uređaj.</p>
@@ -342,6 +358,18 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-spec th, .ndn-spec td { padding: 10px 4px; font-size: 14.5px; border-bottom: 1px solid #e7ebee; text-align: left; }
   .ndn-spec th { color: #6b757d; font-weight: 600; width: 46%; }
   .ndn-spec td { color: #12181d; font-weight: 600; }
+
+  /* Kratki opis iznad cijene — bez dvostrukih oznaka i bez uvučenih redaka. */
+  .woocommerce-product-details__short-description { font-size: 15px; color: #35414a; }
+  .woocommerce-product-details__short-description p { margin: 0 0 10px !important; line-height: 1.55; color: #35414a; }
+  .woocommerce-product-details__short-description ul { list-style: none !important; margin: 0 0 6px !important; padding-left: 0 !important; }
+  .woocommerce-product-details__short-description ul li {
+      position: relative; list-style: none !important; padding: 0 0 0 26px !important;
+      margin: 0 0 8px !important; text-indent: 0 !important; line-height: 1.5; color: #35414a;
+  }
+  .woocommerce-product-details__short-description ul li:before {
+      content: "✓"; position: absolute; left: 0; top: 0; color: #16a34a; font-weight: 800; font-size: 15px;
+  }
 
   .ndn-cta { display: inline-block; margin-top: 8px; background: #12181d; color: #fff; font-weight: 700; font-size: 15.5px; padding: 14px 30px; border-radius: 10px; text-decoration: none; }
   .ndn-cta:hover { background: #000; color: #fff; }
