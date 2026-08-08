@@ -290,8 +290,9 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-steps li:before { content: counter(ndnstep); position: absolute; left: 0; top: -2px; width: 30px; height: 30px; border-radius: 50%; background: #12181d; color: #fff; font-size: 14px; font-weight: 800; text-align: center; line-height: 30px; }
 
   /* polni pasovi kot na originalu */
-  .ndn-band { background: #000; line-height: 0; }
-  .ndn-band img { width: 100%; height: auto; display: block; border-radius: 0; }
+  .ndn-band { background: #000; line-height: 0; text-align: center; }
+  /* slika je kvadratna (1400x1400) — brez omejitve bi zauzela pol zaslona */
+  .ndn-band img { width: 100%; max-width: 620px; height: auto; display: inline-block; border-radius: 0; }
   .ndn-band-dark { background: #000; }
 
   /* ljubicasti "Kako se koristi" pas */
@@ -357,6 +358,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     .ndn-how-arrow { display: none; }
     .ndn-how-dot { width: 56px; height: 56px; }
     .ndn-media img { border-radius: 12px; }
+    .ndn-band img { max-width: 100%; }
   }
 </style>
 
