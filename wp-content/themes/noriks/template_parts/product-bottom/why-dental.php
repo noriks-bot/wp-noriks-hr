@@ -99,15 +99,15 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     <div class="ndn-how-row">
       <?php $ndn_steps = array(
         array( 'Napunite spremnik hladnom vodom',
-               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6s12 13 12 21a12 12 0 1 1-24 0c0-8 12-21 12-21Z" stroke-linejoin="round"/></svg>' ),
+               '<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><path d="M32 8s16 17 16 27a16 16 0 1 1-32 0C16 25 32 8 32 8Z" fill="#7fd4c8"/><path d="M24 36c0 6 4 10 9 11" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".85"/></svg>' ),
         array( 'Stavite zubno pomagalo u uređaj',
-               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 20c0-5 6-8 14-8s14 3 14 8" stroke-linecap="round"/><path d="M8 22h32l-3 16a4 4 0 0 1-4 3H15a4 4 0 0 1-4-3L8 22Z" stroke-linejoin="round"/></svg>' ),
+               '<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><ellipse cx="32" cy="24" rx="20" ry="9" fill="#ffffff"/><path d="M12 24v10c0 6 9 11 20 11s20-5 20-11V24" fill="#dff3ef"/><ellipse cx="32" cy="24" rx="11" ry="5" fill="#7fd4c8"/><path d="M29 21c2-1.6 6-1.6 6 .6 0 2-6 1.4-6 3.4 0 2.2 4 2.2 6 .6" stroke="#12181d" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>' ),
         array( 'Uključite ciklus od 3 ili 5 minuta',
-               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="26" r="14"/><path d="M24 18v8l6 4M19 6h10" stroke-linecap="round"/></svg>' ),
+               '<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><path d="M18 46c-3-13-2-24 5-29 6-4 12 1 9 6M46 46c3-13 2-24-5-29-6-4-12 1-9 6" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M14 20c3 4 3 12 0 16M50 20c-3 4-3 12 0 16M8 16c5 6 5 20 0 26M56 16c-5 6-5 20 0 26" stroke="#7fd4c8" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>' ),
         array( 'Isperite pomagalo pod mlazom vode',
-               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h14a6 6 0 0 1 6 6v4M28 22h10" stroke-linecap="round"/><path d="M33 28v3M28 32v3M38 32v3M33 36v4" stroke-linecap="round"/></svg>' ),
+               '<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><path d="M10 14h18a8 8 0 0 1 8 8v3h14" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M40 31c0 6 8 8 8 14a8 8 0 0 1-16 0c0-6 8-8 8-14Z" fill="#7fd4c8"/></svg>' ),
         array( 'Uživajte u blistavo čistom pomagalu',
-               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 8l3.2 7.6L35 18l-7.8 2.4L24 28l-3.2-7.6L13 18l7.8-2.4L24 8Z" stroke-linejoin="round"/><path d="M36 30l1.6 3.8L41 35l-3.4 1.2L36 40l-1.6-3.8L31 35l3.4-1.2L36 30Z" stroke-linejoin="round"/></svg>' ),
+               '<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><path d="M12 28c6-5 34-5 40 0-3 12-11 19-20 19S15 40 12 28Z" fill="#ffffff"/><path d="M12 28c6-5 34-5 40 0-2 3-7 5-20 5s-18-2-20-5Z" fill="#dff3ef"/><path d="M50 12l2.2 5.2L57 19l-4.8 1.8L50 26l-2.2-5.2L43 19l4.8-1.8L50 12Z" fill="#7fd4c8"/></svg>' ),
       );
       foreach ( $ndn_steps as $k => $st ) : $txt = $st[0]; ?>
         <div class="ndn-how-step">
@@ -299,7 +299,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-how-row { display: flex; align-items: flex-start; gap: 6px; }
   .ndn-how-step { flex: 1 1 0; text-align: center; padding: 0 4px; }
   .ndn-how-num { display: block; font-size: 26px; font-weight: 700; color: #7fd4c8; margin-bottom: 10px; }
-  .ndn-how-dot { display: block; width: 74px; height: 74px; margin: 0 auto 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); background: radial-gradient(circle at 50% 45%, rgba(127,212,200,.35), rgba(127,212,200,.06) 62%); }
+  .ndn-how-dot { display: flex; align-items: center; justify-content: center; width: 82px; height: 82px; margin: 0 auto 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.08); }
   .ndn-how-txt { font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,.9); margin: 0; }
   .ndn-how-arrow { flex: 0 0 18px; color: rgba(255,255,255,.55); font-size: 26px; line-height: 1; margin-top: 62px; }
   .ndn-tiles-3 { grid-template-columns: repeat(3,1fr); margin-top: 22px; }
