@@ -62,6 +62,8 @@ function noriks_product_type_map() : array {
         'norikshersbrush'         => array( 'orto-norikshersbrush', 'norikshersbrush' ),
         // NORIKS HERS HairMagic+ — puder za liniju kose.
         'hairmagic'               => array( 'orto-norikshershairmagic', 'hairmagic' ),
+        // NORIKS Pro — ultrazvučni čistač zubnih pomagala.
+        'dental'                  => array( 'noriks-dental', 'orto-dental' ),
         'leakboxers'              => array( 'orto-leak-boxers', 'leak-boxers' ),
         'kompresijske-majice'     => array( 'orto-kompresijske-majice', 'kompresijske-majice' ),
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),

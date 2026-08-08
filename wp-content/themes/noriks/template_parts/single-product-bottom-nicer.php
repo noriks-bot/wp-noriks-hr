@@ -109,6 +109,11 @@ if ( noriks_is_type( 'norikshersbrush' ) ) {
     include $noriks_pb_dir . 'why-norikshersbrush.php';
 }
 
+// NORIKS DENTAL (noriks-dental) — ultrazvučni čistač zubnih pomagala
+if ( noriks_is_type( 'dental' ) ) {
+    include $noriks_pb_dir . 'why-dental.php';
+}
+
 // HAIRMAGIC (orto-norikshershairmagic) — puder za liniju kose
 if ( noriks_is_type( 'hairmagic' ) ) {
     include $noriks_pb_dir . 'why-hairmagic.php';
