@@ -274,35 +274,6 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   </div>
 </section>
 
-<!-- ============ 8) Jamstvo ============ -->
-<section class="ndn-sec ndn-alt">
-  <div class="ndn-wrap ndn-wrap-mid">
-    <div class="ndn-guarantee">
-      <div class="ndn-guarantee-head">
-        <h2 class="ndn-h2">Isprobajte bez rizika</h2>
-        <p class="ndn-lead">Ako u 30 dana niste zadovoljni, vraćamo cijeli iznos. Bez objašnjavanja i bez skrivenih uvjeta.</p>
-      </div>
-      <div class="ndn-guarantee-grid">
-        <?php foreach ( array(
-          array( '30', 'dana povrata novca', 'Vratite uređaj i dobivate cijeli iznos natrag.' ),
-          array( '1', 'godina jamstva', 'Na uređaj i elektroniku, uz servis u Hrvatskoj.' ),
-          array( '24 h', 'slanje narudžbe', 'Radnim danom šaljemo isti ili sljedeći dan.' ),
-        ) as $g ) : ?>
-          <div class="ndn-guarantee-card">
-            <p class="ndn-guarantee-num"><?php echo esc_html( $g[0] ); ?></p>
-            <p class="ndn-guarantee-t"><?php echo esc_html( $g[1] ); ?></p>
-            <p class="ndn-guarantee-d"><?php echo esc_html( $g[2] ); ?></p>
-          </div>
-        <?php endforeach; ?>
-      </div>
-      <div class="ndn-guarantee-cta">
-        <a class="ndn-cta" href="#bundle-selector">Naruči NORIKS Pro →</a>
-        <span class="ndn-guarantee-pay">Plaćanje pouzećem · Besplatna dostava</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
   .ndn-sec { padding: 54px 0; background: #fff; }
   .ndn-sec.ndn-alt { background: #f5f7f8; }
