@@ -75,6 +75,22 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   </div>
 </section>
 
+<section class="ndn-sec">
+  <div class="ndn-wrap ndn-row2">
+    <div class="ndn-copy">
+      <h2 class="ndn-h2">Bez kemikalija, bez ribanja</h2>
+      <p class="ndn-lead">Tablete nisu potrebne — uređaj radi sa samom hladnom vodom. Za tvrdokorne mrlje možete dodati tabletu, ali to nije uvjet za čist rezultat.</p>
+      <ul class="ndn-check">
+        <li>Ciklus od <strong>3 minute</strong> za svakodnevnu upotrebu</li>
+        <li>Ciklus od <strong>5 minuta</strong> za dubinsko čišćenje i tvrdokorne naslage</li>
+        <li>Spremnik od <strong>165 ml</strong> i tiho djelovanje (≤ 65 dB)</li>
+        <li>Upravljanje <strong>na dodir</strong> — jedan gumb i gotovo</li>
+      </ul>
+    </div>
+    <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS Pro — koraci čišćenja' ); ?></div>
+  </div>
+</section>
+
 <!-- ============ 3) Kako se koristi — ljubičasti pas s 5 koraka (kao na originalu) ============ -->
 <section class="ndn-how">
   <div class="ndn-wrap">
@@ -102,22 +118,6 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <?php if ( $k < count( $ndn_steps ) - 1 ) : ?><span class="ndn-how-arrow" aria-hidden="true">›</span><?php endif; ?>
       <?php endforeach; ?>
     </div>
-  </div>
-</section>
-
-<section class="ndn-sec">
-  <div class="ndn-wrap ndn-row2">
-    <div class="ndn-copy">
-      <h2 class="ndn-h2">Bez kemikalija, bez ribanja</h2>
-      <p class="ndn-lead">Tablete nisu potrebne — uređaj radi sa samom hladnom vodom. Za tvrdokorne mrlje možete dodati tabletu, ali to nije uvjet za čist rezultat.</p>
-      <ul class="ndn-check">
-        <li>Ciklus od <strong>3 minute</strong> za svakodnevnu upotrebu</li>
-        <li>Ciklus od <strong>5 minuta</strong> za dubinsko čišćenje i tvrdokorne naslage</li>
-        <li>Spremnik od <strong>165 ml</strong> i tiho djelovanje (≤ 65 dB)</li>
-        <li>Upravljanje <strong>na dodir</strong> — jedan gumb i gotovo</li>
-      </ul>
-    </div>
-    <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS Pro — koraci čišćenja' ); ?></div>
   </div>
 </section>
 
