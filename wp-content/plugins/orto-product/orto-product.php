@@ -1345,6 +1345,158 @@ function gck_render_bundle_selector() {
     })();
     </script>
     <?php endif; ?>
+    <?php // NORIKS Dental: kartice ponuda u ljubičastoj shemi (kao na originalu)
+          // + boja (Bijela / Crna) kao prilagođeni dropdown s uzorkom boje.
+    if ( has_term( 'noriks-dental', 'product_cat', $product_id ) ) : ?>
+    <script>
+    (function(){
+      var PURPLE = '#7c5cbf', PURPLE_BG = '#ece7f7', LINE = '#111111';
+      var COLORS = { 'bijela':'#ffffff', 'bela':'#ffffff', 'crna':'#111111', 'černá':'#111111' };
+      function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
+
+      function paint(box){
+        box.querySelectorAll('.bundle-option').forEach(function(l){
+          var on = !!l.querySelector('input[name="bundle_option"]:checked');
+          css(l, on ? { 'background': PURPLE_BG, 'border': '2px solid ' + LINE }
+                    : { 'background': '#fff',   'border': '2px solid ' + LINE });
+          var r = l.querySelector('input[type="radio"]');
+          css(r, { 'border-color': on ? PURPLE : '#c9c9c9', 'background': on ? PURPLE : '#fff' });
+        });
+      }
+
+      function build(){
+        var box = document.getElementById('bundle-selector');
+        if(!box || box.dataset.ndnDone) return;
+        box.dataset.ndnDone = '1';
+
+        box.querySelectorAll('.bundle-option').forEach(function(lab){
+          css(lab, {'display':'block','position':'relative','box-sizing':'border-box',
+                    'border':'2px solid ' + LINE,'border-radius':'14px','background':'#fff',
+                    'padding':'16px 18px 16px 58px','margin':'0 0 12px','cursor':'pointer'});
+          var radio = lab.querySelector('input[type="radio"]');
+          css(radio, {'position':'absolute','left':'18px','top':'50%','transform':'translateY(-50%)',
+                      'margin':'0','width':'24px','height':'24px','box-sizing':'border-box',
+                      'border':'2px solid #c9c9c9','background':'#fff','display':'grid','place-items':'center'});
+          lab.querySelectorAll('br').forEach(function(b){ css(b, {'display':'none'}); });
+
+          /* red: cijena (bold) + naziv ponude + popust */
+          var head  = document.createElement('div');
+          var title = lab.querySelector('.bundle-option-title');
+          var total = lab.querySelector('.line-total');
+          var reg   = lab.querySelector('.gck-regular-price');
+          var save  = lab.querySelector('.gck-discount-badge');
+          var per   = lab.querySelector('.gck-per-chip');
+          var tline = lab.querySelector('.bundle-total-line');
+          css(head, {'display':'flex','align-items':'center','gap':'14px','flex-wrap':'wrap'});
+          if(title) title.parentNode.insertBefore(head, title);
+          if(total) head.appendChild(total);
+          if(title) head.appendChild(title);
+          if(save)  head.appendChild(save);
+          css(total, {'font-size':'21px','font-weight':'800','color':'#111','line-height':'1.1','margin':'0'});
+          css(title, {'font-size':'16px','font-weight':'700','color':'#111','margin':'0'});
+          css(save,  {'position':'static','display':'inline-block','margin':'0','padding':'3px 8px',
+                      'background':'#e9e2f7','color':'#5b3fa0','border':'0','border-radius':'5px',
+                      'font-size':'11.5px','font-weight':'800','transform':'none','top':'auto','right':'auto'});
+          css(tline, {'display':'block','margin':'0','padding':'0'});
+          if(reg) { css(reg, {'display':'inline-block','font-size':'14px','color':'#8b8b8b',
+                              'text-decoration':'line-through','margin':'4px 0 0'}); head.parentNode.insertBefore(reg, head.nextSibling); }
+          if(per) { css(per, {'display':'block','margin':'2px 0 0'});
+                    css(lab.querySelector('.gck-per-old'), {'display':'none'});
+                    css(lab.querySelector('.gck-per-new'), {'font-size':'13.5px','color':'#6d6d6d','font-weight':'500'}); }
+          var badge = lab.querySelector('.gck-popular-badge');
+          if(badge) css(badge, {'display':'inline-block','position':'absolute','top':'-11px','right':'14px','left':'auto',
+                                'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700',
+                                'padding':'4px 10px','border-radius':'6px','white-space':'nowrap','transform':'none','box-shadow':'0 0 0 3px #fff'});
+
+          /* boja kao prilagođeni dropdown s uzorkom */
+          var pairs = lab.querySelector('.bundle-pairs');
+          if(pairs){
+            css(pairs, {'border-top':'1px solid #e6e6e6','margin-top':'14px','padding-top':'12px'});
+            if(!pairs.querySelector('.ndn-lbl')){
+              var lbl = document.createElement('div');
+              lbl.className = 'ndn-lbl'; lbl.textContent = 'Boja';
+              pairs.insertBefore(lbl, pairs.firstChild);
+              css(lbl, {'margin':'0 0 6px','font-size':'13px','font-weight':'600','color':'#111'});
+            }
+            pairs.querySelectorAll('small').forEach(function(n){ css(n, {'display':'none'}); });
+          }
+          lab.querySelectorAll('.bundle-attr-row').forEach(function(row){
+            var sel = row.querySelector('.gck-size-select');
+            if(!sel || row.querySelector('.ndn-dd')) return;
+            css(row, {'display':'flex','align-items':'center','gap':'10px','width':'100%','margin':'0 0 8px'});
+            css(sel, {'display':'none'});
+
+            var wrap = document.createElement('span'); wrap.className = 'ndn-dd';
+            css(wrap, {'position':'relative','display':'inline-block','flex':'0 0 auto','width':'220px','max-width':'100%'});
+            row.insertBefore(wrap, sel); wrap.appendChild(sel);
+
+            var btn = document.createElement('button'); btn.type = 'button';
+            css(btn, {'display':'flex','align-items':'center','gap':'10px','width':'100%','box-sizing':'border-box',
+                      'border':'2px solid ' + LINE,'border-radius':'10px','background':'#fff','cursor':'pointer',
+                      'padding':'10px 30px 10px 12px','font-size':'15px','font-weight':'600','color':'#111','text-align':'left','min-height':'44px'});
+            var sw = document.createElement('span');
+            css(sw, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'50%','border':'1px solid rgba(0,0,0,.25)'});
+            var lb = document.createElement('span');
+            css(lb, {'flex':'1 1 auto','overflow':'hidden','text-overflow':'ellipsis','white-space':'nowrap'});
+            btn.appendChild(sw); btn.appendChild(lb); wrap.appendChild(btn);
+            var car = document.createElement('span');
+            css(car, {'position':'absolute','right':'12px','top':'50%','transform':'translateY(-50%)','pointer-events':'none',
+                      'width':'0','height':'0','border-left':'5px solid transparent','border-right':'5px solid transparent','border-top':'6px solid #333'});
+            wrap.appendChild(car);
+
+            var list = document.createElement('div');
+            css(list, {'display':'none','position':'absolute','left':'0','top':'calc(100% + 6px)','z-index':'50','width':'100%',
+                       'background':'#fff','border':'1px solid #e0e0e0','border-radius':'10px',
+                       'box-shadow':'0 12px 28px rgba(0,0,0,.16)','padding':'5px'});
+            wrap.appendChild(list);
+            function hex(v){ return COLORS[(v||'').toLowerCase()] || '#c9c9c9'; }
+            function sync(){
+              var o = sel.options[sel.selectedIndex];
+              lb.textContent = o ? o.text.trim() : '';
+              sw.style.setProperty('background', hex(sel.value), 'important');
+              Array.prototype.forEach.call(list.children, function(el){
+                var on = el.dataset.val === sel.value;
+                css(el, {'background': on ? PURPLE_BG : 'transparent', 'font-weight': on ? '700' : '500'});
+              });
+            }
+            Array.prototype.forEach.call(sel.options, function(o){
+              var it = document.createElement('div'); it.dataset.val = o.value;
+              css(it, {'display':'flex','align-items':'center','gap':'10px','padding':'10px 12px','border-radius':'8px',
+                       'cursor':'pointer','font-size':'15px','color':'#111'});
+              var c = document.createElement('span');
+              css(c, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'50%','border':'1px solid rgba(0,0,0,.25)'});
+              c.style.setProperty('background', hex(o.value), 'important');
+              var t = document.createElement('span'); t.textContent = o.text.trim();
+              it.appendChild(c); it.appendChild(t);
+              it.addEventListener('click', function(e){
+                e.preventDefault(); e.stopPropagation();
+                sel.value = o.value; sel.dispatchEvent(new Event('change', { bubbles: true }));
+                sync(); css(list, {'display':'none'});
+              });
+              list.appendChild(it);
+            });
+            btn.addEventListener('click', function(e){
+              e.preventDefault(); e.stopPropagation();
+              var open = list.style.display === 'block';
+              document.querySelectorAll('#bundle-selector .ndn-dd > div').forEach(function(o){ o.style.setProperty('display','none','important'); });
+              css(list, {'display': open ? 'none' : 'block'});
+            });
+            document.addEventListener('click', function(e){ if(!wrap.contains(e.target)) css(list, {'display':'none'}); });
+            sel.addEventListener('change', sync);
+            sync();
+          });
+        });
+
+        box.querySelectorAll('input[name="bundle_option"]').forEach(function(r){
+          r.addEventListener('change', function(){ paint(box); });
+        });
+        paint(box);
+      }
+      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', function(){ setTimeout(build, 0); }); }
+      else { setTimeout(build, 0); }
+    })();
+    </script>
+    <?php endif; ?>
     <?php // Alternativni izbornici: umjesto trake swatcheva -> DVA prilagodena dropdowna
           // (prvo Velicina, zatim Boja s uzorkom boje), isti stil kao na HairMagic+.
           // Ukljucuje se PO PROIZVODU preko ACF prekidaca "Alternativni izbornici"
