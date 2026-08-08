@@ -107,7 +107,6 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 
 <section class="ndn-sec">
   <div class="ndn-wrap ndn-row2">
-    <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS Pro — koraci čišćenja' ); ?></div>
     <div class="ndn-copy">
       <h2 class="ndn-h2">Bez kemikalija, bez ribanja</h2>
       <p class="ndn-lead">Tablete nisu potrebne — uređaj radi sa samom hladnom vodom. Za tvrdokorne mrlje možete dodati tabletu, ali to nije uvjet za čist rezultat.</p>
@@ -118,12 +117,14 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <li>Upravljanje <strong>na dodir</strong> — jedan gumb i gotovo</li>
       </ul>
     </div>
+    <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS Pro — koraci čišćenja' ); ?></div>
   </div>
 </section>
 
 <!-- ============ Svakodnevna upotreba — tekst lijevo, slika desno ============ -->
 <section class="ndn-sec ndn-alt">
   <div class="ndn-wrap ndn-row2">
+    <div class="ndn-media"><?php echo $nd_img( 'nd_08_uporaba.webp', 'NORIKS Pro u svakodnevnoj upotrebi' ); ?></div>
     <div class="ndn-copy">
       <h2 class="ndn-h2">Dio jutarnje rutine, ne dodatni posao</h2>
       <p class="ndn-lead">Stavite pomagalo u uređaj dok se tuširate ili spremate — kad se vratite, čeka vas čisto i dezinficirano pomagalo. Bez namakanja preko noći, bez posudica po kupaonici i bez mirisa tableta.</p>
@@ -134,7 +135,6 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
         <li>Radi na 100–240 V, pa ga možete nositi na put</li>
       </ul>
     </div>
-    <div class="ndn-media"><?php echo $nd_img( 'nd_08_uporaba.webp', 'NORIKS Pro u svakodnevnoj upotrebi' ); ?></div>
   </div>
 </section>
 
