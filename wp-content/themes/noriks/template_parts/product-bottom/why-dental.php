@@ -25,7 +25,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 ?>
 
 <!-- ============ 1) Ultrazvuk 43.000 Hz + UV-C ============ -->
-<section class="ndn-sec ndn-soft">
+<section class="ndn-sec ndn-soft" style="background:#f1f3f5;">
   <div class="ndn-wrap ndn-row2">
     <div class="ndn-copy">
       <p class="ndn-eyebrow">Ultrazvuk + UV-C</p>
@@ -42,12 +42,37 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   </div>
 </section>
 
-<!-- ============ 2) Što NORIKS Pro može čistiti (crni pas, kao na originalu) ============ -->
-<section class="ndn-band ndn-band-dark">
-  <?php echo $nd_img( 'nd_06_sto-cisti.webp', 'Što NORIKS Pro može čistiti — Invisalign, retaineri, proteze, noćne udlage, glave četkica' ); ?>
+<!-- ============ 2) Što NORIKS Pro može čistiti (crni pas, sve u jednom redu) ============ -->
+<section class="ndn-clean">
+  <div class="ndn-wrap ndn-wrap-mid">
+    <h2 class="ndn-clean-h">Što <strong>NORIKS Pro</strong> može čistiti?</h2>
+    <div class="ndn-clean-row">
+      <?php
+      $ndn_ico = array(
+        'aligner'  => '<svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 46c-3-12-2-24 4-30 5-5 27-5 32 0 6 6 7 18 4 30" stroke-linecap="round"/><path d="M19 45c-2-10-1-20 3-24 4-4 16-4 20 0 4 4 5 14 3 24" stroke-linecap="round"/></svg>',
+        'retainer' => '<svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2"><path d="M32 16v14M14 44c-2-12 0-22 6-25 5-3 9 1 12 6 3-5 7-9 12-6 6 3 8 13 6 25" stroke-linecap="round"/><path d="M9 46a5 5 0 1 0 8-4M55 46a5 5 0 1 1-8-4" stroke-linecap="round"/></svg>',
+        'denture'  => '<svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 24c4-6 40-6 44 0 2 3-2 8-6 8H16c-4 0-8-5-6-8Z" stroke-linejoin="round"/><path d="M10 42c4-6 40-6 44 0 2 3-2 8-6 8H16c-4 0-8-5-6-8Z" stroke-linejoin="round"/><path d="M20 24v8M28 24v8M36 24v8M44 24v8M20 42v8M28 42v8M36 42v8M44 42v8"/></svg>',
+        'guard'    => '<svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 44c-3-12-2-22 4-27 5-4 23-4 28 0 6 5 7 15 4 27" stroke-linecap="round"/><path d="M18 46c-2-10-1-18 3-22 4-3 18-3 22 0 4 4 5 12 3 22" stroke-linecap="round"/><path d="M14 44c2 4 8 6 18 6s16-2 18-6" stroke-linecap="round"/></svg>',
+        'brush'    => '<svg viewBox="0 0 64 64" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="14" width="16" height="16" rx="8"/><path d="M26 22h10c3 0 5 2 5 5v20c0 3-2 5-5 5h-2c-3 0-5-2-5-5V27" stroke-linejoin="round"/></svg>',
+      );
+      foreach ( array(
+        array( 'aligner',  'Invisalign / folije' ),
+        array( 'retainer', 'Retaineri' ),
+        array( 'denture',  'Proteze' ),
+        array( 'guard',    'Noćne udlage / štitnici' ),
+        array( 'brush',    'Glave četkica' ),
+      ) as $c ) : ?>
+        <div class="ndn-clean-item">
+          <span class="ndn-clean-ico"><?php echo $ndn_ico[ $c[0] ]; ?></span>
+          <p class="ndn-clean-t"><?php echo esc_html( $c[1] ); ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
 </section>
+
 <section class="ndn-sec">
-  <div class="ndn-wrap">
+  <div class="ndn-wrap ndn-wrap-mid">
     <h2 class="ndn-h2 ndn-center">Jedan uređaj za sva zubna pomagala</h2>
     <p class="ndn-lead ndn-center">Ako se stavlja u usta, NORIKS Pro će to očistiti — postupak je uvijek isti i traje 3 minute.</p>
     <div class="ndn-tiles ndn-tiles-3">
@@ -78,16 +103,21 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     <p class="ndn-how-sub">Ultrazvučni čistač zubnih pomagala s UV-C svjetlom</p>
     <div class="ndn-how-row">
       <?php $ndn_steps = array(
-        'Napunite spremnik NORIKS Pro hladnom vodom',
-        'Stavite zubno pomagalo u NORIKS Pro',
-        'Uključite i pričekajte ciklus od 3 ili 5 minuta',
-        'Isperite pomagalo pod mlazom vode i izlijte vodu iz spremnika',
-        'Uživajte u blistavo čistom pomagalu bez mrlja',
+        array( 'Napunite spremnik hladnom vodom',
+               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6s12 13 12 21a12 12 0 1 1-24 0c0-8 12-21 12-21Z" stroke-linejoin="round"/></svg>' ),
+        array( 'Stavite zubno pomagalo u uređaj',
+               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 20c0-5 6-8 14-8s14 3 14 8" stroke-linecap="round"/><path d="M8 22h32l-3 16a4 4 0 0 1-4 3H15a4 4 0 0 1-4-3L8 22Z" stroke-linejoin="round"/></svg>' ),
+        array( 'Uključite ciklus od 3 ili 5 minuta',
+               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="26" r="14"/><path d="M24 18v8l6 4M19 6h10" stroke-linecap="round"/></svg>' ),
+        array( 'Isperite pomagalo pod mlazom vode',
+               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h14a6 6 0 0 1 6 6v4M28 22h10" stroke-linecap="round"/><path d="M33 28v3M28 32v3M38 32v3M33 36v4" stroke-linecap="round"/></svg>' ),
+        array( 'Uživajte u blistavo čistom pomagalu',
+               '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 8l3.2 7.6L35 18l-7.8 2.4L24 28l-3.2-7.6L13 18l7.8-2.4L24 8Z" stroke-linejoin="round"/><path d="M36 30l1.6 3.8L41 35l-3.4 1.2L36 40l-1.6-3.8L31 35l3.4-1.2L36 30Z" stroke-linejoin="round"/></svg>' ),
       );
-      foreach ( $ndn_steps as $k => $txt ) : ?>
+      foreach ( $ndn_steps as $k => $st ) : $txt = $st[0]; ?>
         <div class="ndn-how-step">
           <span class="ndn-how-num"><?php echo (int) ( $k + 1 ); ?></span>
-          <span class="ndn-how-dot" aria-hidden="true"></span>
+          <span class="ndn-how-dot" aria-hidden="true"><?php echo $st[1]; ?></span>
           <p class="ndn-how-txt"><?php echo esc_html( $txt ); ?></p>
         </div>
         <?php if ( $k < count( $ndn_steps ) - 1 ) : ?><span class="ndn-how-arrow" aria-hidden="true">›</span><?php endif; ?>
@@ -348,6 +378,16 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-how-arrow { flex: 0 0 18px; color: rgba(255,255,255,.55); font-size: 26px; line-height: 1; margin-top: 62px; }
   .ndn-tiles-3 { grid-template-columns: repeat(3,1fr); margin-top: 22px; }
 
+  /* crni pas — 5 ikona u jednom redu */
+  .ndn-clean { background: #0b0b0b; padding: 46px 0 40px; }
+  .ndn-clean-h { font-size: clamp(22px,2.6vw,32px); font-weight: 500; color: rgba(255,255,255,.72); text-align: center; margin: 0 0 30px; }
+  .ndn-clean-h strong { color: #fff; font-weight: 800; }
+  .ndn-clean-row { display: flex; align-items: flex-start; justify-content: center; gap: 10px; }
+  .ndn-clean-item { flex: 1 1 0; text-align: center; color: #fff; }
+  .ndn-clean-ico { display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: #fff; }
+  .ndn-clean-t { font-size: 14px; line-height: 1.4; color: #fff; margin: 8px 0 0; }
+  .ndn-how-dot { display: flex; align-items: center; justify-content: center; color: #cdbdf2; }
+
   .ndn-cmp-scroll { width: 100%; overflow-x: auto; }
   .ndn-cmp-narrow { max-width: 1000px; margin: 0 auto; }
   .ndn-cmp { width: 100%; border-collapse: collapse; margin-top: 26px; min-width: 720px; background: #fff; }
@@ -440,6 +480,11 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     .ndn-how-step { flex: 0 0 50%; }
     .ndn-how-arrow { display: none; }
     .ndn-how-dot { width: 56px; height: 56px; }
+    .ndn-clean { padding: 26px 0 22px; }
+    .ndn-clean-row { flex-wrap: wrap; gap: 18px 0; }
+    .ndn-clean-item { flex: 0 0 33.33%; }
+    .ndn-clean-ico { width: 56px; height: 56px; }
+    .ndn-clean-t { font-size: 12.5px; }
     .ndn-media img { border-radius: 12px; }
     .ndn-band img { max-width: 100%; }
   }
