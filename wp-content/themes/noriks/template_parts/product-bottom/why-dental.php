@@ -25,13 +25,13 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 ?>
 
 <!-- ============ 1) Ultrazvuk 43.000 Hz + UV-C ============ -->
-<section class="ndn-sec ndn-dark">
+<section class="ndn-sec ndn-soft">
   <div class="ndn-wrap ndn-row2">
     <div class="ndn-copy">
       <p class="ndn-eyebrow">Ultrazvuk + UV-C</p>
-      <h2 class="ndn-h2 ndn-h2-light">Čisto do dubine — u 3 minute, bez četkanja</h2>
-      <p class="ndn-lead-light">Ultrazvučni valovi frekvencije <strong>43.000 Hz</strong> stvaraju milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s onih mjesta do kojih četkica nikada ne dođe — bez struganja koje ogrebe prozirne folije.</p>
-      <ul class="ndn-check ndn-check-light">
+      <h2 class="ndn-h2">Čisto do dubine — u 3 minute, bez četkanja</h2>
+      <p class="ndn-lead">Ultrazvučni valovi frekvencije <strong>43.000 Hz</strong> stvaraju milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s onih mjesta do kojih četkica nikada ne dođe — bez struganja koje ogrebe prozirne folije.</p>
+      <ul class="ndn-check">
         <li><strong>43.000 Hz</strong> ultrazvuka za dubinsko čišćenje</li>
         <li><strong>UV-C svjetlo 200–280 nm</strong> uklanja 99,9 % bakterija, virusa i gljivica</li>
         <li><strong>Bez kemikalija</strong> — dovoljna je obična hladna voda</li>
@@ -258,12 +258,13 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-sec { padding: 54px 0; background: #fff; }
   .ndn-sec.ndn-alt { background: #f5f7f8; }
   .ndn-sec.ndn-dark { background: #12181d; }
+  .ndn-sec.ndn-soft { background: #f1f3f5; }
   .ndn-wrap { max-width: 1440px; margin: 0 auto; padding: 0 24px; }
   .ndn-wrap-narrow { max-width: 820px; }
   .ndn-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
   .ndn-center { text-align: center; }
 
-  .ndn-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #4fd1c5; margin: 0 0 10px; }
+  .ndn-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #0d9488; margin: 0 0 10px; }
   .ndn-h2 { font-size: clamp(23px, 2.6vw, 34px); font-weight: 800; line-height: 1.22; color: #12181d; margin: 0 0 14px; }
   .ndn-h2-light { color: #fff; }
   .ndn-lead { font-size: 16px; line-height: 1.65; color: #47525b; margin: 0 0 18px; }
