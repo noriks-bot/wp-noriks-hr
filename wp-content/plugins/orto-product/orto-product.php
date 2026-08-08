@@ -1396,7 +1396,7 @@ function gck_render_bundle_selector() {
 
           css(lab, {'display':'block','position':'relative','box-sizing':'border-box',
                     'border':'2px solid #dcdcdc','border-radius':'14px','background':'#fff',
-                    'padding':'14px 16px 14px 52px','margin':'0 0 14px','min-height':'0','cursor':'pointer','overflow':'visible'});
+                    'padding':'13px 16px 10px 52px','margin':'0 0 14px','min-height':'0','cursor':'pointer','overflow':'visible'});
           css(radio, {'position':'absolute','left':'16px','top':'16px','margin':'0','width':'22px','height':'22px',
                       'box-sizing':'border-box','border':'2px solid #c9c9c9','background':'#fff',
                       'display':'grid','place-items':'center','padding':'0','line-height':'0'});
@@ -1437,19 +1437,19 @@ function gck_render_bundle_selector() {
           /* boja — prilagođeni dropdown s uzorkom */
           var pairs = lab.querySelector('.bundle-pairs');
           if(pairs){
-            css(pairs, {'border-top':'0','margin-top':'10px','padding-top':'0','margin-left':'-36px'});
+            css(pairs, {'border-top':'0','margin-top':'8px','padding-top':'0','padding-bottom':'0','margin-bottom':'0','margin-left':'-36px'});
             if(!pairs.querySelector('.ndn-lbl')){
               var lbl = document.createElement('div');
               lbl.className = 'ndn-lbl'; lbl.textContent = 'Boja';
               pairs.insertBefore(lbl, pairs.firstChild);
-              css(lbl, {'margin':'0 0 6px','font-size':'13px','font-weight':'600','color':'#111'});
+              css(lbl, {'margin':'0 0 5px','font-size':'13px','font-weight':'600','color':'#111'});
             }
             pairs.querySelectorAll('small').forEach(function(n){ css(n, {'display':'none'}); });
           }
           lab.querySelectorAll('.bundle-attr-row').forEach(function(row){
             var sel = row.querySelector('.gck-size-select');
             if(!sel || row.querySelector('.ndn-dd')) return;
-            css(row, {'display':'flex','align-items':'center','gap':'10px','width':'100%','margin':'0 0 8px'});
+            css(row, {'display':'flex','align-items':'center','gap':'10px','width':'100%','margin':'0'});
             css(sel, {'display':'none'});
 
             var wrap = document.createElement('span'); wrap.className = 'ndn-dd';
