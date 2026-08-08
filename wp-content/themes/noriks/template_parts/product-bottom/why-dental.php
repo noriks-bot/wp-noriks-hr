@@ -219,7 +219,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 
 <!-- ============ 7) Tehnički podaci ============ -->
 <section class="ndn-sec">
-  <div class="ndn-wrap ndn-wrap-mid">
+  <div class="ndn-wrap">
     <h2 class="ndn-h2 ndn-center">Tehnički podaci</h2>
     <p class="ndn-lead ndn-center">Sve što uređaj zna, na jednom mjestu.</p>
     <div class="ndn-spec-card">
@@ -372,7 +372,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-wrap-mid { max-width: 1080px; }
 
   /* tehnicki podaci — kartica sa slikom i dvostupcanom listom */
-  .ndn-spec-card { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 30px; align-items: center;
+  .ndn-spec-card { display: grid; grid-template-columns: 0.62fr 1.38fr; gap: 30px; align-items: center;
                    background: #fff; border: 1px solid #e7ebee; border-radius: 20px; padding: 26px; margin-top: 24px; }
   .ndn-spec-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
   .ndn-spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; }
