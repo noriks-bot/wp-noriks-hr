@@ -372,7 +372,11 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .woocommerce-product-details__short-description { font-size: 15px; color: #35414a; }
   /* Slogan odmah ispod naslova proizvoda (kao na originalu). */
   .woocommerce-product-details__short-description p.ndn-tagline {
-      font-size: 17px !important; font-weight: 700 !important; color: #12181d !important;
+      font-size: 17px !important; font-weight: 800 !important; color: #12181d !important;
+      margin: 0 0 4px !important; line-height: 1.35;
+  }
+  .woocommerce-product-details__short-description p.ndn-tagline2 {
+      font-size: 15.5px !important; font-weight: 700 !important; color: #16a34a !important;
       margin: 0 0 10px !important; line-height: 1.35;
   }
   .woocommerce-product-details__short-description p { margin: 0 0 10px !important; line-height: 1.55; color: #35414a; }
