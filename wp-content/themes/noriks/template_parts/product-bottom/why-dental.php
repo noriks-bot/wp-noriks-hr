@@ -426,6 +426,11 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 
   /* Kratki opis iznad cijene — bez dvostrukih oznaka i bez uvučenih redaka. */
   .woocommerce-product-details__short-description { font-size: 15px; color: #35414a; }
+  /* Slogan odmah ispod naslova proizvoda (kao na originalu). */
+  .woocommerce-product-details__short-description p.ndn-tagline {
+      font-size: 17px !important; font-weight: 700 !important; color: #12181d !important;
+      margin: 0 0 10px !important; line-height: 1.35;
+  }
   .woocommerce-product-details__short-description p { margin: 0 0 10px !important; line-height: 1.55; color: #35414a; }
   .woocommerce-product-details__short-description ul { list-style: none !important; margin: 0 0 6px !important; padding-left: 0 !important; }
   .woocommerce-product-details__short-description ul li {
