@@ -134,7 +134,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   <div class="ndn-wrap">
     <h2 class="ndn-h2 ndn-center">Zašto NORIKS Pro, a ne nešto drugo?</h2>
     <p class="ndn-lead ndn-center">Isti test, četiri načina čišćenja zubnih pomagala.</p>
-    <div class="ndn-cmp-scroll">
+    <div class="ndn-cmp-scroll ndn-cmp-narrow">
       <table class="ndn-cmp">
         <thead>
           <tr>
@@ -234,39 +234,63 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 
 <!-- ============ 7) Tehnički podaci ============ -->
 <section class="ndn-sec">
-  <div class="ndn-wrap ndn-row2">
-    <div class="ndn-media"><?php echo $nd_img( 'nd_03_pakiranje.webp', 'NORIKS Pro — pakiranje i sadržaj' ); ?></div>
-    <div class="ndn-copy">
-      <h2 class="ndn-h2">Tehnički podaci</h2>
-      <table class="ndn-spec">
+  <div class="ndn-wrap ndn-wrap-mid">
+    <h2 class="ndn-h2 ndn-center">Tehnički podaci</h2>
+    <p class="ndn-lead ndn-center">Sve što uređaj zna, na jednom mjestu.</p>
+    <div class="ndn-spec-card">
+      <div class="ndn-spec-media"><?php echo $nd_img( 'nd_03_pakiranje.webp', 'NORIKS Pro — pakiranje i sadržaj' ); ?></div>
+      <div class="ndn-spec-grid">
         <?php foreach ( array(
           array( 'Model', 'NORIKS Pro' ),
-          array( 'Snaga', '20 W' ),
-          array( 'Napajanje', 'DC 12 V / 2 A' ),
           array( 'Ultrazvučna frekvencija', '43 kHz' ),
           array( 'UV-C svjetlo', '200–280 nm' ),
+          array( 'Ciklusi čišćenja', '3 min / 5 min' ),
+          array( 'Snaga', '20 W' ),
+          array( 'Napajanje', 'DC 12 V / 2 A' ),
           array( 'Razina buke', '≤ 65 dB(A)' ),
-          array( 'Ciklusi', '3 min / 5 min' ),
           array( 'Upravljanje', 'na dodir' ),
           array( 'Dimenzije', '122 × 122 × 100 mm' ),
-          array( 'Spremnik', 'ø 80 × 45 mm, 165 ml' ),
+          array( 'Spremnik', 'ø 80 × 45 mm · 165 ml' ),
           array( 'Materijal', 'ABS + nehrđajući čelik 304' ),
-          array( 'Certifikati', 'CE, FCC, RoHS, C-Tick (EMC)' ),
+          array( 'Certifikati', 'CE · FCC · RoHS · C-Tick' ),
         ) as $sp ) : ?>
-          <tr><th><?php echo esc_html( $sp[0] ); ?></th><td><?php echo esc_html( $sp[1] ); ?></td></tr>
+          <div class="ndn-spec-row">
+            <span class="ndn-spec-k"><?php echo esc_html( $sp[0] ); ?></span>
+            <span class="ndn-spec-v"><?php echo esc_html( $sp[1] ); ?></span>
+          </div>
         <?php endforeach; ?>
-      </table>
-      <p class="ndn-note">U pakiranju: uređaj NORIKS Pro, adapter za napajanje i upute na hrvatskom.</p>
+      </div>
     </div>
+    <p class="ndn-note ndn-center">U pakiranju: uređaj NORIKS Pro, adapter za napajanje i upute na hrvatskom.</p>
   </div>
 </section>
 
 <!-- ============ 8) Jamstvo ============ -->
 <section class="ndn-sec ndn-alt">
-  <div class="ndn-wrap ndn-wrap-narrow ndn-center">
-    <h2 class="ndn-h2">Bez rizika: 30 dana povrata novca</h2>
-    <p class="ndn-lead">Isprobajte NORIKS Pro mjesec dana. Ako niste zadovoljni, vraćamo cijeli iznos — bez pitanja. Uz to dobivate <strong>godinu dana jamstva</strong> na uređaj.</p>
-    <a class="ndn-cta" href="#bundle-selector">Naruči NORIKS Pro →</a>
+  <div class="ndn-wrap ndn-wrap-mid">
+    <div class="ndn-guarantee">
+      <div class="ndn-guarantee-head">
+        <h2 class="ndn-h2">Isprobajte bez rizika</h2>
+        <p class="ndn-lead">Ako u 30 dana niste zadovoljni, vraćamo cijeli iznos. Bez objašnjavanja i bez skrivenih uvjeta.</p>
+      </div>
+      <div class="ndn-guarantee-grid">
+        <?php foreach ( array(
+          array( '30', 'dana povrata novca', 'Vratite uređaj i dobivate cijeli iznos natrag.' ),
+          array( '1', 'godina jamstva', 'Na uređaj i elektroniku, uz servis u Hrvatskoj.' ),
+          array( '24 h', 'slanje narudžbe', 'Radnim danom šaljemo isti ili sljedeći dan.' ),
+        ) as $g ) : ?>
+          <div class="ndn-guarantee-card">
+            <p class="ndn-guarantee-num"><?php echo esc_html( $g[0] ); ?></p>
+            <p class="ndn-guarantee-t"><?php echo esc_html( $g[1] ); ?></p>
+            <p class="ndn-guarantee-d"><?php echo esc_html( $g[2] ); ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+      <div class="ndn-guarantee-cta">
+        <a class="ndn-cta" href="#bundle-selector">Naruči NORIKS Pro →</a>
+        <span class="ndn-guarantee-pay">Plaćanje pouzećem · Besplatna dostava</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -325,6 +349,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   .ndn-tiles-3 { grid-template-columns: repeat(3,1fr); margin-top: 22px; }
 
   .ndn-cmp-scroll { width: 100%; overflow-x: auto; }
+  .ndn-cmp-narrow { max-width: 1000px; margin: 0 auto; }
   .ndn-cmp { width: 100%; border-collapse: collapse; margin-top: 26px; min-width: 720px; background: #fff; }
   .ndn-cmp th, .ndn-cmp td { padding: 14px 12px; text-align: center; border-bottom: 1px solid #eceff1; font-size: 14px; }
   .ndn-cmp thead th { font-size: 13.5px; font-weight: 700; color: #6b757d; border-bottom: 2px solid #12181d; vertical-align: bottom; }
@@ -371,6 +396,32 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
       content: "✓"; position: absolute; left: 0; top: 0; color: #16a34a; font-weight: 800; font-size: 15px;
   }
 
+  .ndn-wrap-mid { max-width: 1080px; }
+
+  /* tehnicki podaci — kartica sa slikom i dvostupcanom listom */
+  .ndn-spec-card { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 30px; align-items: center;
+                   background: #fff; border: 1px solid #e7ebee; border-radius: 20px; padding: 26px; margin-top: 24px; }
+  .ndn-spec-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
+  .ndn-spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; }
+  .ndn-spec-row { display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #eef1f3; }
+  .ndn-spec-k { font-size: 13.5px; color: #6b757d; }
+  .ndn-spec-v { font-size: 13.5px; font-weight: 700; color: #12181d; text-align: right; }
+
+  /* jamstvo */
+  .ndn-guarantee { background: #12181d; border-radius: 22px; padding: 38px 34px; color: #fff; }
+  .ndn-guarantee-head { text-align: center; max-width: 640px; margin: 0 auto 26px; }
+  .ndn-guarantee .ndn-h2 { color: #fff; }
+  .ndn-guarantee .ndn-lead { color: rgba(255,255,255,.78); margin: 0; }
+  .ndn-guarantee-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .ndn-guarantee-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: 20px; text-align: center; }
+  .ndn-guarantee-num { font-size: 34px; font-weight: 800; color: #4fd1c5; margin: 0 0 2px; }
+  .ndn-guarantee-t { font-size: 15px; font-weight: 700; color: #fff; margin: 0 0 6px; }
+  .ndn-guarantee-d { font-size: 13px; line-height: 1.5; color: rgba(255,255,255,.68); margin: 0; }
+  .ndn-guarantee-cta { text-align: center; margin-top: 26px; }
+  .ndn-guarantee-cta .ndn-cta { background: #fff; color: #12181d; }
+  .ndn-guarantee-cta .ndn-cta:hover { background: #e9edf0; color: #12181d; }
+  .ndn-guarantee-pay { display: block; margin-top: 12px; font-size: 13px; color: rgba(255,255,255,.62); }
+
   .ndn-cta { display: inline-block; margin-top: 8px; background: #12181d; color: #fff; font-weight: 700; font-size: 15.5px; padding: 14px 30px; border-radius: 10px; text-decoration: none; }
   .ndn-cta:hover { background: #000; color: #fff; }
 
@@ -379,7 +430,10 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     .ndn-wrap { padding: 0 16px; }
     .ndn-row2, .ndn-lab { grid-template-columns: 1fr; gap: 22px; }
     .ndn-lab { padding: 20px; }
-    .ndn-trust { grid-template-columns: 1fr; }
+    .ndn-trust, .ndn-guarantee-grid { grid-template-columns: 1fr; }
+    .ndn-spec-card { grid-template-columns: 1fr; padding: 18px; }
+    .ndn-spec-grid { grid-template-columns: 1fr; }
+    .ndn-guarantee { padding: 24px 18px; }
     .ndn-tiles, .ndn-tiles-3 { grid-template-columns: 1fr; }
     .ndn-how { padding: 30px 0 26px; }
     .ndn-how-row { flex-wrap: wrap; gap: 16px 0; }
