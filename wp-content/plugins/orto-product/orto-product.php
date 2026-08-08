@@ -1432,7 +1432,7 @@ function gck_render_bundle_selector() {
           var badge = lab.querySelector('.gck-popular-badge');
           if(badge) css(badge, {'display':'inline-block','position':'absolute','top':'-11px','right':'12px','left':'auto','z-index':'3',
                                 'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700','padding':'4px 10px',
-                                'border-radius':'6px','white-space':'nowrap','line-height':'1.4','transform':'none','box-shadow':'0 0 0 3px #fff','border':'0'});
+                                'border-radius':'6px','white-space':'nowrap','line-height':'1.4','transform':'none','box-shadow':'none','border':'0'});
 
           /* boja — prilagođeni dropdown s uzorkom */
           var pairs = lab.querySelector('.bundle-pairs');
