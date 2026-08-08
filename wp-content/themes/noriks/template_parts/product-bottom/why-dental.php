@@ -105,7 +105,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
   </div>
 </section>
 
-<section class="ndn-sec ndn-alt">
+<section class="ndn-sec">
   <div class="ndn-wrap ndn-row2">
     <div class="ndn-media"><?php echo $nd_img( 'nd_07_koraci.webp', 'NORIKS Pro — koraci čišćenja' ); ?></div>
     <div class="ndn-copy">
@@ -122,7 +122,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ Svakodnevna upotreba — tekst lijevo, slika desno ============ -->
-<section class="ndn-sec">
+<section class="ndn-sec ndn-alt">
   <div class="ndn-wrap ndn-row2">
     <div class="ndn-copy">
       <h2 class="ndn-h2">Dio jutarnje rutine, ne dodatni posao</h2>
@@ -139,7 +139,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ 4) Usporedna tablica ============ -->
-<section class="ndn-sec ndn-alt">
+<section class="ndn-sec">
   <div class="ndn-wrap">
     <h2 class="ndn-h2 ndn-center">Zašto NORIKS Pro, a ne nešto drugo?</h2>
     <p class="ndn-lead ndn-center">Isti test, četiri načina čišćenja zubnih pomagala.</p>
@@ -182,7 +182,7 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
 </section>
 
 <!-- ============ 5) Laboratorijski testirano i dokazano ============ -->
-<section class="ndn-sec">
+<section class="ndn-sec ndn-alt">
   <div class="ndn-wrap">
     <div class="ndn-lab">
       <div class="ndn-lab-left">
@@ -212,30 +212,6 @@ $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
           2. Sterilizacija je provedena prema uputama za uporabu<br>
           3. Formula za izračun stope uništenja: [(A−B)/A] × 100 %
         </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6) Nagrada + The Telegraph ============ -->
-<section class="ndn-sec ndn-alt">
-  <div class="ndn-wrap">
-    <h2 class="ndn-h2 ndn-center">Priznat tamo gdje se najviše koristi</h2>
-    <div class="ndn-trust">
-      <div class="ndn-trust-card">
-        <?php echo $nd_img( 'nd_02_nagrada.webp', 'Finalist Dental Industry Awards 2024' ); ?>
-        <p class="ndn-trust-t">Finalist Dental Industry Awards 2024</p>
-        <p class="ndn-trust-d">U suradnji s Britanskim udruženjem privatne stomatologije (BPR).</p>
-      </div>
-      <div class="ndn-trust-card">
-        <?php echo $nd_img( 'nd_04_telegraph.webp', 'The Telegraph preporučuje' ); ?>
-        <p class="ndn-trust-t">„Najbolji uređaj za čišćenje zubnih pomagala 2024."</p>
-        <p class="ndn-trust-d">Preporuka The Telegrapha.</p>
-      </div>
-      <div class="ndn-trust-card ndn-trust-stat">
-        <p class="ndn-stat-num">250.000+</p>
-        <p class="ndn-trust-t">prodanih uređaja</p>
-        <p class="ndn-trust-d">i povjerenje više od 1.000 stomatoloških ordinacija.</p>
       </div>
     </div>
   </div>
