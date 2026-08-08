@@ -1410,7 +1410,7 @@ function gck_render_bundle_selector() {
           css(R, {'flex':'0 0 auto','margin-left':'auto','text-align':'right','white-space':'nowrap'});
           head.appendChild(L); head.appendChild(R);
           title.parentNode.insertBefore(head, title);
-          L.appendChild(title); if(save) L.appendChild(save);
+          L.appendChild(title);
           if(total) R.appendChild(total); if(reg) R.appendChild(reg);
 
           css(title, {'display':'inline-block','margin':'0','font-size':'16.5px','font-weight':'800','color':'#111','line-height':'1.25'});
@@ -1427,6 +1427,8 @@ function gck_render_bundle_selector() {
             css(perO, {'display':'none'});
             css(perN, {'font-size':'13px','font-weight':'500','color':'#6d6d6d','background':'none','padding':'0','white-space':'nowrap'});
           }
+          /* redoslijed u lijevom stupcu: naziv → cijena po komadu → popust */
+          if(save) L.appendChild(save);
           var badge = lab.querySelector('.gck-popular-badge');
           if(badge) css(badge, {'display':'inline-block','position':'absolute','top':'-11px','right':'12px','left':'auto','z-index':'3',
                                 'background':PURPLE,'color':'#fff','font-size':'11px','font-weight':'700','padding':'4px 10px',
