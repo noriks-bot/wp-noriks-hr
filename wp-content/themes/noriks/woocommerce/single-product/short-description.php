@@ -474,3 +474,93 @@ if ( ! $short_description ) {
 </script>
 <?php endif; ?>
 
+
+<?php // ============ NORIKS HYD: karusel recenzija ispod gumba "Dodaj u košaricu" ============ ?>
+<?php if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) :
+  $hy_dir = get_template_directory_uri() . '/img/hyd/';
+  $hy_pth = get_template_directory() . '/img/hyd/';
+  $hy_revs = array(
+    array( 'av' => 'hyd-av-1.webp', 'name' => 'Aleks P.',
+           'text' => 'Ova boca je promijenila moje treninge! Osjećam više energije i brže se oporavljam zahvaljujući infuziji vodika.' ),
+    array( 'av' => 'hyd-av-2.webp', 'name' => 'Samanta L.',
+           'text' => 'Obožavam gledati mjehuriće! Ciklus od 10 minuta daje savršenu dozu vode bogate vodikom. I koža mi djeluje blistavije.' ),
+    array( 'av' => 'hyd-av-3.webp', 'name' => 'Mihael R.',
+           'text' => 'Čvrsta izrada i nula okusa plastike. Punjiva baterija traje cijeli tjedan, a ciklus je gotov prije nego što se spremiš.' ),
+  );
+?>
+<div class="hyc-below">
+  <div class="hyc" id="hycCar">
+    <button class="hyc-nav is-prev" type="button" aria-label="Prethodna recenzija">‹</button>
+    <div class="hyc-track">
+      <?php foreach ( $hy_revs as $r ) : ?>
+        <div class="hyc-slide">
+          <?php if ( file_exists( $hy_pth . $r['av'] ) ) : ?>
+            <div class="hyc-av"><img src="<?php echo esc_url( $hy_dir . $r['av'] ); ?>" alt="" loading="lazy"></div>
+          <?php endif; ?>
+          <div class="hyc-body">
+            <p class="hyc-text"><?php echo esc_html( $r['text'] ); ?></p>
+            <p class="hyc-name"><?php echo esc_html( $r['name'] ); ?></p>
+            <div class="hyc-stars">★★★★★</div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <button class="hyc-nav is-next" type="button" aria-label="Sljedeća recenzija">›</button>
+  </div>
+  <p class="hyc-sub">Na temelju više od 1.000 recenzija</p>
+</div>
+
+<style>
+  .hyc-below { margin: 14px 0 4px; }
+  .hyc { position: relative; display: flex; align-items: center; gap: 4px; }
+  .hyc-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+               -webkit-overflow-scrolling: touch; scrollbar-width: none; flex: 1 1 auto; }
+  .hyc-track::-webkit-scrollbar { display: none; }
+  .hyc-slide { flex: 0 0 100%; scroll-snap-align: center; display: flex; align-items: center; gap: 14px;
+               background: #fff; border: 1px solid #e3ebf3; border-radius: 14px; padding: 14px 16px;
+               box-shadow: 0 3px 14px rgba(15,47,92,.06); box-sizing: border-box; }
+  .hyc-av { flex: 0 0 58px; }
+  .hyc-av img { width: 58px; height: 58px; border-radius: 50%; object-fit: cover; display: block; }
+  .hyc-body { text-align: center; flex: 1 1 auto; }
+  .hyc-text { font-size: 14.5px; line-height: 1.5; color: #141414; margin: 0 0 6px; }
+  .hyc-name { font-size: 12.5px; font-style: italic; color: #6b6b6b; margin: 0 0 4px; }
+  .hyc-stars { color: #2e7fd4; font-size: 13px; letter-spacing: 2px; }
+  .hyc-nav { flex: 0 0 auto; width: 26px; height: 26px; border: 0; background: transparent; cursor: pointer;
+             font-size: 24px; line-height: 1; color: #8ba3bd; padding: 0; }
+  .hyc-nav:hover { color: #0f2f5c; }
+  .hyc-sub { text-align: center; font-size: 12.5px; color: #6b6b6b; margin: 10px 0 0; }
+  @media (max-width: 560px) { .hyc-slide { flex-direction: column; text-align: center; gap: 10px; } }
+</style>
+
+<script>
+(function(){
+  function init(){
+    /* Blok se premjesta odmah ispod gumba "Dodaj u kosaricu". */
+    var below = document.querySelector('.hyc-below');
+    var btn   = document.querySelector('.single_add_to_cart_button');
+    if (below && btn && btn.nextElementSibling !== below) {
+      btn.parentNode.insertBefore(below, btn.nextSibling);
+    }
+    var car = document.getElementById('hycCar');
+    if (!car) { return; }
+    var track = car.querySelector('.hyc-track');
+    var prev  = car.querySelector('.is-prev');
+    var next  = car.querySelector('.is-next');
+    if (!track) { return; }
+    function go(dir){
+      var w = track.clientWidth;
+      var max = track.scrollWidth - w - 2;
+      var to = track.scrollLeft + dir * w;
+      if (to > max) { to = 0; }
+      if (to < 0)   { to = max; }
+      track.scrollTo({ left: to, behavior: 'smooth' });
+    }
+    if (prev) { prev.addEventListener('click', function(){ go(-1); }); }
+    if (next) { next.addEventListener('click', function(){ go(1); }); }
+    var timer = setInterval(function(){ go(1); }, 6000);
+    car.addEventListener('mouseenter', function(){ clearInterval(timer); });
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+<?php endif; ?>

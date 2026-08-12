@@ -821,6 +821,21 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
 
     <?php
+    // NORIKS BRA: uzorak boje je fotografija proizvoda u toj boji (mijenja se s odabirom).
+    if ( has_term( array( 'orto-bra' ), 'product_cat', $product_id ) ) :
+      $bra_img = get_template_directory_uri() . '/img/bra/';
+    ?>
+        <style>
+          .swatch-circle.color-bez,
+          .swatch-circle.color-crna,
+          .swatch-circle.color-leopard { background-size: cover !important; background-position: center !important; }
+          .swatch-circle.color-bez     { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-bez.webp' ); ?>') !important; }
+          .swatch-circle.color-crna    { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-crna.webp' ); ?>') !important; }
+          .swatch-circle.color-leopard { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-leopard.webp' ); ?>') !important; }
+        </style>
+    <?php endif; ?>
+
+    <?php
     // NORIKS HYD: plava shema izbornika ponuda (uskladena s bocom), umjesto narancaste.
     if ( has_term( array( 'orto-hyd' ), 'product_cat', $product_id ) ) :
     ?>
@@ -831,6 +846,13 @@ function gck_render_bundle_selector() {
           #bundle-selector .gck-per-chip { background: #0f2f5c !important; }
           #bundle-selector .gck-discount-badge { background: #2e7fd4 !important; }
           #bundle-selector .bundle-pairs { border-top-color: #cfe0f0 !important; }
+        </style>
+        <style>
+          /* Traka ogranicene zalihe: svijetlo plava umjesto crvene. */
+          .gck-countdown { background: #eef5fc !important; border-color: #cfe0f0 !important; border-left-color: #2e7fd4 !important; }
+          .gck-countdown__head { color: #0f2f5c !important; }
+          .gck-countdown__body strong,
+          .gck-countdown__timer { color: #2e7fd4 !important; }
         </style>
     <?php endif; ?>
 
@@ -1649,6 +1671,9 @@ function gck_render_bundle_selector() {
             var c = document.createElement('span');
             css(c, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'4px','border':'1px solid rgba(0,0,0,.15)'});
             c.style.setProperty('background', o.color, 'important');
+            if(o.image && o.image !== 'none'){
+              css(c, {'background-image':o.image,'background-size':'cover','background-position':'center'});
+            }
             it.appendChild(c);
           }
           var tx = document.createElement('span'); tx.textContent = o.label; it.appendChild(tx);
@@ -1662,6 +1687,11 @@ function gck_render_bundle_selector() {
           wrap.dataset.val = o.value;
           lab.textContent = o.label;
           if(o.color) sw.style.setProperty('background', o.color, 'important');
+          if(o.image && o.image !== 'none'){
+            css(sw, {'background-image':o.image,'background-size':'cover','background-position':'center'});
+          } else {
+            sw.style.removeProperty('background-image');
+          }
           items.forEach(function(x){
             var on = x.o.value === o.value;
             x.el.setAttribute('aria-selected', on ? 'true' : 'false');
@@ -1721,8 +1751,9 @@ function gck_render_bundle_selector() {
               var colorItems = swatches.map(function(sw){
                 var circle = sw.querySelector('.swatch-circle');
                 var bg = circle ? getComputedStyle(circle).backgroundColor : '';
+                var bgi = circle ? getComputedStyle(circle).backgroundImage : 'none';
                 if(!bg || bg === 'rgba(0, 0, 0, 0)') bg = '#cccccc';
-                return { value: sw.dataset.value || '', label: sw.dataset.value || sw.title || '', color: bg,
+                return { value: sw.dataset.value || '', label: sw.dataset.value || sw.title || '', color: bg, image: bgi,
                          /* NE sw.click(): klik bi doplovio do <label class="bundle-option">
                             i prebacio odabranu ponudu. Ne-bubbling klik pokrece samo
                             slusac na swatchu (postavi hidden input + .active). */

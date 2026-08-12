@@ -36,7 +36,7 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 ?>
 
 <!-- ============ 1) Prekrizena ledna potpora za bolje drzanje ============ -->
-<section class="nbr-sec">
+<section class="nbr-sec nbr-alt">
   <div class="nbr-wrap nbr-row2">
     <div class="nbr-media"><?php echo $nb_anim('bra-anim-1.mp4','bra-04-znacajke.webp','Prekrižena leđna potpora — NORIKS BRA'); ?></div>
     <div class="nbr-copy">
@@ -47,7 +47,7 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 </section>
 
 <!-- ============ 2) Prirodno podizanje i oblikovanje ============ -->
-<section class="nbr-sec nbr-alt">
+<section class="nbr-sec">
   <div class="nbr-wrap nbr-row2">
     <div class="nbr-copy">
       <h2 class="nbr-h2">✨ Prirodno podizanje i oblikovanje</h2>
@@ -58,7 +58,7 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 </section>
 
 <!-- ============ 3) Praktican dizajn s prednjim zakopcavanjem ============ -->
-<section class="nbr-sec">
+<section class="nbr-sec nbr-alt">
   <div class="nbr-wrap nbr-row2">
     <div class="nbr-media"><?php echo $nb_anim('bra-anim-4.mp4','bra-05-korekcija.webp','Prednje zakopčavanje grudnjaka'); ?></div>
     <div class="nbr-copy">
@@ -69,16 +69,12 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 </section>
 
 <!-- ============ 4) Preciznost u svakom detalju ============ -->
-<section class="nbr-sec nbr-alt">
+<section class="nbr-sec">
   <div class="nbr-wrap">
     <h2 class="nbr-h2 nbr-center">Preciznost u svakom detalju</h2>
     <div class="nbr-tiles">
       <div class="nbr-tile">
-        <div class="nbr-tile-media">
-          <?php if ( $nb_has('bra-anim-2.mp4') ) : ?>
-            <video class="nbr-video" src="<?php echo esc_url($nb.'bra-anim-2.mp4'); ?>" poster="<?php echo esc_url($nb.'bra-anim-2-poster.webp'); ?>" autoplay muted loop playsinline preload="metadata"></video>
-          <?php else : echo $nb_img('bra-02-ergonomija-crna.webp','Mekana rastezljiva tkanina'); endif; ?>
-        </div>
+        <div class="nbr-tile-media"><?php echo $nb_img('bra-03-podizanje.webp','Mekana rastezljiva tkanina'); ?></div>
         <h3>Mekana, rastezljiva tkanina</h3>
         <p>Lagan i prozračan materijal iznimno mekan na dodir — ugodan tijekom cijelog dana.</p>
       </div>
@@ -102,7 +98,7 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 </section>
 
 <!-- ============ 5) Voli ga 12.000+ zena ============ -->
-<section class="nbr-sec">
+<section class="nbr-sec nbr-alt">
   <div class="nbr-wrap nbr-center">
     <h2 class="nbr-h2">Voli ga 12.000+ žena diljem svijeta</h2>
   </div>
@@ -120,7 +116,12 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
         <?php for ( $i = 1; $i <= 3; $i++ ) :
           if ( ! $nb_has( 'bra-review-'.$i.'.mp4' ) ) { continue; } ?>
           <div class="nbr-slide">
-            <video class="nbr-vrev" src="<?php echo esc_url($nb.'bra-review-'.$i.'.mp4'); ?>" poster="<?php echo esc_url($nb.'bra-review-'.$i.'-poster.webp'); ?>" controls playsinline preload="none"></video>
+            <div class="nbr-vwrap">
+              <video class="nbr-vrev" src="<?php echo esc_url($nb.'bra-review-'.$i.'.mp4'); ?>" poster="<?php echo esc_url($nb.'bra-review-'.$i.'-poster.webp'); ?>" playsinline preload="none"></video>
+              <button class="nbr-play" type="button" aria-label="Pokreni video">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z" fill="currentColor"/></svg>
+              </button>
+            </div>
           </div>
         <?php endfor; ?>
       </div>
@@ -165,7 +166,15 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 
   .nbr-slider { position: relative; }
   .nbr-track { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .nbr-vwrap { position: relative; }
   .nbr-vrev { width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 14px; background: #000; display: block; }
+  .nbr-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+              width: 78px; height: 78px; border-radius: 50%; border: 0; cursor: pointer;
+              background: rgba(255,255,255,.92); color: #141414; display: flex; align-items: center; justify-content: center;
+              box-shadow: 0 6px 22px rgba(0,0,0,.28); transition: transform .15s ease, background .15s ease; padding: 0; }
+  .nbr-play svg { width: 34px; height: 34px; margin-left: 4px; }
+  .nbr-play:hover { transform: translate(-50%,-50%) scale(1.06); background: #fff; }
+  .nbr-vwrap.is-playing .nbr-play { display: none; }
   .nbr-dots { display: none; }
 
   @media (max-width: 980px) {
@@ -207,6 +216,18 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
       var t = document.getElementById('bundle-selector') || document.querySelector('.single_add_to_cart_button');
       if (t) t.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
+  });
+
+  /* Veliki gumb za reprodukciju na sredini videa. */
+  document.querySelectorAll('.nbr-vwrap').forEach(function(w){
+    var v = w.querySelector('video'), b = w.querySelector('.nbr-play');
+    if (!v || !b) { return; }
+    b.addEventListener('click', function(){
+      w.classList.add('is-playing');
+      v.setAttribute('controls','controls');
+      v.play();
+    });
+    v.addEventListener('pause', function(){ if (v.currentTime === 0) { w.classList.remove('is-playing'); } });
   });
 
   /* Tockice ispod slidera UGC snimaka (samo na mobitelu). */

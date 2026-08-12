@@ -25,18 +25,16 @@ $nh_img = function( $file, $alt ) use ( $nh, $nh_path ) {
   return '<div class="nhy-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };
 
-$nhy_marquee = array(
-  '3.000 ppb maksimalna infuzija',
-  'Trajni filter, bez zamjena',
-  'Omiljena među ljubiteljima wellnessa',
+/* Pokretna traka — kao na referenci (bijeli tekst na plavoj, sporo), uz ikonu ispred teksta. */
+$nhy_icon = array(
+  'kap'    => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 10.4a6 6 0 0 1-12 0c0-4 6-10.4 6-10.4z"/></svg>',
+  'beskraj'=> '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6.8 8.2a3.8 3.8 0 1 0 0 7.6c3.4 0 4.6-7.6 8-7.6a3.8 3.8 0 1 1 0 7.6c-3.4 0-4.6-7.6-8-7.6z"/></svg>',
+  'srce'   => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.1A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.9C19 15.6 12 20 12 20z"/></svg>',
 );
-$nhy_revs = array(
-  array( 'av' => 'hyd-av-1.webp', 'name' => 'Aleks P.',
-         'text' => 'Ova boca je promijenila moje treninge! Osjećam više energije i brže se oporavljam zahvaljujući infuziji vodika.' ),
-  array( 'av' => 'hyd-av-2.webp', 'name' => 'Samanta L.',
-         'text' => 'Obožavam gledati mjehuriće! Ciklus od 10 minuta daje savršenu dozu vode bogate vodikom. I koža mi djeluje blistavije.' ),
-  array( 'av' => 'hyd-av-3.webp', 'name' => 'Mihael R.',
-         'text' => 'Čvrsta izrada i nula okusa plastike. Punjiva baterija traje cijeli tjedan, a zvučna potvrda ciklusa je praktična.' ),
+$nhy_marquee = array(
+  array( 'kap',     '3.000 ppb maksimalna infuzija' ),
+  array( 'beskraj', 'Trajni filter, bez zamjena' ),
+  array( 'srce',    'Omiljena među ljubiteljima wellnessa' ),
 );
 ?>
 
@@ -45,54 +43,30 @@ $nhy_revs = array(
   <div class="nhy-marquee" aria-hidden="true">
     <div class="nhy-marquee-track">
       <?php for ( $r = 0; $r < 4; $r++ ) : foreach ( $nhy_marquee as $m ) : ?>
-        <span class="nhy-marquee-item"><?php echo esc_html( $m ); ?></span>
+        <span class="nhy-marquee-item"><?php echo $nhy_icon[ $m[0] ]; ?><?php echo esc_html( $m[1] ); ?></span>
       <?php endforeach; endfor; ?>
     </div>
   </div>
 </section>
 
-<!-- ============ 2) Karusel recenzija ============ -->
-<section class="nhy-sec nhy-sec-tight">
-  <div class="nhy-wrap-sm">
-    <div class="nhy-car" id="nhyCar">
-      <button class="nhy-car-nav is-prev" type="button" aria-label="Prethodna recenzija">‹</button>
-      <div class="nhy-car-track">
-        <?php foreach ( $nhy_revs as $r ) : ?>
-          <div class="nhy-car-slide">
-            <?php if ( $nh_has( $r['av'] ) ) : ?>
-              <div class="nhy-car-av"><img src="<?php echo esc_url( $nh . $r['av'] ); ?>" alt="" loading="lazy"></div>
-            <?php endif; ?>
-            <div class="nhy-car-body">
-              <p class="nhy-car-text"><?php echo esc_html( $r['text'] ); ?></p>
-              <p class="nhy-car-name"><?php echo esc_html( $r['name'] ); ?></p>
-              <div class="nhy-car-stars">★★★★★</div>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
-      <button class="nhy-car-nav is-next" type="button" aria-label="Sljedeća recenzija">›</button>
-    </div>
-    <p class="nhy-car-sub">Na temelju više od 1.000 recenzija</p>
-  </div>
-</section>
-
-<!-- ============ 3) Pogledajte kako pjeni ============ -->
+<!-- ============ 2) Pogledajte kako pjeni ============ -->
 <section class="nhy-sec">
-  <div class="nhy-wrap nhy-row2">
-    <div class="nhy-media"><?php echo $nh_img('hyd-01-hidracija.webp','Mjehurići vodika tijekom elektrolize'); ?></div>
-    <div class="nhy-copy">
-      <h2 class="nhy-h2">Pogledajte kako pjeni</h2>
-      <p>Pogledajte snažne mjehuriće koji nastaju tijekom elektrolize — to je čista infuzija vodika u najboljem izdanju. Voda pritom ostaje bistra i osvježavajuća nakon svakog ciklusa.</p>
-      <ul class="nhy-check">
-        <li>3 minute → oko 1.600 ppb H₂</li>
-        <li>10 minuta → do 3.000 ppb H₂</li>
-        <li>450 mL · USB punjenje u 30–60 min</li>
-      </ul>
+  <div class="nhy-wrap">
+    <h2 class="nhy-h2">Pogledajte kako pjeni</h2>
+    <div class="nhy-fizz">
+      <div class="nhy-fizz-item">
+        <?php if ( $nh_has('hyd-fizz-1.mp4') ) : ?>
+          <video src="<?php echo esc_url($nh.'hyd-fizz-1.mp4'); ?>" poster="<?php echo esc_url($nh.'hyd-fizz-1-poster.webp'); ?>" autoplay muted loop playsinline preload="metadata"></video>
+        <?php else : echo $nh_img('hyd-01-hidracija.webp','Mjehurići vodika tijekom elektrolize'); endif; ?>
+      </div>
+      <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-2.webp','Korisnica s NORIKS HYD bocom'); ?></div>
+      <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-3.webp','Korisnik s NORIKS HYD bocom'); ?></div>
     </div>
+    <p class="nhy-fizz-text">Pogledajte snažne mjehuriće koji nastaju tijekom elektrolize — to je čista infuzija vodika u najboljem izdanju. Voda pritom ostaje bistra i osvježavajuća nakon svakog ciklusa.</p>
   </div>
 </section>
 
-<!-- ============ 4) Snaga antioksidansa, manje upala ============ -->
+<!-- ============ 3) Snaga antioksidansa, manje upala ============ -->
 <section class="nhy-sec nhy-alt">
   <div class="nhy-wrap nhy-row2">
     <div class="nhy-copy">
@@ -105,7 +79,7 @@ $nhy_revs = array(
   </div>
 </section>
 
-<!-- ============ 5) Prave price korisnika ============ -->
+<!-- ============ 4) Prave price korisnika ============ -->
 <section class="nhy-sec">
   <div class="nhy-wrap nhy-center">
     <h2 class="nhy-h2">Prave priče korisnika</h2>
@@ -122,7 +96,7 @@ $nhy_revs = array(
   </div>
 </section>
 
-<!-- ============ 6) Prednosti vodikove vode ============ -->
+<!-- ============ 5) Prednosti vodikove vode ============ -->
 <section class="nhy-sec nhy-alt">
   <div class="nhy-wrap nhy-center">
     <h2 class="nhy-h2">Prednosti vodikove vode</h2>
@@ -137,7 +111,7 @@ $nhy_revs = array(
   </div>
 </section>
 
-<!-- ============ 7) Napredna proizvodnja vodika ============ -->
+<!-- ============ 6) Napredna proizvodnja vodika ============ -->
 <section class="nhy-sec">
   <div class="nhy-wrap nhy-row2">
     <div class="nhy-media"><?php echo $nh_img('hyd-04-kako-radi.webp','PEM i SPE elektroliza — proizvodnja vodika'); ?></div>
@@ -153,7 +127,7 @@ $nhy_revs = array(
   </div>
 </section>
 
-<!-- ============ 8) Spremni podici hidraciju? ============ -->
+<!-- ============ 7) Spremni podici hidraciju? ============ -->
 <section class="nhy-sec nhy-alt">
   <div class="nhy-wrap nhy-row2">
     <div class="nhy-copy">
@@ -185,10 +159,12 @@ $nhy_revs = array(
   .nhy-ph span { font-size: 13px; line-height: 1.45; color: #8ba3bd; text-align: center; }
 
   /* 1) pokretna traka */
-  .nhy-marquee { background: #57a8dd; overflow: hidden; padding: 13px 0; }
-  .nhy-marquee-track { display: flex; align-items: center; gap: 56px; width: max-content;
-                       animation: nhyMarquee 28s linear infinite; }
-  .nhy-marquee-item { font-size: 15.5px; font-weight: 600; color: #0f2f5c; white-space: nowrap; }
+  .nhy-marquee { background: #3e92cc; overflow: hidden; padding: 16px 0; }
+  .nhy-marquee-track { display: flex; align-items: center; width: max-content;
+                       animation: nhyMarquee 60s linear infinite; }
+  .nhy-marquee-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 32px;
+                      font-size: 18px; font-weight: 400; letter-spacing: .63px; color: #fff; white-space: nowrap; }
+  .nhy-marquee-item svg { width: 20px; height: 20px; flex: 0 0 20px; opacity: .95; }
   @keyframes nhyMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .nhy-marquee-track { animation: none; } }
 
@@ -211,6 +187,10 @@ $nhy_revs = array(
   .nhy-car-nav:hover { color: #0f2f5c; }
   .nhy-car-sub { text-align: center; font-size: 13px; color: #6b6b6b; margin: 12px 0 0; }
 
+  .nhy-fizz { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin: 22px 0 20px; }
+  .nhy-fizz-item img, .nhy-fizz-item video { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 16px; display: block; }
+  .nhy-fizz-text { max-width: 900px; margin: 0 auto; text-align: center; font-size: 16px; line-height: 1.7; color: #3a3a3a; }
+
   .nhy-check { list-style: none; margin: 0 0 16px; padding: 0; }
   .nhy-check li { position: relative; padding: 0 0 11px 30px; font-size: 15.5px; color: #0f2f5c; line-height: 1.5; }
   .nhy-check li:before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; background: #2e7fd4; color: #fff; border-radius: 50%; font-size: 12px; text-align: center; line-height: 20px; }
@@ -229,6 +209,7 @@ $nhy_revs = array(
   .nhy-cta:hover { background: #2e7fd4; color: #fff; }
 
   @media (max-width: 980px) { .nhy-perks { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 820px) { .nhy-fizz { grid-template-columns: 1fr; gap: 14px; } }
   @media (max-width: 820px) {
     .nhy-sec { padding: 30px 0; }
     .nhy-row2 { grid-template-columns: 1fr; gap: 20px; }
@@ -258,23 +239,5 @@ $nhy_revs = array(
     });
   });
 
-  var car = document.getElementById('nhyCar');
-  if (!car) { return; }
-  var track = car.querySelector('.nhy-car-track');
-  var prev  = car.querySelector('.is-prev');
-  var next  = car.querySelector('.is-next');
-  if (!track) { return; }
-  function go(dir){
-    var w = track.clientWidth;
-    var max = track.scrollWidth - w - 2;
-    var to = track.scrollLeft + dir * w;
-    if (to > max) { to = 0; }
-    if (to < 0)   { to = max; }
-    track.scrollTo({ left: to, behavior: 'smooth' });
-  }
-  if (prev) { prev.addEventListener('click', function(){ go(-1); }); }
-  if (next) { next.addEventListener('click', function(){ go(1); }); }
-  var timer = setInterval(function(){ go(1); }, 6000);
-  car.addEventListener('mouseenter', function(){ clearInterval(timer); });
 })();
 </script>
