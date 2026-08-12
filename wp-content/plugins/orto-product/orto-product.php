@@ -829,9 +829,9 @@ function gck_render_bundle_selector() {
           .swatch-circle.color-bez,
           .swatch-circle.color-crna,
           .swatch-circle.color-leopard { background-size: cover !important; background-position: center !important; }
-          .swatch-circle.color-bez     { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-bez.webp' ); ?>') !important; }
-          .swatch-circle.color-crna    { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-crna.webp' ); ?>') !important; }
-          .swatch-circle.color-leopard { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-leopard.webp' ); ?>') !important; }
+          .swatch-circle.color-bez     { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-bez-v2.webp' ); ?>') !important; }
+          .swatch-circle.color-crna    { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-crna-v2.webp' ); ?>') !important; }
+          .swatch-circle.color-leopard { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-leopard-v2.webp' ); ?>') !important; }
         </style>
     <?php endif; ?>
 
