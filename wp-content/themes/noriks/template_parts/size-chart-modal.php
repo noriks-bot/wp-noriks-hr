@@ -198,7 +198,18 @@
   <div  style="<?php if ( noriks_is_type( 'starter' ) ): ?>  display: block; <?php endif; ?>"
         class="size-chart-left">
       
-      <?php if ( noriks_is_type( 'ortopas' ) ): ?>
+      <?php if ( noriks_is_type( 'bra' ) ): ?>
+
+      <img
+        style="margin:10px 0 18px; width:100%; height:auto; border-radius:12px; display:block;"
+        src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
+        alt="NORIKS BRA tablica veličina">
+      <div style="line-height:1.8; text-align:left; padding:0 6px; font-size:15px; color:#111;">
+        Izmjerite <strong>opseg ispod grudi</strong> i pronađite ga u gornjem redu, a svoju <strong>košaricu</strong> u lijevom stupcu — polje na presjeku je vaša veličina.<br><br>
+        Ako ste između dvije veličine, odaberite <strong>veću</strong>.
+      </div>
+
+      <?php elseif ( noriks_is_type( 'ortopas' ) ): ?>
 
       <div style="line-height:1.9; text-align:left; margin:40px 0; padding:0 6px; font-size:15px; color:#111;">
         <strong>S/M</strong> : opseg bokova 75–110 cm<br>
