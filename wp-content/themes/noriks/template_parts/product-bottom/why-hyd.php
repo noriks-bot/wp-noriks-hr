@@ -141,7 +141,6 @@ $nhy_marquee = array(
 
 <style>
   .nhy-sec { padding: 46px 0; background: #fff; }
-  .nhy-sec-flush { padding: 0; }
   .nhy-sec-tight { padding: 28px 0 34px; }
   .nhy-alt { background: #eef4fa; }
   .nhy-wrap { max-width: 1180px; margin: 0 auto; padding: 0 18px; }
@@ -159,7 +158,10 @@ $nhy_marquee = array(
   .nhy-ph span { font-size: 13px; line-height: 1.45; color: #8ba3bd; text-align: center; }
 
   /* 1) pokretna traka */
-  .nhy-marquee { background: #3e92cc; overflow: hidden; padding: 16px 0; }
+  /* Traka ide preko cijele sirine ekrana, i unutar uzeg containera (full-bleed). */
+  .nhy-sec-flush { padding: 0; }
+  .nhy-marquee { background: #3e92cc; overflow: hidden; padding: 16px 0;
+                 width: 100vw; max-width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); }
   .nhy-marquee-track { display: flex; align-items: center; width: max-content;
                        animation: nhyMarquee 60s linear infinite; }
   .nhy-marquee-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 32px;
