@@ -675,6 +675,16 @@ function gck_render_bundle_selector() {
       .color-bela  { background: #fff; border: 1px solid #ccc; }
       .color-bijela{ background: #fff; border: 1px solid #ccc; }
       .color-bez { background: #e4e0cf; }
+      /* NORIKS BRA — leopard uzorak (CSS, bez slike). */
+      .color-leopard {
+        background-color: #a5573a;
+        background-image:
+          radial-gradient(circle at 22% 26%, #2b1a12 0 2.2px, transparent 2.6px),
+          radial-gradient(circle at 68% 20%, #2b1a12 0 1.8px, transparent 2.2px),
+          radial-gradient(circle at 40% 58%, #2b1a12 0 2.4px, transparent 2.8px),
+          radial-gradient(circle at 78% 66%, #2b1a12 0 1.9px, transparent 2.3px),
+          radial-gradient(circle at 18% 78%, #2b1a12 0 1.7px, transparent 2.1px);
+      }
       .color-smeda { background: #9f6f4e; }
       .color-zelena { background: #65633c; }
       .color-tamnoplava { background: #2a3262; }
