@@ -36,7 +36,7 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
 <!-- ============ 1) Prekrizena ledna potpora za bolje drzanje ============ -->
 <section class="nbr-sec nbr-alt">
   <div class="nbr-wrap nbr-row2">
-    <div class="nbr-media"><?php echo $nb_anim('bra-anim-1.mp4','bra-04-znacajke.webp','Prekrižena leđna potpora — NORIKS BRA'); ?></div>
+    <div class="nbr-media"><?php echo $nb_anim('bra-anim-1-v2.mp4','bra-04-znacajke.webp','Prekrižena leđna potpora — NORIKS BRA'); ?></div>
     <div class="nbr-copy">
       <h2 class="nbr-h2">💪 Prekrižena leđna potpora za bolje držanje</h2>
       <p>Naš prepoznatljivi prekriženi kroj naramenica nježno poravnava ramena i gornji dio leđa. Učinkovito odvraća od pogrbljenog položaja i pomaže vam zadržati uspravnu, podignutu siluetu i prirodno samouvjereno držanje tijekom cijelog dana.</p>

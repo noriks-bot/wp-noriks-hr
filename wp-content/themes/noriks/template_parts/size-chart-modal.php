@@ -200,31 +200,21 @@
       
       <?php if ( noriks_is_type( 'bra' ) ): ?>
 
-      <div class="bra-sc">
-        <div class="bra-sc-steps">
-          <h3>Kako pronaći svoju veličinu</h3>
-          <ol>
-            <li>Izmjerite <strong>opseg ispod grudi</strong> i pronađite broj u gornjem redu tablice.</li>
-            <li>Pronađite svoju <strong>košaricu</strong> (A–H) u lijevom stupcu.</li>
-            <li>Polje na presjeku je vaša veličina.</li>
-          </ol>
-          <p class="bra-sc-tip"><strong>PRO SAVJET:</strong> ako ste između dvije veličine, odaberite <strong>veću</strong> — grudnjak je bešavan i lagano se prilagođava tijelu.</p>
-        </div>
-        <img class="bra-sc-img"
-             src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
-             alt="NORIKS BRA tablica veličina">
+      <?php /* Stilovi su inline: LiteSpeed UCSS zna izbaciti pravila za klase kojih nema u statickom HTML-u. */ ?>
+      <div style="display:block;width:100%;max-width:600px;margin:0 auto;text-align:left;box-sizing:border-box;">
+        <h3 style="font-size:17px;font-weight:800;color:#111;margin:0 0 10px;">Kako pronaći svoju veličinu</h3>
+        <ol style="margin:0 0 12px;padding-left:20px;">
+          <li style="font-size:14.5px;line-height:1.6;color:#333;margin-bottom:5px;">Izmjerite <strong>opseg ispod grudi</strong> i pronađite broj u gornjem redu tablice.</li>
+          <li style="font-size:14.5px;line-height:1.6;color:#333;margin-bottom:5px;">Pronađite svoju <strong>košaricu</strong> (A–H) u lijevom stupcu.</li>
+          <li style="font-size:14.5px;line-height:1.6;color:#333;margin-bottom:5px;">Polje na presjeku je vaša veličina.</li>
+        </ol>
+        <p style="font-size:13.5px;line-height:1.55;color:#444;background:#f6f2ef;border-radius:10px;padding:10px 12px;margin:0 0 16px;">
+          <strong>PRO SAVJET:</strong> ako ste između dvije veličine, odaberite <strong>veću</strong> — grudnjak je bešavan i lagano se prilagođava tijelu.
+        </p>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
+             alt="NORIKS BRA tablica veličina"
+             style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;border-radius:12px;">
       </div>
-
-      <style>
-        .bra-sc { display: block; width: 100%; max-width: 620px; margin: 0 auto; text-align: left; }
-        .bra-sc-steps h3 { font-size: 17px; font-weight: 800; color: #111; margin: 0 0 10px; }
-        .bra-sc-steps ol { margin: 0 0 12px; padding-left: 20px; }
-        .bra-sc-steps li { font-size: 14.5px; line-height: 1.6; color: #333; margin-bottom: 5px; }
-        .bra-sc-tip { font-size: 13.5px; line-height: 1.55; color: #444; background: #f6f2ef;
-                      border-radius: 10px; padding: 10px 12px; margin: 0 0 16px; }
-        .bra-sc-img { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto;
-                      border-radius: 12px; }
-      </style>
 
       <?php elseif ( noriks_is_type( 'ortopas' ) ): ?>
 
