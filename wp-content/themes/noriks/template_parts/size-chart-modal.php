@@ -211,38 +211,49 @@
         <p style="font-size:13.5px;line-height:1.55;color:#444;background:#f6f2ef;border-radius:10px;padding:10px 12px;margin:0 0 16px;">
           <strong>PRO SAVJET:</strong> ako ste između dvije veličine, odaberite <strong>veću</strong> — grudnjak je bešavan i lagano se prilagođava tijelu.
         </p>
-        <img id="braSizeChartImg" src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
-             alt="NORIKS BRA tablica veličina"
-             style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;border-radius:12px;">
+        <div id="braSizeChartBox" style="width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+          <img id="braSizeChartImg" src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
+               alt="NORIKS BRA tablica veličina"
+               style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;border-radius:12px;">
+        </div>
       </div>
 
       <script>
-      /* Roditeljski .size-chart-left je flex — na mobitelu slika zna prerasti modal.
-         Postavljamo iz JS-a jer LiteSpeed UCSS brise pravila za klase kojih nema u statickom HTML-u. */
+      /* Na mobitelu je slika sira od modala. Sirinu racunamo u PIKSELIMA iz stvarne
+         sirine modala — inline px nadjacava svako CSS pravilo, a UCSS ga ne moze obrisati.
+         Ako je i tada preuska, posuda ima vodoravni scroll. */
       (function(){
         function fix(){
           var img = document.getElementById('braSizeChartImg');
-          if (!img) { return; }
-          var box = img.parentNode;
-          box.style.setProperty('max-width','600px','important');
-          box.style.setProperty('min-width','0','important');
-          box.style.setProperty('width','100%','important');
-          var left = box.closest('.size-chart-left');
+          var box = document.getElementById('braSizeChartBox');
+          if (!img || !box) { return; }
+          var wrap = box.parentNode;
+          var left = wrap.closest ? wrap.closest('.size-chart-left') : null;
           if (left) {
             left.style.setProperty('display','block','important');
             left.style.setProperty('width','100%','important');
             left.style.setProperty('max-width','100%','important');
             left.style.setProperty('min-width','0','important');
-            left.style.setProperty('overflow-x','hidden','important');
             left.style.setProperty('box-sizing','border-box','important');
-            left.style.setProperty('padding','0 14px','important');
+            left.style.setProperty('padding','0 12px','important');
+            left.style.setProperty('overflow-x','hidden','important');
           }
-          img.style.setProperty('width','100%','important');
-          img.style.setProperty('max-width','100%','important');
-          img.style.setProperty('height','auto','important');
+          wrap.style.setProperty('width','100%','important');
+          wrap.style.setProperty('max-width','100%','important');
+          wrap.style.setProperty('min-width','0','important');
+          wrap.style.setProperty('box-sizing','border-box','important');
+
+          var w = box.clientWidth || wrap.clientWidth || 0;
+          if (!w) { return; }
+          img.style.setProperty('width', w + 'px', 'important');
+          img.style.setProperty('max-width', w + 'px', 'important');
+          img.style.setProperty('height', 'auto', 'important');
         }
-        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', fix); } else { fix(); }
-        document.addEventListener('click', function(){ setTimeout(fix, 60); });
+        function later(){ setTimeout(fix, 60); setTimeout(fix, 350); }
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', later); } else { later(); }
+        window.addEventListener('resize', fix);
+        window.addEventListener('orientationchange', later);
+        document.addEventListener('click', later);   /* otvaranje modala */
       })();
       </script>
 
