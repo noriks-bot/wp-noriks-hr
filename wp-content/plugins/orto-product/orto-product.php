@@ -821,6 +821,20 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
 
     <?php
+    // NORIKS HYD: plava shema izbornika ponuda (uskladena s bocom), umjesto narancaste.
+    if ( has_term( array( 'orto-hyd' ), 'product_cat', $product_id ) ) :
+    ?>
+        <style>
+          #bundle-selector .bundle-option.active { border-color: #2e7fd4 !important; background: #2e7fd414 !important; }
+          #bundle-selector .bundle-option input[type="radio"] { border-color: #2e7fd4 !important; }
+          #bundle-selector .bundle-option input[type="radio"]::before { background: #2e7fd4 !important; }
+          #bundle-selector .gck-per-chip { background: #0f2f5c !important; }
+          #bundle-selector .gck-discount-badge { background: #2e7fd4 !important; }
+          #bundle-selector .bundle-pairs { border-top-color: #cfe0f0 !important; }
+        </style>
+    <?php endif; ?>
+
+    <?php
     // Wider size select ONLY for compression socks (longer labels like "S/M 36-40").
     if ( has_term( array( 'orto-kompresijske-carape' ), 'product_cat', $product_id ) ) :
     ?>
