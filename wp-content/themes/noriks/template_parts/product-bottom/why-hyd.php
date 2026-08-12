@@ -64,11 +64,6 @@ $nhy_marquee = array(
       <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-3.webp','Korisnik s NORIKS HYD bocom'); ?></div>
     </div>
   </div>
-      <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-2.webp','Korisnica s NORIKS HYD bocom'); ?></div>
-      <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-3.webp','Korisnik s NORIKS HYD bocom'); ?></div>
-    </div>
-    <p class="nhy-fizz-text">Pogledajte snažne mjehuriće koji nastaju tijekom elektrolize — to je čista infuzija vodika u najboljem izdanju. Voda pritom ostaje bistra i osvježavajuća nakon svakog ciklusa.</p>
-  </div>
 </section>
 
 <!-- ============ 3) Snaga antioksidansa, manje upala ============ -->
