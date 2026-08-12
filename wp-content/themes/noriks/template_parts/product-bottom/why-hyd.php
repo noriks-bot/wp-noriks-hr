@@ -52,13 +52,18 @@ $nhy_marquee = array(
 <!-- ============ 2) Pogledajte kako pjeni ============ -->
 <section class="nhy-sec">
   <div class="nhy-wrap">
-    <h2 class="nhy-h2">Pogledajte kako pjeni</h2>
+    <h2 class="nhy-h2 nhy-center">Pogledajte kako pjeni</h2>
+    <p class="nhy-fizz-text">Pogledajte snažne mjehuriće koji nastaju tijekom elektrolize — to je čista infuzija vodika u najboljem izdanju. Voda pritom ostaje bistra i osvježavajuća nakon svakog ciklusa.</p>
     <div class="nhy-fizz">
       <div class="nhy-fizz-item">
         <?php if ( $nh_has('hyd-fizz-1.mp4') ) : ?>
           <video src="<?php echo esc_url($nh.'hyd-fizz-1.mp4'); ?>" poster="<?php echo esc_url($nh.'hyd-fizz-1-poster.webp'); ?>" autoplay muted loop playsinline preload="metadata"></video>
         <?php else : echo $nh_img('hyd-01-hidracija.webp','Mjehurići vodika tijekom elektrolize'); endif; ?>
       </div>
+      <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-2.webp','Korisnica s NORIKS HYD bocom'); ?></div>
+      <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-3.webp','Korisnik s NORIKS HYD bocom'); ?></div>
+    </div>
+  </div>
       <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-2.webp','Korisnica s NORIKS HYD bocom'); ?></div>
       <div class="nhy-fizz-item"><?php echo $nh_img('hyd-fizz-3.webp','Korisnik s NORIKS HYD bocom'); ?></div>
     </div>
@@ -187,9 +192,9 @@ $nhy_marquee = array(
   .nhy-car-nav:hover { color: #0f2f5c; }
   .nhy-car-sub { text-align: center; font-size: 13px; color: #6b6b6b; margin: 12px 0 0; }
 
-  .nhy-fizz { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin: 22px 0 20px; }
+  .nhy-fizz { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin: 6px 0 0; }
   .nhy-fizz-item img, .nhy-fizz-item video { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 16px; display: block; }
-  .nhy-fizz-text { max-width: 900px; margin: 0 auto; text-align: center; font-size: 16px; line-height: 1.7; color: #3a3a3a; }
+  .nhy-fizz-text { max-width: 900px; margin: 0 auto 24px; text-align: center; font-size: 16px; line-height: 1.7; color: #3a3a3a; }
 
   .nhy-check { list-style: none; margin: 0 0 16px; padding: 0; }
   .nhy-check li { position: relative; padding: 0 0 11px 30px; font-size: 15.5px; color: #0f2f5c; line-height: 1.5; }

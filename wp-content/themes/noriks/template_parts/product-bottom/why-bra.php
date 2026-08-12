@@ -2,15 +2,13 @@
 /**
  * product-bottom: NORIKS BRA — grudnjak s prednjim zakopcavanjem i potporom drzanja (orto-bra).
  *
- * Broj i redoslijed sekcija preslikani 1:1 s referentne stranice (5 vidljivih sekcija):
- *   1. Crisscross Back For Better Posture   animacija (original DM_..._001)
- *   2. Natural Lift & Flattering Shaping    animacija (original DM_..._002) — fallback slika
- *   3. Convenient Front Closure Design      animacija (original DM_..._003) — fallback slika
- *   4. Precision In Every Detail            4 plocice s medijima
+ * Sekcije (redoslijed po referentnoj stranici) — prve DVIJE imaju animaciju,
+ * kao i na referenci:
+ *   1. Crisscross Back For Better Posture   animacija bra-anim-1
+ *   2. Natural Lift & Flattering Shaping    animacija bra-anim-2
+ *   3. Convenient Front Closure Design      bra-anim-4 ako postoji, inace slika
+ *   4. Precision In Every Detail            4 plocice s izrezanim detaljima
  *   5. Loved By 12,000+ Ladies Worldwide    4 recenzije + UGC snimke kupaca
- * (Blokovi "Indulge in All-Day Comfort" i usporedna tablica su na referenci
- *  skriveni s display:none, pa ih ne preuzimamo kao zasebne sekcije — animacija
- *  iz tog bloka koristi se kao medij prve plocice u sekciji 4.)
  * Recenzije i FAQ renderira zajednicki reviews.php (ne ovdje).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -46,14 +44,14 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
   </div>
 </section>
 
-<!-- ============ 2) Prirodno podizanje i oblikovanje ============ -->
+<!-- ============ 2) Prirodno podizanje i oblikovanje (drugi gif) ============ -->
 <section class="nbr-sec">
   <div class="nbr-wrap nbr-row2">
     <div class="nbr-copy">
       <h2 class="nbr-h2">✨ Prirodno podizanje i oblikovanje</h2>
       <p>Izrađen s čvrstom trakom ispod grudi i potpornim prednjim panelom, ovaj grudnjak bez žice daje postojano, nježno podizanje koje naglašava vašu prirodnu figuru. Dobivate savršeno oblikovane obline i udobnost tijekom cijelog dana, bez odricanja od lijepe linije.</p>
     </div>
-    <div class="nbr-media"><?php echo $nb_anim('bra-anim-3.mp4','bra-03-podizanje.webp','Prirodno podizanje i oblikovanje grudi'); ?></div>
+    <div class="nbr-media"><?php echo $nb_anim('bra-anim-2.mp4','bra-03-podizanje.webp','Prirodno podizanje i oblikovanje'); ?></div>
   </div>
 </section>
 
@@ -74,22 +72,22 @@ $nb_anim = function( $mp4, $fallback_img, $alt ) use ( $nb, $nb_path, $nb_img ) 
     <h2 class="nbr-h2 nbr-center">Preciznost u svakom detalju</h2>
     <div class="nbr-tiles">
       <div class="nbr-tile">
-        <div class="nbr-tile-media"><?php echo $nb_img('bra-03-podizanje.webp','Mekana rastezljiva tkanina'); ?></div>
+        <div class="nbr-tile-media"><?php echo $nb_img('bra-tile-1.webp','Mekana rastezljiva tkanina'); ?></div>
         <h3>Mekana, rastezljiva tkanina</h3>
         <p>Lagan i prozračan materijal iznimno mekan na dodir — ugodan tijekom cijelog dana.</p>
       </div>
       <div class="nbr-tile">
-        <div class="nbr-tile-media"><?php echo $nb_img('bra-02-ergonomija-crna.webp','Bešavne oblikovane košarice'); ?></div>
+        <div class="nbr-tile-media"><?php echo $nb_img('bra-tile-2.webp','Bešavne oblikovane košarice'); ?></div>
         <h3>Bešavne oblikovane košarice</h3>
         <p>Glatke, oblikovane košarice prate i naglašavaju vaše prirodne obline.</p>
       </div>
       <div class="nbr-tile">
-        <div class="nbr-tile-media"><?php echo $nb_img('bra-04-znacajke.webp','Prekrižena potpora na leđima'); ?></div>
+        <div class="nbr-tile-media"><?php echo $nb_img('bra-tile-3.webp','Prekrižena potpora na leđima'); ?></div>
         <h3>Prekrižena potpora na leđima</h3>
         <p>Prekriženi kroj podupire držanje i opušta ramena, a silueta ostaje uredna.</p>
       </div>
       <div class="nbr-tile">
-        <div class="nbr-tile-media"><?php echo $nb_img('bra-01-ergonomija-leopard.webp','Jednostavno prednje zakopčavanje'); ?></div>
+        <div class="nbr-tile-media"><?php echo $nb_img('bra-tile-4.webp','Jednostavno prednje zakopčavanje'); ?></div>
         <h3>Jednostavno prednje zakopčavanje</h3>
         <p>Brze prednje kopče za lako oblačenje i sigurno, udobno pristajanje.</p>
       </div>
