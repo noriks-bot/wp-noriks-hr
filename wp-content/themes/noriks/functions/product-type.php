@@ -52,6 +52,10 @@ function noriks_product_type_map() : array {
         'kidsnest'                => array( 'orto-kidsnest', 'kidsnest' ),
         // ErgoSit orthopedic pillow (ortopedski jastuk) — no colour/size, quantity-only bundle.
         'ortopedski-jastuk'       => array( 'orto-ortopedski-jastuk', 'ortopedski-jastuk' ),
+        // NORIKS BRA — grudnjak s prednjim zakopcavanjem i potporom drzanja.
+        'bra'                     => array( 'orto-bra' ),
+        // NORIKS HYD — boca za vodikovu vodu (PEM/SPE elektroliza), bez atributa.
+        'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
         // ControlPro trener dna zdjelice (Kegel trainer s otporom) — bez atributa.

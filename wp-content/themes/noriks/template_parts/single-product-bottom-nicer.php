@@ -89,6 +89,16 @@ if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
     include $noriks_pb_dir . 'why-majice.php';
 }
 
+// NORIKS BRA (orto-bra) — grudnjak s potporom drzanja
+if ( noriks_is_type( 'bra' ) ) {
+    include $noriks_pb_dir . 'why-bra.php';
+}
+
+// NORIKS HYD (orto-hyd) — boca za vodikovu vodu
+if ( noriks_is_type( 'hyd' ) ) {
+    include $noriks_pb_dir . 'why-hyd.php';
+}
+
 // KNEEFIX (orto-kneefix) — ortopedska steznica za koljeno
 if ( noriks_is_type( 'kneefix' ) ) {
     include $noriks_pb_dir . 'why-kneefix.php';

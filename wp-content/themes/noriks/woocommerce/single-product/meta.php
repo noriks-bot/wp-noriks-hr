@@ -543,6 +543,14 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
 
                 NORIKS ControlPro je mehanički trener dna zdjelice s pravim fizičkim otporom. Umjesto da mišić samo stisnete u prazno, dobivate nešto protiv čega možete pritisnuti — isti princip progresivnog opterećenja po kojem jača svaki drugi mišić u tijelu.<br><br>Koristi se sjedeći: uređaj postavite između koljena i stišćete protiv otpora — 3 serije od 10 ponavljanja dnevno, oko pet minuta. Bez sondi i umetanja, bez žica, gela, baterija i aplikacija. Ugrađeni brojač ponavljanja pokazuje koliko ste odradili, pa napredak ne procjenjujete naslijepo.<br><br>Konstrukcija je čvrsta, s mekanim oblogama na osloncima koje ne pritišću kožu ni nakon više serija. Otpor se progresivno povećava kako mišići jačaju.<br><br>Namijenjen je muškarcima koji žele vratiti kontrolu nad mjehurom — nakon operacije prostate, kod curenja pri naporu ili nakon dugih mjeseci Kegelovih vježbi bez rezultata. Dostava je diskretna, u neutralnoj kutiji bez oznaka.
 
+         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
+
+                <strong>NORIKS BRA</strong> je bešavni grudnjak bez žice koji istovremeno rješava dvije stvari: potporu grudi i položaj ramena. Prekriženi dizajn na leđima nježno povlači ramena unatrag i odvraća od pogrbljenog držanja, a šire naramenice raspoređuju težinu po većoj površini, pa nema urezivanja.<br><br>Prednje zakopčavanje s dvije kopče i 8 razina zategnutosti znači da ga obučete i skinete u sekundi, bez izvijanja ruku iza leđa. Zategnutost mijenjate tijekom dana — čvršće ujutro, opuštenije navečer.<br><br>Bešavne oblikovane košarice podižu grudi prirodno, bez žice koja pritišće rebra. Visoka bočna pokrivenost skuplja i izglađuje liniju ispod pazuha, pa silueta ostaje glatka i u pripijenoj odjeći.<br><br>Tkanina je lagana, elastična i prozračna. Dostupno u nijansama bež, crna i leopard, u veličinama od S do 4XL.
+
+         <?php elseif( noriks_is_type( 'hyd', $current_product_id ) ): ?>
+
+                <strong>NORIKS HYD</strong> je prijenosna boca koja običnu vodu pretvara u vodikovu vodu. Elektrolizom na naprednoj protonskoj membrani (PEM/SPE) u vodu se otapa molekularni vodik — do 3.000 ppb — bez klora i bez nusprodukata u napitku.<br><br>Odaberite ciklus prema potrebi: 3 minute za brzo osvježenje (oko 1.600 ppb) ili 10 minuta za maksimalnu koncentraciju. Automatsko odzračivanje izbacuje preostale plinove (O₃, Cl₂, H₂O₂), pa u boci ostaje samo voda obogaćena vodikom.<br><br>Boca je od borosilikatnog stakla s bazom od nehrđajućeg čelika — voda nikada ne dodiruje plastiku, pa nema stranog okusa. Generator ima trajni filter: nema potrošnog materijala ni zamjena.<br><br>Kapacitet je 450 mL, a USB punjenje traje 30–60 minuta i dovoljno je za više ciklusa. Radi s bilo kojom pitkom vodom, uključujući filtriranu i destiliranu.
+
          <?php elseif( noriks_is_type( 'kneefix', $current_product_id ) ): ?>
 
                 NORIKS KneeFix je fleksibilna steznica za koljeno koja spaja četiri funkcije u jednom sustavu potpore: podesivu kompresiju putem preciznog kotačića, dvostruke bočne stabilizatore, gel jastučić koji rasterećuje čašicu te silikonski protuklizni rub koji drži steznicu na mjestu.<br><br>Za razliku od krutih ortoza, KneeFix ne ukočuje koljeno — podupire ga tijekom prirodnog pokreta. Kompresiju podesite u sekundi: ujutro čvršće, popodne opuštenije, ovisno o tome koliko ste na nogama. Time koljeno dobiva stabilnost pri ustajanju, na stepenicama, u šetnji i pri duljem stajanju.<br><br>Tkanina je lagana, prozračna i odvodi vlagu, pa se steznica može nositi satima bez znojenja i bez urezivanja. Tanka je i diskretna — ispod hlača se gotovo ne primijeti.<br><br>Dostupna je u veličinama od S do 2XL prema tjelesnoj težini te u izvedbi za lijevo i desno koljeno, pa pristajanje ostaje precizno.
@@ -613,7 +621,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
+     <?php if ( ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -622,7 +630,14 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
       </div>
       <div class="accordion-content">
 
-           <?php if( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+           <?php if( noriks_is_type( 'bra', $current_product_id ) ): ?>
+
+          <div class="bra-size">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp" alt="NORIKS BRA tablica veličina" style="width:100%;height:auto;border-radius:12px;display:block;margin:0 0 14px;">
+            <p style="margin:0;line-height:1.6;"><strong>Kako odabrati?</strong> Izmjerite opseg ispod grudi i pronađite ga u tablici zajedno sa svojom košaricom. Ako ste između dvije veličine, odaberite veću.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
           <div class="kn-size">
             <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest veličine po dobi" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
@@ -746,14 +761,18 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'noriks-cards', $current_pro
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk + kidsnest + kneefix -->
-    <?php if ( ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+             <?php if( noriks_is_type( 'bra', $current_product_id ) ): ?>
+
+                Ručno pranje ili strojno na 30 °C u vrećici za rublje, na programu za osjetljivo rublje. Bez omekšivača i izbjeljivača. Ne sušiti u sušilici i ne peglati — sušite na zraku, položeno. Tako tkanina i kopča zadržavaju elastičnost.
+
+             <?php elseif( noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
 
                 Perite na 30–40 °C, na programu za osjetljivo rublje. Bez omekšivača i izbjeljivača. Sušite na zraku. Zadržavaju upijajuću moć kroz stotine pranja.
 
