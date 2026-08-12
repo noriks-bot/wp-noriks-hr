@@ -63,6 +63,29 @@ $nb_has = function( $file ) use ( $nb_path ) { return file_exists( $nb_path . $f
   </div>
 </section>
 
+<!-- ============ 2b) Udobnost koja traje cijeli dan (siroki pas s animacijom detalja) ============ -->
+<?php if ( $nb_has('bra-anim-2.mp4') ) : ?>
+<section class="nbr-sec">
+  <div class="nbr-wrap">
+    <div class="nbr-strip">
+      <div class="nbr-strip-copy">
+        <h2 class="nbr-h2">Udobnost koja traje cijeli dan</h2>
+        <p>Materijal i obrada rubova odlučuju hoće li vam nešto smetati nakon osam sati. Zato su svi detalji rađeni tako da se ne osjete: mekana čipka, glatki spojevi i rubovi bez tvrdih šavova.</p>
+        <ul class="nbr-inline-list">
+          <li>Mekani rubovi bez urezivanja</li>
+          <li>Elastičan, prozračan materijal</li>
+          <li>Glatki spojevi bez tvrdih šavova</li>
+          <li>Držanje oblika i nakon pranja</li>
+        </ul>
+      </div>
+      <div class="nbr-strip-media">
+        <video class="nbr-video" src="<?php echo esc_url($nb.'bra-anim-2.mp4'); ?>" poster="<?php echo esc_url($nb.'bra-anim-2-poster.webp'); ?>" autoplay muted loop playsinline preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
 <!-- ============ 3) Prekrizena ledna potpora ============ -->
 <section class="nbr-sec">
   <div class="nbr-wrap nbr-row2">
@@ -99,10 +122,18 @@ $nb_has = function( $file ) use ( $nb_path ) { return file_exists( $nb_path . $f
 </section>
 
 <!-- ============ 5) Prije i poslije ============ -->
-<section class="nbr-sec nbr-narrow">
-  <div class="nbr-wrap-sm nbr-center">
-    <h2 class="nbr-h2">Razlika se vidi odmah</h2>
-    <p class="nbr-sub">Ista osoba, ista majica — jedina razlika je grudnjak ispod.</p>
+<section class="nbr-sec">
+  <div class="nbr-wrap nbr-row2">
+    <div class="nbr-copy">
+      <p class="nbr-eyebrow">Prije i poslije</p>
+      <h2 class="nbr-h2">Razlika se vidi odmah</h2>
+      <p>Ista osoba, ista majica — jedina razlika je grudnjak ispod. Ramena se vraćaju iznad kukova, prsni koš se otvara, a leđa prestaju „padati" prema naprijed.</p>
+      <ul class="nbr-ba">
+        <li><span>Prije</span><strong>Ramena rotirana naprijed, gornji dio leđa zaobljen, vrat gurnut ispred linije tijela.</strong></li>
+        <li class="is-after"><span>Poslije</span><strong>Lopatice povučene unatrag, prsni koš otvoren, silueta uspravnija bez uvlačenja trbuha.</strong></li>
+      </ul>
+      <p class="nbr-note">Fotografije su snimljene isti dan, bez naknadne obrade držanja.</p>
+    </div>
     <div class="nbr-media nbr-media-shadow"><?php echo $nb_img('bra-06-prije-poslije.webp','Prije i poslije — držanje s NORIKS BRA grudnjakom'); ?></div>
   </div>
 </section>
@@ -121,8 +152,8 @@ $nb_has = function( $file ) use ( $nb_path ) { return file_exists( $nb_path . $f
       <p class="nbr-note">Zategnutost mijenjate u hodu: čvršće ujutro, opuštenije navečer.</p>
     </div>
     <div class="nbr-media">
-      <?php if ( $nb_has('bra-anim-2.mp4') ) : ?>
-        <video class="nbr-video" src="<?php echo esc_url($nb.'bra-anim-2.mp4'); ?>" poster="<?php echo esc_url($nb.'bra-anim-2-poster.webp'); ?>" autoplay muted loop playsinline preload="metadata"></video>
+      <?php if ( $nb_has('bra-anim-1.mp4') ) : ?>
+        <video class="nbr-video" src="<?php echo esc_url($nb.'bra-anim-1.mp4'); ?>" poster="<?php echo esc_url($nb.'bra-anim-1-poster.webp'); ?>" autoplay muted loop playsinline preload="metadata"></video>
       <?php else : echo $nb_img('bra-02-ergonomija-crna.webp','Prednje zakopčavanje grudnjaka'); endif; ?>
     </div>
   </div>
@@ -214,6 +245,20 @@ $nb_has = function( $file ) use ( $nb_path ) { return file_exists( $nb_path . $f
   .nbr-feat strong { display: block; font-size: 15.5px; color: #141414; margin-bottom: 3px; }
   .nbr-feat span { display: block; font-size: 14.5px; line-height: 1.55; color: #5a5a5a; }
 
+  /* siroki pas: tekst lijevo, animacija desno preko pune sirine */
+  .nbr-strip { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; align-items: center;
+               background: #f6f2ef; border-radius: 20px; padding: 34px 38px; }
+  .nbr-strip-copy .nbr-h2 { margin-bottom: 12px; }
+  .nbr-strip-copy p { font-size: 16px; line-height: 1.65; color: #3a3a3a; margin: 0 0 14px; }
+  .nbr-strip-media video { width: 100%; height: auto; display: block; border-radius: 14px; }
+
+  .nbr-ba { list-style: none; margin: 0 0 16px; padding: 0; }
+  .nbr-ba li { position: relative; padding: 12px 14px; border-radius: 12px; background: #f6f2ef; margin-bottom: 10px; }
+  .nbr-ba li.is-after { background: #eef6ef; }
+  .nbr-ba span { display: block; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #a97a63; margin-bottom: 4px; }
+  .nbr-ba li.is-after span { color: #3f8b57; }
+  .nbr-ba strong { display: block; font-size: 15px; line-height: 1.55; color: #141414; font-weight: 600; }
+
   .nbr-inline-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0 0 16px; padding: 0; }
   .nbr-inline-list li { background: #fff; border: 1px solid #e4ddd8; border-radius: 999px; padding: 8px 16px; font-size: 14px; color: #141414; }
 
@@ -239,6 +284,8 @@ $nb_has = function( $file ) use ( $nb_path ) { return file_exists( $nb_path . $f
     .nbr-row2 { grid-template-columns: 1fr; gap: 20px; }
     .nbr-row2 .nbr-media { order: -1; }
     .nbr-h2 { font-size: 2rem; }
+    .nbr-strip { grid-template-columns: 1fr; gap: 18px; padding: 22px 18px; }
+    .nbr-strip-media { order: -1; }
     .nbr-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px;
                  -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
     .nbr-track::-webkit-scrollbar { display: none; }

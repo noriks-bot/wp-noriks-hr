@@ -127,10 +127,29 @@ $nh_img = function( $file, $alt ) use ( $nh, $nh_path ) {
 
 <!-- ============ 7) Pravi ljudi, pravi rezultati ============ -->
 <section class="nhy-sec nhy-alt">
-  <div class="nhy-wrap-sm nhy-center">
-    <h2 class="nhy-h2">Pravi ljudi. Pravi rezultati.</h2>
-    <p class="nhy-sub">Boca koja se koristi svaki dan — kod kuće, na poslu i na treningu.</p>
+  <div class="nhy-wrap nhy-row2">
     <div class="nhy-media nhy-media-shadow"><?php echo $nh_img('hyd-06-pravi-ljudi.webp','Kupci NORIKS HYD boce'); ?></div>
+    <div class="nhy-copy">
+      <h2 class="nhy-h2">Pravi ljudi. Pravi rezultati.</h2>
+      <p>Boca se ne koristi „kad se sjetimo" — uđe u rutinu. Evo za što je naši kupci najčešće koriste.</p>
+      <ul class="nhy-quotes">
+        <li>
+          <strong>Brži oporavak</strong>
+          <span>„Nakon treninga osjećam manje umora u mišićima. Oporavak mi je jednostavno lakši."</span>
+          <em>Alen P. · ★★★★★</em>
+        </li>
+        <li>
+          <strong>Hidracija koja se vidi</strong>
+          <span>„Koža mi djeluje punije i odmornije. Konačno pijem dovoljno vode tijekom dana."</span>
+          <em>Samanta L. · ★★★★★</em>
+        </li>
+        <li>
+          <strong>Praktično i čisto</strong>
+          <span>„Nema okusa plastike, punjenje preko USB-a traje kratko. Moja svakodnevna boca."</span>
+          <em>Mihael R. · ★★★★★</em>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
