@@ -201,7 +201,7 @@
       <?php if ( noriks_is_type( 'bra' ) ): ?>
 
       <?php /* Stilovi su inline: LiteSpeed UCSS zna izbaciti pravila za klase kojih nema u statickom HTML-u. */ ?>
-      <div style="display:block;width:100%;max-width:600px;margin:0 auto;text-align:left;box-sizing:border-box;">
+      <div style="display:block;width:100%;max-width:600px;min-width:0;flex:1 1 auto;margin:0 auto;text-align:left;box-sizing:border-box;overflow:hidden;">
         <h3 style="font-size:17px;font-weight:800;color:#111;margin:0 0 10px;">Kako pronaći svoju veličinu</h3>
         <ol style="margin:0 0 12px;padding-left:20px;">
           <li style="font-size:14.5px;line-height:1.6;color:#333;margin-bottom:5px;">Izmjerite <strong>opseg ispod grudi</strong> i pronađite broj u gornjem redu tablice.</li>
@@ -211,10 +211,40 @@
         <p style="font-size:13.5px;line-height:1.55;color:#444;background:#f6f2ef;border-radius:10px;padding:10px 12px;margin:0 0 16px;">
           <strong>PRO SAVJET:</strong> ako ste između dvije veličine, odaberite <strong>veću</strong> — grudnjak je bešavan i lagano se prilagođava tijelu.
         </p>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
+        <img id="braSizeChartImg" src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
              alt="NORIKS BRA tablica veličina"
              style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;border-radius:12px;">
       </div>
+
+      <script>
+      /* Roditeljski .size-chart-left je flex — na mobitelu slika zna prerasti modal.
+         Postavljamo iz JS-a jer LiteSpeed UCSS brise pravila za klase kojih nema u statickom HTML-u. */
+      (function(){
+        function fix(){
+          var img = document.getElementById('braSizeChartImg');
+          if (!img) { return; }
+          var box = img.parentNode;
+          box.style.setProperty('max-width','600px','important');
+          box.style.setProperty('min-width','0','important');
+          box.style.setProperty('width','100%','important');
+          var left = box.closest('.size-chart-left');
+          if (left) {
+            left.style.setProperty('display','block','important');
+            left.style.setProperty('width','100%','important');
+            left.style.setProperty('max-width','100%','important');
+            left.style.setProperty('min-width','0','important');
+            left.style.setProperty('overflow-x','hidden','important');
+            left.style.setProperty('box-sizing','border-box','important');
+            left.style.setProperty('padding','0 14px','important');
+          }
+          img.style.setProperty('width','100%','important');
+          img.style.setProperty('max-width','100%','important');
+          img.style.setProperty('height','auto','important');
+        }
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', fix); } else { fix(); }
+        document.addEventListener('click', function(){ setTimeout(fix, 60); });
+      })();
+      </script>
 
       <?php elseif ( noriks_is_type( 'ortopas' ) ): ?>
 
