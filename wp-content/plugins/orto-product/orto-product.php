@@ -503,11 +503,11 @@ function gck_render_bundle_selector() {
         : array();
     // Mala oznaka pokraj naslova ponude (index => tekst).
     $gck_offer_tags = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
-        ? array( 1 => 'Bestseller' )
+        ? array( 1 => 'Hit' )
         : array();
     // Kartusi iznad kartice ponude (index => tekst).
     $gck_offer_badges = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
-        ? array( 1 => 'MOST POPULAR!', 2 => 'BEST VALUE' )
+        ? array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' )
         : array();
 
     $gck_no_attrs    = has_term( array( 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
@@ -877,7 +877,7 @@ function gck_render_bundle_selector() {
               display: inline-block; margin-left: 8px; background: #ececec; color: #333;
               font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; vertical-align: middle;
           }
-          #bundle-selector .gck-popular-badge { top: -14px; right: 10px; transform: none; border-radius: 6px 6px 0 0; font-size: 12px; font-weight: 800; letter-spacing: .02em; }
+          #bundle-selector .gck-popular-badge { top: -13px; right: 10px; transform: none; border-radius: 8px; font-size: 12px; font-weight: 800; letter-spacing: .02em; padding: 4px 14px; }
           @media (max-width: 520px) {
               #bundle-selector .bundle-option { padding: 12px 12px !important; column-gap: 8px; }
               #bundle-selector .bundle-option .bundle-option-title { font-size: 15.5px; }
