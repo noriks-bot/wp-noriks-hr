@@ -154,7 +154,11 @@ $cl_anim = function( $mp4, $fallback, $alt ) use ( $cl, $cl_path, $cl_img ) {
   #open-size-chart, #open-size-chartCustom { display: none !important; }
 
   /* Kratki opis: zelene kvacice, a prelomljeni redak pocinje ispod teksta (viseci uvlak). */
-  .woocommerce-product-details__short-description ul { list-style: none; margin: 8px 0 26px; padding-left: 0; }
+  .woocommerce-product-details__short-description ul { list-style: none; margin: 8px 0 14px; padding-left: 0; }
+
+  /* Razmak iznad i ispod cijene izjednacen. */
+  .single-product div.product .summary .price,
+  .single-product div.product .summary p.price { margin: 14px 0 14px !important; }
   .woocommerce-product-details__short-description ul li {
       list-style: none; margin-left: 0; line-height: 1.55; margin-bottom: 8px;
       padding-left: 24px; text-indent: -24px;
