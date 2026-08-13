@@ -850,24 +850,21 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option {
               display: grid !important;
               grid-template-columns: auto minmax(0,1fr) auto;
-              grid-template-rows: auto auto auto;
+              grid-template-rows: auto auto;
               column-gap: 10px;
               row-gap: 0;
               align-items: center;
               padding: 14px 16px !important;
           }
-          #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 3; }
+          #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; }
           #bundle-selector .bundle-option .gck-offer-head { grid-column: 2; grid-row: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.15; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 17px; font-weight: 800; letter-spacing: -.01em; line-height: 1.15; }
           #bundle-selector .bundle-option .gck-offer-sub { grid-column: 2; grid-row: 2; margin: 1px 0 0 !important; font-size: 13px; line-height: 1.25; color: #6b6b6b; }
-          #bundle-selector .bundle-option .gck-offer-prices {
-              grid-column: 2; grid-row: 3; justify-self: start;
-              display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap;
-          }
+          #bundle-selector .bundle-option .gck-offer-prices { display: inline-flex; align-items: center; gap: 8px; }
           #bundle-selector .bundle-option .gck-per-chip,
           #bundle-selector .bundle-option .gck-discount-badge { margin: 0 !important; }
           #bundle-selector .bundle-option .bundle-total-line {
-              grid-column: 3; grid-row: 1 / span 3;
+              grid-column: 3; grid-row: 1 / span 2;
               display: flex !important; flex-direction: column; align-items: flex-end; gap: 2px;
               margin: 0 !important; text-align: right;
           }
@@ -2005,7 +2002,7 @@ function gck_render_bundle_selector() {
   
 
 <span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
-                  if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?></span>
+                  if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?>
                 
                   <?php
 
@@ -2033,6 +2030,7 @@ function gck_render_bundle_selector() {
 
                 
                 <?php endif; ?>
+                </span><!-- /.gck-offer-head -->
 
                 <?php if ( ! empty( $gck_offer_subs ) && isset( $gck_offer_subs[ $loop_index ] ) ) : ?>
                   <span class="gck-offer-sub"><?php echo esc_html( $gck_offer_subs[ $loop_index ] ); ?></span>
