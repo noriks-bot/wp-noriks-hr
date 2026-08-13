@@ -501,10 +501,8 @@ function gck_render_bundle_selector() {
     $gck_offer_subs = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
         ? array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' )
         : array();
-    // Mala oznaka pokraj naslova ponude (index => tekst).
-    $gck_offer_tags = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
-        ? array( 1 => 'Hit' )
-        : array();
+    // Mala oznaka pokraj naslova ponude (index => tekst). Trenutno se ne koristi.
+    $gck_offer_tags = array();
     // Kartusi iznad kartice ponude (index => tekst).
     $gck_offer_badges = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
         ? array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' )
