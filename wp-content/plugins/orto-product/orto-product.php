@@ -501,9 +501,13 @@ function gck_render_bundle_selector() {
     $gck_offer_subs = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
         ? array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' )
         : array();
+    // Mala oznaka pokraj naslova ponude (index => tekst).
+    $gck_offer_tags = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
+        ? array( 1 => 'Bestseller' )
+        : array();
     // Kartusi iznad kartice ponude (index => tekst).
     $gck_offer_badges = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
-        ? array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' )
+        ? array( 1 => 'MOST POPULAR!', 2 => 'BEST VALUE' )
         : array();
 
     $gck_no_attrs    = has_term( array( 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
@@ -834,6 +838,53 @@ function gck_render_bundle_selector() {
           .bundle-option.active { border-color: #969696 !important;  background: #62626217  !important; border: none !important; }
           .color-swatches .swatch.active { border-color: black  !important; }
           .bundle-box select { border: 2px solid black !important; }
+        </style>
+    <?php endif; ?>
+
+    <?php
+    // Polar NORIKS Cloth: kartica ponude kao na referenci — naslov i naziv paketa lijevo,
+    // cijena desno u istom redu, precrtana stara cijena ispod nje.
+    if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) :
+    ?>
+        <style>
+          #bundle-selector .bundle-option {
+              display: grid !important;
+              grid-template-columns: auto minmax(0,1fr) auto;
+              grid-template-rows: auto auto;
+              column-gap: 10px;
+              row-gap: 0;
+              align-items: center;
+              padding: 14px 16px !important;
+          }
+          #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; }
+          #bundle-selector .bundle-option .bundle-option-title { grid-column: 2; grid-row: 1; font-size: 17px; font-weight: 800; }
+          #bundle-selector .bundle-option .gck-offer-tag { grid-column: 2; grid-row: 1; justify-self: start; }
+          #bundle-selector .bundle-option .gck-offer-sub { grid-column: 2; grid-row: 2; margin: 2px 0 0 !important; }
+          #bundle-selector .bundle-option .bundle-total-line {
+              grid-column: 3; grid-row: 1 / span 2;
+              display: flex !important; flex-direction: column; align-items: flex-end; gap: 2px;
+              margin: 0 !important; text-align: right;
+          }
+          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 20px; font-weight: 800; color: #141414; order: 1; }
+          #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 14px; margin: 0 !important; order: 2; }
+          /* referenca nema "Ukupno:", ni cijene po komadu ni postotka u kartici */
+          #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+          #bundle-selector .bundle-option .gck-per-chip,
+          #bundle-selector .bundle-option .gck-discount-badge,
+          #bundle-selector .bundle-option br { display: none !important; }
+          #bundle-selector .gck-offer-tag {
+              display: inline-block; margin-left: 8px; background: #ececec; color: #333;
+              font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; vertical-align: middle;
+          }
+          #bundle-selector .gck-popular-badge { top: -14px; right: 10px; transform: none; border-radius: 6px 6px 0 0; font-size: 12px; font-weight: 800; letter-spacing: .02em; }
+          @media (max-width: 520px) {
+              #bundle-selector .bundle-option { padding: 12px 12px !important; column-gap: 8px; }
+              #bundle-selector .bundle-option .bundle-option-title { font-size: 15.5px; }
+              #bundle-selector .bundle-option .gck-offer-sub { font-size: 12.5px; }
+              #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 17px; }
+              #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px; }
+              #bundle-selector .gck-popular-badge { right: 8px; font-size: 11px; padding: 2px 10px; }
+          }
         </style>
     <?php endif; ?>
 
@@ -1949,7 +2000,8 @@ function gck_render_bundle_selector() {
                     
   
 
-                <span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span>
+                <span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
+                  if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?>
                 
                   <?php
 
