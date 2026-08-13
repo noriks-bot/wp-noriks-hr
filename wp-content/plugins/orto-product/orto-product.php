@@ -497,6 +497,11 @@ function gck_render_bundle_selector() {
     //  - orto-bunion  : quantity-only bundle, NO colour and NO size selectors.
     //  - orto-ortopas : single "Veličina" attribute, no colour (size selector only).
     // Every other product keeps the original 2-attribute (colour + size) requirement.
+    // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
+    $gck_offer_subs = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
+        ? array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' )
+        : array();
+
     $gck_no_attrs    = has_term( array( 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
     $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id );
 
@@ -585,6 +590,14 @@ function gck_render_bundle_selector() {
          cursor: pointer;
          position: relative;
          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+      .gck-offer-sub {
+          display: block;
+          font-size: 13.5px;
+          font-weight: 500;
+          color: #5a5a5a;
+          line-height: 1.3;
+          margin-top: 2px;
       }
       .bundle-option-title {
           font-weight: 600;
@@ -1843,6 +1856,8 @@ function gck_render_bundle_selector() {
     <style>
       /* Bunion (no-attrs): nema selektora — makni divider iznad prazne .bundle-pairs. */
       #bundle-selector.is-no-attrs .bundle-pairs { border-top: 0 !important; padding-top: 0 !important; margin-top: 0 !important; }
+      /* Brez atributov nema sto prikazati u .bundle-pairs — prazni redovi su samo dizali visinu odabrane kartice. */
+      #bundle-selector.is-no-attrs .bundle-pairs { display: none !important; }
     </style>
     <?php endif; ?>
     <?php // Leak boxers + kompresijske majice: size-chart link top-right, directly above the bundle buttons.
@@ -1927,6 +1942,9 @@ function gck_render_bundle_selector() {
   
 
                 <span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span>
+                <?php if ( ! empty( $gck_offer_subs ) && isset( $gck_offer_subs[ $loop_index ] ) ) : ?>
+                  <span class="gck-offer-sub"><?php echo esc_html( $gck_offer_subs[ $loop_index ] ); ?></span>
+                <?php endif; ?>
                 
                   <?php
 

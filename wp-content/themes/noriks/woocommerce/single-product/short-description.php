@@ -29,6 +29,22 @@ if ( ! $short_description ) {
 
 ?>
 
+<?php // Polar NORIKS Cloth: zelena traka povjerenja ispod naslova, iznad kratkog opisa.
+if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) : ?>
+<div class="ncl-trust">
+  <span>Za kristalno čisto staklo i tuš-kabine,</span>
+  <span class="ncl-trust-stars">★★★★★</span>
+  <span>vjeruje nam 138.452+ kućanstava</span>
+</div>
+<style>
+  .ncl-trust { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px;
+               background: #eaf3ea; border-radius: 10px; padding: 11px 14px; margin: 10px 0 16px;
+               font-size: 14px; font-weight: 700; color: #2b4636; line-height: 1.35; text-align: center; }
+  .ncl-trust-stars { color: #f5a623; letter-spacing: 1px; }
+  @media (max-width: 480px) { .ncl-trust { font-size: 13px; padding: 10px 12px; } }
+</style>
+<?php endif; ?>
+
 <!--
 <div class="woocommerce-product-details__short-description">
 	<?php echo $short_description; // WPCS: XSS ok. ?>
