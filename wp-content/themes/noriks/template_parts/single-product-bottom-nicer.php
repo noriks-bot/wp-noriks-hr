@@ -89,6 +89,11 @@ if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
     include $noriks_pb_dir . 'why-majice.php';
 }
 
+// POLAR NORIKS CLOTH (orto-cloath) — krpa za ciscenje
+if ( noriks_is_type( 'cloath' ) ) {
+    include $noriks_pb_dir . 'why-cloath.php';
+}
+
 // NORIKS BRA (orto-bra) — grudnjak s potporom drzanja
 if ( noriks_is_type( 'bra' ) ) {
     include $noriks_pb_dir . 'why-bra.php';
