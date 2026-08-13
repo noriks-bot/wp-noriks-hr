@@ -161,10 +161,10 @@ $cl_anim = function( $mp4, $fallback, $alt ) use ( $cl, $cl_path, $cl_img ) {
   .single-product div.product .summary p.price { margin: 14px 0 14px !important; }
   .woocommerce-product-details__short-description ul li {
       list-style: none; margin-left: 0; line-height: 1.55; margin-bottom: 8px;
-      padding-left: 24px; text-indent: -24px;
+      padding-left: 17px; text-indent: -17px;
   }
   .woocommerce-product-details__short-description .ncl-tick {
-      display: inline-block; width: 24px; text-indent: 0; color: #3f8b57; font-weight: 800;
+      display: inline-block; width: 17px; text-indent: 0; color: #3f8b57; font-weight: 800;
   }
   .woocommerce-product-details__short-description p:has(+ ul) { margin-top: 20px; margin-bottom: 4px; }
 
