@@ -850,18 +850,24 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option {
               display: grid !important;
               grid-template-columns: auto minmax(0,1fr) auto;
-              grid-template-rows: auto auto;
+              grid-template-rows: auto auto auto;
               column-gap: 10px;
               row-gap: 0;
               align-items: center;
               padding: 14px 16px !important;
           }
-          #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; }
-          #bundle-selector .bundle-option .bundle-option-title { grid-column: 2; grid-row: 1; font-size: 17px; font-weight: 800; }
-          #bundle-selector .bundle-option .gck-offer-tag { grid-column: 2; grid-row: 1; justify-self: start; }
-          #bundle-selector .bundle-option .gck-offer-sub { grid-column: 2; grid-row: 2; margin: 2px 0 0 !important; }
+          #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 3; }
+          #bundle-selector .bundle-option .gck-offer-head { grid-column: 2; grid-row: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.15; }
+          #bundle-selector .bundle-option .bundle-option-title { font-size: 17px; font-weight: 800; letter-spacing: -.01em; line-height: 1.15; }
+          #bundle-selector .bundle-option .gck-offer-sub { grid-column: 2; grid-row: 2; margin: 1px 0 0 !important; font-size: 13px; line-height: 1.25; color: #6b6b6b; }
+          #bundle-selector .bundle-option .gck-offer-prices {
+              grid-column: 2; grid-row: 3; justify-self: start;
+              display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap;
+          }
+          #bundle-selector .bundle-option .gck-per-chip,
+          #bundle-selector .bundle-option .gck-discount-badge { margin: 0 !important; }
           #bundle-selector .bundle-option .bundle-total-line {
-              grid-column: 3; grid-row: 1 / span 2;
+              grid-column: 3; grid-row: 1 / span 3;
               display: flex !important; flex-direction: column; align-items: flex-end; gap: 2px;
               margin: 0 !important; text-align: right;
           }
@@ -869,8 +875,6 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 14px; margin: 0 !important; order: 2; }
           /* referenca nema "Ukupno:", ni cijene po komadu ni postotka u kartici */
           #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
-          #bundle-selector .bundle-option .gck-per-chip,
-          #bundle-selector .bundle-option .gck-discount-badge,
           #bundle-selector .bundle-option br { display: none !important; }
           #bundle-selector .gck-offer-tag {
               display: inline-block; margin-left: 8px; background: #ececec; color: #333;
@@ -2000,8 +2004,8 @@ function gck_render_bundle_selector() {
                     
   
 
-                <span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
-                  if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?>
+<span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
+                  if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?></span>
                 
                   <?php
 
@@ -2012,6 +2016,7 @@ function gck_render_bundle_selector() {
     )  :  ?>
                 <?php if ( $show_price_highlights ) : ?>
                     <br class="gck-hl-break">
+                    <span class="gck-offer-prices">
                     <span class="gck-per-chip">
                         <?php if ( $per_regular > $gck_per_new ) : ?>
                             <span class="gck-per-old"><?php echo number_format( $per_regular, 2 ); ?>€</span>
@@ -2021,6 +2026,7 @@ function gck_render_bundle_selector() {
                     <?php if ( $discount_pct > 0 ) : ?>
                         <span class="gck-discount-badge">−<?php echo (int) $discount_pct; ?>%</span>
                     <?php endif; ?>
+                    </span>
                 <?php else : ?>
                     — <span class="bundle-option-title"><?php echo number_format( $gck_per_new, 2 ); ?>€ / kom</span>
                 <?php endif; ?>
