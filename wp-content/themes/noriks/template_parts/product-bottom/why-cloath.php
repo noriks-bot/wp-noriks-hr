@@ -143,12 +143,12 @@ $cl_anim = function( $mp4, $fallback, $alt ) use ( $cl, $cl_path, $cl_img ) {
   .ncl-cta:hover { background: #6f8f74; color: #fff; }
 
   @media (max-width: 820px) {
-    .ncl-sec { padding: 26px 0; }
-    .ncl-row2 { grid-template-columns: 1fr; gap: 18px; }
+    .ncl-sec { padding: 30px 0; }
+    .ncl-row2 { grid-template-columns: 1fr; gap: 20px; }
     .ncl-row2 .ncl-media { order: -1; }
-    .ncl-h2 { font-size: 1.6rem; }
-    /* tema vec ima svoj razmak na kontejneru — nas dodatni je visak */
-    .ncl-wrap { padding: 0 !important; }
+    .ncl-h2 { font-size: 1.85rem; }
+    /* tema vec ima svoj razmak na kontejneru — nas prepolovimo */
+    .ncl-wrap { padding: 0 9px !important; }
   }
 
   /* Krpa nema velicina — bez linka na tablicu velicina. */
