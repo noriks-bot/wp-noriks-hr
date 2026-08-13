@@ -43,6 +43,21 @@ if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) : ?>
   .ncl-trust-stars { color: #f5a623; letter-spacing: 1px; }
   @media (max-width: 480px) { .ncl-trust { font-size: 13px; padding: 10px 12px; } }
 </style>
+<script>
+/* Traka mora stajati ODMAH ispod naslova, iznad kratkog opisa — predlozak se
+   ucitava kasnije u summary bloku, pa je premjestamo iz JS-a. */
+(function(){
+  function move(){
+    var bar = document.querySelector('.ncl-trust');
+    if (!bar) { return; }
+    var title = document.querySelector('.product_title, .entry-title');
+    if (!title || title.nextElementSibling === bar) { return; }
+    title.parentNode.insertBefore(bar, title.nextSibling);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', move); } else { move(); }
+  setTimeout(move, 300);
+})();
+</script>
 <?php endif; ?>
 
 <!--

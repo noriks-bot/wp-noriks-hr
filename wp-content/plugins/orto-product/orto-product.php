@@ -501,6 +501,10 @@ function gck_render_bundle_selector() {
     $gck_offer_subs = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
         ? array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' )
         : array();
+    // Kartusi iznad kartice ponude (index => tekst).
+    $gck_offer_badges = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
+        ? array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' )
+        : array();
 
     $gck_no_attrs    = has_term( array( 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
     $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id );
@@ -597,7 +601,7 @@ function gck_render_bundle_selector() {
           font-weight: 500;
           color: #5a5a5a;
           line-height: 1.3;
-          margin-top: 2px;
+          margin: 6px 0 0;
       }
       .bundle-option-title {
           font-weight: 600;
@@ -1916,8 +1920,12 @@ function gck_render_bundle_selector() {
                 ? (int) round( ( ( (float) $data['regular'] - (float) $data['total'] ) / (float) $data['regular'] ) * 100 )
                 : 0;
         ?>
-            <label style="position: relative; <?php if ( ($loop_index == 1 ||  $loop_index == 3) && ! $show_group_titles) : ?> margin-top: 25px;  <?php endif; ?>"
+            <label style="position: relative; <?php if ( ( ( $loop_index == 1 ||  $loop_index == 3 ) && ! $show_group_titles ) || ( ! empty( $gck_offer_badges ) && isset( $gck_offer_badges[ $loop_index ] ) ) ) : ?> margin-top: 25px;  <?php endif; ?>"
                    class="bundle-option<?php echo $is_default ? ' active' : ''; ?>">
+
+                <?php if ( ! empty( $gck_offer_badges ) && isset( $gck_offer_badges[ $loop_index ] ) ) : ?>
+                    <div class="gck-popular-badge" style="display:inline-block !important;"><?php echo esc_html( $gck_offer_badges[ $loop_index ] ); ?></div>
+                <?php endif; ?>
 
                 <?php if ( ! $show_group_titles ) : ?>
                     <?php if ( $loop_index == 1 ) : ?>
@@ -1942,9 +1950,6 @@ function gck_render_bundle_selector() {
   
 
                 <span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span>
-                <?php if ( ! empty( $gck_offer_subs ) && isset( $gck_offer_subs[ $loop_index ] ) ) : ?>
-                  <span class="gck-offer-sub"><?php echo esc_html( $gck_offer_subs[ $loop_index ] ); ?></span>
-                <?php endif; ?>
                 
                   <?php
 
@@ -1970,7 +1975,10 @@ function gck_render_bundle_selector() {
 
                 
                 <?php endif; ?>
-                
+
+                <?php if ( ! empty( $gck_offer_subs ) && isset( $gck_offer_subs[ $loop_index ] ) ) : ?>
+                  <span class="gck-offer-sub"><?php echo esc_html( $gck_offer_subs[ $loop_index ] ); ?></span>
+                <?php endif; ?>
 
                 <br/>
 
