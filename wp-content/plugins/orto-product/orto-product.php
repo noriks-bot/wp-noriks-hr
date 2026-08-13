@@ -877,11 +877,11 @@ function gck_render_bundle_selector() {
           }
           #bundle-selector .gck-popular-badge { top: -13px; right: 10px; transform: none; border-radius: 8px; font-size: 12px; font-weight: 800; letter-spacing: .02em; padding: 4px 14px; }
           @media (max-width: 520px) {
-              #bundle-selector .bundle-option { padding: 12px 12px !important; column-gap: 8px; }
+              #bundle-selector .bundle-option { padding: 12px 8px !important; column-gap: 6px; }
               #bundle-selector .bundle-option .bundle-option-title { font-size: 15.5px; }
               #bundle-selector .bundle-option .gck-offer-sub { font-size: 12.5px; }
-              #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 17px; }
-              #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px; }
+              #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 15.5px; }
+              #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 12px; margin: 0 !important; }
               #bundle-selector .gck-popular-badge { right: 8px; font-size: 11px; padding: 2px 10px; }
           }
         </style>
