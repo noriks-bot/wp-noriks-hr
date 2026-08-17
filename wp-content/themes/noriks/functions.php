@@ -10,6 +10,7 @@ include(get_template_directory() . '/functions/performance.php');  // safe front
 include(get_template_directory() . '/functions/checkout_mods.php');
 include(get_template_directory() . '/functions/thankyou_upsell.php');
 include(get_template_directory() . '/functions/product-page-upsell.php'); // upsell okvir ispod gumba na stranici proizvoda (ACF prekidač)
+include(get_template_directory() . '/functions/pack-switcher.php'); // izbor velicine paketa + druge kombinacije boja (X-paket proizvodi)
 include(get_template_directory() . '/functions/cpts.php');
 include(get_template_directory() . '/functions/options.php');
 include(get_template_directory() . '/functions/single_product_mods.php');
