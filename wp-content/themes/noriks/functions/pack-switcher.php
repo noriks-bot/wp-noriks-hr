@@ -149,7 +149,11 @@ function noriks_render_pack_switcher() {
     global $product;
     if ( ! $product instanceof WC_Product ) { return; }
 
-    $id   = $product->get_id();
+    $id = $product->get_id();
+
+    // Samo webshop asortiman (majice/bokserice paketi) — nikad orto proizvodi.
+    if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'orto', $id ) ) { return; }
+
     $meta = noriks_pack_meta( $id );
     if ( ! $meta ) { return; }
 
@@ -171,16 +175,18 @@ function noriks_render_pack_switcher() {
 
     if ( count( $sizes ) < 2 && count( $same ) < 2 ) { return; }
 
-    $keys      = array_keys( $sizes );
-    $last_size = end( $keys );
+    $keys      = array_values( array_filter( array_keys( $sizes ), function ( $k ) { return (int) $k > 1; } ) );
+    $last_size = $keys ? end( $keys ) : 0;
+    $shown     = count( $keys );
     ?>
     <div class="npk">
 
-        <?php if ( count( $sizes ) > 1 ) : ?>
+        <?php if ( $shown > 1 ) : ?>
         <div class="npk-block">
             <div class="npk-label"><?php esc_html_e( 'Odaberi paket', 'noriks' ); ?></div>
             <div class="npk-sizes">
                 <?php foreach ( $sizes as $s => $list ) :
+                    if ( (int) $s < 2 ) { continue; }   // "1-paket" nikad ne prikazujemo
                     $t = noriks_pack_target( $list, $family );
                     if ( ! $t ) { continue; }
                     $is_cur = ( (int) $s === (int) $size );
@@ -228,15 +234,17 @@ function noriks_render_pack_switcher() {
       .npk-label { font-size: 15px; font-weight: 800; color: #141414; margin: 0 0 10px; }
 
       /* velicine paketa — ravni robovi, kao i gumbi za velicinu ispod */
-      .npk-sizes { display: grid; grid-template-columns: repeat(auto-fit, minmax(124px, 1fr)); gap: 10px; }
+      .npk-sizes { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; padding-top: 12px; }
       .npk-size { position: relative; display: flex; flex-direction: column; justify-content: center;
-                  min-height: 62px; text-align: center; text-decoration: none;
-                  border: 1px solid #d7d7d7; border-radius: 0; padding: 12px 10px; background: #fff;
+                  min-height: 62px; min-width: 0; text-align: center; text-decoration: none;
+                  border: 1px solid #d7d7d7; border-radius: 0; padding: 12px 6px; background: #fff;
                   transition: border-color .15s, background .15s; }
       .npk-size:hover { border-color: #141414; }
       .npk-size.is-active { background: #12233b; border-color: #12233b; }
-      .npk-size-n { display: block; font-size: 17px; font-weight: 800; color: #141414; line-height: 1.15; }
-      .npk-size-p { display: block; font-size: 13px; color: #6b6b6b; margin-top: 4px; white-space: nowrap; }
+      /* pisava se skrci s sirino stolpca, da tekst nikoli ne izpade iz kartice */
+      .npk-size-n { display: block; font-size: clamp(14px, 1.35vw, 18px); font-weight: 800; color: #141414; line-height: 1.15; }
+      .npk-size-p { display: block; font-size: clamp(10.5px, 1.02vw, 13px); color: #6b6b6b; margin-top: 4px;
+                    line-height: 1.25; white-space: normal; overflow-wrap: anywhere; }
       .npk-size.is-active .npk-size-n, .npk-size.is-active .npk-size-p,
       .npk-size.is-active .npk-size-p .amount, .npk-size.is-active .npk-size-p bdi { color: #fff !important; }
       .npk-size.is-active .npk-size-p { opacity: .92; }
@@ -256,14 +264,15 @@ function noriks_render_pack_switcher() {
 
       @media (min-width: 1024px) {
         .npk-label { font-size: 16px; }
-        .npk-size { min-height: 70px; }
-        .npk-size-n { font-size: 18px; }
-        .npk-size-p { font-size: 13.5px; }
+        .npk-size { min-height: 70px; padding: 12px 8px; }
         .npk-color { width: 86px; height: 86px; }
       }
 
+      @media (max-width: 700px) {
+        .npk-sizes { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      }
       @media (max-width: 560px) {
-        .npk-sizes { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .npk-sizes { gap: 8px; }
         .npk-size { min-height: 56px; padding: 10px 4px; }
         .npk-size-n { font-size: 14.5px; }
         .npk-size-p { font-size: 11px; }
