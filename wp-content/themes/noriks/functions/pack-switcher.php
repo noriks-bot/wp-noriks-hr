@@ -110,7 +110,8 @@ function noriks_pack_index() {
                 'url'    => get_permalink( $id ),
                 'img'    => get_the_post_thumbnail_url( $id, 'woocommerce_thumbnail' ),
                 'price'  => $price,
-                'ppu'    => $size > 0 ? $price / $size : 0,
+                // cijena po komadu se ODREZE na 2 decimale (kao u pluginu) — 134,99/9 = 14,99, ne 15,00
+                'ppu'    => $size > 0 ? floor( ( $price / $size ) * 100 ) / 100 : 0,
             );
         }
     }
@@ -197,7 +198,9 @@ function noriks_render_pack_switcher() {
                     $t = noriks_pack_target( $list, $family );
                     if ( ! $t ) { continue; }
                     $is_cur = ( (int) $s === (int) $size );
-                    $ppu    = $is_cur ? ( (float) $product->get_price() / max( 1, $size ) ) : $t['ppu'];
+                    $ppu    = $is_cur
+                        ? floor( ( (float) $product->get_price() / max( 1, $size ) ) * 100 ) / 100
+                        : $t['ppu'];
                     ?>
                     <a class="npk-size<?php echo $is_cur ? ' is-active' : ''; ?>"
                        href="<?php echo esc_url( $is_cur ? get_permalink( $id ) : $t['url'] ); ?>"
