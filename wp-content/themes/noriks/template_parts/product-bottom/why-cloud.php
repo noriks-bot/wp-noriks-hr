@@ -29,7 +29,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 ?>
 
 <!-- ============ 1) Vratite jutra ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <p class="ncd-eyebrow">Spavanje na boku</p>
@@ -43,7 +43,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-media"><?php echo $cd_img('cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
     <div class="ncd-copy">
@@ -60,7 +60,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 3) Poravnanje ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Poravnanje koje osjetite ujutro</h2>
@@ -75,17 +75,37 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
   </div>
 </section>
 
-<!-- ============ 4) Za koga je ============ -->
-<section class="ncd-sec">
+<!-- ============ 4) Za koga je — krugovi s naslovom i tekstom (kao na referenci) ============ -->
+<?php
+$cd_cases = array(
+  array( 'cld-case-bok.webp',       'Spavanje na boku', 'Prilagođeno vašem prirodnom položaju.' ),
+  array( 'cld-case-ledja.webp',     'Bol u leđima',     'Sprječava uvijanje donjeg dijela leđa noću.' ),
+  array( 'cld-case-kukovi.webp',    'Bol u kukovima',   'Drži kukove poravnate umjesto iskrivljene.' ),
+  array( 'cld-case-koljena.webp',   'Bol u koljenima',  'Kraj pritisku koljena o koljeno.' ),
+  array( 'cld-case-trudnoca.webp',  'Trudnoća',         'Podupire kukove i trbuh tijekom trudnoće.' ),
+  array( 'cld-case-operacija.webp', 'Nakon operacije',  'Štedi kuk i koljeno tijekom oporavka.' ),
+);
+?>
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-center">
     <h2 class="ncd-h2">Osmišljeno za ono što vas sprječava da spavate</h2>
     <p class="ncd-sub">Šest situacija u kojima jastuk za koljena napravi najveću razliku.</p>
   </div>
-  <div class="ncd-wrap"><div class="ncd-media"><?php echo $cd_img('cld-za-koga.webp','Za koga je NORIKS Cloud jastuk'); ?></div></div>
+  <div class="ncd-wrap">
+    <div class="ncd-cases">
+      <?php foreach ( $cd_cases as $c ) : ?>
+        <div class="ncd-case">
+          <div class="ncd-case-ic"><?php echo $cd_img( $c[0], $c[1] ); ?></div>
+          <h3 class="ncd-case-t"><?php echo esc_html( $c[1] ); ?></h3>
+          <p class="ncd-case-p"><?php echo esc_html( $c[2] ); ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
 </section>
 
 <!-- ============ 5) Ostaje na mjestu ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-media"><?php echo $cd_img('cld-traka.webp','Podesiva traka drži jastuk na mjestu'); ?></div>
     <div class="ncd-copy">
@@ -102,7 +122,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 6) Stvoreno da dise ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Stvoreno da diše</h2>
@@ -118,7 +138,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 7) Usporedba ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-media"><?php echo $cd_img('cld-usporedba.webp','NORIKS Cloud u usporedbi s običnim jastucima'); ?></div>
     <div class="ncd-copy">
@@ -136,7 +156,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 8) Standardi ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Izrađeno prema strogim standardima</h2>
@@ -152,7 +172,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 9) Strucnjaci ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-media"><?php echo $cd_img('cld-strucnjaci.webp','Preporuka fizioterapeuta i recenzije kupaca'); ?></div>
     <div class="ncd-copy">
@@ -165,7 +185,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 </section>
 
 <!-- ============ 10) 60 noci ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <p class="ncd-eyebrow">Bez rizika</p>
@@ -205,6 +225,15 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
             display: flex; align-items: center; justify-content: center; padding: 18px; box-sizing: border-box; }
   .ncd-ph span { font-size: 13px; line-height: 1.45; color: #8ba0c0; text-align: center; }
 
+  /* krugovi sa slucajevima — po uzoru na referentnu stranicu */
+  .ncd-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 24px; margin-top: 30px; }
+  .ncd-case { text-align: center; }
+  .ncd-case-ic { width: 100%; max-width: 190px; margin: 0 auto 16px; aspect-ratio: 1 / 1;
+                 border-radius: 50%; overflow: hidden; }
+  .ncd-case-ic img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
+  .ncd-case-t { font-size: clamp(16px, 1.5vw, 19px); font-weight: 800; color: #fff; margin: 0 0 6px; line-height: 1.25; }
+  .ncd-case-p { font-size: 14.5px; line-height: 1.55; color: #a9bad6; margin: 0; }
+
   .ncd-check { list-style: none; margin: 0 0 16px; padding: 0; }
   .ncd-check li { position: relative; padding: 0 0 11px 30px; font-size: 15.5px; color: #0e1a33; line-height: 1.5; }
   .ncd-check li:before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; background: #2f6fd0; color: #fff; border-radius: 50%; font-size: 12px; text-align: center; line-height: 20px; }
@@ -232,6 +261,9 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
   .ncd-dark .ncd-cta:hover { background: #2f6fd0; color: #fff; }
 
   @media (max-width: 820px) {
+    .ncd-cases { grid-template-columns: repeat(2, 1fr); gap: 26px 16px; margin-top: 20px; }
+    .ncd-case-ic { max-width: 140px; margin-bottom: 12px; }
+    .ncd-case-p { font-size: 13.5px; }
     .ncd-sec { padding: 30px 0; }
     .ncd-row2 { grid-template-columns: 1fr; gap: 20px; }
     .ncd-row2 .ncd-media { order: -1; }
