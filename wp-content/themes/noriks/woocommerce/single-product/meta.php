@@ -769,14 +769,18 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk + kidsnest + kneefix -->
-    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( noriks_is_type( 'bra', $current_product_id ) ): ?>
+             <?php if( noriks_is_type( 'cloud', $current_product_id ) ): ?>
+
+                Navlaku skinite i perite u stroju na 40 °C, s deterdžentom bez omekšivača i bez izbjeljivača. Ne sušite u sušilici — sušite na zraku. Memorijsku pjenu ne perite u stroju i ne potapajte: po potrebi je obrišite vlažnom krpom i ostavite da se potpuno osuši prije sljedeće upotrebe.
+
+             <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
 
                 Ručno pranje ili strojno na 30 °C u vrećici za rublje, na programu za osjetljivo rublje. Bez omekšivača i izbjeljivača. Ne sušiti u sušilici i ne peglati — sušite na zraku, položeno. Tako tkanina i kopča zadržavaju elastičnost.
 
