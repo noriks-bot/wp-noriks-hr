@@ -500,11 +500,13 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     $gck_offer_subs = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
         ? array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' )
-        : array();
+        : ( has_term( array( 'orto-cloud' ), 'product_cat', $product_id )
+        ? array( 'Za jednu osobu', 'Za vas i partnera', 'Najniža cijena po komadu' )
+        : array() );
     // Mala oznaka pokraj naslova ponude (index => tekst). Trenutno se ne koristi.
     $gck_offer_tags = array();
     // Kartusi iznad kartice ponude (index => tekst).
-    $gck_offer_badges = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
+    $gck_offer_badges = has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id )
         ? array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' )
         : array();
 
@@ -842,7 +844,7 @@ function gck_render_bundle_selector() {
     <?php
     // Polar NORIKS Cloth: kartica ponude kao na referenci — naslov i naziv paketa lijevo,
     // cijena desno u istom redu, precrtana stara cijena ispod nje.
-    if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) :
+    if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) :
     ?>
         <style>
           #bundle-selector .bundle-option {
@@ -900,6 +902,58 @@ function gck_render_bundle_selector() {
           .swatch-circle.color-crna    { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-crna-v2.webp' ); ?>') !important; }
           .swatch-circle.color-leopard { background-image: url('<?php echo esc_url( $bra_img . 'bra-sw-leopard-v2.webp' ); ?>') !important; }
         </style>
+    <?php endif; ?>
+
+    <?php
+    // NORIKS Cloud: zelena shema izbornika ponuda + sličica paketa u kartici (kao na referenci).
+    if ( has_term( array( 'orto-cloud' ), 'product_cat', $product_id ) ) :
+      $cld_img = get_template_directory_uri() . '/img/cloud/';
+    ?>
+        <style>
+          #bundle-selector .bundle-option.active { border-color: #3f8b57 !important; background: #edf7f0 !important; }
+          #bundle-selector .bundle-option input[type="radio"] { border-color: #3f8b57 !important; }
+          #bundle-selector .bundle-option input[type="radio"]::before { background: #3f8b57 !important; }
+          #bundle-selector .gck-per-chip { background: #24513a !important; }
+          #bundle-selector .gck-discount-badge { background: #3f8b57 !important; }
+          #bundle-selector .bundle-pairs { border-top-color: #cfe6d6 !important; }
+          #bundle-selector .gck-popular-badge { background: #141414 !important; color: #fff !important; }
+
+          /* sličica paketa lijevo, kao na referenci (bez promjene markupa) */
+          #bundle-selector .bundle-option {
+              padding-left: 92px !important;
+              background-repeat: no-repeat !important;
+              background-position: 40px center !important;
+              background-size: 44px 44px !important;
+          }
+          #bundle-selector .bundle-option:nth-of-type(1) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-1x.webp' ); ?>') !important; }
+          #bundle-selector .bundle-option:nth-of-type(2) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-2x.webp' ); ?>') !important; }
+          #bundle-selector .bundle-option:nth-of-type(3) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-3x.webp' ); ?>') !important; }
+
+          /* jamstvo ispod izbornika, kao na referenci */
+          #bundle-selector .gck-cloud-guarantee {
+              display: flex; align-items: center; justify-content: center; gap: 7px;
+              margin: 12px 0 0; font-size: 13.5px; color: #4a4a4a;
+          }
+          #bundle-selector .gck-cloud-guarantee svg { flex: 0 0 auto; }
+
+          @media (max-width: 520px) {
+              #bundle-selector .bundle-option { padding-left: 74px !important; background-position: 34px center !important; background-size: 36px 36px !important; }
+          }
+        </style>
+        <script>
+        (function(){
+          function add(){
+            var box = document.getElementById('bundle-selector');
+            if (!box || box.querySelector('.gck-cloud-guarantee')) { return; }
+            var d = document.createElement('div');
+            d.className = 'gck-cloud-guarantee';
+            d.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3f8b57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+                        + '<span>Zadovoljni ili vraćamo novac · 60 noći</span>';
+            box.appendChild(d);
+          }
+          if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', add); } else { add(); }
+        })();
+        </script>
     <?php endif; ?>
 
     <?php
