@@ -52,8 +52,6 @@ $cd_revs = array(
   array( 5, 'Traka je ono što ga razlikuje', 'Prije mi je obični jastuk ispadao nakon pola sata. Ovaj ostaje između koljena do jutra, i kad se okrenem na drugu stranu.', 'Davor K.' ),
   array( 5, 'Spas u trudnoći',               'Kupila sam ga u sedmom mjesecu. Konačno mogu ležati na lijevoj strani bez pritiska u kuku i bez vrpoljenja pola noći.', 'Ivana P.' ),
   array( 5, 'Kukovi me više ne bole ujutro', 'Bila sam skeptična jer je to ipak samo jastuk. Razlika je stvarna — ustajem bez one ukočenosti u zdjelici.', 'Lucija H.' ),
-  array( 5, 'Nakon operacije koljena',       'Fizioterapeut mi je rekao da stavljam jastuk između nogu. Ovaj drži razmak i ne pomiče se, za razliku od običnog.', 'Goran V.' ),
-  array( 5, 'Ni nakon dva mjeseca se ne sploštava', 'Pjena je čvrsta koliko treba i vraća se u oblik. Navlaku sam prala nekoliko puta i izgleda kao nova.', 'Stjepan M.' ),
 );
 ?>
 <section class="ncd-sec ncd-dark">
@@ -62,7 +60,7 @@ $cd_revs = array(
     <p class="ncd-sub ncd-rate"><span class="ncd-stars">★★★★★</span> Ocjena <strong>4,8/5</strong> tisuća zadovoljnih kupaca</p>
   </div>
   <div class="ncd-wrap">
-    <div class="ncd-revs" id="ncd-revs">
+    <div class="ncd-revs">
       <?php foreach ( $cd_revs as $r ) : ?>
         <article class="ncd-rev">
           <div class="ncd-rev-stars"><?php echo str_repeat( '★', (int) $r[0] ); ?></div>
@@ -78,11 +76,7 @@ $cd_revs = array(
         </article>
       <?php endforeach; ?>
     </div>
-    <div class="ncd-revs-nav">
-      <button type="button" class="ncd-arw" data-dir="-1" aria-label="Prethodne recenzije">&#8592;</button>
-      <div class="ncd-revs-bar"><span></span></div>
-      <button type="button" class="ncd-arw" data-dir="1" aria-label="Sljedeće recenzije">&#8594;</button>
-    </div>
+    
   </div>
 </section>
 
@@ -269,23 +263,14 @@ $cd_cases = array(
   /* recenzije — vrtuljak (referenca) */
   .ncd-rate { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 14.5px; }
   .ncd-stars { color: #f5a623; letter-spacing: 1px; }
-  .ncd-revs { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * 20px) / 4);
-              gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
-              scrollbar-width: none; padding-bottom: 4px; margin-top: 26px; }
-  .ncd-revs::-webkit-scrollbar { display: none; }
-  .ncd-rev { scroll-snap-align: start; border: 1px solid #e6e6e6; border-radius: 12px; padding: 18px 18px 16px;
+  .ncd-revs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 26px; }
+  .ncd-rev { border: 1px solid #e6e6e6; border-radius: 12px; padding: 18px 18px 16px;
              background: #fff; display: flex; flex-direction: column; }
   .ncd-rev-stars { color: #f5a623; font-size: 15px; letter-spacing: 1px; margin-bottom: 8px; }
   .ncd-rev-t { font-size: 15.5px; font-weight: 800; color: #0e1a33; margin: 0 0 7px; line-height: 1.3; }
   .ncd-rev-p { font-size: 14.5px; line-height: 1.6; color: #4a4a4a; margin: 0 0 14px; flex: 1 1 auto; }
   .ncd-rev-a { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13.5px; color: #0e1a33; }
   .ncd-rev-v { display: inline-flex; align-items: center; gap: 4px; color: #5c6b7f; }
-  .ncd-revs-nav { display: flex; align-items: center; gap: 14px; margin-top: 18px; }
-  .ncd-arw { flex: 0 0 auto; width: 38px; height: 34px; border: 1px solid #d7d7d7; background: #fff;
-             color: #0e1a33; font-size: 16px; line-height: 1; cursor: pointer; border-radius: 4px; }
-  .ncd-arw:hover { background: #0e1a33; color: #fff; border-color: #0e1a33; }
-  .ncd-revs-bar { flex: 1 1 auto; height: 3px; background: #e4e4e4; border-radius: 3px; overflow: hidden; }
-  .ncd-revs-bar span { display: block; height: 100%; width: 25%; background: #0e1a33; border-radius: 3px; }
 
   /* koraci — krugovi s oznakom (referenca) */
   .ncd-steps4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px 24px; margin-top: 30px; }
@@ -296,8 +281,10 @@ $cd_cases = array(
   .ncd-step4-b { position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%);
                  background: #2f6fd0; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .01em;
                  padding: 3px 12px; border-radius: 999px; white-space: nowrap; }
-  .ncd-step4-t { font-size: clamp(15px, 1.4vw, 17px); font-weight: 800; color: #fff; margin: 0 0 6px; line-height: 1.3; }
-  .ncd-step4-p { font-size: 14px; line-height: 1.55; color: #a9bad6; margin: 0; }
+  .ncd-step4-t { font-size: clamp(15px, 1.4vw, 17px); font-weight: 800; color: #0e1a33; margin: 0 0 6px; line-height: 1.3; }
+  .ncd-step4-p { font-size: 14px; line-height: 1.55; color: #40505f; margin: 0; }
+  .ncd-dark .ncd-step4-t { color: #fff; }
+  .ncd-dark .ncd-step4-p { color: #a9bad6; }
 
   /* krugovi sa slucajevima — po uzoru na referentnu stranicu */
   .ncd-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 24px; margin-top: 30px; }
@@ -305,8 +292,10 @@ $cd_cases = array(
   .ncd-case-ic { width: 100%; max-width: 190px; margin: 0 auto 16px; aspect-ratio: 1 / 1;
                  border-radius: 50%; overflow: hidden; }
   .ncd-case-ic img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
-  .ncd-case-t { font-size: clamp(16px, 1.5vw, 19px); font-weight: 800; color: #fff; margin: 0 0 6px; line-height: 1.25; }
-  .ncd-case-p { font-size: 14.5px; line-height: 1.55; color: #a9bad6; margin: 0; }
+  .ncd-case-t { font-size: clamp(16px, 1.5vw, 19px); font-weight: 800; color: #0e1a33; margin: 0 0 6px; line-height: 1.25; }
+  .ncd-case-p { font-size: 14.5px; line-height: 1.55; color: #40505f; margin: 0; }
+  .ncd-dark .ncd-case-t { color: #fff; }
+  .ncd-dark .ncd-case-p { color: #a9bad6; }
 
   .ncd-check { list-style: none; margin: 0 0 16px; padding: 0; }
   .ncd-check li { position: relative; padding: 0 0 11px 30px; font-size: 15.5px; color: #0e1a33; line-height: 1.5; }
@@ -335,7 +324,7 @@ $cd_cases = array(
   .ncd-dark .ncd-cta:hover { background: #2f6fd0; color: #fff; }
 
   @media (max-width: 820px) {
-    .ncd-revs { grid-auto-columns: 78%; gap: 12px; margin-top: 18px; }
+    .ncd-revs { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
     .ncd-steps4 { grid-template-columns: repeat(2, 1fr); gap: 26px 16px; margin-top: 20px; }
     .ncd-step4-ic { max-width: 140px; margin-bottom: 22px; }
     .ncd-step4-p { font-size: 13.5px; }
@@ -361,30 +350,6 @@ $cd_cases = array(
 
 <script>
 (function(){
-  /* Vrtuljak recenzija: strelice pomicu za jednu "stranicu", traka prati polozaj. */
-  var box = document.getElementById('ncd-revs');
-  if (box) {
-    var bar = document.querySelector('.ncd-revs-bar span');
-    function sync(){
-      if (!bar) { return; }
-      var max = box.scrollWidth - box.clientWidth;
-      var ratio = box.clientWidth / box.scrollWidth;
-      var track = box.parentNode.querySelector('.ncd-revs-bar').clientWidth;
-      var w = Math.max(30, track * ratio);
-      bar.style.width = w + 'px';
-      bar.style.transform = 'translateX(' + (max > 0 ? (box.scrollLeft / max) * (track - w) : 0) + 'px)';
-    }
-    document.querySelectorAll('.ncd-arw').forEach(function(b){
-      b.addEventListener('click', function(){
-        box.scrollLeft += parseInt(b.getAttribute('data-dir'), 10) * box.clientWidth;
-      });
-    });
-    box.addEventListener('scroll', sync, { passive: true });
-    window.addEventListener('resize', sync);
-    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', sync); } else { sync(); }
-    window.addEventListener('load', sync);
-  }
-
   document.querySelectorAll('a.ncd-cta[href="#bundle-selector"]').forEach(function(a){
     a.addEventListener('click', function(e){
       e.preventDefault();
