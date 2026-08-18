@@ -175,6 +175,11 @@ function noriks_render_pack_switcher() {
 
     if ( count( $sizes ) < 2 && count( $same ) < 2 ) { return; }
 
+    // Odabrana boja uvijek na PRVOM mjestu u redu boja.
+    foreach ( $same as $k => $p ) {
+        if ( (int) $p['id'] === (int) $id ) { unset( $same[ $k ] ); array_unshift( $same, $p ); break; }
+    }
+
     $keys      = array_values( array_filter( array_keys( $sizes ), function ( $k ) { return (int) $k > 1; } ) );
     $shown     = count( $keys );
     ?>
