@@ -89,6 +89,11 @@ if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
     include $noriks_pb_dir . 'why-majice.php';
 }
 
+// NORIKS CLOUD (orto-cloud) — ortopedski jastuk za koljena
+if ( noriks_is_type( 'cloud' ) ) {
+    include $noriks_pb_dir . 'why-cloud.php';
+}
+
 // POLAR NORIKS CLOTH (orto-cloath) — krpa za ciscenje
 if ( noriks_is_type( 'cloath' ) ) {
     include $noriks_pb_dir . 'why-cloath.php';
