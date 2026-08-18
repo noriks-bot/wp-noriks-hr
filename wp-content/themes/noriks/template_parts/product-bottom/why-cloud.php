@@ -20,6 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $cd      = get_template_directory_uri() . '/img/cloud/';
 $cd_path = get_template_directory() . '/img/cloud/';
 
+$cd_vid = function( $mp4, $fallback, $alt ) use ( $cd, $cd_path ) {
+  if ( file_exists( $cd_path . $mp4 ) ) {
+    $poster = str_replace( '.mp4', '-poster.webp', $mp4 );
+    return '<video class="ncd-video" src="'.esc_url($cd.$mp4).'" poster="'.esc_url($cd.$poster).'"'
+         . ' autoplay muted loop playsinline preload="metadata" aria-label="'.esc_attr($alt).'"></video>';
+  }
+  return '<img src="'.esc_url($cd.$fallback).'" alt="'.esc_attr($alt).'" loading="lazy">';
+};
 $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
   if ( file_exists( $cd_path . $file ) ) {
     return '<img src="'.esc_url($cd.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
@@ -31,7 +39,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 <!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
 <section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
-    <div class="ncd-media"><?php echo $cd_img('cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
+    <div class="ncd-media"><?php echo $cd_vid('cld-vid-razlika.mp4','cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
     <div class="ncd-copy">
       <h2 class="ncd-h2">Razlika koja se vidi već prvu noć</h2>
       <p><strong>Bez jastuka:</strong> gornja noga pada preko donje, zdjelica se uvija, a pritisak ide u donji dio leđa i u koljena.</p>
@@ -120,7 +128,7 @@ $cd_revs = array(
       <p>Problem niste vi. Kad spavate na boku bez oslonca između koljena, kukovi se uvijaju, donji dio leđa ostaje napet, a mišići cijelu noć rade da vas stabiliziraju.</p>
       <p class="ncd-strong">NORIKS Cloud drži noge razmaknute točno koliko treba — kralježnica ostaje poravnata, a tijelo se konačno opusti.</p>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-jutra.webp','Jutro bez bolova u leđima'); ?></div>
+    <div class="ncd-media"><?php echo $cd_vid('cld-vid-jutra.mp4','cld-jutra.webp','Jutro bez bolova u leđima'); ?></div>
   </div>
 </section>
 
@@ -244,7 +252,7 @@ $cd_cases = array(
   .ncd-sub { max-width: 820px; margin: 0 auto 24px; }
   .ncd-strong { font-weight: 700; color: #0e1a33 !important; }
   .ncd-note { font-size: 14px !important; color: #6b6b6b !important; }
-  .ncd-media img { width: 100%; height: auto; display: block; border-radius: 16px; }
+  .ncd-media img, .ncd-video { width: 100%; height: auto; display: block; border-radius: 16px; }
 
   /* tamne sekcije */
   .ncd-dark .ncd-h2, .ncd-dark .ncd-strong { color: #fff !important; }
