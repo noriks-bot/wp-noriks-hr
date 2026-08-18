@@ -211,7 +211,7 @@ function noriks_render_pack_switcher() {
                             } else {
                                 echo (int) $s; ?>-<?php esc_html_e( 'paket', 'noriks' );
                             } ?></span>
-                        <span class="npk-size-p"><?php echo wp_kses_post( wc_price( $ppu ) ); ?> <?php esc_html_e( 'po komadu', 'noriks' ); ?></span>
+                        <span class="npk-size-p"><?php echo wp_kses_post( wc_price( $ppu ) ); ?><span class="npk-size-u"><?php esc_html_e( 'po komadu', 'noriks' ); ?></span></span>
                     </a>
                 <?php endforeach; ?>
             </div>
@@ -264,8 +264,10 @@ function noriks_render_pack_switcher() {
       .npk-size.is-active { background: #12233b; border-color: #12233b; }
       /* pisava se skrci s sirino stolpca, da tekst nikoli ne izpade iz kartice */
       .npk-size-n { display: block; font-size: clamp(14px, 1.35vw, 18px); font-weight: 800; color: #141414; line-height: 1.15; }
-      .npk-size-p { display: block; font-size: clamp(10.5px, 1.02vw, 13px); color: #6b6b6b; margin-top: 4px;
-                    line-height: 1.25; white-space: normal; overflow-wrap: anywhere; }
+      .npk-size-p { display: block; font-size: clamp(10px, .95vw, 12px); color: #6b6b6b; margin-top: 4px;
+                    line-height: 1.25; white-space: nowrap; }
+      /* mjerna jedinica uvijek u DRUGI red i sitnije */
+      .npk-size-u { display: block; font-size: .9em; }
       .npk-size.is-active .npk-size-n, .npk-size.is-active .npk-size-p,
       .npk-size.is-active .npk-size-p .amount, .npk-size.is-active .npk-size-p bdi { color: #fff !important; }
       .npk-size.is-active .npk-size-p { opacity: .92; }
