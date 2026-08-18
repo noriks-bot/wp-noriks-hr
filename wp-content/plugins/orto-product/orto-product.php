@@ -961,7 +961,8 @@ function gck_render_bundle_selector() {
               font-size: 12.5px !important; font-weight: 700 !important; padding: 2px 9px !important;
               border-radius: 6px !important; margin: 0 !important; border: 0 !important;
           }
-          #bundle-selector .bundle-option input[type="radio"] { border-color: #12233b !important; }
+          #bundle-selector .bundle-option input[type="radio"] { border-color: #12233b !important; accent-color: #12233b !important; }
+          #bundle-selector .bundle-option input[type="radio"]::before { background: #12233b !important; }
           #bundle-selector .bundle-pairs { border-top-color: #d5e1f0 !important; }
 
           /* crni kartus iznad kartice, desno — kao na referenci */
