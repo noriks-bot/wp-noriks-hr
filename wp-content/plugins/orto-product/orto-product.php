@@ -925,18 +925,18 @@ function gck_render_bundle_selector() {
           }
           #bundle-selector .bundle-option.active { border-color: #12233b !important; background-color: #f2f6fb !important; }
           #bundle-selector .bundle-option > input[type="radio"] { position: absolute !important; opacity: 0 !important; width: 0 !important; height: 0 !important; margin: 0 !important; }
-          #bundle-selector .bundle-option .gck-offer-head { display: contents; }
+          /* naslov i cijena po komadu u ISTOM redu */
+          #bundle-selector .bundle-option .gck-offer-head {
+              grid-column: 1; grid-row: 1 / span 2; align-self: center;
+              display: flex; align-items: center; gap: 9px; flex-wrap: wrap; line-height: 1.2;
+          }
           #bundle-selector .bundle-option .bundle-option-title {
-              grid-column: 1; grid-row: 1;
               font-size: 15.5px; font-weight: 700; color: #141414; line-height: 1.25;
           }
           #bundle-selector .bundle-option .gck-offer-sub { display: none !important; }
-          #bundle-selector .bundle-option .gck-offer-prices {
-              grid-column: 1; grid-row: 2; justify-self: start; align-self: center;
-              display: inline-flex; align-items: center; gap: 6px;
-          }
+          #bundle-selector .bundle-option .gck-offer-prices { display: inline-flex; align-items: center; gap: 6px; }
           #bundle-selector .bundle-option .bundle-total-line {
-              grid-column: 2; grid-row: 1 / span 2;
+              grid-column: 2; grid-row: 1 / span 2; align-self: center;
               display: flex !important; flex-direction: column; align-items: flex-end; gap: 1px;
               margin: 0 !important; text-align: right; white-space: nowrap;
           }
@@ -946,17 +946,17 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option br { display: none !important; }
 
           /* svijetli cipovi, kao na referenci */
+          /* samo cijena po komadu — bez precrtane stare cijene i bez postotka */
           #bundle-selector .gck-per-chip {
-              background: #eef3fa !important; color: #12233b !important;
-              font-size: 12px !important; font-weight: 600 !important; padding: 2px 8px !important;
+              background: #e6effb !important; padding: 2px 9px !important;
               border-radius: 6px !important; margin: 0 !important;
           }
-          #bundle-selector .gck-per-chip .gck-per-old { color: #9aa3ad !important; }
-          #bundle-selector .gck-discount-badge {
-              background: #e6effb !important; color: #1d4f9e !important;
-              font-size: 12px !important; font-weight: 700 !important; padding: 2px 8px !important;
-              border-radius: 6px !important; margin: 0 !important;
+          #bundle-selector .gck-per-chip .gck-per-old { display: none !important; }
+          #bundle-selector .gck-per-chip .gck-per-new {
+              color: #12233b !important; font-size: 12.5px !important; font-weight: 700 !important;
+              text-decoration: none !important; opacity: 1 !important;
           }
+          #bundle-selector .gck-discount-badge { display: none !important; }
           #bundle-selector .bundle-option input[type="radio"] { border-color: #12233b !important; }
           #bundle-selector .bundle-pairs { border-top-color: #d5e1f0 !important; }
 

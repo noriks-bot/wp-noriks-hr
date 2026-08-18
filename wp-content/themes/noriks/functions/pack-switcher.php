@@ -180,7 +180,9 @@ function noriks_render_pack_switcher() {
         if ( (int) $p['id'] === (int) $id ) { unset( $same[ $k ] ); array_unshift( $same, $p ); break; }
     }
 
-    $keys      = array_values( array_filter( array_keys( $sizes ), function ( $k ) { return (int) $k > 1; } ) );
+    // "1 komad" se prikazuje samo kad smo na proizvodu od jednog komada — inace nikad.
+    $min_size  = ( (int) $size === 1 ) ? 1 : 2;
+    $keys      = array_values( array_filter( array_keys( $sizes ), function ( $k ) use ( $min_size ) { return (int) $k >= $min_size; } ) );
     $shown     = count( $keys );
     ?>
     <div class="npk">
@@ -191,7 +193,7 @@ function noriks_render_pack_switcher() {
             <div class="npk-scroll">
             <div class="npk-sizes">
                 <?php foreach ( $sizes as $s => $list ) :
-                    if ( (int) $s < 2 ) { continue; }   // "1-paket" nikad ne prikazujemo
+                    if ( (int) $s < $min_size ) { continue; }
                     $t = noriks_pack_target( $list, $family );
                     if ( ! $t ) { continue; }
                     $is_cur = ( (int) $s === (int) $size );
@@ -200,7 +202,12 @@ function noriks_render_pack_switcher() {
                     <a class="npk-size<?php echo $is_cur ? ' is-active' : ''; ?>"
                        href="<?php echo esc_url( $is_cur ? get_permalink( $id ) : $t['url'] ); ?>"
                        <?php echo $is_cur ? 'aria-current="true"' : ''; ?>>
-                        <span class="npk-size-n"><?php echo (int) $s; ?>-<?php esc_html_e( 'paket', 'noriks' ); ?></span>
+                        <span class="npk-size-n"><?php
+                            if ( (int) $s === 1 ) {
+                                esc_html_e( '1 komad', 'noriks' );
+                            } else {
+                                echo (int) $s; ?>-<?php esc_html_e( 'paket', 'noriks' );
+                            } ?></span>
                         <span class="npk-size-p"><?php echo wp_kses_post( wc_price( $ppu ) ); ?> <?php esc_html_e( 'po komadu', 'noriks' ); ?></span>
                     </a>
                 <?php endforeach; ?>
@@ -237,6 +244,10 @@ function noriks_render_pack_switcher() {
 
     <style>
       .npk { margin: 8px 0 14px; }
+      <?php if ( count( $same ) > 1 ) : ?>
+      /* temin red "druge boje" iznad nudi iste linkove -> ne prikazujemo ga dvaput */
+      .color-selections { display: none !important; }
+      <?php endif; ?>
       .npk-block { margin-bottom: 10px; }
       .npk-label { font-size: 15px; font-weight: 800; color: #141414; margin: 0 0 7px; }
 
