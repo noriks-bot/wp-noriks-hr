@@ -225,9 +225,9 @@ function noriks_render_pack_switcher() {
     </div>
 
     <style>
-      .npk { margin: 8px 0 20px; }
-      .npk-block { margin-bottom: 18px; }
-      .npk-label { font-size: 15px; font-weight: 800; color: #141414; margin: 0 0 10px; }
+      .npk { margin: 8px 0 14px; }
+      .npk-block { margin-bottom: 10px; }
+      .npk-label { font-size: 15px; font-weight: 800; color: #141414; margin: 0 0 7px; }
 
       /* velicine paketa — ravni robovi, kao i gumbi za velicinu ispod */
       .npk-sizes { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; }
@@ -246,6 +246,7 @@ function noriks_render_pack_switcher() {
       .npk-size.is-active .npk-size-p { opacity: .92; }
 
       /* boje — kvadratne plocice */
+      .npk-block:last-child { margin-bottom: 0; }
       .npk-colors { display: flex; flex-wrap: wrap; gap: 10px; }
       .npk-color { display: block; width: 78px; height: 78px; border: 1px solid #e2e2e2; border-radius: 0;
                    overflow: hidden; background: #f4f4f4; transition: border-color .15s; }
