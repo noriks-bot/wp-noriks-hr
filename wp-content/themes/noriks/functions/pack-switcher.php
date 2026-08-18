@@ -263,7 +263,12 @@ function noriks_render_pack_switcher() {
       }
 
       @media (max-width: 700px) {
-        .npk-sizes { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        /* vodoravni drsnik — vidi se ~4 kartice, ostale podrsas */
+        .npk-sizes { display: flex; grid-auto-flow: unset; gap: 8px; overflow-x: auto;
+                     scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+                     scrollbar-width: none; padding-bottom: 2px; }
+        .npk-sizes::-webkit-scrollbar { display: none; }
+        .npk-size { flex: 0 0 calc((100% - 24px) / 3.6); scroll-snap-align: center; }
       }
       @media (max-width: 560px) {
         .npk-sizes { gap: 8px; }
@@ -275,6 +280,21 @@ function noriks_render_pack_switcher() {
         .npk-color { flex: 0 0 62px; width: 62px; height: 62px; }
       }
     </style>
+    <script>
+    (function(){
+      /* Na mobitelu odabrani paket i odabranu boju dovedemo u sredinu drsnika. */
+      function center(sel){
+        var box = document.querySelector(sel);
+        if (!box) { return; }
+        var act = box.querySelector('.is-active');
+        if (!act || box.scrollWidth <= box.clientWidth + 4) { return; }
+        box.scrollLeft = act.offsetLeft - (box.clientWidth - act.offsetWidth) / 2;
+      }
+      function run(){ center('.npk-sizes'); center('.npk-colors'); }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+      window.addEventListener('load', run);
+    })();
+    </script>
     <?php
 }
 add_action( 'woocommerce_single_product_summary', 'noriks_render_pack_switcher', 24 );
