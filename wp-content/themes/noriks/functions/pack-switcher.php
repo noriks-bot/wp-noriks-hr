@@ -176,7 +176,6 @@ function noriks_render_pack_switcher() {
     if ( count( $sizes ) < 2 && count( $same ) < 2 ) { return; }
 
     $keys      = array_values( array_filter( array_keys( $sizes ), function ( $k ) { return (int) $k > 1; } ) );
-    $last_size = $keys ? end( $keys ) : 0;
     $shown     = count( $keys );
     ?>
     <div class="npk">
@@ -195,9 +194,6 @@ function noriks_render_pack_switcher() {
                     <a class="npk-size<?php echo $is_cur ? ' is-active' : ''; ?>"
                        href="<?php echo esc_url( $is_cur ? get_permalink( $id ) : $t['url'] ); ?>"
                        <?php echo $is_cur ? 'aria-current="true"' : ''; ?>>
-                        <?php if ( (int) $s === (int) $last_size && ! $is_cur ) : ?>
-                            <span class="npk-best"><?php esc_html_e( 'Najbolja cijena', 'noriks' ); ?></span>
-                        <?php endif; ?>
                         <span class="npk-size-n"><?php echo (int) $s; ?>-<?php esc_html_e( 'paket', 'noriks' ); ?></span>
                         <span class="npk-size-p"><?php echo wp_kses_post( wc_price( $ppu ) ); ?> <?php esc_html_e( 'po komadu', 'noriks' ); ?></span>
                     </a>
@@ -234,7 +230,7 @@ function noriks_render_pack_switcher() {
       .npk-label { font-size: 15px; font-weight: 800; color: #141414; margin: 0 0 10px; }
 
       /* velicine paketa — ravni robovi, kao i gumbi za velicinu ispod */
-      .npk-sizes { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; padding-top: 12px; }
+      .npk-sizes { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; }
       .npk-size { position: relative; display: flex; flex-direction: column; justify-content: center;
                   min-height: 62px; min-width: 0; text-align: center; text-decoration: none;
                   border: 1px solid #d7d7d7; border-radius: 0; padding: 12px 6px; background: #fff;
@@ -248,9 +244,6 @@ function noriks_render_pack_switcher() {
       .npk-size.is-active .npk-size-n, .npk-size.is-active .npk-size-p,
       .npk-size.is-active .npk-size-p .amount, .npk-size.is-active .npk-size-p bdi { color: #fff !important; }
       .npk-size.is-active .npk-size-p { opacity: .92; }
-      .npk-best { position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
-                  background: #1f9d55; color: #fff; font-size: 11px; font-weight: 800;
-                  padding: 3px 10px; border-radius: 0; white-space: nowrap; letter-spacing: .01em; }
 
       /* boje — kvadratne plocice */
       .npk-colors { display: flex; flex-wrap: wrap; gap: 10px; }
