@@ -946,8 +946,8 @@ function gck_render_bundle_selector() {
           /* svijetli cipovi, kao na referenci */
           /* samo cijena po komadu — bez precrtane stare cijene i bez postotka */
           #bundle-selector .gck-per-chip {
-              background: #e6effb !important; padding: 2px 9px !important;
-              border-radius: 6px !important; margin: 0 !important;
+              background: #e6effb !important; padding: 5px 11px !important;
+              border-radius: 4px !important; margin: 0 !important;
           }
           #bundle-selector .gck-per-chip .gck-per-old { display: none !important; }
           #bundle-selector .gck-per-chip .gck-per-new {
@@ -958,8 +958,8 @@ function gck_render_bundle_selector() {
           #bundle-selector .gck-discount-badge {
               display: inline-block !important;
               background: #e3f4e8 !important; color: #1e6b3f !important;
-              font-size: 12.5px !important; font-weight: 700 !important; padding: 2px 9px !important;
-              border-radius: 6px !important; margin: 0 !important; border: 0 !important;
+              font-size: 12.5px !important; font-weight: 700 !important; padding: 5px 11px !important;
+              border-radius: 4px !important; margin: 0 !important; border: 0 !important;
           }
           #bundle-selector .bundle-option input[type="radio"] { border-color: #12233b !important; accent-color: #12233b !important; }
           #bundle-selector .bundle-option input[type="radio"]::before { background: #12233b !important; }
@@ -985,7 +985,7 @@ function gck_render_bundle_selector() {
               #bundle-selector .bundle-option { padding: 12px 10px !important; column-gap: 8px; }
               #bundle-selector .bundle-option .bundle-option-title { font-size: 14.5px; }
               #bundle-selector .bundle-option .gck-offer-sub { font-size: 12.5px; }
-              #bundle-selector .gck-per-chip, #bundle-selector .gck-discount-badge { font-size: 11px !important; padding: 2px 6px !important; }
+              #bundle-selector .gck-per-chip, #bundle-selector .gck-discount-badge { font-size: 11px !important; padding: 4px 8px !important; }
           }
         </style>
     <?php endif; ?>
