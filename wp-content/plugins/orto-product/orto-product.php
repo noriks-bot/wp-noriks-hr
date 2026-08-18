@@ -905,29 +905,26 @@ function gck_render_bundle_selector() {
     <?php
     // NORIKS Cloud: zelena shema izbornika ponuda + sličica paketa u kartici (kao na referenci).
     if ( has_term( array( 'orto-cloud' ), 'product_cat', $product_id ) ) :
-      $cld_img = get_template_directory_uri() . '/img/cloud/';
     ?>
         <style>
           /* Kartica ponude 1:1 po referenci: slicica lijevo, naslov, podnaslov + postotak,
              pa cijena i precrtana stara cijena — sve lijevo poravnato. Radio je skriven. */
           #bundle-selector .bundle-option {
               display: grid !important;
-              grid-template-columns: minmax(0,1fr) auto;
+              grid-template-columns: auto minmax(0,1fr) auto;
               column-gap: 12px; row-gap: 3px;
               align-items: center;
-              padding: 13px 16px 13px 76px !important;
+              padding: 13px 16px !important;
               border: 1px solid #e3e6ea !important;
               border-radius: 10px !important;
               background-color: #fff !important;
-              background-repeat: no-repeat !important;
-              background-position: 18px center !important;
-              background-size: 46px 46px !important;
+              background-image: none !important;
           }
           #bundle-selector .bundle-option.active { border-color: #12233b !important; background-color: #f2f6fb !important; }
-          #bundle-selector .bundle-option > input[type="radio"] { position: absolute !important; opacity: 0 !important; width: 0 !important; height: 0 !important; margin: 0 !important; }
+          #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; margin: 0 !important; }
           /* naslov i cijena po komadu u ISTOM redu */
           #bundle-selector .bundle-option .gck-offer-head {
-              grid-column: 1; grid-row: 1 / span 2; align-self: center;
+              grid-column: 2; grid-row: 1 / span 2; align-self: center;
               display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; line-height: 1.2; min-width: 0;
           }
           #bundle-selector .bundle-option .bundle-option-title {
@@ -937,7 +934,7 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option .gck-offer-prices { display: inline-flex; align-items: center; gap: 6px; flex-wrap: nowrap; white-space: nowrap; }
           #bundle-selector .bundle-option .bundle-option-title { white-space: nowrap; }
           #bundle-selector .bundle-option .bundle-total-line {
-              grid-column: 2; grid-row: 1 / span 2; align-self: center;
+              grid-column: 3; grid-row: 1 / span 2; align-self: center;
               display: flex !important; flex-direction: column; align-items: flex-end; gap: 1px;
               margin: 0 !important; text-align: right; white-space: nowrap;
           }
@@ -975,10 +972,6 @@ function gck_render_bundle_selector() {
               letter-spacing: .04em !important; padding: 4px 12px !important;
           }
 
-          /* slicica paketa po ponudi */
-          #bundle-selector .bundle-option:nth-of-type(1) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-1x.webp' ); ?>') !important; }
-          #bundle-selector .bundle-option:nth-of-type(2) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-2x.webp' ); ?>') !important; }
-          #bundle-selector .bundle-option:nth-of-type(3) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-3x.webp' ); ?>') !important; }
 
 
           /* traka "Ogranicena zaliha": svijetlo plava umjesto crvene */
@@ -988,7 +981,7 @@ function gck_render_bundle_selector() {
           .gck-countdown__timer { color: #2f6fd0 !important; }
 
           @media (max-width: 520px) {
-              #bundle-selector .bundle-option { padding: 12px 10px 12px 66px !important; background-position: 12px center !important; background-size: 42px 42px !important; }
+              #bundle-selector .bundle-option { padding: 12px 10px !important; column-gap: 8px; }
               #bundle-selector .bundle-option .bundle-option-title { font-size: 14.5px; }
               #bundle-selector .bundle-option .gck-offer-sub { font-size: 12.5px; }
               #bundle-selector .gck-per-chip, #bundle-selector .gck-discount-badge { font-size: 11px !important; padding: 2px 6px !important; }
