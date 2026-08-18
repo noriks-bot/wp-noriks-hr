@@ -928,13 +928,14 @@ function gck_render_bundle_selector() {
           /* naslov i cijena po komadu u ISTOM redu */
           #bundle-selector .bundle-option .gck-offer-head {
               grid-column: 1; grid-row: 1 / span 2; align-self: center;
-              display: flex; align-items: center; gap: 9px; flex-wrap: wrap; line-height: 1.2;
+              display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; line-height: 1.2; min-width: 0;
           }
           #bundle-selector .bundle-option .bundle-option-title {
               font-size: 15.5px; font-weight: 700; color: #141414; line-height: 1.25;
           }
           #bundle-selector .bundle-option .gck-offer-sub { display: none !important; }
-          #bundle-selector .bundle-option .gck-offer-prices { display: inline-flex; align-items: center; gap: 6px; }
+          #bundle-selector .bundle-option .gck-offer-prices { display: inline-flex; align-items: center; gap: 6px; flex-wrap: nowrap; white-space: nowrap; }
+          #bundle-selector .bundle-option .bundle-option-title { white-space: nowrap; }
           #bundle-selector .bundle-option .bundle-total-line {
               grid-column: 2; grid-row: 1 / span 2; align-self: center;
               display: flex !important; flex-direction: column; align-items: flex-end; gap: 1px;
@@ -979,12 +980,6 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option:nth-of-type(2) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-2x.webp' ); ?>') !important; }
           #bundle-selector .bundle-option:nth-of-type(3) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-3x.webp' ); ?>') !important; }
 
-          /* jamstvo ispod izbornika, kao na referenci */
-          #bundle-selector .gck-cloud-guarantee {
-              display: flex; align-items: center; justify-content: center; gap: 7px;
-              margin: 12px 0 0; font-size: 13.5px; color: #4a4a4a;
-          }
-          #bundle-selector .gck-cloud-guarantee svg { flex: 0 0 auto; }
 
           /* traka "Ogranicena zaliha": svijetlo plava umjesto crvene */
           .gck-countdown { background: #eef4fb !important; border-color: #d5e1f0 !important; border-left-color: #2f6fd0 !important; }
@@ -999,20 +994,6 @@ function gck_render_bundle_selector() {
               #bundle-selector .gck-per-chip, #bundle-selector .gck-discount-badge { font-size: 11px !important; padding: 2px 6px !important; }
           }
         </style>
-        <script>
-        (function(){
-          function add(){
-            var box = document.getElementById('bundle-selector');
-            if (!box || box.querySelector('.gck-cloud-guarantee')) { return; }
-            var d = document.createElement('div');
-            d.className = 'gck-cloud-guarantee';
-            d.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2f6fd0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
-                        + '<span>Zadovoljni ili vraćamo novac · 60 noći</span>';
-            box.appendChild(d);
-          }
-          if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', add); } else { add(); }
-        })();
-        </script>
     <?php endif; ?>
 
     <?php
