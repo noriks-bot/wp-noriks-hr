@@ -183,6 +183,7 @@ function noriks_render_pack_switcher() {
         <?php if ( $shown > 1 ) : ?>
         <div class="npk-block">
             <div class="npk-label"><?php esc_html_e( 'Odaberi paket', 'noriks' ); ?></div>
+            <div class="npk-scroll">
             <div class="npk-sizes">
                 <?php foreach ( $sizes as $s => $list ) :
                     if ( (int) $s < 2 ) { continue; }   // "1-paket" nikad ne prikazujemo
@@ -199,12 +200,15 @@ function noriks_render_pack_switcher() {
                     </a>
                 <?php endforeach; ?>
             </div>
+            <div class="npk-bar" aria-hidden="true"><span></span></div>
+            </div>
         </div>
         <?php endif; ?>
 
         <?php if ( count( $same ) > 1 ) : ?>
         <div class="npk-block">
             <div class="npk-label"><?php esc_html_e( 'Boja', 'noriks' ); ?></div>
+            <div class="npk-scroll">
             <div class="npk-colors">
                 <?php foreach ( $same as $p ) :
                     $is_cur = ( (int) $p['id'] === (int) $id ); ?>
@@ -218,6 +222,8 @@ function noriks_render_pack_switcher() {
                         <?php endif; ?>
                     </a>
                 <?php endforeach; ?>
+            </div>
+            <div class="npk-bar" aria-hidden="true"><span></span></div>
             </div>
         </div>
         <?php endif; ?>
@@ -247,8 +253,9 @@ function noriks_render_pack_switcher() {
 
       /* boje — kvadratne plocice */
       .npk-block:last-child { margin-bottom: 0; }
-      .npk-colors { display: flex; flex-wrap: wrap; gap: 10px; }
-      .npk-color { display: block; width: 78px; height: 78px; border: 1px solid #e2e2e2; border-radius: 0;
+      /* jedan red preko cele sirine — plocice ostaju kvadratne i rastu s prostorom */
+      .npk-colors { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; }
+      .npk-color { display: block; width: 100%; aspect-ratio: 1 / 1; min-width: 0; border: 1px solid #e2e2e2; border-radius: 0;
                    overflow: hidden; background: #f4f4f4; transition: border-color .15s; }
       .npk-color img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .npk-color:hover { border-color: #9a9a9a; }
@@ -259,8 +266,13 @@ function noriks_render_pack_switcher() {
       @media (min-width: 1024px) {
         .npk-label { font-size: 16px; }
         .npk-size { min-height: 70px; padding: 12px 8px; }
-        .npk-color { width: 86px; height: 86px; }
       }
+
+      /* uvijek vidljiva crta drsnika ispod reda (nativna se na mobitelu skriva) */
+      .npk-scroll { position: relative; }
+      .npk-bar { display: none; height: 3px; border-radius: 3px; background: #e4e4e4; margin: 8px 0 0; overflow: hidden; }
+      .npk-bar span { display: block; height: 100%; width: 30%; border-radius: 3px; background: #12233b; transform: translateX(0); }
+      .npk-scroll.is-scrollable .npk-bar { display: block; }
 
       @media (max-width: 700px) {
         /* vodoravni drsnik — vidi se ~4 kartice, ostale podrsas */
@@ -269,15 +281,17 @@ function noriks_render_pack_switcher() {
                      scrollbar-width: none; padding-bottom: 2px; }
         .npk-sizes::-webkit-scrollbar { display: none; }
         .npk-size { flex: 0 0 calc((100% - 24px) / 3.6); scroll-snap-align: center; }
+
+        .npk-colors { display: flex; grid-auto-flow: unset; flex-wrap: nowrap; gap: 8px; overflow-x: auto;
+                      -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+        .npk-colors::-webkit-scrollbar { display: none; }
+        .npk-color { flex: 0 0 calc((100% - 24px) / 3.6); width: auto; }
       }
       @media (max-width: 560px) {
         .npk-sizes { gap: 8px; }
         .npk-size { min-height: 56px; padding: 10px 4px; }
         .npk-size-n { font-size: 14.5px; }
         .npk-size-p { font-size: 11px; }
-        .npk-colors { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
-        .npk-colors::-webkit-scrollbar { display: none; }
-        .npk-color { flex: 0 0 62px; width: 62px; height: 62px; }
       }
     </style>
     <script>
@@ -290,9 +304,29 @@ function noriks_render_pack_switcher() {
         if (!act || box.scrollWidth <= box.clientWidth + 4) { return; }
         box.scrollLeft = act.offsetLeft - (box.clientWidth - act.offsetWidth) / 2;
       }
-      function run(){ center('.npk-sizes'); center('.npk-colors'); }
+      /* Crta drsnika: sirina palca = udio vidljivog dijela, pomak = polozaj drsnika. */
+      function bar(box){
+        var wrap = box.closest ? box.closest('.npk-scroll') : null;
+        if (!wrap) { return; }
+        var thumb = wrap.querySelector('.npk-bar span');
+        var can   = box.scrollWidth > box.clientWidth + 4;
+        wrap.classList.toggle('is-scrollable', can);
+        if (!can || !thumb) { return; }
+        var ratio = box.clientWidth / box.scrollWidth;
+        var track = wrap.querySelector('.npk-bar').clientWidth;
+        var w     = Math.max(28, track * ratio);
+        var max   = box.scrollWidth - box.clientWidth;
+        thumb.style.width = w + 'px';
+        thumb.style.transform = 'translateX(' + ((box.scrollLeft / max) * (track - w)) + 'px)';
+      }
+      function each(fn){ ['.npk-sizes', '.npk-colors'].forEach(function(sel){
+        document.querySelectorAll(sel).forEach(fn);
+      }); }
+      function run(){ center('.npk-sizes'); center('.npk-colors'); each(bar); }
+      each(function(box){ box.addEventListener('scroll', function(){ bar(box); }, { passive: true }); });
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
       window.addEventListener('load', run);
+      window.addEventListener('resize', run);
     })();
     </script>
     <?php
