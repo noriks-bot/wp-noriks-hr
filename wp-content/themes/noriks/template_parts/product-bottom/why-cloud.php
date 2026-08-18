@@ -29,7 +29,7 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 ?>
 
 <!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-media"><?php echo $cd_img('cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
     <div class="ncd-copy">
@@ -41,6 +41,36 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
         <li>Manje pritiska na donji dio leđa</li>
         <li>Manje okretanja tijekom noći</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ B) Koraci — pocnite bolje spavati vec veceras ============ -->
+<?php
+$cd_steps = array(
+  array( 'cld-korak1.webp', 'Otkopčajte traku i postavite jastuk', 'Pritisnite druker da oslobodite traku i stavite jastuk između koljena.' ),
+  array( 'cld-korak2.webp', 'Prilagodite traku svojoj nozi',       'Zategnite traku oko noge u jedan od dva položaja — čvrsto, ali bez pritiska.' ),
+  array( 'cld-korak3.webp', 'Spavajte s pravilnim poravnanjem',    'Jastuk drži razmak nogu, kralježnica ostaje poravnata, a pritisak popušta.' ),
+  array( 'cld-korak4.webp', 'Probudite se bez ukočenosti',         'Bez okretanja pola noći i bez traženja položaja koji ne boli.' ),
+);
+?>
+<section class="ncd-sec">
+  <div class="ncd-wrap ncd-center">
+    <h2 class="ncd-h2">Počnite bolje spavati već večeras</h2>
+    <p class="ncd-sub">Jednostavno za korištenje. <strong>Bolji san</strong> od prve noći.</p>
+  </div>
+  <div class="ncd-wrap">
+    <div class="ncd-steps4">
+      <?php foreach ( $cd_steps as $i => $st ) : ?>
+        <div class="ncd-step4">
+          <div class="ncd-step4-ic">
+            <?php echo $cd_img( $st[0], $st[1] ); ?>
+            <span class="ncd-step4-b">Korak <?php echo (int) $i + 1; ?></span>
+          </div>
+          <h3 class="ncd-step4-t"><?php echo esc_html( $st[1] ); ?></h3>
+          <p class="ncd-step4-p"><?php echo esc_html( $st[2] ); ?></p>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -80,38 +110,8 @@ $cd_revs = array(
   </div>
 </section>
 
-<!-- ============ B) Koraci — pocnite bolje spavati vec veceras ============ -->
-<?php
-$cd_steps = array(
-  array( 'cld-korak1.webp', 'Otkopčajte traku i postavite jastuk', 'Pritisnite druker da oslobodite traku i stavite jastuk između koljena.' ),
-  array( 'cld-korak2.webp', 'Prilagodite traku svojoj nozi',       'Zategnite traku oko noge u jedan od dva položaja — čvrsto, ali bez pritiska.' ),
-  array( 'cld-korak3.webp', 'Spavajte s pravilnim poravnanjem',    'Jastuk drži razmak nogu, kralježnica ostaje poravnata, a pritisak popušta.' ),
-  array( 'cld-korak4.webp', 'Probudite se bez ukočenosti',         'Bez okretanja pola noći i bez traženja položaja koji ne boli.' ),
-);
-?>
-<section class="ncd-sec">
-  <div class="ncd-wrap ncd-center">
-    <h2 class="ncd-h2">Počnite bolje spavati već večeras</h2>
-    <p class="ncd-sub">Jednostavno za korištenje. <strong>Bolji san</strong> od prve noći.</p>
-  </div>
-  <div class="ncd-wrap">
-    <div class="ncd-steps4">
-      <?php foreach ( $cd_steps as $i => $st ) : ?>
-        <div class="ncd-step4">
-          <div class="ncd-step4-ic">
-            <?php echo $cd_img( $st[0], $st[1] ); ?>
-            <span class="ncd-step4-b">Korak <?php echo (int) $i + 1; ?></span>
-          </div>
-          <h3 class="ncd-step4-t"><?php echo esc_html( $st[1] ); ?></h3>
-          <p class="ncd-step4-p"><?php echo esc_html( $st[2] ); ?></p>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
 <!-- ============ 1) Vratite jutra ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <p class="ncd-eyebrow">Spavanje na boku</p>
@@ -125,7 +125,7 @@ $cd_steps = array(
 </section>
 
 <!-- ============ 3) Poravnanje ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Poravnanje koje osjetite ujutro</h2>
@@ -151,7 +151,7 @@ $cd_cases = array(
   array( 'cld-case-operacija.webp', 'Nakon operacije',  'Štedi kuk i koljeno tijekom oporavka.' ),
 );
 ?>
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-center">
     <h2 class="ncd-h2">Osmišljeno za ono što vas sprječava da spavate</h2>
     <p class="ncd-sub">Šest situacija u kojima jastuk za koljena napravi najveću razliku.</p>
@@ -170,7 +170,7 @@ $cd_cases = array(
 </section>
 
 <!-- ============ 6) Stvoreno da dise ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Stvoreno da diše</h2>
@@ -186,7 +186,7 @@ $cd_cases = array(
 </section>
 
 <!-- ============ 7) Usporedba ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-media"><?php echo $cd_img('cld-usporedba.webp','NORIKS Cloud u usporedbi s običnim jastucima'); ?></div>
     <div class="ncd-copy">
@@ -204,7 +204,7 @@ $cd_cases = array(
 </section>
 
 <!-- ============ 8) Standardi ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Izrađeno prema strogim standardima</h2>
@@ -220,7 +220,7 @@ $cd_cases = array(
 </section>
 
 <!-- ============ 10) 60 noci ============ -->
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <p class="ncd-eyebrow">Bez rizika</p>
