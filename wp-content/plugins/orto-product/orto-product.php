@@ -956,7 +956,13 @@ function gck_render_bundle_selector() {
               color: #12233b !important; font-size: 12.5px !important; font-weight: 700 !important;
               text-decoration: none !important; opacity: 1 !important;
           }
-          #bundle-selector .gck-discount-badge { display: none !important; }
+          /* mali zeleni cip s popustom, kao na referenci */
+          #bundle-selector .gck-discount-badge {
+              display: inline-block !important;
+              background: #e3f4e8 !important; color: #1e6b3f !important;
+              font-size: 12.5px !important; font-weight: 700 !important; padding: 2px 9px !important;
+              border-radius: 6px !important; margin: 0 !important; border: 0 !important;
+          }
           #bundle-selector .bundle-option input[type="radio"] { border-color: #12233b !important; }
           #bundle-selector .bundle-pairs { border-top-color: #d5e1f0 !important; }
 
