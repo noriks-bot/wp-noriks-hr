@@ -258,8 +258,9 @@ function noriks_render_pack_switcher() {
 
       /* boje — kvadratne plocice */
       .npk-block:last-child { margin-bottom: 0; }
-      /* jedan red preko cele sirine — plocice ostaju kvadratne i rastu s prostorom */
-      .npk-colors { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; }
+      /* kvadratne plocice, najvise 110px — pri 3 boje ostaju male, pri mnogima se skrce */
+      .npk-colors { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 110px);
+                    justify-content: start; gap: 10px; }
       .npk-color { display: block; width: 100%; aspect-ratio: 1 / 1; min-width: 0; border: 1px solid #e2e2e2; border-radius: 0;
                    overflow: hidden; background: #f4f4f4; transition: border-color .15s; }
       .npk-color img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -290,7 +291,7 @@ function noriks_render_pack_switcher() {
         .npk-colors { display: flex; grid-auto-flow: unset; flex-wrap: nowrap; gap: 8px; overflow-x: auto;
                       -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
         .npk-colors::-webkit-scrollbar { display: none; }
-        .npk-color { flex: 0 0 calc((100% - 24px) / 3.6); width: auto; }
+        .npk-color { flex: 0 0 calc((100% - 24px) / 3.6); width: auto; max-width: 110px; }
       }
       @media (max-width: 560px) {
         .npk-sizes { gap: 8px; }
