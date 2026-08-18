@@ -28,6 +28,23 @@ $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
 };
 ?>
 
+<!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
+<section class="ncd-sec">
+  <div class="ncd-wrap ncd-row2">
+    <div class="ncd-media"><?php echo $cd_img('cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
+    <div class="ncd-copy">
+      <h2 class="ncd-h2">Razlika koja se vidi već prvu noć</h2>
+      <p><strong>Bez jastuka:</strong> gornja noga pada preko donje, zdjelica se uvija, a pritisak ide u donji dio leđa i u koljena.</p>
+      <p><strong>S NORIKS Cloudom:</strong> noge ostaju u liniji s kukovima, težina se raspoređuje, a pritisne točke nestanu.</p>
+      <ul class="ncd-check">
+        <li>Kukovi i koljena u prirodnoj liniji</li>
+        <li>Manje pritiska na donji dio leđa</li>
+        <li>Manje okretanja tijekom noći</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ============ A) Recenzije kupaca — vrtuljak (kao prva sekcija na referenci) ============ -->
 <?php
 $cd_revs = array(
@@ -39,7 +56,7 @@ $cd_revs = array(
   array( 5, 'Ni nakon dva mjeseca se ne sploštava', 'Pjena je čvrsta koliko treba i vraća se u oblik. Navlaku sam prala nekoliko puta i izgleda kao nova.', 'Stjepan M.' ),
 );
 ?>
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-center">
     <h2 class="ncd-h2">Zašto se bude drukčije s NORIKS Cloudom</h2>
     <p class="ncd-sub ncd-rate"><span class="ncd-stars">★★★★★</span> Ocjena <strong>4,8/5</strong> tisuća zadovoljnih kupaca</p>
@@ -54,7 +71,7 @@ $cd_revs = array(
           <div class="ncd-rev-a">
             <strong><?php echo esc_html( $r[3] ); ?></strong>
             <span class="ncd-rev-v">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3f8b57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2f6fd0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
               Provjereni kupac
             </span>
           </div>
@@ -78,7 +95,7 @@ $cd_steps = array(
   array( 'cld-korak4.webp', 'Probudite se bez ukočenosti',         'Bez okretanja pola noći i bez traženja položaja koji ne boli.' ),
 );
 ?>
-<section class="ncd-sec ncd-dark">
+<section class="ncd-sec">
   <div class="ncd-wrap ncd-center">
     <h2 class="ncd-h2">Počnite bolje spavati već večeras</h2>
     <p class="ncd-sub">Jednostavno za korištenje. <strong>Bolji san</strong> od prve noći.</p>
@@ -100,7 +117,7 @@ $cd_steps = array(
 </section>
 
 <!-- ============ 1) Vratite jutra ============ -->
-<section class="ncd-sec">
+<section class="ncd-sec ncd-dark">
   <div class="ncd-wrap ncd-row2">
     <div class="ncd-copy">
       <p class="ncd-eyebrow">Spavanje na boku</p>
@@ -110,23 +127,6 @@ $cd_steps = array(
       <p class="ncd-strong">NORIKS Cloud drži noge razmaknute točno koliko treba — kralježnica ostaje poravnata, a tijelo se konačno opusti.</p>
     </div>
     <div class="ncd-media"><?php echo $cd_img('cld-jutra.webp','Jutro bez bolova u leđima'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 2) Bez Noriksa / S Noriksom ============ -->
-<section class="ncd-sec ncd-dark">
-  <div class="ncd-wrap ncd-row2">
-    <div class="ncd-media"><?php echo $cd_img('cld-bez-s-noriksom.webp','Spavanje bez jastuka i s NORIKS Cloud jastukom'); ?></div>
-    <div class="ncd-copy">
-      <h2 class="ncd-h2">Razlika koja se vidi već prvu noć</h2>
-      <p><strong>Bez jastuka:</strong> gornja noga pada preko donje, zdjelica se uvija, a pritisak ide u donji dio leđa i u koljena.</p>
-      <p><strong>S NORIKS Cloudom:</strong> noge ostaju u liniji s kukovima, težina se raspoređuje, a pritisne točke nestanu.</p>
-      <ul class="ncd-check">
-        <li>Kukovi i koljena u prirodnoj liniji</li>
-        <li>Manje pritiska na donji dio leđa</li>
-        <li>Manje okretanja tijekom noći</li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -294,7 +294,7 @@ $cd_cases = array(
                   border-radius: 50%; overflow: visible; }
   .ncd-step4-ic img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
   .ncd-step4-b { position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%);
-                 background: #3f8b57; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .01em;
+                 background: #2f6fd0; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .01em;
                  padding: 3px 12px; border-radius: 999px; white-space: nowrap; }
   .ncd-step4-t { font-size: clamp(15px, 1.4vw, 17px); font-weight: 800; color: #fff; margin: 0 0 6px; line-height: 1.3; }
   .ncd-step4-p { font-size: 14px; line-height: 1.55; color: #a9bad6; margin: 0; }
@@ -354,7 +354,7 @@ $cd_cases = array(
   #open-size-chart, #open-size-chartCustom { display: none !important; }
 
   .woocommerce-product-details__short-description ul { list-style: none; margin: 8px 0 14px; padding-left: 0; }
-  .woocommerce-product-details__short-description .ncd-tick { display: inline-block; width: 17px; text-indent: 0; color: #3f8b57; font-weight: 800; }
+  .woocommerce-product-details__short-description .ncd-tick { display: inline-block; width: 17px; text-indent: 0; color: #2f6fd0; font-weight: 800; }
   .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 17px; text-indent: -17px; margin-left: 0; line-height: 1.55; margin-bottom: 7px; }
   .woocommerce-product-details__short-description p:has(+ ul) { margin-top: 20px; margin-bottom: 4px; }
 </style>

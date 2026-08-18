@@ -844,7 +844,7 @@ function gck_render_bundle_selector() {
     <?php
     // Polar NORIKS Cloth: kartica ponude kao na referenci — naslov i naziv paketa lijevo,
     // cijena desno u istom redu, precrtana stara cijena ispod nje.
-    if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) :
+    if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) :
     ?>
         <style>
           #bundle-selector .bundle-option {
@@ -910,21 +910,70 @@ function gck_render_bundle_selector() {
       $cld_img = get_template_directory_uri() . '/img/cloud/';
     ?>
         <style>
-          #bundle-selector .bundle-option.active { border-color: #3f8b57 !important; background: #edf7f0 !important; }
-          #bundle-selector .bundle-option input[type="radio"] { border-color: #3f8b57 !important; }
-          #bundle-selector .bundle-option input[type="radio"]::before { background: #3f8b57 !important; }
-          #bundle-selector .gck-per-chip { background: #24513a !important; }
-          #bundle-selector .gck-discount-badge { background: #3f8b57 !important; }
-          #bundle-selector .bundle-pairs { border-top-color: #cfe6d6 !important; }
-          #bundle-selector .gck-popular-badge { background: #141414 !important; color: #fff !important; }
-
-          /* sličica paketa lijevo, kao na referenci (bez promjene markupa) */
+          /* Kartica ponude 1:1 po referenci: slicica lijevo, naslov, podnaslov + postotak,
+             pa cijena i precrtana stara cijena — sve lijevo poravnato. Radio je skriven. */
           #bundle-selector .bundle-option {
-              padding-left: 92px !important;
+              display: grid !important;
+              grid-template-columns: auto 1fr;
+              column-gap: 10px; row-gap: 2px;
+              align-items: center;
+              padding: 13px 16px 13px 76px !important;
+              border: 1px solid #e3e6ea !important;
+              border-radius: 10px !important;
+              background-color: #fff !important;
               background-repeat: no-repeat !important;
-              background-position: 40px center !important;
-              background-size: 44px 44px !important;
+              background-position: 18px center !important;
+              background-size: 46px 46px !important;
           }
+          #bundle-selector .bundle-option.active { border-color: #12233b !important; background-color: #f2f6fb !important; }
+          #bundle-selector .bundle-option > input[type="radio"] { position: absolute !important; opacity: 0 !important; width: 0 !important; height: 0 !important; margin: 0 !important; }
+          #bundle-selector .bundle-option .gck-offer-head { display: contents; }
+          #bundle-selector .bundle-option .bundle-option-title {
+              grid-column: 1 / -1; grid-row: 1;
+              font-size: 15.5px; font-weight: 700; color: #141414; line-height: 1.25;
+          }
+          #bundle-selector .bundle-option .gck-offer-sub {
+              grid-column: 1; grid-row: 2; justify-self: start; align-self: center;
+              margin: 0 !important; font-size: 13.5px; line-height: 1.3; color: #5c6b7f;
+          }
+          #bundle-selector .bundle-option .gck-offer-prices {
+              grid-column: 2; grid-row: 2; justify-self: start; align-self: center;
+              display: inline-flex; align-items: center; gap: 6px;
+          }
+          #bundle-selector .bundle-option .bundle-total-line {
+              grid-column: 1 / -1; grid-row: 3;
+              display: flex !important; flex-direction: row; align-items: baseline; gap: 8px;
+              margin: 3px 0 0 !important; text-align: left;
+          }
+          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 15.5px; font-weight: 700; color: #141414; order: 1; }
+          #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13.5px; color: #9aa3ad; margin: 0 !important; order: 2; }
+          #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+          #bundle-selector .bundle-option br { display: none !important; }
+
+          /* svijetli cipovi, kao na referenci */
+          #bundle-selector .gck-per-chip {
+              background: #eef3fa !important; color: #12233b !important;
+              font-size: 12px !important; font-weight: 600 !important; padding: 2px 8px !important;
+              border-radius: 6px !important; margin: 0 !important;
+          }
+          #bundle-selector .gck-per-chip .gck-per-old { color: #9aa3ad !important; }
+          #bundle-selector .gck-discount-badge {
+              background: #e6effb !important; color: #1d4f9e !important;
+              font-size: 12px !important; font-weight: 700 !important; padding: 2px 8px !important;
+              border-radius: 6px !important; margin: 0 !important;
+          }
+          #bundle-selector .bundle-option input[type="radio"] { border-color: #12233b !important; }
+          #bundle-selector .bundle-pairs { border-top-color: #d5e1f0 !important; }
+
+          /* crni kartus iznad kartice, desno — kao na referenci */
+          #bundle-selector .gck-popular-badge {
+              background: #12233b !important; color: #fff !important;
+              top: -12px !important; right: 10px !important; left: auto !important; transform: none !important;
+              border-radius: 6px !important; font-size: 11.5px !important; font-weight: 800 !important;
+              letter-spacing: .04em !important; padding: 4px 12px !important;
+          }
+
+          /* slicica paketa po ponudi */
           #bundle-selector .bundle-option:nth-of-type(1) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-1x.webp' ); ?>') !important; }
           #bundle-selector .bundle-option:nth-of-type(2) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-2x.webp' ); ?>') !important; }
           #bundle-selector .bundle-option:nth-of-type(3) { background-image: url('<?php echo esc_url( $cld_img . 'cld-pack-3x.webp' ); ?>') !important; }
@@ -936,8 +985,17 @@ function gck_render_bundle_selector() {
           }
           #bundle-selector .gck-cloud-guarantee svg { flex: 0 0 auto; }
 
+          /* traka "Ogranicena zaliha": svijetlo plava umjesto crvene */
+          .gck-countdown { background: #eef4fb !important; border-color: #d5e1f0 !important; border-left-color: #2f6fd0 !important; }
+          .gck-countdown__head, .gck-countdown__head * { color: #12233b !important; }
+          .gck-countdown__body, .gck-countdown__body strong,
+          .gck-countdown__timer { color: #2f6fd0 !important; }
+
           @media (max-width: 520px) {
-              #bundle-selector .bundle-option { padding-left: 74px !important; background-position: 34px center !important; background-size: 36px 36px !important; }
+              #bundle-selector .bundle-option { padding: 12px 10px 12px 66px !important; background-position: 12px center !important; background-size: 42px 42px !important; }
+              #bundle-selector .bundle-option .bundle-option-title { font-size: 14.5px; }
+              #bundle-selector .bundle-option .gck-offer-sub { font-size: 12.5px; }
+              #bundle-selector .gck-per-chip, #bundle-selector .gck-discount-badge { font-size: 11px !important; padding: 2px 6px !important; }
           }
         </style>
         <script>
@@ -947,7 +1005,7 @@ function gck_render_bundle_selector() {
             if (!box || box.querySelector('.gck-cloud-guarantee')) { return; }
             var d = document.createElement('div');
             d.className = 'gck-cloud-guarantee';
-            d.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3f8b57" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+            d.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2f6fd0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
                         + '<span>Zadovoljni ili vraćamo novac · 60 noći</span>';
             box.appendChild(d);
           }
