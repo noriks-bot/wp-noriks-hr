@@ -119,8 +119,13 @@
 
    <!-- Mobile + Desktop Navigation -->
 <?php $header_nav = get_field("mainheader_menu", "option"); ?>
-<nav class="navbar-center mobile-hidden" id="mobileMenu">
-    <button class="mobile-menu-close mobile-only" onclick="toggleMobileMenu()">×</button>
+<nav class="navbar-center mobile-hidden" id="mobileMenu" aria-label="Glavni izbornik">
+    <div class="nmm-top mobile-only">
+      <span class="nmm-brand">NORIKS</span>
+      <button class="mobile-menu-close" type="button" onclick="toggleMobileMenu()" aria-label="Zatvori izbornik">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
 
     <?php if ($header_nav): ?>
         <?php $i = 0; ?>
@@ -169,15 +174,31 @@
     <?php endif; ?>
 
 
-    <a class="mobile-only-menu-item" href="mailto:info@noriks.com" style="color: white;">
-        <i class="fas fa-envelope" style="margin-right: 8px;"></i>info@noriks.com
-    </a>
+    <div class="nmm-foot mobile-only">
+      <p class="nmm-foot-title">Trebate pomoć?</p>
 
-    <div class="language-selector mobile-only" onclick="openLanguageModal()">
+      <a class="nmm-contact" href="mailto:info@noriks.com">
+        <span class="nmm-ico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        <span>info@noriks.com</span>
+      </a>
+
+      <a class="nmm-contact" href="tel:+38518801114">
+        <span class="nmm-ico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2.1z"/></svg>
+        </span>
+        <span>+385 1 8801 114</span>
+      </a>
+
+      <button type="button" class="nmm-lang" onclick="openLanguageModal()">
         <img src="https://static.devit.software/countries/flags/rectangle/<?php echo get_field("webshop_icon", "options"); ?>" alt="" class="flag">
         <span><?php echo get_field("webshop_language", "options"); ?></span>
+        <svg class="nmm-lang-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
     </div>
 </nav>
+<div class="nmm-backdrop" id="mobileMenuBackdrop" onclick="toggleMobileMenu()" hidden></div>
 
 
 
