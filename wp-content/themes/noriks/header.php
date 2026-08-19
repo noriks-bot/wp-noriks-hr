@@ -121,7 +121,6 @@
 <?php $header_nav = get_field("mainheader_menu", "option"); ?>
 <nav class="navbar-center mobile-hidden" id="mobileMenu" aria-label="Glavni izbornik">
     <div class="nmm-top mobile-only">
-      <span class="nmm-brand">NORIKS</span>
       <button class="mobile-menu-close" type="button" onclick="toggleMobileMenu()" aria-label="Zatvori izbornik">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>

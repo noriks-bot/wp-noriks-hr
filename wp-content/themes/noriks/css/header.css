@@ -442,8 +442,8 @@ color: white;
     width: min(88vw, 370px);
     left: min(-88vw, -370px);
     padding: 0 14px 24px;
-    background: #f2f2f2;
-    box-shadow: 12px 0 34px rgba(0,0,0,.28);
+    background: #0d0d0d;
+    box-shadow: 12px 0 34px rgba(0,0,0,.45);
     overflow-y: auto; -webkit-overflow-scrolling: touch;
     font-family: 'Inter', 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     transition: left .28s cubic-bezier(.22,.61,.36,1);
@@ -452,17 +452,15 @@ color: white;
 
   /* glava */
   .nmm-top {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 2px 14px; position: sticky; top: 0; z-index: 3;
-    background: #f2f2f2;
+    display: flex; align-items: center; justify-content: flex-end;
+    padding: 14px 2px 12px; position: sticky; top: 0; z-index: 3;
+    background: #0d0d0d;
   }
-  .nmm-brand { color: #111; font-size: 18px; font-weight: 800; letter-spacing: .12em; }
   .mobile-menu-close {
     position: static; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
-    border-radius: 50%; background: #fff; color: #111; border: 0; font-size: 0; cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,.10);
+    border-radius: 50%; background: rgba(255,255,255,.10); color: #fff; border: 0; font-size: 0; cursor: pointer;
   }
-  .mobile-menu-close:hover, .mobile-menu-close:active { background: #111; color: #fff; }
+  .mobile-menu-close:hover, .mobile-menu-close:active { background: #fff; color: #111; }
 
   /* stavke = bijele kartice */
   .navbar-center > a,
@@ -490,11 +488,11 @@ color: white;
 
   /* istaknuta kartica (rasprodaja) — na vrh */
   .navbar-center > a.nav-link--pill {
-    order: -1; background: #fff0dd; box-shadow: none; padding: 16px !important; margin-bottom: 14px !important;
+    background: #ff8a00; color: #fff !important; box-shadow: none;
   }
   .navbar-center > a.nav-link--pill:after {
     content: ""; width: 34px; height: 34px; border: 0; border-radius: 50%; transform: none; opacity: 1;
-    background: #111 center/13px 13px no-repeat;
+    background: rgba(0,0,0,.22) center/13px 13px no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
   }
 
@@ -502,7 +500,7 @@ color: white;
   .nmm-foot { display: block; margin-top: 6px; }
   .nmm-foot-title {
     margin: 0 0 9px 4px; font-size: 11px; font-weight: 700; letter-spacing: .16em;
-    text-transform: uppercase; color: #8a8a8a;
+    text-transform: uppercase; color: rgba(255,255,255,.45);
   }
   .nmm-contact {
     display: flex !important; align-items: center; gap: 12px;
@@ -523,6 +521,7 @@ color: white;
   }
   .nmm-lang .flag { width: 24px; height: auto; border-radius: 3px; }
   .nmm-lang-arrow { margin-left: auto; color: #111; opacity: .5; }
+  .nmm-foot { padding-bottom: 10px; }
 
   .navbar-center .language-selector.mobile-only { display: none !important; }
   body.nmm-open { overflow: hidden; }
