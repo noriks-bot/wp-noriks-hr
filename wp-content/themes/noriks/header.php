@@ -183,6 +183,8 @@
         <span>info@noriks.com</span>
       </a>
 
+      <p class="nmm-foot-title nmm-foot-title--lang">Država</p>
+
       <button type="button" class="nmm-lang" onclick="openLanguageModal()">
         <img src="https://static.devit.software/countries/flags/rectangle/<?php echo get_field("webshop_icon", "options"); ?>" alt="" class="flag">
         <span><?php echo get_field("webshop_language", "options"); ?></span>

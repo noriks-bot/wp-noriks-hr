@@ -525,6 +525,7 @@ color: white;
   }
   .nmm-lang .flag { width: 22px; height: auto; border-radius: 2px; }
   .nmm-lang-arrow { margin-left: auto; color: #fff; opacity: .45; }
+  .nmm-foot-title--lang { margin-top: 18px; }
   .nmm-foot { padding-bottom: 10px; }
 
   .navbar-center .language-selector.mobile-only { display: none !important; }
