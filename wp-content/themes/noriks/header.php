@@ -183,7 +183,8 @@
         <span>info@noriks.com</span>
       </a>
 
-      <p class="nmm-foot-title nmm-foot-title--lang">Država</p>
+      <?php $nmm_country_label = get_field( 'country_shop_list_POPUP_t1', 'options' ); ?>
+      <p class="nmm-foot-title nmm-foot-title--lang"><?php echo esc_html( $nmm_country_label ?: 'Država' ); ?></p>
 
       <button type="button" class="nmm-lang" onclick="openLanguageModal()">
         <img src="https://static.devit.software/countries/flags/rectangle/<?php echo get_field("webshop_icon", "options"); ?>" alt="" class="flag">
