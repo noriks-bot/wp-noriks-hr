@@ -502,25 +502,28 @@ color: white;
     margin: 0 0 9px 4px; font-size: 11px; font-weight: 700; letter-spacing: .16em;
     text-transform: uppercase; color: rgba(255,255,255,.45);
   }
+  /* podnozje ima drugaciji stil od stavki izbornika: prozirno, s tankim rubom */
   .nmm-contact {
-    display: flex !important; align-items: center; gap: 12px;
-    margin: 0 0 10px !important; padding: 14px 16px !important;
-    background: #fff; border-radius: 14px; box-shadow: 0 1px 2px rgba(0,0,0,.06);
-    color: #111 !important; font-size: 15px !important; font-weight: 600 !important; text-decoration: none;
+    display: flex !important; align-items: center; gap: 11px;
+    margin: 0 0 9px !important; padding: 12px 14px !important;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
+    box-shadow: none;
+    color: rgba(255,255,255,.92) !important; font-size: 14.5px !important; font-weight: 500 !important;
+    text-decoration: none;
   }
   .nmm-contact:after { display: none !important; }
   .nmm-ico {
-    width: 34px; height: 34px; flex: 0 0 auto; border-radius: 10px;
-    background: #f2f2f2; color: #111; display: flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; flex: 0 0 auto; border-radius: 9px;
+    background: rgba(255,255,255,.10); color: #fff; display: flex; align-items: center; justify-content: center;
   }
   .nmm-lang {
-    display: flex; align-items: center; gap: 11px; width: 100%; box-sizing: border-box;
-    margin-top: 4px; padding: 14px 16px;
-    background: #fff; border: 0; border-radius: 14px; box-shadow: 0 1px 2px rgba(0,0,0,.06);
-    color: #111; font-size: 15px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 10px; width: 100%; box-sizing: border-box;
+    margin-top: 0; padding: 12px 14px;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 12px;
+    box-shadow: none; color: rgba(255,255,255,.92); font-size: 14.5px; font-weight: 500; cursor: pointer;
   }
-  .nmm-lang .flag { width: 24px; height: auto; border-radius: 3px; }
-  .nmm-lang-arrow { margin-left: auto; color: #111; opacity: .5; }
+  .nmm-lang .flag { width: 22px; height: auto; border-radius: 3px; }
+  .nmm-lang-arrow { margin-left: auto; color: #fff; opacity: .45; }
   .nmm-foot { padding-bottom: 10px; }
 
   .navbar-center .language-selector.mobile-only { display: none !important; }
