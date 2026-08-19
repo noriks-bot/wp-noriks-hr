@@ -52,50 +52,73 @@ function noriks_flash_deals_banner() {
     $off = noriks_flash_max_discount();
     if ( $off < 1 ) { $off = NORIKS_FLASH_OFF_FALLBACK; }
     ?>
-    <div class="nfd" role="region" aria-label="Flash Deals">
+    <div class="nfd" role="region" aria-label="Ljetna rasprodaja">
       <div class="nfd-in">
         <div class="nfd-left">
+          <div class="nfd-head">
           <span class="nfd-bolt" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#f07c00"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg>
           </span>
-          <span class="nfd-title">Flash Deals</span>
+          <span class="nfd-title">Ljetna rasprodaja</span>
           <?php if ( $off > 0 ) : ?>
-            <span class="nfd-badge">Ušteda do &minus;<?php echo (int) $off; ?>%</span>
+            <span class="nfd-badge">do &minus;<?php echo (int) $off; ?>%</span>
           <?php endif; ?>
+          </div>
+          <p class="nfd-sub">Sniženo dok traju zalihe</p>
         </div>
 
-        <div class="nfd-right" id="nfd-clock" aria-live="off">
-          <span class="nfd-unit"><b data-u="d">00</b>d</span><i>:</i>
-          <span class="nfd-unit"><b data-u="h">00</b>h</span><i>:</i>
-          <span class="nfd-unit"><b data-u="m">00</b>m</span><i>:</i>
-          <span class="nfd-unit"><b data-u="s">00</b>s</span>
+        <div class="nfd-right">
+          <span class="nfd-cta">Ponuda istječe za</span>
+          <div class="nfd-clock" id="nfd-clock" aria-live="off">
+            <span class="nfd-unit"><b data-u="d">00</b><em>dana</em></span>
+            <span class="nfd-unit"><b data-u="h">00</b><em>sati</em></span>
+            <span class="nfd-unit"><b data-u="m">00</b><em>min</em></span>
+            <span class="nfd-unit"><b data-u="s">00</b><em>sek</em></span>
+          </div>
         </div>
       </div>
     </div>
 
     <style>
-      .nfd { width: 100vw; margin-left: calc(50% - 50vw); background: linear-gradient(90deg, #f18a00 0%, #ef7c00 55%, #e97100 100%); }
-      .nfd-in { max-width: 1180px; margin: 0 auto; padding: 14px 18px; display: flex; align-items: center;
-                justify-content: space-between; gap: 16px; }
-      .nfd-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
-      .nfd-bolt { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 10px; background: #fff;
-                  display: flex; align-items: center; justify-content: center; }
-      .nfd-title { font-size: clamp(19px, 2.4vw, 26px); font-weight: 800; color: #fff; letter-spacing: -.01em; white-space: nowrap; }
-      .nfd-badge { background: #c8102e; color: #fff; font-size: 12.5px; font-weight: 700; padding: 4px 11px;
-                   border-radius: 999px; white-space: nowrap; }
-      .nfd-right { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
-      .nfd-unit { background: rgba(255,255,255,.22); border-radius: 8px; padding: 8px 10px; color: #fff;
-                  font-size: 14px; font-weight: 600; min-width: 46px; text-align: center; font-variant-numeric: tabular-nums; }
-      .nfd-unit b { font-weight: 800; }
-      .nfd-right i { color: rgba(255,255,255,.75); font-style: normal; font-weight: 700; }
+      /* Na ovoj kategoriji traka JE naslov stranice — hero slika se ne prikazuje. */
+      .one-banner-shop { display: none !important; }
 
-      @media (max-width: 700px) {
-        .nfd-in { padding: 11px 12px; gap: 10px; flex-wrap: wrap; justify-content: center; }
-        .nfd-bolt { width: 34px; height: 34px; border-radius: 8px; }
+      .nfd { width: 100vw; margin-left: calc(50% - 50vw); color: #fff;
+             background: linear-gradient(100deg, #ff8c1a 0%, #f37600 48%, #e26600 100%); }
+      .nfd-in { max-width: 1180px; margin: 0 auto; padding: 20px 18px; display: flex; align-items: center;
+                justify-content: space-between; gap: 20px; }
+      .nfd-left { min-width: 0; }
+      .nfd-head { display: flex; align-items: center; gap: 12px; }
+      .nfd-bolt { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 11px; background: #fff;
+                  display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+      .nfd-title { font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -.02em; line-height: 1.1;
+                   text-transform: uppercase; white-space: nowrap; }
+      .nfd-badge { background: #111; color: #fff; font-size: 12.5px; font-weight: 800; letter-spacing: .03em;
+                   padding: 5px 11px; border-radius: 6px; white-space: nowrap; }
+      .nfd-sub { margin: 7px 0 0 54px; font-size: 14px; color: rgba(255,255,255,.9); }
+
+      .nfd-right { flex: 0 0 auto; text-align: right; }
+      .nfd-cta { display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+                 color: rgba(255,255,255,.85); margin-bottom: 7px; }
+      .nfd-clock { display: flex; gap: 8px; }
+      .nfd-unit { background: rgba(0,0,0,.16); border-radius: 8px; padding: 7px 10px 6px; min-width: 58px;
+                  display: flex; flex-direction: column; align-items: center; line-height: 1; }
+      .nfd-unit b { font-size: 21px; font-weight: 800; font-variant-numeric: tabular-nums; }
+      .nfd-unit em { font-style: normal; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+                     color: rgba(255,255,255,.8); margin-top: 5px; }
+
+      @media (max-width: 820px) {
+        .nfd-in { flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px 14px 16px; }
+        .nfd-bolt { width: 34px; height: 34px; border-radius: 9px; }
         .nfd-bolt svg { width: 18px; height: 18px; }
-        .nfd-title { font-size: 19px; }
-        .nfd-badge { font-size: 11.5px; padding: 3px 9px; }
-        .nfd-unit { padding: 6px 8px; min-width: 40px; font-size: 13px; }
+        .nfd-title { font-size: 20px; }
+        .nfd-badge { font-size: 11.5px; padding: 4px 9px; }
+        .nfd-sub { margin: 6px 0 0 46px; font-size: 13px; }
+        .nfd-right { width: 100%; text-align: left; }
+        .nfd-clock { width: 100%; }
+        .nfd-unit { flex: 1 1 0; min-width: 0; padding: 6px 4px 5px; }
+        .nfd-unit b { font-size: 18px; }
+        .nfd-unit em { font-size: 9.5px; }
       }
     </style>
 
