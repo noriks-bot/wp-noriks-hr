@@ -492,10 +492,6 @@ color: white;
   .navbar-center > a.nav-link--pill {
     order: -1; background: #fff0dd; box-shadow: none; padding: 16px !important; margin-bottom: 14px !important;
   }
-  .navbar-center > a.nav-link--pill .nmm-txt { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-  .navbar-center > a.nav-link--pill .nmm-sub {
-    font-size: 13px; font-weight: 500; color: #7a5a2e; letter-spacing: 0;
-  }
   .navbar-center > a.nav-link--pill:after {
     content: ""; width: 34px; height: 34px; border: 0; border-radius: 50%; transform: none; opacity: 1;
     background: #111 center/13px 13px no-repeat;

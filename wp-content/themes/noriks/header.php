@@ -164,12 +164,8 @@
                 
             <?php else: ?>
                 <!-- NORMAL ITEMS -->
-                <?php $is_pill = ( $i === count($header_nav) - 1 ); ?>
-                <a href="<?php echo esc_url($link); ?>" class="nav-link<?php echo $is_pill ? ' nav-link--pill' : ''; ?>">
-                    <span class="nmm-txt">
-                        <?php echo esc_html($text); ?>
-                        <?php if ( $is_pill ) : ?><span class="nmm-sub">Sniženo dok traju zalihe</span><?php endif; ?>
-                    </span>
+                <a href="<?php echo esc_url($link); ?>" class="nav-link<?php echo ( $i === count($header_nav) - 1 ) ? ' nav-link--pill' : ''; ?>">
+                    <?php echo esc_html($text); ?>
                 </a>
             <?php endif; ?>
 
