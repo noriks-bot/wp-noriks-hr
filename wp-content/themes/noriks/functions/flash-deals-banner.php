@@ -82,10 +82,11 @@ function noriks_flash_deals_banner() {
       .one-banner-shop { display: none !important; }
 
       .nfd { width: 100vw; margin-left: calc(50% - 50vw); color: #fff; position: relative; overflow: hidden;
-             background: linear-gradient(103deg, #ff8f26 0%, #f57c00 42%, #e06a00 100%); }
+             /* gotovo ravna boja — prijelaz je jedva primjetan i ide u suprotnom smjeru */
+             background: linear-gradient(283deg, #f5820a 0%, #ef7a03 100%); }
       /* diskretan sjaj po dijagonali — traka ne izgleda kao plosnata boja */
       .nfd:after { content: ""; position: absolute; inset: 0; pointer-events: none;
-                   background: linear-gradient(103deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 46%); }
+                   background: linear-gradient(283deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 55%); }
       /* poravnano s ostatkom stranice (filteri, mreza proizvoda) */
       .nfd-in { position: relative; z-index: 1; max-width: 1800px; margin: 0 auto; padding: 22px 15px;
                 display: flex; align-items: center; justify-content: space-between; gap: 24px; }
