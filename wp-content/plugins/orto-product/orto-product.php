@@ -903,6 +903,28 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
 
     <?php
+    // NORIKS SNORE: plava shema umjesto narancaste/crvene (uskladena s proizvodom).
+    if ( has_term( array( 'orto-snore' ), 'product_cat', $product_id ) ) :
+    ?>
+        <style>
+          /* traka "Ogranicena zaliha": plava umjesto crvene */
+          .gck-countdown { background: #eef4fb !important; border-color: #cfe0f0 !important; border-left-color: #1e6fc4 !important; }
+          .gck-countdown__head, .gck-countdown__head * { color: #0b2a4a !important; }
+          .gck-countdown__body { color: #24384b !important; }
+          .gck-countdown__body strong,
+          .gck-countdown__timer { color: #1e6fc4 !important; }
+
+          /* izbornik ponuda u istoj plavoj shemi */
+          #bundle-selector .bundle-option.active { border-color: #1e6fc4 !important; background-color: #eef4fb !important; }
+          #bundle-selector .bundle-option input[type="radio"] { border-color: #1e6fc4 !important; accent-color: #1e6fc4 !important; }
+          #bundle-selector .bundle-option input[type="radio"]::before { background: #1e6fc4 !important; }
+          #bundle-selector .gck-per-chip { background: #0b2a4a !important; }
+          #bundle-selector .gck-discount-badge { background: #1e6fc4 !important; }
+          #bundle-selector .bundle-pairs { border-top-color: #cfe0f0 !important; }
+        </style>
+    <?php endif; ?>
+
+    <?php
     // NORIKS Cloud: zelena shema izbornika ponuda + sličica paketa u kartici (kao na referenci).
     if ( has_term( array( 'orto-cloud' ), 'product_cat', $product_id ) ) :
     ?>
