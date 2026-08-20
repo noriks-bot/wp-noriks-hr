@@ -120,19 +120,50 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
   </div>
 </section>
 
-<!-- ============ 7) Usporedba ============ -->
+<!-- ============ 7) Usporedba — tablica (kao na referenci) ============ -->
+<?php
+$sn_vs = array(
+  'Klinički dokazano',
+  'Izrađeno od švicarskih medicinskih polimera',
+  'Patentirane podesive trake za pokretljivost čeljusti',
+  'Podesiv pomak čeljusti (#1–#5)',
+  'Bez BPA, ftalata i lateksa',
+  'Omogućuje pijenje i govor tijekom nošenja',
+);
+?>
 <section class="nsn-sec nsn-dark">
-  <div class="nsn-wrap nsn-row2">
-    <div class="nsn-media"><?php echo $sn_img('sn-usporedba.webp','NORIKS u usporedbi s običnom udlagom'); ?></div>
-    <div class="nsn-copy">
-      <h2 class="nsn-h2">Nije svaka udlaga ista</h2>
-      <ul class="nsn-vs">
-        <li class="is-yes"><strong>Švicarska izrada</strong><span>medicinski polimeri, ne jeftina plastika</span></li>
-        <li class="is-yes"><strong>Podesiv pomak čeljusti</strong><span>pet traka umjesto jednog fiksnog položaja</span></li>
-        <li class="is-yes"><strong>Otvorena usta</strong><span>možete piti i govoriti dok je nosite</span></li>
-        <li class="is-yes"><strong>Prilagodba svim ustima</strong><span>oblikuje se po vašem ugrizu</span></li>
-        <li class="is-yes"><strong>Ravnomjeran pritisak</strong><span>bez bolnih točaka na zubima</span></li>
-      </ul>
+  <div class="nsn-wrap nsn-center">
+    <h2 class="nsn-h2">NORIKS i sve ostalo</h2>
+    <p class="nsn-sub">Zašto se isplati uzeti udlagu koja je napravljena da traje.</p>
+  </div>
+  <div class="nsn-wrap">
+    <div class="nsn-tbl-wrap">
+      <table class="nsn-tbl">
+        <thead>
+          <tr>
+            <th class="nsn-tbl-feat">Značajke</th>
+            <th class="nsn-tbl-us">NORIKS</th>
+            <th class="nsn-tbl-them">Ostali</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ( $sn_vs as $row ) : ?>
+            <tr>
+              <td class="nsn-tbl-feat"><?php echo esc_html( $row ); ?></td>
+              <td class="nsn-tbl-us">
+                <span class="nsn-yes" aria-label="da">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+              </td>
+              <td class="nsn-tbl-them">
+                <span class="nsn-no" aria-label="ne">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </span>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -232,6 +263,22 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
   .nsn-step4 h3 { font-size: 17px; font-weight: 800; color: #0b2a4a; margin: 0 0 6px; }
   .nsn-step4 p { font-size: 14.5px; line-height: 1.55; color: #40505f; margin: 0; }
 
+  /* usporedna tablica */
+  .nsn-tbl-wrap { margin-top: 28px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table.nsn-tbl { width: 100%; min-width: 460px; border-collapse: separate; border-spacing: 0; background: #fff;
+                  border-radius: 14px; overflow: hidden; }
+  table.nsn-tbl th, table.nsn-tbl td { padding: 15px 16px; font-size: 15px; border-bottom: 1px solid #eef2f6; }
+  table.nsn-tbl tbody tr:last-child th, table.nsn-tbl tbody tr:last-child td { border-bottom: 0; }
+  table.nsn-tbl thead th { font-size: 15.5px; font-weight: 800; color: #fff; border-bottom: 0; text-align: center; }
+  table.nsn-tbl thead th.nsn-tbl-feat { background: #3d95d8; text-align: left; }
+  table.nsn-tbl thead th.nsn-tbl-us   { background: #0b2a4a; }
+  table.nsn-tbl thead th.nsn-tbl-them { background: #0b2a4a; color: #b9cbdd; }
+  table.nsn-tbl td.nsn-tbl-feat { color: #223; font-weight: 600; line-height: 1.45; }
+  table.nsn-tbl td.nsn-tbl-us, table.nsn-tbl td.nsn-tbl-them { text-align: center; width: 22%; }
+  table.nsn-tbl tbody tr:nth-child(even) td { background: #f7fafd; }
+  .nsn-yes { display: inline-flex; color: #3d95d8; }
+  .nsn-no  { display: inline-flex; color: #e14b4b; }
+
   .nsn-vs { list-style: none; margin: 0; padding: 0; }
   .nsn-vs li { position: relative; padding: 11px 0 11px 34px; border-bottom: 1px solid #e2e8f2; }
   .nsn-vs li:last-child { border-bottom: 0; }
@@ -252,6 +299,9 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
     .nsn-bens { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .nsn-ben { padding: 13px 14px; }
     .nsn-steps4 { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    table.nsn-tbl { min-width: 420px; }
+    table.nsn-tbl th, table.nsn-tbl td { padding: 12px 10px; font-size: 13.5px; }
+    table.nsn-tbl thead th { font-size: 13.5px; }
   }
 
   /* jedna velicina — bez tablice velicina */
