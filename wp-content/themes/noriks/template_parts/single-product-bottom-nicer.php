@@ -89,6 +89,11 @@ if ( noriks_is_type( 'majica-darila' ) && ! noriks_is_type( 'majice' ) ) {
     include $noriks_pb_dir . 'why-majice.php';
 }
 
+// NORIKS SNORE (orto-snore) — udlaga protiv hrkanja
+if ( noriks_is_type( 'snore' ) ) {
+    include $noriks_pb_dir . 'why-snore.php';
+}
+
 // NORIKS CLOUD (orto-cloud) — ortopedski jastuk za koljena
 if ( noriks_is_type( 'cloud' ) ) {
     include $noriks_pb_dir . 'why-cloud.php';

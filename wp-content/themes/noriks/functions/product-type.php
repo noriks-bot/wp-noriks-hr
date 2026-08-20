@@ -55,6 +55,7 @@ function noriks_product_type_map() : array {
         // Polar NORIKS Cloth — krpa za ciscenje (mikrovlakna), bez atributa.
         'cloath'                  => array( 'orto-cloath' ),
         'cloud'                   => array( 'orto-cloud' ),
+        'snore'                   => array( 'orto-snore' ),
         // NORIKS BRA — grudnjak s prednjim zakopcavanjem i potporom drzanja.
         'bra'                     => array( 'orto-bra' ),
         // NORIKS HYD — boca za vodikovu vodu (PEM/SPE elektroliza), bez atributa.

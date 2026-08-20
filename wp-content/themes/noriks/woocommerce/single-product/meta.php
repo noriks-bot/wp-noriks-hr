@@ -217,7 +217,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
 
 <?php // NORIKS Cards i HairMagic: bez tri ikone (majica/pristajanje) — nisu relevantne za te proizvode.
-if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'bra', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ): ?>
+if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'bra', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ): ?>
 
 
 <!-- my thre icons content -->
@@ -543,6 +543,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 NORIKS ControlPro je mehanički trener dna zdjelice s pravim fizičkim otporom. Umjesto da mišić samo stisnete u prazno, dobivate nešto protiv čega možete pritisnuti — isti princip progresivnog opterećenja po kojem jača svaki drugi mišić u tijelu.<br><br>Koristi se sjedeći: uređaj postavite između koljena i stišćete protiv otpora — 3 serije od 10 ponavljanja dnevno, oko pet minuta. Bez sondi i umetanja, bez žica, gela, baterija i aplikacija. Ugrađeni brojač ponavljanja pokazuje koliko ste odradili, pa napredak ne procjenjujete naslijepo.<br><br>Konstrukcija je čvrsta, s mekanim oblogama na osloncima koje ne pritišću kožu ni nakon više serija. Otpor se progresivno povećava kako mišići jačaju.<br><br>Namijenjen je muškarcima koji žele vratiti kontrolu nad mjehurom — nakon operacije prostate, kod curenja pri naporu ili nakon dugih mjeseci Kegelovih vježbi bez rezultata. Dostava je diskretna, u neutralnoj kutiji bez oznaka.
 
+         <?php elseif( noriks_is_type( 'snore', $current_product_id ) ): ?>
+
+                <strong>NORIKS udlaga protiv hrkanja</strong> djeluje na sam uzrok hrkanja: tijekom sna mišići grla se opuste, jezik i meko nepce padnu prema natrag i suze dišni put, zrak prolazi kroz uski otvor i tkivo počne vibrirati.<br><br>Udlaga nježno pomiče donju čeljust prema naprijed i otvara dišni put, pa vibracija prestaje. Zato djeluje i ondje gdje sprejevi i trakice za nos ne pomognu — oni ne diraju uzrok.<br><br>Prilagodi se vašim ustima: uronite je u vruću vodu, ugrizite i poprimit će oblik vaših zubi. Uz nju dolazi pet zamjenjivih traka (#1–#5); svaka sljedeća pomiče čeljust 1,5 mm više, pa sami odredite koliko pomaka trebate.<br><br>Okvir je fleksibilan, čeljust ostaje pokretna — možete piti vodu i govoriti dok je nosite. Bez BPA, ftalata i lateksa. Dimenzije 4,1 × 6 × 2,5 cm, dubina ugriza 1,3 cm.
+
          <?php elseif( noriks_is_type( 'cloud', $current_product_id ) ): ?>
 
                 <strong>NORIKS Cloud</strong> je ortopedski jastuk za koljena namijenjen spavanju na boku. Postavlja se između koljena i drži kukove, zdjelicu i kralježnicu u prirodnoj liniji — bez uvijanja donjeg dijela leđa i bez pritiska koljena o koljeno.<br><br>Za razliku od običnog jastuka koji se tijekom noći splošti i ispadne, NORIKS Cloud ima podesivu traku s drukerima. Traka ide oko noge i drži jastuk točno na mjestu — i kad se okrenete na drugu stranu. Traka se skida, pa jastuk možete koristiti i pod gležnjeve ili pod vrat.<br><br>Jezgra je od memorijske pjene medicinske kvalitete s ugrađenim perforacijama: dovoljno čvrsta da drži razmak nogu, dovoljno mekana da se prilagodi tijelu i prozračna, pa se ne pregrijava. Zadržava oblik godinama.<br><br>Navlaka se skida i pere u stroju na 40 °C. Materijali su certificirani po OEKO-TEX® STANDARD 100 i CertiPUR-EU, a dizajn je rađen prema švicarskim standardima kvalitete.
@@ -629,7 +633,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
+     <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -776,7 +780,11 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( noriks_is_type( 'cloud', $current_product_id ) ): ?>
+             <?php if( noriks_is_type( 'snore', $current_product_id ) ): ?>
+
+                Isperite udlagu mlakom vodom nakon svake upotrebe i po potrebi je očistite mekom četkicom, bez zubne paste. Ostavite je da se osuši na zraku i čuvajte u priloženoj kutijici. Ne koristite vrelu vodu, perilicu posuđa ni sredstva za izbjeljivanje — visoka temperatura promijenila bi joj oblik.
+
+             <?php elseif( noriks_is_type( 'cloud', $current_product_id ) ): ?>
 
                 Navlaku skinite i perite u stroju na 40 °C, s deterdžentom bez omekšivača i bez izbjeljivača. Ne sušite u sušilici — sušite na zraku. Memorijsku pjenu ne perite u stroju i ne potapajte: po potrebi je obrišite vlažnom krpom i ostavite da se potpuno osuši prije sljedeće upotrebe.
 
