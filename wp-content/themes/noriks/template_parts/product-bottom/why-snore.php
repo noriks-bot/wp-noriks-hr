@@ -51,6 +51,34 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
   </div>
 </section>
 
+<!-- ============ 6) Kako djeluje — pet krugova (kao na referenci) ============ -->
+<?php
+$sn_how = array(
+  array('sn-ic-1.webp', 'Pomak čeljusti',    'Udlaga nježno pomiče donju čeljust naprijed, dišni put se otvara i zrak prolazi slobodno.'),
+  array('sn-ic-2.webp', 'Prilagodba ugrizu', 'Uronite je u vruću vodu i ugrizite — poprima točan oblik vaših zubi.'),
+  array('sn-ic-3.webp', 'Podesiva traka',    'Pet traka (#1–#5) određuje koliko pomaka trebate, a čeljust ostaje pokretna.'),
+  array('sn-ic-4.webp', 'Švicarska izrada',  'Izrađena od medicinskih polimera, bez BPA, ftalata i lateksa.'),
+  array('sn-ic-5.webp', 'Povjerenje tisuća', 'Više od 500.000 prodanih komada u Europi i 98 % zadovoljnih kupaca.'),
+);
+?>
+<section class="nsn-sec nsn-soft">
+  <div class="nsn-wrap nsn-center">
+    <h2 class="nsn-h2">Kako djeluje</h2>
+    <p class="nsn-sub">Pet stvari zbog kojih radi ondje gdje sprejevi i trakice ne pomognu.</p>
+  </div>
+  <div class="nsn-wrap">
+    <div class="nsn-how">
+      <?php foreach ( $sn_how as $h ) : ?>
+        <div class="nsn-how-item">
+          <span class="nsn-how-ic"><?php echo $sn_img( $h[0], $h[1] ); ?></span>
+          <h3><?php echo esc_html( $h[1] ); ?></h3>
+          <p><?php echo esc_html( $h[2] ); ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 4) Brojke ============ -->
 <section class="nsn-sec nsn-dark">
   <div class="nsn-wrap nsn-row2">
@@ -84,46 +112,6 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
   </div>
 </section>
 
-<!-- ============ 6) Kako djeluje — pet krugova (kao na referenci) ============ -->
-<?php
-$sn_how = array(
-  array('jaw',   'Pomak čeljusti',      'Udlaga nježno pomiče donju čeljust naprijed, dišni put se otvara i zrak prolazi slobodno.'),
-  array('boil',  'Prilagodba ugrizu',   'Uronite je u vruću vodu i ugrizite — poprima točan oblik vaših zubi.'),
-  array('strap', 'Podesiva traka',      'Pet traka (#1–#5) određuje koliko pomaka trebate, a čeljust ostaje pokretna.'),
-  array('swiss', 'Švicarska izrada',    'Izrađena od medicinskih polimera, bez BPA, ftalata i lateksa.'),
-  array('trust', 'Povjerenje tisuća',   'Više od 500.000 prodanih komada u Europi i 98 % zadovoljnih kupaca.'),
-);
-$sn_icon = function( $key ) {
-  $ico = array(
-    'jaw'   => '<path d="M14 20c0-7 5-12 12-12"/><path d="M14 20c0 8 6 14 14 14h12"/><path d="M34 26l8 4-8 4"/><circle cx="21" cy="18" r="1.6" fill="currentColor" stroke="none"/>',
-    'boil'  => '<path d="M12 22h24v10a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6z"/><path d="M36 25h5a3 3 0 0 1 0 6h-5"/><path d="M18 15c0-3 3-3 3-6M27 15c0-3 3-3 3-6"/>',
-    'strap' => '<path d="M10 17h28M10 24h28M10 31h28"/><circle cx="17" cy="17" r="2"/><circle cx="17" cy="24" r="2"/><circle cx="17" cy="31" r="2"/><circle cx="31" cy="17" r="2"/><circle cx="31" cy="24" r="2"/><circle cx="31" cy="31" r="2"/>',
-    'swiss' => '<path d="M24 9l13 5v11c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16V14z"/><path d="M24 17v12M18 23h12"/>',
-    'trust' => '<circle cx="24" cy="20" r="6"/><path d="M13 37c0-6 5-10 11-10s11 4 11 10"/><circle cx="12" cy="18" r="4"/><circle cx="36" cy="18" r="4"/>',
-  );
-  return isset( $ico[ $key ] ) ? $ico[ $key ] : '';
-};
-?>
-<section class="nsn-sec nsn-soft">
-  <div class="nsn-wrap nsn-center">
-    <h2 class="nsn-h2">Kako djeluje</h2>
-    <p class="nsn-sub">Pet stvari zbog kojih radi ondje gdje sprejevi i trakice ne pomognu.</p>
-  </div>
-  <div class="nsn-wrap">
-    <div class="nsn-how">
-      <?php foreach ( $sn_how as $h ) : ?>
-        <div class="nsn-how-item">
-          <span class="nsn-how-ic" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><?php echo $sn_icon( $h[0] ); ?></svg>
-          </span>
-          <h3><?php echo esc_html( $h[1] ); ?></h3>
-          <p><?php echo esc_html( $h[2] ); ?></p>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
 <!-- ============ 7) Usporedba — tablica (kao na referenci) ============ -->
 <?php
 $sn_vs = array(
@@ -135,7 +123,7 @@ $sn_vs = array(
   'Omogućuje pijenje i govor tijekom nošenja',
 );
 ?>
-<section class="nsn-sec">
+<section class="nsn-sec nsn-dark">
   <div class="nsn-wrap nsn-center">
     <h2 class="nsn-h2">NORIKS i sve ostalo</h2>
     <p class="nsn-sub">Zašto se isplati uzeti udlagu koja je napravljena da traje.</p>
@@ -235,9 +223,8 @@ $sn_vs = array(
   .nsn-soft { background: #eef5fb; }
   .nsn-how { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; margin-top: 30px; }
   .nsn-how-item { text-align: center; }
-  .nsn-how-ic { display: flex; width: 108px; height: 108px; margin: 0 auto 16px; border-radius: 50%;
-                background: #0b2a4a; color: #9ecbf0; align-items: center; justify-content: center; }
-  .nsn-how-ic svg { width: 58px; height: 58px; }
+  .nsn-how-ic { display: block; width: 100%; max-width: 132px; margin: 0 auto 16px; }
+  .nsn-how-ic img { width: 100%; height: auto; display: block; border-radius: 50%; }
   .nsn-how-item h3 { font-size: 16.5px; font-weight: 800; color: #1e6fc4; margin: 0 0 8px; }
   .nsn-how-item p { font-size: 14.5px; line-height: 1.6; color: #40505f; margin: 0; }
 
@@ -277,6 +264,8 @@ $sn_vs = array(
   table.nsn-tbl td.nsn-tbl-feat { color: #223; font-weight: 600; line-height: 1.45; }
   table.nsn-tbl td.nsn-tbl-us, table.nsn-tbl td.nsn-tbl-them { text-align: center; width: 22%; }
   table.nsn-tbl tbody tr:nth-child(even) td { background: #f7fafd; }
+  .nsn-dark table.nsn-tbl thead th.nsn-tbl-us,
+  .nsn-dark table.nsn-tbl thead th.nsn-tbl-them { background: #16456f; }
   .nsn-yes { display: inline-flex; color: #3d95d8; }
   .nsn-no  { display: inline-flex; color: #e14b4b; }
 
@@ -300,8 +289,7 @@ $sn_vs = array(
     .nsn-bens { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .nsn-ben { padding: 13px 14px; }
     .nsn-how { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; margin-top: 20px; }
-    .nsn-how-ic { width: 82px; height: 82px; margin-bottom: 12px; }
-    .nsn-how-ic svg { width: 44px; height: 44px; }
+    .nsn-how-ic { max-width: 98px; margin-bottom: 12px; }
     .nsn-how-item h3 { font-size: 15px; }
     .nsn-how-item p { font-size: 13.5px; }
     table.nsn-tbl { min-width: 420px; }
