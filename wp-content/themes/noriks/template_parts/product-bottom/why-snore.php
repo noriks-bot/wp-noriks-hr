@@ -28,7 +28,7 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
 ?>
 
 <!-- ============ 2) Uzrok hrkanja ============ -->
-<section class="nsn-sec">
+<section class="nsn-sec nsn-dark">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-media"><?php echo $sn_img('sn-prije-poslije.webp','Prije i poslije — otvoren dišni put'); ?></div>
     <div class="nsn-copy">
@@ -41,7 +41,7 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
 </section>
 
 <!-- ============ 3) Lijecnik ============ -->
-<section class="nsn-sec nsn-dark">
+<section class="nsn-sec">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-copy">
       <p class="nsn-eyebrow">Preporuka struke</p>
@@ -54,7 +54,7 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
 </section>
 
 <!-- ============ 4) Brojke ============ -->
-<section class="nsn-sec">
+<section class="nsn-sec nsn-dark">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-media"><?php echo $sn_img('sn-statistika.webp','97 % manje hrkanja, 98 % zadovoljstvo, 500.000+ prodanih'); ?></div>
     <div class="nsn-copy">
@@ -70,7 +70,7 @@ $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
 </section>
 
 <!-- ============ 5) Trake ============ -->
-<section class="nsn-sec nsn-dark">
+<section class="nsn-sec">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-copy">
       <h2 class="nsn-h2">Pet traka — vi birate koliko pomaka trebate</h2>
@@ -137,7 +137,7 @@ $sn_vs = array(
   'Omogućuje pijenje i govor tijekom nošenja',
 );
 ?>
-<section class="nsn-sec nsn-dark">
+<section class="nsn-sec">
   <div class="nsn-wrap nsn-center">
     <h2 class="nsn-h2">NORIKS i sve ostalo</h2>
     <p class="nsn-sub">Zašto se isplati uzeti udlagu koja je napravljena da traje.</p>
@@ -193,7 +193,7 @@ $sn_vs = array(
 </section>
 
 <!-- ============ 8) Nagrade ============ -->
-<section class="nsn-sec">
+<section class="nsn-sec nsn-dark">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-copy">
       <p class="nsn-eyebrow">Priznanja</p>
@@ -208,7 +208,7 @@ $sn_vs = array(
 </section>
 
 <!-- ============ 9) Velicine ============ -->
-<section class="nsn-sec nsn-dark">
+<section class="nsn-sec">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-media"><?php echo $sn_img('sn-velicine.webp','Vodič za veličine — 4,1 × 6 × 2,5 cm'); ?></div>
     <div class="nsn-copy">
@@ -223,7 +223,7 @@ $sn_vs = array(
 </section>
 
 <!-- ============ 10) Jamstvo ============ -->
-<section class="nsn-sec">
+<section class="nsn-sec nsn-dark">
   <div class="nsn-wrap nsn-row2">
     <div class="nsn-copy">
       <p class="nsn-eyebrow">Bez rizika</p>
