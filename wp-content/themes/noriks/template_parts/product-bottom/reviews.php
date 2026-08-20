@@ -342,7 +342,8 @@
   if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_dental_page || $is_cloud_page || $is_snore_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_snore_page ? 'NORIKS udlaga protiv hrkanja'
+  $rv_fallback_title = $is_bokserice_page ? 'NORIKS bokserice'
+                     : ( $is_snore_page ? 'NORIKS udlaga protiv hrkanja'
                      : ( $is_cloud_page ? 'NORIKS Cloud jastuk za koljena'
                      : ( $is_cloath_page ? 'Polar NORIKS Cloth XXL krpa'
                      : ( $is_bra_page ? 'NORIKS BRA grudnjak'
@@ -362,7 +363,7 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
   if ( $is_dental_page ) {
