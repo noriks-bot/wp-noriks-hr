@@ -11,8 +11,6 @@
  *   6. Kako se koristi                      4 koraka
  *   7. Nije svaka udlaga ista               sn-usporedba
  *   8. Nagrade i priznanja                  sn-nagrade
- *   9. Vodic za velicine                    sn-velicine
- *  10. 120 noci jamstva                     sn-zajamceno
  * Recenzije i FAQ renderira zajednicki reviews.php.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
