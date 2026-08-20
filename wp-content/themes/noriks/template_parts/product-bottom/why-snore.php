@@ -207,39 +207,6 @@ $sn_vs = array(
   </div>
 </section>
 
-<!-- ============ 9) Velicine ============ -->
-<section class="nsn-sec">
-  <div class="nsn-wrap nsn-row2">
-    <div class="nsn-media"><?php echo $sn_img('sn-velicine.webp','Vodič za veličine — 4,1 × 6 × 2,5 cm'); ?></div>
-    <div class="nsn-copy">
-      <h2 class="nsn-h2">Jedna veličina, prilagodljiv okvir</h2>
-      <p>Okvir je fleksibilan i oblikuje se po vašem ugrizu, pa <strong>odgovara većini veličina usta</strong> — ne birate veličinu pri narudžbi.</p>
-      <ul class="nsn-check">
-        <li>Duljina <strong>4,1 cm</strong> · Širina <strong>6 cm</strong></li>
-        <li>Visina <strong>2,5 cm</strong> · Dubina ugriza <strong>1,3 cm</strong></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 10) Jamstvo ============ -->
-<section class="nsn-sec nsn-dark">
-  <div class="nsn-wrap nsn-row2">
-    <div class="nsn-copy">
-      <p class="nsn-eyebrow">Bez rizika</p>
-      <h2 class="nsn-h2">120 noći jamstva</h2>
-      <p>Isprobajte je četiri mjeseca. Ako hrkanje ne popusti ili vam udlaga jednostavno ne odgovara, vraćamo vam cijeli iznos.</p>
-      <ul class="nsn-check">
-        <li>Bez BPA, ftalata i lateksa</li>
-        <li>Možete piti vodu dok je nosite</li>
-        <li>Podesive trake za maksimalnu udobnost</li>
-      </ul>
-      <a class="nsn-cta" href="#bundle-selector">Naruči bez rizika</a>
-    </div>
-    <div class="nsn-media"><?php echo $sn_img('sn-zajamceno.webp','120 noći jamstva'); ?></div>
-  </div>
-</section>
-
 <style>
   .nsn-sec { padding: 46px 0; background: #fff; }
   .nsn-dark { background: #0b2a4a; }
