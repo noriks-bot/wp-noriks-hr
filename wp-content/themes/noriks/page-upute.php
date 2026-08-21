@@ -75,16 +75,17 @@ $dir_path = get_template_directory() . '/manuals/';
   }
   .nmn-search input:focus { border-color: #12233b; box-shadow: 0 0 0 3px rgba(18,35,59,.08); }
 
-  .nmn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: start; }
-  .nmn-card { display: flex; gap: 14px; background: #fff; border-radius: 9px; padding: 18px; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+  .nmn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .nmn-card { display: flex; gap: 14px; height: 100%; background: #fff; border-radius: 9px; padding: 18px;
+              box-shadow: 0 1px 2px rgba(0,0,0,.06); box-sizing: border-box; }
   .nmn-thumb { flex: 0 0 auto; width: 84px; height: 84px; border-radius: 8px; overflow: hidden; background: #f1f4f8;
                display: flex; align-items: center; justify-content: center; color: #12233b; }
   .nmn-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .nmn-body { min-width: 0; }
+  .nmn-body { min-width: 0; display: flex; flex-direction: column; flex: 1 1 auto; }
   .nmn-card h2 { font-size: 17px; font-weight: 800; color: #111; margin: 0 0 2px; }
   .nmn-kind { font-size: 13px; font-weight: 600; color: #12233b; margin: 0 0 7px; }
   .nmn-desc { font-size: 14.5px; line-height: 1.55; color: #555; margin: 0 0 12px; }
-  .nmn-links { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 0; }
+  .nmn-links { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: auto 0 0; }
   .nmn-btn { display: inline-block; background: #111; color: #fff !important; font-size: 14px; font-weight: 700;
              padding: 9px 16px; border-radius: 7px; text-decoration: none; white-space: nowrap; }
   .nmn-btn span { font-weight: 500; opacity: .7; }
