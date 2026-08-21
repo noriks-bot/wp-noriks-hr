@@ -11,33 +11,44 @@ function noriks_manuals_list() {
     return array(
         array(
             'file'  => 'noriks-kneefix.pdf',
+            'sku'   => 'NORIKS-KNEEFIX',
             'title' => 'NORIKS KneeFix',
             'sub'   => 'Ortopedska steznica za koljeno',
             'desc'  => 'Odabir veličine, stavljanje, podešavanje kompresije i održavanje.',
-            'url'   => '/hr/product/noriks-kneefix-ortopedska-steznica-za-koljeno/',
         ),
         array(
             'file'  => 'noriks-bunion-fix.pdf',
+            'sku'   => 'NORIKS-BUNION',
             'title' => 'NORIKS Bunion Fix',
             'sub'   => 'Ortopedski korektor čukljeva',
             'desc'  => 'Stavljanje na stopalo, raspored nošenja po tjednima i njega.',
-            'url'   => '/hr/product/noriks-ortopedski-korektor-cuklja/',
         ),
         array(
             'file'  => 'noriks-fisiorest.pdf',
+            'sku'   => 'NORIKS-FISIOREST',
             'title' => 'NORIKS FisioRest',
             'sub'   => 'Uređaj za vrat',
             'desc'  => 'Punjenje, pokretanje ciklusa, preporučeno trajanje i sigurnosne napomene.',
-            'url'   => '/hr/product/noriks-ortopedski-uredaj-za-vrat-fisiorest/',
         ),
         array(
             'file'  => 'noriks-fit-kompresijska-majica.pdf',
+            'sku'   => 'NORIKS-KOMPSFIT',
             'title' => 'NORIKS FIT',
             'sub'   => 'Kompresijska majica',
             'desc'  => 'Tablica veličina prema težini, oblačenje i pranje.',
-            'url'   => '/hr/product/noriks-fit-kompresijska-majica/',
         ),
     );
+}
+
+/** Slika i poveznica proizvoda po SKU-u — uvijek aktualne, bez rucnog upisa URL-a. */
+function noriks_manual_product( $sku ) {
+    $out = array( 'img' => '', 'url' => '' );
+    if ( ! function_exists( 'wc_get_product_id_by_sku' ) ) { return $out; }
+    $pid = wc_get_product_id_by_sku( $sku );
+    if ( ! $pid ) { return $out; }
+    $out['url'] = get_permalink( $pid );
+    $out['img'] = get_the_post_thumbnail_url( $pid, 'woocommerce_thumbnail' );
+    return $out;
 }
 
 /**
