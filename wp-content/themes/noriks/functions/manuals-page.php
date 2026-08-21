@@ -25,7 +25,7 @@ function noriks_manuals_list() {
         ),
         array(
             'file'  => 'noriks-kompresijske-carape.pdf',
-            'sku'   => 'NORIKS-KOMZIPS',
+            'sku'   => array( 'NORIKS-KOMZIPS', 'NORIKS-BOXERS-ORTO-4' ),
             'title' => 'NORIKS kompresijske čarape',
             'sub'   => 'Sa zatvaračem, 15–20 mmHg',
             'desc'  => 'Veličina po opsegu lista, oblačenje i njega.',
@@ -100,12 +100,30 @@ function noriks_manuals_list() {
 function noriks_manual_product( $sku ) {
     $out = array( 'img' => '', 'url' => '' );
     if ( ! function_exists( 'wc_get_product_id_by_sku' ) ) { return $out; }
-    $pid = wc_get_product_id_by_sku( $sku );
+
+    $pid = 0;
+    foreach ( (array) $sku as $candidate ) {
+        $pid = wc_get_product_id_by_sku( $candidate );
+        if ( $pid ) { break; }
+    }
     if ( ! $pid ) { return $out; }
+
     $out['url'] = get_permalink( $pid );
     $out['img'] = get_the_post_thumbnail_url( $pid, 'woocommerce_thumbnail' );
+
+    // Ako proizvod nema istaknutu sliku, uzmi prvu iz galerije.
+    if ( ! $out['img'] && function_exists( 'wc_get_product' ) ) {
+        $product = wc_get_product( $pid );
+        if ( $product ) {
+            $gallery = $product->get_gallery_image_ids();
+            if ( ! empty( $gallery[0] ) ) {
+                $out['img'] = wp_get_attachment_image_url( $gallery[0], 'woocommerce_thumbnail' );
+            }
+        }
+    }
     return $out;
 }
+
 
 /**
  * Jednokratno kreira pravu WP stranicu "Upute za uporabu" i dodijeli joj predlozak
