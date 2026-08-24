@@ -93,8 +93,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 <!-- Pametna tehnologija — video lijevo -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-led.mp4', 'kh-vid-led.jpg', 'Grijaći elementi u omotaču' ); ?></div>
-    <div class="nkh-copy">
+        <div class="nkh-copy">
       <h2 class="nkh-h2">Pametna tehnologija za dublje tkivo</h2>
       <p>NORIKS KneeHeat prilagodite svom koljenu: <strong>3 stupnja topline</strong>, <strong>3 načina vibracije</strong> i <strong>cikličnu kompresiju</strong>. Bez kabela, jedan gumb, dvanaest minuta.</p>
       <ul class="nkh-tri">
@@ -103,6 +102,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
         <li><strong>Jednostavno upravljanje:</strong> jedan gumb, bez aplikacije i bez postavljanja.</li>
       </ul>
     </div>
+    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-led.mp4', 'kh-vid-led.jpg', 'Grijaći elementi u omotaču' ); ?></div>
   </div>
 </section>
 
