@@ -101,7 +101,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 
 
 <!-- 7) Liječnik — slika desno -->
-<section class="nkh-sec nkh-light">
+<section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
     <div class="nkh-copy">
       <h2 class="nkh-h2">Stvoreno za svakodnevnu udobnost i pokret</h2>
@@ -113,7 +113,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 </section>
 
 <!-- 8) Dodaci i jamstvo — slika lijevo -->
-<section class="nkh-sec nkh-white">
+<section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
     <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
     <div class="nkh-copy">
@@ -125,7 +125,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 </section>
 
 <!-- 9) Jamstvo — slika desno -->
-<section class="nkh-sec nkh-light">
+<section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
     <div class="nkh-copy">
       <h2 class="nkh-h2">Isprobajte bez rizika</h2>
