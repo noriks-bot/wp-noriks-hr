@@ -62,6 +62,8 @@ function noriks_product_type_map() : array {
         'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
+        // NORIKS Hugger — nosivi termofor (samo boja).
+        'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
         'pre'                     => array( 'orto-pre', 'pre' ),
         // NORIKS KneeHeat — grijac, kompresija i masaza koljena (bez atributa).

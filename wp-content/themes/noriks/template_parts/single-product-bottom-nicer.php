@@ -159,5 +159,10 @@ if ( noriks_is_type( 'pre' ) ) {
     include $noriks_pb_dir . 'why-pre.php';
 }
 
+// NORIKS HUGGER (orto-hug) — nosivi termofor
+if ( noriks_is_type( 'hug' ) ) {
+    include $noriks_pb_dir . 'why-hug.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
