@@ -195,7 +195,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .nkh-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c1601f; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-.nkh-lead-copy { max-width: 780px; margin: 0 0 20px; }
+
 .nkh-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
 .nkh-three figure { margin: 0; }
 .nkh-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
@@ -241,4 +241,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-media .nkh-video { width: 100%; height: auto; display: block; border-radius: 14px; }
 .nkh-sec p.nkh-lead { max-width: 720px; margin: 0 auto 22px !important; opacity: .85; text-align: center; }
 .nkh-sec .nkh-center { text-align: center; }
+.nkh-sec .nkh-lead-copy { max-width: 820px; margin: 0 auto 22px !important; text-align: center; }
+.nkh-sec .nkh-lead-copy p { margin-left: auto !important; margin-right: auto !important; }
+.nkh-sec .nkh-lead-copy h2 { text-align: center; }
 </style>

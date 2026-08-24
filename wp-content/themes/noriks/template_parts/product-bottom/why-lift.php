@@ -195,7 +195,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-weeks { list-style: none; padding: 0; margin: 10px 0 0; }
 .nlf-weeks li { border-left: 3px solid #d8bd97; padding: 2px 0 2px 14px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .nlf-weeks strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: #8a6a45; margin-bottom: 2px; }
-.nlf-lead-copy { max-width: 760px; margin: 0 0 20px; }
+
 .nlf-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 18px; }
 .nlf-three figure { margin: 0; }
 .nlf-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
@@ -239,4 +239,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #a5825a !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.nlf-sec .nlf-lead-copy { max-width: 820px; margin: 0 auto 22px !important; text-align: center; }
+.nlf-sec .nlf-lead-copy p { margin-left: auto !important; margin-right: auto !important; }
+.nlf-sec .nlf-lead-copy h2 { text-align: center; }
 </style>

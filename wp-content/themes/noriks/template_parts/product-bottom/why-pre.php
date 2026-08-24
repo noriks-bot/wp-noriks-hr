@@ -144,7 +144,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .npr-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c47b8a; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-.npr-lead-copy { max-width: 780px; margin: 0 0 20px; }
+
 .npr-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .npr-three figure { margin: 0; }
 .npr-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
@@ -175,4 +175,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #c47b8a !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.npr-sec .npr-lead-copy { max-width: 820px; margin: 0 auto 22px !important; text-align: center; }
+.npr-sec .npr-lead-copy p { margin-left: auto !important; margin-right: auto !important; }
+.npr-sec .npr-lead-copy h2 { text-align: center; }
 </style>

@@ -198,7 +198,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .nhg-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #d24a2a; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-.nhg-lead-copy { max-width: 780px; margin: 0 0 20px; }
+
 .nhg-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
 .nhg-three figure { margin: 0; }
 .nhg-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
@@ -246,4 +246,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-vids .nhg-video { width: 100%; height: auto; display: block; border-radius: 14px; }
 .nhg-vids figcaption { text-align: center; font-size: 16px; font-weight: 700; margin-top: 12px; }
 .nhg-media .nhg-video { width: 100%; height: auto; display: block; border-radius: 14px; }
+.nhg-sec .nhg-lead-copy { max-width: 820px; margin: 0 auto 22px !important; text-align: center; }
+.nhg-sec .nhg-lead-copy p { margin-left: auto !important; margin-right: auto !important; }
+.nhg-sec .nhg-lead-copy h2 { text-align: center; }
 </style>
