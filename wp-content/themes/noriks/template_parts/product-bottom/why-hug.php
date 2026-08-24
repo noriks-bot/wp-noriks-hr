@@ -49,7 +49,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
       </ol>
       <p class="nhg-note">Prednja strana je mekano krzno, stražnja ima džep za bocu i čičak na krakovima.</p>
     </div>
-    <div class="nhg-media"><?php echo $hg_img( 'hug-09-strane.jpg', 'Prednja i stražnja strana navlake' ); ?></div>
+    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-09-strane.jpg', 'Prednja i stražnja strana navlake' ); ?></div>
   </div>
 </section>
 
@@ -74,7 +74,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
       <p>Za razliku od grijaćeg jastuka ne veže vas za utičnicu, a za razliku od gel-obloga ne treba mikrovalna — dovoljan je čajnik.</p>
       <p class="nhg-strong">Zato često završi kao poklon: dolazi u urednom pakiranju i ne treba mu ništa dodatno kupovati.</p>
     </div>
-    <div class="nhg-media"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
+    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
   </div>
 </section>
 
@@ -164,7 +164,8 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-white { background: #fff;    color: #3a2620; }
 .nhg-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nhg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nhg-media img { width: 100%; height: auto; max-height: 430px; object-fit: contain; display: block; border-radius: 12px; }
+.nhg-media img { width: 100%; height: 460px; object-fit: cover; display: block; border-radius: 12px; }
+.nhg-media.nhg-graf img { height: auto; max-height: 460px; object-fit: contain; background: transparent; }
 .nhg-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #d24a2a; margin: 0 0 8px; }
 .nhg-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nhg-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -195,7 +196,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   .nhg-three { grid-template-columns: 1fr; gap: 14px; }
   .nhg-three img { height: auto; }
   .nhg-row .nhg-media { order: -1; }
-  .nhg-media img { max-height: 340px; }
+  .nhg-media img { height: auto; max-height: 340px; object-fit: contain; }
 }
 
 /* kratek opis izdelka: kljukice namesto pikic (kot pri udlagi proti hrkanju) */

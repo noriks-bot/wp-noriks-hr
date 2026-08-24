@@ -50,7 +50,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
       </ul>
       <p class="nkh-note">Za razliku od TENS uređaja koji samo prekrivaju signal boli, KneeHeat djeluje na dublje tkivo.</p>
     </div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
   </div>
 </section>
 
@@ -79,14 +79,14 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
       <p>Omotač se zatvara preko dvije trake, pa čvrstoću birate sami — labavije dok sjedite, čvršće dok hodate po kući. Uređaj tada ostaje na mjestu i ne rotira oko noge.</p>
       <p class="nkh-strong">Bežičan je i puni se USB-C kabelom; jedno punjenje traje više seansi, pa ide s vama na posao ili na put.</p>
     </div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-11-znacajke.jpg', 'Značajke uređaja NORIKS KneeHeat' ); ?></div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-11-znacajke.jpg', 'Značajke uređaja NORIKS KneeHeat' ); ?></div>
   </div>
 </section>
 
 <!-- 5) Što je u paketu — slika lijevo -->
 <section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-07-unboxing-h.jpg', 'Sadržaj pakiranja NORIKS KneeHeat' ); ?></div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-07-unboxing-h.jpg', 'Sadržaj pakiranja NORIKS KneeHeat' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Što dobivate u pakiranju</h2>
       <ul class="nkh-pack">
@@ -125,14 +125,14 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
       <p class="nkh-quote">„Kod kroničnih tegoba s koljenom nakon 45. godine najviše se isplati ono što ljudi mogu raditi svaki dan kod kuće. Toplina, kompresija i vibracija zajedno vraćaju protok u tkivo — a to je temelj na kojem sve ostalo radi.”</p>
       <p class="nkh-sign">Dr. Marko Kovačević, ortoped</p>
     </div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
   </div>
 </section>
 
 <!-- 8) Dodaci i jamstvo — slika lijevo -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Dodaci koji rješavaju sitnice</h2>
       <p>Produžna traka rješava veće opsege noge, pleteni USB-C kabel ne puca na savijanju, a mjerna traka pomaže da omotač namjestite jednako čvrsto svaki put.</p>
@@ -161,7 +161,8 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-dark h2, .nkh-dark h3, .nkh-dark p, .nkh-dark li, .nkh-dark strong { color: #eef3f9; }
 .nkh-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nkh-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nkh-media img { width: 100%; height: auto; max-height: 430px; object-fit: contain; display: block; border-radius: 12px; }
+.nkh-media img { width: 100%; height: 460px; object-fit: cover; display: block; border-radius: 12px; }
+.nkh-media.nkh-graf img { height: auto; max-height: 460px; object-fit: contain; background: transparent; }
 .nkh-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #c1601f; margin: 0 0 8px; }
 .nkh-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nkh-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -196,7 +197,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   .nkh-three { grid-template-columns: 1fr; gap: 14px; }
   .nkh-three img { height: auto; }
   .nkh-row .nkh-media { order: -1; }
-  .nkh-media img { max-height: 340px; }
+  .nkh-media img { height: auto; max-height: 340px; object-fit: contain; }
 }
 
 /* kratek opis izdelka: kljukice namesto pikic (kot pri udlagi proti hrkanju) */

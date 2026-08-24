@@ -46,7 +46,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
       <p>Manji jastučić je tu za mjesto koje vas trenutno najviše smeta: pod trbuh kad vuče prema naprijed, iza leđa kad želite polulezeći položaj ili među koljena kad se jave kukovi.</p>
       <p class="npr-strong">Okretanje na drugu stranu ne traži preslagivanje — jastuk jednostavno prebacite sa sobom.</p>
     </div>
-    <div class="npr-media"><?php echo $pr_img( 'pre-08-kako.jpg', 'Kako funkcionira jastuk za trudnice' ); ?></div>
+    <div class="npr-media npr-graf"><?php echo $pr_img( 'pre-08-kako.jpg', 'Kako funkcionira jastuk za trudnice' ); ?></div>
   </div>
 </section>
 
@@ -75,7 +75,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
       <p>Veliki jastuci zauzmu pola kreveta, griju i traže preslagivanje pri svakom okretanju. NORIKS Pre daje potporu točno ondje gdje treba — uz trbuščić i leđa — i ostaje kompaktan.</p>
       <p class="npr-strong">Zato stane i u kofer, a partner ne mora na kauč.</p>
     </div>
-    <div class="npr-media"><?php echo $pr_img( 'pre-09-usporedba.jpg', 'Usporedba s velikim jastucima za trudnice' ); ?></div>
+    <div class="npr-media npr-graf"><?php echo $pr_img( 'pre-09-usporedba.jpg', 'Usporedba s velikim jastucima za trudnice' ); ?></div>
   </div>
 </section>
 
@@ -130,7 +130,8 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-white { background: #fff;   color: #34262a; }
 .npr-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .npr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.npr-media img { width: 100%; height: auto; max-height: 430px; object-fit: contain; display: block; border-radius: 12px; }
+.npr-media img { width: 100%; height: 460px; object-fit: cover; display: block; border-radius: 12px; }
+.npr-media.npr-graf img { height: auto; max-height: 460px; object-fit: contain; background: transparent; }
 .npr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #c47b8a; margin: 0 0 8px; }
 .npr-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .npr-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -159,7 +160,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
   .npr-row { grid-template-columns: 1fr; gap: 18px; }
   .npr-three { grid-template-columns: 1fr; gap: 14px; }
   .npr-row .npr-media { order: -1; }
-  .npr-media img { max-height: 340px; }
+  .npr-media img { height: auto; max-height: 340px; object-fit: contain; }
 }
 
 /* kratek opis izdelka: kljukice namesto pikic (kot pri udlagi proti hrkanju) */
