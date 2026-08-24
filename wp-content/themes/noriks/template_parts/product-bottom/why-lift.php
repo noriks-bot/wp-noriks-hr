@@ -75,19 +75,36 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
   </div>
 </section>
 
-<!-- 4) Tijek — slika desno -->
+<!-- Tijek oblikovanja — vremenska crta -->
 <section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
     <div class="nlf-copy">
-      <h2 class="nlf-h2">Što se događa tjedan po tjedan</h2>
-      <ul class="nlf-weeks">
-        <li><strong>1. – 2. tjedan</strong> Smanjenje otekline — kompresija pokreće limfnu drenažu, donji dio lica postaje lakši.</li>
-        <li><strong>3. – 6. tjedan</strong> Zatezanje i podizanje — počinje stimulacija kolagena, čeljust izgleda definiranije.</li>
-        <li><strong>8. – 12. tjedan</strong> Remodeliranje kolagena — podbradak vidljivo manji, linija čeljusti oštrija.</li>
-        <li><strong>I dalje</strong> Uz redovitu uporabu struktura kože ostaje čvršća, a izgled oblikovan.</li>
-      </ul>
+      <h2 class="nlf-h2">Vaš put do definirane čeljusti</h2>
+      <p class="nlf-sub">Rutina koja traje 20 minuta — dok se vi odmarate.</p>
+      <ol class="nlf-tl">
+        <li>
+          <span class="nlf-tl-badge">1. – 2. tjedan</span>
+          <strong class="nlf-tl-h">Trenutačan efekt podizanja</strong>
+          <p>Već u prva dva tjedna linija čeljusti djeluje definiranije i lakše. Kompresija pokreće limfnu drenažu, pa se smanjuju oteklina i zadržavanje tekućine.</p>
+        </li>
+        <li>
+          <span class="nlf-tl-badge">3. – 6. tjedan</span>
+          <strong class="nlf-tl-h">Zatezanje i podizanje</strong>
+          <p>Počinje stimulacija kolagena. Kolagen od 300 daltona ulazi dublje, a kompresija istovremeno „uči" kožu da se drži prema gore.</p>
+        </li>
+        <li>
+          <span class="nlf-tl-badge">8. – 12. tjedan</span>
+          <strong class="nlf-tl-h">Definirana linija čeljusti</strong>
+          <p>Kolagen se remodelira i koža se učvršćuje. Podbradak djeluje vidljivo manje, a čeljust oštrije — u ovoj fazi promjenu primijete i drugi.</p>
+        </li>
+        <li>
+          <span class="nlf-tl-badge">I dalje</span>
+          <strong class="nlf-tl-h">Dugoročna obnova</strong>
+          <p>Uz redovitu uporabu struktura kože ostaje čvršća, a oblikovana linija čeljusti postaje ono što u ogledalu vidite svaki dan.</p>
+        </li>
+      </ol>
     </div>
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
   </div>
 </section>
 
@@ -242,4 +259,16 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-sec .nlf-lead-copy { max-width: 820px; margin: 0 auto 22px !important; text-align: center; }
 .nlf-sec .nlf-lead-copy p { margin-left: auto !important; margin-right: auto !important; }
 .nlf-sec .nlf-lead-copy h2 { text-align: center; }
+.nlf-sub { font-size: 15px; opacity: .8; margin: -4px 0 20px; }
+.nlf-tl { list-style: none; margin: 0; padding: 0 0 0 26px; position: relative; }
+.nlf-tl:before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 2px; background: #e0cdb4; }
+.nlf-tl li { position: relative; margin: 0 0 22px; }
+.nlf-tl li:last-child { margin-bottom: 0; }
+.nlf-tl li:before { content: ""; position: absolute; left: -26px; top: 7px; width: 12px; height: 12px;
+  border-radius: 50%; background: #8a6a45; box-shadow: 0 0 0 4px #fff; }
+.nlf-tl-badge { display: inline-block; background: #efe3d3; color: #6b5334; font-size: 12.5px; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px; margin-right: 10px; vertical-align: middle; }
+.nlf-tl-h { font-size: 19px; font-weight: 700; vertical-align: middle; }
+.nlf-tl li p { font-size: 14.8px; line-height: 1.6; margin: 8px 0 0 !important; opacity: .9; }
+@media (max-width: 820px) { .nlf-tl-badge { display: block; margin: 0 0 6px; } }
 </style>
