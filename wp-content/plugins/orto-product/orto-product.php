@@ -525,6 +525,7 @@ function gck_render_bundle_selector() {
 
     if ( ! $gck_no_attrs && ! $gck_single_size && ! $gck_shgifts && count( $custom_attrs ) < 2 ) return;
 
+    $gck_single_is_color = false; // edini izbirnik je boja (kvadratic uz dropdown)
     $split  = gck_split_attrs_color_size( $custom_attrs );
     $colors = $split['colors'];
     $sizes  = $split['sizes'];
@@ -553,7 +554,7 @@ function gck_render_bundle_selector() {
     } elseif ( $gck_single_size ) {
         // Jedan izbornik. Ako proizvod nema veličinu nego samo boju (NORIKS Dental:
         // Bijela / Crna), boja preuzima ulogu tog jedinog izbornika.
-        if ( empty($sizes) && ! empty($colors) ) { $sizes = $colors; $colors = array(); }
+        if ( empty($sizes) && ! empty($colors) ) { $sizes = $colors; $colors = array(); $gck_single_is_color = true; }
         if ( empty($sizes) ) return;
     } elseif ( ! $gck_shgifts ) {
         if ( empty($colors) || empty($sizes) ) return;
@@ -2020,6 +2021,75 @@ function gck_render_bundle_selector() {
       }
     </style>
     <?php endif; ?>
+    <?php if ( $gck_single_is_color ) : ?>
+    <style>
+      /* Jedan izbornik = boja: broj komada (#1, #2 …) + kvadratic boje uz dropdown. */
+      #bundle-selector .bundle-pairs { counter-reset: clrpair; }
+      #bundle-selector .bundle-pair  { counter-increment: clrpair; }
+      #bundle-selector .bundle-pair .bundle-attr-row {
+          display: flex !important;
+          flex-wrap: nowrap !important;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 8px;
+          width: 100%;
+      }
+      #bundle-selector .bundle-pair .bundle-attr-row:before {
+          content: "#" counter(clrpair);
+          flex: 0 0 24px;
+          text-align: right;
+          font-size: 13px; font-weight: 700; color: #6b6b6b;
+          font-variant-numeric: tabular-nums;
+      }
+      #bundle-selector .gck-color-chip {
+          flex: 0 0 auto;
+          width: 34px; height: 34px;
+          border-radius: 8px;
+          border: 1px solid #d9d9d9;
+          background-size: cover; background-position: center;
+          display: inline-block;
+      }
+      #bundle-selector .bundle-pair .gck-color-select {
+          flex: 1 1 auto;
+          width: auto !important;
+          min-width: 0 !important;
+          font-size: 14px;
+          padding: 9px 26px 9px 10px;
+      }
+      @media (max-width: 600px) {
+          #bundle-selector .bundle-pair .bundle-attr-row { gap: 6px; }
+          #bundle-selector .gck-color-chip { width: 30px; height: 30px; }
+          #bundle-selector .bundle-pair .gck-color-select { font-size: 13px; padding: 9px 22px 9px 8px; }
+      }
+    </style>
+    <script>
+    (function(){
+      /* Kvadratic uz dropdown prati odabranu boju. */
+      function slugify(v){
+        return (v||'').toString().toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+          .replace(/đ/g,'d').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+      }
+      function sync(sel){
+        var chip = sel.parentNode ? sel.parentNode.querySelector('.gck-color-chip') : null;
+        if(!chip) return;
+        chip.className = 'gck-color-chip color-' + slugify(sel.value);
+      }
+      function bind(){
+        var sels = document.querySelectorAll('#bundle-selector .gck-color-select');
+        Array.prototype.forEach.call(sels, function(sel){
+          if(sel.dataset.chipBound) return;
+          sel.dataset.chipBound = '1';
+          sel.addEventListener('change', function(){ sync(sel); });
+          sync(sel);
+        });
+      }
+      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', bind); }
+      else { bind(); }
+      setTimeout(bind, 400);
+    })();
+    </script>
+    <?php endif; ?>
     <?php if ( $gck_no_attrs ) : ?>
     <style>
       /* Bunion (no-attrs): nema selektora — makni divider iznad prazne .bundle-pairs. */
@@ -2376,8 +2446,12 @@ function gck_render_bundle_selector() {
                                     <?php endif; ?>
 
                                     <?php if ( ! empty($size_values) && $target_size_field_key !== '' ) : ?>
+                                        <?php if ( $gck_single_is_color ) : ?>
+                                            <span class="gck-color-chip color-<?php echo esc_attr( sanitize_title( $size_values[0] ) ); ?>"
+                                                  data-chip="1" aria-hidden="true"></span>
+                                        <?php endif; ?>
                                         <select
-                                            class="gck-size-select"
+                                            class="gck-size-select<?php echo $gck_single_is_color ? ' gck-color-select' : ''; ?>"
                                             data-size-key="<?php echo esc_attr($target_size_attr_key); ?>"
                                             data-garment-group="<?php echo (int) $g_index; ?>"
                                             name="pairs[<?php echo esc_attr( $offer_id ); ?>][<?php echo $i; ?>][<?php echo esc_attr( $target_size_field_key ); ?>]">
