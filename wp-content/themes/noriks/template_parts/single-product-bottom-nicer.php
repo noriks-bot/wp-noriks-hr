@@ -144,5 +144,10 @@ if ( noriks_is_type( 'hairmagic' ) ) {
     include $noriks_pb_dir . 'why-hairmagic.php';
 }
 
+// NORIKS LIFT (orto-lift) — kolagenski zavoj za oblikovanje lica
+if ( noriks_is_type( 'lift' ) ) {
+    include $noriks_pb_dir . 'why-lift.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
