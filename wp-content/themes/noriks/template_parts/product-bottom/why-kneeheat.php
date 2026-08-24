@@ -11,6 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $kh      = get_template_directory_uri() . '/img/kneeheat/';
 $kh_path = get_template_directory() . '/img/kneeheat/';
 
+$kh_vid = function( $file, $poster, $alt ) use ( $kh, $kh_path ) {
+  if ( ! file_exists( $kh_path . $file ) ) { return ''; }
+  return '<video class="nkh-video" autoplay muted loop playsinline preload="metadata" '
+       . 'poster="' . esc_url( $kh . $poster ) . '" aria-label="' . esc_attr( $alt ) . '">'
+       . '<source src="' . esc_url( $kh . $file ) . '" type="video/mp4"></video>';
+};
+
 $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   if ( file_exists( $kh_path . $file ) ) {
     return '<img src="' . esc_url( $kh . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
@@ -19,27 +26,91 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 };
 ?>
 
-<!-- 1) Problem — slika lijevo -->
+<!-- 1) Tri koraka — videi -->
 <section class="nkh-sec nkh-light">
+  <div class="nkh-wrap">
+    <p class="nkh-eyebrow nkh-center">Kako djeluje</p>
+    <h2 class="nkh-h2 nkh-center">Olakšanje u 3 jednostavna koraka</h2>
+    <p class="nkh-lead nkh-center">Bez postavljanja, bez aplikacije, bez komplicirane rutine. Namjestite, pritisnite gumb i nastavite s danom.</p>
+    <div class="nkh-steps3">
+      <div class="nkh-step3">
+        <?php echo $kh_vid( 'kh-step-1.mp4', 'kh-step-1.jpg', 'Namještanje omotača oko koljena' ); ?>
+        <div class="nkh-step3-txt">
+          <p class="nkh-step3-h"><span>1</span> Namjestite omotač</p>
+          <p>Postavite ga oko koljena i zategnite trake. Traje 20 sekundi i radi na obje noge.</p>
+        </div>
+      </div>
+      <div class="nkh-step3">
+        <?php echo $kh_vid( 'kh-step-2.mp4', 'kh-step-2.jpg', 'Pokretanje seanse jednim gumbom' ); ?>
+        <div class="nkh-step3-txt">
+          <p class="nkh-step3-h"><span>2</span> Pritisnite gumb</p>
+          <p>Jedan gumb pokreće sve tri terapije — toplinu, kompresiju i vibraciju — točno 12 minuta.</p>
+        </div>
+      </div>
+      <div class="nkh-step3">
+        <?php echo $kh_vid( 'kh-step-3.mp4', 'kh-step-3.jpg', 'Uređaj radi sam dok se odmarate' ); ?>
+        <div class="nkh-step3-txt">
+          <p class="nkh-step3-h"><span>3</span> Nastavite s danom</p>
+          <p>Pogledajte vijesti, popijte kavu. Uređaj radi sam i staje kad seansa završi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2) Zacaran krug — video -->
+<section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-05-garaza.jpg', 'Ukočeno koljeno pri svakodnevnim poslovima' ); ?></div>
+    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-bol.mp4', 'kh-vid-bol.jpg', 'Bol i ukočenost u koljenu' ); ?></div>
     <div class="nkh-copy">
-      <p class="nkh-eyebrow">Kraj stepenicama jednu po jednu</p>
-      <h2 class="nkh-h2">Ukočenost koja se javlja pri ustajanju</h2>
-      <p>Kronična nelagoda u koljenu rijetko nastane preko noći. Godinama se smanjuje dotok krvi u dublje tkivo oko zgloba: tkivo postaje tvrđe, tekućina se zadržava, a pokret se sužava na ono što ne boli.</p>
-      <p class="nkh-strong">NORIKS KneeHeat radi upravo na tome — vraća protok u područje koje ga je izgubilo, umjesto da samo prekriva osjećaj boli.</p>
-      <ul class="nkh-ticks">
-        <li>12 minuta dnevno, dok sjedite</li>
-        <li>Bez tableta, bez gelova, bez kabela</li>
-        <li>Za lijevo i desno koljeno</li>
+      <h2 class="nkh-h2">Prekinite začarani krug. Koljeno je spremno za pravo olakšanje.</h2>
+      <p>Ona tupa bol, ukočenost pri ustajanju, oprezan korak prije silaska niz stepenice — to su znakovi tkiva koje godinama tiho gladuje. Odgovor nije još jedna tableta, nego vraćanje protoka krvi u zglob.</p>
+      <ul class="nkh-tri">
+        <li><strong>12 minuta dnevno:</strong> vraćanje protoka i otpuštanje napetosti, bez tableta.</li>
+        <li><strong>Obnova i oporavak:</strong> toplina širi žile, kompresija ispire oteklinu, vibracija otpušta ukočenost — sve u jednoj seansi.</li>
+        <li><strong>Kretanje bez računice:</strong> stepenice bez planiranja, čučanj u vrtu, unuk u naručju.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- 2) Trostruka metoda — slika desno -->
+<!-- Osjetite razliku — video desno -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Osjetite razliku: trajno olakšanje počinje danas</h2>
+      <p>Ne kratkotrajan mir, nego promjena koju primijetite. <strong>Većina korisnika osjeti pravu razliku unutar prvih 7 do 14 dana</strong> redovite uporabe. Jutarnja ukočenost popušta, silazak niz stepenice prestaje biti računica.</p>
+      <ul class="nkh-tri">
+        <li><strong>Manje ukočenosti i pritiska:</strong> smanjuje napetost i oteklinu koje održavaju tegobe.</li>
+        <li><strong>Bolja cirkulacija:</strong> vraća protok u dublje tkivo koljena — ondje gdje problem zapravo nastaje.</li>
+        <li><strong>Sve kod kuće:</strong> bez odlazaka na terapije i bez čekanja termina.</li>
+      </ul>
+    </div>
+    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-zglob.mp4', 'kh-vid-zglob.jpg', 'Prikaz koljenskog zgloba' ); ?></div>
+  </div>
+</section>
+
+<!-- Pametna tehnologija — video lijevo -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-led.mp4', 'kh-vid-led.jpg', 'Grijaći elementi u omotaču' ); ?></div>
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Pametna tehnologija za dublje tkivo</h2>
+      <p>NORIKS KneeHeat prilagodite svom koljenu: <strong>3 stupnja topline</strong>, <strong>3 načina vibracije</strong> i <strong>cikličnu kompresiju</strong>. Bez kabela, jedan gumb, dvanaest minuta.</p>
+      <ul class="nkh-tri">
+        <li><strong>Uvijek spreman:</strong> bežičan rad i punjenje preko USB-C kabela.</li>
+        <li><strong>Prijenosan:</strong> lagan je i stane u torbu — koristite ga gdje god ste.</li>
+        <li><strong>Jednostavno upravljanje:</strong> jedan gumb, bez aplikacije i bez postavljanja.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2) Trostruka metoda — slika desno -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Tri terapije u jednoj seansi</h2>
       <p>Grijač, kompresija i vibracija ne rade jedno za drugim, nego istovremeno — zato jedna seansa traje samo 12 minuta.</p>
@@ -54,21 +125,6 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   </div>
 </section>
 
-<!-- 3) Kako se koristi — slika lijevo -->
-<section class="nkh-sec nkh-light">
-  <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-10-sjedi.jpg', 'Seansa od 12 minuta u fotelji' ); ?></div>
-    <div class="nkh-copy">
-      <h2 class="nkh-h2">Tri koraka, 12 minuta</h2>
-      <ol class="nkh-steps">
-        <li><span>1</span><div><strong>Namjestite omotač.</strong> Postavite ga oko koljena i zategnite trake. Traje 20 sekundi i radi na obje noge.</div></li>
-        <li><span>2</span><div><strong>Pritisnite gumb.</strong> Jedan gumb pokreće sve tri terapije. Stupanj topline i način vibracije birate po osjećaju.</div></li>
-        <li><span>3</span><div><strong>Nastavite s danom.</strong> Popijte kavu, pogledajte vijesti — uređaj radi sam i staje nakon 12 minuta.</div></li>
-      </ol>
-      <p class="nkh-note">Većina korisnika osjeti da je koljeno rastresenije već nakon prve seanse, a osjetniju promjenu kroz 7 do 14 dana svakodnevne uporabe.</p>
-    </div>
-  </div>
-</section>
 
 <!-- 4) Značajke uređaja — slika desno -->
 <section class="nkh-sec nkh-white">
@@ -176,6 +232,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   .nkh-wrap { padding-left: 0; padding-right: 0; }
   .nkh-h2 { font-size: 22px; }
   .nkh-row { grid-template-columns: 1fr; gap: 18px; }
+  .nkh-steps3 { grid-template-columns: 1fr; gap: 18px; }
   .nkh-three { grid-template-columns: 1fr; gap: 14px; }
   .nkh-row .nkh-media { order: -1; }
 }
@@ -194,4 +251,15 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #c1601f !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.nkh-center { text-align: center; }
+.nkh-lead { max-width: 720px; margin: 0 auto 22px; opacity: .85; }
+.nkh-steps3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.nkh-step3 { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
+.nkh-step3 .nkh-video { width: 100%; height: auto; display: block; }
+.nkh-step3-txt { padding: 16px 18px 20px; }
+.nkh-step3-h { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; margin: 0 0 6px !important; }
+.nkh-step3-h span { flex: 0 0 auto; width: 27px; height: 27px; border-radius: 50%; background: #c1601f; color: #fff;
+                    font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.nkh-step3-txt p:last-child { font-size: 14.5px; margin: 0 !important; }
+.nkh-media .nkh-video { width: 100%; height: auto; display: block; border-radius: 14px; }
 </style>
