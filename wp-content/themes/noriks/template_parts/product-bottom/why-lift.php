@@ -19,23 +19,23 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 };
 ?>
 
-<!-- 1) Prije i poslije — prva sekcija -->
+<!-- 1) Prije i poslije — tri slike u nizu -->
 <section class="nlf-sec nlf-cream">
-  <div class="nlf-wrap nlf-row">
-    <div class="nlf-media"><?php echo $lf_img( 'lift-03-pp7.jpg', 'Prije i nakon 7 tjedana' ); ?></div>
-    <div class="nlf-copy">
+  <div class="nlf-wrap">
+    <div class="nlf-lead-copy">
       <h2 class="nlf-h2">Stvarne korisnice, stvarni tjedni</h2>
       <p>Fotografije su snimljene kod kuće, bez filtera i bez profesionalnog svjetla — isti kut, isto svjetlo, razmak od nekoliko tjedana.</p>
       <p>Ono što se prvo mijenja nije bora, nego <strong>obris</strong>: donji dio lica djeluje lakše, a linija čeljusti se jasnije odvaja od vrata.</p>
-      <div class="nlf-stats">
-        <div><strong>96 %</strong><span>odmah je primijetilo manju oteklinu</span></div>
-        <div><strong>92 %</strong><span>vidljivo podizanje nakon 4 tjedna</span></div>
-        <div><strong>91 %</strong><span>sigurnije se osjeća na fotografijama</span></div>
-      </div>
-      <div class="nlf-mini">
-        <figure><?php echo $lf_img( 'lift-04-pp10.jpg', 'Prije i nakon 10 tjedana' ); ?><figcaption>10 tjedana</figcaption></figure>
-        <figure><?php echo $lf_img( 'lift-05-pp11.jpg', 'Prije i nakon 11 tjedana' ); ?><figcaption>11 tjedana</figcaption></figure>
-      </div>
+    </div>
+    <div class="nlf-three">
+      <figure><?php echo $lf_img( 'lift-03-pp7.jpg',  'Prije i nakon 7 tjedana' ); ?><figcaption>Nakon 7 tjedana</figcaption></figure>
+      <figure><?php echo $lf_img( 'lift-04-pp10.jpg', 'Prije i nakon 10 tjedana' ); ?><figcaption>Nakon 10 tjedana</figcaption></figure>
+      <figure><?php echo $lf_img( 'lift-05-pp11.jpg', 'Prije i nakon 11 tjedana' ); ?><figcaption>Nakon 11 tjedana</figcaption></figure>
+    </div>
+    <div class="nlf-stats nlf-stats-wide">
+      <div><strong>96 %</strong><span>odmah je primijetilo manju oteklinu</span></div>
+      <div><strong>92 %</strong><span>vidljivo podizanje nakon 4 tjedna</span></div>
+      <div><strong>91 %</strong><span>sigurnije se osjeća na fotografijama</span></div>
     </div>
   </div>
 </section>
@@ -194,6 +194,14 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-weeks { list-style: none; padding: 0; margin: 10px 0 0; }
 .nlf-weeks li { border-left: 3px solid #d8bd97; padding: 2px 0 2px 14px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .nlf-weeks strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: #8a6a45; margin-bottom: 2px; }
+.nlf-lead-copy { max-width: 760px; margin: 0 0 20px; }
+.nlf-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 18px; }
+.nlf-three figure { margin: 0; }
+.nlf-three img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.nlf-three figcaption { text-align: center; font-size: 13px; margin-top: 7px; opacity: .72; }
+.nlf-stats-wide div { padding: 16px 12px; }
+.nlf-stats-wide strong { font-size: 26px; }
+.nlf-stats-wide span { font-size: 13.5px; }
 .nlf-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 14px; }
 .nlf-stats div { background: rgba(165,130,90,.12); border-radius: 10px; padding: 12px 10px; text-align: center; }
 .nlf-stats strong { display: block; font-size: 22px; color: #8a6a45; line-height: 1.1; }
@@ -208,6 +216,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ece0cf; border-radius: 12px; color: #8a6a45; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nlf-sec { padding: 28px 0; }
+  .nlf-three { grid-template-columns: 1fr; gap: 14px; }
   .nlf-h2 { font-size: 22px; }
   .nlf-row { grid-template-columns: 1fr; gap: 18px; }
   .nlf-row .nlf-media { order: -1; }
