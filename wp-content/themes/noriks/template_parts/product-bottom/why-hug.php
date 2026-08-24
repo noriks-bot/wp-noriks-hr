@@ -19,20 +19,36 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 };
 ?>
 
-<!-- 1) Toplina koja ostaje na mjestu — slika lijevo -->
+
+<!-- 1) Mnenja kupcev — tri fotografije -->
 <section class="nhg-sec nhg-warm">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-media"><?php echo $hg_img( 'hug-05-na-tijelu.jpg', 'Nosivi termofor na trbuhu' ); ?></div>
-    <div class="nhg-copy">
-      <p class="nhg-eyebrow">Zagrljaj koji ide s vama</p>
-      <h2 class="nhg-h2">Toplina koja ostaje točno gdje treba</h2>
-      <p>Klasičan termofor sklizne čim ustanete, a grijaći jastuk vas veže za utičnicu. NORIKS Hugger se pričvrsti oko struka i ostaje na mjestu — na trbuhu, križima ili leđima.</p>
-      <p class="nhg-strong">Ruke ostaju slobodne: možete kuhati, raditi za stolom, gledati seriju ili zaspati s njim.</p>
-      <ul class="nhg-ticks">
-        <li>Prirodno i trenutno olakšanje kod grčeva i bolova</li>
-        <li>Bez kabela, baterije i utičnice</li>
-        <li>Opseg struka 70 – 93 cm, s produžetkom do 110 cm</li>
-      </ul>
+  <div class="nhg-wrap">
+    <h2 class="nhg-h2">Što nam kupci pišu</h2>
+    <div class="nhg-fb">
+      <figure>
+        <?php echo $hg_img( 'hug-fb-1.jpg', 'Recenzija kupca s NORIKS Huggerom' ); ?>
+        <figcaption>
+          <strong>Izum koji mijenja dan</strong>
+          <span class="nhg-stars">★★★★★ <em>5/5</em></span>
+          <p>„Imam endometriozu i grčeve koje tablete jedva ublaže. Prije sam si termofor gurala pod trenirku i nadala se najboljem — ovako ostane točno na mjestu i mogu normalno funkcionirati.”</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <?php echo $hg_img( 'hug-fb-2.jpg', 'Recenzija kupca s NORIKS Huggerom' ); ?>
+        <figcaption>
+          <strong>„Nevjerojatan proizvod"</strong>
+          <span class="nhg-stars">★★★★★ <em>5/5</em></span>
+          <p>„Iznenadila me kvaliteta materijala — jako je mekan. Nosim ga cijeli dan, s bocom sprijeda ili straga, ovisno o tome što me taj dan muči.”</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <?php echo $hg_img( 'hug-fb-3.jpg', 'Recenzija kupca s NORIKS Huggerom' ); ?>
+        <figcaption>
+          <strong>„Ne skidam ga!"</strong>
+          <span class="nhg-stars">★★★★★ <em>5/5</em></span>
+          <p>„Kupila sam ga prije tjedan dana i doslovno ga ne skidam. Savršen je kad zatreba topline — i za grčeve i za križa nakon dugog dana.”</p>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -128,35 +144,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   </div>
 </section>
 
-<!-- 8) Recenzije korisnica — tri slike u nizu -->
-<section class="nhg-sec nhg-white">
-  <div class="nhg-wrap">
-    <div class="nhg-lead-copy">
-      <p class="nhg-stars">★★★★★</p>
-      <h2 class="nhg-h2">Ono što kupci najčešće kažu</h2>
-      <p>Da im je toplina konačno ostala na mjestu dok rade i hodaju po kući, da je krzno ugodnije nego što su očekivali i da je ispao odličan poklon.</p>
-      <p class="nhg-strong">Najčešća rečenica: „Trebala sam ga kupiti prije godinu dana.”</p>
-    </div>
-    <div class="nhg-three">
-      <figure><?php echo $hg_img( 'hug-10-helena.jpg', 'Recenzija korisnice Helene' ); ?></figure>
-      <figure><?php echo $hg_img( 'hug-11-ivana.jpg', 'Recenzija korisnice Ivane' ); ?></figure>
-      <figure><?php echo $hg_img( 'hug-06-kupci.jpg', 'Zadovoljni kupci' ); ?></figure>
-    </div>
-  </div>
-</section>
 
-<!-- 9) Jamstvo — slika lijevo -->
-<section class="nhg-sec nhg-warm">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-media"><?php echo $hg_img( 'hug-16-pas.jpg', 'NORIKS Hugger oko struka' ); ?></div>
-    <div class="nhg-copy">
-      <h2 class="nhg-h2">30 dana za povrat</h2>
-      <p>Isprobajte ga kod kuće. Ako vam ne odgovara, javite nam se unutar 30 dana i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
-      <p>Termofor i navlaka stižu zajedno, spremni za prvu večer — ne treba dokupljivati bocu ni tražiti pravu veličinu.</p>
-      <p class="nhg-strong">Dostava kreće u roku od 24 sata od narudžbe.</p>
-    </div>
-  </div>
-</section>
 
 <style>
 .nhg-sec { padding: 46px 0; }
@@ -192,6 +180,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   .nhg-wrap { padding-left: 0; padding-right: 0; }
   .nhg-h2 { font-size: 22px; }
   .nhg-row { grid-template-columns: 1fr; gap: 18px; }
+  .nhg-fb { grid-template-columns: 1fr; gap: 22px; }
   .nhg-three { grid-template-columns: 1fr; gap: 14px; }
   .nhg-row .nhg-media { order: -1; }
 }
@@ -210,4 +199,12 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #d24a2a !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.nhg-fb { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 18px; }
+.nhg-fb figure { margin: 0; }
+.nhg-fb img { width: 100%; height: auto; display: block; border-radius: 14px; }
+.nhg-fb figcaption { padding-top: 12px; }
+.nhg-fb figcaption strong { display: block; font-size: 19px; line-height: 1.25; margin-bottom: 4px; }
+.nhg-fb .nhg-stars { display: block; font-size: 15px; margin: 0 0 8px; }
+.nhg-fb .nhg-stars em { font-style: normal; color: #6b625c; font-size: 14px; }
+.nhg-fb p { font-size: 14.5px; line-height: 1.6; margin: 0; }
 </style>
