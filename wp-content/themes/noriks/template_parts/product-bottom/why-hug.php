@@ -112,8 +112,16 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   <div class="nhg-wrap nhg-row">
     <div class="nhg-copy">
       <h2 class="nhg-h2">Zašto grije duže od običnog termofora</h2>
-      <p>Navlaka ima <strong>dvostruki sloj izolacije</strong>, pa temperatura ostaje ugodna satima — bez skoka od prevruće do mlake nakon deset minuta.</p>
-      <p class="nhg-strong">Krakovi drže bocu uz tijelo, pa se toplina zadržava između navlake i vas, a ne bježi u sobu.</p>
+      <p>Klasičan termofor ima jedan problem: prvih deset minuta je prevruć, a onda naglo postane mlak. Razlog je jednostavan — toplina bježi u sobu jer je ništa ne zadržava uz tijelo.</p>
+      <p>NORIKS Hugger rješava oboje. Navlaka ima <strong>dvostruki sloj izolacije</strong>: gušći sloj prema van zadržava toplinu, mekano krzno prema koži je ublažava, pa nema onog prvog vrelog šoka.</p>
+      <p class="nhg-strong">Krakovi na čičak drže bocu pritisnutu uz tijelo, pa toplina ide u vas, a ne u zrak.</p>
+      <ul class="nhg-ticks">
+        <li><strong>Ugodna temperatura satima</strong>, bez skoka od vrućeg do mlakog</li>
+        <li><strong>Toplina ostaje na jednom mjestu</strong> — na trbuhu ili križima, ondje gdje ste je stavili</li>
+        <li><strong>Ne treba je pridržavati</strong>: ruke su slobodne dok kuhate, radite ili spavate</li>
+        <li><strong>Bez struje i bez čekanja</strong> — dovoljan je čajnik, spremna je za minutu</li>
+      </ul>
+      <p class="nhg-note">Za usporedbu: termofor ispod deke ohladi se čim ustanete i deka sklizne. Hugger ide s vama i toplina traje koliko i voda u boci.</p>
     </div>
     <div class="nhg-media"><?php echo $hg_img( 'hug-01-sofa.jpg', 'Nosivi termofor na kauču' ); ?></div>
   </div>
