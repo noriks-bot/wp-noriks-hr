@@ -128,20 +128,20 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   </div>
 </section>
 
-<!-- 8) Recenzije korisnica — slika desno -->
+<!-- 8) Recenzije korisnica — tri slike u nizu -->
 <section class="nhg-sec nhg-white">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-copy">
+  <div class="nhg-wrap">
+    <div class="nhg-lead-copy">
       <p class="nhg-stars">★★★★★</p>
       <h2 class="nhg-h2">Ono što kupci najčešće kažu</h2>
       <p>Da im je toplina konačno ostala na mjestu dok rade i hodaju po kući, da je krzno ugodnije nego što su očekivali i da je ispao odličan poklon.</p>
       <p class="nhg-strong">Najčešća rečenica: „Trebala sam ga kupiti prije godinu dana.”</p>
-      <div class="nhg-mini">
-        <figure><?php echo $hg_img( 'hug-10-helena.jpg', 'Recenzija korisnice Helene' ); ?></figure>
-        <figure><?php echo $hg_img( 'hug-11-ivana.jpg', 'Recenzija korisnice Ivane' ); ?></figure>
-      </div>
     </div>
-    <div class="nhg-media"><?php echo $hg_img( 'hug-06-kupci.jpg', 'Zadovoljni kupci' ); ?></div>
+    <div class="nhg-three">
+      <figure><?php echo $hg_img( 'hug-10-helena.jpg', 'Recenzija korisnice Helene' ); ?></figure>
+      <figure><?php echo $hg_img( 'hug-11-ivana.jpg', 'Recenzija korisnice Ivane' ); ?></figure>
+      <figure><?php echo $hg_img( 'hug-06-kupci.jpg', 'Zadovoljni kupci' ); ?></figure>
+    </div>
   </div>
 </section>
 
@@ -152,6 +152,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
     <div class="nhg-copy">
       <h2 class="nhg-h2">30 dana za povrat</h2>
       <p>Isprobajte ga kod kuće. Ako vam ne odgovara, javite nam se unutar 30 dana i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
+      <p>Termofor i navlaka stižu zajedno, spremni za prvu večer — ne treba dokupljivati bocu ni tražiti pravu veličinu.</p>
       <p class="nhg-strong">Dostava kreće u roku od 24 sata od narudžbe.</p>
     </div>
   </div>

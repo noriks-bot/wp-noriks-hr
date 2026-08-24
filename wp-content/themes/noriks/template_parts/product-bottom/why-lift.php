@@ -98,6 +98,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
     <div class="nlf-copy">
       <h2 class="nlf-h2">Dizajnirano od stručnjaka</h2>
       <p class="nlf-quote">„NORIKS sustav kompresijskog oblikovanja u klasi je za sebe. Spajanjem ciljane kompresije s tehnologijom kolagena od 300 daltona premošćuje jaz između kućne njege i profesionalnih tretmana.”</p>
+      <p>Razlika je u veličini molekule: obični kolagen ostaje na površini, dok molekula od 300 daltona prolazi rožnati sloj i dolazi do mjesta gdje struktura kože zapravo nastaje.</p>
       <p class="nlf-sign">Dr. Soo-Yeon Kim, dermatologinja</p>
     </div>
   </div>

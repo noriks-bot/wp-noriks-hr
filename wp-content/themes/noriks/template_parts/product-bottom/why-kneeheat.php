@@ -101,19 +101,19 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   </div>
 </section>
 
-<!-- 6) Tiskani vodiči — slika desno -->
+<!-- 6) Tiskani vodiči — tri slike u nizu -->
 <section class="nkh-sec nkh-white">
-  <div class="nkh-wrap nkh-row">
-    <div class="nkh-copy">
+  <div class="nkh-wrap">
+    <div class="nkh-lead-copy">
       <h2 class="nkh-h2">Uređaj je pola posla</h2>
       <p>Uz KneeHeat dolazi tiskani plan koji vas vodi kroz prvih 90 dana: koliko seansi tjedno, koje vježbe dodati i na što paziti kod dužeg stajanja.</p>
       <p class="nkh-strong">Vodič „Sloboda od boli” objašnjava zašto koljeno postaje ukočeno i što svakodnevno možete promijeniti — jednostavnim jezikom, bez medicinskog žargona.</p>
-      <div class="nkh-mini">
-        <figure><?php echo $kh_img( 'kh-03-knjiga.jpg', 'Vodič Sloboda od boli' ); ?></figure>
-        <figure><?php echo $kh_img( 'kh-12-tiskovine.jpg', 'Tiskani materijali uz uređaj' ); ?></figure>
-      </div>
     </div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-06-unboxing-v.jpg', 'Pakiranje NORIKS KneeHeat' ); ?></div>
+    <div class="nkh-three">
+      <figure><?php echo $kh_img( 'kh-03-knjiga.jpg', 'Vodič Sloboda od boli' ); ?><figcaption>Vodič „Sloboda od boli”</figcaption></figure>
+      <figure><?php echo $kh_img( 'kh-12-tiskovine.jpg', 'Tiskani materijali uz uređaj' ); ?><figcaption>Plan oporavka i materijali</figcaption></figure>
+      <figure><?php echo $kh_img( 'kh-06-unboxing-v.jpg', 'Pakiranje NORIKS KneeHeat' ); ?><figcaption>Pakiranje</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -179,6 +179,11 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .nkh-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c1601f; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.nkh-lead-copy { max-width: 780px; margin: 0 0 20px; }
+.nkh-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.nkh-three figure { margin: 0; }
+.nkh-three img { width: 100%; height: 260px; object-fit: contain; background: #f6f2ec; display: block; border-radius: 12px; }
+.nkh-three figcaption { text-align: center; font-size: 13px; margin-top: 7px; opacity: .72; }
 .nkh-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .nkh-mini figure { margin: 0; }
 .nkh-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
@@ -187,6 +192,8 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   .nkh-sec { padding: 28px 0; }
   .nkh-h2 { font-size: 22px; }
   .nkh-row { grid-template-columns: 1fr; gap: 18px; }
+  .nkh-three { grid-template-columns: 1fr; gap: 14px; }
+  .nkh-three img { height: auto; }
   .nkh-row .nkh-media { order: -1; }
   .nkh-media img { max-height: 340px; }
 }
