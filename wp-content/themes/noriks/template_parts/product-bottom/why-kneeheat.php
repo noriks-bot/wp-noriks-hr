@@ -75,14 +75,9 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   <div class="nkh-wrap nkh-row">
     <div class="nkh-copy">
       <h2 class="nkh-h2">Napravljen da se nosi, ne da stoji u ladici</h2>
-      <ul class="nkh-ticks">
-        <li>Ergonomski oblikovan omotač koji prati zglob</li>
-        <li>Podesive trake za siguran pristanak, plus produžna traka za veće opsege</li>
-        <li>Mekana i prozračna tkanina uz kožu</li>
-        <li>3 stupnja topline i 3 načina vibracije</li>
-        <li>Bežičan rad i punjenje preko USB-C kabela</li>
-      </ul>
-      <p class="nkh-strong">Jedno punjenje traje više seansi, pa uređaj možete ponijeti na posao ili na put.</p>
+      <p>Upravljačka ploča je na vanjskoj strani, nadohvat ruke: <strong>jedan dodir mijenja stupanj topline</strong>, drugi način vibracije. Nema izbornika ni aplikacije koju treba tražiti u mraku.</p>
+      <p>Omotač se zatvara preko dvije trake, pa čvrstoću birate sami — labavije dok sjedite, čvršće dok hodate po kući. Uređaj tada ostaje na mjestu i ne rotira oko noge.</p>
+      <p class="nkh-strong">Bežičan je i puni se USB-C kabelom; jedno punjenje traje više seansi, pa ide s vama na posao ili na put.</p>
     </div>
     <div class="nkh-media"><?php echo $kh_img( 'kh-11-znacajke.jpg', 'Značajke uređaja NORIKS KneeHeat' ); ?></div>
   </div>

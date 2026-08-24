@@ -69,14 +69,10 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 <section class="nhg-sec nhg-white">
   <div class="nhg-wrap nhg-row">
     <div class="nhg-copy">
-      <h2 class="nhg-h2">Zbog čega ga korisnice ne ispuštaju iz ruku</h2>
-      <ul class="nhg-ticks">
-        <li>Kod menstrualnih grčeva i bolova u križima</li>
-        <li>Za hladna jutra i rad za stolom u prohladnoj sobi</li>
-        <li>Super mekano krzno ugodno uz kožu</li>
-        <li>Savršen poklon — dolazi u urednom pakiranju</li>
-        <li>30 dana za povrat novca</li>
-      </ul>
+      <h2 class="nhg-h2">Kad se najčešće poseže za njim</h2>
+      <p>Prvi dan ciklusa, dok grčevi ne popuste. Poslije duge vožnje ili smjene na nogama, kad se križa jave. U prohladnom uredu, gdje grijanje nikad nije taman.</p>
+      <p>Za razliku od grijaćeg jastuka ne veže vas za utičnicu, a za razliku od gel-obloga ne treba mikrovalna — dovoljan je čajnik.</p>
+      <p class="nhg-strong">Zato često završi kao poklon: dolazi u urednom pakiranju i ne treba mu ništa dodatno kupovati.</p>
     </div>
     <div class="nhg-media"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
   </div>
@@ -108,6 +104,8 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
       <p class="nhg-strong">Sve je iz iste linije, u istim nijansama — bež i taupe.</p>
       <div class="nhg-mini">
         <figure><?php echo $hg_img( 'hug-02-extender-bez.jpg', 'Produžetak veličine, bež' ); ?></figure>
+        <figure><?php echo $hg_img( 'hug-03-extender-taupe.jpg', 'Produžetak veličine, taupe' ); ?></figure>
+        <figure><?php echo $hg_img( 'hug-13-vrecica.jpg', 'Putna vrećica' ); ?></figure>
         <figure><?php echo $hg_img( 'hug-14-vrecica-boca.jpg', 'Putna vrećica s termoforom' ); ?></figure>
       </div>
     </div>

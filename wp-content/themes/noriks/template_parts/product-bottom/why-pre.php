@@ -41,13 +41,10 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 <section class="npr-sec npr-white">
   <div class="npr-wrap npr-row">
     <div class="npr-copy">
-      <h2 class="npr-h2">Kako se namješta</h2>
-      <ol class="npr-steps">
-        <li><span>1</span><div><strong>Prilagodite duljinu.</strong> Namjestite jastuk tako da udobno nalijeglo uz leđa i trbuščić.</div></li>
-        <li><span>2</span><div><strong>Dodajte jastučić.</strong> Manji jastučić stavite sprijeda ili straga za dodatnu potporu — ili među koljena.</div></li>
-        <li><span>3</span><div><strong>Pronađite svoj položaj.</strong> Svi smo različiti; isprobajte nekoliko kombinacija dok ne nađete onu koja vam odgovara.</div></li>
-      </ol>
-      <p class="npr-note">Okretanje na drugu stranu ne traži preslagivanje — jastuk jednostavno prebacite sa sobom.</p>
+      <h2 class="npr-h2">Namjestite ga jednom, ostaje cijelu noć</h2>
+      <p>Krila se razmiču i skupljaju, pa razmak podesite prema trbuščiću — u 20. tjednu drukčije nego u 35. Kad jednom pogodite svoju širinu, jastuk ostaje takav i ne treba ga svaku večer namještati iznova.</p>
+      <p>Manji jastučić je tu za mjesto koje vas trenutno najviše smeta: pod trbuh kad vuče prema naprijed, iza leđa kad želite polulezeći položaj ili među koljena kad se jave kukovi.</p>
+      <p class="npr-strong">Okretanje na drugu stranu ne traži preslagivanje — jastuk jednostavno prebacite sa sobom.</p>
     </div>
     <div class="npr-media"><?php echo $pr_img( 'pre-08-kako.jpg', 'Kako funkcionira jastuk za trudnice' ); ?></div>
   </div>
@@ -119,10 +116,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
       <h2 class="npr-h2">San koji zaslužujete</h2>
       <p>Umjesto prevrtanja i traženja položaja do tri ujutro — jedan jastuk koji ostaje na mjestu i kad se okrenete.</p>
       <p class="npr-strong">Lagan je i prenosiv, pa ide s vama na vikend, k mami ili u rodilište.</p>
-      <div class="npr-mini">
-        <figure><?php echo $pr_img( 'pre-03.jpg', 'Jastuk za trudnice NORIKS Pre' ); ?></figure>
-        <figure><?php echo $pr_img( 'pre-06.jpg', 'Jastuk za trudnice NORIKS Pre' ); ?></figure>
-      </div>
+      <figure class="npr-inline"><?php echo $pr_img( 'pre-03.jpg', 'Jastuk za trudnice NORIKS Pre' ); ?></figure>
     </div>
   </div>
 </section>
@@ -135,7 +129,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
       <p>Isprobajte jastuk 90 noći. Ako vam ne odgovara, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
       <p class="npr-strong">Uz to ide i 12 mjeseci jamstva na izradu.</p>
     </div>
-    <div class="npr-media"><?php echo $pr_img( 'pre-01-potpora.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></div>
+    <div class="npr-media"><?php echo $pr_img( 'pre-06.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></div>
   </div>
 </section>
 
@@ -159,6 +153,8 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .npr-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c47b8a; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.npr-inline { margin: 14px 0 0; }
+.npr-inline img { width: 100%; height: auto; border-radius: 10px; display: block; }
 .npr-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .npr-mini figure { margin: 0; }
 .npr-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
