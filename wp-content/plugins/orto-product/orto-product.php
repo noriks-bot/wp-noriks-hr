@@ -508,8 +508,8 @@ function gck_render_bundle_selector() {
         ? array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' )
         : array();
 
-    $gck_no_attrs    = has_term( array( 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre' ), 'product_cat', $product_id );
 
     // SHGIFTS (orto-majica-darila): the SAME split-garment selector as SHBOX,
     // extended to 3 garment groups (4 majica + 1 bokserica + 1 čarapa). Gated
@@ -707,6 +707,9 @@ function gck_render_bundle_selector() {
       }
       .color-smeda { background: #9f6f4e; }
       .color-taupe { background: #a89684; }
+      .color-tirkizna { background: #57bfb5; }
+      .color-breskva { background: #f0bfa2; }
+      .color-krem { background: #f0e7d6; }
       .color-zelena { background: #65633c; }
       .color-tamnoplava { background: #2a3262; }
 
@@ -2024,70 +2027,136 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
     <?php if ( $gck_single_is_color ) : ?>
     <style>
-      /* Jedan izbornik = boja: broj komada (#1, #2 …) + kvadratic boje uz dropdown. */
+      /* Jedan izbornik = boja: broj komada (#1, #2 …) + uzorak boje UNUTAR izbornika. */
       #bundle-selector .bundle-pairs { counter-reset: clrpair; }
       #bundle-selector .bundle-pair  { counter-increment: clrpair; }
       #bundle-selector .bundle-pair .bundle-attr-row {
-          display: flex !important;
-          flex-wrap: nowrap !important;
-          align-items: center;
-          justify-content: flex-start;
-          gap: 8px;
-          width: 100%;
+          display: flex !important; flex-wrap: nowrap !important; align-items: center;
+          justify-content: flex-start; gap: 8px; width: 100%;
       }
       #bundle-selector .bundle-pair .bundle-attr-row:before {
           content: "#" counter(clrpair);
-          flex: 0 0 24px;
-          text-align: right;
-          font-size: 13px; font-weight: 700; color: #6b6b6b;
-          font-variant-numeric: tabular-nums;
+          flex: 0 0 24px; text-align: right;
+          font-size: 13px; font-weight: 700; color: #6b6b6b; font-variant-numeric: tabular-nums;
       }
-      #bundle-selector .gck-color-chip {
-          flex: 0 0 auto;
-          width: 34px; height: 34px;
-          border-radius: 8px;
-          border: 1px solid #d9d9d9;
-          background-size: cover; background-position: center;
-          display: inline-block;
+      #bundle-selector .gck-cdd { position: relative; flex: 1 1 auto; min-width: 0; max-width: 260px; }
+      #bundle-selector .gck-cdd-btn {
+          display: flex; align-items: center; gap: 9px; width: 100%; box-sizing: border-box;
+          border: 1px solid #111; border-radius: 4px; background: #fff; cursor: pointer;
+          padding: 8px 26px 8px 10px; font-size: 15px; font-weight: 600; color: #333; text-align: left; min-height: 38px;
       }
-      #bundle-selector .bundle-pair .gck-color-select {
-          flex: 1 1 auto;
-          width: auto !important;
-          min-width: 0 !important;
-          font-size: 14px;
-          padding: 9px 26px 9px 10px;
-      }
+      #bundle-selector .gck-cdd-sw { flex: 0 0 20px; width: 20px; height: 20px; border-radius: 4px; border: 1px solid rgba(0,0,0,.2); }
+      #bundle-selector .gck-cdd-car { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;
+          width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid #444; }
+      #bundle-selector .gck-cdd-list { display: none; position: absolute; left: 0; top: calc(100% + 4px); z-index: 60;
+          width: max-content; min-width: 100%; max-height: 268px; overflow-y: auto; background: #fff;
+          border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 10px 26px rgba(0,0,0,.16); padding: 4px; }
+      #bundle-selector .gck-cdd-list.is-open { display: block; }
+      #bundle-selector .gck-cdd-opt { display: flex; align-items: center; gap: 10px; padding: 8px 12px 8px 10px;
+          border-radius: 4px; cursor: pointer; font-size: 15px; font-weight: 600; color: #333; white-space: nowrap; }
+      #bundle-selector .gck-cdd-opt:hover { background: #f6f6f6; }
+      #bundle-selector .gck-cdd-opt[aria-selected="true"] { background: #fff1e9; font-weight: 700; }
+      #bundle-selector .gck-color-select.is-hidden { position: absolute !important; width: 1px !important; height: 1px !important;
+          opacity: 0 !important; pointer-events: none !important; }
       @media (max-width: 600px) {
           #bundle-selector .bundle-pair .bundle-attr-row { gap: 6px; }
-          #bundle-selector .gck-color-chip { width: 30px; height: 30px; }
-          #bundle-selector .bundle-pair .gck-color-select { font-size: 13px; padding: 9px 22px 9px 8px; }
+          #bundle-selector .gck-cdd-btn { font-size: 14px; padding: 8px 24px 8px 9px; }
       }
     </style>
     <script>
     (function(){
-      /* Kvadratic uz dropdown prati odabranu boju. */
+      /* Izbornik boje s uzorkom UNUTAR polja — isti princip kao alternativni izbornici na majicama. */
       function slugify(v){
-        return (v||'').toString().toLowerCase()
-          .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-          .replace(/đ/g,'d').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+        return (v||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+          .replace(/\u0111/g,'d').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
       }
-      function sync(sel){
-        var chip = sel.parentNode ? sel.parentNode.querySelector('.gck-color-chip') : null;
-        if(!chip) return;
-        chip.className = 'gck-color-chip color-' + slugify(sel.value);
+      var probeCache = {};
+      function colorOf(val){
+        var slug = slugify(val);
+        if(probeCache[slug]) return probeCache[slug];
+        var el = document.createElement('span');
+        el.className = 'swatch-circle color-' + slug;
+        el.style.position = 'absolute'; el.style.left = '-9999px';
+        document.body.appendChild(el);
+        var cs = getComputedStyle(el);
+        var out = { bg: cs.backgroundColor, img: cs.backgroundImage };
+        document.body.removeChild(el);
+        probeCache[slug] = out;
+        return out;
       }
-      function bind(){
-        var sels = document.querySelectorAll('#bundle-selector .gck-color-select');
-        Array.prototype.forEach.call(sels, function(sel){
-          if(sel.dataset.chipBound) return;
-          sel.dataset.chipBound = '1';
-          sel.addEventListener('change', function(){ sync(sel); });
-          sync(sel);
+      function paint(node, val){
+        var c = colorOf(val);
+        node.style.setProperty('background-color', c.bg, 'important');
+        if(c.img && c.img !== 'none'){
+          node.style.setProperty('background-image', c.img, 'important');
+          node.style.setProperty('background-size', 'cover', 'important');
+          node.style.setProperty('background-position', 'center', 'important');
+        } else {
+          node.style.removeProperty('background-image');
+        }
+      }
+      var regs = [];
+      function buildOne(sel){
+        if(sel.dataset.cddDone) return;
+        sel.dataset.cddDone = '1';
+        var wrap = document.createElement('span'); wrap.className = 'gck-cdd';
+        var btn  = document.createElement('button'); btn.type = 'button'; btn.className = 'gck-cdd-btn';
+        btn.setAttribute('aria-haspopup','listbox'); btn.setAttribute('aria-expanded','false');
+        var sw   = document.createElement('span'); sw.className = 'gck-cdd-sw';
+        var lab  = document.createElement('span'); lab.style.flex = '1 1 auto'; lab.style.overflow = 'hidden';
+        lab.style.textOverflow = 'ellipsis'; lab.style.whiteSpace = 'nowrap';
+        btn.appendChild(sw); btn.appendChild(lab);
+        var car  = document.createElement('span'); car.className = 'gck-cdd-car';
+        var list = document.createElement('div'); list.className = 'gck-cdd-list'; list.setAttribute('role','listbox');
+        wrap.appendChild(btn); wrap.appendChild(car); wrap.appendChild(list);
+
+        function close(){ list.classList.remove('is-open'); btn.setAttribute('aria-expanded','false'); }
+        function open(){
+          Array.prototype.forEach.call(document.querySelectorAll('#bundle-selector .gck-cdd-list'), function(o){ o.classList.remove('is-open'); });
+          list.classList.add('is-open'); btn.setAttribute('aria-expanded','true');
+        }
+        btn.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); list.classList.contains('is-open') ? close() : open(); });
+        document.addEventListener('click', function(e){ if(!wrap.contains(e.target)) close(); });
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+
+        var opts = [];
+        Array.prototype.forEach.call(sel.options, function(op){
+          var it = document.createElement('div');
+          it.className = 'gck-cdd-opt'; it.setAttribute('role','option'); it.dataset.val = op.value;
+          var c = document.createElement('span'); c.className = 'gck-cdd-sw'; paint(c, op.value);
+          var t = document.createElement('span'); t.textContent = op.textContent;
+          it.appendChild(c); it.appendChild(t);
+          it.addEventListener('click', function(e){
+            e.preventDefault(); e.stopPropagation();
+            sel.value = op.value;
+            sel.dispatchEvent(new Event('change', { bubbles: true }));
+            sync(); close();
+          });
+          list.appendChild(it); opts.push(it);
         });
+        function sync(){
+          var v = sel.value || (sel.options[0] && sel.options[0].value) || '';
+          lab.textContent = (sel.selectedOptions && sel.selectedOptions[0]) ? sel.selectedOptions[0].textContent : v;
+          paint(sw, v);
+          opts.forEach(function(it){ it.setAttribute('aria-selected', it.dataset.val === v ? 'true' : 'false'); });
+        }
+        sel.classList.add('is-hidden');
+        sel.parentNode.insertBefore(wrap, sel);
+        sel.addEventListener('change', sync);
+        sync();
+        regs.push(sync);
       }
-      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', bind); }
-      else { bind(); }
-      setTimeout(bind, 400);
+      function build(){
+        var box = document.getElementById('bundle-selector');
+        if(!box) return;
+        Array.prototype.forEach.call(box.querySelectorAll('.gck-color-select'), buildOne);
+      }
+      function syncAll(){ regs.forEach(function(f){ f(); }); }
+      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', build); } else { build(); }
+      setTimeout(build, 400);
+      /* osnovni skript mijenja .value bez 'change' dogadaja — osvjezi gumbe sami */
+      document.addEventListener('click', function(){ setTimeout(syncAll, 0); });
+      var t = 0, iv = setInterval(function(){ syncAll(); if(++t > 12) clearInterval(iv); }, 500);
     })();
     </script>
     <?php endif; ?>
@@ -2447,10 +2516,6 @@ function gck_render_bundle_selector() {
                                     <?php endif; ?>
 
                                     <?php if ( ! empty($size_values) && $target_size_field_key !== '' ) : ?>
-                                        <?php if ( $gck_single_is_color ) : ?>
-                                            <span class="gck-color-chip color-<?php echo esc_attr( sanitize_title( $size_values[0] ) ); ?>"
-                                                  data-chip="1" aria-hidden="true"></span>
-                                        <?php endif; ?>
                                         <select
                                             class="gck-size-select<?php echo $gck_single_is_color ? ' gck-color-select' : ''; ?>"
                                             data-size-key="<?php echo esc_attr($target_size_attr_key); ?>"
