@@ -190,6 +190,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #e3ded4; border-radius: 12px; color: #7a6a55; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nkh-sec { padding: 28px 0; }
+  .nkh-wrap { padding: 0 9px; }
   .nkh-h2 { font-size: 22px; }
   .nkh-row { grid-template-columns: 1fr; gap: 18px; }
   .nkh-three { grid-template-columns: 1fr; gap: 14px; }

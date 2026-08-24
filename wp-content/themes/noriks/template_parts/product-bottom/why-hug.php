@@ -189,6 +189,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #f6e2d8; border-radius: 12px; color: #a86a55; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nhg-sec { padding: 28px 0; }
+  .nhg-wrap { padding: 0 9px; }
   .nhg-h2 { font-size: 22px; }
   .nhg-row { grid-template-columns: 1fr; gap: 18px; }
   .nhg-three { grid-template-columns: 1fr; gap: 14px; }

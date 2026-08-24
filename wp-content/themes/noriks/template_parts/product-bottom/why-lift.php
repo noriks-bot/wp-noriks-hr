@@ -217,6 +217,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ece0cf; border-radius: 12px; color: #8a6a45; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nlf-sec { padding: 28px 0; }
+  .nlf-wrap { padding: 0 9px; }
   .nlf-three { grid-template-columns: 1fr; gap: 14px; }
   .nlf-h2 { font-size: 22px; }
   .nlf-row { grid-template-columns: 1fr; gap: 18px; }

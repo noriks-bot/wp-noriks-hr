@@ -154,6 +154,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #f3dfe2; border-radius: 12px; color: #a9707c; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .npr-sec { padding: 28px 0; }
+  .npr-wrap { padding: 0 9px; }
   .npr-h2 { font-size: 22px; }
   .npr-row { grid-template-columns: 1fr; gap: 18px; }
   .npr-three { grid-template-columns: 1fr; gap: 14px; }
