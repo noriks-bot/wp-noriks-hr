@@ -30,7 +30,10 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 <!-- 1) Kako izgleda u stvarnom danu — cetiri videa -->
 <section class="nhg-sec nhg-warm">
   <div class="nhg-wrap">
-    <h2 class="nhg-h2 nhg-center">Toplina koja ide s vama kroz dan</h2>
+    <div class="nhg-lead-copy">
+      <h2 class="nhg-h2">Toplina koja ide s vama kroz dan</h2>
+      <p>Kuhinja, kauč, ured ili šetnja — termofor ostaje na mjestu, a ruke su slobodne.</p>
+    </div>
     <div class="nhg-vids">
       <figure>
         <?php echo $hg_vid( 'hug-vid-1.mp4', 'hug-vid-1.jpg', 'Punjenje termofora u kuhinji' ); ?>
@@ -55,7 +58,10 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 <!-- 1) Mnenja kupcev — tri fotografije -->
 <section class="nhg-sec nhg-white">
   <div class="nhg-wrap">
-    <h2 class="nhg-h2">Što nam kupci pišu</h2>
+    <div class="nhg-lead-copy">
+      <h2 class="nhg-h2">Što nam kupci pišu</h2>
+      <p>Tri poruke koje najbolje opisuju zašto se Hugger ne vraća u ladicu.</p>
+    </div>
     <div class="nhg-fb">
       <figure>
         <?php echo $hg_img( 'hug-fb-1.jpg', 'Recenzija kupca s NORIKS Huggerom' ); ?>
@@ -114,70 +120,9 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 4) Prednosti — slika desno -->
-<section class="nhg-sec nhg-warm">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
-    <div class="nhg-copy">
-      <h2 class="nhg-h2">Kad se najčešće poseže za njim</h2>
-      <p>Prvi dan ciklusa, dok grčevi ne popuste. Poslije duge vožnje ili smjene na nogama, kad se križa jave. U prohladnom uredu, gdje grijanje nikad nije taman.</p>
-      <p>Za razliku od grijaćeg jastuka ne veže vas za utičnicu, a za razliku od gel-obloga ne treba mikrovalna — dovoljan je čajnik.</p>
-      <p class="nhg-strong">Zato često završi kao poklon: dolazi u urednom pakiranju i ne treba mu ništa dodatno kupovati.</p>
-    </div>
-  </div>
-</section>
-
 <!-- 5) Boca i sigurnost — slika lijevo -->
-<section class="nhg-sec nhg-white">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-copy">
-      <h2 class="nhg-h2">Boca koja dolazi u kompletu</h2>
-      <p>U pakiranju je termofor od <strong>500 ml</strong> izrađen od <strong>100 % prirodne gume</strong>, bez lateksa — ne trebate ništa dokupljivati.</p>
-      <ul class="nhg-ticks">
-        <li>Punite vrućom, ali ne kipućom vodom</li>
-        <li>Istisnite zrak i dobro zavrnite čep prije uporabe</li>
-        <li>Ne stavljajte termofor izravno na golu kožu na dulje vrijeme</li>
-        <li>Zamijenite bocu ako primijetite pukotine ili zamor gume</li>
-      </ul>
-    </div>
-    <div class="nhg-media"><?php echo $hg_img( 'hug-08-boce.jpg', 'Termofor od prirodne gume' ); ?></div>
-  </div>
-</section>
-
 <!-- 6) Dodaci — tri slike u nizu -->
-<section class="nhg-sec nhg-warm">
-  <div class="nhg-wrap">
-    <div class="nhg-lead-copy">
-      <h2 class="nhg-h2">Dodaci koji dopunjuju komplet</h2>
-      <p>Produžetak veličine povećava opseg do 110 cm, putna vrećica čuva navlaku u torbi, a rezervna boca i klasična navlaka produžuju vijek kompleta.</p>
-      <p class="nhg-strong">Sve je iz iste linije, u istim nijansama — bež i kapučino.</p>
-    </div>
-    <div class="nhg-three">
-      <figure><?php echo $hg_img( 'hug-02-extender-bez.jpg', 'Produžetak veličine' ); ?><figcaption>Produžetak veličine</figcaption></figure>
-      <figure><?php echo $hg_img( 'hug-14-vrecica-boca.jpg', 'Putna vrećica s termoforom' ); ?><figcaption>Putna vrećica</figcaption></figure>
-      <figure><?php echo $hg_img( 'hug-12-dodaci.jpg', 'Pregled dodataka' ); ?><figcaption>Cijela linija dodataka</figcaption></figure>
-    </div>
-  </div>
-</section>
-
 <!-- 7) Materijal i pranje — slika desno -->
-<section class="nhg-sec nhg-white">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-media"><?php echo $hg_img( 'hug-04-navlaka.jpg', 'Mekana navlaka od krzna' ); ?></div>
-    <div class="nhg-copy">
-      <h2 class="nhg-h2">Materijal i održavanje</h2>
-      <ul class="nhg-ticks">
-        <li>Vanjski sloj od super mekanog krzna, ugodan uz kožu</li>
-        <li>Mrlje obrišite vlažnom krpom</li>
-        <li>Strojno pranje na najviše 30 °C, program za osjetljivo, blagi deterdžent</li>
-        <li>Ne bijeliti, ne peglati, ne sušiti u sušilici i ne prati s drugim bojama</li>
-      </ul>
-      <p class="nhg-note">Za najduži vijek navlake preporučujemo ručno pranje u hladnoj vodi.</p>
-    </div>
-  </div>
-</section>
-
-
-
 <style>
 .nhg-sec { padding: 46px 0; }
 .nhg-warm  { background: #fdf2ec; color: #3a2620; }
