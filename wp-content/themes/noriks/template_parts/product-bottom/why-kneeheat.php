@@ -93,29 +93,12 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
         <li><strong>Uređaj NORIKS KneeHeat</strong> — omotač s grijačem, kompresijom i vibracijom</li>
         <li><strong>Pleteni USB-C kabel</strong> za punjenje</li>
         <li><strong>Produžna traka</strong> za veće opsege noge</li>
-        <li><strong>Plan oporavka za 90 dana</strong> — što raditi tjedan po tjedan</li>
-        <li><strong>Vodič „Sloboda od boli”</strong> u tiskanom obliku</li>
         <li><strong>2 godine jamstva na zamjenu</strong></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- 6) Tiskani vodiči — tri slike u nizu -->
-<section class="nkh-sec nkh-white">
-  <div class="nkh-wrap">
-    <div class="nkh-lead-copy">
-      <h2 class="nkh-h2">Uređaj je pola posla</h2>
-      <p>Uz KneeHeat dolazi tiskani plan koji vas vodi kroz prvih 90 dana: koliko seansi tjedno, koje vježbe dodati i na što paziti kod dužeg stajanja.</p>
-      <p class="nkh-strong">Vodič „Sloboda od boli” objašnjava zašto koljeno postaje ukočeno i što svakodnevno možete promijeniti — jednostavnim jezikom, bez medicinskog žargona.</p>
-    </div>
-    <div class="nkh-three">
-      <figure><?php echo $kh_img( 'kh-03-knjiga.jpg', 'Vodič Sloboda od boli' ); ?><figcaption>Vodič „Sloboda od boli”</figcaption></figure>
-      <figure><?php echo $kh_img( 'kh-12-tiskovine.jpg', 'Tiskani materijali uz uređaj' ); ?><figcaption>Plan oporavka i materijali</figcaption></figure>
-      <figure><?php echo $kh_img( 'kh-06-unboxing-v.jpg', 'Pakiranje NORIKS KneeHeat' ); ?><figcaption>Pakiranje</figcaption></figure>
-    </div>
-  </div>
-</section>
 
 <!-- 7) Liječnik — slika desno -->
 <section class="nkh-sec nkh-light">
