@@ -176,8 +176,8 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-dark h2, .nlf-dark h3, .nlf-dark p, .nlf-dark li, .nlf-dark strong { color: #f7efe4; }
 .nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nlf-media img { width: 100%; height: 460px; object-fit: cover; display: block; border-radius: 12px; }
-.nlf-media.nlf-graf img { height: auto; max-height: 460px; object-fit: contain; background: transparent; }
+.nlf-media img { width: 100%; height: auto; max-height: 620px; object-fit: contain; display: block; border-radius: 12px; }
+.nlf-media.nlf-graf img { max-height: 620px; }
 .nlf-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #a5825a; margin: 0 0 8px; }
 .nlf-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nlf-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }

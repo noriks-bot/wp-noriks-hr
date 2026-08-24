@@ -161,8 +161,8 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-dark h2, .nkh-dark h3, .nkh-dark p, .nkh-dark li, .nkh-dark strong { color: #eef3f9; }
 .nkh-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nkh-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nkh-media img { width: 100%; height: 460px; object-fit: cover; display: block; border-radius: 12px; }
-.nkh-media.nkh-graf img { height: auto; max-height: 460px; object-fit: contain; background: transparent; }
+.nkh-media img { width: 100%; height: auto; max-height: 620px; object-fit: contain; display: block; border-radius: 12px; }
+.nkh-media.nkh-graf img { max-height: 620px; }
 .nkh-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #c1601f; margin: 0 0 8px; }
 .nkh-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nkh-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
