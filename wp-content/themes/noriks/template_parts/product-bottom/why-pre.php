@@ -108,28 +108,19 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
   </div>
 </section>
 
-<!-- 7) Za san i putovanja — slika lijevo -->
+<!-- 7) San, putovanja i jamstvo — tri slike u nizu -->
 <section class="npr-sec npr-rose">
-  <div class="npr-wrap npr-row">
-    <div class="npr-media"><?php echo $pr_img( 'pre-07-zagrljaj.jpg', 'Jastuk je lagan i prenosiv' ); ?></div>
-    <div class="npr-copy">
-      <h2 class="npr-h2">San koji zaslužujete</h2>
-      <p>Umjesto prevrtanja i traženja položaja do tri ujutro — jedan jastuk koji ostaje na mjestu i kad se okrenete.</p>
-      <p>Ne grije kao veliki jastuci koji vas obuhvate sa svih strana, pa ljetne noći ostaju podnošljive. Navlaka je prozračna, a punjenje se ne slegne pod težinom trbuščića.</p>
-      <p class="npr-strong">Lagan je i prenosiv, pa ide s vama na vikend, k mami ili u rodilište.</p>
+  <div class="npr-wrap">
+    <div class="npr-lead-copy">
+      <h2 class="npr-h2">San koji zaslužujete — 90 noći bez rizika</h2>
+      <p>Umjesto prevrtanja i traženja položaja do tri ujutro — jedan jastuk koji ostaje na mjestu i kad se okrenete. Ne grije kao veliki jastuci koji vas obuhvate sa svih strana, pa ljetne noći ostaju podnošljive.</p>
+      <p>Lagan je i prenosiv, pa ide s vama na vikend, k mami ili u rodilište. Isprobajte ga <strong>90 noći</strong>: ako vam ne odgovara, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja. Uz to ide i 12 mjeseci jamstva na izradu.</p>
     </div>
-  </div>
-</section>
-
-<!-- 8) Jamstvo — slika desno -->
-<section class="npr-sec npr-white">
-  <div class="npr-wrap npr-row">
-    <div class="npr-copy">
-      <h2 class="npr-h2">90 noći bez rizika</h2>
-      <p>Isprobajte jastuk 90 noći. Ako vam ne odgovara, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
-      <p class="npr-strong">Uz to ide i 12 mjeseci jamstva na izradu.</p>
+    <div class="npr-three">
+      <figure><?php echo $pr_img( 'pre-07-zagrljaj.jpg', 'Jastuk je lagan i prenosiv' ); ?></figure>
+      <figure><?php echo $pr_img( 'pre-03.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></figure>
+      <figure><?php echo $pr_img( 'pre-06.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></figure>
     </div>
-    <div class="npr-media"><?php echo $pr_img( 'pre-03.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></div>
   </div>
 </section>
 
@@ -153,6 +144,10 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .npr-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c47b8a; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.npr-lead-copy { max-width: 780px; margin: 0 0 20px; }
+.npr-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.npr-three figure { margin: 0; }
+.npr-three img { width: 100%; height: auto; display: block; border-radius: 12px; }
 .npr-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .npr-mini figure { margin: 0; }
 .npr-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
@@ -161,6 +156,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
   .npr-sec { padding: 28px 0; }
   .npr-h2 { font-size: 22px; }
   .npr-row { grid-template-columns: 1fr; gap: 18px; }
+  .npr-three { grid-template-columns: 1fr; gap: 14px; }
   .npr-row .npr-media { order: -1; }
   .npr-media img { max-height: 340px; }
 }

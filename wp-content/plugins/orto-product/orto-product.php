@@ -707,6 +707,7 @@ function gck_render_bundle_selector() {
       }
       .color-smeda { background: #9f6f4e; }
       .color-taupe { background: #a89684; }
+      .color-kapucino { background: #a89684; }
       .color-tirkizna { background: #57bfb5; }
       .color-breskva { background: #f0bfa2; }
       .color-krem { background: #f0e7d6; }
