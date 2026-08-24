@@ -95,21 +95,19 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   </div>
 </section>
 
-<!-- 6) Dodaci — slika desno -->
+<!-- 6) Dodaci — tri slike u nizu -->
 <section class="nhg-sec nhg-white">
-  <div class="nhg-wrap nhg-row">
-    <div class="nhg-copy">
+  <div class="nhg-wrap">
+    <div class="nhg-lead-copy">
       <h2 class="nhg-h2">Dodaci koji dopunjuju komplet</h2>
       <p>Produžetak veličine povećava opseg do 110 cm, putna vrećica čuva navlaku u torbi, a rezervna boca i klasična navlaka produžuju vijek kompleta.</p>
-      <p class="nhg-strong">Sve je iz iste linije, u istim nijansama — bež i taupe.</p>
-      <div class="nhg-mini">
-        <figure><?php echo $hg_img( 'hug-02-extender-bez.jpg', 'Produžetak veličine, bež' ); ?></figure>
-        <figure><?php echo $hg_img( 'hug-03-extender-taupe.jpg', 'Produžetak veličine, taupe' ); ?></figure>
-        <figure><?php echo $hg_img( 'hug-13-vrecica.jpg', 'Putna vrećica' ); ?></figure>
-        <figure><?php echo $hg_img( 'hug-14-vrecica-boca.jpg', 'Putna vrećica s termoforom' ); ?></figure>
-      </div>
+      <p class="nhg-strong">Sve je iz iste linije, u istim nijansama — bež i kapučino.</p>
     </div>
-    <div class="nhg-media"><?php echo $hg_img( 'hug-12-dodaci.jpg', 'Dodaci uz NORIKS Hugger' ); ?></div>
+    <div class="nhg-three">
+      <figure><?php echo $hg_img( 'hug-02-extender-bez.jpg', 'Produžetak veličine' ); ?><figcaption>Produžetak veličine</figcaption></figure>
+      <figure><?php echo $hg_img( 'hug-14-vrecica-boca.jpg', 'Putna vrećica s termoforom' ); ?><figcaption>Putna vrećica</figcaption></figure>
+      <figure><?php echo $hg_img( 'hug-12-dodaci.jpg', 'Pregled dodataka' ); ?><figcaption>Cijela linija dodataka</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -179,14 +177,21 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .nhg-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #d24a2a; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.nhg-lead-copy { max-width: 780px; margin: 0 0 20px; }
+.nhg-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.nhg-three figure { margin: 0; }
+.nhg-three img { width: 100%; height: 260px; object-fit: contain; background: #faf5f1; display: block; border-radius: 12px; }
+.nhg-three figcaption { text-align: center; font-size: 13px; margin-top: 7px; opacity: .72; }
 .nhg-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .nhg-mini figure { margin: 0; }
-.nhg-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.nhg-mini img { width: 100%; height: 170px; object-fit: cover; border-radius: 10px; display: block; }
 .nhg-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #f6e2d8; border-radius: 12px; color: #a86a55; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nhg-sec { padding: 28px 0; }
   .nhg-h2 { font-size: 22px; }
   .nhg-row { grid-template-columns: 1fr; gap: 18px; }
+  .nhg-three { grid-template-columns: 1fr; gap: 14px; }
+  .nhg-three img { height: auto; }
   .nhg-row .nhg-media { order: -1; }
   .nhg-media img { max-height: 340px; }
 }
