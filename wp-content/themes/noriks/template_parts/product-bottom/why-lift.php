@@ -78,6 +78,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 <!-- Tijek oblikovanja — vremenska crta -->
 <section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Vaš put do definirane čeljusti</h2>
       <p class="nlf-sub">Rutina koja traje 20 minuta — dok se vi odmarate.</p>
@@ -104,25 +105,54 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
         </li>
       </ol>
     </div>
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
   </div>
 </section>
 
-<!-- 5) Dermatolog — slika lijevo -->
+<!-- Prkosite gravitaciji — brojke -->
 <section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-copy">
-      <h2 class="nlf-h2">Dizajnirano od stručnjaka</h2>
-      <p class="nlf-quote">„NORIKS sustav kompresijskog oblikovanja u klasi je za sebe. Spajanjem ciljane kompresije s tehnologijom kolagena od 300 daltona premošćuje jaz između kućne njege i profesionalnih tretmana.”</p>
-      <p>Razlika je u veličini molekule: obični kolagen ostaje na površini, dok molekula od 300 daltona prolazi rožnati sloj i dolazi do mjesta gdje struktura kože zapravo nastaje.</p>
-      <p class="nlf-sign">Dr. Soo-Yeon Kim, dermatologinja</p>
+    <div class="nlf-copy nlf-stats-copy">
+      <h2 class="nlf-h2">Prkosite gravitaciji.<br><em>Oblikujte liniju čeljusti.</em></h2>
+      <p class="nlf-sub">Zašto su tisuće žena bolne filere zamijenile kompresijom s kolagenom od 300 daltona.</p>
+      <ul class="nlf-figs">
+        <li><span class="nlf-fig-ico">↑</span><span class="nlf-fig-num">96 %</span><span class="nlf-fig-txt">odmah je primijetilo manju oteklinu u donjem dijelu lica</span></li>
+        <li><span class="nlf-fig-ico">↑</span><span class="nlf-fig-num">92 %</span><span class="nlf-fig-txt">prijavilo je vidljivo podizanje i definiciju nakon 4 tjedna</span></li>
+        <li><span class="nlf-fig-ico">↑</span><span class="nlf-fig-num">91 %</span><span class="nlf-fig-txt">osjeća se sigurnije na fotografijama i pred ogledalom</span></li>
+      </ul>
+      <p class="nlf-note-sm">* Prema četverotjednoj anketi među korisnicama.</p>
     </div>
     <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-02-dermatolog.jpg', 'Preporuka dermatologinje' ); ?></div>
   </div>
 </section>
 
-<!-- 6) Botoks vs kompresija — slika desno -->
+<!-- Usporedba -->
 <section class="nlf-sec nlf-white">
+  <div class="nlf-wrap">
+    <div class="nlf-lead-copy">
+      <h2 class="nlf-h2">NORIKS FaceLift naspram ostalih</h2>
+      <p>Zašto kompresija s kolagenom radi ono što kreme i maske ne mogu.</p>
+    </div>
+    <table class="nlf-cmp">
+      <thead>
+        <tr><th></th><th class="nlf-cmp-us">NORIKS</th><th>Ostali</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tkanina s kolagenom od 300 daltona</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Podržava vašu njegu lica</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Ciljana kompresija donjeg dijela lica</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Podesivo čičak zatvaranje</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Bezbolno, bez igala</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Prirodan rezultat</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Dugoročna obnova strukture kože</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+        <tr><td>Višekratno — do 15 uporaba</td><td class="nlf-cmp-us"><span class="nlf-yes">✓</span></td><td><span class="nlf-no">✕</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- 6) Botoks vs kompresija — slika desno -->
+<section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-18-vs.jpg', 'Usporedba: botoks i fileri naspram kompresije s kolagenom' ); ?></div>
     <div class="nlf-copy">
@@ -134,7 +164,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 7) Prednosti — slika lijevo -->
-<section class="nlf-sec nlf-cream">
+<section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-copy">
       <h2 class="nlf-h2">Sitnice zbog kojih ju je lako nositi svaki dan</h2>
@@ -147,7 +177,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 8) Recenzija — slika lijevo -->
-<section class="nlf-sec nlf-white">
+<section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-16-sanja.jpg', 'Recenzija korisnice' ); ?></div>
     <div class="nlf-copy">
@@ -174,7 +204,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 9) Jamstvo — slika lijevo -->
-<section class="nlf-sec nlf-cream">
+<section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-copy">
       <h2 class="nlf-h2">Rezultati ili vam vraćamo novac</h2>
@@ -271,4 +301,28 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-tl-h { font-size: 19px; font-weight: 700; vertical-align: middle; }
 .nlf-tl li p { font-size: 14.8px; line-height: 1.6; margin: 8px 0 0 !important; opacity: .9; }
 @media (max-width: 820px) { .nlf-tl-badge { display: block; margin: 0 0 6px; } }
+.nlf-stats-copy { text-align: center; }
+.nlf-stats-copy .nlf-h2 em { font-style: italic; font-weight: 600; }
+.nlf-figs { list-style: none; margin: 22px 0 12px; padding: 0; text-align: left; }
+.nlf-figs li { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e8ddcd; }
+.nlf-figs li:first-child { border-top: 1px solid #e8ddcd; }
+.nlf-fig-ico { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 50%; background: #2a2118; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; }
+.nlf-fig-num { flex: 0 0 auto; font-size: 27px; font-weight: 800; letter-spacing: -.02em; }
+.nlf-fig-txt { font-size: 14.6px; line-height: 1.45; }
+.nlf-note-sm { font-size: 13px; opacity: .7; font-style: italic; margin: 0 !important; }
+.nlf-cmp { width: 100%; border-collapse: separate; border-spacing: 0; max-width: 900px; margin: 0 auto;
+  background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
+.nlf-cmp th, .nlf-cmp td { padding: 15px 18px; text-align: center; font-size: 15px; border-bottom: 1px solid #efe9e0; }
+.nlf-cmp td:first-child, .nlf-cmp th:first-child { text-align: left; font-weight: 600; }
+.nlf-cmp thead th { font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: #6b625c; background: #faf7f3; }
+.nlf-cmp .nlf-cmp-us { background: #fbf5ec; }
+.nlf-cmp thead th.nlf-cmp-us { color: #2a2118; font-weight: 800; font-size: 15px; letter-spacing: .04em; }
+.nlf-cmp tbody tr:last-child td { border-bottom: 0; }
+.nlf-yes { color: #1e8f4e; font-weight: 800; font-size: 18px; }
+.nlf-no { color: #b9b2a9; font-weight: 700; font-size: 17px; }
+@media (max-width: 820px) {
+  .nlf-cmp th, .nlf-cmp td { padding: 12px 10px; font-size: 13.5px; }
+  .nlf-fig-num { font-size: 22px; }
+}
 </style>
