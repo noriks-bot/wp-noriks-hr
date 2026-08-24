@@ -198,7 +198,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-lead-copy { max-width: 760px; margin: 0 0 20px; }
 .nlf-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 18px; }
 .nlf-three figure { margin: 0; }
-.nlf-three img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.nlf-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nlf-three figcaption { text-align: center; font-size: 13px; margin-top: 7px; opacity: .72; }
 .nlf-stats-wide div { padding: 16px 12px; }
 .nlf-stats-wide strong { font-size: 26px; }
@@ -209,11 +209,11 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-stats span { display: block; font-size: 12.5px; margin-top: 4px; }
 .nlf-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .nlf-mini figure { margin: 0; }
-.nlf-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.nlf-mini img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nlf-mini figcaption { font-size: 12.5px; opacity: .7; text-align: center; margin-top: 5px; }
 .nlf-strip { display: flex; gap: 10px; overflow-x: auto; margin-top: 16px; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
 .nlf-strip figure { flex: 0 0 118px; margin: 0; }
-.nlf-strip img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.nlf-strip img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nlf-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ece0cf; border-radius: 12px; color: #8a6a45; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nlf-sec { padding: 28px 0; }

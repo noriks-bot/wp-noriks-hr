@@ -147,10 +147,10 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-lead-copy { max-width: 780px; margin: 0 0 20px; }
 .npr-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .npr-three figure { margin: 0; }
-.npr-three img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.npr-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .npr-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .npr-mini figure { margin: 0; }
-.npr-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.npr-mini img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .npr-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #f3dfe2; border-radius: 12px; color: #a9707c; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .npr-sec { padding: 28px 0; }

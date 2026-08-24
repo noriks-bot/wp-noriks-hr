@@ -182,11 +182,11 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-lead-copy { max-width: 780px; margin: 0 0 20px; }
 .nkh-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
 .nkh-three figure { margin: 0; }
-.nkh-three img { width: 100%; height: 260px; object-fit: contain; background: #f6f2ec; display: block; border-radius: 12px; }
+.nkh-three img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nkh-three figcaption { text-align: center; font-size: 13px; margin-top: 7px; opacity: .72; }
 .nkh-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .nkh-mini figure { margin: 0; }
-.nkh-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.nkh-mini img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nkh-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #e3ded4; border-radius: 12px; color: #7a6a55; font-size: 14px; text-align: center; padding: 12px; }
 @media (max-width: 860px) {
   .nkh-sec { padding: 28px 0; }
@@ -194,7 +194,6 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   .nkh-h2 { font-size: 22px; }
   .nkh-row { grid-template-columns: 1fr; gap: 18px; }
   .nkh-three { grid-template-columns: 1fr; gap: 14px; }
-  .nkh-three img { height: auto; }
   .nkh-row .nkh-media { order: -1; }
 }
 
