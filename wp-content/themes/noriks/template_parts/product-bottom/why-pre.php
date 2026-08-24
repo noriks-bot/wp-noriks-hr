@@ -50,64 +50,6 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
   </div>
 </section>
 
-<!-- 3) Zašto spavanje na boku — slika lijevo -->
-<section class="npr-sec npr-rose">
-  <div class="npr-wrap npr-row">
-    <div class="npr-media"><?php echo $pr_img( 'pre-02.jpg', 'Spavanje na lijevom boku u trudnoći' ); ?></div>
-    <div class="npr-copy">
-      <h2 class="npr-h2">Zašto se preporučuje lijevi bok</h2>
-      <ul class="npr-tri">
-        <li><strong>Manji pritisak na leđa</strong> — kralježnica ostaje poravnata, pa je jutarnja ukočenost manja.</li>
-        <li><strong>Bolja cirkulacija</strong> — na lijevom boku protok prema posteljici ostaje neometan.</li>
-        <li><strong>Manje oticanja</strong> — bubrezi lakše rade, pa su noge i gležnjevi ujutro rasterećeniji.</li>
-        <li><strong>Manje žgaravice i lakše disanje</strong> — trbuščić manje pritišće ošit i želudac.</li>
-      </ul>
-      <p class="npr-note">Preporuku o položaju spavanja uvijek uskladite sa svojim liječnikom ili primaljom.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 4) Usporedba — slika desno -->
-<section class="npr-sec npr-white">
-  <div class="npr-wrap npr-row">
-    <div class="npr-copy">
-      <h2 class="npr-h2">Zašto ne veliki C ili U jastuk</h2>
-      <p>Veliki jastuci zauzmu pola kreveta, griju i traže preslagivanje pri svakom okretanju. NORIKS Pre daje potporu točno ondje gdje treba — uz trbuščić i leđa — i ostaje kompaktan.</p>
-      <p class="npr-strong">Zato stane i u kofer, a partner ne mora na kauč.</p>
-    </div>
-    <div class="npr-media npr-graf"><?php echo $pr_img( 'pre-09-usporedba.jpg', 'Usporedba s velikim jastucima za trudnice' ); ?></div>
-  </div>
-</section>
-
-<!-- 5) Navlaka i punjenje — slika lijevo -->
-<section class="npr-sec npr-rose">
-  <div class="npr-wrap npr-row">
-    <div class="npr-media"><?php echo $pr_img( 'pre-04-navlaka.jpg', 'Periva navlaka i dodatni jastučić' ); ?></div>
-    <div class="npr-copy">
-      <h2 class="npr-h2">Materijali i održavanje</h2>
-      <ul class="npr-ticks">
-        <li>Navlaka od mješavine bambusa i poliestera — prozračna i mekana uz kožu</li>
-        <li>Punjenje od mikrovlakana koje zadržava oblik i ne stvara grude</li>
-        <li>Navlaka se skida na patentni zatvarač i pere u perilici</li>
-        <li>Perite na 60 °C i sušite u sušilici za punoću jastuka</li>
-      </ul>
-      <p class="npr-strong">U pakiranju su jastuk, navlaka i manji jastučić za dodatnu potporu.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6) Poslije trudnoće — slika desno -->
-<section class="npr-sec npr-white">
-  <div class="npr-wrap npr-row">
-    <div class="npr-copy">
-      <h2 class="npr-h2">Koristan i nakon poroda</h2>
-      <p>Nakon trudnoće jastuk ostaje u uporabi: podupire ruke i leđa tijekom dojenja, a manji jastučić rasterećuje zapešće dok držite bebu.</p>
-      <p class="npr-strong">Isti jastuk, druga faza — zato se isplati više nego jastuk koji odslužite u devet mjeseci.</p>
-    </div>
-    <div class="npr-media"><?php echo $pr_img( 'pre-05.jpg', 'Jastuk kao potpora pri dojenju' ); ?></div>
-  </div>
-</section>
-
 <!-- 7) San, putovanja i jamstvo — tri slike u nizu -->
 <section class="npr-sec npr-rose">
   <div class="npr-wrap">
@@ -121,6 +63,64 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
       <figure><?php echo $pr_img( 'pre-03.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></figure>
       <figure><?php echo $pr_img( 'pre-06.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></figure>
     </div>
+  </div>
+</section>
+
+<!-- 4) Usporedba — slika desno -->
+<section class="npr-sec npr-white">
+  <div class="npr-wrap npr-row">
+    <div class="npr-media npr-graf"><?php echo $pr_img( 'pre-09-usporedba.jpg', 'Usporedba s velikim jastucima za trudnice' ); ?></div>
+    <div class="npr-copy">
+      <h2 class="npr-h2">Zašto ne veliki C ili U jastuk</h2>
+      <p>Veliki jastuci zauzmu pola kreveta, griju i traže preslagivanje pri svakom okretanju. NORIKS Pre daje potporu točno ondje gdje treba — uz trbuščić i leđa — i ostaje kompaktan.</p>
+      <p class="npr-strong">Zato stane i u kofer, a partner ne mora na kauč.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5) Navlaka i punjenje — slika lijevo -->
+<section class="npr-sec npr-rose">
+  <div class="npr-wrap npr-row">
+    <div class="npr-copy">
+      <h2 class="npr-h2">Materijali i održavanje</h2>
+      <ul class="npr-ticks">
+        <li>Navlaka od mješavine bambusa i poliestera — prozračna i mekana uz kožu</li>
+        <li>Punjenje od mikrovlakana koje zadržava oblik i ne stvara grude</li>
+        <li>Navlaka se skida na patentni zatvarač i pere u perilici</li>
+        <li>Perite na 60 °C i sušite u sušilici za punoću jastuka</li>
+      </ul>
+      <p class="npr-strong">U pakiranju su jastuk, navlaka i manji jastučić za dodatnu potporu.</p>
+    </div>
+    <div class="npr-media"><?php echo $pr_img( 'pre-04-navlaka.jpg', 'Periva navlaka i dodatni jastučić' ); ?></div>
+  </div>
+</section>
+
+<!-- 6) Poslije trudnoće — slika desno -->
+<section class="npr-sec npr-white">
+  <div class="npr-wrap npr-row">
+    <div class="npr-media"><?php echo $pr_img( 'pre-05.jpg', 'Jastuk kao potpora pri dojenju' ); ?></div>
+    <div class="npr-copy">
+      <h2 class="npr-h2">Koristan i nakon poroda</h2>
+      <p>Nakon trudnoće jastuk ostaje u uporabi: podupire ruke i leđa tijekom dojenja, a manji jastučić rasterećuje zapešće dok držite bebu.</p>
+      <p class="npr-strong">Isti jastuk, druga faza — zato se isplati više nego jastuk koji odslužite u devet mjeseci.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3) Zašto spavanje na boku — slika lijevo -->
+<section class="npr-sec npr-rose">
+  <div class="npr-wrap npr-row">
+    <div class="npr-copy">
+      <h2 class="npr-h2">Zašto se preporučuje lijevi bok</h2>
+      <ul class="npr-tri">
+        <li><strong>Manji pritisak na leđa</strong> — kralježnica ostaje poravnata, pa je jutarnja ukočenost manja.</li>
+        <li><strong>Bolja cirkulacija</strong> — na lijevom boku protok prema posteljici ostaje neometan.</li>
+        <li><strong>Manje oticanja</strong> — bubrezi lakše rade, pa su noge i gležnjevi ujutro rasterećeniji.</li>
+        <li><strong>Manje žgaravice i lakše disanje</strong> — trbuščić manje pritišće ošit i želudac.</li>
+      </ul>
+      <p class="npr-note">Preporuku o položaju spavanja uvijek uskladite sa svojim liječnikom ili primaljom.</p>
+    </div>
+    <div class="npr-media"><?php echo $pr_img( 'pre-02.jpg', 'Spavanje na lijevom boku u trudnoći' ); ?></div>
   </div>
 </section>
 

@@ -58,27 +58,9 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
   </div>
 </section>
 
-<!-- 3) Kako se koristi — slika lijevo -->
+<!-- Tijek oblikovanja — vremenska crta -->
 <section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-copy">
-      <h2 class="nlf-h2">Tri koraka, svaku večer</h2>
-      <p>Cijela rutina traje koliko i jedna epizoda serije.</p>
-      <ol class="nlf-steps">
-        <li><span>1</span><div><strong>Očistite i osušite lice.</strong> Koža bez teških ulja upija kolagen dublje. Serum ili kremu nanesite prije — traka pomaže da se upiju.</div></li>
-        <li><span>2</span><div><strong>Namjestite traku.</strong> Čičak na tjemenu i zatiljku zategnite do ugodne napetosti; otvori za uši je drže na mjestu.</div></li>
-        <li><span>3</span><div><strong>Opustite se 20 – 30 minuta.</strong> Kompresija podiže liniju čeljusti, kolagen radi na strukturi kože. Skinete traku i lice djeluje čvršće.</div></li>
-      </ol>
-      <p class="nlf-note">Dosljednost je ono što razdvaja „ništa ne djeluje" od „suprug je primijetio prije mene".</p>
-    </div>
-    <div class="nlf-media"><?php echo $lf_img( 'lift-13-ogrtac.jpg', 'Traka tijekom večernje rutine' ); ?></div>
-  </div>
-</section>
-
-<!-- Tijek oblikovanja — vremenska crta -->
-<section class="nlf-sec nlf-white">
-  <div class="nlf-wrap nlf-row">
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Vaš put do definirane čeljusti</h2>
       <p class="nlf-sub">Rutina koja traje 20 minuta — dok se vi odmarate.</p>
@@ -104,6 +86,24 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
           <p>Uz redovitu uporabu struktura kože ostaje čvršća, a oblikovana linija čeljusti postaje ono što u ogledalu vidite svaki dan.</p>
         </li>
       </ol>
+    </div>
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
+  </div>
+</section>
+
+<!-- 3) Kako se koristi — slika lijevo -->
+<section class="nlf-sec nlf-white">
+  <div class="nlf-wrap nlf-row">
+    <div class="nlf-media nlf-crop"><?php echo $lf_img( 'lift-13-ogrtac.jpg', 'Traka tijekom večernje rutine' ); ?></div>
+    <div class="nlf-copy">
+      <h2 class="nlf-h2">Tri koraka, svaku večer</h2>
+      <p>Cijela rutina traje koliko i jedna epizoda serije.</p>
+      <ol class="nlf-steps">
+        <li><span>1</span><div><strong>Očistite i osušite lice.</strong> Koža bez teških ulja upija kolagen dublje. Serum ili kremu nanesite prije — traka pomaže da se upiju.</div></li>
+        <li><span>2</span><div><strong>Namjestite traku.</strong> Čičak na tjemenu i zatiljku zategnite do ugodne napetosti; otvori za uši je drže na mjestu.</div></li>
+        <li><span>3</span><div><strong>Opustite se 20 – 30 minuta.</strong> Kompresija podiže liniju čeljusti, kolagen radi na strukturi kože. Skinete traku i lice djeluje čvršće.</div></li>
+      </ol>
+      <p class="nlf-note">Dosljednost je ono što razdvaja „ništa ne djeluje" od „suprug je primijetio prije mene".</p>
     </div>
   </div>
 </section>
@@ -224,6 +224,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
 .nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .nlf-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
+.nlf-media.nlf-crop img { aspect-ratio: 1 / 1; object-fit: cover; height: auto; }
 .nlf-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #a5825a; margin: 0 0 8px; }
 .nlf-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nlf-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -301,7 +302,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-tl-h { font-size: 19px; font-weight: 700; vertical-align: middle; }
 .nlf-tl li p { font-size: 14.8px; line-height: 1.6; margin: 8px 0 0 !important; opacity: .9; }
 @media (max-width: 820px) { .nlf-tl-badge { display: block; margin: 0 0 6px; } }
-.nlf-stats-copy { text-align: center; }
+.nlf-stats-copy { text-align: left; }
 .nlf-stats-copy .nlf-h2 em { font-style: italic; font-weight: 600; }
 .nlf-figs { list-style: none; margin: 22px 0 12px; padding: 0; text-align: left; }
 .nlf-figs li { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e8ddcd; }
