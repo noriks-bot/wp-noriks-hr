@@ -1,0 +1,198 @@
+<?php
+/**
+ * product-bottom: NORIKS KneeHeat — grijac, kompresija i masaza koljena (orto-kneeheat).
+ *
+ * Sve sekcije su LIJEVO/DESNO (slika + tekst), po referentnoj stranici
+ * (getmendable.com / Knee Triple Therapy Recovery System). Nikad slika na sredini.
+ * Recenzije i FAQ renderira zajednicki reviews.php.
+ */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
+$kh      = get_template_directory_uri() . '/img/kneeheat/';
+$kh_path = get_template_directory() . '/img/kneeheat/';
+
+$kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
+  if ( file_exists( $kh_path . $file ) ) {
+    return '<img src="' . esc_url( $kh . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  }
+  return '<div class="nkh-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
+};
+?>
+
+<!-- 1) Problem — slika lijevo -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-05-garaza.jpg', 'Ukočeno koljeno pri svakodnevnim poslovima' ); ?></div>
+    <div class="nkh-copy">
+      <p class="nkh-eyebrow">Kraj stepenicama jednu po jednu</p>
+      <h2 class="nkh-h2">Ukočenost koja se javlja pri ustajanju</h2>
+      <p>Kronična nelagoda u koljenu rijetko nastane preko noći. Godinama se smanjuje dotok krvi u dublje tkivo oko zgloba: tkivo postaje tvrđe, tekućina se zadržava, a pokret se sužava na ono što ne boli.</p>
+      <p class="nkh-strong">NORIKS KneeHeat radi upravo na tome — vraća protok u područje koje ga je izgubilo, umjesto da samo prekriva osjećaj boli.</p>
+      <ul class="nkh-ticks">
+        <li>12 minuta dnevno, dok sjedite</li>
+        <li>Bez tableta, bez gelova, bez kabela</li>
+        <li>Za lijevo i desno koljeno</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 2) Trostruka metoda — slika desno -->
+<section class="nkh-sec nkh-dark">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Tri terapije u jednoj seansi</h2>
+      <p>Grijač, kompresija i vibracija ne rade jedno za drugim, nego istovremeno — zato jedna seansa traje samo 12 minuta.</p>
+      <ul class="nkh-tri">
+        <li><strong>Toplina do 42 °C</strong> širi krvne žile i omekšava ukočeno tkivo oko zgloba.</li>
+        <li><strong>Zračna kompresija</strong> ritmično stišće i otpušta, potiskuje nakupljenu tekućinu i vraća svježu krv.</li>
+        <li><strong>Vibracijska masaža 60 Hz</strong> otpušta napetost i ukočenost koja drži koljeno „zaključanim".</li>
+      </ul>
+      <p class="nkh-note">Za razliku od TENS uređaja koji samo prekrivaju signal boli, KneeHeat djeluje na dublje tkivo.</p>
+    </div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
+  </div>
+</section>
+
+<!-- 3) Kako se koristi — slika lijevo -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-10-sjedi.jpg', 'Seansa od 12 minuta u fotelji' ); ?></div>
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Tri koraka, 12 minuta</h2>
+      <ol class="nkh-steps">
+        <li><span>1</span><div><strong>Namjestite omotač.</strong> Postavite ga oko koljena i zategnite trake. Traje 20 sekundi i radi na obje noge.</div></li>
+        <li><span>2</span><div><strong>Pritisnite gumb.</strong> Jedan gumb pokreće sve tri terapije. Stupanj topline i način vibracije birate po osjećaju.</div></li>
+        <li><span>3</span><div><strong>Nastavite s danom.</strong> Popijte kavu, pogledajte vijesti — uređaj radi sam i staje nakon 12 minuta.</div></li>
+      </ol>
+      <p class="nkh-note">Većina korisnika osjeti da je koljeno rastresenije već nakon prve seanse, a osjetniju promjenu kroz 7 do 14 dana svakodnevne uporabe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4) Značajke uređaja — slika desno -->
+<section class="nkh-sec nkh-white">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Napravljen da se nosi, ne da stoji u ladici</h2>
+      <ul class="nkh-ticks">
+        <li>Ergonomski oblikovan omotač koji prati zglob</li>
+        <li>Podesive trake za siguran pristanak, plus produžna traka za veće opsege</li>
+        <li>Mekana i prozračna tkanina uz kožu</li>
+        <li>3 stupnja topline i 3 načina vibracije</li>
+        <li>Bežičan rad i punjenje preko USB-C kabela</li>
+      </ul>
+      <p class="nkh-strong">Jedno punjenje traje više seansi, pa uređaj možete ponijeti na posao ili na put.</p>
+    </div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-11-znacajke.jpg', 'Značajke uređaja NORIKS KneeHeat' ); ?></div>
+  </div>
+</section>
+
+<!-- 5) Što je u paketu — slika lijevo -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-07-unboxing-h.jpg', 'Sadržaj pakiranja NORIKS KneeHeat' ); ?></div>
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Što dobivate u pakiranju</h2>
+      <ul class="nkh-pack">
+        <li><strong>Uređaj NORIKS KneeHeat</strong> — omotač s grijačem, kompresijom i vibracijom</li>
+        <li><strong>Pleteni USB-C kabel</strong> za punjenje</li>
+        <li><strong>Produžna traka</strong> za veće opsege noge</li>
+        <li><strong>Plan oporavka za 90 dana</strong> — što raditi tjedan po tjedan</li>
+        <li><strong>Vodič „Sloboda od boli”</strong> u tiskanom obliku</li>
+        <li><strong>2 godine jamstva na zamjenu</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6) Tiskani vodiči — slika desno -->
+<section class="nkh-sec nkh-white">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Uređaj je pola posla</h2>
+      <p>Uz KneeHeat dolazi tiskani plan koji vas vodi kroz prvih 90 dana: koliko seansi tjedno, koje vježbe dodati i na što paziti kod dužeg stajanja.</p>
+      <p class="nkh-strong">Vodič „Sloboda od boli” objašnjava zašto koljeno postaje ukočeno i što svakodnevno možete promijeniti — jednostavnim jezikom, bez medicinskog žargona.</p>
+      <div class="nkh-mini">
+        <figure><?php echo $kh_img( 'kh-03-knjiga.jpg', 'Vodič Sloboda od boli' ); ?></figure>
+        <figure><?php echo $kh_img( 'kh-12-tiskovine.jpg', 'Tiskani materijali uz uređaj' ); ?></figure>
+      </div>
+    </div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-06-unboxing-v.jpg', 'Pakiranje NORIKS KneeHeat' ); ?></div>
+  </div>
+</section>
+
+<!-- 7) Liječnik — slika lijevo -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Stvoreno za svakodnevnu udobnost i pokret</h2>
+      <p class="nkh-quote">„Kod kroničnih tegoba s koljenom nakon 45. godine najviše se isplati ono što ljudi mogu raditi svaki dan kod kuće. Toplina, kompresija i vibracija zajedno vraćaju protok u tkivo — a to je temelj na kojem sve ostalo radi.”</p>
+      <p class="nkh-sign">Dr. Marko Kovačević, ortoped</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8) Dodaci i jamstvo — slika desno -->
+<section class="nkh-sec nkh-white">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Dodaci koji rješavaju sitnice</h2>
+      <p>Produžna traka rješava veće opsege noge, pleteni USB-C kabel ne puca na savijanju, a mjerna traka pomaže da omotač namjestite jednako čvrsto svaki put.</p>
+      <p class="nkh-strong">Uz sve to ide <strong>2 godine jamstva na zamjenu</strong> — ako uređaj prestane raditi zbog greške u izradi, dobivate novi.</p>
+    </div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
+  </div>
+</section>
+
+<!-- 9) Jamstvo — slika lijevo -->
+<section class="nkh-sec nkh-light">
+  <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-01-kutija.jpg', 'Jamstvo povrata novca' ); ?></div>
+    <div class="nkh-copy">
+      <h2 class="nkh-h2">Isprobajte bez rizika</h2>
+      <p>Koristite KneeHeat svaki dan. Ako se koljeno ne kreće i ne osjeća bolje, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
+      <p class="nkh-strong">Uz povrat novca dobivate i 2 godine jamstva na zamjenu, koje vrijedi i nakon isteka roka za povrat.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.nkh-sec { padding: 40px 0; }
+.nkh-light { background: #f3f0ea; color: #1f2a37; }
+.nkh-white { background: #fff;    color: #1f2a37; }
+.nkh-dark  { background: #12233b; color: #eef3f9; }
+.nkh-dark h2, .nkh-dark h3, .nkh-dark p, .nkh-dark li, .nkh-dark strong { color: #eef3f9; }
+.nkh-wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+.nkh-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+.nkh-media img { width: 100%; height: auto; max-height: 430px; object-fit: contain; display: block; border-radius: 12px; }
+.nkh-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #c1601f; margin: 0 0 8px; }
+.nkh-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
+.nkh-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
+.nkh-strong { font-weight: 600; }
+.nkh-note { font-size: 14.5px; opacity: .85; margin: 4px 0 0; }
+.nkh-quote { font-style: italic; font-size: 16.5px; }
+.nkh-sign { font-size: 14px; opacity: .75; margin: 0; }
+.nkh-ticks, .nkh-tri, .nkh-pack { list-style: none; padding: 0; margin: 14px 0 0; }
+.nkh-ticks li { position: relative; padding-left: 24px; margin-bottom: 7px; font-size: 15px; }
+.nkh-ticks li:before { content: ""; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #c1601f; }
+.nkh-tri li { border-left: 3px solid #c1601f; padding: 2px 0 2px 14px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
+.nkh-pack li { position: relative; padding-left: 22px; margin-bottom: 8px; font-size: 15px; line-height: 1.5; }
+.nkh-pack li:before { content: "✓"; position: absolute; left: 0; top: 0; color: #1e8f4e; font-weight: 800; }
+.nkh-steps { list-style: none; padding: 0; margin: 14px 0 0; }
+.nkh-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
+.nkh-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c1601f; color: #fff;
+                  font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.nkh-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.nkh-mini figure { margin: 0; }
+.nkh-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.nkh-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #e3ded4; border-radius: 12px; color: #7a6a55; font-size: 14px; text-align: center; padding: 12px; }
+@media (max-width: 860px) {
+  .nkh-sec { padding: 28px 0; }
+  .nkh-h2 { font-size: 22px; }
+  .nkh-row { grid-template-columns: 1fr; gap: 18px; }
+  .nkh-row .nkh-media { order: -1; }
+  .nkh-media img { max-height: 340px; }
+}
+</style>

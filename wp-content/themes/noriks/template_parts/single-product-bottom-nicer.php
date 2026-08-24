@@ -149,5 +149,10 @@ if ( noriks_is_type( 'lift' ) ) {
     include $noriks_pb_dir . 'why-lift.php';
 }
 
+// NORIKS KNEEHEAT (orto-kneeheat) — grijac, kompresija i masaza koljena
+if ( noriks_is_type( 'kneeheat' ) ) {
+    include $noriks_pb_dir . 'why-kneeheat.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';

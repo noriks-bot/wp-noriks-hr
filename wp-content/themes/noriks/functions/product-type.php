@@ -62,6 +62,8 @@ function noriks_product_type_map() : array {
         'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
+        // NORIKS KneeHeat — grijac, kompresija i masaza koljena (bez atributa).
+        'kneeheat'                => array( 'orto-kneeheat', 'kneeheat' ),
         // NORIKS LIFT — kolagenski zavoj za oblikovanje lica (bez atributa).
         'lift'                    => array( 'orto-lift', 'lift' ),
         // ControlPro trener dna zdjelice (Kegel trainer s otporom) — bez atributa.
