@@ -111,10 +111,9 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   </div>
 </section>
 
-<!-- 7) Materijal i pranje — slika lijevo -->
+<!-- 7) Materijal i pranje — slika desno -->
 <section class="nhg-sec nhg-warm">
   <div class="nhg-wrap nhg-row">
-    <div class="nhg-media"><?php echo $hg_img( 'hug-04-navlaka.jpg', 'Mekana navlaka od krzna' ); ?></div>
     <div class="nhg-copy">
       <h2 class="nhg-h2">Materijal i održavanje</h2>
       <ul class="nhg-ticks">
@@ -125,6 +124,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
       </ul>
       <p class="nhg-note">Za najduži vijek navlake preporučujemo ručno pranje u hladnoj vodi.</p>
     </div>
+    <div class="nhg-media"><?php echo $hg_img( 'hug-04-navlaka.jpg', 'Mekana navlaka od krzna' ); ?></div>
   </div>
 </section>
 

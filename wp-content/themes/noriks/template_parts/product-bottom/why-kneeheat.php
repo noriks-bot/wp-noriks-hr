@@ -117,39 +117,39 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   </div>
 </section>
 
-<!-- 7) Liječnik — slika lijevo -->
+<!-- 7) Liječnik — slika desno -->
 <section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Stvoreno za svakodnevnu udobnost i pokret</h2>
       <p class="nkh-quote">„Kod kroničnih tegoba s koljenom nakon 45. godine najviše se isplati ono što ljudi mogu raditi svaki dan kod kuće. Toplina, kompresija i vibracija zajedno vraćaju protok u tkivo — a to je temelj na kojem sve ostalo radi.”</p>
       <p class="nkh-sign">Dr. Marko Kovačević, ortoped</p>
     </div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
   </div>
 </section>
 
-<!-- 8) Dodaci i jamstvo — slika desno -->
+<!-- 8) Dodaci i jamstvo — slika lijevo -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Dodaci koji rješavaju sitnice</h2>
       <p>Produžna traka rješava veće opsege noge, pleteni USB-C kabel ne puca na savijanju, a mjerna traka pomaže da omotač namjestite jednako čvrsto svaki put.</p>
       <p class="nkh-strong">Uz sve to ide <strong>2 godine jamstva na zamjenu</strong> — ako uređaj prestane raditi zbog greške u izradi, dobivate novi.</p>
     </div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
   </div>
 </section>
 
-<!-- 9) Jamstvo — slika lijevo -->
+<!-- 9) Jamstvo — slika desno -->
 <section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-01-kutija.jpg', 'Jamstvo povrata novca' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Isprobajte bez rizika</h2>
       <p>Koristite KneeHeat svaki dan. Ako se koljeno ne kreće i ne osjeća bolje, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
       <p class="nkh-strong">Uz povrat novca dobivate i 2 godine jamstva na zamjenu, koje vrijedi i nakon isteka roka za povrat.</p>
     </div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-01-kutija.jpg', 'Jamstvo povrata novca' ); ?></div>
   </div>
 </section>
 
