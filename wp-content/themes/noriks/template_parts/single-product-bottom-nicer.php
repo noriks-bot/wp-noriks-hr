@@ -154,5 +154,10 @@ if ( noriks_is_type( 'kneeheat' ) ) {
     include $noriks_pb_dir . 'why-kneeheat.php';
 }
 
+// NORIKS PRE (orto-pre) — jastuk za trudnice
+if ( noriks_is_type( 'pre' ) ) {
+    include $noriks_pb_dir . 'why-pre.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
