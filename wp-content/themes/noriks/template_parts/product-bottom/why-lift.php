@@ -174,7 +174,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-white { background: #fff;    color: #2a2118; }
 .nlf-dark  { background: #3a2c20; color: #f7efe4; }
 .nlf-dark h2, .nlf-dark h3, .nlf-dark p, .nlf-dark li, .nlf-dark strong { color: #f7efe4; }
-.nlf-wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+.nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
 .nlf-media img { width: 100%; height: auto; max-height: 430px; object-fit: contain; display: block; border-radius: 12px; }
 .nlf-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #a5825a; margin: 0 0 8px; }
@@ -224,4 +224,18 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
   .nlf-media img { max-height: 340px; }
   .nlf-stats { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* kratek opis izdelka: kljukice namesto pikic (kot pri udlagi proti hrkanju) */
+.woocommerce-product-details__short-description ul,
+.woocommerce div.product .woocommerce-product-details__short-description ul {
+  list-style: none !important; margin: 8px 0 14px !important; padding-left: 0 !important; }
+.woocommerce-product-details__short-description ul li,
+.woocommerce div.product .woocommerce-product-details__short-description ul li {
+  list-style: none !important; list-style-type: none !important; padding-left: 24px !important;
+  text-indent: -24px !important; margin-left: 0 !important; line-height: 1.55 !important; margin-bottom: 8px !important; }
+.woocommerce-product-details__short-description ul li::marker { content: "" !important; }
+.woocommerce-product-details__short-description ul li::before { content: none !important; }
+.woocommerce-product-details__short-description .nlf-tick {
+  display: inline-block !important; width: 24px !important; text-indent: 0 !important;
+  color: #a5825a !important; font-weight: 800 !important; }
 </style>
