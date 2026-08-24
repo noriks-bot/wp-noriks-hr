@@ -164,8 +164,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-white { background: #fff;    color: #3a2620; }
 .nhg-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nhg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nhg-media img { width: 100%; height: auto; max-height: 620px; object-fit: contain; display: block; border-radius: 12px; }
-.nhg-media.nhg-graf img { max-height: 620px; }
+.nhg-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 .nhg-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #d24a2a; margin: 0 0 8px; }
 .nhg-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nhg-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -196,7 +195,6 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   .nhg-three { grid-template-columns: 1fr; gap: 14px; }
   .nhg-three img { height: auto; }
   .nhg-row .nhg-media { order: -1; }
-  .nhg-media img { height: auto; max-height: 340px; object-fit: contain; }
 }
 
 /* kratek opis izdelka: kljukice namesto pikic (kot pri udlagi proti hrkanju) */
@@ -213,9 +211,4 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #d24a2a !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
-.nhg-row .nhg-media:first-child img { object-position: left center; }
-.nhg-row .nhg-media:last-child  img { object-position: right center; }
-@media (max-width: 860px) {
-  .nhg-row .nhg-media img { object-position: center; }
-}
 </style>

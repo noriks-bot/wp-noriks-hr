@@ -176,8 +176,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-dark h2, .nlf-dark h3, .nlf-dark p, .nlf-dark li, .nlf-dark strong { color: #f7efe4; }
 .nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
 .nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nlf-media img { width: 100%; height: auto; max-height: 620px; object-fit: contain; display: block; border-radius: 12px; }
-.nlf-media.nlf-graf img { max-height: 620px; }
+.nlf-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
 .nlf-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #a5825a; margin: 0 0 8px; }
 .nlf-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nlf-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -223,7 +222,6 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
   .nlf-h2 { font-size: 22px; }
   .nlf-row { grid-template-columns: 1fr; gap: 18px; }
   .nlf-row .nlf-media { order: -1; }
-  .nlf-media img { height: auto; max-height: 340px; object-fit: contain; }
   .nlf-stats { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -241,9 +239,4 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #a5825a !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
-.nlf-row .nlf-media:first-child img { object-position: left center; }
-.nlf-row .nlf-media:last-child  img { object-position: right center; }
-@media (max-width: 860px) {
-  .nlf-row .nlf-media img { object-position: center; }
-}
 </style>
