@@ -41,7 +41,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 2) Problem — slika desno -->
-<section class="nlf-sec nlf-cream">
+<section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-copy">
       <p class="nlf-eyebrow">Oštra linija čeljusti. Bez operacije.</p>
@@ -59,7 +59,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 3) Kako se koristi — slika lijevo -->
-<section class="nlf-sec nlf-dark">
+<section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-media"><?php echo $lf_img( 'lift-13-ogrtac.jpg', 'Traka tijekom večernje rutine' ); ?></div>
     <div class="nlf-copy">
@@ -92,7 +92,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 5) Dermatolog — slika lijevo -->
-<section class="nlf-sec nlf-white">
+<section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-media"><?php echo $lf_img( 'lift-02-dermatolog.jpg', 'Preporuka dermatologinje' ); ?></div>
     <div class="nlf-copy">
@@ -104,7 +104,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 6) Botoks vs kompresija — slika desno -->
-<section class="nlf-sec nlf-cream">
+<section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-copy">
       <h2 class="nlf-h2">Zašto injekcije ne rješavaju opuštenu kožu</h2>
@@ -116,7 +116,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 7) Prednosti — slika lijevo -->
-<section class="nlf-sec nlf-white">
+<section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-media"><?php echo $lf_img( 'lift-15-prednosti.jpg', 'Prednosti trake za oblikovanje lica' ); ?></div>
     <div class="nlf-copy">
@@ -129,7 +129,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 8) Recenzija — slika lijevo -->
-<section class="nlf-sec nlf-cream">
+<section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-copy">
       <p class="nlf-stars">★★★★★</p>
@@ -156,7 +156,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <!-- 9) Jamstvo — slika lijevo -->
-<section class="nlf-sec nlf-white">
+<section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
     <div class="nlf-media"><?php echo $lf_img( 'lift-09-jamstvo.jpg', 'Jamstvo povrata novca 30 dana' ); ?></div>
     <div class="nlf-copy">
@@ -189,7 +189,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-ticks li:before { content: ""; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #a5825a; }
 .nlf-steps { list-style: none; padding: 0; margin: 14px 0 0; }
 .nlf-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
-.nlf-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #e6cfae; color: #3a2c20;
+.nlf-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #8a6a45; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
 .nlf-weeks { list-style: none; padding: 0; margin: 10px 0 0; }
 .nlf-weeks li { border-left: 3px solid #d8bd97; padding: 2px 0 2px 14px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }

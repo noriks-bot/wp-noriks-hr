@@ -38,7 +38,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 </section>
 
 <!-- 2) Trostruka metoda — slika desno -->
-<section class="nkh-sec nkh-dark">
+<section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
     <div class="nkh-copy">
       <h2 class="nkh-h2">Tri terapije u jednoj seansi</h2>
