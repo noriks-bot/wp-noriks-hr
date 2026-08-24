@@ -115,8 +115,8 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
     <div class="npr-copy">
       <h2 class="npr-h2">San koji zaslužujete</h2>
       <p>Umjesto prevrtanja i traženja položaja do tri ujutro — jedan jastuk koji ostaje na mjestu i kad se okrenete.</p>
+      <p>Ne grije kao veliki jastuci koji vas obuhvate sa svih strana, pa ljetne noći ostaju podnošljive. Navlaka je prozračna, a punjenje se ne slegne pod težinom trbuščića.</p>
       <p class="npr-strong">Lagan je i prenosiv, pa ide s vama na vikend, k mami ili u rodilište.</p>
-      <figure class="npr-inline"><?php echo $pr_img( 'pre-03.jpg', 'Jastuk za trudnice NORIKS Pre' ); ?></figure>
     </div>
   </div>
 </section>
@@ -129,7 +129,7 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
       <p>Isprobajte jastuk 90 noći. Ako vam ne odgovara, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
       <p class="npr-strong">Uz to ide i 12 mjeseci jamstva na izradu.</p>
     </div>
-    <div class="npr-media"><?php echo $pr_img( 'pre-06.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></div>
+    <div class="npr-media"><?php echo $pr_img( 'pre-03.jpg', 'NORIKS Pre jastuk za trudnice' ); ?></div>
   </div>
 </section>
 
@@ -153,8 +153,6 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-steps li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; line-height: 1.55; }
 .npr-steps span { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #c47b8a; color: #fff;
                   font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-.npr-inline { margin: 14px 0 0; }
-.npr-inline img { width: 100%; height: auto; border-radius: 10px; display: block; }
 .npr-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
 .npr-mini figure { margin: 0; }
 .npr-mini img { width: 100%; height: auto; border-radius: 10px; display: block; }
