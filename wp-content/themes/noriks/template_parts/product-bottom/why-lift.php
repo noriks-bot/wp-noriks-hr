@@ -43,6 +43,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 <!-- 2) Problem — slika desno -->
 <section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
+    <div class="nlf-media"><?php echo $lf_img( 'lift-10-sjaj.jpg', 'NORIKS FaceLift traka na licu' ); ?></div>
     <div class="nlf-copy">
       <p class="nlf-eyebrow">Oštra linija čeljusti. Bez operacije.</p>
       <h2 class="nlf-h2">Opuštena koža je prvi znak starenja</h2>
@@ -54,14 +55,12 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
         <li>Periva i višekratna — do 15 uporaba</li>
       </ul>
     </div>
-    <div class="nlf-media"><?php echo $lf_img( 'lift-10-sjaj.jpg', 'NORIKS FaceLift traka na licu' ); ?></div>
   </div>
 </section>
 
 <!-- 3) Kako se koristi — slika lijevo -->
 <section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-media"><?php echo $lf_img( 'lift-13-ogrtac.jpg', 'Traka tijekom večernje rutine' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Tri koraka, svaku večer</h2>
       <p>Cijela rutina traje koliko i jedna epizoda serije.</p>
@@ -72,12 +71,14 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
       </ol>
       <p class="nlf-note">Dosljednost je ono što razdvaja „ništa ne djeluje" od „suprug je primijetio prije mene".</p>
     </div>
+    <div class="nlf-media"><?php echo $lf_img( 'lift-13-ogrtac.jpg', 'Traka tijekom večernje rutine' ); ?></div>
   </div>
 </section>
 
 <!-- 4) Tijek — slika desno -->
 <section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Što se događa tjedan po tjedan</h2>
       <ul class="nlf-weeks">
@@ -87,51 +88,51 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
         <li><strong>I dalje</strong> Uz redovitu uporabu struktura kože ostaje čvršća, a izgled oblikovan.</li>
       </ul>
     </div>
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-17-tijek.jpg', 'Tijek oblikovanja linije čeljusti kroz tjedne' ); ?></div>
   </div>
 </section>
 
 <!-- 5) Dermatolog — slika lijevo -->
 <section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-02-dermatolog.jpg', 'Preporuka dermatologinje' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Dizajnirano od stručnjaka</h2>
       <p class="nlf-quote">„NORIKS sustav kompresijskog oblikovanja u klasi je za sebe. Spajanjem ciljane kompresije s tehnologijom kolagena od 300 daltona premošćuje jaz između kućne njege i profesionalnih tretmana.”</p>
       <p>Razlika je u veličini molekule: obični kolagen ostaje na površini, dok molekula od 300 daltona prolazi rožnati sloj i dolazi do mjesta gdje struktura kože zapravo nastaje.</p>
       <p class="nlf-sign">Dr. Soo-Yeon Kim, dermatologinja</p>
     </div>
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-02-dermatolog.jpg', 'Preporuka dermatologinje' ); ?></div>
   </div>
 </section>
 
 <!-- 6) Botoks vs kompresija — slika desno -->
 <section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-18-vs.jpg', 'Usporedba: botoks i fileri naspram kompresije s kolagenom' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Zašto injekcije ne rješavaju opuštenu kožu</h2>
       <p>Fileri popunjavaju volumen, ali ne vraćaju strukturu — a rezultat traje tri do šest mjeseci i ponavlja se uz cijenu od 700 do 900 € po tretmanu.</p>
       <p class="nlf-strong">Kompresija s kolagenom radi na sloju u kojem struktura zapravo nastaje: bez igala, bez oporavka i za manje od 50 €.</p>
     </div>
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-18-vs.jpg', 'Usporedba: botoks i fileri naspram kompresije s kolagenom' ); ?></div>
   </div>
 </section>
 
 <!-- 7) Prednosti — slika lijevo -->
 <section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-15-prednosti.jpg', 'Prednosti trake za oblikovanje lica' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Sitnice zbog kojih ju je lako nositi svaki dan</h2>
       <p>Tkanina je <strong>81 % poliamid i 19 % elastan</strong> — dovoljno elastična da prati oblik lica, a dovoljno tanka da se ispod nje ne znojite.</p>
       <p>Čičak na tjemenu i zatiljku znači da napetost birate sami: labavije prve večeri, čvršće kad se naviknete. Otvori za uši sprječavaju da traka klizi dok se okrećete.</p>
       <p class="nlf-strong">Perite je ručno u mlakoj vodi i sušite na zraku — tako zadržava oblik kroz svih 15 uporaba.</p>
     </div>
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-15-prednosti.jpg', 'Prednosti trake za oblikovanje lica' ); ?></div>
   </div>
 </section>
 
 <!-- 8) Recenzija — slika lijevo -->
 <section class="nlf-sec nlf-white">
   <div class="nlf-wrap nlf-row">
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-16-sanja.jpg', 'Recenzija korisnice' ); ?></div>
     <div class="nlf-copy">
       <p class="nlf-stars">★★★★★</p>
       <h2 class="nlf-h2">„Pet godina nisam podnosila svoj odraz”</h2>
@@ -152,19 +153,18 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
         ?>
       </div>
     </div>
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-16-sanja.jpg', 'Recenzija korisnice' ); ?></div>
   </div>
 </section>
 
 <!-- 9) Jamstvo — slika lijevo -->
 <section class="nlf-sec nlf-cream">
   <div class="nlf-wrap nlf-row">
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-09-jamstvo.jpg', 'Jamstvo povrata novca 30 dana' ); ?></div>
     <div class="nlf-copy">
       <h2 class="nlf-h2">Rezultati ili vam vraćamo novac</h2>
       <p>Znamo da ste se već opekli na proizvodima koji su obećavali sve, a nisu donijeli ništa. Zato nudimo <strong>jamstvo od 30 dana</strong> — isprobajte traku, vidite rezultate ili dobijete puni povrat novca.</p>
       <p class="nlf-strong">Bez rizika i bez papirologije: dovoljan je jedan e-mail.</p>
     </div>
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-09-jamstvo.jpg', 'Jamstvo povrata novca 30 dana' ); ?></div>
   </div>
 </section>
 

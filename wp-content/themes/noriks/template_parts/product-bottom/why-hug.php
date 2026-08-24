@@ -56,6 +56,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 <!-- 2) Kako je napravljen — slika desno -->
 <section class="nhg-sec nhg-white">
   <div class="nhg-wrap nhg-row">
+    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-09-strane.jpg', 'Prednja i stražnja strana navlake' ); ?></div>
     <div class="nhg-copy">
       <h2 class="nhg-h2">Kako se koristi</h2>
       <ol class="nhg-steps">
@@ -65,39 +66,37 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
       </ol>
       <p class="nhg-note">Prednja strana je mekano krzno, stražnja ima džep za bocu i čičak na krakovima.</p>
     </div>
-    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-09-strane.jpg', 'Prednja i stražnja strana navlake' ); ?></div>
   </div>
 </section>
 
 <!-- 3) Dvostruka izolacija — slika lijevo -->
 <section class="nhg-sec nhg-warm">
   <div class="nhg-wrap nhg-row">
-    <div class="nhg-media"><?php echo $hg_img( 'hug-01-sofa.jpg', 'Nosivi termofor na kauču' ); ?></div>
     <div class="nhg-copy">
       <h2 class="nhg-h2">Zašto grije duže od običnog termofora</h2>
       <p>Navlaka ima <strong>dvostruki sloj izolacije</strong>, pa temperatura ostaje ugodna satima — bez skoka od prevruće do mlake nakon deset minuta.</p>
       <p class="nhg-strong">Krakovi drže bocu uz tijelo, pa se toplina zadržava između navlake i vas, a ne bježi u sobu.</p>
     </div>
+    <div class="nhg-media"><?php echo $hg_img( 'hug-01-sofa.jpg', 'Nosivi termofor na kauču' ); ?></div>
   </div>
 </section>
 
 <!-- 4) Prednosti — slika desno -->
 <section class="nhg-sec nhg-white">
   <div class="nhg-wrap nhg-row">
+    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
     <div class="nhg-copy">
       <h2 class="nhg-h2">Kad se najčešće poseže za njim</h2>
       <p>Prvi dan ciklusa, dok grčevi ne popuste. Poslije duge vožnje ili smjene na nogama, kad se križa jave. U prohladnom uredu, gdje grijanje nikad nije taman.</p>
       <p>Za razliku od grijaćeg jastuka ne veže vas za utičnicu, a za razliku od gel-obloga ne treba mikrovalna — dovoljan je čajnik.</p>
       <p class="nhg-strong">Zato često završi kao poklon: dolazi u urednom pakiranju i ne treba mu ništa dodatno kupovati.</p>
     </div>
-    <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
   </div>
 </section>
 
 <!-- 5) Boca i sigurnost — slika lijevo -->
 <section class="nhg-sec nhg-warm">
   <div class="nhg-wrap nhg-row">
-    <div class="nhg-media"><?php echo $hg_img( 'hug-08-boce.jpg', 'Termofor od prirodne gume' ); ?></div>
     <div class="nhg-copy">
       <h2 class="nhg-h2">Boca koja dolazi u kompletu</h2>
       <p>U pakiranju je termofor od <strong>500 ml</strong> izrađen od <strong>100 % prirodne gume</strong>, bez lateksa — ne trebate ništa dokupljivati.</p>
@@ -108,6 +107,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
         <li>Zamijenite bocu ako primijetite pukotine ili zamor gume</li>
       </ul>
     </div>
+    <div class="nhg-media"><?php echo $hg_img( 'hug-08-boce.jpg', 'Termofor od prirodne gume' ); ?></div>
   </div>
 </section>
 
@@ -130,6 +130,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 <!-- 7) Materijal i pranje — slika desno -->
 <section class="nhg-sec nhg-warm">
   <div class="nhg-wrap nhg-row">
+    <div class="nhg-media"><?php echo $hg_img( 'hug-04-navlaka.jpg', 'Mekana navlaka od krzna' ); ?></div>
     <div class="nhg-copy">
       <h2 class="nhg-h2">Materijal i održavanje</h2>
       <ul class="nhg-ticks">
@@ -140,7 +141,6 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
       </ul>
       <p class="nhg-note">Za najduži vijek navlake preporučujemo ručno pranje u hladnoj vodi.</p>
     </div>
-    <div class="nhg-media"><?php echo $hg_img( 'hug-04-navlaka.jpg', 'Mekana navlaka od krzna' ); ?></div>
   </div>
 </section>
 

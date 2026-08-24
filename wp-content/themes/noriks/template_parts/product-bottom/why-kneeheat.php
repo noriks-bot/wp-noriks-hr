@@ -93,6 +93,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 <!-- Pametna tehnologija — video lijevo -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-led.mp4', 'kh-vid-led.jpg', 'Grijaći elementi u omotaču' ); ?></div>
         <div class="nkh-copy">
       <h2 class="nkh-h2">Pametna tehnologija za dublje tkivo</h2>
       <p>NORIKS KneeHeat prilagodite svom koljenu: <strong>3 stupnja topline</strong>, <strong>3 načina vibracije</strong> i <strong>cikličnu kompresiju</strong>. Bez kabela, jedan gumb, dvanaest minuta.</p>
@@ -102,7 +103,6 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
         <li><strong>Jednostavno upravljanje:</strong> jedan gumb, bez aplikacije i bez postavljanja.</li>
       </ul>
     </div>
-    <div class="nkh-media"><?php echo $kh_vid( 'kh-vid-led.mp4', 'kh-vid-led.jpg', 'Grijaći elementi u omotaču' ); ?></div>
   </div>
 </section>
 
@@ -110,7 +110,6 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 <!-- 2) Trostruka metoda — slika desno -->
 <section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Tri terapije u jednoj seansi</h2>
       <p>Grijač, kompresija i vibracija ne rade jedno za drugim, nego istovremeno — zato jedna seansa traje samo 12 minuta.</p>
@@ -122,6 +121,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
       <p class="nkh-note">Za razliku od TENS uređaja koji samo prekrivaju signal boli, KneeHeat djeluje na dublje tkivo.</p>
     </div>
     <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
+    <div class="nkh-media"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
   </div>
 </section>
 
@@ -129,20 +129,19 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 <!-- 4) Značajke uređaja — slika desno -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-11-znacajke.jpg', 'Značajke uređaja NORIKS KneeHeat' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Napravljen da se nosi, ne da stoji u ladici</h2>
       <p>Upravljačka ploča je na vanjskoj strani, nadohvat ruke: <strong>jedan dodir mijenja stupanj topline</strong>, drugi način vibracije. Nema izbornika ni aplikacije koju treba tražiti u mraku.</p>
       <p>Omotač se zatvara preko dvije trake, pa čvrstoću birate sami — labavije dok sjedite, čvršće dok hodate po kući. Uređaj tada ostaje na mjestu i ne rotira oko noge.</p>
       <p class="nkh-strong">Bežičan je i puni se USB-C kabelom; jedno punjenje traje više seansi, pa ide s vama na posao ili na put.</p>
     </div>
-    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-11-znacajke.jpg', 'Značajke uređaja NORIKS KneeHeat' ); ?></div>
   </div>
 </section>
 
 <!-- 5) Što je u paketu — slika lijevo -->
 <section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-07-unboxing-h.jpg', 'Sadržaj pakiranja NORIKS KneeHeat' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Što dobivate u pakiranju</h2>
       <ul class="nkh-pack">
@@ -152,6 +151,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
         <li><strong>2 godine jamstva na zamjenu</strong></li>
       </ul>
     </div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-07-unboxing-h.jpg', 'Sadržaj pakiranja NORIKS KneeHeat' ); ?></div>
   </div>
 </section>
 
@@ -159,36 +159,36 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 <!-- 7) Liječnik — slika desno -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Stvoreno za svakodnevnu udobnost i pokret</h2>
       <p class="nkh-quote">„Kod kroničnih tegoba s koljenom nakon 45. godine najviše se isplati ono što ljudi mogu raditi svaki dan kod kuće. Toplina, kompresija i vibracija zajedno vraćaju protok u tkivo — a to je temelj na kojem sve ostalo radi.”</p>
       <p class="nkh-sign">Dr. Marko Kovačević, ortoped</p>
     </div>
-    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-02-lijecnik.jpg', 'Preporuka ortopeda' ); ?></div>
   </div>
 </section>
 
 <!-- 8) Dodaci i jamstvo — slika lijevo -->
 <section class="nkh-sec nkh-light">
   <div class="nkh-wrap nkh-row">
-    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Dodaci koji rješavaju sitnice</h2>
       <p>Produžna traka rješava veće opsege noge, pleteni USB-C kabel ne puca na savijanju, a mjerna traka pomaže da omotač namjestite jednako čvrsto svaki put.</p>
       <p class="nkh-strong">Uz sve to ide <strong>2 godine jamstva na zamjenu</strong> — ako uređaj prestane raditi zbog greške u izradi, dobivate novi.</p>
     </div>
+    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
   </div>
 </section>
 
 <!-- 9) Jamstvo — slika desno -->
 <section class="nkh-sec nkh-white">
   <div class="nkh-wrap nkh-row">
+    <div class="nkh-media"><?php echo $kh_img( 'kh-01-kutija.jpg', 'Jamstvo povrata novca' ); ?></div>
     <div class="nkh-copy">
       <h2 class="nkh-h2">Isprobajte bez rizika</h2>
       <p>Koristite KneeHeat svaki dan. Ako se koljeno ne kreće i ne osjeća bolje, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
       <p class="nkh-strong">Uz povrat novca dobivate i 2 godine jamstva na zamjenu, koje vrijedi i nakon isteka roka za povrat.</p>
     </div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-01-kutija.jpg', 'Jamstvo povrata novca' ); ?></div>
   </div>
 </section>
 
