@@ -175,4 +175,10 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .woocommerce-product-details__short-description .npr-tick {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #c47b8a !important; font-weight: 800 !important; }
+/* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.npr-row .npr-media:first-child img { object-position: left center; }
+.npr-row .npr-media:last-child  img { object-position: right center; }
+@media (max-width: 860px) {
+  .npr-row .npr-media img { object-position: center; }
+}
 </style>

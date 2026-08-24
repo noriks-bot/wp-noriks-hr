@@ -212,4 +212,10 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .woocommerce-product-details__short-description .nkh-tick {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #c1601f !important; font-weight: 800 !important; }
+/* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.nkh-row .nkh-media:first-child img { object-position: left center; }
+.nkh-row .nkh-media:last-child  img { object-position: right center; }
+@media (max-width: 860px) {
+  .nkh-row .nkh-media img { object-position: center; }
+}
 </style>

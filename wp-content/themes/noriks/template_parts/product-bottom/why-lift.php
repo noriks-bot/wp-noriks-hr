@@ -239,4 +239,10 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .woocommerce-product-details__short-description .nlf-tick {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #a5825a !important; font-weight: 800 !important; }
+/* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.nlf-row .nlf-media:first-child img { object-position: left center; }
+.nlf-row .nlf-media:last-child  img { object-position: right center; }
+@media (max-width: 860px) {
+  .nlf-row .nlf-media img { object-position: center; }
+}
 </style>

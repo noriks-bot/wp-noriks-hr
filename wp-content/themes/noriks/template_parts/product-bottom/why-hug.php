@@ -211,4 +211,10 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .woocommerce-product-details__short-description .nhg-tick {
   display: inline-block !important; width: 24px !important; text-indent: 0 !important;
   color: #d24a2a !important; font-weight: 800 !important; }
+/* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
+.nhg-row .nhg-media:first-child img { object-position: left center; }
+.nhg-row .nhg-media:last-child  img { object-position: right center; }
+@media (max-width: 860px) {
+  .nhg-row .nhg-media img { object-position: center; }
+}
 </style>
