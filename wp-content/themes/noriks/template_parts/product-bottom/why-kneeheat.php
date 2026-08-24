@@ -121,7 +121,6 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
       <p class="nkh-note">Za razliku od TENS uređaja koji samo prekrivaju signal boli, KneeHeat djeluje na dublje tkivo.</p>
     </div>
     <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
-    <div class="nkh-media"><?php echo $kh_img( 'kh-04-metoda.jpg', 'Trostruka metoda: toplina, kompresija i vibracija' ); ?></div>
   </div>
 </section>
 
@@ -169,29 +168,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 </section>
 
 <!-- 8) Dodaci i jamstvo — slika lijevo -->
-<section class="nkh-sec nkh-light">
-  <div class="nkh-wrap nkh-row">
-    <div class="nkh-copy">
-      <h2 class="nkh-h2">Dodaci koji rješavaju sitnice</h2>
-      <p>Produžna traka rješava veće opsege noge, pleteni USB-C kabel ne puca na savijanju, a mjerna traka pomaže da omotač namjestite jednako čvrsto svaki put.</p>
-      <p class="nkh-strong">Uz sve to ide <strong>2 godine jamstva na zamjenu</strong> — ako uređaj prestane raditi zbog greške u izradi, dobivate novi.</p>
-    </div>
-    <div class="nkh-media nkh-graf"><?php echo $kh_img( 'kh-13-dodaci.jpg', 'Dodaci i jamstvo na zamjenu' ); ?></div>
-  </div>
-</section>
-
 <!-- 9) Jamstvo — slika desno -->
-<section class="nkh-sec nkh-white">
-  <div class="nkh-wrap nkh-row">
-    <div class="nkh-media"><?php echo $kh_img( 'kh-01-kutija.jpg', 'Jamstvo povrata novca' ); ?></div>
-    <div class="nkh-copy">
-      <h2 class="nkh-h2">Isprobajte bez rizika</h2>
-      <p>Koristite KneeHeat svaki dan. Ako se koljeno ne kreće i ne osjeća bolje, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja.</p>
-      <p class="nkh-strong">Uz povrat novca dobivate i 2 godine jamstva na zamjenu, koje vrijedi i nakon isteka roka za povrat.</p>
-    </div>
-  </div>
-</section>
-
 <style>
 .nkh-sec { padding: 46px 0; }
 .nkh-light { background: #f3f0ea; color: #1f2a37; }
@@ -252,7 +229,7 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   color: #c1601f !important; font-weight: 800 !important; }
 /* slika naj bo poravnana na rob kontejnerja, ne na sredino stolpca */
 .nkh-center { text-align: center; }
-.nkh-lead { max-width: 720px; margin: 0 auto 22px; opacity: .85; }
+
 .nkh-steps3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .nkh-step3 { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
 .nkh-step3 .nkh-video { width: 100%; height: auto; display: block; }
@@ -262,4 +239,6 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
                     font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .nkh-step3-txt p:last-child { font-size: 14.5px; margin: 0 !important; }
 .nkh-media .nkh-video { width: 100%; height: auto; display: block; border-radius: 14px; }
+.nkh-sec p.nkh-lead { max-width: 720px; margin: 0 auto 22px !important; opacity: .85; text-align: center; }
+.nkh-sec .nkh-center { text-align: center; }
 </style>

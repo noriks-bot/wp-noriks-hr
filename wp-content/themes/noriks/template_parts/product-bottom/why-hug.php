@@ -11,6 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $hg      = get_template_directory_uri() . '/img/hug/';
 $hg_path = get_template_directory() . '/img/hug/';
 
+$hg_vid = function( $file, $poster, $alt ) use ( $hg, $hg_path ) {
+  if ( ! file_exists( $hg_path . $file ) ) { return ''; }
+  return '<video class="nhg-video" autoplay muted loop playsinline preload="metadata" '
+       . 'poster="' . esc_url( $hg . $poster ) . '" aria-label="' . esc_attr( $alt ) . '">'
+       . '<source src="' . esc_url( $hg . $file ) . '" type="video/mp4"></video>';
+};
+
 $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   if ( file_exists( $hg_path . $file ) ) {
     return '<img src="' . esc_url( $hg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
@@ -20,8 +27,33 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 ?>
 
 
-<!-- 1) Mnenja kupcev — tri fotografije -->
+<!-- 1) Kako izgleda u stvarnom danu — cetiri videa -->
 <section class="nhg-sec nhg-warm">
+  <div class="nhg-wrap">
+    <h2 class="nhg-h2 nhg-center">Toplina koja ide s vama kroz dan</h2>
+    <div class="nhg-vids">
+      <figure>
+        <?php echo $hg_vid( 'hug-vid-1.mp4', 'hug-vid-1.jpg', 'Punjenje termofora u kuhinji' ); ?>
+        <figcaption>Brzo, jednostavno i prirodno</figcaption>
+      </figure>
+      <figure>
+        <?php echo $hg_vid( 'hug-vid-2.mp4', 'hug-vid-2.jpg', 'Mekana navlaka od krzna' ); ?>
+        <figcaption>Mekano i ugodno</figcaption>
+      </figure>
+      <figure>
+        <?php echo $hg_vid( 'hug-vid-3.mp4', 'hug-vid-3.jpg', 'Nosivi termofor na križima' ); ?>
+        <figcaption>Prilagodljivo — trbuh ili križa</figcaption>
+      </figure>
+      <figure>
+        <?php echo $hg_vid( 'hug-vid-4.mp4', 'hug-vid-4.jpg', 'Nošenje ispod odjeće' ); ?>
+        <figcaption>Uvijek sa sobom</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 1) Mnenja kupcev — tri fotografije -->
+<section class="nhg-sec nhg-white">
   <div class="nhg-wrap">
     <h2 class="nhg-h2">Što nam kupci pišu</h2>
     <div class="nhg-fb">
@@ -54,7 +86,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 2) Kako je napravljen — slika desno -->
-<section class="nhg-sec nhg-white">
+<section class="nhg-sec nhg-warm">
   <div class="nhg-wrap nhg-row">
     <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-09-strane.jpg', 'Prednja i stražnja strana navlake' ); ?></div>
     <div class="nhg-copy">
@@ -70,7 +102,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 3) Dvostruka izolacija — slika lijevo -->
-<section class="nhg-sec nhg-warm">
+<section class="nhg-sec nhg-white">
   <div class="nhg-wrap nhg-row">
     <div class="nhg-copy">
       <h2 class="nhg-h2">Zašto grije duže od običnog termofora</h2>
@@ -82,7 +114,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 4) Prednosti — slika desno -->
-<section class="nhg-sec nhg-white">
+<section class="nhg-sec nhg-warm">
   <div class="nhg-wrap nhg-row">
     <div class="nhg-media nhg-graf"><?php echo $hg_img( 'hug-07-prednosti.jpg', 'Prednosti nosivog termofora' ); ?></div>
     <div class="nhg-copy">
@@ -95,7 +127,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 5) Boca i sigurnost — slika lijevo -->
-<section class="nhg-sec nhg-warm">
+<section class="nhg-sec nhg-white">
   <div class="nhg-wrap nhg-row">
     <div class="nhg-copy">
       <h2 class="nhg-h2">Boca koja dolazi u kompletu</h2>
@@ -112,7 +144,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 6) Dodaci — tri slike u nizu -->
-<section class="nhg-sec nhg-white">
+<section class="nhg-sec nhg-warm">
   <div class="nhg-wrap">
     <div class="nhg-lead-copy">
       <h2 class="nhg-h2">Dodaci koji dopunjuju komplet</h2>
@@ -128,7 +160,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <!-- 7) Materijal i pranje — slika desno -->
-<section class="nhg-sec nhg-warm">
+<section class="nhg-sec nhg-white">
   <div class="nhg-wrap nhg-row">
     <div class="nhg-media"><?php echo $hg_img( 'hug-04-navlaka.jpg', 'Mekana navlaka od krzna' ); ?></div>
     <div class="nhg-copy">
@@ -180,6 +212,7 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   .nhg-wrap { padding-left: 0; padding-right: 0; }
   .nhg-h2 { font-size: 22px; }
   .nhg-row { grid-template-columns: 1fr; gap: 18px; }
+  .nhg-vids { grid-template-columns: 1fr 1fr; gap: 14px; }
   .nhg-fb { grid-template-columns: 1fr; gap: 22px; }
   .nhg-three { grid-template-columns: 1fr; gap: 14px; }
   .nhg-row .nhg-media { order: -1; }
@@ -207,4 +240,10 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-fb .nhg-stars { display: block; font-size: 15px; margin: 0 0 8px; }
 .nhg-fb .nhg-stars em { font-style: normal; color: #6b625c; font-size: 14px; }
 .nhg-fb p { font-size: 14.5px; line-height: 1.6; margin: 0; }
+.nhg-sec .nhg-center { text-align: center; }
+.nhg-vids { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 18px; }
+.nhg-vids figure { margin: 0; }
+.nhg-vids .nhg-video { width: 100%; height: auto; display: block; border-radius: 14px; }
+.nhg-vids figcaption { text-align: center; font-size: 16px; font-weight: 700; margin-top: 12px; }
+.nhg-media .nhg-video { width: 100%; height: auto; display: block; border-radius: 14px; }
 </style>
