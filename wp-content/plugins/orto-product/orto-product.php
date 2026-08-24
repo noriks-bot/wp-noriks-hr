@@ -508,8 +508,8 @@ function gck_render_bundle_selector() {
         ? array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' )
         : array();
 
-    $gck_no_attrs    = has_term( array( 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift' ), 'product_cat', $product_id );
 
     // SHGIFTS (orto-majica-darila): the SAME split-garment selector as SHBOX,
     // extended to 3 garment groups (4 majica + 1 bokserica + 1 čarapa). Gated
