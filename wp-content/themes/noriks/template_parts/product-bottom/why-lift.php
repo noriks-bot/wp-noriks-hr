@@ -224,7 +224,7 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
 .nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .nlf-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
-.nlf-media.nlf-crop img { aspect-ratio: 1 / 1; object-fit: cover; height: auto; }
+.nlf-media.nlf-crop img { aspect-ratio: 1 / 1 !important; height: auto !important; object-fit: cover !important; object-position: center 22% !important; }
 .nlf-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #a5825a; margin: 0 0 8px; }
 .nlf-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nlf-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -302,7 +302,8 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-tl-h { font-size: 19px; font-weight: 700; vertical-align: middle; }
 .nlf-tl li p { font-size: 14.8px; line-height: 1.6; margin: 8px 0 0 !important; opacity: .9; }
 @media (max-width: 820px) { .nlf-tl-badge { display: block; margin: 0 0 6px; } }
-.nlf-stats-copy { text-align: left; }
+.nlf-stats-copy, .nlf-stats-copy .nlf-h2, .nlf-stats-copy .nlf-sub,
+.nlf-stats-copy .nlf-note-sm { text-align: left !important; }
 .nlf-stats-copy .nlf-h2 em { font-style: italic; font-weight: 600; }
 .nlf-figs { list-style: none; margin: 22px 0 12px; padding: 0; text-align: left; }
 .nlf-figs li { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e8ddcd; }
