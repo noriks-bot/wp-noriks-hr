@@ -125,12 +125,12 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 </section>
 
 <style>
-.npr-sec { padding: 40px 0; }
+.npr-sec { padding: 46px 0; }
 .npr-rose { background: #fdf1f1; color: #34262a; }
 .npr-white { background: #fff;   color: #34262a; }
-.npr-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
-.npr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.npr-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.npr-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
+.npr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.npr-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
 .npr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #c47b8a; margin: 0 0 8px; }
 .npr-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .npr-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -152,9 +152,9 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 .npr-mini figure { margin: 0; }
 .npr-mini img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .npr-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #f3dfe2; border-radius: 12px; color: #a9707c; font-size: 14px; text-align: center; padding: 12px; }
-@media (max-width: 860px) {
-  .npr-sec { padding: 28px 0; }
-  .npr-wrap { padding: 0 9px; }
+@media (max-width: 820px) {
+  .npr-sec { padding: 22px 0; }
+  .npr-wrap { padding-left: 0; padding-right: 0; }
   .npr-h2 { font-size: 22px; }
   .npr-row { grid-template-columns: 1fr; gap: 18px; }
   .npr-three { grid-template-columns: 1fr; gap: 14px; }

@@ -169,14 +169,14 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 </section>
 
 <style>
-.nlf-sec { padding: 40px 0; }
+.nlf-sec { padding: 46px 0; }
 .nlf-cream { background: #f7efe4; color: #3a2c20; }
 .nlf-white { background: #fff;    color: #2a2118; }
 .nlf-dark  { background: #3a2c20; color: #f7efe4; }
 .nlf-dark h2, .nlf-dark h3, .nlf-dark p, .nlf-dark li, .nlf-dark strong { color: #f7efe4; }
-.nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
-.nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nlf-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.nlf-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
+.nlf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.nlf-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
 .nlf-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #a5825a; margin: 0 0 8px; }
 .nlf-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nlf-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -215,9 +215,9 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
 .nlf-strip figure { flex: 0 0 118px; margin: 0; }
 .nlf-strip img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nlf-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ece0cf; border-radius: 12px; color: #8a6a45; font-size: 14px; text-align: center; padding: 12px; }
-@media (max-width: 860px) {
-  .nlf-sec { padding: 28px 0; }
-  .nlf-wrap { padding: 0 9px; }
+@media (max-width: 820px) {
+  .nlf-sec { padding: 22px 0; }
+  .nlf-wrap { padding-left: 0; padding-right: 0; }
   .nlf-three { grid-template-columns: 1fr; gap: 14px; }
   .nlf-h2 { font-size: 22px; }
   .nlf-row { grid-template-columns: 1fr; gap: 18px; }

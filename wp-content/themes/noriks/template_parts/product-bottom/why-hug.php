@@ -159,12 +159,12 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 </section>
 
 <style>
-.nhg-sec { padding: 40px 0; }
+.nhg-sec { padding: 46px 0; }
 .nhg-warm  { background: #fdf2ec; color: #3a2620; }
 .nhg-white { background: #fff;    color: #3a2620; }
-.nhg-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
-.nhg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nhg-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.nhg-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
+.nhg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.nhg-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
 .nhg-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #d24a2a; margin: 0 0 8px; }
 .nhg-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nhg-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -187,9 +187,9 @@ $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
 .nhg-mini figure { margin: 0; }
 .nhg-mini img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nhg-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #f6e2d8; border-radius: 12px; color: #a86a55; font-size: 14px; text-align: center; padding: 12px; }
-@media (max-width: 860px) {
-  .nhg-sec { padding: 28px 0; }
-  .nhg-wrap { padding: 0 9px; }
+@media (max-width: 820px) {
+  .nhg-sec { padding: 22px 0; }
+  .nhg-wrap { padding-left: 0; padding-right: 0; }
   .nhg-h2 { font-size: 22px; }
   .nhg-row { grid-template-columns: 1fr; gap: 18px; }
   .nhg-three { grid-template-columns: 1fr; gap: 14px; }

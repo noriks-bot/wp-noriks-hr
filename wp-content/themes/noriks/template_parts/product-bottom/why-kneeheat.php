@@ -154,14 +154,14 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 </section>
 
 <style>
-.nkh-sec { padding: 40px 0; }
+.nkh-sec { padding: 46px 0; }
 .nkh-light { background: #f3f0ea; color: #1f2a37; }
 .nkh-white { background: #fff;    color: #1f2a37; }
 .nkh-dark  { background: #12233b; color: #eef3f9; }
 .nkh-dark h2, .nkh-dark h3, .nkh-dark p, .nkh-dark li, .nkh-dark strong { color: #eef3f9; }
-.nkh-wrap { max-width: 1440px; margin: 0 auto; padding: 0 18px; }
-.nkh-row { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
-.nkh-media img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.nkh-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
+.nkh-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.nkh-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
 .nkh-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; color: #c1601f; margin: 0 0 8px; }
 .nkh-h2 { font-size: 27px; line-height: 1.22; margin: 0 0 12px; font-weight: 700; }
 .nkh-sec p { font-size: 15.5px; line-height: 1.62; margin: 0 0 12px; }
@@ -188,9 +188,9 @@ $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
 .nkh-mini figure { margin: 0; }
 .nkh-mini img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .nkh-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #e3ded4; border-radius: 12px; color: #7a6a55; font-size: 14px; text-align: center; padding: 12px; }
-@media (max-width: 860px) {
-  .nkh-sec { padding: 28px 0; }
-  .nkh-wrap { padding: 0 9px; }
+@media (max-width: 820px) {
+  .nkh-sec { padding: 22px 0; }
+  .nkh-wrap { padding-left: 0; padding-right: 0; }
   .nkh-h2 { font-size: 22px; }
   .nkh-row { grid-template-columns: 1fr; gap: 18px; }
   .nkh-three { grid-template-columns: 1fr; gap: 14px; }
