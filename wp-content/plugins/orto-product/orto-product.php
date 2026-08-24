@@ -710,6 +710,7 @@ function gck_render_bundle_selector() {
       .color-tirkizna { background: #57bfb5; }
       .color-breskva { background: #f0bfa2; }
       .color-krem { background: #f0e7d6; }
+      .color-roza { background: #f2b8c6; }
       .color-zelena { background: #65633c; }
       .color-tamnoplava { background: #2a3262; }
 
