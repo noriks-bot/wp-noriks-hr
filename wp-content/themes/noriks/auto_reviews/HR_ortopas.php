@@ -4,7 +4,7 @@
 $auto_reviews_en = array(
     array("name" => "Mario H.", "text" => "Bio sam skeptičan – mislio sam da je fizioterapija dovoljna. Nakon tjedan dana s Noriksom osjećam znatno poboljšanje pri sjedenju i hodanju. U kombinaciji s laganim vježbama sada mi je prvi izbor. Dostava je stigla u roku od 7 dana, vrhunska kvaliteta."),
     array("name" => "Damir K.", "text" => "Kao majstor se puno krećem – pojas ostaje stabilan i drži položaj. Dobre mogućnosti podešavanja. Rok isporuke kako je navedeno."),
-    array("name" => "Željko P.", "text" => "Nisam bio siguran zbog opsega bokova, uzeo sam manju veličinu kako je preporučeno – savršeno pristaje. Besplatna zamjena bila bi super, ako bi zatrebala."),
+    array("name" => "Željko P.", "text" => "Nisam bio siguran zbog opsega bokova, uzeo sam manju veličinu kako je preporučeno – savršeno pristaje. Zamjena veličine bila bi super, ako bi zatrebala."),
     array("name" => "Igor M.", "text" => "Cijena je poštena za kvalitetu i funkciju. Jamstvo povrata novca od 30 dana dalo mi je povjerenje."),
     array("name" => "Saša B.", "text" => "Sumnjao sam, sada sam uvjeren: čvrsto stoji, jedva da se pomiče, a bolovi su manji. Dobar omjer cijene i kvalitete."),
     array("name" => "Boris L.", "text" => "Već nakon prvog sata osjetno bolje. Nakon 2 tjedna svakodnevnog nošenja znatno manje boli. Ako ne odgovara, povrat je bez problema."),

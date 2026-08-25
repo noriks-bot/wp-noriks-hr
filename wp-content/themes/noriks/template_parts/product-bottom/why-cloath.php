@@ -109,10 +109,10 @@ $cl_anim = function( $mp4, $fallback, $alt ) use ( $cl, $cl_path, $cl_img ) {
 <section class="ncl-sec">
   <div class="ncl-wrap ncl-row2">
     <div class="ncl-copy">
-      <p class="ncl-eyebrow">60 dana bez rizika</p>
+      <p class="ncl-eyebrow">30 dana bez rizika</p>
       <h2 class="ncl-h2">Plaćate samo ako vam se svidi</h2>
       <p>Još uvijek sumnjate? Razumijemo — zvuči predobro da bi bilo istinito.</p>
-      <p>Zato krpu možete isprobati potpuno bez rizika <strong>60 dana</strong>. Ako staklo nije kristalno čisto, ako pločice nisu lakše za održavanje ili vam se jednostavno ne sviđa rezultat — vratite je.</p>
+      <p>Zato krpu možete isprobati potpuno bez rizika <strong>30 dana</strong>. Ako staklo nije kristalno čisto, ako pločice nisu lakše za održavanje ili vam se jednostavno ne sviđa rezultat — vratite je.</p>
       <p class="ncl-strong">Ili dobijete kupaonicu koja blista kao nova, ili dobijete svoj novac natrag.</p>
       <a class="ncl-cta" href="#bundle-selector">Naruči bez rizika</a>
     </div>

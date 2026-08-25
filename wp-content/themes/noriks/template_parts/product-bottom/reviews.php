@@ -1692,7 +1692,7 @@ $bra_faq = array(
   ),
   array(
     'questioon' => 'Što ako ne odgovara?',
-    'answer'    => 'Imate 30 dana za povrat novca ili besplatnu zamjenu veličine. Javite se našoj podršci i sve rješavamo bez papirologije.',
+    'answer'    => 'Imate 30 dana za povrat novca ili zamjenu veličine. Javite se našoj podršci i sve rješavamo bez papirologije.',
   ),
 );
 
