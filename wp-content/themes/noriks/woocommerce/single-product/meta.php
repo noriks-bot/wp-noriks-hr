@@ -668,7 +668,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
           <div class="kn-size">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest veličine po dobi" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine-hr.webp" alt="KidsNest veličine po dobi" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
             <p style="margin:0;line-height:1.6;"><strong>Dijete je između dvije veličine?</strong> Uvijek odaberite veću. Jastuk je dizajniran da podupire zdravo poravnanje dok dijete raste — veća veličina daje više prostora i dulje razdoblje korištenja.</p>
           </div>
 
