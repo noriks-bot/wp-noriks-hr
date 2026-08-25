@@ -103,9 +103,8 @@
 			<div class="nf-wrap nf-main-grid">
 
 				<div class="nf-brand-col">
-					<p class="nf-brand-tagline">Odjeća za snažniju građu, krojena da stvarno pristaje.</p>
 					<p class="nf-brand-desc"><?php echo esc_html( $nf_brand ); ?></p>
-					<a class="nf-btn nf-btn-outline" href="/hr/shop">Pogledaj kolekciju</a>
+					<a class="nf-btn nf-btn-outline" href="/hr/shop">Kupuj sada</a>
 				</div>
 
 				<nav class="nf-links">
