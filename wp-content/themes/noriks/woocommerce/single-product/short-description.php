@@ -357,7 +357,7 @@ if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) : ?>
 </div>
 <div class="kn2-below">
   <div class="kn2-trust">
-    <span><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z" fill="#2b3fb0"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 90 noći isprobavanja</span>
+    <span><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z" fill="#2b3fb0"/><path d="M8.5 12l2.5 2.5 4.5-4.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 14 noći isprobavanja</span>
     <span><svg width="18" height="14" viewBox="0 0 24 18"><rect x="1" y="3" width="13" height="10" rx="1.5" fill="#2b3fb0"/><path d="M14 6h4l4 4v3h-8z" fill="#2b3fb0"/><circle cx="6" cy="15" r="2.4" fill="#1b2450"/><circle cx="18" cy="15" r="2.4" fill="#1b2450"/></svg> Brza dostava</span>
     <span><svg width="17" height="15" viewBox="0 0 24 20"><rect x="3" y="2" width="18" height="11" rx="2" fill="none" stroke="#2b3fb0" stroke-width="2"/><circle cx="12" cy="7.5" r="2.6" fill="#2b3fb0"/><path d="M2 17c3 2 7 3 10 3s7-1 10-3" fill="none" stroke="#2b3fb0" stroke-width="2" stroke-linecap="round"/></svg> Plaćanje i pouzećem</span>
   </div>

@@ -222,7 +222,7 @@ $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
 <section class="hgm-sec hgm-alt">
   <div class="hgm-wrap-narrow hgm-center">
     <h2 class="hgm-h2 hgm-center">100 % jamstvo povrata novca</h2>
-    <p>Isprobajte HairMagic+ bez rizika. Ako niste zadovoljni, javite nam se u roku od 30 dana i vraćamo vam novac.</p>
+    <p>Isprobajte HairMagic+ bez rizika. Ako niste zadovoljni, javite nam se u roku od 14 dana i vraćamo vam novac.</p>
     <a class="hgm-cta" href="#bundle-selector">Naruči bez rizika</a>
   </div>
 </section>

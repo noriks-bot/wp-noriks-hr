@@ -2627,7 +2627,7 @@ function gck_render_bundle_selector() {
                     <?php endif; /* $gck_shgifts vs SHBOX/normal render */ ?>
 
                     <?php if ( ! $gck_no_attrs ) : ?>
-                    <small style="display: block; line-height: 1;"><?php esc_html_e( 'Nudimo 30 dana za povrat novca ili besplatnu zamjenu proizvoda – bezbrižna kupovina!
+                    <small style="display: block; line-height: 1;"><?php esc_html_e( 'Nudimo 14 dana za povrat novca ili besplatnu zamjenu proizvoda – bezbrižna kupovina!
 ', 'gift-card-kompetentnost' ); ?></small>
                     <?php endif; ?>
                 </div>

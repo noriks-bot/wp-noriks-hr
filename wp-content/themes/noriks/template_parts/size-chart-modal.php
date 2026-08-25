@@ -820,7 +820,7 @@
 
         <div class="noriks-sc-guarantee">
           <span class="noriks-sc-check">&#10003;</span>
-          <span>Nisi siguran? Besplatna zamjena veličine u 90 dana.</span>
+          <span>Nisi siguran? Besplatna zamjena veličine u 14 dana.</span>
         </div>
       </div>
 

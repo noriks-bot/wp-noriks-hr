@@ -80,7 +80,7 @@ global $product;
         
         <div class="feature">
       <img src="https://noriks.com/hr/wp-content/uploads/2025/07/footer_icon1-1.png" alt="Shirt Icon" class="feature__icon info-icon">
-          <p class="feature__text">Isprobajte 30 dana, bez rizika</p>
+          <p class="feature__text">Isprobajte 14 dana, bez rizika</p>
         </div>
         
         
@@ -525,7 +525,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'dental', $current_product_id ) ): ?>
 
-                NORIKS ProSonic je ultrazvučni čistač s UV-C sterilizacijom za sva odvojiva zubna pomagala — prozirne folije i Invisalign, retainere, proteze, noćne udlage i štitnike te glave električnih četkica.<br><br>Ultrazvuk frekvencije <strong>43.000 Hz</strong> stvara milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s mjesta do kojih četkica ne dolazi — bez struganja koje ogrebe folije. Istovremeno <strong>UV-C svjetlo (200–280 nm)</strong> uklanja do 99,9 % bakterija, virusa i gljivica; učinkovitost je laboratorijski potvrđena na E. coli, Staphylococcus aureusu i Candidi albicans.<br><br>Upotreba je jednostavna: spremnik (165 ml) napunite hladnom vodom, stavite pomagalo unutra i odaberite ciklus od 3 ili 5 minuta. Tablete i kemikalije nisu potrebne. Uređaj radi tiho (≤ 65 dB), upravlja se na dodir i dimenzija je 122 × 122 × 100 mm, pa stane na svaku policu u kupaonici.<br><br>U pakiranju: uređaj NORIKS ProSonic, adapter za napajanje i upute. Uz proizvod idu <strong>1 godina jamstva</strong> i <strong>30 dana povrata novca</strong>.
+                NORIKS ProSonic je ultrazvučni čistač s UV-C sterilizacijom za sva odvojiva zubna pomagala — prozirne folije i Invisalign, retainere, proteze, noćne udlage i štitnike te glave električnih četkica.<br><br>Ultrazvuk frekvencije <strong>43.000 Hz</strong> stvara milijune mikroskopskih mjehurića koji uklanjaju naslage i mrlje i s mjesta do kojih četkica ne dolazi — bez struganja koje ogrebe folije. Istovremeno <strong>UV-C svjetlo (200–280 nm)</strong> uklanja do 99,9 % bakterija, virusa i gljivica; učinkovitost je laboratorijski potvrđena na E. coli, Staphylococcus aureusu i Candidi albicans.<br><br>Upotreba je jednostavna: spremnik (165 ml) napunite hladnom vodom, stavite pomagalo unutra i odaberite ciklus od 3 ili 5 minuta. Tablete i kemikalije nisu potrebne. Uređaj radi tiho (≤ 65 dB), upravlja se na dodir i dimenzija je 122 × 122 × 100 mm, pa stane na svaku policu u kupaonici.<br><br>U pakiranju: uređaj NORIKS ProSonic, adapter za napajanje i upute. Uz proizvod idu <strong>1 godina jamstva</strong> i <strong>14 dana povrata novca</strong>.
 
          <?php elseif( noriks_is_type( 'hairmagic', $current_product_id ) ): ?>
 
@@ -638,7 +638,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           <li>UV-C sterilizacija koja neutralizira bakterije i neugodne mirise</li>
           <li>Sigurno za folije, retainere, proteze, noćne udlage i ostala oralna pomagala</li>
           <li>Blistavo čisto u samo 3 minute</li>
-          <li>Uz 1 godinu jamstva i 30 dana povrata novca</li>
+          <li>Uz 1 godinu jamstva i 14 dana povrata novca</li>
         </ul>
       </div>
     </div>
@@ -848,7 +848,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
       </div>
       <div class="accordion-content">
        <p></p>
-       Toliko vjerujemo da će ti se NORIKS svidjeti da imaš <b data-stringify-type="bold">30 dana</b> za povrat ili besplatnu zamjenu.
+       Toliko vjerujemo da će ti se NORIKS svidjeti da imaš <b data-stringify-type="bold">14 dana</b> za povrat ili besplatnu zamjenu.
 Bez papirologije, bez stresa – riješimo u par klikova. </p>
 
 <p>
