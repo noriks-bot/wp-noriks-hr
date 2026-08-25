@@ -10,7 +10,7 @@
  *   5. Laboratorijski testirano i dokazano   izvještaj S. aureus (3 ponavljanja)
  *   6. Nagrada + The Telegraph               slike 02 i 04
  *   7. Tehnički podaci                       tablica specifikacija
- *   8. Jamstvo                               1 godina + 14 dana
+ *   8. Jamstvo                               1 godina + 30 dana
  *
  * Slike: wp-content/themes/noriks/img/dental/
  */

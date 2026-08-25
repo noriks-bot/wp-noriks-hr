@@ -54,9 +54,9 @@ $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
 <section class="npr-sec npr-rose">
   <div class="npr-wrap">
     <div class="npr-lead-copy">
-      <h2 class="npr-h2">San koji zaslužujete — 14 noći bez rizika</h2>
+      <h2 class="npr-h2">San koji zaslužujete — 30 noći bez rizika</h2>
       <p>Umjesto prevrtanja i traženja položaja do tri ujutro — jedan jastuk koji ostaje na mjestu i kad se okrenete. Ne grije kao veliki jastuci koji vas obuhvate sa svih strana, pa ljetne noći ostaju podnošljive.</p>
-      <p>Lagan je i prenosiv, pa ide s vama na vikend, k mami ili u rodilište. Isprobajte ga <strong>14 noći</strong>: ako vam ne odgovara, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja. Uz to ide i 12 mjeseci jamstva na izradu.</p>
+      <p>Lagan je i prenosiv, pa ide s vama na vikend, k mami ili u rodilište. Isprobajte ga <strong>30 noći</strong>: ako vam ne odgovara, javite nam se i vraćamo cijeli iznos — bez obrazaca i bez neugodnih pitanja. Uz to ide i 12 mjeseci jamstva na izradu.</p>
     </div>
     <div class="npr-three">
       <figure><?php echo $pr_img( 'pre-07-zagrljaj.jpg', 'Jastuk je lagan i prenosiv' ); ?></figure>

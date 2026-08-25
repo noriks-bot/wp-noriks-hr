@@ -129,7 +129,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap nhs-row2">
     <div class="nhs-media"><img src="<?php echo esc_url( $nh.'12.png' ); ?>" alt="NORIKS HERS rezultati" loading="lazy"></div>
     <div class="nhs-res-copy">
-      <h2 class="nhs-h2">Vidi rezultate za 14 dana ili <em>povrat novca!</em></h2>
+      <h2 class="nhs-h2">Vidi rezultate za 30 dana ili <em>povrat novca!</em></h2>
       <?php
       $nhs_stats = array(
         array( 'p' => '98', 'dash' => '172.4', 't' => 'Primijetilo je <strong>glađu kožu</strong> i smanjene fine linije već u <strong>prvom tjednu</strong> uporabe.' ),
@@ -146,7 +146,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
           <p><?php echo wp_kses_post($s['t']); ?></p>
         </div>
       <?php endforeach; ?>
-      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Isprobaj bez rizika 14 dana</a>
+      <a class="nhs-cta nhs-cta-solid" href="#bundle-selector">Isprobaj bez rizika 30 dana</a>
       <p class="nhs-cta-note"><em>Niste oduševljeni? Puni povrat!</em></p>
     </div>
   </div>

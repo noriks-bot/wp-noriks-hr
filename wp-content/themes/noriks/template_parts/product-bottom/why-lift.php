@@ -211,14 +211,14 @@ $lf_img = function( $file, $alt ) use ( $lf, $lf_path ) {
       <p>Znamo kako to ide: krema koja „djeluje za 7 dana", serum koji je koštao kao pola tretmana, maska koja je završila u ladici. Zato odluku ne morate donijeti unaprijed — donesite je nakon što traku isprobate.</p>
       <p>Nosite je <strong>svaku večer 30 dana</strong>, uz svoju uobičajenu njegu. To je dovoljno dugo da prođete kroz prvu fazu — smanjenje otekline — i uđete u onu u kojoj se koža počinje zatezati.</p>
       <ul class="nlf-ticks">
-        <li><strong>14 dana za povrat novca</strong> — vraćamo cijeli iznos, bez pitanja</li>
+        <li><strong>30 dana za povrat novca</strong> — vraćamo cijeli iznos, bez pitanja</li>
         <li><strong>Bez papirologije</strong>: javite nam se na e-mail i dogovorimo povrat</li>
         <li><strong>Vrijedi i na pakete</strong> 1+1, 2+2 i 3+3, ne samo na jedan komad</li>
         <li><strong>Podrška odgovara isti dan</strong> ako niste sigurni kako je namjestiti</li>
       </ul>
       <p class="nlf-note">Rizik je time na nama, a ne na vama — vi riskirate samo 20 minuta navečer.</p>
     </div>
-    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-09-jamstvo.jpg', 'Jamstvo povrata novca 14 dana' ); ?></div>
+    <div class="nlf-media nlf-graf"><?php echo $lf_img( 'lift-09-jamstvo.jpg', 'Jamstvo povrata novca 30 dana' ); ?></div>
   </div>
 </section>
 

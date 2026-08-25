@@ -1410,8 +1410,8 @@ $kidsnest_faq = array(
   array( 'questioon' => 'Za koju dob je KidsNest namijenjen?', 'answer' => 'KidsNest dolazi u tri veličine: 1–3, 3–9 i 9–14 godina. Najvažniji prozor je između 3. i 9. godine, kada se nepce i čeljust najintenzivnije razvijaju — ali svaka dob ima svoju veličinu i svoju korist.' ),
   array( 'questioon' => 'Je li siguran? Što je unutra?', 'answer' => 'KidsNest je izrađen od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA. Otporan je na grinje i prozračan, a navlaka se skida i pere u perilici.' ),
   array( 'questioon' => 'Hoće li ga moje dijete stvarno koristiti?', 'answer' => 'Da. Ergonomski oblik osjeća se kao podrška, ne kao nešto čudno — većina djece navikne se u 1–2 noći. Roditelji često javljaju da djeca nakon prvog tjedna ne žele spavati bez njega. 3-zonska struktura prirodno prihvaća glavu — nema "pravilnog načina", nema borbe prije spavanja.' ),
-  array( 'questioon' => 'Djeluje li ako moje dijete već diše na usta?', 'answer' => 'Da — upravo za takvu djecu je dizajniran. 3-zonska struktura pomaže spriječiti naginjanje glave unatrag, zbog kojeg se usta otvaraju u snu. Kod većine djece unutar 7–14 noći usnice se prirodno zatvaraju i disanje kroz nos se vraća.' ),
-  array( 'questioon' => 'Što ako mom djetetu ne pomogne?', 'answer' => 'Neka dijete spava na KidsNestu 14 noći. Ako ne vidite razliku — manje disanja na usta, tiše noći, mirniji san — javite nam se i vraćamo novac. Bez pitanja i bez sitnih slova.' ),
+  array( 'questioon' => 'Djeluje li ako moje dijete već diše na usta?', 'answer' => 'Da — upravo za takvu djecu je dizajniran. 3-zonska struktura pomaže spriječiti naginjanje glave unatrag, zbog kojeg se usta otvaraju u snu. Kod većine djece unutar 7–30 noći usnice se prirodno zatvaraju i disanje kroz nos se vraća.' ),
+  array( 'questioon' => 'Što ako mom djetetu ne pomogne?', 'answer' => 'Neka dijete spava na KidsNestu 30 noći. Ako ne vidite razliku — manje disanja na usta, tiše noći, mirniji san — javite nam se i vraćamo novac. Bez pitanja i bez sitnih slova.' ),
 );
 
 // BabyGo nosiljka — product FAQ (NORIKS).
@@ -1457,7 +1457,7 @@ $fisiorest_faq = array(
   ),
   array(
     'questioon' => 'Mogu li ga vratiti ako ne vidim rezultate?',
-    'answer'    => 'Naravno! Nudimo puno jamstvo povrata novca unutar 14 dana od isporuke ako niste zadovoljni proizvodom. Javite nam se na info@noriks.com i odgovorit ćemo u roku od 12 sati od primitka poruke!'
+    'answer'    => 'Naravno! Nudimo puno jamstvo povrata novca unutar 30 dana od isporuke ako niste zadovoljni proizvodom. Javite nam se na info@noriks.com i odgovorit ćemo u roku od 12 sati od primitka poruke!'
   ),
 );
 
@@ -1522,7 +1522,7 @@ $ortopas_faq = array(
   ),
   array(
     'questioon' => 'Postoji li jamstvo povrata novca ako pojas ne pomogne?',
-    'answer'    => 'Nudimo jamstvo zadovoljstva! Ako niste zadovoljni NORIKS pojasom, kontaktirajte nas na info@noriks.com za povrat i povrat novca unutar 14 dana. Rok počinje od primitka pojasa.<br><br>U središtu nam je podrška u svakodnevnom ublažavanju vaših bolova. Zato vas potičemo da NORIKS pojas najprije dva tjedna testirate svakodnevno prije nego što donesete odluku.'
+    'answer'    => 'Nudimo jamstvo zadovoljstva! Ako niste zadovoljni NORIKS pojasom, kontaktirajte nas na info@noriks.com za povrat i povrat novca unutar 30 dana. Rok počinje od primitka pojasa.<br><br>U središtu nam je podrška u svakodnevnom ublažavanju vaših bolova. Zato vas potičemo da NORIKS pojas najprije dva tjedna testirate svakodnevno prije nego što donesete odluku.'
   ),
 );
 
@@ -1585,7 +1585,7 @@ $snore_faq = array(
   ),
   array(
     'questioon' => 'Što ako mi ne pomogne?',
-    'answer'    => 'Imate 14 noći da je isprobate. Ako hrkanje ne popusti ili vam jednostavno ne odgovara, javite se podršci i vraćamo vam cijeli iznos.',
+    'answer'    => 'Imate 30 noći da je isprobate. Ako hrkanje ne popusti ili vam jednostavno ne odgovara, javite se podršci i vraćamo vam cijeli iznos.',
   ),
 );
 
@@ -1692,7 +1692,7 @@ $bra_faq = array(
   ),
   array(
     'questioon' => 'Što ako ne odgovara?',
-    'answer'    => 'Imate 14 dana za povrat novca ili besplatnu zamjenu veličine. Javite se našoj podršci i sve rješavamo bez papirologije.',
+    'answer'    => 'Imate 30 dana za povrat novca ili besplatnu zamjenu veličine. Javite se našoj podršci i sve rješavamo bez papirologije.',
   ),
 );
 
@@ -1728,7 +1728,7 @@ $hyd_faq = array(
   ),
   array(
     'questioon' => 'Što ako nisam zadovoljan?',
-    'answer'    => 'Imate 14 dana za povrat novca. Uz to, na uređaj dobivate 1 godinu jamstva.',
+    'answer'    => 'Imate 30 dana za povrat novca. Uz to, na uređaj dobivate 1 godinu jamstva.',
   ),
 );
 
@@ -1787,7 +1787,7 @@ $controlpro_faq = array(
   ),
   array(
     'questioon' => 'Što ako mi ne pomogne?',
-    'answer'    => 'Pokriva vas jamstvo povrata novca u 14 dana. Ako ne osjetite napredak u kontroli, javite nam se za povrat cijelog iznosa.'
+    'answer'    => 'Pokriva vas jamstvo povrata novca u 30 dana. Ako ne osjetite napredak u kontroli, javite nam se za povrat cijelog iznosa.'
   ),
 );
 
@@ -1883,7 +1883,7 @@ $dental_faq = array(
   ),
   array(
     'questioon' => 'Kakvo je jamstvo?',
-    'answer'    => 'Uz uređaj dobivate <strong>1 godinu jamstva</strong> i <strong>14 dana povrata novca</strong> — ako niste zadovoljni, vraćamo cijeli iznos.'
+    'answer'    => 'Uz uređaj dobivate <strong>1 godinu jamstva</strong> i <strong>30 dana povrata novca</strong> — ako niste zadovoljni, vraćamo cijeli iznos.'
   ),
   array(
     'questioon' => 'Je li učinkovitost dokazana?',
@@ -2012,7 +2012,7 @@ $pre_faq = array(
   array('questioon' => 'Mogu li ga koristiti i nakon poroda?',
     'answer'    => 'Da. Podupire ruke i leđa tijekom dojenja, a manji jastučić rasterećuje zapešće dok držite bebu.'),
   array('questioon' => 'Što ako mi ne odgovara?',
-    'answer'    => 'Imate <strong>14 noći</strong> za probu. Ako niste zadovoljni, javite nam se i vraćamo cijeli iznos.'),
+    'answer'    => 'Imate <strong>30 noći</strong> za probu. Ako niste zadovoljni, javite nam se i vraćamo cijeli iznos.'),
 );
 
 // NORIKS Hugger — FAQ za "Informacije o Proizvodu" (po originalu).
@@ -2032,7 +2032,7 @@ $hug_faq = array(
   array('questioon' => 'Gdje se sve može nositi?',
     'answer'    => 'Oko struka — na trbuhu za grčeve, na križima za bolove u leđima ili pomaknuto više uz leđa. Ruke ostaju slobodne u svakom položaju.'),
   array('questioon' => 'Mogu li ga vratiti?',
-    'answer'    => 'Da, imate <strong>14 dana</strong> za povrat novca. Dovoljan je e-mail, bez obrazaca.'),
+    'answer'    => 'Da, imate <strong>30 dana</strong> za povrat novca. Dovoljan je e-mail, bez obrazaca.'),
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
