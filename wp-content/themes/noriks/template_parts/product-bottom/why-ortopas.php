@@ -45,7 +45,7 @@ $opz_cmp_rows = array(
     array( 'Povoljno',                       true,  false ),
     array( 'Trenutno opuštanje',             true,  false ),
     array( 'Bez čekanja',                    true,  false ),
-    array( '60 dana jamstva povrata novca',  true,  false ),
+    array( '30 dana jamstva povrata novca',  true,  false ),
     array( 'Dugoročni troškovi',             false, true  ),
 );
 /* Recenzije sa slikom — 8) sekcija */

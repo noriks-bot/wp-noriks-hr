@@ -25,7 +25,7 @@ $bun_results = array(
 
 // Zašto odabrati nas — usporedba (isti stil kao knc-table na čarapama sa zatvaračem)
 $bun_cmp = array(
-    '90-dnevno jamstvo povrata novca',
+    '30-dnevno jamstvo povrata novca',
     'Ublažava nelagodu',
     'Sprječava rast čuklja',
     'Poboljšava stanje čuklja s vremenom',
@@ -116,7 +116,7 @@ $bun_steps = array(
         <li><strong>Podesiv</strong> intenzitet istezanja</li>
         <li>Osmišljen i preporučen od strane <strong>medicinskih stručnjaka</strong></li>
         <li><strong>Jednostavan za uporabu</strong> i prijenosan</li>
-        <li><strong>90-dnevno jamstvo povrata novca</strong> („rezultati ili puni povrat") jer smo toliko sigurni u svoj proizvod i znamo da će vam pomoći</li>
+        <li><strong>30-dnevno jamstvo povrata novca</strong> („rezultati ili puni povrat") jer smo toliko sigurni u svoj proizvod i znamo da će vam pomoći</li>
       </ul>
     </div>
     <div class="bun-col bun-media">

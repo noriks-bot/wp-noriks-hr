@@ -1401,7 +1401,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Može li se navlaka prati?', 'answer' => 'Da. Navlaka se skida i može se prati u perilici, pa jastuk ostaje svjež i čist. Tkanina je prozračna, hipoalergena i OEKO-TEX® certificirana.' ),
   array( 'questioon' => 'Odgovara li mojoj stolici ili sjedalu?', 'answer' => 'ErgoSit je univerzalnog oblika i pristaje većini autosjedala, uredskih i kuhinjskih stolica te invalidskih kolica. Nema veličina — jedan model odgovara svima.' ),
   array( 'questioon' => 'Za koliko vremena osjetim razliku?', 'answer' => 'Većina korisnika osjeti manje pritiska na trtici i udobnije sjedenje već od prvog dana. Za bolje držanje i manje boli u leđima učinak se dodatno gradi kroz redovitu uporabu.' ),
-  array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, svaki NORIKS ErgoSit dolazi s jamstvom udobnosti od 60 dana. Ako ne osjetite manje boli i više udobnosti, kontaktirajte nas i riješit ćemo to.' ),
+  array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, svaki NORIKS ErgoSit dolazi s jamstvom udobnosti od 30 dana. Ako ne osjetite manje boli i više udobnosti, kontaktirajte nas i riješit ćemo to.' ),
 );
 
 // KidsNest djecji jastuk — product FAQ (NORIKS, ublazene tvrdnje).
@@ -1629,7 +1629,7 @@ $cloud_faq = array(
 $cloath_faq = array(
   array(
     'questioon' => 'Što ako nisam zadovoljan kupnjom?',
-    'answer'    => 'Imate 60 dana da krpu isprobate bez rizika. Ako niste zadovoljni rezultatom, javite se našoj podršci i vraćamo vam novac — bez papirologije i bez objašnjavanja.',
+    'answer'    => 'Imate 30 dana da krpu isprobate bez rizika. Ako niste zadovoljni rezultatom, javite se našoj podršci i vraćamo vam novac — bez papirologije i bez objašnjavanja.',
   ),
   array(
     'questioon' => 'Od čega je krpa napravljena?',

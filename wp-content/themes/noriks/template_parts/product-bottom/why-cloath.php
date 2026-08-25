@@ -105,7 +105,7 @@ $cl_anim = function( $mp4, $fallback, $alt ) use ( $cl, $cl_path, $cl_img ) {
   </div>
 </section>
 
-<!-- ============ 6) 60 dana jamstva ============ -->
+<!-- ============ 6) 30 dana jamstva ============ -->
 <section class="ncl-sec">
   <div class="ncl-wrap ncl-row2">
     <div class="ncl-copy">
@@ -116,7 +116,7 @@ $cl_anim = function( $mp4, $fallback, $alt ) use ( $cl, $cl_path, $cl_img ) {
       <p class="ncl-strong">Ili dobijete kupaonicu koja blista kao nova, ili dobijete svoj novac natrag.</p>
       <a class="ncl-cta" href="#bundle-selector">Naruči bez rizika</a>
     </div>
-    <div class="ncl-media"><?php echo $cl_img('cl-10-zena-lice.webp','60 dana jamstva na povrat novca'); ?></div>
+    <div class="ncl-media"><?php echo $cl_img('cl-10-zena-lice.webp','30 dana jamstva na povrat novca'); ?></div>
   </div>
 </section>
 

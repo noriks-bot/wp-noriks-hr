@@ -60,7 +60,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
           <tr><td>Ojačani zatvarač, nikad se ne zaglavi</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Prozračna tkanina</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Udobnost cijeli dan (+12 sati)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>Jamstvo povrata novca 60 dana</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>Jamstvo povrata novca 30 dana</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr class="knc-price"><td>Cijena po paru</td><td>od 85 €</td><td>~15 €</td><td class="us">od 23,33 €</td></tr>
         </tbody>
       </table>
