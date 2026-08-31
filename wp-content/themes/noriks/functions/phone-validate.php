@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 define( 'NORIKS_TEL_CC',    '385' );
 define( 'NORIKS_TEL_TRUNK', '0' );
 define( 'NORIKS_TEL_MIN',   8 );
-define( 'NORIKS_TEL_MAX',   11 );
+define( 'NORIKS_TEL_MAX',   12 );
 
 /**
  * Vrne nacionalno stevilko brez klicne in vodilne nicle,
@@ -100,7 +100,7 @@ add_action( 'wp_footer', function () {
     </style>
     <script id="noriks-tel-check">
     jQuery(function($){
-      var CC = '385', TRUNK = '0', MIN = 8, MAX = 11;
+      var CC = '385', TRUNK = '0', MIN = 8, MAX = 12;
       var MSG = <?php echo wp_json_encode( 'Provjerite broj mobitela — čini se da nije potpun.' . ' ' . 'npr. 091 234 5678' ); ?>;
       function national(raw){
         var s = (raw||'').trim();
