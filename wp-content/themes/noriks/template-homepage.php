@@ -279,7 +279,7 @@ Probaj NORIKS po boljoj cijeni.
     <!-- Card 5 -->
     <a class="collection-card" href="/hr/product-category/carape/">
       <div class="collection-card__media">
-        <img src="https://devhr.noriks.com/wp-content/uploads/2025/11/stumfi_beli-crni_10paket-683x1024.jpg" alt="Čarape" />
+        <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2025/11/stumfi_beli-crni_10paket-683x1024.jpg' ) ); ?>" alt="Čarape" />
       </div>
       <div class="collection-card__body">
         <div class="collection-card__text">
