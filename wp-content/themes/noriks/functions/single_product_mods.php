@@ -74,8 +74,20 @@ add_action( 'wp_footer', function () {
 
 
 add_action( 'woocommerce_before_variations_form', function() {
-    get_template_part( 'template_parts/size-chart-modal' );
-    get_template_part( 'template_parts/size-chart-secondary' );
+    // Glavna tablica velicina se renderira SAMO enkrat - drugace na kompletima
+    // (dvije tablice) nastanu dupli ID-jevi #custom-size-chart-modal i klik na
+    // donju poveznicu otvori obje tablice odjednom.
+    if ( function_exists( 'noriks_render_size_chart_once' ) ) {
+        noriks_render_size_chart_once();
+    } else {
+        get_template_part( 'template_parts/size-chart-modal' );
+    }
+
+    static $noriks_secondary_done = false;
+    if ( ! $noriks_secondary_done ) {
+        $noriks_secondary_done = true;
+        get_template_part( 'template_parts/size-chart-secondary' );
+    }
 });
 
 
