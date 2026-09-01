@@ -509,7 +509,7 @@ function gck_render_bundle_selector() {
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
     } elseif ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) {
-        $gck_offer_subs = array( 'Standardnih 29 % popusta', '+ dodatnih 20 % popusta', '+ dodatnih 25 % popusta', '+ dodatnih 30 % popusta' );
+        $gck_offer_subs = array( 'Standardnih 29 % popusta', '+ dodatnih 20 % popusta', '+ dodatnih 25 % popusta' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Uređaj + 10 vrećica', 'Uređaj + 20 vrećica', 'Uređaj + 30 vrećica' );
     } else {
@@ -528,7 +528,7 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
     } elseif ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) {
-        $gck_offer_badges = array( 2 => 'NAJPOPULARNIJE', 3 => 'NAJBOLJA VRIJEDNOST' );
+        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' );
     } else {
         $gck_offer_badges = array();
     }
