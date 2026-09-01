@@ -928,12 +928,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option { padding: 13px 16px !important; align-content: center; }
       /* manji razmak izmedu kartica (inline stil je bio 25px) */
       #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 12px !important; }
-      /* znacka: jednak padding lijevo i desno */
+      /* znacka sjedi U kartici, u gornjem desnom kutu — ne visi izmedu kartica */
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 {
+          position: absolute !important; top: 0 !important; right: 0 !important; bottom: auto !important; left: auto !important;
+          transform: none !important; margin: 0 !important;
           display: inline-flex !important; align-items: center; justify-content: center;
-          padding: 5px 13px !important; letter-spacing: 0 !important; line-height: 1.3 !important;
-          font-size: 11.5px !important; border-radius: 7px !important;
+          padding: 4px 11px !important; letter-spacing: 0 !important; line-height: 1.3 !important;
+          font-size: 11px !important; font-weight: 800 !important;
+          border-radius: 0 10px 0 10px !important; white-space: nowrap; z-index: 3;
       }
       /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
       #bundle-selector .bundle-option > br,
