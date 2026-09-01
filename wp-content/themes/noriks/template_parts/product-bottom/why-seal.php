@@ -442,6 +442,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   border-radius: 12px; color: #8b8b8b; font-size: 14px; text-align: center; padding: 12px; }
 
 @media (max-width: 900px) {
+  .nsl-marquee { margin-top: 26px; padding: 11px 0; }
+  .nsl-marquee span { font-size: 12.5px; }
   .nsl-sec { padding: 34px 0; }
   .nsl-copy { max-width: none; }
   .nsl-wrap { padding-left: 14px; padding-right: 14px; }

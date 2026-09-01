@@ -517,6 +517,11 @@ function gck_render_bundle_selector() {
     }
     // Mala oznaka pokraj naslova ponude (index => tekst). Trenutno se ne koristi.
     $gck_offer_tags = array();
+
+    // Slicica u kartici ponude (index => datoteka u temi /img/seal/).
+    $gck_offer_imgs = has_term( array( 'orto-seal' ), 'product_cat', $product_id )
+        ? array( 'seal-paket-10.jpg', 'seal-paket-20.jpg', 'seal-paket-30.jpg' )
+        : array();
     // Kartusi iznad kartice ponude (index => tekst).
     if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
@@ -883,6 +888,51 @@ function gck_render_bundle_selector() {
           .color-swatches .swatch.active { border-color: black  !important; }
           .bundle-box select { border: 2px solid black !important; }
         </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS ChefSeal: kartica ponude sa slicicom paketa, kao na referenci. */
+      #bundle-selector .bundle-option {
+          display: grid !important;
+          grid-template-columns: auto 62px minmax(0,1fr) auto;
+          grid-template-rows: auto auto;
+          column-gap: 12px; row-gap: 0; align-items: center;
+          padding: 14px 16px !important;
+      }
+      #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; }
+      #bundle-selector .bundle-option .gck-offer-img {
+          grid-column: 2; grid-row: 1 / span 2;
+          width: 62px; height: 62px; object-fit: contain; display: block;
+          background: #fff; border-radius: 8px; border: 1px solid #ececec;
+      }
+      #bundle-selector .bundle-option .gck-offer-head {
+          grid-column: 3; grid-row: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.15;
+      }
+      #bundle-selector .bundle-option .bundle-option-title { font-size: 17px; font-weight: 800; letter-spacing: -.01em; }
+      #bundle-selector .bundle-option .gck-offer-sub {
+          grid-column: 3; grid-row: 2; margin: 2px 0 0 !important; font-size: 13px; line-height: 1.25; color: #6b6b6b;
+      }
+      #bundle-selector .bundle-option .bundle-total-line {
+          grid-column: 4; grid-row: 1 / span 2;
+          display: flex !important; flex-direction: column; align-items: flex-end; gap: 2px;
+          margin: 0 !important; text-align: right;
+      }
+      #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 20px; font-weight: 800; color: #141414; order: 1; }
+      #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 14px; color: #9aa3ad; margin: 0 !important; order: 2; }
+      #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+      /* cijena po komadu je kod jednog uredaja suvisna */
+      #bundle-selector .bundle-option .gck-per-chip { display: none !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { margin: 0 !important; }
+      @media (max-width: 560px) {
+          #bundle-selector .bundle-option { grid-template-columns: auto 48px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
+          #bundle-selector .bundle-option .gck-offer-img { width: 48px; height: 48px; }
+          #bundle-selector .bundle-option .bundle-option-title { font-size: 15px; }
+          #bundle-selector .bundle-option .gck-offer-sub { font-size: 12px; }
+          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 16.5px; }
+          #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 12.5px; }
+      }
+    </style>
     <?php endif; ?>
 
     <?php
@@ -2382,7 +2432,7 @@ function gck_render_bundle_selector() {
                     
   
 
-<span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
+<?php if ( ! empty( $gck_offer_imgs ) && isset( $gck_offer_imgs[ $loop_index ] ) ) : ?><img class="gck-offer-img" src="<?php echo esc_url( get_template_directory_uri() . '/img/seal/' . $gck_offer_imgs[ $loop_index ] ); ?>" alt="" loading="lazy"><?php endif; ?><span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
                   if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?>
                 
                   <?php

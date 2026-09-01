@@ -202,7 +202,8 @@ $sr_ico = function( $d ) {
   border-radius: 12px; color: #7d8694; font-size: 14px; text-align: center; padding: 12px; }
 
 @media (max-width: 900px) {
-  .nsr-sec { padding: 28px 0; }
+  .nsr-sec { padding: 32px 0; }
+  .nsr-sec:first-of-type { padding-top: 30px; }
   .nsr-wrap { padding-left: 14px; padding-right: 14px; }
   .nsr-h2 { font-size: 24px; }
   .nsr-four { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
