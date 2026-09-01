@@ -410,12 +410,15 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 
 /* 7) usporedna tablica */
 .nsl-cmp { position: relative; max-width: 860px; margin: 0 auto; }
-.nsl-cmp-grid { display: grid; grid-template-columns: 46% 27% 27%; position: relative; z-index: 1; }
+/* bela podlaga tablice na sivoj sekciji */
+.nsl-cmp:before { content: ""; position: absolute; top: -16px; bottom: -18px; left: -22px; right: -22px;
+  background: #fff; border-radius: 18px; box-shadow: 0 8px 28px rgba(0,0,0,.07); z-index: 0; }
+.nsl-cmp-grid { display: grid; grid-template-columns: 46% 27% 27%; position: relative; z-index: 2; }
 .nsl-cmp-grid > div { padding: 19px 10px; font-size: 16.5px; text-align: center; display: flex;
   align-items: center; justify-content: center; }
 .nsl-cmp-grid > .nsl-cmp-t, .nsl-cmp-grid > .nsl-cmp-h:first-child { justify-content: flex-start; text-align: left; font-weight: 700; }
 .nsl-cmp-h { font-size: 18px; font-weight: 800; letter-spacing: -.02em; align-items: flex-end !important; padding-bottom: 18px !important; }
-.nsl-cmp-grid > .nsl-cmp-t, .nsl-cmp-grid > .nsl-cmp-t + div, .nsl-cmp-grid > .nsl-cmp-t + div + div { border-top: 1px solid #e0e0e2; }
+.nsl-cmp-grid > .nsl-cmp-t, .nsl-cmp-grid > .nsl-cmp-t + div + div { border-top: 1px solid #ececee; }
 .nsl-cmp-grid i { font-style: normal; font-size: 21px; font-weight: 700; }
 .nsl-cmp-grid .ok { color: #fff; }
 .nsl-cmp-grid .no { color: #e03142; }
@@ -423,8 +426,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-cmp-h.nsl-cmp-c2 { align-items: center !important; justify-content: flex-end !important; text-align: center; }
 .nsl-cmp-h.nsl-cmp-c2 img { width: 46px; height: auto; display: block; margin: 0 auto; }
 .nsl-cmp-h.nsl-cmp-c2 span { color: #fff; font-size: 14.5px; font-weight: 800; display: block; width: 100%; text-align: center; }
-.nsl-cmp-hl { position: absolute; top: 0; bottom: 0; left: 46%; width: 27%; background: #c3192a;
-  border-radius: 16px; z-index: 0; }
+.nsl-cmp-hl { position: absolute; top: -8px; bottom: -8px; left: 46%; width: 27%; background: #c3192a;
+  border-radius: 16px; z-index: 1; }
 
 /* 8) mnenja kupcev */
 .nsl-ugc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
