@@ -217,7 +217,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
 
 <?php // NORIKS Cards i HairMagic: bez tri ikone (majica/pristajanje) — nisu relevantne za te proizvode.
-if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'bra', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) ): ?>
+if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'bra', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) ): ?>
 
 
 <!-- my thre icons content -->

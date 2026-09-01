@@ -14,6 +14,8 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
         static $done = false;
         if ( $done ) { return; }
         $done = true;
+        // Proizvodi bez velicina uopce nemaju tablicu — ne izrisuj je.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'seal' ) ) { return; }
         get_template_part( 'template_parts/size-chart-modal' );
     }
 }
