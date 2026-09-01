@@ -80,13 +80,13 @@ add_action( 'woocommerce_before_variations_form', function() {
     if ( function_exists( 'noriks_render_size_chart_once' ) ) {
         noriks_render_size_chart_once();
     } else {
-        get_template_part( 'template_parts/size-chart-modal' );
+        noriks_size_chart_once();
     }
 
     static $noriks_secondary_done = false;
     if ( ! $noriks_secondary_done ) {
         $noriks_secondary_done = true;
-        get_template_part( 'template_parts/size-chart-secondary' );
+        noriks_size_chart_secondary_once();
     }
 });
 

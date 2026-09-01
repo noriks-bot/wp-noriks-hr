@@ -7,6 +7,7 @@
 
 include(get_template_directory() . '/functions/product-type.php'); // central product-type resolver (load first)
 include(get_template_directory() . '/functions/performance.php');  // safe front-end performance tweaks
+include(get_template_directory() . '/functions/size-chart-once.php'); // tabela velikosti samo enkrat
 include(get_template_directory() . '/functions/checkout_mods.php');
 include(get_template_directory() . '/functions/acf-text-fix.php'); // popravki besedil iz ACF nastavitev
 include(get_template_directory() . '/functions/out-of-stock-notice.php'); // obvestilo ni na zalogi
@@ -867,7 +868,7 @@ function noriks_render_size_chart_once() {
         return;
     }
     $done = true;
-    get_template_part( 'template_parts/size-chart-modal' );
+    noriks_size_chart_once();
 }
 
 // Keep it available where variations render (fires first when present).
