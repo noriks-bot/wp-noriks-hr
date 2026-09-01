@@ -937,7 +937,7 @@ function gck_render_bundle_selector() {
           display: inline-flex !important; align-items: center; justify-content: center;
           padding: 0 14px !important; height: 25px !important; line-height: 1 !important;
           letter-spacing: 0 !important; font-size: 11.5px !important; font-weight: 800 !important;
-          border-radius: 6px !important; white-space: nowrap; z-index: 3;
+          border-radius: 10px !important; white-space: nowrap; z-index: 3;
           max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
       }
       /* obje znacke moraju biti identicne — offer znacka je prije imala inline display */
@@ -980,11 +980,11 @@ function gck_render_bundle_selector() {
       @media (max-width: 560px) {
           #bundle-selector .gck-popular-badge,
           #bundle-selector .gck-popular-badge-2 {
-              right: 20px !important; left: auto !important; top: 0 !important;
+              right: 10px !important; left: auto !important; top: 0 !important;
               transform: translateY(-50%) !important;
               font-size: 10.5px !important; padding: 0 12px !important; height: 23px !important;
               line-height: 1 !important; letter-spacing: 0 !important;
-              border-radius: 6px !important; max-width: calc(100% - 40px);
+              border-radius: 10px !important; max-width: calc(100% - 40px);
           }
           #bundle-selector .bundle-option:has(.gck-popular-badge),
           #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 18px !important; }
