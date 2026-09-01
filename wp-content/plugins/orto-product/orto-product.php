@@ -520,7 +520,7 @@ function gck_render_bundle_selector() {
 
     // Slicica u kartici ponude (index => datoteka u temi /img/seal/).
     $gck_offer_imgs = has_term( array( 'orto-seal' ), 'product_cat', $product_id )
-        ? array( 'seal-paket-10.jpg', 'seal-paket-20.jpg', 'seal-paket-30.jpg' )
+        ? array( 'seal-paket-10-v2.jpg', 'seal-paket-20-v2.jpg', 'seal-paket-30-v2.jpg' )
         : array();
     // Kartusi iznad kartice ponude (index => tekst).
     if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) {
