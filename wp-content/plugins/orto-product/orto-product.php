@@ -931,9 +931,9 @@ function gck_render_bundle_selector() {
       /* znacka na gornjem rubu kartice, tocno po sredini */
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 {
-          position: absolute !important; top: 0 !important; left: 50% !important;
-          right: auto !important; bottom: auto !important; margin: 0 !important;
-          transform: translate(-50%, -50%) !important;
+          position: absolute !important; top: 0 !important; right: 14px !important;
+          left: auto !important; bottom: auto !important; margin: 0 !important;
+          transform: translateY(-50%) !important;
           display: inline-flex !important; align-items: center; justify-content: center;
           padding: 5px 14px !important; letter-spacing: 0 !important; line-height: 1.25 !important;
           font-size: 11.5px !important; font-weight: 800 !important;
@@ -979,8 +979,8 @@ function gck_render_bundle_selector() {
           /* mobilno: ista sredinska poravnava, samo manje */
           #bundle-selector .gck-popular-badge,
           #bundle-selector .gck-popular-badge-2 {
-              left: 50% !important; right: auto !important; top: 0 !important;
-              transform: translate(-50%, -50%) !important;
+              right: 12px !important; left: auto !important; top: 0 !important;
+              transform: translateY(-50%) !important;
               font-size: 10.5px !important; padding: 4px 12px !important; letter-spacing: 0 !important;
               max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
           }
