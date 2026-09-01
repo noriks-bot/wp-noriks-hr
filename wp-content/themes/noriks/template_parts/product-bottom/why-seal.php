@@ -509,8 +509,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-sub { margin: -16px 0 20px; font-size: 14px; }
   .nsl-cmp { margin: 30px 0 34px; }
   /* tablica na mobilnom ide od ruba do ruba, bez zaobljenja */
-  .nsl-cmp:before { left: -14px; right: -14px; border-radius: 0; box-shadow: none; border-top: 1px solid #ececee; border-bottom: 1px solid #ececee; }
-  .nsl-cmp-hl { border-radius: 0; top: 0; bottom: 0; }
+  .nsl-cmp:before { left: -14px; right: -14px; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+  .nsl-cmp-hl { border-radius: 14px; top: -6px; bottom: -6px; }
   .nsl-cmp-grid > div { padding: 13px 5px; font-size: 14px; }
   .nsl-cmp-h { font-size: 14.5px; padding-bottom: 12px !important; }
   .nsl-cmp-h.nsl-cmp-c2 img { width: 32px; }
