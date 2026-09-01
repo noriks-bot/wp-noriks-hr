@@ -32,7 +32,7 @@ $sl_vid = function( $file, $poster, $alt ) use ( $sl, $sl_path ) {
 
 // Ikonice za radijalne sekcije (crveni obris u svijetlo ruzicastom krugu).
 $sl_ico = function( $d ) {
-  return '<span class="nsl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="1.7" '
+  return '<span class="nsl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#c3192a" stroke-width="1.7" '
        . 'stroke-linecap="round" stroke-linejoin="round">' . $d . '</svg></span>';
 };
 $ico_batt  = '<rect x="3" y="8" width="14" height="9" rx="2"/><path d="M20 11v3"/><path d="M10 10l-2 3h3l-2 3"/>';
@@ -146,22 +146,22 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
       <div class="nsl-step">
         <div class="nsl-num">1</div>
         <p class="nsl-steplab">Napunite vrećicu hranom</p>
-        <?php echo $sl_img( 'seal-03-avokado-vrecice.jpg', 'Punjenje vrećice hranom' ); ?>
+        <?php echo $sl_img( 'seal-korak-1.jpg', 'Punjenje vrećice hranom' ); ?>
       </div>
       <div class="nsl-step">
         <div class="nsl-num">2</div>
         <p class="nsl-steplab">Zatvorite zatvarač</p>
-        <?php echo $sl_img( 'seal-09-prsut.jpg', 'Zatvaranje vrećice' ); ?>
+        <?php echo $sl_img( 'seal-korak-2.jpg', 'Zatvaranje vrećice' ); ?>
       </div>
       <div class="nsl-step">
         <div class="nsl-num">3</div>
         <p class="nsl-steplab">Pritisnite gumb za početak</p>
-        <?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Pritisak na gumb' ); ?>
+        <?php echo $sl_img( 'seal-korak-3.jpg', 'Pritisak na gumb za vakuumiranje' ); ?>
       </div>
       <div class="nsl-step">
         <div class="nsl-num">4</div>
         <p class="nsl-steplab">Sam se isključi kad je gotovo</p>
-        <?php echo $sl_img( 'seal-05-losos-flatlay.jpg', 'Vakuumirana hrana' ); ?>
+        <?php echo $sl_img( 'seal-korak-4.jpg', 'Vakuumirana vrećica' ); ?>
       </div>
     </div>
   </div>
@@ -176,7 +176,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Za zamrzivač, mikrovalnu i perilicu</strong><span>Sigurne za spremanje, podgrijavanje i pranje.</span></div><?php echo $sl_ico( $ico_snow ); ?></div>
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Čuvaju okus i hranjive tvari</strong><span>Bez zraka se okus i sastojci dulje zadrže.</span></div><?php echo $sl_ico( $ico_leaf ); ?></div>
       </div>
-      <div class="nsl-rc nsl-rc-circle"><?php echo $sl_img( 'seal-16-orasasti-plodovi.jpg', 'NORIKS vakuumska vrećica' ); ?></div>
+      <div class="nsl-rc"><?php echo $sl_img( 'seal-vrecica-krug.jpg', 'NORIKS vakuumska vrećica' ); ?></div>
       <div class="nsl-rr">
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_drop ); ?><div class="nsl-rtxt"><strong>Bez mirisa i bez curenja</strong><span>Zatvarač brtvi, miris ostaje unutra.</span></div></div>
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_recyc ); ?><div class="nsl-rtxt"><strong>Izdržljive i za višekratnu upotrebu</strong><span>Operete ih i koristite iznova.</span></div></div>
@@ -211,23 +211,28 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </div></div>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap');
+.nsl-sec, .nsl-marquee {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+.nsl-sec h2, .nsl-sec h3, .nsl-sec strong, .nsl-stat span, .nsl-num, .nsl-tag, .nsl-marquee span {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
 .nsl-sec { padding: 54px 0; }
 .nsl-white { background: #fff;     color: #151515; }
-.nsl-grey  { background: #f6f6f7;  color: #151515; }
+.nsl-grey  { background: #f4f4f4;  color: #151515; }
 .nsl-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
 .nsl-center { text-align: center; }
 .nsl-h2 { font-size: 34px; line-height: 1.18; margin: 0 0 34px; font-weight: 800; letter-spacing: -.01em; }
-.nsl-h2 em { font-style: normal; color: #c8102e; }
+.nsl-h2 em { font-style: normal; color: #e03142; }
 .nsl-h3 { font-size: 25px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
 .nsl-sec p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
 
 /* traka */
-.nsl-marquee { background: #fdeaee; overflow: hidden; padding: 13px 0; }
+.nsl-marquee { background: #ffeff2; overflow: hidden; padding: 13px 0; }
 .nsl-marquee-track { display: flex; align-items: center; gap: 26px; white-space: nowrap;
   animation: nslmq 34s linear infinite; width: max-content; }
-.nsl-marquee span { color: #c8102e; font-weight: 800; font-size: 14px; letter-spacing: .06em; }
-.nsl-marquee i { color: #c8102e; font-style: normal; font-size: 13px; }
+.nsl-marquee span { color: #c3192a; font-weight: 800; font-size: 14px; letter-spacing: .06em; }
+.nsl-marquee i { color: #c3192a; font-style: normal; font-size: 13px; }
 @keyframes nslmq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* 1) tri negativne kartice */
@@ -237,24 +242,24 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-negcard h3 { font-size: 22px; font-weight: 800; margin: 0 0 14px; }
 .nsl-negcard ul { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
 .nsl-negcard li { position: relative; padding-left: 30px; margin-bottom: 9px; font-size: 16px; }
-.nsl-negcard li:before { content: "✕"; position: absolute; left: 4px; top: 0; color: #c8102e; font-weight: 800; }
+.nsl-negcard li:before { content: "✕"; position: absolute; left: 4px; top: 0; color: #c3192a; font-weight: 800; }
 
 /* 2) izmenicne vrstice */
 .nsl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 46px; }
 .nsl-row:last-child { margin-bottom: 0; }
 .nsl-sq { aspect-ratio: 1 / 1; border-radius: 16px; overflow: hidden; background: #ececed; }
 .nsl-sq img, .nsl-sq .nsl-video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.nsl-spark { color: #c8102e; font-size: 24px; line-height: 1; display: block; margin-bottom: 12px; }
-.nsl-dot { border-top: 1.5px dotted #e2909c; margin: 18px 0 16px; }
+.nsl-spark { color: #e03142; font-size: 24px; line-height: 1; display: block; margin-bottom: 12px; }
+.nsl-dot { border-top: 1.5px dotted #efa8b3; margin: 18px 0 16px; }
 .nsl-stat { display: flex; align-items: flex-start; gap: 16px; }
-.nsl-stat span { flex: 0 0 auto; font-size: 40px; font-weight: 800; color: #c8102e; line-height: 1; }
+.nsl-stat span { flex: 0 0 auto; font-size: 40px; font-weight: 800; color: #e03142; line-height: 1; }
 .nsl-stat p { margin: 0; font-size: 15.5px; line-height: 1.5; }
 
 /* 3) + 5) radijalno */
 .nsl-radial { display: grid; grid-template-columns: 1fr 1.05fr 1fr; gap: 26px; align-items: center; }
 .nsl-rc img { width: 100%; height: auto; display: block; }
 .nsl-rc-circle { position: relative; display: flex; align-items: center; justify-content: center; }
-.nsl-rc-circle:before { content: ""; position: absolute; width: 74%; padding-bottom: 74%; border-radius: 50%; background: #c8102e; }
+.nsl-rc-circle:before { content: ""; position: absolute; width: 74%; padding-bottom: 74%; border-radius: 50%; background: #c3192a; }
 .nsl-rc-circle:after { content: ""; position: absolute; width: 92%; padding-bottom: 92%; border-radius: 50%; border: 1px solid #f0c4cc; }
 .nsl-rc-circle img { position: relative; width: 62%; }
 .nsl-rl, .nsl-rr { display: flex; flex-direction: column; gap: 46px; }
@@ -263,18 +268,18 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-rr .nsl-rlab { justify-content: flex-start; text-align: left; }
 .nsl-rtxt strong { display: block; font-size: 17px; font-weight: 800; line-height: 1.25; }
 .nsl-rtxt span { display: block; font-size: 14px; color: #5f5f5f; margin-top: 4px; }
-.nsl-ico { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: #fdeaee;
+.nsl-ico { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: #ffeff2;
   display: flex; align-items: center; justify-content: center; }
 .nsl-ico svg { width: 23px; height: 23px; }
 
 /* 4) koraki */
 .nsl-steps4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; position: relative; }
 .nsl-step { text-align: center; position: relative; }
-.nsl-num { width: 56px; height: 56px; border-radius: 50%; border: 2px solid #c8102e; background: #c8102e;
+.nsl-num { width: 56px; height: 56px; border-radius: 50%; border: 2px solid #c3192a; background: #c3192a;
   color: #fff; font-size: 21px; font-weight: 800; display: flex; align-items: center; justify-content: center;
   margin: 0 auto 16px; position: relative; z-index: 2; }
 .nsl-step:not(:last-child):after { content: ""; position: absolute; top: 28px; left: calc(50% + 34px);
-  width: calc(100% - 68px); border-top: 1.5px dashed #e2909c; z-index: 1; }
+  width: calc(100% - 68px); border-top: 1.5px dashed #efa8b3; z-index: 1; }
 .nsl-steplab { font-size: 16.5px; font-weight: 800; margin: 0 0 16px; }
 .nsl-step img, .nsl-step .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block; }
 
@@ -284,7 +289,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-vs2 img, .nsl-vs2 .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; display: block; }
 .nsl-vs2 figcaption { text-align: center; padding-top: 12px; }
 .nsl-tag { display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 14px; font-weight: 800; }
-.nsl-tag-bad  { background: #fdeaee; color: #c8102e; }
+.nsl-tag-bad  { background: #ffeff2; color: #c3192a; }
 .nsl-tag-good { background: #e6f4ec; color: #1f7a4d; }
 
 .nsl-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ececed;
