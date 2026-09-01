@@ -895,7 +895,7 @@ function gck_render_bundle_selector() {
       /* NORIKS ChefSeal: kartica ponude sa slicicom paketa, kao na referenci. */
       #bundle-selector .bundle-option {
           display: grid !important;
-          grid-template-columns: auto 62px minmax(0,1fr) auto;
+          grid-template-columns: auto 76px minmax(0,1fr) auto;
           grid-template-rows: auto auto;
           column-gap: 12px; row-gap: 0; align-items: center;
           padding: 14px 16px !important;
@@ -903,7 +903,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; }
       #bundle-selector .bundle-option .gck-offer-img {
           grid-column: 2; grid-row: 1 / span 2;
-          width: 62px; height: 62px; object-fit: contain; display: block;
+          width: 76px; height: 76px; object-fit: contain; display: block;
           background: #fff; border-radius: 8px; border: 1px solid #ececec;
       }
       #bundle-selector .bundle-option .gck-offer-head {
@@ -959,8 +959,8 @@ function gck_render_bundle_selector() {
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 { background: #c3192a !important; color: #fff !important; }
       @media (max-width: 560px) {
-          #bundle-selector .bundle-option { grid-template-columns: auto 48px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
-          #bundle-selector .bundle-option .gck-offer-img { width: 48px; height: 48px; }
+          #bundle-selector .bundle-option { grid-template-columns: auto 56px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
+          #bundle-selector .bundle-option .gck-offer-img { width: 56px; height: 56px; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 15px; }
           #bundle-selector .bundle-option .gck-offer-sub { font-size: 12px; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 16.5px; }

@@ -180,13 +180,13 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Za zamrzivač, mikrovalnu i perilicu</strong><span>Sigurne za spremanje, podgrijavanje i pranje.</span></div><?php echo $sl_ico( $ico_snow ); ?></div>
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Čuvaju okus i hranjive tvari</strong><span>Bez zraka se okus i sastojci dulje zadrže.</span></div><?php echo $sl_ico( $ico_leaf ); ?></div>
       </div>
-      <div class="nsl-rc"><?php echo $sl_img( 'seal-vrecica-krug.jpg', 'NORIKS vakuumska vrećica' ); ?></div>
+      <div class="nsl-rc nsl-rc-circle"><?php echo $sl_img( 'seal-vrecica.png', 'NORIKS vakuumska vrećica za višekratnu upotrebu' ); ?></div>
       <div class="nsl-rr">
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_drop ); ?><div class="nsl-rtxt"><strong>Bez mirisa i bez curenja</strong><span>Zatvarač brtvi, miris ostaje unutra.</span></div></div>
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_recyc ); ?><div class="nsl-rtxt"><strong>Izdržljive i za višekratnu upotrebu</strong><span>Operete ih i koristite iznova.</span></div></div>
       </div>
     </div>
-    <p class="nsl-note nsl-center">Polovica vrećica u kompletu je manja (1 l), polovica veća (2 l).</p>
+    <p class="nsl-note nsl-center"><b>Vrećice se peru i koriste iznova — nisu jednokratne.</b> Polovica vrećica u kompletu je manja (1 l), polovica veća (2 l).</p>
   </div>
 </section>
 
@@ -345,16 +345,17 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 /* 3) + 5) radijalno */
 .nsl-radial { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 34px; align-items: center; }
 .nsl-rc img { width: 100%; height: auto; display: block; }
-.nsl-radial-lg { margin-top: 12px; }
+.nsl-radial-lg { margin-top: 12px; grid-template-columns: 1fr 1.5fr 1fr; }
 .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 92px; }
 .nsl-radial-lg .nsl-rtxt strong { font-size: 19px; }
 .nsl-radial-lg .nsl-rtxt span { font-size: 15px; margin-top: 6px; }
 .nsl-radial-lg .nsl-ico { width: 54px; height: 54px; }
 .nsl-radial-lg .nsl-ico svg { width: 26px; height: 26px; }
 .nsl-rc-circle { position: relative; display: flex; align-items: center; justify-content: center; }
-.nsl-rc-circle:before { content: ""; position: absolute; width: 74%; padding-bottom: 74%; border-radius: 50%; background: #c3192a; }
-.nsl-rc-circle:after { content: ""; position: absolute; width: 92%; padding-bottom: 92%; border-radius: 50%; border: 1px solid #f0c4cc; }
-.nsl-rc-circle img { position: relative; width: 62%; }
+.nsl-rc-circle { aspect-ratio: 1 / 1; }
+.nsl-rc-circle:before { content: ""; position: absolute; width: 78%; padding-bottom: 78%; border-radius: 50%; background: #c3192a; }
+.nsl-rc-circle:after { content: ""; position: absolute; width: 100%; padding-bottom: 100%; border-radius: 50%; border: 1px solid #f0c4cc; }
+.nsl-rc-circle img { position: relative; width: 74%; height: auto; filter: drop-shadow(0 6px 16px rgba(0,0,0,.16)); }
 .nsl-rl, .nsl-rr { display: flex; flex-direction: column; gap: 58px; }
 .nsl-rlab { display: flex; align-items: center; gap: 14px; }
 .nsl-rl .nsl-rlab { justify-content: flex-end; text-align: right; }
