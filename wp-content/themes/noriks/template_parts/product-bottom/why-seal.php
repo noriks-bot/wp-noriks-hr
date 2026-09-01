@@ -345,7 +345,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 /* 3) + 5) radijalno */
 .nsl-radial { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 34px; align-items: center; }
 .nsl-rc img { width: 100%; height: auto; display: block; }
-.nsl-radial-lg { margin-top: 12px; grid-template-columns: 1fr 1.5fr 1fr; }
+.nsl-radial-lg { margin-top: 12px; grid-template-columns: .85fr 2.1fr .85fr; gap: 8px; }
+.nsl-radial-lg .nsl-rc img { width: 100%; height: auto; }
 .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 92px; }
 .nsl-radial-lg .nsl-rtxt strong { font-size: 19px; }
 .nsl-radial-lg .nsl-rtxt span { font-size: 15px; margin-top: 6px; }
