@@ -152,6 +152,14 @@
 
            Niste jedine kojima termofor sklizne čim ustanu sa kauča.
 
+          <?php elseif ( noriks_is_type( 'seal' ) ): ?>
+
+           Niste jedini koji na kraju tjedna bacaju hranu koju su platili.
+
+          <?php elseif ( noriks_is_type( 'sr' ) ): ?>
+
+           Niste jedini kojima je košulja izgužvana prije nego što dođu na posao.
+
 
 
           <?php else: ?>
@@ -272,6 +280,14 @@
 
            Tisuće kupaca već nosi NORIKS Hugger – toplina ostaje uz tijelo, a ruke su slobodne za sve ostalo.
 
+           <?php elseif ( noriks_is_type( 'seal' ) ): ?>
+
+           Tisuće kućanstava već koristi NORIKS Seal – hrana vakuumirana u pet sekundi, bez glomaznog aparata na radnoj plohi.
+
+           <?php elseif ( noriks_is_type( 'sr' ) ): ?>
+
+           Tisuće muškaraca već nosi NORIKS SR – košulja koja se rasteže s vama i ne treba glačalo.
+
            <?php else: ?>
         
         
@@ -374,11 +390,15 @@
   $is_pre_page        = noriks_is_type( 'pre', $current_product_id );
   $is_hug_page        = noriks_is_type( 'hug', $current_product_id );
   $is_dental_page     = noriks_is_type( 'dental', $current_product_id );
+  $is_seal_page       = noriks_is_type( 'seal', $current_product_id );
+  $is_sr_page         = noriks_is_type( 'sr', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_bokserice_page ? 'NORIKS bokserice'
+  $rv_fallback_title = $is_seal_page ? 'NORIKS Seal vakuumski aparat'
+                     : ( $is_sr_page ? 'NORIKS SR košulja'
+                     : ( $is_bokserice_page ? 'NORIKS bokserice'
                      : ( $is_snore_page ? 'NORIKS udlaga protiv hrkanja'
                      : ( $is_cloud_page ? 'NORIKS Cloud jastuk za koljena'
                      : ( $is_cloath_page ? 'Polar NORIKS Cloth XXL krpa'
@@ -403,10 +423,14 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_dental_page ) {
+  if ( $is_seal_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_seal.php';
+  } elseif ( $is_sr_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_sr.php';
+  } elseif ( $is_dental_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_dental.php';
   } elseif ( $is_hug_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_hug.php';
@@ -546,7 +570,7 @@
          za vejami in je npr. KneeFixu stregel predpomnjeni bazen majic. */
       $noriks_key_type = 'all';
       if ( function_exists( 'noriks_is_type' ) ) {
-          foreach ( array( 'hug', 'pre', 'kneeheat', 'lift', 'kneefix', 'kidsnest', 'ortopedski-jastuk', 'leakboxers', 'kompresijske-majice', 'norikshers', 'fisiorest', 'bunion', 'ortopas', 'kompresijske-nogavice', 'nosilka', 'controlpro', 'dental', 'hairmagic', 'norikshersbrush', 'noriks-cards', 'cloath', 'bra', 'hyd', 'snore', 'cloud', 'bokserice' ) as $t ) {
+          foreach ( array( 'seal', 'sr', 'hug', 'pre', 'kneeheat', 'lift', 'kneefix', 'kidsnest', 'ortopedski-jastuk', 'leakboxers', 'kompresijske-majice', 'norikshers', 'fisiorest', 'bunion', 'ortopas', 'kompresijske-nogavice', 'nosilka', 'controlpro', 'dental', 'hairmagic', 'norikshersbrush', 'noriks-cards', 'cloath', 'bra', 'hyd', 'snore', 'cloud', 'bokserice' ) as $t ) {
               if ( noriks_is_type( $t, $product_id ) ) { $noriks_key_type = $t; break; }
           }
       }
@@ -829,7 +853,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_cloath_page || $is_bra_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_cloath_page || $is_bra_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -906,7 +930,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page && ! $is_seal_page && ! $is_sr_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -945,7 +969,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page && ! $is_seal_page && ! $is_sr_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -983,7 +1007,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1321,9 +1345,11 @@ $is_lift          = ( function_exists('noriks_is_type') && noriks_is_type('lift'
 $is_kneeheat      = ( function_exists('noriks_is_type') && noriks_is_type('kneeheat') );
 $is_pre           = ( function_exists('noriks_is_type') && noriks_is_type('pre') );
 $is_hug           = ( function_exists('noriks_is_type') && noriks_is_type('hug') );
+$is_seal          = ( function_exists('noriks_is_type') && noriks_is_type('seal') );
+$is_sr            = ( function_exists('noriks_is_type') && noriks_is_type('sr') );
 $is_dental        = ( function_exists('noriks_is_type') && noriks_is_type('dental') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_cloath || $is_bra || $is_hyd || $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic || $is_lift || $is_kneeheat || $is_pre || $is_hug || $is_dental || $is_cloud || $is_snore ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_cloath || $is_bra || $is_hyd || $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic || $is_lift || $is_kneeheat || $is_pre || $is_hug || $is_dental || $is_cloud || $is_snore || $is_seal || $is_sr ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -2016,6 +2042,44 @@ $pre_faq = array(
 );
 
 // NORIKS Hugger — FAQ za "Informacije o Proizvodu" (po originalu).
+$seal_faq = array(
+  array('questioon' => 'Koliko dugo hrana ostaje svježa?',
+    'answer'    => 'Ovisi o namirnici, ali bez zraka nema oksidacije — <strong>meso, riba, sir i povrće ostaju svježi znatno dulje</strong> nego u običnoj vrećici ili posudi s poklopcem. Avokado ne posmeđi preko noći, jagode ne uplijesne za dva dana.'),
+  array('questioon' => 'Kako se koristi?',
+    'answer'    => 'U četiri koraka: napunite vrećicu, zatvorite zatvarač, prislonite uređaj na ventil i pritisnite gumb. Uređaj se <strong>sam isključi</strong> kad je zrak vani.'),
+  array('questioon' => 'Koliko traje baterija?',
+    'answer'    => 'Punjiva baterija od <strong>1200 mAh</strong> dovoljna je za više stotina vrećica na jedno punjenje. Puni se preko USB-C kabela, istog kao za mobitel.'),
+  array('questioon' => 'Što je sve u pakiranju?',
+    'answer'    => 'Uređaj, kabel za punjenje, klipsa za zatvaranje vrećica, upute i vakuumske vrećice. <strong>Polovica vrećica je manja (1 l), polovica veća (2 l)</strong>.'),
+  array('questioon' => 'Mogu li se vrećice prati i koristiti ponovno?',
+    'answer'    => 'Da. Vrećice su <strong>za višekratnu uporabu</strong> i sigurne su za zamrzivač, mikrovalnu i perilicu posuđa.'),
+  array('questioon' => 'Radi li i s posudama?',
+    'answer'    => 'Da, uz NORIKS posude s ventilom. Postupak je isti kao s vrećicom — uređaj prislonite na ventil na poklopcu.'),
+  array('questioon' => 'Koliko je velik?',
+    'answer'    => 'Dug je <strong>20,5 cm</strong>, širok 4,7 cm i težak 237 g — stane u ladicu za pribor i radna ploha ostaje prazna.'),
+  array('questioon' => 'Mogu li ga vratiti?',
+    'answer'    => 'Da, imate <strong>30 dana</strong> za povrat novca ili zamjenu. Dovoljan je e-mail, bez obrazaca.'),
+);
+
+$sr_faq = array(
+  array('questioon' => 'Stvarno se ne gužva?',
+    'answer'    => 'Tako je. Tkanina s elastičnošću u četiri smjera <strong>vraća se u svoj oblik</strong>, pa košulja izgleda uredno cijeli dan — i kad je izvadite iz torbe. Glačanje nije potrebno.'),
+  array('questioon' => 'Jesu li veličine točne?',
+    'answer'    => 'Da, košulja je vjerna veličinama. U akordeonu „Tablica veličina“ imate visine i težine modela s fotografija. <strong>Ako ste između dvije veličine, uzmite veću</strong> za opušteniji kroj.'),
+  array('questioon' => 'Koji rukavi i boje su dostupni?',
+    'answer'    => 'Birate <strong>kratki ili dugi rukav</strong>, u 8 boja: bijela, svijetloplava, crna, teget, grafitna, bordo, petrol i tamno petrol. Veličine od S do 3XL.'),
+  array('questioon' => 'Od čega je napravljena?',
+    'answer'    => 'Od mješavine poliestera i elastana s <strong>12 % elastana</strong> — lagana, mekana i prozračna tkanina koja odvodi vlagu i toplinu s kože.'),
+  array('questioon' => 'Kako se pere?',
+    'answer'    => 'Strojno na <strong>programu za osjetljivo rublje</strong>, na 30 °C. Sušite na niskoj temperaturi ili na zraku kako tkanina zadrži elastičnost i ne bi se skupila.'),
+  array('questioon' => 'Ima li džep na prsima?',
+    'answer'    => 'Nema. Kroj je čist, s klasičnim raširenim ovratnikom i zakopčavanjem sprijeda — <strong>bez džepa na prsima</strong>.'),
+  array('questioon' => 'Za koje prilike je prikladna?',
+    'answer'    => 'Za ured, sastanke, večere, proslave i putovanja. Izgleda uredno bez glačanja, pa je praktična i za <strong>cjelodnevno nošenje</strong>.'),
+  array('questioon' => 'Mogu li je vratiti ili zamijeniti?',
+    'answer'    => 'Da, imate <strong>30 dana</strong> za povrat novca ili zamjenu veličine. Dovoljan je e-mail, bez obrazaca.'),
+);
+
 $hug_faq = array(
   array('questioon' => 'Koliko dugo ostaje topao?',
     'answer'    => 'Navlaka ima <strong>dvostruki sloj izolacije</strong>, pa toplina ostaje ugodna satima — bez naglog skoka od prevruće do mlake. Krakovi drže bocu uz tijelo, zato grije osjetno duže od klasičnog termofora.'),
@@ -2036,7 +2100,7 @@ $hug_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_snore && $is_info ) {
     return $snore_faq;
@@ -2070,6 +2134,12 @@ $faq_pick = function( $title, $list ) use ( $is_snore, $snore_faq, $is_cloud, $c
   }
   if ( $is_hug && $is_info ) {
     return $hug_faq;
+  }
+  if ( $is_seal && $is_info ) {
+    return $seal_faq;
+  }
+  if ( $is_sr && $is_info ) {
+    return $sr_faq;
   }
   if ( $is_brush && $is_info ) {
     return $brush_faq;

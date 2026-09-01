@@ -62,6 +62,10 @@ function noriks_product_type_map() : array {
         'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
+        // NORIKS Seal — rucni vakuumski aparat za hranu (bez atributa).
+        'seal'                    => array( 'orto-seal', 'seal' ),
+        // NORIKS SR — rastezljiva kosulja (boja + velicina + rukav).
+        'sr'                      => array( 'orto-sr', 'sr' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
