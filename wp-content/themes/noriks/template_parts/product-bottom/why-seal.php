@@ -419,8 +419,9 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-cmp-grid .ok { color: #fff; }
 .nsl-cmp-grid .no { color: #e03142; }
 .nsl-cmp-c2 { flex-direction: column; gap: 6px; }
-.nsl-cmp-h.nsl-cmp-c2 img { width: 46px; height: auto; display: block; }
-.nsl-cmp-h.nsl-cmp-c2 span { color: #fff; font-size: 14.5px; font-weight: 800; }
+.nsl-cmp-h.nsl-cmp-c2 { align-items: center !important; justify-content: flex-end !important; text-align: center; }
+.nsl-cmp-h.nsl-cmp-c2 img { width: 46px; height: auto; display: block; margin: 0 auto; }
+.nsl-cmp-h.nsl-cmp-c2 span { color: #fff; font-size: 14.5px; font-weight: 800; display: block; width: 100%; text-align: center; }
 .nsl-cmp-hl { position: absolute; top: 0; bottom: 0; left: 46%; width: 27%; background: #c3192a;
   border-radius: 16px; z-index: 0; }
 
