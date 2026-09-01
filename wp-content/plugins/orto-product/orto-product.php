@@ -924,6 +924,24 @@ function gck_render_bundle_selector() {
       /* cijena po komadu je kod jednog uredaja suvisna */
       #bundle-selector .bundle-option .gck-per-chip { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { margin: 0 !important; }
+      /* rdeci stil kartica — kao na referenci */
+      #bundle-selector .bundle-option {
+          border: 2px solid #f0d3d7 !important;
+          background: #fff !important;
+          border-radius: 12px !important;
+      }
+      #bundle-selector .bundle-option.active {
+          border-color: #c3192a !important;
+          background: #fff6f7 !important;
+          box-shadow: 0 0 0 3px rgba(195,25,42,.08);
+      }
+      #bundle-selector .bundle-option input[type="radio"] { accent-color: #c3192a; border-color: #c3192a !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #c3192a !important; }
+      #bundle-selector .bundle-option .gck-offer-img { border-color: #f0d3d7; }
+      /* podnaslov paketa crno */
+      #bundle-selector .bundle-option .gck-offer-sub { color: #151515 !important; font-weight: 600; }
+      #bundle-selector .gck-popular-badge,
+      #bundle-selector .gck-popular-badge-2 { background: #c3192a !important; color: #fff !important; }
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { grid-template-columns: auto 48px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
           #bundle-selector .bundle-option .gck-offer-img { width: 48px; height: 48px; }
