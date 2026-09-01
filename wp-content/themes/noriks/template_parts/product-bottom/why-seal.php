@@ -427,6 +427,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 
 /* 7) usporedna tablica */
 .nsl-cmp { position: relative; max-width: 860px; margin: 0 auto; }
+.nsl-cmp { margin-bottom: 26px; }
 /* bela podlaga tablice na sivoj sekciji */
 .nsl-cmp:before { content: ""; position: absolute; top: -16px; bottom: -18px; left: -22px; right: -22px;
   background: #fff; border-radius: 18px; box-shadow: 0 8px 28px rgba(0,0,0,.07); z-index: 0; }
@@ -504,7 +505,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-step:not(:last-child):after { top: 23px; left: calc(50% + 29px); width: calc(100% - 58px); }
   .nsl-steplab { font-size: 15px; margin-bottom: 12px; min-height: 3em; }
   .nsl-sub { margin: -16px 0 20px; font-size: 14px; }
-  .nsl-cmp { margin-top: 30px; }
+  .nsl-cmp { margin: 30px 0 34px; }
   .nsl-cmp-grid > div { padding: 13px 5px; font-size: 14px; }
   .nsl-cmp-h { font-size: 14.5px; padding-bottom: 12px !important; }
   .nsl-cmp-h.nsl-cmp-c2 img { width: 32px; }
