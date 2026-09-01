@@ -218,11 +218,11 @@ $sr_ico = function( $d ) {
 /* kratki opis proizvoda: zelene kvacice umjesto tockica */
 .woocommerce-product-details__short-description ul,
 .woocommerce div.product .woocommerce-product-details__short-description ul {
-  list-style: none !important; margin: 6px 0 12px !important; padding-left: 0 !important; }
+  list-style: none !important; margin: 4px 0 10px !important; padding-left: 0 !important; }
 .woocommerce-product-details__short-description ul li,
 .woocommerce div.product .woocommerce-product-details__short-description ul li {
   list-style: none !important; list-style-type: none !important; padding-left: 26px !important;
-  text-indent: -26px !important; margin-left: 0 !important; line-height: 1.45 !important; margin-bottom: 3px !important; }
+  text-indent: -26px !important; margin-left: 0 !important; line-height: 1.38 !important; margin-bottom: 0 !important; }
 .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
 .woocommerce-product-details__short-description ul li::before { content: none !important; }
 .woocommerce-product-details__short-description .nsr-tick {
