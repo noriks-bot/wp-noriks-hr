@@ -180,7 +180,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Za zamrzivač, mikrovalnu i perilicu</strong><span>Sigurne za spremanje, podgrijavanje i pranje.</span></div><?php echo $sl_ico( $ico_snow ); ?></div>
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Čuvaju okus i hranjive tvari</strong><span>Bez zraka se okus i sastojci dulje zadrže.</span></div><?php echo $sl_ico( $ico_leaf ); ?></div>
       </div>
-      <div class="nsl-rc nsl-rc-circle"><?php echo $sl_img( 'seal-vrecica.png', 'NORIKS vakuumska vrećica za višekratnu upotrebu' ); ?></div>
+      <div class="nsl-rc"><?php echo $sl_img( 'seal-vrecica.png', 'NORIKS vakuumska vrećica za višekratnu upotrebu' ); ?></div>
       <div class="nsl-rr">
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_drop ); ?><div class="nsl-rtxt"><strong>Bez mirisa i bez curenja</strong><span>Zatvarač brtvi, miris ostaje unutra.</span></div></div>
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_recyc ); ?><div class="nsl-rtxt"><strong>Izdržljive i za višekratnu upotrebu</strong><span>Operete ih i koristite iznova.</span></div></div>
