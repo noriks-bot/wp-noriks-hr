@@ -1,5 +1,5 @@
 <?php
-// Review pool for NORIKS Seal — rucni vakuumski aparat za hranu (orto-seal).
+// Review pool for NORIKS ChefSeal — rucni vakuumski aparat za hranu (orto-seal).
 // Text-only (no images), Croatian.
 $auto_reviews_en = array(
     array("name" => "Ivana K.",    "text" => "Kupila sam ga zbog avokada koji nam je uvijek propadao. Prepolovim ga, vakuumiram i drugi dan je još zelen."),

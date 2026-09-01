@@ -506,9 +506,15 @@ function gck_render_bundle_selector() {
     //  - orto-ortopas : single "Veličina" attribute, no colour (size selector only).
     // Every other product keeps the original 2-attribute (colour + size) requirement.
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
-    $gck_offer_subs = has_term( array( 'orto-cloath' ), 'product_cat', $product_id )
-        ? array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' )
-        : array();
+    if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
+        $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
+    } elseif ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) {
+        $gck_offer_subs = array( 'Standardnih 29 % popusta', '+ dodatnih 20 % popusta', '+ dodatnih 25 % popusta', '+ dodatnih 30 % popusta' );
+    } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
+        $gck_offer_subs = array( 'Uređaj + 10 vrećica', 'Uređaj + 20 vrećica', 'Uređaj + 30 vrećica' );
+    } else {
+        $gck_offer_subs = array();
+    }
     // Mala oznaka pokraj naslova ponude (index => tekst). Trenutno se ne koristi.
     $gck_offer_tags = array();
     // Kartusi iznad kartice ponude (index => tekst).
@@ -622,6 +628,8 @@ function gck_render_bundle_selector() {
          position: relative;
          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       }
+      /* NORIKS SR: treci izbornik (Rukav) uz velicinu i boju. */
+      #bundle-selector .bundle-pair .gck-extra-select { flex: 0 1 auto; width: auto !important; min-width: 132px; }
       .gck-offer-sub {
           display: block;
           font-size: 13.5px;
@@ -2129,8 +2137,6 @@ function gck_render_bundle_selector() {
           padding: 9px 26px 9px 10px;
           text-overflow: ellipsis;
       }
-      /* NORIKS SR: velicina + rukav jedan uz drugi. */
-      #bundle-selector .bundle-pair .gck-extra-select { flex: 0 1 auto; width: auto; min-width: 132px; }
       #bundle-selector .bundle-pair .gck-side-select {
           order: 2;
           flex: 0 0 auto;

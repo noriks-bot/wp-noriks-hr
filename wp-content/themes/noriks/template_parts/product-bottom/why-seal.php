@@ -1,6 +1,6 @@
 <?php
 /**
- * product-bottom: NORIKS Seal — rucni vakuumski aparat za hranu (orto-seal).
+ * product-bottom: NORIKS ChefSeal — rucni vakuumski aparat za hranu (orto-seal).
  * Postavitev sekcij je 1:1 po originalu (chefpreserve.com/products/cp):
  *   0) roza traka z jamstvi
  *   1) Druge metode pohrane — 3 stupca (slika + naslov + 3 crvena X)
@@ -78,17 +78,17 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   </div>
 </section>
 
-<!-- 2) Zasto ljudi vole NORIKS Seal -->
+<!-- 2) Zasto ljudi vole NORIKS ChefSeal -->
 <section class="nsl-sec nsl-grey">
   <div class="nsl-wrap">
-    <h2 class="nsl-h2 nsl-center">Zašto ljudi <em>vole</em> NORIKS Seal</h2>
+    <h2 class="nsl-h2 nsl-center">Zašto ljudi <em>vole</em> NORIKS ChefSeal</h2>
 
     <div class="nsl-row">
-      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
+      <div class="nsl-media nsl-sq"><?php echo $sl_img( 'seal-03-avokado-vrecice.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
       <div class="nsl-copy">
         <span class="nsl-spark">✦</span>
         <h3 class="nsl-h3">Čuva hranu svježom</h3>
-        <p>S NORIKS Sealom hranu <strong>vakuumirate u samo 5 sekundi</strong> i ostaje svježa dulje. Pritisnete gumb i uređaj se <strong>sam isključi kad je gotovo</strong>.</p>
+        <p>S NORIKS ChefSealom hranu <strong>vakuumirate u samo 5 sekundi</strong> i ostaje svježa dulje. Pritisnete gumb i uređaj se <strong>sam isključi kad je gotovo</strong>.</p>
         <div class="nsl-dot"></div>
         <div class="nsl-stat"><span>94 %</span><p>korisnika primijetilo je da im hrana ostaje svježa dulje nego kod uobičajenog čuvanja.</p></div>
       </div>
@@ -98,7 +98,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
       <div class="nsl-copy">
         <span class="nsl-spark">✦</span>
         <h3 class="nsl-h3">Štedi novac jer se manje baca</h3>
-        <p><strong>NORIKS Seal drži hranu svježom</strong>, pa manje bacate i manje trošite na pokvarene namirnice. Pomaže protiv posmeđivanja avokada, plijesni na jagodama i kvarenja općenito.</p>
+        <p><strong>NORIKS ChefSeal drži hranu svježom</strong>, pa manje bacate i manje trošite na pokvarene namirnice. Pomaže protiv posmeđivanja avokada, plijesni na jagodama i kvarenja općenito.</p>
         <div class="nsl-dot"></div>
         <div class="nsl-stat"><span>91 %</span><p>korisnika prijavilo je primjetnu uštedu na namirnicama zbog manje bačene hrane.</p></div>
       </div>
@@ -128,7 +128,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Prijenosno i snažno</strong></div><?php echo $sl_ico( $ico_plug ); ?></div>
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Pametno automatsko isključivanje</strong></div><?php echo $sl_ico( $ico_off ); ?></div>
       </div>
-      <div class="nsl-rc"><?php echo $sl_img( 'seal-13-banner-uspravni.jpg', 'NORIKS Seal' ); ?></div>
+      <div class="nsl-rc"><?php echo $sl_img( 'seal-13-banner-uspravni.jpg', 'NORIKS ChefSeal' ); ?></div>
       <div class="nsl-rr">
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_box ); ?><div class="nsl-rtxt"><strong>Kompaktno i lagano</strong></div></div>
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_power ); ?><div class="nsl-rtxt"><strong>Rad jednim gumbom</strong></div></div>
@@ -196,11 +196,36 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <figcaption><span class="nsl-tag nsl-tag-bad">Bez vakuuma</span></figcaption>
       </figure>
       <figure>
-        <?php echo $sl_img( 'seal-14-avokado-kvadrat.jpg', 'Vakuumirani avokado nakon tri dana' ); ?>
+        <?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Vakuumirani avokado nakon tri dana' ); ?>
         <figcaption><span class="nsl-tag nsl-tag-good">Vakuumirano</span></figcaption>
       </figure>
     </div>
     <p class="nsl-note nsl-center">* Prema trodnevnom testu čuvanja u stvarnim uvjetima.</p>
+  </div>
+</section>
+
+<!-- 7) Vakuumiranje. Iznova osmisljeno. — usporedna tablica -->
+<section class="nsl-sec nsl-white">
+  <div class="nsl-wrap">
+    <h2 class="nsl-h2 nsl-center">Vakuumiranje. Iznova osmišljeno.</h2>
+    <div class="nsl-cmp">
+      <div class="nsl-cmp-col nsl-cmp-us">
+        <?php echo $sl_img( 'seal-11-packshot-bijeli.jpg', 'NORIKS ChefSeal' ); ?>
+        <span>NORIKS ChefSeal</span>
+      </div>
+      <table class="nsl-cmp-tab">
+        <thead>
+          <tr><th>Ključne značajke</th><th class="nsl-cmp-mine"></th><th>Stolni aparati</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bez kabela</td><td class="nsl-cmp-mine"><i class="ok">✓</i></td><td><i class="no">✕</i></td></tr>
+          <tr><td>Prijenosno</td><td class="nsl-cmp-mine"><i class="ok">✓</i></td><td><i class="no">✕</i></td></tr>
+          <tr><td>Kompaktno</td><td class="nsl-cmp-mine"><i class="ok">✓</i></td><td><i class="no">✕</i></td></tr>
+          <tr><td>Jednostavno za korištenje</td><td class="nsl-cmp-mine"><i class="ok">✓</i></td><td><i class="no">✕</i></td></tr>
+          <tr><td>Vrećice za višekratnu upotrebu</td><td class="nsl-cmp-mine"><i class="ok">✓</i></td><td><i class="no">✕</i></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -216,15 +241,16 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
 .nsl-sec h2, .nsl-sec h3, .nsl-sec strong, .nsl-stat span, .nsl-num, .nsl-tag, .nsl-marquee span {
   font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
-.nsl-sec { padding: 54px 0; }
+.nsl-sec { padding: 72px 0; }
 .nsl-white { background: #fff;     color: #151515; }
 .nsl-grey  { background: #f4f4f4;  color: #151515; }
-.nsl-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
+.nsl-sec *, .nsl-marquee * { box-sizing: border-box; }
+.nsl-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
 .nsl-center { text-align: center; }
-.nsl-h2 { font-size: 34px; line-height: 1.18; margin: 0 0 34px; font-weight: 800; letter-spacing: -.01em; }
+.nsl-h2 { font-size: 40px; line-height: 1.14; margin: 0 0 44px; font-weight: 800; letter-spacing: -.025em; }
 .nsl-h2 em { font-style: normal; color: #e03142; }
-.nsl-h3 { font-size: 25px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
-.nsl-sec p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
+.nsl-h3 { font-size: 27px; line-height: 1.18; margin: 0 0 14px; font-weight: 800; letter-spacing: -.02em; }
+.nsl-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
 
 /* traka */
@@ -238,37 +264,38 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 /* 1) tri negativne kartice */
 .nsl-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .nsl-negcard { text-align: center; }
-.nsl-negcard img { width: 100%; max-width: 330px; height: auto; display: block; margin: 0 auto 14px; }
-.nsl-negcard h3 { font-size: 22px; font-weight: 800; margin: 0 0 14px; }
+.nsl-negcard img { width: 100%; max-width: 330px; height: auto; display: block; margin: 0 auto 18px; }
+.nsl-negcard h3 { font-size: 23px; font-weight: 800; margin: 0 0 16px; letter-spacing: -.02em; }
 .nsl-negcard ul { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
-.nsl-negcard li { position: relative; padding-left: 30px; margin-bottom: 9px; font-size: 16px; }
+.nsl-negcard li { position: relative; padding-left: 32px; margin-bottom: 11px; font-size: 16.5px; color: #333; }
 .nsl-negcard li:before { content: "✕"; position: absolute; left: 4px; top: 0; color: #c3192a; font-weight: 800; }
 
 /* 2) izmenicne vrstice */
-.nsl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 46px; }
+.nsl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; margin-bottom: 64px; }
 .nsl-row:last-child { margin-bottom: 0; }
-.nsl-sq { aspect-ratio: 1 / 1; border-radius: 16px; overflow: hidden; background: #ececed; }
+.nsl-sq { aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; background: #ececed; }
 .nsl-sq img, .nsl-sq .nsl-video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.nsl-spark { color: #e03142; font-size: 24px; line-height: 1; display: block; margin-bottom: 12px; }
-.nsl-dot { border-top: 1.5px dotted #efa8b3; margin: 18px 0 16px; }
-.nsl-stat { display: flex; align-items: flex-start; gap: 16px; }
-.nsl-stat span { flex: 0 0 auto; font-size: 40px; font-weight: 800; color: #e03142; line-height: 1; }
-.nsl-stat p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+.nsl-copy { max-width: 500px; }
+.nsl-spark { color: #e03142; font-size: 26px; line-height: 1; display: block; margin-bottom: 14px; }
+.nsl-dot { border-top: 1.5px dotted #efa8b3; margin: 22px 0 20px; }
+.nsl-stat { display: flex; align-items: center; gap: 20px; }
+.nsl-stat span { flex: 0 0 auto; font-size: 44px; font-weight: 800; color: #e03142; line-height: 1; letter-spacing: -.03em; }
+.nsl-stat p { margin: 0; font-size: 15.5px; line-height: 1.5; color: #333; }
 
 /* 3) + 5) radijalno */
-.nsl-radial { display: grid; grid-template-columns: 1fr 1.05fr 1fr; gap: 26px; align-items: center; }
+.nsl-radial { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 20px; align-items: center; }
 .nsl-rc img { width: 100%; height: auto; display: block; }
 .nsl-rc-circle { position: relative; display: flex; align-items: center; justify-content: center; }
 .nsl-rc-circle:before { content: ""; position: absolute; width: 74%; padding-bottom: 74%; border-radius: 50%; background: #c3192a; }
 .nsl-rc-circle:after { content: ""; position: absolute; width: 92%; padding-bottom: 92%; border-radius: 50%; border: 1px solid #f0c4cc; }
 .nsl-rc-circle img { position: relative; width: 62%; }
-.nsl-rl, .nsl-rr { display: flex; flex-direction: column; gap: 46px; }
+.nsl-rl, .nsl-rr { display: flex; flex-direction: column; gap: 58px; }
 .nsl-rlab { display: flex; align-items: center; gap: 14px; }
 .nsl-rl .nsl-rlab { justify-content: flex-end; text-align: right; }
 .nsl-rr .nsl-rlab { justify-content: flex-start; text-align: left; }
-.nsl-rtxt strong { display: block; font-size: 17px; font-weight: 800; line-height: 1.25; }
+.nsl-rtxt strong { display: block; font-size: 17.5px; font-weight: 800; line-height: 1.25; letter-spacing: -.01em; }
 .nsl-rtxt span { display: block; font-size: 14px; color: #5f5f5f; margin-top: 4px; }
-.nsl-ico { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: #ffeff2;
+.nsl-ico { flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #ffeff2;
   display: flex; align-items: center; justify-content: center; }
 .nsl-ico svg { width: 23px; height: 23px; }
 
@@ -280,8 +307,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   margin: 0 auto 16px; position: relative; z-index: 2; }
 .nsl-step:not(:last-child):after { content: ""; position: absolute; top: 28px; left: calc(50% + 34px);
   width: calc(100% - 68px); border-top: 1.5px dashed #efa8b3; z-index: 1; }
-.nsl-steplab { font-size: 16.5px; font-weight: 800; margin: 0 0 16px; }
-.nsl-step img, .nsl-step .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; display: block; }
+.nsl-steplab { font-size: 17px; font-weight: 800; margin: 0 0 18px; letter-spacing: -.01em; }
+.nsl-step img, .nsl-step .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; display: block; }
 
 /* 6) usporedba */
 .nsl-vs2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 900px; margin: 0 auto; }
@@ -292,14 +319,32 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-tag-bad  { background: #ffeff2; color: #c3192a; }
 .nsl-tag-good { background: #e6f4ec; color: #1f7a4d; }
 
+/* 7) usporedna tablica */
+.nsl-cmp { position: relative; max-width: 900px; margin: 0 auto; }
+.nsl-cmp-tab { width: 100%; border-collapse: collapse; position: relative; z-index: 1; }
+.nsl-cmp-tab th, .nsl-cmp-tab td { padding: 20px 12px; font-size: 16.5px; text-align: center; }
+.nsl-cmp-tab thead th { font-size: 18px; font-weight: 800; letter-spacing: -.01em; padding-bottom: 26px; }
+.nsl-cmp-tab th:first-child, .nsl-cmp-tab td:first-child { text-align: left; font-weight: 700; width: 46%; }
+.nsl-cmp-tab tbody tr { border-top: 1px solid #e4e4e6; }
+.nsl-cmp-tab i { font-style: normal; font-size: 20px; font-weight: 700; }
+.nsl-cmp-tab .ok { color: #fff; }
+.nsl-cmp-tab .no { color: #e03142; }
+.nsl-cmp-tab .nsl-cmp-mine { width: 27%; }
+.nsl-cmp-us { position: absolute; top: -18px; bottom: -10px; left: 46%; width: 27%; background: #c3192a;
+  border-radius: 18px; z-index: 0; display: flex; flex-direction: column; align-items: center;
+  justify-content: flex-start; padding: 18px 10px 0; }
+.nsl-cmp-us img { width: 62%; max-width: 120px; height: auto; display: block; }
+.nsl-cmp-us span { color: #fff; font-weight: 800; font-size: 15px; margin-top: 6px; text-align: center; }
 .nsl-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ececed;
   border-radius: 12px; color: #8b8b8b; font-size: 14px; text-align: center; padding: 12px; }
 
 @media (max-width: 900px) {
-  .nsl-sec { padding: 28px 0; }
+  .nsl-sec { padding: 34px 0; }
+  .nsl-copy { max-width: none; }
   .nsl-wrap { padding-left: 14px; padding-right: 14px; }
-  .nsl-h2 { font-size: 24px; margin-bottom: 22px; }
-  .nsl-h3 { font-size: 21px; }
+  .nsl-h2 { font-size: 26px; margin-bottom: 24px; }
+  .nsl-h3 { font-size: 22px; }
+  .nsl-stat span { font-size: 36px; }
   .nsl-three { grid-template-columns: 1fr; gap: 30px; }
   .nsl-row, .nsl-row.nsl-rev { grid-template-columns: 1fr; gap: 18px; margin-bottom: 32px; }
   .nsl-row .nsl-media { order: -1; }
@@ -312,6 +357,10 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-steps4 { grid-template-columns: 1fr 1fr; gap: 20px 16px; }
   .nsl-step:nth-child(2):after { display: none; }
   .nsl-vs2 { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .nsl-cmp-tab th, .nsl-cmp-tab td { padding: 14px 6px; font-size: 14.5px; }
+  .nsl-cmp-tab thead th { font-size: 15px; }
+  .nsl-cmp-us img { width: 54%; }
+  .nsl-cmp-us span { font-size: 12.5px; }
 }
 
 /* kratki opis proizvoda: zelene kvacice umjesto tockica */

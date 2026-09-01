@@ -282,7 +282,7 @@
 
            <?php elseif ( noriks_is_type( 'seal' ) ): ?>
 
-           Tisuće kućanstava već koristi NORIKS Seal – hrana vakuumirana u pet sekundi, bez glomaznog aparata na radnoj plohi.
+           Tisuće kućanstava već koristi NORIKS ChefSeal – hrana vakuumirana u pet sekundi, bez glomaznog aparata na radnoj plohi.
 
            <?php elseif ( noriks_is_type( 'sr' ) ): ?>
 
@@ -396,7 +396,7 @@
   if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_seal_page ? 'NORIKS Seal vakuumski aparat'
+  $rv_fallback_title = $is_seal_page ? 'NORIKS ChefSeal vakuumski aparat'
                      : ( $is_sr_page ? 'NORIKS SR košulja'
                      : ( $is_bokserice_page ? 'NORIKS bokserice'
                      : ( $is_snore_page ? 'NORIKS udlaga protiv hrkanja'

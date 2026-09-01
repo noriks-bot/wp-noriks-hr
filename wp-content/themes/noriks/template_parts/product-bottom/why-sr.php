@@ -55,13 +55,35 @@ $sr_ico = function( $d ) {
   </div>
 </section>
 
-<!-- 2) Tri kartice tkanine -->
+<!-- 2) Tri detaljne sekcije s vlastitim fotografijama -->
 <section class="nsr-sec nsr-grey">
   <div class="nsr-wrap">
-    <div class="nsr-cards">
-      <figure><?php echo $sr_img( 'sr-01-4way.jpg', 'Elastičnost u 4 smjera' ); ?></figure>
-      <figure><?php echo $sr_img( 'sr-02-bez-guzvanja.jpg', 'Bez gužvanja' ); ?></figure>
-      <figure><?php echo $sr_img( 'sr-03-prozracna.jpg', 'Prozračna i svježa' ); ?></figure>
+    <div class="nsr-row">
+      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-1-rastezanje.jpg', 'Tkanina se rasteže u sva četiri smjera' ); ?></div>
+      <div class="nsr-copy">
+        <p class="nsr-eyebrow">Tehnologija tkanine</p>
+        <h3 class="nsr-h3">Rasteže se s vama, ne protiv vas</h3>
+        <p>Tkanina popušta u sva četiri smjera i odmah se vraća u svoj oblik. Ramena, laktovi i leđa dobiju prostor pri svakom pokretu — <strong>bez zatezanja i bez izvlačenja košulje iz hlača</strong>.</p>
+        <p class="nsr-note">Mješavina poliestera i elastana s 12 % elastana.</p>
+      </div>
+    </div>
+
+    <div class="nsr-row">
+      <div class="nsr-copy">
+        <p class="nsr-eyebrow">Ista košulja, cijeli dan</p>
+        <h3 class="nsr-h3">Lijevo obična košulja. Desno NORIKS SR.</h3>
+        <p>Obična košulja se izgužva već u autu. NORIKS SR zadržava strukturu od jutra do večeri i <strong>izgleda uredno i kad je izvadite iz torbe</strong> — glačalo joj nije potrebno.</p>
+      </div>
+      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-2-guzvanje.jpg', 'Obična košulja izgužvana, NORIKS SR glatka' ); ?></div>
+    </div>
+
+    <div class="nsr-row">
+      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-3-tkanina.jpg', 'Prozračna tkanina odbija vlagu' ); ?></div>
+      <div class="nsr-copy">
+        <p class="nsr-eyebrow">Osjećaj na koži</p>
+        <h3 class="nsr-h3">Prozračna, suha i bez mirisa</h3>
+        <p>Između niti prolazi zrak, pa toplina i vlaga odlaze s kože umjesto da ostanu na njoj. Tkanina je obrađena tako da <strong>zadržava svježinu i nakon dugog dana</strong>.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -145,11 +167,10 @@ $sr_ico = function( $d ) {
   align-items: center; justify-content: center; }
 .nsr-ico svg { width: 26px; height: 26px; }
 
-.nsr-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.nsr-cards figure { margin: 0; }
-.nsr-cards img { width: 100%; height: auto; display: block; border-radius: 14px; }
-
-.nsr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.nsr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 42px; }
+.nsr-row:last-child { margin-bottom: 0; }
+.nsr-h3 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
+.nsr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
 .nsr-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
 .nsr-colors { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
 .nsr-colors li { display: flex; align-items: center; gap: 10px; font-size: 15.5px; }
@@ -175,7 +196,7 @@ $sr_ico = function( $d ) {
   .nsr-wrap { padding-left: 14px; padding-right: 14px; }
   .nsr-h2 { font-size: 24px; }
   .nsr-four { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
-  .nsr-cards { grid-template-columns: 1fr; gap: 18px; }
+  .nsr-h3 { font-size: 20px; }
   .nsr-row { grid-template-columns: 1fr; gap: 18px; }
   .nsr-row .nsr-media { order: -1; }
   .nsr-colors { grid-template-columns: 1fr 1fr; }
