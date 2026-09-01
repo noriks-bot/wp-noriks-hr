@@ -486,8 +486,10 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-radial-lg .nsl-rlab { position: static !important; transform: none !important; width: auto !important; }
   .nsl-note-gap { margin-top: 28px; }
   .nsl-tagline { font-size: 14.5px; margin: -14px auto 22px; }
+  /* ikona uvijek lijevo — u lijevom stupcu je u markupu zadnja, pa row-reverse */
+  .nsl-rl .nsl-rlab { flex-direction: row-reverse !important; justify-content: flex-end !important; }
   .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
-    flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
+    flex-direction: row; justify-content: flex-start; text-align: left !important;
     align-items: center; width: 100% !important; box-sizing: border-box;
     gap: 14px; padding: 14px 16px !important; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
   .nsl-rl .nsl-rtxt, .nsl-rr .nsl-rtxt { flex: 1 1 auto; min-width: 0; }
@@ -502,6 +504,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-step:not(:last-child):after { top: 23px; left: calc(50% + 29px); width: calc(100% - 58px); }
   .nsl-steplab { font-size: 15px; margin-bottom: 12px; min-height: 3em; }
   .nsl-sub { margin: -16px 0 20px; font-size: 14px; }
+  .nsl-cmp { margin-top: 30px; }
   .nsl-cmp-grid > div { padding: 13px 5px; font-size: 14px; }
   .nsl-cmp-h { font-size: 14.5px; padding-bottom: 12px !important; }
   .nsl-cmp-h.nsl-cmp-c2 img { width: 32px; }
