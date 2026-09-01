@@ -269,7 +269,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   </div>
 </section>
 
-<div class="nsl-marquee"><div class="nsl-marquee-track">
+<div class="nsl-marquee nsl-marquee-end"><div class="nsl-marquee-track">
   <?php for ( $i = 0; $i < 4; $i++ ) : ?>
     <span>30 DANA ZA POVRAT</span><i>✦</i><span>2 GODINE JAMSTVA</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
   <?php endfor; ?>
@@ -321,6 +321,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
 .nsl-note-gap { margin-top: 64px; }
+.nsl-marquee-end { margin-top: -14px; }
 .nsl-tagline { max-width: 720px; margin: -22px auto 34px; text-align: center; font-size: 16px; line-height: 1.55; color: #5f5f5f; }
 
 /* traka */
@@ -469,6 +470,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 
 @media (max-width: 900px) {
   .nsl-marquee { margin-top: 26px; padding: 11px 0; }
+  .nsl-marquee-end { margin-top: -13px; }
   .nsl-marquee span { font-size: 12.5px; }
   .nsl-sec { padding: 26px 0; }
   .nsl-copy { max-width: none; }
