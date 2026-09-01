@@ -186,7 +186,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_recyc ); ?><div class="nsl-rtxt"><strong>Izdržljive i za višekratnu upotrebu</strong><span>Operete ih i koristite iznova.</span></div></div>
       </div>
     </div>
-    <p class="nsl-note nsl-center"><b>Vrećice se peru i koriste iznova — nisu jednokratne.</b> Polovica vrećica u kompletu je manja (1 l), polovica veća (2 l).</p>
+    <p class="nsl-note nsl-center nsl-note-gap"><b>Vrećice se peru i koriste iznova — nisu jednokratne.</b> Polovica vrećica u kompletu je manja (1 l), polovica veća (2 l).</p>
   </div>
 </section>
 
@@ -312,6 +312,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   letter-spacing: -.028em; color: #151515; }
 .nsl-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
+.nsl-note-gap { margin-top: 34px; }
 
 /* traka */
 .nsl-marquee { background: #ffeff2; overflow: hidden; padding: 13px 0; }
@@ -345,8 +346,13 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 /* 3) + 5) radijalno */
 .nsl-radial { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 34px; align-items: center; }
 .nsl-rc img { width: 100%; height: auto; display: block; }
-.nsl-radial-lg { margin-top: 12px; grid-template-columns: 1fr 1.65fr 1fr; gap: 14px; }
+.nsl-radial-lg { margin-top: 12px; grid-template-columns: 1fr 1.65fr 1fr; gap: 14px; align-items: stretch; }
 .nsl-radial-lg .nsl-rc { max-width: 700px; margin: 0 auto; }
+/* napisi tocno na visini crtkanih crt v grafiki (18,4 % in 60,4 % visine slike) */
+.nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { display: block; position: relative; }
+.nsl-radial-lg .nsl-rlab { position: absolute; width: 100%; transform: translateY(-50%); }
+.nsl-radial-lg .nsl-rlab:nth-child(1) { top: 18.4%; }
+.nsl-radial-lg .nsl-rlab:nth-child(2) { top: 60.4%; }
 .nsl-radial-lg .nsl-rc img { width: 100%; height: auto; display: block; }
 .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 0; }
 .nsl-radial-lg .nsl-rtxt strong { font-size: 19px; }
@@ -466,7 +472,9 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-radial, .nsl-radial-lg { grid-template-columns: 1fr; gap: 18px; }
   .nsl-rc { order: -1; max-width: 300px; margin: 0 auto 6px; }
   .nsl-rl, .nsl-rr, .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr {
-    display: flex !important; flex-direction: column; gap: 14px; }
+    display: flex !important; flex-direction: column; gap: 14px; position: static; }
+  .nsl-radial-lg .nsl-rlab { position: static !important; transform: none !important; width: auto !important; }
+  .nsl-note-gap { margin-top: 18px; }
   .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
     flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
     gap: 14px; padding: 12px 14px; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
