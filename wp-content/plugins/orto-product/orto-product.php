@@ -512,9 +512,15 @@ function gck_render_bundle_selector() {
     // Mala oznaka pokraj naslova ponude (index => tekst). Trenutno se ne koristi.
     $gck_offer_tags = array();
     // Kartusi iznad kartice ponude (index => tekst).
-    $gck_offer_badges = has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id )
-        ? array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' )
-        : array();
+    if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) {
+        $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
+    } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
+        $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
+    } elseif ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) {
+        $gck_offer_badges = array( 2 => 'NAJPOPULARNIJE', 3 => 'NAJBOLJA VRIJEDNOST' );
+    } else {
+        $gck_offer_badges = array();
+    }
 
     $gck_no_attrs    = has_term( array( 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
     $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre' ), 'product_cat', $product_id );
