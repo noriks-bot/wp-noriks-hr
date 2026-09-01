@@ -191,7 +191,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 6) Bez vakuuma vs. vakuumirano — drsnik -->
-<section class="nsl-sec nsl-white">
+<section class="nsl-sec nsl-white nsl-sec-tight">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Bez vakuuma vs. vakuumirano</h2>
     <p class="nsl-sub nsl-center">*Prema trodnevnom testu čuvanja u stvarnim uvjetima</p>
@@ -386,15 +386,15 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-tag-good { background: #e6f4ec; color: #1f7a4d; }
 
 /* 6) drsnik prej/potem */
-.nsl-sub { font-size: 15.5px; color: #6b6b6b; margin: -30px 0 30px; }
-.nsl-ba { position: relative; max-width: 760px; margin: 0 auto; border-radius: 16px; overflow: hidden;
-  background: #f4f4f4; user-select: none; touch-action: pan-y; }
+.nsl-sub { font-size: 15.5px; color: #6b6b6b; margin: -32px 0 26px; }
+.nsl-ba { position: relative; max-width: 640px; margin: 0 auto; border-radius: 14px; overflow: hidden;
+  background: #e7e7ed; user-select: none; touch-action: pan-y; }
 .nsl-ba img { width: 100%; height: auto; display: block; }
 .nsl-ba-over { position: absolute; inset: 0; width: 50%; overflow: hidden; }
-.nsl-ba-over img { width: 760px; max-width: none; height: 100%; object-fit: cover; object-position: left center; }
-.nsl-ba-lab { position: absolute; top: 16px; padding: 8px 16px; border-radius: 8px; font-size: 15px; font-weight: 800; color: #fff; z-index: 3; }
-.nsl-ba-l { left: 16px; background: #3a3a3a; }
-.nsl-ba-r { right: 16px; background: #c3192a; }
+.nsl-ba-over img { width: 640px; max-width: none; height: 100%; object-fit: cover; object-position: left center; }
+.nsl-ba-lab { position: absolute; top: 14px; padding: 7px 14px; border-radius: 7px; font-size: 14.5px; font-weight: 800; color: #fff; z-index: 3; }
+.nsl-ba-l { left: 14px; background: #3a3a3a; }
+.nsl-ba-r { right: 14px; background: #c3192a; }
 .nsl-ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #fff; z-index: 2;
   box-shadow: 0 0 6px rgba(0,0,0,.25); pointer-events: none; }
 .nsl-ba-handle i { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
@@ -436,6 +436,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-ugc footer strong { display: block; font-size: 15.5px; }
 .nsl-ugc footer em { display: block; font-style: normal; font-size: 13.5px; color: #1f7a4d; font-weight: 600; }
 
+.nsl-sec-tight { padding: 56px 0 60px; }
+.nsl-sec-tight .nsl-h2 { margin-bottom: 40px; }
 .nsl-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ececed;
   border-radius: 12px; color: #8b8b8b; font-size: 14px; text-align: center; padding: 12px; }
 
