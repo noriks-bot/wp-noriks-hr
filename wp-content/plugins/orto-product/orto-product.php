@@ -940,6 +940,9 @@ function gck_render_bundle_selector() {
           border-radius: 999px !important; white-space: nowrap; z-index: 3;
           max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
       }
+      /* kartica sa znackom dobije prostor gore da znacka ne pada preko naslova */
+      #bundle-selector .bundle-option:has(.gck-popular-badge),
+      #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 26px !important; }
       /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
       #bundle-selector .bundle-option > br,
       #bundle-selector .bundle-option .gck-hl-break,
@@ -981,6 +984,8 @@ function gck_render_bundle_selector() {
               font-size: 10.5px !important; padding: 4px 12px !important; letter-spacing: 0 !important;
               max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
           }
+          #bundle-selector .bundle-option:has(.gck-popular-badge),
+          #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 24px !important; }
           #bundle-selector .bundle-option { grid-template-columns: auto 56px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
           #bundle-selector .bundle-option .gck-offer-img { width: 56px; height: 56px; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 15px; }
