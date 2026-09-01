@@ -191,7 +191,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 6) Bez vakuuma vs. vakuumirano — drsnik -->
-<section class="nsl-sec nsl-white nsl-sec-tight">
+<section class="nsl-sec nsl-rose nsl-sec-tight">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Bez vakuuma vs. vakuumirano</h2>
     <p class="nsl-sub nsl-center">*Prema trodnevnom testu čuvanja u stvarnim uvjetima</p>
@@ -299,13 +299,14 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-steplab, .nsl-marquee span {
   font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important; }
 .nsl-sec h2, .nsl-sec h3 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-.nsl-sec { padding: 72px 0; }
+.nsl-sec { padding: 52px 0; }
 .nsl-white { background: #fff;     color: #151515; }
+.nsl-rose  { background: #fff7f9;  color: #151515; }
 .nsl-grey  { background: #f4f4f4;  color: #151515; }
 .nsl-sec *, .nsl-marquee * { box-sizing: border-box; }
 .nsl-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
 .nsl-center { text-align: center; }
-.nsl-h2 { font-size: 40px; line-height: 1.1; margin: 0 0 44px; font-weight: 800 !important;
+.nsl-h2 { font-size: 40px; line-height: 1.1; margin: 0 0 34px; font-weight: 800 !important;
   letter-spacing: -.032em; color: #151515; text-transform: none; }
 .nsl-h2 em { font-style: normal; color: #e03142; }
 .nsl-h3 { font-size: 27px; line-height: 1.15; margin: 0 0 14px; font-weight: 800 !important;
@@ -452,15 +453,15 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-ugc footer strong { display: block; font-size: 15.5px; }
 .nsl-ugc footer em { display: block; font-style: normal; font-size: 13.5px; color: #1f7a4d; font-weight: 600; }
 
-.nsl-sec-tight { padding: 56px 0 60px; }
-.nsl-sec-tight .nsl-h2 { margin-bottom: 40px; }
+.nsl-sec-tight { padding: 44px 0 46px; }
+.nsl-sec-tight .nsl-h2 { margin-bottom: 34px; }
 .nsl-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #ececed;
   border-radius: 12px; color: #8b8b8b; font-size: 14px; text-align: center; padding: 12px; }
 
 @media (max-width: 900px) {
   .nsl-marquee { margin-top: 26px; padding: 11px 0; }
   .nsl-marquee span { font-size: 12.5px; }
-  .nsl-sec { padding: 34px 0; }
+  .nsl-sec { padding: 26px 0; }
   .nsl-copy { max-width: none; }
   .nsl-wrap { padding-left: 14px; padding-right: 14px; }
   .nsl-h2 { font-size: 26px; margin-bottom: 24px; }
