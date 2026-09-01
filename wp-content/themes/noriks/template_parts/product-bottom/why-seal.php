@@ -481,13 +481,16 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-radial, .nsl-radial-lg { grid-template-columns: 1fr; gap: 18px; }
   .nsl-rc { order: -1; max-width: 300px; margin: 0 auto 6px; }
   .nsl-rl, .nsl-rr, .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr {
-    display: flex !important; flex-direction: column; gap: 14px; position: static; }
+    display: flex !important; flex-direction: column; gap: 12px; position: static;
+    align-items: stretch !important; }
   .nsl-radial-lg .nsl-rlab { position: static !important; transform: none !important; width: auto !important; }
   .nsl-note-gap { margin-top: 28px; }
   .nsl-tagline { font-size: 14.5px; margin: -14px auto 22px; }
   .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
     flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
-    gap: 14px; padding: 12px 14px; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
+    align-items: center; width: 100% !important; box-sizing: border-box;
+    gap: 14px; padding: 14px 16px !important; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
+  .nsl-rl .nsl-rtxt, .nsl-rr .nsl-rtxt { flex: 1 1 auto; min-width: 0; }
   .nsl-grey .nsl-rlab { background: #fff; }
   .nsl-rtxt strong, .nsl-radial-lg .nsl-rtxt strong { font-size: 16px; }
   .nsl-radial-lg .nsl-rtxt span { font-size: 14px; }
