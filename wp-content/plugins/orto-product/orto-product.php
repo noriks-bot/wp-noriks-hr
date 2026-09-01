@@ -940,6 +940,8 @@ function gck_render_bundle_selector() {
           border-radius: 999px !important; white-space: nowrap; z-index: 3;
           max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
       }
+      /* obje znacke moraju biti identicne — offer znacka je prije imala inline display */
+      #bundle-selector .gck-popular-badge--offer { display: inline-flex !important; }
       /* kartica sa znackom dobije prostor gore da znacka ne pada preko naslova */
       #bundle-selector .bundle-option:has(.gck-popular-badge),
       #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 18px !important; }
@@ -976,11 +978,16 @@ function gck_render_bundle_selector() {
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 { background: #c3192a !important; color: #fff !important; }
       @media (max-width: 560px) {
-          /* na mobilnom bez znacki — na uskom ekranu su uvijek smetale */
           #bundle-selector .gck-popular-badge,
-          #bundle-selector .gck-popular-badge-2 { display: none !important; }
+          #bundle-selector .gck-popular-badge-2 {
+              right: 12px !important; left: auto !important; top: 0 !important;
+              transform: translateY(-50%) !important;
+              font-size: 10.5px !important; padding: 0 12px !important; height: 23px !important;
+              line-height: 1 !important; letter-spacing: 0 !important;
+              max-width: calc(100% - 24px);
+          }
           #bundle-selector .bundle-option:has(.gck-popular-badge),
-          #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 11px !important; }
+          #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 18px !important; }
           /* na mobilnom bez slicice — vise prostora za naslov i cijenu */
           #bundle-selector .bundle-option .gck-offer-img { display: none !important; }
           #bundle-selector .bundle-option { grid-template-columns: auto minmax(0,1fr) auto; column-gap: 10px; padding: 11px 12px !important; }
@@ -2467,7 +2474,7 @@ function gck_render_bundle_selector() {
                    class="bundle-option<?php echo $is_default ? ' active' : ''; ?>">
 
                 <?php if ( ! empty( $gck_offer_badges ) && isset( $gck_offer_badges[ $loop_index ] ) ) : ?>
-                    <div class="gck-popular-badge" style="display:inline-block !important;"><?php echo esc_html( $gck_offer_badges[ $loop_index ] ); ?></div>
+                    <div class="gck-popular-badge gck-popular-badge--offer"><?php echo esc_html( $gck_offer_badges[ $loop_index ] ); ?></div>
                 <?php endif; ?>
 
                 <?php if ( ! $show_group_titles ) : ?>
