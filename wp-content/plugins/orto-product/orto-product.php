@@ -927,22 +927,18 @@ function gck_render_bundle_selector() {
       /* manje praznog prostora ispod sadrzaja kartice */
       #bundle-selector .bundle-option { padding: 13px 16px !important; align-content: center; }
       /* manji razmak izmedu kartica (inline stil je bio 25px) */
-      #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 12px !important; }
-      /* znacka sjedi U kartici, u gornjem desnom kutu — ne visi izmedu kartica */
+      #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 22px !important; }
+      /* znacka na gornjem rubu kartice, tocno po sredini */
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 {
-          position: absolute !important; top: 0 !important; right: 0 !important; bottom: auto !important; left: auto !important;
-          transform: none !important; margin: 0 !important;
+          position: absolute !important; top: 0 !important; left: 50% !important;
+          right: auto !important; bottom: auto !important; margin: 0 !important;
+          transform: translate(-50%, -50%) !important;
           display: inline-flex !important; align-items: center; justify-content: center;
-          padding: 4px 11px !important; letter-spacing: 0 !important; line-height: 1.3 !important;
-          font-size: 11px !important; font-weight: 800 !important;
-          border-radius: 0 10px 0 10px !important; white-space: nowrap; z-index: 3;
+          padding: 5px 14px !important; letter-spacing: 0 !important; line-height: 1.25 !important;
+          font-size: 11.5px !important; font-weight: 800 !important;
+          border-radius: 999px !important; white-space: nowrap; z-index: 3;
       }
-      /* kartica sa znackom dobije prostor gore da se nista ne preklapa */
-      #bundle-selector .bundle-option:has(.gck-popular-badge),
-      #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 30px !important; }
-      /* rezerva za preglednike bez :has — cijena nikad ne ide ispod znacke */
-      #bundle-selector .bundle-option .bundle-total-line { padding-top: 2px; }
       /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
       #bundle-selector .bundle-option > br,
       #bundle-selector .bundle-option .gck-hl-break,
