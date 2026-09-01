@@ -938,6 +938,11 @@ function gck_render_bundle_selector() {
           font-size: 11px !important; font-weight: 800 !important;
           border-radius: 0 10px 0 10px !important; white-space: nowrap; z-index: 3;
       }
+      /* kartica sa znackom dobije prostor gore da se nista ne preklapa */
+      #bundle-selector .bundle-option:has(.gck-popular-badge),
+      #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 30px !important; }
+      /* rezerva za preglednike bez :has — cijena nikad ne ide ispod znacke */
+      #bundle-selector .bundle-option .bundle-total-line { padding-top: 2px; }
       /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
       #bundle-selector .bundle-option > br,
       #bundle-selector .bundle-option .gck-hl-break,
