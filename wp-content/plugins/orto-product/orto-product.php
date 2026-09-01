@@ -633,8 +633,19 @@ function gck_render_bundle_selector() {
          position: relative;
          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       }
-      /* NORIKS SR: treci izbornik (Rukav) uz velicinu i boju. */
-      #bundle-selector .bundle-pair .gck-extra-select { flex: 0 1 auto; width: auto !important; min-width: 132px; }
+      /* NORIKS SR: treci izbornik (Rukav) mora izgledati IDENTICNO kao gck-dd gumbi
+         (visina 38, crni rub 1px, radijus 4, bijela pozadina, 18px/600). */
+      #bundle-selector .bundle-pair .gck-extra-select {
+          flex: 0 1 auto; width: auto !important; min-width: 132px;
+          height: 38px !important; box-sizing: border-box !important;
+          border: 1px solid #111 !important; border-radius: 4px !important;
+          background-color: #fff !important; color: #333 !important;
+          font-size: 18px !important; font-weight: 600 !important; line-height: 1.2 !important;
+          padding: 4px 26px 4px 10px !important; margin: 0 !important;
+          appearance: none; -webkit-appearance: none;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%236d6d6d' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-repeat: no-repeat; background-position: right 10px center;
+      }
       .gck-offer-sub {
           display: block;
           font-size: 13.5px;
