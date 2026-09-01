@@ -935,8 +935,8 @@ function gck_render_bundle_selector() {
           left: auto !important; bottom: auto !important; margin: 0 !important;
           transform: translateY(-50%) !important;
           display: inline-flex !important; align-items: center; justify-content: center;
-          padding: 5px 14px !important; letter-spacing: 0 !important; line-height: 1.25 !important;
-          font-size: 11.5px !important; font-weight: 800 !important;
+          padding: 0 14px !important; height: 25px !important; line-height: 1 !important;
+          letter-spacing: 0 !important; font-size: 11.5px !important; font-weight: 800 !important;
           border-radius: 999px !important; white-space: nowrap; z-index: 3;
           max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
       }
@@ -981,13 +981,15 @@ function gck_render_bundle_selector() {
           #bundle-selector .gck-popular-badge-2 {
               right: 12px !important; left: auto !important; top: 0 !important;
               transform: translateY(-50%) !important;
-              font-size: 10.5px !important; padding: 4px 12px !important; letter-spacing: 0 !important;
+              font-size: 10.5px !important; padding: 0 12px !important; height: 23px !important;
+              line-height: 1 !important; letter-spacing: 0 !important;
               max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
           }
           #bundle-selector .bundle-option:has(.gck-popular-badge),
           #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 24px !important; }
-          #bundle-selector .bundle-option { grid-template-columns: auto 56px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
-          #bundle-selector .bundle-option .gck-offer-img { width: 56px; height: 56px; }
+          #bundle-selector .bundle-option { grid-template-columns: auto 52px minmax(0,1fr) auto; column-gap: 6px; padding: 11px 10px !important; }
+          #bundle-selector .bundle-option > input[type="radio"] { margin-right: 0 !important; }
+          #bundle-selector .bundle-option .gck-offer-img { width: 52px; height: 52px; margin-left: -2px; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 15px; }
           #bundle-selector .bundle-option .gck-offer-sub { font-size: 12px; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 16.5px; }
