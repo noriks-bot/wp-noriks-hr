@@ -959,6 +959,13 @@ function gck_render_bundle_selector() {
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 { background: #c3192a !important; color: #fff !important; }
       @media (max-width: 560px) {
+          /* znacka je na mobilnom bjezala izvan kartice */
+          #bundle-selector .gck-popular-badge,
+          #bundle-selector .gck-popular-badge-2 {
+              right: 10px !important; left: auto !important; transform: none !important;
+              font-size: 10.5px !important; padding: 3px 9px !important; letter-spacing: .01em !important;
+              max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+          }
           #bundle-selector .bundle-option { grid-template-columns: auto 56px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
           #bundle-selector .bundle-option .gck-offer-img { width: 56px; height: 56px; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 15px; }
