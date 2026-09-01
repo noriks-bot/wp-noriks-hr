@@ -938,6 +938,7 @@ function gck_render_bundle_selector() {
           padding: 5px 14px !important; letter-spacing: 0 !important; line-height: 1.25 !important;
           font-size: 11.5px !important; font-weight: 800 !important;
           border-radius: 999px !important; white-space: nowrap; z-index: 3;
+          max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
       }
       /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
       #bundle-selector .bundle-option > br,
@@ -972,11 +973,12 @@ function gck_render_bundle_selector() {
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 { background: #c3192a !important; color: #fff !important; }
       @media (max-width: 560px) {
-          /* znacka je na mobilnom bjezala izvan kartice */
+          /* mobilno: ista sredinska poravnava, samo manje */
           #bundle-selector .gck-popular-badge,
           #bundle-selector .gck-popular-badge-2 {
-              right: 10px !important; left: auto !important; transform: none !important;
-              font-size: 10.5px !important; padding: 3px 9px !important; letter-spacing: .01em !important;
+              left: 50% !important; right: auto !important; top: 0 !important;
+              transform: translate(-50%, -50%) !important;
+              font-size: 10.5px !important; padding: 4px 12px !important; letter-spacing: 0 !important;
               max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
           }
           #bundle-selector .bundle-option { grid-template-columns: auto 56px minmax(0,1fr) auto; column-gap: 9px; padding: 11px 12px !important; }
