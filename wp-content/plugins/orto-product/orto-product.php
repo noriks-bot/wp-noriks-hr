@@ -927,13 +927,13 @@ function gck_render_bundle_selector() {
       /* manje praznog prostora ispod sadrzaja kartice */
       #bundle-selector .bundle-option { padding: 13px 16px !important; align-content: center; }
       /* manji razmak izmedu kartica (inline stil je bio 25px) */
-      #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 26px !important; }
+      #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 22px !important; }
       /* znacka na gornjem rubu kartice, tocno po sredini */
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 {
           position: absolute !important; top: 0 !important; right: 14px !important;
           left: auto !important; bottom: auto !important; margin: 0 !important;
-          transform: translateY(-32%) !important;
+          transform: translateY(-50%) !important;
           display: inline-flex !important; align-items: center; justify-content: center;
           padding: 0 14px !important; height: 25px !important; line-height: 1 !important;
           letter-spacing: 0 !important; font-size: 11.5px !important; font-weight: 800 !important;
@@ -980,7 +980,7 @@ function gck_render_bundle_selector() {
           #bundle-selector .gck-popular-badge,
           #bundle-selector .gck-popular-badge-2 {
               right: 12px !important; left: auto !important; top: 0 !important;
-              transform: translateY(-32%) !important;
+              transform: translateY(-50%) !important;
               font-size: 10.5px !important; padding: 0 12px !important; height: 23px !important;
               line-height: 1 !important; letter-spacing: 0 !important;
               max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
