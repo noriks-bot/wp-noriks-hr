@@ -312,7 +312,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   letter-spacing: -.028em; color: #151515; }
 .nsl-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
-.nsl-note-gap { margin-top: 34px; }
+.nsl-note-gap { margin-top: 64px; }
 
 /* traka */
 .nsl-marquee { background: #ffeff2; overflow: hidden; padding: 13px 0; }
@@ -474,7 +474,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-rl, .nsl-rr, .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr {
     display: flex !important; flex-direction: column; gap: 14px; position: static; }
   .nsl-radial-lg .nsl-rlab { position: static !important; transform: none !important; width: auto !important; }
-  .nsl-note-gap { margin-top: 18px; }
+  .nsl-note-gap { margin-top: 28px; }
   .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
     flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
     gap: 14px; padding: 12px 14px; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
