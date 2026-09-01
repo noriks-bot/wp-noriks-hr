@@ -47,6 +47,10 @@ $ico_leaf  = '<path d="M20 4c0 8-5 12-11 12H5c0-8 5-12 11-12z"/><path d="M5 20c2
 $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h4l-2-3"/><path d="M19 17l-4-7 3-2"/>';
 ?>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+
 <!-- 0) traka s jamstvima -->
 <div class="nsl-marquee"><div class="nsl-marquee-track">
   <?php for ( $i = 0; $i < 4; $i++ ) : ?>
@@ -84,7 +88,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
     <h2 class="nsl-h2 nsl-center">Zašto ljudi <em>vole</em> NORIKS ChefSeal</h2>
 
     <div class="nsl-row">
-      <div class="nsl-media nsl-sq"><?php echo $sl_img( 'seal-03-avokado-vrecice.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
+      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
       <div class="nsl-copy">
         <span class="nsl-spark">✦</span>
         <h3 class="nsl-h3">Čuva hranu svježom</h3>
@@ -102,7 +106,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-dot"></div>
         <div class="nsl-stat"><span>91 %</span><p>korisnika prijavilo je primjetnu uštedu na namirnicama zbog manje bačene hrane.</p></div>
       </div>
-      <div class="nsl-media nsl-sq"><?php echo $sl_img( 'seal-14-avokado-kvadrat.jpg', 'Vakuumirani avokado ne posmeđi' ); ?></div>
+      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-2.mp4', 'seal-vid-2.jpg', 'Avokado ostaje svjež u vakuumskoj vrećici' ); ?></div>
     </div>
 
     <div class="nsl-row">
@@ -192,11 +196,11 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
     <h2 class="nsl-h2 nsl-center">Bez vakuuma vs. vakuumirano</h2>
     <div class="nsl-vs2">
       <figure>
-        <?php echo $sl_vid( 'seal-vid-2.mp4', 'seal-vid-2.jpg', 'Avokado u običnoj vrećici nakon tri dana' ); ?>
+        <?php echo $sl_img( 'seal-bez-vakuuma.jpg', 'Avokado u običnoj vrećici nakon tri dana' ); ?>
         <figcaption><span class="nsl-tag nsl-tag-bad">Bez vakuuma</span></figcaption>
       </figure>
       <figure>
-        <?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Vakuumirani avokado nakon tri dana' ); ?>
+        <?php echo $sl_img( 'seal-14-avokado-kvadrat.jpg', 'Vakuumirani avokado nakon tri dana' ); ?>
         <figcaption><span class="nsl-tag nsl-tag-good">Vakuumirano</span></figcaption>
       </figure>
     </div>
@@ -236,20 +240,23 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </div></div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap');
-.nsl-sec, .nsl-marquee {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
-.nsl-sec h2, .nsl-sec h3, .nsl-sec strong, .nsl-stat span, .nsl-num, .nsl-tag, .nsl-marquee span {
-  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+.nsl-sec, .nsl-sec p, .nsl-sec li, .nsl-sec td, .nsl-marquee {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif !important; }
+.nsl-sec h2, .nsl-sec h3, .nsl-sec strong, .nsl-sec th, .nsl-stat span, .nsl-num, .nsl-tag,
+.nsl-steplab, .nsl-marquee span {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important; }
+.nsl-sec h2, .nsl-sec h3 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 .nsl-sec { padding: 72px 0; }
 .nsl-white { background: #fff;     color: #151515; }
 .nsl-grey  { background: #f4f4f4;  color: #151515; }
 .nsl-sec *, .nsl-marquee * { box-sizing: border-box; }
 .nsl-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
 .nsl-center { text-align: center; }
-.nsl-h2 { font-size: 40px; line-height: 1.14; margin: 0 0 44px; font-weight: 800; letter-spacing: -.025em; }
+.nsl-h2 { font-size: 40px; line-height: 1.1; margin: 0 0 44px; font-weight: 800 !important;
+  letter-spacing: -.032em; color: #151515; text-transform: none; }
 .nsl-h2 em { font-style: normal; color: #e03142; }
-.nsl-h3 { font-size: 27px; line-height: 1.18; margin: 0 0 14px; font-weight: 800; letter-spacing: -.02em; }
+.nsl-h3 { font-size: 27px; line-height: 1.15; margin: 0 0 14px; font-weight: 800 !important;
+  letter-spacing: -.028em; color: #151515; }
 .nsl-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
 
@@ -265,7 +272,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .nsl-negcard { text-align: center; }
 .nsl-negcard img { width: 100%; max-width: 330px; height: auto; display: block; margin: 0 auto 18px; }
-.nsl-negcard h3 { font-size: 23px; font-weight: 800; margin: 0 0 16px; letter-spacing: -.02em; }
+.nsl-negcard h3 { font-size: 23px; font-weight: 800 !important; margin: 0 0 16px; letter-spacing: -.028em; color: #151515; }
 .nsl-negcard ul { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
 .nsl-negcard li { position: relative; padding-left: 32px; margin-bottom: 11px; font-size: 16.5px; color: #333; }
 .nsl-negcard li:before { content: "✕"; position: absolute; left: 4px; top: 0; color: #c3192a; font-weight: 800; }

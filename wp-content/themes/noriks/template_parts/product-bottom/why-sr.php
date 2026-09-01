@@ -26,6 +26,10 @@ $sr_ico = function( $d ) {
 };
 ?>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+
 <!-- 1) Snazne osobine -->
 <section class="nsr-sec nsr-white">
   <div class="nsr-wrap">
@@ -147,6 +151,11 @@ $sr_ico = function( $d ) {
 </section>
 
 <style>
+.nsr-sec, .nsr-sec p, .nsr-sec li, .nsr-sec td {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif !important; }
+.nsr-sec h2, .nsr-sec h3, .nsr-sec strong, .nsr-sec th {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important; }
+.nsr-sec h2, .nsr-sec h3 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 .nsr-sec { padding: 54px 0; }
 .nsr-white { background: #fff;    color: #151515; }
 .nsr-grey  { background: #f5f6f8; color: #151515; }
@@ -154,7 +163,8 @@ $sr_ico = function( $d ) {
 .nsr-navy h2, .nsr-navy p, .nsr-navy strong, .nsr-navy span { color: #eef2f7; }
 .nsr-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
 .nsr-center { text-align: center; }
-.nsr-h2 { font-size: 32px; line-height: 1.18; margin: 0 0 18px; font-weight: 800; letter-spacing: -.01em; }
+.nsr-h2 { font-size: 36px; line-height: 1.1; margin: 0 0 20px; font-weight: 800 !important;
+  letter-spacing: -.032em; color: #151515; }
 .nsr-sec p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
 .nsr-lead { max-width: 760px; margin: 0 auto 30px; text-align: center; }
 .nsr-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
