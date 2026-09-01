@@ -923,6 +923,7 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
         <!-- 6 - navodila za uporabo (PDF) -->
     <?php
     $noriks_manuals = array(
+        'seal' => array( 'noriks-chefseal.pdf', 'NORIKS ChefSeal — ručni vakuumski aparat za hranu' ),
         'kidsnest' => array( 'noriks-kidsnest.pdf', 'NORIKS KidsNest — dječji ortopedski jastuk' ),
         'kneefix' => array( 'noriks-kneefix.pdf', 'NORIKS KneeFix — ortopedska steznica za koljeno' ),
         'ortopedski-jastuk' => array( 'noriks-ergosit.pdf', 'NORIKS ErgoSit — ortopedski jastuk za sjedenje' ),
