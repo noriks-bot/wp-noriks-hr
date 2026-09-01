@@ -348,7 +348,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-radial-lg { margin-top: 12px; grid-template-columns: 1fr 1.65fr 1fr; gap: 14px; }
 .nsl-radial-lg .nsl-rc { max-width: 700px; margin: 0 auto; }
 .nsl-radial-lg .nsl-rc img { width: 100%; height: auto; display: block; }
-.nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 92px; }
+.nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 0; }
 .nsl-radial-lg .nsl-rtxt strong { font-size: 19px; }
 .nsl-radial-lg .nsl-rtxt span { font-size: 15px; margin-top: 6px; }
 .nsl-radial-lg .nsl-ico { width: 54px; height: 54px; }
@@ -358,10 +358,10 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-rc-circle:before { content: ""; position: absolute; width: 78%; padding-bottom: 78%; border-radius: 50%; background: #c3192a; }
 .nsl-rc-circle:after { content: ""; position: absolute; width: 100%; padding-bottom: 100%; border-radius: 50%; border: 1px solid #f0c4cc; }
 .nsl-rc-circle img { position: relative; width: 74%; height: auto; filter: drop-shadow(0 6px 16px rgba(0,0,0,.16)); }
-.nsl-rl, .nsl-rr { display: flex; flex-direction: column; gap: 58px; }
+.nsl-rl, .nsl-rr { display: grid; grid-auto-rows: 1fr; align-items: center; gap: 0; }
 .nsl-rlab { display: flex; align-items: center; gap: 14px; }
-.nsl-rl .nsl-rlab { justify-content: flex-end; text-align: right; }
-.nsl-rr .nsl-rlab { justify-content: flex-start; text-align: left; }
+.nsl-rl .nsl-rlab { justify-content: flex-end; text-align: right; padding-right: 4px; }
+.nsl-rr .nsl-rlab { justify-content: flex-start; text-align: left; padding-left: 4px; }
 .nsl-rtxt strong { display: block; font-size: 17.5px; font-weight: 800; line-height: 1.25; letter-spacing: -.01em; }
 .nsl-rtxt span { display: block; font-size: 14px; color: #5f5f5f; margin-top: 4px; }
 .nsl-ico { flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; background: #ffeff2;
@@ -465,7 +465,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-row .nsl-media { order: -1; }
   .nsl-radial, .nsl-radial-lg { grid-template-columns: 1fr; gap: 18px; }
   .nsl-rc { order: -1; max-width: 300px; margin: 0 auto 6px; }
-  .nsl-rl, .nsl-rr, .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 14px; }
+  .nsl-rl, .nsl-rr, .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr {
+    display: flex !important; flex-direction: column; gap: 14px; }
   .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
     flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
     gap: 14px; padding: 12px 14px; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
