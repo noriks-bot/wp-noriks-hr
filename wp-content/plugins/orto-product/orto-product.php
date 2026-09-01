@@ -931,7 +931,7 @@ function gck_render_bundle_selector() {
       /* znacka na gornjem rubu kartice, tocno po sredini */
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 {
-          position: absolute !important; top: 0 !important; right: 14px !important;
+          position: absolute !important; top: 0 !important; right: 0 !important;
           left: auto !important; bottom: auto !important; margin: 0 !important;
           transform: translateY(-50%) !important;
           display: inline-flex !important; align-items: center; justify-content: center;
@@ -980,7 +980,7 @@ function gck_render_bundle_selector() {
       @media (max-width: 560px) {
           #bundle-selector .gck-popular-badge,
           #bundle-selector .gck-popular-badge-2 {
-              right: 12px !important; left: auto !important; top: 0 !important;
+              right: 0 !important; left: auto !important; top: 0 !important;
               transform: translateY(-50%) !important;
               font-size: 10.5px !important; padding: 0 12px !important; height: 23px !important;
               line-height: 1 !important; letter-spacing: 0 !important;
