@@ -942,7 +942,7 @@ function gck_render_bundle_selector() {
       }
       /* kartica sa znackom dobije prostor gore da znacka ne pada preko naslova */
       #bundle-selector .bundle-option:has(.gck-popular-badge),
-      #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 26px !important; }
+      #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 18px !important; }
       /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
       #bundle-selector .bundle-option > br,
       #bundle-selector .bundle-option .gck-hl-break,
@@ -976,17 +976,11 @@ function gck_render_bundle_selector() {
       #bundle-selector .gck-popular-badge,
       #bundle-selector .gck-popular-badge-2 { background: #c3192a !important; color: #fff !important; }
       @media (max-width: 560px) {
-          /* mobilno: ista sredinska poravnava, samo manje */
+          /* na mobilnom bez znacki — na uskom ekranu su uvijek smetale */
           #bundle-selector .gck-popular-badge,
-          #bundle-selector .gck-popular-badge-2 {
-              right: 12px !important; left: auto !important; top: 0 !important;
-              transform: translateY(-50%) !important;
-              font-size: 10.5px !important; padding: 0 12px !important; height: 23px !important;
-              line-height: 1 !important; letter-spacing: 0 !important;
-              max-width: calc(100% - 20px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-          }
+          #bundle-selector .gck-popular-badge-2 { display: none !important; }
           #bundle-selector .bundle-option:has(.gck-popular-badge),
-          #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 24px !important; }
+          #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 11px !important; }
           /* na mobilnom bez slicice — vise prostora za naslov i cijenu */
           #bundle-selector .bundle-option .gck-offer-img { display: none !important; }
           #bundle-selector .bundle-option { grid-template-columns: auto minmax(0,1fr) auto; column-gap: 10px; padding: 11px 12px !important; }
