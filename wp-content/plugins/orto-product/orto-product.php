@@ -925,7 +925,14 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .gck-per-chip { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { margin: 0 !important; }
       /* manje praznog prostora ispod sadrzaja kartice */
-      #bundle-selector .bundle-option { padding: 12px 16px !important; }
+      #bundle-selector .bundle-option { padding: 13px 16px !important; align-content: center; }
+      /* prazni elementi koji su stvarali dodatni red i gurali sadrzaj gore */
+      #bundle-selector .bundle-option > br,
+      #bundle-selector .bundle-option .gck-hl-break,
+      #bundle-selector .bundle-option .bundle-pairs { display: none !important; }
+      #bundle-selector .bundle-option > input[type="radio"] { align-self: center !important; }
+      #bundle-selector .bundle-option .gck-offer-img { align-self: center !important; }
+      #bundle-selector .bundle-option .gck-popular-badge { position: absolute !important; }
       #bundle-selector .bundle-option .bundle-option-content { margin: 0 !important; padding: 0 !important; }
       #bundle-selector .bundle-option .bundle-pairs { margin: 0 !important; padding: 0 !important; }
       #bundle-selector .bundle-option .bundle-pairs:empty,
