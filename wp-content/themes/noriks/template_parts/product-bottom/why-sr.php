@@ -31,7 +31,7 @@ $sr_ico = function( $d ) {
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 
 <!-- 1) Snazne osobine -->
-<section class="nsr-sec nsr-white">
+<section class="nsr-sec nsr-grey">
   <div class="nsr-wrap">
     <h2 class="nsr-h2 nsr-center">Snažne osobine</h2>
     <p class="nsr-tagline">Četiri stvari zbog kojih se ova košulja nosi češće od ostalih u ormaru.</p>
@@ -61,7 +61,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 2) Tri detaljne sekcije s vlastitim fotografijama -->
-<section class="nsr-sec nsr-grey">
+<section class="nsr-sec nsr-white">
   <div class="nsr-wrap">
     <div class="nsr-row">
       <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-1-rastezanje.jpg', 'Tkanina se rasteže u sva četiri smjera' ); ?></div>
@@ -94,7 +94,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 3) Boje i rukavi -->
-<section class="nsr-sec nsr-white">
+<section class="nsr-sec nsr-grey">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-media"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS SR košulje' ); ?></div>
     <div class="nsr-copy">
@@ -117,7 +117,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 4) Kako stoji -->
-<section class="nsr-sec nsr-grey">
+<section class="nsr-sec nsr-white">
   <div class="nsr-wrap">
     <h2 class="nsr-h2 nsr-center">Kako stoji</h2>
     <p class="nsr-tagline">Modeli s fotografija, njihove mjere i veličina koju nose.</p>
@@ -128,8 +128,8 @@ $sr_ico = function( $d ) {
         <figcaption><strong>183 cm · 73 kg</strong><span>veličina M</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-10-tamno-petrol.jpg', 'Model 180 cm, 82 kg nosi veličinu L' ); ?>
         <figcaption><strong>180 cm · 82 kg</strong><span>veličina L</span></figcaption></figure>
-      <figure><?php echo $sr_img( 'sr-04-bijela-kosulja.jpg', 'Model 188 cm, 104 kg nosi veličinu XL' ); ?>
-        <figcaption><strong>188 cm · 104 kg</strong><span>veličina XL</span></figcaption></figure>
+      <figure><?php echo $sr_img( 'sr-11-siva-rooftop.jpg', 'Model 188 cm, 88 kg nosi veličinu XL' ); ?>
+        <figcaption><strong>188 cm · 88 kg</strong><span>veličina XL</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-08-bordo.jpg', 'Model 185 cm, 129 kg nosi veličinu 3XL' ); ?>
         <figcaption><strong>185 cm · 129 kg</strong><span>veličina 3XL</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-13-svijetloplava-3xl.jpg', 'Model 183 cm, 125 kg nosi veličinu 3XL' ); ?>
@@ -175,28 +175,35 @@ $sr_ico = function( $d ) {
 .nsr-tagline-left { margin: -8px 0 16px; text-align: left; }
 .nsr-navy .nsr-note { color: #b8c3d2; }
 
-.nsr-four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
-.nsr-four strong { display: block; font-size: 18px; font-weight: 800; margin: 14px 0 6px; }
-.nsr-four p { font-size: 15px; color: #5f5f5f; margin: 0; }
-.nsr-ico { width: 54px; height: 54px; border-radius: 50%; background: #eef1f5; display: inline-flex;
+.nsr-four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.nsr-four > div { background: #fff; border: 1px solid #e6e8ec; border-radius: 16px; padding: 26px 20px 24px; }
+.nsr-white .nsr-four > div { background: #f5f6f8; }
+.nsr-four strong { display: block; font-size: 18px; font-weight: 800; margin: 14px 0 6px; letter-spacing: -.02em; }
+.nsr-four p { font-size: 15px; color: #5f5f5f; margin: 0; line-height: 1.5; }
+.nsr-ico { width: 56px; height: 56px; border-radius: 50%; background: #1b2a41; display: inline-flex;
   align-items: center; justify-content: center; }
-.nsr-ico svg { width: 26px; height: 26px; }
+.nsr-ico svg { width: 26px; height: 26px; stroke: #fff !important; }
 
 .nsr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 42px; }
 .nsr-row:last-child { margin-bottom: 0; }
 .nsr-h3 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
 .nsr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
-.nsr-media img { width: 100%; height: auto; display: block; border-radius: 14px; }
+.nsr-media img { width: 100%; height: auto; display: block; border-radius: 18px; }
 .nsr-colors { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
-.nsr-colors li { display: flex; align-items: center; gap: 10px; font-size: 15.5px; }
-.nsr-dot { width: 20px; height: 20px; border-radius: 50%; display: inline-block; flex: 0 0 auto; }
+.nsr-colors li { display: flex; align-items: center; gap: 10px; font-size: 15.5px;
+  background: #fff; border: 1px solid #e6e8ec; border-radius: 999px; padding: 7px 14px; }
+.nsr-grey .nsr-colors li { background: #fff; }
+.nsr-dot { width: 20px; height: 20px; border-radius: 50%; display: inline-block; flex: 0 0 auto;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
 
 .nsr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .nsr-grid figure { margin: 0; }
 .nsr-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 14px; }
-.nsr-grid figcaption { text-align: center; padding-top: 10px; }
-.nsr-grid figcaption strong { display: block; font-size: 16px; }
-.nsr-grid figcaption span { display: block; font-size: 14px; color: #6b6b6b; }
+.nsr-grid figure { position: relative; }
+.nsr-grid figcaption { text-align: center; padding-top: 12px; }
+.nsr-grid figcaption strong { display: block; font-size: 16px; letter-spacing: -.01em; }
+.nsr-grid figcaption span { display: inline-block; margin-top: 4px; font-size: 13px; color: #1b2a41;
+  background: #eef1f5; border-radius: 999px; padding: 3px 12px; font-weight: 700; }
 
 .nsr-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 10px; }
 .nsr-badges div { border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px 20px;

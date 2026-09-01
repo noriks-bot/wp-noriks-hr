@@ -901,6 +901,15 @@ function gck_render_bundle_selector() {
         </style>
     <?php endif; ?>
 
+    <?php if ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS SR: bez crte iznad izbornika — kartica je ciscija. */
+      #bundle-selector .bundle-option .bundle-pairs {
+          border-top: 0 !important; padding-top: 0 !important; margin-top: 4px !important;
+      }
+    </style>
+    <?php endif; ?>
+
     <?php if ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* NORIKS ChefSeal: kartica ponude sa slicicom paketa, kao na referenci. */
