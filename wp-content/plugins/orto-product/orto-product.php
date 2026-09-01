@@ -924,6 +924,15 @@ function gck_render_bundle_selector() {
       /* cijena po komadu je kod jednog uredaja suvisna */
       #bundle-selector .bundle-option .gck-per-chip { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { margin: 0 !important; }
+      /* manje praznog prostora ispod sadrzaja kartice */
+      #bundle-selector .bundle-option { padding: 12px 16px !important; }
+      #bundle-selector .bundle-option .bundle-option-content { margin: 0 !important; padding: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pairs { margin: 0 !important; padding: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pairs:empty,
+      #bundle-selector .bundle-option .bundle-pair:empty,
+      #bundle-selector .bundle-option .bundle-attr-row:empty { display: none !important; }
+      #bundle-selector .bundle-option > *:last-child,
+      #bundle-selector .bundle-option .bundle-option-content > *:last-child { margin-bottom: 0 !important; }
       /* rdeci stil kartica — kao na referenci */
       #bundle-selector .bundle-option {
           border: 2px solid #f0d3d7 !important;
