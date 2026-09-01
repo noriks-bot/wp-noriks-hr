@@ -514,8 +514,9 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   list-style: none !important; margin: 4px 0 10px !important; padding-left: 0 !important; }
 .woocommerce-product-details__short-description ul li,
 .woocommerce div.product .woocommerce-product-details__short-description ul li {
-  list-style: none !important; list-style-type: none !important; padding-left: 26px !important;
-  text-indent: -26px !important; margin-left: 0 !important; line-height: 1.38 !important; margin-bottom: 0 !important; }
+  list-style: none !important; list-style-type: none !important; padding-left: 0 !important;
+  text-indent: 0 !important; margin-left: 0 !important; line-height: 1.38 !important; margin-bottom: 0 !important;
+  display: flex !important; align-items: flex-start; gap: 8px; }
 .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
 .woocommerce-product-details__short-description ul li::before { content: none !important; }
 .woocommerce-product-details__short-description .nsl-red,
@@ -523,6 +524,6 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   color: #c3192a !important; font-weight: 700 !important; font-size: 15px !important;
   line-height: 1.45 !important; margin: 8px 0 12px !important; }
 .woocommerce-product-details__short-description .nsl-tick {
-  display: inline-block !important; width: 26px !important; text-indent: 0 !important;
+  flex: 0 0 auto !important; display: inline-block !important; width: auto !important; text-indent: 0 !important;
   color: #22c55e !important; font-weight: 800 !important; font-size: 17px !important; }
 </style>
