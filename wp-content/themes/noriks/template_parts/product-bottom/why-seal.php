@@ -373,7 +373,10 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   margin: 0 auto 16px; position: relative; z-index: 2; }
 .nsl-step:not(:last-child):after { content: ""; position: absolute; top: 28px; left: calc(50% + 34px);
   width: calc(100% - 68px); border-top: 1.5px dashed #efa8b3; z-index: 1; }
-.nsl-steplab { font-size: 17px; font-weight: 800; margin: 0 0 18px; letter-spacing: -.01em; }
+.nsl-steplab { font-size: 17px; font-weight: 800; margin: 0 0 18px; letter-spacing: -.01em;
+  min-height: 2.5em; display: flex; align-items: center; justify-content: center; }
+.nsl-step { display: flex; flex-direction: column; }
+.nsl-step > *:last-child { margin-top: auto; }
 .nsl-step img, .nsl-step .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; display: block; }
 
 /* 6) usporedba */
@@ -453,14 +456,22 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-three { grid-template-columns: 1fr; gap: 30px; }
   .nsl-row, .nsl-row.nsl-rev { grid-template-columns: 1fr; gap: 18px; margin-bottom: 32px; }
   .nsl-row .nsl-media { order: -1; }
-  .nsl-radial { grid-template-columns: 1fr; gap: 22px; }
-  .nsl-rc { order: -1; max-width: 330px; margin: 0 auto; }
-  .nsl-rl, .nsl-rr { gap: 20px; }
-  .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab { justify-content: flex-start; text-align: left; flex-direction: row-reverse; }
-  .nsl-rr .nsl-rlab { flex-direction: row; }
-  .nsl-rl .nsl-rlab { flex-direction: row-reverse; }
-  .nsl-steps4 { grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+  .nsl-radial, .nsl-radial-lg { grid-template-columns: 1fr; gap: 18px; }
+  .nsl-rc { order: -1; max-width: 300px; margin: 0 auto 6px; }
+  .nsl-rl, .nsl-rr, .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { gap: 14px; }
+  .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
+    flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
+    gap: 14px; padding: 12px 14px; border: 1px solid #ececee; border-radius: 12px; background: #fff; }
+  .nsl-grey .nsl-rlab { background: #fff; }
+  .nsl-rtxt strong, .nsl-radial-lg .nsl-rtxt strong { font-size: 16px; }
+  .nsl-radial-lg .nsl-rtxt span { font-size: 14px; }
+  .nsl-ico, .nsl-radial-lg .nsl-ico { width: 42px; height: 42px; }
+  .nsl-ico svg, .nsl-radial-lg .nsl-ico svg { width: 21px; height: 21px; }
+  .nsl-steps4 { grid-template-columns: 1fr 1fr; gap: 26px 16px; }
   .nsl-step:nth-child(2):after { display: none; }
+  .nsl-num { width: 46px; height: 46px; font-size: 18px; margin-bottom: 12px; }
+  .nsl-step:not(:last-child):after { top: 23px; left: calc(50% + 29px); width: calc(100% - 58px); }
+  .nsl-steplab { font-size: 15px; margin-bottom: 12px; min-height: 3em; }
   .nsl-sub { margin: -16px 0 20px; font-size: 14px; }
   .nsl-cmp-grid > div { padding: 13px 5px; font-size: 14px; }
   .nsl-cmp-h { font-size: 14.5px; padding-bottom: 12px !important; }
