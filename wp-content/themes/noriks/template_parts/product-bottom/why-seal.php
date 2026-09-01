@@ -62,6 +62,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Druge metode pohrane</h2>
+    <p class="nsl-tagline">Zašto hrana u običnoj vrećici ili posudi ne izdrži dugo — u sve tri metode ostaje zrak.</p>
     <div class="nsl-three">
       <div class="nsl-negcard">
         <?php echo $sl_img( 'seal-alt-1-zip.jpg', 'Obična zip vrećica zadržava zrak' ); ?>
@@ -86,6 +87,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-grey">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Zašto ljudi <em>vole</em> NORIKS ChefSeal</h2>
+    <p class="nsl-tagline">Tri stvari koje kupci najčešće spominju nakon prvog tjedna korištenja.</p>
 
     <div class="nsl-row">
       <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
@@ -126,6 +128,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Zatvorite brže. Spremite pametnije. Bacajte manje.</h2>
+    <p class="nsl-tagline">Sve što uređaj radi umjesto vas — bez kabela, bez postavki i bez čekanja.</p>
     <div class="nsl-radial">
       <div class="nsl-rl">
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Punjiva baterija</strong></div><?php echo $sl_ico( $ico_batt ); ?></div>
@@ -146,6 +149,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-grey">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Radi u 4 jednostavna koraka</h2>
+    <p class="nsl-tagline">Od pune vrećice do vakuumirane hrane u manje od pet sekundi.</p>
     <div class="nsl-steps4">
       <div class="nsl-step">
         <div class="nsl-num">1</div>
@@ -175,6 +179,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Inovativne vakuumske vrećice</h2>
+    <p class="nsl-tagline">Vrećice koje se peru i koriste iznova — sigurne za zamrzivač, mikrovalnu i perilicu posuđa.</p>
     <div class="nsl-radial nsl-radial-lg">
       <div class="nsl-rl">
         <div class="nsl-rlab"><div class="nsl-rtxt"><strong>Za zamrzivač, mikrovalnu i perilicu</strong><span>Sigurne za spremanje, podgrijavanje i pranje.</span></div><?php echo $sl_ico( $ico_snow ); ?></div>
@@ -210,6 +215,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-grey">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Vakuumiranje. Iznova osmišljeno.</h2>
+    <p class="nsl-tagline">Isti posao kao kod velikih stolnih aparata, bez njihovih mana.</p>
     <div class="nsl-cmp">
       <div class="nsl-cmp-hl"></div>
       <div class="nsl-cmp-grid">
@@ -233,6 +239,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Što kažu naši kupci</h2>
+    <p class="nsl-tagline">Poruke kupaca koji ChefSeal koriste u kuhinji svaki dan.</p>
     <div class="nsl-ugc">
       <article>
         <div class="nsl-ugc-img">
@@ -314,6 +321,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
 .nsl-note-gap { margin-top: 64px; }
+.nsl-tagline { max-width: 720px; margin: -22px auto 34px; text-align: center; font-size: 16px; line-height: 1.55; color: #5f5f5f; }
 
 /* traka */
 .nsl-marquee { background: #ffeff2; overflow: hidden; padding: 13px 0; }
@@ -476,6 +484,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
     display: flex !important; flex-direction: column; gap: 14px; position: static; }
   .nsl-radial-lg .nsl-rlab { position: static !important; transform: none !important; width: auto !important; }
   .nsl-note-gap { margin-top: 28px; }
+  .nsl-tagline { font-size: 14.5px; margin: -14px auto 22px; }
   .nsl-rl .nsl-rlab, .nsl-rr .nsl-rlab {
     flex-direction: row !important; justify-content: flex-start !important; text-align: left !important;
     gap: 14px; padding: 12px 14px; border: 1px solid #ececee; border-radius: 12px; background: #fff; }

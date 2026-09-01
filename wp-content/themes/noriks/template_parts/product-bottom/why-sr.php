@@ -34,6 +34,7 @@ $sr_ico = function( $d ) {
 <section class="nsr-sec nsr-white">
   <div class="nsr-wrap">
     <h2 class="nsr-h2 nsr-center">Snažne osobine</h2>
+    <p class="nsr-tagline">Četiri stvari zbog kojih se ova košulja nosi češće od ostalih u ormaru.</p>
     <div class="nsr-four">
       <div>
         <?php echo $sr_ico( '<path d="M12 3v18M3 12h18"/><path d="M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/>' ); ?>
@@ -98,6 +99,7 @@ $sr_ico = function( $d ) {
     <div class="nsr-media"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS SR košulje' ); ?></div>
     <div class="nsr-copy">
       <h2 class="nsr-h2">Osam boja, kratki i dugi rukav</h2>
+      <p class="nsr-tagline nsr-tagline-left">Isti kroj i ista tkanina u svakoj boji.</p>
       <p>Isti kroj i ista tkanina u svakoj boji. Rukav birate pri narudžbi — kratki za ljeto i vruće urede, dugi za sastanke i večeri.</p>
       <ul class="nsr-colors">
         <li><span class="nsr-dot" style="background:#f2f2f4;border:1px solid #cfcfd6;"></span>Bijela</li>
@@ -118,8 +120,8 @@ $sr_ico = function( $d ) {
 <section class="nsr-sec nsr-grey">
   <div class="nsr-wrap">
     <h2 class="nsr-h2 nsr-center">Kako stoji</h2>
-    <p class="nsr-lead">Modeli s fotografija, njihove mjere i veličina koju nose — najlakši način da procijenite svoju.</p>
-    <div class="nsr-grid">
+    <p class="nsr-tagline">Modeli s fotografija, njihove mjere i veličina koju nose.</p>
+        <div class="nsr-grid">
       <figure><?php echo $sr_img( 'sr-07-svijetloplava.jpg', 'Model 178 cm, 75 kg nosi veličinu M' ); ?>
         <figcaption><strong>178 cm · 75 kg</strong><span>veličina M</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-09-petrol-kratki-rukav.jpg', 'Model 183 cm, 73 kg nosi veličinu M' ); ?>
@@ -141,6 +143,7 @@ $sr_ico = function( $d ) {
 <section class="nsr-sec nsr-navy">
   <div class="nsr-wrap">
     <h2 class="nsr-h2 nsr-center">Jamstvo povrata novca</h2>
+    <p class="nsr-tagline">Kupujete bez rizika — zamjena veličine ili povrat novca u 30 dana.</p>
     <p class="nsr-lead">Niste zadovoljni kupnjom? Povrat ili zamjenu možete zatražiti u roku od 30 dana od dostave. Naša podrška je tu da pomogne.</p>
     <div class="nsr-badges">
       <div><strong>Vjerna veličinama</strong><span>Veličina koju naručite je veličina koju dobijete.</span></div>
@@ -168,6 +171,8 @@ $sr_ico = function( $d ) {
 .nsr-sec p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
 .nsr-lead { max-width: 760px; margin: 0 auto 30px; text-align: center; }
 .nsr-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
+.nsr-tagline { max-width: 720px; margin: -8px auto 26px; text-align: center; font-size: 16px; line-height: 1.55; color: #5f5f5f; }
+.nsr-tagline-left { margin: -8px 0 16px; text-align: left; }
 .nsr-navy .nsr-note { color: #b8c3d2; }
 
 .nsr-four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
