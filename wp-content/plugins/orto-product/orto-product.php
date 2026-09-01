@@ -987,9 +987,12 @@ function gck_render_bundle_selector() {
           }
           #bundle-selector .bundle-option:has(.gck-popular-badge),
           #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 24px !important; }
-          #bundle-selector .bundle-option { grid-template-columns: auto 52px minmax(0,1fr) auto; column-gap: 6px; padding: 11px 10px !important; }
-          #bundle-selector .bundle-option > input[type="radio"] { margin-right: 0 !important; }
-          #bundle-selector .bundle-option .gck-offer-img { width: 52px; height: 52px; margin-left: -2px; }
+          /* na mobilnom bez slicice — vise prostora za naslov i cijenu */
+          #bundle-selector .bundle-option .gck-offer-img { display: none !important; }
+          #bundle-selector .bundle-option { grid-template-columns: auto minmax(0,1fr) auto; column-gap: 10px; padding: 11px 12px !important; }
+          #bundle-selector .bundle-option .gck-offer-head { grid-column: 2; }
+          #bundle-selector .bundle-option .gck-offer-sub { grid-column: 2; }
+          #bundle-selector .bundle-option .bundle-total-line { grid-column: 3; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 15px; }
           #bundle-selector .bundle-option .gck-offer-sub { font-size: 12px; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 16.5px; }
