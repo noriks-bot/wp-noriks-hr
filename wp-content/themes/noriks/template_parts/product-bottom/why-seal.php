@@ -472,7 +472,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   .nsl-marquee { margin-top: 26px; padding: 11px 0; }
   .nsl-marquee-end { margin-top: -13px; }
   .nsl-marquee span { font-size: 12.5px; }
-  .nsl-sec { padding: 26px 0; }
+  .nsl-sec { padding: 22px 0; }
   .nsl-copy { max-width: none; }
   .nsl-wrap { padding-left: 14px; padding-right: 14px; }
   .nsl-h2 { font-size: 26px; margin-bottom: 24px; }
@@ -487,7 +487,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
     display: flex !important; flex-direction: column; gap: 12px; position: static;
     align-items: stretch !important; }
   .nsl-radial-lg .nsl-rlab { position: static !important; transform: none !important; width: auto !important; }
-  .nsl-note-gap { margin-top: 28px; }
+  .nsl-note-gap { margin-top: 26px; margin-bottom: 0; }
   .nsl-tagline { font-size: 14.5px; margin: -14px auto 22px; }
   /* ikona uvijek lijevo — u lijevom stupcu je u markupu zadnja, pa row-reverse */
   .nsl-rl .nsl-rlab { flex-direction: row-reverse !important; justify-content: flex-end !important; }
