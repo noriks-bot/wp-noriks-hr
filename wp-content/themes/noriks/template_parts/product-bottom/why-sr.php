@@ -150,12 +150,6 @@ $sr_ico = function( $d ) {
   </div>
 </section>
 
-<div class="nsr-marquee nsr-marquee-end"><div class="nsr-marquee-track">
-  <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-    <span>30 DANA ZA POVRAT</span><i>✦</i><span>ZAMJENA VELIČINE BEZ PITANJA</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
-  <?php endfor; ?>
-</div></div>
-
 <style>
 .nsr-marquee { background: #eef1f5; overflow: hidden; padding: 13px 0; }
 .nsr-marquee-track { display: flex; align-items: center; gap: 26px; white-space: nowrap;
@@ -182,8 +176,9 @@ $sr_ico = function( $d ) {
 .nsr-sec p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
 .nsr-lead { max-width: 760px; margin: 0 auto 30px; text-align: center; }
 .nsr-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
-.nsr-tagline { max-width: 720px; margin: -8px auto 26px; text-align: center; font-size: 16px; line-height: 1.55; color: #5f5f5f; }
-.nsr-tagline-left { margin: -8px 0 16px; text-align: left; }
+.nsr-tagline { max-width: 720px; margin: -8px auto 26px !important; text-align: center !important;
+  font-size: 16px; line-height: 1.55; color: #5f5f5f; }
+.nsr-tagline-left { margin: -8px 0 16px !important; text-align: left !important; }
 .nsr-navy .nsr-note { color: #b8c3d2; }
 
 .nsr-icons { background: #fff; color: #151515; }
