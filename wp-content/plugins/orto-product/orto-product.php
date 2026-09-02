@@ -958,8 +958,11 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option .bundle-total-line { top: 14px !important; right: 12px !important; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px !important; }
           #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px !important; }
-          #bundle-selector .bundle-option .bundle-attr-row { gap: 10px; padding: 10px 12px; }
-          #bundle-selector .bundle-option .color-swatches { gap: 8px; }
+          /* na mobilnom okvir ide preko cijele sirine kartice */
+          #bundle-selector .bundle-option .bundle-pairs { margin-right: -96px !important; }
+          #bundle-selector .bundle-option .bundle-attr-row {
+              display: flex !important; width: 100% !important; gap: 10px; padding: 10px 12px; }
+          #bundle-selector .bundle-option .color-swatches { gap: 8px; flex: 1 1 auto; justify-content: space-between; }
           #bundle-selector .bundle-option .color-swatches .swatch { width: 44px !important; height: 44px !important; padding: 5px !important; }
           #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; }
       }
