@@ -904,7 +904,8 @@ function gck_render_bundle_selector() {
           border-top: 0 !important; padding-top: 13px !important; padding-bottom: 0 !important;
           margin-top: 0 !important; margin-bottom: 0 !important;
       }
-      #bundle-selector .bundle-option .bundle-pairs .bundle-pair { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair { margin-bottom: 10px !important; padding-bottom: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair:last-child { margin-bottom: 0 !important; }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair .bundle-attr-row { margin-bottom: 0 !important; }
       /* cijena u istom redu kao naslov, bez rijeci "Ukupno:" */
       #bundle-selector .bundle-option { position: relative; padding: 16px 175px 16px 16px !important; }
