@@ -919,7 +919,9 @@ function gck_render_bundle_selector() {
       /* NORIKS HOME PowerHook — kartica ponude 1:1 kao original */
       #bundle-selector .bundle-option { position: relative; padding: 16px 150px 16px 16px !important; }
       #bundle-selector .bundle-option > br { display: none !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { display: none !important; }
+      /* uz naslov: samo konacna cijena po komadu + zeleni postotak popusta */
+      #bundle-selector .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { display: inline-flex !important; margin: 0 !important; }
       /* desno: KONCNA cijena paketa; cijena po komadu ostaje uz naslov kao i prije */
       #bundle-selector .bundle-option .gck-hl-break { display: none !important; }
       #bundle-selector .bundle-option .gck-offer-prices {
