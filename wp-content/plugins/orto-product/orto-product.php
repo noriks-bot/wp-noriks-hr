@@ -922,10 +922,11 @@ function gck_render_bundle_selector() {
       /* uz naslov: samo konacna cijena po komadu + zeleni postotak popusta */
       #bundle-selector .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { display: inline-flex !important; margin: 0 !important; }
-      /* desno: KONCNA cijena paketa; cijena po komadu ostaje uz naslov kao i prije */
-      #bundle-selector .bundle-option .gck-hl-break { display: none !important; }
+      /* desno: KONCNA cijena paketa; cijena po komadu i postotak u REDU ISPOD naslova */
+      #bundle-selector .bundle-option .gck-hl-break { display: block !important; }
       #bundle-selector .bundle-option .gck-offer-prices {
-          display: inline-flex !important; align-items: center; gap: 8px; white-space: nowrap; margin-left: 10px; }
+          display: inline-flex !important; align-items: center; gap: 8px; white-space: nowrap;
+          margin: 6px 0 0 0 !important; }
       #bundle-selector .bundle-option .bundle-total-line {
           position: absolute !important; top: 16px !important; right: 16px !important;
           margin: 0 !important; padding: 0 !important;
@@ -964,7 +965,7 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 17px !important; }
           #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 12.5px !important; }
           /* naslov ostaje u istom redu s gumbom; oblacici samo manji */
-          #bundle-selector .bundle-option .gck-offer-prices { margin-left: 8px !important; gap: 6px; }
+          #bundle-selector .bundle-option .gck-offer-prices { margin: 5px 0 0 0 !important; gap: 6px; }
           #bundle-selector .bundle-option .gck-per-chip { padding: 3px 8px !important; }
           #bundle-selector .bundle-option .gck-per-chip .gck-per-new { font-size: 12px !important; }
           #bundle-selector .bundle-option .gck-discount-badge { font-size: 11.5px !important; padding: 3px 8px !important; }
