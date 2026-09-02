@@ -30,20 +30,8 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 };
 ?>
 
-<!-- 1) Estetske i prakticne kuke — tekst u sivoj kartici lijevo, video desno (kao original) -->
+<!-- 1) DISCOVER THE POWER — videi -->
 <section class="nhm-sec nhm-white">
-  <div class="nhm-wrap nhm-row nhm-row-card">
-    <div class="nhm-copy nhm-card">
-      <h2 class="nhm-h2">Estetske i praktične kuke</h2>
-      <p>Moderan, rustikalan ili elegantan interijer? NORIKS HOME PowerHook kuke unose uredan detalj u svaki prostor i istovremeno pouzdano drže ono što vam treba pri ruci.</p>
-      <p>Ravna, diskretna glava bez vidljivih vijaka i pet nijansi koje se uklapaju uz armaturu: <strong>crna, krom, bijela, zlatna i siva</strong>.</p>
-    </div>
-    <div class="nhm-media nhm-media-video"><?php echo $hm_vid( 'home-vid-3.mp4', 'home-vid-3.jpg', 'NORIKS HOME PowerHook kuka u kupaonici' ); ?></div>
-  </div>
-</section>
-
-<!-- 2) DISCOVER THE POWER — videi -->
-<section class="nhm-sec nhm-grey">
   <div class="nhm-wrap">
     <h2 class="nhm-h2 nhm-center">Otkrijte snagu naših kuka</h2>
     <p class="nhm-tagline">Montaža, opterećenje i skidanje — bez montaže i bez tragova.</p>
@@ -55,7 +43,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 3) Twist & Lock tehnologija -->
+<!-- 2) Twist & Lock tehnologija -->
 <section class="nhm-sec nhm-grey">
   <div class="nhm-wrap nhm-row">
     <div class="nhm-copy">
@@ -69,7 +57,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 4) Montaza bez ostecenja -->
+<!-- 3) Montaza bez ostecenja -->
 <section class="nhm-sec nhm-white">
   <div class="nhm-wrap nhm-row">
     <div class="nhm-media"><?php echo $hm_img( 'home-povrsine.jpg', 'Kuke rade na više vrsta glatkih površina' ); ?></div>
@@ -89,7 +77,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 5) Recenzije kupaca -->
+<!-- 4) Recenzije kupaca -->
 <section class="nhm-sec nhm-white">
   <div class="nhm-wrap">
     <h2 class="nhm-h2 nhm-center">Što kažu naši kupci</h2>

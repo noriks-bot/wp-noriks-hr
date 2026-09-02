@@ -532,7 +532,7 @@ function gck_render_bundle_selector() {
     }
 
     $gck_no_attrs    = has_term( array( 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-home', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre' ), 'product_cat', $product_id );
 
     // SHGIFTS (orto-majica-darila): the SAME split-garment selector as SHBOX,
     // extended to 3 garment groups (4 majica + 1 bokserica + 1 čarapa). Gated
@@ -549,10 +549,13 @@ function gck_render_bundle_selector() {
     // NORIKS FlexShirt kosulja: TRI izbora kao na originalu (Boja + Velicina + Rukav).
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']
     // i ovdje ga uzimamo kao dodatni <select> uz par.
+    // NORIKS HOME PowerHook: jedini izbor je BOJA i prikazuje se kao krugovi (kao original).
+    $gck_single_color = has_term( array( 'orto-home' ), 'product_cat', $product_id );
+
     $gck_extra_select = has_term( 'orto-sr', 'product_cat', $product_id );
     $gck_extra_attr   = null;
 
-    if ( ! $gck_no_attrs && ! $gck_single_size && ! $gck_shgifts && count( $custom_attrs ) < 2 ) return;
+    if ( ! $gck_no_attrs && ! $gck_single_size && ! $gck_single_color && ! $gck_shgifts && count( $custom_attrs ) < 2 ) return;
 
     $gck_single_is_color = false; // edini izbirnik je boja (kvadratic uz dropdown)
     $split  = gck_split_attrs_color_size( $custom_attrs );
@@ -580,7 +583,16 @@ function gck_render_bundle_selector() {
         $colors = array( $all[1] );
     }
 
-    if ( $gck_no_attrs ) {
+    if ( $gck_single_color ) {
+        // Samo boja, prikazana kao krugovi (bez selecta).
+        $sizes = array();
+        if ( empty( $colors ) && ! empty( $custom_attrs ) ) {
+            $k = array_key_first( $custom_attrs );
+            $a = $custom_attrs[ $k ];
+            $colors = array( array( 'key' => $k, 'label' => (string) $a->get_name(),
+                                    'field_key' => 'attribute_' . $k, 'values' => (array) $a->get_options() ) );
+        }
+    } elseif ( $gck_no_attrs ) {
         // Bunion: quantity-only, render offers with no colour/size pickers at all.
         $colors = array();
         $sizes  = array();
@@ -902,6 +914,48 @@ function gck_render_bundle_selector() {
           .color-swatches .swatch.active { border-color: black  !important; }
           .bundle-box select { border: 2px solid black !important; }
         </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-home' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS HOME PowerHook — kartica ponude 1:1 kao original */
+      #bundle-selector .bundle-option { position: relative; padding: 16px 190px 16px 16px !important; }
+      #bundle-selector .bundle-option > br { display: none !important; }
+      #bundle-selector .bundle-option .bundle-total-line { display: none !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { display: none !important; }
+      #bundle-selector .bundle-option small { display: none !important; }
+      #bundle-selector .bundle-option .bundle-option-title { font-size: 19px; font-weight: 800; letter-spacing: -.01em; }
+      #bundle-selector .bundle-option .gck-offer-sub { display: block; margin: 2px 0 0 !important; font-size: 14px; color: #6b6b6b; }
+      /* cijena po pakiranju desno gore */
+      #bundle-selector .bundle-option .gck-offer-prices {
+          position: absolute !important; top: 16px !important; right: 16px !important;
+          display: inline-flex !important; align-items: baseline; gap: 8px; white-space: nowrap; }
+      #bundle-selector .bundle-option .gck-per-chip {
+          background: none !important; padding: 0 !important; margin: 0 !important;
+          display: inline-flex !important; align-items: baseline; gap: 8px; }
+      #bundle-selector .bundle-option .gck-per-chip .gck-per-new {
+          color: #151515 !important; font-size: 21px !important; font-weight: 800 !important; }
+      #bundle-selector .bundle-option .gck-per-chip .gck-per-old {
+          display: inline !important; color: #9aa3ad !important; font-size: 14px !important;
+          font-weight: 500 !important; text-decoration: line-through; order: 2; }
+      /* krugovi boja u okviru, s oznakom #1 / #2 / #3 */
+      #bundle-selector .bundle-option .bundle-pairs { counter-reset: nhmpair; border-top: 0 !important; padding-top: 14px !important; margin: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pair { counter-increment: nhmpair; margin-bottom: 8px !important; }
+      #bundle-selector .bundle-option .bundle-pair:last-child { margin-bottom: 0 !important; }
+      #bundle-selector .bundle-option .bundle-attr-row {
+          display: flex !important; align-items: center; gap: 12px; width: 100%;
+          border: 1px solid #e4e4e6; border-radius: 12px; padding: 8px 12px; background: #fff; }
+      #bundle-selector .bundle-option .bundle-attr-row:before {
+          content: "#" counter(nhmpair); flex: 0 0 auto; font-size: 13px; font-weight: 800; color: #6b6b6b; }
+      #bundle-selector .bundle-option .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 30px; height: 30px; }
+      @media (max-width: 560px) {
+          #bundle-selector .bundle-option { padding: 14px 128px 14px 12px !important; }
+          #bundle-selector .bundle-option .bundle-option-title { font-size: 16px; }
+          #bundle-selector .bundle-option .gck-per-chip .gck-per-new { font-size: 17px !important; }
+          #bundle-selector .bundle-option .gck-offer-prices { top: 14px !important; right: 12px !important; }
+      }
+    </style>
     <?php endif; ?>
 
     <?php if ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) : ?>
