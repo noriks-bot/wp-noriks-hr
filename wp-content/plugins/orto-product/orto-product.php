@@ -917,7 +917,7 @@ function gck_render_bundle_selector() {
     <?php if ( has_term( array( 'orto-home' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* NORIKS HOME PowerHook — kartica ponude 1:1 kao original */
-      #bundle-selector .bundle-option { position: relative; padding: 16px 190px 16px 16px !important; }
+      #bundle-selector .bundle-option { position: relative; padding: 16px 150px 16px 16px !important; }
       #bundle-selector .bundle-option > br { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { display: none !important; }
       /* desno: KONCNA cijena paketa; cijena po komadu ostaje uz naslov kao i prije */
@@ -942,7 +942,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .bundle-pair { counter-increment: nhmpair; margin-bottom: 8px !important; }
       #bundle-selector .bundle-option .bundle-pair:last-child { margin-bottom: 0 !important; }
       #bundle-selector .bundle-option .bundle-attr-row {
-          display: flex !important; align-items: center; gap: 16px; width: 100%;
+          display: inline-flex !important; align-items: center; gap: 16px; width: auto; max-width: 100%;
           border: 1px solid #e4e4e6; border-radius: 0; padding: 12px 16px; background: #fff; }
       #bundle-selector .bundle-option .bundle-attr-row:before {
           content: "#" counter(nhmpair); flex: 0 0 auto; font-size: 15px; font-weight: 800; color: #6b6b6b; }
@@ -953,7 +953,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .color-swatches .swatch.active { transform: none !important; }
       #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 38px !important; height: 38px !important; }
       @media (max-width: 560px) {
-          #bundle-selector .bundle-option { padding: 14px 128px 14px 12px !important; }
+          #bundle-selector .bundle-option { padding: 14px 108px 14px 12px !important; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 16px; }
           #bundle-selector .bundle-option .bundle-total-line { top: 14px !important; right: 12px !important; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px !important; }
