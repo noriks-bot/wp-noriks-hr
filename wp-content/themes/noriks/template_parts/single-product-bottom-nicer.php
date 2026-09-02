@@ -174,5 +174,10 @@ if ( noriks_is_type( 'sr' ) ) {
     include $noriks_pb_dir . 'why-sr.php';
 }
 
+// NORIKS HOME (orto-home) — vakuumske kuke
+if ( noriks_is_type( 'home' ) ) {
+    include $noriks_pb_dir . 'why-home.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';

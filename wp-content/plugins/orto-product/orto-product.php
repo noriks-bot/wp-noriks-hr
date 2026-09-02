@@ -530,7 +530,7 @@ function gck_render_bundle_selector() {
     }
 
     $gck_no_attrs    = has_term( array( 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-home', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre' ), 'product_cat', $product_id );
 
     // SHGIFTS (orto-majica-darila): the SAME split-garment selector as SHBOX,
     // extended to 3 garment groups (4 majica + 1 bokserica + 1 čarapa). Gated
@@ -739,6 +739,9 @@ function gck_render_bundle_selector() {
       .color-bela  { background: #fff; border: 1px solid #ccc; }
       .color-bijela{ background: #fff; border: 1px solid #ccc; }
       .color-bez { background: #e4e0cf; }
+      /* NORIKS Home — nijanse kuka */
+      .color-krom          { background: linear-gradient(135deg,#e9ecef 0%,#b9c0c7 50%,#eef1f4 100%); }
+      .color-zlatna        { background: linear-gradient(135deg,#e7c66a 0%,#c9a227 55%,#f0dc9a 100%); }
       /* NORIKS FlexShirt kosulja — nijanse ocitane s fotografija proizvoda. */
       .color-svijetloplava { background: #c5d2ec; }
       .color-grafitna      { background: #3d3a40; }
@@ -889,7 +892,7 @@ function gck_render_bundle_selector() {
 
     <?php
     // Your extra conditional style block (kept)
-    if (  !has_term( array( 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
+    if (  !has_term( array( 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
@@ -1471,7 +1474,7 @@ function gck_render_bundle_selector() {
     
 
     <div class="gck-benefits-box">
-        <?php if ( ! has_term( array( 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
+        <?php if ( ! has_term( array( 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
         <ul class="gck-benefits-list">
             <?php if ( !has_term( array( 'orto-bokserice', 'orto-bokserice2', 'starter-paketi' ), 'product_cat', $product_id ) ) : ?>
                 <li><span class="gck-check">✔</span> <strong>Savršeno pristajanje</strong></li>
@@ -1506,7 +1509,7 @@ function gck_render_bundle_selector() {
         </ul>
         <?php endif; // /hide benefits list for compression socks ?>
 
-        <?php if ( ! $show_countdown && ! $gck_no_attrs && ! $gck_single_size && ! has_term( array( 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-kompresijske-carape', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id ) ) : ?>
+        <?php if ( ! $show_countdown && ! $gck_no_attrs && ! $gck_single_size && ! has_term( array( 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-kompresijske-carape', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id ) ) : ?>
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right: 5px; width: 23px; height: 23px; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                 <path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.84375"></path>
@@ -1652,7 +1655,7 @@ function gck_render_bundle_selector() {
         </script>
     <?php endif; ?>
 
-    <?php if ( $show_countdown && ! $gck_no_attrs && ! $gck_single_size && ! has_term( array( 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id ) ) : ?>
+    <?php if ( $show_countdown && ! $gck_no_attrs && ! $gck_single_size && ! has_term( array( 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id ) ) : ?>
     <div class="gck-size-link-wrap" style="text-align:right; margin:0 0 8px 0;">
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right: 5px; width: 23px; height: 23px; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">

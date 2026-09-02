@@ -66,6 +66,8 @@ function noriks_product_type_map() : array {
         'seal'                    => array( 'orto-seal', 'seal' ),
         // NORIKS FlexShirt — rastezljiva kosulja (boja + velicina + rukav).
         'sr'                      => array( 'orto-sr', 'sr' ),
+        // NORIKS Home — vakuumske kuke (samo boja).
+        'home'                    => array( 'orto-home', 'home' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
