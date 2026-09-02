@@ -508,8 +508,6 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
-    } elseif ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) {
-        $gck_offer_subs = array( 'Standardnih 29 % popusta', '+ dodatnih 20 % popusta', '+ dodatnih 25 % popusta' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Uređaj + 10 vrećica', 'Uređaj + 20 vrećica', 'Uređaj + 30 vrećica' );
     } else {
