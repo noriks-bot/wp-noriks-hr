@@ -36,16 +36,15 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   <?php endfor; ?>
 </div></div>
 
-<!-- 1) Estetske i prakticne kuke -->
+<!-- 1) Estetske i prakticne kuke — tekst u sivoj kartici lijevo, video desno (kao original) -->
 <section class="nhm-sec nhm-white">
-  <div class="nhm-wrap nhm-row">
-    <div class="nhm-media"><?php echo $hm_img( 'home-06-rucnik.jpg', 'NORIKS Home kuke s ručnikom i spužvom' ); ?></div>
-    <div class="nhm-copy">
-      <p class="nhm-eyebrow">Dizajn i funkcija</p>
+  <div class="nhm-wrap nhm-row nhm-row-card">
+    <div class="nhm-copy nhm-card">
       <h2 class="nhm-h2">Estetske i praktične kuke</h2>
-      <p>Moderan, rustikalan ili elegantan interijer — NORIKS Home kuke unose uredan detalj u svaki prostor i istovremeno drže ono što vam treba pri ruci.</p>
+      <p>Moderan, rustikalan ili elegantan interijer? NORIKS Home kuke unose uredan detalj u svaki prostor i istovremeno pouzdano drže ono što vam treba pri ruci.</p>
       <p>Ravna, diskretna glava bez vidljivih vijaka i pet nijansi koje se uklapaju uz armaturu: <strong>crna, krom, bijela, zlatna i siva</strong>.</p>
     </div>
+    <div class="nhm-media nhm-media-video"><?php echo $hm_vid( 'home-vid-3.mp4', 'home-vid-3.jpg', 'NORIKS Home kuka u kupaonici' ); ?></div>
   </div>
 </section>
 
@@ -176,6 +175,11 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 .nhm-tagline { max-width: 720px; margin: -6px auto 30px !important; text-align: center !important; font-size: 16px; color: #5f5f5f; }
 .nhm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .nhm-row .nhm-copy { max-width: 540px; }
+.nhm-row-card { gap: 24px; align-items: stretch; }
+.nhm-card { background: #f1f1f1; border-radius: 18px; padding: 46px 44px; display: flex; flex-direction: column;
+  justify-content: center; max-width: none !important; }
+.nhm-media-video { border-radius: 18px; overflow: hidden; }
+.nhm-media-video .nhm-video { width: 100%; height: 100%; min-height: 340px; object-fit: cover; display: block; }
 .nhm-media img { width: 100%; height: auto; display: block; border-radius: 18px; }
 .nhm-sq { aspect-ratio: 1/1; border-radius: 18px; overflow: hidden; background: #ececed; }
 .nhm-sq .nhm-video { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -211,6 +215,9 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   .nhm-h2 { font-size: 25px; }
   .nhm-row { grid-template-columns: 1fr; gap: 18px; }
   .nhm-row .nhm-copy { max-width: none; }
+  .nhm-card { padding: 26px 22px; }
+  .nhm-media-video .nhm-video { min-height: 240px; }
+  .nhm-row-card .nhm-media { order: -1; }
   .nhm-row .nhm-media { order: -1; }
   .nhm-ticks { grid-template-columns: 1fr; }
   .nhm-vids { grid-template-columns: 1fr; gap: 16px; }
