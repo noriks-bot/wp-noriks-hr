@@ -910,22 +910,25 @@ function gck_render_bundle_selector() {
       }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair:last-child { margin-bottom: 0 !important; }
       /* jasno je koji izbornici pripadaju kojoj kosulji */
-      #bundle-selector .bundle-option .bundle-pairs .bundle-pair:not(:only-child):before {
+      #bundle-selector .bundle-option .bundle-pairs:not([data-qty="1"]) .bundle-pair:before {
           content: counter(fsxpair) ". košulja";
           display: block; font-size: 12px; font-weight: 800; color: #7a7a7a;
           letter-spacing: .06em; text-transform: uppercase; margin: 0 0 7px;
       }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair + .bundle-pair {
-          border-top: 1px solid #e6e2d8; padding-top: 12px !important;
+          position: relative; padding-top: 14px !important; border-top: 0 !important;
+      }
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair + .bundle-pair:after {
+          content: ""; position: absolute; top: 0; left: -16px; right: -175px;
+          border-top: 1px solid #e6e2d8;
       }
       /* cijena po komadu i postotak u istom redu */
-      #bundle-selector .bundle-option .gck-hl-break { display: none !important; }
-      #bundle-selector .bundle-option .gck-offer-head {
-          display: flex !important; flex-wrap: wrap; align-items: center; gap: 8px; row-gap: 6px;
-      }
       #bundle-selector .bundle-option .gck-offer-prices {
-          display: inline-flex !important; align-items: center; gap: 8px; flex-wrap: nowrap; top: 0 !important;
+          display: inline-flex !important; align-items: center; gap: 8px; flex-wrap: nowrap;
+          white-space: nowrap; top: 0 !important;
       }
+      #bundle-selector .bundle-option .gck-per-chip,
+      #bundle-selector .bundle-option .gck-discount-badge { white-space: nowrap; }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair .bundle-attr-row { margin-bottom: 0 !important; }
       /* cijena u istom redu kao naslov, bez rijeci "Ukupno:" */
       #bundle-selector .bundle-option { position: relative; padding: 16px 175px 12px 16px !important; }
@@ -953,6 +956,7 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-pair .gck-dd-extra { grid-column: 1 / -1; }
           #bundle-selector .bundle-pair .gck-extra-select { grid-column: 1 / -1; width: 100% !important; min-width: 0 !important; }
           #bundle-selector .bundle-option { padding: 14px 130px 10px 12px !important; }
+          #bundle-selector .bundle-option .bundle-pairs .bundle-pair + .bundle-pair:after { left: -12px; right: -130px; }
           #bundle-selector .bundle-option .bundle-pairs { padding-top: 11px !important; margin-top: 0 !important; }
           #bundle-selector .bundle-option .bundle-total-line { top: 11px !important; right: 12px !important; }
       }
@@ -2305,9 +2309,23 @@ function gck_render_bundle_selector() {
           r.addEventListener('change', function(){ setTimeout(syncAllSizes, 60); });
         });
       }
+      /* Na uskom ekranu svi izbornici moraju biti jednako siroki. makeDD postavlja
+         inline width s !important, pa ga ovdje prepisujemo (CSS ga ne moze nadjacati). */
+      function fitWidths(){
+        var narrow = window.matchMedia('(max-width: 560px)').matches;
+        document.querySelectorAll('#bundle-selector .bundle-pair .gck-dd').forEach(function(d){
+          if(!d.dataset.gckW) d.dataset.gckW = d.style.width || '';
+          if(narrow){ d.style.setProperty('width','100%','important'); }
+          else if(d.dataset.gckW){ d.style.setProperty('width', d.dataset.gckW, 'important'); }
+        });
+      }
       /* radi tek kad je osnovni skript vec postavio pocetne swatcheve */
-      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', function(){ setTimeout(build, 0); }); }
-      else { setTimeout(build, 0); }
+      if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', function(){ setTimeout(function(){ build(); fitWidths(); }, 0); }); }
+      else { setTimeout(function(){ build(); fitWidths(); }, 0); }
+      window.addEventListener('resize', function(){ setTimeout(fitWidths, 80); });
+      document.addEventListener('change', function(e){
+        if(e.target && e.target.name === 'bundle_option') setTimeout(fitWidths, 60);
+      }, true);
     })();
     </script>
     <?php endif; ?>
