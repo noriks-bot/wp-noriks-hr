@@ -212,11 +212,14 @@ $sr_ico = function( $d ) {
 .nsr-sec-pair-b { padding-top: 18px; }
 .nsr-sec-pair .nsr-media img { max-height: 512px; width: auto; margin: 0 auto; }
 .nsr-media-tall img { max-height: 560px; width: auto; margin: 0 auto; }
-.nsr-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 14px; margin: 24px 0 6px; }
-.nsr-swatches figure { margin: 0; text-align: center; }
-.nsr-sw { display: block; width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 9px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.12); }
-.nsr-swatches figcaption { font-size: 13.5px; color: #4a4a4a; letter-spacing: .01em; }
+.nsr-swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 26px 0 18px; }
+.nsr-swatches figure { margin: 0; text-align: center; background: #fff; border: 1px solid #e6e8ec;
+  border-radius: 14px; padding: 20px 10px 16px; transition: box-shadow .18s, transform .18s; }
+.nsr-swatches figure:hover { box-shadow: 0 8px 22px rgba(27,42,65,.10); transform: translateY(-2px); }
+.nsr-sw { display: block; width: 58px; height: 58px; border-radius: 50%; margin: 0 auto 12px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.10), 0 4px 12px rgba(0,0,0,.12); }
+.nsr-swatches figcaption { font-size: 13px; color: #1b2a41; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; }
 
 .nsr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .nsr-grid figure { margin: 0; }
@@ -245,9 +248,10 @@ $sr_ico = function( $d ) {
   .nsr-quals p { font-size: 14px; }
   .nsr-row { grid-template-columns: 1fr; gap: 18px; }
   .nsr-row .nsr-media { order: -1; }
-  .nsr-swatches { grid-template-columns: repeat(4, 1fr); gap: 16px 8px; }
-  .nsr-sw { width: 42px; height: 42px; }
-  .nsr-swatches figcaption { font-size: 12px; }
+  .nsr-swatches { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .nsr-swatches figure { padding: 14px 6px 12px; border-radius: 12px; }
+  .nsr-sw { width: 42px; height: 42px; margin-bottom: 9px; }
+  .nsr-swatches figcaption { font-size: 10.5px; letter-spacing: .03em; }
   .nsr-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
 }
 
