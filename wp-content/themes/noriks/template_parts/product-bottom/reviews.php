@@ -286,7 +286,7 @@
 
            <?php elseif ( noriks_is_type( 'sr' ) ): ?>
 
-           Tisuće muškaraca već nosi NORIKS SR – košulja koja se rasteže s vama i ne treba glačalo.
+           Tisuće muškaraca već nosi NORIKS FlexShirt – košulja koja se rasteže s vama i ne treba glačalo.
 
            <?php else: ?>
         
@@ -397,7 +397,7 @@
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_seal_page ? 'NORIKS ChefSeal vakuumski aparat'
-                     : ( $is_sr_page ? 'NORIKS SR košulja'
+                     : ( $is_sr_page ? 'NORIKS FlexShirt košulja'
                      : ( $is_bokserice_page ? 'NORIKS bokserice'
                      : ( $is_snore_page ? 'NORIKS udlaga protiv hrkanja'
                      : ( $is_cloud_page ? 'NORIKS Cloud jastuk za koljena'

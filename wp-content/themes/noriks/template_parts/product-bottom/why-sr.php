@@ -1,6 +1,6 @@
 <?php
 /**
- * product-bottom: NORIKS SR — rastezljiva kosulja bez guzvanja (orto-sr).
+ * product-bottom: NORIKS FlexShirt — rastezljiva kosulja bez guzvanja (orto-sr).
  * Postavitev po originalu (itsimperium.com — Sovereign Stretch Dress Shirt):
  *   1) Snazne osobine — 4 ikone u nizu
  *   2) Tri kartice tkanine (slike vec sadrze naslov i opis)
@@ -82,10 +82,10 @@ $sr_ico = function( $d ) {
     <div class="nsr-row">
       <div class="nsr-copy">
         <p class="nsr-eyebrow">Ista košulja, cijeli dan</p>
-        <h3 class="nsr-h3">Lijevo obična košulja. Desno NORIKS SR.</h3>
-        <p>Obična košulja se izgužva već u autu. NORIKS SR zadržava strukturu od jutra do večeri i <strong>izgleda uredno i kad je izvadite iz torbe</strong> — glačalo joj nije potrebno.</p>
+        <h3 class="nsr-h3">Lijevo obična košulja. Desno NORIKS FlexShirt.</h3>
+        <p>Obična košulja se izgužva već u autu. NORIKS FlexShirt zadržava strukturu od jutra do večeri i <strong>izgleda uredno i kad je izvadite iz torbe</strong> — glačalo joj nije potrebno.</p>
       </div>
-      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-2-guzvanje.jpg', 'Obična košulja izgužvana, NORIKS SR glatka' ); ?></div>
+      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-2-guzvanje.jpg', 'Obična košulja izgužvana, NORIKS FlexShirt glatka' ); ?></div>
     </div>
 
     <div class="nsr-row">
@@ -102,7 +102,7 @@ $sr_ico = function( $d ) {
 <!-- 3) Boje i rukavi -->
 <section class="nsr-sec nsr-grey">
   <div class="nsr-wrap nsr-row">
-    <div class="nsr-media nsr-media-tall"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS SR košulje' ); ?></div>
+    <div class="nsr-media nsr-media-tall"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS FlexShirt košulje' ); ?></div>
     <div class="nsr-copy">
       <h2 class="nsr-h2">Osam boja, kratki i dugi rukav</h2>
       <p class="nsr-tagline nsr-tagline-left">Isti kroj i ista tkanina u svakoj boji.</p>

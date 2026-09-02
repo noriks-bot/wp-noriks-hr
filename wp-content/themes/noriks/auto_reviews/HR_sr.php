@@ -1,5 +1,5 @@
 <?php
-// Review pool for NORIKS SR — rastezljiva kosulja bez guzvanja (orto-sr).
+// Review pool for NORIKS FlexShirt — rastezljiva kosulja bez guzvanja (orto-sr).
 // Text-only (no images), Croatian.
 $auto_reviews_en = array(
     array("name" => "Marko J.",    "text" => "Prva košulja u kojoj mogu podignuti ruke bez da mi se izvuče iz hlača. Rasteže se stvarno u svim smjerovima."),

@@ -484,7 +484,7 @@ function gck_render_bundle_selector() {
         has_term( array( 'orto-sr' ), 'product_cat', $product_id )
         || ( stripos( (string) $product->get_slug(), 'noriks-sr' ) !== false )
     ) {
-        // NORIKS SR je košulja, ne majica.
+        // NORIKS FlexShirt je košulja, ne majica.
         $gck_garment = 'kosulja';
     }
 
@@ -548,7 +548,7 @@ function gck_render_bundle_selector() {
     // KneeFix: dva izbornika (Velicina + Stranica) umjesto swatcheva boje.
     $gck_side_select = has_term( 'orto-kneefix', 'product_cat', $product_id );
 
-    // NORIKS SR kosulja: TRI izbora kao na originalu (Boja + Velicina + Rukav).
+    // NORIKS FlexShirt kosulja: TRI izbora kao na originalu (Boja + Velicina + Rukav).
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']
     // i ovdje ga uzimamo kao dodatni <select> uz par.
     $gck_extra_select = has_term( 'orto-sr', 'product_cat', $product_id );
@@ -633,7 +633,7 @@ function gck_render_bundle_selector() {
          position: relative;
          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       }
-      /* NORIKS SR: treci izbornik (Rukav) mora izgledati IDENTICNO kao gck-dd gumbi
+      /* NORIKS FlexShirt: treci izbornik (Rukav) mora izgledati IDENTICNO kao gck-dd gumbi
          (visina 38, crni rub 1px, radijus 4, bijela pozadina, 18px/600). */
       #bundle-selector .bundle-pair .gck-extra-select {
           flex: 0 1 auto; width: auto !important; min-width: 132px;
@@ -743,7 +743,7 @@ function gck_render_bundle_selector() {
       .color-bela  { background: #fff; border: 1px solid #ccc; }
       .color-bijela{ background: #fff; border: 1px solid #ccc; }
       .color-bez { background: #e4e0cf; }
-      /* NORIKS SR kosulja — nijanse ocitane s fotografija proizvoda. */
+      /* NORIKS FlexShirt kosulja — nijanse ocitane s fotografija proizvoda. */
       .color-svijetloplava { background: #c5d2ec; }
       .color-teget         { background: #1c2233; }
       .color-grafitna      { background: #3d3a40; }
@@ -903,7 +903,7 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS SR: bez crte iznad izbornika — kartica je ciscija. */
+      /* NORIKS FlexShirt: bez crte iznad izbornika — kartica je ciscija. */
       #bundle-selector .bundle-option .bundle-pairs {
           border-top: 0 !important; padding-top: 0 !important; margin-top: 4px !important;
       }
@@ -2224,7 +2224,7 @@ function gck_render_bundle_selector() {
             }
           }
 
-          /* 3) TRECI IZBORNIK (NORIKS SR: Rukav) — isti prikaz kao velicina i boja.
+          /* 3) TRECI IZBORNIK (NORIKS FlexShirt: Rukav) — isti prikaz kao velicina i boja.
              Originalni <select> ostaje u DOM-u (samo skriven), pa se meta i dalje salje. */
           var xsel = row.querySelector('.gck-extra-select');
           if(xsel && !xsel.dataset.gckDdDone){
