@@ -169,7 +169,7 @@ if ( noriks_is_type( 'seal' ) ) {
     include $noriks_pb_dir . 'why-seal.php';
 }
 
-// NORIKS SR (orto-sr) — rastezljiva kosulja bez guzvanja
+// NORIKS FlexShirt (orto-sr) — rastezljiva kosulja bez guzvanja
 if ( noriks_is_type( 'sr' ) ) {
     include $noriks_pb_dir . 'why-sr.php';
 }
