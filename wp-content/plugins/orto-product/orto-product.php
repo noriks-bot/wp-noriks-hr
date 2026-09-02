@@ -904,8 +904,28 @@ function gck_render_bundle_selector() {
           border-top: 0 !important; padding-top: 13px !important; padding-bottom: 0 !important;
           margin-top: 0 !important; margin-bottom: 0 !important;
       }
-      #bundle-selector .bundle-option .bundle-pairs .bundle-pair { margin-bottom: 10px !important; padding-bottom: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pairs { counter-reset: fsxpair; }
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair {
+          counter-increment: fsxpair; margin-bottom: 12px !important; padding-bottom: 0 !important;
+      }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair:last-child { margin-bottom: 0 !important; }
+      /* jasno je koji izbornici pripadaju kojoj kosulji */
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair:not(:only-child):before {
+          content: counter(fsxpair) ". košulja";
+          display: block; font-size: 12px; font-weight: 800; color: #7a7a7a;
+          letter-spacing: .06em; text-transform: uppercase; margin: 0 0 7px;
+      }
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair + .bundle-pair {
+          border-top: 1px solid #e6e2d8; padding-top: 12px !important;
+      }
+      /* cijena po komadu i postotak u istom redu */
+      #bundle-selector .bundle-option .gck-hl-break { display: none !important; }
+      #bundle-selector .bundle-option .gck-offer-head {
+          display: flex !important; flex-wrap: wrap; align-items: center; gap: 8px; row-gap: 6px;
+      }
+      #bundle-selector .bundle-option .gck-offer-prices {
+          display: inline-flex !important; align-items: center; gap: 8px; flex-wrap: nowrap; top: 0 !important;
+      }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair .bundle-attr-row { margin-bottom: 0 !important; }
       /* cijena u istom redu kao naslov, bez rijeci "Ukupno:" */
       #bundle-selector .bundle-option { position: relative; padding: 16px 175px 12px 16px !important; }
@@ -925,7 +945,7 @@ function gck_render_bundle_selector() {
       @media (max-width: 560px) {
           /* izbornici u urednoj mrezi: velicina + boja u redu, rukav preko cijele sirine */
           #bundle-selector .bundle-pair .bundle-attr-row {
-              display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px;
+              display: grid !important; grid-template-columns: 1fr; gap: 8px;
               align-items: center; width: 100%;
           }
           #bundle-selector .bundle-pair .gck-dd { width: 100% !important; max-width: none !important; }
