@@ -70,8 +70,10 @@ $sr_ico = function( $d ) {
     <div class="nsr-media"><?php echo $sr_img( 'sr-02-bez-guzvanja.jpg', 'Ovratnik koji ostaje uredan cijeli dan' ); ?></div>
     <div class="nsr-copy">
       <p class="nsr-eyebrow">Struktura cijeli dan</p>
-      <h2 class="nsr-h2">Bez gužvanja</h2>
-      <p>Ovratnik ostaje besprijekoran od jutarnjeg sastanka do zadnjeg pića. Košulja izgleda kao da ste je upravo izglačali — <strong>a glačalo joj nikad ne treba</strong>.</p>
+      <h2 class="nsr-h2">Nabori se sami ispravljaju</h2>
+      <p>Klasična pamučna košulja zapamti svaki pregib — sjednete u auto, naslonite se na stolicu i do podneva ste zgužvani. Vlakna u ovoj tkanini imaju <strong>elastičnu memoriju</strong>: rastegnu se pri pokretu i vrate u prvotni položaj, pa se nabor jednostavno ne zadrži.</p>
+      <p>To se najbolje vidi na putovanju. Košulju možete presavijeno nositi u ruksaku ili koferu, izvaditi je i obući odmah — bez pare, bez glačala i bez traženja daske u hotelskoj sobi.</p>
+      <p class="nsr-note">Nakon pranja objesite je vlažnu na vješalicu; osuši se ravna i spremna za nošenje.</p>
     </div>
   </div>
 </section>
@@ -81,8 +83,10 @@ $sr_ico = function( $d ) {
   <div class="nsr-wrap nsr-row">
     <div class="nsr-copy">
       <p class="nsr-eyebrow">Osjećaj udobnosti</p>
-      <h2 class="nsr-h2">Prozračna i svježa</h2>
-      <p>Tkanina odvodi toplinu i znoj s kože, pa ostajete suhi, hladni i pribrani — <strong>bez obzira koliko dan bude dug</strong>.</p>
+      <h2 class="nsr-h2">Zrak prolazi, toplina odlazi</h2>
+      <p>Tkanina je tkana tako da između niti ostaju <strong>sitni kanali kroz koje prolazi zrak</strong>. Toplina i vlaga ne ostaju zarobljene uz kožu, nego izlaze prema van, pa se materijal ne lijepi za leđa ni u punom uredu ni u pretrpanom tramvaju.</p>
+      <p>Zato je nosiva i ljeti pod sakoom i zimi u pregrijanoj prostoriji. Lagana je, gotovo se ne osjeti na tijelu, a mekana je i na golu kožu — bez grebanja i bez one krutosti koju imaju jeftinije poliesterske košulje.</p>
+      <p class="nsr-note">Ista tkanina odbija i zadržavanje mirisa, pa ostaje svježa i nakon dvanaest sati.</p>
     </div>
     <div class="nsr-media"><?php echo $sr_img( 'sr-03-prozracna.jpg', 'Prozračna tkanina na rukavu košulje' ); ?></div>
   </div>
