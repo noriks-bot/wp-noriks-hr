@@ -65,7 +65,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 2) Bez guzvanja — slika lijevo, tekst desno -->
-<section class="nsr-sec nsr-grey">
+<section class="nsr-sec nsr-grey nsr-sec-pair nsr-sec-pair-a">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-media"><?php echo $sr_img( 'sr-02-bez-guzvanja.jpg', 'Ovratnik koji ostaje uredan cijeli dan' ); ?></div>
     <div class="nsr-copy">
@@ -79,7 +79,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 2b) Prozracna i svjeza — tekst lijevo, slika desno -->
-<section class="nsr-sec nsr-grey">
+<section class="nsr-sec nsr-grey nsr-sec-pair nsr-sec-pair-b">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-copy">
       <p class="nsr-eyebrow">Osjećaj udobnosti</p>
@@ -207,6 +207,10 @@ $sr_ico = function( $d ) {
 .nsr-h3 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
 .nsr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
 .nsr-media img { width: 100%; height: auto; display: block; border-radius: 18px; }
+/* dvije kartice tkanine: manji razmak izmedu sekcija i 30 % niza slika */
+.nsr-sec-pair-a { padding-bottom: 18px; }
+.nsr-sec-pair-b { padding-top: 18px; }
+.nsr-sec-pair .nsr-media img { max-height: 512px; width: auto; margin: 0 auto; }
 .nsr-media-tall img { max-height: 560px; width: auto; margin: 0 auto; }
 .nsr-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 14px; margin: 24px 0 6px; }
 .nsr-swatches figure { margin: 0; text-align: center; }

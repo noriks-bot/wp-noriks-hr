@@ -901,7 +901,8 @@ function gck_render_bundle_selector() {
     <style>
       /* NORIKS FlexShirt: bez crte iznad izbornika — kartica je ciscija. */
       #bundle-selector .bundle-option .bundle-pairs {
-          border-top: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 16px !important; margin-bottom: 0 !important;
+          border-top: 0 !important; padding-top: 13px !important; padding-bottom: 0 !important;
+          margin-top: 0 !important; margin-bottom: 0 !important;
       }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair { margin-bottom: 0 !important; padding-bottom: 0 !important; }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair .bundle-attr-row { margin-bottom: 0 !important; }
@@ -922,7 +923,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option small { display: none !important; }
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { padding: 14px 130px 14px 12px !important; }
-          #bundle-selector .bundle-option .bundle-pairs { margin-top: 14px !important; }
+          #bundle-selector .bundle-option .bundle-pairs { padding-top: 11px !important; margin-top: 0 !important; }
           #bundle-selector .bundle-option .bundle-total-line { top: 11px !important; right: 12px !important; }
       }
     </style>
