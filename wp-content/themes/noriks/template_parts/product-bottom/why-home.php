@@ -31,7 +31,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 ?>
 
 <!-- 1) DISCOVER THE POWER — videi -->
-<section class="nhm-sec nhm-white">
+<section class="nhm-sec nhm-grey">
   <div class="nhm-wrap">
     <h2 class="nhm-h2 nhm-center">Otkrijte snagu naših kuka</h2>
     <p class="nhm-tagline">Montaža, opterećenje i skidanje — bez montaže i bez tragova.</p>
@@ -44,7 +44,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- 2) Twist & Lock tehnologija -->
-<section class="nhm-sec nhm-grey">
+<section class="nhm-sec nhm-white">
   <div class="nhm-wrap nhm-row">
     <div class="nhm-copy">
       <p class="nhm-eyebrow">Patentirana tehnologija</p>
@@ -58,7 +58,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 </section>
 
 <!-- 3) Montaza bez ostecenja -->
-<section class="nhm-sec nhm-white">
+<section class="nhm-sec nhm-grey">
   <div class="nhm-wrap nhm-row">
     <div class="nhm-media"><?php echo $hm_img( 'home-povrsine.jpg', 'Kuke rade na više vrsta glatkih površina' ); ?></div>
     <div class="nhm-copy">
