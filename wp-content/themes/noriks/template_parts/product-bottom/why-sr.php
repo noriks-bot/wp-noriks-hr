@@ -97,20 +97,20 @@ $sr_ico = function( $d ) {
   <div class="nsr-wrap nsr-row">
     <div class="nsr-media nsr-media-tall"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS FlexShirt košulje' ); ?></div>
     <div class="nsr-copy">
-      <h2 class="nsr-h2">Osam boja, kratki i dugi rukav</h2>
-      <p class="nsr-tagline nsr-tagline-left">Isti kroj i ista tkanina u svakoj boji.</p>
-      <p>Isti kroj i ista tkanina u svakoj boji. Rukav birate pri narudžbi — kratki za ljeto i vruće urede, dugi za sastanke i večeri.</p>
-      <ul class="nsr-colors">
-        <li><span class="nsr-dot" style="background:#f2f2f4;border:1px solid #cfcfd6;"></span>Bijela</li>
-        <li><span class="nsr-dot" style="background:#c5d2ec;"></span>Svijetloplava</li>
-        <li><span class="nsr-dot" style="background:#000;"></span>Crna</li>
-        <li><span class="nsr-dot" style="background:#1c2233;"></span>Teget</li>
-        <li><span class="nsr-dot" style="background:#3d3a40;"></span>Grafitna</li>
-        <li><span class="nsr-dot" style="background:#61282f;"></span>Bordo</li>
-        <li><span class="nsr-dot" style="background:#0a4467;"></span>Petrol</li>
-        <li><span class="nsr-dot" style="background:#0a3b52;"></span>Tamno petrol</li>
-      </ul>
-      <p class="nsr-note">Veličine S, M, L, XL, 2XL i 3XL.</p>
+      <p class="nsr-eyebrow">Paleta</p>
+      <h2 class="nsr-h2">Osam boja, dva rukava</h2>
+      <p>Od bijele za ured i vjenčanja do tamnog petrola za večernje izlaske — svaka nijansa je obojena u istoj tkanini, pa se kroj, težina i pad materijala ne razlikuju među bojama.</p>
+      <div class="nsr-swatches">
+        <figure><span class="nsr-sw" style="background:#f2f2f4;box-shadow:inset 0 0 0 1px #d8d8de;"></span><figcaption>Bijela</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#c5d2ec;"></span><figcaption>Svijetloplava</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#000;"></span><figcaption>Crna</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#1c2233;"></span><figcaption>Teget</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#3d3a40;"></span><figcaption>Grafitna</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#61282f;"></span><figcaption>Bordo</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#0a4467;"></span><figcaption>Petrol</figcaption></figure>
+        <figure><span class="nsr-sw" style="background:#0a3b52;"></span><figcaption>Tamno petrol</figcaption></figure>
+      </div>
+      <p class="nsr-note">Kratki i dugi rukav · veličine S, M, L, XL, 2XL i 3XL</p>
     </div>
   </div>
 </section>
@@ -210,12 +210,11 @@ $sr_ico = function( $d ) {
 .nsr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
 .nsr-media img { width: 100%; height: auto; display: block; border-radius: 18px; }
 .nsr-media-tall img { max-height: 560px; width: auto; margin: 0 auto; }
-.nsr-colors { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
-.nsr-colors li { display: flex; align-items: center; gap: 10px; font-size: 15.5px;
-  background: #fff; border: 1px solid #e6e8ec; border-radius: 999px; padding: 7px 14px; }
-.nsr-grey .nsr-colors li { background: #fff; }
-.nsr-dot { width: 20px; height: 20px; border-radius: 50%; display: inline-block; flex: 0 0 auto;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+.nsr-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 14px; margin: 24px 0 6px; }
+.nsr-swatches figure { margin: 0; text-align: center; }
+.nsr-sw { display: block; width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 9px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.nsr-swatches figcaption { font-size: 13.5px; color: #4a4a4a; letter-spacing: .01em; }
 
 .nsr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .nsr-grid figure { margin: 0; }
@@ -244,7 +243,9 @@ $sr_ico = function( $d ) {
   .nsr-quals p { font-size: 14px; }
   .nsr-row { grid-template-columns: 1fr; gap: 18px; }
   .nsr-row .nsr-media { order: -1; }
-  .nsr-colors { grid-template-columns: 1fr 1fr; }
+  .nsr-swatches { grid-template-columns: repeat(4, 1fr); gap: 16px 8px; }
+  .nsr-sw { width: 42px; height: 42px; }
+  .nsr-swatches figcaption { font-size: 12px; }
   .nsr-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
 }
 
