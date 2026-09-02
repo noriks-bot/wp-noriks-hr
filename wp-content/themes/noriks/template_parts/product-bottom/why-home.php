@@ -178,7 +178,11 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   .nhm-ticks { grid-template-columns: 1fr; }
   .nhm-vids { grid-template-columns: 1fr; gap: 16px; }
   .nhm-rev-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .nhm-rev p { font-size: 13.5px; }
+  .nhm-rev-body { padding: 12px 13px 14px; }
+  .nhm-rev p { font-size: 13.5px; margin: 8px 0 11px; }
+  /* ime i oznaka jedno ispod drugog — inace oznaka izlazi iz kartice */
+  .nhm-rev footer { flex-direction: column; align-items: flex-start; gap: 5px; }
+  .nhm-rev footer em { font-size: 11.5px; padding: 2px 8px; }
 }
 
 /* kratki opis proizvoda: zelene kvacice */
