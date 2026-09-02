@@ -2223,6 +2223,26 @@ function gck_render_bundle_selector() {
               if(cc){ cc.pick(); colorDD.setCurrent(cc); }
             }
           }
+
+          /* 3) TRECI IZBORNIK (NORIKS SR: Rukav) — isti prikaz kao velicina i boja.
+             Originalni <select> ostaje u DOM-u (samo skriven), pa se meta i dalje salje. */
+          var xsel = row.querySelector('.gck-extra-select');
+          if(xsel && !xsel.dataset.gckDdDone){
+            xsel.dataset.gckDdDone = '1';
+            var xItems = Array.prototype.map.call(xsel.options, function(o){
+              return { value: o.value, label: o.text.trim(), color: null,
+                       pick: function(){ xsel.value = o.value; xsel.dispatchEvent(new Event('change', { bubbles: true })); } };
+            });
+            var xDD = makeDD({ items: xItems, width: '152px', hasColor: false, grow: false });
+            row.appendChild(xDD);
+            css(xsel, {'display':'none'});
+            var xcur = xItems.filter(function(i){ return i.value === xsel.value; })[0] || xItems[0];
+            if(xcur) xDD.setCurrent(xcur);
+            xsel.addEventListener('change', function(){
+              var c = xItems.filter(function(i){ return i.value === xsel.value; })[0];
+              if(c) xDD.setCurrent(c);
+            });
+          }
         });
 
         /* promjena velicine u 1. redu -> osnovni skript prepise ostale selectove:
