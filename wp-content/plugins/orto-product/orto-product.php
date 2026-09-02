@@ -920,8 +920,10 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option { position: relative; padding: 16px 190px 16px 16px !important; }
       #bundle-selector .bundle-option > br { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { display: none !important; }
-      /* desno: KONCNA cijena paketa (ne po komadu) */
-      #bundle-selector .bundle-option .gck-offer-prices { display: none !important; }
+      /* desno: KONCNA cijena paketa; cijena po komadu ostaje uz naslov kao i prije */
+      #bundle-selector .bundle-option .gck-hl-break { display: none !important; }
+      #bundle-selector .bundle-option .gck-offer-prices {
+          display: inline-flex !important; align-items: center; gap: 8px; white-space: nowrap; margin-left: 10px; }
       #bundle-selector .bundle-option .bundle-total-line {
           position: absolute !important; top: 16px !important; right: 16px !important;
           margin: 0 !important; padding: 0 !important;
