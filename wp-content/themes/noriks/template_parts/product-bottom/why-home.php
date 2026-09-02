@@ -33,7 +33,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 <!-- 1) DISCOVER THE POWER — videi -->
 <section class="nhm-sec nhm-grey">
   <div class="nhm-wrap">
-    <h2 class="nhm-h2 nhm-center">Otkrijte snagu naših kuka</h2>
+    <h2 class="nhm-h2 nhm-center">Otkrijte <em>snagu</em> naših kuka</h2>
     <p class="nhm-tagline">Montaža, opterećenje i skidanje — bez montaže i bez tragova.</p>
     <div class="nhm-vids">
       <figure><?php echo $hm_vid( 'home-vid-2.mp4', 'home-vid-2.jpg', 'Postavljanje kuke u nekoliko sekundi' ); ?><figcaption>Postavljanje u nekoliko sekundi</figcaption></figure>
@@ -48,7 +48,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   <div class="nhm-wrap nhm-row">
     <div class="nhm-copy">
       <p class="nhm-eyebrow">Patentirana tehnologija</p>
-      <h2 class="nhm-h2">Twist &amp; Lock</h2>
+      <h2 class="nhm-h2">Twist &amp; <em>Lock</em></h2>
       <p>Okretanjem gumba aktivira se <strong>višestruka kompresija</strong>: brtva se prilagodi površini i stvori čvrst dosjed, a vakuum ga dodatno pojača.</p>
       <p>Zato kuka drži i kad je okolina vlažna, a kad je poželite premjestiti, otpustite je jednim okretom — bez ostatka ljepila i bez oštećenja.</p>
       <p class="nhm-note">Promjer 6,1 cm · dubina 4 cm · izdržljivi polimer otporan na hrđu</p>
@@ -63,7 +63,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
     <div class="nhm-media"><?php echo $hm_img( 'home-povrsine.jpg', 'Kuke rade na više vrsta glatkih površina' ); ?></div>
     <div class="nhm-copy">
       <p class="nhm-eyebrow">Bez alata</p>
-      <h2 class="nhm-h2">Montaža bez oštećenja</h2>
+      <h2 class="nhm-h2">Montaža <em>bez oštećenja</em></h2>
       <p>Bez bušenja, bez vijaka i bez ljepila. Kuku prislonite, zavrnete i gotovo — postavljanje traje nekoliko sekundi.</p>
       <ul class="nhm-ticks">
         <li>Staklo i ogledala</li>
@@ -80,7 +80,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 <!-- 4) Recenzije kupaca -->
 <section class="nhm-sec nhm-white">
   <div class="nhm-wrap">
-    <h2 class="nhm-h2 nhm-center">Što kažu naši kupci</h2>
+    <h2 class="nhm-h2 nhm-center">Što kažu <em>naši kupci</em></h2>
     <p class="nhm-tagline"><strong>4,9 / 5</strong> — prosječna ocjena na temelju recenzija kupaca</p>
     <div class="nhm-rev-grid">
       <?php
@@ -121,9 +121,16 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 .nhm-center { text-align: center; }
 .nhm-sec, .nhm-sec p, .nhm-sec li { font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
 .nhm-sec h2, .nhm-sec strong { font-family: 'Plus Jakarta Sans', 'Inter', Helvetica, Arial, sans-serif; }
-.nhm-h2 { font-size: 36px; line-height: 1.12; margin: 0 0 18px; font-weight: 800; letter-spacing: -.03em; color: #151515; }
+.nhm-h2 { font-size: 36px; line-height: 1.12; margin: 0 0 18px; font-weight: 800; letter-spacing: -.03em; color: #10233c; }
+.nhm-h2 em { font-style: normal; color: #b08a2e; }
+.nhm-center.nhm-h2 { position: relative; padding-top: 20px; }
+.nhm-center.nhm-h2:before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 54px; height: 3px; border-radius: 2px; background: #b08a2e; }
+.nhm-row .nhm-h2 { position: relative; padding-top: 18px; }
+.nhm-row .nhm-h2:before { content: ""; position: absolute; top: 0; left: 0;
+  width: 44px; height: 3px; border-radius: 2px; background: #b08a2e; }
 .nhm-sec p { font-size: 16.5px; line-height: 1.62; margin: 0 0 12px; color: #333; }
-.nhm-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #8a8a8a; margin: 0 0 8px; }
+.nhm-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
 .nhm-note { font-size: 14px; color: #6b6b6b; margin-top: 10px; }
 .nhm-tagline { max-width: 720px; margin: -6px auto 30px !important; text-align: center !important; font-size: 16px; color: #5f5f5f; }
 .nhm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }

@@ -919,23 +919,22 @@ function gck_render_bundle_selector() {
       /* NORIKS HOME PowerHook — kartica ponude 1:1 kao original */
       #bundle-selector .bundle-option { position: relative; padding: 16px 190px 16px 16px !important; }
       #bundle-selector .bundle-option > br { display: none !important; }
-      #bundle-selector .bundle-option .bundle-total-line { display: none !important; }
       #bundle-selector .bundle-option .gck-discount-badge { display: none !important; }
+      /* desno: KONCNA cijena paketa (ne po komadu) */
+      #bundle-selector .bundle-option .gck-offer-prices { display: none !important; }
+      #bundle-selector .bundle-option .bundle-total-line {
+          position: absolute !important; top: 16px !important; right: 16px !important;
+          margin: 0 !important; padding: 0 !important;
+          display: inline-flex !important; align-items: baseline; gap: 9px; white-space: nowrap; }
+      #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+      #bundle-selector .bundle-option .bundle-total-line .line-total {
+          order: 1; color: #151515 !important; font-size: 22px !important; font-weight: 800 !important; }
+      #bundle-selector .bundle-option .bundle-total-line .gck-regular-price {
+          order: 2; color: #9aa3ad !important; font-size: 14.5px !important; font-weight: 500 !important; margin: 0 !important; }
       #bundle-selector .bundle-option small { display: none !important; }
       #bundle-selector .bundle-option .bundle-option-title { font-size: 19px; font-weight: 800; letter-spacing: -.01em; }
       #bundle-selector .bundle-option .gck-offer-sub { display: block; margin: 2px 0 0 !important; font-size: 14px; color: #6b6b6b; }
       /* cijena po pakiranju desno gore */
-      #bundle-selector .bundle-option .gck-offer-prices {
-          position: absolute !important; top: 16px !important; right: 16px !important;
-          display: inline-flex !important; align-items: baseline; gap: 8px; white-space: nowrap; }
-      #bundle-selector .bundle-option .gck-per-chip {
-          background: none !important; padding: 0 !important; margin: 0 !important;
-          display: inline-flex !important; align-items: baseline; gap: 8px; }
-      #bundle-selector .bundle-option .gck-per-chip .gck-per-new {
-          color: #151515 !important; font-size: 21px !important; font-weight: 800 !important; }
-      #bundle-selector .bundle-option .gck-per-chip .gck-per-old {
-          display: inline !important; color: #9aa3ad !important; font-size: 14px !important;
-          font-weight: 500 !important; text-decoration: line-through; order: 2; }
       /* krugovi boja u okviru, s oznakom #1 / #2 / #3 */
       #bundle-selector .bundle-option .bundle-pairs { counter-reset: nhmpair; border-top: 0 !important; padding-top: 14px !important; margin: 0 !important; }
       #bundle-selector .bundle-option .bundle-pair { counter-increment: nhmpair; margin-bottom: 8px !important; }
@@ -954,8 +953,9 @@ function gck_render_bundle_selector() {
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { padding: 14px 128px 14px 12px !important; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 16px; }
-          #bundle-selector .bundle-option .gck-per-chip .gck-per-new { font-size: 17px !important; }
-          #bundle-selector .bundle-option .gck-offer-prices { top: 14px !important; right: 12px !important; }
+          #bundle-selector .bundle-option .bundle-total-line { top: 14px !important; right: 12px !important; }
+          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px !important; }
+          #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px !important; }
           #bundle-selector .bundle-option .bundle-attr-row { gap: 10px; padding: 10px 12px; }
           #bundle-selector .bundle-option .color-swatches { gap: 8px; }
           #bundle-selector .bundle-option .color-swatches .swatch { width: 44px !important; height: 44px !important; padding: 5px !important; }
