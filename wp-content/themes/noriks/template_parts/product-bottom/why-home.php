@@ -42,7 +42,20 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 2) Twist & Lock tehnologija -->
+<!-- 2) DISCOVER THE POWER — videi -->
+<section class="nhm-sec nhm-grey">
+  <div class="nhm-wrap">
+    <h2 class="nhm-h2 nhm-center">Otkrijte snagu naših kuka</h2>
+    <p class="nhm-tagline">Montaža, opterećenje i skidanje — bez montaže i bez tragova.</p>
+    <div class="nhm-vids">
+      <figure><?php echo $hm_vid( 'home-vid-2.mp4', 'home-vid-2.jpg', 'Postavljanje kuke u nekoliko sekundi' ); ?><figcaption>Postavljanje u nekoliko sekundi</figcaption></figure>
+      <figure><?php echo $hm_vid( 'home-vid-3.mp4', 'home-vid-3.jpg', 'Kuka u kupaonici' ); ?><figcaption>U kupaonici, na staklu i pločicama</figcaption></figure>
+      <figure><?php echo $hm_vid( 'home-vid-1.mp4', 'home-vid-1.jpg', 'Ispitivanje nosivosti' ); ?><figcaption>Ispitana nosivost do 7 kg</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3) Twist & Lock tehnologija -->
 <section class="nhm-sec nhm-grey">
   <div class="nhm-wrap nhm-row">
     <div class="nhm-copy">
@@ -56,7 +69,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 3) Montaza bez ostecenja -->
+<!-- 4) Montaza bez ostecenja -->
 <section class="nhm-sec nhm-white">
   <div class="nhm-wrap nhm-row">
     <div class="nhm-media"><?php echo $hm_img( 'home-povrsine.jpg', 'Kuke rade na više vrsta glatkih površina' ); ?></div>
@@ -72,19 +85,6 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
         <li>Laminat i glatko drvo</li>
       </ul>
       <p class="nhm-note">Površina mora biti glatka, čista i suha. Ne prianja na hrapave, porozne i teksturirane zidove.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 4) DISCOVER THE POWER — videi -->
-<section class="nhm-sec nhm-grey">
-  <div class="nhm-wrap">
-    <h2 class="nhm-h2 nhm-center">Otkrijte snagu naših kuka</h2>
-    <p class="nhm-tagline">Montaža, opterećenje i skidanje — bez montaže i bez tragova.</p>
-    <div class="nhm-vids">
-      <figure><?php echo $hm_vid( 'home-vid-2.mp4', 'home-vid-2.jpg', 'Postavljanje kuke u nekoliko sekundi' ); ?><figcaption>Postavljanje u nekoliko sekundi</figcaption></figure>
-      <figure><?php echo $hm_vid( 'home-vid-3.mp4', 'home-vid-3.jpg', 'Kuka u kupaonici' ); ?><figcaption>U kupaonici, na staklu i pločicama</figcaption></figure>
-      <figure><?php echo $hm_vid( 'home-vid-1.mp4', 'home-vid-1.jpg', 'Ispitivanje nosivosti' ); ?><figcaption>Ispitana nosivost do 7 kg</figcaption></figure>
     </div>
   </div>
 </section>
@@ -109,7 +109,6 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
         array( 'home-ugc-10.jpg', 'Jednu držim izvana za ručnik, drugu iznutra za spužvu. Ostat ću kod ove marke jer druge padaju puno brže.', 'Tin V.' ),
         array( 'home-ugc-11.jpg', 'Kupio sam ih za staklene stijenke tuša — prošle su test dugotrajnosti. Drže i suhe i mokre ručnike.', 'Lidija M.' ),
         array( 'home-ugc-12.jpg', 'Izgledaju moderno i uredno, točno ono što sam tražila. Konačno nema nereda u kupaonici.', 'Eliana S.' ),
-        array( 'home-ugc-13.jpg', 'Dostava brza, pakiranje uredno. Jedina zamjerka — trebala sam odmah uzeti dva kompleta.', 'Iva G.' ),
       );
       foreach ( $hm_revs as $rv ) : ?>
         <article class="nhm-rev">
@@ -157,15 +156,18 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 .nhm-vids figure { margin: 0; }
 .nhm-vids .nhm-video { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 14px; display: block; }
 .nhm-vids figcaption { text-align: center; font-size: 15px; font-weight: 700; margin-top: 10px; }
-.nhm-rev-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.nhm-rev { border: 1px solid #e8e8ea; border-radius: 14px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.nhm-rev-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.nhm-rev { border: 1px solid #ececee; border-radius: 18px; overflow: hidden; background: #fff;
+  display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
+.nhm-rev:hover { box-shadow: 0 10px 28px rgba(0,0,0,.09); transform: translateY(-2px); }
 .nhm-rev img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
-.nhm-rev-body { padding: 14px 15px 16px; display: flex; flex-direction: column; flex: 1; }
-.nhm-stars { color: #f5b301; font-size: 15px; letter-spacing: 2px; }
-.nhm-rev p { font-size: 14.5px; line-height: 1.55; margin: 8px 0 12px; flex: 1; }
-.nhm-rev footer { border-top: 1px solid #eee; padding-top: 9px; }
-.nhm-rev footer strong { display: block; font-size: 14.5px; }
-.nhm-rev footer em { display: block; font-style: normal; font-size: 13px; color: #1f7a4d; font-weight: 600; }
+.nhm-rev-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; position: relative; }
+.nhm-stars { color: #f5b301; font-size: 14px; letter-spacing: 2.5px; }
+.nhm-rev p { font-size: 14.5px; line-height: 1.6; margin: 10px 0 14px; flex: 1; color: #333; }
+.nhm-rev footer { border-top: 1px solid #efefef; padding-top: 11px; display: flex; align-items: center; gap: 9px; }
+.nhm-rev footer strong { font-size: 14.5px; letter-spacing: -.01em; }
+.nhm-rev footer em { font-style: normal; font-size: 12.5px; color: #1f7a4d; font-weight: 700;
+  background: #e8f5ee; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
 .nhm-ph { display: flex; align-items: center; justify-content: center; min-height: 180px; background: #ececed; border-radius: 12px; color: #8b8b8b; font-size: 14px; }
 
 @media (max-width: 900px) {
