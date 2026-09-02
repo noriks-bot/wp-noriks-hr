@@ -832,6 +832,10 @@ function gck_render_bundle_selector() {
           white-space: nowrap;
       }
 
+      /* Znacka iz $gck_offer_badges je prije imala inline "display:inline-block !important".
+         Sada je razred, pa mora nadjacati gornji display:none — zato ID u selektoru. */
+      #bundle-selector .gck-popular-badge--offer { display: inline-block !important; }
+
       .gck-top-banner-wrap { margin-bottom: 0px; }
       .gck-divider { display:flex; align-items:center; justify-content:center; margin: 8px 0 4px; }
       .gck-divider span { font-size: 15px; font-weight: 600; color: black; padding: 0 12px; text-transform: uppercase; }
@@ -1014,7 +1018,6 @@ function gck_render_bundle_selector() {
           max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
       }
       /* obje znacke moraju biti identicne — offer znacka je prije imala inline display */
-      #bundle-selector .gck-popular-badge--offer { display: inline-flex !important; }
       /* kartica sa znackom dobije prostor gore da znacka ne pada preko naslova */
       #bundle-selector .bundle-option:has(.gck-popular-badge),
       #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 18px !important; }
@@ -2312,6 +2315,7 @@ function gck_render_bundle_selector() {
       /* Na uskom ekranu svi izbornici moraju biti jednako siroki. makeDD postavlja
          inline width s !important, pa ga ovdje prepisujemo (CSS ga ne moze nadjacati). */
       function fitWidths(){
+        <?php if ( ! has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) : ?>return;<?php endif; ?>
         var narrow = window.matchMedia('(max-width: 560px)').matches;
         document.querySelectorAll('#bundle-selector .bundle-pair .gck-dd').forEach(function(d){
           if(!d.dataset.gckW) d.dataset.gckW = d.style.width || '';
