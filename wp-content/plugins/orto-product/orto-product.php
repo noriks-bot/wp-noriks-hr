@@ -965,15 +965,15 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option .bundle-pairs { margin-right: -96px !important; }
           #bundle-selector .bundle-option .bundle-attr-row {
               display: flex !important; width: 100% !important; gap: 8px; padding: 9px 10px; flex-wrap: nowrap !important; }
+          #bundle-selector .bundle-option .bundle-attr-row { width: 100% !important; }
           #bundle-selector .bundle-option .color-swatches {
               display: flex !important; flex-wrap: nowrap !important; gap: 6px;
-              flex: 1 1 auto; justify-content: space-between; min-width: 0; }
+              flex: 1 1 auto !important; justify-content: space-between; min-width: 0; }
           #bundle-selector .bundle-option .color-swatches .swatch {
-              width: auto !important; height: auto !important; flex: 1 1 0; min-width: 0;
-              aspect-ratio: 1 / 1; padding: 4px !important; display: flex !important;
-              align-items: center; justify-content: center; }
+              width: 50px !important; height: 50px !important; flex: 0 0 auto !important;
+              padding: 5px !important; display: flex !important; align-items: center; justify-content: center; }
           #bundle-selector .bundle-option .color-swatches .swatch-circle {
-              width: 100% !important; height: auto !important; aspect-ratio: 1 / 1; max-width: 30px; }
+              width: 36px !important; height: 36px !important; }
       }
     </style>
     <?php endif; ?>
