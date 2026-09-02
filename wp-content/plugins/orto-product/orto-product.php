@@ -923,6 +923,15 @@ function gck_render_bundle_selector() {
       /* bez recenice o povratu unutar kartice */
       #bundle-selector .bundle-option small { display: none !important; }
       @media (max-width: 560px) {
+          /* izbornici u urednoj mrezi: velicina + boja u redu, rukav preko cijele sirine */
+          #bundle-selector .bundle-pair .bundle-attr-row {
+              display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px;
+              align-items: center; width: 100%;
+          }
+          #bundle-selector .bundle-pair .gck-dd { width: 100% !important; max-width: none !important; }
+          #bundle-selector .bundle-pair .gck-dd .gck-dd-btn { width: 100% !important; }
+          #bundle-selector .bundle-pair .gck-dd-extra { grid-column: 1 / -1; }
+          #bundle-selector .bundle-pair .gck-extra-select { grid-column: 1 / -1; width: 100% !important; min-width: 0 !important; }
           #bundle-selector .bundle-option { padding: 14px 130px 10px 12px !important; }
           #bundle-selector .bundle-option .bundle-pairs { padding-top: 11px !important; margin-top: 0 !important; }
           #bundle-selector .bundle-option .bundle-total-line { top: 11px !important; right: 12px !important; }
@@ -2254,6 +2263,7 @@ function gck_render_bundle_selector() {
                        pick: function(){ xsel.value = o.value; xsel.dispatchEvent(new Event('change', { bubbles: true })); } };
             });
             var xDD = makeDD({ items: xItems, width: '152px', hasColor: false, grow: false });
+            xDD.classList.add('gck-dd-extra');
             row.appendChild(xDD);
             css(xsel, {'display':'none'});
             var xcur = xItems.filter(function(i){ return i.value === xsel.value; })[0] || xItems[0];
