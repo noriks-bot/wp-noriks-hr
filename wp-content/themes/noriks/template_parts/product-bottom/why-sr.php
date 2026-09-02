@@ -77,7 +77,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 2b) Prozracna i svjeza — tekst lijevo, slika desno -->
-<section class="nsr-sec nsr-white">
+<section class="nsr-sec nsr-grey">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-copy">
       <p class="nsr-eyebrow">Osjećaj udobnosti</p>
@@ -89,7 +89,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 3) Boje i rukavi -->
-<section class="nsr-sec nsr-grey">
+<section class="nsr-sec nsr-white">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-media nsr-media-tall"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS FlexShirt košulje' ); ?></div>
     <div class="nsr-copy">
@@ -112,7 +112,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 4) Kako stoji -->
-<section class="nsr-sec nsr-white">
+<section class="nsr-sec nsr-grey">
   <div class="nsr-wrap">
     <h2 class="nsr-h2 nsr-center">Kako stoji</h2>
     <p class="nsr-tagline">Modeli s fotografija, njihove mjere i veličina koju nose.</p>
