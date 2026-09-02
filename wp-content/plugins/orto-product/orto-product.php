@@ -960,9 +960,16 @@ function gck_render_bundle_selector() {
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { padding: 14px 108px 14px 12px !important; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 13.5px !important; }
-          #bundle-selector .bundle-option .bundle-total-line { top: 14px !important; right: 12px !important; }
-          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px !important; }
-          #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px !important; }
+          #bundle-selector .bundle-option .bundle-total-line { top: 13px !important; right: 12px !important; gap: 6px; }
+          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 17px !important; }
+          #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 12.5px !important; }
+          /* naslov + cijena po komadu + postotak u jednom redu */
+          #bundle-selector .bundle-option .gck-offer-head { display: flex !important; align-items: center; flex-wrap: wrap; gap: 6px; }
+          #bundle-selector .bundle-option .gck-offer-prices { margin-left: 0 !important; gap: 6px; }
+          #bundle-selector .bundle-option .gck-per-chip { padding: 3px 8px !important; }
+          #bundle-selector .bundle-option .gck-per-chip .gck-per-new { font-size: 12px !important; }
+          #bundle-selector .bundle-option .gck-discount-badge { font-size: 11.5px !important; padding: 3px 8px !important; }
+          #bundle-selector .bundle-option .bundle-pairs { padding-top: 11px !important; }
           /* na mobilnom okvir ide preko cijele sirine kartice, sve boje u JEDNOM redu */
           #bundle-selector .bundle-option .bundle-pairs { margin-right: -96px !important; }
           #bundle-selector .bundle-option .bundle-attr-row {
