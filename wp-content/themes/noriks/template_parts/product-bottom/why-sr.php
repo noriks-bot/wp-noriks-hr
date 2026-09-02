@@ -36,32 +36,31 @@ $sr_ico = function( $d ) {
   <?php endfor; ?>
 </div></div>
 
-<!-- 1) Snazne osobine -->
+<!-- 1) Snazne osobine — slika lijevo, popis desno -->
 <section class="nsr-sec nsr-grey">
-  <div class="nsr-wrap">
-    <h2 class="nsr-h2 nsr-center">Snažne osobine</h2>
-    <p class="nsr-tagline">Četiri stvari zbog kojih se ova košulja nosi češće od ostalih u ormaru.</p>
-    <div class="nsr-four">
-      <div>
-        <?php echo $sr_ico( '<path d="M12 3v18M3 12h18"/><path d="M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/>' ); ?>
-        <strong>Elastičnost u 4 smjera</strong>
-        <p>Prati vas u svakom pokretu, cijeli dan.</p>
-      </div>
-      <div>
-        <?php echo $sr_ico( '<path d="M4 14a8 8 0 0 1 16 0"/><path d="M7 18c2-2 3-4 5-4s3 2 5 4"/><path d="M12 3v3"/>' ); ?>
-        <strong>Prozračna i mekana</strong>
-        <p>Lagana tkanina koja ostaje svježa na koži.</p>
-      </div>
-      <div>
-        <?php echo $sr_ico( '<circle cx="12" cy="12" r="8"/><path d="M8 12h8"/><path d="M5 5l14 14"/>' ); ?>
-        <strong>Bez neugodnih mirisa</strong>
-        <p>Ostaje svježa i kad se dan zagrije.</p>
-      </div>
-      <div>
-        <?php echo $sr_ico( '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/><path d="M8 3l-2 18"/>' ); ?>
-        <strong>Bez gužvanja</strong>
-        <p>Izgleda uredno od jutra do večeri. Bez glačanja.</p>
-      </div>
+  <div class="nsr-wrap nsr-row">
+    <div class="nsr-media"><?php echo $sr_img( 'sr-06-crna-kratki-rukav.jpg', 'NORIKS FlexShirt na modelu' ); ?></div>
+    <div class="nsr-copy">
+      <h2 class="nsr-h2">Snažne osobine</h2>
+      <p class="nsr-tagline nsr-tagline-left">Četiri stvari zbog kojih se ova košulja nosi češće od ostalih u ormaru.</p>
+      <ul class="nsr-feat">
+        <li>
+          <?php echo $sr_ico( '<path d="M12 3v18M3 12h18"/><path d="M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/>' ); ?>
+          <div><strong>Elastičnost u 4 smjera</strong><span>Prati vas u svakom pokretu, cijeli dan.</span></div>
+        </li>
+        <li>
+          <?php echo $sr_ico( '<path d="M4 14a8 8 0 0 1 16 0"/><path d="M7 18c2-2 3-4 5-4s3 2 5 4"/><path d="M12 3v3"/>' ); ?>
+          <div><strong>Prozračna i mekana</strong><span>Lagana tkanina koja ostaje svježa na koži.</span></div>
+        </li>
+        <li>
+          <?php echo $sr_ico( '<circle cx="12" cy="12" r="8"/><path d="M8 12h8"/><path d="M5 5l14 14"/>' ); ?>
+          <div><strong>Bez neugodnih mirisa</strong><span>Ostaje svježa i kad se dan zagrije.</span></div>
+        </li>
+        <li>
+          <?php echo $sr_ico( '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/><path d="M8 3l-2 18"/>' ); ?>
+          <div><strong>Bez gužvanja</strong><span>Izgleda uredno od jutra do večeri. Bez glačanja.</span></div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
@@ -70,13 +69,13 @@ $sr_ico = function( $d ) {
 <section class="nsr-sec nsr-white">
   <div class="nsr-wrap">
     <div class="nsr-row">
-      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-1-rastezanje.jpg', 'Tkanina se rasteže u sva četiri smjera' ); ?></div>
       <div class="nsr-copy">
         <p class="nsr-eyebrow">Tehnologija tkanine</p>
         <h3 class="nsr-h3">Rasteže se s vama, ne protiv vas</h3>
         <p>Tkanina popušta u sva četiri smjera i odmah se vraća u svoj oblik. Ramena, laktovi i leđa dobiju prostor pri svakom pokretu — <strong>bez zatezanja i bez izvlačenja košulje iz hlača</strong>.</p>
         <p class="nsr-note">Mješavina poliestera i elastana s 12 % elastana.</p>
       </div>
+      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-1-rastezanje.jpg', 'Tkanina se rasteže u sva četiri smjera' ); ?></div>
     </div>
 
     <div class="nsr-row">
@@ -89,12 +88,12 @@ $sr_ico = function( $d ) {
     </div>
 
     <div class="nsr-row">
-      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-3-tkanina.jpg', 'Prozračna tkanina odbija vlagu' ); ?></div>
       <div class="nsr-copy">
         <p class="nsr-eyebrow">Osjećaj na koži</p>
         <h3 class="nsr-h3">Prozračna, suha i bez mirisa</h3>
         <p>Između niti prolazi zrak, pa toplina i vlaga odlaze s kože umjesto da ostanu na njoj. Tkanina je obrađena tako da <strong>zadržava svježinu i nakon dugog dana</strong>.</p>
       </div>
+      <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-3-tkanina.jpg', 'Prozračna tkanina odbija vlagu' ); ?></div>
     </div>
   </div>
 </section>
@@ -145,17 +144,19 @@ $sr_ico = function( $d ) {
   </div>
 </section>
 
-<!-- 5) Jamstvo + oznake povjerenja -->
+<!-- 5) Jamstvo + oznake povjerenja — tekst lijevo, slika desno -->
 <section class="nsr-sec nsr-navy">
-  <div class="nsr-wrap">
-    <h2 class="nsr-h2 nsr-center">Jamstvo povrata novca</h2>
-    <p class="nsr-tagline">Kupujete bez rizika — zamjena veličine ili povrat novca u 30 dana.</p>
-    <p class="nsr-lead">Niste zadovoljni kupnjom? Povrat ili zamjenu možete zatražiti u roku od 30 dana od dostave. Naša podrška je tu da pomogne.</p>
-    <div class="nsr-badges">
-      <div><strong>Vjerna veličinama</strong><span>Veličina koju naručite je veličina koju dobijete.</span></div>
-      <div><strong>Brza dostava</strong><span>Šaljemo odmah, dostava 2–5 radnih dana.</span></div>
-      <div><strong>30 dana za povrat</strong><span>Povrat novca ili zamjena unutar 30 dana od dostave.</span></div>
+  <div class="nsr-wrap nsr-row">
+    <div class="nsr-copy">
+      <h2 class="nsr-h2">Jamstvo povrata novca</h2>
+      <p>Niste zadovoljni kupnjom? Povrat ili zamjenu možete zatražiti u roku od <strong>30 dana</strong> od dostave. Naša podrška je tu da pomogne.</p>
+      <ul class="nsr-feat nsr-feat-light">
+        <li><div><strong>Vjerna veličinama</strong><span>Veličina koju naručite je veličina koju dobijete.</span></div></li>
+        <li><div><strong>Brza dostava</strong><span>Šaljemo odmah, dostava 2–5 radnih dana.</span></div></li>
+        <li><div><strong>30 dana za povrat</strong><span>Povrat novca ili zamjena unutar 30 dana od dostave.</span></div></li>
+      </ul>
     </div>
+    <div class="nsr-media"><?php echo $sr_img( 'sr-12-teget-kratki-rukav.jpg', 'Teget NORIKS FlexShirt košulja' ); ?></div>
   </div>
 </section>
 
@@ -195,11 +196,15 @@ $sr_ico = function( $d ) {
 .nsr-tagline-left { margin: -8px 0 16px; text-align: left; }
 .nsr-navy .nsr-note { color: #b8c3d2; }
 
-.nsr-four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
-.nsr-four > div { background: #fff; border: 1px solid #e6e8ec; border-radius: 16px; padding: 26px 20px 24px; }
-.nsr-white .nsr-four > div { background: #f5f6f8; }
-.nsr-four strong { display: block; font-size: 18px; font-weight: 800; margin: 14px 0 6px; letter-spacing: -.02em; }
-.nsr-four p { font-size: 15px; color: #5f5f5f; margin: 0; line-height: 1.5; }
+.nsr-feat { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 14px; }
+.nsr-feat li { display: flex; align-items: flex-start; gap: 14px; }
+.nsr-feat strong { display: block; font-size: 17.5px; font-weight: 800; letter-spacing: -.02em; }
+.nsr-feat span { display: block; font-size: 15px; color: #5f5f5f; margin-top: 3px; line-height: 1.5; }
+.nsr-feat .nsr-ico { flex: 0 0 auto; width: 44px; height: 44px; }
+.nsr-feat .nsr-ico svg { width: 21px; height: 21px; }
+.nsr-navy .nsr-feat span { color: #b8c3d2; }
+.nsr-feat-light li { border: 1px solid rgba(255,255,255,.18); border-radius: 12px;
+  background: rgba(255,255,255,.05); padding: 14px 16px; }
 .nsr-ico { width: 56px; height: 56px; border-radius: 50%; background: #1b2a41; display: inline-flex;
   align-items: center; justify-content: center; }
 .nsr-ico svg { width: 26px; height: 26px; stroke: #fff !important; }
@@ -226,11 +231,6 @@ $sr_ico = function( $d ) {
 .nsr-grid figcaption span { display: inline-block; margin-top: 4px; font-size: 13px; color: #1b2a41;
   background: #eef1f5; border-radius: 999px; padding: 3px 12px; font-weight: 700; }
 
-.nsr-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 10px; }
-.nsr-badges div { border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 18px 20px;
-  background: rgba(255,255,255,.05); text-align: center; }
-.nsr-badges strong { display: block; font-size: 17px; margin-bottom: 5px; }
-.nsr-badges span { display: block; font-size: 14.5px; opacity: .86; }
 .nsr-ph { display: flex; align-items: center; justify-content: center; min-height: 200px; background: #e2e5ea;
   border-radius: 12px; color: #7d8694; font-size: 14px; text-align: center; padding: 12px; }
 
@@ -242,13 +242,11 @@ $sr_ico = function( $d ) {
   .nsr-sec:first-of-type { padding-top: 30px; }
   .nsr-wrap { padding-left: 14px; padding-right: 14px; }
   .nsr-h2 { font-size: 24px; }
-  .nsr-four { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
   .nsr-h3 { font-size: 20px; }
   .nsr-row { grid-template-columns: 1fr; gap: 18px; }
   .nsr-row .nsr-media { order: -1; }
   .nsr-colors { grid-template-columns: 1fr 1fr; }
   .nsr-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .nsr-badges { grid-template-columns: 1fr; }
 }
 
 /* kratki opis proizvoda: zelene kvacice umjesto tockica */
