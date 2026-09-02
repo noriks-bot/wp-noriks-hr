@@ -171,7 +171,8 @@ $sr_ico = function( $d ) {
 .nsr-grey  { background: #f5f6f8; color: #151515; }
 .nsr-navy  { background: #1b2a41; color: #eef2f7; }
 .nsr-navy h2, .nsr-navy p, .nsr-navy strong, .nsr-navy span { color: #eef2f7; }
-.nsr-wrap { max-width: 1440px; margin: 0 auto; padding: 0 22px; }
+.nsr-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
+.nsr-sec *, .nsr-marquee * { box-sizing: border-box; }
 .nsr-center { text-align: center; }
 .nsr-h2 { font-size: 36px; line-height: 1.1; margin: 0 0 20px; font-weight: 800 !important;
   letter-spacing: -.032em; color: #151515; }
@@ -203,6 +204,7 @@ $sr_ico = function( $d ) {
 .nsr-ico svg { width: 26px; height: 26px; stroke: #fff !important; }
 
 .nsr-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 42px; }
+.nsr-row .nsr-copy { max-width: 540px; }
 .nsr-row:last-child { margin-bottom: 0; }
 .nsr-h3 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
 .nsr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
@@ -210,7 +212,7 @@ $sr_ico = function( $d ) {
 /* dvije kartice tkanine: manji razmak izmedu sekcija i 30 % niza slika */
 .nsr-sec-pair-a { padding-bottom: 18px; }
 .nsr-sec-pair-b { padding-top: 18px; }
-.nsr-sec-pair .nsr-media img { max-height: 512px; width: auto; margin: 0 auto; }
+.nsr-sec-pair .nsr-media img { max-height: 600px; width: auto; margin: 0 auto; }
 .nsr-media-tall img { max-height: 560px; width: auto; margin: 0 auto; }
 .nsr-swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 26px 0 18px; }
 .nsr-swatches figure { margin: 0; text-align: center; background: #fff; border: 1px solid #e6e8ec;
