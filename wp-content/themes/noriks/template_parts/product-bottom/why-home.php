@@ -30,12 +30,6 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 };
 ?>
 
-<div class="nhm-marquee"><div class="nhm-marquee-track">
-  <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-    <span>BEZ BUŠENJA</span><i>✦</i><span>DRŽI DO 7 KG</span><i>✦</i><span>SKIDANJE BEZ TRAGA</span><i>✦</i>
-  <?php endfor; ?>
-</div></div>
-
 <!-- 1) Estetske i prakticne kuke — tekst u sivoj kartici lijevo, video desno (kao original) -->
 <section class="nhm-sec nhm-white">
   <div class="nhm-wrap nhm-row nhm-row-card">
@@ -82,29 +76,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 4) Snazno prianjanje -->
-<section class="nhm-sec nhm-grey">
-  <div class="nhm-wrap nhm-row">
-    <div class="nhm-copy">
-      <p class="nhm-eyebrow">Ispitano opterećenje</p>
-      <h2 class="nhm-h2">Drži do 7 kg po kuki</h2>
-      <p>Mokri ručnik, kupaći ogrtač, torba ili pribor za tuširanje — svaka kuka nosi do <strong>7 kg</strong> i ostaje na mjestu.</p>
-      <p>U pakiranju su <strong>četiri kuke</strong>, dovoljno za kupaonicu, kuhinju i predsoblje odjednom.</p>
-    </div>
-    <div class="nhm-media nhm-sq"><?php echo $hm_vid( 'home-vid-1.mp4', 'home-vid-1.jpg', 'Kuka drži uteg od 7 kg' ); ?></div>
-  </div>
-</section>
-
-<!-- 5) Usporedba -->
-<section class="nhm-sec nhm-white">
-  <div class="nhm-wrap">
-    <h2 class="nhm-h2 nhm-center">NORIKS Home vs klasične vakuumske kuke</h2>
-    <p class="nhm-tagline">Zašto jeftina kuka s tržnice padne za tjedan dana, a ova ostaje na zidu.</p>
-    <div class="nhm-cmp"><?php echo $hm_img( 'home-usporedba.jpg', 'Usporedba NORIKS Home i klasičnih vakuumskih kuka' ); ?></div>
-  </div>
-</section>
-
-<!-- 6) Videi -->
+<!-- 4) DISCOVER THE POWER — videi -->
 <section class="nhm-sec nhm-grey">
   <div class="nhm-wrap">
     <h2 class="nhm-h2 nhm-center">Otkrijte snagu naših kuka</h2>
@@ -117,7 +89,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   </div>
 </section>
 
-<!-- 7) Recenzije kupaca -->
+<!-- 5) Recenzije kupaca -->
 <section class="nhm-sec nhm-white">
   <div class="nhm-wrap">
     <h2 class="nhm-h2 nhm-center">Što kažu naši kupci</h2>
@@ -152,12 +124,6 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
     </div>
   </div>
 </section>
-
-<div class="nhm-marquee nhm-marquee-end"><div class="nhm-marquee-track">
-  <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-    <span>30 DANA ZA POVRAT</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i><span>PLAĆANJE POUZEĆEM</span><i>✦</i>
-  <?php endfor; ?>
-</div></div>
 
 <style>
 .nhm-sec { padding: 52px 0; }
@@ -202,13 +168,6 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
 .nhm-rev footer em { display: block; font-style: normal; font-size: 13px; color: #1f7a4d; font-weight: 600; }
 .nhm-ph { display: flex; align-items: center; justify-content: center; min-height: 180px; background: #ececed; border-radius: 12px; color: #8b8b8b; font-size: 14px; }
 
-.nhm-marquee { background: #eef1f5; overflow: hidden; padding: 13px 0; }
-.nhm-marquee-track { display: flex; align-items: center; gap: 26px; white-space: nowrap; animation: nhmmq 34s linear infinite; width: max-content; }
-.nhm-marquee span { color: #151515; font-weight: 800; font-size: 14px; letter-spacing: .06em; font-family: 'Plus Jakarta Sans','Inter',sans-serif; }
-.nhm-marquee i { color: #8a8a8a; font-style: normal; font-size: 13px; }
-.nhm-marquee-end { margin-top: -14px; }
-@keyframes nhmmq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
 @media (max-width: 900px) {
   .nhm-sec { padding: 26px 0; }
   .nhm-wrap { padding-left: 14px; padding-right: 14px; }
@@ -223,9 +182,6 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   .nhm-vids { grid-template-columns: 1fr; gap: 16px; }
   .nhm-rev-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .nhm-rev p { font-size: 13.5px; }
-  .nhm-marquee { margin-top: 22px; padding: 11px 0; }
-  .nhm-marquee span { font-size: 12.5px; }
-  .nhm-marquee-end { margin-top: -13px; }
 }
 
 /* kratki opis proizvoda: zelene kvacice */
