@@ -508,8 +508,6 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
-    } elseif ( has_term( array( 'orto-home' ), 'product_cat', $product_id ) ) {
-        $gck_offer_subs = array( 'Standardna cijena', 'Odaberite 2 boje', 'Odaberite 3 boje' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Uređaj + 10 vrećica', 'Uređaj + 20 vrećica', 'Uređaj + 30 vrećica' );
     } else {
@@ -943,17 +941,25 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .bundle-pair { counter-increment: nhmpair; margin-bottom: 8px !important; }
       #bundle-selector .bundle-option .bundle-pair:last-child { margin-bottom: 0 !important; }
       #bundle-selector .bundle-option .bundle-attr-row {
-          display: flex !important; align-items: center; gap: 12px; width: 100%;
-          border: 1px solid #e4e4e6; border-radius: 12px; padding: 8px 12px; background: #fff; }
+          display: flex !important; align-items: center; gap: 16px; width: 100%;
+          border: 1px solid #e4e4e6; border-radius: 0; padding: 12px 16px; background: #fff; }
       #bundle-selector .bundle-option .bundle-attr-row:before {
-          content: "#" counter(nhmpair); flex: 0 0 auto; font-size: 13px; font-weight: 800; color: #6b6b6b; }
-      #bundle-selector .bundle-option .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
-      #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 30px; height: 30px; }
+          content: "#" counter(nhmpair); flex: 0 0 auto; font-size: 15px; font-weight: 800; color: #6b6b6b; }
+      #bundle-selector .bundle-option .color-swatches { display: flex !important; gap: 12px; flex-wrap: wrap; }
+      #bundle-selector .bundle-option .color-swatches .swatch {
+          width: 52px !important; height: 52px !important; padding: 6px !important;
+          border-radius: 8px !important; box-sizing: border-box; }
+      #bundle-selector .bundle-option .color-swatches .swatch.active { transform: none !important; }
+      #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 38px !important; height: 38px !important; }
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { padding: 14px 128px 14px 12px !important; }
           #bundle-selector .bundle-option .bundle-option-title { font-size: 16px; }
           #bundle-selector .bundle-option .gck-per-chip .gck-per-new { font-size: 17px !important; }
           #bundle-selector .bundle-option .gck-offer-prices { top: 14px !important; right: 12px !important; }
+          #bundle-selector .bundle-option .bundle-attr-row { gap: 10px; padding: 10px 12px; }
+          #bundle-selector .bundle-option .color-swatches { gap: 8px; }
+          #bundle-selector .bundle-option .color-swatches .swatch { width: 44px !important; height: 44px !important; padding: 5px !important; }
+          #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; }
       }
     </style>
     <?php endif; ?>
