@@ -934,7 +934,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .bundle-total-line .gck-regular-price {
           order: 2; color: #9aa3ad !important; font-size: 14.5px !important; font-weight: 500 !important; margin: 0 !important; }
       #bundle-selector .bundle-option small { display: none !important; }
-      #bundle-selector .bundle-option .bundle-option-title { font-size: 19px; font-weight: 800; letter-spacing: -.01em; }
+      #bundle-selector .bundle-option .bundle-option-title { font-size: 15px !important; font-weight: 800; letter-spacing: -.01em; }
       #bundle-selector .bundle-option .gck-offer-sub { display: block; margin: 2px 0 0 !important; font-size: 14px; color: #6b6b6b; }
       /* cijena po pakiranju desno gore */
       /* krugovi boja u okviru, s oznakom #1 / #2 / #3 */
@@ -954,7 +954,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 38px !important; height: 38px !important; }
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { padding: 14px 108px 14px 12px !important; }
-          #bundle-selector .bundle-option .bundle-option-title { font-size: 16px; }
+          #bundle-selector .bundle-option .bundle-option-title { font-size: 13.5px !important; }
           #bundle-selector .bundle-option .bundle-total-line { top: 14px !important; right: 12px !important; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px !important; }
           #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px !important; }
