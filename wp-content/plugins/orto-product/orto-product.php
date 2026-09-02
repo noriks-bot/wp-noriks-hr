@@ -903,6 +903,32 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-sr' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* Znacke ponuda — isti stil kao na ChefSealu (bez ovoga se koristi
+         osnovni crni zakrenuti stil izvan kartice). */
+      #bundle-selector .gck-popular-badge,
+      #bundle-selector .gck-popular-badge-2 {
+          position: absolute !important; top: 0 !important; right: 20px !important;
+          left: auto !important; bottom: auto !important; margin: 0 !important;
+          transform: translateY(-50%) !important;
+          display: inline-flex !important; align-items: center; justify-content: center;
+          padding: 0 14px !important; height: 25px !important; line-height: 1 !important;
+          letter-spacing: 0 !important; font-size: 11.5px !important; font-weight: 800 !important;
+          border-radius: 10px !important; white-space: nowrap; z-index: 3;
+          background: #c3192a !important; color: #fff !important;
+          max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis;
+      }
+      #bundle-selector .bundle-option:has(.gck-popular-badge),
+      #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 26px !important; }
+      #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 22px !important; }
+      @media (max-width: 560px) {
+          #bundle-selector .gck-popular-badge,
+          #bundle-selector .gck-popular-badge-2 {
+              right: 10px !important; font-size: 10.5px !important; padding: 0 12px !important;
+              height: 23px !important; max-width: calc(100% - 20px);
+          }
+          #bundle-selector .bundle-option:has(.gck-popular-badge),
+          #bundle-selector .bundle-option:has(.gck-popular-badge-2) { padding-top: 24px !important; }
+      }
       /* NORIKS FlexShirt: bez crte iznad izbornika — kartica je ciscija. */
       #bundle-selector .bundle-option .bundle-pairs {
           border-top: 0 !important; padding-top: 13px !important; padding-bottom: 0 !important;
