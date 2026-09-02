@@ -958,13 +958,19 @@ function gck_render_bundle_selector() {
           #bundle-selector .bundle-option .bundle-total-line { top: 14px !important; right: 12px !important; }
           #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px !important; }
           #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px !important; }
-          /* na mobilnom okvir ide preko cijele sirine kartice */
+          /* na mobilnom okvir ide preko cijele sirine kartice, sve boje u JEDNOM redu */
           #bundle-selector .bundle-option .bundle-pairs { margin-right: -96px !important; }
           #bundle-selector .bundle-option .bundle-attr-row {
-              display: flex !important; width: 100% !important; gap: 10px; padding: 10px 12px; }
-          #bundle-selector .bundle-option .color-swatches { gap: 8px; flex: 1 1 auto; justify-content: space-between; }
-          #bundle-selector .bundle-option .color-swatches .swatch { width: 44px !important; height: 44px !important; padding: 5px !important; }
-          #bundle-selector .bundle-option .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; }
+              display: flex !important; width: 100% !important; gap: 8px; padding: 9px 10px; flex-wrap: nowrap !important; }
+          #bundle-selector .bundle-option .color-swatches {
+              display: flex !important; flex-wrap: nowrap !important; gap: 6px;
+              flex: 1 1 auto; justify-content: space-between; min-width: 0; }
+          #bundle-selector .bundle-option .color-swatches .swatch {
+              width: auto !important; height: auto !important; flex: 1 1 0; min-width: 0;
+              aspect-ratio: 1 / 1; padding: 4px !important; display: flex !important;
+              align-items: center; justify-content: center; }
+          #bundle-selector .bundle-option .color-swatches .swatch-circle {
+              width: 100% !important; height: auto !important; aspect-ratio: 1 / 1; max-width: 30px; }
       }
     </style>
     <?php endif; ?>
