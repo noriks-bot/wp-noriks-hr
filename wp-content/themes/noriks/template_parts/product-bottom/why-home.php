@@ -1,13 +1,13 @@
 <?php
 /**
- * product-bottom: NORIKS Home — vakuumske kuke (orto-home).
+ * product-bottom: NORIKS HOME PowerHook — vakuumske kuke (orto-home).
  * Sekcije prate original (rohahome.com) u istom redoslijedu:
  *   0) traka s jamstvima
  *   1) Estetske i praktične kuke
  *   2) Twist & Lock tehnologija
  *   3) Montaža bez oštećenja
  *   4) Snažno prianjanje do 7 kg (video)
- *   5) NORIKS Home vs klasične kuke
+ *   5) NORIKS HOME PowerHook vs klasične kuke
  *   6) Otkrijte snagu naših kuka (videi)
  *   7) Recenzije kupaca s fotografijama
  */
@@ -35,10 +35,10 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
   <div class="nhm-wrap nhm-row nhm-row-card">
     <div class="nhm-copy nhm-card">
       <h2 class="nhm-h2">Estetske i praktične kuke</h2>
-      <p>Moderan, rustikalan ili elegantan interijer? NORIKS Home kuke unose uredan detalj u svaki prostor i istovremeno pouzdano drže ono što vam treba pri ruci.</p>
+      <p>Moderan, rustikalan ili elegantan interijer? NORIKS HOME PowerHook kuke unose uredan detalj u svaki prostor i istovremeno pouzdano drže ono što vam treba pri ruci.</p>
       <p>Ravna, diskretna glava bez vidljivih vijaka i pet nijansi koje se uklapaju uz armaturu: <strong>crna, krom, bijela, zlatna i siva</strong>.</p>
     </div>
-    <div class="nhm-media nhm-media-video"><?php echo $hm_vid( 'home-vid-3.mp4', 'home-vid-3.jpg', 'NORIKS Home kuka u kupaonici' ); ?></div>
+    <div class="nhm-media nhm-media-video"><?php echo $hm_vid( 'home-vid-3.mp4', 'home-vid-3.jpg', 'NORIKS HOME PowerHook kuka u kupaonici' ); ?></div>
   </div>
 </section>
 
@@ -112,7 +112,7 @@ $hm_vid = function( $file, $poster, $alt ) use ( $hm, $hm_path ) {
       );
       foreach ( $hm_revs as $rv ) : ?>
         <article class="nhm-rev">
-          <?php echo $hm_img( $rv[0], 'Recenzija kupca NORIKS Home' ); ?>
+          <?php echo $hm_img( $rv[0], 'Recenzija kupca NORIKS HOME PowerHook' ); ?>
           <div class="nhm-rev-body">
             <span class="nhm-stars">★★★★★</span>
             <p><?php echo esc_html( $rv[1] ); ?></p>

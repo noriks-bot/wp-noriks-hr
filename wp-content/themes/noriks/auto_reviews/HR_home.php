@@ -1,5 +1,5 @@
 <?php
-// Review pool for NORIKS Home — vakuumske kuke (orto-home).
+// Review pool for NORIKS HOME PowerHook — vakuumske kuke (orto-home).
 $auto_reviews_en = array(
     array("name" => "Vedran C.",  "text" => "Stavio sam jednu na staklo tuš-kabine i tjednima drži bez pomicanja. Nisam vjerovao da će izdržati mokri ručnik."),
     array("name" => "Petra G.",   "text" => "Kupila sam komplet od četiri i sve drže čvrsto. Čak i četka za tuširanje ostane gore bez problema."),

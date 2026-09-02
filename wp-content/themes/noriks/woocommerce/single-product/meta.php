@@ -581,7 +581,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'home', $current_product_id ) ): ?>
 
-                <strong>NORIKS Home</strong> su vakuumske kuke s patentiranom Twist &amp; Lock tehnologijom. Okretanjem gumba aktivira se višestruka kompresija koja se prilagodi površini i stvori čvrsto brtvljenje, a vakuum ga dodatno pojača.<br><br>Postavljaju se u nekoliko sekundi na staklo, pločice, ogledala, mramor, akril, glatki metal i laminat — bez bušenja, bez vijaka i bez ljepila. Skidaju se jednako lako i ne ostavljaju trag, pa su prikladne i za iznajmljeni stan.<br><br>Svaka kuka nosi do 7 kg, dovoljno za mokri ručnik, kupaći ogrtač ili torbu. U pakiranju su četiri kuke.<br><br>Kućište je od izdržljivog polimera otpornog na hrđu i vlagu. Promjer je 6,1 cm, dubina 4 cm. Dostupno u pet nijansi: crna, krom, bijela, zlatna i siva.
+                <strong>NORIKS HOME PowerHook</strong> su vakuumske kuke s patentiranom Twist &amp; Lock tehnologijom. Okretanjem gumba aktivira se višestruka kompresija koja se prilagodi površini i stvori čvrsto brtvljenje, a vakuum ga dodatno pojača.<br><br>Postavljaju se u nekoliko sekundi na staklo, pločice, ogledala, mramor, akril, glatki metal i laminat — bez bušenja, bez vijaka i bez ljepila. Skidaju se jednako lako i ne ostavljaju trag, pa su prikladne i za iznajmljeni stan.<br><br>Svaka kuka nosi do 7 kg, dovoljno za mokri ručnik, kupaći ogrtač ili torbu. U pakiranju su četiri kuke.<br><br>Kućište je od izdržljivog polimera otpornog na hrđu i vlagu. Promjer je 6,1 cm, dubina 4 cm. Dostupno u pet nijansi: crna, krom, bijela, zlatna i siva.
 
          <?php elseif( noriks_is_type( 'seal', $current_product_id ) ): ?>
 
