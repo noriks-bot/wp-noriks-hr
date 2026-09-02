@@ -98,17 +98,15 @@ $sr_ico = function( $d ) {
     <div class="nsr-media nsr-media-tall"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS FlexShirt košulje' ); ?></div>
     <div class="nsr-copy">
       <p class="nsr-eyebrow">Paleta</p>
-      <h2 class="nsr-h2">Osam boja, dva rukava</h2>
-      <p>Od bijele za ured i vjenčanja do tamnog petrola za večernje izlaske — svaka nijansa je obojena u istoj tkanini, pa se kroj, težina i pad materijala ne razlikuju među bojama.</p>
+      <h2 class="nsr-h2">Šest boja, dva rukava</h2>
+      <p>Od bijele za ured i vjenčanja do petrola za večernje izlaske — svaka nijansa je obojena u istoj tkanini, pa se kroj, težina i pad materijala ne razlikuju među bojama.</p>
       <div class="nsr-swatches">
         <figure><span class="nsr-sw" style="background:#f2f2f4;box-shadow:inset 0 0 0 1px #d8d8de;"></span><figcaption>Bijela</figcaption></figure>
         <figure><span class="nsr-sw" style="background:#c5d2ec;"></span><figcaption>Svijetloplava</figcaption></figure>
         <figure><span class="nsr-sw" style="background:#000;"></span><figcaption>Crna</figcaption></figure>
-        <figure><span class="nsr-sw" style="background:#1c2233;"></span><figcaption>Teget</figcaption></figure>
         <figure><span class="nsr-sw" style="background:#3d3a40;"></span><figcaption>Grafitna</figcaption></figure>
         <figure><span class="nsr-sw" style="background:#61282f;"></span><figcaption>Bordo</figcaption></figure>
         <figure><span class="nsr-sw" style="background:#0a4467;"></span><figcaption>Petrol</figcaption></figure>
-        <figure><span class="nsr-sw" style="background:#0a3b52;"></span><figcaption>Tamno petrol</figcaption></figure>
       </div>
       <p class="nsr-note">Kratki i dugi rukav · veličine S, M, L, XL, 2XL i 3XL</p>
     </div>
@@ -125,8 +123,8 @@ $sr_ico = function( $d ) {
         <figcaption><strong>178 cm · 75 kg</strong><span>veličina M</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-09-petrol-kratki-rukav.jpg', 'Model 183 cm, 73 kg nosi veličinu M' ); ?>
         <figcaption><strong>183 cm · 73 kg</strong><span>veličina M</span></figcaption></figure>
-      <figure><?php echo $sr_img( 'sr-10-tamno-petrol.jpg', 'Model 180 cm, 82 kg nosi veličinu L' ); ?>
-        <figcaption><strong>180 cm · 82 kg</strong><span>veličina L</span></figcaption></figure>
+      <figure><?php echo $sr_img( 'sr-06-crna-kratki-rukav.jpg', 'Model 185 cm, 88 kg nosi veličinu XL' ); ?>
+        <figcaption><strong>185 cm · 88 kg</strong><span>veličina XL</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-11-siva-rooftop.jpg', 'Model 188 cm, 88 kg nosi veličinu XL' ); ?>
         <figcaption><strong>188 cm · 88 kg</strong><span>veličina XL</span></figcaption></figure>
       <figure><?php echo $sr_img( 'sr-08-bordo.jpg', 'Model 185 cm, 129 kg nosi veličinu 3XL' ); ?>
@@ -150,7 +148,7 @@ $sr_ico = function( $d ) {
         <li><div><strong>30 dana za povrat</strong><span>Povrat novca ili zamjena unutar 30 dana od dostave.</span></div></li>
       </ul>
     </div>
-    <div class="nsr-media"><?php echo $sr_img( 'sr-12-teget-kratki-rukav.jpg', 'Teget NORIKS FlexShirt košulja' ); ?></div>
+    <div class="nsr-media"><?php echo $sr_img( 'sr-detalj-1-rastezanje.jpg', 'Elastična tkanina NORIKS FlexShirt košulje' ); ?></div>
   </div>
 </section>
 

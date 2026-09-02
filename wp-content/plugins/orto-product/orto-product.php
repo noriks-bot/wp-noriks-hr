@@ -743,11 +743,9 @@ function gck_render_bundle_selector() {
       .color-bez { background: #e4e0cf; }
       /* NORIKS FlexShirt kosulja — nijanse ocitane s fotografija proizvoda. */
       .color-svijetloplava { background: #c5d2ec; }
-      .color-teget         { background: #1c2233; }
       .color-grafitna      { background: #3d3a40; }
       .color-bordo         { background: #61282f; }
       .color-petrol        { background: #0a4467; }
-      .color-tamno-petrol  { background: #0a3b52; }
       /* NORIKS BRA — leopard uzorak (CSS, bez slike). */
       .color-leopard {
         background-color: #a5573a;
