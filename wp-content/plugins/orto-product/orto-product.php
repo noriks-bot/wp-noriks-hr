@@ -905,6 +905,26 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .bundle-pairs {
           border-top: 0 !important; padding-top: 0 !important; margin-top: 4px !important;
       }
+      /* cijena u istom redu kao naslov, bez rijeci "Ukupno:" */
+      #bundle-selector .bundle-option { position: relative; }
+      #bundle-selector .bundle-option > br { display: none !important; }
+      #bundle-selector .bundle-option .gck-offer-head { display: block; padding-right: 165px; }
+      #bundle-selector .bundle-option .bundle-total-line {
+          position: absolute !important; top: 13px !important; right: 16px !important;
+          margin: 0 !important; padding: 0 !important;
+          display: flex !important; align-items: baseline; gap: 8px;
+      }
+      #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) {
+          display: none !important;
+      }
+      #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { order: 1; margin: 0 !important; }
+      #bundle-selector .bundle-option .bundle-total-line .line-total { order: 2; font-weight: 800; }
+      /* bez recenice o povratu unutar kartice */
+      #bundle-selector .bundle-option small { display: none !important; }
+      @media (max-width: 560px) {
+          #bundle-selector .bundle-option .gck-offer-head { padding-right: 125px; }
+          #bundle-selector .bundle-option .bundle-total-line { top: 11px !important; right: 12px !important; }
+      }
     </style>
     <?php endif; ?>
 

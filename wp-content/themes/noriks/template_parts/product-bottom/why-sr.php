@@ -65,7 +65,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 2) Bez guzvanja — slika lijevo, tekst desno -->
-<section class="nsr-sec nsr-white">
+<section class="nsr-sec nsr-grey">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-media"><?php echo $sr_img( 'sr-02-bez-guzvanja.jpg', 'Ovratnik koji ostaje uredan cijeli dan' ); ?></div>
     <div class="nsr-copy">
@@ -77,7 +77,7 @@ $sr_ico = function( $d ) {
 </section>
 
 <!-- 2b) Prozracna i svjeza — tekst lijevo, slika desno -->
-<section class="nsr-sec nsr-grey">
+<section class="nsr-sec nsr-white">
   <div class="nsr-wrap nsr-row">
     <div class="nsr-copy">
       <p class="nsr-eyebrow">Osjećaj udobnosti</p>
@@ -186,7 +186,7 @@ $sr_ico = function( $d ) {
 .nsr-tagline-left { margin: -8px 0 16px; text-align: left; }
 .nsr-navy .nsr-note { color: #b8c3d2; }
 
-.nsr-icons { background: #eef0f2; color: #151515; }
+.nsr-icons { background: #fff; color: #151515; }
 .nsr-quals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px; text-align: center; }
 .nsr-quals img { width: 148px; height: 148px; object-fit: contain; display: block; margin: 0 auto 26px; }
 .nsr-quals strong { display: block; font-size: 25px; font-weight: 800; letter-spacing: -.03em; margin: 0 0 10px;
