@@ -30,6 +30,12 @@ $sr_ico = function( $d ) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 
+<div class="nsr-marquee"><div class="nsr-marquee-track">
+  <?php for ( $i = 0; $i < 4; $i++ ) : ?>
+    <span>30 DANA ZA POVRAT</span><i>✦</i><span>ZAMJENA VELIČINE BEZ PITANJA</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
+  <?php endfor; ?>
+</div></div>
+
 <!-- 1) Snazne osobine -->
 <section class="nsr-sec nsr-grey">
   <div class="nsr-wrap">
@@ -96,7 +102,7 @@ $sr_ico = function( $d ) {
 <!-- 3) Boje i rukavi -->
 <section class="nsr-sec nsr-grey">
   <div class="nsr-wrap nsr-row">
-    <div class="nsr-media"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS SR košulje' ); ?></div>
+    <div class="nsr-media nsr-media-tall"><?php echo $sr_img( 'sr-05-sve-boje.jpg', 'Osam boja NORIKS SR košulje' ); ?></div>
     <div class="nsr-copy">
       <h2 class="nsr-h2">Osam boja, kratki i dugi rukav</h2>
       <p class="nsr-tagline nsr-tagline-left">Isti kroj i ista tkanina u svakoj boji.</p>
@@ -153,13 +159,27 @@ $sr_ico = function( $d ) {
   </div>
 </section>
 
+<div class="nsr-marquee nsr-marquee-end"><div class="nsr-marquee-track">
+  <?php for ( $i = 0; $i < 4; $i++ ) : ?>
+    <span>30 DANA ZA POVRAT</span><i>✦</i><span>ZAMJENA VELIČINE BEZ PITANJA</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
+  <?php endfor; ?>
+</div></div>
+
 <style>
+.nsr-marquee { background: #eef1f5; overflow: hidden; padding: 13px 0; }
+.nsr-marquee-track { display: flex; align-items: center; gap: 26px; white-space: nowrap;
+  animation: nsrmq 34s linear infinite; width: max-content; }
+.nsr-marquee span { color: #1b2a41; font-weight: 800; font-size: 14px; letter-spacing: .06em;
+  font-family: 'Plus Jakarta Sans','Inter',sans-serif; }
+.nsr-marquee i { color: #b08a2e; font-style: normal; font-size: 13px; }
+.nsr-marquee-end { margin-top: -14px; }
+@keyframes nsrmq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .nsr-sec, .nsr-sec p, .nsr-sec li, .nsr-sec td {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif !important; }
 .nsr-sec h2, .nsr-sec h3, .nsr-sec strong, .nsr-sec th {
   font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !important; }
 .nsr-sec h2, .nsr-sec h3 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-.nsr-sec { padding: 54px 0; }
+.nsr-sec { padding: 52px 0; }
 .nsr-white { background: #fff;    color: #151515; }
 .nsr-grey  { background: #f5f6f8; color: #151515; }
 .nsr-navy  { background: #1b2a41; color: #eef2f7; }
@@ -189,6 +209,7 @@ $sr_ico = function( $d ) {
 .nsr-h3 { font-size: 24px; line-height: 1.2; margin: 0 0 12px; font-weight: 800; }
 .nsr-eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #b08a2e; margin: 0 0 8px; }
 .nsr-media img { width: 100%; height: auto; display: block; border-radius: 18px; }
+.nsr-media-tall img { max-height: 560px; width: auto; margin: 0 auto; }
 .nsr-colors { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
 .nsr-colors li { display: flex; align-items: center; gap: 10px; font-size: 15.5px;
   background: #fff; border: 1px solid #e6e8ec; border-radius: 999px; padding: 7px 14px; }
@@ -214,7 +235,10 @@ $sr_ico = function( $d ) {
   border-radius: 12px; color: #7d8694; font-size: 14px; text-align: center; padding: 12px; }
 
 @media (max-width: 900px) {
-  .nsr-sec { padding: 32px 0; }
+  .nsr-sec { padding: 26px 0; }
+  .nsr-marquee { margin-top: 22px; padding: 11px 0; }
+  .nsr-marquee span { font-size: 12.5px; }
+  .nsr-marquee-end { margin-top: -13px; }
   .nsr-sec:first-of-type { padding-top: 30px; }
   .nsr-wrap { padding-left: 14px; padding-right: 14px; }
   .nsr-h2 { font-size: 24px; }
