@@ -908,7 +908,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair:last-child { margin-bottom: 0 !important; }
       #bundle-selector .bundle-option .bundle-pairs .bundle-pair .bundle-attr-row { margin-bottom: 0 !important; }
       /* cijena u istom redu kao naslov, bez rijeci "Ukupno:" */
-      #bundle-selector .bundle-option { position: relative; padding: 16px 175px 16px 16px !important; }
+      #bundle-selector .bundle-option { position: relative; padding: 16px 175px 12px 16px !important; }
       #bundle-selector .bundle-option > br { display: none !important; }
       #bundle-selector .bundle-option .bundle-total-line {
           position: absolute !important; top: 13px !important; right: 16px !important;
@@ -923,7 +923,7 @@ function gck_render_bundle_selector() {
       /* bez recenice o povratu unutar kartice */
       #bundle-selector .bundle-option small { display: none !important; }
       @media (max-width: 560px) {
-          #bundle-selector .bundle-option { padding: 14px 130px 14px 12px !important; }
+          #bundle-selector .bundle-option { padding: 14px 130px 10px 12px !important; }
           #bundle-selector .bundle-option .bundle-pairs { padding-top: 11px !important; margin-top: 0 !important; }
           #bundle-selector .bundle-option .bundle-total-line { top: 11px !important; right: 12px !important; }
       }
