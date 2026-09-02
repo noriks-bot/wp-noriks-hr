@@ -941,9 +941,12 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option .bundle-pairs { counter-reset: nhmpair; border-top: 0 !important; padding-top: 14px !important; margin: 0 !important; }
       #bundle-selector .bundle-option .bundle-pair { counter-increment: nhmpair; margin-bottom: 8px !important; }
       #bundle-selector .bundle-option .bundle-pair:last-child { margin-bottom: 0 !important; }
+      #bundle-selector .bundle-option .bundle-pairs .bundle-pair { display: flex !important; }
       #bundle-selector .bundle-option .bundle-attr-row {
-          display: inline-flex !important; align-items: center; gap: 16px; width: auto; max-width: 100%;
+          display: inline-flex !important; align-items: center; gap: 16px;
+          width: fit-content !important; max-width: 100% !important; flex: 0 0 auto !important;
           border: 1px solid #e4e4e6; border-radius: 0; padding: 12px 16px; background: #fff; }
+      #bundle-selector .bundle-option .color-swatches { flex: 0 0 auto !important; }
       #bundle-selector .bundle-option .bundle-attr-row:before {
           content: "#" counter(nhmpair); flex: 0 0 auto; font-size: 15px; font-weight: 800; color: #6b6b6b; }
       #bundle-selector .bundle-option .color-swatches { display: flex !important; gap: 12px; flex-wrap: wrap; }
