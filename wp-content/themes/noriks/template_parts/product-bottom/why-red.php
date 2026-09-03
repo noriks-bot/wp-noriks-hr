@@ -8,7 +8,6 @@
  *   4) Za koje tegobe (slika + popis)
  *   5) Što možete očekivati — vremenska crta (Tjedan 1 / 2-3 / 4-6 / 8+)
  *   6) Zašto odabrati NORIKS RedRelief — usporedba s drugim uređajima
- *   7) Traka s jamstvom
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -216,31 +215,17 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   </div>
 </section>
 
-<!-- 7) TRAKA S JAMSTVOM -->
-<section class="nrd-belt">
-  <div class="nrd-wrap nrd-belt__wrap">
-  <div class="nrd-belt__badge">
-    <div class="nrd-belt__ring"><span class="nrd-belt__num">30</span><span class="nrd-belt__label">Dana jamstva</span></div>
-  </div>
-  <div class="nrd-belt__body">
-    <p class="nrd-belt__eyebrow"><span>——</span> Naše obećanje</p>
-    <h2 class="nrd-belt__headline">Isprobajte 30 dana,<br>bez rizika.</h2>
-    <p class="nrd-belt__copy">Ako nakon redovite upotrebe ne osjetite razliku, javite nam se unutar 30 dana od primitka i vraćamo novac.</p>
-    <p class="nrd-belt__fine">Jedan povrat po kupcu na prvu narudžbu. Svaka narudžba šalje se s praćenjem pošiljke.</p>
-  </div>
-  </div>
-</section>
 
 <style>
 /* ===== NORIKS RedRelief — why sekcije (paleta preuzeta s originala) ===== */
-.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs,.nrd-belt{
+.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
   color:#231b16; box-sizing:border-box;
 }
-.nrd-intro *,.nrd-why *,.nrd-pain *,.nrd-tl *,.nrd-steps *,.nrd-vs *,.nrd-belt *{ box-sizing:border-box; }
+.nrd-intro *,.nrd-why *,.nrd-pain *,.nrd-tl *,.nrd-steps *,.nrd-vs *{ box-sizing:border-box; }
 .nrd-wrap{ width:100%; max-width:1240px; margin:0 auto; padding:0 24px; }
 /* enak navpicni ritem za vse sekcije */
-.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs,.nrd-belt{ padding:78px 0; }
+.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{ padding:78px 0; }
 /* enak videz slik v vseh sekcijah */
 .nrd-intro__img,.nrd-pain__img,.nrd-why__img,.nrd-steps__media,.nrd-vs__imgwrap{
   border-radius:12px; overflow:hidden;
@@ -343,17 +328,6 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 .nrd-vs__guar{ display:flex; align-items:center; gap:9px; font-size:14px; font-weight:700; color:#6b625d; }
 .nrd-vs__shield{ font-size:16px; }
 
-/* 7) traka */
-.nrd-belt{ background:#f0e9db; }
-.nrd-belt__wrap{ display:flex; align-items:center; justify-content:center; gap:56px; flex-wrap:wrap; }
-.nrd-belt__ring{ width:148px; height:148px; border-radius:50%; border:2px solid #d4c9bc; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; }
-.nrd-belt__num{ font-size:58px; font-weight:800; line-height:1; color:#c3192a; }
-.nrd-belt__label{ font-size:9px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:#6b625d; }
-.nrd-belt__body{ max-width:440px; }
-.nrd-belt__eyebrow{ display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#6b625d; margin:0 0 16px; }
-.nrd-belt__headline{ font-size:36px; font-weight:800; line-height:1.15; margin:0 0 18px; }
-.nrd-belt__copy{ font-size:15px; line-height:1.7; color:#6b625d; margin:0 0 20px; }
-.nrd-belt__fine{ font-size:12px; line-height:1.6; color:#9a8e86; margin:0; padding-top:14px; border-top:1px solid #d4c9bc; }
 
 /* ===== mobilno ===== */
 @media (max-width:880px){
@@ -364,7 +338,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   .nrd-vs__copy > .nrd-h2{ display:none; }
 }
 @media (max-width:760px){
-  .nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs,.nrd-belt{ padding:52px 0; }
+  .nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{ padding:52px 0; }
   .nrd-stats{ grid-template-columns:repeat(2,1fr); gap:28px 18px; margin-top:40px; padding-top:32px; }
   .nrd-why__row{ grid-template-columns:1fr; gap:24px; }
   .nrd-why__row + .nrd-why__row{ margin-top:44px; }
@@ -379,9 +353,6 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   .nrd-steps__step{ flex:0 0 80%; scroll-snap-align:center; }
   .nrd-vs__cards{ grid-template-columns:1fr; }
   .nrd-vs__card--them{ margin-top:0; }
-  .nrd-belt__wrap{ flex-direction:column; text-align:center; gap:28px; }
-  .nrd-belt__eyebrow{ justify-content:center; }
-  .nrd-belt__headline{ font-size:28px; }
 }
 
 /* kratek opis izdelka: kljukice namesto pik */
