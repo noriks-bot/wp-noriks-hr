@@ -1,5 +1,5 @@
 <?php
-// Review pool for NORIKS RED — terapija crvenim svjetlom za zapešće (orto-red).
+// Review pool for NORIKS RedRelief — terapija crvenim svjetlom za zapešće (orto-red).
 $auto_reviews_en = array(
     array("name" => "Snježana K.", "text" => "Godinama me noću budila utrnula desna ruka. Nakon tri tjedna korištenja prvi put sam prospavala cijelu noć."),
     array("name" => "Damir L.",    "text" => "Radim za tipkovnicom osam sati dnevno. Stavim ga navečer dok gledam TV, 15 minuta i gotovo. Jutarnja ukočenost je osjetno manja."),
