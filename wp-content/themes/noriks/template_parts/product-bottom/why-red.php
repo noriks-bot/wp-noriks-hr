@@ -85,7 +85,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   <div class="nrd-wrap nrd-pain__wrap">
     <div class="nrd-pain__text">
       <p class="nrd-kicker">Za koga je NORIKS RED</p>
-      <h2 class="nrd-h2">Olakšanje boli počinje terapijom crvenim svjetlom.</h2>
+      <h2 class="nrd-h2">Za ruke koje rade cijeli dan.</h2>
       <p class="nrd-pain__body">Bol u zapešću rijetko dolazi sama. NORIKS RED namijenjen je onima koji svaki dan opterećuju šaku i zapešće — za tipkovnicom, za volanom, u frizerskom salonu, na gradilištu ili u vrtu.</p>
       <ul class="nrd-pills">
         <li>Karpalni tunel</li><li>Tendinitis</li><li>Artritis</li><li>Bolovi u šaci i zapešću</li>
@@ -155,12 +155,12 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
         <p>Provucite palac kroz otvor i pričvrstite traku preko nadlanice.</p>
       </div>
       <div class="nrd-steps__step">
-        <div class="nrd-steps__media"><span class="nrd-steps__num">2</span><?php echo $rd_vid( 'red-vid-2.mp4', 'red-vid-2.jpg', 'Pokretanje seanse jednim gumbom' ); ?></div>
+        <div class="nrd-steps__media"><span class="nrd-steps__num">2</span><?php echo $rd_img( 'red-nacini.jpg', 'Gumb za pokretanje, 4 nacina rada i 3 razine snage', 'nrd-steps__pic' ); ?></div>
         <h4>Pritisnite gumb</h4>
         <p>Jedan pritisak pokreće seansu od 15 minuta. Odaberite razinu snage i način rada.</p>
       </div>
       <div class="nrd-steps__step">
-        <div class="nrd-steps__media"><span class="nrd-steps__num">3</span><?php echo $rd_vid( 'red-vid-3.mp4', 'red-vid-3.jpg', 'Opuštanje tijekom terapije' ); ?></div>
+        <div class="nrd-steps__media"><span class="nrd-steps__num">3</span><?php echo $rd_vid( 'red-vid-3-v2.mp4', 'red-vid-3-v2.jpg', 'Opuštanje tijekom terapije' ); ?></div>
         <h4>Opustite se</h4>
         <p>Pustite svjetlo da radi. Jednom dnevno — redovitost je ono što donosi rezultat.</p>
       </div>
@@ -300,7 +300,8 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 .nrd-steps__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .nrd-steps__step{ text-align:center; }
 .nrd-steps__media{ position:relative; aspect-ratio:1/1; border-radius:14px; overflow:hidden; background:#e8ddd0; margin-bottom:18px; }
-.nrd-steps__media .nrd-video{ width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+.nrd-steps__media .nrd-video,
+.nrd-steps__media .nrd-steps__pic{ width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
 .nrd-steps__num{ position:absolute; top:14px; left:14px; width:38px; height:38px; border-radius:50%; background:#c3192a; color:#fff; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; z-index:2; }
 .nrd-steps__step h4{ font-size:18px; font-weight:800; margin:0 0 6px; }
 .nrd-steps__step p{ font-size:14.5px; color:#6b625d; max-width:34ch; margin:0 auto; line-height:1.5; }
