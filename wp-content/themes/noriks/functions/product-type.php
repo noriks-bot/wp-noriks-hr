@@ -68,6 +68,8 @@ function noriks_product_type_map() : array {
         'sr'                      => array( 'orto-sr', 'sr' ),
         // NORIKS Home — vakuumske kuke (samo boja).
         'home'                    => array( 'orto-home', 'home' ),
+        // NORIKS RED — omotac za zapesce s terapijom crvenim svjetlom (bez atributa).
+        'red'                     => array( 'orto-red', 'red' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).

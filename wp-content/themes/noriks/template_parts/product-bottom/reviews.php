@@ -391,13 +391,15 @@
   $is_hug_page        = noriks_is_type( 'hug', $current_product_id );
   $is_dental_page     = noriks_is_type( 'dental', $current_product_id );
   $is_home_page       = noriks_is_type( 'home', $current_product_id );
+  $is_red_page        = noriks_is_type( 'red', $current_product_id );
   $is_seal_page       = noriks_is_type( 'seal', $current_product_id );
   $is_sr_page         = noriks_is_type( 'sr', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_home_page ? 'NORIKS HOME PowerHook vakuumske kuke'
+  $rv_fallback_title = $is_red_page ? 'NORIKS RED terapija crvenim svjetlom'
+                     : ( $is_home_page ? 'NORIKS HOME PowerHook vakuumske kuke'
                      : ( $is_seal_page ? 'NORIKS ChefSeal vakuumski aparat'
                      : ( $is_sr_page ? 'NORIKS FlexShirt košulja'
                      : ( $is_bokserice_page ? 'NORIKS bokserice'
@@ -425,10 +427,12 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
-  if ( $is_home_page ) {
+  if ( $is_red_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_red.php';
+  } elseif ( $is_home_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_home.php';
   } elseif ( $is_seal_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_seal.php';
@@ -574,7 +578,7 @@
          za vejami in je npr. KneeFixu stregel predpomnjeni bazen majic. */
       $noriks_key_type = 'all';
       if ( function_exists( 'noriks_is_type' ) ) {
-          foreach ( array( 'home', 'seal', 'sr', 'hug', 'pre', 'kneeheat', 'lift', 'kneefix', 'kidsnest', 'ortopedski-jastuk', 'leakboxers', 'kompresijske-majice', 'norikshers', 'fisiorest', 'bunion', 'ortopas', 'kompresijske-nogavice', 'nosilka', 'controlpro', 'dental', 'hairmagic', 'norikshersbrush', 'noriks-cards', 'cloath', 'bra', 'hyd', 'snore', 'cloud', 'bokserice' ) as $t ) {
+          foreach ( array( 'red', 'home', 'seal', 'sr', 'hug', 'pre', 'kneeheat', 'lift', 'kneefix', 'kidsnest', 'ortopedski-jastuk', 'leakboxers', 'kompresijske-majice', 'norikshers', 'fisiorest', 'bunion', 'ortopas', 'kompresijske-nogavice', 'nosilka', 'controlpro', 'dental', 'hairmagic', 'norikshersbrush', 'noriks-cards', 'cloath', 'bra', 'hyd', 'snore', 'cloud', 'bokserice' ) as $t ) {
               if ( noriks_is_type( $t, $product_id ) ) { $noriks_key_type = $t; break; }
           }
       }
@@ -1350,11 +1354,12 @@ $is_kneeheat      = ( function_exists('noriks_is_type') && noriks_is_type('kneeh
 $is_pre           = ( function_exists('noriks_is_type') && noriks_is_type('pre') );
 $is_hug           = ( function_exists('noriks_is_type') && noriks_is_type('hug') );
 $is_home          = ( function_exists('noriks_is_type') && noriks_is_type('home') );
+$is_red           = ( function_exists('noriks_is_type') && noriks_is_type('red') );
 $is_seal          = ( function_exists('noriks_is_type') && noriks_is_type('seal') );
 $is_sr            = ( function_exists('noriks_is_type') && noriks_is_type('sr') );
 $is_dental        = ( function_exists('noriks_is_type') && noriks_is_type('dental') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
-if ( $is_cloath || $is_bra || $is_hyd || $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic || $is_lift || $is_kneeheat || $is_pre || $is_hug || $is_dental || $is_cloud || $is_snore || $is_seal || $is_sr || $is_home ) { $is_knc = false; } // carry sock cat but are NOT socks
+if ( $is_cloath || $is_bra || $is_hyd || $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic || $is_lift || $is_kneeheat || $is_pre || $is_hug || $is_dental || $is_cloud || $is_snore || $is_seal || $is_sr || $is_home || $is_red ) { $is_knc = false; } // carry sock cat but are NOT socks
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)
@@ -2047,6 +2052,27 @@ $pre_faq = array(
 );
 
 // NORIKS Hugger — FAQ za "Informacije o Proizvodu" (po originalu).
+$red_faq = array(
+  array('questioon' => 'Kako terapija crvenim svjetlom pomaže kod karpalnog tunela?',
+    'answer'    => 'Crveno i infracrveno svjetlo prodire u tkivo i potiče <strong>stvaranje stanične energije (ATP)</strong>, što pomaže smiriti upalu oko srednjeg živca, poboljšati cirkulaciju i podržati prirodni oporavak.'),
+  array('questioon' => 'Koliko treba do prvih rezultata?',
+    'answer'    => 'Većina korisnika osjeti manje noćnih trnaca unutar <strong>1 – 2 tjedna</strong>. Osjetnija promjena u snazi stiska obično dolazi oko četvrtog tjedna. Preporučujemo redovitu svakodnevnu upotrebu barem osam tjedana.'),
+  array('questioon' => 'Je li sigurno koristiti svaki dan?',
+    'answer'    => 'Da. Uređaj je namijenjen <strong>svakodnevnim seansama od 15 minuta</strong>. Svjetlo pri ovim dozama ne zagrijava tkivo. Uređaj se sam isključi na kraju seanse.'),
+  array('questioon' => 'Radi li za obje ruke?',
+    'answer'    => 'Da, omotač odgovara <strong>i lijevoj i desnoj ruci</strong>. Ako su vam obje ruke zahvaćene, odradite dvije uzastopne seanse od 15 minuta ili uzmite paket s dva uređaja.'),
+  array('questioon' => 'Koje veličine šake pokriva?',
+    'answer'    => 'Fleksibilni omotač s podesivom trakom odgovara <strong>većini veličina odrasle šake</strong>, uključujući i veće. Otvor za palac drži uređaj na mjestu tijekom cijele seanse.'),
+  array('questioon' => 'Što se nalazi u pakiranju?',
+    'answer'    => '1× NORIKS RED omotač, <strong>1× USB-C kabel za punjenje</strong> i upute s preporučenim protokolom terapije.'),
+  array('questioon' => 'Koliko traje baterija?',
+    'answer'    => 'Jedno punjenje dovoljno je za <strong>do 4 tretmana</strong>. Uređaj se puni preko USB-C kabela, pa ga možete puniti s punjača mobitela ili prijenosnog računala.'),
+  array('questioon' => 'Zamjenjuje li liječnika?',
+    'answer'    => 'Ne. NORIKS RED je uređaj za kućnu upotrebu i <strong>nije zamjena za liječnički pregled</strong> ni za propisanu terapiju. Kod trajnih ili jakih tegoba javite se liječniku.'),
+  array('questioon' => 'Mogu li ga vratiti?',
+    'answer'    => 'Da, imate <strong>30 dana</strong> za povrat novca ili zamjenu. Dovoljan je e-mail, bez obrazaca.'),
+);
+
 $home_faq = array(
   array('questioon' => 'Na koje površine se mogu postaviti?',
     'answer'    => 'Na sve <strong>glatke i neporozne</strong> površine: staklo, ogledala, sjajne pločice, mramor, akril, glatku plastiku, inox i laminat. Ne prianjaju na hrapave, porozne i teksturirane zidove ni na obojene zidove.'),
@@ -2126,7 +2152,7 @@ $hug_faq = array(
 );
 
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
-$faq_pick = function( $title, $list ) use ( $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_snore && $is_info ) {
     return $snore_faq;
@@ -2166,6 +2192,9 @@ $faq_pick = function( $title, $list ) use ( $is_snore, $snore_faq, $is_cloud, $c
   }
   if ( $is_home && $is_info ) {
     return $home_faq;
+  }
+  if ( $is_red && $is_info ) {
+    return $red_faq;
   }
   if ( $is_sr && $is_info ) {
     return $sr_faq;

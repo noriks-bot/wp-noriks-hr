@@ -174,6 +174,11 @@ if ( noriks_is_type( 'sr' ) ) {
     include $noriks_pb_dir . 'why-sr.php';
 }
 
+// NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
+if ( noriks_is_type( 'red' ) ) {
+    include $noriks_pb_dir . 'why-red.php';
+}
+
 // NORIKS HOME (orto-home) — vakuumske kuke
 if ( noriks_is_type( 'home' ) ) {
     include $noriks_pb_dir . 'why-home.php';
