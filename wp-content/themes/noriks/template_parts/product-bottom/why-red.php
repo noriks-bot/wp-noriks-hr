@@ -2,11 +2,12 @@
 /**
  * product-bottom: NORIKS RedRelief — terapija crvenim svjetlom za zapešće (orto-red).
  * Sekcije prate original (kovaria.com/products/therawrap) u istom redoslijedu:
- *   1) Upoznajte NORIKS RedRelief + statistike
- *   2) Tri jednostavna koraka (tri videa, kao na originalu)
- *   3) Dvije valne duljine / 48 LED dioda (slika lijevo-desno)
- *   4) Za koje tegobe (slika + popis)
- *   5) Što možete očekivati — vremenska crta (Tjedan 1 / 2-3 / 4-6 / 8+)
+ *   1) Pregled i prednosti (tamna traka)
+ *   2) Upoznajte NORIKS RedRelief + statistike
+ *   3) Tri jednostavna koraka (tri videa, kao na originalu)
+ *   4) Dvije valne duljine / 48 LED dioda (slika lijevo-desno)
+ *   5) Za koje tegobe (slika + popis)
+ *   6) Što možete očekivati — vremenska crta (Tjedan 1 / 2-3 / 4-6 / 8+)
  *   6) Zašto odabrati NORIKS RedRelief — usporedba s drugim uređajima
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -26,7 +27,61 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 };
 ?>
 
-<!-- 1) UPOZNAJTE NORIKS RedRelief -->
+<!-- 1) PREGLED I PREDNOSTI (tamna traka) -->
+<section class="nrd-facts">
+  <div class="nrd-wrap">
+    <h2 class="nrd-facts__title">Pregled i prednosti</h2>
+    <div class="nrd-facts__grid">
+
+      <div class="nrd-facts__item">
+        <span class="nrd-facts__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6M5.4 5.4l1.8 1.8M16.8 16.8l1.8 1.8M18.6 5.4l-1.8 1.8M7.2 16.8l-1.8 1.8"/></svg>
+        </span>
+        <div>
+          <div class="nrd-facts__big">48</div>
+          <div class="nrd-facts__lab">dvostrukih LED dioda</div>
+          <div class="nrd-facts__sub">Crvene i infracrvene, po cijeloj traci</div>
+        </div>
+      </div>
+
+      <div class="nrd-facts__item">
+        <span class="nrd-facts__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14c2.6 0 2.6-5 5.2-5s2.6 5 5.2 5 2.6-5 5.2-5S20.2 14 22 14"/></svg>
+        </span>
+        <div>
+          <div class="nrd-facts__big">660<span>+</span>850</div>
+          <div class="nrd-facts__lab">nanometara</div>
+          <div class="nrd-facts__sub">Dvije valne duljine u jednoj seansi</div>
+        </div>
+      </div>
+
+      <div class="nrd-facts__item">
+        <span class="nrd-facts__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg>
+        </span>
+        <div>
+          <div class="nrd-facts__big">15</div>
+          <div class="nrd-facts__lab">minuta dnevno</div>
+          <div class="nrd-facts__sub">Uređaj se sam isključi na kraju</div>
+        </div>
+      </div>
+
+      <div class="nrd-facts__item">
+        <span class="nrd-facts__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.6 5.4 13.4h5.2L11 21.4 18.6 10.6h-5.2z"/></svg>
+        </span>
+        <div>
+          <div class="nrd-facts__big">4</div>
+          <div class="nrd-facts__lab">tretmana po punjenju</div>
+          <div class="nrd-facts__sub">Bežično, punjenje preko USB-C</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 2) UPOZNAJTE NORIKS RedRelief -->
 <section class="nrd-intro">
   <div class="nrd-wrap">
     <div class="nrd-intro__top">
@@ -49,7 +104,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   </div>
 </section>
 
-<!-- 2) TRI JEDNOSTAVNA KORAKA (videi) -->
+<!-- 3) TRI JEDNOSTAVNA KORAKA (videi) -->
 <section class="nrd-steps">
   <div class="nrd-wrap">
     <p class="nrd-kicker nrd-center">Jednostavno koliko može biti</p>
@@ -75,7 +130,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   </div>
 </section>
 
-<!-- 3) DVIJE VALNE DULJINE / 48 LED DIODA -->
+<!-- 4) DVIJE VALNE DULJINE / 48 LED DIODA -->
 <section class="nrd-why">
   <div class="nrd-wrap">
 
@@ -107,7 +162,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   </div>
 </section>
 
-<!-- 4) ZA KOJE TEGOBE -->
+<!-- 5) ZA KOJE TEGOBE -->
 <section class="nrd-pain">
   <div class="nrd-wrap nrd-pain__wrap">
     <div class="nrd-pain__text">
@@ -123,7 +178,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   </div>
 </section>
 
-<!-- 5) ŠTO MOŽETE OČEKIVATI -->
+<!-- 6) ŠTO MOŽETE OČEKIVATI -->
 <section class="nrd-tl">
   <div class="nrd-wrap">
   <h2 class="nrd-h2 nrd-center">Što možete očekivati</h2>
@@ -172,21 +227,23 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 </section>
 
 
-<!-- 6) ZAŠTO ODABRATI NORIKS RedRelief -->
+<!-- 7) ZAŠTO ODABRATI NORIKS RedRelief -->
 <section class="nrd-vs">
   <div class="nrd-wrap nrd-vs__inner">
-    <h2 class="nrd-h2 nrd-center nrd-vs__title-mobile">Zašto odabrati NORIKS RedRelief?</h2>
+
+    <h2 class="nrd-vs__title-mobile">Zašto odabrati NORIKS RedRelief<sup>&reg;</sup>?</h2>
 
     <div class="nrd-vs__cards">
+
       <div class="nrd-vs__card nrd-vs__card--us">
         <div class="nrd-vs__imgwrap"><?php echo $rd_img( 'red-vs.jpg', 'NORIKS RedRelief', 'nrd-vs__img' ); ?></div>
         <div class="nrd-vs__card-title">NORIKS RedRelief</div>
         <div class="nrd-vs__list">
-          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>Dvostruka valna duljina (660 + 850 nm)</div>
+          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>Dvostruka valna duljina</div>
           <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>48 dvostrukih LED dioda</div>
-          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>3 razine snage, 4 načina rada</div>
-          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>Bežično i punjivo (USB-C)</div>
-          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>Oblikovano za šaku i zapešće</div>
+          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>3 razine snage, 4 načina</div>
+          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>Bežično i punjivo</div>
+          <div class="nrd-vs__row"><span class="nrd-vs__ic nrd-vs__ic--yes">&#10003;</span>Oblikovano za šaku</div>
         </div>
       </div>
 
@@ -194,38 +251,41 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
         <div class="nrd-vs__card-title nrd-vs__card-title--dark">Drugi uređaji</div>
         <div class="nrd-vs__list">
           <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Samo jedna valna duljina</div>
-          <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Manje dioda, nejednaka pokrivenost</div>
+          <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Manje dioda i pokrivenosti</div>
           <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Fiksni intenzitet</div>
           <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Ovisni o utičnici</div>
-          <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Univerzalni kroj koji ne prianja</div>
+          <div class="nrd-vs__row nrd-vs__row--dark"><span class="nrd-vs__ic nrd-vs__ic--no">&#10007;</span>Univerzalni kroj</div>
         </div>
       </div>
+
     </div>
 
     <div class="nrd-vs__copy">
-      <h2 class="nrd-h2">Zašto NORIKS RedRelief?</h2>
+      <h2 class="nrd-vs__title">Zašto odabrati NORIKS RedRelief<sup>&reg;</sup>?</h2>
       <div class="nrd-vs__bullets">
         <div class="nrd-vs__bullet"><span class="nrd-vs__bc">&#10003;</span><span>Oblikovan upravo za šaku i zapešće</span></div>
         <div class="nrd-vs__bullet"><span class="nrd-vs__bc">&#10003;</span><span>Dvostruka valna duljina u jednoj seansi</span></div>
         <div class="nrd-vs__bullet"><span class="nrd-vs__bc">&#10003;</span><span>Bežično, bilo gdje, 15 minuta dnevno</span></div>
         <div class="nrd-vs__bullet"><span class="nrd-vs__bc">&#10003;</span><span>Do 4 tretmana po jednom punjenju</span></div>
       </div>
+      <a class="nrd-vs__cta" href="#bundle-selector">Isprobajte bez rizika</a>
       <div class="nrd-vs__guar"><span class="nrd-vs__shield">&#128737;</span> 30 dana povrata novca</div>
     </div>
+
   </div>
 </section>
 
 
 <style>
 /* ===== NORIKS RedRelief — why sekcije (paleta preuzeta s originala) ===== */
-.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{
+.nrd-facts,.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
   color:#231b16; box-sizing:border-box;
 }
-.nrd-intro *,.nrd-why *,.nrd-pain *,.nrd-tl *,.nrd-steps *,.nrd-vs *{ box-sizing:border-box; }
+.nrd-facts *,.nrd-intro *,.nrd-why *,.nrd-pain *,.nrd-tl *,.nrd-steps *,.nrd-vs *{ box-sizing:border-box; }
 .nrd-wrap{ width:100%; max-width:1240px; margin:0 auto; padding:0 24px; }
 /* enak navpicni ritem za vse sekcije */
-.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{ padding:78px 0; }
+.nrd-facts,.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{ padding:78px 0; }
 /* enak videz slik v vseh sekcijah */
 .nrd-intro__img,.nrd-pain__img,.nrd-why__img,.nrd-steps__media,.nrd-vs__imgwrap{
   border-radius:12px; overflow:hidden;
@@ -236,7 +296,20 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 .nrd-center{ text-align:center; }
 .nrd-sub{ text-align:center; font-size:16px; color:#6b625d; max-width:56ch; margin:0 auto 46px; line-height:1.55; }
 
-/* 1) intro */
+/* 1) pregled i prednosti */
+.nrd-facts{ background:#231b16; color:#fff; }
+.nrd-facts__title{ font-size:clamp(24px,3vw,34px); font-weight:800; color:#fff; text-align:center; margin:0 0 44px; letter-spacing:-.01em; }
+.nrd-facts__grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
+.nrd-facts__item{ display:flex; align-items:flex-start; gap:16px; }
+.nrd-facts__ico{ flex:none; width:46px; height:46px; border-radius:50%; border:1px solid #3a2e28; background:#2b211b;
+  display:flex; align-items:center; justify-content:center; color:#e2544f; }
+.nrd-facts__ico svg{ width:22px; height:22px; }
+.nrd-facts__big{ font-size:30px; font-weight:800; line-height:1; color:#fff; letter-spacing:-.02em; }
+.nrd-facts__big span{ font-size:20px; font-weight:700; margin:0 2px; color:#e2544f; }
+.nrd-facts__lab{ font-size:14px; font-weight:700; color:#fff; margin-top:6px; }
+.nrd-facts__sub{ font-size:13px; color:#9a8e86; line-height:1.5; margin-top:4px; }
+
+/* 2) intro */
 .nrd-intro{ background:#f0e9db; }
 .nrd-intro__top{ display:grid; grid-template-columns:1fr 1.08fr; gap:50px; align-items:center; }
 .nrd-intro__img{ aspect-ratio:4/3.4; background:#e8ddd4; }
@@ -304,41 +377,60 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 .nrd-steps__step h4{ font-size:18px; font-weight:800; margin:0 0 6px; }
 .nrd-steps__step p{ font-size:14.5px; color:#6b625d; max-width:34ch; margin:0 auto; line-height:1.5; }
 
-/* 6) usporedba */
+/* 7) usporedba (postavitev kot na originalu) */
 .nrd-vs{ background:#faf7f3; }
-.nrd-vs__inner{ display:grid; grid-template-columns:1.15fr .85fr; gap:50px; align-items:center; }
+.nrd-vs__inner{ display:grid; grid-template-columns:auto 1fr; gap:56px; align-items:center; justify-content:center; }
 .nrd-vs__title-mobile{ display:none; }
-.nrd-vs__cards{ display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; }
-.nrd-vs__card{ border-radius:16px; padding:24px 22px; }
-.nrd-vs__card--us{ background:#231b16; color:#fff; box-shadow:0 18px 44px rgba(28,24,23,.16); }
-.nrd-vs__card--them{ background:#fff; border:1px solid #d4c9bc; margin-top:26px; }
-.nrd-vs__imgwrap{ background:#2e241e; margin-bottom:16px; box-shadow:none; }
-.nrd-vs__img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
-.nrd-vs__card-title{ font-size:18px; font-weight:800; margin-bottom:14px; }
-.nrd-vs__card-title--dark{ color:#231b16; }
-.nrd-vs__list{ display:flex; flex-direction:column; gap:11px; }
-.nrd-vs__row{ display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.45; }
-.nrd-vs__row--dark{ color:#6b625d; }
-.nrd-vs__ic{ flex:none; width:19px; height:19px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; margin-top:1px; }
+.nrd-vs__cards{ display:grid; grid-template-columns:200px 190px; gap:14px; align-items:start; }
+.nrd-vs__card{ border-radius:14px; }
+.nrd-vs__card--us{ position:relative; background:#241C16; color:#fff; padding:52px 18px 20px; box-shadow:0 18px 44px rgba(28,24,23,.18); }
+.nrd-vs__card--them{ background:#fff; border:1px solid #e6ddd3; padding:20px 18px; margin-top:34px; }
+.nrd-vs__imgwrap{ position:absolute; top:-30px; left:50%; transform:translateX(-50%); width:82px; height:82px;
+  border-radius:10px; overflow:hidden; background:#fff; border:5px solid #fff; box-shadow:0 6px 18px rgba(28,24,23,.18); }
+.nrd-vs__img{ width:100%; height:100%; object-fit:cover; display:block; }
+.nrd-vs__card-title{ font-size:15px; font-weight:800; text-align:center; margin:0 0 6px; letter-spacing:-.01em; }
+.nrd-vs__card-title--dark{ color:#241C16; }
+.nrd-vs__list{ display:flex; flex-direction:column; }
+.nrd-vs__row{ display:flex; align-items:center; gap:9px; font-size:12.5px; font-weight:700; line-height:1.35;
+  padding:11px 0; border-bottom:1px solid rgba(255,255,255,.09); }
+.nrd-vs__row:last-child{ border-bottom:0; padding-bottom:2px; }
+.nrd-vs__row--dark{ color:#6b625d; font-weight:700; border-bottom:1px solid #efe7dd; }
+.nrd-vs__ic{ flex:none; width:19px; height:19px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; }
 .nrd-vs__ic--yes{ background:#c3192a; color:#fff; }
-.nrd-vs__ic--no{ background:#e6ddd3; color:#9a8e86; }
-.nrd-vs__bullets{ display:flex; flex-direction:column; gap:12px; margin:0 0 22px; }
-.nrd-vs__bullet{ display:flex; align-items:flex-start; gap:10px; font-size:15px; line-height:1.5; }
-.nrd-vs__bc{ flex:none; width:21px; height:21px; border-radius:50%; background:#c3192a; color:#fff; font-size:12px; display:flex; align-items:center; justify-content:center; margin-top:1px; }
-.nrd-vs__guar{ display:flex; align-items:center; gap:9px; font-size:14px; font-weight:700; color:#6b625d; }
-.nrd-vs__shield{ font-size:16px; }
+.nrd-vs__ic--no{ background:#f1e9df; color:#b4a79a; }
+.nrd-vs__copy{ max-width:440px; }
+.nrd-vs__title{ font-size:clamp(26px,3vw,34px); font-weight:800; letter-spacing:-.01em; margin:0 0 20px; color:#241C16; }
+.nrd-vs__title sup{ font-size:.42em; top:-1.1em; }
+.nrd-vs__bullets{ display:flex; flex-direction:column; gap:13px; margin:0 0 26px; }
+.nrd-vs__bullet{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color:#241C16; line-height:1.45; }
+.nrd-vs__bc{ flex:none; color:#c3192a; font-weight:800; font-size:15px; line-height:1.35; }
+.nrd-vs__cta{ display:block; width:100%; text-align:center; background:#b32d19; color:#fff !important;
+  font-size:15px; font-weight:800; letter-spacing:.01em; padding:16px 20px; border-radius:6px; border:0;
+  text-decoration:none; cursor:pointer; transition:background .18s ease; }
+.nrd-vs__cta:hover{ background:#9c2614; color:#fff !important; }
+.nrd-vs__guar{ display:flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; color:#6b625d; margin-top:12px; }
+.nrd-vs__shield{ font-size:14px; }
 
 
 /* ===== mobilno ===== */
 @media (max-width:880px){
   .nrd-intro__top{ grid-template-columns:1fr; gap:30px; }
   .nrd-pain__wrap{ grid-template-columns:1fr; gap:28px; }
-  .nrd-vs__inner{ grid-template-columns:1fr; gap:32px; }
-  .nrd-vs__title-mobile{ display:block; }
-  .nrd-vs__copy > .nrd-h2{ display:none; }
+  .nrd-vs__inner{ grid-template-columns:1fr; gap:30px; justify-items:center; }
+  .nrd-vs__title-mobile{ display:block; text-align:center; font-size:clamp(24px,6vw,30px); font-weight:800; letter-spacing:-.01em; margin:0 0 4px; }
+  .nrd-vs__title-mobile sup{ font-size:.42em; top:-1.1em; }
+  .nrd-vs__title{ display:none; }
+  .nrd-vs__copy{ max-width:420px; width:100%; }
+}
+@media (max-width:880px){
+  .nrd-facts__grid{ grid-template-columns:repeat(2,1fr); gap:28px 24px; }
 }
 @media (max-width:760px){
-  .nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{ padding:52px 0; }
+  .nrd-facts,.nrd-intro,.nrd-why,.nrd-pain,.nrd-tl,.nrd-steps,.nrd-vs{ padding:52px 0; }
+  .nrd-facts__title{ margin-bottom:32px; }
+  .nrd-facts__grid{ grid-template-columns:1fr; gap:22px; }
+  .nrd-facts__ico{ width:40px; height:40px; }
+  .nrd-facts__big{ font-size:26px; }
   .nrd-stats{ grid-template-columns:repeat(2,1fr); gap:28px 18px; margin-top:40px; padding-top:32px; }
   .nrd-why__row{ grid-template-columns:1fr; gap:24px; }
   .nrd-why__row + .nrd-why__row{ margin-top:44px; }
@@ -351,8 +443,10 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   .nrd-steps__grid{ display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 24px 16px; margin:0 -24px; scrollbar-width:none; }
   .nrd-steps__grid::-webkit-scrollbar{ display:none; }
   .nrd-steps__step{ flex:0 0 80%; scroll-snap-align:center; }
-  .nrd-vs__cards{ grid-template-columns:1fr; }
-  .nrd-vs__card--them{ margin-top:0; }
+  .nrd-vs__cards{ grid-template-columns:1fr 1fr; gap:12px; max-width:420px; }
+  .nrd-vs__card--us{ padding:48px 14px 16px; }
+  .nrd-vs__card--them{ padding:16px 14px; margin-top:28px; }
+  .nrd-vs__row{ font-size:12px; padding:9px 0; }
 }
 
 /* kratek opis izdelka: kljukice namesto pik */
