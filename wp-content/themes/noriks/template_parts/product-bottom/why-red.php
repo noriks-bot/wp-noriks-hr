@@ -365,13 +365,13 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   .nrd-tl__node{ grid-column:1; }
   .nrd-tl__step--right .nrd-tl__content,
   .nrd-tl__step--left  .nrd-tl__content{ grid-column:2; grid-row:1; text-align:left; padding:0 0 0 18px; }
-  .nrd-steps__grid{ display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 24px 16px; margin:0 -24px; scrollbar-width:none; }
-  .nrd-steps__grid::-webkit-scrollbar{ display:none; }
-  .nrd-steps__step{ flex:0 0 80%; scroll-snap-align:center; }
-  .nrd-vs__cards{ grid-template-columns:1fr 1fr; gap:12px; max-width:420px; }
-  .nrd-vs__card--us{ padding:48px 14px 16px; }
-  .nrd-vs__card--them{ padding:16px 14px; margin-top:28px; }
-  .nrd-vs__row{ font-size:12px; padding:9px 0; }
+  .nrd-steps__grid{ grid-template-columns:1fr; gap:32px; }
+  .nrd-vs .nrd-wrap{ padding-left:14px; padding-right:14px; }
+  .nrd-vs__cards{ grid-template-columns:1fr 1fr; gap:10px; width:100%; max-width:none; }
+  .nrd-vs__card--us{ padding:46px 12px 14px; }
+  .nrd-vs__card--them{ padding:14px 12px; margin-top:26px; }
+  .nrd-vs__row{ font-size:12px; padding:9px 0; gap:8px; }
+  .nrd-vs__copy{ max-width:none; }
 }
 
 /* kratek opis izdelka: kljukice namesto pik */
