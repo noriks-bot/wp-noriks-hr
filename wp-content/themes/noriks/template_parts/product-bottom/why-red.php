@@ -311,7 +311,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 
 /* 6) usporedba (postavitev kot na originalu) */
 .nrd-vs{ background:#faf7f3; }
-.nrd-vs__inner{ display:grid; grid-template-columns:auto 1fr; gap:56px; align-items:center; justify-content:center; }
+.nrd-vs__inner{ display:grid; grid-template-columns:auto auto; gap:64px; align-items:center; justify-content:center; }
 .nrd-vs__title-mobile{ display:none; }
 .nrd-vs__cards{ display:grid; grid-template-columns:200px 190px; gap:14px; align-items:start; }
 .nrd-vs__card{ border-radius:14px; }
@@ -330,9 +330,9 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
 .nrd-vs__ic{ flex:none; width:19px; height:19px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; }
 .nrd-vs__ic--yes{ background:#c3192a; color:#fff; }
 .nrd-vs__ic--no{ background:#f1e9df; color:#b4a79a; }
-.nrd-vs__copy{ max-width:440px; }
+.nrd-vs__copy{ width:100%; max-width:440px; }
 .nrd-vs__title{ font-size:clamp(26px,3vw,34px); font-weight:800; letter-spacing:-.01em; margin:0 0 20px; color:#241C16; }
-.nrd-vs__title sup{ font-size:.42em; top:-1.1em; }
+.nrd-vs__title sup{ font-size:.4em; top:-1.05em; margin-left:3px; }
 .nrd-vs__bullets{ display:flex; flex-direction:column; gap:13px; margin:0 0 26px; }
 .nrd-vs__bullet{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color:#241C16; line-height:1.45; }
 .nrd-vs__bc{ flex:none; color:#c3192a; font-weight:800; font-size:15px; line-height:1.35; }
@@ -350,7 +350,7 @@ $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   .nrd-pain__wrap{ grid-template-columns:1fr; gap:28px; }
   .nrd-vs__inner{ grid-template-columns:1fr; gap:30px; justify-items:center; }
   .nrd-vs__title-mobile{ display:block; text-align:center; font-size:clamp(24px,6vw,30px); font-weight:800; letter-spacing:-.01em; margin:0 0 4px; }
-  .nrd-vs__title-mobile sup{ font-size:.42em; top:-1.1em; }
+  .nrd-vs__title-mobile sup{ font-size:.4em; top:-1.05em; margin-left:3px; }
   .nrd-vs__title{ display:none; }
   .nrd-vs__copy{ max-width:420px; width:100%; }
 }
