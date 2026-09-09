@@ -30,8 +30,8 @@ $fis_experts = array(
 $fis_ugc = array(
     array( 'img' => $fis_i.'fis-uporaba-1.jpg', 'cap' => '„Prvi put u dugo vremena napokon sam bez bolova…"' ),
     array( 'img' => $fis_i.'fis-uporaba-2.jpg', 'cap' => '„NORIKS jastuk je moja nova svakodnevna nužnost…"' ),
-    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Jako mi pomaže u ublažavanju napetosti u vratu i ramenima."' ),
-    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Ako ste tek postali mama, ovo bi moglo biti baš ono što trebate…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Ako ste tek postali mama, ovo bi moglo biti baš ono što trebate…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Jako mi pomaže u ublažavanju napetosti u vratu i ramenima."' ),
 );
 // 5) ThermoTrac 3-u-1
 $fis_thermo = array(
