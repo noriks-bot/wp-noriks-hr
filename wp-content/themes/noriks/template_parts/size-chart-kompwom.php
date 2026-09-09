@@ -22,10 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
   <div class="kwsc-body">
     <p class="kwsc-lead">Veličinu birajte prema <strong>opsegu grudi</strong> — on određuje kako majica sjeda na prsa i ramena. Ako ste između dvije veličine, uzmite <strong>veću</strong>.</p>
 
-    <div class="kwsc-units" role="group" aria-label="Mjerne jedinice">
-      <button type="button" class="kwsc-unit is-active" data-unit="cm">cm</button>
-      <button type="button" class="kwsc-unit" data-unit="in">inči</button>
-    </div>
 
     <div class="kwsc-scroll">
       <table class="kwsc-table">
@@ -34,23 +30,23 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
         </thead>
         <tbody>
           <tr><th scope="row">S <span class="kwsc-us">US 0–4</span></th>
-              <td><span class="kwsc-cm">78 – 83 cm</span><span class="kwsc-in">31 – 33 in</span></td>
-              <td><span class="kwsc-cm">65 – 71 cm</span><span class="kwsc-in">26 – 28 in</span></td></tr>
+              <td>78 – 83 cm</td>
+              <td>65 – 71 cm</td></tr>
           <tr><th scope="row">M <span class="kwsc-us">US 6–8</span></th>
-              <td><span class="kwsc-cm">83 – 89 cm</span><span class="kwsc-in">33 – 35 in</span></td>
-              <td><span class="kwsc-cm">71 – 77 cm</span><span class="kwsc-in">28 – 30 in</span></td></tr>
+              <td>83 – 89 cm</td>
+              <td>71 – 77 cm</td></tr>
           <tr><th scope="row">L <span class="kwsc-us">US 10–12</span></th>
-              <td><span class="kwsc-cm">89 – 95 cm</span><span class="kwsc-in">35 – 37 in</span></td>
-              <td><span class="kwsc-cm">77 – 83 cm</span><span class="kwsc-in">30 – 33 in</span></td></tr>
+              <td>89 – 95 cm</td>
+              <td>77 – 83 cm</td></tr>
           <tr><th scope="row">XL <span class="kwsc-us">US 14</span></th>
-              <td><span class="kwsc-cm">95 – 102 cm</span><span class="kwsc-in">37 – 40 in</span></td>
-              <td><span class="kwsc-cm">83 – 88 cm</span><span class="kwsc-in">33 – 35 in</span></td></tr>
+              <td>95 – 102 cm</td>
+              <td>83 – 88 cm</td></tr>
           <tr><th scope="row">2XL <span class="kwsc-us">US 16–18</span></th>
-              <td><span class="kwsc-cm">102 – 108 cm</span><span class="kwsc-in">40 – 43 in</span></td>
-              <td><span class="kwsc-cm">88 – 94 cm</span><span class="kwsc-in">35 – 37 in</span></td></tr>
+              <td>102 – 108 cm</td>
+              <td>88 – 94 cm</td></tr>
           <tr><th scope="row">3XL <span class="kwsc-us">US 20</span></th>
-              <td><span class="kwsc-cm">108 – 115 cm</span><span class="kwsc-in">43 – 45 in</span></td>
-              <td><span class="kwsc-cm">94 – 100 cm</span><span class="kwsc-in">37 – 39 in</span></td></tr>
+              <td>108 – 115 cm</td>
+              <td>94 – 100 cm</td></tr>
         </tbody>
       </table>
     </div>
@@ -85,9 +81,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 #close-size-chart-x:hover { color: #241c22; }
 .kwsc-body { padding: 20px 22px 26px; overflow-y: auto; flex: 1 1 auto; }
 .kwsc-lead { font-size: 14.5px; line-height: 1.6; color: #6b5f66; margin: 0 0 16px; }
-.kwsc-units { display: inline-flex; border: 1px solid #e5d7dc; border-radius: 100px; padding: 3px; margin: 0 0 14px; background: #fbf3f4; }
-.kwsc-unit { border: 0; background: transparent; border-radius: 100px; padding: 7px 18px; font: inherit; font-size: 13.5px; font-weight: 700; color: #8b7b83; cursor: pointer; }
-.kwsc-unit.is-active { background: #a8536b; color: #fff; }
 .kwsc-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .kwsc-table { width: 100%; border-collapse: collapse; font-size: 15px; }
 .kwsc-table th[scope="col"] { background: #a8536b; color: #fff; font-weight: 700; text-align: left; padding: 12px 14px; white-space: nowrap; }
@@ -98,10 +91,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .kwsc-table tbody tr { border-bottom: 1px solid #f0e6ea; }
 .kwsc-table tbody tr:nth-child(odd) { background: #fbf7f8; }
 .kwsc-us { display: block; font-size: 11.5px; font-weight: 600; color: #a08d95; letter-spacing: .02em; }
-.kwsc-in { display: none; }
-#custom-size-chart-modal.kwsc.is-in .kwsc-cm { display: none; }
-#custom-size-chart-modal.kwsc.is-in .kwsc-in { display: inline; }
-.kwsc-how { margin-top: 22px; border-top: 1px solid #f0e6ea; padding-top: 18px; }
 .kwsc-how h3 { font-size: 16px; font-weight: 800; margin: 0 0 10px; }
 .kwsc-how ol { margin: 0; padding-left: 20px; }
 .kwsc-how li { font-size: 14.5px; line-height: 1.6; color: #56494f; margin-bottom: 7px; }
@@ -130,12 +119,5 @@ document.addEventListener("DOMContentLoaded", function () {
   modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
 
-  modal.querySelectorAll(".kwsc-unit").forEach(function (b) {
-    b.addEventListener("click", function () {
-      modal.querySelectorAll(".kwsc-unit").forEach(function (x) { x.classList.remove("is-active"); });
-      b.classList.add("is-active");
-      modal.classList.toggle("is-in", b.dataset.unit === "in");
-    });
-  });
 });
 </script>

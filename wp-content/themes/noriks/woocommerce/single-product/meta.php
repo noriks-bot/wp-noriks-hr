@@ -711,6 +711,42 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:12px 0 0;line-height:1.6;"><strong>Između dvije veličine?</strong> Uzmite veću za opušteniji kroj, manju za pripijeniji.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'kompwom', $current_product_id ) ): ?>
+
+          <div class="kwm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>opsegu grudi</strong> — on određuje kako majica sjeda na prsa i ramena. Ako ste između dvije veličine, uzmite <strong>veću</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a8536b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg grudi</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg struka</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $kwm_sizes = array(
+                  array( 'S',   'US 0–4',   '78 – 83 cm',  '65 – 71 cm' ),
+                  array( 'M',   'US 6–8',   '83 – 89 cm',  '71 – 77 cm' ),
+                  array( 'L',   'US 10–12', '89 – 95 cm',  '77 – 83 cm' ),
+                  array( 'XL',  'US 14',     '95 – 102 cm', '83 – 88 cm' ),
+                  array( '2XL', 'US 16–18', '102 – 108 cm','88 – 94 cm' ),
+                  array( '3XL', 'US 20',     '108 – 115 cm','94 – 100 cm' ),
+                );
+                foreach ( $kwm_sizes as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbf7f8' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?>
+                      <span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;"><?php echo esc_html( $r[1] ); ?></span></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> grudi preko najšireg dijela, struk na najužem mjestu. Mjerite preko donjeg rublja, traka pripijena ali ne stegnuta.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
 
           <div class="bra-size">

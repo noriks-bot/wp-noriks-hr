@@ -24,6 +24,7 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 <!-- 1) PROBLEM — slika lijevo -->
 <section class="npl-sec npl-tint">
   <div class="npl-wrap npl-row2">
+    <div class="npl-media"><?php echo $pl_img( 'pal-rucke.jpg', 'Ortopedske ručke za oslonac' ); ?></div>
     <div class="npl-copy">
       <p class="npl-kicker">Druga ručka</p>
       <h2 class="npl-h2">Oslonac točno ondje gdje vam treba</h2>
@@ -36,13 +37,25 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
       </ul>
       <a class="npl-cta" href="#bundle-selector">Pogledaj ponudu</a>
     </div>
-    <div class="npl-media"><?php echo $pl_img( 'pal-rucke.jpg', 'Ortopedske ručke za oslonac' ); ?></div>
   </div>
 </section>
 
 <!-- 3) PREGLED ŠTAPA — slika lijevo -->
 <section class="npl-sec">
   <div class="npl-wrap npl-row2 npl-row2--rev">
+    <div class="npl-copy">
+      <p class="npl-kicker">Stabilnost</p>
+      <h2 class="npl-h2">Stoji sam — nema saginjanja za štapom</h2>
+      <p>Četiri gumene nožice drže štap uspravno kad ga pustite. Ne pada na pod uz kauč, uz stol ni u čekaonici, pa se ne morate saginjati da biste ga podigli.</p>
+      <p>To je sitnica koju primijetite već prvi dan: štap vas čeka ondje gdje ste ga ostavili.</p>
+    </div>
+    <div class="npl-media"><?php echo $pl_vid( 'pal-video.mp4', 'pal-video.jpg', 'Štap stoji sam na četiri nožice' ); ?></div>
+  </div>
+</section>
+
+<!-- 5) PROTUKLIZNA BAZA — slika lijevo -->
+<section class="npl-sec npl-tint">
+  <div class="npl-wrap npl-row2">
     <div class="npl-media"><?php echo $pl_img( 'pal-pregled.jpg', 'Pregled štapa: dvije ručke, svjetiljka, alarm, četiri nožice' ); ?></div>
     <div class="npl-copy">
       <p class="npl-kicker">Što dobivate</p>
@@ -59,22 +72,8 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 </section>
 
 <!-- 4) STOJI SAM (video) — video desno -->
-<section class="npl-sec npl-tint">
-  <div class="npl-wrap npl-row2">
-    <div class="npl-copy">
-      <p class="npl-kicker">Stabilnost</p>
-      <h2 class="npl-h2">Stoji sam — nema saginjanja za štapom</h2>
-      <p>Četiri gumene nožice drže štap uspravno kad ga pustite. Ne pada na pod uz kauč, uz stol ni u čekaonici, pa se ne morate saginjati da biste ga podigli.</p>
-      <p>To je sitnica koju primijetite već prvi dan: štap vas čeka ondje gdje ste ga ostavili.</p>
-    </div>
-    <div class="npl-media"><?php echo $pl_vid( 'pal-video.mp4', 'pal-video.jpg', 'Štap stoji sam na četiri nožice' ); ?></div>
-  </div>
-</section>
-
-<!-- 5) PROTUKLIZNA BAZA — slika lijevo -->
 <section class="npl-sec">
   <div class="npl-wrap npl-row2 npl-row2--rev">
-    <div class="npl-media"><?php echo $pl_img( 'pal-nozice.jpg', 'Četiri protuklizne gumene nožice' ); ?></div>
     <div class="npl-copy">
       <p class="npl-kicker">Baza</p>
       <h2 class="npl-h2">Drži na pločicama, parketu i vani</h2>
@@ -85,12 +84,14 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
         <li>Nožice se mogu zamijeniti kad se istroše</li>
       </ul>
     </div>
+    <div class="npl-media"><?php echo $pl_img( 'pal-nozice.jpg', 'Četiri protuklizne gumene nožice' ); ?></div>
   </div>
 </section>
 
 <!-- 6) SVJETILJKA — slika desno -->
 <section class="npl-sec npl-tint">
   <div class="npl-wrap npl-row2">
+    <div class="npl-media"><?php echo $pl_img( 'pal-sklopivo.jpg', 'Sklopiv i podesiv štap' ); ?></div>
     <div class="npl-copy">
       <p class="npl-kicker">Prijenosnost</p>
       <h2 class="npl-h2">Sklopi se u sekundi i stane u torbu</h2>
@@ -102,28 +103,10 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
         <li>Dijelovi ostaju povezani — ništa se ne gubi</li>
       </ul>
     </div>
-    <div class="npl-media"><?php echo $pl_img( 'pal-sklopivo.jpg', 'Sklopiv i podesiv štap' ); ?></div>
   </div>
 </section>
 
 <section class="npl-sec">
-  <div class="npl-wrap npl-row2 npl-row2--rev">
-    <div class="npl-media"><?php echo $pl_img( 'pal-detalji.jpg', 'Detalji izrade: ručka, spoj, baza' ); ?></div>
-    <div class="npl-copy">
-      <p class="npl-kicker">Izrada</p>
-      <h2 class="npl-h2">Lagan za nošenje, čvrst pod opterećenjem</h2>
-      <p>Konstrukcija je od aluminijske legure — dovoljno lagana da je nosite jednom rukom, a dovoljno čvrsta da se na nju oslonite cijelom težinom pri ustajanju.</p>
-      <ul class="npl-check">
-        <li>Aluminijska konstrukcija, mekane ručke</li>
-        <li>Spojevi bez zazora — štap ne škripi</li>
-        <li>Nosivost predviđena za oslanjanje pri ustajanju</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 12) KOD NAŠIH KUPACA — galerija -->
-<section class="npl-sec npl-tint">
   <div class="npl-wrap">
     <p class="npl-kicker npl-center">Kod naših kupaca</p>
     <h2 class="npl-h2 npl-center">Štap u stvarnim domovima</h2>
@@ -143,9 +126,8 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 </section>
 
 <!-- 13) PRIJE I POSLIJE — slika lijevo -->
-<section class="npl-sec">
+<section class="npl-sec npl-tint">
   <div class="npl-wrap npl-row2 npl-row2--rev">
-    <div class="npl-media"><?php echo $pl_img( 'pal-prije-poslije.jpg', 'Prije i poslije — samostalno kretanje' ); ?></div>
     <div class="npl-copy">
       <p class="npl-kicker">Razlika</p>
       <h2 class="npl-h2">Od „trebam pomoć" do „idem sam"</h2>
@@ -153,6 +135,7 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
       <p class="npl-strong">Samostalno ustajanje, pa i šetnja parkom.</p>
       <a class="npl-cta" href="#bundle-selector">Naruči bez rizika — 30 dana</a>
     </div>
+    <div class="npl-media"><?php echo $pl_img( 'pal-prije-poslije.jpg', 'Prije i poslije — samostalno kretanje' ); ?></div>
   </div>
 </section>
 

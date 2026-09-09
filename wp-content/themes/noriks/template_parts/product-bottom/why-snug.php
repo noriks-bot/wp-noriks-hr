@@ -32,10 +32,10 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
     <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
     <div class="nsg-gallery">
       <figure class="nsg-gallery__lead"><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug — nijanse u krevetu' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-boje-2.jpg', 'NORIKS Snug — zelena i siva' ); ?></figure>
+      <figure><?php echo $sg_vid( 'sng-gal-1.mp4', 'sng-gal-1.jpg', 'Jastuk omotan oko nogu tijekom spavanja' ); ?></figure>
+      <figure><?php echo $sg_vid( 'sng-gal-2.mp4', 'sng-gal-2.jpg', 'Kako se NORIKS Snug koristi' ); ?></figure>
+      <figure><?php echo $sg_vid( 'sng-gal-3.mp4', 'sng-gal-3.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
+      <figure><?php echo $sg_vid( 'sng-gal-4.mp4', 'sng-gal-4.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
     </div>
   </div>
 </section>
