@@ -2,13 +2,17 @@
 /**
  * product-bottom: NORIKS Snug — jastuk za cijelo tijelo u S-obliku (orto-snug).
  * Sekcije prate original (pilloway.com.au) u istom redoslijedu:
- *   1) Kako izgleda u krevetu (video + galerija)
- *   2) Zašto se nikad ne probudite odmorni (slika + 01/02/03, kao na originalu)
- *   3) Kako vam pomaže da bolje spavate
- *   4) Tri ključne potpore + dimenzije
- *   5) Preporučuju stručnjaci (2 kiropraktora)
- *   6) Punjenje koje zadržava oblik + rashladna navlaka + boje
- *   7) Što možete očekivati (vremenska crta)
+ * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno.
+ *   1) Kako izgleda u krevetu (galerija: video + 5 fotografija)
+ *   2) Problem — anatomija (slika lijevo)
+ *   3) Kako radi — usporedba (slika desno)
+ *   4) Tri kljucne potpore (slika lijevo)
+ *   5) Dimenzije (slika desno)
+ *   6) Preporucuju strucnjaci (postavitev z originala)
+ *   7) Punjenje (slika lijevo)
+ *   8) Rashladna navlaka (slika desno)
+ *   9) Boje (slika lijevo)
+ *  10) Sto mozete ocekivati
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -26,24 +30,26 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 };
 ?>
 
-<!-- 1) KAKO IZGLEDA U KREVETU -->
+<!-- 1) KAKO IZGLEDA U KREVETU (galerija) -->
 <section class="nsg-sec nsg-tint">
   <div class="nsg-wrap">
     <p class="nsg-kicker nsg-center">U stvarnom krevetu</p>
     <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
     <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
     <div class="nsg-gallery">
-      <figure class="nsg-gallery__big"><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></figure>
+      <figure><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug u krevetu — nijanse' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug — nijanse u krevetu' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-boje-2.jpg', 'NORIKS Snug — zelena i siva' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
     </div>
   </div>
 </section>
 
-<!-- 2) ZAŠTO SE NIKAD NE PROBUDITE ODMORNI -->
+<!-- 2) PROBLEM — slika lijevo -->
 <section class="nsg-sec">
-  <div class="nsg-wrap nsg-row2 nsg-row2--tight">
+  <div class="nsg-wrap nsg-row2">
     <div class="nsg-media"><?php echo $sg_img( 'sng-anatomija.jpg', 'Točke pritiska pri spavanju na boku' ); ?></div>
     <div class="nsg-copy">
       <p class="nsg-kicker">Problem</p>
@@ -75,13 +81,9 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   </div>
 </section>
 
-<!-- 3) KAKO POMAŽE -->
+<!-- 3) KAKO RADI — slika desno -->
 <section class="nsg-sec nsg-tint">
-  <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media nsg-media--stack">
-      <?php echo $sg_img( 'sng-usporedba.jpg', 'NORIKS Snug u usporedbi s običnim jastukom' ); ?>
-      <?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?>
-    </div>
+  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
     <div class="nsg-copy">
       <p class="nsg-kicker">Kako radi</p>
       <h2 class="nsg-h2">S-oblik drži tri točke istovremeno</h2>
@@ -94,29 +96,52 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
       </ul>
       <a class="nsg-cta" href="#bundle-selector">Odaberi svoju boju</a>
     </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-usporedba.jpg', 'NORIKS Snug u usporedbi s običnim jastukom' ); ?></div>
   </div>
 </section>
 
-<!-- 4) TRI KLJUČNE POTPORE -->
+<!-- 4) TRI KLJUČNE POTPORE — slika lijevo -->
 <section class="nsg-sec">
-  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
+  <div class="nsg-wrap nsg-row2">
+    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
     <div class="nsg-copy">
       <p class="nsg-kicker">Tri točke potpore</p>
       <h2 class="nsg-h2">Jedan jastuk umjesto tri</h2>
       <p>Većina ljudi slaže dva ili tri obična jastuka da bi dobila potporu koju Snug daje sam — i onda ih cijelu noć premješta.</p>
       <p>Snug drži sve tri točke odjednom, pa se ne morate buditi da biste ga namjestili.</p>
+      <ul class="nsg-check">
+        <li>Potpora za ruke — sprječava utrnulost tijekom noći</li>
+        <li>Poravnanje kukova — kralježnica ostaje neutralna</li>
+        <li>Jastučenje koljena — skida pritisak s donjeg dijela leđa</li>
+      </ul>
     </div>
-    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
   </div>
 </section>
 
-<!-- 5) PREPORUČUJU STRUČNJACI (postavitev z originala) -->
+<!-- 5) DIMENZIJE — slika desno -->
+<section class="nsg-sec nsg-tint">
+  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
+    <div class="nsg-copy">
+      <p class="nsg-kicker">Prava veličina</p>
+      <h2 class="nsg-h2">105 × 30 cm — dovoljno, a ne previše</h2>
+      <p>Podupire vas od ramena do koljena, ali ne zauzima cijeli krevet i ne smeta partneru.</p>
+      <p>Ta duljina je razlog zašto ga je lako držati i lako se okrenuti s njim — bez premještanja i bez buđenja.</p>
+      <ul class="nsg-check">
+        <li>Duljina 105 cm, širina 30 cm</li>
+        <li>Odgovara svim visinama</li>
+        <li>Lagan za premještanje jednom rukom</li>
+      </ul>
+    </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?></div>
+  </div>
+</section>
+
+<!-- 6) PREPORUČUJU STRUČNJACI (postavitev z originala) -->
 <section class="nsg-sec nsg-trust">
   <div class="nsg-trust__head">
     <p class="nsg-trust__eyebrow">Povjerenje struke</p>
     <h2 class="nsg-trust__title">Preporučuju <em>kiropraktičari.</em></h2>
   </div>
-
   <div class="nsg-wrap">
     <div class="nsg-docs">
       <article class="nsg-doc">
@@ -132,7 +157,6 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
           </div>
         </div>
       </article>
-
       <article class="nsg-doc">
         <div class="nsg-doc__img"><?php echo $sg_img( 'sng-doc-2.jpg', 'Kiropraktičar s NORIKS Snug jastukom' ); ?></div>
         <div class="nsg-doc__body">
@@ -151,33 +175,56 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   </div>
 </section>
 
-<!-- 6) PUNJENJE I NAVLAKA -->
-<section class="nsg-sec">
+<!-- 7) PUNJENJE — slika lijevo -->
+<section class="nsg-sec nsg-tint">
   <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media nsg-media--stack">
-      <?php echo $sg_img( 'sng-punjenje.jpg', 'Punjenje koje zadržava oblik' ); ?>
-      <?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?>
-    </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-punjenje.jpg', 'Punjenje koje zadržava oblik' ); ?></div>
     <div class="nsg-copy">
       <p class="nsg-kicker">Izrada</p>
       <h2 class="nsg-h2">Punjenje koje se ne sliježe</h2>
       <p>Tisuće finih, elastičnih vlakana vraćaju se u oblik pod pritiskom. Mekano i za grljenje izvana, čvrsto i potporno iznutra.</p>
+      <p>Potpora koju osjetite prve noći ista je i nakon devedeset noći.</p>
       <ul class="nsg-check">
         <li>Zadržava oblik i nakon mjeseci upotrebe</li>
-        <li>Rashladna navlaka koja propušta zrak</li>
-        <li>Navlaka se skida i pere u stroju na 40 °C</li>
+        <li>Ne sliježe se i ne gubi volumen</li>
       </ul>
     </div>
   </div>
-  <div class="nsg-wrap nsg-boje">
-    <figure><?php echo $sg_img( 'sng-navlaka.jpg', 'Rashladna navlaka u šest nijansi' ); ?></figure>
-    <figure><?php echo $sg_img( 'sng-boje.jpg', 'Odaberite boju — šest dostupnih' ); ?></figure>
-    <figure><?php echo $sg_img( 'sng-boje-2.jpg', 'NORIKS Snug — zelena i siva' ); ?></figure>
+</section>
+
+<!-- 8) RASHLADNA NAVLAKA — slika desno -->
+<section class="nsg-sec">
+  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
+    <div class="nsg-copy">
+      <p class="nsg-kicker">Navlaka</p>
+      <h2 class="nsg-h2">Rashladna navlaka koja diše</h2>
+      <p>Tkanina propušta zrak cijelu noć, pa se ispod jastuka ne skuplja toplina — važno ako se budite prevrući ili imate valunge.</p>
+      <p>Navlaka se skida i pere u perilici na 40 °C. Nakon pranja je kao nova i ne skuplja se.</p>
+      <ul class="nsg-check">
+        <li>Prozračna tkanina, nježna prema koži</li>
+        <li>Skida se i pere u stroju na 40 °C</li>
+      </ul>
+    </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-navlaka.jpg', 'Rashladna navlaka u šest nijansi' ); ?></div>
   </div>
 </section>
 
-<!-- 7) ŠTO MOŽETE OČEKIVATI -->
+<!-- 9) BOJE — slika lijevo -->
 <section class="nsg-sec nsg-tint">
+  <div class="nsg-wrap nsg-row2">
+    <div class="nsg-media"><?php echo $sg_img( 'sng-boje.jpg', 'Šest dostupnih boja' ); ?></div>
+    <div class="nsg-copy">
+      <p class="nsg-kicker">Odaberite boju</p>
+      <h2 class="nsg-h2">Šest boja za svaku spavaću sobu</h2>
+      <p>Plava, roza, siva, zelena, ljubičasta i tamnoplava — boju birate na ovoj stranici, prije dodavanja u košaricu.</p>
+      <p>Sve nijanse imaju istu rashladnu tkaninu i isto punjenje; razlikuje se samo boja navlake.</p>
+      <a class="nsg-cta" href="#bundle-selector">Odaberi svoju boju</a>
+    </div>
+  </div>
+</section>
+
+<!-- 10) ŠTO MOŽETE OČEKIVATI -->
+<section class="nsg-sec">
   <div class="nsg-wrap">
     <h2 class="nsg-h2 nsg-center">Što možete očekivati</h2>
     <p class="nsg-sub">Prve noći tijelo uči novi položaj. Evo kako to obično izgleda.</p>
@@ -258,7 +305,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 .nsg-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
 .nsg-gallery figure { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 4px rgba(31,42,55,.05), 0 14px 40px rgba(31,42,55,.09); }
 .nsg-gallery img, .nsg-video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; aspect-ratio: 3/4; }
-.nsg-boje { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+.nsg-boje { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
 .nsg-media--stack { display: grid; gap: 16px; }
 .nsg-boje figure { margin: 0; border-radius: 14px; overflow: hidden; }
 .nsg-boje img { width: 100%; display: block; }
