@@ -194,9 +194,9 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
   line-height: 1.45 !important; display: flex !important; align-items: flex-start; gap: 10px; font-size: 15.5px; }
 .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
 .woocommerce-product-details__short-description ul li::before { content: none !important; }
-.woocommerce-product-details__short-description .nkw-tick {
+.woocommerce-product-details__short-description .nsg-tick {
   flex: 0 0 21px !important; width: 21px; height: 21px; border-radius: 50%;
-  background: #a8536b !important; color: #fff !important;
+  background: #2f9e5f !important; color: #fff !important;
   font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
   text-align: center !important; display: inline-block !important; margin-top: 1px; }
 .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
