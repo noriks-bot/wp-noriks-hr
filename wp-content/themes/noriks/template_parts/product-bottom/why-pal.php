@@ -166,4 +166,21 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
   .npl-six { grid-template-columns: 1fr; gap: 14px; }
   .npl-cta { width: 100%; text-align: center; }
 }
+
+/* ── kratek opis izdelka: kljukice namesto pik ─────────────────────── */
+.woocommerce div.product .woocommerce-product-details__short-description ul,
+.woocommerce-product-details__short-description ul {
+  list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
+.woocommerce div.product .woocommerce-product-details__short-description ul li,
+.woocommerce-product-details__short-description ul li {
+  list-style: none !important; padding-left: 0 !important; text-indent: 0 !important; margin: 0 0 7px !important;
+  line-height: 1.45 !important; display: flex !important; align-items: flex-start; gap: 10px; font-size: 15.5px; }
+.woocommerce-product-details__short-description ul li::marker { content: "" !important; }
+.woocommerce-product-details__short-description ul li::before { content: none !important; }
+.woocommerce-product-details__short-description .npl-tick {
+  flex: 0 0 21px !important; width: 21px; height: 21px; border-radius: 50%;
+  background: #2b8fa6 !important; color: #fff !important;
+  font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
+  text-align: center !important; display: inline-block !important; margin-top: 1px; }
+.woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
 </style>

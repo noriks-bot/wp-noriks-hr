@@ -743,6 +743,8 @@ function gck_render_bundle_selector() {
       .swatch-circle { width: 27px; height: 27px; border-radius: 50%; }
 
       .color-black { background: #000; } .color-crna { background: #000; }
+      .color-ljubicasta { background: #8f6fb0; } .color-ljubicasto { background: #8f6fb0; }
+      .color-tamnosiva { background: #4a4a4f; }
       .color-blue  { background: #203240; } .color-modra { background: #203240; } .color-plava { background: #203240; }
       .color-green  { background: #294d3b; } .color-zelena { background: #294d3b; }
       .color-gray { background: #706d78; } .color-siva { background: #706d78; }
@@ -1059,6 +1061,66 @@ function gck_render_bundle_selector() {
          Inline margin-top: 25px na drugoj kartici radio je veci razmak 1-2 nego 2-3. */
       #bundle-selector label.bundle-option { margin-top: 0 !important; margin-bottom: 14px !important; }
       #bundle-selector label.bundle-option:last-of-type { margin-bottom: 0 !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php
+    // Snug / FIT Woman / Pal: cistija kartica ponude — bez "Ukupno:", bez cijene po
+    // komadu kod jednog komada, i okrugli swatchevi u pravim nijansama.
+    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal' ), 'product_cat', $product_id ) ) :
+    ?>
+    <style>
+      /* rijec "Ukupno:" ne treba — cijena govori sama za sebe */
+      #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+      #bundle-selector .bundle-option .bundle-total-line { display: flex !important; align-items: baseline; justify-content: flex-end; gap: 8px; }
+      #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { order: 1; font-size: 14px; color: #9aa3ad; margin: 0 !important; }
+      #bundle-selector .bundle-option .bundle-total-line .line-total { order: 2; font-size: 19px; font-weight: 800; color: #141414; }
+      /* kod jednog komada je cijena po komadu ista kao ukupna — suvisna je */
+      #bundle-selector label.bundle-option:first-of-type .gck-per-chip { display: none !important; }
+      #bundle-selector .bundle-option br { display: none !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php
+    // NORIKS Snug: jedini izbor je BOJA, prikazana kao krugovi u stvarnim nijansama jastuka.
+    if ( has_term( array( 'orto-snug' ), 'product_cat', $product_id ) ) :
+    ?>
+    <style>
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; width: fit-content !important; }
+      #bundle-selector .color-swatches .swatch { width: 46px !important; height: 46px !important; border-radius: 50% !important;
+          border: 2px solid #dfe3e8 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #ff6d2e !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 34px !important; height: 34px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+      /* stvarne nijanse jastuka — globalne boje su za bokserice, ovdje su drukcije */
+      #bundle-selector .swatch-circle.color-plava      { background: #b7c4e6 !important; }
+      #bundle-selector .swatch-circle.color-roza       { background: #e6a8b8 !important; }
+      #bundle-selector .swatch-circle.color-siva       { background: #c9c2ba !important; }
+      #bundle-selector .swatch-circle.color-zelena     { background: #b3bf9a !important; }
+      #bundle-selector .swatch-circle.color-ljubicasta { background: #b48fc4 !important; }
+      #bundle-selector .swatch-circle.color-tamnoplava { background: #2b3a63 !important; }
+      @media (max-width: 560px) {
+        #bundle-selector .color-swatches { gap: 8px; width: 100% !important; }
+        #bundle-selector .color-swatches .swatch { width: 42px !important; height: 42px !important; }
+        #bundle-selector .color-swatches .swatch-circle { width: 30px !important; height: 30px !important; }
+      }
+    </style>
+    <?php endif; ?>
+
+    <?php
+    // NORIKS FIT Woman: boja + velicina, swatchevi u nijansama majice.
+    if ( has_term( array( 'orto-kompwom' ), 'product_cat', $product_id ) ) :
+    ?>
+    <style>
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
+          border: 2px solid #e7dde1 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #a8536b !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); }
+      #bundle-selector .swatch-circle.color-crna      { background: #17161a !important; }
+      #bundle-selector .swatch-circle.color-tamnosiva { background: #4a4a4f !important; }
+      #bundle-selector .swatch-circle.color-roza      { background: #e28ba4 !important; }
     </style>
     <?php endif; ?>
 
