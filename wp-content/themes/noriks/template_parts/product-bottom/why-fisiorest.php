@@ -18,7 +18,7 @@ $fis_science = array(
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
 $fis_i = get_template_directory_uri() . '/img/fisiorest/';
-$fis_hero_video = $fis_v . 'hero.mp4';
+$fis_hero_video = $fis_v . 'hero-v2.mp4';
 
 // 3) Preporučuju stručnjaci
 $fis_experts = array(
@@ -151,7 +151,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Dizajnirano od inženjera. Izrađeno prema PT standardima</h2>
       <p>Uložili smo više od 50.000 € i 2 godine razvoja kako bismo osigurali da NORIKS nije samo maser za vrat. To je sveobuhvatan uređaj za terapiju vrata koji zaista liječi uzrok. Svaka narudžba prolazi detaljnu kontrolu kvalitete kako bi stigla u savršenom stanju.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
