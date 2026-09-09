@@ -1121,6 +1121,25 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-crna      { background: #17161a !important; }
       #bundle-selector .swatch-circle.color-tamnosiva { background: #4a4a4f !important; }
       #bundle-selector .swatch-circle.color-roza      { background: #e28ba4 !important; }
+
+      /* Cijeli izbornik ponuda u roza/bordo paleti stranice (#a8536b / #5c2331 / #fbf3f4).
+         Gumb "Dodaj u kosaricu" ostaje nepromijenjen. */
+      #bundle-selector .bundle-option {
+          border: 2px solid #e7dde1 !important; background: #fdfafb !important;
+          box-shadow: 0 1px 2px rgba(36,28,34,.10), 0 2px 6px 2px rgba(36,28,34,.06) !important; }
+      #bundle-selector .bundle-option.active { border-color: #a8536b !important; background: #fbf3f4 !important; }
+      #bundle-selector .bundle-option-title { color: #241c22 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #a8536b !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #a8536b !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #a8536b !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #5c2331 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #efe2e6 !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #a8536b !important; }
+      #bundle-selector .bundle-total-line .gck-regular-price { color: #a08d95 !important; }
+      #bundle-selector .gck-offer-sub { color: #7b6d73 !important; }
+      #bundle-selector .bundle-pair select,
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #a8536b !important; color: #241c22 !important; }
+      .gck-size-link { color: #a8536b !important; }
     </style>
     <?php endif; ?>
 
@@ -2277,7 +2296,8 @@ function gck_render_bundle_selector() {
     <script>
     (function(){
       var ORANGE = '#ff6d2e';
-      var BORDER = '#111111';   /* okvir izbornika: crn */
+      /* Okvir izbornika: crn, osim na NORIKS FIT Woman gdje prati roza paletu stranice. */
+      var BORDER = <?php echo has_term( array( 'orto-kompwom' ), 'product_cat', $product_id ) ? "'#a8536b'" : "'#111111'"; ?>;
       function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
 
       /* Jedan prilagodeni dropdown. items = [{value, label, color|null, pick()}] */

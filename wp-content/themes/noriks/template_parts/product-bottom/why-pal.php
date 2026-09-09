@@ -106,26 +106,44 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
   </div>
 </section>
 
-<section class="npl-sec">
+<section class="npl-sec npl-rev">
   <div class="npl-wrap">
     <p class="npl-kicker npl-center">Kod naših kupaca</p>
     <h2 class="npl-h2 npl-center">Štap u stvarnim domovima</h2>
-    <p class="npl-sub">Fotografije kupaca — uz fotelju, u hodniku, u mraku i sklopljen za put.</p>
-    <div class="npl-ugc">
-      <figure><?php echo $pl_img( 'pal-ugc-1.jpg', 'Štap uz fotelju' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-3.jpg', 'Štap u dnevnom boravku' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-noc.jpg', 'Svjetiljka u mraku' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-baza.jpg', 'Protuklizna baza izbliza' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-sklop.jpg', 'Štap sklopljen' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-6.jpg', 'Štap uz zid' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-2.jpg', 'Štap u hodniku' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-4.jpg', 'Štap uz kauč' ); ?></figure>
-      <figure><?php echo $pl_img( 'pal-ugc-5.jpg', 'Svjetiljka na ručki' ); ?></figure>
+    <p class="npl-sub">Fotografije i komentari kupaca — uz fotelju, u hodniku, u mraku i sklopljen za put.</p>
+    <div class="npl-rev__grid">
+      <?php
+      $pl_reviews = array(
+        array( 'img' => 'pal-ugc-1.jpg',    'name' => 'Marija K.',  'meta' => 'Zagreb · kupila prije 2 mjeseca',
+               'text' => '„Držim ga uz fotelju. Prije sam se dizala u tri pokušaja, sada se primim za donju ručku i ustanem iz prve."' ),
+        array( 'img' => 'pal-ugc-3.jpg',    'name' => 'Zdravko P.', 'meta' => 'Osijek · kupio prije 3 mjeseca',
+               'text' => '„Stoji sam pokraj stola i ne pada. To mi je najveća stvar — više se ne saginjem za štapom svakih pet minuta."' ),
+        array( 'img' => 'pal-noc.jpg',      'name' => 'Ankica M.',  'meta' => 'Split · kupila prije mjesec dana',
+               'text' => '„Svjetiljku palim kad idem noću do kupaonice. Ne budim muža paljenjem svjetla, a vidim pod pred sobom."' ),
+        array( 'img' => 'pal-ugc-baza.jpg', 'name' => 'Ivan Š.',    'meta' => 'Rijeka · kupio prije 6 tjedana',
+               'text' => '„Baza je široka i ne kliže. Isprobao sam na pločicama u kupaonici i na mokrom terasi — drži."' ),
+        array( 'img' => 'pal-ugc-6.jpg',    'name' => 'Nada B.',    'meta' => 'Varaždin · kupila prije 2 mjeseca',
+               'text' => '„Kupila sam ga majci za 78. rođendan. Sama ga podešava po visini i sama ga sklapa, bez ičije pomoći."' ),
+        array( 'img' => 'pal-ugc-5.jpg',    'name' => 'Stjepan L.', 'meta' => 'Karlovac · kupio prije 4 mjeseca',
+               'text' => '„Nosim ga u autu kad idem doktoru. Sklopi se u sekundi i stane u torbu, ne smeta u čekaonici."' ),
+      );
+      foreach ( $pl_reviews as $r ) : ?>
+      <article class="npl-rev__card">
+        <div class="npl-rev__img"><?php echo $pl_img( $r['img'], 'Fotografija kupca — NORIKS Pal' ); ?></div>
+        <div class="npl-rev__body">
+          <div class="npl-rev__stars" aria-label="Ocjena 5 od 5">★★★★★</div>
+          <p class="npl-rev__text"><?php echo esc_html( $r['text'] ); ?></p>
+          <p class="npl-rev__name"><?php echo esc_html( $r['name'] ); ?>
+            <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#2f9e5f"/><path d="M5 8l2 2 4-4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </p>
+          <p class="npl-rev__meta"><?php echo esc_html( $r['meta'] ); ?></p>
+        </div>
+      </article>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<!-- 13) PRIJE I POSLIJE — slika lijevo -->
 <section class="npl-sec npl-tint">
   <div class="npl-wrap npl-row2 npl-row2--rev">
     <div class="npl-copy">
@@ -165,18 +183,26 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 .npl-reason p { font-size: 14px; color: #465863; line-height: 1.55; margin: 0; }
 .npl-cta { display: inline-block; background: #12212b; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .npl-cta:hover { background: #2b8fa6; color: #fff !important; }
+.npl-rev__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.npl-rev__card { background: #fff; border: 1px solid #d9e8ec; border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(18,33,43,.04), 0 8px 24px rgba(18,33,43,.06); }
+.npl-rev__img img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 0; box-shadow: none; }
+.npl-rev__body { padding: 16px 18px 18px; }
+.npl-rev__stars { color: #f0a020; font-size: 14px; letter-spacing: 1px; margin: 0 0 8px; }
+.npl-rev__text { font-size: 14.5px; line-height: 1.6; color: #46545e; margin: 0 0 12px; }
+.npl-rev__name { display: flex; align-items: center; gap: 6px; font-size: 14.5px; font-weight: 800; color: #12212b; margin: 0; }
+.npl-rev__name svg { flex: 0 0 15px; }
+.npl-rev__meta { font-size: 12.5px; color: #7b8b94; margin: 3px 0 0; }
 .npl-sub { text-align: center; font-size: 16px; color: #5b6d78; max-width: 60ch; margin: 0 auto 34px; line-height: 1.6; }
 .npl-video { width: 100%; display: block; border-radius: 14px; }
-.npl-ugc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.npl-ugc figure { margin: 0; border-radius: 12px; overflow: hidden; background: #eef6f8; }
-.npl-ugc img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
 @media (max-width: 980px) {
-  .npl-ugc { grid-template-columns: 1fr 1fr; }
-  .npl-row2 { grid-template-columns: 1fr; gap: 30px; }
+  .npl-rev__grid { grid-template-columns: 1fr 1fr; }
+    .npl-row2 { grid-template-columns: 1fr; gap: 30px; }
   .npl-row2--rev .npl-media { order: -1; }
   .npl-six { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
+  .npl-rev__grid { grid-template-columns: 1fr; gap: 16px; }
   .npl-sec { padding: 44px 0; }
   .npl-wrap { padding: 0 16px; }
   .npl-six { grid-template-columns: 1fr; gap: 14px; }
