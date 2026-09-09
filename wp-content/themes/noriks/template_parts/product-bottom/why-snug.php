@@ -31,6 +31,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
     <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
     <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
     <div class="nsg-gallery">
+      <figure class="nsg-gallery__lead"><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug — nijanse u krevetu' ); ?></figure>
@@ -235,6 +236,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 .nsg-pain__copy p { font-size: 15px; line-height: 1.6; color: #5c6b7a; margin: 0; }
 .nsg-h2 em { font-style: normal; color: #5b7fa6; }
 .nsg-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+.nsg-gallery__lead { grid-column: span 2; grid-row: span 2; }
 .nsg-gallery figure { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 4px rgba(31,42,55,.05), 0 14px 40px rgba(31,42,55,.09); }
 .nsg-gallery img, .nsg-video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; aspect-ratio: 3/4; }
 .nsg-boje { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
@@ -245,6 +247,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   .nsg-docs { grid-template-columns: 1fr; gap: 18px; max-width: 520px; }
   .nsg-boje { grid-template-columns: 1fr 1fr; }
   .nsg-gallery { grid-template-columns: 1fr 1fr; }
+  .nsg-gallery__lead { grid-column: span 2; grid-row: span 2; }
   .nsg-gallery img, .nsg-video { aspect-ratio: 4/3; }
   .nsg-row2 { grid-template-columns: 1fr; gap: 30px; }
   .nsg-row2--rev .nsg-media { order: -1; }
