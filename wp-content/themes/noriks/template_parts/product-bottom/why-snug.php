@@ -31,10 +31,10 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
     <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
     <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
     <div class="nsg-gallery">
-      <figure><?php echo $sg_img( 'sng-anatomija.jpg', 'Ramena, kukovi i koljena s potporom' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug — nijanse u krevetu' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-boje-2.jpg', 'NORIKS Snug — zelena i siva' ); ?></figure>
     </div>
   </div>
 </section>
@@ -93,42 +93,6 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 </section>
 
 <!-- 4) TRI KLJUČNE POTPORE — slika lijevo -->
-<section class="nsg-sec">
-  <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
-    <div class="nsg-copy">
-      <p class="nsg-kicker">Tri točke potpore</p>
-      <h2 class="nsg-h2">Jedan jastuk umjesto tri</h2>
-      <p>Većina ljudi slaže dva ili tri obična jastuka da bi dobila potporu koju Snug daje sam — i onda ih cijelu noć premješta.</p>
-      <p>Snug drži sve tri točke odjednom, pa se ne morate buditi da biste ga namjestili.</p>
-      <ul class="nsg-check">
-        <li>Potpora za ruke — sprječava utrnulost tijekom noći</li>
-        <li>Poravnanje kukova — kralježnica ostaje neutralna</li>
-        <li>Jastučenje koljena — skida pritisak s donjeg dijela leđa</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 5) DIMENZIJE — slika desno -->
-<section class="nsg-sec nsg-tint">
-  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
-    <div class="nsg-copy">
-      <p class="nsg-kicker">Prava veličina</p>
-      <h2 class="nsg-h2">105 × 30 cm — dovoljno, a ne previše</h2>
-      <p>Podupire vas od ramena do koljena, ali ne zauzima cijeli krevet i ne smeta partneru.</p>
-      <p>Ta duljina je razlog zašto ga je lako držati i lako se okrenuti s njim — bez premještanja i bez buđenja.</p>
-      <ul class="nsg-check">
-        <li>Duljina 105 cm, širina 30 cm</li>
-        <li>Odgovara svim visinama</li>
-        <li>Lagan za premještanje jednom rukom</li>
-      </ul>
-    </div>
-    <div class="nsg-media"><?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?></div>
-  </div>
-</section>
-
-<!-- 6) PREPORUČUJU STRUČNJACI (postavitev z originala) -->
 <section class="nsg-sec nsg-trust">
   <div class="nsg-trust__head">
     <p class="nsg-trust__eyebrow">Povjerenje struke</p>
@@ -168,23 +132,42 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 </section>
 
 <!-- 7) PUNJENJE — slika lijevo -->
-<section class="nsg-sec nsg-tint">
+<section class="nsg-sec">
   <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media"><?php echo $sg_img( 'sng-punjenje.jpg', 'Punjenje koje zadržava oblik' ); ?></div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
     <div class="nsg-copy">
-      <p class="nsg-kicker">Izrada</p>
-      <h2 class="nsg-h2">Punjenje koje se ne sliježe</h2>
-      <p>Tisuće finih, elastičnih vlakana vraćaju se u oblik pod pritiskom. Mekano i za grljenje izvana, čvrsto i potporno iznutra.</p>
-      <p>Potpora koju osjetite prve noći ista je i nakon devedeset noći.</p>
+      <p class="nsg-kicker">Tri točke potpore</p>
+      <h2 class="nsg-h2">Jedan jastuk umjesto tri</h2>
+      <p>Većina ljudi slaže dva ili tri obična jastuka da bi dobila potporu koju Snug daje sam — i onda ih cijelu noć premješta.</p>
+      <p>Snug drži sve tri točke odjednom, pa se ne morate buditi da biste ga namjestili.</p>
       <ul class="nsg-check">
-        <li>Zadržava oblik i nakon mjeseci upotrebe</li>
-        <li>Ne sliježe se i ne gubi volumen</li>
+        <li>Potpora za ruke — sprječava utrnulost tijekom noći</li>
+        <li>Poravnanje kukova — kralježnica ostaje neutralna</li>
+        <li>Jastučenje koljena — skida pritisak s donjeg dijela leđa</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- 8) RASHLADNA NAVLAKA — slika desno -->
+<!-- 5) DIMENZIJE — slika desno -->
+<section class="nsg-sec nsg-tint">
+  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
+    <div class="nsg-copy">
+      <p class="nsg-kicker">Prava veličina</p>
+      <h2 class="nsg-h2">105 × 30 cm — dovoljno, a ne previše</h2>
+      <p>Podupire vas od ramena do koljena, ali ne zauzima cijeli krevet i ne smeta partneru.</p>
+      <p>Ta duljina je razlog zašto ga je lako držati i lako se okrenuti s njim — bez premještanja i bez buđenja.</p>
+      <ul class="nsg-check">
+        <li>Duljina 105 cm, širina 30 cm</li>
+        <li>Odgovara svim visinama</li>
+        <li>Lagan za premještanje jednom rukom</li>
+      </ul>
+    </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?></div>
+  </div>
+</section>
+
+<!-- 6) PREPORUČUJU STRUČNJACI (postavitev z originala) -->
 <section class="nsg-sec">
   <div class="nsg-wrap nsg-row2">
     <div class="nsg-media"><?php echo $sg_img( 'sng-boje.jpg', 'Šest dostupnih boja' ); ?></div>
