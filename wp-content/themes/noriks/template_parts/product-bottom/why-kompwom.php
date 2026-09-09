@@ -20,7 +20,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 ?>
 
 <!-- 1) ZAGLAĐEN TRBUH -->
-<section class="nkw-sec">
+<section class="nkw-sec nkw-tint">
   <div class="nkw-wrap nkw-row2">
     <div class="nkw-media"><?php echo $kw_img( 'kwm-trbuh.jpg', 'Zaglađen trbuh s NORIKS FIT Woman majicom' ); ?></div>
     <div class="nkw-copy">
@@ -39,7 +39,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 </section>
 
 <!-- 2) MI VS DRUGI -->
-<section class="nkw-sec nkw-tint">
+<section class="nkw-sec">
   <div class="nkw-wrap nkw-row2 nkw-row2--rev">
     <div class="nkw-copy">
       <p class="nkw-kicker">Razlika</p>
@@ -60,7 +60,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 </section>
 
 <!-- 3) OSJEĆAJTE SE SIGURNO -->
-<section class="nkw-sec">
+<section class="nkw-sec nkw-tint">
   <div class="nkw-wrap nkw-row2">
     <div class="nkw-media"><?php echo $kw_img( 'kwm-drzanje.jpg', 'Suženiji struk i uspravno držanje' ); ?></div>
     <div class="nkw-copy">
@@ -85,7 +85,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 </section>
 
 <!-- 4) TKANINA I KROJ -->
-<section class="nkw-sec nkw-tint">
+<section class="nkw-sec">
   <div class="nkw-wrap">
     <p class="nkw-kicker nkw-center">Tkanina i kroj</p>
     <h2 class="nkw-h2 nkw-center">Reljef je upleten, ne tiskan</h2>
@@ -101,7 +101,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 </section>
 
 <!-- 5) KAKO JE NOSITI -->
-<section class="nkw-sec">
+<section class="nkw-sec nkw-tint">
   <div class="nkw-wrap">
     <p class="nkw-kicker nkw-center">Kako je nositi</p>
     <h2 class="nkw-h2 nkw-center">Obucite ujutro i zaboravite je do večeri</h2>
