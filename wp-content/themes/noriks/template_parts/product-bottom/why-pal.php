@@ -216,10 +216,12 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 .woocommerce div.product .woocommerce-product-details__short-description ul li,
 .woocommerce-product-details__short-description ul li {
   list-style: none !important; padding-left: 0 !important; text-indent: 0 !important; margin: 0 0 7px !important;
-  line-height: 1.45 !important; display: flex !important; align-items: flex-start; gap: 10px; font-size: 15.5px; }
+  line-height: 1.45 !important; font-size: 15.5px !important;
+  display: block !important; position: relative !important; padding-left: 31px !important; }
 .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
 .woocommerce-product-details__short-description ul li::before { content: none !important; }
 .woocommerce-product-details__short-description .nsg-tick {
+  position: absolute !important; left: 0 !important; top: 1px !important;
   flex: 0 0 21px !important; width: 21px; height: 21px; border-radius: 50%;
   background: #2f9e5f !important; color: #fff !important;
   font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
