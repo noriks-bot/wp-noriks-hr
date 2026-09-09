@@ -23,8 +23,8 @@ $fis_hero_video = $fis_v . 'hero.mp4';
 // 3) Preporučuju stručnjaci
 $fis_experts = array(
     array( 'img' => $fis_i.'fis-strucnjak-1.jpg', 'name' => 'Marina Jurić',     'role' => 'Certificirana masažna terapeutkinja', 'org' => '' ),
-    array( 'img' => $fis_i.'fis-strucnjak-2.jpg', 'name' => 'Dr. Ana Kovačević','role' => 'Doktorica fizikalne terapije',        'org' => '' ),
-    array( 'img' => $fis_i.'fis-strucnjak-3.jpg', 'name' => 'Dr. Ivan Horvat',  'role' => 'Doktor kiropraktike',                 'org' => '' ),
+    array( 'img' => $fis_i.'fis-strucnjak-2.jpg', 'name' => 'Ana Kovačević',    'role' => 'Fizioterapeutkinja',                  'org' => '' ),
+    array( 'img' => $fis_i.'fis-strucnjak-3.jpg', 'name' => 'Iva Horvat',       'role' => 'Kiropraktičarka',                     'org' => '' ),
 );
 // 4) Iskustva korisnika
 $fis_ugc = array(
