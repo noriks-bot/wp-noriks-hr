@@ -132,9 +132,8 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 </section>
 
 <!-- 7) PUNJENJE — slika lijevo -->
-<section class="nsg-sec">
-  <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
+<section class="nsg-sec nsg-tint">
+  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
     <div class="nsg-copy">
       <p class="nsg-kicker">Tri točke potpore</p>
       <h2 class="nsg-h2">Jedan jastuk umjesto tri</h2>
@@ -146,12 +145,14 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
         <li>Jastučenje koljena — skida pritisak s donjeg dijela leđa</li>
       </ul>
     </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
   </div>
 </section>
 
 <!-- 5) DIMENZIJE — slika desno -->
-<section class="nsg-sec nsg-tint">
-  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
+<section class="nsg-sec">
+  <div class="nsg-wrap nsg-row2">
+    <div class="nsg-media"><?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?></div>
     <div class="nsg-copy">
       <p class="nsg-kicker">Prava veličina</p>
       <h2 class="nsg-h2">105 × 30 cm — dovoljno, a ne previše</h2>
@@ -163,14 +164,12 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
         <li>Lagan za premještanje jednom rukom</li>
       </ul>
     </div>
-    <div class="nsg-media"><?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?></div>
   </div>
 </section>
 
 <!-- 6) PREPORUČUJU STRUČNJACI (postavitev z originala) -->
-<section class="nsg-sec">
-  <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media"><?php echo $sg_img( 'sng-boje.jpg', 'Šest dostupnih boja' ); ?></div>
+<section class="nsg-sec nsg-tint">
+  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
     <div class="nsg-copy">
       <p class="nsg-kicker">Odaberite boju</p>
       <h2 class="nsg-h2">Šest boja za svaku spavaću sobu</h2>
@@ -178,6 +177,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
       <p>Sve nijanse imaju istu rashladnu tkaninu i isto punjenje; razlikuje se samo boja navlake.</p>
       <a class="nsg-cta" href="#bundle-selector">Odaberi svoju boju</a>
     </div>
+    <div class="nsg-media"><?php echo $sg_img( 'sng-boje.jpg', 'Šest dostupnih boja' ); ?></div>
   </div>
 </section>
 
@@ -205,8 +205,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 .nsg-cta { display: inline-block; background: #1f2a37; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .nsg-cta:hover { background: #33445a; color: #fff !important; }
 .nsg-cta--center { display: block; width: fit-content; margin: 40px auto 0; }
-.nsg-trust { padding: 0 0 62px; background: #fff; }
-.nsg-trust__head { background: #dce8f0; padding: 34px 22px 30px; text-align: center; border-top: 1px solid #5b7fa6; margin-bottom: 34px; }
+.nsg-trust__head { padding: 0 22px; text-align: center; margin-bottom: 34px; }
 .nsg-trust__eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #5b7fa6; margin: 0 0 8px; }
 .nsg-trust__title { font-size: clamp(22px, 3vw, 30px); line-height: 1.15; font-weight: 800; color: #12202c; margin: 0; }
 .nsg-trust__title em { font-style: italic; font-weight: 800; color: #5b7fa6; }
