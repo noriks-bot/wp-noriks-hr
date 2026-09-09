@@ -1131,8 +1131,11 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option-title { color: #241c22 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a8536b !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a8536b !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #a8536b !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #5c2331 !important; }
+      /* Cijena po komadu i znacka popusta ostaju u izvornim bojama. */
+      #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
+      /* U cipu se prikazuje samo konacna cijena po komadu, bez precrtane. */
+      #bundle-selector .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
       #bundle-selector .bundle-pairs { border-top-color: #efe2e6 !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a8536b !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #a08d95 !important; }
