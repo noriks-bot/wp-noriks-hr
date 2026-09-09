@@ -28,10 +28,10 @@ $fis_experts = array(
 );
 // 4) Iskustva korisnika
 $fis_ugc = array(
-    array( 'vid' => $fis_v.'v09c.mp4', 'cap' => '„Prvi put u dugo vremena napokon sam bez bolova…"' ),
-    array( 'vid' => $fis_v.'v06.mp4', 'cap' => '„NORIKS jastuk je moja nova svakodnevna nužnost…"' ),
-    array( 'vid' => $fis_v.'v11c.mp4', 'cap' => '„Jako mi pomaže u ublažavanju napetosti u vratu i ramenima."' ),
-    array( 'vid' => $fis_v.'v02c.mp4', 'cap' => '„Ako ste tek postali mama, ovo bi moglo biti baš ono što trebate…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-1.jpg', 'cap' => '„Prvi put u dugo vremena napokon sam bez bolova…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-2.jpg', 'cap' => '„NORIKS jastuk je moja nova svakodnevna nužnost…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Jako mi pomaže u ublažavanju napetosti u vratu i ramenima."' ),
+    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Ako ste tek postali mama, ovo bi moglo biti baš ono što trebate…"' ),
 );
 // 5) ThermoTrac 3-u-1
 $fis_thermo = array(
@@ -104,7 +104,7 @@ $fis_upgrades = array(
     <div class="fis-ugc-grid">
       <?php foreach ( $fis_ugc as $u ) : ?>
         <div class="fis-ugc-card">
-          <div class="fis-ugc-media"><video src="<?php echo esc_url( $u['vid'] ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+          <div class="fis-ugc-media"><img src="<?php echo esc_url( $u['img'] ); ?>" alt="<?php echo esc_attr( $u['cap'] ); ?>" loading="lazy"></div>
           <p class="fis-ugc-cap"><?php echo esc_html( $u['cap'] ); ?></p>
         </div>
       <?php endforeach; ?>
@@ -199,7 +199,8 @@ $fis_upgrades = array(
   .fis-ugc { background: #223047; padding: 40px 0; }
   .fis-ugc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
   .fis-ugc-media { border-radius: 12px; overflow: hidden; aspect-ratio: 3/4; background: #000; }
-  .fis-ugc-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fis-ugc-media video,
+  .fis-ugc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .fis-ugc-cap { color: #eee; font-size: 14px; line-height: 1.5; margin: 10px 0 0; }
 
   /* 5) ThermoTrac */
