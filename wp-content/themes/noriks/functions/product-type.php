@@ -70,6 +70,12 @@ function noriks_product_type_map() : array {
         'home'                    => array( 'orto-home', 'home' ),
         // NORIKS RED — omotac za zapesce s terapijom crvenim svjetlom (bez atributa).
         'red'                     => array( 'orto-red', 'red' ),
+        // NORIKS Snug — jastuk za cijelo tijelo u S-obliku (samo boja).
+        'snug'                    => array( 'orto-snug', 'snug' ),
+        // NORIKS FIT Woman — oblikujuca majica (boja + velicina).
+        'kompwom'                 => array( 'orto-kompwom', 'kompwom' ),
+        // NORIKS Pal — stap za hodanje (bez atributa).
+        'pal'                     => array( 'orto-pal', 'pal' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).

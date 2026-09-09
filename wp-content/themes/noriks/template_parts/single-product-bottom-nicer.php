@@ -174,6 +174,21 @@ if ( noriks_is_type( 'sr' ) ) {
     include $noriks_pb_dir . 'why-sr.php';
 }
 
+// NORIKS Snug (orto-snug) — jastuk za cijelo tijelo
+if ( noriks_is_type( 'snug' ) ) {
+    include $noriks_pb_dir . 'why-snug.php';
+}
+
+// NORIKS FIT Woman (orto-kompwom) — oblikujuca majica
+if ( noriks_is_type( 'kompwom' ) ) {
+    include $noriks_pb_dir . 'why-kompwom.php';
+}
+
+// NORIKS Pal (orto-pal) — stap za hodanje
+if ( noriks_is_type( 'pal' ) ) {
+    include $noriks_pb_dir . 'why-pal.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';
