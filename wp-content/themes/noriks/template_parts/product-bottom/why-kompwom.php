@@ -97,6 +97,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
       <div class="nkw-tile"><h3>Materijal</h3><p>Tanak, mat i prozračan — nestane ispod košulje ili sakoa.</p></div>
     </div>
     <div class="nkw-media nkw-media--wide"><?php echo $kw_img( 'kwm-detalji.jpg', 'Detalji: 3D linije, pojas, rukavi, materijal' ); ?></div>
+    <div class="nkw-media nkw-media--wide"><?php echo $kw_img( 'kwm-200k.jpg', 'Preko 200.000 zadovoljnih kupaca' ); ?></div>
   </div>
 </section>
 

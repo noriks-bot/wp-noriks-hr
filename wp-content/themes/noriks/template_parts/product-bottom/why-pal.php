@@ -13,6 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 $pl      = get_template_directory_uri() . '/img/pal/';
 $pl_path = get_template_directory() . '/img/pal/';
+$pl_vid  = function( $file, $poster, $alt ) use ( $pl, $pl_path ) {
+  if ( ! file_exists( $pl_path . $file ) ) { return ''; }
+  return '<video class="npl-video" autoplay muted loop playsinline preload="metadata" poster="'
+       . esc_url( $pl . $poster ) . '" aria-label="' . esc_attr( $alt ) . '">'
+       . '<source src="' . esc_url( $pl . $file ) . '" type="video/mp4"></video>';
+};
 $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
   if ( ! file_exists( $pl_path . $file ) ) { return ''; }
   return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $pl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
@@ -30,7 +36,10 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
       <p class="npl-strong">Postoji bolji način.</p>
       <a class="npl-cta" href="#bundle-selector">Pogledaj ponudu</a>
     </div>
-    <div class="npl-media"><?php echo $pl_img( 'pal-ustajanje.jpg', 'Ustajanje uz NORIKS Pal štap' ); ?></div>
+    <div class="npl-media npl-media--stack">
+      <?php echo $pl_img( 'pal-ustajanje.jpg', 'Ustajanje uz NORIKS Pal štap' ); ?>
+      <?php echo $pl_img( 'pal-pregled.jpg', 'Pregled štapa: druga ručka, stoji sam, čvrsta baza' ); ?>
+    </div>
   </div>
 </section>
 
@@ -55,7 +64,10 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 <!-- 3) STOJI SAM -->
 <section class="npl-sec">
   <div class="npl-wrap npl-row2">
-    <div class="npl-media"><?php echo $pl_img( 'pal-nozice.jpg', 'Četiri gumene nožice — štap stoji sam' ); ?></div>
+    <div class="npl-media npl-media--stack">
+      <?php echo $pl_vid( 'pal-video.mp4', 'pal-video.jpg', 'Štap stoji sam na četiri nožice' ); ?>
+      <?php echo $pl_img( 'pal-nozice.jpg', 'Četiri gumene nožice' ); ?>
+    </div>
     <div class="npl-copy">
       <p class="npl-kicker">Stabilnost</p>
       <h2 class="npl-h2">Stoji sam — nema saginjanja za štapom</h2>
@@ -103,7 +115,12 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
         <li>Lagan za nošenje, čvrst pod opterećenjem</li>
       </ul>
     </div>
-    <div class="npl-media"><?php echo $pl_img( 'pal-sklopivo.jpg', 'Sklopiva izvedba' ); ?></div>
+    <div class="npl-media npl-media--pair">
+      <?php echo $pl_img( 'pal-sklopivo.jpg', 'Sklopiva izvedba' ); ?>
+      <?php echo $pl_img( 'pal-sklapanje.jpg', 'Sklapanje štapa u nekoliko sekundi' ); ?>
+      <?php echo $pl_img( 'pal-duljina.jpg', 'Podesiva duljina za sve visine' ); ?>
+      <?php echo $pl_img( 'pal-detalji.jpg', 'Detalji: ručka, baza, stoji sam' ); ?>
+    </div>
   </div>
 </section>
 
@@ -119,8 +136,38 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
       <div class="npl-reason"><span>5</span><h3>Sklopiv i prijenosan</h3><p>Stane u torbu i u pretinac u autu.</p></div>
       <div class="npl-reason"><span>6</span><h3>Više samostalnosti</h3><p>Ustajanje i šetnja bez čekanja na tuđu pomoć.</p></div>
     </div>
-    <div class="npl-media npl-media--wide"><?php echo $pl_img( 'pal-prije-poslije.jpg', 'Prije i poslije — samostalno kretanje' ); ?></div>
+    <div class="npl-media npl-media--wide"><?php echo $pl_img( 'pal-razlozi.jpg', 'Šest razloga za NORIKS Pal' ); ?></div>
     <a class="npl-cta npl-cta--center" href="#bundle-selector">Naruči bez rizika — 30 dana</a>
+  </div>
+</section>
+
+<!-- 7) KOD NAŠIH KUPACA -->
+<section class="npl-sec">
+  <div class="npl-wrap">
+    <p class="npl-kicker npl-center">Kod naših kupaca</p>
+    <h2 class="npl-h2 npl-center">Štap u stvarnim domovima</h2>
+    <p class="npl-sub">Fotografije kupaca — uz fotelju, u hodniku, u mraku i sklopljen za put.</p>
+    <div class="npl-ugc">
+      <figure><?php echo $pl_img( 'pal-ugc-1.jpg', 'Štap uz fotelju' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-3.jpg', 'Štap u dnevnom boravku' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-noc.jpg', 'Svjetiljka u mraku' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-baza.jpg', 'Protuklizna baza izbliza' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-sklop.jpg', 'Štap sklopljen' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-6.jpg', 'Štap uz zid' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-2.jpg', 'Štap u hodniku' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-4.jpg', 'Štap uz kauč' ); ?></figure>
+      <figure><?php echo $pl_img( 'pal-ugc-5.jpg', 'Svjetiljka na ručki' ); ?></figure>
+    </div>
+
+    <div class="npl-ba">
+      <div class="npl-ba__img"><?php echo $pl_img( 'pal-prije-poslije.jpg', 'Prije i poslije — samostalno kretanje' ); ?></div>
+      <div class="npl-ba__txt">
+        <h3>Od „trebam pomoć" do „idem sam"</h3>
+        <p>Razlika nije u snazi nogu, nego u tome što imate za što se primiti. Druga ručka nosi težinu umjesto vaših ramena i zapešća.</p>
+        <p class="npl-strong">Samostalno ustajanje, pa i šetnja parkom.</p>
+        <div class="npl-guar"><?php echo $pl_img( 'pal-garancija.jpg', '30 dana jamstva na povrat novca' ); ?></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -154,7 +201,24 @@ $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
 .npl-cta { display: inline-block; background: #12212b; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .npl-cta:hover { background: #2b8fa6; color: #fff !important; }
 .npl-cta--center { display: block; width: fit-content; margin: 38px auto 0; }
+.npl-sub { text-align: center; font-size: 16px; color: #5b6d78; max-width: 60ch; margin: 0 auto 34px; line-height: 1.6; }
+.npl-video { width: 100%; display: block; border-radius: 14px; }
+.npl-media--pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.npl-media--stack { display: grid; gap: 16px; }
+.npl-guar { max-width: 190px; margin-top: 16px; }
+.npl-guar img { width: 100%; display: block; border-radius: 10px; }
+.npl-ugc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.npl-ugc figure { margin: 0; border-radius: 12px; overflow: hidden; background: #eef6f8; }
+.npl-ugc img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+.npl-ba { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; margin-top: 44px;
+  background: #eef6f8; border-radius: 16px; padding: 28px; }
+.npl-ba__img img { width: 100%; display: block; border-radius: 12px; }
+.npl-ba__txt h3 { font-size: 22px; font-weight: 800; margin: 0 0 12px; }
+.npl-ba__txt p { font-size: 15.5px; line-height: 1.65; color: #465863; margin: 0 0 12px; }
 @media (max-width: 980px) {
+  .npl-ugc { grid-template-columns: 1fr 1fr; }
+  .npl-ba { grid-template-columns: 1fr; gap: 22px; padding: 20px; }
+  .npl-media--pair { grid-template-columns: 1fr 1fr; }
   .npl-row2 { grid-template-columns: 1fr; gap: 30px; }
   .npl-row2--rev .npl-media { order: -1; }
   .npl-two { grid-template-columns: 1fr; gap: 18px; }

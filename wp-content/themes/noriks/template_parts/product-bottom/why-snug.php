@@ -13,6 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 $sg      = get_template_directory_uri() . '/img/snug/';
 $sg_path = get_template_directory() . '/img/snug/';
+$sg_vid  = function( $file, $poster, $alt ) use ( $sg, $sg_path ) {
+  if ( ! file_exists( $sg_path . $file ) ) { return ''; }
+  return '<video class="nsg-video" autoplay muted loop playsinline preload="metadata" poster="'
+       . esc_url( $sg . $poster ) . '" aria-label="' . esc_attr( $alt ) . '">'
+       . '<source src="' . esc_url( $sg . $file ) . '" type="video/mp4"></video>';
+};
 $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   if ( ! file_exists( $sg_path . $file ) ) { return ''; }
   return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $sg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
@@ -25,6 +31,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
     <p class="nsg-kicker nsg-center">Zašto se budite umorni</p>
     <h2 class="nsg-h2 nsg-center">Tijelo vam noću ostaje bez potpore</h2>
     <p class="nsg-sub">Obični jastuci za tijelo su ravni. Vaše tijelo nije. Legnete na bok i počne lančana reakcija.</p>
+    <div class="nsg-anat"><?php echo $sg_img( 'sng-anatomija.jpg', 'Točke pritiska pri spavanju na boku' ); ?></div>
     <div class="nsg-three">
       <div class="nsg-card">
         <span class="nsg-num">1</span>
@@ -73,7 +80,25 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
       <p>Većina ljudi slaže dva ili tri obična jastuka da bi dobila potporu koju Snug daje sam — i onda ih cijelu noć premješta.</p>
       <p>Snug drži sve tri točke odjednom, pa se ne morate buditi da biste ga namjestili.</p>
     </div>
-    <div class="nsg-media"><?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?></div>
+    <div class="nsg-media nsg-media--stack">
+      <?php echo $sg_img( 'sng-potpore.jpg', 'Tri ključne potpore: ruke, kukovi, koljena' ); ?>
+      <?php echo $sg_img( 'sng-dimenzije.jpg', 'Dimenzije: 105 × 30 cm' ); ?>
+    </div>
+  </div>
+</section>
+
+<!-- 3b) KAKO IZGLEDA U KREVETU -->
+<section class="nsg-sec">
+  <div class="nsg-wrap">
+    <p class="nsg-kicker nsg-center">U stvarnom krevetu</p>
+    <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
+    <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
+    <div class="nsg-gallery">
+      <figure class="nsg-gallery__big"><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
+    </div>
   </div>
 </section>
 
@@ -116,6 +141,12 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
         <li>Navlaka se skida i pere u stroju na 40 °C</li>
       </ul>
     </div>
+  </div>
+  <div class="nsg-wrap nsg-boje">
+    <figure><?php echo $sg_img( 'sng-navlaka.jpg', 'Rashladna navlaka u šest nijansi' ); ?></figure>
+    <figure><?php echo $sg_img( 'sng-boje.jpg', 'Odaberite boju — šest dostupnih' ); ?></figure>
+    <figure><?php echo $sg_img( 'sng-boje-2.jpg', 'NORIKS Snug — zelena i siva' ); ?></figure>
+    <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug — nijanse' ); ?></figure>
   </div>
 </section>
 
@@ -180,7 +211,19 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 .nsg-tl__when { font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #5b7fa6; margin-bottom: 8px; }
 .nsg-tl__item h3 { font-size: 18px; font-weight: 800; margin: 0 0 8px; line-height: 1.3; }
 .nsg-tl__item p { font-size: 15px; color: #5c6b7a; line-height: 1.6; margin: 0; }
+.nsg-anat { max-width: 420px; margin: 0 auto 34px; }
+.nsg-anat img { width: 100%; display: block; border-radius: 14px; }
+.nsg-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+.nsg-gallery figure { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 4px rgba(31,42,55,.05), 0 14px 40px rgba(31,42,55,.09); }
+.nsg-gallery img, .nsg-video { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+.nsg-boje { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+.nsg-media--stack { display: grid; gap: 16px; }
+.nsg-boje figure { margin: 0; border-radius: 14px; overflow: hidden; }
+.nsg-boje img { width: 100%; display: block; }
 @media (max-width: 980px) {
+  .nsg-boje { grid-template-columns: 1fr 1fr; }
+  .nsg-gallery { grid-template-columns: 1fr 1fr; }
+  .nsg-gallery img, .nsg-video { aspect-ratio: 4/3; }
   .nsg-row2 { grid-template-columns: 1fr; gap: 30px; }
   .nsg-row2--rev .nsg-media { order: -1; }
   .nsg-three, .nsg-tl, .nsg-docs { grid-template-columns: 1fr; gap: 16px; }
