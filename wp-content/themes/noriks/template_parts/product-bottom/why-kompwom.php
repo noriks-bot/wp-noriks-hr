@@ -3,10 +3,10 @@
  * product-bottom: NORIKS FIT Woman — oblikujuca majica s 3D linijama (orto-kompwom).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno.
  * Recenzije su preslikane s originala (leonieandco): bordo pas + vodoravni klizac.
- *   1) Zagladen trbuh (slika lijevo)      5) Kako je nositi (slika lijevo)
- *   2) Mi vs drugi (slika desno)          6) Recenzije — klizac
- *   3) Osjecajte se sigurno (slika lijevo) 7) Boje (slika desno)
- *   4) Tkanina i kroj (slika desno)
+ *   1) Zagladen trbuh (lijevo)     5) Tkanina i kroj (desno)
+ *   2) Mi vs drugi (desno)         6) Kako je nositi (lijevo)
+ *   3) RECENZIJE — klizac          7) Boje (desno)
+ *   4) Osjecajte se sigurno (lijevo)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -59,6 +59,53 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 </section>
 
 <!-- 3) OSJEĆAJTE SE SIGURNO — slika lijevo -->
+<section class="nkw-rev">
+  <div class="nkw-rev__head">
+    <span class="nkw-rev__badge">★★★★★ Izvrsno · Ocjena 4,9/5</span>
+    <h2 class="nkw-rev__title">Recenzije žena poput vas</h2>
+  </div>
+  <div class="nkw-rev__track">
+    <?php
+    $kw_reviews = array(
+      array( 'img' => 'kwm-ugc-1.jpg', 'name' => 'Karolina B.', 'meta' => 'Veličina M · 46 · Zagreb', 'worn' => 'Nosi 7 tjedana',
+             'text' => '„Košulje mi sjedaju ravno, sprijeda i straga. One koje sam probala prije nisu izdržale ni jedan cijeli dan."' ),
+      array( 'img' => 'kwm-ugc-2.jpg', 'name' => 'Danijela P.', 'meta' => 'Veličina 2XL · 48 · Split', 'worn' => 'Nosi 5 tjedana',
+             'text' => '„Prva oblikujuća majica koja mi se ne rola prema gore. Rub drži, a tkanina je dovoljno tanka za ljeto."' ),
+      array( 'img' => 'kwm-ugc-3.jpg', 'name' => 'Hana T.', 'meta' => 'Veličina 3XL · 51 · Osijek', 'worn' => 'Nosi 6 tjedana',
+             'text' => '„Kupila sam je za vjenčanje, a sad je nosim na posao. Sjedenje više ne mijenja način na koji haljina pada."' ),
+      array( 'img' => 'kwm-ugc-4.jpg', 'name' => 'Lara D.', 'meta' => 'Veličina M · 43 · Rijeka', 'worn' => 'Nosi 8 tjedana',
+             'text' => '„Obučem je nakon doručka i zaboravim da je imam. Do podneva je uopće ne primjećujem."' ),
+      array( 'img' => 'kwm-ugc-5.jpg', 'name' => 'Natalija A.', 'meta' => 'Veličina 2XL · 37 · Zadar', 'worn' => 'Nosi 9 tjedana',
+             'text' => '„Nikad mi nije dobro stajalo kad zataknem majicu u hlače. S ovom ispod struk izgleda uži i ne popravljam se cijeli dan."' ),
+      array( 'img' => 'kwm-ugc-6.jpg', 'name' => 'Nikolina M.', 'meta' => 'Veličina L · 48 · Varaždin', 'worn' => 'Nosi 4 tjedna',
+             'text' => '„Naručila sam je za jednu kombinaciju, a završila ispod većine džempera. Pletivo izgleda glatko umjesto nabrano u struku."' ),
+      array( 'img' => 'kwm-ugc-7.jpg', 'name' => 'Petra J.', 'meta' => 'Veličina XL · 50 · Pula', 'worn' => 'Nosi 6 tjedana',
+             'text' => '„Za stolom sam devet sati dnevno i ostaje udobna. Nema šavova koji se osjete, a bluza straga ostaje glatka."' ),
+      array( 'img' => 'kwm-ugc-8.jpg', 'name' => 'Sofija K.', 'meta' => 'Veličina M · 45 · Karlovac', 'worn' => 'Nosi 10 tjedana',
+             'text' => '„Leđa su mi zahvalna. Majica me nježno podsjeća da se uspravim, a da me pritom nigdje ne steže."' ),
+    );
+    foreach ( $kw_reviews as $r ) : ?>
+    <article class="nkw-rev__card">
+      <div class="nkw-rev__img"><?php echo $kw_img( $r['img'], 'Kupka u NORIKS FIT Woman majici' ); ?></div>
+      <div class="nkw-rev__body">
+        <div class="nkw-rev__top">
+          <div>
+            <p class="nkw-rev__name"><?php echo esc_html( $r['name'] ); ?>
+              <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#3aa06a"/><path d="M5 8l2 2 4-4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </p>
+            <p class="nkw-rev__meta"><?php echo esc_html( $r['meta'] ); ?></p>
+          </div>
+          <span class="nkw-rev__worn"><?php echo esc_html( $r['worn'] ); ?></span>
+        </div>
+        <p class="nkw-rev__text"><?php echo esc_html( $r['text'] ); ?></p>
+      </div>
+    </article>
+    <?php endforeach; ?>
+  </div>
+  <p class="nkw-rev__hint">Povucite u stranu za više recenzija →</p>
+</section>
+
+<!-- 7) BOJE — slika desno -->
 <section class="nkw-sec nkw-tint">
   <div class="nkw-wrap nkw-row2">
     <div class="nkw-media"><?php echo $kw_img( 'kwm-drzanje.jpg', 'Suženiji struk i uspravno držanje' ); ?></div>
@@ -111,53 +158,6 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 </section>
 
 <!-- 6) RECENZIJE (postavitev z originala — bordo pas z drsnikom) -->
-<section class="nkw-rev">
-  <div class="nkw-rev__head">
-    <span class="nkw-rev__badge">★★★★★ Izvrsno · Ocjena 4,9/5</span>
-    <h2 class="nkw-rev__title">Recenzije žena poput vas</h2>
-  </div>
-  <div class="nkw-rev__track">
-    <?php
-    $kw_reviews = array(
-      array( 'img' => 'kwm-ugc-1.jpg', 'name' => 'Karolina B.', 'meta' => 'Veličina M · 46 · Zagreb', 'worn' => 'Nosi 7 tjedana',
-             'text' => '„Košulje mi sjedaju ravno, sprijeda i straga. One koje sam probala prije nisu izdržale ni jedan cijeli dan."' ),
-      array( 'img' => 'kwm-ugc-2.jpg', 'name' => 'Danijela P.', 'meta' => 'Veličina 2XL · 48 · Split', 'worn' => 'Nosi 5 tjedana',
-             'text' => '„Prva oblikujuća majica koja mi se ne rola prema gore. Rub drži, a tkanina je dovoljno tanka za ljeto."' ),
-      array( 'img' => 'kwm-ugc-3.jpg', 'name' => 'Hana T.', 'meta' => 'Veličina 3XL · 51 · Osijek', 'worn' => 'Nosi 6 tjedana',
-             'text' => '„Kupila sam je za vjenčanje, a sad je nosim na posao. Sjedenje više ne mijenja način na koji haljina pada."' ),
-      array( 'img' => 'kwm-ugc-4.jpg', 'name' => 'Lara D.', 'meta' => 'Veličina M · 43 · Rijeka', 'worn' => 'Nosi 8 tjedana',
-             'text' => '„Obučem je nakon doručka i zaboravim da je imam. Do podneva je uopće ne primjećujem."' ),
-      array( 'img' => 'kwm-ugc-5.jpg', 'name' => 'Natalija A.', 'meta' => 'Veličina 2XL · 37 · Zadar', 'worn' => 'Nosi 9 tjedana',
-             'text' => '„Nikad mi nije dobro stajalo kad zataknem majicu u hlače. S ovom ispod struk izgleda uži i ne popravljam se cijeli dan."' ),
-      array( 'img' => 'kwm-ugc-6.jpg', 'name' => 'Nikolina M.', 'meta' => 'Veličina L · 48 · Varaždin', 'worn' => 'Nosi 4 tjedna',
-             'text' => '„Naručila sam je za jednu kombinaciju, a završila ispod većine džempera. Pletivo izgleda glatko umjesto nabrano u struku."' ),
-      array( 'img' => 'kwm-ugc-7.jpg', 'name' => 'Petra J.', 'meta' => 'Veličina XL · 50 · Pula', 'worn' => 'Nosi 6 tjedana',
-             'text' => '„Za stolom sam devet sati dnevno i ostaje udobna. Nema šavova koji se osjete, a bluza straga ostaje glatka."' ),
-      array( 'img' => 'kwm-ugc-8.jpg', 'name' => 'Sofija K.', 'meta' => 'Veličina M · 45 · Karlovac', 'worn' => 'Nosi 10 tjedana',
-             'text' => '„Leđa su mi zahvalna. Majica me nježno podsjeća da se uspravim, a da me pritom nigdje ne steže."' ),
-    );
-    foreach ( $kw_reviews as $r ) : ?>
-    <article class="nkw-rev__card">
-      <div class="nkw-rev__img"><?php echo $kw_img( $r['img'], 'Kupka u NORIKS FIT Woman majici' ); ?></div>
-      <div class="nkw-rev__body">
-        <div class="nkw-rev__top">
-          <div>
-            <p class="nkw-rev__name"><?php echo esc_html( $r['name'] ); ?>
-              <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#3aa06a"/><path d="M5 8l2 2 4-4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </p>
-            <p class="nkw-rev__meta"><?php echo esc_html( $r['meta'] ); ?></p>
-          </div>
-          <span class="nkw-rev__worn"><?php echo esc_html( $r['worn'] ); ?></span>
-        </div>
-        <p class="nkw-rev__text"><?php echo esc_html( $r['text'] ); ?></p>
-      </div>
-    </article>
-    <?php endforeach; ?>
-  </div>
-  <p class="nkw-rev__hint">Povucite u stranu za više recenzija →</p>
-</section>
-
-<!-- 7) BOJE — slika desno -->
 <section class="nkw-sec">
   <div class="nkw-wrap nkw-row2 nkw-row2--rev">
     <div class="nkw-copy">

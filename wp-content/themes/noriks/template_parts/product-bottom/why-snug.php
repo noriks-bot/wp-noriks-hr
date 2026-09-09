@@ -1,18 +1,12 @@
 <?php
 /**
  * product-bottom: NORIKS Snug — jastuk za cijelo tijelo u S-obliku (orto-snug).
- * Sekcije prate original (pilloway.com.au) u istom redoslijedu:
- * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno.
- *   1) Kako izgleda u krevetu (galerija: video + 5 fotografija)
- *   2) Problem — anatomija (slika lijevo)
- *   3) Kako radi — usporedba (slika desno)
- *   4) Tri kljucne potpore (slika lijevo)
- *   5) Dimenzije (slika desno)
- *   6) Preporucuju strucnjaci (postavitev z originala)
- *   7) Punjenje (slika lijevo)
- *   8) Rashladna navlaka (slika desno)
- *   9) Boje (slika lijevo)
- *  10) Sto mozete ocekivati
+ * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno,
+ * pozadine se izmjenjuju (prva tonirana).
+ *   1) Galerija u krevetu            5) Dimenzije (desno)
+ *   2) Problem — VIDEO (lijevo)      6) Preporucuju kiroprakticari
+ *   3) Kako radi (desno)             7) Punjenje (lijevo)
+ *   4) Tri potpore (lijevo)          8) Boje (desno)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -37,12 +31,10 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
     <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
     <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
     <div class="nsg-gallery">
-      <figure><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-anatomija.jpg', 'Ramena, kukovi i koljena s potporom' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
       <figure><?php echo $sg_img( 'sng-boje-3.jpg', 'NORIKS Snug — nijanse u krevetu' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-boje-2.jpg', 'NORIKS Snug — zelena i siva' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
     </div>
   </div>
 </section>
@@ -50,7 +42,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 <!-- 2) PROBLEM — slika lijevo -->
 <section class="nsg-sec">
   <div class="nsg-wrap nsg-row2">
-    <div class="nsg-media"><?php echo $sg_img( 'sng-anatomija.jpg', 'Točke pritiska pri spavanju na boku' ); ?></div>
+    <div class="nsg-media"><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></div>
     <div class="nsg-copy">
       <p class="nsg-kicker">Problem</p>
       <h2 class="nsg-h2">Zašto se nikad ne probudite <em>odmorni</em></h2>
@@ -194,23 +186,6 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 
 <!-- 8) RASHLADNA NAVLAKA — slika desno -->
 <section class="nsg-sec">
-  <div class="nsg-wrap nsg-row2 nsg-row2--rev">
-    <div class="nsg-copy">
-      <p class="nsg-kicker">Navlaka</p>
-      <h2 class="nsg-h2">Rashladna navlaka koja diše</h2>
-      <p>Tkanina propušta zrak cijelu noć, pa se ispod jastuka ne skuplja toplina — važno ako se budite prevrući ili imate valunge.</p>
-      <p>Navlaka se skida i pere u perilici na 40 °C. Nakon pranja je kao nova i ne skuplja se.</p>
-      <ul class="nsg-check">
-        <li>Prozračna tkanina, nježna prema koži</li>
-        <li>Skida se i pere u stroju na 40 °C</li>
-      </ul>
-    </div>
-    <div class="nsg-media"><?php echo $sg_img( 'sng-navlaka.jpg', 'Rashladna navlaka u šest nijansi' ); ?></div>
-  </div>
-</section>
-
-<!-- 9) BOJE — slika lijevo -->
-<section class="nsg-sec nsg-tint">
   <div class="nsg-wrap nsg-row2">
     <div class="nsg-media"><?php echo $sg_img( 'sng-boje.jpg', 'Šest dostupnih boja' ); ?></div>
     <div class="nsg-copy">
@@ -224,31 +199,6 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 </section>
 
 <!-- 10) ŠTO MOŽETE OČEKIVATI -->
-<section class="nsg-sec">
-  <div class="nsg-wrap">
-    <h2 class="nsg-h2 nsg-center">Što možete očekivati</h2>
-    <p class="nsg-sub">Prve noći tijelo uči novi položaj. Evo kako to obično izgleda.</p>
-    <div class="nsg-tl">
-      <div class="nsg-tl__item">
-        <div class="nsg-tl__when">Noći 1 – 3</div>
-        <h3>Pronalazite svoj položaj</h3>
-        <p>S-oblik je drukčiji od ravnog jastuka. Većina ljudi nađe svoj položaj do druge noći i počne se opuštati u potporu.</p>
-      </div>
-      <div class="nsg-tl__item">
-        <div class="nsg-tl__when">Tjedan 1</div>
-        <h3>San postaje mirniji</h3>
-        <p>Brže tonete u san i rjeđe se budite. Jutra su drukčija — ustajete odmorni, a ne kao da ste preživjeli noć.</p>
-      </div>
-      <div class="nsg-tl__item">
-        <div class="nsg-tl__when">Tjedan 2 +</div>
-        <h3>Jutarnja ukočenost popušta</h3>
-        <p>Kukovi i donji dio leđa manje se javljaju ujutro. Tijelo se navikne na poravnanje i zadrži ga cijelu noć.</p>
-      </div>
-    </div>
-    <a class="nsg-cta nsg-cta--center" href="#bundle-selector">Naruči bez rizika — 30 dana</a>
-  </div>
-</section>
-
 <style>
 .nsg-sec { padding: 62px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #1f2a37; }
 .nsg-sec * { box-sizing: border-box; }
