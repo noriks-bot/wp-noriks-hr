@@ -2,12 +2,13 @@
 /**
  * product-bottom: NORIKS Snug — jastuk za cijelo tijelo u S-obliku (orto-snug).
  * Sekcije prate original (pilloway.com.au) u istom redoslijedu:
- *   1) Zašto se nikad ne probudite odmorni (3 točke)
- *   2) Kako vam pomaže da bolje spavate (3 koraka)
- *   3) Tri ključne potpore
- *   4) Preporučuju stručnjaci (2 kiropraktora)
- *   5) Punjenje koje zadržava oblik + rashladna navlaka
- *   6) Što možete očekivati (vremenska crta)
+ *   1) Kako izgleda u krevetu (video + galerija)
+ *   2) Zašto se nikad ne probudite odmorni (slika + 01/02/03, kao na originalu)
+ *   3) Kako vam pomaže da bolje spavate
+ *   4) Tri ključne potpore + dimenzije
+ *   5) Preporučuju stručnjaci (2 kiropraktora)
+ *   6) Punjenje koje zadržava oblik + rashladna navlaka + boje
+ *   7) Što možete očekivati (vremenska crta)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -25,34 +26,56 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 };
 ?>
 
-<!-- 1) ZAŠTO SE NIKAD NE PROBUDITE ODMORNI -->
-<section class="nsg-sec nsg-tint">
+<!-- 1) KAKO IZGLEDA U KREVETU -->
+<section class="nsg-sec">
   <div class="nsg-wrap">
-    <p class="nsg-kicker nsg-center">Zašto se budite umorni</p>
-    <h2 class="nsg-h2 nsg-center">Tijelo vam noću ostaje bez potpore</h2>
-    <p class="nsg-sub">Obični jastuci za tijelo su ravni. Vaše tijelo nije. Legnete na bok i počne lančana reakcija.</p>
-    <div class="nsg-anat"><?php echo $sg_img( 'sng-anatomija.jpg', 'Točke pritiska pri spavanju na boku' ); ?></div>
-    <div class="nsg-three">
-      <div class="nsg-card">
-        <span class="nsg-num">1</span>
-        <h3>Rame nosi cijelu težinu</h3>
-        <p>Bez ničega što bi popunilo prostor, gornji dio tijela pritišće jedno rame cijelu noć.</p>
+    <p class="nsg-kicker nsg-center">U stvarnom krevetu</p>
+    <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
+    <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
+    <div class="nsg-gallery">
+      <figure class="nsg-gallery__big"><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
+      <figure><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 2) ZAŠTO SE NIKAD NE PROBUDITE ODMORNI (postavitev kot na originalu) -->
+<section class="nsg-sec nsg-tint">
+  <div class="nsg-pain">
+    <p class="nsg-kicker nsg-center">Problem</p>
+    <h2 class="nsg-h2 nsg-center">Zašto se nikad ne probudite <em>odmorni</em></h2>
+
+    <div class="nsg-pain__img"><?php echo $sg_img( 'sng-anatomija.jpg', 'Točke pritiska pri spavanju na boku' ); ?></div>
+
+    <div class="nsg-pain__list">
+      <div class="nsg-pain__row">
+        <span class="nsg-pain__num">01</span>
+        <div class="nsg-pain__copy">
+          <h3>Rame nosi cijelu težinu.</h3>
+          <p>Bez potpore za gornji dio tijela gornje rame se prevrne prema naprijed i preuzme svu vašu težinu. To je ona utrnulost i bol s kojom se budite svako jutro.</p>
+        </div>
       </div>
-      <div class="nsg-card">
-        <span class="nsg-num">2</span>
-        <h3>Kuk propada, kralježnica slijedi</h3>
-        <p>Gornja noga pada preko donje, zdjelica se uvija i donji dio leđa ostaje napet do jutra.</p>
+      <div class="nsg-pain__row">
+        <span class="nsg-pain__num">02</span>
+        <div class="nsg-pain__copy">
+          <h3>Kuk propada, kralježnica slijedi.</h3>
+          <p>Ništa vam ne drži kukove u razini, pa ih gravitacija povuče prema dolje, a donji dio leđa se uvije da to nadoknadi. To je buđenje u tri ujutro koje tijelo pošalje kad više ne može izdržati.</p>
+        </div>
       </div>
-      <div class="nsg-card">
-        <span class="nsg-num">3</span>
-        <h3>Koljena se stišću jedno o drugo</h3>
-        <p>Kost na kost, bez jastučenja. To je pritisak koji vas budi u tri ujutro.</p>
+      <div class="nsg-pain__row">
+        <span class="nsg-pain__num">03</span>
+        <div class="nsg-pain__copy">
+          <h3>Koljena se slažu i tare.</h3>
+          <p>Pritisak kosti o kost raste kroz cijelu noć. Do jutra koljena bole, a noge su teške i prije nego što ste ustali iz kreveta.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2) KAKO POMAŽE -->
+<!-- 3) KAKO POMAŽE -->
 <section class="nsg-sec">
   <div class="nsg-wrap nsg-row2">
     <div class="nsg-media"><?php echo $sg_img( 'sng-usporedba.jpg', 'NORIKS Snug u usporedbi s običnim jastukom' ); ?></div>
@@ -71,7 +94,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   </div>
 </section>
 
-<!-- 3) TRI KLJUČNE POTPORE -->
+<!-- 4) TRI KLJUČNE POTPORE -->
 <section class="nsg-sec nsg-tint">
   <div class="nsg-wrap nsg-row2 nsg-row2--rev">
     <div class="nsg-copy">
@@ -87,22 +110,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   </div>
 </section>
 
-<!-- 3b) KAKO IZGLEDA U KREVETU -->
-<section class="nsg-sec">
-  <div class="nsg-wrap">
-    <p class="nsg-kicker nsg-center">U stvarnom krevetu</p>
-    <h2 class="nsg-h2 nsg-center">Zagrljaj koji drži cijelu noć</h2>
-    <p class="nsg-sub">Prigrlite ga sprijeda, naslonite leđa straga — jastuk radi na obje strane.</p>
-    <div class="nsg-gallery">
-      <figure class="nsg-gallery__big"><?php echo $sg_vid( 'sng-video.mp4', 'sng-video.jpg', 'NORIKS Snug u upotrebi' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-lifestyle-1.jpg', 'Spavanje na boku uz NORIKS Snug' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-lifestyle-2.jpg', 'NORIKS Snug u krevetu' ); ?></figure>
-      <figure><?php echo $sg_img( 'sng-zagrljaj.jpg', 'Osjećaj kao zagrljaj cijelog tijela' ); ?></figure>
-    </div>
-  </div>
-</section>
-
-<!-- 4) PREPORUČUJU STRUČNJACI -->
+<!-- 5) PREPORUČUJU STRUČNJACI -->
 <section class="nsg-sec">
   <div class="nsg-wrap">
     <p class="nsg-kicker nsg-center">Povjerenje struke</p>
@@ -127,7 +135,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   </div>
 </section>
 
-<!-- 5) PUNJENJE I NAVLAKA -->
+<!-- 6) PUNJENJE I NAVLAKA -->
 <section class="nsg-sec nsg-tint">
   <div class="nsg-wrap nsg-row2">
     <div class="nsg-media"><?php echo $sg_img( 'sng-punjenje.jpg', 'Punjenje koje zadržava oblik' ); ?></div>
@@ -150,7 +158,7 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
   </div>
 </section>
 
-<!-- 6) ŠTO MOŽETE OČEKIVATI -->
+<!-- 7) ŠTO MOŽETE OČEKIVATI -->
 <section class="nsg-sec">
   <div class="nsg-wrap">
     <h2 class="nsg-h2 nsg-center">Što možete očekivati</h2>
@@ -199,10 +207,11 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 .nsg-cta { display: inline-block; background: #1f2a37; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .nsg-cta:hover { background: #33445a; color: #fff !important; }
 .nsg-cta--center { display: block; width: fit-content; margin: 40px auto 0; }
-.nsg-docs { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.nsg-doc { margin: 0; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; overflow: hidden; }
-.nsg-doc img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
-.nsg-doc figcaption { padding: 22px 24px 24px; }
+.nsg-docs { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 900px; margin: 0 auto; }
+.nsg-doc { margin: 0; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; overflow: hidden;
+  display: grid; grid-template-columns: 190px 1fr; align-items: stretch; }
+.nsg-doc img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
+.nsg-doc figcaption { padding: 22px 24px; display: flex; flex-direction: column; justify-content: center; }
 .nsg-quote { font-size: 15.5px; line-height: 1.65; color: #34414f; font-style: italic; margin: 0 0 12px; }
 .nsg-doc-name { font-size: 13.5px; font-weight: 700; color: #5b7fa6; margin: 0; }
 .nsg-note { text-align: center; font-size: 12px; color: #93a1b0; font-style: italic; margin: 22px 0 0; }
@@ -211,16 +220,26 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 .nsg-tl__when { font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #5b7fa6; margin-bottom: 8px; }
 .nsg-tl__item h3 { font-size: 18px; font-weight: 800; margin: 0 0 8px; line-height: 1.3; }
 .nsg-tl__item p { font-size: 15px; color: #5c6b7a; line-height: 1.6; margin: 0; }
-.nsg-anat { max-width: 420px; margin: 0 auto 34px; }
-.nsg-anat img { width: 100%; display: block; border-radius: 14px; }
+.nsg-pain { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.nsg-pain__img { margin: 0 0 36px; border-radius: 14px; overflow: hidden; background: #fff; }
+.nsg-pain__img img { width: 100%; display: block; }
+.nsg-pain__list { display: flex; flex-direction: column; }
+.nsg-pain__row { display: flex; gap: 24px; padding: 30px 0; border-top: 1px solid #dbe2ea; }
+.nsg-pain__row:last-child { border-bottom: 1px solid #dbe2ea; }
+.nsg-pain__num { flex: none; font-size: 17px; font-weight: 800; color: #5b7fa6; letter-spacing: .04em; padding-top: 5px; }
+.nsg-pain__copy { flex: 1; }
+.nsg-pain__copy h3 { font-size: clamp(21px, 2.6vw, 28px); font-weight: 800; line-height: 1.22; margin: 0 0 10px; letter-spacing: -.01em; }
+.nsg-pain__copy p { font-size: 15.5px; line-height: 1.68; color: #5c6b7a; margin: 0; }
+.nsg-h2 em { font-style: normal; color: #5b7fa6; }
 .nsg-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
 .nsg-gallery figure { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 4px rgba(31,42,55,.05), 0 14px 40px rgba(31,42,55,.09); }
-.nsg-gallery img, .nsg-video { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+.nsg-gallery img, .nsg-video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; aspect-ratio: 3/4; }
 .nsg-boje { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
 .nsg-media--stack { display: grid; gap: 16px; }
 .nsg-boje figure { margin: 0; border-radius: 14px; overflow: hidden; }
 .nsg-boje img { width: 100%; display: block; }
 @media (max-width: 980px) {
+  .nsg-doc { grid-template-columns: 150px 1fr; }
   .nsg-boje { grid-template-columns: 1fr 1fr; }
   .nsg-gallery { grid-template-columns: 1fr 1fr; }
   .nsg-gallery img, .nsg-video { aspect-ratio: 4/3; }
@@ -230,6 +249,10 @@ $sg_img  = function( $file, $alt, $cls = '' ) use ( $sg, $sg_path ) {
 }
 @media (max-width: 560px) {
   .nsg-sec { padding: 44px 0; }
+  .nsg-pain { padding: 0 16px; }
+  .nsg-pain__row { gap: 14px; padding: 24px 0; }
+  .nsg-doc { grid-template-columns: 1fr; }
+  .nsg-doc img { aspect-ratio: 4/3; }
   .nsg-wrap { padding: 0 16px; }
   .nsg-sub { margin-bottom: 28px; }
   .nsg-card, .nsg-tl__item { padding: 22px 18px; }

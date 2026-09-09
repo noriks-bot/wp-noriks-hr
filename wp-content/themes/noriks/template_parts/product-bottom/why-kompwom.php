@@ -96,8 +96,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
       <div class="nkw-tile"><h3>Rukavi</h3><p>Pripijeni kroj koji se ne rola i ne skuplja prema gore.</p></div>
       <div class="nkw-tile"><h3>Materijal</h3><p>Tanak, mat i prozračan — nestane ispod košulje ili sakoa.</p></div>
     </div>
-    <div class="nkw-media nkw-media--wide"><?php echo $kw_img( 'kwm-detalji.jpg', 'Detalji: 3D linije, pojas, rukavi, materijal' ); ?></div>
-    <div class="nkw-media nkw-media--wide"><?php echo $kw_img( 'kwm-200k.jpg', 'Preko 200.000 zadovoljnih kupaca' ); ?></div>
+    <div class="nkw-detail"><?php echo $kw_img( 'kwm-detalji.jpg', 'Detalji: 3D linije, pojas, rukavi, materijal' ); ?></div>
   </div>
 </section>
 
@@ -116,7 +115,27 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
   </div>
 </section>
 
-<!-- 6) BOJE -->
+<!-- 6) NAŠE KUPKE -->
+<section class="nkw-sec">
+  <div class="nkw-wrap">
+    <p class="nkw-kicker nkw-center">Naše kupke</p>
+    <h2 class="nkw-h2 nkw-center">Preko <em>200.000 žena</em> nosi je svaki dan</h2>
+    <p class="nkw-sub">Ispod košulje, ispod haljine, na poslu i kod kuće — bez razmišljanja o njoj.</p>
+    <div class="nkw-ugc">
+      <figure><?php echo $kw_img( 'kwm-ugc-1.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-2.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-3.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-4.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-5.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-6.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-7.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+      <figure><?php echo $kw_img( 'kwm-ugc-8.jpg', 'Kupka u NORIKS FIT Woman majici' ); ?></figure>
+    </div>
+    <div class="nkw-200k"><?php echo $kw_img( 'kwm-200k.jpg', 'Preko 200.000 zadovoljnih kupaca' ); ?></div>
+  </div>
+</section>
+
+<!-- 7) BOJE -->
 <section class="nkw-sec nkw-tint">
   <div class="nkw-wrap">
     <h2 class="nkw-h2 nkw-center">Tri boje za svaki dan</h2>
@@ -143,6 +162,14 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 .nkw-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
 .nkw-media img { width: 100%; display: block; border-radius: 14px; box-shadow: 0 2px 4px rgba(36,28,34,.05), 0 14px 40px rgba(36,28,34,.10); }
 .nkw-media--wide { margin-top: 34px; }
+.nkw-detail { max-width: 720px; margin: 32px auto 0; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(36,28,34,.05), 0 14px 40px rgba(36,28,34,.10); }
+.nkw-detail img { width: 100%; display: block; }
+.nkw-ugc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.nkw-ugc figure { margin: 0; border-radius: 12px; overflow: hidden; background: #f3eaed; }
+.nkw-ugc img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.nkw-200k { max-width: 620px; margin: 34px auto 0; border-radius: 14px; overflow: hidden; }
+.nkw-200k img { width: 100%; display: block; }
 .nkw-check { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 11px; }
 .nkw-check li { position: relative; padding-left: 28px; font-size: 15.5px; line-height: 1.5; }
 .nkw-check li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #a8536b; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
@@ -172,6 +199,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 .nkw-cta:hover { background: #a8536b; color: #fff !important; }
 .nkw-cta--center { display: block; width: fit-content; margin: 38px auto 0; }
 @media (max-width: 980px) {
+  .nkw-ugc { grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .nkw-row2 { grid-template-columns: 1fr; gap: 30px; }
   .nkw-row2--rev .nkw-media { order: -1; }
   .nkw-grid4 { grid-template-columns: 1fr 1fr; }
@@ -179,6 +207,7 @@ $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
 }
 @media (max-width: 560px) {
   .nkw-sec { padding: 44px 0; }
+  .nkw-ugc { grid-template-columns: 1fr 1fr; gap: 10px; }
   .nkw-wrap { padding: 0 16px; }
   .nkw-grid4 { grid-template-columns: 1fr; gap: 14px; }
   .nkw-colors { grid-template-columns: 1fr; gap: 18px; }
