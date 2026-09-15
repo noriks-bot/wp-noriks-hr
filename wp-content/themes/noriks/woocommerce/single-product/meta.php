@@ -509,7 +509,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           
          <?php if( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
-                NORIKS KidsNest izrađen je od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA — s prozračnom, perivom navlakom koja se jednostavno skida.<br><br>Njegova 3-zonska ergonomska struktura nježno prihvaća glavu, podupire vrat i pomaže održati kralježnicu u prirodnom poravnanju — čak i kad se dijete tijekom noći puno okreće. Tako potiče disanje kroz nos i mirniji, dublji san.<br><br>Dostupan u tri veličine (1–3, 3–9 i 9–14 godina), raste s vašim djetetom i pruža pravu visinu potpore u svakoj fazi razvoja.
+                NORIKS KidsNest izrađen je od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA — s prozračnom pletenom navlakom.<br><br>Njegova 3-zonska ergonomska struktura nježno prihvaća glavu, podupire vrat i pomaže održati kralježnicu u prirodnom poravnanju — čak i kad se dijete tijekom noći puno okreće. Tako potiče disanje kroz nos i mirniji, dublji san.<br><br>Dostupan u tri veličine (1–3, 3–9 i 9–14 godina), raste s vašim djetetom i pruža pravu visinu potpore u svakoj fazi razvoja.
 
          <?php elseif( noriks_is_type( 'nosilka', $current_product_id ) ): ?>
 

@@ -15,7 +15,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 1) Trust marquee (plava traka, vrti se) ============ -->
 <div class="kn-marquee" aria-hidden="true">
   <div class="kn-marquee-track">
-    <?php $kn_ticker = array('PREPORUKA PEDIJATARA','OEKO-TEX® MEMORIJSKA PJENA','3-ZONSKA STRUKTURA','30 NOĆI ISPROBAVANJA','HIPOALERGENO','PERIVA NAVLAKA');
+    <?php $kn_ticker = array('PREPORUKA PEDIJATARA','OEKO-TEX® MEMORIJSKA PJENA','3-ZONSKA STRUKTURA','30 NOĆI ISPROBAVANJA','HIPOALERGENO','PROZRAČNA PLETENINA');
     for ( $r = 0; $r < 2; $r++ ) { foreach ( $kn_ticker as $t ) { echo '<span class="kn-tick">'.esc_html($t).'</span><span class="kn-dot">•</span>'; } } ?>
   </div>
 </div>
@@ -96,7 +96,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Kvaliteta koja se osjeti — noć za noći.</h2>
       <p>Gusta, prozračna pletenina i pažljivo oblikovana površina nisu tu zbog izgleda — <strong>svaka zona ima svoju ulogu</strong>. Sredina nježno prihvaća glavu, rubovi podupiru vrat, a struktura zadržava oblik i nakon mjeseci svakodnevne uporabe.</p>
-      <p>Navlaka se skida i pere u perilici, pjena je <strong>hipoalergena i otporna na grinje</strong> — pa jastuk ostaje svjež, čist i spreman za svaku noć. Bez udubljenja, bez splošnjavanja, bez kompromisa.</p>
+      <p>Pletenina je prozračna, a pjena je <strong>hipoalergena i otporna na grinje</strong> — pa jastuk ostaje svjež, čist i spreman za svaku noć. Bez udubljenja, bez splošnjavanja, bez kompromisa.</p>
       <p><strong>Jastuk koji i nakon godinu dana izgleda — i podupire — kao prvi dan.</strong></p>
     </div>
   </div>
