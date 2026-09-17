@@ -591,6 +591,14 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Pal</strong> je štap za hodanje osmišljen oko jednog problema: ustajanja. Uz gornju ručku ima i drugu ručku niže, za koju se primite kad ustajete iz fotelje, s kreveta ili s niske stolice — bez naginjanja naprijed i bez tuđe pomoći.<br><br>Četiri gumene nožice drže štap uspravno kad ga pustite. Ne pada na pod, pa se ne morate saginjati da biste ga podigli. Baza je protuklizna i ostaje stabilna na pločicama, parketu i na neravnom terenu.<br><br>U ručku je ugrađena svjetiljka koja osvjetljava put pred vama — za odlazak do kupaonice noću ili šetnju u sumrak. Uz nju je i zvučni alarm koji upozori ukućane ako padnete ili vam zatreba pomoć.<br><br>Štap je sklopiv i stane u torbu ili pretinac u autu, a visina se podešava u nekoliko sekundi, bez alata, za sve visine korisnika.
 
+         <?php elseif( noriks_is_type( 'slim', $current_product_id ) ): ?>
+
+                <strong>NORIKS Slim</strong> su oblikujuće gaćice visokog struka. Široki pojas prelazi ukriženo preko trbuha i nastavlja se na bokove i leđa, pa je kompresija raspoređena oko cijelog struka, a ne stisnuta u jednu liniju.<br><br>Trbuh je zaglađen, struk izgleda uži, a odjeća pada ravnije — bez nabora iznad hlača i bez ruba koji se ocrtava ispod haljine.<br><br>Pletivo je tanko, mekano i prozračno, s elastičnim mrežastim umecima i pamučnim ulošcem. Gaćice se ne rolaju prema dolje i ne klize tijekom dana, pa ih obučete ujutro i zaboravite do večeri.<br><br>Dostupne su u šest boja (crna, boja kože, tamnoplava, lila, fuksija i šljiva) i veličinama od XS do 5XL. Veličinu birajte prema opsegu struka; ako ste između dvije veličine, uzmite veću.
+
+         <?php elseif( noriks_is_type( 'bowl', $current_product_id ) ): ?>
+
+                <strong>NORIKS Bowl</strong> je povišena zdjelica za hranu i vodu namijenjena malim psima. Zdjela stoji na čeličnom postolju visine 11 cm i nagnuta je za 15°, pa pas jede stojeći, s glavom u prirodnijem položaju umjesto da vrat savija sve do poda.<br><br>Zdjela je plitka (5 cm), pa brkovi ne udaraju o rub, a hrana se ne gura prema van. Promjer je 15 cm, a zapremina oko 430 ml — dovoljno za obrok ili vodu malog psa.<br><br>I zdjela i postolje izrađeni su od nehrđajućeg čelika. Glatka površina ne upija mirise i ne zadržava ostatke hrane kao plastika; dovoljno je isprati je toplom vodom sa sredstvom za pranje posuđa.<br><br>Prikladna je za male pasmine kao što su jazavčar, francuski buldog, šnaucer, mops i maltezer.
+
          <?php elseif( noriks_is_type( 'red', $current_product_id ) ): ?>
 
                 <strong>NORIKS RedRelief</strong> je omotač za zapešće koji spaja dvije najistraženije valne duljine u terapiji crvenim svjetlom: 660 nm crveno svjetlo smiruje površinsku upalu, a 850 nm infracrveno dopire dublje, do tkiva oko srednjeg živca.<br><br>Svjetlo se u tkivu pretvara u staničnu energiju (ATP) i potiče lokalni protok krvi — dva procesa koja su dio prirodnog oporavka tijela. Zato se koristi kod karpalnog tunela, tendinitisa, artritisa te bolova u šaci i zapešću.<br><br>U omotač je ugrađeno 48 dvostrukih LED dioda raspoređenih po cijeloj unutarnjoj strani, pa svjetlo pokriva cijelo zapešće, a ne samo jednu točku. Na raspolaganju su 4 načina rada i 3 razine snage.<br><br>Uređaj je bežičan i puni se preko USB-C kabela — jedno punjenje dovoljno je za do 4 tretmana. Težak je svega 126 g, ima otvor za palac i podesivu traku, pa odgovara i lijevoj i desnoj ruci. Preporučena je jedna seansa od 15 minuta dnevno; uređaj se sam isključi na kraju seanse.
@@ -677,7 +685,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
+     <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -745,6 +753,33 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> grudi preko najšireg dijela, struk na najužem mjestu. Mjerite preko donjeg rublja, traka pripijena ali ne stegnuta.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'slim', $current_product_id ) ): ?>
+
+          <div class="slm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>opsegu struka</strong>, ne prema uobičajenoj veličini odjeće. Ako ste između dvije veličine, uzmite <strong>veću</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a3336b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">EU veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg struka</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_slim_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbf2f6' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #f1e3ea;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> centimetarsku traku obavijte oko najužeg dijela trupa, malo iznad pupka. Traka neka bude vodoravna i pripijena, ali ne stegnuta.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
@@ -878,7 +913,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk + kidsnest + kneefix -->
-    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>

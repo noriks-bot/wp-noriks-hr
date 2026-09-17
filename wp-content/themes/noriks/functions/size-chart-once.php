@@ -17,6 +17,13 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
         // Proizvodi bez velicina uopce nemaju tablicu — ne izrisuj je.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'seal' ) ) { return; }
         // NORIKS FIT Woman: zenska tablica po opsegu grudi i struka, ne muska po visini i tezini.
+        // NORIKS Slim: tablica po opsegu struka (XS–5XL).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'slim' ) ) {
+            get_template_part( 'template_parts/size-chart-slim' );
+            return;
+        }
+        // Bowl nema velicina.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bowl' ) ) { return; }
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kompwom' ) ) {
             get_template_part( 'template_parts/size-chart-kompwom' );
             return;

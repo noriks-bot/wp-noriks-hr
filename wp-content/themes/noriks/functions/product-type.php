@@ -76,6 +76,10 @@ function noriks_product_type_map() : array {
         'kompwom'                 => array( 'orto-kompwom', 'kompwom' ),
         // NORIKS Pal — stap za hodanje (bez atributa).
         'pal'                     => array( 'orto-pal', 'pal' ),
+        // NORIKS Slim — oblikujuce gacice visokog struka (boja + velicina).
+        'slim'                    => array( 'orto-slim', 'slim' ),
+        // NORIKS Bowl — povisena zdjelica za pse s nagibom 15° (bez atributa).
+        'bowl'                    => array( 'orto-bowl', 'bowl' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -214,3 +218,20 @@ function noriks_is_mixed_bundle( $product_id = null ) : bool {
 }
 
 endif;
+
+if ( ! function_exists( 'noriks_slim_sizes' ) ) {
+    /** NORIKS Slim: velicina, EU velicina, opseg struka — ena tabela za akordeon in modal. */
+    function noriks_slim_sizes() {
+        return array(
+            array( 'XS',  '32 – 34', '64 – 69 cm' ),
+            array( 'S',   '36',      '71 – 74 cm' ),
+            array( 'M',   '38 – 40', '76 – 81 cm' ),
+            array( 'L',   '42 – 44', '86 – 94 cm' ),
+            array( 'XL',  '46 – 48', '99 – 104 cm' ),
+            array( '2XL', '50 – 52', '107 – 112 cm' ),
+            array( '3XL', '54 – 56', '114 – 118 cm' ),
+            array( '4XL', '58 – 60', '119 – 122 cm' ),
+            array( '5XL', '62 – 64', '124 – 127 cm' ),
+        );
+    }
+}

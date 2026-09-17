@@ -189,6 +189,16 @@ if ( noriks_is_type( 'pal' ) ) {
     include $noriks_pb_dir . 'why-pal.php';
 }
 
+// NORIKS Slim (orto-slim) — oblikujuce gacice visokog struka
+if ( noriks_is_type( 'slim' ) ) {
+    include $noriks_pb_dir . 'why-slim.php';
+}
+
+// NORIKS Bowl (orto-bowl) — povisena zdjelica za pse
+if ( noriks_is_type( 'bowl' ) ) {
+    include $noriks_pb_dir . 'why-bowl.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';
