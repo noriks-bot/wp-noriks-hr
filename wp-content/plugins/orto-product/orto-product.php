@@ -1241,10 +1241,10 @@ function gck_render_bundle_selector() {
       #bundle-selector .color-swatches .swatch.active { border-color: #1f6fd0 !important; transform: scale(1.06); }
       #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
           box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); }
-      #bundle-selector .swatch-circle.color-plava                { background: #2a7fd4 !important; }
-      #bundle-selector .swatch-circle.color-crna                 { background: #17161a !important; }
-      #bundle-selector .swatch-circle.color-boja-koze            { background: #ecd9bd !important; }
-      #bundle-selector .swatch-circle.color-roza                 { background: #e5399a !important; }
+      #bundle-selector .swatch-circle.color-plava                { background: #3680c6 !important; }
+      #bundle-selector .swatch-circle.color-crna                 { background: #1c1c1c !important; }
+      #bundle-selector .swatch-circle.color-boja-koze            { background: #e5b79c !important; }
+      #bundle-selector .swatch-circle.color-roza                 { background: #ee51b6 !important; }
       #bundle-selector .bundle-option {
           border: 2px solid #d9e6f8 !important; background: #f6f9fe !important;
           box-shadow: 0 1px 2px rgba(20,25,40,.10), 0 2px 6px 2px rgba(20,25,40,.06) !important; }
