@@ -24,6 +24,23 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
         }
         // Bowl nema velicina.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bowl' ) ) { return; }
+        // NORIKS Relief: tablica po EU broju obuce.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'relief' ) ) {
+            get_template_part( 'template_parts/size-chart-relief' );
+            return;
+        }
+        // NORIKS CelLeg: tablica po opsegu struka i bokova (XS–5XL).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'celleg' ) ) {
+            get_template_part( 'template_parts/size-chart-celleg' );
+            return;
+        }
+        // NORIKS StepCloud: tablica po EU broju obuce.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'stepcloud' ) ) {
+            get_template_part( 'template_parts/size-chart-stepcloud' );
+            return;
+        }
+        // GelSeat i KneeTape nemaju velicina.
+        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'gelseat' ) || noriks_is_type( 'kneetape' ) ) ) { return; }
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kompwom' ) ) {
             get_template_part( 'template_parts/size-chart-kompwom' );
             return;

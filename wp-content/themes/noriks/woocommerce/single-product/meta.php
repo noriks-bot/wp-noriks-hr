@@ -599,6 +599,26 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Bowl</strong> je povišena zdjelica za hranu i vodu namijenjena malim psima. Zdjela stoji na čeličnom postolju visine 11 cm i nagnuta je za 15°, pa pas jede stojeći, s glavom u prirodnijem položaju umjesto da vrat savija sve do poda.<br><br>Zdjela je plitka (5 cm), pa brkovi ne udaraju o rub, a hrana se ne gura prema van. Promjer je 15 cm, a zapremina oko 430 ml — dovoljno za obrok ili vodu malog psa.<br><br>I zdjela i postolje izrađeni su od nehrđajućeg čelika. Glatka površina ne upija mirise i ne zadržava ostatke hrane kao plastika; dovoljno je isprati je toplom vodom sa sredstvom za pranje posuđa.<br><br>Prikladna je za male pasmine kao što su jazavčar, francuski buldog, šnaucer, mops i maltezer.
 
+         <?php elseif( noriks_is_type( 'relief', $current_product_id ) ): ?>
+
+                <strong>NORIKS Relief</strong> su bambusove kompresijske čarape bez prstiju i bez pete, osmišljene za stopala koja bole. Pletivo je gušće oko svoda, pete i gležnja, pa je pritisak ravnomjerno raspoređen umjesto da steže u jednoj liniji.<br><br>Otvoreni prsti i peta znače da nema šava koji pritišće osjetljiva mjesta i da čarapa ne klizi unutar cipele. Tanke su, pa stanu u tenisice, cipele i radne čizme, a mnogi ih nose i bosi po kući ili preko običnih čarapa.<br><br>Blaga kompresija potiče protok krvi, zato su noge nakon dugog stajanja manje teške, a gležnjevi manje natečeni. Mogu se nositi i preko noći; ujutro je ukočenost pri prvim koracima obično manja.<br><br>Pletivo s bambusovom viskozom upija vlagu i ostaje prozračno, bez lateksa. Dostupne su u četiri veličine, od EU 36 do EU 46 — veličinu birajte prema broju obuće, a ako ste između dvije, uzmite veću.
+
+         <?php elseif( noriks_is_type( 'gelseat', $current_product_id ) ): ?>
+
+                <strong>NORIKS GelSeat</strong> je jastuk za sjedenje od 100 % gela u saćastoj strukturi. Pod težinom tijela saće se razmakne i raspodijeli pritisak po cijeloj površini, umjesto da se sva težina skupi na trtičnu kost i sjedne kosti.<br><br>Zato je sjedenje ugodnije kod bolova u trtici, donjem dijelu leđa i kukovima, kod išijasa te kad noge nakon pola sata sjedenja utrnu.<br><br>Saće je otvoreno, pa zrak struji kroz jastuk i toplina se ne nakuplja — po tome se najviše razlikuje od jastuka od memorijske pjene. Gel se nakon svakog ustajanja vraća u prvobitni oblik i ne ostaje spljošten.<br><br>Dimenzije su oko 42 × 37 cm, pa jastuk leži na uredskoj stolici, autosjedalu, invalidskim kolicima i kuhinjskoj stolici. Navlaka ima protukliznu donju stranu, otkopča se i pere u perilici na 30 °C.
+
+         <?php elseif( noriks_is_type( 'kneetape', $current_product_id ) ): ?>
+
+                <strong>NORIKS KneeTape</strong> je kineziološka traka za koljeno koja je <strong>već izrezana</strong> u pravi oblik. Skinete zaštitnu foliju, zalijepite bazu ispod koljena i prekrižite krakove oko čašice — bez mjerenja, rezanja i odlaska fizioterapeutu.<br><br>Traka ne blokira zglob kao kruta ortoza. Rasteže se do 140 % i prati pokret koljena, a istodobno daje osjećaj oslonca i vođenja pri hodu, čučnju i penjanju stepenicama.<br><br>Uz pravilno nanošenje drži 3 do 5 dana, i kad se tuširate ili vježbate. Materijal je 100 % bez lateksa, na pamučnoj podlozi prilagođenoj osjetljivoj koži.<br><br>U pakiranju je 10 već izrezanih traka, a uz narudžbu dobivate i 10 biljnih grijaćih traka na poklon. Dostupne su četiri boje — plava, crna, boja kože i roza; boja ne utječe na učinak ni trajnost.
+
+         <?php elseif( noriks_is_type( 'celleg', $current_product_id ) ): ?>
+
+                <strong>NORIKS CelLeg</strong> su 3D kompresijske tajice namijenjene oblikovanju nogu i stražnjice. Linije utkane u pletivo ciljaju područja na kojima se celulit najčešće vidi i ondje stišću jače, a na ostatku noge blaže.<br><br>Takva ciljana kompresija potiče mikrocirkulaciju i limfni protok, pa koža izgleda zaglađenije, a noge čvršće. Uz to mišići nogu i stražnjice ostaju blago aktivni tijekom dana, što znači veću potrošnju kalorija pri istom broju koraka.<br><br>Pletivo je bešavno, od 70 % poliamida i 30 % elastana — rastezljivo u svim smjerovima, prozračno i neprozirno i pri čučnju. Visoki pojas drži trbuh i ne rola se prema dolje.<br><br>Dostupne su u devet boja i veličinama od XS do 5XL. Veličinu birajte prema opsegu struka i bokova iz tablice, a ne prema broju traperica.
+
+         <?php elseif( noriks_is_type( 'stepcloud', $current_product_id ) ): ?>
+
+                <strong>NORIKS StepCloud</strong> su ulošci s biomehaničkom potporom svoda stopala. Uložak obuhvaća sredinu stopala i prirodno raspoređuje pritisak, pa je svaki korak stabilniji i mekši, uz manje umora na kraju dana.<br><br>Ispod prednjeg dijela stopala i pete su ciljani masažni čvorići koji pri svakom koraku nježno stimuliraju stopalo. Debela petna čašica ublažava udarac pete, a prozračni otvori smanjuju znojenje.<br><br>Koriste se kod umora i bolova u stopalima nakon dugog stajanja, kod bolova u peti i svodu te kod osjećaja težine u nogama. Uz svakodnevno nošenje zadržavaju oblik oko dva mjeseca.<br><br>Umeću se umjesto tvorničkog uloška, nikada preko njega. Ako su predugi, skratite ih škarama po oznaci na vrhu. Dostupni su u narančastoj, crnoj i sivoj boji, za brojeve obuće od EU 35 do EU 50.
+
          <?php elseif( noriks_is_type( 'red', $current_product_id ) ): ?>
 
                 <strong>NORIKS RedRelief</strong> je omotač za zapešće koji spaja dvije najistraženije valne duljine u terapiji crvenim svjetlom: 660 nm crveno svjetlo smiruje površinsku upalu, a 850 nm infracrveno dopire dublje, do tkiva oko srednjeg živca.<br><br>Svjetlo se u tkivu pretvara u staničnu energiju (ATP) i potiče lokalni protok krvi — dva procesa koja su dio prirodnog oporavka tijela. Zato se koristi kod karpalnog tunela, tendinitisa, artritisa te bolova u šaci i zapešću.<br><br>U omotač je ugrađeno 48 dvostrukih LED dioda raspoređenih po cijeloj unutarnjoj strani, pa svjetlo pokriva cijelo zapešće, a ne samo jednu točku. Na raspolaganju su 4 načina rada i 3 razine snage.<br><br>Uređaj je bežičan i puni se preko USB-C kabela — jedno punjenje dovoljno je za do 4 tretmana. Težak je svega 126 g, ima otvor za palac i podesivu traku, pa odgovara i lijevoj i desnoj ruci. Preporučena je jedna seansa od 15 minuta dnevno; uređaj se sam isključi na kraju seanse.
@@ -685,7 +705,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
      
      <?php endif; /* end skrivanje detalja na ortopasu */ ?>
 
-     <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
+     <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'cloud', $current_product_id ) && ! noriks_is_type( 'snore', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'nosilka', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) && ! noriks_is_type( 'gelseat', $current_product_id ) && ! noriks_is_type( 'kneetape', $current_product_id ) ) : // hide size accordion on bunion + fisiorest + norikshers + ortopedski jastuk + nosiljka + kneefix + controlpro ?>
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -780,6 +800,83 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> centimetarsku traku obavijte oko najužeg dijela trupa, malo iznad pupka. Traka neka bude vodoravna i pripijena, ali ne stegnuta.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'relief', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>broju obuće</strong>. Ako ste između dvije veličine, uzmite <strong>veću</strong> — čarapa treba prianjati, a ne stezati.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#2f8f7d;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">EU broj obuće</th>
+                  <th style="padding:9px 10px;text-align:left;">Duljina stopala</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_relief_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#eef6f4' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> stopalo stavite na papir, označite petu i najduži prst pa izmjerite razmak. Mjerite navečer, kad su stopala najveća.</p>
+          </div>
+        <?php elseif( noriks_is_type( 'celleg', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>opsegu struka i bokova</strong>, ne prema broju traperica. Manja veličina daje jaču kompresiju, veća blaži osjećaj.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a4557f;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg bokova</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_celleg_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbf1f6' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> struk izmjerite na najužem dijelu trupa, bokove preko najšireg dijela. Traka neka bude vodoravna i pripijena, ali ne stegnuta.</p>
+          </div>
+        <?php elseif( noriks_is_type( 'stepcloud', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Odaberite <strong>svoj EU broj obuće</strong>. Ako je uložak predug, skratite ga škarama po oznaci na vrhu — zato jedan par odgovara i međuveličinama.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#f0581a;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">EU broj obuće</th>
+                  <th style="padding:9px 10px;text-align:left;">Duljina uloška</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_stepcloud_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fff2ea' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> izvadite tvornički uložak iz cipele i usporedite ga s duljinom iz tablice; NORIKS uložak po potrebi skratite po toj liniji.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
@@ -913,7 +1010,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk + kidsnest + kneefix -->
-    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) && ! noriks_is_type( 'gelseat', $current_product_id ) && ! noriks_is_type( 'kneetape', $current_product_id ) ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>

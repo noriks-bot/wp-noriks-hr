@@ -80,6 +80,16 @@ function noriks_product_type_map() : array {
         'slim'                    => array( 'orto-slim', 'slim' ),
         // NORIKS Bowl — povisena zdjelica za pse s nagibom 15° (bez atributa).
         'bowl'                    => array( 'orto-bowl', 'bowl' ),
+        // NORIKS Relief — bambusove kompresijske carape bez prstiju (samo velicina).
+        'relief'                  => array( 'orto-relief', 'relief' ),
+        // NORIKS GelSeat — gel jastuk za sjedenje (bez atributa).
+        'gelseat'                 => array( 'orto-gelseat', 'gelseat' ),
+        // NORIKS KneeTape — vec izrezana kinezioloska traka za koljeno (samo boja).
+        'kneetape'                => array( 'orto-kneetape', 'kneetape' ),
+        // NORIKS CelLeg — 3D kompresijske tajice protiv celulita (boja + velicina).
+        'celleg'                  => array( 'orto-celleg', 'celleg' ),
+        // NORIKS StepCloud — masazni ulosci s potporom svoda (boja + velicina).
+        'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -232,6 +242,51 @@ if ( ! function_exists( 'noriks_slim_sizes' ) ) {
             array( '3XL', '54 – 56', '114 – 118 cm' ),
             array( '4XL', '58 – 60', '119 – 122 cm' ),
             array( '5XL', '62 – 64', '124 – 127 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_relief_sizes' ) ) {
+    /** NORIKS Relief: velicina, EU broj obuce — jedna tablica za akordeon i modal. */
+    function noriks_relief_sizes() {
+        return array(
+            array( 'S',  'EU 36 – 38', 'do 24 cm' ),
+            array( 'M',  'EU 38 – 40', '24 – 25,5 cm' ),
+            array( 'L',  'EU 40 – 43', '25,5 – 27,5 cm' ),
+            array( 'XL', 'EU 44 – 46', '27,5 – 29,5 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_celleg_sizes' ) ) {
+    /** NORIKS CelLeg: velicina, opseg struka, opseg bokova. */
+    function noriks_celleg_sizes() {
+        return array(
+            array( 'XS',  '56 – 62 cm',   '80 – 86 cm' ),
+            array( 'S',   '62 – 68 cm',   '86 – 92 cm' ),
+            array( 'M',   '68 – 74 cm',   '92 – 98 cm' ),
+            array( 'L',   '74 – 82 cm',   '98 – 106 cm' ),
+            array( 'XL',  '82 – 90 cm',   '106 – 114 cm' ),
+            array( '2XL', '90 – 98 cm',   '114 – 122 cm' ),
+            array( '3XL', '98 – 106 cm',  '122 – 130 cm' ),
+            array( '4XL', '106 – 116 cm', '130 – 138 cm' ),
+            array( '5XL', '116 – 126 cm', '138 – 146 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_stepcloud_sizes' ) ) {
+    /** NORIKS StepCloud: EU broj obuce i duljina uloska (ulozak se po potrebi skrati). */
+    function noriks_stepcloud_sizes() {
+        return array(
+            array( 'EU 35 – 36', '23,0 cm' ),
+            array( 'EU 37 – 38', '24,5 cm' ),
+            array( 'EU 39 – 40', '25,5 cm' ),
+            array( 'EU 41 – 42', '27,0 cm' ),
+            array( 'EU 43 – 44', '28,0 cm' ),
+            array( 'EU 45 – 46', '29,5 cm' ),
+            array( 'EU 47 – 48', '30,5 cm' ),
+            array( 'EU 49 – 50', '32,0 cm' ),
         );
     }
 }

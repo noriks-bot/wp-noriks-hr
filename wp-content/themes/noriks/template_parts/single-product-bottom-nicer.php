@@ -199,6 +199,31 @@ if ( noriks_is_type( 'bowl' ) ) {
     include $noriks_pb_dir . 'why-bowl.php';
 }
 
+// NORIKS Relief (orto-relief) — bambusove kompresijske carape bez prstiju
+if ( noriks_is_type( 'relief' ) ) {
+    include $noriks_pb_dir . 'why-relief.php';
+}
+
+// NORIKS GelSeat (orto-gelseat) — gel jastuk za sjedenje
+if ( noriks_is_type( 'gelseat' ) ) {
+    include $noriks_pb_dir . 'why-gelseat.php';
+}
+
+// NORIKS KneeTape (orto-kneetape) — vec izrezana kinezioloska traka za koljeno
+if ( noriks_is_type( 'kneetape' ) ) {
+    include $noriks_pb_dir . 'why-kneetape.php';
+}
+
+// NORIKS CelLeg (orto-celleg) — 3D kompresijske tajice protiv celulita
+if ( noriks_is_type( 'celleg' ) ) {
+    include $noriks_pb_dir . 'why-celleg.php';
+}
+
+// NORIKS StepCloud (orto-stepcloud) — masazni ulosci s potporom svoda
+if ( noriks_is_type( 'stepcloud' ) ) {
+    include $noriks_pb_dir . 'why-stepcloud.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';
