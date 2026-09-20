@@ -174,7 +174,7 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
 .ngs-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #16233b; }
 .ngs-sec * { box-sizing: border-box; }
 .ngs-tint { background: #eef3fc; }
-.ngs-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 24px; }
+.ngs-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .ngs-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #1f63c8; margin: 0 0 10px; }
 .ngs-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: #16233b; }
 .ngs-h2 em { font-style: italic; font-weight: 800; color: #1f63c8; }

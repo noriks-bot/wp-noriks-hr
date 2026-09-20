@@ -170,7 +170,7 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
 .nrl-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #17302c; }
 .nrl-sec * { box-sizing: border-box; }
 .nrl-tint { background: #eef6f4; }
-.nrl-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 24px; }
+.nrl-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .nrl-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #2f8f7d; margin: 0 0 10px; }
 .nrl-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: #17302c; }
 .nrl-h2 em { font-style: italic; font-weight: 800; color: #2f8f7d; }
