@@ -250,10 +250,10 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
     /** NORIKS Relief: velicina, EU broj obuce — jedna tablica za akordeon i modal. */
     function noriks_relief_sizes() {
         return array(
-            array( 'S',  'EU 36 – 38', 'do 24 cm' ),
-            array( 'M',  'EU 38 – 40', '24 – 25,5 cm' ),
-            array( 'L',  'EU 40 – 43', '25,5 – 27,5 cm' ),
-            array( 'XL', 'EU 44 – 46', '27,5 – 29,5 cm' ),
+            array( 'S',  '36 – 38', 'do 24 cm' ),
+            array( 'M',  '38 – 40', '24 – 25,5 cm' ),
+            array( 'L',  '40 – 43', '25,5 – 27,5 cm' ),
+            array( 'XL', '44 – 46', '27,5 – 29,5 cm' ),
         );
     }
 }
@@ -279,14 +279,14 @@ if ( ! function_exists( 'noriks_stepcloud_sizes' ) ) {
     /** NORIKS StepCloud: EU broj obuce i duljina uloska (ulozak se po potrebi skrati). */
     function noriks_stepcloud_sizes() {
         return array(
-            array( 'EU 35 – 36', '23,0 cm' ),
-            array( 'EU 37 – 38', '24,5 cm' ),
-            array( 'EU 39 – 40', '25,5 cm' ),
-            array( 'EU 41 – 42', '27,0 cm' ),
-            array( 'EU 43 – 44', '28,0 cm' ),
-            array( 'EU 45 – 46', '29,5 cm' ),
-            array( 'EU 47 – 48', '30,5 cm' ),
-            array( 'EU 49 – 50', '32,0 cm' ),
+            array( '35 – 36', '23,0 cm' ),
+            array( '37 – 38', '24,5 cm' ),
+            array( '39 – 40', '25,5 cm' ),
+            array( '41 – 42', '27,0 cm' ),
+            array( '43 – 44', '28,0 cm' ),
+            array( '45 – 46', '29,5 cm' ),
+            array( '47 – 48', '30,5 cm' ),
+            array( '49 – 50', '32,0 cm' ),
         );
     }
 }

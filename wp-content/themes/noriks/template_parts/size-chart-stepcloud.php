@@ -16,12 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
   </div>
 
   <div class="kwsc-body">
-    <p class="kwsc-lead">Odaberite <strong>svoj EU broj obuće</strong>. Ako je uložak predug, skratite ga škarama po oznaci na vrhu — zato jedan par odgovara i međuveličinama.</p>
+    <p class="kwsc-lead">Odaberite <strong>svoj Broj obuće</strong>. Ako je uložak predug, skratite ga škarama po oznaci na vrhu — zato jedan par odgovara i međuveličinama.</p>
 
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">EU broj obuće</th><th scope="col">Duljina uloška</th></tr>
+          <tr><th scope="col">Broj obuće</th><th scope="col">Duljina uloška</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_stepcloud_sizes() as $r ) : ?>

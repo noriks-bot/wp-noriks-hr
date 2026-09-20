@@ -810,7 +810,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#2f8f7d;color:#fff;">
                   <th style="padding:9px 10px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 10px;text-align:left;">EU broj obuće</th>
+                  <th style="padding:9px 10px;text-align:left;">Broj obuće</th>
                   <th style="padding:9px 10px;text-align:left;">Duljina stopala</th>
                 </tr>
               </thead>
@@ -857,11 +857,11 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'stepcloud', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;">Odaberite <strong>svoj EU broj obuće</strong>. Ako je uložak predug, skratite ga škarama po oznaci na vrhu — zato jedan par odgovara i međuveličinama.</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Odaberite <strong>svoj Broj obuće</strong>. Ako je uložak predug, skratite ga škarama po oznaci na vrhu — zato jedan par odgovara i međuveličinama.</p>
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#f0581a;color:#fff;">
-                  <th style="padding:9px 10px;text-align:left;">EU broj obuće</th>
+                  <th style="padding:9px 10px;text-align:left;">Broj obuće</th>
                   <th style="padding:9px 10px;text-align:left;">Duljina uloška</th>
                 </tr>
               </thead>

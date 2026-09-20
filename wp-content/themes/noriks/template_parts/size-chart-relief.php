@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">EU broj obuće</th><th scope="col">Duljina stopala</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Broj obuće</th><th scope="col">Duljina stopala</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_relief_sizes() as $r ) : ?>

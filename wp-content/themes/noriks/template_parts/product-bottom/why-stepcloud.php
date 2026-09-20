@@ -118,7 +118,7 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
     <div class="nsc-copy">
       <p class="nsc-kicker">Boje i veličine</p>
       <h2 class="nsc-h2">Tri boje <em>i svi brojevi obuće</em></h2>
-      <p>Narančasta, crna i siva — jednaka konstrukcija, birajte prema cipeli. Veličine pokrivaju EU 35 do 50, a uložak se po potrebi skrati po oznaci.</p>
+      <p>Narančasta, crna i siva — jednaka konstrukcija, birajte prema cipeli. Veličine pokrivaju brojeve 35 do 50, a uložak se po potrebi skrati po oznaci.</p>
       <ul class="nsc-check">
         <li>Za <strong>tenisice, radne cipele i čizme</strong></li>
         <li>Jedan par se skrati za pola broja manje</li>
