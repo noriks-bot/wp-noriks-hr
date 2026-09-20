@@ -1193,6 +1193,18 @@ function gck_render_bundle_selector() {
     ?>
     <?php if ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* en sam izbornik: kratak i u stilu alternativnih izbornika */
+      #bundle-selector.is-single-size .gck-size-select,
+      #bundle-selector .bundle-pair .gck-dd {
+          width: 190px !important; max-width: 190px !important; min-width: 0 !important;
+          font-size: 15px !important; }
+      #bundle-selector.is-single-size .gck-size-select {
+          border: 2px solid #2f8f7d !important; border-radius: 8px !important;
+          padding: 12px 34px 12px 14px !important; font-weight: 600; color: #111 !important; }
+      @media (max-width: 560px) {
+        #bundle-selector.is-single-size .gck-size-select,
+        #bundle-selector .bundle-pair .gck-dd { width: 100% !important; max-width: 100% !important; }
+      }
       #bundle-selector .bundle-option {
           border: 2px solid #dcebe7 !important; background: #f4faf8 !important;
           box-shadow: 0 1px 2px rgba(20,25,40,.10), 0 2px 6px 2px rgba(20,25,40,.06) !important; }
@@ -1235,6 +1247,18 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-kneetape' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* en sam izbornik: kratak i u stilu alternativnih izbornika */
+      #bundle-selector.is-single-size .gck-size-select,
+      #bundle-selector .bundle-pair .gck-dd {
+          width: 190px !important; max-width: 190px !important; min-width: 0 !important;
+          font-size: 15px !important; }
+      #bundle-selector.is-single-size .gck-size-select {
+          border: 2px solid #1f6fd0 !important; border-radius: 8px !important;
+          padding: 12px 34px 12px 14px !important; font-weight: 600; color: #111 !important; }
+      @media (max-width: 560px) {
+        #bundle-selector.is-single-size .gck-size-select,
+        #bundle-selector .bundle-pair .gck-dd { width: 100% !important; max-width: 100% !important; }
+      }
       #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
       #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
           border: 2px solid #d9e6f8 !important; background: #fff; }

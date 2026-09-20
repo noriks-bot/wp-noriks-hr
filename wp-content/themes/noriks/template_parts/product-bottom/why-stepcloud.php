@@ -1,17 +1,19 @@
 <?php
 /**
  * product-bottom: NORIKS StepCloud — masazni ulosci s biomehanickom potporom svoda (orto-stepcloud).
- * Original: stepprs.com (Massage Insoles). Slike: img/stepcloud/ (kreative z namizja + ciste fotografije z originalne strani).
+ * Original: stepprs.com (Massage Insoles) — vrstni red sekcij sledi originalu. Slike: img/stepcloud/ (kreative z namizja + ciste fotografije z originalne strani).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikada na sredini;
  * slike su omedene na max-height 430px.
- *   1) Prednosti svakodnevne uporabe (lijevo)
- *   2) Tehnologija (desno)
- *   3) Značajke (lijevo)
- *   4) Kako koristiti (desno)
- *   5) Usporedba (lijevo)
- *   6) Boje i veličine (desno)
- *   7) Paketi (lijevo)
- *   8) NORIKS StepCloud (desno)
+ *   1) Hodajte bez boli (lijevo)
+ *   2) NORIKS razlika (desno)
+ *   3) Četiri razloga (lijevo)
+ *   4) Za sve namjene (desno)
+ *   5) Iskustva (lijevo)
+ *   6) Rezultati (desno)
+ *   7) Usporedba (lijevo)
+ *   8) Stručno mišljenje (desno)
+ *   9) Kako koristiti (lijevo)
+ *   10) Paketi i jamstvo (desno)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -23,144 +25,188 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 };
 ?>
 
-<!-- 1) PREDNOSTI SVAKODNEVNE UPORABE — slika lijevo -->
+<!-- 1) HODAJTE BEZ BOLI — slika lijevo -->
 <section class="nsc-sec nsc-tint">
   <div class="nsc-wrap nsc-row2">
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-05-prednosti.jpg', 'Par u šetnji s NORIKS StepCloud ulošcima' ); ?></div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-01-narancasti.jpg', 'NORIKS StepCloud ulošci u narančastoj boji' ); ?></div>
     <div class="nsc-copy">
-      <p class="nsc-kicker">Prednosti svakodnevne uporabe</p>
-      <h2 class="nsc-h2">Dan na nogama <em>bez boli u stopalima</em></h2>
-      <ul class="nsc-check">
-        <li>Odradite <strong>12-satnu smjenu</strong> bez boli u stopalima</li>
-        <li>Godine bolova od radnih čizama nestaju u sekundi</li>
-        <li><strong>Trenutno olakšanje</strong> kod kroničnih bolova</li>
-        <li>Potiče <strong>oporavak mišića</strong> i smanjuje upalu</li>
-        <li>Povratak aktivnom životu — šetnje, posao, trening</li>
+      <p class="nsc-kicker">Hodajte bez boli</p>
+      <h2 class="nsc-h2">Ponovno otkrijte radost <em>stajanja i hodanja</em></h2>
+      <p>Upoznajte NORIKS StepCloud uloške — udobnost za vaša stopala od prvog koraka. Bez boli u stopalima, bez umora na kraju smjene, bez mijenjanja cipela i navika.</p>
+      <ul class="nsc-strip">
+        <li>🚚 Brza dostava s praćenjem</li>
+        <li>😊 Više od 1.000.000 zadovoljnih kupaca</li>
+        <li>🛡️ 30 dana jamstva na povrat novca</li>
       </ul>
       <a class="nsc-cta" href="#bundle-selector">Naruči NORIKS StepCloud</a>
     </div>
   </div>
 </section>
 
-<!-- 2) TEHNOLOGIJA — slika desno -->
+<!-- 2) NORIKS RAZLIKA — slika desno -->
 <section class="nsc-sec">
   <div class="nsc-wrap nsc-row2 nsc-row2--rev">
     <div class="nsc-copy">
-      <p class="nsc-kicker">Tehnologija</p>
-      <h2 class="nsc-h2">Biomehanička tehnologija <em>potpore svodu stopala</em></h2>
-      <p>NORIKS koristi biomehaničku potporu svoda kako bi obuhvatio sredinu stopala i prirodno rasporedio pritisak — svaki korak je stabilniji i mekši, uz manje umora na kraju dana.</p>
-      <p>Jednostavna nadogradnja u cipeli za cjelodnevnu udobnost i sigurniji korak, bez promjene navika.</p>
+      <p class="nsc-kicker">NORIKS razlika</p>
+      <h2 class="nsc-h2">Prije <em>i poslije</em> u istoj cipeli</h2>
+      <div class="nsc-points">
+        <div class="nsc-point"><h3>Prije</h3><p>Tvornički uložak je ravan komad pjene. Pritisak pada na petu i prednji dio stopala, svod ostaje bez potpore, a navečer bole stopala, listovi i leđa.</p></div>
+        <div class="nsc-point"><h3>Poslije</h3><p>Biomehanička potpora obuhvati sredinu stopala i rasporedi pritisak po cijeloj površini. Korak je stabilniji i mekši, a umor dolazi kasnije.</p></div>
+      </div>
+      <p>Iskusite razliku sami i zakoračite u dan bez boli.</p>
     </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-06-tehnologija.jpg', 'NORIKS StepCloud uložak — biomehanička potpora' ); ?></div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-06-tehnologija.jpg', 'Biomehanička tehnologija potpore svodu stopala' ); ?></div>
   </div>
 </section>
 
-<!-- 3) ZNAČAJKE — slika lijevo -->
+<!-- 3) ČETIRI RAZLOGA — slika lijevo -->
 <section class="nsc-sec nsc-tint">
   <div class="nsc-wrap nsc-row2">
     <div class="nsc-media"><?php echo $nsc_img( 'sc-04-znacajke.jpg', 'Značajke NORIKS StepCloud uloška' ); ?></div>
     <div class="nsc-copy">
-      <p class="nsc-kicker">Značajke</p>
-      <h2 class="nsc-h2">Svaki detalj <em>ima svrhu</em></h2>
-      <div class="nsc-points">
-        <div class="nsc-point"><h3>Biomehanička potpora svodu</h3><p>Obuhvaća sredinu stopala i rasterećuje petu i prednji dio.</p></div>
-        <div class="nsc-point"><h3>Ciljani masažni čvorići</h3><p>Nježno stimuliraju stopalo pri svakom koraku.</p></div>
-        <div class="nsc-point"><h3>Debela petna čašica</h3><p>Ublažava udarac pete i drži stopalo u osi.</p></div>
-        <div class="nsc-point"><h3>Prozračni otvori</h3><p>Zrak kruži, pa se stopalo manje znoji.</p></div>
-        <div class="nsc-point"><h3>Mekano jastučenje</h3><p>Upija udarce na tvrdim podovima i asfaltu.</p></div>
-        <div class="nsc-point"><h3>Može se skratiti</h3><p>Škarama po oznaci, za točan broj cipele.</p></div>
+      <p class="nsc-kicker">Četiri razloga</p>
+      <h2 class="nsc-h2">Što uložak <em>mijenja svaki dan</em></h2>
+      <div class="nsc-facts">
+        <div><span class="nsc-num">⌁</span><h3>Bolje držanje</h3><p>Prava potpora svodu potiče bolju poravnatost kralježnice.</p></div>
+        <div><span class="nsc-num">⚡</span><h3>Više energije</h3><p>Svakom koraku dodaje odskok — hodanje i trčanje su lakši.</p></div>
+        <div><span class="nsc-num">✂</span><h3>Prilagodljiva veličina</h3><p>Jednostavno škarama režete po iscrtanoj liniji.</p></div>
+        <div><span class="nsc-num">💧</span><h3>Lako se pere</h3><p>Ručno, s malo sapuna i vode, pa osušiti na zraku.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4) KAKO KORISTITI — slika desno -->
+<!-- 4) ZA SVE NAMJENE — slika desno -->
 <section class="nsc-sec">
   <div class="nsc-wrap nsc-row2 nsc-row2--rev">
+    <div class="nsc-copy">
+      <p class="nsc-kicker">Za sve namjene</p>
+      <h2 class="nsc-h2">Jedan uložak <em>za sve što radite</em></h2>
+      <ul class="nsc-tags">
+        <li>Avantura</li>
+        <li>Sport i trening</li>
+        <li>Duge smjene</li>
+        <li>Svakodnevica</li>
+        <li>Izlasci</li>
+        <li>Gradilište</li>
+      </ul>
+      <ul class="nsc-check">
+        <li>Olakšanje kod boli, napetosti i nelagode</li>
+        <li>Potpora svodu i ciljani masažni čvorići</li>
+        <li>Regulacija temperature i prozračivanje</li>
+        <li>Uklanja neugodne mirise</li>
+      </ul>
+    </div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-10-setnja.jpg', 'Šetnja u cipelama s NORIKS StepCloud ulošcima' ); ?></div>
+  </div>
+</section>
+
+<!-- 5) ISKUSTVA — slika lijevo -->
+<section class="nsc-sec nsc-tint">
+  <div class="nsc-wrap nsc-row2">
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-05-prednosti.jpg', 'Prednosti svakodnevne uporabe NORIKS StepCloud uložaka' ); ?></div>
+    <div class="nsc-copy">
+      <p class="nsc-kicker">Iskustva</p>
+      <h2 class="nsc-h2">Kako ih koriste <em>ljudi na nogama cijeli dan</em></h2>
+      <ul class="nsc-jobs">
+        <li><strong>Građevinski radnik</strong><span>„Dane provodim na betonu, u radnim cipelama s čeličnom kapicom. Ulošci upijaju udarce, pa su stopala i koljena na kraju dana mirnija."</span></li>
+        <li><strong>Medicinska sestra</strong><span>„Na nogama sam cijelu smjenu. Razliku sam osjetila čim sam ih umetnula — potpora svodu je upravo ono što mi je nedostajalo."</span></li>
+        <li><strong>Konobar</strong><span>„Dvanaest sati u smjeni i prvi put bez onog žarenja u petama. Nisam očekivao toliku razliku od jednog uloška."</span></li>
+        <li><strong>Rekreativni trkač</strong><span>„Nakon trčanja stopala se brže oporave, a peta ne prima cijeli udarac kao prije."</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6) REZULTATI — slika desno -->
+<section class="nsc-sec">
+  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
+    <div class="nsc-copy">
+      <p class="nsc-kicker">Rezultati</p>
+      <h2 class="nsc-h2">Budućnost je <em>bez boli u stopalima</em></h2>
+      <div class="nsc-stats">
+        <div><b>95 %</b><span>Manje boli u stopalima</span><p>Potpora svodu i jastučenje osjetno smanjuju bol.</p></div>
+        <div><b>94 %</b><span>Veća udobnost</span><p>Udobnost u svakom koraku, uz manje umora.</p></div>
+        <div><b>90 %</b><span>Manji rizik od ozljeda</span><p>Jastučenje i potpora smanjuju rizik od ozljeda stopala.</p></div>
+      </div>
+      <p class="nsc-note">* Prema kliničkim i potrošačkim istraživanjima proizvođača uložaka ovog tipa.</p>
+    </div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-02-crni.jpg', 'NORIKS StepCloud ulošci u crnoj boji' ); ?></div>
+  </div>
+</section>
+
+<!-- 7) USPOREDBA — slika lijevo -->
+<section class="nsc-sec nsc-tint">
+  <div class="nsc-wrap nsc-row2">
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-07-usporedba.jpg', 'Usporedba NORIKS uložaka s drogerijskim i običnim' ); ?></div>
+    <div class="nsc-copy">
+      <p class="nsc-kicker">Usporedba</p>
+      <h2 class="nsc-h2">Po čemu je NORIKS <em>drukčiji</em></h2>
+      <table class="nsc-table">
+        <thead><tr><th>&nbsp;</th><th>NORIKS</th><th>Ostali</th></tr></thead>
+        <tbody>
+          <tr><td>Jastučenje</td><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><td>Prozračnost</td><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><td>Olakšanje od prvog nošenja</td><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><td>Potpora svodu stopala</td><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><td>Upijanje udaraca</td><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><td>Uklanjanje neugodnih mirisa</td><td class="yes">✓</td><td class="no">✕</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 8) STRUČNO MIŠLJENJE — slika desno -->
+<section class="nsc-sec">
+  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
+    <div class="nsc-copy">
+      <p class="nsc-kicker">Stručno mišljenje</p>
+      <h2 class="nsc-h2">Ciljano olakšanje <em>ondje gdje nastaje bol</em></h2>
+      <div class="nsc-quote">
+        <p>„Kao podijatar godinama liječim pacijente sa spuštenim svodom i plantarnim fasciitisom. Ulošci ovog tipa daju ciljanu potporu svodu, ravnomjerno raspoređuju pritisak i smanjuju napetost plantarne fascije. Uz redovito nošenje pacijenti primjećuju osjetno poboljšanje."</p>
+        <cite>Dr. Thomas Schneider — podijatar</cite>
+      </div>
+      <p>Zato se ulošci najčešće preporučuju uz dug boravak na nogama, kod boli u peti i svodu te tijekom oporavka.</p>
+    </div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-03-sivi.jpg', 'NORIKS StepCloud ulošci u sivoj boji' ); ?></div>
+  </div>
+</section>
+
+<!-- 9) KAKO KORISTITI — slika lijevo -->
+<section class="nsc-sec nsc-tint">
+  <div class="nsc-wrap nsc-row2">
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-08-kako-koristiti.jpg', 'Umetanje NORIKS StepCloud uloška u tenisicu' ); ?></div>
     <div class="nsc-copy">
       <p class="nsc-kicker">Kako koristiti</p>
       <h2 class="nsc-h2">U cipeli <em>za manje od minute</em></h2>
       <ol class="nsc-steps">
         <li>Izvadite stari uložak iz cipele i bacite ga</li>
         <li>Umetnite NORIKS u cipelu</li>
-        <li>Ako je stopalu pretijesno, skratite uložak</li>
+        <li>Ako je stopalu pretijesno, skratite uložak po oznaci</li>
         <li>Uživajte u udobnosti</li>
       </ol>
       <p class="nsc-note">Ulošci se stavljaju umjesto tvorničkog uloška, nikada preko njega.</p>
     </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-08-kako-koristiti.jpg', 'Umetanje NORIKS StepCloud uloška u tenisicu' ); ?></div>
   </div>
 </section>
 
-<!-- 5) USPOREDBA — slika lijevo -->
-<section class="nsc-sec nsc-tint">
-  <div class="nsc-wrap nsc-row2">
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-07-usporedba.jpg', 'Usporedba NORIKS uložaka s drogerijskim i običnim' ); ?></div>
-    <div class="nsc-copy">
-      <p class="nsc-kicker">Usporedba</p>
-      <h2 class="nsc-h2">Mi <em>prema ostalim ulošcima</em></h2>
-      <ul class="nsc-vs">
-        <li class="is-yes">Olakšanje do 12 sati dnevno</li>
-        <li class="is-yes">Zadržava oblik 2 mjeseca</li>
-        <li class="is-yes">Prava potpora svodu stopala</li>
-        <li class="is-yes">Pomaže kod kroničnih bolova u stopalima</li>
-        <li class="is-yes">Olakšanje od prvog nošenja</li>
-        <li class="is-no">Ulošci iz drogerije: samo mekana pjena</li>
-        <li class="is-no">Obični ulošci: spljošte se za nekoliko tjedana</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 6) BOJE I VELIČINE — slika desno -->
+<!-- 10) PAKETI I JAMSTVO — slika desno -->
 <section class="nsc-sec">
   <div class="nsc-wrap nsc-row2 nsc-row2--rev">
     <div class="nsc-copy">
-      <p class="nsc-kicker">Boje i veličine</p>
-      <h2 class="nsc-h2">Tri boje <em>i svi brojevi obuće</em></h2>
-      <p>Narančasta, crna i siva — jednaka konstrukcija, birajte prema cipeli. Veličine pokrivaju brojeve 35 do 50, a uložak se po potrebi skrati po oznaci.</p>
-      <ul class="nsc-check">
-        <li>Za <strong>tenisice, radne cipele i čizme</strong></li>
-        <li>Jedan par se skrati za pola broja manje</li>
-        <li>Muški i ženski brojevi</li>
-      </ul>
-    </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-02-crni.jpg', 'NORIKS StepCloud ulošci u crnoj boji' ); ?></div>
-  </div>
-</section>
-
-<!-- 7) PAKETI — slika lijevo -->
-<section class="nsc-sec nsc-tint">
-  <div class="nsc-wrap nsc-row2">
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-09-akcija.jpg', 'NORIKS StepCloud akcijska ponuda' ); ?></div>
-    <div class="nsc-copy">
-      <p class="nsc-kicker">Paketi</p>
-      <h2 class="nsc-h2">Više pari <em>— niža cijena po paru</em></h2>
-      <p>Ulošci uz svakodnevno nošenje zadržavaju oblik oko dva mjeseca, pa većina kupaca uzme više pari odjednom — za radne cipele, tenisice i čizme.</p>
+      <p class="nsc-kicker">Paketi i jamstvo</p>
+      <h2 class="nsc-h2">Pomozite svojim stopalima <em>već danas</em></h2>
+      <p>Bilo da ste cijeli dan na nogama na poslu ili gurate granice na treningu — ulošci daju potporu ondje gdje je najpotrebnija. Uz svakodnevno nošenje zadržavaju oblik oko dva mjeseca, pa većina kupaca uzme više pari odjednom.</p>
       <ul class="nsc-check">
         <li><strong>2 para</strong> — niža cijena po paru</li>
         <li><strong>3 para</strong> — za cijelu obitelj</li>
         <li><strong>5 pari</strong> — najniža cijena po paru</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 8) NORIKS STEPCLOUD — slika desno -->
-<section class="nsc-sec">
-  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
-    <div class="nsc-copy">
-      <p class="nsc-kicker">NORIKS StepCloud</p>
-      <h2 class="nsc-h2">Isprobajte ih <em>30 dana bez rizika</em></h2>
-      <p>Umetnite ih u cipele koje nosite svaki dan. Ako nakon tjedan dana ne osjetite razliku, vratit ćemo vam novac.</p>
-      <ul class="nsc-check">
         <li><strong>30 dana</strong> za povrat novca</li>
-        <li>Brza dostava na kućnu adresu</li>
-        <li>Plaćanje pouzećem pri preuzimanju</li>
       </ul>
       <a class="nsc-cta" href="#bundle-selector">Naruči NORIKS StepCloud</a>
     </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-01-narancasti.jpg', 'NORIKS StepCloud ulošci u narančastoj boji' ); ?></div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-09-akcija.jpg', 'NORIKS StepCloud akcijska ponuda' ); ?></div>
   </div>
 </section>
 
@@ -168,14 +214,15 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 .nsc-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #2b1a10; }
 .nsc-sec * { box-sizing: border-box; }
 .nsc-tint { background: #fff2ea; }
-.nsc-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.nsc-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 24px; }
 .nsc-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #f0581a; margin: 0 0 10px; }
 .nsc-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: #2b1a10; }
 .nsc-h2 em { font-style: italic; font-weight: 800; color: #f0581a; }
 .nsc-copy p { font-size: 16px; line-height: 1.7; color: #5d4a3d; margin: 0 0 14px; }
 .nsc-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nsc-media { text-align: center; }
-.nsc-media img { display: inline-block; width: auto; max-width: 100%; max-height: 430px; object-fit: contain; border-radius: 14px;
+.nsc-media { text-align: left; }
+.nsc-row2--rev .nsc-media { text-align: right; }
+.nsc-media img { display: inline-block; width: auto; max-width: 100%; max-height: 560px; object-fit: contain; border-radius: 14px;
   box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 40px rgba(20,25,40,.10); }
 .nsc-check { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 11px; }
 .nsc-check li { position: relative; padding-left: 28px; font-size: 15.5px; line-height: 1.5; color: #2b1a10; }
@@ -215,7 +262,7 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   .nsc-sec { padding: 42px 0; }
   .nsc-wrap { padding: 0 16px; }
   .nsc-cta { width: 100%; text-align: center; }
-  .nsc-media img { max-height: 360px; }
+  .nsc-media img { max-height: 440px; }
   .nsc-num { font-size: 23px; }
   .nsc-tags { grid-template-columns: 1fr; }
 }
@@ -238,4 +285,30 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
   text-align: center !important; display: inline-block !important; }
 .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
+
+.nsc-strip { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 4px 0 20px; padding: 0; list-style: none; }
+.nsc-strip li { font-size: 14.5px; font-weight: 700; color: #f0581a; }
+.nsc-stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin: 6px 0 18px; }
+.nsc-stats > div { background: #fff2ea; border-radius: 12px; padding: 16px 14px; text-align: center; }
+.nsc-stats b { display: block; font-size: 30px; font-weight: 800; color: #f0581a; line-height: 1.05; }
+.nsc-stats span { display: block; font-size: 13.5px; font-weight: 700; color: #2b1a10; margin: 6px 0 4px; }
+.nsc-stats p { font-size: 13px !important; color: #5d4a3d !important; line-height: 1.45 !important; margin: 0 !important; }
+.nsc-table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 6px 0 18px; }
+.nsc-table th { text-align: left; font-weight: 800; color: #2b1a10; padding: 10px 12px; border-bottom: 2px solid #fff2ea; }
+.nsc-table th:nth-child(2), .nsc-table th:nth-child(3),
+.nsc-table td:nth-child(2), .nsc-table td:nth-child(3) { text-align: center; width: 92px; }
+.nsc-table td { padding: 10px 12px; border-bottom: 1px solid #fff2ea; color: #2b1a10; }
+.nsc-table .yes { color: #2f9e5f; font-weight: 800; }
+.nsc-table .no { color: #b9b9b9; font-weight: 800; }
+.nsc-quote { background: #fff2ea; border-left: 4px solid #f0581a; border-radius: 0 12px 12px 0; padding: 18px 20px; margin: 4px 0 16px; }
+.nsc-quote p { font-size: 15.5px !important; line-height: 1.65 !important; color: #2b1a10 !important; margin: 0 0 10px !important; font-style: italic; }
+.nsc-quote cite { font-size: 13.5px; font-weight: 800; color: #f0581a; font-style: normal; }
+.nsc-jobs { list-style: none; padding: 0; margin: 4px 0 18px; display: flex; flex-direction: column; gap: 14px; }
+.nsc-jobs li { background: #fff2ea; border-radius: 12px; padding: 14px 16px; }
+.nsc-jobs strong { display: block; font-size: 14.5px; color: #f0581a; margin-bottom: 4px; }
+.nsc-jobs span { font-size: 15px; line-height: 1.6; color: #2b1a10; }
+@media (max-width: 560px) {
+  .nsc-stats { grid-template-columns: 1fr; }
+  .nsc-table { font-size: 14px; }
+}
 </style>

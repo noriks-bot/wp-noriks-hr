@@ -216,8 +216,9 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
 .nkt-h2 em { font-style: italic; font-weight: 800; color: #1f6fd0; }
 .nkt-copy p { font-size: 16px; line-height: 1.7; color: #4c5a71; margin: 0 0 14px; }
 .nkt-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nkt-media { text-align: center; }
-.nkt-media img { display: inline-block; width: auto; max-width: 100%; max-height: 430px; object-fit: contain; border-radius: 14px;
+.nkt-media { text-align: left; }
+.nkt-row2--rev .nkt-media { text-align: right; }
+.nkt-media img { display: inline-block; width: auto; max-width: 100%; max-height: 560px; object-fit: contain; border-radius: 14px;
   box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 40px rgba(20,25,40,.10); }
 .nkt-check { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 11px; }
 .nkt-check li { position: relative; padding-left: 28px; font-size: 15.5px; line-height: 1.5; color: #15243d; }
@@ -257,7 +258,7 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
   .nkt-sec { padding: 42px 0; }
   .nkt-wrap { padding: 0 16px; }
   .nkt-cta { width: 100%; text-align: center; }
-  .nkt-media img { max-height: 360px; }
+  .nkt-media img { max-height: 440px; }
   .nkt-num { font-size: 23px; }
   .nkt-tags { grid-template-columns: 1fr; }
 }

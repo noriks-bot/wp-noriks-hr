@@ -180,8 +180,9 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
 .ngs-h2 em { font-style: italic; font-weight: 800; color: #1f63c8; }
 .ngs-copy p { font-size: 16px; line-height: 1.7; color: #4d5a70; margin: 0 0 14px; }
 .ngs-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.ngs-media { text-align: center; }
-.ngs-media img { display: inline-block; width: auto; max-width: 100%; max-height: 430px; object-fit: contain; border-radius: 14px;
+.ngs-media { text-align: left; }
+.ngs-row2--rev .ngs-media { text-align: right; }
+.ngs-media img { display: inline-block; width: auto; max-width: 100%; max-height: 560px; object-fit: contain; border-radius: 14px;
   box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 40px rgba(20,25,40,.10); }
 .ngs-check { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 11px; }
 .ngs-check li { position: relative; padding-left: 28px; font-size: 15.5px; line-height: 1.5; color: #16233b; }
@@ -221,7 +222,7 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
   .ngs-sec { padding: 42px 0; }
   .ngs-wrap { padding: 0 16px; }
   .ngs-cta { width: 100%; text-align: center; }
-  .ngs-media img { max-height: 360px; }
+  .ngs-media img { max-height: 440px; }
   .ngs-num { font-size: 23px; }
   .ngs-tags { grid-template-columns: 1fr; }
 }
