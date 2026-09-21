@@ -1247,6 +1247,12 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-kneetape' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* izbornik boje cita nijansu s probnog elementa IZVAN #bundle-selector,
+         zato ista pravila moraju postojati i bez prefiksa (inace ostane osnovna tamna boja). */
+      .swatch-circle.color-plava                { background: #3680c6 !important; }
+      .swatch-circle.color-crna                 { background: #1c1c1c !important; }
+      .swatch-circle.color-boja-koze            { background: #e5b79c !important; }
+      .swatch-circle.color-roza                 { background: #ee51b6 !important; }
       /* en sam izbornik: kratak i u stilu alternativnih izbornika */
       #bundle-selector.is-single-size .gck-size-select,
       #bundle-selector .bundle-pair .gck-dd {
@@ -1290,6 +1296,17 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-celleg' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* izbornik boje cita nijansu s probnog elementa IZVAN #bundle-selector,
+         zato ista pravila moraju postojati i bez prefiksa (inace ostane osnovna tamna boja). */
+      .swatch-circle.color-crna                 { background: #17161a !important; }
+      .swatch-circle.color-siva                 { background: #6f7377 !important; }
+      .swatch-circle.color-paunovo-zelena       { background: #1f8a8f !important; }
+      .swatch-circle.color-bez                  { background: #d8c3a5 !important; }
+      .swatch-circle.color-tamnoplava           { background: #23314f !important; }
+      .swatch-circle.color-roza                 { background: #e35bb6 !important; }
+      .swatch-circle.color-plava                { background: #23a3dd !important; }
+      .swatch-circle.color-zuta                 { background: #f2d43c !important; }
+      .swatch-circle.color-svijetloljubicasta   { background: #cfd3ec !important; }
 
       /* dva izbornika u redu: velicina uze, boja sira (ime boje mora stati) */
       #bundle-selector .bundle-pair .gck-dd { min-width: 132px !important; }
@@ -1335,6 +1352,11 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-stepcloud' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* izbornik boje cita nijansu s probnog elementa IZVAN #bundle-selector,
+         zato ista pravila moraju postojati i bez prefiksa (inace ostane osnovna tamna boja). */
+      .swatch-circle.color-narancasta           { background: #f0581a !important; }
+      .swatch-circle.color-crna                 { background: #2b2b2d !important; }
+      .swatch-circle.color-siva                 { background: #9aa0a6 !important; }
 
       /* dva izbornika u redu: velicina uze, boja sira (ime boje mora stati) */
       #bundle-selector .bundle-pair .gck-dd { min-width: 132px !important; }
