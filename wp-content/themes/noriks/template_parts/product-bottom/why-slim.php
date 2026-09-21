@@ -5,13 +5,13 @@
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikoli na sredini;
  * slike su omejene na max-height 430px.
  *   1) BEZ / S NORIKS SLIM — slika lijevo
- *   2) LIJEPO I SAMOUVJERENO — slika desno
- *   3) TEHNOLOGIJA PLETIVA — slika lijevo
- *   4) VISOKOELASTIČNO OBLIKOVANJE — slika desno
- *   5) NAKON PORODA — slika lijevo
- *   6) ŠEST BOJA — slika desno
- *   7) TABLICA VELIČINA — slika lijevo
- *   8) ONE GOVORE SAME — videi
+ *   2) ONE GOVORE SAME — videi
+ *   3) LIJEPO I SAMOUVJERENO — slika desno
+ *   4) TEHNOLOGIJA PLETIVA — slika lijevo
+ *   5) VISOKOELASTIČNO OBLIKOVANJE — slika desno
+ *   6) NAKON PORODA — slika lijevo
+ *   7) ŠEST BOJA — slika desno
+ *   8) TABLICA VELIČINA — slika lijevo
  *   9) USPOREDBA — tablica
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -45,8 +45,25 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 2) LIJEPO I SAMOUVJERENO — slika desno -->
-<section class="nsl-sec">
+<!-- 2) ONE GOVORE SAME — videi -->
+<section class="nsl-sec nsl-vids">
+  <div class="nsl-wrap">
+    <h2 class="nsl-h2" style="text-align:center">Govore <em>same za sebe</em></h2>
+    <div class="nsl-vids__strip">
+      <figure class="nsl-vids__card">
+        <video src="<?php echo esc_url( $sl . 'slm-vid-1.mp4' ); ?>" poster="<?php echo esc_url( $sl . 'slm-vid-1.jpg' ); ?>"
+               muted autoplay loop playsinline preload="none" aria-label="Kupka pokazuje NORIKS Slim gaćice"></video>
+      </figure>
+      <figure class="nsl-vids__card">
+        <video src="<?php echo esc_url( $sl . 'slm-vid-2.mp4' ); ?>" poster="<?php echo esc_url( $sl . 'slm-vid-2.jpg' ); ?>"
+               muted autoplay loop playsinline preload="none" aria-label="Kupka pokazuje kako NORIKS Slim oblikuje struk"></video>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3) LIJEPO I SAMOUVJERENO — slika desno -->
+<section class="nsl-sec nsl-tint">
   <div class="nsl-wrap nsl-row2 nsl-row2--rev">
     <div class="nsl-copy">
       <p class="nsl-kicker">Od jutra do večeri</p>
@@ -61,8 +78,8 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 3) TEHNOLOGIJA PLETIVA — slika lijevo -->
-<section class="nsl-sec nsl-tint">
+<!-- 4) TEHNOLOGIJA PLETIVA — slika lijevo -->
+<section class="nsl-sec">
   <div class="nsl-wrap nsl-row2">
     <div class="nsl-media"><?php echo $sl_img( 'slm-07-pletivo.jpg', 'Ukriženi pojas i pletivo NORIKS Slim gaćica' ); ?></div>
     <div class="nsl-copy">
@@ -79,8 +96,8 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 4) VISOKOELASTIČNO OBLIKOVANJE — slika desno -->
-<section class="nsl-sec">
+<!-- 5) VISOKOELASTIČNO OBLIKOVANJE — slika desno -->
+<section class="nsl-sec nsl-tint">
   <div class="nsl-wrap nsl-row2 nsl-row2--rev">
     <div class="nsl-copy">
       <p class="nsl-kicker">Elastična kompresija</p>
@@ -97,8 +114,8 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 5) NAKON PORODA — slika lijevo -->
-<section class="nsl-sec nsl-tint">
+<!-- 6) NAKON PORODA — slika lijevo -->
+<section class="nsl-sec">
   <div class="nsl-wrap nsl-row2">
     <div class="nsl-media"><?php echo $sl_img( 'slm-11-oblikovanje-nakon-poroda.jpg', 'Mame u NORIKS Slim gaćicama' ); ?></div>
     <div class="nsl-copy">
@@ -115,8 +132,8 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 6) ŠEST BOJA — slika desno -->
-<section class="nsl-sec">
+<!-- 7) ŠEST BOJA — slika desno -->
+<section class="nsl-sec nsl-tint">
   <div class="nsl-wrap nsl-row2 nsl-row2--rev">
     <div class="nsl-copy">
       <p class="nsl-kicker">Šest boja</p>
@@ -136,8 +153,8 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 7) TABLICA VELIČINA — slika lijevo -->
-<section class="nsl-sec nsl-tint">
+<!-- 8) TABLICA VELIČINA — slika lijevo -->
+<section class="nsl-sec">
   <div class="nsl-wrap nsl-row2">
     <div class="nsl-media"><?php echo $sl_img( 'slm-15-tablica-velicina.jpg', 'Tablica veličina NORIKS Slim' ); ?></div>
     <div class="nsl-copy">
@@ -150,23 +167,6 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
         <li>Pronađite svoj opseg u tablici. Između dvije veličine? Uzmite <strong>veću</strong>.</li>
       </ol>
       <a class="nsl-cta nsl-cta--line js-open-size-chart" href="#">Otvori tablicu veličina</a>
-    </div>
-  </div>
-</section>
-
-<!-- 8) ONE GOVORE SAME — videi -->
-<section class="nsl-sec nsl-vids">
-  <div class="nsl-wrap">
-    <h2 class="nsl-h2" style="text-align:center">Govore <em>same za sebe</em></h2>
-    <div class="nsl-vids__strip">
-      <figure class="nsl-vids__card">
-        <video src="<?php echo esc_url( $sl . 'slm-vid-1.mp4' ); ?>" poster="<?php echo esc_url( $sl . 'slm-vid-1.jpg' ); ?>"
-               muted autoplay loop playsinline preload="none" aria-label="Kupka pokazuje NORIKS Slim gaćice"></video>
-      </figure>
-      <figure class="nsl-vids__card">
-        <video src="<?php echo esc_url( $sl . 'slm-vid-2.mp4' ); ?>" poster="<?php echo esc_url( $sl . 'slm-vid-2.jpg' ); ?>"
-               muted autoplay loop playsinline preload="none" aria-label="Kupka pokazuje kako NORIKS Slim oblikuje struk"></video>
-      </figure>
     </div>
   </div>
 </section>
@@ -201,9 +201,9 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
 .nsl-h2 em { font-style: italic; font-weight: 800; color: #a3336b; }
 .nsl-copy p { font-size: 16px; line-height: 1.7; color: #5a4550; margin: 0 0 14px; }
 .nsl-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nsl-media { text-align: center; }
-.nsl-media img { display: inline-block; width: auto; max-width: 100%; max-height: 430px; object-fit: contain; border-radius: 14px;
-  box-shadow: 0 2px 4px rgba(43,22,34,.05), 0 14px 40px rgba(43,22,34,.10); }
+.nsl-media { text-align: left; }
+.nsl-media img { display: block; width: 100%; max-width: 100%; max-height: none; height: auto; object-fit: cover;
+  border-radius: 14px; box-shadow: 0 2px 4px rgba(40,20,35,.05), 0 14px 40px rgba(40,20,35,.10); }
 .nsl-check { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 11px; }
 .nsl-check li { position: relative; padding-left: 28px; font-size: 15.5px; line-height: 1.5; color: #3f2a35; }
 .nsl-check li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
@@ -219,9 +219,12 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
 .nsl-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 26px; margin-top: 6px; }
 .nsl-facts h3 { font-size: 16px; font-weight: 800; margin: 0 0 6px; color: #2b1622; }
 .nsl-facts p { font-size: 14.5px; color: #6d5863; line-height: 1.6; margin: 0; }
-.nsl-colors { list-style: none; padding: 0; margin: 6px 0 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 16px; }
-.nsl-colors li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #3f2a35; }
-.nsl-colors span { flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+.nsl-colors { list-style: none; padding: 0; margin: 14px 0 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.nsl-colors li { display: flex; align-items: center; gap: 11px; font-size: 14.5px; font-weight: 700; color: #3f2a35;
+  background: #fff; border: 1px solid #f1dfe9; border-radius: 12px; padding: 10px 14px;
+  box-shadow: 0 1px 2px rgba(40,20,35,.04), 0 6px 16px rgba(40,20,35,.05); }
+.nsl-colors span { flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.14), 0 0 0 3px #fff, 0 0 0 4px rgba(164,85,127,.22); }
 .nsl-steps { margin: 4px 0 22px; padding-left: 22px; }
 .nsl-steps li { font-size: 15.5px; line-height: 1.6; color: #3f2a35; margin-bottom: 8px; }
 .nsl-note { font-size: 13.5px !important; color: #8e7883 !important; font-style: italic; margin: 6px 0 0 !important; }
@@ -263,7 +266,6 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   .nsl-facts { grid-template-columns: 1fr; gap: 16px; }
   .nsl-colors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nsl-cta { width: 100%; text-align: center; }
-  .nsl-media img { max-height: 360px; }
 }
 
 /* ── kratek opis izdelka: kljukice namesto pik (REST pobrise inline slog) ── */
