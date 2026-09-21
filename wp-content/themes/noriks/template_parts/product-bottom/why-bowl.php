@@ -110,8 +110,31 @@ $bw_img  = function( $file, $alt ) use ( $bw, $bw_path ) {
   </div>
 </section>
 
-<!-- 6) IZJAVA + JAMSTVO — slika desno -->
-<section class="nbw-sec">
+<!-- 6) VOLE JE VLASNICI PASA — fotografije kupaca -->
+<section class="nbw-sec nbw-rev">
+  <div class="nbw-wrap">
+    <h2 class="nbw-h2" style="text-align:center">Vole je <em>vlasnici pasa</em></h2>
+    <p class="nbw-rev__lead">Bolje držanje. Mirniji obroci.</p>
+    <p class="nbw-rev__rate"><span class="nbw-rev__stars">★★★★★</span> Ocjena <strong>4,8/5</strong> na temelju <strong>1.081 recenzije</strong></p>
+    <div class="nbw-rev__strip">
+        <figure class="nbw-rev__card">
+          <?php echo $bw_img( 'bwl-02-jazavcar.jpg', 'Jazavčar, 6 god. uz NORIKS Bowl zdjelicu' ); ?>
+          <figcaption><span class="nbw-rev__stars">★★★★★</span><strong>Jazavčar, 6 god.</strong><span>„Više ne jede u čučnju. Zdjelica je taman visoka da mu glava ostane ravno."</span></figcaption>
+        </figure>
+        <figure class="nbw-rev__card">
+          <?php echo $bw_img( 'bwl-03-francuski-buldog.jpg', 'Francuski buldog, 3 god. uz NORIKS Bowl zdjelicu' ); ?>
+          <figcaption><span class="nbw-rev__stars">★★★★★</span><strong>Francuski buldog, 3 god.</strong><span>„Kratkonosnom psu je ovo najveća razlika — jede mirnije i bez gušenja."</span></figcaption>
+        </figure>
+        <figure class="nbw-rev__card">
+          <?php echo $bw_img( 'bwl-04-snaucer.jpg', 'Šnaucer, 8 god. uz NORIKS Bowl zdjelicu' ); ?>
+          <figcaption><span class="nbw-rev__stars">★★★★★</span><strong>Šnaucer, 8 god.</strong><span>„Stariji pas s ukočenim vratom. Nagib od 15° mu je vidno olakšao obrok."</span></figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 7) IZJAVA + JAMSTVO — slika desno -->
+<section class="nbw-sec nbw-tint">
   <div class="nbw-wrap nbw-row2 nbw-row2--rev">
     <div class="nbw-copy">
       <p class="nbw-kicker">NORIKS Bowl</p>
@@ -138,9 +161,9 @@ $bw_img  = function( $file, $alt ) use ( $bw, $bw_path ) {
 .nbw-h2 em { font-style: italic; font-weight: 800; color: #2f5b9a; }
 .nbw-copy p { font-size: 16px; line-height: 1.7; color: #4b5a70; margin: 0 0 14px; }
 .nbw-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nbw-media { text-align: center; }
-.nbw-media img { display: inline-block; width: auto; max-width: 100%; max-height: 430px; object-fit: contain; border-radius: 14px;
-  box-shadow: 0 2px 4px rgba(28,43,68,.05), 0 14px 40px rgba(28,43,68,.10); }
+.nbw-media { text-align: left; }
+.nbw-media img { display: block; width: 100%; max-width: 100%; max-height: none; height: auto; object-fit: cover;
+  border-radius: 14px; box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 40px rgba(20,25,40,.10); }
 .nbw-check { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 11px; }
 .nbw-check li { position: relative; padding-left: 28px; font-size: 15.5px; line-height: 1.5; color: #2c3b52; }
 .nbw-check li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
@@ -165,15 +188,30 @@ $bw_img  = function( $file, $alt ) use ( $bw, $bw_path ) {
 .nbw-cta { display: inline-block; background: #2f5b9a; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .nbw-cta:hover { background: #22477c; color: #fff !important; }
 
+.nbw-rev__lead { text-align: center; font-size: 16px; color: #5a6b85; margin: 0 0 8px; }
+.nbw-rev__rate { text-align: center; font-size: 15.5px; color: #1c2b44; margin: 0 0 22px; }
+.nbw-rev__stars { color: #f5a623; letter-spacing: 2px; }
+.nbw-rev__strip { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.nbw-rev__card { margin: 0; background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 12px 30px rgba(20,25,40,.10); }
+.nbw-rev__card img { width: 100%; max-width: none; max-height: none; aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: 0; box-shadow: none; display: block; }
+.nbw-rev__card figcaption { padding: 14px 16px 18px; }
+.nbw-rev__card figcaption strong { display: block; font-size: 15.5px; font-weight: 800; color: #1c2b44; margin: 6px 0 5px; }
+.nbw-rev__card figcaption span:last-child { display: block; font-size: 14.5px; line-height: 1.6; color: #4c5a71; }
+
 @media (max-width: 980px) {
+  .nbw-rev__strip { grid-template-columns: 1fr 1fr; }
   .nbw-row2 { grid-template-columns: 1fr; gap: 28px; }
-  .nbw-row2--rev .nbw-media { order: -1; }
+  .nbw-row2--rev .nbw-media { text-align: right; }
 }
 @media (max-width: 560px) {
+  .nbw-rev__strip { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 78%;
+    overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .nbw-rev__card { scroll-snap-align: center; }
   .nbw-sec { padding: 42px 0; }
   .nbw-wrap { padding: 0 16px; }
   .nbw-cta { width: 100%; text-align: center; }
-  .nbw-media img { max-height: 360px; }
   .nbw-num { font-size: 23px; }
 }
 

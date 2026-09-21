@@ -4,10 +4,15 @@
  * Original: saybeam.com/products/saybeam-sculpt-brief. Slike: img/slim/ (s namizja NORIKS-SLIMY/SPLETNA STRAN).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikoli na sredini;
  * slike su omejene na max-height 430px.
- *   1) Bez / s NORIKS Slim (slika lijevo)    5) Nakon poroda (lijevo)
- *   2) Lijepo i samouvjereno (desno)          6) Sest boja (desno)
- *   3) Tehnologija pletiva (lijevo)           7) Tablica velicina (lijevo)
- *   4) Visokoelasticno oblikovanje (desno)    8) Bonus e-knjiga (desno)
+ *   1) BEZ / S NORIKS SLIM — slika lijevo
+ *   2) LIJEPO I SAMOUVJERENO — slika desno
+ *   3) TEHNOLOGIJA PLETIVA — slika lijevo
+ *   4) VISOKOELASTIČNO OBLIKOVANJE — slika desno
+ *   5) NAKON PORODA — slika lijevo
+ *   6) ŠEST BOJA — slika desno
+ *   7) TABLICA VELIČINA — slika lijevo
+ *   8) ONE GOVORE SAME — videi
+ *   9) USPOREDBA — tablica
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -149,21 +154,40 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   </div>
 </section>
 
-<!-- 8) BONUS E-KNJIGA — slika desno -->
-<section class="nsl-sec">
-  <div class="nsl-wrap nsl-row2 nsl-row2--rev">
-    <div class="nsl-copy">
-      <p class="nsl-kicker">Bonus uz narudžbu</p>
-      <h2 class="nsl-h2">Metoda ravnog trbuha — <em>besplatna e-knjiga</em></h2>
-      <p>Jednostavan vodič do ravnijeg i čvršćeg donjeg trbuha — bez teretane. Kratke vježbe i navike koje možete uklopiti u običan dan.</p>
-      <ul class="nsl-check">
-        <li>Vježbe koje traju nekoliko minuta dnevno</li>
-        <li>Bez opreme i bez odlaska u teretanu</li>
-        <li>Stiže uz vašu narudžbu, besplatno</li>
-      </ul>
-      <p class="nsl-guarantee"><strong>30 dana za povrat ili zamjenu veličine.</strong> Ako vam ne odgovaraju, javite nam se e-mailom.</p>
+<!-- 8) ONE GOVORE SAME — videi -->
+<section class="nsl-sec nsl-vids">
+  <div class="nsl-wrap">
+    <h2 class="nsl-h2" style="text-align:center">Govore <em>same za sebe</em></h2>
+    <div class="nsl-vids__strip">
+      <figure class="nsl-vids__card">
+        <video src="<?php echo esc_url( $sl . 'slm-vid-1.mp4' ); ?>" poster="<?php echo esc_url( $sl . 'slm-vid-1.jpg' ); ?>"
+               muted autoplay loop playsinline preload="none" aria-label="Kupka pokazuje NORIKS Slim gaćice"></video>
+      </figure>
+      <figure class="nsl-vids__card">
+        <video src="<?php echo esc_url( $sl . 'slm-vid-2.mp4' ); ?>" poster="<?php echo esc_url( $sl . 'slm-vid-2.jpg' ); ?>"
+               muted autoplay loop playsinline preload="none" aria-label="Kupka pokazuje kako NORIKS Slim oblikuje struk"></video>
+      </figure>
     </div>
-    <div class="nsl-media"><?php echo $sl_img( 'slm-10-ebook.jpg', 'E-knjiga Metoda ravnog trbuha' ); ?></div>
+  </div>
+</section>
+
+<!-- 9) USPOREDBA — tablica -->
+<section class="nsl-sec nsl-tint nsl-cmp">
+  <div class="nsl-wrap">
+    <h2 class="nsl-h2" style="text-align:center">Zašto su NORIKS Slim gaćice <em>drukčije</em></h2>
+    <div class="nsl-cmp__box">
+      <table class="nsl-cmp__table">
+        <thead><tr><td>&nbsp;</td><th scope="col">Vježbanje</th><th scope="col">Dijeta</th><th scope="col">Klasično stezanje</th><th scope="col">Operacija</th><th scope="col" class="is-us">NORIKS Slim</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Djeluje na pravi uzrok</th><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__pol">–</td><td class="nsl-cmp__da is-us">✓</td></tr>
+          <tr><th scope="row">Obuče se u nekoliko sekundi</th><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__pol">–</td><td class="nsl-cmp__da">✓</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__da is-us">✓</td></tr>
+          <tr><th scope="row">Jeftinije od operacije</th><td class="nsl-cmp__da">✓</td><td class="nsl-cmp__da">✓</td><td class="nsl-cmp__da">✓</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__da is-us">✓</td></tr>
+          <tr><th scope="row">Udobno cijeli dan</th><td class="nsl-cmp__pol">–</td><td class="nsl-cmp__da">✓</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__da is-us">✓</td></tr>
+          <tr><th scope="row">Učinak već prvi dan</th><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__pol">–</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__da is-us">✓</td></tr>
+          <tr><th scope="row">Podupire trbuh u 360°</th><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__ne">✕</td><td class="nsl-cmp__pol">–</td><td class="nsl-cmp__da is-us">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -207,11 +231,33 @@ $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
 .nsl-cta--line { background: #fff; color: #a3336b !important; border: 2px solid #a3336b; padding: 13px 28px; }
 .nsl-cta--line:hover { background: #a3336b; color: #fff !important; }
 
+.nsl-vids__strip { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; max-width: 760px; margin: 22px auto 0; }
+.nsl-vids__card { margin: 0; border-radius: 14px; overflow: hidden; background: #000;
+  box-shadow: 0 2px 4px rgba(40,20,35,.06), 0 14px 34px rgba(40,20,35,.12); }
+.nsl-vids__card video { display: block; width: 100%; height: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+.nsl-cmp__box { background: #fff; border-radius: 16px; overflow-x: auto; margin-top: 22px;
+  box-shadow: 0 2px 4px rgba(40,20,35,.05), 0 16px 40px rgba(40,20,35,.10); }
+.nsl-cmp__table { width: 100%; min-width: 620px; border-collapse: collapse; border-spacing: 0; margin: 0 !important; border: 0 !important; }
+.nsl-cmp__table tr, .nsl-cmp__table thead, .nsl-cmp__table tbody { background: transparent !important; border: 0 !important; }
+.nsl-cmp__table thead th { font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: #6b5566; text-align: center; padding: 16px 10px; border-bottom: 1px solid #f0e2ea; }
+.nsl-cmp__table thead th.is-us { color: #a4557f; background: #fdf4f8; }
+.nsl-cmp__table th[scope="row"] { background: #fbf1f6; color: #3a2030; font-size: 14.5px; font-weight: 800;
+  text-align: left; padding: 14px 16px; border-bottom: 1px solid #fff; width: 27%; }
+.nsl-cmp__table td { text-align: center; font-size: 19px; font-weight: 800; padding: 14px 10px; border-bottom: 1px solid #f6ecf1; }
+.nsl-cmp__table tbody tr:last-child td, .nsl-cmp__table tbody tr:last-child th[scope="row"] { border-bottom: 0; }
+.nsl-cmp__table td.is-us { background: #fdf4f8; }
+.nsl-cmp__table td.nsl-cmp__da { color: #2f9e5f; }
+.nsl-cmp__table td.nsl-cmp__ne { color: #d05353; }
+.nsl-cmp__table td.nsl-cmp__pol { color: #b3a3ad; }
+
 @media (max-width: 980px) {
   .nsl-row2 { grid-template-columns: 1fr; gap: 28px; }
   .nsl-row2--rev .nsl-media { order: -1; }
 }
 @media (max-width: 560px) {
+  .nsl-vids__strip { gap: 12px; }
+  .nsl-cmp__table th[scope="row"] { font-size: 13.5px; padding: 12px 12px; }
   .nsl-sec { padding: 42px 0; }
   .nsl-wrap { padding: 0 16px; }
   .nsl-facts { grid-template-columns: 1fr; gap: 16px; }
