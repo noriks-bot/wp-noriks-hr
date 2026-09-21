@@ -271,7 +271,7 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
 .nkt-rev__strip { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: 22px; }
 .nkt-rev__card { margin: 0; background: #fff; border-radius: 14px; overflow: hidden;
   box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 34px rgba(20,25,40,.10); display: flex; flex-direction: column; }
-.nkt-rev__card img { width: 100%; max-width: none; max-height: none; height: 300px; object-fit: cover; border-radius: 0; box-shadow: none; display: block; }
+.nkt-rev__card img { width: 100%; max-width: none; max-height: none; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 0; box-shadow: none; display: block; }
 .nkt-rev__card figcaption { padding: 14px 16px 18px; }
 .nkt-rev__stars { color: #f5a623; font-size: 15px; letter-spacing: 2px; }
 .nkt-rev__who { display: inline-block; margin-left: 8px; background: #eef4fd; color: #1f6fd0; font-size: 12.5px; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
@@ -283,7 +283,6 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
   .nkt-rev__strip { grid-auto-flow: column; grid-auto-columns: 78%; grid-template-columns: none;
     overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
   .nkt-rev__card { scroll-snap-align: center; }
-  .nkt-rev__card img { height: 260px; }
 }
 
 @media (max-width: 980px) {
