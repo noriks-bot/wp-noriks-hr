@@ -4,14 +4,14 @@
  * Original: bamburelief.fi (BambuRelief Polvituki). Slike: img/relief/ (kreative z namizja + ciste fotografije z originalne strani).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikada na sredini;
  * slike su omedene na max-height 430px.
- *   1) Zvuči poznato? (lijevo)
- *   2) Olakšanje u nekoliko minuta (desno)
- *   3) Smanjuje upalu (lijevo)
- *   4) Više pokretljivosti (desno)
- *   5) Nosite ga danju i noću (lijevo)
- *   6) Zašto bambus (desno)
- *   7) Veličine (lijevo)
- *   8) NORIKS Relief (desno)
+ *   1) OLAKŠANJE U NEKOLIKO MINUTA — slika lijevo
+ *   2) ZVUČI POZNATO? — slika desno
+ *   3) SMANJUJE UPALU — slika lijevo
+ *   4) VIŠE POKRETLJIVOSTI — slika desno
+ *   5) NOSITE GA DANJU I NOĆU — slika lijevo
+ *   6) ZAŠTO BAMBUS — slika desno
+ *   7) VELIČINE — slika lijevo
+ *   8) NORIKS RELIEF — slika desno
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -23,10 +23,27 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
 };
 ?>
 
-<!-- 1) ZVUČI POZNATO? — slika lijevo -->
+<!-- 1) OLAKŠANJE U NEKOLIKO MINUTA — slika lijevo -->
 <section class="nrl-sec nrl-tint">
   <div class="nrl-wrap nrl-row2">
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-k01-bol.jpg', 'Bol u koljenu — NORIKS Relief steznik za koljeno' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k02-cirkulacija.webp', 'Prikaz krvotoka u koljenu pod kompresijom' ); ?></div>
+    <div class="nrl-copy">
+      <p class="nrl-kicker">Olakšanje u nekoliko minuta</p>
+      <h2 class="nrl-h2">Kompresija koja <em>pokreće krvotok</em></h2>
+      <p>Pletivo je gušće točno ondje gdje zglob treba potporu — oko čašice i s obje strane koljena. Umjesto da steže u jednoj liniji kao guma, pritisak je raspoređen po cijelom koljenu i potiče protok krvi.</p>
+      <ul class="nrl-check">
+        <li><strong>Bolji krvotok</strong> — više kisika do zgloba i mišića oko njega</li>
+        <li><strong>Manje oticanja</strong> jer se tekućina brže odvodi</li>
+        <li><strong>Stabilnije koljeno</strong> pri hodanju, čučnju i stepenicama</li>
+      </ul>
+      <p>Većina korisnika razliku osjeti već pri prvom nošenju, a puni učinak dolazi uz redovitu upotrebu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2) ZVUČI POZNATO? — slika desno -->
+<section class="nrl-sec">
+  <div class="nrl-wrap nrl-row2 nrl-row2--rev">
     <div class="nrl-copy">
       <p class="nrl-kicker">Zvuči poznato?</p>
       <h2 class="nrl-h2">Koljeno koje boli, <em>škripi i oteče</em></h2>
@@ -39,24 +56,7 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
       </ul>
       <p>NORIKS Relief radi na jednostavnom principu: ravnomjerna, blaga kompresija koja obuhvaća cijelo koljeno — bez šarki, remena i plastike.</p>
     </div>
-  </div>
-</section>
-
-<!-- 2) OLAKŠANJE U NEKOLIKO MINUTA — slika desno -->
-<section class="nrl-sec">
-  <div class="nrl-wrap nrl-row2 nrl-row2--rev">
-    <div class="nrl-copy">
-      <p class="nrl-kicker">Olakšanje u nekoliko minuta</p>
-      <h2 class="nrl-h2">Kompresija koja <em>pokreće krvotok</em></h2>
-      <p>Pletivo je gušće točno ondje gdje zglob treba potporu — oko čašice i s obje strane koljena. Umjesto da steže u jednoj liniji kao guma, pritisak je raspoređen po cijelom koljenu i potiče protok krvi.</p>
-      <ul class="nrl-check">
-        <li><strong>Bolji krvotok</strong> — više kisika do zgloba i mišića oko njega</li>
-        <li><strong>Manje oticanja</strong> jer se tekućina brže odvodi</li>
-        <li><strong>Stabilnije koljeno</strong> pri hodanju, čučnju i stepenicama</li>
-      </ul>
-      <p>Većina korisnika razliku osjeti već pri prvom nošenju, a puni učinak dolazi uz redovitu upotrebu.</p>
-    </div>
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-k02-cirkulacija.webp', 'Prikaz krvotoka u koljenu pod kompresijom' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k13-kuhinja.jpg', 'NORIKS Relief sivi steznik za koljeno' ); ?></div>
   </div>
 </section>
 
