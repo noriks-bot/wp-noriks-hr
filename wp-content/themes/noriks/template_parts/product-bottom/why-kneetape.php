@@ -81,115 +81,8 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
   </div>
 </section>
 
-<!-- 4) PRIMJENA — slika desno -->
-<section class="nkt-sec">
-  <div class="nkt-wrap nkt-row2 nkt-row2--rev">
-    <div class="nkt-copy">
-      <p class="nkt-kicker">Primjena</p>
-      <h2 class="nkt-h2">Nanesete je <em>sami, u manje od minute</em></h2>
-      <p>Traka je već izrezana u oblik za koljeno. Nema mjerenja, rezanja ni odlaska fizioterapeutu.</p>
-      <ol class="nkt-steps">
-        <li>Skinite zaštitnu foliju</li>
-        <li>Zalijepite bazu ispod koljena</li>
-        <li>Prekrižite krakove oko čašice</li>
-        <li>Protrljajte dlanom — gotovo!</li>
-      </ol>
-      <p class="nkt-note">Koža mora biti čista i suha, bez kreme i ulja.</p>
-    </div>
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-04-primjena.jpg', 'Četiri koraka nanošenja NORIKS trake' ); ?></div>
-  </div>
-</section>
-
-<!-- 5) ŠTO DOBIVATE — slika lijevo -->
-<section class="nkt-sec nkt-tint">
-  <div class="nkt-wrap nkt-row2">
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-06-prednosti.jpg', 'Prednosti NORIKS trake za koljeno' ); ?></div>
-    <div class="nkt-copy">
-      <p class="nkt-kicker">Što dobivate</p>
-      <h2 class="nkt-h2">Četiri stvari koje <em>odmah primijetite</em></h2>
-      <div class="nkt-points">
-        <div class="nkt-point"><h3>Brzo olakšanje boli</h3><p>Potpora se osjeti čim se traka zalijepi i koljeno dobije oslonac.</p></div>
-        <div class="nkt-point"><h3>Veća pokretljivost</h3><p>Traka se rasteže do 140 % i prati pokret umjesto da ga blokira.</p></div>
-        <div class="nkt-point"><h3>Potiče zacjeljivanje</h3><p>Blago podizanje kože rasterećuje tkivo oko zgloba.</p></div>
-        <div class="nkt-point"><h3>Brži oporavak</h3><p>Nakon treninga ili ozljede koljeno se lakše vraća u normalan ritam.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6) SVAKODNEVICA — slika desno -->
-<section class="nkt-sec">
-  <div class="nkt-wrap nkt-row2 nkt-row2--rev">
-    <div class="nkt-copy">
-      <p class="nkt-kicker">Svakodnevica</p>
-      <h2 class="nkt-h2">Što se mijenja <em>u običnom danu</em></h2>
-      <ul class="nkt-check">
-        <li>Hoda, vrtlari i saginje se — <strong>bez straha</strong></li>
-        <li>Penje se stubama <strong>bez držanja za rukohvat</strong></li>
-        <li>Prati pokret koljena <strong>bez ograničenja</strong></li>
-        <li>Drži <strong>3 do 5 dana</strong> — bez popravljanja</li>
-      </ul>
-      <p>Traka ostaje na mjestu pod hlačama i tajicama, pa je nosite i na poslu.</p>
-    </div>
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-07-svakodnevica.jpg', 'Žena hoda s NORIKS trakom na koljenu' ); ?></div>
-  </div>
-</section>
-
-<!-- 7) SIGURNO ZA KOŽU — slika lijevo -->
-<section class="nkt-sec nkt-tint">
-  <div class="nkt-wrap nkt-row2">
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-08-koza.jpg', 'Detalj materijala NORIKS trake' ); ?></div>
-    <div class="nkt-copy">
-      <p class="nkt-kicker">Sigurno za kožu</p>
-      <h2 class="nkt-h2">Vodootporna, <em>a nježna prema koži</em></h2>
-      <div class="nkt-facts">
-        <div><span class="nkt-num">140 %</span><h3>Rastezljivost</h3><p>Prati pokret koljena u svim smjerovima.</p></div>
-        <div><span class="nkt-num">3–5</span><h3>Dana nošenja</h3><p>Jedna traka izdrži nekoliko dana, i pod tušem.</p></div>
-        <div><span class="nkt-num">100 %</span><h3>Bez lateksa</h3><p>Pamučna podloga za osjetljivu kožu.</p></div>
-        <div><span class="nkt-num">10</span><h3>Traka u pakiranju</h3><p>Dovoljno za oko mjesec dana nošenja.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8) USPOREDBA — slika desno -->
-<section class="nkt-sec">
-  <div class="nkt-wrap nkt-row2 nkt-row2--rev">
-    <div class="nkt-copy">
-      <p class="nkt-kicker">Usporedba</p>
-      <h2 class="nkt-h2">Izrezana traka <em>umjesto role</em></h2>
-      <ul class="nkt-vs">
-        <li class="is-yes">Već izrezana za koljeno</li>
-        <li class="is-yes">Primjena bez greške, i bez iskustva</li>
-        <li class="is-yes">Razvijeno i testirano s fizioterapeutima</li>
-        <li class="is-no">Rola: dugotrajno rezanje i mjerenje</li>
-        <li class="is-no">Složena primjena, uglavnom za stručnjake</li>
-        <li class="is-no">Zahtijeva skupe termine i tretmane</li>
-      </ul>
-    </div>
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-09-usporedba.jpg', 'Usporedba NORIKS trake i trake u roli' ); ?></div>
-  </div>
-</section>
-
-<!-- 9) BOJE I POKLON — slika lijevo -->
-<section class="nkt-sec nkt-tint">
-  <div class="nkt-wrap nkt-row2">
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-02-bonus.jpg', 'Boje NORIKS trake i poklon grijaće trake' ); ?></div>
-    <div class="nkt-copy">
-      <p class="nkt-kicker">Boje i poklon</p>
-      <h2 class="nkt-h2">Četiri boje <em>i 10 grijaćih traka na dar</em></h2>
-      <p>Plava, crna, boja kože i roza — materijal, ljepilo i trajnost su jednaki, boja je stvar ukusa. Boja kože je najmanje vidljiva ispod odjeće.</p>
-      <ul class="nkt-check">
-        <li><strong>10 već izrezanih traka</strong> u pakiranju</li>
-        <li><strong>+10 biljnih grijaćih traka</strong> na poklon</li>
-        <li>Oznaka <strong>Sigurno za kožu</strong> — bez lateksa</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 10) PRAVE PRIČE — fotografije kupaca -->
-<section class="nkt-sec nkt-tint nkt-rev">
+<!-- 4) PRAVE PRIČE — fotografije kupaca -->
+<section class="nkt-sec nkt-rev">
   <div class="nkt-wrap">
     <p class="nkt-kicker" style="text-align:center">Prave priče</p>
     <h2 class="nkt-h2" style="text-align:center">Kupci <em>i njihova koljena</em></h2>
@@ -202,15 +95,7 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
             <p>„Koljeno mi je popuštalo svaki dan. Traku sam stavila u utorak ujutro, ne očekujući puno. Do popodneva je bol već bila manja."</p>
           </figcaption>
         </figure>
-        <figure class="nkt-rev__card">
-          <?php echo $nkt_img( 'kt-r2-koljeno.jpg', 'Ljiljana J., 56' ); ?>
-          <figcaption>
-            <span class="nkt-rev__stars">★★★★★</span>
-            <span class="nkt-rev__who">Ljiljana J., 56</span>
-            <p>„Prestala sam izbjegavati uspon do naše kuće. Prošli tjedan sam ga prošla s kćeri i koljeno me nijednom nije zaustavilo."</p>
-          </figcaption>
-        </figure>
-        <figure class="nkt-rev__card">
+                <figure class="nkt-rev__card">
           <?php echo $nkt_img( 'kt-r3-traka.jpg', 'Vesna M., 63' ); ?>
           <figcaption>
             <span class="nkt-rev__stars">★★★★★</span>
@@ -230,9 +115,100 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
   </div>
 </section>
 
-<!-- 11) NORIKS KNEETAPE — slika desno -->
-<section class="nkt-sec">
+<!-- 5) PRIMJENA — slika desno -->
+<section class="nkt-sec nkt-tint">
   <div class="nkt-wrap nkt-row2 nkt-row2--rev">
+    <div class="nkt-copy">
+      <p class="nkt-kicker">Primjena</p>
+      <h2 class="nkt-h2">Nanesete je <em>sami, u manje od minute</em></h2>
+      <p>Traka je već izrezana u oblik za koljeno. Nema mjerenja, rezanja ni odlaska fizioterapeutu.</p>
+      <ol class="nkt-steps">
+        <li>Skinite zaštitnu foliju</li>
+        <li>Zalijepite bazu ispod koljena</li>
+        <li>Prekrižite krakove oko čašice</li>
+        <li>Protrljajte dlanom — gotovo!</li>
+      </ol>
+      <p class="nkt-note">Koža mora biti čista i suha, bez kreme i ulja.</p>
+    </div>
+    <div class="nkt-media"><?php echo $nkt_img( 'kt-04-primjena.jpg', 'Četiri koraka nanošenja NORIKS trake' ); ?></div>
+  </div>
+</section>
+
+<!-- 6) ŠTO DOBIVATE — slika lijevo -->
+<section class="nkt-sec">
+  <div class="nkt-wrap nkt-row2">
+    <div class="nkt-media"><?php echo $nkt_img( 'kt-06-prednosti.jpg', 'Prednosti NORIKS trake za koljeno' ); ?></div>
+    <div class="nkt-copy">
+      <p class="nkt-kicker">Što dobivate</p>
+      <h2 class="nkt-h2">Četiri stvari koje <em>odmah primijetite</em></h2>
+      <div class="nkt-points">
+        <div class="nkt-point"><h3>Brzo olakšanje boli</h3><p>Potpora se osjeti čim se traka zalijepi i koljeno dobije oslonac.</p></div>
+        <div class="nkt-point"><h3>Veća pokretljivost</h3><p>Traka se rasteže do 140 % i prati pokret umjesto da ga blokira.</p></div>
+        <div class="nkt-point"><h3>Potiče zacjeljivanje</h3><p>Blago podizanje kože rasterećuje tkivo oko zgloba.</p></div>
+        <div class="nkt-point"><h3>Brži oporavak</h3><p>Nakon treninga ili ozljede koljeno se lakše vraća u normalan ritam.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7) SVAKODNEVICA — slika desno -->
+<section class="nkt-sec nkt-tint">
+  <div class="nkt-wrap nkt-row2 nkt-row2--rev">
+    <div class="nkt-copy">
+      <p class="nkt-kicker">Svakodnevica</p>
+      <h2 class="nkt-h2">Što se mijenja <em>u običnom danu</em></h2>
+      <ul class="nkt-check">
+        <li>Hoda, vrtlari i saginje se — <strong>bez straha</strong></li>
+        <li>Penje se stubama <strong>bez držanja za rukohvat</strong></li>
+        <li>Prati pokret koljena <strong>bez ograničenja</strong></li>
+        <li>Drži <strong>3 do 5 dana</strong> — bez popravljanja</li>
+      </ul>
+      <p>Traka ostaje na mjestu pod hlačama i tajicama, pa je nosite i na poslu.</p>
+    </div>
+    <div class="nkt-media"><?php echo $nkt_img( 'kt-07-svakodnevica.jpg', 'Žena hoda s NORIKS trakom na koljenu' ); ?></div>
+  </div>
+</section>
+
+<!-- 8) SIGURNO ZA KOŽU — slika lijevo -->
+<section class="nkt-sec">
+  <div class="nkt-wrap nkt-row2">
+    <div class="nkt-media"><?php echo $nkt_img( 'kt-08-koza.jpg', 'Detalj materijala NORIKS trake' ); ?></div>
+    <div class="nkt-copy">
+      <p class="nkt-kicker">Sigurno za kožu</p>
+      <h2 class="nkt-h2">Vodootporna, <em>a nježna prema koži</em></h2>
+      <div class="nkt-facts">
+        <div><span class="nkt-num">140 %</span><h3>Rastezljivost</h3><p>Prati pokret koljena u svim smjerovima.</p></div>
+        <div><span class="nkt-num">3–5</span><h3>Dana nošenja</h3><p>Jedna traka izdrži nekoliko dana, i pod tušem.</p></div>
+        <div><span class="nkt-num">100 %</span><h3>Bez lateksa</h3><p>Pamučna podloga za osjetljivu kožu.</p></div>
+        <div><span class="nkt-num">10</span><h3>Traka u pakiranju</h3><p>Dovoljno za oko mjesec dana nošenja.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9) USPOREDBA — slika desno -->
+<section class="nkt-sec nkt-tint">
+  <div class="nkt-wrap nkt-row2 nkt-row2--rev">
+    <div class="nkt-copy">
+      <p class="nkt-kicker">Usporedba</p>
+      <h2 class="nkt-h2">Izrezana traka <em>umjesto role</em></h2>
+      <ul class="nkt-vs">
+        <li class="is-yes">Već izrezana za koljeno</li>
+        <li class="is-yes">Primjena bez greške, i bez iskustva</li>
+        <li class="is-yes">Razvijeno i testirano s fizioterapeutima</li>
+        <li class="is-no">Rola: dugotrajno rezanje i mjerenje</li>
+        <li class="is-no">Složena primjena, uglavnom za stručnjake</li>
+        <li class="is-no">Zahtijeva skupe termine i tretmane</li>
+      </ul>
+    </div>
+    <div class="nkt-media"><?php echo $nkt_img( 'kt-09-usporedba.jpg', 'Usporedba NORIKS trake i trake u roli' ); ?></div>
+  </div>
+</section>
+
+<!-- 10) NORIKS KNEETAPE — slika lijevo -->
+<section class="nkt-sec">
+  <div class="nkt-wrap nkt-row2">
+    <div class="nkt-media"><?php echo $nkt_img( 'kt-10-fizioterapeut.jpg', 'Fizioterapeut drži pakiranje NORIKS trake' ); ?></div>
     <div class="nkt-copy">
       <p class="nkt-kicker">NORIKS KneeTape</p>
       <h2 class="nkt-h2">Isprobajte je <em>30 dana bez rizika</em></h2>
@@ -244,7 +220,6 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
       </ul>
       <a class="nkt-cta" href="#bundle-selector">Naruči NORIKS KneeTape</a>
     </div>
-    <div class="nkt-media"><?php echo $nkt_img( 'kt-10-fizioterapeut.jpg', 'Fizioterapeut drži pakiranje NORIKS trake' ); ?></div>
   </div>
 </section>
 
@@ -293,7 +268,7 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
 .nkt-cta:hover { background: #1854a1; color: #fff !important; }
 
 .nkt-rev .nkt-wrap { max-width: 1240px; }
-.nkt-rev__strip { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; margin-top: 22px; }
+.nkt-rev__strip { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: 22px; }
 .nkt-rev__card { margin: 0; background: #fff; border-radius: 14px; overflow: hidden;
   box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 34px rgba(20,25,40,.10); display: flex; flex-direction: column; }
 .nkt-rev__card img { width: 100%; max-width: none; max-height: none; height: 300px; object-fit: cover; border-radius: 0; box-shadow: none; display: block; }
