@@ -67,10 +67,10 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
       <p class="nsc-kicker">Četiri razloga</p>
       <h2 class="nsc-h2">Što uložak <em>mijenja svaki dan</em></h2>
       <div class="nsc-facts">
-        <div><span class="nsc-num">⌁</span><h3>Bolje držanje</h3><p>Prava potpora svodu potiče bolju poravnatost kralježnice.</p></div>
-        <div><span class="nsc-num">⚡</span><h3>Više energije</h3><p>Svakom koraku dodaje odskok — hodanje i trčanje su lakši.</p></div>
-        <div><span class="nsc-num">✂</span><h3>Prilagodljiva veličina</h3><p>Jednostavno škarama režete po iscrtanoj liniji.</p></div>
-        <div><span class="nsc-num">💧</span><h3>Lako se pere</h3><p>Ručno, s malo sapuna i vode, pa osušiti na zraku.</p></div>
+        <div><span class="nsc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V8"/><path d="m7 13 5-5 5 5"/><path d="M5 21h14"/></svg></span><h3>Bolje držanje</h3><p>Prava potpora svodu potiče bolju poravnatost kralježnice.</p></div>
+        <div><span class="nsc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l0-8Z"/></svg></span><h3>Više energije</h3><p>Svakom koraku dodaje odskok — hodanje i trčanje su lakši.</p></div>
+        <div><span class="nsc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M20 4 8.6 16.2"/><path d="M20 20 8.6 7.8"/></svg></span><h3>Prilagodljiva veličina</h3><p>Jednostavno škarama režete po iscrtanoj liniji.</p></div>
+        <div><span class="nsc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 10.4A6 6 0 0 1 6 13.4C6 9.4 12 3 12 3Z"/></svg></span><h3>Lako se pere</h3><p>Ručno, s malo sapuna i vode, pa osušiti na zraku.</p></div>
       </div>
     </div>
   </div>
@@ -239,8 +239,12 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 .nsc-points { display: flex; flex-direction: column; gap: 20px; }
 .nsc-point h3 { font-size: 17.5px; font-weight: 800; margin: 0 0 6px; color: #f0581a; }
 .nsc-point p { font-size: 15.5px; color: #5d4a3d; line-height: 1.6; margin: 0; }
-.nsc-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 6px; }
-.nsc-facts > div { background: #fff2ea; border-radius: 12px; padding: 16px 18px; }
+.nsc-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+.nsc-facts > div { background: #fff; border: 1px solid #f6ddd0; border-radius: 14px; padding: 18px 18px 18px;
+  box-shadow: 0 1px 2px rgba(60,30,15,.05), 0 8px 22px rgba(60,30,15,.06); }
+.nsc-ico { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; margin-bottom: 11px;
+  border-radius: 13px; background: #fff0e7; color: #f0581a; }
+.nsc-ico svg { width: 26px; height: 26px; display: block; }
 .nsc-num { display: block; font-size: 26px; font-weight: 800; color: #f0581a; line-height: 1.1; margin-bottom: 6px; }
 .nsc-facts h3 { font-size: 15.5px; font-weight: 800; margin: 0 0 4px; color: #2b1a10; }
 .nsc-facts p { font-size: 14px !important; color: #5d4a3d !important; line-height: 1.5 !important; margin: 0 !important; }

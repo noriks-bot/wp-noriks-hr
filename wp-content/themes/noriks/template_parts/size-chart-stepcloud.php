@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .kwsc-lead { font-size: 14.5px; line-height: 1.6; color: #5d4a3d; margin: 0 0 16px; }
 .kwsc-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .kwsc-table { width: 100%; border-collapse: collapse; font-size: 15px; }
-.kwsc-table th[scope="col"] { background: #f0581a; color: #fff; font-weight: 700; text-align: left; padding: 12px 14px; white-space: nowrap; }
+.kwsc-table th[scope="col"] { background: #ffe4d6 !important; color: #2b1a10 !important; font-weight: 800; text-align: left; padding: 12px 14px; white-space: nowrap; border-bottom: 2px solid #f0581a; }
 .kwsc-table th[scope="col"]:first-child { border-top-left-radius: 8px; }
 .kwsc-table th[scope="col"]:last-child { border-top-right-radius: 8px; }
 .kwsc-table th[scope="row"] { text-align: left; font-weight: 800; padding: 12px 14px; white-space: nowrap; }
