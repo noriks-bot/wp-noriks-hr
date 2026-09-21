@@ -11,7 +11,9 @@
  *   5) Leđa i kukovi (lijevo)
  *   6) Održavanje (desno)
  *   7) Usporedba (lijevo)
- *   8) Ponuda (desno)
+ *   8) Kupci ga pokazuju — videi
+ *   9) U svakom sjedalu — 4 fotografije
+ *  10) Ponuda (desno)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -26,7 +28,7 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
 <!-- 1) TRENUTNO OLAKŠANJE — slika lijevo -->
 <section class="ngs-sec ngs-tint">
   <div class="ngs-wrap ngs-row2">
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-03-satima.jpg', 'NORIKS GelSeat gel jastuk za sjedenje' ); ?></div>
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-01-bocno.jpg', 'Kralježnica u prirodnom položaju na NORIKS GelSeat jastuku' ); ?></div>
     <div class="ngs-copy">
       <p class="ngs-kicker">Trenutno olakšanje</p>
       <h2 class="ngs-h2">Sjedite satima <em>bez pritiska, boli i ukočenosti</em></h2>
@@ -90,7 +92,7 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
         <li>Kralježnica <strong>prirodno poravnata</strong></li>
       </ul>
     </div>
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-01-bocno.jpg', 'Prikaz položaja kralježnice na NORIKS GelSeat jastuku' ); ?></div>
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-03-satima.jpg', 'NORIKS GelSeat gel jastuk za sjedenje' ); ?></div>
   </div>
 </section>
 
@@ -152,7 +154,62 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
   </div>
 </section>
 
-<!-- 8) PONUDA — slika desno -->
+<!-- 8) KUPCI GA POKAZUJU — videi -->
+<section class="ngs-sec ngs-tint ngs-ugc">
+  <div class="ngs-wrap">
+    <p class="ngs-kicker" style="text-align:center">Iz prve ruke</p>
+    <h2 class="ngs-h2" style="text-align:center">Kupci ga pokazuju <em>u svojim stolicama</em></h2>
+    <div class="ngs-ugc__strip">
+        <figure class="ngs-ugc__card">
+          <video src="<?php echo esc_url( $ngs . 'gs-vid-1.mp4' ); ?>" poster="<?php echo esc_url( $ngs . 'gs-vid-1.jpg' ); ?>"
+                 muted autoplay loop playsinline preload="none"></video>
+        </figure>
+        <figure class="ngs-ugc__card">
+          <video src="<?php echo esc_url( $ngs . 'gs-vid-2.mp4' ); ?>" poster="<?php echo esc_url( $ngs . 'gs-vid-2.jpg' ); ?>"
+                 muted autoplay loop playsinline preload="none"></video>
+        </figure>
+        <figure class="ngs-ugc__card">
+          <video src="<?php echo esc_url( $ngs . 'gs-vid-3.mp4' ); ?>" poster="<?php echo esc_url( $ngs . 'gs-vid-3.jpg' ); ?>"
+                 muted autoplay loop playsinline preload="none"></video>
+        </figure>
+        <figure class="ngs-ugc__card">
+          <video src="<?php echo esc_url( $ngs . 'gs-vid-4.mp4' ); ?>" poster="<?php echo esc_url( $ngs . 'gs-vid-4.jpg' ); ?>"
+                 muted autoplay loop playsinline preload="none"></video>
+        </figure>
+        <figure class="ngs-ugc__card">
+          <video src="<?php echo esc_url( $ngs . 'gs-vid-5.mp4' ); ?>" poster="<?php echo esc_url( $ngs . 'gs-vid-5.jpg' ); ?>"
+                 muted autoplay loop playsinline preload="none"></video>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9) U SVAKOM SJEDALU -->
+<section class="ngs-sec ngs-seat">
+  <div class="ngs-wrap">
+    <h2 class="ngs-h2" style="text-align:center">Stvoren da vas podupre <em>u svakom sjedalu</em></h2>
+    <div class="ngs-seat__strip">
+        <figure class="ngs-seat__card">
+          <?php echo $ngs_img( 'gs-seat-1-ured.jpg', 'NORIKS GelSeat na uredskoj stolici' ); ?>
+          <figcaption>Uredska stolica</figcaption>
+        </figure>
+        <figure class="ngs-seat__card">
+          <?php echo $ngs_img( 'gs-seat-2-pilot.jpg', 'NORIKS GelSeat u pilotskoj kabini' ); ?>
+          <figcaption>Pilotska kabina</figcaption>
+        </figure>
+        <figure class="ngs-seat__card">
+          <?php echo $ngs_img( 'gs-seat-3-kamion.jpg', 'NORIKS GelSeat u kamionu' ); ?>
+          <figcaption>Kamion</figcaption>
+        </figure>
+        <figure class="ngs-seat__card">
+          <?php echo $ngs_img( 'gs-seat-4-kolica.jpg', 'NORIKS GelSeat na invalidskim kolicima' ); ?>
+          <figcaption>Invalidska kolica</figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 10) PONUDA — slika desno -->
 <section class="ngs-sec">
   <div class="ngs-wrap ngs-row2 ngs-row2--rev">
     <div class="ngs-copy">
@@ -213,6 +270,27 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
 .ngs-note { font-size: 13.5px !important; color: #7d8898 !important; font-style: italic; margin: 6px 0 0 !important; }
 .ngs-cta { display: inline-block; background: #1f63c8; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .ngs-cta:hover { background: #17499a; color: #fff !important; }
+
+.ngs-ugc__strip { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 16px; margin-top: 22px; }
+.ngs-ugc__card { margin: 0; border-radius: 14px; overflow: hidden; background: #000;
+  box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 34px rgba(20,25,40,.12); }
+.ngs-ugc__card video { display: block; width: 100%; height: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+.ngs-seat__strip { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: 22px; }
+.ngs-seat__card { margin: 0; background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 34px rgba(20,25,40,.10); }
+.ngs-seat__card img { width: 100%; max-width: none; max-height: none; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: 0; box-shadow: none; display: block; }
+.ngs-seat__card figcaption { padding: 12px 14px 14px; font-size: 14.5px; font-weight: 700; color: #16233b; text-align: center; }
+@media (max-width: 980px) {
+  .ngs-ugc__strip { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .ngs-seat__strip { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .ngs-ugc__strip, .ngs-seat__strip { grid-auto-flow: column; grid-template-columns: none;
+    grid-auto-columns: 62%; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+  .ngs-seat__strip { grid-auto-columns: 74%; }
+  .ngs-ugc__card, .ngs-seat__card { scroll-snap-align: center; }
+}
 
 @media (max-width: 980px) {
   .ngs-row2 { grid-template-columns: 1fr; gap: 28px; }
