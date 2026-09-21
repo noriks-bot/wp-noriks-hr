@@ -188,7 +188,49 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
   </div>
 </section>
 
-<!-- 10) NORIKS KNEETAPE — slika desno -->
+<!-- 10) PRAVE PRIČE — fotografije kupaca -->
+<section class="nkt-sec nkt-tint nkt-rev">
+  <div class="nkt-wrap">
+    <p class="nkt-kicker" style="text-align:center">Prave priče</p>
+    <h2 class="nkt-h2" style="text-align:center">Kupci <em>i njihova koljena</em></h2>
+    <div class="nkt-rev__strip">
+        <figure class="nkt-rev__card">
+          <?php echo $nkt_img( 'kt-r1-barbara.jpg', 'Barbara S., 58' ); ?>
+          <figcaption>
+            <span class="nkt-rev__stars">★★★★★</span>
+            <span class="nkt-rev__who">Barbara S., 58</span>
+            <p>„Koljeno mi je popuštalo svaki dan. Traku sam stavila u utorak ujutro, ne očekujući puno. Do popodneva je bol već bila manja."</p>
+          </figcaption>
+        </figure>
+        <figure class="nkt-rev__card">
+          <?php echo $nkt_img( 'kt-r2-koljeno.jpg', 'Ljiljana J., 56' ); ?>
+          <figcaption>
+            <span class="nkt-rev__stars">★★★★★</span>
+            <span class="nkt-rev__who">Ljiljana J., 56</span>
+            <p>„Prestala sam izbjegavati uspon do naše kuće. Prošli tjedan sam ga prošla s kćeri i koljeno me nijednom nije zaustavilo."</p>
+          </figcaption>
+        </figure>
+        <figure class="nkt-rev__card">
+          <?php echo $nkt_img( 'kt-r3-traka.jpg', 'Vesna M., 63' ); ?>
+          <figcaption>
+            <span class="nkt-rev__stars">★★★★★</span>
+            <span class="nkt-rev__who">Vesna M., 63</span>
+            <p>„Prije ovoga sam probala tri ortoze i traku iz role. Sve se skliznulo do podneva. Ovo je prvo što ostane točno ondje gdje sam stavila."</p>
+          </figcaption>
+        </figure>
+        <figure class="nkt-rev__card">
+          <?php echo $nkt_img( 'kt-r4-sharon.jpg', 'Sanja K., 61' ); ?>
+          <figcaption>
+            <span class="nkt-rev__stars">★★★★★</span>
+            <span class="nkt-rev__who">Sanja K., 61</span>
+            <p>„Svaka ortoza koju sam imala stezala mi je nogu do crvenih tragova. Ova drži koljeno bez gušenja — to je razlika."</p>
+          </figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 11) NORIKS KNEETAPE — slika desno -->
 <section class="nkt-sec">
   <div class="nkt-wrap nkt-row2 nkt-row2--rev">
     <div class="nkt-copy">
@@ -249,6 +291,25 @@ $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
 .nkt-note { font-size: 13.5px !important; color: #7d8898 !important; font-style: italic; margin: 6px 0 0 !important; }
 .nkt-cta { display: inline-block; background: #1f6fd0; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .nkt-cta:hover { background: #1854a1; color: #fff !important; }
+
+.nkt-rev .nkt-wrap { max-width: 1240px; }
+.nkt-rev__strip { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 20px; margin-top: 22px; }
+.nkt-rev__card { margin: 0; background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(20,25,40,.05), 0 14px 34px rgba(20,25,40,.10); display: flex; flex-direction: column; }
+.nkt-rev__card img { width: 100%; max-width: none; max-height: none; height: 300px; object-fit: cover; border-radius: 0; box-shadow: none; display: block; }
+.nkt-rev__card figcaption { padding: 14px 16px 18px; }
+.nkt-rev__stars { color: #f5a623; font-size: 15px; letter-spacing: 2px; }
+.nkt-rev__who { display: inline-block; margin-left: 8px; background: #eef4fd; color: #1f6fd0; font-size: 12.5px; font-weight: 800; padding: 3px 10px; border-radius: 999px; }
+.nkt-rev__card p { font-size: 14.5px !important; line-height: 1.6 !important; color: #4c5a71 !important; margin: 10px 0 0 !important; }
+@media (max-width: 980px) {
+  .nkt-rev__strip { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .nkt-rev__strip { grid-auto-flow: column; grid-auto-columns: 78%; grid-template-columns: none;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+  .nkt-rev__card { scroll-snap-align: center; }
+  .nkt-rev__card img { height: 260px; }
+}
 
 @media (max-width: 980px) {
   .nkt-row2 { grid-template-columns: 1fr; gap: 28px; }

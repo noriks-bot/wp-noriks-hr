@@ -57,7 +57,7 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
       </ul>
       <p>Mnogi olakšanje osjete već prvog dana nošenja, a puni učinak dolazi kad ih nosite redovito.</p>
     </div>
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-04-par.jpg', 'Par NORIKS Relief čarapa na stopalima' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-anim-kompresija.webp', 'Ravnomjeran pritisak oko svoda, pete i gležnja' ); ?></div>
   </div>
 </section>
 
