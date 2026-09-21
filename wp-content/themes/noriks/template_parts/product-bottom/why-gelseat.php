@@ -4,16 +4,16 @@
  * Original: helloholie.com (100% Gel Seat Cushion). Slike: img/gelseat/ (kreative z namizja + ciste fotografije z originalne strani).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikada na sredini;
  * slike su omedene na max-height 430px.
- *   1) Trenutno olakšanje (lijevo)
- *   2) Nikad se ne spljošti (desno)
- *   3) Ostaje hladan (lijevo)
- *   4) Držanje (desno)
- *   5) Leđa i kukovi (lijevo)
- *   6) Održavanje (desno)
- *   7) Usporedba (lijevo)
- *   8) Kupci ga pokazuju — videi
- *   9) U svakom sjedalu — 4 fotografije
- *  10) Ponuda (desno)
+ *   1) TRENUTNO OLAKŠANJE — slika lijevo
+ *   2) KUPCI GA POKAZUJU — videi
+ *   3) NIKAD SE NE SPLJOŠTI — slika desno
+ *   4) OSTAJE HLADAN — slika lijevo
+ *   5) DRŽANJE — slika desno
+ *   6) LEĐA I KUKOVI — slika lijevo
+ *   7) ODRŽAVANJE — slika desno
+ *   8) USPOREDBA — slika lijevo
+ *   9) U SVAKOM SJEDALU
+ *  10) PONUDA — slika desno
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -44,118 +44,8 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
   </div>
 </section>
 
-<!-- 2) NIKAD SE NE SPLJOŠTI — slika desno -->
-<section class="ngs-sec">
-  <div class="ngs-wrap ngs-row2 ngs-row2--rev">
-    <div class="ngs-copy">
-      <p class="ngs-kicker">Nikad se ne spljošti</p>
-      <h2 class="ngs-h2">Gel se vraća <em>nakon svakog ustajanja</em></h2>
-      <p>Spužva i memorijska pjena s vremenom ostanu utisnute i jastuk postane tvrd. Gel u saću je elastičan: pod pritiskom se razmakne, a čim ustanete vrati se u prvobitni oblik.</p>
-      <div class="ngs-facts">
-        <div><span class="ngs-num">100 %</span><h3>Gel</h3><p>Bez spužve koja se sabije i ostane plosnata.</p></div>
-        <div><span class="ngs-num">42 × 37 cm</span><h3>Veličina</h3><p>Stane na uredsku stolicu, auto i kolica.</p></div>
-        <div><span class="ngs-num">3,5 cm</span><h3>Debljina</h3><p>Dovoljno za rasterećenje, a ne previsoko.</p></div>
-        <div><span class="ngs-num">~1,3 kg</span><h3>Težina</h3><p>Lako ga prenesete iz ureda u auto.</p></div>
-      </div>
-    </div>
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-07-pritisak.jpg', 'Prst pritišće saćasti gel NORIKS GelSeat jastuka' ); ?></div>
-  </div>
-</section>
-
-<!-- 3) OSTAJE HLADAN — slika lijevo -->
-<section class="ngs-sec ngs-tint">
-  <div class="ngs-wrap ngs-row2">
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-04-hladno.jpg', 'Saćasta struktura gela propušta zrak' ); ?></div>
-    <div class="ngs-copy">
-      <p class="ngs-kicker">Ostaje hladan</p>
-      <h2 class="ngs-h2">Zrak prolazi <em>kroz otvoreno saće</em></h2>
-      <p>Memorijska pjena zadržava toplinu tijela, pa nakon sat vremena sjedenja postane vruća i vlažna. Kod saćastog gela zrak struji kroz otvorene ćelije i toplina odlazi.</p>
-      <ul class="ngs-check">
-        <li>Bez nakupljanja topline i znojenja</li>
-        <li>Ugodno i ljeti, i u autu na suncu</li>
-        <li>Jednako udobno nakon osam sati sjedenja</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 4) DRŽANJE — slika desno -->
-<section class="ngs-sec">
-  <div class="ngs-wrap ngs-row2 ngs-row2--rev">
-    <div class="ngs-copy">
-      <p class="ngs-kicker">Držanje</p>
-      <h2 class="ngs-h2">Kralježnica <em>u prirodnom položaju</em></h2>
-      <p>Kad zdjelica utone u mekani jastuk, donji dio leđa se zaokruži i kralježnica izgubi prirodnu krivulju. Gel je čvrst koliko treba: zdjelica ostaje poravnata, a težina je ravnomjerno raspoređena.</p>
-      <ul class="ngs-check">
-        <li>Bez pritiska na <strong>trtičnu kost</strong></li>
-        <li><strong>Ravnomjeran raspored</strong> težine</li>
-        <li>Kralježnica <strong>prirodno poravnata</strong></li>
-      </ul>
-    </div>
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-03-satima.jpg', 'NORIKS GelSeat gel jastuk za sjedenje' ); ?></div>
-  </div>
-</section>
-
-<!-- 5) LEĐA I KUKOVI — slika lijevo -->
-<section class="ngs-sec ngs-tint">
-  <div class="ngs-wrap ngs-row2">
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-02-leda.jpg', 'Prikaz olakšanja u donjem dijelu leđa' ); ?></div>
-    <div class="ngs-copy">
-      <p class="ngs-kicker">Leđa i kukovi</p>
-      <h2 class="ngs-h2">Za sve koji <em>sjede cijeli dan</em></h2>
-      <p>Jastuk je namijenjen svakodnevnom sjedenju — ne samo uredu.</p>
-      <ul class="ngs-tags">
-        <li>Uredska stolica</li>
-        <li>Vožnja automobilom</li>
-        <li>Kamion i kombi</li>
-        <li>Invalidska kolica</li>
-        <li>Kuhinjska stolica</li>
-        <li>Stolica za pecanje</li>
-      </ul>
-      <p>Često ga uzimaju i nakon operacije kuka ili trtice, kad je dugo sjedenje bolno.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6) ODRŽAVANJE — slika desno -->
-<section class="ngs-sec">
-  <div class="ngs-wrap ngs-row2 ngs-row2--rev">
-    <div class="ngs-copy">
-      <p class="ngs-kicker">Održavanje</p>
-      <h2 class="ngs-h2">Navlaka se skine <em>i opere u perilici</em></h2>
-      <p>Otkopčajte patentni zatvarač, skinite navlaku i operite je na 30 °C. Sam gel isperite toplom vodom i obrišite.</p>
-      <ul class="ngs-check">
-        <li>Odvojiva navlaka, <strong>periva u perilici</strong></li>
-        <li><strong>Protuklizna</strong> donja strana — jastuk ostaje na mjestu</li>
-        <li>Prozračna gornja strana koja ne klizi ispod vas</li>
-      </ul>
-    </div>
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-05-navlaka.jpg', 'Odvojiva navlaka NORIKS GelSeat jastuka' ); ?></div>
-  </div>
-</section>
-
-<!-- 7) USPOREDBA — slika lijevo -->
-<section class="ngs-sec ngs-tint">
-  <div class="ngs-wrap ngs-row2">
-    <div class="ngs-media"><?php echo $ngs_img( 'gs-08-usporedba.jpg', 'Usporedba gel jastuka i običnog jastuka' ); ?></div>
-    <div class="ngs-copy">
-      <p class="ngs-kicker">Usporedba</p>
-      <h2 class="ngs-h2">Gel jastuk <em>prema običnom jastuku</em></h2>
-      <ul class="ngs-vs">
-        <li class="is-yes">Trenutno olakšanje leđa i trtice</li>
-        <li class="is-yes">Ostaje hladan cijeli dan</li>
-        <li class="is-yes">Nikad se ne spljošti</li>
-        <li class="is-yes">Protuklizni — radi svugdje</li>
-        <li class="is-no">Obični jastuk: nakupljanje pritiska na trtici</li>
-        <li class="is-no">Zadržava toplinu i nelagodu</li>
-        <li class="is-no">Brzo se spljošti i klizi</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 8) KUPCI GA POKAZUJU — videi -->
-<section class="ngs-sec ngs-tint ngs-ugc">
+<!-- 2) KUPCI GA POKAZUJU — videi -->
+<section class="ngs-sec ngs-ugc">
   <div class="ngs-wrap">
     <p class="ngs-kicker" style="text-align:center">Iz prve ruke</p>
     <h2 class="ngs-h2" style="text-align:center">Kupci ga pokazuju <em>u svojim stolicama</em></h2>
@@ -184,8 +74,118 @@ $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
   </div>
 </section>
 
+<!-- 3) NIKAD SE NE SPLJOŠTI — slika desno -->
+<section class="ngs-sec ngs-tint">
+  <div class="ngs-wrap ngs-row2 ngs-row2--rev">
+    <div class="ngs-copy">
+      <p class="ngs-kicker">Nikad se ne spljošti</p>
+      <h2 class="ngs-h2">Gel se vraća <em>nakon svakog ustajanja</em></h2>
+      <p>Spužva i memorijska pjena s vremenom ostanu utisnute i jastuk postane tvrd. Gel u saću je elastičan: pod pritiskom se razmakne, a čim ustanete vrati se u prvobitni oblik.</p>
+      <div class="ngs-facts">
+        <div><span class="ngs-num">100 %</span><h3>Gel</h3><p>Bez spužve koja se sabije i ostane plosnata.</p></div>
+        <div><span class="ngs-num">42 × 37 cm</span><h3>Veličina</h3><p>Stane na uredsku stolicu, auto i kolica.</p></div>
+        <div><span class="ngs-num">3,5 cm</span><h3>Debljina</h3><p>Dovoljno za rasterećenje, a ne previsoko.</p></div>
+        <div><span class="ngs-num">~1,3 kg</span><h3>Težina</h3><p>Lako ga prenesete iz ureda u auto.</p></div>
+      </div>
+    </div>
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-07-pritisak.jpg', 'Prst pritišće saćasti gel NORIKS GelSeat jastuka' ); ?></div>
+  </div>
+</section>
+
+<!-- 4) OSTAJE HLADAN — slika lijevo -->
+<section class="ngs-sec">
+  <div class="ngs-wrap ngs-row2">
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-04-hladno.jpg', 'Saćasta struktura gela propušta zrak' ); ?></div>
+    <div class="ngs-copy">
+      <p class="ngs-kicker">Ostaje hladan</p>
+      <h2 class="ngs-h2">Zrak prolazi <em>kroz otvoreno saće</em></h2>
+      <p>Memorijska pjena zadržava toplinu tijela, pa nakon sat vremena sjedenja postane vruća i vlažna. Kod saćastog gela zrak struji kroz otvorene ćelije i toplina odlazi.</p>
+      <ul class="ngs-check">
+        <li>Bez nakupljanja topline i znojenja</li>
+        <li>Ugodno i ljeti, i u autu na suncu</li>
+        <li>Jednako udobno nakon osam sati sjedenja</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5) DRŽANJE — slika desno -->
+<section class="ngs-sec ngs-tint">
+  <div class="ngs-wrap ngs-row2 ngs-row2--rev">
+    <div class="ngs-copy">
+      <p class="ngs-kicker">Držanje</p>
+      <h2 class="ngs-h2">Kralježnica <em>u prirodnom položaju</em></h2>
+      <p>Kad zdjelica utone u mekani jastuk, donji dio leđa se zaokruži i kralježnica izgubi prirodnu krivulju. Gel je čvrst koliko treba: zdjelica ostaje poravnata, a težina je ravnomjerno raspoređena.</p>
+      <ul class="ngs-check">
+        <li>Bez pritiska na <strong>trtičnu kost</strong></li>
+        <li><strong>Ravnomjeran raspored</strong> težine</li>
+        <li>Kralježnica <strong>prirodno poravnata</strong></li>
+      </ul>
+    </div>
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-03-satima.jpg', 'NORIKS GelSeat gel jastuk za sjedenje' ); ?></div>
+  </div>
+</section>
+
+<!-- 6) LEĐA I KUKOVI — slika lijevo -->
+<section class="ngs-sec">
+  <div class="ngs-wrap ngs-row2">
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-02-leda.jpg', 'Prikaz olakšanja u donjem dijelu leđa' ); ?></div>
+    <div class="ngs-copy">
+      <p class="ngs-kicker">Leđa i kukovi</p>
+      <h2 class="ngs-h2">Za sve koji <em>sjede cijeli dan</em></h2>
+      <p>Jastuk je namijenjen svakodnevnom sjedenju — ne samo uredu.</p>
+      <ul class="ngs-tags">
+        <li>Uredska stolica</li>
+        <li>Vožnja automobilom</li>
+        <li>Kamion i kombi</li>
+        <li>Invalidska kolica</li>
+        <li>Kuhinjska stolica</li>
+        <li>Stolica za pecanje</li>
+      </ul>
+      <p>Često ga uzimaju i nakon operacije kuka ili trtice, kad je dugo sjedenje bolno.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7) ODRŽAVANJE — slika desno -->
+<section class="ngs-sec ngs-tint">
+  <div class="ngs-wrap ngs-row2 ngs-row2--rev">
+    <div class="ngs-copy">
+      <p class="ngs-kicker">Održavanje</p>
+      <h2 class="ngs-h2">Navlaka se skine <em>i opere u perilici</em></h2>
+      <p>Otkopčajte patentni zatvarač, skinite navlaku i operite je na 30 °C. Sam gel isperite toplom vodom i obrišite.</p>
+      <ul class="ngs-check">
+        <li>Odvojiva navlaka, <strong>periva u perilici</strong></li>
+        <li><strong>Protuklizna</strong> donja strana — jastuk ostaje na mjestu</li>
+        <li>Prozračna gornja strana koja ne klizi ispod vas</li>
+      </ul>
+    </div>
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-05-navlaka.jpg', 'Odvojiva navlaka NORIKS GelSeat jastuka' ); ?></div>
+  </div>
+</section>
+
+<!-- 8) USPOREDBA — slika lijevo -->
+<section class="ngs-sec">
+  <div class="ngs-wrap ngs-row2">
+    <div class="ngs-media"><?php echo $ngs_img( 'gs-08-usporedba.jpg', 'Usporedba gel jastuka i običnog jastuka' ); ?></div>
+    <div class="ngs-copy">
+      <p class="ngs-kicker">Usporedba</p>
+      <h2 class="ngs-h2">Gel jastuk <em>prema običnom jastuku</em></h2>
+      <ul class="ngs-vs">
+        <li class="is-yes">Trenutno olakšanje leđa i trtice</li>
+        <li class="is-yes">Ostaje hladan cijeli dan</li>
+        <li class="is-yes">Nikad se ne spljošti</li>
+        <li class="is-yes">Protuklizni — radi svugdje</li>
+        <li class="is-no">Obični jastuk: nakupljanje pritiska na trtici</li>
+        <li class="is-no">Zadržava toplinu i nelagodu</li>
+        <li class="is-no">Brzo se spljošti i klizi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- 9) U SVAKOM SJEDALU -->
-<section class="ngs-sec ngs-seat">
+<section class="ngs-sec ngs-tint ngs-seat">
   <div class="ngs-wrap">
     <h2 class="ngs-h2" style="text-align:center">Stvoren da vas podupre <em>u svakom sjedalu</em></h2>
     <div class="ngs-seat__strip">
