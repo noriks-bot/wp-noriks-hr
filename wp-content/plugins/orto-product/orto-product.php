@@ -1058,9 +1058,9 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-red' ), 'product_cat', $product_id ) ) : ?>
+    <?php if ( has_term( array( 'orto-red', 'orto-gelseat' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS RedRelief: razmak izmedu kartica mora biti jednak izmedu svih ponuda.
+      /* NORIKS RedRelief + GelSeat: razmak izmedu kartica mora biti jednak izmedu svih ponuda.
          Inline margin-top: 25px na drugoj kartici radio je veci razmak 1-2 nego 2-3. */
       #bundle-selector label.bundle-option { margin-top: 0 !important; margin-bottom: 14px !important; }
       #bundle-selector label.bundle-option:last-of-type { margin-bottom: 0 !important; }
