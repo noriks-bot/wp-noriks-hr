@@ -4,16 +4,16 @@
  * Original: stepprs.com (Massage Insoles) — vrstni red sekcij sledi originalu. Slike: img/stepcloud/ (kreative z namizja + ciste fotografije z originalne strani).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikada na sredini;
  * slike su omedene na max-height 430px.
- *   1) Hodajte bez boli (lijevo)
- *   2) NORIKS razlika (desno)
- *   3) Četiri razloga (lijevo)
- *   4) Za sve namjene (desno)
- *   5) Iskustva (lijevo)
- *   6) Rezultati (desno)
- *   7) Usporedba (lijevo)
- *   8) Stručno mišljenje (desno)
- *   9) Kako koristiti (lijevo)
- *   10) Paketi i jamstvo (desno)
+ *   1) HODAJTE BEZ BOLI — slika lijevo
+ *   2) CRNI TRAK
+ *   3) NORIKS RAZLIKA — slika desno
+ *   4) ČETIRI RAZLOGA — slika lijevo
+ *   5) ZA SVE NAMJENE — karusel situacija
+ *   6) ISKUSTVA — slika lijevo
+ *   7) REZULTATI — slika desno
+ *   8) USPOREDBA — tablica
+ *   9) STRUČNO MIŠLJENJE — slika desno
+ *  10) KAKO KORISTITI — slika lijevo
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -28,22 +28,29 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 <!-- 1) HODAJTE BEZ BOLI — slika lijevo -->
 <section class="nsc-sec nsc-tint">
   <div class="nsc-wrap nsc-row2">
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-01-narancasti.jpg', 'NORIKS StepCloud ulošci u narančastoj boji' ); ?></div>
+    <div class="nsc-media nsc-media--video">
+      <video src="<?php echo esc_url( $nsc . 'sc-vid-1.mp4' ); ?>" poster="<?php echo esc_url( $nsc . 'sc-vid-1.jpg' ); ?>"
+             muted autoplay loop playsinline preload="metadata"
+             aria-label="NORIKS StepCloud ulošci u pokretu"></video>
+    </div>
     <div class="nsc-copy">
       <p class="nsc-kicker">Hodajte bez boli</p>
       <h2 class="nsc-h2">Ponovno otkrijte radost <em>stajanja i hodanja</em></h2>
       <p>Upoznajte NORIKS StepCloud uloške — udobnost za vaša stopala od prvog koraka. Bez boli u stopalima, bez umora na kraju smjene, bez mijenjanja cipela i navika.</p>
-      <ul class="nsc-strip">
-        <li>🚚 Brza dostava s praćenjem</li>
-        <li>😊 Više od 1.000.000 zadovoljnih kupaca</li>
-        <li>🛡️ 30 dana jamstva na povrat novca</li>
-      </ul>
       <a class="nsc-cta" href="#bundle-selector">Naruči NORIKS StepCloud</a>
     </div>
   </div>
 </section>
 
-<!-- 2) NORIKS RAZLIKA — slika desno -->
+<!-- 2) CRNI TRAK -->
+<section class="nsc-ticker" aria-hidden="true">
+  <div class="nsc-ticker__track">
+    <div class="nsc-ticker__row"><span>🛡️ 30 dana jamstva na povrat novca</span><span>🚚 Brza dostava s praćenjem</span><span>😊 Više od 1.000.000 zadovoljnih kupaca</span><span>👣 Jedan par za sve cipele</span></div>
+    <div class="nsc-ticker__row"><span>🛡️ 30 dana jamstva na povrat novca</span><span>🚚 Brza dostava s praćenjem</span><span>😊 Više od 1.000.000 zadovoljnih kupaca</span><span>👣 Jedan par za sve cipele</span></div>
+  </div>
+</section>
+
+<!-- 3) NORIKS RAZLIKA — slika desno -->
 <section class="nsc-sec">
   <div class="nsc-wrap nsc-row2 nsc-row2--rev">
     <div class="nsc-copy">
@@ -59,7 +66,7 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   </div>
 </section>
 
-<!-- 3) ČETIRI RAZLOGA — slika lijevo -->
+<!-- 4) ČETIRI RAZLOGA — slika lijevo -->
 <section class="nsc-sec nsc-tint">
   <div class="nsc-wrap nsc-row2">
     <div class="nsc-media"><?php echo $nsc_img( 'sc-04-znacajke.jpg', 'Značajke NORIKS StepCloud uloška' ); ?></div>
@@ -76,32 +83,55 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   </div>
 </section>
 
-<!-- 4) ZA SVE NAMJENE — slika desno -->
-<section class="nsc-sec">
-  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
-    <div class="nsc-copy">
-      <p class="nsc-kicker">Za sve namjene</p>
-      <h2 class="nsc-h2">Jedan uložak <em>za sve što radite</em></h2>
-      <ul class="nsc-tags">
-        <li>Avantura</li>
-        <li>Sport i trening</li>
-        <li>Duge smjene</li>
-        <li>Svakodnevica</li>
-        <li>Izlasci</li>
-        <li>Gradilište</li>
-      </ul>
-      <ul class="nsc-check">
-        <li>Olakšanje kod boli, napetosti i nelagode</li>
-        <li>Potpora svodu i ciljani masažni čvorići</li>
-        <li>Regulacija temperature i prozračivanje</li>
-        <li>Uklanja neugodne mirise</li>
-      </ul>
+<!-- 5) ZA SVE NAMJENE — karusel situacija -->
+<section class="nsc-sec nsc-use">
+  <div class="nsc-wrap">
+    <div class="nsc-use__head">
+      <h2 class="nsc-h2">Stvoreni <em>za sve namjene</em></h2>
+      <p class="nsc-use__lead">Ne mijenjate ih po aktivnosti — prebacite ih iz tenisica u radne čizme i nastavite dalje. Isti par podnosi asfalt, beton, teretanu i osmosatnu smjenu.</p>
     </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-10-setnja.jpg', 'Šetnja u cipelama s NORIKS StepCloud ulošcima' ); ?></div>
+  </div>
+  <div class="nsc-use__strip">
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u6-gradiliste.jpg', 'Gradilište — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Gradilište</figcaption>
+        </figure>
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u7-zdravstvo.jpg', 'Zdravstvo — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Zdravstvo</figcaption>
+        </figure>
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u1-planinarenje.jpg', 'Avantura — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Avantura</figcaption>
+        </figure>
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u2-trcanje.jpg', 'Sportaš — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Sportaš</figcaption>
+        </figure>
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u3-smjena.jpg', 'Duge smjene — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Duge smjene</figcaption>
+        </figure>
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u4-setnja.jpg', 'Svakodnevica — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Svakodnevica</figcaption>
+        </figure>
+        <figure class="nsc-use__card">
+          <?php echo $nsc_img( 'sc-u5-izlasci.jpg', 'Rekreacija — NORIKS StepCloud ulošci' ); ?>
+          <figcaption>Rekreacija</figcaption>
+        </figure>
+  </div>
+  <div class="nsc-wrap">
+    <ul class="nsc-use__list">
+      <li>Ublažava bol u peti, tabanu i listovima</li>
+      <li>Potpora svodu i ciljani masažni čvorići</li>
+      <li>Prozračni otvori drže stopalo suhim</li>
+      <li>Sprječava neugodne mirise</li>
+    </ul>
   </div>
 </section>
 
-<!-- 5) ISKUSTVA — slika lijevo -->
+<!-- 6) ISKUSTVA — slika lijevo -->
 <section class="nsc-sec nsc-tint">
   <div class="nsc-wrap nsc-row2">
     <div class="nsc-media"><?php echo $nsc_img( 'sc-05-prednosti.jpg', 'Prednosti svakodnevne uporabe NORIKS StepCloud uložaka' ); ?></div>
@@ -118,7 +148,7 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   </div>
 </section>
 
-<!-- 6) REZULTATI — slika desno -->
+<!-- 7) REZULTATI — slika desno -->
 <section class="nsc-sec">
   <div class="nsc-wrap nsc-row2 nsc-row2--rev">
     <div class="nsc-copy">
@@ -135,29 +165,34 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   </div>
 </section>
 
-<!-- 7) USPOREDBA — slika lijevo -->
+<!-- 8) USPOREDBA — tablica -->
 <section class="nsc-sec nsc-tint">
-  <div class="nsc-wrap nsc-row2">
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-07-usporedba.jpg', 'Usporedba NORIKS uložaka s drogerijskim i običnim' ); ?></div>
+  <div class="nsc-wrap nsc-row2 nsc-cmp">
     <div class="nsc-copy">
       <p class="nsc-kicker">Usporedba</p>
-      <h2 class="nsc-h2">Po čemu je NORIKS <em>drukčiji</em></h2>
-      <table class="nsc-table">
-        <thead><tr><th>&nbsp;</th><th>NORIKS</th><th>Ostali</th></tr></thead>
+      <h2 class="nsc-h2">Po čemu je NORIKS StepCloud <em>drukčiji</em></h2>
+      <p>Obični ulošci samo popune cipelu. StepCloud radi tri stvari koje jeftini ulošci ne rade: drži svod, upija udarac pete i masira taban pri svakom koraku — a pritom ostaje prozračan.</p>
+    </div>
+    <div class="nsc-cmp__box">
+      <table class="nsc-cmp__table">
+        <thead>
+          <tr><td>&nbsp;</td><th scope="col">NORIKS<br>StepCloud</th><th scope="col">Obični<br>ulošci</th></tr>
+        </thead>
         <tbody>
-          <tr><td>Jastučenje</td><td class="yes">✓</td><td class="no">✕</td></tr>
-          <tr><td>Prozračnost</td><td class="yes">✓</td><td class="no">✕</td></tr>
-          <tr><td>Olakšanje od prvog nošenja</td><td class="yes">✓</td><td class="no">✕</td></tr>
-          <tr><td>Potpora svodu stopala</td><td class="yes">✓</td><td class="no">✕</td></tr>
-          <tr><td>Upijanje udaraca</td><td class="yes">✓</td><td class="no">✕</td></tr>
-          <tr><td>Uklanjanje neugodnih mirisa</td><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Jastučenje</th><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Prozračnost</th><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Trenutno olakšanje</th><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Potpora svodu</th><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Upijanje udaraca</th><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Uklanjanje neugodnih mirisa</th><td class="yes">✓</td><td class="no">✕</td></tr>
+          <tr><th scope="row">Visoka cijena</th><td class="no">✕</td><td class="yes">✓</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- 8) STRUČNO MIŠLJENJE — slika desno -->
+<!-- 9) STRUČNO MIŠLJENJE — slika desno -->
 <section class="nsc-sec">
   <div class="nsc-wrap nsc-row2 nsc-row2--rev">
     <div class="nsc-copy">
@@ -173,7 +208,7 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   </div>
 </section>
 
-<!-- 9) KAKO KORISTITI — slika lijevo -->
+<!-- 10) KAKO KORISTITI — slika lijevo -->
 <section class="nsc-sec nsc-tint">
   <div class="nsc-wrap nsc-row2">
     <div class="nsc-media"><?php echo $nsc_img( 'sc-08-kako-koristiti.jpg', 'Umetanje NORIKS StepCloud uloška u tenisicu' ); ?></div>
@@ -188,25 +223,6 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
       </ol>
       <p class="nsc-note">Ulošci se stavljaju umjesto tvorničkog uloška, nikada preko njega.</p>
     </div>
-  </div>
-</section>
-
-<!-- 10) PAKETI I JAMSTVO — slika desno -->
-<section class="nsc-sec">
-  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
-    <div class="nsc-copy">
-      <p class="nsc-kicker">Paketi i jamstvo</p>
-      <h2 class="nsc-h2">Pomozite svojim stopalima <em>već danas</em></h2>
-      <p>Bilo da ste cijeli dan na nogama na poslu ili gurate granice na treningu — ulošci daju potporu ondje gdje je najpotrebnija. Uz svakodnevno nošenje zadržavaju oblik oko dva mjeseca, pa većina kupaca uzme više pari odjednom.</p>
-      <ul class="nsc-check">
-        <li><strong>2 para</strong> — niža cijena po paru</li>
-        <li><strong>3 para</strong> — za cijelu obitelj</li>
-        <li><strong>5 pari</strong> — najniža cijena po paru</li>
-        <li><strong>30 dana</strong> za povrat novca</li>
-      </ul>
-      <a class="nsc-cta" href="#bundle-selector">Naruči NORIKS StepCloud</a>
-    </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-09-akcija.jpg', 'NORIKS StepCloud akcijska ponuda' ); ?></div>
   </div>
 </section>
 
@@ -258,11 +274,79 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 .nsc-cta { display: inline-block; background: #f0581a; color: #fff !important; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .nsc-cta:hover { background: #c5430c; color: #fff !important; }
 
+.nsc-use__head { max-width: 760px; }
+.nsc-use__lead { font-size: 16px; line-height: 1.7; color: #5d4a3d; margin: 0; }
+.nsc-use__strip { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin: 24px 0 22px; }
+.nsc-use__card { margin: 0; background: #fff; border: 1px solid #f6ddd0; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 1px 2px rgba(60,30,15,.05), 0 10px 26px rgba(60,30,15,.07); }
+.nsc-use__card img { width: 100%; max-width: none; max-height: none; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: 0; box-shadow: none; display: block; }
+.nsc-use__card figcaption { padding: 14px 16px 17px; display: block; }
+.nsc-use__tag { display: inline-block; background: #fff0e7; color: #f0581a; font-size: 11.5px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-bottom: 8px; }
+.nsc-use__card figcaption strong { display: block; font-size: 16px; font-weight: 800; color: #2b1a10; margin-bottom: 4px; }
+.nsc-use__card figcaption span:last-child { display: block; font-size: 14px; line-height: 1.55; color: #5d4a3d; }
+.nsc-use__list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px 18px; }
+.nsc-use__list li { position: relative; padding-left: 28px; font-size: 15px; line-height: 1.5; color: #2b1a10; }
+.nsc-use__list li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+
+.nsc-media--video video { display: block; width: auto; max-width: 100%; max-height: 430px; aspect-ratio: 1 / 1;
+  object-fit: cover; border-radius: 14px; margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(60,30,15,.05), 0 14px 40px rgba(60,30,15,.12); }
+.nsc-ticker { background: #0f0f10; overflow: hidden; padding: 0; }
+.nsc-ticker__track { display: flex; width: max-content; animation: nscTicker 38s linear infinite; }
+.nsc-ticker__row { display: flex; align-items: center; gap: 46px; padding: 14px 23px; }
+.nsc-ticker__row span { color: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 14px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; white-space: nowrap; }
+@keyframes nscTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .nsc-ticker__track { animation: none; } }
+
+.nsc-use__head { max-width: 780px; }
+.nsc-use__lead { font-size: 16px; line-height: 1.7; color: #5d4a3d; margin: 0; }
+.nsc-use__strip { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; padding: 24px 24px 10px; margin: 0 0 22px; }
+.nsc-use__card { flex: 0 0 272px; position: relative; margin: 0; border-radius: 14px; overflow: hidden; scroll-snap-align: center;
+  box-shadow: 0 2px 4px rgba(60,30,15,.06), 0 14px 32px rgba(60,30,15,.12); }
+.nsc-use__card img { width: 100%; max-width: none; max-height: none; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 0; box-shadow: none; display: block; }
+.nsc-use__card figcaption { position: absolute; left: 0; right: 0; bottom: 0; background: #0f0f10; color: #fff;
+  text-align: center; font-size: 15px; font-weight: 800; letter-spacing: .01em; padding: 11px 12px; }
+.nsc-use__list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px 18px; }
+.nsc-use__list li { position: relative; padding-left: 28px; font-size: 15px; line-height: 1.5; color: #2b1a10; }
+.nsc-use__list li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.nsc-cmp__box { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 4px rgba(60,30,15,.05), 0 16px 40px rgba(60,30,15,.12); }
+.nsc-cmp__table { width: 100%; border-collapse: collapse; }
+.nsc-cmp__table thead th { background: #fff; color: #2b1a10; font-size: 13.5px; font-weight: 800; line-height: 1.25;
+  text-align: center; padding: 14px 10px; border-bottom: 1px solid #f1e0d6; }
+.nsc-cmp__table thead td { background: #f0581a; }
+.nsc-cmp__table th[scope="row"] { background: #f0581a; color: #fff; font-size: 15.5px; font-weight: 800;
+  text-align: center; padding: 15px 16px; border-bottom: 1px solid rgba(255,255,255,.22); }
+.nsc-cmp__table tbody tr:last-child th[scope="row"] { border-bottom: 0; }
+.nsc-cmp__table td { width: 19%; text-align: center; font-size: 21px; font-weight: 800; padding: 15px 10px;
+  border-bottom: 1px solid #f4e6dd; }
+.nsc-cmp__table tbody tr:last-child td { border-bottom: 0; }
+.nsc-cmp__table td.yes { color: #2f9e5f; }
+.nsc-cmp__table td.no { color: #2b1a10; }
+
 @media (max-width: 980px) {
+  .nsc-use__list { grid-template-columns: 1fr 1fr; }
+  .nsc-use__strip { grid-template-columns: 1fr 1fr; }
+  .nsc-use__list { grid-template-columns: 1fr 1fr; }
   .nsc-row2 { grid-template-columns: 1fr; gap: 28px; }
   .nsc-row2--rev .nsc-media { order: -1; }
 }
 @media (max-width: 560px) {
+  .nsc-use__strip { padding: 20px 16px 8px; }
+  .nsc-use__card { flex-basis: 74%; }
+  .nsc-use__list { grid-template-columns: 1fr; }
+  .nsc-cmp__table th[scope="row"] { font-size: 14px; padding: 13px 10px; }
+  .nsc-cmp__table td { font-size: 19px; }
+  .nsc-ticker__row { gap: 30px; padding: 12px 15px; }
+  .nsc-ticker__row span { font-size: 12.5px; }
+  .nsc-use__strip { grid-template-columns: 1fr; }
+  .nsc-use__list { grid-template-columns: 1fr; }
   .nsc-sec { padding: 42px 0; }
   .nsc-wrap { padding: 0 16px; }
   .nsc-cta { width: 100%; text-align: center; }
