@@ -192,9 +192,10 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   </div>
 </section>
 
-<!-- 9) STRUČNO MIŠLJENJE — slika desno -->
+<!-- 9) STRUČNO MIŠLJENJE — slika lijevo -->
 <section class="nsc-sec">
-  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
+  <div class="nsc-wrap nsc-row2">
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-03-sivi.jpg', 'NORIKS StepCloud ulošci u sivoj boji' ); ?></div>
     <div class="nsc-copy">
       <p class="nsc-kicker">Stručno mišljenje</p>
       <h2 class="nsc-h2">Ciljano olakšanje <em>ondje gdje nastaje bol</em></h2>
@@ -204,14 +205,12 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
       </div>
       <p>Zato se ulošci najčešće preporučuju uz dug boravak na nogama, kod boli u peti i svodu te tijekom oporavka.</p>
     </div>
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-03-sivi.jpg', 'NORIKS StepCloud ulošci u sivoj boji' ); ?></div>
   </div>
 </section>
 
-<!-- 10) KAKO KORISTITI — slika lijevo -->
+<!-- 10) KAKO KORISTITI — slika desno -->
 <section class="nsc-sec nsc-tint">
-  <div class="nsc-wrap nsc-row2">
-    <div class="nsc-media"><?php echo $nsc_img( 'sc-08-kako-koristiti.jpg', 'Umetanje NORIKS StepCloud uloška u tenisicu' ); ?></div>
+  <div class="nsc-wrap nsc-row2 nsc-row2--rev">
     <div class="nsc-copy">
       <p class="nsc-kicker">Kako koristiti</p>
       <h2 class="nsc-h2">U cipeli <em>za manje od minute</em></h2>
@@ -223,6 +222,7 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
       </ol>
       <p class="nsc-note">Ulošci se stavljaju umjesto tvorničkog uloška, nikada preko njega.</p>
     </div>
+    <div class="nsc-media"><?php echo $nsc_img( 'sc-08-kako-koristiti.jpg', 'Umetanje NORIKS StepCloud uloška u tenisicu' ); ?></div>
   </div>
 </section>
 
@@ -291,8 +291,9 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 .nsc-use__list li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
   background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 
-.nsc-media--video video { display: block; width: auto; max-width: 100%; max-height: 430px; aspect-ratio: 1 / 1;
-  object-fit: cover; border-radius: 14px; margin: 0 auto;
+.nsc-media--video { text-align: left; }
+.nsc-media--video video { display: block; width: 100%; max-width: 100%; max-height: none; aspect-ratio: 1 / 1;
+  object-fit: cover; border-radius: 14px; margin: 0;
   box-shadow: 0 2px 4px rgba(60,30,15,.05), 0 14px 40px rgba(60,30,15,.12); }
 .nsc-ticker { background: #0f0f10; overflow: hidden; padding: 0; }
 .nsc-ticker__track { display: flex; width: max-content; animation: nscTicker 38s linear infinite; }
@@ -317,7 +318,8 @@ $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
 .nsc-use__list li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%;
   background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .nsc-cmp__box { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 4px rgba(60,30,15,.05), 0 16px 40px rgba(60,30,15,.12); }
-.nsc-cmp__table { width: 100%; border-collapse: collapse; }
+.nsc-cmp__table { width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 !important; border: 0 !important; }
+.nsc-cmp__table tr, .nsc-cmp__table thead, .nsc-cmp__table tbody { background: transparent !important; border: 0 !important; }
 .nsc-cmp__table thead th { background: #fff; color: #2b1a10; font-size: 13.5px; font-weight: 800; line-height: 1.25;
   text-align: center; padding: 14px 10px; border-bottom: 1px solid #f1e0d6; }
 .nsc-cmp__table thead td { background: #f0581a; }
