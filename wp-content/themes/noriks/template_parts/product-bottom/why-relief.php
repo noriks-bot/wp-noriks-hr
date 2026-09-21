@@ -1,15 +1,15 @@
 <?php
 /**
- * product-bottom: NORIKS Relief — bambusove kompresijske carape bez prstiju (orto-relief).
- * Original: bamburelief.fi (BambuRelief Tukisukat). Slike: img/relief/ (kreative z namizja + ciste fotografije z originalne strani).
+ * product-bottom: NORIKS Relief — bambusov steznik za koljeno (orto-relief).
+ * Original: bamburelief.fi (BambuRelief Polvituki). Slike: img/relief/ (kreative z namizja + ciste fotografije z originalne strani).
  * Pravilo: svaka sekcija ima TOCNO JEDNU sliku, naizmjenicno lijevo/desno, nikada na sredini;
  * slike su omedene na max-height 430px.
  *   1) Zvuči poznato? (lijevo)
- *   2) Osjetno olakšanje (desno)
- *   3) Otvoreni prsti i peta (lijevo)
- *   4) Nova energija (desno)
- *   5) Mirnija noć (lijevo)
- *   6) Bambus i elastan (desno)
+ *   2) Olakšanje u nekoliko minuta (desno)
+ *   3) Smanjuje upalu (lijevo)
+ *   4) Više pokretljivosti (desno)
+ *   5) Nosite ga danju i noću (lijevo)
+ *   6) Zašto bambus (desno)
  *   7) Veličine (lijevo)
  *   8) NORIKS Relief (desno)
  */
@@ -26,124 +26,140 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
 <!-- 1) ZVUČI POZNATO? — slika lijevo -->
 <section class="nrl-sec nrl-tint">
   <div class="nrl-wrap nrl-row2">
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-01-naslov.jpg', 'NORIKS Relief kompresijska čarapa bez prstiju' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k01-bol.jpg', 'Bol u koljenu — NORIKS Relief steznik za koljeno' ); ?></div>
     <div class="nrl-copy">
       <p class="nrl-kicker">Zvuči poznato?</p>
-      <h2 class="nrl-h2">Stopala koja bole <em>od prvog koraka ujutro</em></h2>
-      <p>Ujutro spustite noge s kreveta i prvi korak vas presiječe. Navečer su gležnjevi natečeni, a stopala vruća i umorna od stajanja.</p>
+      <h2 class="nrl-h2">Koljeno koje boli, <em>škripi i oteče</em></h2>
+      <p>Ustanete sa stolca i koljeno zapne. Stepenice idete postrance, a nakon šetnje je natečeno i vruće. Većina steznika je pretvrda i nezgrapna, pa ih nakon dva dana odložite u ladicu.</p>
       <ul class="nrl-cross">
-        <li>Osjećaj <strong>pečenja</strong> u tabanima</li>
-        <li><strong>Trnci</strong> i utrnulost prstiju</li>
-        <li><strong>Oticanje</strong> gležnjeva na kraju dana</li>
-        <li><strong>Ukočenost</strong> pri prvim jutarnjim koracima</li>
+        <li><strong>Ukočenost</strong> pri ustajanju i prvim koracima</li>
+        <li><strong>Škripanje</strong> i osjećaj trenja u zglobu</li>
+        <li><strong>Oticanje</strong> nakon hodanja i stajanja</li>
+        <li><strong>Umor</strong> u nogama na kraju dana</li>
       </ul>
-      <p>NORIKS Relief čarape rade na jednostavnom principu: ravnomjeran, blag pritisak koji obuhvaća svod, petu i gležanj.</p>
-      <a class="nrl-cta" href="#bundle-selector">Naruči NORIKS Relief</a>
+      <p>NORIKS Relief radi na jednostavnom principu: ravnomjerna, blaga kompresija koja obuhvaća cijelo koljeno — bez šarki, remena i plastike.</p>
     </div>
   </div>
 </section>
 
-<!-- 2) OSJETNO OLAKŠANJE — slika desno -->
+<!-- 2) OLAKŠANJE U NEKOLIKO MINUTA — slika desno -->
 <section class="nrl-sec">
   <div class="nrl-wrap nrl-row2 nrl-row2--rev">
     <div class="nrl-copy">
-      <p class="nrl-kicker">Osjetno olakšanje</p>
-      <h2 class="nrl-h2">Pritisak koji <em>obuhvaća cijelo stopalo</em></h2>
-      <p>Pletivo je gušće upravo ondje gdje stopalo treba potporu — oko svoda i pete. Umjesto da stišće u jednoj liniji kao guma obične čarape, pritisak je raspoređen po cijelom stopalu.</p>
+      <p class="nrl-kicker">Olakšanje u nekoliko minuta</p>
+      <h2 class="nrl-h2">Kompresija koja <em>pokreće krvotok</em></h2>
+      <p>Pletivo je gušće točno ondje gdje zglob treba potporu — oko čašice i s obje strane koljena. Umjesto da steže u jednoj liniji kao guma, pritisak je raspoređen po cijelom koljenu i potiče protok krvi.</p>
       <ul class="nrl-check">
-        <li><strong>Svod</strong> dobiva potporu, pa su prvi koraci ujutro blaži</li>
-        <li><strong>Peta</strong> je obuhvaćena, bez šava koji pritišće</li>
-        <li><strong>Gležanj</strong> ostaje stabilan tijekom dana</li>
+        <li><strong>Bolji krvotok</strong> — više kisika do zgloba i mišića oko njega</li>
+        <li><strong>Manje oticanja</strong> jer se tekućina brže odvodi</li>
+        <li><strong>Stabilnije koljeno</strong> pri hodanju, čučnju i stepenicama</li>
       </ul>
-      <p>Mnogi olakšanje osjete već prvog dana nošenja, a puni učinak dolazi kad ih nosite redovito.</p>
+      <p>Većina korisnika razliku osjeti već pri prvom nošenju, a puni učinak dolazi uz redovitu upotrebu.</p>
     </div>
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-anim-kompresija.webp', 'Ravnomjeran pritisak oko svoda, pete i gležnja' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k02-cirkulacija.webp', 'Prikaz krvotoka u koljenu pod kompresijom' ); ?></div>
   </div>
 </section>
 
-<!-- 3) OTVORENI PRSTI I PETA — slika lijevo -->
+<!-- 3) SMANJUJE UPALU — slika lijevo -->
 <section class="nrl-sec nrl-tint">
   <div class="nrl-wrap nrl-row2">
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-03-packshot.jpg', 'NORIKS Relief čarape straga — otvorena peta' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k03-upala.jpg', 'NORIKS Relief steznik smanjuje upalu u koljenu' ); ?></div>
     <div class="nrl-copy">
-      <p class="nrl-kicker">Otvoreni prsti i peta</p>
-      <h2 class="nrl-h2">Dizajn koji <em>ne smeta u cipeli</em></h2>
-      <p>Prsti i peta su otvoreni. To nije samo izgled: nema šava koji žulja preko noktiju i nema naborane tkanine koja klizi unutar cipele.</p>
+      <p class="nrl-kicker">Smanjuje upalu</p>
+      <h2 class="nrl-h2">Za koljena koja <em>se moraju oporaviti</em></h2>
+      <p>Toplina i blagi pritisak smiruju nadraženo tkivo oko zgloba, a bolja cirkulacija pomaže da oteklina splasne brže nego mirovanjem.</p>
       <div class="nrl-facts">
-        <div><span class="nrl-num">0</span><h3>Šavova na prstima</h3><p>Ništa ne pritišće osjetljiva mjesta i nokte.</p></div>
-        <div><span class="nrl-num">2 mm</span><h3>Tanko pletivo</h3><p>Stane u tenisice, cipele i radne čizme.</p></div>
-        <div><span class="nrl-num">24 h</span><h3>Za dan i noć</h3><p>Nosite ih na poslu, kod kuće i tijekom spavanja.</p></div>
-        <div><span class="nrl-num">4</span><h3>Veličine</h3><p>Od EU 36 do EU 46, prema broju obuće.</p></div>
+        <div><span class="nrl-num">93 %</span><h3>Manje boli</h3><p>Osjetilo je izrazito smanjenje boli i ukočenosti već nakon prvog nošenja.</p></div>
+        <div><span class="nrl-num">96 %</span><h3>Bolja pokretljivost</h3><p>Primijetilo je da se koljena tijekom dana osjećaju lakšima.</p></div>
+        <div><span class="nrl-num">97 %</span><h3>Udobnije od ostalih</h3><p>Ocijenilo ga je udobnijim i nježnijim od steznika koje su prije probali.</p></div>
+        <div><span class="nrl-num">2 × 1</span><h3>Za oba koljena</h3><p>Isti steznik možete nositi na lijevom ili desnom koljenu.</p></div>
       </div>
+      <p class="nrl-note">* Podaci proizvođača bambusovih steznika ove vrste, prikupljeni anketom među kupcima.</p>
     </div>
   </div>
 </section>
 
-<!-- 4) NOVA ENERGIJA — slika desno -->
+<!-- 4) VIŠE POKRETLJIVOSTI — slika desno -->
 <section class="nrl-sec">
   <div class="nrl-wrap nrl-row2 nrl-row2--rev">
     <div class="nrl-copy">
-      <p class="nrl-kicker">Nova energija</p>
-      <h2 class="nrl-h2">Za noge koje <em>izdrže cijeli dan</em></h2>
-      <p>Blaga kompresija potiče protok krvi u stopalima i potkoljenicama. Zato su noge na kraju dugog dana manje teške, a umor se sporije nakuplja.</p>
+      <p class="nrl-kicker">Više pokretljivosti</p>
+      <h2 class="nrl-h2">Pomaže kod <em>svakodnevnih tegoba</em></h2>
+      <p>Nije zamjena za liječnika, ali je potpora koju možete nositi svaki dan — na poslu, u šetnji i tijekom vježbanja.</p>
+      <ul class="nrl-tags">
+        <li>Artroza koljena</li>
+        <li>Upala patelarne tetive</li>
+        <li>Reumatoidni artritis</li>
+        <li>Burzitis</li>
+        <li>Trkačko koljeno</li>
+        <li>Oticanje i ukočenost</li>
+      </ul>
       <ul class="nrl-check">
-        <li>Za <strong>stajanje na poslu</strong> — trgovina, škola, bolnica, proizvodnja</li>
-        <li>Za <strong>duge šetnje</strong> i putovanja</li>
-        <li>Za <strong>oporavak nakon trčanja</strong> i treninga</li>
+        <li>Za <strong>dug boravak na nogama</strong> — posao, kućanski poslovi, vrt</li>
+        <li>Za <strong>šetnje i stepenice</strong> bez straha da će koljeno popustiti</li>
+        <li>Za <strong>oporavak nakon treninga</strong> i ozljede</li>
       </ul>
     </div>
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-07-hodanje.jpg', 'Žena hoda u NORIKS Relief čarapama' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k04-hodanje.jpg', 'Šetnja u NORIKS Relief stezniku za koljeno' ); ?></div>
   </div>
 </section>
 
-<!-- 5) MIRNIJA NOĆ — slika lijevo -->
+<!-- 5) NOSITE GA DANJU I NOĆU — slika lijevo -->
 <section class="nrl-sec nrl-tint">
   <div class="nrl-wrap nrl-row2">
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-06-krevet.jpg', 'NORIKS Relief čarape u krevetu' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k05-noc.jpg', 'NORIKS Relief steznici za koljena tijekom odmora' ); ?></div>
     <div class="nrl-copy">
-      <p class="nrl-kicker">Mirnija noć</p>
-      <h2 class="nrl-h2">Manje oticanja <em>dok spavate</em></h2>
-      <p>Tekućina se preko noći zadržava u stopalima, pa je jutro najteži dio dana. Uz blagu kompresiju tijekom noći mnogi ujutro javljaju manje oticanja i manje ukočenosti.</p>
-      <p>Pletivo je mekano i prozračno, bez gume koja ureže u kožu, pa ih možete nositi i u krevetu.</p>
-      <p class="nrl-note">Ako osjetite trnce ili prejak pritisak, skinite čarape i sljedeći put uzmite veću veličinu.</p>
+      <p class="nrl-kicker">Danju i noću</p>
+      <h2 class="nrl-h2">Ostaje na mjestu, <em>ne klizi niz nogu</em></h2>
+      <p>Ergonomski kroj prati oblik koljena, pa steznik ne klizi ni kad ga nosite cijeli dan. Tkanina je toliko mekana da ga možete ostaviti i preko noći.</p>
+      <ul class="nrl-check">
+        <li><strong>Bez šarki i remena</strong> — ništa ne pritišće i ne žulja</li>
+        <li><strong>Tanak</strong> koliko treba da stane ispod hlača i tajica</li>
+        <li><strong>Jednostavno se navuče</strong> — bez podešavanja i zatezanja</li>
+      </ul>
+      <p class="nrl-note">Ako osjetite trnce ili prejak pritisak, skinite steznik i sljedeći put uzmite veću veličinu.</p>
     </div>
   </div>
 </section>
 
-<!-- 6) BAMBUS I ELASTAN — slika desno -->
+<!-- 6) ZAŠTO BAMBUS — slika desno -->
 <section class="nrl-sec">
   <div class="nrl-wrap nrl-row2 nrl-row2--rev">
     <div class="nrl-copy">
-      <p class="nrl-kicker">Bambus i elastan</p>
+      <p class="nrl-kicker">Zašto bambus</p>
       <h2 class="nrl-h2">Mekano pletivo <em>koje diše</em></h2>
-      <p>Bambusova viskoza upija vlagu i ostaje prozračna, pa se stopala ne znoje kao u sintetici. Elastan drži kompresiju na mjestu, i nakon pranja.</p>
+      <p>Bambusovo vlakno upija vlagu i ostaje prozračno, pa se koža ispod steznika ne znoji kao u sintetici. Elastan drži kompresiju na mjestu — i nakon pranja.</p>
       <ul class="nrl-vs">
-        <li class="is-yes">Bambusova viskoza — mekana i prozračna</li>
-        <li class="is-yes">Bez lateksa</li>
-        <li class="is-yes">Pranje na 30 °C, bez omekšivača i sušilice</li>
-        <li class="is-no">Gruba sintetika u kojoj se stopalo znoji</li>
-        <li class="is-no">Uska guma koja ureže iznad gležnja</li>
+        <li class="is-yes">Prirodna svježina — sprječava neugodne mirise bolje od pamuka</li>
+        <li class="is-yes">Regulira temperaturu — grije kad je hladno, hladi kad je vruće</li>
+        <li class="is-yes">Mekano i hipoalergeno pletivo, bez lateksa</li>
+        <li class="is-no">Gruba sintetika u kojoj se koljeno znoji</li>
+        <li class="is-no">Tvrde plastične šarke i remeni koji žuljaju</li>
       </ul>
+      <p class="nrl-note">Pranje na 30 °C, bez omekšivača i sušilice — sušiti na zraku.</p>
     </div>
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-05-straga.jpg', 'Detalj pletiva NORIKS Relief čarapa' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k06-pletivo.jpg', 'Rastezljivo bambusovo pletivo NORIKS Relief steznika' ); ?></div>
   </div>
 </section>
 
 <!-- 7) VELIČINE — slika lijevo -->
 <section class="nrl-sec nrl-tint">
   <div class="nrl-wrap nrl-row2">
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-09-stol.jpg', 'NORIKS Relief čarape na nogama za stolom' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k07-tablica.jpg', 'Tablica veličina NORIKS Relief steznika za koljeno' ); ?></div>
     <div class="nrl-copy">
       <p class="nrl-kicker">Veličine</p>
-      <h2 class="nrl-h2">Birajte prema <em>broju obuće</em></h2>
-      <p>Četiri veličine pokrivaju od EU 36 do EU 46. Ako ste između dvije veličine, uzmite veću — čarapa treba prianjati, a ne stezati.</p>
+      <h2 class="nrl-h2">Izmjerite nogu <em>10 cm iznad koljena</em></h2>
+      <p>Sedam veličina pokriva opseg od 32 do 80 cm. Izmjerite opseg noge 10 cm iznad koljenske čašice i odaberite red u koji ulazi vaša mjera. Ako ste između dvije veličine, uzmite veću.</p>
       <ul class="nrl-tags">
-        <li>S — EU 36 do 38</li>
-        <li>M — EU 38 do 40</li>
-        <li>L — EU 40 do 43</li>
-        <li>XL — EU 44 do 46</li>
+        <li>S — 32 do 40 cm</li>
+        <li>M — 40 do 48 cm</li>
+        <li>L — 48 do 54 cm</li>
+        <li>XL — 54 do 59 cm</li>
+        <li>2XL — 59 do 64 cm</li>
+        <li>3XL — 64 do 72 cm</li>
+        <li>4XL — 72 do 80 cm</li>
       </ul>
-      <p class="nrl-note">Točne mjere pronađite u tablici veličina iznad izbornika.</p>
+      <p class="nrl-note">Cijelu tablicu otvorite preko poveznice iznad izbornika veličina.</p>
     </div>
   </div>
 </section>
@@ -153,8 +169,8 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
   <div class="nrl-wrap nrl-row2 nrl-row2--rev">
     <div class="nrl-copy">
       <p class="nrl-kicker">NORIKS Relief</p>
-      <h2 class="nrl-h2">Isprobajte ih <em>30 dana bez rizika</em></h2>
-      <p>Nosite ih tjedan dana na poslu, u šetnji i preko noći. Ako ne osjetite razliku, javite nam se i vratit ćemo vam novac.</p>
+      <h2 class="nrl-h2">Isprobajte ga <em>30 dana bez rizika</em></h2>
+      <p>Nosite ga tjedan dana na poslu, u šetnji i preko noći. Ako ne osjetite razliku, javite nam se i vratit ćemo vam novac.</p>
       <ul class="nrl-check">
         <li><strong>30 dana</strong> za povrat novca</li>
         <li>Brza dostava na kućnu adresu</li>
@@ -162,7 +178,7 @@ $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
       </ul>
       <a class="nrl-cta" href="#bundle-selector">Naruči NORIKS Relief</a>
     </div>
-    <div class="nrl-media"><?php echo $nrl_img( 'rl-08-kauc.jpg', 'Odmor na kauču u NORIKS Relief čarapama' ); ?></div>
+    <div class="nrl-media"><?php echo $nrl_img( 'rl-k08-prednosti.jpg', 'Prednosti NORIKS Relief steznika za koljeno' ); ?></div>
   </div>
 </section>
 

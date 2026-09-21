@@ -16,18 +16,17 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
   </div>
 
   <div class="kwsc-body">
-    <p class="kwsc-lead">Veličinu birajte prema <strong>broju obuće</strong>. Ako ste između dvije veličine, uzmite <strong>veću</strong> — čarapa treba ravnomjerno prianjati, a ne stezati.</p>
+    <p class="kwsc-lead">Izmjerite <strong>opseg noge 10 cm iznad koljenske čašice</strong> i odaberite red u koji ulazi vaša mjera. Ako ste između dvije veličine, uzmite <strong>veću</strong> — steznik treba ravnomjerno prianjati, a ne stezati.</p>
 
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">Broj obuće</th><th scope="col">Duljina stopala</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Opseg noge (10 cm iznad koljena)</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_relief_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td><?php echo esc_html( $r[1] ); ?></td>
-              <td><?php echo esc_html( $r[2] ); ?></td></tr>
+              <td><?php echo esc_html( $r[1] ); ?></td></tr>
           <?php endforeach; ?>
         </tbody>
       </table>
@@ -36,11 +35,11 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-how">
       <h3>Kako izmjeriti</h3>
       <ol>
-        <li><strong>Stanite na papir</strong> i označite petu i najduži prst.</li>
-        <li><strong>Izmjerite razmak</strong> između te dvije oznake u centimetrima.</li>
-        <li><strong>Odaberite red</strong> u kojem je vaš broj obuće ili duljina stopala.</li>
+        <li><strong>Stanite uspravno</strong>, s opuštenom nogom i ispruženim koljenom.</li>
+        <li><strong>Izmjerite opseg noge 10 cm iznad koljenske čašice</strong>, krojačkim metrom preko kože.</li>
+        <li><strong>Odaberite red</strong> u koji ulazi vaša mjera; ako ste između dvije veličine, uzmite veću.</li>
       </ol>
-      <p class="kwsc-note">Mjerite navečer, kad su stopala najveća.</p>
+      <p class="kwsc-note">Steznik se nosi na lijevom ili desnom koljenu — isti komad odgovara objema nogama.</p>
     </div>
   </div>
   </div>

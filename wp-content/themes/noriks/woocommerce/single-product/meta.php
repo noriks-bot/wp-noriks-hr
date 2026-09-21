@@ -601,7 +601,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'relief', $current_product_id ) ): ?>
 
-                <strong>NORIKS Relief</strong> su bambusove kompresijske čarape bez prstiju i bez pete, osmišljene za stopala koja bole. Pletivo je gušće oko svoda, pete i gležnja, pa je pritisak ravnomjerno raspoređen umjesto da steže u jednoj liniji.<br><br>Otvoreni prsti i peta znače da nema šava koji pritišće osjetljiva mjesta i da čarapa ne klizi unutar cipele. Tanke su, pa stanu u tenisice, cipele i radne čizme, a mnogi ih nose i bosi po kući ili preko običnih čarapa.<br><br>Blaga kompresija potiče protok krvi, zato su noge nakon dugog stajanja manje teške, a gležnjevi manje natečeni. Mogu se nositi i preko noći; ujutro je ukočenost pri prvim koracima obično manja.<br><br>Pletivo s bambusovom viskozom upija vlagu i ostaje prozračno, bez lateksa. Dostupne su u četiri veličine, od EU 36 do EU 46 — veličinu birajte prema broju obuće, a ako ste između dvije, uzmite veću.
+                <strong>NORIKS Relief</strong> je bambusov steznik za koljeno namijenjen bolnim, ukočenim i natečenim koljenima. Pletivo je gušće oko čašice i s obje strane zgloba, pa je pritisak ravnomjerno raspoređen umjesto da steže u jednoj liniji.<br><br>Blaga, medicinska kompresija potiče protok krvi, smiruje upalu i pomaže da oteklina splasne. Koljeno je stabilnije pri hodanju, čučnju i penjanju stepenicama, a mnogi olakšanje osjete već pri prvom nošenju.<br><br>Nema šarki, remena ni plastike — steznik se jednostavno navuče, prati oblik koljena i ne klizi niz nogu. Tanak je koliko treba da stane ispod hlača i tajica, pa ga možete nositi na poslu, u šetnji, tijekom vježbanja i preko noći. Isti komad odgovara lijevom i desnom koljenu.<br><br>Pletivo od bambusovog vlakna upija vlagu, diše i prirodno sprječava neugodne mirise, bez lateksa. Dostupno je sedam veličina (S do 4XL) — izmjerite opseg noge 10 cm iznad koljenske čašice, a ako ste između dvije veličine, uzmite veću.<br><br>Prikladan je kod artroze, upale patelarne tetive, reumatoidnog artritisa, burzitisa, trkačkog koljena, oticanja i ukočenosti.
 
          <?php elseif( noriks_is_type( 'gelseat', $current_product_id ) ): ?>
 
@@ -805,13 +805,12 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'relief', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>broju obuće</strong>. Ako ste između dvije veličine, uzmite <strong>veću</strong> — čarapa treba prianjati, a ne stezati.</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Izmjerite <strong>opseg noge 10 cm iznad koljenske čašice</strong>. Ako ste između dvije veličine, uzmite <strong>veću</strong> — steznik treba prianjati, a ne stezati.</p>
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#2f8f7d;color:#fff;">
                   <th style="padding:9px 10px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 10px;text-align:left;">Broj obuće</th>
-                  <th style="padding:9px 10px;text-align:left;">Duljina stopala</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg noge (10 cm iznad koljena)</th>
                 </tr>
               </thead>
               <tbody>
@@ -821,12 +820,11 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
             </table>
-            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> stopalo stavite na papir, označite petu i najduži prst pa izmjerite razmak. Mjerite navečer, kad su stopala najveća.</p>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> stanite uspravno s ispruženim koljenom i krojačkim metrom izmjerite opseg noge 10 cm iznad koljenske čašice.</p>
           </div>
         <?php elseif( noriks_is_type( 'celleg', $current_product_id ) ): ?>
 

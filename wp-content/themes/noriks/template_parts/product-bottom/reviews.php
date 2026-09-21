@@ -416,7 +416,7 @@
   if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_relief_page ? 'NORIKS Relief bambusove kompresijske čarape'
+  $rv_fallback_title = $is_relief_page ? 'NORIKS Relief bambusov steznik za koljeno'
                      : ( $is_gelseat_page ? 'NORIKS GelSeat gel jastuk za sjedenje'
                      : ( $is_kneetape_page ? 'NORIKS KneeTape traka za koljeno'
                      : ( $is_celleg_page ? 'NORIKS CelLeg 3D tajice'
@@ -2307,22 +2307,25 @@ $bowl_faq = array(
 
 $relief_faq = array(
   array('questioon' => 'Kako odabrati veličinu?',
-    'answer'    => 'Veličinu birajte prema <strong>broju obuće</strong>: S za EU 36–38, M za EU 38–40, L za EU 40–43 i XL za EU 44–46. Ako ste između dvije veličine, uzmite <strong>veću</strong> — čarapa ne smije stezati, nego ravnomjerno prianjati.'),
-  array('questioon' => 'Zašto su bez prstiju i bez pete?',
-    'answer'    => 'Otvoreni prsti i peta znače da nema šava koji pritišće bolna mjesta i da čarapa ne klizi unutar cipele. Kompresija ostaje tamo gdje je potrebna — oko svoda, gležnja i pete.'),
-  array('questioon' => 'Mogu li ih nositi u cipelama?',
-    'answer'    => 'Da. Pletivo je tanko pa čarapa stane u tenisice, cipele i čizme. Mnogi ih nose i bosi po kući ili preko običnih čarapa u hladnijim danima.'),
-  array('questioon' => 'Pomažu li kod plantarnog fasciitisa?',
-    'answer'    => 'Ravnomjeran pritisak oko svoda i pete smanjuje osjećaj zatezanja, osobito pri prvim koracima ujutro. Čarape nisu lijek i ne zamjenjuju liječnički pregled, ali mnogima ublaže nelagodu tijekom dana.'),
-  array('questioon' => 'Mogu li ih nositi noću?',
-    'answer'    => 'Možete. Zbog blage kompresije mnogi ih nose i tijekom noći, a ujutro javljaju manje ukočenosti. Ako osjetite trnce ili pritisak, skinite ih i uzmite veću veličinu.'),
-  array('questioon' => 'Kako se peru?',
-    'answer'    => 'Perite ih na 30 °C, po mogućnosti u vrećici za rublje. Bez omekšivača, bez sušilice i bez glačanja — tako elastična vlakna zadrže kompresiju.'),
-  array('questioon' => 'Od čega su izrađene?',
-    'answer'    => 'Od mekanog pletiva s bambusovom viskozom, koja upija vlagu i ostaje prozračna, uz dodatak elastana za kompresiju. Bez lateksa.'),
+    'answer'    => 'Izmjerite <strong>opseg noge 10 cm iznad koljenske čašice</strong>: S 32–40 cm, M 40–48 cm, L 48–54 cm, XL 54–59 cm, 2XL 59–64 cm, 3XL 64–72 cm i 4XL 72–80 cm. Ako ste između dvije veličine, uzmite <strong>veću</strong> — steznik ne smije stezati, nego ravnomjerno prianjati.'),
+  array('questioon' => 'Po čemu se razlikuje od ostalih steznika za koljeno?',
+    'answer'    => 'Izrađen je od bambusovog vlakna, pa je mekši, prozračniji i prirodno sprječava neugodne mirise. Nema tvrdih šarki, remena ni plastike — spoj prirodnog materijala i medicinske kompresije daje potporu bez klizanja i žuljanja.'),
+  array('questioon' => 'Mogu li ga nositi cijeli dan?',
+    'answer'    => 'Da. Možete ga nositi danju, noću ili samo kad vam treba. Tanak je koliko treba da stane ispod hlača i tajica, a ergonomski kroj drži ga na mjestu.'),
+  array('questioon' => 'Odgovara li isti steznik lijevom i desnom koljenu?',
+    'answer'    => 'Da, isti komad možete nositi na lijevom ili desnom koljenu.'),
+  array('questioon' => 'Pomaže li kod artroze i upale?',
+    'answer'    => 'Blaga kompresija i toplina smiruju nadraženo tkivo, potiču cirkulaciju i pomažu da oteklina splasne. Steznik nije lijek i ne zamjenjuje liječnički pregled, ali mnogima ublaži bol, škripanje i ukočenost tijekom dana.'),
+  array('questioon' => 'Mogu li ga nositi noću?',
+    'answer'    => 'Možete. Zbog blage kompresije mnogi ga nose i tijekom noći, a ujutro javljaju manje ukočenosti. Ako osjetite trnce ili prejak pritisak, skinite ga i uzmite veću veličinu.'),
+  array('questioon' => 'Kako se pere?',
+    'answer'    => 'Perite ga na 30 °C, po mogućnosti u vrećici za rublje. Bez omekšivača, bez sušilice i bez glačanja — tako elastična vlakna zadrže kompresiju.'),
+  array('questioon' => 'Od čega je izrađen?',
+    'answer'    => 'Od mekanog pletiva s bambusovim vlaknom, koje upija vlagu i ostaje prozračno, uz dodatak elastana za kompresiju. Bez lateksa.'),
   array('questioon' => 'Koliko dugo traje dostava i mogu li vratiti?',
-    'answer'    => 'Dostava je brza na kućnu adresu, a imate <strong>30 dana</strong> za povrat novca ako vam ne odgovaraju.'),
+    'answer'    => 'Dostava je brza na kućnu adresu, a imate <strong>30 dana</strong> za povrat novca ako vam ne odgovara.'),
 );
+
 
 $gelseat_faq = array(
   array('questioon' => 'Odgovara li jastuk mojoj stolici?',

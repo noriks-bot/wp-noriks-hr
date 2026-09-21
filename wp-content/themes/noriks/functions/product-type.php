@@ -250,10 +250,13 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
     /** NORIKS Relief: velicina, EU broj obuce — jedna tablica za akordeon i modal. */
     function noriks_relief_sizes() {
         return array(
-            array( 'S',  '36 – 38', 'do 24 cm' ),
-            array( 'M',  '38 – 40', '24 – 25,5 cm' ),
-            array( 'L',  '40 – 43', '25,5 – 27,5 cm' ),
-            array( 'XL', '44 – 46', '27,5 – 29,5 cm' ),
+            array( 'S',   '32 – 40 cm' ),
+            array( 'M',   '40 – 48 cm' ),
+            array( 'L',   '48 – 54 cm' ),
+            array( 'XL',  '54 – 59 cm' ),
+            array( '2XL', '59 – 64 cm' ),
+            array( '3XL', '64 – 72 cm' ),
+            array( '4XL', '72 – 80 cm' ),
         );
     }
 }
