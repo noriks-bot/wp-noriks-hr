@@ -24,6 +24,8 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
         }
         // Bowl nema velicina.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bowl' ) ) { return; }
+        // Cloud / Cloth / HYD nemaju velicina — modal s tablicom majica se ne smije ispisati.
+        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'cloud' ) || noriks_is_type( 'cloath' ) || noriks_is_type( 'hyd' ) ) ) { return; }
         // NORIKS Relief: tablica po EU broju obuce.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'relief' ) ) {
             get_template_part( 'template_parts/size-chart-relief' );
