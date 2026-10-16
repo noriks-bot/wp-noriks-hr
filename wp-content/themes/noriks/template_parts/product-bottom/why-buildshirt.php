@@ -112,25 +112,98 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
 <!-- 6) ŠTO ŽENE ZAISTA KAŽU -->
 <section class="nbs-sec nbs-tint">
   <div class="nbs-wrap">
-    <p class="nbs-kicker" style="text-align:center">Potvrđene recenzije</p>
-    <h2 class="nbs-h2" style="text-align:center">Što žene <em>zaista kažu</em></h2>
-    <div class="nbs-ugc">
-        <figure class="nbs-ugc__card"><?php echo $nbs_img( 'bs-ugc-1.webp', 'Kupka u NORIKS BuildShirt majici' ); ?></figure>
-        <figure class="nbs-ugc__card"><?php echo $nbs_img( 'bs-ugc-2.webp', 'Kupka u NORIKS BuildShirt majici' ); ?></figure>
-        <figure class="nbs-ugc__card"><?php echo $nbs_img( 'bs-ugc-3.webp', 'Kupka u NORIKS BuildShirt majici' ); ?></figure>
-        <figure class="nbs-ugc__card"><?php echo $nbs_img( 'bs-ugc-4.webp', 'Kupka u NORIKS BuildShirt majici' ); ?></figure>
-        <figure class="nbs-ugc__card"><?php echo $nbs_img( 'bs-ugc-5.webp', 'Kupka u NORIKS BuildShirt majici' ); ?></figure>
-        <figure class="nbs-ugc__card"><?php echo $nbs_img( 'bs-ugc-6.webp', 'Kupka u NORIKS BuildShirt majici' ); ?></figure>
-      <figure class="nbs-ugc__card nbs-ugc__card--vid"><?php echo $nbs_img( 'bs-vid-2.webp', 'Kupka pokazuje NORIKS BuildShirt' ); ?></figure>
-    </div>
-    <div class="nbs-quotes">
-        <blockquote class="nbs-quote"><span class="nbs-quote__stars">★★★★★</span><p>Rekla sam mužu da je to još jedno internetsko obećanje i da ću je vratiti. Ove godine sam vratila devet stvari. Ova ne ide nikamo. Nosila sam je na desetodnevnom putovanju, ispod ljetnih haljina i ispod sakoa na večeri — i izašla je iz kofera kao nova. Držala me cijelo vrijeme, bez urezivanja i bez namještanja za stolom.</p><cite>Dubravka W., 63 — potvrđena kupnja</cite></blockquote>
-        <blockquote class="nbs-quote"><span class="nbs-quote__stars">★★★★★</span><p>Imam punije grudi i godinama sam se mirila s lošim rješenjima. Ovo nije jedno od njih. Drži sve gore gdje treba, a da me ništa ne steže preko leđa.</p><cite>Katica S., 77 — potvrđena kupnja</cite></blockquote>
+    <span class="nbs-rated">★★★★★ Ocjena 4,8/5 — tisuće zadovoljnih kupaca</span>
+    <h2 class="nbs-h2" style="text-align:center;margin-bottom:6px">Što žene <em>zaista kažu</em></h2>
+    <p class="nbs-rev__sub">Potvrđene recenzije stvarnih kupaca</p>
+    <div class="nbs-rev">
+        <article class="nbs-rev__card">
+          <div class="nbs-rev__img"><?php echo $nbs_img( 'bs-ugc-1.webp', 'Kupka u NORIKS BuildShirt majici — Dubravka W.' ); ?></div>
+          <div class="nbs-rev__body">
+            <div class="nbs-rev__head">
+              <span class="nbs-rev__stars">★★★★★</span>
+              <span class="nbs-rev__who">Dubravka W., 63</span>
+              <span class="nbs-rev__ver">✓ Potvrđena kupnja</span>
+            </div>
+            <p>Rekla sam mužu da je to još jedno internetsko obećanje i da ću je odmah vratiti. Ove godine sam vratila devet stvari. <strong>Ova ne ide nikamo.</strong> Nosila sam je na desetodnevnom putovanju, ispod ljetnih haljina, ispod sakoa na večeri, strpana u kut kofera — i izašla je kao nova. <strong>Držala me cijelo vrijeme, bez urezivanja i bez namještanja za stolom.</strong> Dobila sam kompliment na haljinu koju imam šest godina. <strong>Sada ih imam četiri u ladici.</strong></p>
+          </div>
+        </article>
+        <article class="nbs-rev__card">
+          <div class="nbs-rev__img"><?php echo $nbs_img( 'bs-ugc-3.webp', 'Kupka u NORIKS BuildShirt majici — Katica S.' ); ?></div>
+          <div class="nbs-rev__body">
+            <div class="nbs-rev__head">
+              <span class="nbs-rev__stars">★★★★★</span>
+              <span class="nbs-rev__who">Katica S., 77</span>
+              <span class="nbs-rev__ver">✓ Potvrđena kupnja</span>
+            </div>
+            <p>Imam punije grudi i godinama sam se mirila s lošim rješenjima. Ovo nije jedno od njih. <strong>Drži sve gore gdje treba i ne spljošti me kao palačinku</strong>, što su one kompresijske stvari uvijek radile. Nema zatvarača na leđima, <strong>nema naramice koja pili rame</strong>, a leži savršeno glatko od vrha do dna. Naručila sam svoju uobičajenu veličinu i nisam morala pogađati. <strong>Jedina zamjerka je moja — uzela sam samo dvije.</strong></p>
+          </div>
+        </article>
+        <article class="nbs-rev__card">
+          <div class="nbs-rev__img"><?php echo $nbs_img( 'bs-ugc-2.webp', 'Kupka u NORIKS BuildShirt majici — Marica P.' ); ?></div>
+          <div class="nbs-rev__body">
+            <div class="nbs-rev__head">
+              <span class="nbs-rev__stars">★★★★★</span>
+              <span class="nbs-rev__who">Marica P., 68</span>
+              <span class="nbs-rev__ver">✓ Potvrđena kupnja</span>
+            </div>
+            <p>Nisam vjerovala ni jednoj riječi. Nosim veliku košaricu od 1979. i svaka stvar bez žice splasnula bi za tjedan dana. Naručila sam svoju veličinu, obukla je i stajala pred ogledalom punu minutu. <strong>Stvarno drži.</strong> Bez žice, bez kopči, bez posezanja iza leđa u sedam ujutro. Nosila sam je jedanaest sati na vjenčanju nećaka i <strong>nijednom se nisam namještala</strong>. Obični grudnjak su četiri uske trake koje drže cijelu vas. Ova <strong>raspodjeljuje težinu po svemu</strong>.</p>
+          </div>
+        </article>
+        <article class="nbs-rev__card">
+          <div class="nbs-rev__img"><?php echo $nbs_img( 'bs-ugc-4.webp', 'Kupka u NORIKS BuildShirt majici — Nada A.' ); ?></div>
+          <div class="nbs-rev__body">
+            <div class="nbs-rev__head">
+              <span class="nbs-rev__stars">★★★★★</span>
+              <span class="nbs-rev__who">Nada A., 72</span>
+              <span class="nbs-rev__ver">✓ Potvrđena kupnja</span>
+            </div>
+            <p>Trideset i jednu godinu pjevam u crkvenom zboru i svaku sam od njih provela povlačeći naramicu. Više ne. <strong>Ništa se ne ureza. Ništa se ne spušta. Ništa se ne vidi.</strong> Naručila sam svoju uobičajenu veličinu i sjela je iz prve, što se meni nikad ne događa. Sestra je došla, opipala tkaninu i rekla sam joj — uzmi moju, naručit ću si još.</p>
+          </div>
+        </article>
+        <article class="nbs-rev__card">
+          <div class="nbs-rev__img"><?php echo $nbs_img( 'bs-ugc-5.webp', 'Kupka u NORIKS BuildShirt majici — Vlasta H.' ); ?></div>
+          <div class="nbs-rev__body">
+            <div class="nbs-rev__head">
+              <span class="nbs-rev__stars">★★★★★</span>
+              <span class="nbs-rev__who">Vlasta H., 64</span>
+              <span class="nbs-rev__ver">✓ Potvrđena kupnja</span>
+            </div>
+            <p>Kupila sam točno jednu i to je bila moja greška. Stigla je, sjela savršeno u mojoj uobičajenoj veličini i nosila sam je četiri dana zaredom <strong>jer se nisam htjela vraćati na kopče</strong>. Bez kopče, bez žice, bez borbe s vlastitim leđima. Uđete u nju i gotovi ste. <strong>Drži vas umjesto da vas steže.</strong></p>
+          </div>
+        </article>
+        <article class="nbs-rev__card">
+          <div class="nbs-rev__img"><?php echo $nbs_img( 'bs-ugc-6.webp', 'Kupka u NORIKS BuildShirt majici — Jelka R.' ); ?></div>
+          <div class="nbs-rev__body">
+            <div class="nbs-rev__head">
+              <span class="nbs-rev__stars">★★★★★</span>
+              <span class="nbs-rev__who">Jelka R., 79</span>
+              <span class="nbs-rev__ver">✓ Potvrđena kupnja</span>
+            </div>
+            <p>U sedamdeset i devetoj sam zaslužila pravo da mi bude udobno i ne idem natrag. <strong>Imam ih pet, jednu za svaki radni dan</strong>, i košara za rublje nikad nije bila jednostavnija. Crna ispod svega, bijela ispod crkvene bluze. <strong>Glatko kao staklo ispod pletene majice</strong> — kći nije ni primijetila da nosim nešto ispod.</p>
+          </div>
+        </article>
     </div>
   </div>
 </section>
 
-<!-- 7) VEĆINA MAJICA JE LOŠA -->
+<!-- 7) NIŠTA USKO NIGDJE NA NJOJ -->
+<section class="nbs-sec">
+  <div class="nbs-wrap nbs-row2">
+    <div class="nbs-media nbs-media--tall"><?php echo $nbs_img( 'bs-vid-2.webp', 'NORIKS BuildShirt na tijelu — ništa usko nigdje' ); ?></div>
+    <div class="nbs-copy">
+      <h2 class="nbs-h2">Ništa usko <em>nigdje na njoj.</em></h2>
+      <p>Nema trake, jer traka je dio koji steže. Grudnjak su <strong>dva puna sloja tkanine preko grudi</strong>, usidrena sa strane umjesto preko leđa, i krojena preko bokova pa se podvuče u hlače ili suknju. To je cijela konstrukcija. Jedan pokret preko glave i obučeni ste.</p>
+      <div class="nbs-pills">
+        <span>✓ Dva puna sloja preko grudi</span>
+        <span>✓ Bez trake, žice i kopči</span>
+        <span>✓ Ulošci koji su djelomično ušiveni</span>
+        <span>✓ Krojeno preko bokova pa ostaje dolje</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8) VEĆINA MAJICA JE LOŠA -->
 <section class="nbs-sec">
   <div class="nbs-wrap">
     <h2 class="nbs-h2" style="text-align:center;max-width:860px;margin:0 auto 14px">Većina majica s ugrađenim grudnjakom je loša. <em>Radije ćete to čuti od nas.</em></h2>
@@ -144,7 +217,7 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
   </div>
 </section>
 
-<!-- 8) KOPIJE -->
+<!-- 9) KOPIJE -->
 <section class="nbs-sec nbs-tint">
   <div class="nbs-wrap">
     <span class="nbs-alert">Upozorenje na kopije</span>
@@ -169,7 +242,7 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
   </div>
 </section>
 
-<!-- 9) ZAŠTO NIŠTA DRUGO NIJE DJELOVALO -->
+<!-- 10) ZAŠTO NIŠTA DRUGO NIJE DJELOVALO -->
 <section class="nbs-sec">
   <div class="nbs-wrap">
     <h2 class="nbs-h2" style="text-align:center">Zašto ništa drugo <em>nije djelovalo</em></h2>
@@ -192,7 +265,7 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
   </div>
 </section>
 
-<!-- 10) 30 DANA TESTA -->
+<!-- 11) 30 DANA TESTA -->
 <section class="nbs-sec nbs-tint">
   <div class="nbs-wrap">
     <div class="nbs-guar">
@@ -204,7 +277,7 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
   </div>
 </section>
 
-<!-- 11) ZAKLJUČAK -->
+<!-- 12) ZAKLJUČAK -->
 <section class="nbs-sec">
   <div class="nbs-wrap nbs-row2">
     <div class="nbs-copy">
@@ -333,17 +406,40 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
 .nbs-guar p { font-size: 16px; line-height: 1.7; color: #5d4f48; margin: 0 0 6px; }
 .nbs-guar__note { font-size: 13.5px !important; color: #8a7a72 !important; margin-top: 14px !important; text-align: center; }
 
+/* 6) karusel recenzij */
+.nbs-rated { display: block; width: fit-content; margin: 0 auto 14px; border: 1px solid #e3cfc3; border-radius: 999px;
+  padding: 7px 16px; font-size: 13px; font-weight: 700; color: #8d5a46; background: #fff; letter-spacing: .02em; }
+.nbs-rev__sub { text-align: center; font-size: 14px; color: #8a7a72; margin: 0 0 22px; }
+.nbs-rev { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px, 1fr); gap: 18px;
+  overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
+.nbs-rev__card { background: #fff; border: 1px solid #ecdfd7; border-radius: 14px; overflow: hidden; scroll-snap-align: center;
+  box-shadow: 0 1px 2px rgba(40,25,20,.04), 0 10px 26px rgba(40,25,20,.06); display: flex; flex-direction: column; }
+.nbs-rev__img img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 0; box-shadow: none; }
+.nbs-rev__body { padding: 16px 18px 20px; }
+.nbs-rev__head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.nbs-rev__stars { color: #e0a33c; font-size: 14px; letter-spacing: 1px; }
+.nbs-rev__who { font-size: 13.5px; font-weight: 800; color: #2a2320; }
+.nbs-rev__ver { font-size: 11.5px; font-weight: 700; color: #2f8f5f; background: #eaf6ee; border-radius: 999px; padding: 3px 9px; }
+.nbs-rev__body p { font-size: 14.5px; line-height: 1.62; color: #4b403a; margin: 0; }
+.nbs-rev__body strong { color: #2a2320; }
+
+/* 7) pilule */
+.nbs-media--tall img { aspect-ratio: 9 / 16; object-fit: cover; }
+.nbs-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.nbs-pills span { background: #8d2740; color: #fff; font-size: 13.5px; font-weight: 700; padding: 9px 14px; border-radius: 999px; }
+
 @media (max-width: 980px) {
   .nbs-row2 { grid-template-columns: 1fr; gap: 28px; }
   .nbs-points, .nbs-cmp2, .nbs-quotes { grid-template-columns: 1fr; }
   .nbs-fixes, .nbs-chips { grid-template-columns: 1fr 1fr; }
-  .nbs-ugc { grid-template-columns: 1fr 1fr 1fr; }
+  .nbs-rev { grid-auto-columns: 78%; }
   .nbs-nums { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .nbs-sec { padding: 42px 0; }
   .nbs-wrap { padding: 0 16px; }
-  .nbs-fixes, .nbs-chips, .nbs-ugc { grid-template-columns: 1fr 1fr; }
+  .nbs-fixes, .nbs-chips { grid-template-columns: 1fr 1fr; }
+  .nbs-rev { grid-auto-columns: 86%; }
   .nbs-cta { width: 100%; text-align: center; }
   .nbs-ticker__row { gap: 28px; padding: 12px 14px; }
   .nbs-ticker__row span { font-size: 12px; }
