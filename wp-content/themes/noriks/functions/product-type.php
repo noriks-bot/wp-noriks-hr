@@ -88,6 +88,7 @@ function noriks_product_type_map() : array {
         'kneetape'                => array( 'orto-kneetape', 'kneetape' ),
         // NORIKS CelLeg — 3D kompresijske tajice protiv celulita (boja + velicina).
         'celleg'                  => array( 'orto-celleg', 'celleg' ),
+        'buildshirt'              => array( 'orto-buildshirt', 'buildshirt' ),
         // NORIKS StepCloud — masazni ulosci s potporom svoda (boja + velicina).
         'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
@@ -257,6 +258,24 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
             array( '2XL', '59 – 64 cm' ),
             array( '3XL', '64 – 72 cm' ),
             array( '4XL', '72 – 80 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_buildshirt_sizes' ) ) {
+    /** NORIKS BuildShirt: velicina, visina modela, tezina modela. */
+    function noriks_buildshirt_sizes() {
+        return array(
+            array( 'XS',  '157 cm', '49 kg' ),
+            array( 'S',   '165 cm', '58 kg' ),
+            array( 'M',   '163 cm', '66 kg' ),
+            array( 'L',   '170 cm', '73 kg' ),
+            array( 'XL',  '160 cm', '79 kg' ),
+            array( '2XL', '173 cm', '89 kg' ),
+            array( '3XL', '165 cm', '98 kg' ),
+            array( '4XL', '175 cm', '110 kg' ),
+            array( '5XL', '163 cm', '122 kg' ),
+            array( '6XL', '178 cm', '134 kg' ),
         );
     }
 }

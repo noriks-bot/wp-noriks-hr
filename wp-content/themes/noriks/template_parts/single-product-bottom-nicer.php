@@ -214,6 +214,11 @@ if ( noriks_is_type( 'kneetape' ) ) {
     include $noriks_pb_dir . 'why-kneetape.php';
 }
 
+// NORIKS BuildShirt (orto-buildshirt) — majica s ugradenim grudnjakom
+if ( noriks_is_type( 'buildshirt' ) ) {
+    include $noriks_pb_dir . 'why-buildshirt.php';
+}
+
 // NORIKS CelLeg (orto-celleg) — 3D kompresijske tajice protiv celulita
 if ( noriks_is_type( 'celleg' ) ) {
     include $noriks_pb_dir . 'why-celleg.php';

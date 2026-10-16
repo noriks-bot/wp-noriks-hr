@@ -611,7 +611,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS KneeTape</strong> je kineziološka traka za koljeno koja je <strong>već izrezana</strong> u pravi oblik. Skinete zaštitnu foliju, zalijepite bazu ispod koljena i prekrižite krakove oko čašice — bez mjerenja, rezanja i odlaska fizioterapeutu.<br><br>Traka ne blokira zglob kao kruta ortoza. Rasteže se do 140 % i prati pokret koljena, a istodobno daje osjećaj oslonca i vođenja pri hodu, čučnju i penjanju stepenicama.<br><br>Uz pravilno nanošenje drži 3 do 5 dana, i kad se tuširate ili vježbate. Materijal je 100 % bez lateksa, na pamučnoj podlozi prilagođenoj osjetljivoj koži.<br><br>U pakiranju je 10 već izrezanih traka, a uz narudžbu dobivate i 10 biljnih grijaćih traka na poklon. Dostupne su četiri boje — plava, crna, boja kože i roza; boja ne utječe na učinak ni trajnost.
 
-         <?php elseif( noriks_is_type( 'celleg', $current_product_id ) ): ?>
+         <?php elseif( noriks_is_type( 'buildshirt', $current_product_id ) ): ?>
+
+                <strong>NORIKS BuildShirt</strong> je majica s <strong>ugrađenim grudnjakom</strong> — nije još jedan pokušaj boljeg grudnjaka, nego jedan sloj koji zamjenjuje dva. Široke plosnate naramice, četvrtasti izrez i glatko pletivo do bokova; ništa se ne kopča i ništa se ne ureza.<br><br>Mekane košarice podižu i oblikuju bez žica, a široki dio ispod grudi preuzima težinu umjesto naramica. Ulošci su odvojivi: ostavite ih za oblik i pokrivenost ili ih izvadite za prirodan izgled — ostaju na mjestu i tijekom pranja.<br><br>Pletivo je bešavno, prozračno i rasteže se u svim smjerovima, pa se ispod majice, haljine ili košulje ne vide linije ni tragovi naramica. Nosi se od jutra do večeri, a mnoge je nose i za spavanje.<br><br>Dostupno je deset veličina, od XS do 6XL, i deset boja — crna, bijela, siva, boja kože, kava, maslinasta, tirkizna, stara roza, vinsko crvena i svijetloplava. Veličinu birajte prema visini i težini; ako ste između dvije, uzmite veću.<br><br>Pere se u hladnoj vodi, bez omekšivača i sušilice. Zamjena veličine je besplatna, a imate i 30 dana za povrat novca.
+
+         <?php elseif( noriks_is_type( 'buildshirt', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>visini i težini</strong>. U tablici su mjere modela koje nose prikazanu veličinu. Ako ste između dvije veličine, uzmite <strong>veću</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a8705a;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Visina modela</th>
+                  <th style="padding:9px 10px;text-align:left;">Težina modela</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_buildshirt_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f1ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Savjet:</strong> pletivo se rasteže, ali ne smije stezati — ako ste između dvije veličine, veća će bolje stajati. Zamjena veličine je besplatna.</p>
+          </div>
+        <?php elseif( noriks_is_type( 'celleg', $current_product_id ) ): ?>
 
                 <strong>NORIKS CelLeg</strong> su 3D kompresijske tajice namijenjene oblikovanju nogu i stražnjice. Linije utkane u pletivo ciljaju područja na kojima se celulit najčešće vidi i ondje stišću jače, a na ostatku noge blaže.<br><br>Takva ciljana kompresija potiče mikrocirkulaciju i limfni protok, pa koža izgleda zaglađenije, a noge čvršće. Uz to mišići nogu i stražnjice ostaju blago aktivni tijekom dana, što znači veću potrošnju kalorija pri istom broju koraka.<br><br>Pletivo je bešavno, od 70 % poliamida i 30 % elastana — rastezljivo u svim smjerovima, prozračno i neprozirno i pri čučnju. Visoki pojas drži trbuh i ne rola se prema dolje.<br><br>Dostupne su u devet boja i veličinama od XS do 5XL. Veličinu birajte prema opsegu struka i bokova iz tablice, a ne prema broju traperica.
 

@@ -31,6 +31,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-relief' );
             return;
         }
+        // NORIKS BuildShirt: tablica po visini i tezini modela (XS–6XL).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'buildshirt' ) ) {
+            get_template_part( 'template_parts/size-chart-buildshirt' );
+            return;
+        }
         // NORIKS CelLeg: tablica po opsegu struka i bokova (XS–5XL).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'celleg' ) ) {
             get_template_part( 'template_parts/size-chart-celleg' );
