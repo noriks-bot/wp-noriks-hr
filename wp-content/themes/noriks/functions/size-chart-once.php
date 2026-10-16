@@ -22,6 +22,8 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-slim' );
             return;
         }
+        // KneeBrace: jedna velicina, nema tablice.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kneebrace' ) ) { return; }
         // Bowl nema velicina.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bowl' ) ) { return; }
         // Cloud / Cloth / HYD nemaju velicina — modal s tablicom majica se ne smije ispisati.

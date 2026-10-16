@@ -89,6 +89,7 @@ function noriks_product_type_map() : array {
         // NORIKS CelLeg — 3D kompresijske tajice protiv celulita (boja + velicina).
         'celleg'                  => array( 'orto-celleg', 'celleg' ),
         'buildshirt'              => array( 'orto-buildshirt', 'buildshirt' ),
+        'kneebrace'               => array( 'orto-kneebrace', 'kneebrace' ),
         // NORIKS StepCloud — masazni ulosci s potporom svoda (boja + velicina).
         'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
         // NORIKS Hugger — nosivi termofor (samo boja).

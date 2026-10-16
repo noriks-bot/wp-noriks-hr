@@ -214,6 +214,11 @@ if ( noriks_is_type( 'kneetape' ) ) {
     include $noriks_pb_dir . 'why-kneetape.php';
 }
 
+// NORIKS KneeBrace (orto-kneebrace) — patelarni steznik
+if ( noriks_is_type( 'kneebrace' ) ) {
+    include $noriks_pb_dir . 'why-kneebrace.php';
+}
+
 // NORIKS BuildShirt (orto-buildshirt) — majica s ugradenim grudnjakom
 if ( noriks_is_type( 'buildshirt' ) ) {
     include $noriks_pb_dir . 'why-buildshirt.php';
