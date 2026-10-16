@@ -90,6 +90,8 @@ function noriks_product_type_map() : array {
         'celleg'                  => array( 'orto-celleg', 'celleg' ),
         'buildshirt'              => array( 'orto-buildshirt', 'buildshirt' ),
         'kneebrace'               => array( 'orto-kneebrace', 'kneebrace' ),
+        // NORIKS Hands — stabilizator palca / CMC zgloba (boja + velicina).
+        'hands'                   => array( 'orto-hands', 'hands' ),
         // NORIKS StepCloud — masazni ulosci s potporom svoda (boja + velicina).
         'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
@@ -277,6 +279,17 @@ if ( ! function_exists( 'noriks_buildshirt_sizes' ) ) {
             array( '4XL', '118 – 126 cm','99 – 105 cm', '60 cm' ),
             array( '5XL', '126 – 133 cm','105 – 113 cm','60 cm' ),
             array( '6XL', '133 – 142 cm','113 – 121 cm','60 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_hands_sizes' ) ) {
+    /** NORIKS Hands: velicina, opseg dlana. */
+    function noriks_hands_sizes() {
+        return array(
+            array( 'S', '18 – 19 cm' ),
+            array( 'M', '19 – 21,5 cm' ),
+            array( 'L', '21,5 – 23 cm' ),
         );
     }
 }

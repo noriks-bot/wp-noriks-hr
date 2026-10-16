@@ -219,6 +219,11 @@ if ( noriks_is_type( 'kneebrace' ) ) {
     include $noriks_pb_dir . 'why-kneebrace.php';
 }
 
+// NORIKS Hands (orto-hands) — stabilizator palca
+if ( noriks_is_type( 'hands' ) ) {
+    include $noriks_pb_dir . 'why-hands.php';
+}
+
 // NORIKS BuildShirt (orto-buildshirt) — majica s ugradenim grudnjakom
 if ( noriks_is_type( 'buildshirt' ) ) {
     include $noriks_pb_dir . 'why-buildshirt.php';

@@ -615,6 +615,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS KneeBrace</strong> je patelarni steznik koji se nosi <strong>dva prsta ispod koljenske čašice</strong>, točno na patelarnoj tetivi. Ne stišće cijeli zglob kao ortoza ili kompresijski rukav — pritisne jednu točku i <strong>preusmjeri silu</strong> s upaljenog mjesta.<br><br>Svaki korak, stuba ili ustajanje sa stolca šalju veliku silu kroz tu jednu malenu točku ispod čašice. Rukavi je razmažu po cijelom koljenu, zato se bol vrati čim ih skinete. Ciljani pritisak radi suprotno: silu odvede i zglob rastereti.<br><br>Silikonski jastučić hvata se izravno za kožu, pa steznik ne klizi — ni pri trčanju, ni pri iskoracima, ni nakon nekoliko sati hoda. Traka je od prozračnog pletiva otvorene strukture, pa se noga ne znoji ni u desetosatnoj smjeni.<br><br>Jedna veličina odgovara svima: podesiva čičak traka prianja uz vitku, atletsku ili jaču nogu, bez mjerenja i bez tablice veličina. Nevidljiv je ispod hlača, tajica i čarapa.<br><br>Prikladan je kod boli u patelarnoj tetivi (trkačko i skakačko koljeno), artritisa, oporavka nakon operacije, ozljeda i opće nestabilnosti koljena.
 
+         <?php elseif( noriks_is_type( 'hands', $current_product_id ) ): ?>
+
+                <strong>NORIKS Hands</strong> je stabilizator palca koji drži <strong>bazu palca</strong>, ondje gdje se palac spaja sa zapešćem (CMC zglob). Unutar pletiva je jastučić koji amortizira taj zglob, pa ponavljajući pokreti palca — otvaranje staklenke, rezanje, pletenje, tipkanje, sviranje — ne idu više kroz goli zglob.<br><br>Za razliku od krutih ortoza, stabilizator <strong>ne zaključava palac</strong>. Mekan je i tanak, drži zglob da ne „piskače“, a dlan ostaje otvoren. Vrhovi prstiju i vrh palca ostaju potpuno slobodni, pa hvat i osjet ostaju prirodni i možete nastaviti raditi.<br><br>Navlači se jednom rukom, tanak je i plosnat, pa se nosi diskretno i ispod rukava, od jutra do večeri. U <strong>svakom pakiranju je par</strong> — jedan za lijevu i jedan za desnu ruku.<br><br>Izrađen je od mješavine poliesterskog vlakna, najlona i elastana s pjenastim umetkom, <strong>bez lateksa</strong>. Pere se ručno u hladnoj vodi s blagim deterdžentom i suši na ravnome u hladu.<br><br>Dostupan je u četiri boje — bež, ljubičasta, crna i siva — i u tri veličine (S, M, L) prema opsegu dlana. Ako ste između dvije veličine, uzmite manju.
+
          <?php elseif( noriks_is_type( 'buildshirt', $current_product_id ) ): ?>
 
                 <strong>NORIKS BuildShirt</strong> je majica s <strong>ugrađenim grudnjakom</strong> — nije još jedan pokušaj boljeg grudnjaka, nego jedan sloj koji zamjenjuje dva. Široke plosnate naramice, četvrtasti izrez i glatko pletivo do bokova; ništa se ne kopča i ništa se ne ureza.<br><br>Mekane košarice podižu i oblikuju bez žica, a široki dio ispod grudi preuzima težinu umjesto naramica. Ulošci su odvojivi: ostavite ih za oblik i pokrivenost ili ih izvadite za prirodan izgled — ostaju na mjestu i tijekom pranja.<br><br>Pletivo je bešavno, prozračno i rasteže se u svim smjerovima, pa se ispod majice, haljine ili košulje ne vide linije ni tragovi naramica. Nosi se od jutra do večeri, a mnoge je nose i za spavanje.<br><br>Dostupno je deset veličina, od XS do 6XL, i deset boja — crna, bijela, siva, boja kože, kava, maslinasta, tirkizna, stara roza, vinsko crvena i svijetloplava. Veličinu birajte prema visini i težini; ako ste između dvije, uzmite veću.<br><br>Pere se u hladnoj vodi, bez omekšivača i sušilice. Zamjena veličine je besplatna, a imate i 30 dana za povrat novca.
@@ -838,6 +842,30 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> centimetarsku traku obavijte oko najužeg dijela trupa, malo iznad pupka. Traka neka bude vodoravna i pripijena, ali ne stegnuta.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'hands', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličina se bira po <strong>opsegu dlana</strong> — omotajte metar oko dlana na najširem mjestu, odmah ispod zglobova prstiju, s palcem opušteno sa strane. Ako ste između dvije veličine, uzmite <strong>manju</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg dlana</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_hands_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#faf3ed' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Savjet:</strong> mjerite dominantnu ruku ili onu koja je šira — u svakom pakiranju je par, lijevi i desni, pa jedna veličina pokriva obje ruke.</p>
+          </div>
         <?php elseif( noriks_is_type( 'relief', $current_product_id ) ): ?>
 
           <div class="noriks-size">
