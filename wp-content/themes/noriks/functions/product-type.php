@@ -263,19 +263,19 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_buildshirt_sizes' ) ) {
-    /** NORIKS BuildShirt: velicina, visina modela, tezina modela. */
+    /** NORIKS BuildShirt: velicina, opseg grudi, opseg struka, duzina. */
     function noriks_buildshirt_sizes() {
         return array(
-            array( 'XS',  '157 cm', '49 kg' ),
-            array( 'S',   '165 cm', '58 kg' ),
-            array( 'M',   '163 cm', '66 kg' ),
-            array( 'L',   '170 cm', '73 kg' ),
-            array( 'XL',  '160 cm', '79 kg' ),
-            array( '2XL', '173 cm', '89 kg' ),
-            array( '3XL', '165 cm', '98 kg' ),
-            array( '4XL', '175 cm', '110 kg' ),
-            array( '5XL', '163 cm', '122 kg' ),
-            array( '6XL', '178 cm', '134 kg' ),
+            array( 'XS',  'do 86 cm',    'do 69 cm',    '53 cm' ),
+            array( 'S',   '86 – 91 cm',  '69 – 74 cm',  '54 cm' ),
+            array( 'M',   '91 – 97 cm',  '74 – 79 cm',  '55 cm' ),
+            array( 'L',   '97 – 103 cm', '79 – 84 cm',  '56 cm' ),
+            array( 'XL',  '103 – 108 cm','84 – 89 cm',  '57 cm' ),
+            array( '2XL', '108 – 113 cm','89 – 94 cm',  '58 cm' ),
+            array( '3XL', '113 – 118 cm','94 – 99 cm',  '59 cm' ),
+            array( '4XL', '118 – 126 cm','99 – 105 cm', '60 cm' ),
+            array( '5XL', '126 – 133 cm','105 – 113 cm','60 cm' ),
+            array( '6XL', '133 – 142 cm','113 – 121 cm','60 cm' ),
         );
     }
 }

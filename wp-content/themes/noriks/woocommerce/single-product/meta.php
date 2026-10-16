@@ -618,13 +618,14 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'buildshirt', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte prema <strong>visini i težini</strong>. U tablici su mjere modela koje nose prikazanu veličinu. Ako ste između dvije veličine, uzmite <strong>veću</strong>.</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Mjere u tablici su <strong>mjere tijela</strong> koje svaka veličina pokriva, ne mjere majice položene na stol. Ako ste između dvije veličine, uzmite <strong>veću</strong>.</p>
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#a8705a;color:#fff;">
                   <th style="padding:9px 10px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 10px;text-align:left;">Visina modela</th>
-                  <th style="padding:9px 10px;text-align:left;">Težina modela</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg grudi</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 10px;text-align:left;">Dužina</th>
                 </tr>
               </thead>
               <tbody>
@@ -635,6 +636,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                     <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[3] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>

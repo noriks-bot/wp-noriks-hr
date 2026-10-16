@@ -16,18 +16,19 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
   </div>
 
   <div class="kwsc-body">
-    <p class="kwsc-lead">Veličinu birajte prema <strong>svojoj visini i težini</strong>. U tablici su mjere modela koje nose prikazanu veličinu. Ako ste između dvije veličine, uzmite <strong>veću</strong> — majica treba glatko prianjati, a ne stezati.</p>
+    <p class="kwsc-lead">Pletivo se rasteže u <strong>sva četiri smjera</strong>, a mjere u tablici su <strong>mjere tijela</strong> koje svaka veličina pokriva — ne mjere majice položene na stol. Naručite veličinu koju inače nosite; ako promašite, zamjena je besplatna.</p>
 
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">Visina modela</th><th scope="col">Težina modela</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Opseg grudi</th><th scope="col">Opseg struka</th><th scope="col">Dužina</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_buildshirt_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
               <td><?php echo esc_html( $r[1] ); ?></td>
-              <td><?php echo esc_html( $r[2] ); ?></td></tr>
+              <td><?php echo esc_html( $r[2] ); ?></td>
+              <td><?php echo esc_html( $r[3] ); ?></td></tr>
           <?php endforeach; ?>
         </tbody>
       </table>
@@ -36,9 +37,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-how">
       <h3>Kako izmjeriti</h3>
       <ol>
-        <li><strong>Izmjerite visinu i težinu</strong> — to su glavna mjerila za ovaj kroj.</li>
-        <li><strong>Pronađite red</strong> u kojem su mjere najbliže vašima.</li>
-        <li><strong>Između dvije veličine?</strong> Uzmite veću — pletivo se rasteže, ali ne smije stezati.</li>
+        <li><strong>Opseg grudi</strong> izmjerite preko najšireg dijela, s metrom u vodoravnom položaju.</li>
+        <li><strong>Opseg struka</strong> izmjerite na najužem dijelu trupa, bez stezanja.</li>
+        <li><strong>Odaberite red</strong> u koji ulaze vaše mjere; ako ste između dvije veličine, uzmite veću.</li>
       </ol>
       <p class="kwsc-note">Zamjena veličine je besplatna — javite nam se e-mailom i šaljemo drugu veličinu.</p>
     </div>
