@@ -188,7 +188,7 @@ $nkb_img  = function( $file, $alt ) use ( $nkb, $nkb_path ) {
 .nkb-tint { background: #f2f4f7; }
 .nkb-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .nkb-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nkb-media img { display: block; width: 100%; height: auto; border-radius: 14px;
+.nkb-media img { display: block; width: 100%; height: auto; border-radius: 0;
   box-shadow: 0 2px 4px rgba(15,20,30,.05), 0 14px 40px rgba(15,20,30,.10); }
 .nkb-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #2b6ef2; margin: 0 0 10px; }
 .nkb-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; }
@@ -206,7 +206,7 @@ $nkb_img  = function( $file, $alt ) use ( $nkb, $nkb_path ) {
 .nkb-sub { text-align: center; font-size: 14px; color: #7a8290; margin: 0 0 22px; }
 .nkb-rev { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(290px, 1fr); gap: 18px;
   overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
-.nkb-rev__card { background: #fff; border: 1px solid #e3e8ef; border-radius: 14px; overflow: hidden; scroll-snap-align: center;
+.nkb-rev__card { background: #fff; border: 1px solid #e3e8ef; border-radius: 0; overflow: hidden; scroll-snap-align: center;
   display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(15,20,30,.04), 0 10px 26px rgba(15,20,30,.06); }
 .nkb-rev__img img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 .nkb-rev__body { padding: 16px 18px 20px; }
