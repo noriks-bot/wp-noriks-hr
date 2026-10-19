@@ -94,6 +94,8 @@ function noriks_product_type_map() : array {
         'hands'                   => array( 'orto-hands', 'hands' ),
         // NORIKS StepCloud — masazni ulosci s potporom svoda (boja + velicina).
         'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
+        // NORIKS SlabProof — radne carape s jastucenjem za beton (boja + velicina).
+        'slabproof'               => array( 'orto-slabproof', 'slabproof' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -323,6 +325,17 @@ if ( ! function_exists( 'noriks_stepcloud_sizes' ) ) {
             array( '45 – 46', '29,5 cm' ),
             array( '47 – 48', '30,5 cm' ),
             array( '49 – 50', '32,0 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_slabproof_sizes' ) ) {
+    /** NORIKS SlabProof: velicina, EU broj obuce, US muski broj (original). */
+    function noriks_slabproof_sizes() {
+        return array(
+            array( 'M',  '39 – 42', '6 – 9' ),
+            array( 'L',  '43 – 45', '9,5 – 12' ),
+            array( 'XL', '46 – 49', '12,5 – 15' ),
         );
     }
 }

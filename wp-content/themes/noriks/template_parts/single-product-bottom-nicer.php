@@ -239,6 +239,11 @@ if ( noriks_is_type( 'stepcloud' ) ) {
     include $noriks_pb_dir . 'why-stepcloud.php';
 }
 
+// NORIKS SlabProof (orto-slabproof) — radne carape s jastucenjem za beton
+if ( noriks_is_type( 'slabproof' ) ) {
+    include $noriks_pb_dir . 'why-slabproof.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';
