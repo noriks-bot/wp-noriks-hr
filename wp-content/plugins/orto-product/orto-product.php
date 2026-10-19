@@ -1498,7 +1498,17 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-slabproof' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* samo ena barva (crna) — brez atributa Boja, zato tu ni pravil za krogce. */
+      /* izbornik boje cita nijansu s probnog elementa IZVAN #bundle-selector,
+         zato ista pravila moraju postojati i bez prefiksa (inace ostane osnovna tamna boja). */
+      .swatch-circle.color-crna                 { background: #1b1916 !important; }
+
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
+          border: 2px solid #e4decf !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #d2632e !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); }
+      #bundle-selector .swatch-circle.color-crna                 { background: #1b1916 !important; }
       #bundle-selector .bundle-option {
           border: 2px solid #e4decf !important; background: #faf7f0 !important;
           box-shadow: 0 1px 2px rgba(20,25,40,.10), 0 2px 6px 2px rgba(20,25,40,.06) !important; }
