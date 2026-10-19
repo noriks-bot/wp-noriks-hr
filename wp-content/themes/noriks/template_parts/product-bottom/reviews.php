@@ -2334,7 +2334,7 @@ $hands_faq = array(
   array('questioon' => 'Što ako mi ne odgovara — mogu li ga vratiti?',
     'answer'    => 'Da. Uz svaku narudžbu ide <strong>60 dana</strong> jamstva povrata novca — ako ne radi kako ste se nadali, pošaljite ga natrag i vraćamo cijeli iznos. Zamjena veličine je besplatna, pa ako ste naručili S, a treba vam L, mijenjamo bez naplate.'),
   array('questioon' => 'Kako da odaberem veličinu?',
-    'answer'    => 'Po <strong>opsegu dlana</strong>: omotajte metar oko dlana na najširem mjestu, odmah ispod zglobova prstiju, s palcem opušteno sa strane. S je 18 – 19 cm, M 19 – 21,5 cm, L 21,5 – 23 cm. Ako ste između dvije veličine, uzmite manju.'),
+    'answer'    => 'Po <strong>opsegu dlana</strong>: omotajte metar oko dlana na najširem mjestu, odmah ispod zglobova prstiju, s palcem opušteno sa strane. S je 17,8 – 19,1 cm, M 19,1 – 21,6 cm, L 21,6 – 22,9 cm. Ako ste između dvije veličine, uzmite manju.'),
   array('questioon' => 'Kako se održava?',
     'answer'    => 'Ručno pranje u hladnoj vodi s blagim deterdžentom, zatim sušenje na ravnome u hladu, izvan izravnog sunca. Bez sušilice i omekšivača.'),
 );

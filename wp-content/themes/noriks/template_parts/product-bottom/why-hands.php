@@ -22,12 +22,7 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
 <!-- 1) KAKO RADI — slika lijevo -->
 <section class="nhd-sec nhd-tint">
   <div class="nhd-wrap nhd-row2">
-    <div class="nhd-media nhd-anat">
-      <?php echo $nhd_img( 'hd-03-anatomija.webp', 'CMC zglob u bazi palca — NORIKS Hands stabilizator' ); ?>
-      <span class="nhd-anat__lab nhd-anat__lab--1">Bolni palčevi</span>
-      <span class="nhd-anat__lab nhd-anat__lab--2">CMC zglob</span>
-      <span class="nhd-anat__lab nhd-anat__lab--3">Mekano, cijeli dan</span>
-    </div>
+    <div class="nhd-media"><?php echo $nhd_img( 'hn-03-ciljana-potpora.webp', 'Ciljana potpora za bolne palčeve — NORIKS Hands i CMC zglob' ); ?></div>
     <div class="nhd-copy">
       <p class="nhd-kicker">Kako radi</p>
       <h2 class="nhd-h2">Jedno malo mjesto <em>radi najviše posla.</em></h2>
@@ -53,15 +48,15 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
       <table class="nhd-size">
         <thead><tr><th>Veličina</th><th>Opseg dlana</th></tr></thead>
         <tbody>
-          <tr><td>S</td><td>18 – 19 cm</td></tr>
-          <tr><td>M</td><td>19 – 21,5 cm</td></tr>
-          <tr><td>L</td><td>21,5 – 23 cm</td></tr>
+          <tr><td>S</td><td>17,8 – 19,1 cm</td></tr>
+          <tr><td>M</td><td>19,1 – 21,6 cm</td></tr>
+          <tr><td>L</td><td>21,6 – 22,9 cm</td></tr>
         </tbody>
       </table>
       <p class="nhd-big">Između dvije veličine? Uzmite manju.</p>
       <p>Pripijena baza palca daje najbolju potporu, a pletivo malo popusti kad se razgazi. Mjerite dominantnu ruku ili onu koja je šira — u svakom pakiranju je <strong>par</strong>, lijevi i desni, pa jedna veličina pokriva obje ruke.</p>
     </div>
-    <div class="nhd-media"><?php echo $nhd_img( 'hd-02-blizu.webp', 'Opseg dlana — odabir veličine NORIKS Hands stabilizatora' ); ?></div>
+    <div class="nhd-media"><?php echo $nhd_img( 'hn-04-velicine.webp', 'Pronađite svoju veličinu — opseg dlana za NORIKS Hands' ); ?></div>
   </div>
 </section>
 
@@ -96,7 +91,7 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
 <!-- 4) MATERIJALI I ODRŽAVANJE — slika lijevo -->
 <section class="nhd-sec">
   <div class="nhd-wrap nhd-row2">
-    <div class="nhd-media"><?php echo $nhd_img( 'hd-00-kutije.webp', 'NORIKS Hands u četiri boje — bež, ljubičasta, crna i siva' ); ?></div>
+    <div class="nhd-media"><?php echo $nhd_img( 'hn-05-pakiranje.webp', 'NORIKS Hands u četiri boje — bež, ljubičasta, crna i siva' ); ?></div>
     <div class="nhd-copy">
       <p class="nhd-kicker">Materijali i održavanje</p>
       <h2 class="nhd-h2">Od čega je <em>i kako se pere</em></h2>
@@ -161,12 +156,12 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
     <p class="nhd-sub">Preko <strong>0,6 M</strong> pregleda na Facebooku</p>
     <div class="nhd-grid">
       <?php
-      echo $nhd_img( 'hd-01-pletenje.webp',    'Pletenje s NORIKS Hands stabilizatorom u crnoj boji' );
-      echo $nhd_img( 'hd-04-baka.webp',        'Baka i unuka pletu — NORIKS Hands stabilizator palca' );
-      echo $nhd_img( 'hd-05-pletenje2.webp',   'Pletenje bez boli u palcu uz NORIKS Hands' );
-      echo $nhd_img( 'hd-06-rukotvorine.webp', 'Rukotvorine uz NORIKS Hands stabilizator' );
-      echo $nhd_img( 'hd-08-drvo.webp',        'NORIKS Hands stabilizator na ruci' );
-      echo $nhd_img( 'hd-02-blizu.webp',       'NORIKS Hands stabilizator izbliza' );
+      echo $nhd_img( 'hn-p3-trgovina.webp',   'Nošenje vrećica iz trgovine uz NORIKS Hands stabilizator' );
+      echo $nhd_img( 'hn-p2-setnja.webp',      'Šetnja sa psom uz NORIKS Hands stabilizator u crnoj boji' );
+      echo $nhd_img( 'hn-p6-tipkanje.webp',    'Tipkanje na prijenosnom računalu uz NORIKS Hands' );
+      echo $nhd_img( 'hn-p4-rublje.webp',      'Slaganje rublja uz NORIKS Hands stabilizator' );
+      echo $nhd_img( 'hn-p5-ljubicasta.webp',  'NORIKS Hands stabilizator u ljubičastoj boji' );
+      echo $nhd_img( 'hn-p1-bez.webp',         'NORIKS Hands stabilizator u bež boji' );
       ?>
     </div>
   </div>
@@ -213,7 +208,7 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
       <a class="nhd-cta" href="#bundle-selector">Naruči NORIKS Hands</a>
       <p class="nhd-note">Brza dostava na kućnu adresu · Plaćanje pouzećem pri preuzimanju</p>
     </div>
-    <div class="nhd-media"><?php echo $nhd_img( 'hd-07-kamin.webp', 'NORIKS Hands stabilizator palca tijekom rada rukama' ); ?></div>
+    <div class="nhd-media"><?php echo $nhd_img( 'hn-06-rukavica.webp', 'NORIKS Hands — olakšanje bez ukočenosti, 60 dana jamstva' ); ?></div>
   </div>
 </section>
 
@@ -243,16 +238,6 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
 .nhd-note { font-size: 13.5px !important; color: #8a7a6e !important; margin-top: 12px !important; }
 .nhd-note--box { max-width: 900px; margin: 26px auto 0 !important; background: #fff; border-left: 3px solid #a9683f;
   padding: 16px 20px; font-size: 14.5px !important; line-height: 1.65; color: #6b5e55 !important; }
-
-/* 1) anatomija s oznakama (kot na originalu) */
-.nhd-anat { position: relative; }
-.nhd-anat img { box-shadow: none !important; }
-.nhd-anat__lab { position: absolute; right: 76.5%; transform: translateY(-50%);
-  font-size: clamp(9.5px, 1.15vw, 13.5px); font-weight: 800; line-height: 1.25; color: #231d19;
-  text-align: right; background: #fff; padding: 2px 4px; }
-.nhd-anat__lab--1 { top: 25.6%; }
-.nhd-anat__lab--2 { top: 52.1%; }
-.nhd-anat__lab--3 { top: 77.1%; }
 
 /* 2) koraki + tablica velicin */
 .nhd-steps { list-style: none; padding: 0; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 14px; }

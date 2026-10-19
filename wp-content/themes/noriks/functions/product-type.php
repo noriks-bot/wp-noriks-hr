@@ -287,9 +287,9 @@ if ( ! function_exists( 'noriks_hands_sizes' ) ) {
     /** NORIKS Hands: velicina, opseg dlana. */
     function noriks_hands_sizes() {
         return array(
-            array( 'S', '18 – 19 cm' ),
-            array( 'M', '19 – 21,5 cm' ),
-            array( 'L', '21,5 – 23 cm' ),
+            array( 'S', '17,8 – 19,1 cm' ),
+            array( 'M', '19,1 – 21,6 cm' ),
+            array( 'L', '21,6 – 22,9 cm' ),
         );
     }
 }
