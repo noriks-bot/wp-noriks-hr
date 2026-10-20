@@ -512,6 +512,10 @@ function gck_render_bundle_selector() {
         // NORIKS BraTank: kao na originalu ("Standard Price" / "£15.99 per Tank" / "£12.99 per Tank"),
         // cijena po komadu iz nasih EUR cijena (59,99 / 3 in 94,99 / 6).
         $gck_offer_subs = array( 'Standardna cijena', '20,00 € po majici', '15,83 € po majici' );
+    } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
+        // NORIKS SupportSocks: kao na originalu (Kaching: "2 par for prisen av 1 / Kun 150 kr/par", "5 par for prisen av 2 / Kun 120 kr/par · Fri frakt",
+        // "8 par for prisen av 3 / Kun 112 kr/par · Fri frakt") — cijena po paru iz nasih EUR cijena (27,99 / 2, 56,99 / 5, 84,99 / 8).
+        $gck_offer_subs = array( '2 para po cijeni 1 · samo 14,00 € po paru', '5 pari po cijeni 2 · samo 11,40 € po paru · besplatna dostava', '8 pari po cijeni 3 · samo 10,62 € po paru · besplatna dostava' );
     } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
         // NORIKS PhoneStrap: kao na originalu (Kaching: "You save ..." pod vsako ponudo) — ustedu racuna tema sama, zato brez podnaslovov.
         $gck_offer_subs = array();
@@ -544,6 +548,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) {
         // NORIKS BraTank: znacke 2. in 3. ponude kao na originalu ("60% OFF + FREE SHIPPING", "70% OFF + FREE SHIPPING").
         $gck_offer_badges = array( 1 => '60 % POPUSTA + BESPLATNA DOSTAVA', 2 => '70 % POPUSTA + BESPLATNA DOSTAVA' );
+    } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
+        // NORIKS SupportSocks: znacki 2. in 3. ponude kao na originalu ("Mest populær", "Mest for pengene").
+        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJISPLATIVIJE' );
     } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
         // NORIKS PhoneStrap: znacki 3. in 4. ponude kao na originalu ("Most Popular", "Best Value").
         $gck_offer_badges = array( 2 => 'NAJPOPULARNIJE', 3 => 'NAJBOLJA VRIJEDNOST' );
@@ -937,7 +944,7 @@ function gck_render_bundle_selector() {
 
     <?php
     // Your extra conditional style block (kept)
-    if (  !has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
+    if (  !has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
@@ -1086,7 +1093,7 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-red', 'orto-gelseat', 'orto-kneebrace', 'orto-relief', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap' ), 'product_cat', $product_id ) ) : ?>
+    <?php if ( has_term( array( 'orto-red', 'orto-gelseat', 'orto-kneebrace', 'orto-relief', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* RedRelief + GelSeat + 4 nova proizvoda: razmak izmedu kartica mora biti jednak izmedu svih ponuda.
          Inline margin-top: 25px na drugoj kartici radio je veci razmak 1-2 nego 2-3. */
@@ -1098,7 +1105,7 @@ function gck_render_bundle_selector() {
     <?php
     // Snug / FIT Woman / Pal: cistija kartica ponude — bez "Ukupno:", bez cijene po
     // komadu kod jednog komada, i okrugli swatchevi u pravim nijansama.
-    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap' ), 'product_cat', $product_id ) ) :
+    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks' ), 'product_cat', $product_id ) ) :
     ?>
     <style>
       /* rijec "Ukupno:" ne treba — cijena govori sama za sebe */
@@ -1597,6 +1604,71 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-pair select,
       #bundle-selector .bundle-pair .gck-extra-select { border-color: #0a97d5 !important; color: #121212 !important; }
       .gck-size-link { color: #0a97d5 !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) : $gck_ss_img = get_template_directory_uri() . '/img/supportsocks/'; ?>
+    <style>
+      /* NORIKS SupportSocks: temno modri akcent originala (#002e49, Kaching kartice: bel rob, izbrana #f9fcff). Vzorcaste barve
+         (crte, pike, melirano) imajo v krogcu slicico vzorca z originala. Izbornik boje cita nijanso s probnega elementa
+         IZVAN #bundle-selector, zato ista pravila moraju postojati i bez prefiksa. */
+      .swatch-circle.color-crna { background: #111111 !important; }
+      .swatch-circle.color-bijela { background: #ffffff !important; }
+      .swatch-circle.color-tamnoplava { background: #0b2340 !important; }
+      .swatch-circle.color-siva { background: #808080 !important; }
+      .swatch-circle.color-ruzicasta { background: #f69bbf !important; }
+      .swatch-circle.color-bez { background: #ead8ab !important; }
+      .swatch-circle.color-vinsko-crvena { background: #65040d !important; }
+      .swatch-circle.color-crna-melirana { background: #3a3a3a url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-melirana.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-crna-s-prugama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-prugama.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-crveno-ruzicaste-pruge { background: #f61f1f url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crveno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-plave-pruge { background: #005bd3 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-plave-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-zeleno-sive-pruge { background: #05aa3d url('<?php echo esc_url( $gck_ss_img . 'ss-sw-zeleno-sive-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-ruzicasto-ljubicaste-pruge { background: #ffc0cb url('<?php echo esc_url( $gck_ss_img . 'ss-sw-ruzicasto-ljubicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-koraljno-ruzicaste-pruge { background: #ff8a80 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-koraljno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-crna-s-plavim-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-plavim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-crna-s-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-tockicama.webp' ); ?>') center / cover no-repeat !important; }
+      .swatch-circle.color-svijetloplava-s-bijelim-tockicama { background: #9cc8ec url('<?php echo esc_url( $gck_ss_img . 'ss-sw-svijetloplava-s-bijelim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
+
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
+          border: 2px solid #dce2e5 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #002e49 !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
+      #bundle-selector .swatch-circle.color-crna { background: #111111 !important; }
+      #bundle-selector .swatch-circle.color-bijela { background: #ffffff !important; }
+      #bundle-selector .swatch-circle.color-tamnoplava { background: #0b2340 !important; }
+      #bundle-selector .swatch-circle.color-siva { background: #808080 !important; }
+      #bundle-selector .swatch-circle.color-ruzicasta { background: #f69bbf !important; }
+      #bundle-selector .swatch-circle.color-bez { background: #ead8ab !important; }
+      #bundle-selector .swatch-circle.color-vinsko-crvena { background: #65040d !important; }
+      #bundle-selector .swatch-circle.color-crna-melirana { background: #3a3a3a url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-melirana.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-crna-s-prugama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-prugama.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-crveno-ruzicaste-pruge { background: #f61f1f url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crveno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-plave-pruge { background: #005bd3 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-plave-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-zeleno-sive-pruge { background: #05aa3d url('<?php echo esc_url( $gck_ss_img . 'ss-sw-zeleno-sive-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-ruzicasto-ljubicaste-pruge { background: #ffc0cb url('<?php echo esc_url( $gck_ss_img . 'ss-sw-ruzicasto-ljubicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-koraljno-ruzicaste-pruge { background: #ff8a80 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-koraljno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-crna-s-plavim-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-plavim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-crna-s-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-tockicama.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .swatch-circle.color-svijetloplava-s-bijelim-tockicama { background: #9cc8ec url('<?php echo esc_url( $gck_ss_img . 'ss-sw-svijetloplava-s-bijelim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
+      #bundle-selector .bundle-option {
+          border: 1px solid rgba(0,46,73,.3) !important; background: #fff !important; border-radius: 16px !important; box-shadow: none !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #002e49 !important; background: #f9fcff !important; }
+      #bundle-selector .bundle-option-title { color: #000 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #002e49 !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #002e49 !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #002e49 !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #002e49 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #e0e6e9 !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #000 !important; }
+      #bundle-selector .bundle-total-line .gck-regular-price { color: #555 !important; }
+      #bundle-selector .gck-offer-sub { color: #555 !important; font-weight: 400; }
+      #bundle-selector .gck-popular-badge--offer { background: #002e49 !important; color: #fff !important; transform: none !important; right: 12px !important; }
+      #bundle-selector .bundle-pair select,
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #002e49 !important; color: #121212 !important; }
+      .gck-size-link { color: #002e49 !important; }
     </style>
     <?php endif; ?>
 
@@ -2267,7 +2339,7 @@ function gck_render_bundle_selector() {
     
 
     <div class="gck-benefits-box">
-        <?php if ( ! has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
+        <?php if ( ! has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
         <ul class="gck-benefits-list">
             <?php if ( !has_term( array( 'orto-bokserice', 'orto-bokserice2', 'starter-paketi' ), 'product_cat', $product_id ) ) : ?>
                 <li><span class="gck-check">✔</span> <strong>Savršeno pristajanje</strong></li>
@@ -2946,8 +3018,9 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ? "'#b57e7e'"
            : ( has_term( array( 'orto-floatsuit' ), 'product_cat', $product_id ) ? "'#0a97d5'"
            : ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ? "'#3d3d3d'"
+           : ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ? "'#002e49'"
            : ( has_term( array( 'orto-kneetape' ), 'product_cat', $product_id ) ? "'#1f6fd0'"
-           : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ) ) ) ); ?>;
+           : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ) ) ) ) ); ?>;
       function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
 
       /* Jedan prilagodeni dropdown. items = [{value, label, color|null, pick()}] */

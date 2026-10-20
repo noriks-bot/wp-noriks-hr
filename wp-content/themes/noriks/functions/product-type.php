@@ -106,6 +106,8 @@ function noriks_product_type_map() : array {
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
         'phonestrap'              => array( 'orto-phonestrap', 'phonestrap' ),
+        // NORIKS SupportSocks — potporne čarape 12–15 mmHg (boja + veličina).
+        'supportsocks'            => array( 'orto-supportsocks', 'supportsocks' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -405,6 +407,17 @@ if ( ! function_exists( 'noriks_floatsuit_sizes' ) ) {
             array( '2-3 godine',    '100', '48 cm', '54 cm', '52 cm' ),
             array( '3-4 godine',    '110', '52 cm', '57 cm', '55 cm' ),
             array( '5-6 godina',    '120', '56 cm', '60 cm', '58 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_supportsocks_sizes' ) ) {
+    /** NORIKS SupportSocks: velicina prema broju cipela (original diasocks.no: M 36–39, L 40–43, XL 44–46). */
+    function noriks_supportsocks_sizes() {
+        return array(
+            array( 'M',  '36–39' ),
+            array( 'L',  '40–43' ),
+            array( 'XL', '44–46' ),
         );
     }
 }

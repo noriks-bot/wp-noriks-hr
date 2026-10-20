@@ -269,6 +269,11 @@ if ( noriks_is_type( 'phonestrap' ) ) {
     include $noriks_pb_dir . 'why-phonestrap.php';
 }
 
+// NORIKS SupportSocks (orto-supportsocks) — potporne čarape 12–15 mmHg
+if ( noriks_is_type( 'supportsocks' ) ) {
+    include $noriks_pb_dir . 'why-supportsocks.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';

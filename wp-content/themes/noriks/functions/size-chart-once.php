@@ -73,6 +73,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-bratank' );
             return;
         }
+        // NORIKS SupportSocks: veličina prema broju cipela (M / L / XL).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'supportsocks' ) ) {
+            get_template_part( 'template_parts/size-chart-supportsocks' );
+            return;
+        }
         // NORIKS FloatSuit: tablica po dobi djeteta (90–120).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'floatsuit' ) ) {
             get_template_part( 'template_parts/size-chart-floatsuit' );

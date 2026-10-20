@@ -603,6 +603,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Relief</strong> je bambusov steznik za koljeno namijenjen bolnim, ukočenim i natečenim koljenima. Pletivo je gušće oko čašice i s obje strane zgloba, pa je pritisak ravnomjerno raspoređen umjesto da steže u jednoj liniji.<br><br>Blaga, medicinska kompresija potiče protok krvi, smiruje upalu i pomaže da oteklina splasne. Koljeno je stabilnije pri hodanju, čučnju i penjanju stepenicama, a mnogi olakšanje osjete već pri prvom nošenju.<br><br>Nema šarki, remena ni plastike — steznik se jednostavno navuče, prati oblik koljena i ne klizi niz nogu. Tanak je koliko treba da stane ispod hlača i tajica, pa ga možete nositi na poslu, u šetnji, tijekom vježbanja i preko noći. Isti komad odgovara lijevom i desnom koljenu.<br><br>Pletivo od bambusovog vlakna upija vlagu, diše i prirodno sprječava neugodne mirise, bez lateksa. Dostupno je sedam veličina (S do 4XL) — izmjerite opseg noge 10 cm iznad koljenske čašice, a ako ste između dvije veličine, uzmite veću.<br><br>Prikladan je kod artroze, upale patelarne tetive, reumatoidnog artritisa, burzitisa, trkačkog koljena, oticanja i ukočenosti.
 
+         <?php elseif( noriks_is_type( 'supportsocks', $current_product_id ) ): ?>
+
+                <strong>12–15 mmHg stupnjevana kompresija:</strong> može ublažiti umor i oticanje nogu<br><strong>Lako se oblače:</strong> ne morate se mučiti s njima<br><strong>Mekani rub:</strong> ne usijeca se i ne ostavlja tragove na koži<br><strong>Vrh bez šavova:</strong> ne žulja<br><strong>Prozračan materijal:</strong> mješavina s bambusom koja održava stopala suhima<br><strong>Savršene za:</strong> svakodnevno nošenje, posao, putovanja i još mnogo toga<br><br><strong>Materijal:</strong> 60 % poliester, 18 % bambus, 15 % lycra, 7 % pamuk<br><br><strong>Upute za pranje:</strong><br>Čarape perite izvrnute naopako<br>Strojno pranje na najviše 30 °C<br>Ne koristite izbjeljivač<br>Sušite na zraku — ne u sušilici
+
          <?php elseif( noriks_is_type( 'phonestrap', $current_product_id ) ): ?>
 
                 <strong>NORIKS PhoneStrap</strong> je držač za mobitel protiv ispadanja: tanki podložak umetnete između mobitela i maske, a kolut sa sajlom zakačite na hlače, jaknu, remen ili ruksak. Mobitel vam tako više ne može pasti, a uvijek je nadohvat ruke.<br><br>Kad vam treba, mobitel jednostavno povučete — sajla od 60 cm izvuče se iz koluta, a kad ga pustite, sama se uvuče natrag. Dovoljno je dugačka da normalno telefonirate, fotografirate ili snimate.<br><br>Karabiner i kukica izrađeni su od nehrđajućeg čelika, a podložak je tanak i ne smeta maski. Postavljanje traje oko 8 sekundi, bez alata. Odgovara svim pametnim telefonima koji imaju standardnu masku.<br><br>Idealan je za skijanje i žičaru, planinarenje, bicikl, pecanje, putovanja, koncerte i rad na terenu — svugdje gdje bi jedan nespretan pokret mogao značiti razbijen ili izgubljen mobitel.
@@ -1079,6 +1083,31 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Odgovara veličini:</strong> 95 % naših kupaca pogodi pravu veličinu iz prvog puta.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'supportsocks', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu odaberite prema svom uobičajenom <strong>broju cipela</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#002e49;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Broj cipela</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_supportsocks_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f3f6f7' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako ste između dvije veličine, preporučujemo da odaberete manju.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'floatsuit', $current_product_id ) ): ?>
