@@ -106,6 +106,8 @@ function noriks_product_type_map() : array {
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
         'phonestrap'              => array( 'orto-phonestrap', 'phonestrap' ),
+        // NORIKS WineCooler — štapić za hlađenje vina s izljevom (bez atributa, bez velicin).
+        'winecooler'              => array( 'orto-winecooler', 'winecooler' ),
         // NORIKS SupportSocks — potporne čarape 12–15 mmHg (boja + veličina).
         'supportsocks'            => array( 'orto-supportsocks', 'supportsocks' ),
         // NORIKS Tuck — oblikujuce kratke hlacice visokog struka (boja + velicina).

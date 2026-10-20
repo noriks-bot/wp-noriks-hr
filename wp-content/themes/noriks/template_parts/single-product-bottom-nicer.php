@@ -269,6 +269,11 @@ if ( noriks_is_type( 'phonestrap' ) ) {
     include $noriks_pb_dir . 'why-phonestrap.php';
 }
 
+// NORIKS WineCooler (orto-winecooler) — štapić za hlađenje vina s izljevom
+if ( noriks_is_type( 'winecooler' ) ) {
+    include $noriks_pb_dir . 'why-winecooler.php';
+}
+
 // NORIKS SupportSocks (orto-supportsocks) — potporne čarape 12–15 mmHg
 if ( noriks_is_type( 'supportsocks' ) ) {
     include $noriks_pb_dir . 'why-supportsocks.php';
