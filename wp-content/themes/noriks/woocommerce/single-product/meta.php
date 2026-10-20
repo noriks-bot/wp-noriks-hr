@@ -667,6 +667,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Brassiere</strong> je grudnjak bez žica koji grudi drži i prirodno podiže, bez push-upa i bez stezanja. Rastezljiva, oblikujuća tkanina nježno podiže grudi, a široka donja potporna traka stabilizira ih bez pritiska i ne smota se ispod grudi.<br><br>Nevidljiva unutarnja struktura ravnomjerno raspoređuje težinu grudi, pa grudnjak drži kao model sa žicama, ali bez bolova, tragova i stalnog namještanja. Zato odgovara i za veće grudi. Široke i podesive naramenice ne urezuju se u ramena.<br><br>Kroj prati prirodan oblik grudi: ne spljošti ih kao klasični sportski top i ne ostavlja prazan prostor. Bešavna tkanina i ravni šavovi ne vide se ni ispod uske odjeće.<br><br>Sastav: 90 % poliamid, 10 % elastan. Dostupan je u crnoj, tamnoplavoj, sivoj, petrolej, ružičastoj i bež boji, u veličinama od XS do 5XL.
 
+         <?php elseif( noriks_is_type( 'blanket', $current_product_id ) ): ?>
+
+                <strong>NORIKS Blanket</strong> je prozračna kompresijska vreća za spavanje koja tijelo obavija nježnim stiskom nalik zagrljaju — za mirnije večeri i lakše uspavljivanje. Djeluje na principu terapije dubokim pritiskom (DTP): ravnomjeran pritisak sa svih strana šalje tijelu signal sigurnosti, opušta mišiće i smiruje živčani sustav.<br><br>To je mekana, rastezljiva cijev u koju se jednostavno uvučete — bez zatvarača, kopči, utega i kompliciranog zakopčavanja. Nema ničeg tvrdog ili grebljivog što bi moglo štipati ili zapinjati, pa je sigurna i za nemirne spavače i ruke koje se stalno vrpolje. Dno je otvoreno: stopala mogu ostati pokrivena ili izviriti van. Na vrhu je kapuljača koju po želji navučete preko glave ili ostavite spuštenu, a ruke mogu ostati unutra za kompresiju cijelog tijela ili izaći iznad ramena da imate slobodne ruke.<br><br>Tkanina se rasteže s vama, pa i dalje možete sjesti, ustati i hodati bez osjećaja da ste zarobljeni. Za razliku od utežnog pokrivača, NORIKS Blanket je lagan i ne zadržava toplinu.<br><br>Sastav: 95 % poliester, 5 % elastan — mekano, prozračno i rastezljivo. Dostupan je u plavoj, sivoj, ružičastoj i ljubičastoj boji te u četiri veličine: Djeca S, Djeca L, Odrasli S i Odrasli L. Veličinu birajte prema kompresiji, a ne prema duljini — za čvršći zagrljaj uzmite jednu veličinu manje.
+
          <?php elseif( noriks_is_type( 'red', $current_product_id ) ): ?>
 
                 <strong>NORIKS RedRelief</strong> je omotač za zapešće koji spaja dvije najistraženije valne duljine u terapiji crvenim svjetlom: 660 nm crveno svjetlo smiruje površinsku upalu, a 850 nm infracrveno dopire dublje, do tkiva oko srednjeg živca.<br><br>Svjetlo se u tkivu pretvara u staničnu energiju (ATP) i potiče lokalni protok krvi — dva procesa koja su dio prirodnog oporavka tijela. Zato se koristi kod karpalnog tunela, tendinitisa, artritisa te bolova u šaci i zapešću.<br><br>U omotač je ugrađeno 48 dvostrukih LED dioda raspoređenih po cijeloj unutarnjoj strani, pa svjetlo pokriva cijelo zapešće, a ne samo jednu točku. Na raspolaganju su 4 načina rada i 3 razine snage.<br><br>Uređaj je bežičan i puni se preko USB-C kabela — jedno punjenje dovoljno je za do 4 tretmana. Težak je svega 126 g, ima otvor za palac i podesivu traku, pa odgovara i lijevoj i desnoj ruci. Preporučena je jedna seansa od 15 minuta dnevno; uređaj se sam isključi na kraju seanse.
@@ -1005,6 +1009,39 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> širinu trake položeno, od ruba do ruba, ispod grudi; opseg grudi oko najistaknutijeg dijela grudi. Bešavni rastezljivi materijal: ako niste sigurni, uzmite svoju uobičajenu veličinu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'blanket', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Četiri veličine, od <strong>Djeca S do Odrasli L</strong>. Mjere su za nenošenu vreću položenu ravno, u centimetrima (cm).</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#9217ff;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;white-space:nowrap;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;white-space:nowrap;">Duljina</th>
+                  <th style="padding:9px 10px;text-align:left;white-space:nowrap;">Širina</th>
+                  <th style="padding:9px 10px;text-align:left;white-space:nowrap;">Za visinu</th>
+                  <th style="padding:9px 10px;text-align:left;white-space:nowrap;">Veličina odjeće</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_blanket_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f1ecf8' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 10px;white-space:nowrap;"><?php echo esc_html( $r[6] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[5] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako odabrati:</strong> veličinu birajte prema kompresiji, a ne prema duljini. Za čvršći zagrljaj uzmite jednu veličinu manje.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
 
           <div class="bra-size">
@@ -1170,6 +1207,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'brassiere', $current_product_id ) ): ?>
 
                 Perite na 30 °C, na programu za osjetljivo rublje, kako bi tkanina zadržala elastičnost.
+
+             <?php elseif( noriks_is_type( 'blanket', $current_product_id ) ): ?>
+
+                Strojno pranje na hladnom, na nježnom programu. Sušite na zraku ili u sušilici na niskoj temperaturi. Kompresija se zadržava i nakon pranja.
 
              <?php elseif( noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
 

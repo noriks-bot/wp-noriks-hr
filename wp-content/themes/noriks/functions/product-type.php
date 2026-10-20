@@ -98,6 +98,8 @@ function noriks_product_type_map() : array {
         'slabproof'               => array( 'orto-slabproof', 'slabproof' ),
         // NORIKS Brassiere — grudnjak bez zica s prirodnim podizanjem (boja + velicina).
         'brassiere'               => array( 'orto-brassiere', 'brassiere' ),
+        // NORIKS Blanket — kompresijska vreca za smirenje i bolji san (boja + velicina).
+        'blanket'                 => array( 'orto-blanket', 'blanket' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -355,6 +357,21 @@ if ( ! function_exists( 'noriks_brassiere_sizes' ) ) {
             array( '3XL', '38 cm', '107 – 113 cm', '110 (E/F)' ),
             array( '4XL', '40 cm', '112 – 118 cm', '115 (F/G)' ),
             array( '5XL', '42 cm', '117 – 123 cm', '120 (G/H)' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
+    /**
+     * NORIKS Blanket: velicina, duljina, sirina, visina dijela za stopala, sirina kapuljace,
+     * velicina odjece, visina tijela (original nestishop.com, nepotrosena vreca polozena ravno).
+     */
+    function noriks_blanket_sizes() {
+        return array(
+            array( 'Djeca S',   '130 cm', '30 cm', '22 cm', '22 cm', 'djeca 4–7 god.',                    'do 130 cm' ),
+            array( 'Djeca L',   '150 cm', '39 cm', '26 cm', '23 cm', 'djeca 8–12 god.',                   '130–150 cm' ),
+            array( 'Odrasli S', '170 cm', '44 cm', '28 cm', '27 cm', 'žene EU 34–40, muškarci S–M',        '150–170 cm' ),
+            array( 'Odrasli L', '185 cm', '49 cm', '31 cm', '27 cm', 'žene EU 42–46, muškarci L–XXL',      '170–185 cm' ),
         );
     }
 }
