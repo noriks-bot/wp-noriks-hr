@@ -73,6 +73,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-bratank' );
             return;
         }
+        // NORIKS Doggo: mjere kreveta M / XL u cm i pasmine.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'doggo' ) ) {
+            get_template_part( 'template_parts/size-chart-doggo' );
+            return;
+        }
         // NORIKS Tuck: struk i bokovi u cm, EU velicina (S–XXL).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'tuck' ) ) {
             get_template_part( 'template_parts/size-chart-tuck' );

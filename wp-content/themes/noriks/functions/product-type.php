@@ -110,6 +110,8 @@ function noriks_product_type_map() : array {
         'winecooler'              => array( 'orto-winecooler', 'winecooler' ),
         // NORIKS Bracelet — narukvica od hematita (bez atributa, jedna veličina 19–21,5 cm).
         'bracelet'                => array( 'orto-bracelet', 'bracelet' ),
+        // NORIKS Doggo — sigurnosni autokrevet za pse s ISOFIX kopcama (boja + velicina M / XL).
+        'doggo'                   => array( 'orto-doggo', 'doggo' ),
         // NORIKS SupportSocks — potporne čarape 12–15 mmHg (boja + veličina).
         'supportsocks'            => array( 'orto-supportsocks', 'supportsocks' ),
         // NORIKS Tuck — oblikujuce kratke hlacice visokog struka (boja + velicina).
@@ -438,6 +440,17 @@ if ( ! function_exists( 'noriks_tuck_sizes' ) ) {
             array( 'L',   '40–42', '14–16', '79–81', '103–107', '43 cm' ),
             array( 'XL',  '44–46', '18–20', '83–88', '108–113', '45 cm' ),
             array( 'XXL', '46–48', '20–22', '89–94', '114–119', '47 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_doggo_sizes' ) ) {
+    /** NORIKS Doggo: velicina, duljina, sirina, visina (cm), ISOFIX kopce, pasmine
+     *  (original waggingrightsusa.com, "Sizes & dog sizes": Medium 53 x 47 x 44 cm, Extra Large 100 x 52 x 44 cm). */
+    function noriks_doggo_sizes() {
+        return array(
+            array( 'M',  '53', '47', '44', '2', 'jazavčar, border terijer, cockapoo, koker španijel' ),
+            array( 'XL', '100', '52', '44', '4', 'border koli, labrador, njemački ovčar ili dva manja psa' ),
         );
     }
 }

@@ -603,6 +603,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Relief</strong> je bambusov steznik za koljeno namijenjen bolnim, ukočenim i natečenim koljenima. Pletivo je gušće oko čašice i s obje strane zgloba, pa je pritisak ravnomjerno raspoređen umjesto da steže u jednoj liniji.<br><br>Blaga, medicinska kompresija potiče protok krvi, smiruje upalu i pomaže da oteklina splasne. Koljeno je stabilnije pri hodanju, čučnju i penjanju stepenicama, a mnogi olakšanje osjete već pri prvom nošenju.<br><br>Nema šarki, remena ni plastike — steznik se jednostavno navuče, prati oblik koljena i ne klizi niz nogu. Tanak je koliko treba da stane ispod hlača i tajica, pa ga možete nositi na poslu, u šetnji, tijekom vježbanja i preko noći. Isti komad odgovara lijevom i desnom koljenu.<br><br>Pletivo od bambusovog vlakna upija vlagu, diše i prirodno sprječava neugodne mirise, bez lateksa. Dostupno je sedam veličina (S do 4XL) — izmjerite opseg noge 10 cm iznad koljenske čašice, a ako ste između dvije veličine, uzmite veću.<br><br>Prikladan je kod artroze, upale patelarne tetive, reumatoidnog artritisa, burzitisa, trkačkog koljena, oticanja i ukočenosti.
 
+         <?php elseif( noriks_is_type( 'doggo', $current_product_id ) ): ?>
+
+                <strong>NORIKS Doggo</strong> je sigurnosni putni krevet za pse koji se pričvršćuje izravno na autosjedalo metalnim ISOFIX kopčama (2 na veličini M, 4 na XL) i s dva podesiva remena oko naslona sjedala. Unutra su sigurnosne kopče za ormu, pa pas ostaje na svom mjestu i ne može iskočiti ili se naglo pomaknuti tijekom vožnje.<br><br>Izrađen je od mekane, vodootporne veganske kože koja se lako čisti. Uklonjiva unutarnja podloga je mekana, s jedne strane vodootporna, i pere se u perilici. Protuklizno dno drži krevet stabilnim na sjedalu ili podu, a bočni džep čuva povodac, poslastice i igračke.<br><br>Prednji dio se otkopča, pa Doggo postaje ravni krevet za kod kuće, a dvije ručke olakšavaju nošenje.<br><br><strong>Veličine:</strong> M — 53 × 47 × 44 cm (manje pasmine poput jazavčara, border terijera, cockapooa i koker španijela); XL — 100 × 52 × 44 cm (veće pasmine poput border kolija, labradora i njemačkih ovčara ili dva manja psa, s dva unutarnja povodca).
+
          <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
 
                 <strong>NORIKS Tuck</strong> su oblikujuće kratke hlačice visokog struka s posebnim protukliznim materijalom s unutarnje strane pojasa koji prianja uz kožu, pa se ne smotaju prema dolje kao obično oblikujuće rublje.<br><br>Mekana, rastezljiva tkanina nježno zaglađuje trbuh i bedra, a ne steže previše. Rubovi su laserski rezani, pa nema izbočenih šavova koji bi se vidjeli kroz odjeću. Hlačice sežu visoko na struk i do sredine bedra, pa pokrivaju sva područja koja želite zagladiti — i sprječavaju trljanje bedara.<br><br>Obučete ih jednom i zaboravite na njih cijeli dan — bez povlačenja i namještanja. Odjeća lijepo pada, a vi se osjećate samopouzdano.<br><br><strong>Sastav:</strong> 55 % najlon, 45 % elastan. Bez lateksa i bez silikona. Dostupne su u smeđoj i crnoj boji, u veličinama od S do XXL.
@@ -1097,6 +1101,36 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Odgovara veličini:</strong> 95 % naših kupaca pogodi pravu veličinu iz prvog puta.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'doggo', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Odaberite veličinu prema veličini psa. Veličina <strong>XL</strong> odgovara i za dva manja psa (ima dva unutarnja povodca).</p>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1c3b4b;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Mjere (D × Š × V)</th>
+                  <th style="padding:9px 8px;text-align:left;">ISOFIX</th>
+                  <th style="padding:9px 8px;text-align:left;">Za pse</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_doggo_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#eef5fa' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] . ' × ' . $r[2] . ' × ' . $r[3] ); ?> cm</td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[5] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+          </div>
+
         <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1353,6 +1387,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'blanket', $current_product_id ) ): ?>
 
                 Strojno pranje na hladnom, na nježnom programu. Sušite na zraku ili u sušilici na niskoj temperaturi. Kompresija se zadržava i nakon pranja.
+
+             <?php elseif( noriks_is_type( 'doggo', $current_product_id ) ): ?>
+
+                Izvadite jastuke, a unutarnju navlaku operite u perilici na hladnom, na nježnom programu, i osušite na zraku. Vanjsku stranu od veganske kože obrišite vlažnom krpom.
 
              <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
 

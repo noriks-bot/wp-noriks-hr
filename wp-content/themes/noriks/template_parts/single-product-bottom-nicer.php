@@ -269,6 +269,11 @@ if ( noriks_is_type( 'phonestrap' ) ) {
     include $noriks_pb_dir . 'why-phonestrap.php';
 }
 
+// NORIKS Doggo (orto-doggo) — sigurnosni autokrevet za pse s ISOFIX kopcama
+if ( noriks_is_type( 'doggo' ) ) {
+    include $noriks_pb_dir . 'why-doggo.php';
+}
+
 // NORIKS Bracelet (orto-bracelet) — narukvica od hematita
 if ( noriks_is_type( 'bracelet' ) ) {
     include $noriks_pb_dir . 'why-bracelet.php';
