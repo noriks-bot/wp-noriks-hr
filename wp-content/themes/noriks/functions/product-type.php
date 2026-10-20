@@ -102,6 +102,8 @@ function noriks_product_type_map() : array {
         'blanket'                 => array( 'orto-blanket', 'blanket' ),
         // NORIKS BraTank — majica s ugradenim grudnjakom bez trake (boja + velicina).
         'bratank'                 => array( 'orto-bratank', 'bratank' ),
+        // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
+        'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -389,6 +391,18 @@ if ( ! function_exists( 'noriks_bratank_sizes' ) ) {
             array( '2XL', '98 – 103 cm',  'B – DD' ),
             array( '3XL', '104 – 109 cm', 'B – G' ),
             array( '4XL', '110 – 115 cm', 'B – G' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_floatsuit_sizes' ) ) {
+    /** NORIKS FloatSuit: velicina, duljina, opseg prsa, opseg bokova, dob (original floatbuds.shop, 90–120). */
+    function noriks_floatsuit_sizes() {
+        return array(
+            array( '12-18 mjeseci', '90',  '44 cm', '51 cm', '49 cm' ),
+            array( '2-3 godine',    '100', '48 cm', '54 cm', '52 cm' ),
+            array( '3-4 godine',    '110', '52 cm', '57 cm', '55 cm' ),
+            array( '5-6 godina',    '120', '56 cm', '60 cm', '58 cm' ),
         );
     }
 }

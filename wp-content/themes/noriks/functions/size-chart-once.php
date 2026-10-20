@@ -73,6 +73,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-bratank' );
             return;
         }
+        // NORIKS FloatSuit: tablica po dobi djeteta (90–120).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'floatsuit' ) ) {
+            get_template_part( 'template_parts/size-chart-floatsuit' );
+            return;
+        }
         // GelSeat i KneeTape nemaju velicina.
         if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'gelseat' ) || noriks_is_type( 'kneetape' ) ) ) { return; }
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kompwom' ) ) {

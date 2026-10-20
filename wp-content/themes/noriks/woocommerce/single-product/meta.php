@@ -675,6 +675,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS BraTank</strong> je naša prva majica na naramenice s pravom potporom ugrađenog grudnjaka. Bez žica, bez dodatnih slojeva, bez linija koje se vide kroz odjeću. Jedan komad koji radi sve.<br><br>Ima uklonjive jastučiće za prilagodljivu pokrivenost i kroj koji zaglađuje i oblikuje figuru bez stezanja. Odgovara za sve — od opuštanja kod kuće i obaveza u gradu do ureda. Toliko je udobna da ćete zaboraviti da je nosite.<br><br>Dostupna je u bež, crnoj, bijeloj, paunovo plavoj, staroj ruži, sivoj, vinsko crvenoj i boji kave, u veličinama od S do 4XL.
 
+         <?php elseif( noriks_is_type( 'floatsuit', $current_product_id ) ): ?>
+
+                <strong>ZABAVA KOJA PLUTA</strong><br><br><strong>NORIKS FloatSuit</strong> je praktično rješenje „sve u jednom” koje djeci pomaže da ostanu na površini dok uče plivati. Pruža uravnoteženu potporu i mališanima daje stabilnost koja im u vodi treba, a da ih pritom ne sputava u kretanju.<br><br><video src="<?php echo esc_url( get_template_directory_uri() . '/img/floatsuit/fs-video-opis.mp4' ); ?>" autoplay loop muted playsinline preload="metadata" style="display:block;width:400px;max-width:100%;border-radius:8px;margin:0 auto;"></video><br>Za razliku od glomaznih plutača ili rukavića za plivanje, <strong>NORIKS FloatSuit</strong> potiče pravilan položaj tijela i ravnomjeran uzgon. Pomaže djeci da ostanu uspravna, a pritom slobodno mašu nogama i rukama — tako stvarno razvijaju plivanje dok uče plutati, kliziti i plivati sa samopouzdanjem.<br><br><strong>Naše jamstvo</strong><br>Niste zadovoljni narudžbom? Bez brige! Javite nam se u roku od 30 dana i bez komplikacija vraćamo vam novac.
+
          <?php elseif( noriks_is_type( 'red', $current_product_id ) ): ?>
 
                 <strong>NORIKS RedRelief</strong> je omotač za zapešće koji spaja dvije najistraženije valne duljine u terapiji crvenim svjetlom: 660 nm crveno svjetlo smiruje površinsku upalu, a 850 nm infracrveno dopire dublje, do tkiva oko srednjeg živca.<br><br>Svjetlo se u tkivu pretvara u staničnu energiju (ATP) i potiče lokalni protok krvi — dva procesa koja su dio prirodnog oporavka tijela. Zato se koristi kod karpalnog tunela, tendinitisa, artritisa te bolova u šaci i zapešću.<br><br>U omotač je ugrađeno 48 dvostrukih LED dioda raspoređenih po cijeloj unutarnjoj strani, pa svjetlo pokriva cijelo zapešće, a ne samo jednu točku. Na raspolaganju su 4 načina rada i 3 razine snage.<br><br>Uređaj je bežičan i puni se preko USB-C kabela — jedno punjenje dovoljno je za do 4 tretmana. Težak je svega 126 g, ima otvor za palac i podesivu traku, pa odgovara i lijevoj i desnoj ruci. Preporučena je jedna seansa od 15 minuta dnevno; uređaj se sam isključi na kraju seanse.
@@ -1071,6 +1075,36 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Odgovara veličini:</strong> 95 % naših kupaca pogodi pravu veličinu iz prvog puta.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'floatsuit', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu odaberite prema <strong>dobi djeteta</strong>. Mjere su u centimetrima (cm).</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#0a97d5;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Dob</th>
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina</th>
+                  <th style="padding:9px 8px;text-align:left;">Prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Bokovi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_floatsuit_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#eef7fc' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
           </div>
 
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
