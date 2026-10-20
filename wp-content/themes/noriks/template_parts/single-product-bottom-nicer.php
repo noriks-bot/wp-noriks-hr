@@ -254,6 +254,11 @@ if ( noriks_is_type( 'blanket' ) ) {
     include $noriks_pb_dir . 'why-blanket.php';
 }
 
+// NORIKS BraTank (orto-bratank) — majica s ugradenim grudnjakom bez trake
+if ( noriks_is_type( 'bratank' ) ) {
+    include $noriks_pb_dir . 'why-bratank.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';

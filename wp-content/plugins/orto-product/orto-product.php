@@ -508,6 +508,10 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
+    } elseif ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) {
+        // NORIKS BraTank: kao na originalu ("Standard Price" / "£15.99 per Tank" / "£12.99 per Tank"),
+        // cijena po komadu iz nasih EUR cijena (59,99 / 3 in 94,99 / 6).
+        $gck_offer_subs = array( 'Standardna cijena', '20,00 € po majici', '15,83 € po majici' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: kao na originalu ("Standard price" / "Buy 1 Get 1 50% Off").
         $gck_offer_subs = array( 'Standardna cijena', 'Drugi komad −50 %' );
@@ -531,6 +535,9 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
+    } elseif ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) {
+        // NORIKS BraTank: znacke 2. in 3. ponude kao na originalu ("60% OFF + FREE SHIPPING", "70% OFF + FREE SHIPPING").
+        $gck_offer_badges = array( 1 => '60 % POPUSTA + BESPLATNA DOSTAVA', 2 => '70 % POPUSTA + BESPLATNA DOSTAVA' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: znacka druge ponude kao na originalu ("Most Popular").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE' );
@@ -921,7 +928,7 @@ function gck_render_bundle_selector() {
 
     <?php
     // Your extra conditional style block (kept)
-    if (  !has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
+    if (  !has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
@@ -1070,7 +1077,7 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-red', 'orto-gelseat', 'orto-kneebrace', 'orto-relief', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket' ), 'product_cat', $product_id ) ) : ?>
+    <?php if ( has_term( array( 'orto-red', 'orto-gelseat', 'orto-kneebrace', 'orto-relief', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* RedRelief + GelSeat + 4 nova proizvoda: razmak izmedu kartica mora biti jednak izmedu svih ponuda.
          Inline margin-top: 25px na drugoj kartici radio je veci razmak 1-2 nego 2-3. */
@@ -1082,7 +1089,7 @@ function gck_render_bundle_selector() {
     <?php
     // Snug / FIT Woman / Pal: cistija kartica ponude — bez "Ukupno:", bez cijene po
     // komadu kod jednog komada, i okrugli swatchevi u pravim nijansama.
-    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket' ), 'product_cat', $product_id ) ) :
+    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank' ), 'product_cat', $product_id ) ) :
     ?>
     <style>
       /* rijec "Ukupno:" ne treba — cijena govori sama za sebe */
@@ -1537,6 +1544,60 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-pair select,
       #bundle-selector .bundle-pair .gck-extra-select { border-color: #d2632e !important; color: #15140f !important; }
       .gck-size-link { color: #d2632e !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS BraTank: rozi akcent originala (#B57E7E). Izbornik boje cita nijansu s probnog
+         elementa IZVAN #bundle-selector, zato ista pravila moraju postojati i bez prefiksa. */
+      .swatch-circle.color-bez                  { background: #ecd6b8 !important; }
+      .swatch-circle.color-crna                 { background: #1c1c1e !important; }
+      .swatch-circle.color-bijela               { background: #f7f7f5 !important; }
+      .swatch-circle.color-paunovo-plava        { background: #0f6f9e !important; }
+      .swatch-circle.color-stara-ruza           { background: #d29b95 !important; }
+      .swatch-circle.color-siva                 { background: #77777a !important; }
+      .swatch-circle.color-vinsko-crvena        { background: #b3163b !important; }
+      .swatch-circle.color-kava                 { background: #7a4128 !important; }
+
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
+          border: 2px solid #e8ded6 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #b57e7e !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
+      #bundle-selector .swatch-circle.color-bez                  { background: #ecd6b8 !important; }
+      #bundle-selector .swatch-circle.color-crna                 { background: #1c1c1e !important; }
+      #bundle-selector .swatch-circle.color-bijela               { background: #f7f7f5 !important; }
+      #bundle-selector .swatch-circle.color-paunovo-plava        { background: #0f6f9e !important; }
+      #bundle-selector .swatch-circle.color-stara-ruza           { background: #d29b95 !important; }
+      #bundle-selector .swatch-circle.color-siva                 { background: #77777a !important; }
+      #bundle-selector .swatch-circle.color-vinsko-crvena        { background: #b3163b !important; }
+      #bundle-selector .swatch-circle.color-kava                 { background: #7a4128 !important; }
+      #bundle-selector .bundle-option {
+          border: 2px solid #ededed !important; background: #ededed !important; border-radius: 8px !important;
+          box-shadow: none !important; }
+      #bundle-selector .bundle-option.active { border-color: #b57e7e !important; background: #fff !important; }
+      #bundle-selector .bundle-option-title { color: #000 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #b57e7e !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #b57e7e !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #b57e7e !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #b57e7e !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #e8ded6 !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #b57e7e !important; }
+      #bundle-selector .bundle-total-line .gck-regular-price { color: #555 !important; }
+      #bundle-selector .gck-offer-sub { color: #555 !important; font-weight: 500; }
+      #bundle-selector .gck-popular-badge--offer { background: #b57e7e !important; color: #fff !important; transform: none !important; right: 12px !important; font-size: 12px !important; }
+      #bundle-selector .bundle-pair select,
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #b57e7e !important; color: #121212 !important; }
+      .gck-size-link { color: #b57e7e !important; }
+      /* sporocilo o velikosti + naslov bloka ponud (original: "TRUE TO SIZE", "SALE ENDS TONIGHT") */
+      .gck-bt-size { background: linear-gradient(135deg, #faf5f5 0%, #f5eded 100%); border-left: 3px solid #b57e7e; border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+      .gck-bt-size .main { margin: 0; font-size: 14px; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
+      .gck-bt-size strong { color: #b57e7e; font-size: 15px; font-weight: 700; }
+      .gck-bt-size .proof { margin: 4px 0 0; font-size: 12.7px; font-weight: 500; color: #777; line-height: 1.4; }
+      .gck-bt-title { display: flex; align-items: center; gap: 10px; margin: 16px 0 6px; color: #b57e7e; font-weight: 700; font-size: 14px; letter-spacing: .04em; }
+      .gck-bt-title::before, .gck-bt-title::after { content: ""; flex: 1 1 auto; height: 2px; background: #b57e7e; opacity: .5; }
     </style>
     <?php endif; ?>
 
@@ -2130,7 +2191,7 @@ function gck_render_bundle_selector() {
     
 
     <div class="gck-benefits-box">
-        <?php if ( ! has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
+        <?php if ( ! has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
         <ul class="gck-benefits-list">
             <?php if ( !has_term( array( 'orto-bokserice', 'orto-bokserice2', 'starter-paketi' ), 'product_cat', $product_id ) ) : ?>
                 <li><span class="gck-check">✔</span> <strong>Savršeno pristajanje</strong></li>
@@ -2177,6 +2238,14 @@ function gck_render_bundle_selector() {
     </div>
 
     <div class="gck-top-banner-wrap">
+        <?php if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) : ?>
+            <!-- NORIKS BraTank: kao na originalu — sporocilo o velikosti in naslov bloka ponud -->
+            <div class="gck-bt-size">
+                <p class="main">✨ <strong>ODGOVARA VELIČINI</strong> — jednostavno naručite svoju uobičajenu veličinu</p>
+                <p class="proof">95 % naših kupaca pogodi pravu veličinu iz prvog puta</p>
+            </div>
+            <div class="gck-bt-title">AKCIJA ZAVRŠAVA VEČERAS</div>
+        <?php endif; ?>
         <?php if ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) : $gck_bs_img = get_template_directory_uri() . '/img/brassiere/'; ?>
             <!-- NORIKS Brassiere: jesenska ponuda kao na originalu (izmedu tablice velicina i ponuda) -->
             <picture class="gck-brassiere-offer">
@@ -2798,8 +2867,9 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-slabproof' ), 'product_cat', $product_id ) ? "'#d2632e'"
            : ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ? "'#a65a5d'"
            : ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ? "'#9217ff'"
+           : ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ? "'#b57e7e'"
            : ( has_term( array( 'orto-kneetape' ), 'product_cat', $product_id ) ? "'#1f6fd0'"
-           : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ); ?>;
+           : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ) ); ?>;
       function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
 
       /* Jedan prilagodeni dropdown. items = [{value, label, color|null, pick()}] */
@@ -3217,6 +3287,8 @@ function gck_render_bundle_selector() {
     <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?><?php echo $gck_no_attrs ? ' is-no-attrs' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
+        // NORIKS BraTank: kao na originalu je predizbrana srednja ponuda.
+        if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         $loop_index    = 0;
 
         foreach ( $offers as $offer_id => $data ) :
@@ -4155,5 +4227,35 @@ function gck_shgifts_free_gifts_notice() {
             <?php endforeach; ?>
         </div>
     </div>
+    <?php
+}
+
+// ============================================================
+// NORIKS BraTank (orto-bratank): ikone pod gumbom + opozorilo o kopijah (kot na originalu)
+// ============================================================
+add_action( 'woocommerce_after_add_to_cart_button', 'gck_bratank_after_cart', 21 );
+function gck_bratank_after_cart() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) { return; }
+    global $product;
+    if ( ! $product instanceof WC_Product || ! has_term( 'orto-bratank', 'product_cat', $product->get_id() ) ) { return; }
+    ?>
+    <div class="gck-bt-after">
+      <ul class="gck-bt-icons">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Jednostavan povrat i zamjena</span></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#d9a521"/><circle cx="24" cy="24" r="17.5" fill="none" stroke="#fff3c4" stroke-width="1.5"/><text x="24" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#2b2112">60</text><text x="24" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#2b2112">DANA</text></svg><span>60 dana jamstvo pristajanja</span></li>
+      </ul>
+      <div class="gck-bt-replica">
+        <strong>⚠️ Čuvajte se jeftinih kopija</strong><br><br>
+        Originalna majica s ugrađenim grudnjakom bez trake prodaje se <strong>samo u NORIKS trgovini</strong>.
+      </div>
+    </div>
+    <style>
+      .gck-bt-after { margin: 16px 0 0; }
+      .gck-bt-icons { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 24px; }
+      .gck-bt-icons li { display: flex; align-items: center; gap: 12px; margin: 0; font-size: 15px; font-weight: 600; color: #121212; flex: 1 1 200px; }
+      .gck-bt-icons svg { flex: 0 0 48px; width: 48px; height: 48px; color: #b57e7e; }
+      .gck-bt-replica { border: 2px dashed #b57e7e; padding: 15px; text-align: center; color: #333; font-size: 14px; line-height: 1.5; margin: 15px 0; }
+      .gck-bt-replica strong { color: #b57e7e; }
+    </style>
     <?php
 }

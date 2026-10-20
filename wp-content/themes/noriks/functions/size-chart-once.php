@@ -68,6 +68,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-blanket' );
             return;
         }
+        // NORIKS BraTank: tablica po opsegu grudi i kosarici (S–4XL).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bratank' ) ) {
+            get_template_part( 'template_parts/size-chart-bratank' );
+            return;
+        }
         // GelSeat i KneeTape nemaju velicina.
         if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'gelseat' ) || noriks_is_type( 'kneetape' ) ) ) { return; }
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kompwom' ) ) {

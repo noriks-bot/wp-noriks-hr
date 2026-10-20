@@ -100,6 +100,8 @@ function noriks_product_type_map() : array {
         'brassiere'               => array( 'orto-brassiere', 'brassiere' ),
         // NORIKS Blanket — kompresijska vreca za smirenje i bolji san (boja + velicina).
         'blanket'                 => array( 'orto-blanket', 'blanket' ),
+        // NORIKS BraTank — majica s ugradenim grudnjakom bez trake (boja + velicina).
+        'bratank'                 => array( 'orto-bratank', 'bratank' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -372,6 +374,21 @@ if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
             array( 'Djeca L',   '150 cm', '39 cm', '26 cm', '23 cm', 'djeca 8–12 god.',                   '130–150 cm' ),
             array( 'Odrasli S', '170 cm', '44 cm', '28 cm', '27 cm', 'žene EU 34–40, muškarci S–M',        '150–170 cm' ),
             array( 'Odrasli L', '185 cm', '49 cm', '31 cm', '27 cm', 'žene EU 42–46, muškarci L–XXL',      '170–185 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_bratank_sizes' ) ) {
+    /** NORIKS BraTank: velicina, opseg grudi, kosarica (original lunara-comfort.com, S–4XL). */
+    function noriks_bratank_sizes() {
+        return array(
+            array( 'S',   '76 – 80 cm',   'A – C' ),
+            array( 'M',   '81 – 85 cm',   'A – C' ),
+            array( 'L',   '86 – 91 cm',   'A – DD' ),
+            array( 'XL',  '92 – 97 cm',   'B – DD' ),
+            array( '2XL', '98 – 103 cm',  'B – DD' ),
+            array( '3XL', '104 – 109 cm', 'B – G' ),
+            array( '4XL', '110 – 115 cm', 'B – G' ),
         );
     }
 }
