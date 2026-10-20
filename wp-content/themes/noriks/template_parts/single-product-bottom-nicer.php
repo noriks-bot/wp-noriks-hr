@@ -269,6 +269,11 @@ if ( noriks_is_type( 'phonestrap' ) ) {
     include $noriks_pb_dir . 'why-phonestrap.php';
 }
 
+// NORIKS Bracelet (orto-bracelet) — narukvica od hematita
+if ( noriks_is_type( 'bracelet' ) ) {
+    include $noriks_pb_dir . 'why-bracelet.php';
+}
+
 // NORIKS WineCooler (orto-winecooler) — štapić za hlađenje vina s izljevom
 if ( noriks_is_type( 'winecooler' ) ) {
     include $noriks_pb_dir . 'why-winecooler.php';

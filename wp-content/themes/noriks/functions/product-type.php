@@ -108,6 +108,8 @@ function noriks_product_type_map() : array {
         'phonestrap'              => array( 'orto-phonestrap', 'phonestrap' ),
         // NORIKS WineCooler — štapić za hlađenje vina s izljevom (bez atributa, bez velicin).
         'winecooler'              => array( 'orto-winecooler', 'winecooler' ),
+        // NORIKS Bracelet — narukvica od hematita (bez atributa, jedna veličina 19–21,5 cm).
+        'bracelet'                => array( 'orto-bracelet', 'bracelet' ),
         // NORIKS SupportSocks — potporne čarape 12–15 mmHg (boja + veličina).
         'supportsocks'            => array( 'orto-supportsocks', 'supportsocks' ),
         // NORIKS Tuck — oblikujuce kratke hlacice visokog struka (boja + velicina).
