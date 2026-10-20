@@ -264,6 +264,11 @@ if ( noriks_is_type( 'floatsuit' ) ) {
     include $noriks_pb_dir . 'why-floatsuit.php';
 }
 
+// NORIKS PhoneStrap (orto-phonestrap) — drzac za mobitel protiv ispadanja
+if ( noriks_is_type( 'phonestrap' ) ) {
+    include $noriks_pb_dir . 'why-phonestrap.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';

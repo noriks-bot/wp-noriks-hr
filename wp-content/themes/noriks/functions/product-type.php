@@ -104,6 +104,8 @@ function noriks_product_type_map() : array {
         'bratank'                 => array( 'orto-bratank', 'bratank' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
+        // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
+        'phonestrap'              => array( 'orto-phonestrap', 'phonestrap' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
