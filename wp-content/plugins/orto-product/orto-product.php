@@ -512,6 +512,10 @@ function gck_render_bundle_selector() {
         // NORIKS BraTank: kao na originalu ("Standard Price" / "£15.99 per Tank" / "£12.99 per Tank"),
         // cijena po komadu iz nasih EUR cijena (59,99 / 3 in 94,99 / 6).
         $gck_offer_subs = array( 'Standardna cijena', '20,00 € po majici', '15,83 € po majici' );
+    } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
+        // NORIKS Tuck: kao na originalu ("Try it" / "€29,00 each · one to wear, one in the wash · ✓ Mix & match colours" /
+        // "€21,00 each · a full week covered · ✓ FREE shipping included").
+        $gck_offer_subs = array( 'Isprobajte', '29,00 € po komadu · jedne nosite, druge su u pranju · ✓ Kombinirajte boje', '20,50 € po komadu · cijeli tjedan pokriven · ✓ BESPLATNA dostava uključena' );
     } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
         // NORIKS SupportSocks: kao na originalu (Kaching: "2 par for prisen av 1 / Kun 150 kr/par", "5 par for prisen av 2 / Kun 120 kr/par · Fri frakt",
         // "8 par for prisen av 3 / Kun 112 kr/par · Fri frakt") — cijena po paru iz nasih EUR cijena (27,99 / 2, 56,99 / 5, 84,99 / 8).
@@ -548,6 +552,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) {
         // NORIKS BraTank: znacke 2. in 3. ponude kao na originalu ("60% OFF + FREE SHIPPING", "70% OFF + FREE SHIPPING").
         $gck_offer_badges = array( 1 => '60 % POPUSTA + BESPLATNA DOSTAVA', 2 => '70 % POPUSTA + BESPLATNA DOSTAVA' );
+    } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
+        // NORIKS Tuck: znacki 2. in 3. ponude kao na originalu ("MOST POPULAR", "BEST VALUE").
+        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' );
     } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
         // NORIKS SupportSocks: znacki 2. in 3. ponude kao na originalu ("Mest populær", "Mest for pengene").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJISPLATIVIJE' );
@@ -944,7 +951,7 @@ function gck_render_bundle_selector() {
 
     <?php
     // Your extra conditional style block (kept)
-    if (  !has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
+    if (  !has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-tuck', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-starter', 'orto-majice', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-bokserice', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-majica-darila', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id )  )   :
     ?>
         <style>
           .bundle-option { border: 2px solid #ededed; background: #f4f4f4b0  !important; border-radius: 4px; }
@@ -1093,7 +1100,7 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-red', 'orto-gelseat', 'orto-kneebrace', 'orto-relief', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks' ), 'product_cat', $product_id ) ) : ?>
+    <?php if ( has_term( array( 'orto-red', 'orto-gelseat', 'orto-kneebrace', 'orto-relief', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-tuck' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* RedRelief + GelSeat + 4 nova proizvoda: razmak izmedu kartica mora biti jednak izmedu svih ponuda.
          Inline margin-top: 25px na drugoj kartici radio je veci razmak 1-2 nego 2-3. */
@@ -1105,7 +1112,7 @@ function gck_render_bundle_selector() {
     <?php
     // Snug / FIT Woman / Pal: cistija kartica ponude — bez "Ukupno:", bez cijene po
     // komadu kod jednog komada, i okrugli swatchevi u pravim nijansama.
-    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks' ), 'product_cat', $product_id ) ) :
+    if ( has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-tuck' ), 'product_cat', $product_id ) ) :
     ?>
     <style>
       /* rijec "Ukupno:" ne treba — cijena govori sama za sebe */
@@ -1604,6 +1611,49 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-pair select,
       #bundle-selector .bundle-pair .gck-extra-select { border-color: #0a97d5 !important; color: #121212 !important; }
       .gck-size-link { color: #0a97d5 !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS Tuck: temno rjav akcent originala (#2E2420, kartice z robom, izbrana z debelejsim robom). Izbornik boje cita nijanso
+         s probnega elementa IZVAN #bundle-selector, zato ista pravila moraju postojati i bez prefiksa. */
+      .swatch-circle.color-smeda { background: #c59a87 !important; }
+      .swatch-circle.color-crna { background: #161616 !important; }
+
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
+          border: 2px solid #e4ddd3 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #2E2420 !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
+      #bundle-selector .swatch-circle.color-smeda { background: #c59a87 !important; }
+      #bundle-selector .swatch-circle.color-crna { background: #161616 !important; }
+      #bundle-selector .bundle-option {
+          border: 1.5px solid #e4ddd3 !important; background: #fff !important; border-radius: 0 !important; box-shadow: none !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #2E2420 !important; background: #fff !important; }
+      #bundle-selector .bundle-option-title { color: #222 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #2E2420 !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #2E2420 !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #2E2420 !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #9B2C1F !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #e4ddd3 !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #222 !important; }
+      #bundle-selector .bundle-total-line .gck-regular-price { color: #7a6e64 !important; }
+      #bundle-selector .gck-offer-sub { color: #7a6e64 !important; font-weight: 400; }
+      #bundle-selector .gck-popular-badge--offer { background: #2E2420 !important; color: #fff !important; transform: none !important; right: 12px !important; letter-spacing: .06em; }
+      #bundle-selector .bundle-pair select,
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #2E2420 !important; color: #121212 !important; }
+      .gck-size-link { color: #2E2420 !important; }
+      /* "Između dvije veličine?" in naslov bloka ponud (kot na originalu) */
+      .gck-tk-size { display: grid; grid-template-columns: 22px 1fr auto; gap: 12px; align-items: center; border: 1.5px solid #e4ddd3; padding: 12px 14px; margin: 12px 0; color: #222; }
+      .gck-tk-size svg { width: 22px; height: 22px; }
+      .gck-tk-size strong { display: block; font-size: 13.5px; font-weight: 700; line-height: 1.3; }
+      .gck-tk-size span { display: block; font-size: 12.5px; color: #7a6e64; line-height: 1.3; }
+      .gck-tk-size__link { font-size: 12.5px; font-weight: 700; text-decoration: underline; white-space: nowrap; }
+      .gck-tk-title { display: flex; justify-content: space-between; align-items: baseline; margin: 14px 0 6px; color: #222; }
+      .gck-tk-title strong { font-size: 15px; font-weight: 700; }
+      .gck-tk-title span { font-size: 13px; color: #7a6e64; }
     </style>
     <?php endif; ?>
 
@@ -2339,7 +2389,7 @@ function gck_render_bundle_selector() {
     
 
     <div class="gck-benefits-box">
-        <?php if ( ! has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
+        <?php if ( ! has_term( array( 'orto-snug', 'orto-kompwom', 'orto-pal', 'orto-slim', 'orto-bowl', 'orto-relief', 'orto-gelseat', 'orto-kneebrace', 'orto-kneetape', 'orto-celleg', 'orto-buildshirt', 'orto-hands', 'orto-stepcloud', 'orto-slabproof', 'orto-brassiere', 'orto-blanket', 'orto-bratank', 'orto-floatsuit', 'orto-phonestrap', 'orto-supportsocks', 'orto-tuck', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-bra', 'orto-hyd', 'orto-kompresijske-carape', 'orto-ortopas', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental', 'orto-bunion', 'orto-fisiorest', 'orto-norikshers', 'orto-noriks-hers', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-ortopedski-jastuk', 'orto-nosilka', 'orto-kidsnest' ), 'product_cat', $product_id ) ) : // hide benefits list for compression socks + back belt + bunion + fisiorest + leak boxers + kompresijske majice + orthopedic pillow ?>
         <ul class="gck-benefits-list">
             <?php if ( !has_term( array( 'orto-bokserice', 'orto-bokserice2', 'starter-paketi' ), 'product_cat', $product_id ) ) : ?>
                 <li><span class="gck-check">✔</span> <strong>Savršeno pristajanje</strong></li>
@@ -2386,6 +2436,15 @@ function gck_render_bundle_selector() {
     </div>
 
     <div class="gck-top-banner-wrap">
+        <?php if ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) : ?>
+            <!-- NORIKS Tuck: kao na originalu — "Between sizes? Size up." + naslov "Choose your pack / Most women buy 2+" -->
+            <div class="gck-tk-size">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="1"></rect><path d="M6 8v3M10 8v4M14 8v3M18 8v4"></path></svg>
+                <div><strong>Između dvije veličine? Uzmite veću.</strong><span>Većina zamjena je za veću veličinu.</span></div>
+                <a href="#" class="gck-size-link gck-tk-size__link">Tablica veličina</a>
+            </div>
+            <div class="gck-tk-title"><strong>Odaberite paket</strong><span>Većina žena uzme 2+</span></div>
+        <?php endif; ?>
         <?php if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) : ?>
             <!-- NORIKS BraTank: kao na originalu — sporocilo o velikosti in naslov bloka ponud -->
             <div class="gck-bt-size">
@@ -3019,8 +3078,9 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-floatsuit' ), 'product_cat', $product_id ) ? "'#0a97d5'"
            : ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ? "'#3d3d3d'"
            : ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ? "'#002e49'"
+           : ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ? "'#2E2420'"
            : ( has_term( array( 'orto-kneetape' ), 'product_cat', $product_id ) ? "'#1f6fd0'"
-           : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ) ) ) ) ); ?>;
+           : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ) ) ) ) ) ); ?>;
       function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
 
       /* Jedan prilagodeni dropdown. items = [{value, label, color|null, pick()}] */
@@ -3440,6 +3500,8 @@ function gck_render_bundle_selector() {
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;
         // NORIKS BraTank: kao na originalu je predizbrana srednja ponuda.
         if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
+        // NORIKS Tuck: kao na originalu je predizbrana ponuda 2x kom.
+        if ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         // NORIKS PhoneStrap: kao na originalu je predizbrana zadnja ponuda (4x, "Best Value").
         if ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) && count( $offers ) > 3 ) { $default_index = 3; }
         $loop_index    = 0;
@@ -4409,6 +4471,37 @@ function gck_bratank_after_cart() {
       .gck-bt-icons svg { flex: 0 0 48px; width: 48px; height: 48px; color: #b57e7e; }
       .gck-bt-replica { border: 2px dashed #b57e7e; padding: 15px; text-align: center; color: #333; font-size: 14px; line-height: 1.5; margin: 15px 0; }
       .gck-bt-replica strong { color: #b57e7e; }
+    </style>
+    <?php
+}
+
+// ============================================================
+// NORIKS Tuck (orto-tuck): datum odpreme + dostava/povrat pod gumbom (kot na originalu)
+// ============================================================
+add_action( 'woocommerce_after_add_to_cart_button', 'gck_tuck_after_cart', 21 );
+function gck_tuck_after_cart() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) { return; }
+    global $product;
+    if ( ! $product instanceof WC_Product || ! has_term( 'orto-tuck', 'product_cat', $product->get_id() ) ) { return; }
+    ?>
+    <div class="gck-tk-after">
+      <div class="gck-tk-ship"><svg viewBox="0 0 28 22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4h14v11H2zM16 8h5l4 4v3h-9"></path><circle cx="7" cy="17" r="2.2"></circle><circle cx="20" cy="17" r="2.2"></circle></svg><span>Naručite sada, šaljemo do <b data-tk-ship></b></span></div>
+      <div class="gck-tk-row"><span>Besplatna dostava za 4 komada</span><span>Povrat u roku od 30 dana</span></div>
+    </div>
+    <script>
+      (function(){
+        var el = document.querySelector('[data-tk-ship]'); if (!el) return;
+        var d = new Date(), n = 1; while (n > 0) { d.setDate(d.getDate() + 1); var w = d.getDay(); if (w && w < 6) n--; }
+        el.textContent = d.toLocaleDateString('hr-HR', { weekday: 'long', day: 'numeric', month: 'long' });
+      })();
+    </script>
+    <style>
+      .gck-tk-after { margin: 12px 0 0; border: 1.5px solid #e4ddd3; background: #f4f0eb; color: #222; font-size: 13.5px; }
+      .gck-tk-ship { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 12px; }
+      .gck-tk-ship svg { width: 24px; height: 20px; flex: 0 0 auto; }
+      .gck-tk-row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1.5px solid #e4ddd3; }
+      .gck-tk-row span { padding: 8px 10px; text-align: center; font-size: 11.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #3a3a3a; }
+      .gck-tk-row span + span { border-left: 1.5px solid #e4ddd3; }
     </style>
     <?php
 }

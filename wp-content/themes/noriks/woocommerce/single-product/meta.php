@@ -603,6 +603,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Relief</strong> je bambusov steznik za koljeno namijenjen bolnim, ukočenim i natečenim koljenima. Pletivo je gušće oko čašice i s obje strane zgloba, pa je pritisak ravnomjerno raspoređen umjesto da steže u jednoj liniji.<br><br>Blaga, medicinska kompresija potiče protok krvi, smiruje upalu i pomaže da oteklina splasne. Koljeno je stabilnije pri hodanju, čučnju i penjanju stepenicama, a mnogi olakšanje osjete već pri prvom nošenju.<br><br>Nema šarki, remena ni plastike — steznik se jednostavno navuče, prati oblik koljena i ne klizi niz nogu. Tanak je koliko treba da stane ispod hlača i tajica, pa ga možete nositi na poslu, u šetnji, tijekom vježbanja i preko noći. Isti komad odgovara lijevom i desnom koljenu.<br><br>Pletivo od bambusovog vlakna upija vlagu, diše i prirodno sprječava neugodne mirise, bez lateksa. Dostupno je sedam veličina (S do 4XL) — izmjerite opseg noge 10 cm iznad koljenske čašice, a ako ste između dvije veličine, uzmite veću.<br><br>Prikladan je kod artroze, upale patelarne tetive, reumatoidnog artritisa, burzitisa, trkačkog koljena, oticanja i ukočenosti.
 
+         <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
+
+                <strong>NORIKS Tuck</strong> su oblikujuće kratke hlačice visokog struka s posebnim protukliznim materijalom s unutarnje strane pojasa koji prianja uz kožu, pa se ne smotaju prema dolje kao obično oblikujuće rublje.<br><br>Mekana, rastezljiva tkanina nježno zaglađuje trbuh i bedra, a ne steže previše. Rubovi su laserski rezani, pa nema izbočenih šavova koji bi se vidjeli kroz odjeću. Hlačice sežu visoko na struk i do sredine bedra, pa pokrivaju sva područja koja želite zagladiti — i sprječavaju trljanje bedara.<br><br>Obučete ih jednom i zaboravite na njih cijeli dan — bez povlačenja i namještanja. Odjeća lijepo pada, a vi se osjećate samopouzdano.<br><br><strong>Sastav:</strong> 55 % najlon, 45 % elastan. Bez lateksa i bez silikona. Dostupne su u smeđoj i crnoj boji, u veličinama od S do XXL.
+
          <?php elseif( noriks_is_type( 'supportsocks', $current_product_id ) ): ?>
 
                 <strong>12–15 mmHg stupnjevana kompresija:</strong> može ublažiti umor i oticanje nogu<br><strong>Lako se oblače:</strong> ne morate se mučiti s njima<br><strong>Mekani rub:</strong> ne usijeca se i ne ostavlja tragove na koži<br><strong>Vrh bez šavova:</strong> ne žulja<br><strong>Prozračan materijal:</strong> mješavina s bambusom koja održava stopala suhima<br><strong>Savršene za:</strong> svakodnevno nošenje, posao, putovanja i još mnogo toga<br><br><strong>Materijal:</strong> 60 % poliester, 18 % bambus, 15 % lycra, 7 % pamuk<br><br><strong>Upute za pranje:</strong><br>Čarape perite izvrnute naopako<br>Strojno pranje na najviše 30 °C<br>Ne koristite izbjeljivač<br>Sušite na zraku — ne u sušilici
@@ -1085,6 +1089,38 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Odgovara veličini:</strong> 95 % naših kupaca pogodi pravu veličinu iz prvog puta.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Pronađite svoju uobičajenu veličinu hlača. Ako ste između dvije veličine ili su vam struk i bokovi u različitim veličinama, <strong>uzmite jednu veličinu veću</strong>.</p>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#2E2420;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Struk (cm)</th>
+                  <th style="padding:9px 8px;text-align:left;">Bokovi (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_tuck_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f0eb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Struk:</strong> izmjerite opseg struka. <strong>Bokovi:</strong> izmjerite opseg na najširem dijelu bokova. Ako se ne možete izmjeriti, odaberite slovnu veličinu prema EU veličini hlača.</p>
+          </div>
+
+
         <?php elseif( noriks_is_type( 'supportsocks', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1309,6 +1345,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'blanket', $current_product_id ) ): ?>
 
                 Strojno pranje na hladnom, na nježnom programu. Sušite na zraku ili u sušilici na niskoj temperaturi. Kompresija se zadržava i nakon pranja.
+
+             <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
+
+                Perite na hladnom, na nježnom programu, bez omekšivača i izbjeljivača, i sušite na zraku. Tako rastezljivost i protuklizni pojas ostaju kao novi.
 
              <?php elseif( noriks_is_type( 'bratank', $current_product_id ) ): ?>
 

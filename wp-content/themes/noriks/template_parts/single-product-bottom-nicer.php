@@ -274,6 +274,11 @@ if ( noriks_is_type( 'supportsocks' ) ) {
     include $noriks_pb_dir . 'why-supportsocks.php';
 }
 
+// NORIKS Tuck (orto-tuck) — oblikujuce kratke hlacice visokog struka
+if ( noriks_is_type( 'tuck' ) ) {
+    include $noriks_pb_dir . 'why-tuck.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';

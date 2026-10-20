@@ -108,6 +108,8 @@ function noriks_product_type_map() : array {
         'phonestrap'              => array( 'orto-phonestrap', 'phonestrap' ),
         // NORIKS SupportSocks — potporne čarape 12–15 mmHg (boja + veličina).
         'supportsocks'            => array( 'orto-supportsocks', 'supportsocks' ),
+        // NORIKS Tuck — oblikujuce kratke hlacice visokog struka (boja + velicina).
+        'tuck'                    => array( 'orto-tuck', 'tuck' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -418,6 +420,20 @@ if ( ! function_exists( 'noriks_supportsocks_sizes' ) ) {
             array( 'M',  '36–39' ),
             array( 'L',  '40–43' ),
             array( 'XL', '44–46' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_tuck_sizes' ) ) {
+    /** NORIKS Tuck: velicina, EU velicina, UK/AU, struk (cm), bokovi (cm), duljina nogavice
+     *  (original bellashapewear.com: US pants 4–18, mjere u incima pretvorene u cm). */
+    function noriks_tuck_sizes() {
+        return array(
+            array( 'S',   '34–36', '8–10',  '69–71', '94–97',   '39 cm' ),
+            array( 'M',   '38–40', '12–14', '72–77', '98–102',  '41 cm' ),
+            array( 'L',   '40–42', '14–16', '79–81', '103–107', '43 cm' ),
+            array( 'XL',  '44–46', '18–20', '83–88', '108–113', '45 cm' ),
+            array( 'XXL', '46–48', '20–22', '89–94', '114–119', '47 cm' ),
         );
     }
 }
