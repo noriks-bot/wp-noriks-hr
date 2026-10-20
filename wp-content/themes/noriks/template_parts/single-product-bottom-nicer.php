@@ -244,6 +244,11 @@ if ( noriks_is_type( 'slabproof' ) ) {
     include $noriks_pb_dir . 'why-slabproof.php';
 }
 
+// NORIKS Brassiere (orto-brassiere) — grudnjak bez zica s prirodnim podizanjem
+if ( noriks_is_type( 'brassiere' ) ) {
+    include $noriks_pb_dir . 'why-brassiere.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';

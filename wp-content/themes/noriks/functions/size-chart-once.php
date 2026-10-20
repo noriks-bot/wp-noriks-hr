@@ -58,6 +58,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-slabproof' );
             return;
         }
+        // NORIKS Brassiere: tablica po sirini trake in opsegu grudi (XS–5XL).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'brassiere' ) ) {
+            get_template_part( 'template_parts/size-chart-brassiere' );
+            return;
+        }
         // GelSeat i KneeTape nemaju velicina.
         if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'gelseat' ) || noriks_is_type( 'kneetape' ) ) ) { return; }
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kompwom' ) ) {

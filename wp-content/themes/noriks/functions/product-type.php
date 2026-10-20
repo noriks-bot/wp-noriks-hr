@@ -96,6 +96,8 @@ function noriks_product_type_map() : array {
         'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
         // NORIKS SlabProof — radne carape s jastucenjem za beton (boja + velicina).
         'slabproof'               => array( 'orto-slabproof', 'slabproof' ),
+        // NORIKS Brassiere — grudnjak bez zica s prirodnim podizanjem (boja + velicina).
+        'brassiere'               => array( 'orto-brassiere', 'brassiere' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -336,6 +338,23 @@ if ( ! function_exists( 'noriks_slabproof_sizes' ) ) {
             array( 'M',  '39 – 42', '6 – 9' ),
             array( 'L',  '43 – 45', '9,5 – 12' ),
             array( 'XL', '46 – 49', '12,5 – 15' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_brassiere_sizes' ) ) {
+    /** NORIKS Brassiere: velicina, sirina trake, opseg grudi, klasicni ekvivalent (original, XS–5XL). */
+    function noriks_brassiere_sizes() {
+        return array(
+            array( 'XS',  '26 cm', '77 – 83 cm',   '80 (A/B)' ),
+            array( 'S',   '28 cm', '82 – 88 cm',   '85 (B/C)' ),
+            array( 'M',   '30 cm', '87 – 93 cm',   '90 (B/C)' ),
+            array( 'L',   '32 cm', '92 – 98 cm',   '95 (C/D)' ),
+            array( 'XL',  '34 cm', '97 – 103 cm',  '100 (C/D)' ),
+            array( '2XL', '36 cm', '102 – 108 cm', '105 (D/E)' ),
+            array( '3XL', '38 cm', '107 – 113 cm', '110 (E/F)' ),
+            array( '4XL', '40 cm', '112 – 118 cm', '115 (F/G)' ),
+            array( '5XL', '42 cm', '117 – 123 cm', '120 (G/H)' ),
         );
     }
 }

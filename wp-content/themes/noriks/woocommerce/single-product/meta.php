@@ -663,6 +663,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS SlabProof</strong> su radne čarape napravljene za ljude koji cijeli dan stoje na betonu. Radne čizme štite stopalo, ali ga ne ublažavaju — beton ne vraća ništa, pa svaki korak ide u pete, koljena i leđa. Jedino što taj udarac može ublažiti je čarapa.<br><br>Zato imaju <strong>zonsko jastučenje</strong>: gusti jastučići ispod pete i prednjeg dijela stopala, točno ondje gdje beton udara, a tanko pletivo svugdje drugdje, pa čizma ne postane pretijesna. Peta i prsti ojačani su dvostruko pletenim najlonom, na dva mjesta gdje čarape prve popuste.<br><br>Prozračna mrežica preko gornjeg dijela stopala i pletivo koje odvodi znoj drže stopala suhima kroz cijelu smjenu. Mješavina je bez vune, pa ništa ne grebe i noga se ne pregrijava.<br><br>Široki rebrasti rub drži čarapu gore bez stezanja lista, duboki džep za petu s jezičcem ne da joj da puže u čizmu, a traka oko svoda drži stopalo da ne klizi.<br><br>Dostupne su u crnoj boji, u veličinama M (EU 39–42), L (EU 43–45) i XL (EU 46–49). Vrijedi jamstvo 1.000 smjena — ako se probuše prije toga, šaljemo novi par besplatno — i 30 dana za povrat novca.
 
+         <?php elseif( noriks_is_type( 'brassiere', $current_product_id ) ): ?>
+
+                <strong>NORIKS Brassiere</strong> je grudnjak bez žica koji grudi drži i prirodno podiže, bez push-upa i bez stezanja. Rastezljiva, oblikujuća tkanina nježno podiže grudi, a široka donja potporna traka stabilizira ih bez pritiska i ne smota se ispod grudi.<br><br>Nevidljiva unutarnja struktura ravnomjerno raspoređuje težinu grudi, pa grudnjak drži kao model sa žicama, ali bez bolova, tragova i stalnog namještanja. Zato odgovara i za veće grudi. Široke i podesive naramenice ne urezuju se u ramena.<br><br>Kroj prati prirodan oblik grudi: ne spljošti ih kao klasični sportski top i ne ostavlja prazan prostor. Bešavna tkanina i ravni šavovi ne vide se ni ispod uske odjeće.<br><br>Sastav: 90 % poliamid, 10 % elastan. Dostupan je u crnoj, tamnoplavoj, sivoj, petrolej, ružičastoj i bež boji, u veličinama od XS do 5XL.
+
          <?php elseif( noriks_is_type( 'red', $current_product_id ) ): ?>
 
                 <strong>NORIKS RedRelief</strong> je omotač za zapešće koji spaja dvije najistraženije valne duljine u terapiji crvenim svjetlom: 660 nm crveno svjetlo smiruje površinsku upalu, a 850 nm infracrveno dopire dublje, do tkiva oko srednjeg živca.<br><br>Svjetlo se u tkivu pretvara u staničnu energiju (ATP) i potiče lokalni protok krvi — dva procesa koja su dio prirodnog oporavka tijela. Zato se koristi kod karpalnog tunela, tendinitisa, artritisa te bolova u šaci i zapešću.<br><br>U omotač je ugrađeno 48 dvostrukih LED dioda raspoređenih po cijeloj unutarnjoj strani, pa svjetlo pokriva cijelo zapešće, a ne samo jednu točku. Na raspolaganju su 4 načina rada i 3 razine snage.<br><br>Uređaj je bežičan i puni se preko USB-C kabela — jedno punjenje dovoljno je za do 4 tretmana. Težak je svega 126 g, ima otvor za palac i podesivu traku, pa odgovara i lijevoj i desnoj ruci. Preporučena je jedna seansa od 15 minuta dnevno; uređaj se sam isključi na kraju seanse.
@@ -972,6 +976,35 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Između dvije veličine?</strong> Uzmite veću — jastučić pete i traka oko svoda sjednu na mjesto samo kad čarapa nije premala.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'brassiere', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Sve veličine od <strong>XS do 5XL</strong>. Mjere su u centimetrima (cm).</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a65a5d;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Širina trake</th>
+                  <th style="padding:9px 10px;text-align:left;">Opseg grudi</th>
+                  <th style="padding:9px 10px;text-align:left;">Klasični ekv.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_brassiere_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7efee' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako izmjeriti:</strong> širinu trake položeno, od ruba do ruba, ispod grudi; opseg grudi oko najistaknutijeg dijela grudi. Bešavni rastezljivi materijal: ako niste sigurni, uzmite svoju uobičajenu veličinu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
 
           <div class="bra-size">
@@ -1133,6 +1166,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'slabproof', $current_product_id ) ): ?>
 
                 Strojno pranje na hladnom, zajedno s radnom odjećom. Sušenje u sušilici na niskoj temperaturi. Bez ručnog pranja, sušenja na konopu i posebnog deterdženta.
+
+             <?php elseif( noriks_is_type( 'brassiere', $current_product_id ) ): ?>
+
+                Perite na 30 °C, na programu za osjetljivo rublje, kako bi tkanina zadržala elastičnost.
 
              <?php elseif( noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
 
