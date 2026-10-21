@@ -527,9 +527,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
         // NORIKS PhoneStrap: kao na originalu (Kaching: "You save ..." pod vsako ponudo) — ustedu racuna tema sama, zato brez podnaslovov.
         $gck_offer_subs = array();
-    } elseif ( has_term( array( 'orto-floatsuit' ), 'product_cat', $product_id ) ) {
-        // NORIKS FloatSuit: original nema paketa, samo pasicu "Buy 2+ FloatBuds, 15% off!" — 2x kom = −15 %.
-        $gck_offer_subs = array( 'Standardna cijena', 'Kupite 2+ i uštedite 15 %' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: kao na originalu ("Standard price" / "Buy 1 Get 1 50% Off").
         $gck_offer_subs = array( 'Standardna cijena', 'Drugi komad −50 %' );

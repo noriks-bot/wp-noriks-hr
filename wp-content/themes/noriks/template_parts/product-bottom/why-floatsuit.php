@@ -1,46 +1,44 @@
 <?php
 /**
  * product-bottom: NORIKS FloatSuit — djecji kupaci kostim s ugradenim podesivim plovcima (orto-floatsuit).
- * Original: floatbuds.shop/products/floatbuds-floatsuit — struktura je 1:1 z originalom
- * (isto stevilo sekcij, isti vrstni red, ista ozadja), besedila prevedena v hrvascino.
- *   1) Naslovna slika (otroka v kostimih)
- *   2) Sigurnosna napomena — naslov (svetlo modra)          3) Sigurnosna napomena — besedilo (svetlo modra)
- *   4) Val z morskim psom                                   5) Napis "Vodena čarolija!" (original "Aqua-mazing!")
- *   6) POTIČE SAMOSTALNU IGRU! (temno modra)                7) Video + GRADI SAMOPOUZDANJE U VODI
- *   8) PRUŽA DODATNU POTPORU... (temno modra)               9) Slika + besedilo o plovcih v punom krugu
- *  10) JAČA SAMOPOUZDANJE U VODI... (temno modra)          11) Video + POTIČE VEĆU SAMOSTALNOST
- *  12) Val s kitom                                         13) ZAŠTO RODITELJI VOLE NORIKS FLOATSUIT?
- *  14) Infografika s 4 prednostmi (napisi prevedeni)       15) Seznam 4 prednosti
- *  16) 4 fotografije (na mobilnem drsnik)                  17) Val z delfinom
- *  18) Napis "Super zabava!" (original "Fun-tastic!")      19) Val s podmornico
- *  20) Recenzije kupaca (10 mnenj z originala s fotografijami kupcev, 1:1)
- * Na originalu je med 2) in 3) prazen multicolumn (nic ne izrise) — izpuscen.
- * FAQ originala (med 17 in 18) je v reviews.php ($floatsuit_faq), mnenja tudi v auto_reviews/HR_floatsuit.php.
- * Promo pasici originala ("FREE SHIPPING TODAY", "Buy 2+ FloatBuds, 15% off!") sta na istem mestu — na vrhu strani.
- * Glava trgovine, mreza drzav in noga so izpusceni (trgovinski moduli).
- * Slike: img/floatsuit/ (brez logotipa konkurenta, napisi prevedeni v hrvascino).
+ * Original: floatbuds.shop/products/floatbuds-floatsuit — vsebina 1:1 z originalom (isti vrstni red,
+ * besedila prevedena v hrvascino), oblika po NORIKS stilu (predloga why-hands.php):
+ * vsaka sekcija s sliko/videom ima dva stolpca (medij + besedilo), strani in ozadja se izmenjujejo.
+ *   1) Naslovna slika + »Zabava koja pluta« (besedilo z originala)
+ *   2) Sigurnosna napomena (samo besedilo)
+ *   3) Video + »Vodena čarolija!« / POTIČE SAMOSTALNU IGRU! / GRADI SAMOPOUZDANJE U VODI
+ *   4) PRUŽA DODATNU POTPORU... + slika plovcev v punom krugu
+ *   5) Video + JAČA SAMOPOUZDANJE U VODI... / POTIČE VEĆU SAMOSTALNOST
+ *   6) ZAŠTO RODITELJI VOLE NORIKS FLOATSUIT? — 4 prednosti + infografika
+ *   7) 4 fotografije + »Super zabava!« (besedilo z originala: pravilan polozaj, uzgon)
+ *   8) Recenzije kupaca (10 mnenj z originala, s fotografijami kupcev)
+ * FAQ originala je v reviews.php ($floatsuit_faq), mnenja tudi v auto_reviews/HR_floatsuit.php.
+ * Brez promo pasic, tekocih trakov, drsnikov in valovitih okrasnih slik (NORIKS stil »Preprosto«);
+ * napisa-sliki »Vodena čarolija!« in »Super zabava!« sta zdaj oznaki (kicker) sekcij 3 in 7.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 $nfs      = get_template_directory_uri() . '/img/floatsuit/';
 $nfs_path = get_template_directory() . '/img/floatsuit/';
-$nfs_img  = function( $file, $alt, $cls = '' ) use ( $nfs, $nfs_path ) {
+$nfs_img  = function( $file, $alt ) use ( $nfs, $nfs_path ) {
   if ( ! file_exists( $nfs_path . $file ) ) { return ''; }
   $size = @getimagesize( $nfs_path . $file );
   $wh   = $size ? ' width="' . (int) $size[0] . '" height="' . (int) $size[1] . '"' : '';
-  return '<img src="' . esc_url( $nfs . $file ) . '" alt="' . esc_attr( $alt ) . '"' . $wh . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $nfs . $file ) . '" alt="' . esc_attr( $alt ) . '"' . $wh . ' loading="lazy">';
 };
-$nfs_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg>';
+$nfs_video = function( $file, $label ) use ( $nfs ) {
+  return '<video src="' . esc_url( $nfs . $file ) . '" autoplay loop muted playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video>';
+};
 
-/* 15) Seznam prednosti — 1:1 z originala. */
+/* 6) Prednosti — 1:1 z originala. */
 $nfs_points = array(
-  array( 'LAKO ZAKOPČAVANJE:', 'Priprema je jednostavna i bez muke — UĐI I ZAKOPČAJ' ),
-  array( 'UGRAĐENI PODESIVI PLOVCI:', 'Potpora koju prilagođavate kako djetetove vještine napreduju' ),
-  array( 'ZAŠTITA OD SUNCA:', 'Pomaže zaštititi nježnu kožu tijekom igre u vodi na otvorenom, uz UPF 50+ zaštitu' ),
-  array( 'NESPUTANA UDOBNOST:', 'Potpuna sloboda kretanja za igru cijeli dan' ),
+  array( 'Lako zakopčavanje:', 'Priprema je jednostavna i bez muke — uđi i zakopčaj.' ),
+  array( 'Ugrađeni podesivi plovci:', 'Potpora koju prilagođavate kako djetetove vještine napreduju.' ),
+  array( 'Zaštita od sunca:', 'Pomaže zaštititi nježnu kožu tijekom igre u vodi na otvorenom, uz UPF 50+ zaštitu.' ),
+  array( 'Nesputana udobnost:', 'Potpuna sloboda kretanja za igru cijeli dan.' ),
 );
 
-/* 16) Fotografije. */
+/* 7) Fotografije. */
 $nfs_gallery = array(
   array( 'fs-g-1.webp', 'Detalj kostima NORIKS FloatSuit s plovcima' ),
   array( 'fs-g-2.webp', 'Djeca se igraju u bazenu u kostimima NORIKS FloatSuit' ),
@@ -48,7 +46,7 @@ $nfs_gallery = array(
   array( 'fs-g-4.webp', 'Dvije djevojčice u bazenu u kostimima NORIKS FloatSuit' ),
 );
 
-/* 20) Recenzije kupaca — 1:1 z originala (vse 5 zvezdic, fotografije kupcev ostanejo). */
+/* 8) Recenzije kupaca — 1:1 z originala (vse 5 zvezdic, fotografije kupcev ostanejo). */
 $nfs_reviews = array(
   array( 'ime' => 'Karen T.',     'datum' => '20.08.2026.', 'foto' => 'fs-rv-1.webp',
     'tekst' => 'Odličan proizvod — moj unuk ga obožava, a nama je drago što je siguran.' ),
@@ -71,129 +69,114 @@ $nfs_reviews = array(
   array( 'ime' => 'Susan H.',     'datum' => '08.09.2026.', 'foto' => 'fs-rv-10.webp',
     'tekst' => 'Obožavam ih. Moje mališane naučili su plivati!' ),
 );
-$nfs_hist = array( array( 5, 95, 294 ), array( 4, 4, 13 ), array( 3, 1, 2 ), array( 2, 0, 0 ), array( 1, 0, 0 ) );
 ?>
 
-<div class="nfs">
-
-<!-- 1) Naslovna slika -->
-<section class="nfs-sec nfs-sec--white nfs-banner">
-  <?php echo $nfs_img( 'fs-hero.webp', 'Djeca u kostimima NORIKS FloatSuit' ); ?>
-</section>
-
-<!-- 2) + 3) Sigurnosna napomena -->
-<section class="nfs-sec nfs-sec--sky nfs-rt nfs-rt--tight">
-  <h2 class="nfs-h">⚠️ Sigurnosna napomena ⚠️</h2>
-</section>
-<section class="nfs-sec nfs-sec--sky nfs-rt nfs-rt--tight">
-  <p class="nfs-rt__p">NORIKS FloatSuit je pomagalo za plivanje, a NE sredstvo za spašavanje života. Nije certificiran kao sredstvo za spašavanje. Potreban je stalan nadzor odrasle osobe — nikad ne ostavljajte djecu bez nadzora u vodi ili blizu nje.</p>
-</section>
-
-<!-- 4) Val + 5) Vodena čarolija! -->
-<section class="nfs-sec nfs-sec--white nfs-banner"><?php echo $nfs_img( 'fs-val-1-morski-pas.webp', '' ); ?></section>
-<section class="nfs-sec nfs-sec--navy nfs-banner"><?php echo $nfs_img( 'fs-vodena-carolija-hr.webp', 'Vodena čarolija!' ); ?></section>
-
-<!-- 6) + 7) -->
-<section class="nfs-sec nfs-sec--navy nfs-rt">
-  <h2 class="nfs-h">POTIČE SAMOSTALNU IGRU!</h2>
-</section>
-<section class="nfs-sec nfs-sec--navy nfs-vc-wrap">
-  <div class="nfs-vc">
-    <div class="nfs-vc__video"><video src="<?php echo esc_url( $nfs . 'fs-video-samopouzdanje.mp4' ); ?>" autoplay loop muted playsinline preload="metadata" aria-label="Dijete pliva u kostimu NORIKS FloatSuit"></video></div>
-    <div class="nfs-vc__text" style="background:#136fad;">
-      <h3>GRADI SAMOPOUZDANJE U VODI</h3>
-      <p><strong>NORIKS FloatSuit</strong> osmišljen je da podrži prve plivačke korake jačanjem samopouzdanja u vodi i oko nje. Uz pravu ravnotežu sigurnosti i slobode djeca se mogu opustiti i zabaviti.</p>
+<!-- 1) ZABAVA KOJA PLUTA — slika lijevo -->
+<section class="nfs-sec nfs-tint">
+  <div class="nfs-wrap nfs-row2">
+    <div class="nfs-media"><?php echo $nfs_img( 'fs-hero.webp', 'Djeca u kostimima NORIKS FloatSuit s plovcima' ); ?></div>
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Zabava koja pluta</p>
+      <h2 class="nfs-h2">Rješenje „sve u jednom” <em>dok dijete uči plivati.</em></h2>
+      <p><strong>NORIKS FloatSuit</strong> je praktično rješenje „sve u jednom” koje djeci pomaže da ostanu na površini dok uče plivati.</p>
+      <p>Pruža uravnoteženu potporu i mališanima daje stabilnost koja im u vodi treba.</p>
+      <p class="nfs-big">A pritom ih ne sputava u kretanju.</p>
     </div>
   </div>
 </section>
 
-<!-- 8) + 9) -->
-<section class="nfs-sec nfs-sec--navy nfs-rt">
-  <h2 class="nfs-h">PRUŽA DODATNU POTPORU...</h2>
-</section>
-<section class="nfs-sec nfs-sec--navy nfs-iwt-wrap">
-  <div class="nfs-iwt">
-    <div class="nfs-iwt__text"><p>Sustav plovaka u punom krugu ravnomjerno obavija trup i pomaže da dijete ostane u ravnoteži u vodi, a istodobno potiče prirodniji položaj pri plivanju.</p></div>
-    <div class="nfs-iwt__media"><?php echo $nfs_img( 'fs-potpora.webp', 'Plovci NORIKS FloatSuit obavijaju trup u punom krugu' ); ?></div>
-  </div>
-</section>
-
-<!-- 10) + 11) -->
-<section class="nfs-sec nfs-sec--navy nfs-rt">
-  <h2 class="nfs-h">JAČA SAMOPOUZDANJE U VODI...</h2>
-</section>
-<section class="nfs-sec nfs-sec--navy nfs-vc-wrap nfs-vc-wrap--last">
-  <div class="nfs-vc">
-    <div class="nfs-vc__video"><video src="<?php echo esc_url( $nfs . 'fs-video-samostalnost.mp4' ); ?>" autoplay loop muted playsinline preload="metadata" aria-label="Dječji kostimi NORIKS FloatSuit s plovcima"></video></div>
-    <div class="nfs-vc__text" style="background:#73b2e1;">
-      <h3>POTIČE VEĆU SAMOSTALNOST</h3>
-      <p><strong>NORIKS FloatSuit</strong> osmišljen je da osnaži male plivače dok počinju sve više raditi sami. Djeci omogućuje da u vodi razvijaju vještine i vjeru u sebe, a roditeljima i dalje pruža mir.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 12) Val + 13) naslov + 14) infografika + 15) seznam -->
-<section class="nfs-sec nfs-sec--white nfs-banner"><?php echo $nfs_img( 'fs-val-2-kit.webp', '' ); ?></section>
-<section class="nfs-sec nfs-sec--white nfs-rt nfs-rt--why">
-  <h2 class="nfs-h nfs-h--ink">ZAŠTO RODITELJI VOLE NORIKS FLOATSUIT?</h2>
-</section>
-<section class="nfs-sec nfs-sec--white nfs-banner nfs-banner--info">
-  <?php echo $nfs_img( 'fs-prednosti-hr.webp', 'Lako se zakopča, zaštita od sunca, ugrađeni podesivi plovci, nesputana udobnost' ); ?>
-</section>
-<section class="nfs-sec nfs-sec--white nfs-rt">
-  <ul class="nfs-points">
-    <?php foreach ( $nfs_points as $pt ) : ?>
-      <li><strong><?php echo esc_html( $pt[0] ); ?></strong> <?php echo esc_html( $pt[1] ); ?></li>
-    <?php endforeach; ?>
-  </ul>
-</section>
-
-<!-- 16) Fotografije -->
-<section class="nfs-sec nfs-sec--white nfs-photos">
+<!-- 2) SIGURNOSNA NAPOMENA — samo besedilo -->
+<section class="nfs-sec">
   <div class="nfs-wrap">
-    <div class="nfs-photos__track" data-nfs-slider="photos">
-      <?php foreach ( $nfs_gallery as $g ) : ?>
-        <div class="nfs-photos__item"><?php echo $nfs_img( $g[0], $g[1] ); ?></div>
-      <?php endforeach; ?>
+    <div class="nfs-safety">
+      <p class="nfs-kicker nfs-kicker--c">⚠️ Sigurnosna napomena ⚠️</p>
+      <p>NORIKS FloatSuit je pomagalo za plivanje, a <strong>NE sredstvo za spašavanje života</strong>. Nije certificiran kao sredstvo za spašavanje. Potreban je stalan nadzor odrasle osobe — nikad ne ostavljajte djecu bez nadzora u vodi ili blizu nje.</p>
     </div>
-    <div class="nfs-photos__count" aria-hidden="true"><span data-nfs-cur="photos">1</span> / <?php echo count( $nfs_gallery ); ?></div>
   </div>
 </section>
 
-<!-- 17) Val, (FAQ je v bloku teme), 18) Super zabava!, 19) Val -->
-<section class="nfs-sec nfs-sec--white nfs-banner"><?php echo $nfs_img( 'fs-val-3-dupin.webp', '' ); ?></section>
-<section class="nfs-sec nfs-sec--navy nfs-banner"><?php echo $nfs_img( 'fs-super-zabava-hr.webp', 'Super zabava!' ); ?></section>
-<section class="nfs-sec nfs-sec--white nfs-banner"><?php echo $nfs_img( 'fs-val-4-podmornica.webp', '' ); ?></section>
-
-<!-- 20) Recenzije kupaca -->
-<section class="nfs-sec nfs-sec--white nfs-rv-sec">
-  <div class="nfs-wrap nfs-wrap--rv">
-    <div class="nfs-rv-head">
-      <h2 class="nfs-rv-title">Recenzije kupaca</h2>
-      <div class="nfs-rv-sum">
-        <span class="nfs-stars" aria-label="Prosječna ocjena 4,94 od 5"><?php echo str_repeat( $nfs_star, 5 ); ?></span>
-        <span class="nfs-rv-sum__txt">Na temelju 309 recenzija</span>
-      </div>
-      <div class="nfs-hist">
-        <?php foreach ( $nfs_hist as $h ) : ?>
-          <div class="nfs-hist__row">
-            <span class="nfs-stars nfs-stars--sm"><?php for ( $i = 1; $i <= 5; $i++ ) { echo str_replace( '<svg ', '<svg class="' . ( $i <= $h[0] ? 'on' : 'off' ) . '" ', $nfs_star ); } ?></span>
-            <span class="nfs-hist__bar"><span style="width:<?php echo (int) $h[1]; ?>%"></span></span>
-            <span class="nfs-hist__pct"><?php echo (int) $h[1]; ?> %</span>
-            <span class="nfs-hist__n">(<?php echo (int) $h[2]; ?>)</span>
-          </div>
-        <?php endforeach; ?>
-      </div>
+<!-- 3) POTIČE SAMOSTALNU IGRU — video desno -->
+<section class="nfs-sec nfs-tint">
+  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Vodena čarolija!</p>
+      <h2 class="nfs-h2">Potiče <em>samostalnu igru!</em></h2>
+      <p><strong>Gradi samopouzdanje u vodi.</strong> NORIKS FloatSuit osmišljen je da podrži prve plivačke korake jačanjem samopouzdanja u vodi i oko nje.</p>
+      <p class="nfs-big">Uz pravu ravnotežu sigurnosti i slobode djeca se mogu opustiti i zabaviti.</p>
     </div>
+    <div class="nfs-media nfs-media--video"><?php echo $nfs_video( 'fs-video-samopouzdanje.mp4', 'Dijete pliva u kostimu NORIKS FloatSuit' ); ?></div>
+  </div>
+</section>
+
+<!-- 4) PRUŽA DODATNU POTPORU — slika lijevo -->
+<section class="nfs-sec">
+  <div class="nfs-wrap nfs-row2">
+    <div class="nfs-media"><?php echo $nfs_img( 'fs-potpora.webp', 'Plovci NORIKS FloatSuit obavijaju trup u punom krugu' ); ?></div>
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Plovci u punom krugu</p>
+      <h2 class="nfs-h2">Pruža <em>dodatnu potporu...</em></h2>
+      <p>Sustav plovaka u punom krugu ravnomjerno obavija trup i pomaže da dijete ostane u ravnoteži u vodi.</p>
+      <p class="nfs-big">A istodobno potiče prirodniji položaj pri plivanju.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5) JAČA SAMOPOUZDANJE U VODI — video desno -->
+<section class="nfs-sec nfs-tint">
+  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Potiče veću samostalnost</p>
+      <h2 class="nfs-h2">Jača samopouzdanje <em>u vodi...</em></h2>
+      <p>NORIKS FloatSuit osmišljen je da osnaži male plivače dok počinju sve više raditi sami. Djeci omogućuje da u vodi razvijaju vještine i vjeru u sebe.</p>
+      <p class="nfs-big">A roditeljima i dalje pruža mir.</p>
+    </div>
+    <div class="nfs-media nfs-media--video"><?php echo $nfs_video( 'fs-video-samostalnost.mp4', 'Dječji kostimi NORIKS FloatSuit s plovcima' ); ?></div>
+  </div>
+</section>
+
+<!-- 6) ZAŠTO RODITELJI VOLE — infografika lijevo -->
+<section class="nfs-sec">
+  <div class="nfs-wrap nfs-row2">
+    <div class="nfs-media nfs-media--flat"><?php echo $nfs_img( 'fs-prednosti-hr.webp', 'Lako se zakopča, zaštita od sunca, ugrađeni podesivi plovci, nesputana udobnost' ); ?></div>
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Prednosti</p>
+      <h2 class="nfs-h2">Zašto roditelji vole <em>NORIKS FloatSuit?</em></h2>
+      <ul class="nfs-check">
+        <?php foreach ( $nfs_points as $pt ) : ?>
+          <li><strong><?php echo esc_html( $pt[0] ); ?></strong> <?php echo esc_html( $pt[1] ); ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7) SUPER ZABAVA — fotografije desno -->
+<section class="nfs-sec nfs-tint">
+  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Super zabava!</p>
+      <h2 class="nfs-h2">Bolje od glomaznih plutača <em>i rukavića za plivanje.</em></h2>
+      <p>Za razliku od glomaznih plutača ili rukavića za plivanje, NORIKS FloatSuit potiče <strong>pravilan položaj tijela i ravnomjeran uzgon</strong>.</p>
+      <p>Pomaže djeci da ostanu uspravna, a pritom slobodno mašu nogama i rukama — tako stvarno razvijaju plivanje.</p>
+      <p class="nfs-big">Uče plutati, kliziti i plivati sa samopouzdanjem.</p>
+    </div>
+    <div class="nfs-media nfs-grid">
+      <?php foreach ( $nfs_gallery as $g ) { echo $nfs_img( $g[0], $g[1] ); } ?>
+    </div>
+  </div>
+</section>
+
+<!-- 8) RECENZIJE KUPACA -->
+<section class="nfs-sec">
+  <div class="nfs-wrap nfs-wrap--rv">
+    <h2 class="nfs-h2 nfs-h2--c">Recenzije <em>kupaca</em></h2>
+    <p class="nfs-rate"><span class="nfs-rate__stars">★★★★★</span> <strong>4,94</strong> · na temelju 309 recenzija</p>
     <div class="nfs-rv-list">
       <?php foreach ( $nfs_reviews as $r ) : ?>
       <article class="nfs-rv">
         <div class="nfs-rv__top">
-          <span class="nfs-rv__icon" aria-hidden="true"><?php echo esc_html( substr( $r['ime'], 0, 1 ) ); ?></span>
-          <div class="nfs-rv__who">
-            <span class="nfs-stars nfs-stars--sm" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( $nfs_star, 5 ); ?></span>
-            <span class="nfs-rv__name"><?php echo esc_html( $r['ime'] ); ?> <span class="nfs-rv__ver">✓ Provjereni kupac</span></span>
-          </div>
+          <span class="nfs-rv__stars" aria-label="5 od 5 zvjezdica">★★★★★</span>
+          <span class="nfs-rv__name"><?php echo esc_html( $r['ime'] ); ?> <span class="nfs-rv__ver">✓ Provjereni kupac</span></span>
           <span class="nfs-rv__date"><?php echo esc_html( $r['datum'] ); ?></span>
         </div>
         <p class="nfs-rv__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
@@ -204,137 +187,70 @@ $nfs_hist = array( array( 5, 95, 294 ), array( 4, 4, 13 ), array( 3, 1, 2 ), arr
   </div>
 </section>
 
-</div>
-
-<script>
-(function(){
-  /* promo pasici originala ("FREE SHIPPING TODAY 🌊" + tekoca vrstica "• Buy 2+ FloatBuds, 15% off! •") — na istem mestu: cisto na vrhu strani. */
-  if (!document.querySelector('.nfs-annbar')) {
-    var wrap = document.createElement('div');
-    wrap.className = 'nfs-promo';
-    wrap.innerHTML = '<div class="nfs-annbar" role="region" aria-label="Obavijest">BESPLATNA DOSTAVA DANAS 🌊</div>'
-      + '<div class="nfs-marquee" aria-label="Kupite 2+ NORIKS FloatSuit i uštedite 15 %"><span>• Kupite 2+ NORIKS FloatSuit i uštedite 15 %! •</span></div>';
-    document.body.insertBefore(wrap, document.body.firstChild);
-  }
-  /* 16) fotografije: na mobilnem drsnik s stevcem "1 / 4" kot na originalu */
-  var t = document.querySelector('[data-nfs-slider="photos"]'), cur = document.querySelector('[data-nfs-cur="photos"]');
-  if (t && cur) {
-    t.addEventListener('scroll', function(){
-      var it = t.querySelector('.nfs-photos__item'); if (!it) return;
-      cur.textContent = Math.min(t.children.length, Math.round(t.scrollLeft / (it.getBoundingClientRect().width + 12)) + 1);
-    }, { passive: true });
-  }
-  /* videi: predvajanje samo, ko so v vidnem polju */
-  if ('IntersectionObserver' in window) {
-    document.querySelectorAll('.nfs video').forEach(function(v){
-      new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function(){}); } else { v.pause(); } }); }, { threshold: .2 }).observe(v);
-    });
-  }
-})();
-</script>
-
 <style>
-.nfs { --nfs-navy: #002a71; --nfs-sky: #0a97d5; --nfs-ink: #0e1b4d; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; overflow-x: hidden; }
-.nfs * { box-sizing: border-box; }
-.nfs img, .nfs video { display: block; max-width: 100%; height: auto; }
-.nfs-sec { margin: 0; padding: 0; display: flow-root; }
-.nfs-sec--white { background: #fff; color: rgba(14,27,77,.75); }
-.nfs-sec--navy  { background: var(--nfs-navy); color: #fff; }
-.nfs-sec--sky   { background: var(--nfs-sky); color: #fff; }
-.nfs-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.nfs-banner img { width: 100%; }
+.nfs-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #0e1b4d; }
+.nfs-sec * { box-sizing: border-box; }
+.nfs-tint { background: #eef7fc; }
+.nfs-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.nfs-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.nfs-media img, .nfs-media video { display: block; width: 100%; height: auto; border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0,42,113,.05), 0 14px 40px rgba(0,42,113,.10); }
+.nfs-media--video video { max-height: 640px; object-fit: cover; background: #000; }
+.nfs-media--flat img { box-shadow: none; }
+.nfs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.nfs-grid img { aspect-ratio: 1 / 1; object-fit: cover; }
+.nfs-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #0a97d5; margin: 0 0 10px; }
+.nfs-kicker--c { text-align: center; }
+.nfs-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: #0e1b4d; }
+.nfs-h2--c { text-align: center; }
+.nfs-h2 em { font-style: italic; font-weight: 800; color: #0a97d5; }
+.nfs-copy p { font-size: 16px; line-height: 1.7; color: #3d4a6b; margin: 0 0 14px; }
+.nfs-big { font-size: 19px !important; font-weight: 800; color: #0e1b4d !important; }
+.nfs-check { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.nfs-check li { position: relative; padding-left: 30px; font-size: 15.5px; line-height: 1.55; color: #3d4a6b; }
+.nfs-check li strong { color: #0e1b4d; }
+.nfs-check li::before { content: "\2713"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
+  background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 
-/* naslovi (rich text) */
-.nfs-rt { padding: 12px 20px; text-align: center; }
-.nfs-rt--tight { padding: 12px 20px; }
-.nfs-rt--why { padding-top: 40px; padding-bottom: 16px; }
-.nfs-h { margin: 0 auto; max-width: 1100px; font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.2; letter-spacing: .02em; color: #fff; text-transform: none; }
-.nfs-h--ink { color: var(--nfs-ink); }
-.nfs-rt__p { margin: 0 auto; max-width: 900px; font-size: 16px; line-height: 1.7; color: #fff; }
+/* 2) sigurnosna napomena */
+.nfs-safety { max-width: 900px; margin: 0 auto; background: #fff8e6; border-left: 3px solid #e0a33c; padding: 20px 24px; }
+.nfs-safety p { margin: 0; font-size: 15.5px; line-height: 1.7; color: #3d4a6b; text-align: center; }
+.nfs-safety .nfs-kicker { color: #0e1b4d; margin-bottom: 8px; }
 
-/* video + besedilo */
-.nfs-vc-wrap { padding: 6px 16px 0; }
-.nfs-vc-wrap--last { padding-bottom: 39px; }
-.nfs-vc { display: flex; align-items: stretch; max-width: 1100px; margin: 16px auto; border-radius: 16px; overflow: hidden; }
-.nfs-vc__video { flex: 1 1 0; background: #000; }
-.nfs-vc__video video { width: 100%; height: 100%; object-fit: cover; }
-.nfs-vc__text { flex: 1 1 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 32px 24px; text-align: center; }
-.nfs-vc__text h3 { font-size: 22px; font-weight: 800; color: #fff; margin: 0 0 14px; letter-spacing: 1px; }
-.nfs-vc__text p { font-size: 15px; color: rgba(255,255,255,.9); line-height: 1.7; max-width: 380px; margin: 0; }
+/* 8) recenzije */
+.nfs-wrap--rv { max-width: 1000px; }
+.nfs-rate { text-align: center; font-size: 15px; color: #3d4a6b; margin: 0 0 18px; }
+.nfs-rate__stars, .nfs-rv__stars { color: #e0a33c; letter-spacing: 1px; }
+.nfs-rv-list { display: flex; flex-direction: column; border-top: 1px solid #e3e8f0; }
+.nfs-rv { padding: 18px 0; border-bottom: 1px solid #e3e8f0; }
+.nfs-rv__top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.nfs-rv__name { font-size: 14.5px; font-weight: 800; color: #0e1b4d; }
+.nfs-rv__ver { font-weight: 500; font-size: 12.5px; color: #2f9e5f; margin-left: 6px; }
+.nfs-rv__date { font-size: 13px; color: #8a93a8; margin-left: auto; }
+.nfs-rv__txt { margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #3d4a6b; }
+.nfs-rv__photo { margin: 12px 0 0; }
+.nfs-rv__photo img { display: block; width: 96px; height: 96px; object-fit: cover; }
 
-/* slika + besedilo */
-.nfs-iwt-wrap { padding: 0 20px 16px; }
-.nfs-iwt { display: grid; grid-template-columns: 1fr 1fr; max-width: 1200px; margin: 0 auto; }
-.nfs-iwt__text { background: var(--nfs-sky); display: flex; align-items: center; justify-content: center; padding: 40px 48px; text-align: center; }
-.nfs-iwt__text p { margin: 0; font-size: 17px; line-height: 1.7; color: #fff; }
-.nfs-iwt__media { background: var(--nfs-sky); }
-.nfs-iwt__media img { width: 100%; height: 100%; object-fit: cover; }
-
-/* seznam prednosti */
-.nfs-points { list-style: disc; display: inline-block; text-align: left; margin: 0 auto; padding: 0 0 0 22px; max-width: 900px; }
-.nfs-points li { font-size: 16px; line-height: 1.7; margin: 0 0 4px; color: rgba(14,27,77,.75); }
-.nfs-points strong { color: var(--nfs-ink); }
-
-/* fotografije */
-.nfs-photos { padding: 12px 0 32px; }
-.nfs-photos__track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.nfs-photos__item img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
-.nfs-photos__count { display: none; text-align: center; margin-top: 12px; font-size: 14px; color: var(--nfs-ink); }
-
-/* recenzije */
-.nfs-rv-sec { padding: 40px 0; color: #222; }
-.nfs-wrap--rv { max-width: 1200px; }
-.nfs-rv-head { display: grid; grid-template-columns: 1fr auto; gap: 16px 40px; align-items: center; border-bottom: 1px solid #e3e3e3; padding-bottom: 24px; margin-bottom: 8px; }
-.nfs-rv-title { grid-column: 1 / -1; margin: 0; text-align: center; font-size: 26px; font-weight: 700; color: var(--nfs-ink); }
-.nfs-rv-sum { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.nfs-rv-sum__txt { font-size: 14px; color: #555; }
-.nfs-stars { display: inline-flex; gap: 2px; color: #0a97d5; line-height: 1; }
-.nfs-stars svg { width: 20px; height: 20px; }
-.nfs-stars--sm svg { width: 15px; height: 15px; }
-.nfs-stars svg.off { color: #cfe3f1; }
-.nfs-hist { display: flex; flex-direction: column; gap: 4px; }
-.nfs-hist__row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #555; }
-.nfs-hist__bar { display: block; width: 120px; height: 12px; background: #eef3f7; }
-.nfs-hist__bar span { display: block; height: 100%; background: #0a97d5; }
-.nfs-hist__pct { width: 34px; text-align: right; }
-.nfs-rv-list { display: flex; flex-direction: column; }
-.nfs-rv { padding: 20px 0; border-bottom: 1px solid #e3e3e3; }
-.nfs-rv__top { display: flex; align-items: center; gap: 12px; }
-.nfs-rv__icon { flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; background: #e6f3fb; color: var(--nfs-sky); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 17px; }
-.nfs-rv__who { display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; }
-.nfs-rv__name { font-size: 14px; font-weight: 700; color: var(--nfs-ink); }
-.nfs-rv__ver { font-weight: 500; font-size: 12px; color: #2f9e5f; margin-left: 6px; }
-.nfs-rv__date { font-size: 13px; color: #888; }
-.nfs-rv__txt { margin: 12px 0 0 52px; font-size: 15px; line-height: 1.6; color: #333; }
-.nfs-rv__photo { margin: 12px 0 0 52px; }
-.nfs-rv__photo img { width: 110px; height: 110px; object-fit: cover; border-radius: 4px; }
-
-@media (max-width: 749px) {
-  .nfs-rt { padding: 9px 16px; }
-  .nfs-rt--why { padding-top: 30px; padding-bottom: 12px; }
-  .nfs-h { font-size: 30px; }
-  .nfs-vc { flex-direction: column; }
-  .nfs-iwt { grid-template-columns: 1fr; }
-  .nfs-iwt__media { order: -1; }
-  .nfs-iwt__text { padding: 28px 22px; }
-  .nfs-photos__track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-  .nfs-photos__track::-webkit-scrollbar { display: none; }
-  .nfs-photos__item { flex: 0 0 calc(50% - 30px); scroll-snap-align: start; }
-  .nfs-photos__count { display: block; }
-  .nfs-rv-head { grid-template-columns: 1fr; justify-items: center; }
-  .nfs-rv__txt, .nfs-rv__photo { margin-left: 0; }
-}
-
-/* promo pasici na vrhu strani */
-.nfs-promo { position: relative; z-index: 2; font-family: 'Montserrat', system-ui, sans-serif; }
-.nfs-annbar { background: #002a71; color: #fff; text-align: center; font-weight: 700; font-size: 14px; letter-spacing: .06em; padding: 9px 12px; line-height: 1.3; }
-.nfs-marquee { background: #0a97d5; color: #fff; overflow: hidden; white-space: nowrap; font-size: 16px; font-weight: 700; padding: 6px 0; }
-.nfs-marquee span { display: inline-block; padding-left: 100%; animation: nfs-marquee 15s linear infinite; }
-@keyframes nfs-marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
-@media (prefers-reduced-motion: reduce) { .nfs-marquee span { animation: none; padding-left: 0; } .nfs-marquee { text-align: center; } }
+/* galerija izdelka: slicice najvec v 2 vrstah (5 na vrsto), ostale slike dosegljive s potegom glavne slike */
+.single-product div.product.product_cat-orto-floatsuit .woocommerce-product-gallery .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
 
 /* kratek opis izdelka: zelene kljukice namesto pik */
+.woocommerce-product-details__short-description ul { list-style: none !important; padding-left: 0 !important; margin: 10px 0 14px !important; }
+.woocommerce-product-details__short-description ul li { list-style: none !important; position: relative !important; padding-left: 31px !important; margin: 0 0 7px !important; line-height: 1.45 !important; }
+.woocommerce-product-details__short-description ul li::marker { content: "" !important; }
+.woocommerce-product-details__short-description ul li::before { content: none !important; }
 .woocommerce-product-details__short-description .nfs-tick {
-  display: inline-block; width: 21px; height: 21px; border-radius: 50%; background: #2f9e5f; color: #fff;
-  font-size: 12px; font-weight: 800; line-height: 21px; text-align: center; margin-right: 8px; }
+  position: absolute !important; left: 0 !important; top: 1px !important;
+  width: 21px; height: 21px; border-radius: 50%; background: #2f9e5f !important; color: #fff !important;
+  font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important; text-align: center !important; display: inline-block !important; }
+
+@media (max-width: 980px) {
+  .nfs-row2 { grid-template-columns: 1fr; gap: 28px; }
+  .nfs-row2--rev .nfs-media { order: -1; }
+}
+@media (max-width: 560px) {
+  .nfs-sec { padding: 42px 0; }
+  .nfs-wrap { padding: 0 16px; }
+  .nfs-grid { gap: 8px; }
+}
 </style>
