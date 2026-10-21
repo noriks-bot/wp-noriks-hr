@@ -524,9 +524,6 @@ function gck_render_bundle_selector() {
         // NORIKS Bracelet: kao na originalu (Kaching: "1 bracelet only / 50% OFF TODAY", "BUY 1 GET 1 FREE / Free express shipping").
         // "Free express shipping" ni NORIKS pogoj (brezplacna dostava sele nad 70 €) — zamenjano z opisom ponudbe (2 za ceno 1).
         $gck_offer_subs = array( '50 % POPUSTA SAMO DANAS', '2 narukvice po cijeni jedne' );
-    } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
-        // NORIKS PhoneStrap: kao na originalu (Kaching: "You save ..." pod vsako ponudo) — ustedu racuna tema sama, zato brez podnaslovov.
-        $gck_offer_subs = array();
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: kao na originalu ("Standard price" / "Buy 1 Get 1 50% Off").
         $gck_offer_subs = array( 'Standardna cijena', 'Drugi komad −50 %' );
@@ -562,9 +559,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ) {
         // NORIKS Bracelet: oznaka 2. ponude kao na originalu ("-50% + B1G1").
         $gck_offer_badges = array( 1 => '-50 % + 2 ZA 1' );
-    } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
-        // NORIKS PhoneStrap: znacki 3. in 4. ponude kao na originalu ("Most Popular", "Best Value").
-        $gck_offer_badges = array( 2 => 'NAJPOPULARNIJE', 3 => 'NAJBOLJA VRIJEDNOST' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: znacka druge ponude kao na originalu ("Most Popular").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE' );
@@ -1812,9 +1806,6 @@ function gck_render_bundle_selector() {
       /* NORIKS PhoneStrap: kartice ponud kot na originalu (Kaching) — bele, temno siv rob, izbrana svetlo siva,
          cena temno rdeca, crne znacke. Nad ponudami naslov originala "Free shipping this week" s crtama levo in desno.
          Izdelek nima barv, zato krogcev ni. */
-      #bundle-selector::before { content: "Besplatna dostava ovaj tjedan"; display: block; text-align: center; font-weight: 700; font-size: 14px;
-          color: #000; margin: 0 0 12px; line-height: 1.4;
-          background: linear-gradient(#b5b5b5, #b5b5b5) left center / 28% 1px no-repeat, linear-gradient(#b5b5b5, #b5b5b5) right center / 28% 1px no-repeat; }
       #bundle-selector .bundle-option {
           border: 1px solid #3d3d3d !important; background: #fff !important; border-radius: 8px !important; box-shadow: none !important; }
       #bundle-selector .bundle-option.active { border: 2px solid #3d3d3d !important; background: rgba(227,227,227,.81) !important; }

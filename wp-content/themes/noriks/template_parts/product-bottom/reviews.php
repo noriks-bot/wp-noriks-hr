@@ -2661,9 +2661,9 @@ $winecooler_faq = array(
 
 $phonestrap_faq = array(
   array('questioon' => 'Kakva su pravila povrata?',
-    'answer'    => 'Nudimo <strong>povrat u roku od 90 dana</strong> za proizvode u originalnom stanju.'),
+    'answer'    => 'Nudimo <strong>pravo na povrat u roku od 30 dana</strong> za proizvode u originalnom stanju.'),
   array('questioon' => 'Mogu li izmijeniti ili otkazati narudžbu?',
-    'answer'    => 'Izmjene ili otkazivanje mogući su <strong>u roku od 1 sata</strong> od narudžbe. Nakon toga narudžba je možda već u obradi.<br><br>Trenutačno imamo <strong>posebnu ponudu</strong>: cijeli tjedan nudimo <strong>besplatnu dostavu</strong> za sve narudžbe.<br><br>Nakon ovog tjedna troškovi dostave izračunavaju se na blagajni prema vašoj adresi i odabranom načinu dostave.'),
+    'answer'    => 'Izmjene ili otkazivanje mogući su <strong>u roku od 1 sata</strong> od narudžbe. Nakon toga narudžba je možda već u obradi.'),
   array('questioon' => 'Koliko traje dostava?',
     'answer'    => 'Standardna dostava traje <strong>5–9 radnih dana</strong>, ovisno o vašoj lokaciji. Broj za praćenje dobit ćete čim narudžba bude poslana.'),
   array('questioon' => 'Kako se proizvod pričvršćuje na mobitel?',
@@ -2671,7 +2671,7 @@ $phonestrap_faq = array(
   array('questioon' => 'Odgovara li svim modelima mobitela?',
     'answer'    => 'Da! Podložak odgovara <strong>svim pametnim telefonima</strong>, sve dok koristite standardnu masku za mobitel.'),
   array('questioon' => 'Koliko košta dostava?',
-    'answer'    => 'Ne propustite! Ovaj tjedan besplatna dostava za svaku narudžbu.'),
+    'answer'    => '<strong>Besplatna dostava za narudžbe iznad 70 €.</strong> Za manje narudžbe troškovi dostave prikazuju se na blagajni prije potvrde narudžbe.'),
 );
 
 $floatsuit_faq = array(
