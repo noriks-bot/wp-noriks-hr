@@ -116,6 +116,8 @@ function noriks_product_type_map() : array {
         'corksandals'             => array( 'orto-corksandals', 'corksandals' ),
         // NORIKS AnkleSleeve — kompresijska potpora za glezanj (velicina S/M/L po broju cipele, ena barva).
         'anklesleeve'             => array( 'orto-anklesleeve', 'anklesleeve' ),
+        // NORIKS Slippers — tople papuce s debelim potplatom za kucu i van (boja + velicina EU 34-35 do 48-49).
+        'slippers'                => array( 'orto-slippers', 'slippers' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -510,6 +512,23 @@ if ( ! function_exists( 'noriks_harness_sizes' ) ) {
             array( 'M',  '55–67 cm', 'koker španijel, beagle, stafordski bul terijer, whippet, cockapoo (standardni), springer španijel (manji), velški springer španijel, bedlington terijer, basenji, mini labradoodle' ),
             array( 'L',  '67–84 cm', 'labrador retriver (vitki / ženka), border koli, engleski springer španijel, standardna pudla, bokser, vižla, vajmarski ptičar (manji), dalmatinac, australski ovčar, škotski ovčar (koli)' ),
             array( 'XL', '80–107 cm', 'labrador retriver (veći), zlatni retriver, njemački ovčar, rotvajler, doberman, sibirski haski, aljaški malamut, akita, rodezijski gonič, cane corso' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_slippers_sizes' ) ) {
+    /** NORIKS Slippers: EU velicina, duljina stopala (cm), UK, US zene, US muskarci.
+     *  1:1 s tablice velicin originala ("US Size Chart" + "UK & International Size Chart", 8 velicin). */
+    function noriks_slippers_sizes() {
+        return array(
+            array( 'EU 34–35', '20,3–21,5 cm', '2–2,5', '3–4', '2–3' ),
+            array( 'EU 36–37', '21,6–22,7 cm', '3–4', '4,5–5,5', '3,5–4,5' ),
+            array( 'EU 38–39', '22,8–24,0 cm', '4,5–5,5', '6–7', '5–6' ),
+            array( 'EU 40–41', '24,1–25,3 cm', '6–7', '7,5–8,5', '6,5–7,5' ),
+            array( 'EU 42–43', '25,4–26,5 cm', '7,5–8,5', '9–10', '8–9' ),
+            array( 'EU 44–45', '26,6–27,8 cm', '9–10', '10,5–11,5', '9,5–10,5' ),
+            array( 'EU 46–47', '27,9–29,0 cm', '10,5–11,5', '12–13', '11–12' ),
+            array( 'EU 48–49', '29,1–30,2 cm', '12–13', '13,5–14,5', '12,5–13,5' ),
         );
     }
 }

@@ -88,6 +88,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-harness' );
             return;
         }
+        // NORIKS Slippers: EU 34–35 do 48–49 po duljini stopala (cm) + UK/US velicine iz tablice originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'slippers' ) ) {
+            get_template_part( 'template_parts/size-chart-slippers' );
+            return;
+        }
         // NORIKS AnkleSleeve: S/M/L po broju cipele (EU) iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'anklesleeve' ) ) {
             get_template_part( 'template_parts/size-chart-anklesleeve' );

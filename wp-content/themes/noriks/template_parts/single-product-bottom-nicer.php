@@ -279,6 +279,11 @@ if ( noriks_is_type( 'seatcover' ) ) {
     include $noriks_pb_dir . 'why-seatcover.php';
 }
 
+// NORIKS Slippers (orto-slippers) — tople papuce s debelim potplatom za kucu i van
+if ( noriks_is_type( 'slippers' ) ) {
+    include $noriks_pb_dir . 'why-slippers.php';
+}
+
 // NORIKS AnkleSleeve (orto-anklesleeve) — kompresijska potpora za glezanj
 if ( noriks_is_type( 'anklesleeve' ) ) {
     include $noriks_pb_dir . 'why-anklesleeve.php';
