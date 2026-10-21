@@ -164,6 +164,10 @@
 
            Niste jedini koje noću budi utrnula ruka.
 
+          <?php elseif ( noriks_is_type( 'titaniumpan' ) ): ?>
+
+           Niste jedini u potrazi za tavom bez premaza koja traje cijeli život.
+
 
 
           <?php else: ?>
@@ -295,6 +299,10 @@
            <?php elseif ( noriks_is_type( 'red' ) ): ?>
 
            Tisuće kupaca već koristi NORIKS RedRelief – 15 minuta dnevno kod kuće, bez tableta i bez zahvata.
+
+           <?php elseif ( noriks_is_type( 'titaniumpan' ) ): ?>
+
+           Tisuće kućanstava već kuha na NORIKS TitaniumPan – čisti titanij bez premaza i toksina, za svaku ploču i pećnicu.
 
            <?php else: ?>
         
