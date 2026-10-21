@@ -102,6 +102,45 @@ function gck_get_bundle_offers( $product_id = null ) : array {
     return $offers;
 }
 
+/**
+ * Cene po velikosti (izdelki, kjer ima vsaka velikost svojo ceno kot na originalu).
+ * sizes: velikost => array( akcijska, redna ) za 1 kos; factor: popust na kos po kolicini.
+ * Paket = vsota cen izbranih velikosti * factor, zaokrozeno navzdol na .99 (kot ACF ponudbe).
+ */
+function gck_size_prices( $product_id ) : array {
+    if ( $product_id && has_term( 'orto-titaniumpan', 'product_cat', $product_id ) ) {
+        // original USD 137/457, 144/480, 149/497 po ECB 0,89015 na .99
+        return array(
+            'default' => '28 cm',
+            'sizes'   => array(
+                '26 cm' => array( 121.99, 406.99 ),
+                '28 cm' => array( 127.99, 426.99 ),
+                '30 cm' => array( 132.99, 442.99 ),
+            ),
+            'factor'  => array( 1 => 1, 2 => 0.9, 3 => 0.8 ),
+        );
+    }
+    return array();
+}
+
+/** Vrne array( akcijska, redna ) za izbrane velikosti ali null, ce izbor ni veljaven. */
+function gck_size_priced_totals( array $table, array $sizes ) {
+    $qty = count( $sizes );
+    if ( $qty <= 0 || empty( $table['factor'][ $qty ] ) ) return null;
+
+    $sale_c = 0;
+    $reg_c  = 0;
+    foreach ( $sizes as $s ) {
+        if ( ! isset( $table['sizes'][ $s ] ) ) return null;
+        $sale_c += (int) round( $table['sizes'][ $s ][0] * 100 );
+        $reg_c  += (int) round( $table['sizes'][ $s ][1] * 100 );
+    }
+    if ( $qty > 1 ) {
+        $sale_c = (int) floor( round( $sale_c * $table['factor'][ $qty ] ) / 100 ) * 100 - 1;
+    }
+    return array( $sale_c / 100, $reg_c / 100 );
+}
+
 function gck_is_orto_bundle_enabled( $product_id ) : bool {
     if ( ! $product_id ) return false;
     $flag = get_post_meta( $product_id, '_singlepp_orto_ison', true );
@@ -4222,6 +4261,93 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <?php
+    $gck_sp = gck_size_prices( $post->ID );
+    if ( $gck_sp ) :
+    ?>
+<script>
+/* Cena po velikosti: kartice ponud, cena pod naslovom in gumb sledijo izbranim velikostim. */
+document.addEventListener('DOMContentLoaded', function () {
+    const SP = <?php echo wp_json_encode( $gck_sp ); ?>;
+    const selector = document.getElementById('bundle-selector');
+    if (!selector) return;
+
+    const fmtCard = c => (c / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmtHr   = c => (c / 100).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+    // isto kot gck_size_priced_totals() v PHP
+    function totals(sizes) {
+        const f = SP.factor[sizes.length];
+        if (!sizes.length || !f) return null;
+        let sale = 0, reg = 0;
+        for (const s of sizes) {
+            const p = SP.sizes[s];
+            if (!p) return null;
+            sale += Math.round(p[0] * 100);
+            reg  += Math.round(p[1] * 100);
+        }
+        if (sizes.length > 1) sale = Math.floor(Math.round(sale * f) / 100) * 100 - 1;
+        return { sale, reg };
+    }
+
+    function sizesOf(card) {
+        return Array.from(card.querySelectorAll('.bundle-pairs select.gck-size-select'))
+            .map(s => s.value).filter(v => SP.sizes[v]);
+    }
+
+    function refresh() {
+        selector.querySelectorAll('.bundle-option').forEach(card => {
+            const radio = card.querySelector('input[name="bundle_option"]');
+            const qty   = radio ? parseInt(radio.dataset.qty, 10) : 0;
+            const sizes = sizesOf(card);
+            if (!radio || sizes.length !== qty) return;
+            const t = totals(sizes);
+            if (!t) return;
+
+            radio.dataset.total = (t.sale / 100).toFixed(2);
+            const per = qty > 1 ? Math.floor(t.sale / qty) : t.sale;
+            const titles = card.querySelectorAll('.gck-offer-head .bundle-option-title');
+            if (titles.length > 1) titles[titles.length - 1].textContent = fmtCard(per) + '€ / kom';
+            card.querySelectorAll('.gck-per-new').forEach(el => el.textContent = fmtCard(per) + '€ / kom');
+            card.querySelectorAll('.gck-per-old').forEach(el => el.textContent = fmtCard(Math.round(t.reg / qty)) + '€');
+            card.querySelectorAll('.line-total').forEach(el => el.textContent = fmtCard(t.sale) + '€');
+            card.querySelectorAll('.gck-regular-price').forEach(el => el.textContent = fmtCard(t.reg) + '€');
+        });
+
+        const active = selector.querySelector('input[name="bundle_option"]:checked');
+        if (!active) return;
+        const card  = active.closest('.bundle-option');
+        const first = card ? sizesOf(card)[0] : null;
+        const one   = first ? totals([first]) : null;
+
+        // cena pod naslovom = 1 kos izbrane velikosti
+        const price = document.querySelector('.summary p.price');
+        if (price && one) {
+            const del = price.querySelector('del bdi');
+            const ins = price.querySelector('ins bdi');
+            if (del) del.firstChild.nodeValue = fmtHr(one.reg) + ' ';
+            if (ins) ins.firstChild.nodeValue = fmtHr(one.sale) + ' ';
+        }
+
+        // gumb = skupaj izbrane ponudbe
+        const btn = document.querySelector('form.cart .single_add_to_cart_button');
+        if (btn && active.dataset.total) {
+            const base = btn.textContent.replace(/\s*-\s*.*$/, '').trim();
+            btn.textContent = base + ' - ' + fmtHr(Math.round(parseFloat(active.dataset.total) * 100)) + ' €';
+        }
+    }
+
+    // privzeta velikost kot na originalu
+    selector.querySelectorAll('.bundle-pairs select.gck-size-select').forEach(s => {
+        if (SP.sizes[SP.default] && Array.from(s.options).some(o => o.value === SP.default)) s.value = SP.default;
+    });
+
+    // usklajevanje velikosti (activateSizeSync) vrednosti nastavi brez dogodka, zato osvezi po njem
+    selector.addEventListener('change', () => setTimeout(refresh, 0));
+    refresh();
+});
+</script>
+<?php
+    endif;
 }
 
 // ============================================================
@@ -4344,6 +4470,21 @@ function gck_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
     }
 
     $total      = (float) $offer['total'];
+
+    // Cena po velikosti: paket se izracuna iz izbranih velikosti (na strezniku, ne iz brskalnika).
+    $gck_sp = gck_size_prices( $product_id );
+    if ( $gck_sp ) {
+        $gck_sizes = array();
+        foreach ( array_slice( $pairs_data, 0, $pairs_selected ) as $attrs ) {
+            foreach ( (array) $attrs as $v ) {
+                $v = trim( sanitize_text_field( wp_unslash( (string) $v ) ) );
+                if ( isset( $gck_sp['sizes'][ $v ] ) ) { $gck_sizes[] = $v; break; }
+            }
+        }
+        $gck_t = ( count( $gck_sizes ) === $pairs_selected ) ? gck_size_priced_totals( $gck_sp, $gck_sizes ) : null;
+        if ( $gck_t ) $total = $gck_t[0];
+    }
+
     $unit_price = $total;
 
     $cart_item_data['_orto_offer_id']          = $offer_id;

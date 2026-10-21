@@ -109,7 +109,8 @@ $ntp_reviews = array(
   array( 'ime' => 'Caliann', 'naslov' => 'Brza i temeljita podrška',
     'tekst' => 'Vrlo brz i temeljit odgovor korisničke podrške e-mailom na pitanje o proizvodu. Prije nekoliko mjeseci kupila sam i titanijski wok i radi točno kako sam očekivala. Sad mi je omiljeno posuđe.' ),
 );
-$ntp_dist = array( 5 => array( '1,9 tis.', 83 ), 4 => array( '337', 15 ), 3 => array( '38', 2 ), 2 => array( '6', 0 ), 1 => array( '3', 0 ) );
+// Število recenzij usklajeno z glavo strani in zavihki recenzij teme (1081 skupaj = 692 izdelka + 389 dostave)
+$ntp_dist = array( 5 => array( '574', 83 ), 4 => array( '104', 15 ), 3 => array( '11', 2 ), 2 => array( '2', 0 ), 1 => array( '1', 0 ) );
 ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 
@@ -197,7 +198,7 @@ $ntp_dist = array( 5 => array( '1,9 tis.', 83 ), 4 => array( '337', 15 ), 3 => a
 <!-- 6) MNENJE KUPCA -->
 <section class="ntp-sec ntp-sec--quote">
   <div class="ntp-wrap ntp-c">
-    <p class="ntp-score"><strong>4,8</strong> <?php echo $ntp_stars( 5 ); ?> <span>38.393 recenzija</span></p>
+    <p class="ntp-score"><strong>4,8</strong> <?php echo $ntp_stars( 5 ); ?> <span>1.081 recenzija</span></p>
     <blockquote class="ntp-quote">„Ovo je posljednje posuđe koje ću ikad kupiti. Sve se odvaja, ništa se ne lijepi, a i nakon godinu dana svakodnevnog korištenja izgleda kao novo.”</blockquote>
     <p class="ntp-quote__name">Danielle R. <span>· Provjereni kupac</span></p>
   </div>
@@ -297,7 +298,7 @@ $ntp_dist = array( 5 => array( '1,9 tis.', 83 ), 4 => array( '337', 15 ), 3 => a
     <p class="ntp-kicker ntp-c">Recenzije kupaca</p>
     <h2 class="ntp-h2 ntp-c">Što kažu <em>naši kupci</em></h2>
     <div class="ntp-summary">
-      <div class="ntp-summary__score"><strong>4,8</strong><?php echo $ntp_stars( 5 ); ?><span>na temelju 2.289 recenzija</span></div>
+      <div class="ntp-summary__score"><strong>4,8</strong><?php echo $ntp_stars( 5 ); ?><span>na temelju 692 recenzije proizvoda</span></div>
       <div class="ntp-summary__bars">
         <?php foreach ( $ntp_dist as $z => $d ) : ?>
         <div class="ntp-bar"><span class="ntp-bar__lbl"><?php echo (int) $z; ?> ★</span><span class="ntp-bar__track"><span style="width:<?php echo (int) $d[1]; ?>%"></span></span><span class="ntp-bar__n"><?php echo esc_html( $d[0] ); ?></span></div>
