@@ -259,6 +259,11 @@ if ( noriks_is_type( 'bratank' ) ) {
     include $noriks_pb_dir . 'why-bratank.php';
 }
 
+// NORIKS Polo (orto-polo) — udobna muska polo majica od rastezljivog pletiva
+if ( noriks_is_type( 'polo' ) ) {
+    include $noriks_pb_dir . 'why-polo.php';
+}
+
 // NORIKS FloatSuit (orto-floatsuit) — djecji kupaci kostim s ugradenim plovcima
 if ( noriks_is_type( 'floatsuit' ) ) {
     include $noriks_pb_dir . 'why-floatsuit.php';

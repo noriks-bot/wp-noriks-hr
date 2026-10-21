@@ -73,6 +73,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-bratank' );
             return;
         }
+        // NORIKS Polo: velicina po visini i tezini (S–5XL), iz kalkulatora originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'polo' ) ) {
+            get_template_part( 'template_parts/size-chart-polo' );
+            return;
+        }
         // NORIKS Doggo: mjere kreveta M / XL u cm i pasmine.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'doggo' ) ) {
             get_template_part( 'template_parts/size-chart-doggo' );

@@ -102,6 +102,8 @@ function noriks_product_type_map() : array {
         'blanket'                 => array( 'orto-blanket', 'blanket' ),
         // NORIKS BraTank — majica s ugradenim grudnjakom bez trake (boja + velicina).
         'bratank'                 => array( 'orto-bratank', 'bratank' ),
+        // NORIKS Polo — udobna muska polo majica od rastezljivog pletiva (boja + velicina).
+        'polo'                    => array( 'orto-polo', 'polo' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -440,6 +442,26 @@ if ( ! function_exists( 'noriks_tuck_sizes' ) ) {
             array( 'L',   '40–42', '14–16', '79–81', '103–107', '43 cm' ),
             array( 'XL',  '44–46', '18–20', '83–88', '108–113', '45 cm' ),
             array( 'XXL', '46–48', '20–22', '89–94', '114–119', '47 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_polo_sizes' ) ) {
+    /** NORIKS Polo: velicina, ITM (indeks tjelesne mase), tjelesna tezina pri visini 170 / 180 / 190 cm.
+     *  Original wearbreeze.co nema tablice mjera, samo kalkulator "Find my size" (visina + tezina -> ITM):
+     *  < 20 S, 20–23 M, 23–26 L, 26–29 XL, 29–32 2XL, 32–35 3XL, 35–38 4XL, 38+ 5XL;
+     *  ispod 165 cm broj manje, iznad 190 cm broj vise; vitka gradja −1,5 ITM, krupnija +1,5 ITM.
+     *  Tezine su izracunate iz tih granica (ITM × visina²), zaokruzeno na kg. */
+    function noriks_polo_sizes() {
+        return array(
+            array( 'S',   'do 20',   'do 58 kg',     'do 65 kg',     'do 72 kg' ),
+            array( 'M',   '20 – 23', '58 – 66 kg',   '65 – 75 kg',   '72 – 83 kg' ),
+            array( 'L',   '23 – 26', '66 – 75 kg',   '75 – 84 kg',   '83 – 94 kg' ),
+            array( 'XL',  '26 – 29', '75 – 84 kg',   '84 – 94 kg',   '94 – 105 kg' ),
+            array( '2XL', '29 – 32', '84 – 92 kg',   '94 – 104 kg',  '105 – 116 kg' ),
+            array( '3XL', '32 – 35', '92 – 101 kg',  '104 – 113 kg', '116 – 126 kg' ),
+            array( '4XL', '35 – 38', '101 – 110 kg', '113 – 123 kg', '126 – 137 kg' ),
+            array( '5XL', '38+',     '110+ kg',      '123+ kg',      '137+ kg' ),
         );
     }
 }

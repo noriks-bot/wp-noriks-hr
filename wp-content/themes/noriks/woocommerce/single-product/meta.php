@@ -699,6 +699,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS BraTank</strong> je naša prva majica na naramenice s pravom potporom ugrađenog grudnjaka. Bez žica, bez dodatnih slojeva, bez linija koje se vide kroz odjeću. Jedan komad koji radi sve.<br><br>Ima uklonjive jastučiće za prilagodljivu pokrivenost i kroj koji zaglađuje i oblikuje figuru bez stezanja. Odgovara za sve — od opuštanja kod kuće i obaveza u gradu do ureda. Toliko je udobna da ćete zaboraviti da je nosite.<br><br>Dostupna je u bež, crnoj, bijeloj, paunovo plavoj, staroj ruži, sivoj, vinsko crvenoj i boji kave, u veličinama od S do 4XL.
 
+         <?php elseif( noriks_is_type( 'polo', $current_product_id ) ): ?>
+
+                <strong>NORIKS Polo</strong> je najudobnija majica koju ćete ikad nositi. Klasična polo majica krojena od rastezljive tkanine, modernog kroja i nenametljivo profinjenog izgleda. Lijepo se slaže uz chino hlače, kratke hlače i traperice.<br><br><strong>Istaknuto:</strong><br>• Prozračna rastezljiva pletenina<br>• Mekana završna obrada otporna na gužvanje, za udobnost cijeli dan<br>• Krojeni atletski kroj koji se kreće s vama<br>• Izrazito mekana unutrašnjost otporna na habanje<br>• Obrađena posebnom mješavinom za dugotrajnu mekoću i zadržavanje oblika<br>• Sprječava znojenje i neugodne mirise<br>• Izrađena od izdržljivog pletiva visoke gustoće od 100 % PET-a, za uredan i strukturiran pad<br><br>Dostupna je u devet boja (crna, tamnosiva, plava, tamnoplava, zelena, bordo, srebrnosiva, šljiva i camel) i u veličinama od S do 5XL. Kroj je malo uži — ako volite opušteniji kroj, uzmite broj veći.
+
          <?php elseif( noriks_is_type( 'floatsuit', $current_product_id ) ): ?>
 
                 <strong>ZABAVA KOJA PLUTA</strong><br><br><strong>NORIKS FloatSuit</strong> je praktično rješenje „sve u jednom” koje djeci pomaže da ostanu na površini dok uče plivati. Pruža uravnoteženu potporu i mališanima daje stabilnost koja im u vodi treba, a da ih pritom ne sputava u kretanju.<br><br><video src="<?php echo esc_url( get_template_directory_uri() . '/img/floatsuit/fs-video-opis.mp4' ); ?>" autoplay loop muted playsinline preload="metadata" style="display:block;width:400px;max-width:100%;border-radius:8px;margin:0 auto;"></video><br>Za razliku od glomaznih plutača ili rukavića za plivanje, <strong>NORIKS FloatSuit</strong> potiče pravilan položaj tijela i ravnomjeran uzgon. Pomaže djeci da ostanu uspravna, a pritom slobodno mašu nogama i rukama — tako stvarno razvijaju plivanje dok uče plutati, kliziti i plivati sa samopouzdanjem.<br><br><strong>30 dana za povrat</strong><br>Niste zadovoljni narudžbom? Bez brige! Imate pravo na povrat u roku od 30 dana. Besplatna dostava za narudžbe iznad 70 €.
@@ -1099,6 +1103,39 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Odgovara veličini:</strong> 95 % naših kupaca pogodi pravu veličinu iz prvog puta.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'polo', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Sve veličine od <strong>S do 5XL</strong>. Veličinu odaberite prema visini i tjelesnoj težini. Kroj je malo uži — ako volite opušteniji kroj, uzmite broj veći.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">ITM</th>
+                  <th style="padding:9px 8px;text-align:left;">170 cm</th>
+                  <th style="padding:9px 8px;text-align:left;">180 cm</th>
+                  <th style="padding:9px 8px;text-align:left;">190 cm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_polo_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako odabrati:</strong> pronađite svoju težinu u stupcu najbližem vašoj visini. Vitka građa — računajte oko 5 kg manje, krupnija građa — oko 5 kg više. Niži od 165 cm uzmite broj manji, viši od 190 cm broj veći. 168 kupaca potvrdilo je da je majica malo manja; ako trebate drugu veličinu, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'doggo', $current_product_id ) ): ?>
