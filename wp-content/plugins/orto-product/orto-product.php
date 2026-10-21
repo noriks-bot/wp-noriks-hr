@@ -508,9 +508,6 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
-    } elseif ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) {
-        // NORIKS Brassiere: kao na originalu ("+ Livraison OFFERTE" pod obje ponude).
-        $gck_offer_subs = array( '+ Besplatna dostava', '+ Besplatna dostava' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Uređaj + 10 vrećica', 'Uređaj + 20 vrećica', 'Uređaj + 30 vrećica' );
     } else {
@@ -528,9 +525,6 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
-    } elseif ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) {
-        // NORIKS Brassiere: znacka druge ponude kao na originalu ("OFFRE SPECIALE 24H").
-        $gck_offer_badges = array( 1 => 'POSEBNA PONUDA 24H' );
     } else {
         $gck_offer_badges = array();
     }
@@ -1903,7 +1897,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-ruzicasta            { background: #e46ab8 !important; }
       #bundle-selector .swatch-circle.color-bez                  { background: #cdb898 !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #eadcdb !important; background: #fcf8f7 !important;
+          border: 2px solid #eadcdb !important; background: #fcf8f7 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(20,25,40,.10), 0 2px 6px 2px rgba(20,25,40,.06) !important; }
       #bundle-selector .bundle-option.active { border-color: #a65a5d !important; background: #f7efee !important; }
       #bundle-selector .bundle-option-title { color: #121212 !important; }
@@ -1914,13 +1908,9 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-pairs { border-top-color: #eadcdb !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a65a5d !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8f8384 !important; }
-      #bundle-selector .gck-offer-sub { color: #2e7d32 !important; font-weight: 600; }
-      #bundle-selector .gck-popular-badge--offer { background: #a65a5d !important; transform: none !important; right: 12px !important; }
       #bundle-selector .bundle-pair select,
       #bundle-selector .bundle-pair .gck-extra-select { border-color: #a65a5d !important; color: #121212 !important; }
       .gck-size-link { color: #a65a5d !important; }
-      .gck-brassiere-offer { display: block; width: 100%; margin: 10px 0 4px; }
-      .gck-brassiere-offer img { display: block; width: 100%; height: auto; aspect-ratio: 1440 / 480; object-fit: contain; }
     </style>
     <?php endif; ?>
 
@@ -2477,16 +2467,6 @@ function gck_render_bundle_selector() {
     </div>
 
     <div class="gck-top-banner-wrap">
-        <?php if ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) : $gck_bs_img = get_template_directory_uri() . '/img/brassiere/'; ?>
-            <!-- NORIKS Brassiere: jesenska ponuda kao na originalu (izmedu tablice velicina i ponuda) -->
-            <picture class="gck-brassiere-offer">
-                <img src="<?php echo esc_url( $gck_bs_img . 'bs-jesenska-ponuda-960.webp' ); ?>"
-                     srcset="<?php echo esc_url( $gck_bs_img . 'bs-jesenska-ponuda-960.webp' ); ?> 960w, <?php echo esc_url( $gck_bs_img . 'bs-jesenska-ponuda-1440.webp' ); ?> 1440w"
-                     sizes="(min-width: 990px) 45vw, (min-width: 750px) 50vw, calc(100vw - 30px)"
-                     width="1440" height="480" loading="lazy" decoding="async"
-                     alt="Jesenska ponuda: -10 € odmah. Grudnjak za 29,90 € umjesto 39,90 €.">
-            </picture>
-        <?php endif; ?>
         <?php if ( has_term( array( 'orto-starter' ), 'product_cat', $product_id ) ) : ?>
             <!-- divider/timer removed in your current code -->
             

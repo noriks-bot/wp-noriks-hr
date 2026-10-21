@@ -1,10 +1,10 @@
 <?php
 /**
  * product-bottom: NORIKS Brassiere — grudnjak bez zica s prirodnim podizanjem (orto-brassiere).
- * Original: luveon.com/products/brassiere-luveon — struktura je 1:1 z originalom
- * (isto stevilo sekcij, isti vrstni red, isti dizajn), besedila prevedena.
- *   1) Recenzije (karusel kartic: fotografija, zvjezdice, citat, ime, gumb)
- *   2) Kako osigurava savrsenu potporu? (3 kartice: slika, ikona, naslov)
+ * Original: luveon.com/products/brassiere-luveon — vsebina in vrstni red 1:1 z originalom,
+ * oblika po NORIKS stilu (predloga why-hands.php / why-bratank.php):
+ *   1) Recenzije (preprosta mreza kartic, brez drsnika)
+ *   2) Kako osigurava savrsenu potporu? (3 kartice originala -> 3 vrstice slika ob besedilu, strani in ozadja se izmenjujejo)
  * "Nous avons ete vu dans" (logotipi medija) je izpuscen — trgovinski modul.
  * FAQ originala je v reviews.php ($brassiere_faq), mnenja v auto_reviews/HR_brassiere.php.
  * Slike: img/brassiere/ (original, brez napisov in logotipa).
@@ -49,126 +49,121 @@ $nbs_reviews = array(
     'tekst'  => 'Vrlo ugodan za nošenje, osjeti se kvaliteta tkanine. Samo bih voljela malo više potpore sa strane, ali inače savršeno.' ),
 );
 
-$nbs_cards = array(
-  array( 'slika' => 'bs-k1-tkanina.webp',   'ikona' => 'bs-k1-ikona.webp', 'naslov' => 'Rastezljiva tkanina koja oblikuje i nježno podiže.' ),
-  array( 'slika' => 'bs-k2-traka.webp',     'ikona' => 'bs-k2-ikona.webp', 'naslov' => 'Donja potporna traka koja stabilizira bez stezanja.' ),
-  array( 'slika' => 'bs-k3-struktura.webp', 'ikona' => 'bs-k3-ikona.webp', 'naslov' => 'Nevidljiva struktura koja raspoređuje težinu bez žica i push-upa.' ),
+/* 3 kartice originala; naslov kartice = naslov vrstice, besedilo iz opisa izdelka (meta.php) in FAQ. */
+$nbs_rows = array(
+  array( 'slika' => 'bs-k1-tkanina.webp', 'ikona' => 'bs-k1-ikona.webp', 'oznaka' => 'Tkanina',
+    'naslov' => 'Rastezljiva tkanina <em>koja oblikuje i nježno podiže.</em>',
+    'tekst'  => array( 'Rastezljiva, oblikujuća tkanina nježno podiže grudi, bez push-upa i bez stezanja.',
+                       'Kroj prati prirodan oblik grudi: ne spljošti ih kao klasični sportski top i ne ostavlja prazan prostor.' ),
+    'big'    => 'Bešavna tkanina ne vidi se ni ispod uske odjeće.' ),
+  array( 'slika' => 'bs-k2-traka.webp', 'ikona' => 'bs-k2-ikona.webp', 'oznaka' => 'Donja traka',
+    'naslov' => 'Donja potporna traka <em>koja stabilizira bez stezanja.</em>',
+    'tekst'  => array( 'Široka donja potporna traka stabilizira grudi bez pritiska i ne smota se ispod grudi.',
+                       'Za razliku od modela koji se podižu ili smotaju, osigurava stabilnu potporu bez nelagode i bez stalnog namještanja.' ),
+    'big'    => 'Ostaje na mjestu cijeli dan.' ),
+  array( 'slika' => 'bs-k3-struktura.webp', 'ikona' => 'bs-k3-ikona.webp', 'oznaka' => 'Struktura',
+    'naslov' => 'Nevidljiva struktura <em>koja raspoređuje težinu</em> bez žica i push-upa.',
+    'tekst'  => array( 'Nevidljiva unutarnja struktura ravnomjerno raspoređuje težinu grudi, pa grudnjak drži kao model sa žicama, ali bez bolova, tragova i stalnog namještanja.',
+                       'Široke i podesive naramenice ne urezuju se u ramena.' ),
+    'big'    => 'Zato odgovara i za veće grudi.' ),
 );
 
 $nbs_stars = '<span class="nbs-stars" aria-label="5 od 5 zvjezdica">' . str_repeat( '<i>★</i>', 5 ) . '</span>';
 ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 
-<!-- 1) RECENZIJE -->
+<!-- 1) RECENZIJE — preprosta mreza -->
 <section class="nbs-sec nbs-sec--reviews">
   <div class="nbs-wrap">
-    <h2 class="nbs-h2">Recenzije naših NORIKS grudnjaka</h2>
-    <div class="nbs-slider" data-nbs-slider tabindex="0" role="group" aria-label="Recenzije kupaca">
-      <div class="nbs-track">
-        <?php foreach ( $nbs_reviews as $r ) : ?>
-        <article class="nbs-rv">
-          <?php if ( $r['foto'] ) : ?><div class="nbs-rv__photo"><?php echo $nbs_img( $r['foto'], 'Fotografija kupca — ' . $r['ime'] ); ?></div><?php endif; ?>
-          <?php echo $nbs_stars; ?>
-          <p class="nbs-rv__txt">"<strong><?php echo esc_html( $r['naslov'] ); ?></strong><br><?php echo esc_html( $r['tekst'] ); ?>"</p>
-          <div class="nbs-rv__div"></div>
-          <div class="nbs-rv__bottom"><span class="nbs-rv__name"><?php echo esc_html( $r['ime'] ); ?></span></div>
-          <a class="nbs-btn" href="#bundle-selector">Kupi odmah</a>
-        </article>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <div class="nbs-nav">
-      <button type="button" class="nbs-arrow" data-nbs-prev aria-label="Prethodna recenzija"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <button type="button" class="nbs-arrow" data-nbs-next aria-label="Sljedeća recenzija"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- 2) KAKO OSIGURAVA SAVRŠENU POTPORU? -->
-<section class="nbs-sec nbs-sec--cards">
-  <div class="nbs-wrap">
-    <h2 class="nbs-h2">Kako osigurava savršenu potporu?</h2>
-    <div class="nbs-cards">
-      <?php foreach ( $nbs_cards as $c ) : ?>
-      <article class="nbs-card">
-        <?php echo $nbs_img( $c['slika'], $c['naslov'], 'nbs-card__img' ); ?>
-        <span class="nbs-card__grad" aria-hidden="true"></span>
-        <span class="nbs-card__ico"><?php echo $nbs_img( $c['ikona'], '' ); ?></span>
-        <h3 class="nbs-card__ttl"><?php echo esc_html( $c['naslov'] ); ?></h3>
+    <p class="nbs-kicker nbs-c">Recenzije kupaca</p>
+    <h2 class="nbs-h2 nbs-c">Recenzije naših <em>NORIKS grudnjaka</em></h2>
+    <div class="nbs-revs">
+      <?php foreach ( $nbs_reviews as $r ) : ?>
+      <article class="nbs-rv">
+        <?php echo $nbs_stars; ?>
+        <p class="nbs-rv__txt"><strong><?php echo esc_html( $r['naslov'] ); ?></strong><br><?php echo esc_html( $r['tekst'] ); ?></p>
+        <div class="nbs-rv__bottom">
+          <?php if ( $r['foto'] ) : ?><span class="nbs-rv__photo"><?php echo $nbs_img( $r['foto'], 'Fotografija kupca — ' . $r['ime'] ); ?></span><?php endif; ?>
+          <span class="nbs-rv__name"><?php echo esc_html( $r['ime'] ); ?></span>
+        </div>
       </article>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<script>
-(function(){
-  var s = document.querySelector('[data-nbs-slider]');
-  if (!s) return;
-  var prev = document.querySelector('[data-nbs-prev]'), next = document.querySelector('[data-nbs-next]');
-  function step(){ var c = s.querySelector('.nbs-rv'); return c ? c.getBoundingClientRect().width + 16 : 300; }
-  function upd(){ prev.disabled = s.scrollLeft <= 2; next.disabled = s.scrollLeft + s.clientWidth >= s.scrollWidth - 2; }
-  prev.addEventListener('click', function(){ s.scrollBy({ left: -step(), behavior: 'smooth' }); });
-  next.addEventListener('click', function(){ s.scrollBy({ left: step(), behavior: 'smooth' }); });
-  s.addEventListener('scroll', upd, { passive: true });
-  window.addEventListener('resize', upd);
-  upd();
-})();
-</script>
+<!-- 2) KAKO OSIGURAVA SAVRŠENU POTPORU? — slika ob besedilu, strani in ozadja se izmenjujejo -->
+<?php foreach ( $nbs_rows as $i => $row ) : ?>
+<section class="nbs-sec<?php echo ( 0 === $i % 2 ) ? ' nbs-tint' : ''; ?>">
+  <div class="nbs-wrap">
+    <?php if ( 0 === $i ) : ?><h2 class="nbs-h2 nbs-c nbs-h2--top">Kako osigurava <em>savršenu potporu?</em></h2><?php endif; ?>
+    <div class="nbs-row2<?php echo ( 1 === $i % 2 ) ? ' nbs-row2--rev' : ''; ?>">
+      <div class="nbs-media"><?php echo $nbs_img( $row['slika'], wp_strip_all_tags( $row['naslov'] ) ); ?></div>
+      <div class="nbs-copy">
+        <p class="nbs-kicker"><span class="nbs-ico"><?php echo $nbs_img( $row['ikona'], '' ); ?></span><?php echo esc_html( $row['oznaka'] ); ?></p>
+        <h3 class="nbs-h3"><?php echo wp_kses( $row['naslov'], array( 'em' => array() ) ); ?></h3>
+        <?php foreach ( $row['tekst'] as $p ) : ?><p><?php echo esc_html( $p ); ?></p><?php endforeach; ?>
+        <p class="nbs-big"><?php echo esc_html( $row['big'] ); ?></p>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endforeach; ?>
 
 <style>
-.nbs-sec { padding: 56px 0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #121212; background: #fff; overflow-x: hidden; }
+/* NORIKS stil (predloga why-hands.php): oznaka + naslov z lezecim poudarkom, slika ob besedilu, izmenjujoca ozadja */
+.nbs-sec { padding: 60px 0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #121212; background: #fff; }
 .nbs-sec * { box-sizing: border-box; }
-.nbs-sec--reviews { padding-top: 20px; }
-.nbs-sec--cards { background: #f7efee; }
+.nbs-sec--reviews { padding-top: 24px; }
+.nbs-tint { background: #f7efee; }
 .nbs-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.nbs-h2 { font-family: inherit; font-weight: 600; font-size: clamp(24px, 3vw, 34px); line-height: 1.25; text-align: center; margin: 0 0 28px; color: #121212; letter-spacing: 0; text-transform: none; }
+.nbs-c { text-align: center; }
+.nbs-sec h2, .nbs-sec h3 { font-family: inherit; text-transform: none; letter-spacing: 0; }
+.nbs-kicker, .nbs-copy p.nbs-kicker { display: flex; align-items: center; gap: 10px; font-size: 12.5px; line-height: 1.4; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #a65a5d; margin: 0 0 10px; }
+.nbs-kicker.nbs-c { justify-content: center; }
+.nbs-h2 { font-weight: 700; font-size: clamp(25px, 3.1vw, 36px); line-height: 1.2; margin: 0 0 28px; color: #121212; }
+.nbs-h2--top { margin-bottom: 40px; }
+.nbs-h2 em, .nbs-h3 em { font-style: italic; color: #a65a5d; }
+.nbs-h3 { font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; margin: 0 0 16px; color: #121212; }
 .nbs-sec img { display: block; width: 100%; height: auto; }
 
-/* 1) recenzije — karusel */
-.nbs-slider { overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; outline: none; }
-.nbs-slider::-webkit-scrollbar { display: none; }
-.nbs-track { display: flex; gap: 16px; align-items: stretch; }
-.nbs-rv { flex: 0 0 calc((100% - 48px) / 4); scroll-snap-align: start; display: flex; flex-direction: column; background: #fff; border: 1px solid #e8dedd; border-radius: 12px; padding: 16px; }
-.nbs-rv__photo { margin: 0 0 14px; border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; }
-.nbs-rv__photo img { width: 100%; height: 100%; object-fit: cover; }
+/* 1) recenzije — mreza */
+.nbs-revs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.nbs-rv { display: flex; flex-direction: column; background: #fff; border: 1px solid #eadcdb; border-radius: 10px; padding: 22px 22px 18px; }
 .nbs-stars { display: inline-flex; gap: 3px; margin: 0 0 12px; }
 .nbs-stars i { font-style: normal; width: 22px; height: 22px; background: #00b67a; color: #fff; font-size: 15px; line-height: 22px; text-align: center; }
-.nbs-rv__txt { font-size: 14.5px; line-height: 1.6; color: #2b2526; margin: 0 0 14px; }
+.nbs-rv__txt { font-size: 15px; line-height: 1.65; color: #2b2526; margin: 0 0 16px; flex: 1 1 auto; }
 .nbs-rv__txt strong { font-weight: 600; color: #121212; }
-.nbs-rv__div { height: 1px; background: #e8dedd; margin: auto 0 12px; }
+.nbs-rv__bottom { display: flex; align-items: center; gap: 12px; border-top: 1px solid #eadcdb; padding-top: 14px; }
+.nbs-rv__photo { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 8px; overflow: hidden; }
+.nbs-sec .nbs-rv__photo img { width: 100%; height: 100%; object-fit: cover; }
 .nbs-rv__name { font-size: 13.5px; font-weight: 500; color: #6b5f61; }
-.nbs-btn { display: block; width: 100%; margin-top: 16px; text-align: center; background: #121212; color: #fff !important; font-weight: 600; font-size: 15px;
-  padding: 13px 16px; border-radius: 6px; text-decoration: none; }
-.nbs-btn:hover { background: #a65a5d; color: #fff !important; }
-.nbs-nav { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
-.nbs-arrow { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid #b8b8b8; border-radius: 50%; background: #fff; color: #111; cursor: pointer; }
-.nbs-arrow:hover:not(:disabled) { border-color: currentColor; background: #f5f5f5; }
-.nbs-arrow:disabled { opacity: .35; cursor: default; }
-.nbs-arrow svg { width: 20px; height: 20px; }
 
-/* 2) kartice z ikonami */
-.nbs-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.nbs-card { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 5; background: #e9dfde; }
-.nbs-card .nbs-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.nbs-card__grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.72) 100%); }
-.nbs-card__ico { position: absolute; top: 16px; left: 16px; width: 64px; height: 64px; border-radius: 12px; background: #fff; padding: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
-.nbs-card__ico img { width: 100%; height: 100%; object-fit: contain; }
-.nbs-card__ttl { position: absolute; left: 20px; right: 20px; bottom: 20px; margin: 0; color: #fff; font-family: inherit; font-weight: 600; font-size: 18px; line-height: 1.35; text-transform: none; letter-spacing: 0; }
+/* 2) slika ob besedilu */
+.nbs-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.nbs-row2--rev .nbs-media { order: 2; }
+.nbs-media img { aspect-ratio: 4 / 5; object-fit: cover; box-shadow: 0 2px 4px rgba(40,20,20,.05), 0 14px 40px rgba(40,20,20,.10); }
+.nbs-ico { flex: 0 0 40px; width: 40px; height: 40px; border-radius: 10px; background: #fff; padding: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.10); }
+.nbs-sec .nbs-ico img { width: 100%; height: 100%; object-fit: contain; }
+.nbs-copy p { font-size: 16px; line-height: 1.7; color: #4d4446; margin: 0 0 14px; }
+.nbs-copy p.nbs-big { font-size: 19px; font-weight: 700; color: #121212; line-height: 1.45; margin-top: 6px; }
 
 @media (max-width: 989px) {
-  .nbs-rv { flex-basis: calc((100% - 16px) / 2); }
+  .nbs-revs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nbs-row2 { gap: 32px; }
 }
 @media (max-width: 749px) {
-  .nbs-sec { padding: 40px 0; }
+  .nbs-sec { padding: 42px 0; }
   .nbs-sec--reviews { padding-top: 16px; }
   .nbs-wrap { padding: 0 16px; }
-  .nbs-rv { flex-basis: 82%; }
-  .nbs-cards { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
-  .nbs-cards::-webkit-scrollbar { display: none; }
-  .nbs-card { flex: 0 0 78%; scroll-snap-align: start; }
-  .nbs-card__ttl { font-size: 16px; }
+  .nbs-revs { grid-template-columns: 1fr; gap: 14px; }
+  .nbs-row2 { grid-template-columns: 1fr; gap: 24px; }
+  .nbs-row2--rev .nbs-media { order: 0; }
+  .nbs-h2--top { margin-bottom: 28px; }
 }
+
+/* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
+.product_cat-orto-brassiere .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
 
 /* kratek opis izdelka: zelene kljukice namesto pik (REST pobrise inline slog) */
 .woocommerce div.product .woocommerce-product-details__short-description ul,
