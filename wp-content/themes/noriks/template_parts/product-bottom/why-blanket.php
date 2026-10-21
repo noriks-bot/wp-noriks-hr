@@ -1,17 +1,20 @@
 <?php
 /**
  * product-bottom: NORIKS Blanket — kompresijska vreca za smirenje i bolji san (orto-blanket).
- * Original: nestishop.com/products/nesti-pod — struktura je 1:1 z originalom
- * (isto stevilo sekcij, isti vrstni red, isti dizajn), besedila prevedena v hrvascino.
- *   1) Iskustva nase zajednice (4 lila kartice z mnenji — na originalu pod galerijo)
- *   2) Detalji proizvoda / Kako radi / Dostava i povrat / Jamstvo 60 dana (zavihki iz nakupne skatle)
- *   3) Zasto je NORIKS najbolji izbor? (banner + primerjava NORIKS : utezni pokrivaci)
- *   4) Koristite ga za... (karusel 3 kartic)
- *   5) Znanost iza NORIKS-a (slika z oznakami + 4 tocke) in Kako koristiti (video + CTA)
- *   6) Prednosti terapije dubokim pritiskom (DTP) — lila pas s 3 ikonami
- *   7) Recenzije kupaca (karusel mnenj z originala, s fotografijami)
+ * Original: nestishop.com/products/nesti-pod — vsebina 1:1 z originalom (isti vrstni red, ista besedila),
+ * oblika po NORIKS stilu (vzor why-hands.php): slika/video vedno ob besedilu, strani in ozadja se izmenjujejo,
+ * brez drsnikov, pasic in animacij.
+ *   1) Iskustva nase zajednice (4 kartice z mnenji)
+ *   2) Detalji proizvoda + Kako radi (zavihka iz nakupne skatle)
+ *   3) Dostava i povrat (zavihka iz nakupne skatle — po NORIKS pogojih: 30 dana za povrat, besplatna dostava iznad 70 €)
+ *   4) Zasto je NORIKS najbolji izbor? (slika levo + primerjava NORIKS : utezni pokrivaci)
+ *   5) Koristite ga za... (3 vrstice slika/besedilo: san, opustanje, putovanja)
+ *   6) Znanost iza NORIKS-a (slika levo + 4 tocke)
+ *   7) Kako koristiti (video s hrvaskimi podnapisi desno + CTA)
+ *   8) Prednosti terapije dubokim pritiskom (DTP) — 3 tocke z ikonami
+ *   9) Recenzije kupaca (mreza mnenj z originala, s fotografijami)
  * FAQ originala je v reviews.php ($blanket_faq), mnenja tudi v auto_reviews/HR_blanket.php.
- * Glava trgovine, "As seen in", "You may also like" in noga so izpusceni (trgovinski moduli).
+ * Promo pasica originala (akcija ADHD meseca) je po NORIKS stilu izpuscena.
  * Slike: img/blanket/ (logotip konkurenta odstranjen, napisi prevedeni v hrvascino).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -22,13 +25,6 @@ $nbl_img  = function( $file, $alt, $cls = '' ) use ( $nbl, $nbl_path ) {
   if ( ! file_exists( $nbl_path . $file ) ) { return ''; }
   return '<img src="' . esc_url( $nbl . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
 };
-
-$nbl_star  = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg>';
-$nbl_stars = '<span class="nbl-stars" aria-label="5 od 5 zvjezdica">' . str_repeat( $nbl_star, 5 ) . '</span>';
-$nbl_yes   = '<svg class="nbl-ico nbl-ico--yes" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm5 7.6-6.1 6.1a1 1 0 0 1-1.4 0L4.9 11a1 1 0 0 1 1.4-1.4l1.9 1.9 5.4-5.4A1 1 0 0 1 15 7.6Z"/></svg>';
-$nbl_no    = '<svg class="nbl-ico nbl-ico--no" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm3.5 12.1a1 1 0 0 1-1.4 1.4L10 11.4l-2.1 2.1a1 1 0 0 1-1.4-1.4L8.6 10 6.5 7.9a1 1 0 0 1 1.4-1.4L10 8.6l2.1-2.1a1 1 0 0 1 1.4 1.4L11.4 10l2.1 2.1Z"/></svg>';
-$nbl_arrow = '<svg class="nbl-cta__arrow" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-$nbl_plus  = '<span class="nbl-acc__icon" aria-hidden="true"><svg viewBox="0 0 12 12" width="12" height="12" fill="none"><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.5"/><line class="nbl-acc__v" x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.5"/></svg></span>';
 
 /* 1) Iskustva nase zajednice — 1:1 z originala. */
 $nbl_community = array(
@@ -46,73 +42,45 @@ $nbl_community = array(
     'ime'   => 'Rebecca N. i Eve' ),
 );
 
-/* 2) Zavihki iz nakupne skatle originala. */
+/* 2) Detalji proizvoda — velicine iz noriks_blanket_sizes() (iste kot v tablici velicin). */
 $nbl_sizes_txt = '';
 if ( function_exists( 'noriks_blanket_sizes' ) ) {
   foreach ( noriks_blanket_sizes() as $r ) {
     $nbl_sizes_txt .= '<li><strong>' . esc_html( $r[0] ) . ':</strong> duljina ' . esc_html( $r[1] ) . ', širina ' . esc_html( $r[2] ) . '. Visina dijela za stopala ' . esc_html( $r[3] ) . '. Širina kapuljače ' . esc_html( $r[4] ) . '.</li>';
   }
 }
-$nbl_tabs = array(
-  array( 'naslov' => 'Detalji proizvoda', 'html' =>
-    '<h4>Materijali</h4><ul><li>95 % poliester, 5 % elastan</li><li>Mekano, prozračno i rastezljivo</li></ul>'
-    . '<h4>Pranje</h4><ul><li>Strojno pranje na hladnom, nježni program</li><li>Sušenje na zraku</li><li>Kompresija se zadržava i nakon pranja</li></ul>'
-    . '<h4>Veličine i dimenzije</h4><p>Nenošena, položena ravno:</p><ul>' . $nbl_sizes_txt . '</ul>'
-    . '<p>Veličinu birajte prema kompresiji, a ne prema duljini. Za čvršći zagrljaj uzmite jednu veličinu manje.</p>'
-    . '<p>Prije narudžbe pogledajte tablicu veličina iznad ponuda.</p>'
-    . '<h4>Dostupne boje</h4><p>Plava, siva, ružičasta, ljubičasta</p>' ),
-  array( 'naslov' => 'Kako radi', 'html' =>
-    '<ul>'
-    . '<li>Mekana rastezljiva cijev u koju se jednostavno uvučete. Bez zatvarača, kopči, utega i kompliciranog zakopčavanja.</li>'
-    . '<li>Ništa tvrdo ili grebljivo što bi moglo štipati ili zapinjati. Sigurno za nemirne spavače i ruke koje se vrpolje.</li>'
-    . '<li>Otvoreno dno. Stopala mogu ostati pokrivena ili izviriti van.</li>'
-    . '<li>Kapuljača na vrhu po želji. Navucite je za veću pokrivenost ili je ostavite spuštenu.</li>'
-    . '<li>Ruke mogu ostati unutra za kompresiju cijelog tijela ili izaći iznad ramena ako želite slobodne ruke.</li>'
-    . '<li>Tkanina se rasteže s vama. I dalje možete sjesti, ustati i hodati bez osjećaja da ste zarobljeni.</li>'
-    . '<li>Nježna kompresija sa svih strana. Nije utežni pokrivač — lagana je i lako se u njoj krećete.</li>'
-    . '</ul>' ),
-  array( 'naslov' => 'Dostava i povrat', 'html' =>
-    '<h4>Dostava</h4><p>Narudžbe šaljemo <strong>praćenom dostavom</strong>. Dostava traje <strong>3–5 radnih dana</strong>. <strong>Broj za praćenje</strong> dobit ćete čim narudžba bude poslana.</p>'
-    . '<h4>Zamjena veličine</h4><p>Ne pristaje baš najbolje? Nudimo <strong>14 dana za zamjenu veličine</strong> od dana dostave.</p>'
-    . '<p>Zamjena <strong>ovisi o zalihama</strong>, pa ponekad treba kratko pričekati sljedeću isporuku.</p>'
-    . '<p>Proizvod mora biti <strong>nenošen i u originalnom stanju</strong> da bi se mogao zamijeniti.</p>' ),
-  array( 'naslov' => 'Jamstvo povrata novca 60 dana', 'html' =>
-    '<p>Kad smo razvijali NORIKS Blanket, cilj nam nije bio napraviti još jedan proizvod.</p>'
-    . '<p>Htjeli smo napraviti pomagalo koje ljudima zaista pomaže da se osjećaju mirnije, prizemljenije i da bolje upravljaju svojim osjetilnim svijetom.</p>'
-    . '<p>No znamo i da je svaki živčani sustav drukčiji.</p>'
-    . '<p>Neki osjete učinak odmah. Drugima treba nekoliko prilagodbi da pronađu svoju senzornu ravnotežu — i to je sasvim normalno.</p>'
-    . '<p>Ovo jamstvo postoji jer želimo da imate vremena, prostora i podrške da NORIKS Blanket isprobate kako treba.</p>'
-    . '<h4>NORIKS jamstvo udobnosti: povrat novca u 60 dana</h4>'
-    . '<p>Od dana dostave imate 60 dana da odlučite odgovara li vam NORIKS Blanket.</p>' ),
+$nbl_how = array(
+  'Mekana rastezljiva cijev u koju se jednostavno uvučete. Bez zatvarača, kopči, utega i kompliciranog zakopčavanja.',
+  'Ništa tvrdo ili grebljivo što bi moglo štipati ili zapinjati. Sigurno za nemirne spavače i ruke koje se vrpolje.',
+  'Otvoreno dno. Stopala mogu ostati pokrivena ili izviriti van.',
+  'Kapuljača na vrhu po želji. Navucite je za veću pokrivenost ili je ostavite spuštenu.',
+  'Ruke mogu ostati unutra za kompresiju cijelog tijela ili izaći iznad ramena ako želite slobodne ruke.',
+  'Tkanina se rasteže s vama. I dalje možete sjesti, ustati i hodati bez osjećaja da ste zarobljeni.',
 );
 
-/* 3) Primerjava. */
-$nbl_cmp_yes = array(
-  'Nježna, ravnomjerna kompresija bez težine',
-  'Prozračan i regulira temperaturu',
-  'Osmišljen posebno za djecu sa senzornom osjetljivošću',
-  'Lagan i jednostavan za nošenje na put',
-  'Pere se u perilici i brzo se suši',
-);
-$nbl_cmp_no = array(
-  'Mogu sputavati i biti teški',
-  'Često zadržavaju toplinu i uzrokuju pregrijavanje',
-  'Generički dizajn, nije prilagođen djeci',
-  'Glomazni i teško ih je spakirati',
-  'Često preveliki ili preteški za često pranje',
+/* 4) Primerjava. */
+$nbl_cmp = array(
+  array( 'Nježna, ravnomjerna kompresija bez težine',            'Mogu sputavati i biti teški' ),
+  array( 'Prozračan i regulira temperaturu',                      'Često zadržavaju toplinu i uzrokuju pregrijavanje' ),
+  array( 'Osmišljen posebno za djecu sa senzornom osjetljivošću', 'Generički dizajn, nije prilagođen djeci' ),
+  array( 'Lagan i jednostavan za nošenje na put',                 'Glomazni i teško ih je spakirati' ),
+  array( 'Pere se u perilici i brzo se suši',                     'Često preveliki ili preteški za često pranje' ),
 );
 
-/* 4) Koristite ga za... */
+/* 5) Koristite ga za... — slika in besedilo, strani se izmenjujejo. */
 $nbl_uses = array(
-  array( 'slika' => 'bl-uc-1-san.webp', 'naslov' => 'Bolji san',
-    'tekst' => 'NORIKS Blanket pomaže djetetu da brže zaspi i dulje spava jer nježna kompresija cijelog tijela daje osjećaj sigurnosti i smirenosti. To je jednostavan način bez lijekova da odlazak na spavanje bude manje stresan — i za dijete i za vas.' ),
-  array( 'slika' => 'bl-uc-2-opustanje.webp', 'naslov' => 'Opuštanje',
-    'tekst' => 'Bilo da se smiruje nakon škole ili radi senzornu pauzu, NORIKS Blanket djetetu daje ugodan kutak za opuštanje. Kao umirujući zagrljaj u koji se može uvući kad god se treba prizemljiti.' ),
-  array( 'slika' => 'bl-uc-3-putovanja.webp', 'naslov' => 'Putovanja',
-    'tekst' => 'Od vožnje autom i spavanja kod prijatelja do dugih letova — NORIKS Blanket ide svugdje gdje treba udobnosti. Lagan je i lako se spakira, a pruža poznati mir i dosljednost kad se rutina promijeni — posebno korisno za senzorno osjetljivu djecu u pokretu.' ),
+  array( 'slika' => 'bl-uc-1-san.webp', 'h2' => 'Bolji <em>san</em>',
+    'tekst' => 'NORIKS Blanket pomaže djetetu da brže zaspi i dulje spava jer nježna kompresija cijelog tijela daje osjećaj sigurnosti i smirenosti.',
+    'big'   => 'Jednostavan način bez lijekova da odlazak na spavanje bude manje stresan — i za dijete i za vas.' ),
+  array( 'slika' => 'bl-uc-2-opustanje.webp', 'h2' => '<em>Opuštanje</em>',
+    'tekst' => 'Bilo da se smiruje nakon škole ili radi senzornu pauzu, NORIKS Blanket djetetu daje ugodan kutak za opuštanje.',
+    'big'   => 'Kao umirujući zagrljaj u koji se može uvući kad god se treba prizemljiti.' ),
+  array( 'slika' => 'bl-uc-3-putovanja.webp', 'h2' => '<em>Putovanja</em>',
+    'tekst' => 'Od vožnje autom i spavanja kod prijatelja do dugih letova — NORIKS Blanket ide svugdje gdje treba udobnosti. Lagan je i lako se spakira, a pruža poznati mir i dosljednost kad se rutina promijeni.',
+    'big'   => 'Posebno korisno za senzorno osjetljivu djecu u pokretu.' ),
 );
 
-/* 5) Znanost */
+/* 6) Znanost */
 $nbl_science = array(
   array( 'Kompresijska terapija od 360°', 'Nježnom kompresijom obavija cijelo tijelo sa svih strana.' ),
   array( 'Šalje signale opuštanja mozgu', 'Nježna kompresija oponaša osjećaj zagrljaja i potiče receptore serotonina u mozgu.' ),
@@ -120,7 +88,7 @@ $nbl_science = array(
   array( 'Za miran san koji obnavlja', 'Tjeskoba i stres prelaze u umor, pa brže zaspite i dulje spavate.' ),
 );
 
-/* 6) DTP */
+/* 8) DTP */
 $nbl_dtp = array(
   array( 'ikona' => 'bl-dtp-1.webp', 'naslov' => 'Smiruje živčani sustav i ublažava tjeskobu',
     'tekst' => 'DTP aktivira umirujući dio živčanog sustava i snižava razinu hormona stresa. Djeci s tjeskobom, ADHD-om ili senzornim teškoćama pomaže da se osjećaju sigurno i smireno.' ),
@@ -130,7 +98,7 @@ $nbl_dtp = array(
     'tekst' => 'DTP daje stalan podražaj koji djeci pomaže da ostanu mirna i usredotočena. Odlično smanjuje vrpoljenje i olakšava prijelaz na spavanje.' ),
 );
 
-/* 7) Recenzije kupaca — 1:1 z originala (test vnos izpuscen), fotografije kupcev brez logotipa. */
+/* 9) Recenzije kupaca — 1:1 z originala (test vnos izpuscen), fotografije kupcev brez logotipa. */
 $nbl_reviews = array(
   array( 'ime' => 'Jessica Thomas', 'ocjena' => 5, 'foto' => '',
     'tekst' => 'Moj petogodišnjak ima autizam i teško se regulira, pogotovo nakon škole i pred spavanje. NORIKS je promijenio igru. Apsolutno ga obožava i odmah postane mirniji i spokojniji. Toplo preporučujem!!' ),
@@ -162,342 +130,246 @@ $nbl_reviews = array(
     'tekst' => 'Vau, kakva razlika. Naš unuk ima ADHD i apsolutno obožava svoj NORIKS. Obukao ga je prvu noć, smjestio se u njega i mirno spavao. Ne možemo biti zadovoljniji.' ),
 );
 ?>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap">
 
 <!-- 1) ISKUSTVA NAŠE ZAJEDNICE -->
-<section class="nbl-sec nbl-sec--community">
+<section class="nbl-sec nbl-tint">
   <div class="nbl-wrap">
-    <h2 class="nbl-h2">Iskustva naše zajednice</h2>
-    <div class="nbl-slider" data-nbl-slider="community" tabindex="0" role="group" aria-label="Iskustva naše zajednice">
-      <div class="nbl-track">
-        <?php foreach ( $nbl_community as $c ) : ?>
-        <article class="nbl-testi">
-          <p class="nbl-testi__quote">„<?php echo esc_html( $c['naslov'] ); ?>”</p>
-          <p class="nbl-testi__body"><?php echo esc_html( $c['tekst'] ); ?></p>
-          <div class="nbl-testi__meta"><?php echo $nbl_stars; ?><p class="nbl-testi__author">– <?php echo esc_html( $c['ime'] ); ?></p></div>
-        </article>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <div class="nbl-nav">
-      <button type="button" class="nbl-arrow" data-nbl-prev="community" aria-label="Prethodno"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <button type="button" class="nbl-arrow" data-nbl-next="community" aria-label="Sljedeće"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- 2) DETALJI PROIZVODA (zavihki iz nakupne skatle originala) -->
-<section class="nbl-sec nbl-sec--tabs">
-  <div class="nbl-wrap nbl-wrap--narrow">
-    <div class="nbl-acc-list">
-      <?php foreach ( $nbl_tabs as $tab ) : ?>
-      <details class="nbl-acc nbl-acc--bold">
-        <summary><span class="nbl-acc__label"><?php echo esc_html( $tab['naslov'] ); ?></span><?php echo $nbl_plus; ?></summary>
-        <div class="nbl-acc__panel"><?php echo wp_kses_post( $tab['html'] ); ?></div>
-      </details>
+    <p class="nbl-kicker nbl-kicker--c">Iskustva</p>
+    <h2 class="nbl-h2 nbl-h2--c">Iskustva naše <em>zajednice</em></h2>
+    <div class="nbl-testi-grid">
+      <?php foreach ( $nbl_community as $c ) : ?>
+      <article class="nbl-testi">
+        <span class="nbl-stars" aria-label="5 od 5 zvjezdica">★★★★★</span>
+        <h3>„<?php echo esc_html( $c['naslov'] ); ?>”</h3>
+        <p><?php echo esc_html( $c['tekst'] ); ?></p>
+        <cite>– <?php echo esc_html( $c['ime'] ); ?></cite>
+      </article>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<!-- 3) ZAŠTO JE NORIKS NAJBOLJI IZBOR? -->
-<section class="nbl-sec nbl-sec--compare">
-  <div class="nbl-wrap">
-    <div class="nbl-cmp-layout">
-      <div class="nbl-cmp-layout__banner"><?php echo $nbl_img( 'bl-cmp-banner.webp', 'Djevojčica u ružičastoj NORIKS vreći' ); ?></div>
-      <div class="nbl-cmp-layout__main">
-        <h2 class="nbl-h2">Zašto je NORIKS najbolji izbor?</h2>
-        <div class="nbl-cmp">
-          <div class="nbl-cmp__col nbl-cmp__col--noriks">
-            <div class="nbl-cmp__media"><?php echo $nbl_img( 'bl-cmp-noriks.webp', 'NORIKS Blanket' ); ?></div>
-            <p class="nbl-cmp__label">NORIKS</p>
-            <?php foreach ( $nbl_cmp_yes as $it ) : ?><div class="nbl-cmp__item"><?php echo $nbl_yes; ?><span><?php echo esc_html( $it ); ?></span></div><?php endforeach; ?>
-          </div>
-          <div class="nbl-cmp__col nbl-cmp__col--other">
-            <div class="nbl-cmp__media"><?php echo $nbl_img( 'bl-cmp-utezni.webp', 'Utežni pokrivač' ); ?></div>
-            <p class="nbl-cmp__label">Utežni pokrivači</p>
-            <?php foreach ( $nbl_cmp_no as $it ) : ?><div class="nbl-cmp__item"><?php echo $nbl_no; ?><span><?php echo esc_html( $it ); ?></span></div><?php endforeach; ?>
-          </div>
-        </div>
+<!-- 2) DETALJI PROIZVODA + KAKO RADI (zavihka iz nakupne skatle originala) -->
+<section class="nbl-sec">
+  <div class="nbl-wrap nbl-row2 nbl-row2--top">
+    <div class="nbl-copy">
+      <p class="nbl-kicker">Kako radi</p>
+      <h2 class="nbl-h2">Jednostavno se <em>uvučete</em></h2>
+      <ul class="nbl-check">
+        <?php foreach ( $nbl_how as $it ) : ?><li><?php echo esc_html( $it ); ?></li><?php endforeach; ?>
+      </ul>
+      <p class="nbl-big">Nježna kompresija sa svih strana. Nije utežni pokrivač — lagana je i lako se u njoj krećete.</p>
+    </div>
+    <div class="nbl-copy nbl-card">
+      <p class="nbl-kicker">Detalji proizvoda</p>
+      <p><strong>Materijali</strong><br>95 % poliester, 5 % elastan. Mekano, prozračno i rastezljivo.</p>
+      <p><strong>Pranje</strong><br>Strojno pranje na hladnom, nježni program. Sušenje na zraku. Kompresija se zadržava i nakon pranja.</p>
+      <p><strong>Veličine i dimenzije</strong><br>Nenošena, položena ravno:</p>
+      <ul class="nbl-sizes"><?php echo wp_kses_post( $nbl_sizes_txt ); ?></ul>
+      <p>Veličinu birajte prema kompresiji, a ne prema duljini. Za čvršći zagrljaj uzmite jednu veličinu manje. Prije narudžbe pogledajte tablicu veličina iznad ponuda.</p>
+      <p><strong>Dostupne boje</strong><br>Plava, siva, ružičasta, ljubičasta</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3) DOSTAVA I POVRAT (po NORIKS pogojih) -->
+<section class="nbl-sec nbl-tint">
+  <div class="nbl-wrap nbl-wrap--narrow nbl-copy">
+    <p class="nbl-kicker nbl-kicker--c">Dostava i povrat</p>
+    <h2 class="nbl-h2 nbl-h2--c">Vrijeme da ga isprobate <em>kako treba</em></h2>
+    <p>Kad smo razvijali NORIKS Blanket, cilj nam nije bio napraviti još jedan proizvod. Htjeli smo napraviti pomagalo koje ljudima zaista pomaže da se osjećaju mirnije, prizemljenije i da bolje upravljaju svojim osjetilnim svijetom.</p>
+    <p>No znamo i da je svaki živčani sustav drukčiji. Neki osjete učinak odmah. Drugima treba nekoliko prilagodbi da pronađu svoju senzornu ravnotežu — i to je sasvim normalno.</p>
+    <ul class="nbl-check nbl-check--c">
+      <li><strong>Besplatna dostava za narudžbe iznad 70 €</strong> — broj za praćenje dobit ćete čim narudžba bude poslana.</li>
+      <li><strong>Pravo na povrat u roku od 30 dana</strong> od dana dostave.</li>
+      <li><strong>Zamjena veličine</strong> — ne pristaje baš najbolje? Zamjena ovisi o zalihama, a proizvod mora biti nenošen i u originalnom stanju.</li>
+    </ul>
+    <p class="nbl-big nbl-big--c">30 dana za povrat — da odlučite odgovara li vam NORIKS Blanket.</p>
+  </div>
+</section>
+
+<!-- 4) ZAŠTO JE NORIKS NAJBOLJI IZBOR? — slika lijevo -->
+<section class="nbl-sec">
+  <div class="nbl-wrap nbl-row2">
+    <div class="nbl-media"><?php echo $nbl_img( 'bl-cmp-banner.webp', 'Djevojčica u ružičastoj NORIKS Blanket vreći' ); ?></div>
+    <div class="nbl-copy">
+      <p class="nbl-kicker">Usporedba</p>
+      <h2 class="nbl-h2">Zašto je NORIKS <em>najbolji izbor?</em></h2>
+      <div class="nbl-cmp">
+        <table class="nbl-cmp__table">
+          <thead>
+            <tr>
+              <th class="nbl-cmp__us"><?php echo $nbl_img( 'bl-cmp-noriks.webp', 'NORIKS Blanket' ); ?>NORIKS</th>
+              <th class="nbl-cmp__them"><?php echo $nbl_img( 'bl-cmp-utezni.webp', 'Utežni pokrivač' ); ?>Utežni pokrivači</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ( $nbl_cmp as $row ) : ?>
+            <tr><td><span class="nbl-y">✓</span><?php echo esc_html( $row[0] ); ?></td><td><span class="nbl-n">✕</span><?php echo esc_html( $row[1] ); ?></td></tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4) KORISTITE GA ZA... -->
-<section class="nbl-sec nbl-sec--uses">
-  <div class="nbl-wrap">
-    <h2 class="nbl-h2">Koristite ga za...</h2>
-    <div class="nbl-slider nbl-slider--uses" data-nbl-slider="uses" tabindex="0" role="group" aria-label="Koristite ga za">
-      <div class="nbl-track">
-        <?php foreach ( $nbl_uses as $u ) : ?>
-        <article class="nbl-use">
-          <?php echo $nbl_img( $u['slika'], $u['naslov'] ); ?>
-          <div class="nbl-use__body">
-            <p class="nbl-use__title"><?php echo esc_html( $u['naslov'] ); ?></p>
-            <p class="nbl-use__text"><?php echo esc_html( $u['tekst'] ); ?></p>
-          </div>
-        </article>
-        <?php endforeach; ?>
-      </div>
+<!-- 5) KORISTITE GA ZA... — tri vrstice, strani se izmenjujejo (desno, levo, desno) -->
+<?php foreach ( $nbl_uses as $i => $u ) : $nbl_rev = ( 0 === $i % 2 ); ?>
+<section class="nbl-sec<?php echo $nbl_rev ? ' nbl-tint' : ''; ?>">
+  <div class="nbl-wrap nbl-row2<?php echo $nbl_rev ? ' nbl-row2--rev' : ''; ?>">
+    <?php if ( ! $nbl_rev ) : ?><div class="nbl-media"><?php echo $nbl_img( $u['slika'], wp_strip_all_tags( $u['h2'] ) . ' — NORIKS Blanket' ); ?></div><?php endif; ?>
+    <div class="nbl-copy">
+      <p class="nbl-kicker">Koristite ga za...</p>
+      <h2 class="nbl-h2"><?php echo wp_kses( $u['h2'], array( 'em' => array() ) ); ?></h2>
+      <p><?php echo esc_html( $u['tekst'] ); ?></p>
+      <p class="nbl-big"><?php echo esc_html( $u['big'] ); ?></p>
     </div>
-    <div class="nbl-nav nbl-nav--uses">
-      <button type="button" class="nbl-arrow" data-nbl-prev="uses" aria-label="Prethodno"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <button type="button" class="nbl-arrow" data-nbl-next="uses" aria-label="Sljedeće"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <?php if ( $nbl_rev ) : ?><div class="nbl-media"><?php echo $nbl_img( $u['slika'], wp_strip_all_tags( $u['h2'] ) . ' — NORIKS Blanket' ); ?></div><?php endif; ?>
+  </div>
+</section>
+<?php endforeach; ?>
+
+<!-- 6) ZNANOST IZA NORIKS-A — slika lijevo -->
+<section class="nbl-sec">
+  <div class="nbl-wrap nbl-row2">
+    <div class="nbl-media"><?php echo $nbl_img( 'bl-04-dijelovi-hr.webp', 'Dijelovi NORIKS Blanket vreće: fleksibilna kapuljača, ultramekana tkanina, pokrov za stopala po želji' ); ?></div>
+    <div class="nbl-copy">
+      <p class="nbl-kicker">Znanost</p>
+      <h2 class="nbl-h2">Znanost iza <em>NORIKS-a</em></h2>
+      <?php foreach ( $nbl_science as $s ) : ?>
+      <p><strong><?php echo esc_html( $s[0] ); ?></strong><br><?php echo esc_html( $s[1] ); ?></p>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<!-- 5) ZNANOST IZA NORIKS-A + KAKO KORISTITI -->
-<section class="nbl-sec nbl-sec--science">
-  <div class="nbl-wrap">
-    <div class="nbl-sci">
-      <div class="nbl-sci__row nbl-sci__row--science">
-        <div class="nbl-sci__media"><?php echo $nbl_img( 'bl-04-dijelovi-hr.webp', 'Dijelovi NORIKS Blanket vreće: fleksibilna kapuljača, ultramekana tkanina, pokrov za stopala po želji' ); ?></div>
-        <div class="nbl-sci__content">
-          <h2 class="nbl-h2 nbl-h2--left">Znanost iza NORIKS-a</h2>
-          <?php foreach ( $nbl_science as $s ) : ?>
-          <div class="nbl-sci__item"><p class="nbl-sci__item-title"><?php echo esc_html( $s[0] ); ?></p><p class="nbl-sci__item-text"><?php echo esc_html( $s[1] ); ?></p></div>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      <div class="nbl-sci__row nbl-sci__row--howto">
-        <div class="nbl-sci__content">
-          <h2 class="nbl-h2 nbl-h2--left">Kako koristiti</h2>
-          <p class="nbl-sci__howto">Kad ste u krevetu, uvucite se u NORIKS Blanket tako da gornji rub bude u udobnom položaju. Preporučujemo da ga namjestite blizu gornjeg dijela prsa i zatim ga povučete preko ramena. Tkanina će se rastegnuti i stisnuti te pružiti umirujući pritisak oko tijela.</p>
-        </div>
-        <div class="nbl-sci__media nbl-sci__media--video">
-          <video class="nbl-sci__video" src="<?php echo esc_url( $nbl . 'bl-kako-koristiti.mp4' ); ?>" poster="<?php echo esc_url( $nbl . 'bl-video-poster.webp' ); ?>" preload="none" muted loop playsinline autoplay disablepictureinpicture aria-label="Kako koristiti"></video>
-        </div>
-      </div>
-      <div class="nbl-cta-wrap"><a class="nbl-cta" href="#bundle-selector"><span>Isprobajte danas, bez rizika</span><?php echo $nbl_arrow; ?></a></div>
+<!-- 7) KAKO KORISTITI — video desno -->
+<section class="nbl-sec nbl-tint">
+  <div class="nbl-wrap nbl-row2 nbl-row2--rev">
+    <div class="nbl-copy">
+      <p class="nbl-kicker">Kako koristiti</p>
+      <h2 class="nbl-h2">Uvucite se <em>i opustite</em></h2>
+      <p>Kad ste u krevetu, uvucite se u NORIKS Blanket tako da gornji rub bude u udobnom položaju. Preporučujemo da ga namjestite blizu gornjeg dijela prsa i zatim ga povučete preko ramena.</p>
+      <p class="nbl-big">Tkanina će se rastegnuti i stisnuti te pružiti umirujući pritisak oko tijela.</p>
+      <a class="nbl-cta" href="#bundle-selector">Isprobajte danas — 30 dana za povrat</a>
+    </div>
+    <div class="nbl-media nbl-media--video">
+      <video src="<?php echo esc_url( $nbl . 'bl-kako-koristiti.mp4' ); ?>" poster="<?php echo esc_url( $nbl . 'bl-video-poster.webp' ); ?>" preload="metadata" muted loop playsinline autoplay disablepictureinpicture aria-label="Kako koristiti NORIKS Blanket"></video>
     </div>
   </div>
 </section>
 
-<!-- 6) PREDNOSTI TERAPIJE DUBOKIM PRITISKOM (DTP) -->
-<section class="nbl-sec nbl-sec--dtp">
+<!-- 8) PREDNOSTI TERAPIJE DUBOKIM PRITISKOM (DTP) -->
+<section class="nbl-sec">
   <div class="nbl-wrap">
-    <h2 class="nbl-h2 nbl-h2--white">Znanstveno potvrđene prednosti terapije dubokim pritiskom (DTP)</h2>
+    <p class="nbl-kicker nbl-kicker--c">Terapija dubokim pritiskom</p>
+    <h2 class="nbl-h2 nbl-h2--c">Znanstveno potvrđene prednosti <em>terapije dubokim pritiskom (DTP)</em></h2>
     <div class="nbl-dtp">
       <?php foreach ( $nbl_dtp as $d ) : ?>
       <div class="nbl-dtp__item">
         <?php echo $nbl_img( $d['ikona'], '', 'nbl-dtp__icon' ); ?>
-        <p class="nbl-dtp__title"><?php echo esc_html( $d['naslov'] ); ?></p>
-        <p class="nbl-dtp__text"><?php echo esc_html( $d['tekst'] ); ?></p>
+        <h3><?php echo esc_html( $d['naslov'] ); ?></h3>
+        <p><?php echo esc_html( $d['tekst'] ); ?></p>
       </div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<!-- 7) RECENZIJE KUPACA -->
-<section class="nbl-sec nbl-sec--reviews">
+<!-- 9) RECENZIJE KUPACA -->
+<section class="nbl-sec nbl-tint">
   <div class="nbl-wrap">
-    <h2 class="nbl-h2">Recenzije kupaca</h2>
-    <p class="nbl-rv-sum"><?php echo $nbl_stars; ?> <strong>4,97 od 5</strong> · na temelju 319 recenzija</p>
-    <div class="nbl-slider" data-nbl-slider="reviews" tabindex="0" role="group" aria-label="Recenzije kupaca">
-      <div class="nbl-track">
-        <?php foreach ( $nbl_reviews as $r ) : ?>
-        <article class="nbl-rv">
-          <?php if ( $r['foto'] ) : ?><div class="nbl-rv__photo"><?php echo $nbl_img( $r['foto'], 'Fotografija kupca — ' . $r['ime'] ); ?></div><?php endif; ?>
-          <span class="nbl-stars nbl-stars--rv" aria-label="<?php echo (int) $r['ocjena']; ?> od 5 zvjezdica"><?php echo str_repeat( $nbl_star, (int) $r['ocjena'] ); ?><?php echo str_repeat( '<svg class="is-off" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg>', 5 - (int) $r['ocjena'] ); ?></span>
-          <p class="nbl-rv__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
-          <div class="nbl-rv__bottom"><span class="nbl-rv__name"><?php echo esc_html( $r['ime'] ); ?></span><span class="nbl-rv__ver">✓ Provjereni kupac</span></div>
-        </article>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <div class="nbl-nav">
-      <button type="button" class="nbl-arrow" data-nbl-prev="reviews" aria-label="Prethodna recenzija"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <button type="button" class="nbl-arrow" data-nbl-next="reviews" aria-label="Sljedeća recenzija"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <h2 class="nbl-h2 nbl-h2--c">Recenzije <em>kupaca</em></h2>
+    <p class="nbl-rate"><span class="nbl-stars">★★★★★</span> <strong>4,97 od 5</strong> · na temelju 319 recenzija</p>
+    <div class="nbl-rv">
+      <?php foreach ( $nbl_reviews as $r ) : ?>
+      <article class="nbl-rv__card">
+        <?php if ( $r['foto'] ) : ?><div class="nbl-rv__photo"><?php echo $nbl_img( $r['foto'], 'Fotografija kupca — ' . $r['ime'] ); ?></div><?php endif; ?>
+        <span class="nbl-stars" aria-label="<?php echo (int) $r['ocjena']; ?> od 5 zvjezdica"><?php echo str_repeat( '★', (int) $r['ocjena'] ); ?><span class="nbl-stars__off"><?php echo str_repeat( '★', 5 - (int) $r['ocjena'] ); ?></span></span>
+        <p><?php echo esc_html( $r['tekst'] ); ?></p>
+        <div class="nbl-rv__who"><cite><?php echo esc_html( $r['ime'] ); ?></cite><span>✓ Provjereni kupac</span></div>
+      </article>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<script>
-(function(){
-  /* promo pasica originala ("ADHD Month Sale Live Now") — na istem mestu: cisto na vrhu strani, nad glavo. */
-  if (!document.querySelector('.nbl-annbar')) {
-    var bar = document.createElement('div');
-    bar.className = 'nbl-annbar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Obavijest');
-    bar.textContent = 'Akcija za mjesec ADHD-a je u tijeku';
-    document.body.insertBefore(bar, document.body.firstChild);
-  }
-})();
-(function(){
-  document.querySelectorAll('[data-nbl-slider]').forEach(function(s){
-    var key = s.getAttribute('data-nbl-slider');
-    var prev = document.querySelector('[data-nbl-prev="' + key + '"]'), next = document.querySelector('[data-nbl-next="' + key + '"]');
-    if (!prev || !next) return;
-    function step(){ var c = s.querySelector('.nbl-track > *'); return c ? c.getBoundingClientRect().width + 16 : 300; }
-    function upd(){ prev.disabled = s.scrollLeft <= 2; next.disabled = s.scrollLeft + s.clientWidth >= s.scrollWidth - 2; }
-    prev.addEventListener('click', function(){ s.scrollBy({ left: -step(), behavior: 'smooth' }); });
-    next.addEventListener('click', function(){ s.scrollBy({ left: step(), behavior: 'smooth' }); });
-    s.addEventListener('scroll', upd, { passive: true });
-    window.addEventListener('resize', upd);
-    upd();
-  });
-  /* video "Kako koristiti" se zazene sele, ko pride v vidno polje (kot na originalu, data-src + preload none). */
-  var v = document.querySelector('.nbl-sci__video');
-  if (v && 'IntersectionObserver' in window) {
-    v.removeAttribute('autoplay');
-    new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function(){}); } else { v.pause(); } }); }, { threshold: .25 }).observe(v);
-  }
-})();
-</script>
-
 <style>
-.nbl-sec { --nbl-lilac: #cec1df; --nbl-lilac-strong: #b7a3d0; --nbl-hot: #9217ff; --nbl-ink: #242424; --nbl-muted: #5f5f5f; --nbl-grey: #f4f4f4;
-  padding: 40px 0; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nbl-ink); background: #fff; overflow-x: hidden; }
+.nbl-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #231d29; }
 .nbl-sec * { box-sizing: border-box; }
-.nbl-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.nbl-wrap--narrow { max-width: 820px; }
-.nbl-h2 { font-family: 'League Spartan', 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(27px, 3vw, 33px); line-height: 1.3; text-align: center; margin: 0 0 22px; color: var(--nbl-lilac-strong); letter-spacing: 0; text-transform: none; }
-.nbl-h2--left { text-align: left; }
-.nbl-h2--white { color: #fff; }
-.nbl-sec img { display: block; max-width: 100%; height: auto; }
-
-/* karuseli */
-.nbl-slider { overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; outline: none; }
-.nbl-slider::-webkit-scrollbar { display: none; }
-.nbl-track { display: flex; gap: 16px; align-items: stretch; }
-.nbl-nav { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
-.nbl-arrow { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid #b4b4b4; border-radius: 50%; background: #fff; color: #111; cursor: pointer; }
-.nbl-arrow:hover:not(:disabled) { border-color: var(--nbl-hot); color: var(--nbl-hot); }
-.nbl-arrow:disabled { opacity: .35; cursor: default; }
-.nbl-arrow svg { width: 20px; height: 20px; }
-.nbl-stars { display: inline-flex; align-items: center; gap: 4px; color: #764293; line-height: 1; }
-.nbl-stars svg { width: 16px; height: 16px; }
-.nbl-stars svg.is-off { color: #d9d2e3; }
+.nbl-tint { background: #f6f2fa; }
+.nbl-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.nbl-wrap--narrow { max-width: 860px; }
+.nbl-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.nbl-row2--top { align-items: start; }
+.nbl-media img, .nbl-media video { display: block; width: 100%; height: auto; border: 0;
+  box-shadow: 0 2px 4px rgba(40,20,60,.05), 0 14px 40px rgba(40,20,60,.10); }
+.nbl-media--video video { background: #000; aspect-ratio: 1 / 1; object-fit: cover; }
+.nbl-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #7b4fb3; margin: 0 0 10px; }
+.nbl-kicker--c { text-align: center; }
+.nbl-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: #231d29; text-transform: none; }
+.nbl-h2--c { text-align: center; }
+.nbl-h2 em { font-style: italic; font-weight: 800; color: #7b4fb3; }
+.nbl-copy p { font-size: 16px; line-height: 1.7; color: #574c5e; margin: 0 0 14px; }
+.nbl-copy p strong { color: #231d29; }
+.nbl-big { font-size: 19px !important; font-weight: 800; color: #231d29 !important; }
+.nbl-big--c { text-align: center; }
+.nbl-card { background: #f6f2fa; border: 1px solid #e7def1; padding: 28px 26px; }
+.nbl-card p { font-size: 15px; }
+.nbl-sizes { margin: 0 0 14px; padding-left: 18px; font-size: 14.5px; line-height: 1.6; color: #574c5e; }
+.nbl-sizes li { margin: 0 0 4px; }
+.nbl-check { list-style: none; padding: 0; margin: 6px 0 18px; display: flex; flex-direction: column; gap: 11px; }
+.nbl-check li { position: relative; padding-left: 30px; font-size: 15.5px; line-height: 1.55; color: #3d3346; }
+.nbl-check li::before { content: "\2713"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
+  background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.nbl-check--c { max-width: 640px; margin: 18px auto 20px; }
+.nbl-cta { display: inline-block; margin-top: 8px; background: #7b4fb3; color: #fff !important; font-size: 15px; font-weight: 700;
+  padding: 15px 30px; border-radius: 8px; text-decoration: none; }
+.nbl-cta:hover { background: #643c99; color: #fff !important; }
+.nbl-stars { color: #e0a33c; letter-spacing: 1px; font-size: 15px; }
+.nbl-stars__off { color: #ddd3e6; }
 
 /* 1) iskustva zajednice */
-.nbl-sec--community { padding-top: 24px; }
-.nbl-testi { flex: 0 0 calc((100% - 32px) / 3); scroll-snap-align: start; background: var(--nbl-lilac); color: #fff; border-radius: 8px; padding: 14px 26px 16px; display: flex; flex-direction: column; }
-.nbl-testi__quote { font-weight: 700; font-size: 15px; line-height: 1.6; margin: 0 0 6px; color: #fff; }
-.nbl-testi__body { font-size: 13.5px; line-height: 1.7; margin: 0 0 12px; color: #fff; flex: 1 1 auto; }
-.nbl-testi__meta { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; }
-.nbl-testi__author { margin: 0; font-family: 'League Spartan', 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; color: #fff; }
+.nbl-testi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px; }
+.nbl-testi { background: #fff; border: 1px solid #e7def1; padding: 22px 20px; display: flex; flex-direction: column; }
+.nbl-testi h3 { font-size: 16.5px; font-weight: 800; line-height: 1.3; margin: 8px 0 10px; color: #231d29; }
+.nbl-testi p { font-size: 14.5px; line-height: 1.65; color: #574c5e; margin: 0 0 14px; flex: 1 1 auto; }
+.nbl-testi cite { font-style: normal; font-size: 14px; font-weight: 800; color: #231d29; }
 
-/* 2) zavihki / harmonika */
-.nbl-sec--tabs { padding-top: 8px; }
-.nbl-acc { border-top: 1px solid rgba(0,0,0,.12); }
-.nbl-acc:last-of-type { border-bottom: 1px solid rgba(0,0,0,.12); }
-.nbl-acc > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; cursor: pointer; font-weight: 400; font-size: 16px; color: var(--nbl-ink); list-style: none; }
-.nbl-acc--bold > summary { font-weight: 700; }
-.nbl-acc > summary::-webkit-details-marker { display: none; }
-.nbl-acc__icon { flex: 0 0 12px; display: inline-flex; color: var(--nbl-ink); }
-.nbl-acc[open] .nbl-acc__v { opacity: 0; }
-.nbl-acc__panel { padding: 0 0 18px; color: var(--nbl-muted); font-size: 15px; line-height: 1.8; }
-.nbl-acc__panel h4 { font-family: inherit; font-size: 15px; font-weight: 700; color: var(--nbl-ink); margin: 12px 0 4px; text-transform: none; letter-spacing: 0; }
-.nbl-acc__panel h4:first-child { margin-top: 0; }
-.nbl-acc__panel p { margin: 0 0 8px; }
-.nbl-acc__panel ul { margin: 0 0 8px; padding-left: 20px; }
-.nbl-acc__panel li { margin: 0 0 4px; }
+/* 4) usporedba */
+.nbl-cmp { background: #fff; border: 1px solid #e7def1; overflow: hidden; }
+.nbl-cmp__table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 0 !important; table-layout: fixed; }
+.nbl-cmp__table th, .nbl-cmp__table td { padding: 13px 14px; border-bottom: 1px solid #eee6f5; vertical-align: middle; text-align: left; }
+.nbl-cmp__table th { font-size: 16px; font-weight: 800; text-align: center; }
+.nbl-cmp__table th img { display: block; height: 90px; width: auto; max-width: 100%; margin: 0 auto 8px; object-fit: contain; }
+.nbl-cmp__us { background: #7b4fb3; color: #fff; }
+.nbl-cmp__them { background: #f1edf4; color: #6b5e75; }
+.nbl-cmp__table td { color: #3d3346; line-height: 1.45; }
+.nbl-cmp__table td span { font-weight: 800; margin-right: 8px; }
+.nbl-y { color: #2f9e5f; }
+.nbl-n { color: #c0392b; }
+.nbl-cmp__table tbody tr:last-child td { border-bottom: 0; }
 
-/* 3) primerjava */
-.nbl-cmp-layout { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 30px; align-items: start; }
-.nbl-cmp-layout__banner img { width: 100%; border-radius: 8px; }
-.nbl-cmp-layout__main .nbl-h2 { margin-bottom: 40px; }
-.nbl-cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; padding-top: 30px; }
-.nbl-cmp__col { border-radius: 12px; padding: 12px; }
-.nbl-cmp__col--noriks { background: var(--nbl-lilac); }
-.nbl-cmp__col--other { background: var(--nbl-grey); margin-top: 24px; }
-.nbl-cmp__media { margin: -50px 0 12px; text-align: center; }
-.nbl-cmp__media img { display: inline-block; max-height: 190px; width: auto; }
-.nbl-cmp__label { text-align: center; font-family: 'League Spartan', 'Montserrat', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.5; margin: 0 0 10px; color: var(--nbl-ink); }
-.nbl-cmp__col--noriks .nbl-cmp__label { color: #fff; font-size: 26px; line-height: 1.1; }
-.nbl-cmp__item { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.07); padding: 16px; margin-bottom: 10px; font-size: 14px; line-height: 1.35; }
-.nbl-cmp__item:last-child { margin-bottom: 0; }
-.nbl-ico { flex: 0 0 20px; width: 20px; height: 20px; }
-.nbl-ico--yes { color: #52c41a; }
-.nbl-ico--no { color: #8c8c8c; }
+/* 8) DTP */
+.nbl-dtp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 10px; }
+.nbl-dtp__item { text-align: center; }
+.nbl-sec .nbl-dtp__icon { display: block; width: 84px; height: 84px; object-fit: contain; margin: 0 auto 14px; }
+.nbl-dtp__item h3 { font-size: 17.5px; font-weight: 800; line-height: 1.3; margin: 0 0 8px; color: #231d29; }
+.nbl-dtp__item p { font-size: 15px; line-height: 1.6; color: #574c5e; margin: 0; }
 
-/* 4) koristite ga za */
-.nbl-use { flex: 0 0 calc((100% - 32px) / 3); scroll-snap-align: start; background: var(--nbl-lilac); color: #fff; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
-.nbl-sec .nbl-use img { width: 100%; height: 300px; object-fit: cover; }
-.nbl-use__body { padding: 24px 24px 16px; }
-.nbl-use__title { font-family: 'League Spartan', 'Montserrat', sans-serif; font-weight: 600; font-size: 24px; line-height: 1.3; margin: 0 0 7px; color: #fff; }
-.nbl-use__text { font-size: 15px; line-height: 1.45; margin: 0; color: #fff; }
-.nbl-nav--uses { display: none; }
+/* 9) recenzije */
+.nbl-rate { text-align: center; font-size: 15px; color: #6b5e75; margin: 0 0 24px; }
+.nbl-rv { column-count: 3; column-gap: 18px; }
+.nbl-rv__card { break-inside: avoid; display: inline-block; width: 100%; margin: 0 0 18px; background: #fff; border: 1px solid #e7def1; padding: 18px; }
+.nbl-rv__photo { margin: 0 0 12px; }
+.nbl-sec .nbl-rv__photo img { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; }
+.nbl-rv__card p { font-size: 14.5px; line-height: 1.65; color: #574c5e; margin: 8px 0 14px; }
+.nbl-rv__who { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-top: 1px solid #eee6f5; padding-top: 10px; }
+.nbl-rv__who cite { font-style: normal; font-size: 14px; font-weight: 800; color: #231d29; }
+.nbl-rv__who span { font-size: 12.5px; color: #2e7d32; white-space: nowrap; }
 
-/* 5) znanost + kako koristiti */
-.nbl-sci { display: flex; flex-direction: column; gap: 28px; }
-.nbl-sci__row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.nbl-sci__row--howto { align-items: center; }
-.nbl-sci__media { border-radius: 12px; overflow: hidden; background: var(--nbl-lilac); }
-.nbl-sci__media img, .nbl-sci__video { display: block; width: 100%; height: auto; border: 0; }
-.nbl-sci__video { background: #000; pointer-events: none; aspect-ratio: 1 / 1; object-fit: cover; }
-.nbl-sci__item { margin-bottom: 18px; }
-.nbl-sci__item-title { font-weight: 700; font-size: 17px; color: var(--nbl-ink); margin: 0 0 4px; line-height: 1.3; }
-.nbl-sci__item-text { color: var(--nbl-muted); font-size: 14.5px; line-height: 1.5; margin: 0; }
-.nbl-sci__howto { color: var(--nbl-muted); font-size: 14.5px; line-height: 1.5; margin: 0 0 20px; }
-.nbl-cta-wrap { display: flex; justify-content: center; width: 100%; }
-.nbl-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: 420px; min-height: 52px; padding: 0 24px;
-  border-radius: 999px; background: var(--nbl-hot); color: #fff !important; font-weight: 700; font-size: 16px; letter-spacing: .02em; text-decoration: none;
-  box-shadow: 0 4px 14px rgba(146,23,255,.28); transition: background .2s ease, box-shadow .2s ease, transform .15s ease; }
-.nbl-cta:hover { background: #7a12d9; box-shadow: 0 6px 18px rgba(146,23,255,.36); transform: translateY(-1px); color: #fff !important; }
-
-/* 6) DTP */
-.nbl-sec--dtp { background: var(--nbl-lilac); color: #fff; padding: 48px 0; }
-.nbl-dtp { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 30px; }
-.nbl-dtp__item { text-align: center; max-width: 600px; margin: 0 auto; }
-.nbl-sec .nbl-dtp__icon { width: 110px; height: 110px; object-fit: contain; margin: 0 auto 12px; }
-.nbl-dtp__title { font-weight: 700; font-size: 19px; line-height: 1.3; margin: 0 0 7px; color: #fff; }
-.nbl-dtp__text { font-size: 15px; line-height: 1.3; margin: 0; color: #fff; }
-
-/* 7) recenzije */
-.nbl-rv-sum { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin: -8px 0 22px; font-size: 15px; color: var(--nbl-muted); }
-.nbl-rv-sum strong { color: var(--nbl-ink); }
-.nbl-sec--reviews .nbl-track { align-items: flex-start; }
-.nbl-rv { flex: 0 0 calc((100% - 48px) / 4); scroll-snap-align: start; display: flex; flex-direction: column; background: #fff; border: 1px solid #e6e0ee; border-radius: 12px; padding: 16px; }
-.nbl-rv__photo { margin: 0 0 12px; border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1; }
-.nbl-sec .nbl-rv__photo img { width: 100%; height: 100%; object-fit: cover; }
-.nbl-stars--rv { margin: 0 0 10px; }
-.nbl-rv__txt { font-size: 14px; line-height: 1.6; color: #3a3a3a; margin: 0 0 14px; flex: 1 1 auto; }
-.nbl-rv__bottom { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-top: 1px solid #eee7f5; padding-top: 10px; }
-.nbl-rv__name { font-size: 13.5px; font-weight: 700; color: var(--nbl-ink); }
-.nbl-rv__ver { font-size: 12px; color: #2e7d32; white-space: nowrap; }
-
-@media (max-width: 989px) {
-  .nbl-rv { flex-basis: calc((100% - 16px) / 2); }
-  .nbl-testi { flex-basis: calc((100% - 16px) / 2); }
-}
-@media (max-width: 749px) {
-  .nbl-sec { padding: 30px 0; }
-  .nbl-wrap { padding: 0 16px; }
-  .nbl-h2 { font-size: 27px; }
-  .nbl-testi { flex-basis: 86%; padding: 12px 20px 14px; }
-  .nbl-cmp-layout { grid-template-columns: 1fr; gap: 20px; }
-  .nbl-cmp-layout__banner { display: none; }
-  .nbl-cmp-layout__main .nbl-h2 { margin-bottom: 30px; }
-  .nbl-cmp__label { font-size: 17px; }
-  .nbl-cmp__col--noriks .nbl-cmp__label { font-size: 22px; }
-  .nbl-cmp__item { padding: 12px 8px; font-size: 13px; }
-  .nbl-cmp__media img { max-height: 130px; }
-  .nbl-use { flex-basis: 84%; }
-  .nbl-sec .nbl-use img { height: 220px; }
-  .nbl-use__body { padding: 14px 14px 10px; }
-  .nbl-use__title { font-size: 18px; }
-  .nbl-use__text { font-size: 14px; }
-  .nbl-nav--uses { display: flex; }
-  .nbl-sci__row { grid-template-columns: 1fr; gap: 24px; }
-  .nbl-sci__row--science .nbl-sci__content { order: 1; }
-  .nbl-sci__row--science .nbl-sci__media { order: 2; }
-  .nbl-sci__item-title { font-size: 15px; }
-  .nbl-sci__item-text, .nbl-sci__howto { font-size: 14px; }
-  .nbl-sec--dtp { padding: 36px 0; }
-  .nbl-dtp { grid-template-columns: 1fr; gap: 30px; }
-  .nbl-dtp__title { font-size: 17px; }
-  .nbl-dtp__text { font-size: 14px; }
-  .nbl-rv { flex-basis: 82%; }
-}
-
-.nbl-annbar { background: #cec1df; color: #fff; text-align: center; font-family: 'Montserrat', system-ui, sans-serif; font-weight: 700;
-  font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 9px 12px; line-height: 1.3; position: relative; z-index: 2; }
-
-/* kratek opis izdelka: zelene kljukice namesto pik (REST pobrise inline slog) */
+/* kratek opis izdelka: zelene kljukice namesto pik */
 .woocommerce div.product .woocommerce-product-details__short-description ul,
 .woocommerce-product-details__short-description ul {
   list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
@@ -515,4 +387,22 @@ $nbl_reviews = array(
   font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
   text-align: center !important; display: inline-block !important; }
 .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
+
+@media (max-width: 980px) {
+  .nbl-row2 { grid-template-columns: 1fr; gap: 28px; }
+  .nbl-row2--rev .nbl-media { order: -1; }
+  .nbl-testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .nbl-rv { column-count: 2; }
+}
+@media (max-width: 560px) {
+  .nbl-sec { padding: 42px 0; }
+  .nbl-wrap { padding: 0 16px; }
+  .nbl-cta { width: 100%; text-align: center; }
+  .nbl-testi-grid { grid-template-columns: 1fr; }
+  .nbl-dtp { grid-template-columns: 1fr; }
+  .nbl-rv { column-count: 1; }
+  .nbl-card { padding: 22px 18px; }
+  .nbl-cmp__table th, .nbl-cmp__table td { padding: 10px 8px; font-size: 13px; }
+  .nbl-cmp__table th img { height: 60px; }
+}
 </style>

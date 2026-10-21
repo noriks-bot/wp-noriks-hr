@@ -512,9 +512,6 @@ function gck_render_bundle_selector() {
         // NORIKS Tuck: kao na originalu ("Try it" / "€29,00 each · one to wear, one in the wash · ✓ Mix & match colours" /
         // "€21,00 each · a full week covered · ✓ FREE shipping included").
         $gck_offer_subs = array( 'Isprobajte', '29,00 € po komadu · jedne nosite, druge su u pranju · ✓ Kombinirajte boje', '20,50 € po komadu · cijeli tjedan pokriven · ✓ BESPLATNA dostava uključena' );
-    } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
-        // NORIKS Blanket: kao na originalu ("Standard price" / "Buy 1 Get 1 50% Off").
-        $gck_offer_subs = array( 'Standardna cijena', 'Drugi komad −50 %' );
     } elseif ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) {
         // NORIKS Brassiere: kao na originalu ("+ Livraison OFFERTE" pod obje ponude).
         $gck_offer_subs = array( '+ Besplatna dostava', '+ Besplatna dostava' );
@@ -538,9 +535,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
         // NORIKS Tuck: znacki 2. in 3. ponude kao na originalu ("MOST POPULAR", "BEST VALUE").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' );
-    } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
-        // NORIKS Blanket: znacka druge ponude kao na originalu ("Most Popular").
-        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE' );
     } elseif ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) {
         // NORIKS Brassiere: znacka druge ponude kao na originalu ("OFFRE SPECIALE 24H").
         $gck_offer_badges = array( 1 => 'POSEBNA PONUDA 24H' );
