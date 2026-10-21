@@ -551,7 +551,7 @@ function gck_render_bundle_selector() {
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']
     // i ovdje ga uzimamo kao dodatni <select> uz par.
     // NORIKS HOME PowerHook: jedini izbor je BOJA i prikazuje se kao krugovi (kao original).
-    $gck_single_color = has_term( array( 'orto-home', 'orto-snug' ), 'product_cat', $product_id );
+    $gck_single_color = has_term( array( 'orto-home', 'orto-snug', 'orto-raincoat' ), 'product_cat', $product_id );
 
     $gck_extra_select = has_term( 'orto-sr', 'product_cat', $product_id );
     $gck_extra_attr   = null;
