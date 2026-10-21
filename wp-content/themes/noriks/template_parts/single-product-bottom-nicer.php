@@ -279,6 +279,11 @@ if ( noriks_is_type( 'seatcover' ) ) {
     include $noriks_pb_dir . 'why-seatcover.php';
 }
 
+// NORIKS AnkleSleeve (orto-anklesleeve) — kompresijska potpora za glezanj
+if ( noriks_is_type( 'anklesleeve' ) ) {
+    include $noriks_pb_dir . 'why-anklesleeve.php';
+}
+
 // NORIKS CorkSandals (orto-corksandals) — ljetne sandale od pluta s uloskom od antilopa
 if ( noriks_is_type( 'corksandals' ) ) {
     include $noriks_pb_dir . 'why-corksandals.php';

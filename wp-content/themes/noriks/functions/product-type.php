@@ -114,6 +114,8 @@ function noriks_product_type_map() : array {
         'seatcover'               => array( 'orto-seatcover', 'seatcover' ),
         // NORIKS CorkSandals — ljetne sandale od pluta s uloskom od antilopa (boja + velicina EU 36-46).
         'corksandals'             => array( 'orto-corksandals', 'corksandals' ),
+        // NORIKS AnkleSleeve — kompresijska potpora za glezanj (velicina S/M/L po broju cipele, ena barva).
+        'anklesleeve'             => array( 'orto-anklesleeve', 'anklesleeve' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -508,6 +510,18 @@ if ( ! function_exists( 'noriks_harness_sizes' ) ) {
             array( 'M',  '55–67 cm', 'koker španijel, beagle, stafordski bul terijer, whippet, cockapoo (standardni), springer španijel (manji), velški springer španijel, bedlington terijer, basenji, mini labradoodle' ),
             array( 'L',  '67–84 cm', 'labrador retriver (vitki / ženka), border koli, engleski springer španijel, standardna pudla, bokser, vižla, vajmarski ptičar (manji), dalmatinac, australski ovčar, škotski ovčar (koli)' ),
             array( 'XL', '80–107 cm', 'labrador retriver (veći), zlatni retriver, njemački ovčar, rotvajler, doberman, sibirski haski, aljaški malamut, akita, rodezijski gonič, cane corso' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_anklesleeve_sizes' ) ) {
+    /** NORIKS AnkleSleeve: velicina, broj cipele (EU).
+     *  1:1 z originala flytex.fr ("Guide des tailles": S = 35-40, M = 41-43, L = 44-47). */
+    function noriks_anklesleeve_sizes() {
+        return array(
+            array( 'S', '35–40' ),
+            array( 'M', '41–43' ),
+            array( 'L', '44–47' ),
         );
     }
 }

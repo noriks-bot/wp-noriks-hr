@@ -707,6 +707,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS TitaniumPan</strong> je posljednja tava koja vam ikad treba. Izrađena je da bude neuništiva i da traje cijeli život. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih kuhara. Bez premaza. Bez toksina. Bez kompromisa.<br><br><strong>Netoksični materijali</strong> — izrađena bez: PFAS-a („vječnih kemikalija”), PTFE-a (teflona), PFOA-e, olova i kadmija, nanočestica i teških metala.<br><br><strong>Detalji:</strong><br>• Promjer: 28 cm (11″), visina: 6,3 cm (dostupna i u 26 cm i 30 cm)<br>• Za sve vrste ploča, uključujući indukciju<br><br><strong>Konstrukcija:</strong><br>• Potpuno troslojna izvedba<br>• Donji sloj: 0,6 mm nehrđajućeg čelika (430) – za indukciju<br>• Jezgra: 1 mm aluminija – brza i ravnomjerna raspodjela topline<br>• Površina za kuhanje: 0,5 mm čistog titanija s kovanim uzorkom – prirodno neljepljiva, bez toksina i iznimno izdržljiva<br><br><strong>U paketu:</strong><br>• Titanijska kovana tava, sigurno zapakirana u posebnu zaštitnu kutiju<br>• 5 osnovnih vodiča – savjeti za njegu, prvo pripremanje tave i profesionalne tehnike kuhanja<br><br><strong>Njega i upotreba:</strong><br>• Otporna na temperaturu do 548 °C<br>• Može se prati u perilici posuđa<br>• Sigurna za metalni pribor<br>• Neljepljivost aktivirajte s 1 žličicom ulja s visokom točkom dimljenja prije kuhanja<br>• Titanijsku površinu lako očistite s malo deterdženta i spužvom.
 
+         <?php elseif( noriks_is_type( 'anklesleeve', $current_product_id ) ): ?>
+
+                <strong>NORIKS AnkleSleeve</strong> je kompresijska potpora za gležanj za sport i svakodnevno kretanje. Prianja uz oblik stopala poput druge kože i pruža <strong>ciljanu potporu</strong>, a pritom čuva vašu slobodu pokreta — krećite se s više samopouzdanja i udobnosti.<br><br><strong>Istaknuto:</strong><br>• <strong>Ciljana kompresija</strong> za veću udobnost<br>• <strong>Više kontrole</strong> tijekom napora — prati vaše oslonce<br>• <strong>Udobni i prozračni materijali</strong> — tanki, lagani i otporni<br>• <strong>Tanki šav</strong> koji ne smeta u cipeli — ergonomski dizajn<br>• Pomaže i nakon treninga, uz osjećaj lakoće<br><br>Za razliku od klasičnih modela, NORIKS AnkleSleeve posebno je osmišljena da prati vaše pokrete tijekom napora — za trčanje, trail, nogomet, rukomet, košarku, dvoranske sportove ili cijeli radni dan na nogama. Možete je nositi samo kada želite dodatnu potporu i udobnost.<br><br><strong>Veličine</strong> (po broju cipele, EU): S (35–40), M (41–43), L (44–47). Ako ste između dvije veličine, uzmite veću. Prodaje se po komadu — za oba gležnja odaberite ponudu 2x (par) ili 4x (dva para).<br><br>Boja: crna.
+
          <?php elseif( noriks_is_type( 'corksandals', $current_product_id ) ): ?>
 
                 <strong>NORIKS CorkSandals</strong> su ljetne sandale s plutenim potplatom i uloškom od <strong>pravog goveđeg antilopa</strong>, s mekanim remenima od PU materijala i čvrstom, potpuno podesivom kopčom. Svaki par pažljivo je izrađen kako bismo postigli najvišu kvalitetu — europski antilop, izrada u malim serijama.<br><br><strong>Svaki detalj osmišljen za udobnost:</strong><br>• <strong>Potpora za svod stopala</strong> — smanjuje napetost i drži vas udobnima cijeli dan<br>• <strong>Duboko ležište pete</strong> — obuhvaća petu za bolju stabilnost i manji pritisak pri svakom koraku<br>• <strong>100 % prirodni goveđi antilop</strong> — mekan, prozračan uložak, profinjen na dodir<br>• Čvrst, a savitljiv potplat za cjelodnevno nošenje<br>• Dvije podesive kopče — pristaju i širem stopalu<br><br><strong>Bez dizajnerske marže:</strong> plaćate materijale i udobnost, a ne logotip. Najveći dio cijene ide na materijale i plaće, ne na marku i troškove maloprodaje.<br><br>Unisex model, dostupan u pet boja (smeđa, sivosmeđa, bež, crna i bijela) i u veličinama od EU 36 do EU 46. Sandale odgovaraju standardnim veličinama — ako ste između dva broja, uzmite veći.
@@ -1188,6 +1192,33 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>26 cm</strong> — svakodnevna tava za odrezak, jaja i brzo prženje. <strong>28 cm</strong> — naša najprodavanija, za većinu obroka za dvoje. <strong>30 cm</strong> — obiteljski obroci, priprema unaprijed i gosti. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'anklesleeve', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>. Potpora se prodaje po komadu — za oba gležnja odaberite ponudu 2x (par).</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#24476b;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Broj cipele (EU)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_anklesleeve_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#eef3f8' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Savjet:</strong> ako ste između dvije veličine, preporučujemo veću veličinu za veću udobnost. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'corksandals', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1558,6 +1589,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
 
                 Prije prve upotrebe tavu operite toplom vodom i deterdžentom. Titanijsku površinu lako očistite s malo deterdženta i spužvom; tava se može prati i u perilici posuđa, a kratko ručno pranje dulje čuva sjaj. Sigurna je za metalni pribor. Za prirodnu neljepljivost tavu zagrijte 2–3 minute na srednjoj vatri i dodajte 1 žličicu ulja s visokom točkom dimljenja.
+
+         <?php elseif( noriks_is_type( 'anklesleeve', $current_product_id ) ): ?>
+
+                Kako bi kompresija zadržala svu elastičnost, preporučujemo <strong>ručno pranje u hladnoj vodi</strong>. Možete je prati i u perilici. Za sušenje je položite na ravnu površinu i ostavite da se osuši na zraku kako bi zadržala elastičnost. Ne glačati. Ne izbjeljivati. Ne čistiti kemijski.
 
          <?php elseif( noriks_is_type( 'corksandals', $current_product_id ) ): ?>
 
