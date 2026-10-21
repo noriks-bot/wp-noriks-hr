@@ -508,10 +508,6 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
-    } elseif ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) {
-        // NORIKS BraTank: kao na originalu ("Standard Price" / "£15.99 per Tank" / "£12.99 per Tank"),
-        // cijena po komadu iz nasih EUR cijena (59,99 / 3 in 94,99 / 6).
-        $gck_offer_subs = array( 'Standardna cijena', '20,00 € po majici', '15,83 € po majici' );
     } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
         // NORIKS Tuck: kao na originalu ("Try it" / "€29,00 each · one to wear, one in the wash · ✓ Mix & match colours" /
         // "€21,00 each · a full week covered · ✓ FREE shipping included").
@@ -547,9 +543,6 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
-    } elseif ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) {
-        // NORIKS BraTank: znacke 2. in 3. ponude kao na originalu ("60% OFF + FREE SHIPPING", "70% OFF + FREE SHIPPING").
-        $gck_offer_badges = array( 1 => '60 % POPUSTA + BESPLATNA DOSTAVA', 2 => '70 % POPUSTA + BESPLATNA DOSTAVA' );
     } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
         // NORIKS Tuck: znacki 2. in 3. ponude kao na originalu ("MOST POPULAR", "BEST VALUE").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' );
@@ -2520,14 +2513,6 @@ function gck_render_bundle_selector() {
                 <a href="#" class="gck-size-link gck-tk-size__link">Tablica veličina</a>
             </div>
             <div class="gck-tk-title"><strong>Odaberite paket</strong><span>Većina žena uzme 2+</span></div>
-        <?php endif; ?>
-        <?php if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) : ?>
-            <!-- NORIKS BraTank: kao na originalu — sporocilo o velikosti in naslov bloka ponud -->
-            <div class="gck-bt-size">
-                <p class="main">✨ <strong>ODGOVARA VELIČINI</strong> — jednostavno naručite svoju uobičajenu veličinu</p>
-                <p class="proof">95 % naših kupaca pogodi pravu veličinu iz prvog puta</p>
-            </div>
-            <div class="gck-bt-title">AKCIJA ZAVRŠAVA VEČERAS</div>
         <?php endif; ?>
         <?php if ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) : $gck_bs_img = get_template_directory_uri() . '/img/brassiere/'; ?>
             <!-- NORIKS Brassiere: jesenska ponuda kao na originalu (izmedu tablice velicina i ponuda) -->
@@ -4521,36 +4506,6 @@ function gck_shgifts_free_gifts_notice() {
             <?php endforeach; ?>
         </div>
     </div>
-    <?php
-}
-
-// ============================================================
-// NORIKS BraTank (orto-bratank): ikone pod gumbom + opozorilo o kopijah (kot na originalu)
-// ============================================================
-add_action( 'woocommerce_after_add_to_cart_button', 'gck_bratank_after_cart', 21 );
-function gck_bratank_after_cart() {
-    if ( ! function_exists( 'is_product' ) || ! is_product() ) { return; }
-    global $product;
-    if ( ! $product instanceof WC_Product || ! has_term( 'orto-bratank', 'product_cat', $product->get_id() ) ) { return; }
-    ?>
-    <div class="gck-bt-after">
-      <ul class="gck-bt-icons">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Jednostavan povrat i zamjena</span></li>
-        <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#d9a521"/><circle cx="24" cy="24" r="17.5" fill="none" stroke="#fff3c4" stroke-width="1.5"/><text x="24" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#2b2112">60</text><text x="24" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" fill="#2b2112">DANA</text></svg><span>60 dana jamstvo pristajanja</span></li>
-      </ul>
-      <div class="gck-bt-replica">
-        <strong>⚠️ Čuvajte se jeftinih kopija</strong><br><br>
-        Originalna majica s ugrađenim grudnjakom bez trake prodaje se <strong>samo u NORIKS trgovini</strong>.
-      </div>
-    </div>
-    <style>
-      .gck-bt-after { margin: 16px 0 0; }
-      .gck-bt-icons { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 24px; }
-      .gck-bt-icons li { display: flex; align-items: center; gap: 12px; margin: 0; font-size: 15px; font-weight: 600; color: #121212; flex: 1 1 200px; }
-      .gck-bt-icons svg { flex: 0 0 48px; width: 48px; height: 48px; color: #b57e7e; }
-      .gck-bt-replica { border: 2px dashed #b57e7e; padding: 15px; text-align: center; color: #333; font-size: 14px; line-height: 1.5; margin: 15px 0; }
-      .gck-bt-replica strong { color: #b57e7e; }
-    </style>
     <?php
 }
 

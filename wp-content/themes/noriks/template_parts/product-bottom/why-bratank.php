@@ -1,26 +1,25 @@
 <?php
 /**
  * product-bottom: NORIKS BraTank — majica s ugradenim grudnjakom bez trake (orto-bratank).
- * Original: lunara-comfort.com/products/front-support-built-in-bra-tank — struktura je 1:1 z originalom
- * (isto stevilo sekcij, isti vrstni red, isti dizajn), besedila prevedena.
- *   1) Pridruzite se 20.000+ zadovoljnih kupaca (6 kartic mnenj, 3 v vrsti / karusel na mobilnem)
+ * Original: lunara-comfort.com/products/front-support-built-in-bra-tank — vsebina in vrstni red 1:1
+ * z originalom, oblika po NORIKS stilu (kot why-hands.php: oznaka + naslov z lezecim poudarkom,
+ * izmenicna ozadja, brez drsnikov, pasic in odstevalnikov).
+ *   1) Pridruzite se 20.000+ zadovoljnih kupaca (6 mnenj, mreza)
  *   2) Sto smo promijenili + Kako djeluje — sloj po sloj (4 kartice)
  *   3) Vasa nova jutarnja rutina (3 koraki)
  *   4) Usporedba (tabela, stolpec NORIKS)
+ * Original nima sekcij s slikami/videi (samo besedilo), zato ni dvostolpcnih sekcij.
  * FAQ originala je v reviews.php ($bratank_faq), mnenja za karusel teme v auto_reviews/HR_bratank.php.
- * Promo pasica originala ("FALL SALE" z odstevalnikom) je na istem mestu: cisto na vrhu strani.
- * Izpusceno: glava, noga, locilna crta pred nogo (trgovinski moduli).
+ * Izpusceno (NORIKS stil): promo pasica »FALL SALE« z odstevalnikom, glava, noga, trgovinski moduli.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-$nbt_img = get_template_directory_uri() . '/img/bratank/';
-
-/* Mnenja 1:1 z originala (ime in leta ostanejo kot na originalu). */
+/* Mnenja 1:1 z originala (ime in leta ostanejo kot na originalu); jamstvo -> NORIKS pogoji (30 dana za povrat). */
 $nbt_reviews = array(
   array( 'ime' => 'Janet Mercer, 66', 'tekst' => '»Svako jutro stajala sam pred komodom i pokušavala shvatiti koji grudnjak ide uz ono što nosim. Onaj s jastučićima, onaj bez žica, onaj koji se ne vidi ispod bijelog. Sada uzmem majicu i obučena sam. To je cijela odluka. Ladicu s grudnjacima nisam otvorila mjesecima i ni sekunde mi ne nedostaje.«' ),
   array( 'ime' => 'Sarah Hartley, 69', 'tekst' => '»Cijeli odrasli život prvo što bih napravila kad uđem u kuću bilo je da posegnem iza leđa i otkopčam grudnjak. Svaki dan. Ovu majicu nosim dva mjeseca i neku sam večer shvatila da legnem u krevet, a nemam što skinuti. Već mi je udobno. Nikad nisam mislila da ću to reći za nešto što nosim cijeli dan.«' ),
   array( 'ime' => 'Linda White, 67', 'tekst' => '»Iskreno, sada živim u njoj. Obučem je odmah ujutro i nosim je cijeli dan po kući — dok kuham, čistim, idem do poštanskog sandučića, navečer na kauču. Prije bih se čim dođem kući presvukla u nešto mekano. Sada se nemam u što presvući ni što skinuti. Nosim je od trenutka kad ustanem do odlaska na spavanje. Kupila sam po jednu u svakoj boji da uvijek imam čistu u ladici.«' ),
-  array( 'ime' => 'Stephanie Foren, 74', 'tekst' => 'Cijeli život mrzim grudnjake. Žice, uske trake, tragovi grudnjaka — s time se nosim desetljećima. Prijateljica mi je preporučila ovu majicu i iskreno, bila sam skeptična. Ali naručila sam tri jer ima jamstvo pristajanja. Najbolja stvar koju sam kupila godinama.' ),
+  array( 'ime' => 'Stephanie Foren, 74', 'tekst' => '»Cijeli život mrzim grudnjake. Žice, uske trake, tragovi grudnjaka — s time se nosim desetljećima. Prijateljica mi je preporučila ovu majicu i iskreno, bila sam skeptična. Ali naručila sam tri jer imam 30 dana za povrat. Najbolja stvar koju sam kupila godinama.«' ),
   array( 'ime' => 'Erin Elwell, 78', 'tekst' => '»Najbolji dan s unucima 💕 Toliko je udobna da se mogu cijeli dan igrati na podu, a da me grudnjak ne ubija. Ove majice MIJENJAJU SVE! Imam 78 i napokon sam našla nešto što me stvarno podržava!«' ),
   array( 'ime' => 'Jessica Reller, 72', 'tekst' => '»Godinama sam probala sve i ništa nije pomoglo. Ovo je prva stvar koja zaista pristaje mom tijelu, a da me ne boli. Nosim je cijeli dan, u njoj odspavam, u njoj radim u vrtu. Nitko ne primijeti da ne nosim grudnjak.«' ),
 );
@@ -55,42 +54,43 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 
 <!-- 1) PRIDRUZITE SE 20.000+ ZADOVOLJNIH KUPACA -->
-<section class="nbt-sec nbt-sec--reviews">
+<section class="nbt-sec">
   <div class="nbt-wrap nbt-wrap--wide">
-    <h2 class="nbt-h1">Pridružite se više od 20.000 zadovoljnih kupaca.</h2>
-    <p class="nbt-score">Odlično <span class="nbt-score__num"><strong>4.8</strong></span> <strong>/ 5</strong>
+    <p class="nbt-kicker">Recenzije kupaca</p>
+    <h2 class="nbt-h2">Pridružite se više od <em>20.000 zadovoljnih kupaca.</em></h2>
+    <p class="nbt-score">Odlično <strong>4.8</strong> <strong>/ 5</strong>
       <span class="nbt-stars" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( '<i>' . $nbt_star . '</i>', 5 ); ?></span></p>
-    <div class="nbt-slider" data-nbt-slider tabindex="0" role="group" aria-label="Recenzije kupaca">
-      <div class="nbt-track">
-        <?php foreach ( $nbt_reviews as $r ) : ?>
-        <article class="nbt-rv">
-          <span class="nbt-stars" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( '<i>' . $nbt_star . '</i>', 5 ); ?></span>
-          <p class="nbt-rv__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
-          <p class="nbt-rv__name"><em><strong><?php echo esc_html( $r['ime'] ); ?></strong></em></p>
-        </article>
-        <?php endforeach; ?>
-      </div>
+    <div class="nbt-revs">
+      <?php foreach ( $nbt_reviews as $r ) : ?>
+      <article class="nbt-rv">
+        <span class="nbt-stars" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( '<i>' . $nbt_star . '</i>', 5 ); ?></span>
+        <p class="nbt-rv__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
+        <p class="nbt-rv__name"><strong><?php echo esc_html( $r['ime'] ); ?></strong></p>
+      </article>
+      <?php endforeach; ?>
     </div>
-    <div class="nbt-dots" data-nbt-dots aria-hidden="true"></div>
   </div>
 </section>
 
 <!-- 2) STO SMO PROMIJENILI + KAKO DJELUJE — SLOJ PO SLOJ -->
-<section class="nbt-sec nbt-sec--changed">
+<section class="nbt-sec nbt-tint">
   <div class="nbt-wrap">
-    <h2 class="nbt-title">Što smo promijenili — i zašto je osjećaj drukčiji</h2>
+    <p class="nbt-kicker">Što smo promijenili</p>
+    <h2 class="nbt-h2">Što smo promijenili — <em>i zašto je osjećaj drukčiji</em></h2>
     <p class="nbt-sub">Nismo napravili bolji grudnjak. Potpuno smo prestali raditi grudnjake.</p>
     <div class="nbt-callout">
       <p>Umjesto da potporu natjeramo u dvije naramenice i traku, raspodijelili smo je po cijeloj majici. Bez točaka koncentriranog pritiska. Bez kopči i žica. Bez konstrukcije koja se urezuje, štipa ili smota.</p>
-      <p>Ovo nije steznik. Ovo nije kompresija. Ovo je »taman dovoljno potpore« — osjećaj da vas nešto nježno drži i glatko pokriva, a da se nijedan dio majice ne bori protiv vašeg tijela.</p>
+      <p class="nbt-big">Ovo nije steznik. Ovo nije kompresija. Ovo je »taman dovoljno potpore« — osjećaj da vas nešto nježno drži i glatko pokriva, a da se nijedan dio majice ne bori protiv vašeg tijela.</p>
     </div>
-    <h3 class="nbt-works">Kako djeluje — sloj po sloj</h3>
+    <h3 class="nbt-h3">Kako djeluje — sloj po sloj</h3>
     <div class="nbt-grid">
       <?php foreach ( $nbt_layers as $i => $l ) : ?>
       <div class="nbt-card">
-        <div class="nbt-num"><?php echo (int) ( $i + 1 ); ?></div>
-        <h4><?php echo esc_html( $l[0] ); ?></h4>
-        <p><?php echo esc_html( $l[1] ); ?></p>
+        <span class="nbt-num"><?php echo (int) ( $i + 1 ); ?></span>
+        <div>
+          <h4><?php echo esc_html( $l[0] ); ?></h4>
+          <p><?php echo esc_html( $l[1] ); ?></p>
+        </div>
       </div>
       <?php endforeach; ?>
     </div>
@@ -98,24 +98,29 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 </section>
 
 <!-- 3) VASA NOVA JUTARNJA RUTINA -->
-<section class="nbt-sec nbt-sec--morning">
+<section class="nbt-sec">
   <div class="nbt-wrap nbt-wrap--narrow">
-    <h2 class="nbt-title nbt-title--morning">Vaša nova jutarnja rutina</h2>
-    <?php foreach ( $nbt_steps as $i => $st ) : ?>
-    <div class="nbt-step">
-      <div class="nbt-num nbt-num--big"><?php echo (int) ( $i + 1 ); ?></div>
-      <h3><?php echo esc_html( $st[0] ); ?></h3>
-      <p><?php echo esc_html( $st[1] ); ?></p>
-    </div>
-    <?php endforeach; ?>
+    <p class="nbt-kicker">Jutarnja rutina</p>
+    <h2 class="nbt-h2">Vaša nova <em>jutarnja rutina</em></h2>
+    <ol class="nbt-steps">
+      <?php foreach ( $nbt_steps as $i => $st ) : ?>
+      <li>
+        <span class="nbt-num"><?php echo (int) ( $i + 1 ); ?></span>
+        <div>
+          <h3><?php echo esc_html( $st[0] ); ?></h3>
+          <p><?php echo esc_html( $st[1] ); ?></p>
+        </div>
+      </li>
+      <?php endforeach; ?>
+    </ol>
   </div>
 </section>
 
 <!-- 4) USPOREDBA -->
-<section class="nbt-sec nbt-sec--compare">
+<section class="nbt-sec nbt-tint">
   <div class="nbt-wrap">
-    <h2 class="nbt-title nbt-title--compare">Usporedba</h2>
-    <p class="nbt-sub nbt-sub--compare">Nije svaka potpora jednaka.</p>
+    <p class="nbt-kicker">Usporedba</p>
+    <h2 class="nbt-h2">Nije svaka potpora <em>jednaka.</em></h2>
     <table class="nbt-cmp">
       <thead>
         <tr>
@@ -145,161 +150,84 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
         </tr>
       </tbody>
     </table>
-    <p class="nbt-caption">Jedan stupac sa svim kvačicama. To je onaj koji želite.</p>
+    <p class="nbt-big nbt-big--c">Jedan stupac sa svim kvačicama. To je onaj koji želite.</p>
   </div>
 </section>
 
-<script>
-(function(){
-  /* promo pasica originala ("FALL SALE" + odstevalnik 2 h) — na istem mestu: cisto na vrhu strani, nad glavo. */
-  if (!document.querySelector('.nbt-topbar')) {
-    var bar = document.createElement('div');
-    bar.className = 'nbt-topbar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Obavijest');
-    bar.innerHTML = '<div class="nbt-topbar__row"><div class="nbt-topbar__msg"><div class="t">🍁 JESENSKA AKCIJA</div><div class="s">Kupite sada i uštedite do 70 %</div></div>'
-      + '<div class="nbt-topbar__timer" aria-label="Akcija završava za"><div class="u"><span class="n" data-nbt-h>02</span><span class="l">Sati</span></div><span class="sep">:</span>'
-      + '<div class="u"><span class="n" data-nbt-m>00</span><span class="l">Min</span></div><span class="sep">:</span>'
-      + '<div class="u"><span class="n" data-nbt-s>00</span><span class="l">Sek</span></div></div></div>';
-    document.body.insertBefore(bar, document.body.firstChild);
-    var h = bar.querySelector('[data-nbt-h]'), m = bar.querySelector('[data-nbt-m]'), s = bar.querySelector('[data-nbt-s]');
-    var KEY = 'noriks_bratank_sale_end', DUR = 2 * 60 * 60 * 1000;
-    function getEnd(){ var e = 0; try { e = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (x) {}
-      if (!e || e <= Date.now()) { e = Date.now() + DUR; try { localStorage.setItem(KEY, e); } catch (x) {} } return e; }
-    var end = getEnd();
-    function p(n){ return (n < 10 ? '0' : '') + n; }
-    function tick(){ var d = end - Date.now(); if (d <= 0) { end = getEnd(); d = end - Date.now(); }
-      h.textContent = p(Math.floor(d / 3.6e6)); m.textContent = p(Math.floor((d % 3.6e6) / 6e4)); s.textContent = p(Math.floor((d % 6e4) / 1000)); }
-    tick(); setInterval(tick, 1000);
-  }
-})();
-(function(){
-  /* mnenja: na namizju 3 v vrsti (kot original), na mobilnem karusel s pikami. */
-  var s = document.querySelector('[data-nbt-slider]'), dots = document.querySelector('[data-nbt-dots]');
-  if (!s || !dots) return;
-  var cards = s.querySelectorAll('.nbt-rv');
-  cards.forEach(function(c, i){ var b = document.createElement('span'); b.className = 'nbt-dot' + (i === 0 ? ' is-on' : ''); dots.appendChild(b); });
-  s.addEventListener('scroll', function(){
-    var w = cards[0] ? cards[0].getBoundingClientRect().width + 15 : 1, i = Math.round(s.scrollLeft / w);
-    dots.querySelectorAll('.nbt-dot').forEach(function(d, k){ d.classList.toggle('is-on', k === i); });
-  }, { passive: true });
-})();
-</script>
-
 <style>
-/* promo pasica */
-.nbt-topbar { background: #b57e7e; color: #fff; padding: 8px 12px; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; position: relative; z-index: 50; }
-.nbt-topbar * { box-sizing: border-box; margin: 0; padding: 0; }
-.nbt-topbar__row { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: nowrap; }
-.nbt-topbar__msg { text-align: center; min-width: 0; }
-.nbt-topbar__msg .t { font-size: 19px; font-weight: 600; letter-spacing: .02em; line-height: 1.15; white-space: nowrap; }
-.nbt-topbar__msg .s { font-size: 12px; opacity: .92; line-height: 1.3; margin-top: 2px; white-space: nowrap; }
-.nbt-topbar__timer { display: flex; align-items: flex-start; gap: 5px; flex: 0 0 auto; }
-.nbt-topbar__timer .u { display: flex; flex-direction: column; align-items: center; min-width: 30px; }
-.nbt-topbar__timer .n { font-size: 24px; font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; }
-.nbt-topbar__timer .l { font-size: 11px; opacity: .92; margin-top: 4px; }
-.nbt-topbar__timer .sep { font-size: 20px; line-height: 1; padding-top: 2px; opacity: .9; }
-@media (max-width: 420px) {
-  .nbt-topbar__row { gap: 14px; }
-  .nbt-topbar__msg .t { font-size: 16px; }
-  .nbt-topbar__msg .s { font-size: 10.5px; }
-  .nbt-topbar__timer .n { font-size: 20px; }
-  .nbt-topbar__timer .u { min-width: 26px; }
-  .nbt-topbar__timer .l { font-size: 10px; }
-  .nbt-topbar__timer .sep { font-size: 17px; }
-}
-
-.nbt-sec { --nbt-rose: #b57e7e; --nbt-ink: #1f1b1a; --nbt-muted: #5b5350; --nbt-beige: #f6f2ec; --nbt-line: #e8ded6; --nbt-x: #cbc3bd;
-  padding: 30px 0 39px; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nbt-ink); background: #fff; overflow-x: hidden; }
+.nbt-sec { --nbt-rose: #b57e7e; --nbt-ink: #1f1b1a; --nbt-muted: #5b5350; --nbt-tint: #f6f2ec; --nbt-line: #e8ded6; --nbt-x: #cbc3bd;
+  padding: 60px 0; background: #fff; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nbt-ink); }
 .nbt-sec * { box-sizing: border-box; }
-.nbt-wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+.nbt-tint { background: var(--nbt-tint); }
+.nbt-wrap { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px; }
 .nbt-wrap--wide { max-width: 1200px; }
-.nbt-wrap--narrow { max-width: 640px; }
+.nbt-wrap--narrow { max-width: 680px; }
 .nbt-sec h2, .nbt-sec h3, .nbt-sec h4 { font-family: inherit; text-transform: none; letter-spacing: 0; }
+.nbt-kicker { margin: 0 0 8px; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--nbt-rose); }
+.nbt-h2 { margin: 0 0 14px; text-align: center; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 700; color: var(--nbt-ink); }
+.nbt-h2 em { font-style: italic; color: var(--nbt-rose); }
+.nbt-sub { text-align: center; color: var(--nbt-muted); font-size: 16px; line-height: 1.6; margin: 0 auto 28px; max-width: 640px; }
+.nbt-big { font-weight: 700; color: var(--nbt-ink); }
+.nbt-big--c { text-align: center; margin: 24px auto 0; max-width: 520px; font-size: 16px; }
+.nbt-num { flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; background: var(--nbt-rose); color: #fff;
+  font-size: 15px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
 
 /* 1) mnenja */
-.nbt-sec--reviews { padding: 27px 0; }
-.nbt-h1 { font-weight: 700; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.2; text-align: center; color: #2e2a39; margin: 0 0 12px; }
-.nbt-score { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; font-size: 18px; color: #2e2a39; margin: 0 0 26px; }
-.nbt-score__num { font-size: 1.25em; }
+.nbt-score { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; font-size: 18px; color: var(--nbt-ink); margin: 0 0 28px; }
 .nbt-stars { display: inline-flex; gap: 2px; color: #00b67a; line-height: 1; }
 .nbt-stars i { display: inline-flex; width: 20px; height: 20px; }
 .nbt-stars svg { width: 100%; height: 100%; }
-.nbt-slider { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; outline: none; }
-.nbt-slider::-webkit-scrollbar { display: none; }
-.nbt-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.nbt-rv { background: #f3f3f3; color: #2e2a39; border-radius: 16px; padding: 26px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; scroll-snap-align: start; }
-.nbt-rv .nbt-stars { margin-bottom: 14px; }
-.nbt-rv__txt { font-size: 15px; line-height: 1.65; margin: 0 0 14px; flex: 1 1 auto; }
-.nbt-rv__name { font-size: 15px; margin: 0; }
-.nbt-dots { display: none; justify-content: center; gap: 8px; margin-top: 16px; }
-.nbt-dot { width: 8px; height: 8px; border-radius: 50%; background: #d0ccd4; }
-.nbt-dot.is-on { background: #2e2a39; }
+.nbt-revs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.nbt-rv { background: #fff; border: 1px solid var(--nbt-line); padding: 24px 22px; display: flex; flex-direction: column; }
+.nbt-rv .nbt-stars { margin-bottom: 12px; }
+.nbt-rv__txt { font-size: 15px; line-height: 1.65; color: #332e2c; margin: 0 0 14px; flex: 1 1 auto; }
+.nbt-rv__name { font-size: 14px; margin: 0; color: var(--nbt-ink); }
 
 /* 2) sto smo promijenili */
-.nbt-title { font-weight: 700; font-size: 30px; line-height: 1.18; color: var(--nbt-rose); text-align: center; margin: 0; }
-.nbt-sub { text-align: center; color: var(--nbt-muted); font-size: 16px; margin: 10px 0 28px; }
-.nbt-sec--changed .nbt-wrap { padding-top: 44px; padding-bottom: 44px; }
-.nbt-callout { background: var(--nbt-beige); border-radius: 14px; padding: 26px 24px; margin-bottom: 38px; }
-.nbt-callout p { font-size: 17px; line-height: 1.6; color: #332e2c; margin: 0; }
-.nbt-callout p + p { margin-top: 16px; font-style: italic; font-weight: 700; color: var(--nbt-ink); }
-.nbt-works { font-size: 24px; font-weight: 700; color: var(--nbt-ink); margin: 0 0 18px; }
-.nbt-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.nbt-card { border: 1px solid var(--nbt-line); border-radius: 14px; padding: 22px 20px; background: #fff; }
-.nbt-num { font-size: 34px; line-height: 1; font-weight: 700; color: var(--nbt-rose); margin-bottom: 10px; }
-.nbt-card h4 { font-size: 18px; font-weight: 800; color: var(--nbt-ink); margin: 0 0 8px; }
+.nbt-callout { background: #fff; border-left: 3px solid var(--nbt-rose); padding: 22px 24px; margin: 0 0 36px; }
+.nbt-callout p { font-size: 16px; line-height: 1.65; color: #332e2c; margin: 0; }
+.nbt-callout p + p { margin-top: 14px; }
+.nbt-h3 { font-size: 22px; font-weight: 700; color: var(--nbt-ink); margin: 0 0 16px; text-align: center; }
+.nbt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.nbt-card { display: flex; gap: 14px; align-items: flex-start; border: 1px solid var(--nbt-line); padding: 20px; background: #fff; }
+.nbt-card h4 { font-size: 17px; font-weight: 700; color: var(--nbt-ink); margin: 4px 0 6px; }
 .nbt-card p { font-size: 15px; line-height: 1.55; color: var(--nbt-muted); margin: 0; }
 
 /* 3) jutarnja rutina */
-.nbt-sec--morning .nbt-wrap { padding-top: 44px; padding-bottom: 44px; }
-.nbt-title--morning { line-height: 1.15; margin-bottom: 34px; }
-.nbt-step { margin-bottom: 30px; }
-.nbt-step:last-child { margin-bottom: 0; }
-.nbt-num--big { font-size: 40px; margin-bottom: 4px; }
-.nbt-step h3 { font-size: 19px; font-weight: 800; color: var(--nbt-ink); margin: 0 0 7px; }
-.nbt-step p { font-size: 16px; line-height: 1.55; color: var(--nbt-muted); max-width: 540px; margin: 0; }
+.nbt-steps { list-style: none; margin: 10px 0 0; padding: 0; }
+.nbt-steps li { display: flex; gap: 16px; align-items: flex-start; margin: 0 0 24px; }
+.nbt-steps li:last-child { margin-bottom: 0; }
+.nbt-steps h3 { font-size: 18px; font-weight: 700; color: var(--nbt-ink); margin: 4px 0 6px; }
+.nbt-steps p { font-size: 16px; line-height: 1.6; color: var(--nbt-muted); margin: 0; }
 
 /* 4) usporedba */
-.nbt-sec--compare .nbt-wrap { padding: 0 14px; }
-.nbt-title--compare { font-size: 26px; line-height: 1.15; }
-.nbt-sub--compare { font-size: 15px; margin: 8px 0 24px; }
-.nbt-cmp { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 0; border: 0; }
-.nbt-cmp th, .nbt-cmp td { padding: 11px 3px; text-align: center; border: 0; border-bottom: 1px solid var(--nbt-line); vertical-align: middle; background: transparent; }
-.nbt-cmp thead th { font-weight: 700; color: var(--nbt-ink); font-size: 12px; line-height: 1.2; }
-.nbt-cmp .feat { text-align: left; width: 33%; color: var(--nbt-ink); font-weight: 500; font-size: 13px; line-height: 1.3; padding-left: 2px; }
-.nbt-cmp .check { color: var(--nbt-rose); font-weight: 800; font-size: 16px; }
-.nbt-cmp .cross { color: var(--nbt-x); font-weight: 700; font-size: 14px; }
-.nbt-cmp .win { background: var(--nbt-beige); }
+.nbt-cmp { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 14px 0 0; border: 0; background: #fff; }
+.nbt-cmp th, .nbt-cmp td { padding: 13px 8px; text-align: center; border: 0; border-bottom: 1px solid var(--nbt-line); vertical-align: middle; background: transparent; }
+.nbt-cmp thead th { font-weight: 700; color: var(--nbt-ink); font-size: 14px; line-height: 1.2; }
+.nbt-cmp .feat { text-align: left; width: 33%; color: var(--nbt-ink); font-weight: 500; font-size: 15px; line-height: 1.3; padding-left: 12px; }
+.nbt-cmp .check { color: var(--nbt-rose); font-weight: 800; font-size: 18px; }
+.nbt-cmp .cross { color: var(--nbt-x); font-weight: 700; font-size: 16px; }
+.nbt-cmp .win { background: #faf3f3; }
 .nbt-cmp thead .win { color: var(--nbt-rose); border-top: 3px solid var(--nbt-rose); }
-.nbt-cmp .score td { font-weight: 800; border-bottom: none; padding-top: 14px; font-size: 13px; }
+.nbt-cmp .score td { font-weight: 800; border-bottom: none; font-size: 15px; }
 .nbt-cmp .score .win { color: var(--nbt-rose); }
-.nbt-caption { text-align: center; font-style: italic; color: var(--nbt-muted); font-size: 15px; margin: 22px auto 0; max-width: 420px; }
 
-@media (min-width: 680px) {
-  .nbt-title { font-size: 38px; }
-  .nbt-title--morning { font-size: 34px; }
-  .nbt-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-  .nbt-sec--compare .nbt-wrap { padding: 44px 16px; }
-  .nbt-title--compare { font-size: 34px; }
-  .nbt-sub--compare { font-size: 16px; }
-  .nbt-cmp th, .nbt-cmp td { padding: 13px 8px; }
-  .nbt-cmp thead th { font-size: 14px; }
-  .nbt-cmp .feat { font-size: 15px; }
-  .nbt-cmp .check { font-size: 18px; }
-  .nbt-cmp .cross { font-size: 16px; }
-  .nbt-cmp .score td { font-size: 15px; }
-}
-@media (min-width: 750px) {
-  .nbt-sec { padding: 40px 0 52px; }
-  .nbt-sec--reviews { padding: 36px 0; }
-  .nbt-score { font-size: 20px; }
-}
 @media (max-width: 749px) {
-  .nbt-track { display: flex; gap: 15px; }
-  .nbt-rv { flex: 0 0 100%; }
-  .nbt-dots { display: flex; }
-  .nbt-sec--changed .nbt-wrap, .nbt-sec--morning .nbt-wrap { padding-top: 14px; padding-bottom: 14px; }
+  .nbt-sec { padding: 42px 0; }
+  .nbt-revs { grid-template-columns: 1fr; gap: 14px; }
+  .nbt-grid { grid-template-columns: 1fr; }
+  .nbt-cmp th, .nbt-cmp td { padding: 11px 3px; }
+  .nbt-cmp thead th { font-size: 12px; }
+  .nbt-cmp .feat { font-size: 13px; padding-left: 6px; }
+  .nbt-cmp .check { font-size: 16px; }
+  .nbt-cmp .cross { font-size: 14px; }
+  .nbt-cmp .score td { font-size: 13px; }
 }
 
-/* kratek opis izdelka: sive vrstice z ikono kljukice kot na originalu (REST pobrise inline slog) */
+/* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
+.product_cat-orto-bratank .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
+
+/* kratek opis izdelka: sive vrstice s kljukico (REST pobrise inline slog, zato je CSS tukaj) */
 .woocommerce-product-details__short-description ul.nbt-points,
 .woocommerce div.product .woocommerce-product-details__short-description ul.nbt-points {
   list-style: none !important; margin: 14px 0 !important; padding-left: 0 !important; }
@@ -310,6 +238,6 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 .woocommerce-product-details__short-description ul.nbt-points li::marker { content: "" !important; }
 .woocommerce-product-details__short-description ul.nbt-points li::before { content: none !important; }
 .woocommerce-product-details__short-description .nbt-tick {
-  flex: 0 0 22px; width: 22px; height: 22px; display: inline-block;
-  background: url('<?php echo esc_url( $nbt_img . 'bt-ikona-provjera.webp' ); ?>') center / contain no-repeat; }
+  flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: #b57e7e; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; line-height: 1; }
 </style>
