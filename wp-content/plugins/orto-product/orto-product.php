@@ -4322,10 +4322,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // cena pod naslovom = 1 kos izbrane velikosti
         const price = document.querySelector('.summary p.price');
         if (price && one) {
-            const del = price.querySelector('del bdi');
-            const ins = price.querySelector('ins bdi');
-            if (del) del.firstChild.nodeValue = fmtHr(one.reg) + ' ';
-            if (ins) ins.firstChild.nodeValue = fmtHr(one.sale) + ' ';
+            const amt = c => '<bdi>' + fmtHr(c) + '&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>';
+            const del = price.querySelector('del .woocommerce-Price-amount');
+            const ins = price.querySelector('ins .woocommerce-Price-amount');
+            if (del) del.innerHTML = amt(one.reg);
+            if (ins) ins.innerHTML = amt(one.sale);
+            const sr = price.querySelectorAll('.screen-reader-text');
+            if (sr[0]) sr[0].textContent = 'Izvorna cijena bila je: ' + fmtHr(one.reg) + ' €.';
+            if (sr[1]) sr[1].textContent = 'Trenutna cijena je: ' + fmtHr(one.sale) + ' €.';
         }
 
         // gumb = skupaj izbrane ponudbe
