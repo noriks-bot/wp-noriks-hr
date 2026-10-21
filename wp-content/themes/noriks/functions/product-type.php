@@ -110,6 +110,8 @@ function noriks_product_type_map() : array {
         'titaniumpan'             => array( 'orto-titaniumpan', 'titaniumpan' ),
         // NORIKS Harness — oprsnica za pse protiv povlacenja s prednjom i straznjom kopcom (boja + velicina XS-XL).
         'harness'                 => array( 'orto-harness', 'harness' ),
+        // NORIKS SeatCover — vodootporna presvlaka za autosjedalo od frotira (8 boja, bez velicina).
+        'seatcover'               => array( 'orto-seatcover', 'seatcover' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).

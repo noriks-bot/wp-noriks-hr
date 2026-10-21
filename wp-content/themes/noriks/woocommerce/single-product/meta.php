@@ -707,6 +707,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS TitaniumPan</strong> je posljednja tava koja vam ikad treba. Izrađena je da bude neuništiva i da traje cijeli život. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih kuhara. Bez premaza. Bez toksina. Bez kompromisa.<br><br><strong>Netoksični materijali</strong> — izrađena bez: PFAS-a („vječnih kemikalija”), PTFE-a (teflona), PFOA-e, olova i kadmija, nanočestica i teških metala.<br><br><strong>Detalji:</strong><br>• Promjer: 28 cm (11″), visina: 6,3 cm (dostupna i u 26 cm i 30 cm)<br>• Za sve vrste ploča, uključujući indukciju<br><br><strong>Konstrukcija:</strong><br>• Potpuno troslojna izvedba<br>• Donji sloj: 0,6 mm nehrđajućeg čelika (430) – za indukciju<br>• Jezgra: 1 mm aluminija – brza i ravnomjerna raspodjela topline<br>• Površina za kuhanje: 0,5 mm čistog titanija s kovanim uzorkom – prirodno neljepljiva, bez toksina i iznimno izdržljiva<br><br><strong>U paketu:</strong><br>• Titanijska kovana tava, sigurno zapakirana u posebnu zaštitnu kutiju<br>• 5 osnovnih vodiča – savjeti za njegu, prvo pripremanje tave i profesionalne tehnike kuhanja<br><br><strong>Njega i upotreba:</strong><br>• Otporna na temperaturu do 548 °C<br>• Može se prati u perilici posuđa<br>• Sigurna za metalni pribor<br>• Neljepljivost aktivirajte s 1 žličicom ulja s visokom točkom dimljenja prije kuhanja<br>• Titanijsku površinu lako očistite s malo deterdženta i spužvom.
 
+         <?php elseif( noriks_is_type( 'seatcover', $current_product_id ) ): ?>
+
+                <strong>NORIKS SeatCover</strong> je vodootporna presvlaka za autosjedalo od frotira. Zbogom mokrim i zaprljanim sjedalima — vrhunska zaštita za majstore, ljubitelje teretane i plaže i sve koji ponekad žive malo grublje.<br><br><strong>Istaknuto:</strong><br>• 100 % vodootporna podloga — znoj, voda i prljavština ne dolaze do sjedala<br>• Brzo se stavlja, lako se pere — bez petljanja s trakama, samo prebacite i krenite<br>• Univerzalni kroj — pristaje na većinu sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima<br>• Izdržljiva i udobna — mekani frotir s gornje strane i izdržljiva podloga koja ne upija neugodne mirise<br>• Za dane kad se zaprljate — teretana, plaža, gradilište ili ribolov<br><br>Izrađena da traje, NORIKS SeatCover štiti unutrašnjost vašeg automobila bez glomaznih i kompliciranih klasičnih presvlaka. Bilo da je riječ o znoju nakon treninga ili pijesku nakon surfanja — ova presvlaka vam doslovno čuva leđa.<br><br><strong>Dimenzije:</strong> 145 × 65 cm. Pristaje na gotovo sva sjedala — osobni automobili, SUV-ovi, kamioneti i terenci. Teži manje od 500 g, a smotana je otprilike veličine boce za vodu, pa je možete držati u prtljažniku ili pretincu na vratima.<br><br><strong>Njega:</strong> pranje u perilici na hladnom programu, sušenje na zraku ili na niskoj temperaturi, bez omekšivača.<br><br>Dostupna u osam boja: crna, plava, pješčana, koraljna, zelena, svijetloplava, ružičasta i maskirna.
+
          <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
 
                 <strong>NORIKS Harness</strong> je oprsnica za pse protiv povlačenja s prednjom i stražnjom kopčom. Prednji D-prsten preusmjerava zamah psa u stranu i prekida povlačenje prema naprijed — bez trzanja i bez gušenja. Isto načelo koje preporučuju veterinari i treneri, ugrađeno u oprsnicu.<br><br><strong>Istaknuto:</strong><br>• Podesive trake za savršeno pristajanje<br>• Prozračni, mekani materijali za udobnost cijeli dan<br>• Jednostavna kopča na klik za brzo stavljanje i skidanje<br>• Čvrsta ručka za dodatnu kontrolu<br>• Izdržljivi D-prsteni sprijeda i straga za sigurno pričvršćivanje povodca<br>• Čičak površina za oznaku s imenom<br><br><strong>Dva načina:</strong> prednja kopča za dresuru i kontrolu, stražnja kopča za opuštene šetnje kad pas već lijepo hoda na labavom povodcu.<br><br><strong>Materijal i njega:</strong> lagani, prozračni najlon. Kad se zablati, isperite je pod mlazom tople vode, obrišite i ostavite da se osuši na zraku — pranje u perilici nije potrebno.<br><br>Dostupna je u devet boja (crna, narančasta, siva, crvena, bež, maslinasta, tirkizna, nebeskoplava i ružičasta) i u pet veličina od XS do XL. Veličinu birajte prema opsegu prsa psa.
@@ -1180,6 +1184,22 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>26 cm</strong> — svakodnevna tava za odrezak, jaja i brzo prženje. <strong>28 cm</strong> — naša najprodavanija, za većinu obroka za dvoje. <strong>30 cm</strong> — obiteljski obroci, priprema unaprijed i gosti. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'seatcover', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">NORIKS SeatCover dolazi u <strong>jednoj univerzalnoj veličini</strong> koja pristaje na gotovo sva prednja i stražnja pojedinačna sjedala.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <tbody>
+                <tr style="background:#b5532c;color:#fff;"><th style="padding:9px 8px;text-align:left;">Mjera</th><th style="padding:9px 8px;text-align:left;">Vrijednost</th></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Dužina</td><td style="padding:9px 8px;">145 cm</td></tr>
+                <tr style="background:#f9efe9;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Širina</td><td style="padding:9px 8px;">65 cm</td></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Težina</td><td style="padding:9px 8px;">manje od 500 g</td></tr>
+                <tr style="background:#f9efe9;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Smotana</td><td style="padding:9px 8px;">otprilike veličine boce za vodu</td></tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1503,6 +1523,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
 
                 Prije prve upotrebe tavu operite toplom vodom i deterdžentom. Titanijsku površinu lako očistite s malo deterdženta i spužvom; tava se može prati i u perilici posuđa, a kratko ručno pranje dulje čuva sjaj. Sigurna je za metalni pribor. Za prirodnu neljepljivost tavu zagrijte 2–3 minute na srednjoj vatri i dodajte 1 žličicu ulja s visokom točkom dimljenja.
+
+         <?php elseif( noriks_is_type( 'seatcover', $current_product_id ) ): ?>
+
+                Perite u perilici na hladnom programu. Sušite na zraku ili u sušilici na niskoj temperaturi. Ne koristite omekšivač. Vodootporna podloga zadržava tekućinu, a gornji sloj od frotira ostaje svjež nakon svakog pranja — izrađena je da izdrži i najveći nered.
 
          <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
 
