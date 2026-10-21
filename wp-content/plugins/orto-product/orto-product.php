@@ -512,10 +512,6 @@ function gck_render_bundle_selector() {
         // NORIKS Tuck: kao na originalu ("Try it" / "€29,00 each · one to wear, one in the wash · ✓ Mix & match colours" /
         // "€21,00 each · a full week covered · ✓ FREE shipping included").
         $gck_offer_subs = array( 'Isprobajte', '29,00 € po komadu · jedne nosite, druge su u pranju · ✓ Kombinirajte boje', '20,50 € po komadu · cijeli tjedan pokriven · ✓ BESPLATNA dostava uključena' );
-    } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
-        // NORIKS SupportSocks: kao na originalu (Kaching: "2 par for prisen av 1 / Kun 150 kr/par", "5 par for prisen av 2 / Kun 120 kr/par · Fri frakt",
-        // "8 par for prisen av 3 / Kun 112 kr/par · Fri frakt") — cijena po paru iz nasih EUR cijena (27,99 / 2, 56,99 / 5, 84,99 / 8).
-        $gck_offer_subs = array( '2 para po cijeni 1 · samo 14,00 € po paru', '5 pari po cijeni 2 · samo 11,40 € po paru · besplatna dostava', '8 pari po cijeni 3 · samo 10,62 € po paru · besplatna dostava' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: kao na originalu ("Standard price" / "Buy 1 Get 1 50% Off").
         $gck_offer_subs = array( 'Standardna cijena', 'Drugi komad −50 %' );
@@ -542,9 +538,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
         // NORIKS Tuck: znacki 2. in 3. ponude kao na originalu ("MOST POPULAR", "BEST VALUE").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' );
-    } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
-        // NORIKS SupportSocks: znacki 2. in 3. ponude kao na originalu ("Mest populær", "Mest for pengene").
-        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJISPLATIVIJE' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: znacka druge ponude kao na originalu ("Most Popular").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE' );
