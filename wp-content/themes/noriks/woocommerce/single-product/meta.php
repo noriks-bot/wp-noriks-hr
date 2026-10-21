@@ -707,6 +707,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS TitaniumPan</strong> je posljednja tava koja vam ikad treba. Izrađena je da bude neuništiva i da traje cijeli život. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih kuhara. Bez premaza. Bez toksina. Bez kompromisa.<br><br><strong>Netoksični materijali</strong> — izrađena bez: PFAS-a („vječnih kemikalija”), PTFE-a (teflona), PFOA-e, olova i kadmija, nanočestica i teških metala.<br><br><strong>Detalji:</strong><br>• Promjer: 28 cm (11″), visina: 6,3 cm (dostupna i u 26 cm i 30 cm)<br>• Za sve vrste ploča, uključujući indukciju<br><br><strong>Konstrukcija:</strong><br>• Potpuno troslojna izvedba<br>• Donji sloj: 0,6 mm nehrđajućeg čelika (430) – za indukciju<br>• Jezgra: 1 mm aluminija – brza i ravnomjerna raspodjela topline<br>• Površina za kuhanje: 0,5 mm čistog titanija s kovanim uzorkom – prirodno neljepljiva, bez toksina i iznimno izdržljiva<br><br><strong>U paketu:</strong><br>• Titanijska kovana tava, sigurno zapakirana u posebnu zaštitnu kutiju<br>• 5 osnovnih vodiča – savjeti za njegu, prvo pripremanje tave i profesionalne tehnike kuhanja<br><br><strong>Njega i upotreba:</strong><br>• Otporna na temperaturu do 548 °C<br>• Može se prati u perilici posuđa<br>• Sigurna za metalni pribor<br>• Neljepljivost aktivirajte s 1 žličicom ulja s visokom točkom dimljenja prije kuhanja<br>• Titanijsku površinu lako očistite s malo deterdženta i spužvom.
 
+         <?php elseif( noriks_is_type( 'corksandals', $current_product_id ) ): ?>
+
+                <strong>NORIKS CorkSandals</strong> su ljetne sandale s plutenim potplatom i uloškom od <strong>pravog goveđeg antilopa</strong>, s mekanim remenima od PU materijala i čvrstom, potpuno podesivom kopčom. Svaki par pažljivo je izrađen kako bismo postigli najvišu kvalitetu — europski antilop, izrada u malim serijama.<br><br><strong>Svaki detalj osmišljen za udobnost:</strong><br>• <strong>Potpora za svod stopala</strong> — smanjuje napetost i drži vas udobnima cijeli dan<br>• <strong>Duboko ležište pete</strong> — obuhvaća petu za bolju stabilnost i manji pritisak pri svakom koraku<br>• <strong>100 % prirodni goveđi antilop</strong> — mekan, prozračan uložak, profinjen na dodir<br>• Čvrst, a savitljiv potplat za cjelodnevno nošenje<br>• Dvije podesive kopče — pristaju i širem stopalu<br><br><strong>Bez dizajnerske marže:</strong> plaćate materijale i udobnost, a ne logotip. Najveći dio cijene ide na materijale i plaće, ne na marku i troškove maloprodaje.<br><br>Unisex model, dostupan u pet boja (smeđa, sivosmeđa, bež, crna i bijela) i u veličinama od EU 36 do EU 46. Sandale odgovaraju standardnim veličinama — ako ste između dva broja, uzmite veći.
+
          <?php elseif( noriks_is_type( 'seatcover', $current_product_id ) ): ?>
 
                 <strong>NORIKS SeatCover</strong> je vodootporna presvlaka za autosjedalo od frotira. Zbogom mokrim i zaprljanim sjedalima — vrhunska zaštita za majstore, ljubitelje teretane i plaže i sve koji ponekad žive malo grublje.<br><br><strong>Istaknuto:</strong><br>• 100 % vodootporna podloga — znoj, voda i prljavština ne dolaze do sjedala<br>• Brzo se stavlja, lako se pere — bez petljanja s trakama, samo prebacite i krenite<br>• Univerzalni kroj — pristaje na većinu sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima<br>• Izdržljiva i udobna — mekani frotir s gornje strane i izdržljiva podloga koja ne upija neugodne mirise<br>• Za dane kad se zaprljate — teretana, plaža, gradilište ili ribolov<br><br>Izrađena da traje, NORIKS SeatCover štiti unutrašnjost vašeg automobila bez glomaznih i kompliciranih klasičnih presvlaka. Bilo da je riječ o znoju nakon treninga ili pijesku nakon surfanja — ova presvlaka vam doslovno čuva leđa.<br><br><strong>Dimenzije:</strong> 145 × 65 cm. Pristaje na gotovo sva sjedala — osobni automobili, SUV-ovi, kamioneti i terenci. Teži manje od 500 g, a smotana je otprilike veličine boce za vodu, pa je možete držati u prtljažniku ili pretincu na vratima.<br><br><strong>Njega:</strong> pranje u perilici na hladnom programu, sušenje na zraku ili na niskoj temperaturi, bez omekšivača.<br><br>Dostupna u osam boja: crna, plava, pješčana, koraljna, zelena, svijetloplava, ružičasta i maskirna.
@@ -1184,6 +1188,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>26 cm</strong> — svakodnevna tava za odrezak, jaja i brzo prženje. <strong>28 cm</strong> — naša najprodavanija, za većinu obroka za dvoje. <strong>30 cm</strong> — obiteljski obroci, priprema unaprijed i gosti. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'corksandals', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Sandale su <strong>unisex</strong> i odgovaraju standardnim veličinama — naručite svoj uobičajeni broj. Veličine od <strong>EU 36 do EU 46</strong>.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#9e7446;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Unutarnja duljina</th>
+                  <th style="padding:9px 8px;text-align:left;">US žene</th>
+                  <th style="padding:9px 8px;text-align:left;">US muškarci</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_corksandals_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7efe5' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Savjet:</strong> ako ste između dva broja ili imate široko stopalo, uzmite veći broj. Dvije podesive kopče omogućuju precizno pristajanje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'seatcover', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1523,6 +1558,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
 
                 Prije prve upotrebe tavu operite toplom vodom i deterdžentom. Titanijsku površinu lako očistite s malo deterdženta i spužvom; tava se može prati i u perilici posuđa, a kratko ručno pranje dulje čuva sjaj. Sigurna je za metalni pribor. Za prirodnu neljepljivost tavu zagrijte 2–3 minute na srednjoj vatri i dodajte 1 žličicu ulja s visokom točkom dimljenja.
+
+         <?php elseif( noriks_is_type( 'corksandals', $current_product_id ) ): ?>
+
+                Uložak od antilopa čistite suhom, mekanom četkicom ili blago vlažnom krpom; mrlje uklonite gumicom za antilop. Remene obrišite vlažnom krpom. Sandale ne perite u perilici i ne namačite ih u vodi. Ako se smoče, ostavite ih da se polako osuše na zraku, daleko od radijatora i izravnog sunca.
 
          <?php elseif( noriks_is_type( 'seatcover', $current_product_id ) ): ?>
 

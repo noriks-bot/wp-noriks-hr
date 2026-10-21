@@ -112,6 +112,8 @@ function noriks_product_type_map() : array {
         'harness'                 => array( 'orto-harness', 'harness' ),
         // NORIKS SeatCover — vodootporna presvlaka za autosjedalo od frotira (8 boja, bez velicina).
         'seatcover'               => array( 'orto-seatcover', 'seatcover' ),
+        // NORIKS CorkSandals — ljetne sandale od pluta s uloskom od antilopa (boja + velicina EU 36-46).
+        'corksandals'             => array( 'orto-corksandals', 'corksandals' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -506,6 +508,26 @@ if ( ! function_exists( 'noriks_harness_sizes' ) ) {
             array( 'M',  '55–67 cm', 'koker španijel, beagle, stafordski bul terijer, whippet, cockapoo (standardni), springer španijel (manji), velški springer španijel, bedlington terijer, basenji, mini labradoodle' ),
             array( 'L',  '67–84 cm', 'labrador retriver (vitki / ženka), border koli, engleski springer španijel, standardna pudla, bokser, vižla, vajmarski ptičar (manji), dalmatinac, australski ovčar, škotski ovčar (koli)' ),
             array( 'XL', '80–107 cm', 'labrador retriver (veći), zlatni retriver, njemački ovčar, rotvajler, doberman, sibirski haski, aljaški malamut, akita, rodezijski gonič, cane corso' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_corksandals_sizes' ) ) {
+    /** NORIKS CorkSandals: EU velicina, unutarnja duljina (cm), US zene, US muskarci.
+     *  1:1 s tablice velicin originala qomfortco.com ("Size Guide", EU 36-46; US iz imena varijant). */
+    function noriks_corksandals_sizes() {
+        return array(
+            array( 'EU 36', '22,2–22,9 cm', '5,5–6', '3' ),
+            array( 'EU 37', '23,2 cm', '6,5', '4' ),
+            array( 'EU 38', '23,5 cm', '7', '5' ),
+            array( 'EU 39', '24,1–24,4 cm', '7,5–8', '6–6,5' ),
+            array( 'EU 40', '24,8 cm', '8,5', '7' ),
+            array( 'EU 41', '25,4–25,7 cm', '9–9,5', '8' ),
+            array( 'EU 42', '26,0 cm', '10', '9' ),
+            array( 'EU 43', '26,7–27,0 cm', '10,5–11', '9,5' ),
+            array( 'EU 44', '27,3–27,9 cm', '11,5–12', '10–10,5' ),
+            array( 'EU 45', '28,6 cm', '13', '11–12' ),
+            array( 'EU 46', '29,5 cm', '14', '13' ),
         );
     }
 }

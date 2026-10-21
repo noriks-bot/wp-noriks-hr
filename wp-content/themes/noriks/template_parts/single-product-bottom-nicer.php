@@ -279,6 +279,11 @@ if ( noriks_is_type( 'seatcover' ) ) {
     include $noriks_pb_dir . 'why-seatcover.php';
 }
 
+// NORIKS CorkSandals (orto-corksandals) — ljetne sandale od pluta s uloskom od antilopa
+if ( noriks_is_type( 'corksandals' ) ) {
+    include $noriks_pb_dir . 'why-corksandals.php';
+}
+
 // NORIKS Raincoat (orto-raincoat) — kratka oversized kisna jakna s kapuljacom
 if ( noriks_is_type( 'raincoat' ) ) {
     include $noriks_pb_dir . 'why-raincoat.php';
