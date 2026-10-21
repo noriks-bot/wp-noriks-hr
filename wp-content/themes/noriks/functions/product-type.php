@@ -104,6 +104,8 @@ function noriks_product_type_map() : array {
         'bratank'                 => array( 'orto-bratank', 'bratank' ),
         // NORIKS Polo — udobna muska polo majica od rastezljivog pletiva (boja + velicina).
         'polo'                    => array( 'orto-polo', 'polo' ),
+        // NORIKS Raincoat — kratka oversized kisna jakna s kapuljacom (boja, jedna velicina).
+        'raincoat'                => array( 'orto-raincoat', 'raincoat' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -462,6 +464,16 @@ if ( ! function_exists( 'noriks_polo_sizes' ) ) {
             array( '3XL', '32 – 35', '92 – 101 kg',  '104 – 113 kg', '116 – 126 kg' ),
             array( '4XL', '35 – 38', '101 – 110 kg', '113 – 123 kg', '126 – 137 kg' ),
             array( '5XL', '38+',     '110+ kg',      '123+ kg',      '137+ kg' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_raincoat_sizes' ) ) {
+    /** NORIKS Raincoat: velicina, EU, UK, US, duljina, opseg grudi, duljina rukava (mjere jakne).
+     *  1:1 s tablice originala puffit.com ("Garment measurement details", size F = jedna velicina). */
+    function noriks_raincoat_sizes() {
+        return array(
+            array( 'Jedna veličina', '36–50', '8–22', '4–18', '60 cm', '155 cm', '75 cm' ),
         );
     }
 }

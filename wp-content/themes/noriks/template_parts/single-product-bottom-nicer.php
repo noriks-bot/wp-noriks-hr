@@ -264,6 +264,11 @@ if ( noriks_is_type( 'polo' ) ) {
     include $noriks_pb_dir . 'why-polo.php';
 }
 
+// NORIKS Raincoat (orto-raincoat) — kratka oversized kisna jakna s kapuljacom
+if ( noriks_is_type( 'raincoat' ) ) {
+    include $noriks_pb_dir . 'why-raincoat.php';
+}
+
 // NORIKS FloatSuit (orto-floatsuit) — djecji kupaci kostim s ugradenim plovcima
 if ( noriks_is_type( 'floatsuit' ) ) {
     include $noriks_pb_dir . 'why-floatsuit.php';
