@@ -1748,21 +1748,21 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS WineCooler: kartice ponud kot na originalu (lindnerco.nl) — bele, siv rob, izbrana svetlo siva s crnim robom,
-         crna cena, crna znacka "Najpopularnije" (rahlo nagnjena). Nad ponudami naslov originala "PAKKET & BESPAAR" s crtama
-         levo in desno. Izdelek nima atributov, zato krogcev ni. */
+      /* NORIKS WineCooler: kartice ponud barvne in zaobljene v privzeti topli rjavi paleti NORIKS (kot orto-hands, #a9683f),
+         ker poudarek originala (crna) nima svetlega odtenka. Izdelek nima atributov, zato krogcev ni. */
       #bundle-selector .bundle-option {
-          border: 2px solid #c9c9c9 !important; background: #fff !important; border-radius: 8px !important; box-shadow: none !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #121212 !important; background: #e7e7e7 !important; }
-      #bundle-selector .bundle-option-title { color: #121212 !important; font-weight: 700 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #121212 !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #121212 !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #121212 !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #121212 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #e3e3e3 !important; }
-      #bundle-selector .bundle-total-line .line-total { color: #121212 !important; }
-      #bundle-selector .bundle-total-line .gck-regular-price { color: #555 !important; }
-      #bundle-selector .gck-popular-badge--offer { background: #121212 !important; color: #fff !important; transform: rotate(-3deg) !important; right: -6px !important; }
+          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option-title { color: #231d19 !important; font-weight: 700 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
+      #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
+      #bundle-selector .gck-popular-badge--offer { background: #a9683f !important; color: #fff !important; transform: rotate(-3deg) !important; right: -6px !important; }
     </style>
     <?php endif; ?>
 
@@ -3101,7 +3101,7 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ? "'#b57e7e'"
            : ( has_term( array( 'orto-floatsuit' ), 'product_cat', $product_id ) ? "'#0a97d5'"
            : ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ? "'#3d3d3d'"
-           : ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ? "'#121212'"
+           : ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ? "'#1c3b4b'"
            : ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ? "'#105a85'"
            : ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ? "'#002e49'"
