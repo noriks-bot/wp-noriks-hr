@@ -106,6 +106,8 @@ function noriks_product_type_map() : array {
         'polo'                    => array( 'orto-polo', 'polo' ),
         // NORIKS Raincoat — kratka oversized kisna jakna s kapuljacom (boja, jedna velicina).
         'raincoat'                => array( 'orto-raincoat', 'raincoat' ),
+        // NORIKS TitaniumPan — titanijska kovana tava bez premaza (velicina 26 / 28 / 30 cm).
+        'titaniumpan'             => array( 'orto-titaniumpan', 'titaniumpan' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -474,6 +476,18 @@ if ( ! function_exists( 'noriks_raincoat_sizes' ) ) {
     function noriks_raincoat_sizes() {
         return array(
             array( 'Jedna veličina', '36–50', '8–22', '4–18', '60 cm', '155 cm', '75 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_titaniumpan_sizes' ) ) {
+    /** NORIKS TitaniumPan: velicina, promjer, porcije, jaja, za koga.
+     *  1:1 z vodica velikosti originala siraatskitchen.com (26 cm Solo / 28 cm Most Popular / 30 cm Family). */
+    function noriks_titaniumpan_sizes() {
+        return array(
+            array( '26 cm', '26 cm (10")', '1–2 porcije', '2–3 jaja', 'Za jednu osobu' ),
+            array( '28 cm', '28 cm (11")', '2–3 porcije', '4–5 jaja', 'Najpopularnija' ),
+            array( '30 cm', '30 cm (12")', '3–4 porcije', '6–8 jaja', 'Za obitelj' ),
         );
     }
 }

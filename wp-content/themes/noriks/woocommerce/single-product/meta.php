@@ -703,6 +703,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Polo</strong> je najudobnija majica koju ćete ikad nositi. Klasična polo majica krojena od rastezljive tkanine, modernog kroja i nenametljivo profinjenog izgleda. Lijepo se slaže uz chino hlače, kratke hlače i traperice.<br><br><strong>Istaknuto:</strong><br>• Prozračna rastezljiva pletenina<br>• Mekana završna obrada otporna na gužvanje, za udobnost cijeli dan<br>• Krojeni atletski kroj koji se kreće s vama<br>• Izrazito mekana unutrašnjost otporna na habanje<br>• Obrađena posebnom mješavinom za dugotrajnu mekoću i zadržavanje oblika<br>• Sprječava znojenje i neugodne mirise<br>• Izrađena od izdržljivog pletiva visoke gustoće od 100 % PET-a, za uredan i strukturiran pad<br><br>Dostupna je u devet boja (crna, tamnosiva, plava, tamnoplava, zelena, bordo, srebrnosiva, šljiva i camel) i u veličinama od S do 5XL. Kroj je malo uži — ako volite opušteniji kroj, uzmite broj veći.
 
+         <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
+
+                <strong>NORIKS TitaniumPan</strong> je posljednja tava koja vam ikad treba. Izrađena je da bude neuništiva i da traje cijeli život. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih kuhara. Bez premaza. Bez toksina. Bez kompromisa.<br><br><strong>Netoksični materijali</strong> — izrađena bez: PFAS-a („vječnih kemikalija”), PTFE-a (teflona), PFOA-e, olova i kadmija, nanočestica i teških metala.<br><br><strong>Detalji:</strong><br>• Promjer: 28 cm (11″), visina: 6,3 cm (dostupna i u 26 cm i 30 cm)<br>• Za sve vrste ploča, uključujući indukciju<br><br><strong>Konstrukcija:</strong><br>• Potpuno troslojna izvedba<br>• Donji sloj: 0,6 mm nehrđajućeg čelika (430) – za indukciju<br>• Jezgra: 1 mm aluminija – brza i ravnomjerna raspodjela topline<br>• Površina za kuhanje: 0,5 mm čistog titanija s kovanim uzorkom – prirodno neljepljiva, bez toksina i iznimno izdržljiva<br><br><strong>U paketu:</strong><br>• Titanijska kovana tava, sigurno zapakirana u posebnu zaštitnu kutiju<br>• 5 osnovnih vodiča – savjeti za njegu, prvo pripremanje tave i profesionalne tehnike kuhanja<br><br><strong>Njega i upotreba:</strong><br>• Otporna na temperaturu do 548 °C<br>• Može se prati u perilici posuđa<br>• Sigurna za metalni pribor<br>• Neljepljivost aktivirajte s 1 žličicom ulja s visokom točkom dimljenja prije kuhanja<br>• Titanijsku površinu lako očistite s malo deterdženta i spužvom.
+
          <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 
                 <strong>NORIKS Raincoat</strong> je kratka oversized kišna jakna osmišljena za udobnost i samopouzdanje po nepredvidivom vremenu. Široki kroj daje zaštitnu siluetu koju je lako slojevito kombinirati, a ekstra velik preklopivi obod kapuljače štiti lice, kosu i šminku od kiše. Elastični nabrani rub daje suptilan oblik — za gradske ulice i svakodnevne avanture.<br><br><strong>Istaknuto:</strong><br>• Vodootporna do 12.000 mm, otporna na mrlje i vjetar<br>• Kapuljača sa širokim obodom<br>• Podesive manžete s čičkom<br>• Mekana podstava rukava<br>• Bočni džepovi<br>• Nabrani „bubble” rub<br>• Ventilacijski otvori ispod pazuha, opušten kroj<br>• Klasična verzija za temperature od 15 °C do 25 °C<br><br><strong>Materijal:</strong> 100 % poliester. Samo ručno pranje do 30 °C.<br><br>Jedna veličina (EU 36–50), dostupna u devet boja: crna, bordo, tamnocrvena, smeđa, sivosmeđa, biserna, svijetloružičasta, tamnoplava i svijetložuta.
@@ -1142,6 +1146,36 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>Kako odabrati:</strong> pronađite svoju težinu u stupcu najbližem vašoj visini. Vitka građa — računajte oko 5 kg manje, krupnija građa — oko 5 kg više. Niži od 165 cm uzmite broj manji, viši od 190 cm broj veći. 168 kupaca potvrdilo je da je majica malo manja; ako trebate drugu veličinu, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Niste sigurni koju veličinu odabrati?</strong> Većina kupaca uz ovaj vodič pogodi već prvi put.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Promjer</th>
+                  <th style="padding:9px 8px;text-align:left;">Porcije</th>
+                  <th style="padding:9px 8px;text-align:left;">Jaja</th>
+                  <th style="padding:9px 8px;text-align:left;">Za koga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_titaniumpan_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <?php for ( $c = 1; $c <= 4; $c++ ) : ?><td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[ $c ] ); ?></td><?php endfor; ?>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>26 cm</strong> — svakodnevna tava za odrezak, jaja i brzo prženje. <strong>28 cm</strong> — naša najprodavanija, za većinu obroka za dvoje. <strong>30 cm</strong> — obiteljski obroci, priprema unaprijed i gosti. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1432,6 +1466,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php if( noriks_is_type( 'sr', $current_product_id ) ): ?>
 
                 Perite u perilici na programu za osjetljivo rublje, na 30 °C. Sušite na niskoj temperaturi ili na zraku — tako tkanina zadrži elastičnost i ne skuplja se. Glačanje nije potrebno.
+
+         <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
+
+                Prije prve upotrebe tavu operite toplom vodom i deterdžentom. Titanijsku površinu lako očistite s malo deterdženta i spužvom; tava se može prati i u perilici posuđa, a kratko ručno pranje dulje čuva sjaj. Sigurna je za metalni pribor. Za prirodnu neljepljivost tavu zagrijte 2–3 minute na srednjoj vatri i dodajte 1 žličicu ulja s visokom točkom dimljenja.
 
          <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 

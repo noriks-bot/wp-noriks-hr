@@ -78,6 +78,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-polo' );
             return;
         }
+        // NORIKS TitaniumPan: velicine tave 26 / 28 / 30 cm (porcije, jaja) iz vodica originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'titaniumpan' ) ) {
+            get_template_part( 'template_parts/size-chart-titaniumpan' );
+            return;
+        }
         // NORIKS Raincoat: jedna velicina (EU 36–50), mjere jakne iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'raincoat' ) ) {
             get_template_part( 'template_parts/size-chart-raincoat' );

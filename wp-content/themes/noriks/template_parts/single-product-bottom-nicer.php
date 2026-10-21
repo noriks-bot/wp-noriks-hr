@@ -264,6 +264,11 @@ if ( noriks_is_type( 'polo' ) ) {
     include $noriks_pb_dir . 'why-polo.php';
 }
 
+// NORIKS TitaniumPan (orto-titaniumpan) — titanijska kovana tava bez premaza
+if ( noriks_is_type( 'titaniumpan' ) ) {
+    include $noriks_pb_dir . 'why-titaniumpan.php';
+}
+
 // NORIKS Raincoat (orto-raincoat) — kratka oversized kisna jakna s kapuljacom
 if ( noriks_is_type( 'raincoat' ) ) {
     include $noriks_pb_dir . 'why-raincoat.php';
