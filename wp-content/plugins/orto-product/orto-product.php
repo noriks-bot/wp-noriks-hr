@@ -520,9 +520,6 @@ function gck_render_bundle_selector() {
         // NORIKS SupportSocks: kao na originalu (Kaching: "2 par for prisen av 1 / Kun 150 kr/par", "5 par for prisen av 2 / Kun 120 kr/par · Fri frakt",
         // "8 par for prisen av 3 / Kun 112 kr/par · Fri frakt") — cijena po paru iz nasih EUR cijena (27,99 / 2, 56,99 / 5, 84,99 / 8).
         $gck_offer_subs = array( '2 para po cijeni 1 · samo 14,00 € po paru', '5 pari po cijeni 2 · samo 11,40 € po paru · besplatna dostava', '8 pari po cijeni 3 · samo 10,62 € po paru · besplatna dostava' );
-    } elseif ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ) {
-        // NORIKS Doggo: original nima paketov (ena cena, velikost in barva) — ena kartica brez podnaslova.
-        $gck_offer_subs = array();
     } elseif ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ) {
         // NORIKS Bracelet: kao na originalu (Kaching: "1 bracelet only / 50% OFF TODAY", "BUY 1 GET 1 FREE / Free express shipping").
         // "Free express shipping" ni NORIKS pogoj (brezplacna dostava sele nad 70 €) — zamenjano z opisom ponudbe (2 za ceno 1).
@@ -568,9 +565,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
         // NORIKS SupportSocks: znacki 2. in 3. ponude kao na originalu ("Mest populær", "Mest for pengene").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJISPLATIVIJE' );
-    } elseif ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ) {
-        // NORIKS Doggo: brez znack (original nima paketov).
-        $gck_offer_badges = array();
     } elseif ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ) {
         // NORIKS Bracelet: oznaka 2. ponude kao na originalu ("-50% + B1G1").
         $gck_offer_badges = array( 1 => '-50 % + 2 ZA 1' );

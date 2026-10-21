@@ -1,26 +1,24 @@
 <?php
 /**
  * product-bottom: NORIKS Doggo — sigurnosni autokrevet za pse s ISOFIX kopčama (orto-doggo).
- * Original: waggingrightsusa.com/products/doggo-dock — struktura je 1:1 z originalom
- * (isto stevilo sekcij, isti vrstni red, ista ozadja in valoviti razdelilniki, slike in videi na istih mestih), besedila v hrvascini.
- *   1) Video (svetlo modra #d2e6f2): Max v skladiscu — HR podnapisi, brez zvoka, ~78 % sirine originala
- *   2) Drsnik kartic mnenj s fotografijami (temno modra #276d91)
- *   3) Video (svetlo modra): XL krevet za dva psa — HR podnapisi, brez zvoka, ~78 %
- *   4) 6 videov kupcev (#276d91, 3 stolpci; mobilno vodoravni drsnik)
- *   5) Video (#276d91): Doggo v prtljazniku — HR podnapisi, brez zvoka, ~78 %
- *   6) Zašto Doggo? (svetlo modra, sredinsko besedilo)
- *   7) 6 prednosti s slikami + velika slika na sredini (bela)
- *   8) Ikone: besplatna dostava / 30 dana za povrat / povjerenje tisuća kupaca (svetlo modra)
- *   9) Animiran video izdelka (#276d91, kvadrat, samodejno predvajanje brez zvoka)
- *  10) Tko je NORIKS? (#276d91)
- *  11) Recenzije kupaca (4.8 / 919, sažetak, mreža 40 mnenj s fotografijami 1:1, "Prikaži više")
- * Nad izdelkom kot na originalu: pasica "50 % POPUSTA — AKCIJA ZAVRŠAVA U SRIJEDU" z odstevanjem, tekoci trak prednosti
- * in "PONOVNO NA ZALIHI U 🇭🇷". V nakupni skatli: ocena pod naslovom, "Na zalihi", 3 harmonike in opis z "Pročitaj više".
- * FAQ originala ("Bark & we answer!", 8 vprasanj) je v reviews.php ($doggo_faq), kratka mnenja v auto_reviews/HR_doggo.php.
- * Izpusceno: glava trgovine, "Leads & Harness" (drugi izdelki), ponudba povodca in orme v nakupni skatli (drugi izdelki),
- * "Extra 20% off 2nd Dog Dock" (NORIKS tega popusta nima), sekcija "Wagging Gives Back!" (donacije zavetiscu Battersea —
- * NORIKS jih ne daje), "Lifetime Warranty", "Free DHL Express" in brezplacna zdjelica (NORIKS pogoji: 30 dni za povrat, dostava nad 70 €), noga.
- * Videi z Maxom: zvok odstranjen, angleski vgrajeni podnapisi zakriti in zamenjani s hrvaskimi (prevodi v izdelki/NORIKS-DOGGO/prevodi.md).
+ * Original: waggingrightsusa.com/products/doggo-dock — vsebina in vrstni red 1:1 z originalom, oblika po NORIKS stilu
+ * (kot why-hands.php: slika/video vedno ob besedilu, strani se izmenjujeta, brez pasic, drsnikov, valov in animacij).
+ *   1) Video: Max v skladiscu (video levo, besedilo iz videa desno)
+ *   2) Kartice mnenj s fotografijami (preprosta mreza, brez drsnika)
+ *   3) Video: XL krevet za dva psa (besedilo levo, video desno)
+ *   4) 6 videov kupcev (mreza, predvajanje ob kliku)
+ *   5) Video: Doggo v prtljazniku (video levo, besedilo desno)
+ *   6) Zašto Doggo? (besedilo levo, velika slika z originala desno)
+ *   7) 6 prednosti s slikami (kartice: slika ob besedilu)
+ *   8) Ikone: besplatna dostava iznad 70 € / 30 dana za povrat / povjerenje tisuća kupaca
+ *   9) Video izdelka: otkopča se u krevet (video levo, besedilo z originala desno; brez samodejnega predvajanja)
+ *  10) Tko je NORIKS?
+ *  11) Recenzije kupaca (4.8 / 919, sažetak, mreža 40 mnenj s fotografijami, "Prikaži više")
+ * Nakupna skatla: samo standardni NORIKS bloki — opis, velicine in pasmine ter "Sigurnost psa u vožnji" so v meta.php
+ * (Detalji o proizvodu) in v tablici velicin (size-chart-doggo.php / noriks_doggo_sizes()).
+ * FAQ je v reviews.php ($doggo_faq), kratka mnenja v auto_reviews/HR_doggo.php.
+ * Izpusceno: glava trgovine, drugi izdelki, "Extra 20% off 2nd Dog Dock", "Wagging Gives Back!", "Lifetime Warranty",
+ * "Free DHL Express", brezplacna zdjelica, promo pasica z odstevanjem, tekoci trak, "Just restocked" (NORIKS stil in pogoji).
  * Slike: img/doggo/ (logotip konkurenta na slikah prednosti odstranjen, napisi prevedeni v hrvascino).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -31,7 +29,7 @@ $ndg_img  = function( $file, $alt, $extra = '' ) use ( $ndg, $ndg_path ) {
   if ( ! file_exists( $ndg_path . $file ) ) { return ''; }
   return '<img src="' . esc_url( $ndg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . $extra . '>';
 };
-/* video z gumbom za predvajanje (kot na originalu: poster + gumb, ob kliku predvajanje) — brez zvoka */
+/* video s posterjem in gumbom (nalozi in predvaja se sele ob kliku) — brez zvoka */
 $ndg_video = function( $file, $label, $ratio ) use ( $ndg, $ndg_path ) {
   if ( ! file_exists( $ndg_path . $file ) ) { return ''; }
   $poster = str_replace( '.mp4', '-poster.webp', $file );
@@ -41,11 +39,6 @@ $ndg_video = function( $file, $label, $ratio ) use ( $ndg, $ndg_path ) {
     . '<button type="button" class="ndg-vid__btn" aria-label="Pokreni video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span></button>'
     . '</div>';
 };
-/* valovit razdelilnik: $top = barva zgornje sekcije (val), $bottom = ozadje spodnje sekcije */
-$ndg_wave = function( $top, $bottom, $flip = false ) {
-  return '<div class="ndg-wave' . ( $flip ? ' ndg-wave--flip' : '' ) . '" style="background:' . esc_attr( $bottom ) . ';color:' . esc_attr( $top ) . '" aria-hidden="true">'
-    . '<svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,0H1440V38C1320,70 1200,86 1080,74C960,62 840,22 720,22C600,22 480,62 360,74C240,86 120,70 0,46Z"/></svg></div>';
-};
 $ndg_star  = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 6 6.5.6-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.6z"/></svg>';
 $ndg_stars = function( $n = 5 ) use ( $ndg_star ) {
   $o = '<span class="ndg-stars" aria-label="' . (int) $n . ' od 5 zvjezdica">';
@@ -54,7 +47,7 @@ $ndg_stars = function( $n = 5 ) use ( $ndg_star ) {
 };
 $ndg_ver = '<svg class="ndg-ver" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.5l3.2 3.2L17 8.8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-/* 7) prednosti — 1:1 z originala (levi stolpec 0/2/4, desni 1/3/5) */
+/* 7) prednosti — 1:1 z originala */
 $ndg_hl = array(
   array( 'dg-hl-1.webp', 'Praktičan bočni džep', 'Sve potrebno imate pri ruci — od povodca i poslastica do igračaka za put. Siguran džep znači da na putovanju sa psom ne morate nositi više torbi.' ),
   array( 'dg-hl-4.webp', 'Podesivi remeni za sjedalo', 'Pričvrstite krevet na bilo koje autosjedalo podesivim remenima. Osmišljeni su za stabilnost — drže krevet na mjestu i štite ljubimca pri naglom kočenju ili skretanju.' ),
@@ -114,95 +107,111 @@ $ndg_short = function( $t, $n = 100 ) {
 /* 4) videi kupcev (ugc) */
 $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4', 'dg-ugc-5.mp4', 'dg-ugc-6.mp4' );
 ?>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap">
 
 <div class="ndg">
 
-<?php echo $ndg_wave( '#ffffff', '#d2e6f2' ); ?>
-
-<!-- 1) video: Max v skladiscu -->
-<section class="ndg-sec ndg-sec--light ndg-sec--video">
-  <div class="ndg-wrap"><?php echo $ndg_video( 'dg-video-skladiste.mp4', 'NORIKS Doggo — predstavljanje u skladištu', '4 / 5' ); ?></div>
+<!-- 1) UPOZNAJTE DOGGO — video lijevo -->
+<section class="ndg-sec ndg-tint">
+  <div class="ndg-wrap ndg-row2">
+    <div class="ndg-media"><?php echo $ndg_video( 'dg-video-skladiste.mp4', 'NORIKS Doggo — predstavljanje u skladištu', '4 / 5' ); ?></div>
+    <div class="ndg-copy">
+      <p class="ndg-kicker">Upoznajte Doggo</p>
+      <h2 class="ndg-h2">Psi zaslužuju <em>sigurnu vožnju.</em></h2>
+      <p>Ljudi psa često samo ubace na stražnje sjedalo ili ga vežu običnim povodcem. To nije sigurno i protivno je propisima. Svi volimo izlete sa svojim psima i vožnju do omiljene šetnje — a Doggo je osmišljen da vožnja bude puno sigurnija.</p>
+      <p>Psa u autu osigurava na više načina: <strong>metalne ISOFIX kopče</strong>, iste kao na dječjim autosjedalicama, kopčaju se izravno u ISOFIX točke na sjedalu. Dva remena idu oko gornjeg i donjeg dijela naslona, a unutar kreveta je povodac koji se kopča izravno na psa — preporučujemo ormu, a ne ogrlicu, da bude pričvršćen za tijelo, a ne za vrat.</p>
+      <p>Doggo nije samo za vožnju: ima dvije ručke pa ga možete nositi sa sobom. Izrađen je od vrlo mekane, izdržljive veganske kože, a nakon blatnjave šetnje samo izvadite jastuke i navlaku ubacite u perilicu — izađe kao nova.</p>
+      <p class="ndg-big">Vaš pas zaslužuje bolje.</p>
+    </div>
+  </div>
 </section>
 
-<?php echo $ndg_wave( '#d2e6f2', '#276d91' ); ?>
-
-<!-- 2) drsnik kartic mnenj -->
-<section class="ndg-sec ndg-sec--dark ndg-sec--carousel">
-  <div class="ndg-wrap ndg-car">
-    <button type="button" class="ndg-car__nav ndg-car__nav--prev" aria-label="Prethodne recenzije"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
-    <div class="ndg-car__track" data-ndg-car>
-      <?php foreach ( array_slice( $ndg_rv, 0, 16 ) as $i => $r ) : ?>
+<!-- 2) kartice mnenj s fotografijami — preprosta mreza -->
+<section class="ndg-sec">
+  <div class="ndg-wrap">
+    <div class="ndg-cards">
+      <?php foreach ( array_slice( $ndg_rv, 0, 8 ) as $i => $r ) : ?>
       <article class="ndg-cc">
-        <div class="ndg-cc__img"><?php echo $ndg_img( sprintf( 'dg-rv-%02d.webp', $i + 1 ), 'Fotografija kupca — ' . $r[0] ); ?><span class="ndg-cc__st"><?php echo $ndg_stars( $r[1] ); ?></span></div>
+        <div class="ndg-cc__img"><?php echo $ndg_img( sprintf( 'dg-rv-%02d.webp', $i + 1 ), 'Fotografija kupca — ' . $r[0] ); ?></div>
         <div class="ndg-cc__body">
+          <?php echo $ndg_stars( $r[1] ); ?>
           <p class="ndg-cc__name"><?php echo esc_html( $r[0] ); ?> <?php echo $ndg_ver; ?></p>
           <p class="ndg-cc__txt"><?php echo esc_html( $ndg_short( $r[3] ) ); ?></p>
         </div>
       </article>
       <?php endforeach; ?>
     </div>
-    <button type="button" class="ndg-car__nav ndg-car__nav--next" aria-label="Sljedeće recenzije"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
   </div>
 </section>
 
-<?php echo $ndg_wave( '#276d91', '#d2e6f2' ); ?>
-
-<!-- 3) video: XL krevet za dva psa -->
-<section class="ndg-sec ndg-sec--light ndg-sec--video">
-  <div class="ndg-wrap"><?php echo $ndg_video( 'dg-video-dva-psa.mp4', 'NORIKS Doggo XL — dva psa na putu', '766 / 1080' ); ?></div>
-</section>
-
-<?php echo $ndg_wave( '#d2e6f2', '#276d91' ); ?>
-
-<!-- 4) videi kupcev -->
-<section class="ndg-sec ndg-sec--dark ndg-sec--ugc">
-  <div class="ndg-ugc">
-    <?php foreach ( $ndg_ugc as $k => $u ) : if ( ! file_exists( $ndg_path . $u ) ) { continue; } $up = str_replace( '.mp4', '-poster.webp', $u ); ?>
-    <div class="ndg-ugc__it"><video data-src="<?php echo esc_url( $ndg . $u ); ?>"<?php echo file_exists( $ndg_path . $up ) ? ' poster="' . esc_url( $ndg . $up ) . '"' : ''; ?> muted loop playsinline autoplay preload="none" aria-label="Video kupca <?php echo (int) $k + 1; ?> — NORIKS Doggo"></video></div>
-    <?php endforeach; ?>
-  </div>
-</section>
-
-<!-- 5) video: Doggo v prtljazniku -->
-<section class="ndg-sec ndg-sec--dark ndg-sec--video">
-  <div class="ndg-wrap"><?php echo $ndg_video( 'dg-video-prtljaznik.mp4', 'NORIKS Doggo u prtljažniku', '4 / 3' ); ?></div>
-</section>
-
-<?php echo $ndg_wave( '#276d91', '#d2e6f2' ); ?>
-
-<!-- 6) Zašto Doggo? -->
-<section class="ndg-sec ndg-sec--light">
-  <div class="ndg-wrap ndg-rich">
-    <h2 class="ndg-h2">Zašto Doggo?</h2>
-    <p>Doggo je sigurnosni putni krevet osmišljen kako bi vaš pas tijekom vožnje imao svoj vlastiti prostor. Zahvaljujući ISOFIX pričvršćivanju, ojačanim sigurnosnim remenima i ugrađenoj kopči za ormu čvrsto stoji na sjedalu — i pomaže smanjiti pomicanje, ometanje i nemir tijekom putovanja.</p>
-  </div>
-</section>
-
-<?php echo $ndg_wave( '#d2e6f2', '#ffffff' ); ?>
-
-<!-- 7) prednosti -->
-<section class="ndg-sec ndg-sec--white">
-  <div class="ndg-wrap ndg-hl">
-    <div class="ndg-hl__col">
-      <?php foreach ( array( 0, 2, 4 ) as $k ) : $h = $ndg_hl[ $k ]; ?>
-      <div class="ndg-hl__card"><div class="ndg-hl__img"><?php echo $ndg_img( $h[0], 'NORIKS Doggo — ' . $h[1] ); ?></div><h3><?php echo esc_html( $h[1] ); ?></h3><p><?php echo esc_html( $h[2] ); ?></p></div>
-      <?php endforeach; ?>
+<!-- 3) XL ZA DVA PSA — video desno -->
+<section class="ndg-sec ndg-tint">
+  <div class="ndg-wrap ndg-row2 ndg-row2--rev">
+    <div class="ndg-copy">
+      <p class="ndg-kicker">XL za dva psa</p>
+      <h2 class="ndg-h2">Dva psa, <em>jedan siguran prostor.</em></h2>
+      <p>Ovo su Clem i Charlie. XL krevet savršen je za dva psa jer ima <strong>dva sigurnosna povodca</strong> koji se kopčaju izravno na orme.</p>
+      <p>Uvijek preporučujemo kopčanje na ormu umjesto na ogrlicu — da bude na tijelu, a ne na vratu. Tako psi dobiju siguran prostor da putuju zajedno, pogotovo ako su prijatelji kao Clem i Charlie.</p>
+      <p>Isprobajte bez brige: <strong>besplatna dostava za narudžbe iznad 70 €</strong> i <strong>30 dana za povrat</strong>.</p>
+      <p class="ndg-big">Nabavite Doggo već danas.</p>
     </div>
-    <div class="ndg-hl__main"><?php echo $ndg_img( 'dg-hl-main.webp', 'Labrador u NORIKS Doggo autokrevetu' ); ?></div>
-    <div class="ndg-hl__col">
-      <?php foreach ( array( 1, 3, 5 ) as $k ) : $h = $ndg_hl[ $k ]; ?>
-      <div class="ndg-hl__card"><div class="ndg-hl__img"><?php echo $ndg_img( $h[0], 'NORIKS Doggo — ' . $h[1] ); ?></div><h3><?php echo esc_html( $h[1] ); ?></h3><p><?php echo esc_html( $h[2] ); ?></p></div>
+    <div class="ndg-media"><?php echo $ndg_video( 'dg-video-dva-psa.mp4', 'NORIKS Doggo XL — dva psa na putu', '766 / 1080' ); ?></div>
+  </div>
+</section>
+
+<!-- 4) videi kupcev — mreza, predvajanje ob kliku -->
+<section class="ndg-sec">
+  <div class="ndg-wrap">
+    <div class="ndg-ugc">
+      <?php foreach ( $ndg_ugc as $k => $u ) : ?>
+      <div class="ndg-ugc__it"><?php echo $ndg_video( $u, 'Video kupca ' . ( (int) $k + 1 ) . ' — NORIKS Doggo', '606 / 1080' ); ?></div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<?php echo $ndg_wave( '#ffffff', '#d2e6f2' ); ?>
+<!-- 5) U PRTLJAŽNIKU — video lijevo -->
+<section class="ndg-sec ndg-tint">
+  <div class="ndg-wrap ndg-row2">
+    <div class="ndg-media"><?php echo $ndg_video( 'dg-video-prtljaznik.mp4', 'NORIKS Doggo u prtljažniku', '4 / 3' ); ?></div>
+    <div class="ndg-copy">
+      <p class="ndg-kicker">U prtljažniku</p>
+      <h2 class="ndg-h2">Može li Doggo <em>u prtljažnik?</em></h2>
+      <p>Često nas to pitate. Odgovor je: <strong>da, može!</strong></p>
+      <p>Pepper obožava vožnju u prtljažniku — tamo mu je udobno. Može i s veličinom M, ali najbolje je s XL.</p>
+      <p class="ndg-big">Najbolje u veličini XL.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6) ZAŠTO DOGGO? — slika desno -->
+<section class="ndg-sec">
+  <div class="ndg-wrap ndg-row2 ndg-row2--rev">
+    <div class="ndg-copy">
+      <p class="ndg-kicker">Zašto Doggo</p>
+      <h2 class="ndg-h2">Zašto <em>Doggo?</em></h2>
+      <p>Doggo je sigurnosni putni krevet osmišljen kako bi vaš pas tijekom vožnje imao svoj vlastiti prostor.</p>
+      <p>Zahvaljujući <strong>ISOFIX pričvršćivanju, ojačanim sigurnosnim remenima i ugrađenoj kopči za ormu</strong> čvrsto stoji na sjedalu — i pomaže smanjiti pomicanje, ometanje i nemir tijekom putovanja.</p>
+    </div>
+    <div class="ndg-media"><?php echo $ndg_img( 'dg-hl-main.webp', 'Labrador u NORIKS Doggo autokrevetu' ); ?></div>
+  </div>
+</section>
+
+<!-- 7) prednosti — kartice: slika ob besedilu -->
+<section class="ndg-sec ndg-tint">
+  <div class="ndg-wrap">
+    <div class="ndg-hl">
+      <?php foreach ( $ndg_hl as $h ) : ?>
+      <article class="ndg-hl__card">
+        <div class="ndg-hl__img"><?php echo $ndg_img( $h[0], 'NORIKS Doggo — ' . $h[1] ); ?></div>
+        <div class="ndg-hl__txt"><h3><?php echo esc_html( $h[1] ); ?></h3><p><?php echo esc_html( $h[2] ); ?></p></div>
+      </article>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
 
 <!-- 8) ikone -->
-<section class="ndg-sec ndg-sec--light ndg-sec--icons">
+<section class="ndg-sec">
   <ul class="ndg-icons">
     <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h22v16H6zM28 20h7l5 5v5H28z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="32" r="3.2" fill="#fff" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="32" r="3.2" fill="#fff" stroke="currentColor" stroke-width="2"/></svg></span><h3>Besplatna dostava za narudžbe iznad 70&nbsp;€</h3></li>
     <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M36 26a12 12 0 1 1-4-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M33 10v7h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>30 dana za povrat</h3></li>
@@ -210,33 +219,40 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
   </ul>
 </section>
 
-<?php echo $ndg_wave( '#d2e6f2', '#276d91' ); ?>
-
-<!-- 9) animiran video izdelka -->
-<section class="ndg-sec ndg-sec--dark ndg-sec--anim">
-  <div class="ndg-wrap"><?php if ( file_exists( $ndg_path . 'dg-animacija.mp4' ) ) : ?><video class="ndg-anim" data-src="<?php echo esc_url( $ndg . 'dg-animacija.mp4' ); ?>" poster="<?php echo esc_url( $ndg . 'dg-animacija-poster.webp' ); ?>" muted loop playsinline autoplay preload="none" aria-label="NORIKS Doggo — sklapanje i rasklapanje kreveta"></video><?php endif; ?></div>
+<!-- 9) OTKOPČA SE U KREVET — video lijevo -->
+<section class="ndg-sec ndg-tint">
+  <div class="ndg-wrap ndg-row2">
+    <div class="ndg-media"><?php echo $ndg_video( 'dg-animacija.mp4', 'NORIKS Doggo — sklapanje i rasklapanje kreveta', '1 / 1' ); ?></div>
+    <div class="ndg-copy">
+      <p class="ndg-kicker">Iz auta u dom</p>
+      <h2 class="ndg-h2">Otkopča se <em>u krevet za kod kuće.</em></h2>
+      <p>Doggo nije samo za vožnju. Ima dvije ručke pa ga možete nositi sa sobom, a prednji dio se otkopča u ravni krevet za kod kuće.</p>
+      <p>Srednji jastuk je obostran: jedna strana je mekana, a druga od kože za putovanja. Unutarnja navlaka pere se u perilici.</p>
+      <p class="ndg-big">Autokrevet i krevet za kod kuće u jednom.</p>
+    </div>
+  </div>
 </section>
 
 <!-- 10) Tko je NORIKS? -->
-<section class="ndg-sec ndg-sec--dark">
-  <div class="ndg-wrap ndg-rich ndg-rich--light">
-    <h2 class="ndg-h2">Tko je NORIKS?</h2>
+<section class="ndg-sec">
+  <div class="ndg-wrap ndg-center">
+    <p class="ndg-kicker">O nama</p>
+    <h2 class="ndg-h2">Tko je <em>NORIKS?</em></h2>
     <p>Mi smo brend koji stvara proizvode sa strašću i pažnjom. Naša misija je jednostavna: <strong>zaštititi pse i učiniti stvarnu razliku</strong>.</p>
     <p>Doggo nije samo proizvod — to je naše obećanje psima i njihovim vlasnicima.</p>
   </div>
 </section>
 
-<?php echo $ndg_wave( '#276d91', '#ffffff' ); ?>
-
 <!-- 11) recenzije kupaca -->
-<section class="ndg-sec ndg-sec--white ndg-sec--rv" id="ndg-recenzije">
+<section class="ndg-sec ndg-tint" id="ndg-recenzije">
   <div class="ndg-wrap">
-    <div class="ndg-rv__head"><?php echo $ndg_stars( 5 ); ?> <strong>919 recenzija</strong> <span class="ndg-rv__avg">4.8 / 5</span></div>
+    <h2 class="ndg-h2 ndg-h2--c">Recenzije <em>kupaca</em></h2>
+    <p class="ndg-rv__head"><?php echo $ndg_stars( 5 ); ?> <strong>4.8 / 5</strong> · 919 recenzija</p>
     <div class="ndg-rv__sum">
       <h3>Sažetak recenzija</h3>
       <p>Kupci hvale Doggo zbog izvrsne kvalitete, sigurnog ISOFIX pričvršćivanja i udobnosti. Iako je nekima dostava potrajala, većina se slaže da se isplati čekati jer ga njihovi psi obožavaju.</p>
     </div>
-    <div class="ndg-rv__grid" data-ndg-masonry>
+    <div class="ndg-rv__grid">
       <?php foreach ( $ndg_rv as $i => $r ) : ?>
       <article class="ndg-rc<?php echo $i >= 20 ? ' is-hidden' : ''; ?>">
         <?php echo $ndg_img( sprintf( 'dg-rv-%02d.webp', $i + 1 ), 'Fotografija kupca — ' . $r[0] ); ?>
@@ -255,108 +271,9 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
 
 </div>
 
-<!-- nakupna skatla: predloge (vstavi jih JS kot na originalu) -->
-<template id="ndg-tpl-rating">
-  <a class="ndg-bb-rating" href="#ndg-recenzije"><?php echo $ndg_stars( 5 ); ?><span>(919)</span></a>
-</template>
-<template id="ndg-tpl-stock">
-  <p class="ndg-stock"><span class="ndg-stock__dot" aria-hidden="true"></span>Na zalihi</p>
-</template>
-<template id="ndg-tpl-after">
-  <div class="ndg-bb-after">
-    <details class="ndg-bb-acc">
-      <summary><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 17.4l-12.6-5.5a1 1 0 0 0-.8 0L11 17.4v13.2l13 5.4 13-5.4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 17.4l13 5.6 13-5.6M24 23v13" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Veličine i pasmine</span><i aria-hidden="true"></i></summary>
-      <div class="ndg-bb-acc__a">
-        <p><strong>M:</strong> 53 cm (D) × 47 cm (Š) × 44 cm (V)<br><br><strong>XL:</strong> 100 cm (D) × 52 cm (Š) × 44 cm (V)</p>
-        <p>Veličina M idealna je za manje pasmine poput jazavčara, border terijera, cockapooa i koker španijela — pse koji tijekom putovanja vole tijesan, siguran kutak. Veličina XL namijenjena je većim pasminama poput border kolija, labradora i njemačkih ovčara te pruža više prostora za ispružanje uz zadržanu stabilnost i udobnost. Savršena je i za kućanstva s dva manja psa koji udobno stanu jedan uz drugoga, a ima i dva zasebna unutarnja povodca — po jedan za svakog psa, ili oba za jednog psa radi dodatne sigurnosti.</p>
-      </div>
-    </details>
-    <details class="ndg-bb-acc">
-      <summary><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 9l12 4.5v9c0 8-5.3 14.3-12 16.5-6.7-2.2-12-8.5-12-16.5v-9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18.5 24l4 4 7-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>30 dana za povrat</span><i aria-hidden="true"></i></summary>
-      <div class="ndg-bb-acc__a">
-        <p>Imate <strong>pravo na povrat u roku od 30 dana</strong>. Ako Doggo ne odgovara vama ili vašem psu, javite nam se u roku od 30 dana od primitka narudžbe.</p>
-        <p><strong>Besplatna dostava za narudžbe iznad 70 €.</strong></p>
-      </div>
-    </details>
-    <details class="ndg-bb-acc">
-      <summary><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 33h30M13 33v-6l3-8h16l3 8v6M13 27h22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="17" cy="33" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="31" cy="33" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Sigurnost psa u vožnji ⚠️</span><i aria-hidden="true"></i></summary>
-      <div class="ndg-bb-acc__a">
-        <p>Prometna pravila nalažu da životinje u vozilu moraju biti prevožene tako da ne ometaju vozača i ne ugrožavaju sigurnost vožnje. Nepropisno osiguran pas može značiti kaznu i, što je najvažnije, ozbiljne ozljede vašeg psa u slučaju nesreće.</p>
-        <p><strong>NORIKS Doggo</strong> osmišljen je da vam pruži:</p>
-        <ul>
-          <li><strong>Sigurnost:</strong> vaš ljubimac je siguran i udoban na svakom putovanju.</li>
-          <li><strong>Usklađenost s propisima:</strong> pas je tijekom vožnje propisno osiguran.</li>
-          <li><strong>Bezbrižnost:</strong> putujte opušteno, znajući da je vaš krzneni prijatelj siguran.</li>
-        </ul>
-        <p>To nije samo proizvod — to je obveza prema sigurnosti vašeg psa. Odaberite Doggo za putovanja bez brige!</p>
-      </div>
-    </details>
-    <div class="ndg-bb-desc">
-      <div class="ndg-bb-desc__in">
-        <p>Doggo se pričvršćuje izravno na sjedalo <strong>ISOFIX kopčama (2 na M, 4 na XL)</strong> i s <strong>dva ojačana remena koja se omataju oko sjedala</strong> za dodatnu stabilnost. Unutra <strong>dva remena za ormu</strong> drže psa sigurno na mjestu, a ne ograničavaju mu udobnost.</p>
-        <p>Ovaj sustav pričvršćivanja u više točaka pomaže smanjiti pomicanje pri kočenju, skretanju i na dugim vožnjama — i stvara jasno određen prostor u kojem se vaš pas može prirodno smiriti.</p>
-        <p>Svake godine tisuće pasa ozlijede se u autu jer nisu dobro osigurani. Doggo je osmišljen da to promijeni — za sigurnije i kontroliranije putovanje i bezbrižnost jer znate da je vaš pas siguran na svakom putu.</p>
-      </div>
-      <button type="button" class="ndg-bb-desc__more">Pročitaj više</button>
-    </div>
-  </div>
-</template>
-
 <script>
 (function(){
-  function tpl(id){ var t = document.getElementById(id); return t ? t.content.cloneNode(true) : null; }
-
-  /* 1) promo pasica originala (na vrhu): "50% OFF RESTOCK SALE ENDS WEDNESDAY" + odstevanje do srede 23:59 */
-  if (!document.querySelector('.ndg-annbar')) {
-    var bar = document.createElement('div');
-    bar.className = 'ndg-annbar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Obavijest');
-    bar.innerHTML = '<div class="ndg-annbar__in"><span class="ndg-annbar__t">50 % POPUSTA — AKCIJA ZAVRŠAVA U SRIJEDU</span>'
-      + '<span class="ndg-annbar__cd" role="timer"><span><b data-d>00</b><small>dana</small></span><em>:</em><span><b data-h>00</b><small>sati</small></span><em>:</em>'
-      + '<span><b data-m>00</b><small>min</small></span><em>:</em><span><b data-s>00</b><small>sek</small></span></span></div>';
-    /* 2) tekoci trak prednosti (kot na originalu pod glavo) */
-    var items = ['Besplatna dostava za narudžbe iznad 70 €', '30 dana za povrat', 'Veganska koža'];
-    var ic = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    var row = ''; for (var r = 0; r < 6; r++) { items.forEach(function(t){ row += '<span class="ndg-mq__i">' + ic + t + '</span>'; }); }
-    var mq = document.createElement('div'); mq.className = 'ndg-mq'; mq.setAttribute('aria-label', 'Prednosti');
-    mq.innerHTML = '<div class="ndg-mq__track">' + row + row + '</div>';
-    document.body.insertBefore(mq, document.body.firstChild);
-    document.body.insertBefore(bar, document.body.firstChild);
-    var D = bar.querySelector('[data-d]'), H = bar.querySelector('[data-h]'), M = bar.querySelector('[data-m]'), S = bar.querySelector('[data-s]');
-    var pad = function(n){ return (n < 10 ? '0' : '') + n; };
-    var tick = function(){
-      var n = new Date(), e = new Date(n); var add = (3 - n.getDay() + 7) % 7; e.setDate(n.getDate() + add); e.setHours(23, 59, 59, 999);
-      var d = Math.max(0, Math.floor((e - n) / 1000));
-      D.textContent = pad(Math.floor(d / 86400)); H.textContent = pad(Math.floor(d % 86400 / 3600)); M.textContent = pad(Math.floor(d % 3600 / 60)); S.textContent = pad(d % 60);
-    };
-    tick(); setInterval(tick, 1000);
-  }
-
-  function buybox(){
-    if (document.querySelector('.ndg-bb-after')) return;
-    /* 3) "Ponovno na zalihi" — kot na originalu nad izdelkom */
-    var prod = document.querySelector('div.product.type-product') || document.querySelector('div.product');
-    if (prod && !document.querySelector('.ndg-restock')) {
-      var rs = document.createElement('section'); rs.className = 'ndg-restock';
-      rs.innerHTML = '<h2>Ponovno na zalihi u <span class="ndg-flag" aria-label="Hrvatska">🇭🇷</span></h2>'
-        + '<p>Nažalost, kao mala tvrtka još uvijek imamo ograničene zalihe. Zato ga uzmite dok ga ima!</p>'
-        + '<p>Tijekom razdoblja nove zalihe imamo posebnu akciju od 5 dana!</p>'
-        + '<p>Sljedeća nova zaliha stiže tek krajem studenoga.</p>';
-      prod.parentNode.insertBefore(rs, prod);
-    }
-    var title = document.querySelector('.product_title');
-    if (title) { var rt = tpl('ndg-tpl-rating'); if (rt) title.parentNode.insertBefore(rt, title.nextSibling); }
-    var form = document.querySelector('form.cart');
-    if (form) {
-      var st = tpl('ndg-tpl-stock'); var bs = document.getElementById('bundle-selector');
-      if (st) { (bs && bs.parentNode) ? bs.parentNode.insertBefore(st, bs.nextSibling) : form.insertBefore(st, form.firstChild); }
-      var af = tpl('ndg-tpl-after'); form.parentNode.insertBefore(af, form.nextSibling);
-    }
-    var more = document.querySelector('.ndg-bb-desc__more');
-    if (more) more.addEventListener('click', function(){ var w = more.parentNode; w.classList.toggle('is-open'); more.textContent = w.classList.contains('is-open') ? 'Prikaži manje' : 'Pročitaj više'; });
-    gallery();
-  }
-
-  /* galerija: na mestih videov originala (6.–8. mesto) predvajaj videe (brez zvoka, ~78 % sirine) */
+  /* galerija: na mestih videov originala (6.–8. mesto) predvajaj videe (brez zvoka, predvajanje ob kliku) */
   function gallery(){
     var map = { 'dg-g-v1': 'dg-gv-1.mp4', 'dg-g-v2': 'dg-gv-2.mp4', 'dg-g-v3': 'dg-gv-3.mp4' };
     var base = <?php echo wp_json_encode( $ndg ); ?>;
@@ -374,7 +291,7 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
       }
     });
   }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', buybox); } else { buybox(); }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', gallery); } else { gallery(); }
   window.addEventListener('load', gallery);
 
   /* videi z gumbom (nalozijo se sele ob kliku) */
@@ -382,26 +299,11 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
     var v = w.querySelector('video'), b = w.querySelector('.ndg-vid__btn');
     b.addEventListener('click', function(){
       if (!v.getAttribute('src')) { v.src = v.getAttribute('data-src'); }
-      v.controls = true; w.classList.add('is-playing'); v.play();
+      v.controls = true; w.classList.add('is-playing'); var p = v.play(); if (p && p.catch) p.catch(function(){});
     });
   });
-  /* samodejni videi (kupci, animacija): nalozijo in predvajajo se, ko pridejo v pogled */
-  var autos = document.querySelectorAll('.ndg-ugc video, .ndg-anim');
-  var start = function(v){ if (!v.getAttribute('src')) { v.src = v.getAttribute('data-src'); } var p = v.play(); if (p && p.catch) p.catch(function(){}); };
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { start(e.target); } else if (!e.target.paused) { e.target.pause(); } }); }, { rootMargin: '200px' });
-    autos.forEach(function(v){ io.observe(v); });
-  } else { autos.forEach(start); }
 
-  /* drsnik kartic mnenj */
-  var tr = document.querySelector('[data-ndg-car]');
-  if (tr) {
-    var step = function(dir){ var c = tr.querySelector('.ndg-cc'); var w = c ? c.offsetWidth + 14 : 260; tr.scrollBy({ left: dir * w * (window.innerWidth < 750 ? 2 : 4), behavior: 'smooth' }); };
-    document.querySelector('.ndg-car__nav--prev').addEventListener('click', function(){ step(-1); });
-    document.querySelector('.ndg-car__nav--next').addEventListener('click', function(){ step(1); });
-  }
-
-  /* recenzije: "Prikazi vise" (po 20, kot na originalu) */
+  /* recenzije: "Prikaži više" (po 20, kot na originalu) */
   var rmore = document.querySelector('.ndg-rv__more');
   if (rmore) {
     rmore.addEventListener('click', function(){
@@ -414,166 +316,121 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
 </script>
 
 <style>
-.ndg { --ndg-ink: #1c3b4b; --ndg-light: #d2e6f2; --ndg-dark: #276d91; --ndg-green: #1ca054;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--ndg-ink); overflow-x: hidden; }
-.ndg *, .ndg *::before, .ndg *::after { box-sizing: border-box; }
+.ndg { --ndg-ink: #1c3b4b; --ndg-acc: #276d91; --ndg-tint: #eef5fa; --ndg-txt: #3d5664; --ndg-green: #1ca054; }
+.ndg-sec { padding: 60px 0; margin: 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--ndg-ink); }
+.ndg-sec * { box-sizing: border-box; }
+.ndg-tint { background: var(--ndg-tint); }
 .ndg img { display: block; max-width: 100%; height: auto; }
-.ndg h2, .ndg h3 { text-transform: none; letter-spacing: 0; }
-.ndg-sec { padding: 48px 0; margin: 0; }
-.ndg-sec--light { background: var(--ndg-light); color: #163f59; }
-.ndg-sec--dark { background: var(--ndg-dark); color: #fffef4; }
-.ndg-sec--white { background: #fff; color: var(--ndg-ink); }
-.ndg-wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 20px; }
-.ndg-h2 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; margin: 0 0 18px; letter-spacing: -.02em; color: inherit; }
+.ndg h2, .ndg h3 { text-transform: none; }
+.ndg-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.ndg-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.ndg-media img { width: 100%; box-shadow: 0 2px 4px rgba(20,40,55,.05), 0 14px 40px rgba(20,40,55,.10); }
+.ndg-media .ndg-vid { max-width: 520px; margin: 0 auto; }
+.ndg-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--ndg-acc); margin: 0 0 10px; }
+.ndg-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: var(--ndg-ink); }
+.ndg-h2--c { text-align: center; }
+.ndg-h2 em { font-style: italic; font-weight: 800; color: var(--ndg-acc); }
+.ndg-copy p, .ndg-center p { font-size: 16px; line-height: 1.7; color: var(--ndg-txt); margin: 0 0 14px; }
+.ndg-big { font-size: 19px !important; font-weight: 800; color: var(--ndg-ink) !important; }
+.ndg-center { max-width: 820px; text-align: center; }
 
-/* valovit razdelilnik */
-.ndg-wave { line-height: 0; margin: 0; }
-.ndg-wave svg { display: block; width: 100%; height: clamp(28px, 7vw, 90px); }
-.ndg-wave--flip svg { transform: scaleX(-1); }
-
-/* videi z Maxom — manjsi kot na originalu (~78 % sirine), na sredini */
-.ndg-vid { position: relative; width: 78%; max-width: 970px; margin: 0 auto; border-radius: 6px; overflow: hidden; background: #0d2633; }
+/* video s posterjem in gumbom */
+.ndg-vid { position: relative; width: 100%; overflow: hidden; background: #0d2633; }
 .ndg-vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .ndg-vid__btn { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
-.ndg-vid__btn span { width: 72px; height: 72px; border-radius: 50%; background: rgba(255,255,255,.92); color: var(--ndg-dark); display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0,0,0,.25); transition: transform .2s; }
-.ndg-vid__btn:hover span { transform: scale(1.06); }
-.ndg-vid__btn svg { width: 34px; height: 34px; margin-left: 4px; }
+.ndg-vid__btn span { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,.92); color: var(--ndg-acc); display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.ndg-vid__btn svg { width: 30px; height: 30px; margin-left: 4px; }
 .ndg-vid.is-playing .ndg-vid__btn { display: none; }
 
-/* drsnik kartic mnenj (Loox: 4 na pogled, mobilno 2) */
-.ndg-car { position: relative; max-width: 1140px; display: flex; align-items: center; gap: 8px; }
-.ndg-car__track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 42px) / 4); gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; flex: 1 1 auto; padding: 4px 2px 10px; }
-.ndg-car__track::-webkit-scrollbar { display: none; }
-.ndg-cc { scroll-snap-align: start; background: #fff; color: #000; border-radius: 8px; overflow: hidden; box-shadow: 3px 3px 0 rgba(0,0,0,.25); display: flex; flex-direction: column; }
-.ndg-cc__img { position: relative; aspect-ratio: 1 / .72; background: #e9eef1; }
+/* 2) kartice mnenj */
+.ndg-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.ndg-cc { background: #fff; border: 1px solid #dde8ef; display: flex; flex-direction: column; }
+.ndg-cc__img { position: relative; aspect-ratio: 1 / .75; background: #e9eef1; overflow: hidden; }
 .ndg-cc__img img { position: absolute; inset: 0; width: 100%; height: 100% !important; object-fit: cover; }
-.ndg-cc__st { z-index: 1; position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); background: #fff; border-radius: 6px; padding: 4px 9px; box-shadow: 0 1px 4px rgba(0,0,0,.18); line-height: 0; }
-.ndg-cc__body { padding: 24px 12px 14px; text-align: center; }
-.ndg-cc__name { font-weight: 500; font-size: 15px; margin: 0 0 6px; display: inline-flex; align-items: center; gap: 4px; }
-.ndg-cc__txt { font-size: 13px; line-height: 1.45; margin: 0; color: #222; }
-.ndg-car__nav { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; border: 0; background: #fff; color: #9a9a9a; display: grid; place-items: center; cursor: pointer; padding: 0; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
-.ndg-car__nav svg { width: 20px; height: 20px; }
+.ndg-cc__body { padding: 14px 14px 16px; text-align: center; }
+.ndg-cc__name { font-weight: 700; font-size: 15px; margin: 6px 0; display: inline-flex; align-items: center; gap: 4px; color: var(--ndg-ink); }
+.ndg-cc__txt { font-size: 13.5px; line-height: 1.5; margin: 0; color: var(--ndg-txt); }
 .ndg-stars { display: inline-flex; gap: 2px; vertical-align: middle; }
 .ndg-stars i { display: inline-block; width: 16px; height: 16px; color: var(--ndg-green); }
 .ndg-stars i.off { color: #d6d6d6; }
 .ndg-stars svg { width: 100%; height: 100%; display: block; }
-.ndg-ver { width: 14px; height: 14px; color: #222; flex: 0 0 auto; vertical-align: middle; }
+.ndg-ver { width: 14px; height: 14px; color: var(--ndg-ink); flex: 0 0 auto; vertical-align: middle; }
 
-/* videi kupcev */
-.ndg-ugc { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.ndg-ugc__it { border-radius: 12px; overflow: hidden; aspect-ratio: 606 / 1080; background: #1d5876; }
-.ndg-ugc__it video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 4) videi kupcev */
+.ndg-ugc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto; }
 
-/* besedilo na sredini */
-.ndg-rich { max-width: 860px; text-align: center; }
-.ndg-rich p { font-size: 16px; line-height: 1.55; margin: 0 0 14px; }
-.ndg-rich--light .ndg-h2 { color: #fffef4; }
+/* 7) prednosti */
+.ndg-hl { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.ndg-hl__card { background: #fff; border: 1px solid #dde8ef; display: grid; grid-template-columns: 42% 1fr; gap: 20px; align-items: center; padding: 16px; }
+.ndg-hl__img img { width: 100%; }
+.ndg-hl__txt h3 { font-size: 18px; font-weight: 800; line-height: 1.3; margin: 0 0 8px; color: var(--ndg-ink); }
+.ndg-hl__txt p { font-size: 14.8px; line-height: 1.62; margin: 0; color: var(--ndg-txt); }
 
-/* prednosti */
-.ndg-hl { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 24px; align-items: center; max-width: 1280px; }
-.ndg-hl__col { display: flex; flex-direction: column; gap: 24px; }
-.ndg-hl__card { border: 1.5px solid #1c3b4b; border-radius: 18px; padding: 20px; text-align: center; }
-.ndg-hl__img { max-width: 220px; margin: 0 auto 10px; }
-.ndg-hl__card h3 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; margin: 0 0 8px; color: #1c3b4b; }
-.ndg-hl__card p { font-size: 13.5px; line-height: 1.5; margin: 0; color: #2c4a5a; }
-.ndg-hl__main { max-width: 840px; margin: 0 auto; }
-
-/* ikone */
-.ndg-icons { list-style: none; margin: 0 auto; padding: 0 20px; display: flex; justify-content: center; gap: 28px; max-width: 900px; }
-.ndg-icons li { flex: 1 1 0; max-width: 160px; text-align: center; }
-.ndg-icons__c { display: grid; place-items: center; width: 80px; height: 80px; margin: 0 auto 14px; border-radius: 50%; border: 2.4px solid currentColor; background: #fff; color: #163f59; }
+/* 8) ikone */
+.ndg-icons { list-style: none; margin: 0 auto; padding: 0 24px; display: flex; justify-content: center; gap: 28px; max-width: 900px; }
+.ndg-icons li { flex: 1 1 0; max-width: 180px; text-align: center; }
+.ndg-icons__c { display: grid; place-items: center; width: 80px; height: 80px; margin: 0 auto 14px; border-radius: 50%; border: 2px solid currentColor; background: #fff; color: var(--ndg-acc); }
 .ndg-icons__c svg { width: 46px; height: 46px; }
-.ndg-icons h3 { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 13px; text-transform: uppercase; line-height: 1.35; margin: 0; color: #163f59; }
+.ndg-icons h3 { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; line-height: 1.35; margin: 0; color: var(--ndg-ink); }
 
-/* animacija */
-.ndg-anim { display: block; width: 100%; max-width: 1240px; margin: 0 auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; background: #fff; }
-
-/* recenzije */
-.ndg-sec--rv .ndg-wrap { max-width: 1080px; }
-.ndg-rv__head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 18px; margin: 0 0 16px; }
-.ndg-rv__head .ndg-stars i { width: 22px; height: 22px; }
-.ndg-rv__avg { color: #555; font-size: 15px; }
-.ndg-rv__sum { border: 1px solid #e3e3e3; border-radius: 10px; padding: 14px 16px; margin: 0 0 18px; }
-.ndg-rv__sum h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; color: #111; font-family: 'Inter', sans-serif; }
-.ndg-rv__sum p { font-size: 14px; line-height: 1.5; margin: 0; color: #333; }
-.ndg-rv__grid { column-count: 4; column-gap: 12px; }
-.ndg-rc { break-inside: avoid; display: inline-block; width: 100%; margin: 0 0 12px; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,.12); }
+/* 11) recenzije */
+.ndg-rv__head { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; font-size: 16px; margin: 0 0 18px; color: var(--ndg-txt); }
+.ndg-rv__head .ndg-stars i { width: 20px; height: 20px; }
+.ndg-rv__sum { background: #fff; border-left: 3px solid var(--ndg-acc); padding: 16px 20px; margin: 0 auto 24px; max-width: 900px; }
+.ndg-rv__sum h3 { font-size: 15px; font-weight: 800; margin: 0 0 6px; color: var(--ndg-ink); }
+.ndg-rv__sum p { font-size: 14.5px; line-height: 1.6; margin: 0; color: var(--ndg-txt); }
+.ndg-rv__grid { column-count: 4; column-gap: 14px; }
+.ndg-rc { break-inside: avoid; display: inline-block; width: 100%; margin: 0 0 14px; background: #fff; border: 1px solid #dde8ef; }
 .ndg-rc.is-hidden { display: none; }
 .ndg-rc img { width: 100%; }
-.ndg-rc__b { padding: 12px; }
-.ndg-rc__n { margin: 0; font-size: 14px; color: #111; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-.ndg-rc__n span { font-size: 12px; color: #555; }
-.ndg-rc__d { margin: 2px 0 6px; font-size: 12px; color: #777; }
-.ndg-rc__t { margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: #222; }
-.ndg-rv__more-w { text-align: center; margin: 18px 0 0; }
-.ndg-rv__more { border: 1px solid #1c3b4b; background: #fff; color: #1c3b4b; border-radius: 999px; padding: 11px 26px; font-weight: 600; cursor: pointer; font-size: 14px; }
+.ndg-rc__b { padding: 12px 14px 14px; }
+.ndg-rc__n { margin: 0; font-size: 14px; color: var(--ndg-ink); display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.ndg-rc__n span { font-size: 12px; color: #6b7f8a; }
+.ndg-rc__d { margin: 2px 0 6px; font-size: 12px; color: #6b7f8a; }
+.ndg-rc__t { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--ndg-txt); }
+.ndg-rv__more-w { text-align: center; margin: 20px 0 0; }
+.ndg-rv__more { border: 1px solid var(--ndg-ink); background: #fff; color: var(--ndg-ink); padding: 12px 26px; font-weight: 700; cursor: pointer; font-size: 14px; }
 
-/* pasica na vrhu + tekoci trak */
-.ndg-annbar { background: #1c3b4b; color: #fff; padding: 7px 12px; font-family: 'Poppins', 'Inter', sans-serif; position: relative; z-index: 3; }
-.ndg-annbar__in { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
-.ndg-annbar__t { font-weight: 700; font-size: 15px; letter-spacing: .01em; text-align: center; }
-.ndg-annbar__cd { display: inline-flex; align-items: center; gap: 4px; }
-.ndg-annbar__cd span { display: inline-flex; flex-direction: column; align-items: center; background: #fff; color: #1c3b4b; border-radius: 4px; min-width: 34px; padding: 2px 4px; line-height: 1; }
-.ndg-annbar__cd b { font-size: 15px; font-weight: 700; }
-.ndg-annbar__cd small { font-size: 8px; font-weight: 500; margin-top: 2px; }
-.ndg-annbar__cd em { font-style: normal; font-weight: 700; }
-.ndg-mq { background: #276d91; color: #fff; overflow: hidden; white-space: nowrap; padding: 9px 0; font-family: 'Inter', sans-serif; position: relative; z-index: 2; }
-.ndg-mq__track { display: inline-flex; animation: ndg-mq 40s linear infinite; }
-.ndg-mq__i { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; margin-right: 56px; }
-.ndg-mq__i svg { width: 18px; height: 18px; border: 1.5px solid currentColor; border-radius: 50%; padding: 2px; }
-@keyframes ndg-mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-/* ponovno na zalihi */
-.ndg-restock { background: #fff; color: #233a4d; text-align: center; padding: 36px 16px 32px; font-family: 'Inter', sans-serif; }
-.ndg-restock h2 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(30px, 5vw, 72px); line-height: 1.1; letter-spacing: -.04em; text-transform: uppercase; margin: 0 0 28px; color: inherit; }
-.ndg-restock p { font-size: clamp(16px, 1.6vw, 20px); line-height: 1.5; margin: 0 auto 18px; max-width: 1100px; }
-.ndg-restock p:last-child { margin-bottom: 0; }
-.ndg-flag { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; letter-spacing: 0; }
-
-/* nakupna skatla */
-.ndg-bb-rating { display: inline-flex; align-items: center; gap: 6px; margin: 2px 0 10px; color: #333; font-size: 14px; text-decoration: none; }
-.ndg-bb-rating .ndg-stars i { width: 16px; height: 16px; color: #1ca054; }
-.ndg-stock { display: flex; align-items: center; gap: 8px; margin: 12px 0 6px; font-size: 14px; font-weight: 600; color: #1c3b4b; }
-.ndg-stock__dot { width: 10px; height: 10px; border-radius: 50%; background: #1ca054; box-shadow: 0 0 0 4px rgba(28,160,84,.18); }
-.ndg-bb-after { margin: 18px 0 8px; color: #1c3b4b; font-family: 'Inter', sans-serif; }
-.ndg-bb-acc { border-bottom: 1px solid #1c3b4b; padding: 10px 0; }
-.ndg-bb-acc summary { list-style: none; display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 15px; font-weight: 500; }
-.ndg-bb-acc summary::-webkit-details-marker { display: none; }
-.ndg-bb-acc summary svg { width: 32px; height: 32px; flex: 0 0 auto; }
-.ndg-bb-acc summary span { flex: 1 1 auto; }
-.ndg-bb-acc summary i { width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .2s; margin-right: 6px; }
-.ndg-bb-acc[open] summary i { transform: rotate(-135deg); }
-.ndg-bb-acc__a { padding: 12px 0 6px; font-size: 14px; line-height: 1.6; }
-.ndg-bb-acc__a p { margin: 0 0 10px; }
-.ndg-bb-acc__a ul { margin: 0 0 10px 18px; padding: 0; }
-.ndg-bb-desc { margin: 18px 0 0; font-size: 14px; line-height: 1.6; }
-.ndg-bb-desc__in { max-height: 4.8em; overflow: hidden; position: relative; }
-.ndg-bb-desc__in p { margin: 0 0 10px; }
-.ndg-bb-desc.is-open .ndg-bb-desc__in { max-height: none; }
-.ndg-bb-desc__more { border: 0; background: none; padding: 4px 0; text-decoration: underline; cursor: pointer; color: #1c3b4b; font-size: 14px; }
-
-/* videi v galeriji (manjsi kot na originalu, na sredini) */
+/* galerija: najvec 2 vrsti sličic (5 na vrsto); ostale slike dosegljive z drsenjem glavne slike */
+.single-product div.product.product_cat-orto-doggo .woocommerce-product-gallery .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
+/* videi v galeriji */
 .woocommerce-product-gallery__image .ndg-gv { display: flex; align-items: center; justify-content: center; background: #fff; aspect-ratio: 4 / 5; }
 .woocommerce-product-gallery__image .ndg-gv video { width: 78%; max-height: 100%; display: block; object-fit: contain; }
 
-@media (max-width: 999px) {
-  .ndg-ugc { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 73vw; gap: 20px; overflow-x: auto; scrollbar-width: none; }
-  .ndg-ugc::-webkit-scrollbar { display: none; }
-  .ndg-hl { grid-template-columns: 1fr 1fr; }
-  .ndg-hl__main { grid-column: 1 / -1; order: -1; }
+/* kratek opis izdelka: zelene kljukice namesto pik */
+.product_cat-orto-doggo .woocommerce-product-details__short-description ul {
+  list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
+.product_cat-orto-doggo .woocommerce-product-details__short-description ul li {
+  list-style: none !important; text-indent: 0 !important; margin: 0 0 7px !important;
+  line-height: 1.45 !important; font-size: 15.5px !important;
+  display: block !important; position: relative !important; padding-left: 31px !important; }
+.product_cat-orto-doggo .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
+.product_cat-orto-doggo .woocommerce-product-details__short-description ul li::before { content: none !important; }
+.product_cat-orto-doggo .woocommerce-product-details__short-description .ndg-tick {
+  position: absolute !important; left: 0 !important; top: 1px !important;
+  width: 21px; height: 21px; border-radius: 50%;
+  background: var(--ndg-green, #1ca054) !important; color: #fff !important;
+  font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
+  text-align: center !important; display: inline-block !important; }
+
+@media (max-width: 980px) {
+  .ndg-row2 { grid-template-columns: 1fr; gap: 28px; }
+  .ndg-row2--rev .ndg-media { order: -1; }
+  .ndg-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ndg-hl { grid-template-columns: 1fr; }
   .ndg-rv__grid { column-count: 3; }
 }
-@media (max-width: 749px) {
-  .ndg-sec { padding: 36px 0; }
-  .ndg-vid { width: 80%; }
-  .ndg-car__track { grid-auto-columns: calc((100% - 14px) / 2); }
-  .ndg-car__nav { display: none; }
-  .ndg-hl { grid-template-columns: 1fr; }
-  .ndg-hl__col { gap: 16px; }
-  .ndg-icons { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 560px) {
+  .ndg-sec { padding: 42px 0; }
+  .ndg-wrap { padding: 0 16px; }
+  .ndg-cards { gap: 10px; }
+  .ndg-ugc { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .ndg-hl__card { grid-template-columns: 38% 1fr; gap: 14px; padding: 12px; }
+  .ndg-hl__txt h3 { font-size: 16px; }
+  .ndg-hl__txt p { font-size: 14px; }
+  .ndg-icons { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; padding: 0 16px; }
   .ndg-icons li { max-width: none; }
   .ndg-icons li:last-child { grid-column: 1 / -1; }
   .ndg-rv__grid { column-count: 2; column-gap: 8px; }
-  .ndg-annbar__t { font-size: 13px; }
 }
 </style>

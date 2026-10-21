@@ -33,7 +33,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
         </tbody>
       </table>
     </div>
-    <p class="kwsc-lead"><strong>M</strong> je idealan za manje pasmine poput jazavčara, border terijera, cockapooa i koker španijela.<br><strong>XL</strong> je za veće pasmine poput border kolija, labradora i njemačkih ovčara — ili za dva manja psa (ima dva unutarnja povodca).</p>
+    <p class="kwsc-lead">Veličina <strong>M</strong> idealna je za manje pasmine poput jazavčara, border terijera, cockapooa i koker španijela — pse koji tijekom putovanja vole tijesan, siguran kutak.</p>
+    <p class="kwsc-lead">Veličina <strong>XL</strong> namijenjena je većim pasminama poput border kolija, labradora i njemačkih ovčara te pruža više prostora za ispružanje uz zadržanu stabilnost i udobnost. Savršena je i za kućanstva s dva manja psa koji udobno stanu jedan uz drugoga, a ima i dva zasebna unutarnja povodca — po jedan za svakog psa, ili oba za jednog psa radi dodatne sigurnosti.</p>
   </div>
   </div>
 </div>
