@@ -1580,7 +1580,7 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS Tuck: temno rjav akcent originala (#2E2420, kartice z robom, izbrana z debelejsim robom). Izbornik boje cita nijanso
+      /* NORIKS Tuck: kartice ponud v privzeti topli rjavi paleti (kot Hands, #a9683f), zaobljene. Izbornik boje cita nijanso
          s probnega elementa IZVAN #bundle-selector, zato ista pravila moraju postojati i bez prefiksa. */
       .swatch-circle.color-smeda { background: #c59a87 !important; }
       .swatch-circle.color-crna { background: #161616 !important; }
@@ -1588,27 +1588,29 @@ function gck_render_bundle_selector() {
       #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
       #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
           border: 2px solid #e4ddd3 !important; background: #fff; }
-      #bundle-selector .color-swatches .swatch.active { border-color: #2E2420 !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch.active { border-color: #a9683f !important; transform: scale(1.06); }
       #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
           box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
       #bundle-selector .swatch-circle.color-smeda { background: #c59a87 !important; }
       #bundle-selector .swatch-circle.color-crna { background: #161616 !important; }
+      /* kartice ponud: privzeta topla rjava paleta NORIKS (kot orto-hands) - barvne in zaobljene */
       #bundle-selector .bundle-option {
-          border: 1.5px solid #e4ddd3 !important; background: #fff !important; border-radius: 0 !important; box-shadow: none !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #2E2420 !important; background: #fff !important; }
-      #bundle-selector .bundle-option-title { color: #222 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #2E2420 !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #2E2420 !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #2E2420 !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #9B2C1F !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #e4ddd3 !important; }
-      #bundle-selector .bundle-total-line .line-total { color: #222 !important; }
-      #bundle-selector .bundle-total-line .gck-regular-price { color: #7a6e64 !important; }
-      #bundle-selector .gck-offer-sub { color: #7a6e64 !important; font-weight: 400; }
-      #bundle-selector .gck-popular-badge--offer { background: #2E2420 !important; color: #fff !important; transform: none !important; right: 12px !important; letter-spacing: .06em; }
+          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
+      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option-title { color: #231d19 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
+      #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
+      #bundle-selector .gck-offer-sub { color: #8a7a6e !important; font-weight: 400; }
+      #bundle-selector .gck-popular-badge--offer { background: #a9683f !important; color: #fff !important; transform: none !important; right: 12px !important; letter-spacing: .06em; }
       #bundle-selector .bundle-pair select,
-      #bundle-selector .bundle-pair .gck-extra-select { border-color: #2E2420 !important; color: #121212 !important; }
-      .gck-size-link { color: #2E2420 !important; }
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #a9683f !important; color: #231d19 !important; }
+      .gck-size-link { color: #a9683f !important; }
       /* "Između dvije veličine?" in naslov bloka ponud (kot na originalu) */
       .gck-tk-size { display: grid; grid-template-columns: 22px 1fr auto; gap: 12px; align-items: center; border: 1.5px solid #e4ddd3; padding: 12px 14px; margin: 12px 0; color: #222; }
       .gck-tk-size svg { width: 22px; height: 22px; }
@@ -3103,7 +3105,7 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ? "'#1c3b4b'"
            : ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ? "'#105a85'"
            : ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ? "'#002e49'"
-           : ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ? "'#2E2420'"
+           : ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-kneetape' ), 'product_cat', $product_id ) ? "'#1f6fd0'"
            : ( has_term( array( 'orto-relief' ), 'product_cat', $product_id ) ? "'#2f8f7d'" : "'#111111'" ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ); ?>;
       function css(el, o){ if(!el) return; for(var k in o){ el.style.setProperty(k, o[k], 'important'); } }
