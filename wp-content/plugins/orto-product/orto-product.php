@@ -516,10 +516,6 @@ function gck_render_bundle_selector() {
         // NORIKS SupportSocks: kao na originalu (Kaching: "2 par for prisen av 1 / Kun 150 kr/par", "5 par for prisen av 2 / Kun 120 kr/par · Fri frakt",
         // "8 par for prisen av 3 / Kun 112 kr/par · Fri frakt") — cijena po paru iz nasih EUR cijena (27,99 / 2, 56,99 / 5, 84,99 / 8).
         $gck_offer_subs = array( '2 para po cijeni 1 · samo 14,00 € po paru', '5 pari po cijeni 2 · samo 11,40 € po paru · besplatna dostava', '8 pari po cijeni 3 · samo 10,62 € po paru · besplatna dostava' );
-    } elseif ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ) {
-        // NORIKS Bracelet: kao na originalu (Kaching: "1 bracelet only / 50% OFF TODAY", "BUY 1 GET 1 FREE / Free express shipping").
-        // "Free express shipping" ni NORIKS pogoj (brezplacna dostava sele nad 70 €) — zamenjano z opisom ponudbe (2 za ceno 1).
-        $gck_offer_subs = array( '50 % POPUSTA SAMO DANAS', '2 narukvice po cijeni jedne' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: kao na originalu ("Standard price" / "Buy 1 Get 1 50% Off").
         $gck_offer_subs = array( 'Standardna cijena', 'Drugi komad −50 %' );
@@ -549,9 +545,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) {
         // NORIKS SupportSocks: znacki 2. in 3. ponude kao na originalu ("Mest populær", "Mest for pengene").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJISPLATIVIJE' );
-    } elseif ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ) {
-        // NORIKS Bracelet: oznaka 2. ponude kao na originalu ("-50% + B1G1").
-        $gck_offer_badges = array( 1 => '-50 % + 2 ZA 1' );
     } elseif ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ) {
         // NORIKS Blanket: znacka druge ponude kao na originalu ("Most Popular").
         $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE' );
@@ -1755,9 +1748,6 @@ function gck_render_bundle_selector() {
       /* NORIKS Bracelet: kartice ponud kot na originalu (Kaching, myhematix.com) — bele, temno modri rob #105a85,
          izbrana svetlo modra #e6f6ff, modra cena, modra oznaka. Nad ponudami naslov originala
          "SPECIAL OFFER — 50% OFF ENDS TODAY!" s crtama levo in desno. Izdelek nima atributov, zato krogcev ni. */
-      #bundle-selector::before { content: "POSEBNA PONUDA — 50 % POPUSTA SAMO DANAS!"; display: block; text-align: center; font-weight: 800; font-size: 12px; letter-spacing: .04em;
-          color: #000; margin: 0 0 12px; line-height: 1.4; padding: 0 22%;
-          background: linear-gradient(#000, #000) left center / 20% 1px no-repeat, linear-gradient(#000, #000) right center / 20% 1px no-repeat; }
       #bundle-selector .bundle-option {
           border: 1px solid #105a85 !important; background: #fff !important; border-radius: 8px !important; box-shadow: none !important; }
       #bundle-selector .bundle-option.active { border: 2px solid #105a85 !important; background: #e6f6ff !important; }
