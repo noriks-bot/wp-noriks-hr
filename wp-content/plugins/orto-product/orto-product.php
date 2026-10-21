@@ -508,10 +508,6 @@ function gck_render_bundle_selector() {
     // Podnaslovi ponuda (naziv paketa ispod naslova) — zasad samo Polar NORIKS Cloth.
     if ( has_term( array( 'orto-cloath' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
-    } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
-        // NORIKS Tuck: kao na originalu ("Try it" / "€29,00 each · one to wear, one in the wash · ✓ Mix & match colours" /
-        // "€21,00 each · a full week covered · ✓ FREE shipping included").
-        $gck_offer_subs = array( 'Isprobajte', '29,00 € po komadu · jedne nosite, druge su u pranju · ✓ Kombinirajte boje', '20,50 € po komadu · cijeli tjedan pokriven · ✓ BESPLATNA dostava uključena' );
     } elseif ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) {
         // NORIKS Brassiere: kao na originalu ("+ Livraison OFFERTE" pod obje ponude).
         $gck_offer_subs = array( '+ Besplatna dostava', '+ Besplatna dostava' );
@@ -532,9 +528,6 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
-    } elseif ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) {
-        // NORIKS Tuck: znacki 2. in 3. ponude kao na originalu ("MOST POPULAR", "BEST VALUE").
-        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE', 2 => 'NAJBOLJA VRIJEDNOST' );
     } elseif ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) {
         // NORIKS Brassiere: znacka druge ponude kao na originalu ("OFFRE SPECIALE 24H").
         $gck_offer_badges = array( 1 => 'POSEBNA PONUDA 24H' );
@@ -2482,15 +2475,6 @@ function gck_render_bundle_selector() {
     </div>
 
     <div class="gck-top-banner-wrap">
-        <?php if ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) ) : ?>
-            <!-- NORIKS Tuck: kao na originalu — "Between sizes? Size up." + naslov "Choose your pack / Most women buy 2+" -->
-            <div class="gck-tk-size">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="8" width="20" height="8" rx="1"></rect><path d="M6 8v3M10 8v4M14 8v3M18 8v4"></path></svg>
-                <div><strong>Između dvije veličine? Uzmite veću.</strong><span>Većina zamjena je za veću veličinu.</span></div>
-                <a href="#" class="gck-size-link gck-tk-size__link">Tablica veličina</a>
-            </div>
-            <div class="gck-tk-title"><strong>Odaberite paket</strong><span>Većina žena uzme 2+</span></div>
-        <?php endif; ?>
         <?php if ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ) : $gck_bs_img = get_template_directory_uri() . '/img/brassiere/'; ?>
             <!-- NORIKS Brassiere: jesenska ponuda kao na originalu (izmedu tablice velicina i ponuda) -->
             <picture class="gck-brassiere-offer">
@@ -4486,33 +4470,3 @@ function gck_shgifts_free_gifts_notice() {
     <?php
 }
 
-// ============================================================
-// NORIKS Tuck (orto-tuck): datum odpreme + dostava/povrat pod gumbom (kot na originalu)
-// ============================================================
-add_action( 'woocommerce_after_add_to_cart_button', 'gck_tuck_after_cart', 21 );
-function gck_tuck_after_cart() {
-    if ( ! function_exists( 'is_product' ) || ! is_product() ) { return; }
-    global $product;
-    if ( ! $product instanceof WC_Product || ! has_term( 'orto-tuck', 'product_cat', $product->get_id() ) ) { return; }
-    ?>
-    <div class="gck-tk-after">
-      <div class="gck-tk-ship"><svg viewBox="0 0 28 22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 4h14v11H2zM16 8h5l4 4v3h-9"></path><circle cx="7" cy="17" r="2.2"></circle><circle cx="20" cy="17" r="2.2"></circle></svg><span>Naručite sada, šaljemo do <b data-tk-ship></b></span></div>
-      <div class="gck-tk-row"><span>Besplatna dostava za 4 komada</span><span>Povrat u roku od 30 dana</span></div>
-    </div>
-    <script>
-      (function(){
-        var el = document.querySelector('[data-tk-ship]'); if (!el) return;
-        var d = new Date(), n = 1; while (n > 0) { d.setDate(d.getDate() + 1); var w = d.getDay(); if (w && w < 6) n--; }
-        el.textContent = d.toLocaleDateString('hr-HR', { weekday: 'long', day: 'numeric', month: 'long' });
-      })();
-    </script>
-    <style>
-      .gck-tk-after { margin: 12px 0 0; border: 1.5px solid #e4ddd3; background: #f4f0eb; color: #222; font-size: 13.5px; }
-      .gck-tk-ship { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 12px; }
-      .gck-tk-ship svg { width: 24px; height: 20px; flex: 0 0 auto; }
-      .gck-tk-row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1.5px solid #e4ddd3; }
-      .gck-tk-row span { padding: 8px 10px; text-align: center; font-size: 11.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #3a3a3a; }
-      .gck-tk-row span + span { border-left: 1.5px solid #e4ddd3; }
-    </style>
-    <?php
-}

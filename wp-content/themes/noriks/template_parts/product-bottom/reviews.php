@@ -2584,7 +2584,7 @@ $tuck_faq = array(
   array('questioon' => 'Od čega su izrađene? Kako ih prati?',
     'answer'    => '55 % najlon i 45 % elastan. Ne sadrže lateks ni silikon.<br><br>Perite ih na hladnom, na nježnom programu, bez omekšivača i izbjeljivača, i sušite na zraku. Tako rastezljivost i protuklizni pojas ostaju kao novi.'),
   array('questioon' => 'Što ako mi ne odgovaraju?',
-    'answer'    => 'Možete ih zamijeniti ili dobiti bon za kupnju u roku od 30 dana od dostave. Moraju biti nenošene i s etiketama, a poštarinu za povrat plaćate sami. Za početak nam pošaljite e-poruku s brojem narudžbe. Povrat novca ne nudimo.'),
+    'answer'    => 'Imate pravo na povrat u roku od 30 dana od dostave, a možete ih i zamijeniti za drugu veličinu. Moraju biti nenošene i s etiketama. Za početak nam pošaljite e-poruku s brojem narudžbe.'),
 );
 
 $supportsocks_faq = array(
