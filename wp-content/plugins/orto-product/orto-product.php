@@ -4138,6 +4138,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (priceElem && total) {
             priceElem.innerHTML = total.replace('.', ',') + ' €';
         }
+
+        // gumb "Dodaj u košaricu - <skupaj izbrane ponudbe>" za vse izdelke s ponudbami
+        const atcBtn = document.querySelector('form.cart .single_add_to_cart_button');
+        if (atcBtn && total && parseFloat(total) > 0) {
+            const base = atcBtn.textContent.replace(/\s*-\s*.*$/, '').trim();
+            const sum  = parseFloat(total).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            atcBtn.textContent = base + ' - ' + sum + ' €';
+        }
     }
 
     radios.forEach(radio => {
