@@ -707,6 +707,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS TitaniumPan</strong> je posljednja tava koja vam ikad treba. Izrađena je da bude neuništiva i da traje cijeli život. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih kuhara. Bez premaza. Bez toksina. Bez kompromisa.<br><br><strong>Netoksični materijali</strong> — izrađena bez: PFAS-a („vječnih kemikalija”), PTFE-a (teflona), PFOA-e, olova i kadmija, nanočestica i teških metala.<br><br><strong>Detalji:</strong><br>• Promjer: 28 cm (11″), visina: 6,3 cm (dostupna i u 26 cm i 30 cm)<br>• Za sve vrste ploča, uključujući indukciju<br><br><strong>Konstrukcija:</strong><br>• Potpuno troslojna izvedba<br>• Donji sloj: 0,6 mm nehrđajućeg čelika (430) – za indukciju<br>• Jezgra: 1 mm aluminija – brza i ravnomjerna raspodjela topline<br>• Površina za kuhanje: 0,5 mm čistog titanija s kovanim uzorkom – prirodno neljepljiva, bez toksina i iznimno izdržljiva<br><br><strong>U paketu:</strong><br>• Titanijska kovana tava, sigurno zapakirana u posebnu zaštitnu kutiju<br>• 5 osnovnih vodiča – savjeti za njegu, prvo pripremanje tave i profesionalne tehnike kuhanja<br><br><strong>Njega i upotreba:</strong><br>• Otporna na temperaturu do 548 °C<br>• Može se prati u perilici posuđa<br>• Sigurna za metalni pribor<br>• Neljepljivost aktivirajte s 1 žličicom ulja s visokom točkom dimljenja prije kuhanja<br>• Titanijsku površinu lako očistite s malo deterdženta i spužvom.
 
+         <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
+
+                <strong>NORIKS Harness</strong> je oprsnica za pse protiv povlačenja s prednjom i stražnjom kopčom. Prednji D-prsten preusmjerava zamah psa u stranu i prekida povlačenje prema naprijed — bez trzanja i bez gušenja. Isto načelo koje preporučuju veterinari i treneri, ugrađeno u oprsnicu.<br><br><strong>Istaknuto:</strong><br>• Podesive trake za savršeno pristajanje<br>• Prozračni, mekani materijali za udobnost cijeli dan<br>• Jednostavna kopča na klik za brzo stavljanje i skidanje<br>• Čvrsta ručka za dodatnu kontrolu<br>• Izdržljivi D-prsteni sprijeda i straga za sigurno pričvršćivanje povodca<br>• Čičak površina za oznaku s imenom<br><br><strong>Dva načina:</strong> prednja kopča za dresuru i kontrolu, stražnja kopča za opuštene šetnje kad pas već lijepo hoda na labavom povodcu.<br><br><strong>Materijal i njega:</strong> lagani, prozračni najlon. Kad se zablati, isperite je pod mlazom tople vode, obrišite i ostavite da se osuši na zraku — pranje u perilici nije potrebno.<br><br>Dostupna je u devet boja (crna, narančasta, siva, crvena, bež, maslinasta, tirkizna, nebeskoplava i ružičasta) i u pet veličina od XS do XL. Veličinu birajte prema opsegu prsa psa.
+
          <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 
                 <strong>NORIKS Raincoat</strong> je kratka oversized kišna jakna osmišljena za udobnost i samopouzdanje po nepredvidivom vremenu. Široki kroj daje zaštitnu siluetu koju je lako slojevito kombinirati, a ekstra velik preklopivi obod kapuljače štiti lice, kosu i šminku od kiše. Elastični nabrani rub daje suptilan oblik — za gradske ulice i svakodnevne avanture.<br><br><strong>Istaknuto:</strong><br>• Vodootporna do 12.000 mm, otporna na mrlje i vjetar<br>• Kapuljača sa širokim obodom<br>• Podesive manžete s čičkom<br>• Mekana podstava rukava<br>• Bočni džepovi<br>• Nabrani „bubble” rub<br>• Ventilacijski otvori ispod pazuha, opušten kroj<br>• Klasična verzija za temperature od 15 °C do 25 °C<br><br><strong>Materijal:</strong> 100 % poliester. Samo ručno pranje do 30 °C.<br><br>Jedna veličina (EU 36–50), dostupna u devet boja: crna, bordo, tamnocrvena, smeđa, sivosmeđa, biserna, svijetloružičasta, tamnoplava i svijetložuta.
@@ -1176,6 +1180,35 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;"><strong>26 cm</strong> — svakodnevna tava za odrezak, jaja i brzo prženje. <strong>28 cm</strong> — naša najprodavanija, za većinu obroka za dvoje. <strong>30 cm</strong> — obiteljski obroci, priprema unaprijed i gosti. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Izmjerite <strong>opseg prsa</strong> svog psa — najširi dio prsnog koša, odmah iza prednjih nogu. Veličine od <strong>XS do XL</strong>.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#2b7a6f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Pasmine</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_harness_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#eef5f3' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;vertical-align:top;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;vertical-align:top;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;line-height:1.5;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Savjet:</strong> ako je pas na gornjoj granici raspona ili ima vrlo gustu dlaku, preporučujemo veću veličinu. Četiri podesive trake omogućuju precizno pristajanje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1470,6 +1503,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'titaniumpan', $current_product_id ) ): ?>
 
                 Prije prve upotrebe tavu operite toplom vodom i deterdžentom. Titanijsku površinu lako očistite s malo deterdženta i spužvom; tava se može prati i u perilici posuđa, a kratko ručno pranje dulje čuva sjaj. Sigurna je za metalni pribor. Za prirodnu neljepljivost tavu zagrijte 2–3 minute na srednjoj vatri i dodajte 1 žličicu ulja s visokom točkom dimljenja.
+
+         <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
+
+                Kad se oprsnica zablati, isperite je pod mlazom tople vode, obrišite i ostavite da se osuši na zraku. Pranje u perilici nije potrebno — spremna je za sljedeću šetnju čim i vaš pas bude spreman.
 
          <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 

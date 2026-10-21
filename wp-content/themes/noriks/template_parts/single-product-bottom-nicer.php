@@ -269,6 +269,11 @@ if ( noriks_is_type( 'titaniumpan' ) ) {
     include $noriks_pb_dir . 'why-titaniumpan.php';
 }
 
+// NORIKS Harness (orto-harness) — oprsnica za pse protiv povlacenja
+if ( noriks_is_type( 'harness' ) ) {
+    include $noriks_pb_dir . 'why-harness.php';
+}
+
 // NORIKS Raincoat (orto-raincoat) — kratka oversized kisna jakna s kapuljacom
 if ( noriks_is_type( 'raincoat' ) ) {
     include $noriks_pb_dir . 'why-raincoat.php';

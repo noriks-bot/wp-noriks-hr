@@ -108,6 +108,8 @@ function noriks_product_type_map() : array {
         'raincoat'                => array( 'orto-raincoat', 'raincoat' ),
         // NORIKS TitaniumPan — titanijska kovana tava bez premaza (velicina 26 / 28 / 30 cm).
         'titaniumpan'             => array( 'orto-titaniumpan', 'titaniumpan' ),
+        // NORIKS Harness — oprsnica za pse protiv povlacenja s prednjom i straznjom kopcom (boja + velicina XS-XL).
+        'harness'                 => array( 'orto-harness', 'harness' ),
         // NORIKS FloatSuit — djecji kupaci kostim s ugradenim plovcima (stil + velicina).
         'floatsuit'               => array( 'orto-floatsuit', 'floatsuit' ),
         // NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (bez atributa, bez velicin).
@@ -488,6 +490,20 @@ if ( ! function_exists( 'noriks_titaniumpan_sizes' ) ) {
             array( '26 cm', '26 cm (10")', '1–2 porcije', '2–3 jaja', 'Za jednu osobu' ),
             array( '28 cm', '28 cm (11")', '2–3 porcije', '4–5 jaja', 'Najpopularnija' ),
             array( '30 cm', '30 cm (12")', '3–4 porcije', '6–8 jaja', 'Za obitelj' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_harness_sizes' ) ) {
+    /** NORIKS Harness: velicina, opseg prsa (cm), pasmine.
+     *  1:1 s tablice velicin originala paropet.co.uk ("Size Guide": XS-XL, opseg prsa iza prednjih nogu). */
+    function noriks_harness_sizes() {
+        return array(
+            array( 'XS', '38–46 cm', 'čivava, jorkširski terijer, pomeranac, toy pudla, maltezer, papijon, talijanski hrt (manji), patuljasti jazavčar (manji), kineski kukmasti pas, afenpinč' ),
+            array( 'S',  '44–55 cm', 'jack russell terijer, cavapoo, cockapoo (manji), shih tzu, mops, patuljasti šnaucer, west highland terijer, francuski buldog, bostonski terijer, lhasa apso, bišon, border terijer, norfolk terijer' ),
+            array( 'M',  '55–67 cm', 'koker španijel, beagle, stafordski bul terijer, whippet, cockapoo (standardni), springer španijel (manji), velški springer španijel, bedlington terijer, basenji, mini labradoodle' ),
+            array( 'L',  '67–84 cm', 'labrador retriver (vitki / ženka), border koli, engleski springer španijel, standardna pudla, bokser, vižla, vajmarski ptičar (manji), dalmatinac, australski ovčar, škotski ovčar (koli)' ),
+            array( 'XL', '80–107 cm', 'labrador retriver (veći), zlatni retriver, njemački ovčar, rotvajler, doberman, sibirski haski, aljaški malamut, akita, rodezijski gonič, cane corso' ),
         );
     }
 }
