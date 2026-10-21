@@ -524,9 +524,6 @@ function gck_render_bundle_selector() {
         // NORIKS Bracelet: kao na originalu (Kaching: "1 bracelet only / 50% OFF TODAY", "BUY 1 GET 1 FREE / Free express shipping").
         // "Free express shipping" ni NORIKS pogoj (brezplacna dostava sele nad 70 €) — zamenjano z opisom ponudbe (2 za ceno 1).
         $gck_offer_subs = array( '50 % POPUSTA SAMO DANAS', '2 narukvice po cijeni jedne' );
-    } elseif ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ) {
-        // NORIKS WineCooler: na originalu kartice ponud nimajo podnaslovov (samo naslov, cena in precrtana cena).
-        $gck_offer_subs = array();
     } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
         // NORIKS PhoneStrap: kao na originalu (Kaching: "You save ..." pod vsako ponudo) — ustedu racuna tema sama, zato brez podnaslovov.
         $gck_offer_subs = array();
@@ -568,9 +565,6 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ) {
         // NORIKS Bracelet: oznaka 2. ponude kao na originalu ("-50% + B1G1").
         $gck_offer_badges = array( 1 => '-50 % + 2 ZA 1' );
-    } elseif ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ) {
-        // NORIKS WineCooler: znacka 2. ponude kao na originalu ("Meest Populair").
-        $gck_offer_badges = array( 1 => 'NAJPOPULARNIJE' );
     } elseif ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) {
         // NORIKS PhoneStrap: znacki 3. in 4. ponude kao na originalu ("Most Popular", "Best Value").
         $gck_offer_badges = array( 2 => 'NAJPOPULARNIJE', 3 => 'NAJBOLJA VRIJEDNOST' );
@@ -1801,9 +1795,6 @@ function gck_render_bundle_selector() {
       /* NORIKS WineCooler: kartice ponud kot na originalu (lindnerco.nl) — bele, siv rob, izbrana svetlo siva s crnim robom,
          crna cena, crna znacka "Najpopularnije" (rahlo nagnjena). Nad ponudami naslov originala "PAKKET & BESPAAR" s crtama
          levo in desno. Izdelek nima atributov, zato krogcev ni. */
-      #bundle-selector::before { content: "PAKET I UŠTEDA"; display: block; text-align: center; font-weight: 700; font-size: 12px; letter-spacing: .06em;
-          color: #121212; margin: 0 0 12px; line-height: 1.4;
-          background: linear-gradient(#121212, #121212) left center / 30% 2px no-repeat, linear-gradient(#121212, #121212) right center / 30% 2px no-repeat; }
       #bundle-selector .bundle-option {
           border: 2px solid #c9c9c9 !important; background: #fff !important; border-radius: 8px !important; box-shadow: none !important; }
       #bundle-selector .bundle-option.active { border: 2px solid #121212 !important; background: #e7e7e7 !important; }

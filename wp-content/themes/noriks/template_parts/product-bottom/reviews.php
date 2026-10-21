@@ -2647,16 +2647,16 @@ $bracelet_faq = array(
 );
 
 $winecooler_faq = array(
-  array('questioon' => 'Ponuda 2 za 1?',
-    'answer'    => 'Jednostavno odaberite ponudu <strong>2x kom</strong> — u košaricu idu dva hladnjaka za vino, a plaćate samo jedan. Popust se obračunava automatski.'),
+  array('questioon' => 'Kako funkcionira ponuda za više komada?',
+    'answer'    => 'Jednostavno odaberite ponudu <strong>2x kom</strong>, <strong>4x kom</strong> ili <strong>6x kom</strong> — u košaricu ide odabrani broj hladnjaka za vino, a popust se obračunava automatski.'),
   array('questioon' => 'Koje načine plaćanja mogu koristiti?',
     'answer'    => 'Kod nas možete platiti putem Apple Paya, Google Paya, Mastercarda i Vise.'),
   array('questioon' => 'Kako funkcionira?',
     'answer'    => 'Stavite štapić za hlađenje vina u zamrzivač na najmanje 1 sat. Ohlađeni štapić umetnite u bocu vina. Otpijte gutljaj kako biste napravili malo mjesta i uživajte u savršeno ohlađenom vinu pri svakom točenju.'),
   array('questioon' => 'Informacije o dostavi',
-    'answer'    => 'Uživajte u besplatnoj dostavi za sve narudžbe! Rok isporuke je 5–12 radnih dana od datuma slanja.'),
+    'answer'    => 'Besplatna dostava za narudžbe iznad 70 €. Rok isporuke je 5–12 radnih dana od datuma slanja.'),
   array('questioon' => 'Pravila povrata',
-    'answer'    => 'Nudimo pravo na povrat u roku od 30 dana. Ako niste potpuno zadovoljni kupnjom, javite nam se u roku od 30 dana od primitka narudžbe i rado ćemo vam pomoći s povratom ili povratom novca.'),
+    'answer'    => 'Pravo na povrat u roku od 30 dana. Ako niste potpuno zadovoljni kupnjom, javite nam se u roku od 30 dana od primitka narudžbe i rado ćemo vam pomoći s povratom ili povratom novca.'),
 );
 
 $phonestrap_faq = array(

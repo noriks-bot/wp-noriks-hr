@@ -40,4 +40,8 @@ $auto_reviews_en = array(
     array("name" => "Fleur B.", "text" => "Savršen za balkon tijekom toplih večeri."),
     array("name" => "Roos P.", "text" => "Lijepo toči i ne kaplje — idealno. 👍"),
     array("name" => "Gijs H.", "text" => "Bolji rezultat od kockica leda u čaši."),
+    // 3 citati iz okvirja "Poslušajte naše kupce" (nakupna škatla originala) — prestavljeni sem.
+    array("name" => "Elin V.", "text" => "Jako praktičan za korištenje i lako se nosi sa sobom."),
+    array("name" => "Sanne D.", "text" => "Ispunili ste ono što ste obećali, a stigao mi je i prilično brzo."),
+    array("name" => "Tessa J.", "text" => "Super 😊"),
 );
