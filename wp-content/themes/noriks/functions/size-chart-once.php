@@ -98,6 +98,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-anklesleeve' );
             return;
         }
+        // NORIKS MaternityLeggings: S–XXL po opsegu bokova i duljini nogavice (slika tablice originala prevedena).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'maternityleggings' ) ) {
+            get_template_part( 'template_parts/size-chart-maternityleggings' );
+            return;
+        }
         // NORIKS TechTee: S–4XL po opsegu prsa, visini i tezini (savjet originala: uobicajena velicina).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'techtee' ) ) {
             get_template_part( 'template_parts/size-chart-techtee' );

@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS MaternityLeggings (orto-maternityleggings) — tajice za trudnice
+if ( noriks_is_type( 'maternityleggings' ) ) {
+    include $noriks_pb_dir . 'why-maternityleggings.php';
+}
+
 // NORIKS TechTee (orto-techtee) — ikonicna muska majica s okruglim izrezom
 if ( noriks_is_type( 'techtee' ) ) {
     include $noriks_pb_dir . 'why-techtee.php';

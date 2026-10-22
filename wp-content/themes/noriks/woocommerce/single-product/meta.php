@@ -623,6 +623,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS DishSheets</strong> su listići za pranje posuđa — nova alternativa agresivnim, toksičnim deterdžentima za posuđe. Biljnog su podrijetla, biorazgradivi i bez plastičnog otpada.<br><br>Svaki listić je točno odmjeren: <strong>1 listić = 1 puno pranje</strong>. Dovoljno su svestrani za perilicu posuđa, pranje u sudoperu, namakanje tvrdokornih lonaca i tava ili za četku za posuđe.<br><br>Sadrže samo nužne sastojke — <strong>bez izbjeljivača, fosfata, bojila</strong> i drugih nepotrebnih agresivnih kemikalija. Uz to dolaze u <strong>ambalaži bez plastike</strong>.<br><br><strong>Točno odmjereni:</strong> svaki listić je prava količina za jedno puno pranje<br><strong>Višenamjenski:</strong> za perilicu posuđa, pranje na ruke, namakanje lonaca ili četku za posuđe<br><strong>Prikladni za štedljive perilice:</strong> kompatibilni s visokoučinkovitim (HE) perilicama posuđa za optimalan rezultat<br><strong>Bez štetnih tvari:</strong> bez plastične ambalaže i bez agresivnih kemikalija — čistoća u koju možete imati povjerenja<br><strong>Snažni i nježni:</strong> uklanjaju masnoću, prljavštinu i zapečenu hranu<br><br><strong>Pakiranje:</strong> 1 paket = 80 listića (80 pranja), 3 paketa = 240 listića, 6 paketa = 480 listića. Miris: svježi limun.<br><br><strong>Sastojci:</strong> natrijev kokosulfat, polivinil alkohol, lauril glukozid, glicerin, saponini, natrijev citrat, natrijev bikarbonat, miris, enzimi.
 
+         <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
+
+                <strong>NORIKS MaternityLeggings</strong> — vaše se tijelo mijenja. Naše tajice rastu s njim.<br><br>Ove tajice za trudnice prilagođavaju se vama – a ne obrnuto. <strong>Podupiru trbuh, rasterećuju leđa</strong> i daju vam osjećaj sigurne potpore, bez stezanja.<br><br>Mekan, prozračan materijal pruža ugodan osjećaj pri nošenju, a u hladnijem dijelu godine ugodno vas grije.<br><br>I jer vaše tijelo čini nešto veliko, zaslužuje odjeću koja ga u tome podupire.<br><br><strong>Rasterećuju trbuh i leđa:</strong> posebna mrežasta tkanina nježno podupire trbuščić i tako rasterećuje donji dio leđa.<br><strong>100 % neprozirne:</strong> zahvaljujući kvalitetnim vlaknima tkanina ostaje potpuno neprozirna i pri intenzivnom kretanju – o tome ne morate brinuti.<br><strong>Ne spuštaju se:</strong> ekstra visok, mekan pojas priljubljuje se uz trbuh bez pritiska – i bez stalnog spuštanja. Na poslu, u šetnji ili na kauču: tajice uvijek stoje točno ondje gdje trebaju.<br><strong>Rastu s vašim trbuhom:</strong> mekan pojas prilagođava se trbuščiću – bilo da ste u 10. ili 35. tjednu trudnoće. Bez pritiska, bez spuštanja, jednostavno udobno od početka do kraja.<br><strong>Oblikuju noge i stražnjicu:</strong> oblikuju bez stezanja – za stražnjicu i noge koje ćete rado pokazati.<br><br><strong>Materijal:</strong> 94 % poliamid, 6 % elastan. Ovaj sastav odabran je namjerno – za ugodnu kompresiju nogu i potporu trbuhu i donjem dijelu leđa. Materijal istodobno pruža ugodnu toplinu, a da se ne oznojite. Rezultat: <strong>100 % neprozirne, elastične, tople, prozračne</strong> – i jednostavno super udobne.<br><br><strong>Zašto su NORIKS tajice za trudnice najbolji izbor</strong><br><strong>Visok, elastičan pojas</strong> – nježno podupire trbuh, bez stezanja<br><strong>Dizajn koji čuva leđa</strong> – podupire i rasterećuje donji dio leđa<br><strong>Udobne za svaku priliku</strong> – savršene za svakodnevicu, slobodno vrijeme ili laganu tjelovježbu<br><strong>Prozračne i mekane</strong> – sprječavaju znojenje i ostaju ugodno prozračne<br><strong>Jednostavno održavanje i dugotrajnost</strong> – zadržavaju oblik i nakon mnogo pranja<br><strong>Jednostavan dizajn</strong> – lako se kombiniraju s majicom, haljinom ili puloverom<br><br>Tajice sjede visoko preko trbuha, pružaju nježnu potporu i istodobno rasterećuju donji dio leđa. Bez spuštanja, bez štipanja, bez stezanja – umjesto toga osjećate se slobodno i poduprto pri svakom pokretu. Mnoge žene potvrđuju: „Napokon tajice koje podupiru trbuh i osjetno rasterećuju leđa.”<br><br><strong>Zaključak – vaše nove omiljene tajice:</strong> NORIKS tajice za trudnice spajaju udobnost, potporu trbuhu i rasterećenje leđa. Za trudnoću, babinje ili jednostavno kao udobne tajice za svaki dan – uz njih ste cijeli dan opušteni.<br><br><strong>Boje:</strong> crna, tamnosiva i svijetlosmeđa.<br><strong>Veličine:</strong> S (36) – XXL (48–50). Odaberite svoju uobičajenu veličinu prije trudnoće (pogledajte tablicu veličina).
+
          <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
 
                 <strong>NORIKS TechTee</strong> — ikonična majica, usavršena. <strong>Pripijen kroj</strong>, savršeno izbalansiran: pada točno kako treba, oblikuje siluetu i prirodno se prilagođava svakoj građi.<br><br>Nudi izvanrednu <strong>mekoću</strong>, besprijekorno drži oblik i dugo traje. <strong>Tiskana unutarnja etiketa</strong> zamjenjuje klasične ušivene etikete — za udobnost bez imalo iritacije.<br><br>Apsolutni osnovni komad. Bezvremenski. Neizostavan.<br><br><strong>Materijal i izrada:</strong> drugačiji dodir — namjerno. Tkanina spaja češljani pamuk i Sorona®, poliester biljnog podrijetla (od kukuruznog škroba) koji je razvio DuPont, pažljivo doziran kako bi majica besprijekorno držala oblik kroz vrijeme. Na tijelu je drukčija: mekša, fluidnija, s diskretnim sjajem koji tkanini daje blago satensku završnu obradu — daleko od običnog mat pamuka. Besprijekoran pad koji traje. Ako očekujete klasični pamuk, iznenadit će vas. Ako joj date priliku, nećete je htjeti skinuti.<br><br><strong>Sastav:</strong> 72 % češljani pamuk, 28 % Sorona®<br><strong>Kroj:</strong> okrugli izrez, pripijen kroj<br><br><strong>Boje:</strong> crna, bijela, tamnoplava, kaki, siva, nebeskoplava, lososova i tirkizna.<br><strong>Veličine:</strong> S–4XL. Uzmite svoju uobičajenu veličinu (pogledajte tablicu veličina).
@@ -1351,6 +1355,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Odaberite svoju uobičajenu veličinu prije trudnoće.</strong> Ako ste između dvije veličine, preporučujemo da radije odaberete <strong>manju</strong>. Tajice su rastezljive i savršeno se prilagođavaju trbuhu koji raste.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#c9606a;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Konf. broj</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg bokova</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina nogavice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_maternityleggings_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbeeee' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Primjer: Marta je visoka 170 cm i nosi veličinu M. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2045,6 +2080,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'dishsheets', $current_product_id ) ): ?>
 
                 Jedan listić stavite izravno u pretinac za deterdžent u perilici posuđa i odaberite željeni program. Za manja pranja ili namakanje dovoljna je <strong>polovica listića</strong>. Za pranje na ruke listić otopite u vodi u sudoperu — nastat će lagana pjena — i perite posuđe kao i inače.
+
+             <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
+
+                Perite na <strong>najviše 30 °C</strong>. Ne koristite <strong>omekšivač ni izbjeljivač</strong>. Perite odvojeno po bojama. <strong>Ne sušite u sušilici</strong> — tajice osušite na zraku, tako će dugo zadržati oblik i elastičnost.
 
              <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
 

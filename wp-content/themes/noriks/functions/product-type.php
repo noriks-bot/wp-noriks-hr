@@ -156,6 +156,8 @@ function noriks_product_type_map() : array {
         'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
+        // NORIKS MaternityLeggings — tajice za trudnice (boja + velicina S–XXL).
+        'maternityleggings'       => array( 'orto-maternityleggings', 'maternityleggings' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -554,6 +556,21 @@ if ( ! function_exists( 'noriks_orthomules_sizes' ) ) {
             array( 'EU 41', '10–10,5', '8–8,5' ),
             array( 'EU 42', '11–11,5', '9–9,5' ),
             array( 'EU 43', '12', '10' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_maternityleggings_sizes' ) ) {
+    /** NORIKS MaternityLeggings: velicina, konfekcijski broj (DE/HR), opseg bokova (cm), duljina nogavice (cm).
+     *  1:1 s tablice velicin originala (sivara.de, »Größentabelle Leggings«). Savjet: uobicajena velicina prije
+     *  trudnoce; izmedu dvije -> manja. */
+    function noriks_maternityleggings_sizes() {
+        return array(
+            array( 'S',   '36',      '73 – 98 cm',  '97 cm' ),
+            array( 'M',   '38',      '78 – 103 cm', '99 cm' ),
+            array( 'L',   '40 – 42', '83 – 108 cm', '102 cm' ),
+            array( 'XL',  '44 – 46', '88 – 113 cm', '104 cm' ),
+            array( 'XXL', '48 – 50', '94 – 119 cm', '105 cm' ),
         );
     }
 }
