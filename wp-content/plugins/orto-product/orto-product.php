@@ -123,17 +123,6 @@ function gck_size_prices( $product_id ) : array {
             'factor'  => array( 1 => 1, 2 => 0.9, 3 => 0.8 ),
         );
     }
-    if ( $product_id && has_term( 'orto-doggo', 'product_cat', $product_id ) ) {
-        // original EUR 170/340 (M) in 210/420 (XL) — cene z originalne strani
-        return array(
-            'default' => 'M',
-            'sizes'   => array(
-                'M'  => array( 170.00, 340.00 ),
-                'XL' => array( 210.00, 420.00 ),
-            ),
-            'factor'  => array( 1 => 1, 2 => 0.9, 3 => 0.85 ),
-        );
-    }
     return array();
 }
 
@@ -689,6 +678,11 @@ function gck_render_bundle_selector() {
       .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
 
       /* Kartice ponud: debelejsi robovi (kot na FisioRest). */
+      /* Manjsi razmik nad in pod povezavo "Tablica velicina". */
+      .summary .gck-size-link { margin-top: 2px !important; margin-bottom: 0 !important; }
+      .summary .gck-size-link + * { margin-top: 10px !important; }
+      #bundle-selector { margin-top: 12px !important; }
+
       #bundle-selector .bundle-option { border-width: 2px !important; }
       /* Znacka popusta je zelena (kot na FisioRest), cena na kos ostane v barvi izdelka. */
       #bundle-selector .gck-discount-badge { background: #2f7d4f !important; color: #fff !important; }
@@ -1693,70 +1687,6 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) : $gck_ss_img = get_template_directory_uri() . '/img/supportsocks/'; ?>
-    <style>
-      /* NORIKS SupportSocks: temno modri akcent originala (#a9683f, Kaching kartice: bel rob, izbrana #f7f2ec). Vzorcaste barve
-         (crte, pike, melirano) imajo v krogcu slicico vzorca z originala. Izbornik boje cita nijanso s probnega elementa
-         IZVAN #bundle-selector, zato ista pravila moraju postojati i bez prefiksa. */
-      .swatch-circle.color-crna { background: #111111 !important; }
-      .swatch-circle.color-bijela { background: #ffffff !important; }
-      .swatch-circle.color-tamnoplava { background: #0b2340 !important; }
-      .swatch-circle.color-siva { background: #808080 !important; }
-      .swatch-circle.color-ruzicasta { background: #f69bbf !important; }
-      .swatch-circle.color-bez { background: #ead8ab !important; }
-      .swatch-circle.color-vinsko-crvena { background: #65040d !important; }
-      .swatch-circle.color-crna-melirana { background: #3a3a3a url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-melirana.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-crna-s-prugama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-prugama.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-crveno-ruzicaste-pruge { background: #f61f1f url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crveno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-plave-pruge { background: #005bd3 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-plave-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-zeleno-sive-pruge { background: #05aa3d url('<?php echo esc_url( $gck_ss_img . 'ss-sw-zeleno-sive-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-ruzicasto-ljubicaste-pruge { background: #ffc0cb url('<?php echo esc_url( $gck_ss_img . 'ss-sw-ruzicasto-ljubicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-koraljno-ruzicaste-pruge { background: #ff8a80 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-koraljno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-crna-s-plavim-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-plavim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-crna-s-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-tockicama.webp' ); ?>') center / cover no-repeat !important; }
-      .swatch-circle.color-svijetloplava-s-bijelim-tockicama { background: #9cc8ec url('<?php echo esc_url( $gck_ss_img . 'ss-sw-svijetloplava-s-bijelim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
-
-      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
-      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
-          border: 2px solid #dce2e5 !important; background: #fff; }
-      #bundle-selector .color-swatches .swatch.active { border-color: #a9683f !important; transform: scale(1.06); }
-      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
-          box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
-      #bundle-selector .swatch-circle.color-crna { background: #111111 !important; }
-      #bundle-selector .swatch-circle.color-bijela { background: #ffffff !important; }
-      #bundle-selector .swatch-circle.color-tamnoplava { background: #0b2340 !important; }
-      #bundle-selector .swatch-circle.color-siva { background: #808080 !important; }
-      #bundle-selector .swatch-circle.color-ruzicasta { background: #f69bbf !important; }
-      #bundle-selector .swatch-circle.color-bez { background: #ead8ab !important; }
-      #bundle-selector .swatch-circle.color-vinsko-crvena { background: #65040d !important; }
-      #bundle-selector .swatch-circle.color-crna-melirana { background: #3a3a3a url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-melirana.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-crna-s-prugama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-prugama.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-crveno-ruzicaste-pruge { background: #f61f1f url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crveno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-plave-pruge { background: #005bd3 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-plave-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-zeleno-sive-pruge { background: #05aa3d url('<?php echo esc_url( $gck_ss_img . 'ss-sw-zeleno-sive-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-ruzicasto-ljubicaste-pruge { background: #ffc0cb url('<?php echo esc_url( $gck_ss_img . 'ss-sw-ruzicasto-ljubicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-koraljno-ruzicaste-pruge { background: #ff8a80 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-koraljno-ruzicaste-pruge.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-crna-s-plavim-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-plavim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-crna-s-tockicama { background: #111111 url('<?php echo esc_url( $gck_ss_img . 'ss-sw-crna-s-tockicama.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .swatch-circle.color-svijetloplava-s-bijelim-tockicama { background: #9cc8ec url('<?php echo esc_url( $gck_ss_img . 'ss-sw-svijetloplava-s-bijelim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
-      #bundle-selector .bundle-option {
-          border: 1px solid rgba(0,46,73,.3) !important; background: #fff !important; border-radius: 16px !important; box-shadow: none !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
-      #bundle-selector .bundle-option-title { color: #000 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #a9683f !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #a9683f !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #e0e6e9 !important; }
-      #bundle-selector .bundle-total-line .line-total { color: #000 !important; }
-      #bundle-selector .bundle-total-line .gck-regular-price { color: #555 !important; }
-      #bundle-selector .gck-offer-sub { color: #555 !important; font-weight: 400; }
-      #bundle-selector .gck-popular-badge--offer { background: #a9683f !important; color: #fff !important; transform: none !important; right: 12px !important; }
-      #bundle-selector .bundle-pair select,
-      #bundle-selector .bundle-pair .gck-extra-select { border-color: #a9683f !important; color: #121212 !important; }
-      .gck-size-link { color: #a9683f !important; }
-    </style>
-    <?php endif; ?>
 
     <?php if ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ) : ?>
     <style>
@@ -1816,45 +1746,7 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ) : ?>
-    <style>
-      /* NORIKS WineCooler: kartice ponud barvne in zaobljene v privzeti topli rjavi paleti NORIKS (kot orto-hands, #a9683f),
-         ker poudarek originala (crna) nima svetlega odtenka. Izdelek nima atributov, zato krogcev ni. */
-      #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
-          box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
-      #bundle-selector .bundle-option-title { color: #231d19 !important; font-weight: 700 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
-      #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
-      #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
-      #bundle-selector .gck-popular-badge--offer { background: #a9683f !important; color: #fff !important; transform: rotate(-3deg) !important; right: -6px !important; }
-    </style>
-    <?php endif; ?>
 
-    <?php if ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ) : ?>
-    <style>
-      /* NORIKS PhoneStrap: kartice ponud kot na originalu (Kaching) — bele, temno siv rob, izbrana svetlo siva,
-         cena temno rdeca, crne znacke. Nad ponudami naslov originala "Free shipping this week" s crtama levo in desno.
-         Izdelek nima barv, zato krogcev ni. */
-      #bundle-selector .bundle-option {
-          border: 1px solid #3d3d3d !important; background: #fff !important; border-radius: 8px !important; box-shadow: none !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #3d3d3d !important; background: rgba(227,227,227,.81) !important; }
-      #bundle-selector .bundle-option-title { color: #000 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #3d3d3d !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #3d3d3d !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #b50000 !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #c60000 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #e3e3e3 !important; }
-      #bundle-selector .bundle-total-line .line-total { color: #b50000 !important; }
-      #bundle-selector .bundle-total-line .gck-regular-price { color: #555 !important; }
-      #bundle-selector .gck-popular-badge--offer { background: #000 !important; color: #fff !important; transform: none !important; right: 12px !important; }
-    </style>
-    <?php endif; ?>
 
     <?php if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ) : ?>
     <style>

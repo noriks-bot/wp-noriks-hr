@@ -274,6 +274,11 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
 </div>
 
 <style>
+/* video/slika zapolni okvir — brez sivega pasu pod posnetkom */
+.nss-media .nss-video, .nss-media > img { aspect-ratio: 4 / 5 !important; overflow: hidden; }
+.nss-media .nss-video > video, .nss-media .nss-video > img, .nss-media > img {
+  width: 100% !important; height: 100% !important; object-fit: cover !important; display: block; }
+
 .nss { --nss-ink: #1c2a33; --nss-text: #4f5b62; --nss-navy: #002e49; --nss-accent: #1f6f9a; --nss-line: #dce2e5; --nss-tint: #f3f6f7;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nss-ink); }
 .nss *, .nss *::before, .nss *::after { box-sizing: border-box; }
