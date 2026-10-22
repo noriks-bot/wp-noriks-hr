@@ -156,37 +156,6 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 7) RECENZIJE KUPACA -->
-<section class="nfs-sec nfs-tint">
-  <div class="nfs-wrap nfs-wrap--rv">
-    <h2 class="nfs-h2 nfs-h2--c">Recenzije <em>kupaca</em></h2>
-    <p class="nfs-rate"><span class="nfs-rate__stars">★★★★★</span> <strong>4,8</strong> · na temelju 1.081 recenzije</p>
-    <div class="nfs-rv-list">
-      <?php foreach ( $nfs_reviews as $r ) : ?>
-      <article class="nfs-rv">
-        <div class="nfs-rv__top">
-          <span class="nfs-rv__stars" aria-label="5 od 5 zvjezdica">★★★★★</span>
-          <span class="nfs-rv__name"><?php echo esc_html( $r['ime'] ); ?> <span class="nfs-rv__ver">✓ Provjereni kupac</span></span>
-          <span class="nfs-rv__date"><?php echo esc_html( $r['datum'] ); ?></span>
-        </div>
-        <p class="nfs-rv__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
-        <?php if ( $r['foto'] ) : ?><div class="nfs-rv__photo"><?php echo $nfs_img( $r['foto'], 'Fotografija kupca — ' . $r['ime'] ); ?></div><?php endif; ?>
-      </article>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-
-<!-- 8) NORIKS pogoji -->
-<section class="nfs-sec">
-  <div class="nfs-wrap" style="text-align:center">
-    <h2 class="nfs-h2">Isprobajte ga <em>bez brige.</em></h2>
-    <p>Odvedite dijete na bazen i provjerite kako se drži u vodi. Ako kostim nije za vas, imate <strong>30 dana za povrat novca</strong>.</p>
-    <p class="nfs-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
-  </div>
-</section>
-
 <style>
 /* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
 .nfs-row2 { align-items: center; }

@@ -36,6 +36,7 @@ $nps_testimonials = array(
   array( 'foto' => 'ps-rv-robert.webp',    'ime' => '@Robert',    'tekst' => 'Cijeli vikend koristio sam ga na stazama i nijednom se nisam brinuo da će mi ispasti mobitel.' ),
   array( 'foto' => 'ps-zasto-volite.webp', 'ime' => '@Niko',      'tekst' => 'Napokon držač za mobitel koji stvarno ostaje na mjestu na žičari! Sad se osjećam puno sigurnije.' ),
   array( 'foto' => 'ps-rv-hanna.webp',     'ime' => '@Hanna',     'tekst' => 'Obožavam koliko je siguran. Čak ni na brzim spustovima mobitel se nije pomaknuo.' ),
+  array( 'foto' => 'ps-3-razloga-poster.webp', 'ime' => '@Marko', 'tekst' => 'Nosim ga na planinarenju i na biciklu. Mobitel visi uz mene, a obje ruke su mi slobodne.' ),
 );
 ?>
 

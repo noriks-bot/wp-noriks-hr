@@ -178,68 +178,7 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
   </div>
 </section>
 
-<!-- 5) Recenzije kupaca -->
-<section class="nss-sec nss-rv-sec" aria-labelledby="nss-rv-h">
-  <div class="nss-wrap">
-    <h2 id="nss-rv-h" class="nss-h2 nss-h2--c">Recenzije kupaca</h2>
-    <p class="nss-rv-sum"><span class="nss-rv-sum__stars" aria-hidden="true">★★★★★</span> Ukupna ocjena: <strong>4,8 / 5</strong> na temelju 1.081 recenzije</p>
-    <div class="nss-rv-grid">
-      <?php foreach ( $nss_reviews as $i => $r ) : ?>
-      <article class="nss-rv<?php echo $i >= $nss_rv_first ? ' is-hidden' : ''; ?>">
-        <?php if ( $r[3] ) : ?><div class="nss-rv__photo"><?php echo $nss_img( $r[3], 'Fotografija kupca — ' . $r[0] ); ?></div><?php endif; ?>
-        <div class="nss-rv__body">
-          <div class="nss-rv__head"><span class="nss-rv__name"><?php echo esc_html( $r[0] ); ?></span> <span class="nss-rv__ver">✓ Provjereni kupac</span></div>
-          <div class="nss-rv__stars" aria-label="5 od 5 zvjezdica">★★★★★</div>
-          <p class="nss-rv__txt"><?php echo esc_html( $r[2] ); ?></p>
-          <div class="nss-rv__date"><?php echo esc_html( $r[1] ); ?></div>
-        </div>
-      </article>
-      <?php endforeach; ?>
-    </div>
-    <div class="nss-rv-more-wrap"><button type="button" class="nss-rv-more">Prikaži više recenzija</button></div>
-  </div>
-</section>
-
-</div>
-
-<script>
-(function(){
-  /* videi z originala: brez zvoka, v zanki; nalozijo se sele, ko so v vidnem polju */
-  var wraps = document.querySelectorAll('.nss .nss-video');
-  function load(v){ if (v && !v.getAttribute('src') && v.dataset.src) { v.setAttribute('src', v.dataset.src); v.load(); } }
-  function play(v, b){ load(v); var p = v.play(); if (p && p.catch) { p.catch(function(){ b.hidden = false; }); } }
-  wraps.forEach(function(w){
-    var v = w.querySelector('video'), b = w.querySelector('.nss-play');
-    if (!v || !b) return;
-    b.addEventListener('click', function(){ play(v, b); });
-    v.addEventListener('play', function(){ b.hidden = true; });
-    v.addEventListener('pause', function(){ b.hidden = false; });
-  });
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        var v = e.target.querySelector('video'), b = e.target.querySelector('.nss-play');
-        if (!v || !b) return;
-        if (e.isIntersecting && e.intersectionRatio >= .35) { play(v, b); } else if (!v.paused) { v.pause(); }
-      });
-    }, { threshold: [0, .35, .75] });
-    wraps.forEach(function(w){ io.observe(w); });
-  } else { wraps.forEach(function(w){ load(w.querySelector('video')); }); }
-
-  /* Recenzije kupaca: "Prikaži više" */
-  var more = document.querySelector('.nss-rv-more');
-  if (more) {
-    more.addEventListener('click', function(){
-      var hidden = document.querySelectorAll('.nss-rv.is-hidden');
-      for (var k = 0; k < hidden.length && k < 12; k++) { hidden[k].classList.remove('is-hidden'); }
-      if (!document.querySelector('.nss-rv.is-hidden')) { more.parentNode.style.display = 'none'; }
-    });
-  }
-})();
-</script>
-
-
-<!-- 6) PRONAĐITE SVOJU VELIČINU -->
+<!-- 5) PRONAĐITE SVOJU VELIČINU -->
 <div class="nss-band nss-tint">
   <div class="nss-wrap">
     <div class="nss-row2 nss-row2--rev">
@@ -261,15 +200,6 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
       </div>
       <div class="nss-media"><?php echo $nss_img( 'ss-g-4-hr.webp', 'Veličine NORIKS SupportSocks po broju cipele' ); ?></div>
     </div>
-  </div>
-</div>
-
-<!-- 7) NORIKS pogoji -->
-<div class="nss-band">
-  <div class="nss-wrap nss-c">
-    <h2 class="nss-h2 nss-h2--c">Isprobajte ih <em>bez brige.</em></h2>
-    <p class="nss-promise">Obujte ih na posao, na put ili na dugu smjenu. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong>.</p>
-    <p class="nss-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
   </div>
 </div>
 
