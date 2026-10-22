@@ -60,6 +60,7 @@ function noriks_product_type_map() : array {
         'snore'                   => array( 'orto-snore' ),
         // NORIKS BRA — grudnjak s prednjim zakopcavanjem i potporom drzanja.
         'bra'                     => array( 'orto-bra' ),
+        'ondersteun'              => array( 'orto-ondersteun' ),
         // NORIKS HYD — boca za vodikovu vodu (PEM/SPE elektroliza), bez atributa.
         'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
@@ -889,5 +890,19 @@ if ( ! function_exists( 'noriks_fieldops_sizes' ) ) {
     /** NORIKS FieldOps Pro (taktične slušalke) — nema veličina, samo boja (Carbon Black, Army Green). */
     function noriks_fieldops_sizes() {
         return array();
+    }
+}
+
+if ( ! function_exists( 'noriks_ondersteun_sizes' ) ) {
+    /** NORIKS ONDERSTEUN: veličina, košarica / opseg. */
+    function noriks_ondersteun_sizes() {
+        return array(
+            array( 'XS',  'košarica A – B' ),
+            array( 'S',   'košarica B – C' ),
+            array( 'M',   'košarica C – D' ),
+            array( 'L',   'košarica D – E' ),
+            array( 'XL',  'košarica E – F' ),
+            array( '2XL', 'košarica F+' ),
+        );
     }
 }

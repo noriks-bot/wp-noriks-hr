@@ -113,6 +113,9 @@ if ( noriks_is_type( 'cloath' ) ) {
 if ( noriks_is_type( 'bra' ) ) {
     include $noriks_pb_dir . 'why-bra.php';
 }
+if ( noriks_is_type( 'ondersteun' ) ) {
+    include $noriks_pb_dir . 'why-ondersteun.php';
+}
 
 // NORIKS HYD (orto-hyd) — boca za vodikovu vodu
 if ( noriks_is_type( 'hyd' ) ) {
