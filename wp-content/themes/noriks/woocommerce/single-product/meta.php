@@ -611,6 +611,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS Tuck</strong> su oblikujuće kratke hlačice visokog struka s posebnim protukliznim materijalom s unutarnje strane pojasa koji prianja uz kožu, pa se ne smotaju prema dolje kao obično oblikujuće rublje.<br><br>Mekana, rastezljiva tkanina nježno zaglađuje trbuh i bedra, a ne steže previše. Rubovi su laserski rezani, pa nema izbočenih šavova koji bi se vidjeli kroz odjeću. Hlačice sežu visoko na struk i do sredine bedra, pa pokrivaju sva područja koja želite zagladiti — i sprječavaju trljanje bedara.<br><br>Obučete ih jednom i zaboravite na njih cijeli dan — bez povlačenja i namještanja. Odjeća lijepo pada, a vi se osjećate samopouzdano.<br><br><strong>Sastav:</strong> 55 % najlon, 45 % elastan. Bez lateksa i bez silikona. Dostupne su u smeđoj i crnoj boji, u veličinama od S do XXL.
 
+         <?php elseif( noriks_is_type( 'fleecetights', $current_product_id ) ): ?>
+
+                <strong>NORIKS FleeceTights</strong> su tople hulahopke podstavljene flisom koje izgledaju kao gola koža ispod tankih prozirnih hulahopki — a griju kao debele tajice. Idealne su za haljine, suknje i kratke hlače na jesen i zimu.<br><br><strong>Kompresijski pojas koji oblikuje struk:</strong> visoki pojas nježno steže i zaglađuje trbuh i bokove<br><strong>Prozirni izgled u 4 nijanse:</strong> Vanilija (svijetla), Latte (preplanula), Karamela (brončana) i Espresso (tamna) — za svaku nijansu kože<br><strong>Ultra mekan, debeo flis:</strong> toplo vani, a bez pregrijavanja u zatvorenom; flis ne stvara kuglice<br><strong>Samo jedan šav:</strong> glatka silueta, bez urezivanja i neugodnih linija<br><strong>Izrazito rastezljive (4-way stretch):</strong> ne trgaju se i ne paraju, prianjaju uz gležanj i ne nabiru se na koljenima<br><strong>Za visoke i niske:</strong> odgovaraju unutarnjoj duljini noge od 61 do 102 cm<br><br>Izgledaju prozirno, ali su potpuno neprozirne — ništa se ne vidi ni kad čučnete ili se sagnete. Dovoljno su tanke da ih nosite i ispod traperica.<br><br><strong>Sastav:</strong> 38,9 % najlon, 14,9 % elastan, 46,2 % poliester.<br><br><strong>Veličine:</strong> XXS/XS, XS/S, M/L, L/XL, 2XL/3XL i 4XL/5XL. Ako ste između dvije veličine, uzmite manju za čvršće oblikovanje ili veću za opušteniji osjećaj.
+
          <?php elseif( noriks_is_type( 'supportsocks', $current_product_id ) ): ?>
 
                 <strong>NORIKS SupportSocks</strong> su potporne čarape sa stupnjevanom kompresijom, napravljene za duge dane na nogama i za duga sjedenja. Pritisak je najjači oko gležnja i postupno popušta prema listu, pa noge ostaju lakše i na kraju dana. Oblače se lakše od klasičnih kompresijskih čarapa i udobne su za cjelodnevno nošenje.<br><br><strong>12–15 mmHg stupnjevana kompresija:</strong> može ublažiti umor i oticanje nogu<br><strong>Lako se oblače:</strong> ne morate se mučiti s njima<br><strong>Mekani rub:</strong> ne usijeca se i ne ostavlja tragove na koži<br><strong>Vrh bez šavova:</strong> ne žulja<br><strong>Prozračan materijal:</strong> mješavina s bambusom koja održava stopala suhima<br><strong>Savršene za:</strong> svakodnevno nošenje, posao, putovanja i još mnogo toga<br><br><strong>Materijal:</strong> 60 % poliester, 18 % bambus, 15 % lycra, 7 % pamuk<br><br><strong>Veličine:</strong> M (36–39), L (40–43) i XL (44–46), u 17 boja i uzoraka<br><br><strong>Upute za pranje:</strong><br>Čarape perite izvrnute naopako<br>Strojno pranje na najviše 30 °C<br>Ne koristite izbjeljivač<br>Sušite na zraku — ne u sušilici
@@ -1426,6 +1430,38 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           </div>
 
 
+        <?php elseif( noriks_is_type( 'fleecetights', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Uzmite svoju uobičajenu veličinu i provjerite opseg struka i bokova. Ako ste između dvije veličine, <strong>uzmite manju</strong> za čvršće oblikovanje ili veću za opušteniji osjećaj.</p>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#2E2420;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Struk (cm)</th>
+                  <th style="padding:9px 8px;text-align:left;">Bokovi (cm)</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina noge (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_fleecetights_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f0eb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Hulahopke su <strong>izrazito rastezljive</strong> i odgovaraju unutarnjoj duljini noge do 102 cm.</p>
+          </div>
+
+
         <?php elseif( noriks_is_type( 'supportsocks', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1686,6 +1722,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'tuck', $current_product_id ) ): ?>
 
                 Perite na hladnom, na nježnom programu, bez omekšivača i izbjeljivača, i sušite na zraku. Tako rastezljivost i protuklizni pojas ostaju kao novi.
+
+             <?php elseif( noriks_is_type( 'fleecetights', $current_product_id ) ): ?>
+
+                Prije pranja izvrnite ih naopako. Perite ručno ili na nježnom programu, u hladnoj ili mlakoj vodi (nikad vrućoj). Sušite na zraku ili u sušilici na najnižoj temperaturi. Bez izbjeljivača i omekšivača — tako ostaju mekane, tople i glatke.
 
              <?php elseif( noriks_is_type( 'bratank', $current_product_id ) ): ?>
 

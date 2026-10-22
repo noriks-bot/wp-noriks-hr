@@ -132,6 +132,8 @@ function noriks_product_type_map() : array {
         'supportsocks'            => array( 'orto-supportsocks', 'supportsocks' ),
         // NORIKS Tuck — oblikujuce kratke hlacice visokog struka (boja + velicina).
         'tuck'                    => array( 'orto-tuck', 'tuck' ),
+        // NORIKS FleeceTights — tople hulahopke s flisom koje izgledaju kao koza (boja + velicina XXS/XS–4XL/5XL).
+        'fleecetights'            => array( 'orto-fleecetights', 'fleecetights' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -572,6 +574,21 @@ if ( ! function_exists( 'noriks_doggo_sizes' ) ) {
         return array(
             array( 'M',  '53', '47', '44', '2', 'jazavčar, border terijer, cockapoo, koker španijel' ),
             array( 'XL', '100', '52', '44', '4', 'border koli, labrador, njemački ovčar ili dva manja psa' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_fleecetights_sizes' ) ) {
+    /** NORIKS FleeceTights: velicina, US broj, struk (cm), bokovi (cm), unutarnja duljina noge (cm).
+     *  1:1 s tablice originala irazia.com ("Size Guide", mjere u cm s originala). */
+    function noriks_fleecetights_sizes() {
+        return array(
+            array( 'XXS/XS',  '00–1',  '56–61',   '69–86',   '61–102' ),
+            array( 'XS/S',    '2–6',   '64–74',   '86–99',   '61–102' ),
+            array( 'M/L',     '7–11',  '76–89',   '97–117',  '61–102' ),
+            array( 'L/XL',    '12–16', '91–102',  '112–122', '61–102' ),
+            array( '2XL/3XL', '18–24', '104–114', '124–147', '61–102' ),
+            array( '4XL/5XL', '26–32', '117–132', '150–173', '61–102' ),
         );
     }
 }

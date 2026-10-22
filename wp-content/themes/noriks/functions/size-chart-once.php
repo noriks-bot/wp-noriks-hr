@@ -118,6 +118,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-tuck' );
             return;
         }
+        // NORIKS FleeceTights: struk, bokovi i duljina noge u cm (XXS/XS–4XL/5XL), 1:1 s originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'fleecetights' ) ) {
+            get_template_part( 'template_parts/size-chart-fleecetights' );
+            return;
+        }
         // NORIKS SupportSocks: veličina prema broju cipela (M / L / XL).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'supportsocks' ) ) {
             get_template_part( 'template_parts/size-chart-supportsocks' );

@@ -334,6 +334,11 @@ if ( noriks_is_type( 'tuck' ) ) {
     include $noriks_pb_dir . 'why-tuck.php';
 }
 
+// NORIKS FleeceTights (orto-fleecetights) — tople hulahopke s flisom koje izgledaju kao koza
+if ( noriks_is_type( 'fleecetights' ) ) {
+    include $noriks_pb_dir . 'why-fleecetights.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';
