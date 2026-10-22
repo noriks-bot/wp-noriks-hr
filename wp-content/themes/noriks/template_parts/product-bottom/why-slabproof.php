@@ -107,18 +107,20 @@ $nsp_reviews = array(
 
 <!-- 3) NIKAD NISU BILE ČIZME -->
 <section class="nsp-sec nsp-cream">
-  <div class="nsp-wrap nsp-narrow">
-    <div class="nsp-head">
-      <h2 class="nsp-h2">Nikad nisu bile <em>krive čizme.</em></h2>
-      <p class="nsp-sub">Radne čizme napravljene su da štite stopala, ne da ih ublažavaju. Krutost im je cijela poanta. Ali beton ne vraća ništa, a svaki korak negdje mora otići: u pete, u koljena, u leđa.</p>
+  <div class="nsp-wrap">
+    <div class="nsp-row2">
+      <div class="nsp-test">
+        <div class="nsp-test__labels"><span class="nsp-test__lbl nsp-test__lbl--bad">Obična čarapa</span><span class="nsp-test__vs">vs</span><span class="nsp-test__lbl nsp-test__lbl--good">NORIKS SlabProof</span></div>
+        <div class="nsp-test__img"><?php echo $nsp_img( 'sp-03-test-cizme.webp', 'Obična čarapa i NORIKS SlabProof u istoj radnoj čizmi na betonu' ); ?></div>
+        <p class="nsp-test__cap">Ista čizma, isti beton. Promijenila se samo čarapa.</p>
+      </div>
+      <div class="nsp-row2__copy">
+        <h2 class="nsp-h2">Nikad nisu bile <em>krive čizme.</em></h2>
+        <p class="nsp-sub">Radne čizme napravljene su da štite stopala, ne da ih ublažavaju. Krutost im je cijela poanta. Ali beton ne vraća ništa, a svaki korak negdje mora otići: u pete, u koljena, u leđa.</p>
+        <p class="nsp-quote">Odrađujete smjene od 12 sati u kamionu bez amortizera.</p>
+        <p class="nsp-bridge">Jedino što može ublažiti taj udarac je dva i pol centimetra čarape. <strong>Zato smo tih dva i pol centimetra napravili kako treba.</strong></p>
+      </div>
     </div>
-    <p class="nsp-quote">Odrađujete smjene od 12 sati u kamionu bez amortizera.</p>
-    <div class="nsp-test">
-      <div class="nsp-test__labels"><span class="nsp-test__lbl nsp-test__lbl--bad">Obična čarapa</span><span class="nsp-test__vs">vs</span><span class="nsp-test__lbl nsp-test__lbl--good">NORIKS SlabProof</span></div>
-      <div class="nsp-test__img"><?php echo $nsp_img( 'sp-03-test-cizme.webp', 'Obična čarapa i NORIKS SlabProof u istoj radnoj čizmi na betonu' ); ?></div>
-      <p class="nsp-test__cap">Ista čizma, isti beton. Promijenila se samo čarapa.</p>
-    </div>
-    <p class="nsp-bridge">Jedino što može ublažiti taj udarac je dva i pol centimetra čarape. <strong>Zato smo tih dva i pol centimetra napravili kako treba.</strong></p>
   </div>
 </section>
 
@@ -144,7 +146,7 @@ $nsp_reviews = array(
 </section>
 
 <!-- 5) USPOREDBA -->
-<section class="nsp-sec nsp-light nsp-sec--line">
+<section class="nsp-sec nsp-cream nsp-sec--line">
   <div class="nsp-wrap nsp-narrow">
     <div class="nsp-head">
       <h2 class="nsp-h2">Nisu sve radne čarape <em>napravljene jednako.</em></h2>
@@ -205,8 +207,8 @@ $nsp_reviews = array(
 
 .nsp-sec { padding: clamp(46px, 6vw, 88px) 0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #15140f; overflow-x: hidden; }
 .nsp-sec * { box-sizing: border-box; }
-.nsp-cream { background: #f4f0e7; }
-.nsp-light { background: #f6f4ee; }
+.nsp-cream { background: #f3ece1; }
+.nsp-light { background: #ffffff; }
 .nsp-dark  { background: #0e0e0c; color: #f4f0e7; }
 .nsp-sec--line { border-top: 1px solid #e4decf; }
 .nsp-wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
@@ -251,7 +253,7 @@ $nsp_reviews = array(
 /* 2) mehanizam */
 
 /* 2) temna sekcija: slika ob besedilu (NORIKS standard) */
-.nsp-row2 { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; margin: 0 0 34px; }
+.nsp-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin: 0 0 34px; }
 .nsp-row2__copy { text-align: left; }
 .nsp-row2__copy .nsp-h2 { margin-bottom: 16px; }
 .nsp-row2__copy .nsp-sub { margin: 0; }

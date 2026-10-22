@@ -688,6 +688,10 @@ function gck_render_bundle_selector() {
         text-align: center !important; display: inline-block !important; }
       .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
 
+      /* Kartice ponud: debelejsi robovi (kot na FisioRest). */
+      #bundle-selector .bundle-option { border-width: 2px !important; }
+      #bundle-selector .bundle-option.active { border-width: 3px !important; }
+
       .single_add_to_cart_button {
           font-family: 'Roboto', sans-serif;
           height: 60px;

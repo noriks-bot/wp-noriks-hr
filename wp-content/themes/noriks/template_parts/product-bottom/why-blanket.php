@@ -191,17 +191,20 @@ $nbl_reviews = array(
 
 <!-- 4) DOSTAVA I POVRAT (po NORIKS pogojih) -->
 <section class="nbl-sec">
-  <div class="nbl-wrap nbl-wrap--narrow nbl-copy">
-    <p class="nbl-kicker nbl-kicker--c">Dostava i povrat</p>
-    <h2 class="nbl-h2 nbl-h2--c">Vrijeme da ga isprobate <em>kako treba</em></h2>
+  <div class="nbl-wrap nbl-row2 nbl-row2--rev">
+    <div class="nbl-copy">
+    <p class="nbl-kicker">Dostava i povrat</p>
+    <h2 class="nbl-h2">Vrijeme da ga isprobate <em>kako treba</em></h2>
     <p>Kad smo razvijali NORIKS Blanket, cilj nam nije bio napraviti još jedan proizvod. Htjeli smo napraviti pomagalo koje ljudima zaista pomaže da se osjećaju mirnije, prizemljenije i da bolje upravljaju svojim osjetilnim svijetom.</p>
     <p>No znamo i da je svaki živčani sustav drukčiji. Neki osjete učinak odmah. Drugima treba nekoliko prilagodbi da pronađu svoju senzornu ravnotežu — i to je sasvim normalno.</p>
-    <ul class="nbl-check nbl-check--c">
+    <ul class="nbl-check">
       <li><strong>Besplatna dostava za narudžbe iznad 70 €</strong> — broj za praćenje dobit ćete čim narudžba bude poslana.</li>
       <li><strong>Pravo na povrat u roku od 30 dana</strong> od dana dostave.</li>
       <li><strong>Zamjena veličine</strong> — ne pristaje baš najbolje? Zamjena ovisi o zalihama, a proizvod mora biti nenošen i u originalnom stanju.</li>
     </ul>
-    <p class="nbl-big nbl-big--c">30 dana za povrat — da odlučite odgovara li vam NORIKS Blanket.</p>
+    <p class="nbl-big">30 dana za povrat — da odlučite odgovara li vam NORIKS Blanket.</p>
+    </div>
+    <div class="nbl-media"><?php echo $nbl_img( 'bl-07-citanje.webp', 'Čitanje u NORIKS Blanket vreći' ); ?></div>
   </div>
 </section>
 
