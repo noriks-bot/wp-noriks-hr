@@ -7,9 +7,12 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-$nf = get_template_directory_uri() . '/img/fieldops/';
-function nf_img($f,$a='') { global $nf; return '<img src="'.esc_url($nf.$f).'" alt="'.esc_attr($a).'">'; }
-function nf_has($f) { global $nf; return file_exists( get_template_directory().'/img/fieldops/'.$f ); }
+$nfd      = get_template_directory_uri() . '/img/fieldops/';
+$nfd_path = get_template_directory() . '/img/fieldops/';
+$nfd_img  = function( $file, $alt ) use ( $nfd, $nfd_path ) {
+  if ( ! $file || ! file_exists( $nfd_path . $file ) ) { return ''; }
+  return '<img src="' . esc_url( $nfd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+};
 ?>
 
 <style>
@@ -87,7 +90,7 @@ function nf_has($f) { global $nf; return file_exists( get_template_directory().'
       <p>Tehnologija s dvostrukom zaštitom <strong>blokira opasnu buku odmah u 0,01 sekunde</strong> — brže nego što pucanj može oštetiti vaš sluh.</p>
       <p>Savršene za lov, streljanu i taktički trening.</p>
     </div>
-    <div class="nfd-media"><?php echo nf_img('nfd-01-zastita.webp','NORIKS FieldOps Pro taktične slušalice'); ?></div>
+    <div class="nfd-media"><?php echo $nfd_img('nfd-01-zastita.webp','NORIKS FieldOps Pro taktične slušalice'); ?></div>
   </div>
 </section>
 
@@ -128,7 +131,7 @@ function nf_has($f) { global $nf; return file_exists( get_template_directory().'
       <strong>Smanjenje buke:</strong> aktivno filtriranje vjetra i pozadinskih šumova.</p>
       <p>Jednostavna kontrola — uključite, odaberite način, idite u lov.</p>
     </div>
-    <div class="nfd-media"><?php echo nf_img('nfd-03-nacini.webp','Tri načina rada NORIKS FieldOps'); ?></div>
+    <div class="nfd-media"><?php echo $nfd_img('nfd-03-nacini.webp','Tri načina rada NORIKS FieldOps'); ?></div>
   </div>
 </section>
 
@@ -142,7 +145,7 @@ function nf_has($f) { global $nf; return file_exists( get_template_directory().'
       <p>USB-C brzo punjenje — potpuno napunjene za samo 2 sata. Nikada vam neće ponestati zaštite usred lova.</p>
       <p>Idealno za višednevne lovne izlete, treninге i dugotrajne smjene na streljani.</p>
     </div>
-    <div class="nfd-media"><?php echo nf_img('nfd-04-baterija.webp','40 sati baterije u slučaju'); ?></div>
+    <div class="nfd-media"><?php echo $nfd_img('nfd-04-baterija.webp','40 sati baterije u slučaju'); ?></div>
   </div>
 </section>
 
@@ -156,7 +159,7 @@ function nf_has($f) { global $nf; return file_exists( get_template_directory().'
       <p>Bluetooth povezivost omogućava vam primanje poziva bez skidanja zaštite — ostajete povezani i sigurni.</p>
       <p>Lagane, udobne i gotovo neosjetne tijekom cijelog dana — zaboravite na glomazne slušalice.</p>
     </div>
-    <div class="nfd-media"><?php echo nf_img('nfd-05-vodootporno.webp','IPX5 vodootporna zaštita'); ?></div>
+    <div class="nfd-media"><?php echo $nfd_img('nfd-05-vodootporno.webp','IPX5 vodootporna zaštita'); ?></div>
   </div>
 </section>
 
@@ -229,7 +232,7 @@ function nf_has($f) { global $nf; return file_exists( get_template_directory().'
         <li><strong>U paketu:</strong> <span>slušalice, punjač USB-C, 3 para naušnica (S/M/L), upute</span></li>
       </ul>
     </div>
-    <div class="nfd-media"><?php echo nf_img('nfd-07-spec.webp','Tehnički podaci NORIKS FieldOps'); ?></div>
+    <div class="nfd-media"><?php echo $nfd_img('nfd-07-spec.webp','Tehnički podaci NORIKS FieldOps'); ?></div>
   </div>
 </section>
 
