@@ -29,6 +29,27 @@ if ( ! $short_description ) {
 
 ?>
 
+<?php /* Kljukice v kratkem opisu veljajo za VSE izdelke (Dejan, 23. 10.): brez tega
+         se je ob zeleni kljukici izrisala se privzeta pika seznama. */ ?>
+<style id="nsp-tick-global">
+  .woocommerce div.product .woocommerce-product-details__short-description ul,
+  .woocommerce-product-details__short-description ul {
+    list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
+  .woocommerce div.product .woocommerce-product-details__short-description ul li,
+  .woocommerce-product-details__short-description ul li {
+    list-style: none !important; text-indent: 0 !important; margin: 0 0 7px !important;
+    line-height: 1.45 !important; font-size: 15.5px !important; color: #1b1533;
+    display: block !important; position: relative !important; padding-left: 31px !important; }
+  .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
+  .woocommerce-product-details__short-description ul li::before { content: none !important; }
+  .woocommerce-product-details__short-description .nsp-tick {
+    position: absolute !important; left: 0 !important; top: 1px !important;
+    width: 21px; height: 21px; border-radius: 50%;
+    background: #2f9e5f !important; color: #fff !important;
+    font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
+    text-align: center !important; display: inline-block !important; }
+</style>
+
 <?php // Polar NORIKS Cloth: zelena traka povjerenja ispod naslova, iznad kratkog opisa.
 if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) : ?>
 <div class="ncl-trust">
