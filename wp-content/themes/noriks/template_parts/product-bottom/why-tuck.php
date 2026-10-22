@@ -466,7 +466,7 @@ $ntk_ugc = array(
 .ntk-quote cite { display: block; font-style: normal; font-size: 12.5px; color: #8a7a6e; margin-top: 4px; }
 
 /* 1) problem */
-.ntk-pr { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 760px; margin: 0 auto 22px; }
+.ntk-pr { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 0 0 22px; }
 .ntk-pr__card { background: #fff; border: 1px solid #ece3da; padding: 22px 20px; }
 .ntk-pr__card svg { width: 48px; height: 48px; display: block; margin-bottom: 10px; }
 .ntk-pr__card h3 { font-size: 17.5px; font-weight: 800; margin: 0 0 6px; color: #231d19; text-transform: none; letter-spacing: 0; }

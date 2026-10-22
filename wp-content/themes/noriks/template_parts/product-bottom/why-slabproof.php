@@ -221,7 +221,7 @@ $nsp_reviews = array(
 .nsp-light { background: #ffffff; }
 .nsp-dark  { background: #0e0e0c; color: #f4f0e7; }
 .nsp-sec--line { border-top: 1px solid #e4decf; }
-.nsp-wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.nsp-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .nsp-narrow { max-width: 960px; }
 .nsp-head { max-width: 780px; margin: 0 auto 30px; text-align: center; }
 .nsp-h2 { font-family: 'Oswald', 'Inter', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .01em;
@@ -272,7 +272,7 @@ $nsp_reviews = array(
   .nsp-row2 { grid-template-columns: 1fr; gap: 24px; }
   .nsp-row2__copy { text-align: center; }
 }
-.nsp-viz { position: relative; max-width: 560px; margin: 0 auto 34px; border-radius: 12px; overflow: hidden; }
+.nsp-viz { position: relative; margin: 0 0 34px; border-radius: 12px; overflow: hidden; }
 .nsp-cl { position: absolute; z-index: 3; width: 0; height: 0; pointer-events: none; }
 .nsp-cl i, .nsp-cl b { position: absolute; display: block; }
 .nsp-cl .dot { left: -6px; top: -6px; width: 12px; height: 12px; border-radius: 50%; background: #d2632e; box-shadow: 0 0 0 4px rgba(226,82,29,.28), 0 1px 4px rgba(0,0,0,.5); }

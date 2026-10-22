@@ -138,7 +138,7 @@ $nwc_testimonials = array(
 
 <style>
 /* videi kupcev: sirsi okvir in lastni gumb za predvajanje na sredini */
-.nwc-vids { max-width: 1100px; margin: 0 auto; gap: 22px; }
+.nwc-vids { margin: 0; gap: 22px; }
 .nwc-vid { position: relative; }
 .nwc-vid > video { width: 100%; display: block; }
 .nwc-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
@@ -183,7 +183,7 @@ $nwc_testimonials = array(
 .nwc-sub { text-align: center; font-size: 16px; line-height: 1.6; color: #6b5a5d; max-width: 760px; margin: 0 auto 28px; }
 
 /* 1) videi kupaca */
-.nwc-vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1100px; margin: 0 auto; }
+.nwc-vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 0; }
 .nwc-vid { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #f1ecea; }
 .nwc-vid video { display: block; width: 100%; height: 100%; object-fit: cover; }
 

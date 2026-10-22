@@ -260,7 +260,7 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
 .nss-qcard__ver { color: #17845f; font-size: 13px; font-weight: 600; }
 
 /* 5) Recenzije kupaca */
-.nss-rv-sec .nss-wrap { max-width: 1080px; }
+
 .nss-rv-sec .nss-h2--c { margin-bottom: 8px; }
 .nss-rv-sum { text-align: center; margin: 0 0 30px; color: var(--nss-text); font-size: 15px; }
 .nss-rv-sum__stars { color: #e5a900; letter-spacing: .06em; margin-right: 6px; }

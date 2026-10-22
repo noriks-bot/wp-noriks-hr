@@ -323,7 +323,7 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
 .ndg-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .ndg-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .ndg-media img { width: 100%; box-shadow: 0 2px 4px rgba(20,40,55,.05), 0 14px 40px rgba(20,40,55,.10); }
-.ndg-media .ndg-vid { max-width: 520px; margin: 0 auto; }
+.ndg-media .ndg-vid { margin: 0; }
 .ndg-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--ndg-acc); margin: 0 0 10px; }
 .ndg-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: var(--ndg-ink); }
 .ndg-h2--c { text-align: center; }
