@@ -458,6 +458,10 @@ if ( noriks_is_type( 'calendar' ) ) {
 if ( noriks_is_type( 'viinia' ) ) {
     include $noriks_pb_dir . 'why-viinia.php';
 }
+// NORIKS Birdie (orto-birdie) - osobni sigurnosni alarm s 130 dB sirenom i stroboskopom
+if ( noriks_is_type( 'birdie' ) ) {
+    include $noriks_pb_dir . 'why-birdie.php';
+}
 
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
