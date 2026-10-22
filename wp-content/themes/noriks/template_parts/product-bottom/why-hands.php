@@ -6,7 +6,7 @@
  *   1) Kako radi (CMC zglob)          5) Pravi kupci (7 recenzija)
  *   2) Pronadite svoju velicinu       6) Vole ih 20.000+ kupaca (foto mreza)
  *   3) Sto mozete ocekivati           7) Usporedba: nas vs drugi stezníci
- *   4) Materijali i odrzavanje        8) Isprobajte bez rizika (60 dana)
+ *   4) Materijali i odrzavanje        8) Isprobajte bez rizika (30 dana — NORIKS pogoji)
  * Slike: img/hands/ (Dropbox NORIKS-HANDS/KREATIVA + originalna stran).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -198,17 +198,17 @@ $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
     <div class="nhd-copy">
       <p class="nhd-kicker">Bez rizika</p>
       <h2 class="nhd-h2">Isprobajte ih <em>bez rizika</em></h2>
-      <p>60 dana. Ako ih želite vratiti, vraćamo cijeli iznos. Bez pitanja.</p>
+      <p>30 dana. Ako ih želite vratiti, vraćamo cijeli iznos. Bez pitanja.</p>
       <ul class="nhd-check">
         <li><strong>Par u svakom pakiranju</strong> — lijevi i desni</li>
         <li><strong>Zamjena veličine</strong> je besplatna</li>
-        <li><strong>60 dana</strong> za povrat novca</li>
+        <li><strong>30 dana</strong> za povrat novca</li>
         <li><strong>Četiri boje</strong> — bež, ljubičasta, crna i siva</li>
       </ul>
       <a class="nhd-cta" href="#bundle-selector">Naruči NORIKS Hands</a>
       <p class="nhd-note">Brza dostava na kućnu adresu · Plaćanje pouzećem pri preuzimanju</p>
     </div>
-    <div class="nhd-media"><?php echo $nhd_img( 'hn-06-rukavica.webp', 'NORIKS Hands — olakšanje bez ukočenosti, 60 dana jamstva' ); ?></div>
+    <div class="nhd-media"><?php echo $nhd_img( 'hn-06-rukavica.webp', 'NORIKS Hands — olakšanje bez ukočenosti, 30 dana za povrat' ); ?></div>
   </div>
 </section>
 
