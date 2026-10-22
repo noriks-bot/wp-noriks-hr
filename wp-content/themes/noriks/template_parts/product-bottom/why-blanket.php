@@ -147,9 +147,10 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 2) DETALJI PROIZVODA + KAKO RADI (zavihka iz nakupne skatle originala) -->
+<!-- 2) KAKO RADI — slika lijevo -->
 <section class="nbl-sec">
-  <div class="nbl-wrap nbl-row2 nbl-row2--top">
+  <div class="nbl-wrap nbl-row2">
+    <div class="nbl-media"><?php echo $nbl_img( 'bl-04-dijelovi-hr.webp', 'Dijelovi NORIKS Blanket vreće — kapuljača, otvoreno dno i otvori za ruke' ); ?></div>
     <div class="nbl-copy">
       <p class="nbl-kicker">Kako radi</p>
       <h2 class="nbl-h2">Jednostavno se <em>uvučete</em></h2>
@@ -158,20 +159,38 @@ $nbl_reviews = array(
       </ul>
       <p class="nbl-big">Nježna kompresija sa svih strana. Nije utežni pokrivač — lagana je i lako se u njoj krećete.</p>
     </div>
-    <div class="nbl-copy nbl-card">
-      <p class="nbl-kicker">Detalji proizvoda</p>
-      <p><strong>Materijali</strong><br>95 % poliester, 5 % elastan. Mekano, prozračno i rastezljivo.</p>
-      <p><strong>Pranje</strong><br>Strojno pranje na hladnom, nježni program. Sušenje na zraku. Kompresija se zadržava i nakon pranja.</p>
-      <p><strong>Veličine i dimenzije</strong><br>Nenošena, položena ravno:</p>
-      <ul class="nbl-sizes"><?php echo wp_kses_post( $nbl_sizes_txt ); ?></ul>
-      <p>Veličinu birajte prema kompresiji, a ne prema duljini. Za čvršći zagrljaj uzmite jednu veličinu manje. Prije narudžbe pogledajte tablicu veličina iznad ponuda.</p>
-      <p><strong>Dostupne boje</strong><br>Plava, siva, ružičasta, ljubičasta</p>
+  </div>
+</section>
+
+<!-- 3) DETALJI PROIZVODA — specifikacije v treh stolpcih -->
+<section class="nbl-sec nbl-tint">
+  <div class="nbl-wrap">
+    <p class="nbl-kicker nbl-kicker--c">Detalji proizvoda</p>
+    <h2 class="nbl-h2 nbl-h2--c">Sve što trebate <em>znati prije narudžbe</em></h2>
+    <div class="nbl-specs">
+      <div class="nbl-spec">
+        <h3>Materijali</h3>
+        <p>95 % poliester, 5 % elastan. Mekano, prozračno i rastezljivo.</p>
+        <h3>Pranje</h3>
+        <p>Strojno pranje na hladnom, nježni program. Sušenje na zraku. Kompresija se zadržava i nakon pranja.</p>
+      </div>
+      <div class="nbl-spec">
+        <h3>Veličine i dimenzije</h3>
+        <p class="nbl-spec__note">Nenošena, položena ravno:</p>
+        <ul class="nbl-sizes"><?php echo wp_kses_post( $nbl_sizes_txt ); ?></ul>
+      </div>
+      <div class="nbl-spec">
+        <h3>Odabir veličine</h3>
+        <p>Veličinu birajte prema kompresiji, a ne prema duljini. Za čvršći zagrljaj uzmite jednu veličinu manje.</p>
+        <h3>Dostupne boje</h3>
+        <p>Plava, siva, ružičasta, ljubičasta.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 3) DOSTAVA I POVRAT (po NORIKS pogojih) -->
-<section class="nbl-sec nbl-tint">
+<!-- 4) DOSTAVA I POVRAT (po NORIKS pogojih) -->
+<section class="nbl-sec">
   <div class="nbl-wrap nbl-wrap--narrow nbl-copy">
     <p class="nbl-kicker nbl-kicker--c">Dostava i povrat</p>
     <h2 class="nbl-h2 nbl-h2--c">Vrijeme da ga isprobate <em>kako treba</em></h2>
@@ -186,8 +205,8 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 4) ZAŠTO JE NORIKS NAJBOLJI IZBOR? — slika lijevo -->
-<section class="nbl-sec">
+<!-- 5) ZAŠTO JE NORIKS NAJBOLJI IZBOR? — slika lijevo -->
+<section class="nbl-sec nbl-tint">
   <div class="nbl-wrap nbl-row2">
     <div class="nbl-media"><?php echo $nbl_img( 'bl-cmp-banner.webp', 'Djevojčica u ružičastoj NORIKS Blanket vreći' ); ?></div>
     <div class="nbl-copy">
@@ -212,7 +231,7 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 5) KORISTITE GA ZA... — tri vrstice, strani se izmenjujejo (desno, levo, desno) -->
+<!-- 6) KORISTITE GA ZA... — tri vrstice, strani se izmenjujejo (desno, levo, desno) -->
 <?php foreach ( $nbl_uses as $i => $u ) : $nbl_rev = ( 0 === $i % 2 ); ?>
 <section class="nbl-sec<?php echo $nbl_rev ? ' nbl-tint' : ''; ?>">
   <div class="nbl-wrap nbl-row2<?php echo $nbl_rev ? ' nbl-row2--rev' : ''; ?>">
@@ -228,7 +247,7 @@ $nbl_reviews = array(
 </section>
 <?php endforeach; ?>
 
-<!-- 6) ZNANOST IZA NORIKS-A — slika lijevo -->
+<!-- 7) ZNANOST IZA NORIKS-A — slika lijevo -->
 <section class="nbl-sec">
   <div class="nbl-wrap nbl-row2">
     <div class="nbl-media"><?php echo $nbl_img( 'bl-04-dijelovi-hr.webp', 'Dijelovi NORIKS Blanket vreće: fleksibilna kapuljača, ultramekana tkanina, pokrov za stopala po želji' ); ?></div>
@@ -242,7 +261,7 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 7) PREDNOSTI TERAPIJE DUBOKIM PRITISKOM (DTP) -->
+<!-- 8) PREDNOSTI TERAPIJE DUBOKIM PRITISKOM (DTP) -->
 <section class="nbl-sec nbl-tint">
   <div class="nbl-wrap">
     <p class="nbl-kicker nbl-kicker--c">Terapija dubokim pritiskom</p>
@@ -259,7 +278,7 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 8) RECENZIJE KUPACA -->
+<!-- 9) RECENZIJE KUPACA -->
 <section class="nbl-sec">
   <div class="nbl-wrap">
     <h2 class="nbl-h2 nbl-h2--c">Recenzije <em>kupaca</em></h2>
@@ -278,6 +297,18 @@ $nbl_reviews = array(
 </section>
 
 <style>
+/* 3) specifikacije v treh stolpcih */
+.nbl-specs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
+.nbl-spec { background: #fff; border: 1px solid #ece6f3; border-radius: 12px; padding: 24px 24px 20px; }
+.nbl-spec h3 { font-size: 15px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #7b4fb3; margin: 0 0 8px; }
+.nbl-spec h3 + p, .nbl-spec h3 + ul, .nbl-spec h3 + .nbl-spec__note { margin-top: 0; }
+.nbl-spec p { font-size: 15.5px; line-height: 1.65; color: #4a4450; margin: 0 0 18px; }
+.nbl-spec p:last-child { margin-bottom: 0; }
+.nbl-spec__note { margin-bottom: 8px !important; }
+.nbl-spec .nbl-sizes { margin: 0; padding-left: 18px; }
+.nbl-spec .nbl-sizes li { font-size: 14.5px; line-height: 1.6; margin: 0 0 10px; color: #4a4450; }
+@media (max-width: 989px) { .nbl-specs { grid-template-columns: 1fr; gap: 16px; } }
+
 .nbl-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #231d29; }
 .nbl-sec * { box-sizing: border-box; }
 .nbl-tint { background: #f6f2fa; }
