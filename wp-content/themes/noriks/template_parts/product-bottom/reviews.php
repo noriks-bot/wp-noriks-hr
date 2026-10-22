@@ -361,6 +361,10 @@
 
            Niste jedini čije vino na stolu brzo postane prevrelo.
 
+          <?php elseif ( noriks_is_type( 'fieldops' ) ): ?>
+
+           Niste jedini koji traže savršenu zaštitu sluha za lov.
+
 
 
 
@@ -691,6 +695,10 @@
 
             Tisuće roditelja već koristi NORIKS flomastere – akrilni pigment ne procura, double mine i palete do 168 boja za kreativnost bez granica.
 
+           <?php elseif ( noriks_is_type( 'fieldops' ) ): ?>
+
+            Tisuće lovaca i strelaca već koristi NORIKS FieldOps Pro – zaštita sluha 27-31 dB, amplifikacija 4× i baterija 40 sati za sigurnost na lovu.
+
 
            <?php else: ?>
         
@@ -832,6 +840,7 @@
   $is_smartjacket_page = noriks_is_type( 'smartjacket', $current_product_id );
   $is_utilitypants_page = noriks_is_type( 'utilitypants', $current_product_id );
   $is_hoodie_page = noriks_is_type( 'hoodie', $current_product_id );
+  $is_fieldops_page = noriks_is_type( 'fieldops', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
   $is_dishsheets_page = noriks_is_type( 'dishsheets', $current_product_id );
   $is_litterbox_page = noriks_is_type( 'litterbox', $current_product_id );
@@ -1087,6 +1096,8 @@
     include get_stylesheet_directory() . '/auto_reviews/HR_bokserice.php';
   } elseif ( $is_flomasteri_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_flomasteri.php';
+  } elseif ( $is_fieldops_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
   } else {
     include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
