@@ -6,6 +6,8 @@
  *   1) Recenzije (zid kartic s fotografijami)   4) Ne spustaju se, ne stezu
  *   2) Jastucic tamo gdje beton udara (tamna)   5) Usporedba radnih carapa
  *   3) Nikad nisu bile cizme                    6) Tko stoji iza ovih carapa (tamna, brez imena)
+ * Izpusceno: originalova sekcija "Pick the height for your boots" (Knee High / Crew / Low Cut sta
+ * loceni izdelek — mi prodajamo samo srednjo visino) in tuje jamstvo 1.000 smjen (NORIKS pogoji: 30 dana).
  * FAQ originala je v reviews.php ($slabproof_faq), mnenja v auto_reviews/HR_slabproof.php.
  * Slike: img/slabproof/ (original, logotip Timberland na sp-rv-foto-1 retusiran).
  */
