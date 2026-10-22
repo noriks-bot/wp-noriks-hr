@@ -354,6 +354,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS SilkBoxers (orto-silkboxers) — svilene bokserice za cjelodnevnu udobnost
+if ( noriks_is_type( 'silkboxers' ) ) {
+    include $noriks_pb_dir . 'why-silkboxers.php';
+}
+
 // NORIKS ModalSweatshirt (orto-modalsweatshirt) — dukserica od modala s okruglim izrezom
 if ( noriks_is_type( 'modalsweatshirt' ) ) {
     include $noriks_pb_dir . 'why-modalsweatshirt.php';

@@ -160,6 +160,8 @@ function noriks_product_type_map() : array {
         'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
+        // NORIKS SilkBoxers — svilene bokserice za cjelodnevnu udobnost (samo velicina M–3XL, tamnoplava).
+        'silkboxers'              => array( 'orto-silkboxers', 'silkboxers' ),
         // NORIKS ModalSweatshirt — dukserica od modala s okruglim izrezom (boja + velicina S–3XL).
         'modalsweatshirt'         => array( 'orto-modalsweatshirt', 'modalsweatshirt' ),
         // NORIKS MaternityLeggings — tajice za trudnice (boja + velicina S–XXL).
@@ -659,6 +661,20 @@ if ( ! function_exists( 'noriks_maternityleggings_sizes' ) ) {
             array( 'L',   '40 – 42', '83 – 108 cm', '102 cm' ),
             array( 'XL',  '44 – 46', '88 – 113 cm', '104 cm' ),
             array( 'XXL', '48 – 50', '94 – 119 cm', '105 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_silkboxers_sizes' ) ) {
+    /** NORIKS SilkBoxers: velicina, opseg struka (cm), opseg struka (inci).
+     *  1:1 s slike »Your size, your fit« originala (aresunderwear.com, inci) — pretvorjeno v cm. */
+    function noriks_silkboxers_sizes() {
+        return array(
+            array( 'M',   '76–81 cm',   '30–32' ),
+            array( 'L',   '84–89 cm',   '33–35' ),
+            array( 'XL',  '91–97 cm',   '36–38' ),
+            array( '2XL', '99–104 cm',  '39–41' ),
+            array( '3XL', '107–112 cm', '42–44' ),
         );
     }
 }

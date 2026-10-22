@@ -631,6 +631,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS MaternityLeggings</strong> — vaše se tijelo mijenja. Naše tajice rastu s njim.<br><br>Ove tajice za trudnice prilagođavaju se vama – a ne obrnuto. <strong>Podupiru trbuh, rasterećuju leđa</strong> i daju vam osjećaj sigurne potpore, bez stezanja.<br><br>Mekan, prozračan materijal pruža ugodan osjećaj pri nošenju, a u hladnijem dijelu godine ugodno vas grije.<br><br>I jer vaše tijelo čini nešto veliko, zaslužuje odjeću koja ga u tome podupire.<br><br><strong>Rasterećuju trbuh i leđa:</strong> posebna mrežasta tkanina nježno podupire trbuščić i tako rasterećuje donji dio leđa.<br><strong>100 % neprozirne:</strong> zahvaljujući kvalitetnim vlaknima tkanina ostaje potpuno neprozirna i pri intenzivnom kretanju – o tome ne morate brinuti.<br><strong>Ne spuštaju se:</strong> ekstra visok, mekan pojas priljubljuje se uz trbuh bez pritiska – i bez stalnog spuštanja. Na poslu, u šetnji ili na kauču: tajice uvijek stoje točno ondje gdje trebaju.<br><strong>Rastu s vašim trbuhom:</strong> mekan pojas prilagođava se trbuščiću – bilo da ste u 10. ili 35. tjednu trudnoće. Bez pritiska, bez spuštanja, jednostavno udobno od početka do kraja.<br><strong>Oblikuju noge i stražnjicu:</strong> oblikuju bez stezanja – za stražnjicu i noge koje ćete rado pokazati.<br><br><strong>Materijal:</strong> 94 % poliamid, 6 % elastan. Ovaj sastav odabran je namjerno – za ugodnu kompresiju nogu i potporu trbuhu i donjem dijelu leđa. Materijal istodobno pruža ugodnu toplinu, a da se ne oznojite. Rezultat: <strong>100 % neprozirne, elastične, tople, prozračne</strong> – i jednostavno super udobne.<br><br><strong>Zašto su NORIKS tajice za trudnice najbolji izbor</strong><br><strong>Visok, elastičan pojas</strong> – nježno podupire trbuh, bez stezanja<br><strong>Dizajn koji čuva leđa</strong> – podupire i rasterećuje donji dio leđa<br><strong>Udobne za svaku priliku</strong> – savršene za svakodnevicu, slobodno vrijeme ili laganu tjelovježbu<br><strong>Prozračne i mekane</strong> – sprječavaju znojenje i ostaju ugodno prozračne<br><strong>Jednostavno održavanje i dugotrajnost</strong> – zadržavaju oblik i nakon mnogo pranja<br><strong>Jednostavan dizajn</strong> – lako se kombiniraju s majicom, haljinom ili puloverom<br><br>Tajice sjede visoko preko trbuha, pružaju nježnu potporu i istodobno rasterećuju donji dio leđa. Bez spuštanja, bez štipanja, bez stezanja – umjesto toga osjećate se slobodno i poduprto pri svakom pokretu. Mnoge žene potvrđuju: „Napokon tajice koje podupiru trbuh i osjetno rasterećuju leđa.”<br><br><strong>Zaključak – vaše nove omiljene tajice:</strong> NORIKS tajice za trudnice spajaju udobnost, potporu trbuhu i rasterećenje leđa. Za trudnoću, babinje ili jednostavno kao udobne tajice za svaki dan – uz njih ste cijeli dan opušteni.<br><br><strong>Boje:</strong> crna, tamnosiva i svijetlosmeđa.<br><strong>Veličine:</strong> S (36) – XXL (48–50). Odaberite svoju uobičajenu veličinu prije trudnoće (pogledajte tablicu veličina).
 
+         <?php elseif( noriks_is_type( 'silkboxers', $current_product_id ) ): ?>
+
+                <strong>NORIKS SilkBoxers</strong> — svakodnevni luksuz: <strong>gladak osjećaj svile</strong> uz izdržljivost i potporu potrebne za svakodnevno nošenje. Izrađene od kvalitetne <strong>mješavine svile, najlona, viskoze i elastana</strong>, pružaju iznimnu udobnost, prozračnost i dugotrajnu izdržljivost.<br><br><strong>Ključne značajke:</strong><br><strong>Vrhunska tkanina od svilene mješavine</strong> – iznimno glatka, prozračna i nježna prema osjetljivoj koži<br><strong>Udobnost koja regulira temperaturu</strong> – pomaže da ostanete svježi i suhi cijeli dan<br><strong>Anatomski oblikovan prednji dio</strong> – za prirodan položaj i potporu<br><strong>Konstrukcija protiv trljanja</strong> – manje trenja za udobnost cijeli dan, i pri dugom nošenju<br><strong>Pojas koji se ne uvija</strong> – ostaje ravan i siguran ispod svake odjeće<br><strong>Svakodnevna izdržljivost</strong> – zadržavaju oblik, mekoću i kroj<br><strong>Jednostavno održavanje</strong> – pranje u perilici na nježnom programu (preporučujemo mrežastu vrećicu za rublje)<br><br><strong>Materijal:</strong> vrhunska svilena mješavina, svila gustoće 23 momme, u kombinaciji s viskozom, najlonom i malo elastana za kroj, rastezljivost i strukturu. Prirodno prozračna, regulira temperaturu i sprječava neugodne mirise.<br><br><strong>Kroj:</strong> krojene za muško tijelo – za udobnost cijeli dan.<br>→ Pojas bez šavova: bez pritiska, bez tragova, bez umora.<br>→ Suženi dio za bedra: bez trenja i bez žuljanja pri svakom koraku.<br>→ Anatomski oblikovan prednji dio: ističe i podupire bez stezanja.<br>→ Oblikovan stražnji dio: drži oblik, a ne sputava.<br>→ Antibakterijska unutarnja podstava: mekana na dodir, za kožu kojoj treba najviše pažnje.<br><br>Savršene za poslovne ljude, česte putnike, aktivan način života i muškarce koji traže vrhunsku udobnost bez kompromisa.<br><br><strong>Boja:</strong> tamnoplava.<br><strong>Veličine:</strong> M–3XL (pogledajte tablicu veličina).<br><strong>Proizvedeno:</strong> u Kini, u tvornici vrhunske kvalitete, iz etičnih izvora.
+
          <?php elseif( noriks_is_type( 'modalsweatshirt', $current_product_id ) ): ?>
 
                 <strong>NORIKS ModalSweatshirt</strong> dizajnirana je za uzdignutu svakodnevnu udobnost: spaja mekan, gladak osjećaj s urednim, profinjenim izgledom. Izrađena je od visokotehnološke tkanine s <strong>LENZING™ modalom</strong> koja sadrži prirodna celulozna vlakna, pa je ugodna na koži i pomaže regulirati tjelesnu temperaturu u promjenjivim uvjetima.<br><br>Klasični <strong>okrugli izrez</strong> daje bezvremenski, svestran izgled, a <strong>rastezljivost u 4 smjera</strong> omogućuje prirodne pokrete bez osjećaja sputanosti. Glatka, strukturirana silueta spaja svakodnevnu udobnost s dotjeranim izgledom, pa se lako kombinira s ležernim hlačama, trapericama ili krojenim hlačama.<br><br>Stvorena za dugotrajnu udobnost i svestranost: tkanina je <strong>otporna na pilanje</strong> i zadržava glatki izgled i nakon mnogo nošenja. Diskretan sjaj daje profinjen dodir, pa je ova dukserica praktičan izbor za posao, putovanja, vikende i opušteno svakodnevno nošenje.<br><br><strong>Značajke:</strong><br><strong>Tkanina s modalom:</strong> mekan, gladak osjećaj na koži<br><strong>Prirodna celulozna vlakna:</strong> pomažu regulirati tjelesnu temperaturu za svakodnevnu udobnost<br><strong>Rastezljivost u 4 smjera:</strong> fleksibilni pokreti bez ograničenja<br><strong>Klasični okrugli izrez:</strong> uredna, bezvremenska silueta<br><strong>Tkanina otporna na pilanje:</strong> zadržava glatki izgled i nakon mnogo nošenja<br><strong>Diskretan sjaj tkanine:</strong> profinjena, dotjerana završna obrada<br><strong>Strukturirana silueta:</strong> spaja svakodnevnu udobnost s urednim izgledom<br><strong>Svestran svakodnevni stil:</strong> lako se kombinira s trapericama, ležernim ili krojenim hlačama<br><br><strong>Kroj:</strong> udoban regularni kroj s prirodnim prostorom u prsima, ramenima i rukama. Omogućuje slobodne pokrete, a zadržava urednu, strukturiranu siluetu za svakodnevno nošenje.<br><br><strong>Sastav:</strong> 42 % LENZING™ modal, 49 % poliester, 9 % elastan<br><strong>Boje:</strong> sivoplava, bijela, crna i tamnoplava.<br><strong>Veličine:</strong> S–3XL (pogledajte tablicu veličina).
@@ -1429,6 +1433,36 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Primjer: Marta je visoka 170 cm i nosi veličinu M. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'silkboxers', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>M do 3XL</strong> prema <strong>opsegu struka</strong>. Bokserice su krojene za muško tijelo i priljubljuju se bez pritiska.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka (cm)</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka (inči)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_silkboxers_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f1f5fa' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:12px 0 0;line-height:1.6;"><strong>Između dvije veličine?</strong> Odaberite veću za udobnost.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'modalsweatshirt', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2179,6 +2213,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
 
                 Perite na <strong>najviše 30 °C</strong>. Ne koristite <strong>omekšivač ni izbjeljivač</strong>. Perite odvojeno po bojama. <strong>Ne sušite u sušilici</strong> — tajice osušite na zraku, tako će dugo zadržati oblik i elastičnost.
+
+             <?php elseif( noriks_is_type( 'silkboxers', $current_product_id ) ): ?>
+
+                Za razliku od čiste svile, ova svilena mješavina <strong>može se prati u perilici</strong>. Perite na hladno (<strong>najviše 30 °C</strong>) na nježnom programu, idealno u mrežastoj vrećici za rublje. Sušite ih položene na ravnoj podlozi – <strong>bez sušilice, izbjeljivača, glačanja i omekšivača</strong>.<br><br>Uz pravilnu njegu bokserice zadržavaju svilenkast osjećaj i nakon više od 100 pranja.
 
              <?php elseif( noriks_is_type( 'modalsweatshirt', $current_product_id ) ): ?>
 
