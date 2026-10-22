@@ -6,6 +6,7 @@
  *   1) Recenzije (zid kartic s fotografijami)   4) Ne spustaju se, ne stezu
  *   2) Jastucic tamo gdje beton udara (tamna)   5) Usporedba radnih carapa
  *   3) Nikad nisu bile cizme                    6) Tko stoji iza ovih carapa (tamna, brez imena)
+ * Odstranjeni CTA bloki (naslov + gumb Naruci sada + vrstica jamstev) — na Dejanovo zeljo 22.10.
  * Izpusceno: originalova sekcija "Pick the height for your boots" (Knee High / Crew / Low Cut sta
  * loceni izdelek — mi prodajamo samo srednjo visino) in tuje jamstvo 1.000 smjen (NORIKS pogoji: 30 dana).
  * FAQ originala je v reviews.php ($slabproof_faq), mnenja v auto_reviews/HR_slabproof.php.
@@ -78,36 +79,28 @@ $nsp_reviews = array(
       <?php endforeach; ?>
     </div>
     <p class="nsp-more"><a class="nsp-btn nsp-btn--ghost" href="#reviews-section">Pročitaj više recenzija</a></p>
-    <div class="nsp-cta">
-      <p class="nsp-cta__line">Tko se prebaci, ne vraća se natrag.</p>
-      <a class="nsp-btn" href="#bundle-selector">Naruči sada</a>
-      <p class="nsp-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span></p>
-    </div>
   </div>
 </section>
 
 <!-- 2) JASTUČIĆ TAMO GDJE BETON UDARA -->
 <section class="nsp-sec nsp-dark">
   <div class="nsp-wrap">
-    <div class="nsp-head">
-      <h2 class="nsp-h2">Jastučić smo stavili tamo <em>gdje beton najjače udara.</em></h2>
-      <p class="nsp-sub">Nismo izmislili jastučenje. Napravili smo prvo koje je namijenjeno podu na kojem stojite cijeli dan: gusto ondje gdje udaraju peta i prednji dio stopala, tanko svugdje drugdje, pa vam čizma nikad ne postane pretijesna.</p>
-    </div>
+    <div class="nsp-row2">
+      <div class="nsp-row2__copy">
+        <h2 class="nsp-h2">Jastučić smo stavili tamo <em>gdje beton najjače udara.</em></h2>
+        <p class="nsp-sub">Nismo izmislili jastučenje. Napravili smo prvo koje je namijenjeno podu na kojem stojite cijeli dan: gusto ondje gdje udaraju peta i prednji dio stopala, tanko svugdje drugdje, pa vam čizma nikad ne postane pretijesna.</p>
+      </div>
     <div class="nsp-viz">
       <?php echo $nsp_img( 'sp-04-zone-jastucenja.webp', 'NORIKS SlabProof — zone jastučenja, prozračna mrežica i ojačana peta i prsti' ); ?>
       <span class="nsp-cl nsp-cl--right" style="left:71%;top:65%"><i class="dot"></i><i class="line"></i><b class="lbl">Zonsko jastučenje</b></span>
       <span class="nsp-cl nsp-cl--left" style="left:46%;top:60%"><i class="dot"></i><i class="line"></i><b class="lbl">Prozračna mrežica</b></span>
       <span class="nsp-cl nsp-cl--down" style="left:24%;top:80%"><i class="dot"></i><i class="line"></i><b class="lbl">Ojačana peta i prsti</b></span>
     </div>
+    </div>
     <div class="nsp-cards">
       <div class="nsp-card"><h3>Zonsko jastučenje</h3><p>Gusti jastučići ispod pete i prednjeg dijela stopala, točno ondje gdje beton udara. Svugdje drugdje tanko, pa ublažava udarce, a ne puni čizmu.</p></div>
       <div class="nsp-card"><h3>Ojačana peta i prsti</h3><p>Dvostruko pleteni najlon na dva mjesta gdje čarape prve popuste. Rupe su razlog broj 1 zašto čarapa završi u smeću, zato smo pletivo udvostručili točno ondje gdje nastaju.</p></div>
       <div class="nsp-card"><h3>Prozračne i suhe</h3><p>Mrežasti dijelovi odvode znoj, pa su stopala suha od prvog do dvanaestog sata. Mješavina bez vune, dakle ništa ne grebe i nema sparine u srpnju.</p></div>
-    </div>
-    <div class="nsp-cta">
-      <p class="nsp-cta__line">Vašim stopalima zarađujete za život.</p>
-      <a class="nsp-btn" href="#bundle-selector">Naruči sada</a>
-      <p class="nsp-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span></p>
     </div>
   </div>
 </section>
@@ -242,6 +235,17 @@ $nsp_reviews = array(
 .nsp-more { text-align: center; margin: 10px 0 0; }
 
 /* 2) mehanizam */
+
+/* 2) temna sekcija: slika ob besedilu (NORIKS standard) */
+.nsp-row2 { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; margin: 0 0 34px; }
+.nsp-row2__copy { text-align: left; }
+.nsp-row2__copy .nsp-h2 { margin-bottom: 16px; }
+.nsp-row2__copy .nsp-sub { margin: 0; }
+.nsp-row2 .nsp-viz { margin: 0; max-width: none; }
+@media (max-width: 899px) {
+  .nsp-row2 { grid-template-columns: 1fr; gap: 24px; }
+  .nsp-row2__copy { text-align: center; }
+}
 .nsp-viz { position: relative; max-width: 560px; margin: 0 auto 34px; border-radius: 12px; overflow: hidden; }
 .nsp-cl { position: absolute; z-index: 3; width: 0; height: 0; pointer-events: none; }
 .nsp-cl i, .nsp-cl b { position: absolute; display: block; }

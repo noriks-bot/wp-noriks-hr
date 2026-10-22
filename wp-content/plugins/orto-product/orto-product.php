@@ -3486,7 +3486,7 @@ function gck_render_bundle_selector() {
         /* fiksne sirine — izbornik boje se NE rasteze preko cijele kartice.
            Na uskim zaslonima red se prelomi (flex-wrap), pa nista ne ispada. */
         css(wrap, {'position':'relative','display':'inline-block','flex':'0 0 auto',
-                   'width':opts.width,'max-width':'100%','vertical-align':'middle'});
+                   'width':opts.width,'min-width':(opts.minWidth || '0'),'max-width':'100%','vertical-align':'middle'});
 
         var btn = document.createElement('button');
         btn.type = 'button'; btn.className = 'gck-dd-btn';
@@ -3495,7 +3495,7 @@ function gck_render_bundle_selector() {
         css(btn, {'display':'flex','align-items':'center','gap':'8px','width':'100%','box-sizing':'border-box',
                   'border':'1px solid ' + BORDER,'border-radius':'4px','background':'#fff','cursor':'pointer',
                   'padding':'4px 26px 4px 10px','font-size':'18px','font-weight':'600','color':'#333',
-                  'text-align':'left','min-height':'38px','line-height':'1.3'});
+                  'text-align':'left','min-height':'38px','line-height':'1.3','white-space':'nowrap'});
         var sw = document.createElement('span');
         css(sw, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'4px',
                  'border':'1px solid rgba(0,0,0,.2)','display':opts.hasColor ? 'block' : 'none'});
@@ -3596,9 +3596,7 @@ function gck_render_bundle_selector() {
               return { value: o.value, label: o.text.trim(), color: null,
                        pick: function(){ sel.value = o.value; sel.dispatchEvent(new Event('change', { bubbles: true })); } };
             });
-            var sizeW = Math.min(230, Math.max(96, 26 + 9.6 * Math.max.apply(null,
-                           sizeItems.map(function(i){ return (i.label||'').length; }))));
-            var sizeDD = makeDD({ items: sizeItems, width: sizeW + 'px', hasColor: false, grow: false });
+            var sizeDD = makeDD({ items: sizeItems, width: 'auto', minWidth: '96px', hasColor: false, grow: false });
             row.insertBefore(sizeDD, row.firstChild);
             css(sel, {'display':'none'});
             var cur = sizeItems.filter(function(i){ return i.value === sel.value; })[0] || sizeItems[0];
@@ -3625,9 +3623,7 @@ function gck_render_bundle_selector() {
                             slusac na swatchu (postavi hidden input + .active). */
                          pick: function(){ sw.dispatchEvent(new MouseEvent('click', { bubbles: false })); } };
               });
-              var colorW = Math.min(260, Math.max(176, 52 + 9.6 * Math.max.apply(null,
-                             colorItems.map(function(i){ return (i.label||'').length; }))));
-              var colorDD = makeDD({ items: colorItems, width: colorW + 'px', hasColor: true, grow: false });
+              var colorDD = makeDD({ items: colorItems, width: 'auto', minWidth: '176px', hasColor: true, grow: false });
               /* boja ide ODMAH IZA velicine */
               var sizeEl = row.querySelector('.gck-dd');
               if(sizeEl && sizeEl.nextSibling) row.insertBefore(colorDD, sizeEl.nextSibling);

@@ -4,15 +4,15 @@
  * Original: nestishop.com/products/nesti-pod — vsebina 1:1 z originalom (isti vrstni red, ista besedila),
  * oblika po NORIKS stilu (vzor why-hands.php): slika/video vedno ob besedilu, strani in ozadja se izmenjujejo,
  * brez drsnikov, pasic in animacij.
- *   1) Iskustva nase zajednice (4 kartice z mnenji)
+ *   1) Kako koristiti (video s hrvaskimi podnapisi desno + CTA)
  *   2) Detalji proizvoda + Kako radi (zavihka iz nakupne skatle)
  *   3) Dostava i povrat (zavihka iz nakupne skatle — po NORIKS pogojih: 30 dana za povrat, besplatna dostava iznad 70 €)
  *   4) Zasto je NORIKS najbolji izbor? (slika levo + primerjava NORIKS : utezni pokrivaci)
  *   5) Koristite ga za... (3 vrstice slika/besedilo: san, opustanje, putovanja)
  *   6) Znanost iza NORIKS-a (slika levo + 4 tocke)
- *   7) Kako koristiti (video s hrvaskimi podnapisi desno + CTA)
- *   8) Prednosti terapije dubokim pritiskom (DTP) — 3 tocke z ikonami
- *   9) Recenzije kupaca (mreza mnenj z originala, s fotografijami)
+ *   7) Prednosti terapije dubokim pritiskom (DTP) — 3 tocke z ikonami
+ *   8) Recenzije kupaca (mreza mnenj z originala, s fotografijami)
+ * Sekcija »Iskustva nase zajednice« (4 kartice mnenj) je na Dejanovo zelo odstranjena 22.10.
  * FAQ originala je v reviews.php ($blanket_faq), mnenja tudi v auto_reviews/HR_blanket.php.
  * Promo pasica originala (akcija ADHD meseca) je po NORIKS stilu izpuscena.
  * Slike: img/blanket/ (logotip konkurenta odstranjen, napisi prevedeni v hrvascino).
@@ -131,20 +131,18 @@ $nbl_reviews = array(
 );
 ?>
 
-<!-- 1) ISKUSTVA NAŠE ZAJEDNICE -->
+<!-- 1) KAKO KORISTITI — video desno -->
 <section class="nbl-sec nbl-tint">
-  <div class="nbl-wrap">
-    <p class="nbl-kicker nbl-kicker--c">Iskustva</p>
-    <h2 class="nbl-h2 nbl-h2--c">Iskustva naše <em>zajednice</em></h2>
-    <div class="nbl-testi-grid">
-      <?php foreach ( $nbl_community as $c ) : ?>
-      <article class="nbl-testi">
-        <span class="nbl-stars" aria-label="5 od 5 zvjezdica">★★★★★</span>
-        <h3>„<?php echo esc_html( $c['naslov'] ); ?>”</h3>
-        <p><?php echo esc_html( $c['tekst'] ); ?></p>
-        <cite>– <?php echo esc_html( $c['ime'] ); ?></cite>
-      </article>
-      <?php endforeach; ?>
+  <div class="nbl-wrap nbl-row2 nbl-row2--rev">
+    <div class="nbl-copy">
+      <p class="nbl-kicker">Kako koristiti</p>
+      <h2 class="nbl-h2">Uvucite se <em>i opustite</em></h2>
+      <p>Kad ste u krevetu, uvucite se u NORIKS Blanket tako da gornji rub bude u udobnom položaju. Preporučujemo da ga namjestite blizu gornjeg dijela prsa i zatim ga povučete preko ramena.</p>
+      <p class="nbl-big">Tkanina će se rastegnuti i stisnuti te pružiti umirujući pritisak oko tijela.</p>
+      <a class="nbl-cta" href="#bundle-selector">Isprobajte danas — 30 dana za povrat</a>
+    </div>
+    <div class="nbl-media nbl-media--video">
+      <video src="<?php echo esc_url( $nbl . 'bl-kako-koristiti.mp4' ); ?>" poster="<?php echo esc_url( $nbl . 'bl-video-poster.webp' ); ?>" preload="metadata" muted loop playsinline autoplay disablepictureinpicture aria-label="Kako koristiti NORIKS Blanket"></video>
     </div>
   </div>
 </section>
@@ -244,24 +242,8 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 7) KAKO KORISTITI — video desno -->
+<!-- 7) PREDNOSTI TERAPIJE DUBOKIM PRITISKOM (DTP) -->
 <section class="nbl-sec nbl-tint">
-  <div class="nbl-wrap nbl-row2 nbl-row2--rev">
-    <div class="nbl-copy">
-      <p class="nbl-kicker">Kako koristiti</p>
-      <h2 class="nbl-h2">Uvucite se <em>i opustite</em></h2>
-      <p>Kad ste u krevetu, uvucite se u NORIKS Blanket tako da gornji rub bude u udobnom položaju. Preporučujemo da ga namjestite blizu gornjeg dijela prsa i zatim ga povučete preko ramena.</p>
-      <p class="nbl-big">Tkanina će se rastegnuti i stisnuti te pružiti umirujući pritisak oko tijela.</p>
-      <a class="nbl-cta" href="#bundle-selector">Isprobajte danas — 30 dana za povrat</a>
-    </div>
-    <div class="nbl-media nbl-media--video">
-      <video src="<?php echo esc_url( $nbl . 'bl-kako-koristiti.mp4' ); ?>" poster="<?php echo esc_url( $nbl . 'bl-video-poster.webp' ); ?>" preload="metadata" muted loop playsinline autoplay disablepictureinpicture aria-label="Kako koristiti NORIKS Blanket"></video>
-    </div>
-  </div>
-</section>
-
-<!-- 8) PREDNOSTI TERAPIJE DUBOKIM PRITISKOM (DTP) -->
-<section class="nbl-sec">
   <div class="nbl-wrap">
     <p class="nbl-kicker nbl-kicker--c">Terapija dubokim pritiskom</p>
     <h2 class="nbl-h2 nbl-h2--c">Znanstveno potvrđene prednosti <em>terapije dubokim pritiskom (DTP)</em></h2>
@@ -277,8 +259,8 @@ $nbl_reviews = array(
   </div>
 </section>
 
-<!-- 9) RECENZIJE KUPACA -->
-<section class="nbl-sec nbl-tint">
+<!-- 8) RECENZIJE KUPACA -->
+<section class="nbl-sec">
   <div class="nbl-wrap">
     <h2 class="nbl-h2 nbl-h2--c">Recenzije <em>kupaca</em></h2>
     <p class="nbl-rate"><span class="nbl-stars">★★★★★</span> <strong>4,8 od 5</strong> · na temelju 1.081 recenzije</p>

@@ -71,7 +71,20 @@ $nfs_reviews = array(
 );
 ?>
 
-<!-- 1) ZABAVA KOJA PLUTA — slika lijevo -->
+<!-- 1) POTIČE SAMOSTALNU IGRU — video desno -->
+<section class="nfs-sec nfs-tint">
+  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
+    <div class="nfs-copy">
+      <p class="nfs-kicker">Vodena čarolija!</p>
+      <h2 class="nfs-h2">Potiče <em>samostalnu igru!</em></h2>
+      <p><strong>Gradi samopouzdanje u vodi.</strong> NORIKS FloatSuit osmišljen je da podrži prve plivačke korake jačanjem samopouzdanja u vodi i oko nje.</p>
+      <p class="nfs-big">Uz pravu ravnotežu sigurnosti i slobode djeca se mogu opustiti i zabaviti.</p>
+    </div>
+    <div class="nfs-media nfs-media--video"><?php echo $nfs_video( 'fs-video-samopouzdanje.mp4', 'Dijete pliva u kostimu NORIKS FloatSuit' ); ?></div>
+  </div>
+</section>
+
+<!-- 2) ZABAVA KOJA PLUTA — slika lijevo -->
 <section class="nfs-sec nfs-tint">
   <div class="nfs-wrap nfs-row2">
     <div class="nfs-media"><?php echo $nfs_img( 'fs-hero.webp', 'Djeca u kostimima NORIKS FloatSuit s plovcima' ); ?></div>
@@ -85,26 +98,13 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 2) SIGURNOSNA NAPOMENA — samo besedilo -->
+<!-- 3) SIGURNOSNA NAPOMENA — samo besedilo -->
 <section class="nfs-sec">
   <div class="nfs-wrap">
     <div class="nfs-safety">
       <p class="nfs-kicker nfs-kicker--c">⚠️ Sigurnosna napomena ⚠️</p>
       <p>NORIKS FloatSuit je pomagalo za plivanje, a <strong>NE sredstvo za spašavanje života</strong>. Nije certificiran kao sredstvo za spašavanje. Potreban je stalan nadzor odrasle osobe — nikad ne ostavljajte djecu bez nadzora u vodi ili blizu nje.</p>
     </div>
-  </div>
-</section>
-
-<!-- 3) POTIČE SAMOSTALNU IGRU — video desno -->
-<section class="nfs-sec nfs-tint">
-  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
-    <div class="nfs-copy">
-      <p class="nfs-kicker">Vodena čarolija!</p>
-      <h2 class="nfs-h2">Potiče <em>samostalnu igru!</em></h2>
-      <p><strong>Gradi samopouzdanje u vodi.</strong> NORIKS FloatSuit osmišljen je da podrži prve plivačke korake jačanjem samopouzdanja u vodi i oko nje.</p>
-      <p class="nfs-big">Uz pravu ravnotežu sigurnosti i slobode djeca se mogu opustiti i zabaviti.</p>
-    </div>
-    <div class="nfs-media nfs-media--video"><?php echo $nfs_video( 'fs-video-samopouzdanje.mp4', 'Dijete pliva u kostimu NORIKS FloatSuit' ); ?></div>
   </div>
 </section>
 
