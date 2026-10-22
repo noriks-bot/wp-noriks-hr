@@ -87,3 +87,34 @@ $calendar_faq = array(
   ),
 );
 
+$viinia_faq = array(
+  array(
+    'questioon' => 'Koliko dugo drži vino hladnim?',
+    'answer'    => 'Štapić zadržava optimalnu temperaturu vina 2–3 sata nakon što ga izvadite iz zamrzivača.',
+  ),
+  array(
+    'questioon' => 'Razrjeđuje li vino?',
+    'answer'    => 'Ne. Za razliku od kockica leda, štapić ne dodaje vodu — vino ostaje hladnim bez gubitka okusa.',
+  ),
+  array(
+    'questioon' => 'Kako se koristi?',
+    'answer'    => 'Držite štapić u zamrzivaču dok nije spreman. Izvadite, stavite u otvorenu bocu vina, uživajte.',
+  ),
+  array(
+    'questioon' => 'Je li siguran za piće?',
+    'answer'    => 'Da. Izrađen od prehrambenog nerđajućeg čelika i neoprena. Nema BPA, bez mirisa.',
+  ),
+  array(
+    'questioon' => 'Koliko dugo drži se u zamrzivaču prije upotrebe?',
+    'answer'    => 'Najmanje 2–3 sata. Najbolje ga je držati u zamrzivaču stalno, pa je uvijek spreman.',
+  ),
+  array(
+    'questioon' => 'Pristaje li u svaku bocu?',
+    'answer'    => 'Da. Štapić prolazi kroz standardni grlo vinske boce (i šampanjca, rose, bijelih vina).',
+  ),
+  array(
+    'questioon' => 'Kako se čisti?',
+    'answer'    => 'Operite vodom i sapunom, obrišite i vratite u zamrzivač. Jednostavno.',
+  ),
+);
+

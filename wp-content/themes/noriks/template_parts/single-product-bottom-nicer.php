@@ -454,5 +454,10 @@ if ( noriks_is_type( 'calendar' ) ) {
     include $noriks_pb_dir . 'why-calendar.php';
 }
 
+// NORIKS Viinia (orto-viinia) — viinijäähdytin / stap za hladenje vina
+if ( noriks_is_type( 'viinia' ) ) {
+    include $noriks_pb_dir . 'why-viinia.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';

@@ -198,6 +198,8 @@ function noriks_product_type_map() : array {
         'singles-boxers'          => array( 'singles-boxers' ),
         'bokserice-1-komad'       => array( '1-komad-bokserice' ),
         'majice-1-komad'          => array( '1-komad-majice' ),
+        // NORIKS Viinia — viinijaahdytin / stap za hladenje vina.
+        'viinia'                  => array( 'orto-viinia', 'viinia' ),
         'majice-bokserice-paketi' => array( 'majice-i-bokserice-paketi' ),
         'black-friday'            => array( 'black-friday' ),
         'orto'                    => array( 'orto' ),
