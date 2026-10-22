@@ -208,30 +208,7 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
   </div>
 </section>
 
-<!-- 8) ikone -->
-<section class="ndg-sec">
-  <ul class="ndg-icons">
-    <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h22v16H6zM28 20h7l5 5v5H28z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="32" r="3.2" fill="#fff" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="32" r="3.2" fill="#fff" stroke="currentColor" stroke-width="2"/></svg></span><h3>Besplatna dostava za narudžbe iznad 70&nbsp;€</h3></li>
-    <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M36 26a12 12 0 1 1-4-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M33 10v7h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>30 dana za povrat</h3></li>
-    <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36s-11-6.6-11-14.2A6 6 0 0 1 24 18a6 6 0 0 1 11 3.8C35 29.4 24 36 24 36z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3>Povjerenje tisuća kupaca</h3></li>
-  </ul>
-</section>
-
-<!-- 9) OTKOPČA SE U KREVET — video lijevo -->
-<section class="ndg-sec ndg-tint">
-  <div class="ndg-wrap ndg-row2">
-    <div class="ndg-media"><?php echo $ndg_video( 'dg-animacija.mp4', 'NORIKS Doggo — sklapanje i rasklapanje kreveta', '1 / 1' ); ?></div>
-    <div class="ndg-copy">
-      <p class="ndg-kicker">Iz auta u dom</p>
-      <h2 class="ndg-h2">Otkopča se <em>u krevet za kod kuće.</em></h2>
-      <p>Doggo nije samo za vožnju. Ima dvije ručke pa ga možete nositi sa sobom, a prednji dio se otkopča u ravni krevet za kod kuće.</p>
-      <p>Srednji jastuk je obostran: jedna strana je mekana, a druga od kože za putovanja. Unutarnja navlaka pere se u perilici.</p>
-      <p class="ndg-big">Autokrevet i krevet za kod kuće u jednom.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 10) recenzije kupaca -->
+<!-- 8) recenzije kupaca -->
 <section class="ndg-sec" id="ndg-recenzije">
   <div class="ndg-wrap">
     <h2 class="ndg-h2 ndg-h2--c">Recenzije <em>kupaca</em></h2>
@@ -302,6 +279,29 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
   }
 })();
 </script>
+
+<!-- 9) ikone -->
+<section class="ndg-sec ndg-tint">
+  <ul class="ndg-icons">
+    <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h22v16H6zM28 20h7l5 5v5H28z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="32" r="3.2" fill="#fff" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="32" r="3.2" fill="#fff" stroke="currentColor" stroke-width="2"/></svg></span><h3>Besplatna dostava za narudžbe iznad 70&nbsp;€</h3></li>
+    <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M36 26a12 12 0 1 1-4-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M33 10v7h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>30 dana za povrat</h3></li>
+    <li><span class="ndg-icons__c"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 36s-11-6.6-11-14.2A6 6 0 0 1 24 18a6 6 0 0 1 11 3.8C35 29.4 24 36 24 36z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3>Povjerenje tisuća kupaca</h3></li>
+  </ul>
+</section>
+
+<!-- 10) OTKOPČA SE U KREVET — video lijevo -->
+<section class="ndg-sec">
+  <div class="ndg-wrap ndg-row2">
+    <div class="ndg-media"><?php echo $ndg_video( 'dg-animacija.mp4', 'NORIKS Doggo — sklapanje i rasklapanje kreveta', '1 / 1' ); ?></div>
+    <div class="ndg-copy">
+      <p class="ndg-kicker">Iz auta u dom</p>
+      <h2 class="ndg-h2">Otkopča se <em>u krevet za kod kuće.</em></h2>
+      <p>Doggo nije samo za vožnju. Ima dvije ručke pa ga možete nositi sa sobom, a prednji dio se otkopča u ravni krevet za kod kuće.</p>
+      <p>Srednji jastuk je obostran: jedna strana je mekana, a druga od kože za putovanja. Unutarnja navlaka pere se u perilici.</p>
+      <p class="ndg-big">Autokrevet i krevet za kod kuće u jednom.</p>
+    </div>
+  </div>
+</section>
 
 <style>
 /* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
