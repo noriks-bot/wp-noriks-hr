@@ -128,7 +128,7 @@ function gck_size_prices( $product_id ) : array {
                 'M'  => array( 170.00, 340.00 ),
                 'XL' => array( 210.00, 420.00 ),
             ),
-            'factor'  => array( 1 => 1 ),
+            'factor'  => array( 1 => 1, 2 => 0.9, 3 => 0.85 ),
         );
     }
     return array();
