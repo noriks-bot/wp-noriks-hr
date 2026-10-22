@@ -3596,7 +3596,9 @@ function gck_render_bundle_selector() {
               return { value: o.value, label: o.text.trim(), color: null,
                        pick: function(){ sel.value = o.value; sel.dispatchEvent(new Event('change', { bubbles: true })); } };
             });
-            var sizeDD = makeDD({ items: sizeItems, width: '96px', hasColor: false, grow: false });
+            var sizeW = Math.min(230, Math.max(96, 26 + 9.6 * Math.max.apply(null,
+                           sizeItems.map(function(i){ return (i.label||'').length; }))));
+            var sizeDD = makeDD({ items: sizeItems, width: sizeW + 'px', hasColor: false, grow: false });
             row.insertBefore(sizeDD, row.firstChild);
             css(sel, {'display':'none'});
             var cur = sizeItems.filter(function(i){ return i.value === sel.value; })[0] || sizeItems[0];
@@ -3623,7 +3625,9 @@ function gck_render_bundle_selector() {
                             slusac na swatchu (postavi hidden input + .active). */
                          pick: function(){ sw.dispatchEvent(new MouseEvent('click', { bubbles: false })); } };
               });
-              var colorDD = makeDD({ items: colorItems, width: '176px', hasColor: true, grow: false });
+              var colorW = Math.min(260, Math.max(176, 52 + 9.6 * Math.max.apply(null,
+                             colorItems.map(function(i){ return (i.label||'').length; }))));
+              var colorDD = makeDD({ items: colorItems, width: colorW + 'px', hasColor: true, grow: false });
               /* boja ide ODMAH IZA velicine */
               var sizeEl = row.querySelector('.gck-dd');
               if(sizeEl && sizeEl.nextSibling) row.insertBefore(colorDD, sizeEl.nextSibling);
@@ -4369,13 +4373,7 @@ document.addEventListener('DOMContentLoaded', function () {
             priceElem.innerHTML = total.replace('.', ',') + ' €';
         }
 
-        // gumb "Dodaj u košaricu - <skupaj izbrane ponudbe>" za vse izdelke s ponudbami
-        const atcBtn = document.querySelector('form.cart .single_add_to_cart_button');
-        if (atcBtn && total && parseFloat(total) > 0) {
-            const base = atcBtn.textContent.replace(/\s*-\s*.*$/, '').trim();
-            const sum  = parseFloat(total).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            atcBtn.textContent = base + ' - ' + sum + ' €';
-        }
+        // gumb "Dodaj u košaricu" ostane brez cene (cena je na kartici ponude)
     }
 
     radios.forEach(radio => {
@@ -4570,12 +4568,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (sr[1]) sr[1].textContent = 'Trenutna cijena je: ' + fmtHr(one.sale) + ' €.';
         }
 
-        // gumb = skupaj izbrane ponudbe
-        const btn = document.querySelector('form.cart .single_add_to_cart_button');
-        if (btn && active.dataset.total) {
-            const base = btn.textContent.replace(/\s*-\s*.*$/, '').trim();
-            btn.textContent = base + ' - ' + fmtHr(Math.round(parseFloat(active.dataset.total) * 100)) + ' €';
-        }
+        // gumb ostane brez cene
     }
 
     // privzeta velikost kot na originalu

@@ -8,11 +8,28 @@
  *   2) Sto smo promijenili + Kako djeluje — sloj po sloj (4 kartice)
  *   3) Vasa nova jutarnja rutina (3 koraki)
  *   4) Usporedba (tabela, stolpec NORIKS)
- * Original nima sekcij s slikami/videi (samo besedilo), zato ni dvostolpcnih sekcij.
+ *   5) Dostupne boje (8 barv, ki jih izdelek res ima — fotografije z originala)
+ * Original ima besedilne sekcije, slike pa samo v galeriji; po NORIKS standardu so fotografije
+ * z originala vkljucene tudi v why sekcije (znacilnosti, prije/poslije, mreza barv).
  * FAQ originala je v reviews.php ($bratank_faq), mnenja za karusel teme v auto_reviews/HR_bratank.php.
  * Izpusceno (NORIKS stil): promo pasica »FALL SALE« z odstevalnikom, glava, noga, trgovinski moduli.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
+
+$nbt      = get_template_directory_uri() . '/img/bratank/';
+$nbt_path = get_template_directory() . '/img/bratank/';
+$nbt_img  = function( $file, $alt ) use ( $nbt, $nbt_path ) {
+  if ( ! file_exists( $nbt_path . $file ) ) { return ''; }
+  return '<img src="' . esc_url( $nbt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+};
+
+/* Barve, ki jih izdelek dejansko ima (8 od 17 fotografij v img/bratank). */
+$nbt_colors = array(
+  array( 'bt-05-bez.webp', 'Bež' ), array( 'bt-06-crna.webp', 'Crna' ),
+  array( 'bt-07-bijela.webp', 'Bijela' ), array( 'bt-13-paunovo-plava.webp', 'Paunovo plava' ),
+  array( 'bt-14-stara-ruza.webp', 'Stara ruža' ), array( 'bt-08-siva.webp', 'Siva' ),
+  array( 'bt-15-vinsko-crvena.webp', 'Vinsko crvena' ), array( 'bt-11-kava.webp', 'Kava' ),
+);
 
 /* Mnenja 1:1 z originala (ime in leta ostanejo kot na originalu); jamstvo -> NORIKS pogoji (30 dana za povrat). */
 $nbt_reviews = array(
@@ -78,6 +95,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
     <p class="nbt-kicker">Što smo promijenili</p>
     <h2 class="nbt-h2">Što smo promijenili — <em>i zašto je osjećaj drukčiji</em></h2>
     <p class="nbt-sub">Nismo napravili bolji grudnjak. Potpuno smo prestali raditi grudnjake.</p>
+    <div class="nbt-media nbt-media--wide"><?php echo $nbt_img( 'bt-02-lastnosti-hr.webp', 'Značajke NORIKS BraTank majice s ugrađenim grudnjakom' ); ?></div>
     <div class="nbt-callout">
       <p>Umjesto da potporu natjeramo u dvije naramenice i traku, raspodijelili smo je po cijeloj majici. Bez točaka koncentriranog pritiska. Bez kopči i žica. Bez konstrukcije koja se urezuje, štipa ili smota.</p>
       <p class="nbt-big">Ovo nije steznik. Ovo nije kompresija. Ovo je »taman dovoljno potpore« — osjećaj da vas nešto nježno drži i glatko pokriva, a da se nijedan dio majice ne bori protiv vašeg tijela.</p>
@@ -102,6 +120,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
   <div class="nbt-wrap nbt-wrap--narrow">
     <p class="nbt-kicker">Jutarnja rutina</p>
     <h2 class="nbt-h2">Vaša nova <em>jutarnja rutina</em></h2>
+    <div class="nbt-media nbt-media--wide"><?php echo $nbt_img( 'bt-03-prije-poslije.webp', 'NORIKS BraTank — prije i poslije' ); ?></div>
     <ol class="nbt-steps">
       <?php foreach ( $nbt_steps as $i => $st ) : ?>
       <li>
@@ -154,7 +173,35 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
   </div>
 </section>
 
+
+<!-- 5) DOSTUPNE BOJE -->
+<section class="nbt-sec nbt-tint">
+  <div class="nbt-wrap">
+    <p class="nbt-kicker">Boje</p>
+    <h2 class="nbt-h2">Osam boja <em>za svaki dan.</em></h2>
+    <p class="nbt-sub">Ista majica, ista potpora — odaberite nijansu koja vam najbolje leži ispod odjeće.</p>
+    <div class="nbt-colors">
+      <?php foreach ( $nbt_colors as $c ) : ?>
+      <figure class="nbt-color">
+        <?php echo $nbt_img( $c[0], 'NORIKS BraTank — ' . $c[1] ); ?>
+        <figcaption><?php echo esc_html( $c[1] ); ?></figcaption>
+      </figure>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <style>
+/* slike v sekcijah + mreza barv (standard prejsnjih izdelkov) */
+.nbt-sec img { display: block; width: 100%; height: auto; }
+.nbt-media--wide { max-width: 820px; margin: 0 auto 26px; }
+.nbt-media--wide img { border-radius: 12px; box-shadow: 0 2px 4px rgba(30,20,20,.05), 0 14px 40px rgba(30,20,20,.10); }
+.nbt-colors { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+.nbt-color { margin: 0; }
+.nbt-color img { border-radius: 10px; aspect-ratio: 4/5; object-fit: cover; }
+.nbt-color figcaption { margin-top: 8px; font-size: 14px; font-weight: 600; text-align: center; color: #4d4446; }
+@media (max-width: 749px) { .nbt-colors { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
+
 .nbt-sec { --nbt-rose: #b57e7e; --nbt-ink: #1f1b1a; --nbt-muted: #5b5350; --nbt-tint: #f6f2ec; --nbt-line: #e8ded6; --nbt-x: #cbc3bd;
   padding: 60px 0; background: #fff; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nbt-ink); }
 .nbt-sec * { box-sizing: border-box; }
