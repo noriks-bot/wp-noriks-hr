@@ -235,8 +235,8 @@ $nbl_reviews = array(
 </section>
 
 <!-- 6) KORISTITE GA ZA... — tri vrstice, strani se izmenjujejo (desno, levo, desno) -->
-<?php foreach ( $nbl_uses as $i => $u ) : $nbl_rev = ( 0 === $i % 2 ); ?>
-<section class="nbl-sec<?php echo $nbl_rev ? ' nbl-tint' : ''; ?>">
+<?php foreach ( $nbl_uses as $i => $u ) : $nbl_rev = ( 0 === $i % 2 ); $nbl_tint = ( 1 === $i % 2 ); ?>
+<section class="nbl-sec<?php echo $nbl_tint ? ' nbl-tint' : ''; ?>">
   <div class="nbl-wrap nbl-row2<?php echo $nbl_rev ? ' nbl-row2--rev' : ''; ?>">
     <?php if ( ! $nbl_rev ) : ?><div class="nbl-media"><?php echo $nbl_img( $u['slika'], wp_strip_all_tags( $u['h2'] ) . ' — NORIKS Blanket' ); ?></div><?php endif; ?>
     <div class="nbl-copy">
@@ -313,7 +313,7 @@ $nbl_reviews = array(
 /* 3) specifikacije v treh stolpcih */
 .nbl-specs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
 .nbl-spec { background: #fff; border: 1px solid #ece6f3; border-radius: 12px; padding: 24px 24px 20px; }
-.nbl-spec h3 { font-size: 15px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #7b4fb3; margin: 0 0 8px; }
+.nbl-spec h3 { font-size: 15px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #7a5aa3; margin: 0 0 8px; }
 .nbl-spec h3 + p, .nbl-spec h3 + ul, .nbl-spec h3 + .nbl-spec__note { margin-top: 0; }
 .nbl-spec p { font-size: 15.5px; line-height: 1.65; color: #4a4450; margin: 0 0 18px; }
 .nbl-spec p:last-child { margin-bottom: 0; }
@@ -332,11 +332,11 @@ $nbl_reviews = array(
 .nbl-media img, .nbl-media video { display: block; width: 100%; height: auto; border: 0;
   box-shadow: 0 2px 4px rgba(40,20,60,.05), 0 14px 40px rgba(40,20,60,.10); }
 .nbl-media--video video { background: #000; aspect-ratio: 1 / 1; object-fit: cover; }
-.nbl-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #7b4fb3; margin: 0 0 10px; }
+.nbl-kicker { font-size: 12.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #7a5aa3; margin: 0 0 10px; }
 .nbl-kicker--c { text-align: center; }
 .nbl-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; color: #231d29; text-transform: none; }
 .nbl-h2--c { text-align: center; }
-.nbl-h2 em { font-style: italic; font-weight: 800; color: #7b4fb3; }
+.nbl-h2 em { font-style: italic; font-weight: 800; color: #7a5aa3; }
 .nbl-copy p { font-size: 16px; line-height: 1.7; color: #574c5e; margin: 0 0 14px; }
 .nbl-copy p strong { color: #231d29; }
 .nbl-big { font-size: 19px !important; font-weight: 800; color: #231d29 !important; }
@@ -350,7 +350,7 @@ $nbl_reviews = array(
 .nbl-check li::before { content: "\2713"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
   background: #2f9e5f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .nbl-check--c { max-width: 640px; margin: 18px auto 20px; }
-.nbl-cta { display: inline-block; margin-top: 8px; background: #7b4fb3; color: #fff !important; font-size: 15px; font-weight: 700;
+.nbl-cta { display: inline-block; margin-top: 8px; background: #7a5aa3; color: #fff !important; font-size: 15px; font-weight: 700;
   padding: 15px 30px; border-radius: 8px; text-decoration: none; }
 .nbl-cta:hover { background: #643c99; color: #fff !important; }
 .nbl-stars { color: #e0a33c; letter-spacing: 1px; font-size: 15px; }
@@ -369,7 +369,7 @@ $nbl_reviews = array(
 .nbl-cmp__table th, .nbl-cmp__table td { padding: 13px 14px; border-bottom: 1px solid #eee6f5; vertical-align: middle; text-align: left; }
 .nbl-cmp__table th { font-size: 16px; font-weight: 800; text-align: center; }
 .nbl-cmp__table th img { display: block; height: 90px; width: auto; max-width: 100%; margin: 0 auto 8px; object-fit: contain; }
-.nbl-cmp__us { background: #7b4fb3; color: #fff; }
+.nbl-cmp__us { background: #7a5aa3; color: #fff; }
 .nbl-cmp__them { background: #f1edf4; color: #6b5e75; }
 .nbl-cmp__table td { color: #3d3346; line-height: 1.45; }
 .nbl-cmp__table td span { font-weight: 800; margin-right: 8px; }

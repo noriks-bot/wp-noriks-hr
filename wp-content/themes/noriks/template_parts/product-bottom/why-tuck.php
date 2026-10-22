@@ -256,27 +256,8 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 7) VEĆINA ŽENA UZME 2+ — slika lijevo -->
-<section class="ntk-sec ntk-tint" id="ntk-offer">
-  <div class="ntk-wrap ntk-row2">
-    <div class="ntk-media ntk-media--sm"><?php echo $ntk_img( 'tk-paket-2-480.webp', 'NORIKS Tuck 2x kom — crna i smeđa', 480, 480 ); ?></div>
-    <div class="ntk-copy">
-      <p class="ntk-kicker">Paket</p>
-      <h2 class="ntk-h2">Većina žena uzme <em>2+</em></h2>
-      <p>Jedne nosite, druge su u pranju. Kombinirajte boje.</p>
-      <div class="ntk-price">
-        <strong>2x kom</strong>
-        <span>29,00 € po komadu</span>
-        <p>58,00 € <s>82,00 €</s> <i>UŠTEDA 29 %</i></p>
-      </div>
-      <a class="ntk-cta" href="#bundle-selector" data-tier="2">Odaberite paket</a>
-      <p class="ntk-note">Pravo na povrat u roku od 30 dana</p>
-    </div>
-  </div>
-</section>
-
-<!-- 8) ŠTO ŽENE KAŽU — mnenja (preprosta mreža) -->
-<section class="ntk-sec" id="ntk-reviews">
+<!-- 7) ŠTO ŽENE KAŽU — mnenja (preprosta mreža) -->
+<section class="ntk-sec ntk-tint" id="ntk-reviews">
   <div class="ntk-wrap">
     <h2 class="ntk-h2 ntk-c">Što žene kažu o <em>Super Stay™ pojasu</em></h2>
     <p class="ntk-rate"><span class="ntk-stars">★★★★★</span> <strong>4,8</strong> · Na temelju 1.081 recenzije</p>
@@ -306,18 +287,20 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 9) ZAŠTO NORIKS — samo besedilo -->
-<section class="ntk-sec ntk-tint" id="ntk-trust" aria-label="Zašto NORIKS">
-  <div class="ntk-wrap ntk-trust">
-    <div>
-      <svg width="42" height="42" viewBox="0 0 32 32" aria-hidden="true"><path fill="#2E2420" d="M29.871 6.026l-13.871-5.1-14.394 5.283v19.642l14.394 5.222 14.394-5.222v-19.634l-0.524-0.192zM15.467 29.746l-12.795-4.642v-17.747l12.795 4.642v17.747zM16 11.058l-12.326-4.472 12.326-4.524 12.315 4.528-12.315 4.468zM29.328 25.104l-12.795 4.642v-17.747l12.795-4.623v17.728z"></path></svg>
-      <p><strong>Brza dostava</strong></p>
-      <p class="s">Dostava s praćenjem pošiljke</p>
-    </div>
-    <div>
-      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="#2E2420" stroke-linejoin="round" stroke-linecap="round" d="M14.65 8.93274L12.4852 4.30901C12.2923 3.89699 11.7077 3.897 11.5148 4.30902L9.35002 8.93274L4.25424 9.50158C3.80919 9.55126 3.6278 10.0941 3.95532 10.3997L7.77426 13.9632L6.75374 18.9805C6.66534 19.4151 7.13158 19.7546 7.51754 19.5357L12 16.9935L16.4825 19.5357C16.8684 19.7546 17.3347 19.4151 17.2463 18.9805L16.2257 13.9632L20.0447 10.3997C20.3722 10.0941 20.1908 9.55126 19.7458 9.50158L14.65 8.93274Z"></path></svg>
-      <p><strong>Recenzije s 5 zvjezdica</strong></p>
-      <p class="s">Zadovoljstvo kupaca nam je na prvom mjestu</p>
+<!-- 8) NORIKS pogoji — slika ob besedilu -->
+<section class="ntk-sec" id="ntk-trust" aria-label="Zašto NORIKS">
+  <div class="ntk-wrap ntk-row2">
+    <div class="ntk-media"><?php echo $ntk_img( 'tk-paket-2-480.webp', 'NORIKS Tuck — crna i smeđa boja', 960, 1200 ); ?></div>
+    <div class="ntk-copy">
+      <p class="ntk-kicker">Zašto NORIKS</p>
+      <h2 class="ntk-h2">Isprobajte ih <em>bez brige.</em></h2>
+      <p>Obucite ih pod haljinu i provjerite kako stoje. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong> — bez objašnjavanja.</p>
+      <ul class="ntk-why">
+        <li><strong>Brza dostava</strong><span>Dostava s praćenjem pošiljke</span></li>
+        <li><strong>Recenzije s 5 zvjezdica</strong><span>Zadovoljstvo kupaca nam je na prvom mjestu</span></li>
+        <li><strong>Plaćanje pouzećem</strong><span>Platite tek kad paket stigne</span></li>
+      </ul>
+      <p class="ntk-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span></p>
     </div>
   </div>
 </section>
@@ -391,8 +374,8 @@ $ntk_ugc = array(
 </script>
 
 
-<!-- 10) NORIKS pogoji -->
-<section class="ntk-sec">
+<!-- 9) NORIKS pogoji -->
+<section class="ntk-sec ntk-tint">
   <div class="ntk-wrap" style="text-align:center">
     <h2 class="ntk-h2">Isprobajte ih <em>bez brige.</em></h2>
     <p>Obucite ih pod haljinu i provjerite kako stoje. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong>.</p>
@@ -401,6 +384,13 @@ $ntk_ugc = array(
 </section>
 
 <style>
+.ntk-why { list-style: none; margin: 18px 0 18px; padding: 0; }
+.ntk-why li { position: relative; padding-left: 28px; margin: 0 0 14px; }
+.ntk-why li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: #a9683f; font-weight: 800; }
+.ntk-why strong { display: block; font-size: 16px; color: #2E2420; }
+.ntk-why span { display: block; font-size: 14.5px; color: #6b625a; }
+.ntk-trust { justify-content: flex-start !important; }
+
 /* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
 .ntk-row2 { align-items: center; }
 .ntk-media > img, .ntk-media > video,

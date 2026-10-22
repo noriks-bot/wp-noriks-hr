@@ -690,6 +690,8 @@ function gck_render_bundle_selector() {
 
       /* Kartice ponud: debelejsi robovi (kot na FisioRest). */
       #bundle-selector .bundle-option { border-width: 2px !important; }
+      /* Znacka popusta je zelena (kot na FisioRest), cena na kos ostane v barvi izdelka. */
+      #bundle-selector .gck-discount-badge { background: #2f7d4f !important; color: #fff !important; }
       #bundle-selector .bundle-option.active { border-width: 3px !important; }
 
       .single_add_to_cart_button {
@@ -1920,7 +1922,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
       #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
           border: 2px solid #e2d9ee !important; background: #fff; }
-      #bundle-selector .color-swatches .swatch.active { border-color: #9217ff !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch.active { border-color: #7a5aa3 !important; transform: scale(1.06); }
       #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
           box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); }
       #bundle-selector .swatch-circle.color-plava                { background: #1fb3c9 !important; }
@@ -1930,20 +1932,20 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-option {
           border: 2px solid #cec1df !important; background: #faf8fd !important;
           box-shadow: 0 1px 2px rgba(20,25,40,.10), 0 2px 6px 2px rgba(20,25,40,.06) !important; }
-      #bundle-selector .bundle-option.active { border-color: #9217ff !important; background: #f3edfb !important; }
+      #bundle-selector .bundle-option.active { border-color: #7a5aa3 !important; background: #f4f0f8 !important; }
       #bundle-selector .bundle-option-title { color: #121212 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #9217ff !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #9217ff !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #7a5aa3 !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #7a5aa3 !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
       #bundle-selector .bundle-pairs { border-top-color: #e2d9ee !important; }
-      #bundle-selector .bundle-total-line .line-total { color: #9217ff !important; }
+      #bundle-selector .bundle-total-line .line-total { color: #7a5aa3 !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8c8c8c !important; }
       #bundle-selector .gck-offer-sub { color: #5f5f5f !important; font-weight: 600; }
-      #bundle-selector .gck-popular-badge--offer { background: #9217ff !important; transform: none !important; right: 12px !important; }
+      #bundle-selector .gck-popular-badge--offer { background: #7a5aa3 !important; transform: none !important; right: 12px !important; }
       #bundle-selector .bundle-pair select,
-      #bundle-selector .bundle-pair .gck-extra-select { border-color: #9217ff !important; color: #121212 !important; }
-      .gck-size-link { color: #9217ff !important; }
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #7a5aa3 !important; color: #121212 !important; }
+      .gck-size-link { color: #7a5aa3 !important; }
     </style>
     <?php endif; ?>
 
@@ -3567,7 +3569,7 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-stepcloud' ), 'product_cat', $product_id ) ? "'#f0581a'"
            : ( has_term( array( 'orto-slabproof' ), 'product_cat', $product_id ) ? "'#d2632e'"
            : ( has_term( array( 'orto-brassiere' ), 'product_cat', $product_id ) ? "'#a65a5d'"
-           : ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ? "'#9217ff'"
+           : ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ? "'#7a5aa3'"
            : ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ? "'#b57e7e'"
            : ( has_term( array( 'orto-floatsuit' ), 'product_cat', $product_id ) ? "'#0a97d5'"
            : ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ? "'#a9683f'"

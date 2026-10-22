@@ -73,7 +73,7 @@ $nfs_reviews = array(
 
 <!-- 1) POTIČE SAMOSTALNU IGRU — video desno -->
 <section class="nfs-sec nfs-tint">
-  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
+  <div class="nfs-wrap nfs-row2">
     <div class="nfs-copy">
       <p class="nfs-kicker">Vodena čarolija!</p>
       <h2 class="nfs-h2">Potiče <em>samostalnu igru!</em></h2>
@@ -86,7 +86,7 @@ $nfs_reviews = array(
 
 <!-- 2) ZABAVA KOJA PLUTA — slika lijevo -->
 <section class="nfs-sec">
-  <div class="nfs-wrap nfs-row2">
+  <div class="nfs-wrap nfs-row2 nfs-row2--rev">
     <div class="nfs-media"><?php echo $nfs_img( 'fs-hero.webp', 'Djeca u kostimima NORIKS FloatSuit s plovcima' ); ?></div>
     <div class="nfs-copy">
       <p class="nfs-kicker">Zabava koja pluta</p>

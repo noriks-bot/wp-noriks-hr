@@ -108,17 +108,6 @@ $nps_testimonials = array(
   </div>
 </section>
 
-<!-- 5) 30 DANA ZA POVRAT (samo besedilo) -->
-<section class="nps-sec nps-tint">
-  <div class="nps-wrap nps-text">
-    <p class="nps-kicker nps-kicker--c">Bez rizika</p>
-    <h2 class="nps-h2 nps-h2--c">Pravo na povrat <em>u roku od 30 dana</em></h2>
-    <p>Uvjereni smo da ćete zavoljeti <strong>NORIKS PhoneStrap</strong>. Zato za sve narudžbe vrijedi <strong>pravo na povrat u roku od 30 dana</strong>.</p>
-    <p>Koristite NORIKS PhoneStrap na skijanju, planinarenju ili bilo kojoj avanturi i čuvajte mobitel na sigurnom. Ako niste potpuno zadovoljni, javite nam se u roku od 30 dana i rado ćemo vam pomoći s povratom.</p>
-    <p class="nps-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
-  </div>
-</section>
-
 <style>
 /* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
 .nps-row2 { align-items: center; }
