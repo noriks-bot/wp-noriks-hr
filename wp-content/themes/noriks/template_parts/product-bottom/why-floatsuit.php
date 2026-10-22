@@ -85,7 +85,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 2) ZABAVA KOJA PLUTA — slika lijevo -->
-<section class="nfs-sec nfs-tint">
+<section class="nfs-sec">
   <div class="nfs-wrap nfs-row2">
     <div class="nfs-media"><?php echo $nfs_img( 'fs-hero.webp', 'Djeca u kostimima NORIKS FloatSuit s plovcima' ); ?></div>
     <div class="nfs-copy">
@@ -99,7 +99,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 3) SIGURNOSNA NAPOMENA — samo besedilo -->
-<section class="nfs-sec">
+<section class="nfs-sec nfs-tint">
   <div class="nfs-wrap">
     <div class="nfs-safety">
       <p class="nfs-kicker nfs-kicker--c">⚠️ Sigurnosna napomena ⚠️</p>

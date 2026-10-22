@@ -153,6 +153,7 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
 </section>
 
 <!-- 3) Mekani rub / suha stopala / vrh bez savova — video desno, levo, desno -->
+<?php $nss_band_i = 0; ?>
 <section class="nss-sec nss-sec--bands" aria-label="Još prednosti NORIKS SupportSocks">
   <?php foreach ( $nss_rows_3 as $i => $r ) { echo $nss_band( $nss_row( $r, ! ( $i % 2 ) ) ); } ?>
 </section>

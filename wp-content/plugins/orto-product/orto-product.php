@@ -1672,7 +1672,7 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ) : $gck_ss_img = get_template_directory_uri() . '/img/supportsocks/'; ?>
     <style>
-      /* NORIKS SupportSocks: temno modri akcent originala (#002e49, Kaching kartice: bel rob, izbrana #f9fcff). Vzorcaste barve
+      /* NORIKS SupportSocks: temno modri akcent originala (#a9683f, Kaching kartice: bel rob, izbrana #f7f2ec). Vzorcaste barve
          (crte, pike, melirano) imajo v krogcu slicico vzorca z originala. Izbornik boje cita nijanso s probnega elementa
          IZVAN #bundle-selector, zato ista pravila moraju postojati i bez prefiksa. */
       .swatch-circle.color-crna { background: #111111 !important; }
@@ -1696,7 +1696,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
       #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
           border: 2px solid #dce2e5 !important; background: #fff; }
-      #bundle-selector .color-swatches .swatch.active { border-color: #002e49 !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch.active { border-color: #a9683f !important; transform: scale(1.06); }
       #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
           box-shadow: inset 0 0 0 1px rgba(0,0,0,.14); }
       #bundle-selector .swatch-circle.color-crna { background: #111111 !important; }
@@ -1718,20 +1718,20 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-svijetloplava-s-bijelim-tockicama { background: #9cc8ec url('<?php echo esc_url( $gck_ss_img . 'ss-sw-svijetloplava-s-bijelim-tockicama.webp' ); ?>') center / cover no-repeat !important; }
       #bundle-selector .bundle-option {
           border: 1px solid rgba(0,46,73,.3) !important; background: #fff !important; border-radius: 16px !important; box-shadow: none !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #002e49 !important; background: #f9fcff !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
       #bundle-selector .bundle-option-title { color: #000 !important; }
-      #bundle-selector .bundle-option input[type="radio"] { border-color: #002e49 !important; }
-      #bundle-selector .bundle-option input[type="radio"]::before { background: #002e49 !important; }
-      #bundle-selector .bundle-option .gck-per-chip { background: #002e49 !important; }
-      #bundle-selector .bundle-option .gck-discount-badge { background: #002e49 !important; }
+      #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
+      #bundle-selector .bundle-option .gck-per-chip { background: #a9683f !important; }
+      #bundle-selector .bundle-option .gck-discount-badge { background: #a9683f !important; }
       #bundle-selector .bundle-pairs { border-top-color: #e0e6e9 !important; }
       #bundle-selector .bundle-total-line .line-total { color: #000 !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #555 !important; }
       #bundle-selector .gck-offer-sub { color: #555 !important; font-weight: 400; }
-      #bundle-selector .gck-popular-badge--offer { background: #002e49 !important; color: #fff !important; transform: none !important; right: 12px !important; }
+      #bundle-selector .gck-popular-badge--offer { background: #a9683f !important; color: #fff !important; transform: none !important; right: 12px !important; }
       #bundle-selector .bundle-pair select,
-      #bundle-selector .bundle-pair .gck-extra-select { border-color: #002e49 !important; color: #121212 !important; }
-      .gck-size-link { color: #002e49 !important; }
+      #bundle-selector .bundle-pair .gck-extra-select { border-color: #a9683f !important; color: #121212 !important; }
+      .gck-size-link { color: #a9683f !important; }
     </style>
     <?php endif; ?>
 
@@ -3471,7 +3471,7 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ? "'#1c3b4b'"
            : ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ? "'#105a85'"
-           : ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ? "'#002e49'"
+           : ( has_term( array( 'orto-supportsocks' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-tuck', 'orto-polo', 'orto-raincoat', 'orto-titaniumpan' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-harness' ), 'product_cat', $product_id ) ? "'#2b7a6f'"
            : ( has_term( array( 'orto-seatcover' ), 'product_cat', $product_id ) ? "'#b5532c'"
