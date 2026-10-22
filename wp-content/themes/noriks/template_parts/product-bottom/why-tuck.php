@@ -401,6 +401,16 @@ $ntk_ugc = array(
 </section>
 
 <style>
+/* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
+.ntk-row2 { align-items: center; }
+.ntk-media > img, .ntk-media > video,
+.ntk-media > a > img, .ntk-media picture > img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(25,20,15,.05), 0 14px 40px rgba(25,20,15,.10); }
+@media (max-width: 749px) {
+  .ntk-media > img, .ntk-media > video { aspect-ratio: 1 / 1; }
+}
+
 .ntk-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b625a; }
 .ntk-trust span { position: relative; padding-left: 20px; }
 .ntk-trust span::before { content: "\2713"; position: absolute; left: 0; color: #a9683f; }

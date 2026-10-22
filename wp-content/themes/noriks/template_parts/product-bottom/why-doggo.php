@@ -315,6 +315,16 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
 </script>
 
 <style>
+/* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
+.ndg-row2 { align-items: center; }
+.ndg-media > img, .ndg-media > video,
+.ndg-media > a > img, .ndg-media picture > img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(25,20,15,.05), 0 14px 40px rgba(25,20,15,.10); }
+@media (max-width: 749px) {
+  .ndg-media > img, .ndg-media > video { aspect-ratio: 1 / 1; }
+}
+
 .ndg { --ndg-ink: #1c3b4b; --ndg-acc: #276d91; --ndg-tint: #eef5fa; --ndg-txt: #3d5664; --ndg-green: #1ca054; }
 .ndg-sec { padding: 60px 0; margin: 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--ndg-ink); }
 .ndg-sec * { box-sizing: border-box; }

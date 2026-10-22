@@ -300,6 +300,16 @@ $nbl_reviews = array(
 </section>
 
 <style>
+/* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
+.nbl-row2 { align-items: center; }
+.nbl-media > img, .nbl-media > video,
+.nbl-media > a > img, .nbl-media picture > img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(25,20,15,.05), 0 14px 40px rgba(25,20,15,.10); }
+@media (max-width: 749px) {
+  .nbl-media > img, .nbl-media > video { aspect-ratio: 1 / 1; }
+}
+
 /* 3) specifikacije v treh stolpcih */
 .nbl-specs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
 .nbl-spec { background: #fff; border: 1px solid #ece6f3; border-radius: 12px; padding: 24px 24px 20px; }

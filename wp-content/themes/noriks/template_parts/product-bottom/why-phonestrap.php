@@ -120,6 +120,16 @@ $nps_testimonials = array(
 </section>
 
 <style>
+/* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
+.nps-row2 { align-items: center; }
+.nps-media > img, .nps-media > video,
+.nps-media > a > img, .nps-media picture > img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(25,20,15,.05), 0 14px 40px rgba(25,20,15,.10); }
+@media (max-width: 749px) {
+  .nps-media > img, .nps-media > video { aspect-ratio: 1 / 1; }
+}
+
 .nps-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b6b6b; }
 .nps-trust span { position: relative; padding-left: 20px; }
 .nps-trust span::before { content: "\2713"; position: absolute; left: 0; color: #3d3d3d; }

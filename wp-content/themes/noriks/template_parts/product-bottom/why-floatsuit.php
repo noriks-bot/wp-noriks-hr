@@ -188,6 +188,16 @@ $nfs_reviews = array(
 </section>
 
 <style>
+/* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
+.nfs-row2 { align-items: center; }
+.nfs-media > img, .nfs-media > video,
+.nfs-media > a > img, .nfs-media picture > img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(25,20,15,.05), 0 14px 40px rgba(25,20,15,.10); }
+@media (max-width: 749px) {
+  .nfs-media > img, .nfs-media > video { aspect-ratio: 1 / 1; }
+}
+
 .nfs-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b625a; }
 .nfs-trust span { position: relative; padding-left: 20px; }
 .nfs-trust span::before { content: "\2713"; position: absolute; left: 0; color: #0a97d5; }
