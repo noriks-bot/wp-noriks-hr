@@ -2098,15 +2098,15 @@ function gck_render_bundle_selector() {
       /* NORIKS DishSheets: kartice ponud barvne in zaobljene v poudarku z embalaze izdelka (temno modra #1f568e).
          Izdelek nima atributov (paketi 1x / 3x / 6x kom), zato ni izbirnikov. */
       #bundle-selector .bundle-option {
-          border: 2px solid #d5e1ee !important; background: #f6f9fc !important; border-radius: 8px !important;
+          border: 2px solid #b9cde3 !important; background: #ebf2f9 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(15,35,60,.10), 0 2px 6px 2px rgba(15,35,60,.06) !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #1f568e !important; background: #eaf1f8 !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #1f568e !important; background: #dce8f5 !important; }
       #bundle-selector .bundle-option-title { color: #172433 !important; font-weight: 700 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #1f568e !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #1f568e !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #d5e1ee !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #b9cde3 !important; }
       #bundle-selector .bundle-total-line .line-total { color: #1f568e !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #6b7a89 !important; }
     </style>
