@@ -6,8 +6,8 @@
  *   1) Videi kupaca (3 videa, preprosta mreza)
  *   2) Recite zbogom toplom vinu + 4 prednosti (harmonike originala kot kartice z besedilom)
  *   3) Za ljubitelje vina — slika levo, besedilo desno
- *   4) Odlično 4,8 / 5 — 6 mnenj v preprosti mrezi (brez tekocega traku)
- *   5) Higijena i vrhunska kvaliteta — besedilo levo, slika desno
+ *   4) Higijena i vrhunska kvaliteta — 6 mnenj v preprosti mrezi (brez tekocega traku)
+ *   5) Odlično 4,8 / 5 — besedilo levo, slika desno
  * Brez promo pasice, tekocega traku, valovitih razdelilnikov, animacij in dodatkov v nakupni skatli.
  * FAQ originala je v reviews.php ($winecooler_faq), mnenja v auto_reviews/HR_winecooler.php
  * (tja so prestavljeni tudi 3 citati iz okvirja "Poslušajte naše kupce" iz nakupne skatle originala).
@@ -52,6 +52,7 @@ $nwc_testimonials = array(
 <section class="nwc-sec">
   <div class="nwc-wrap">
     <p class="nwc-kicker nwc-kicker--c">Videi kupaca</p>
+    <h2 class="nwc-h2 nwc-h2--c">Poslušajte <em>naše kupce</em> <span class="nwc-stars">★★★★★</span></h2>
     <div class="nwc-vids">
       <?php echo $nwc_video( 1, 'Video kupca 1 — NORIKS WineCooler' ); ?>
       <?php echo $nwc_video( 2, 'Video kupca 2 — NORIKS WineCooler' ); ?>
@@ -90,8 +91,22 @@ $nwc_testimonials = array(
   </div>
 </section>
 
-<!-- 4) ODLIČNO 4.7 / 5 -->
+<!-- 4) HIGIJENA I VRHUNSKA KVALITETA — slika desno -->
 <section class="nwc-sec nwc-tint">
+  <div class="nwc-wrap nwc-row2 nwc-row2--rev">
+    <div class="nwc-copy">
+      <p class="nwc-kicker">Kvaliteta</p>
+      <h2 class="nwc-h2">Higijena i <em>vrhunska kvaliteta</em></h2>
+      <p>Oslanjamo se na vrhunski nehrđajući čelik prikladan za hranu za neusporedivu kvalitetu i trajnost, kako bi vaš štapić za hlađenje vina godinama pouzdano radio.</p>
+      <p>Štapić za hlađenje vina ima odvojivi izljev, pa ga je lako temeljito očistiti toplom vodom.</p>
+      <p class="nwc-big">Može se prati u perilici posuđa.</p>
+    </div>
+    <div class="nwc-media"><?php echo $nwc_img( 'wc-higijena.webp', 'NORIKS WineCooler štapić za hlađenje i boca vina' ); ?></div>
+  </div>
+</section>
+
+<!-- 5) ODLIČNO 4,8 / 5 -->
+<section class="nwc-sec">
   <div class="nwc-wrap">
     <h2 class="nwc-h2 nwc-h2--c">Odlično <em>4,8 / 5</em></h2>
     <p class="nwc-rate"><span class="nwc-rate__stars">★★★★★</span> Na temelju <strong>1.081</strong> recenzije</p>
@@ -108,21 +123,8 @@ $nwc_testimonials = array(
   </div>
 </section>
 
-<!-- 5) HIGIJENA I VRHUNSKA KVALITETA — slika desno -->
-<section class="nwc-sec">
-  <div class="nwc-wrap nwc-row2 nwc-row2--rev">
-    <div class="nwc-copy">
-      <p class="nwc-kicker">Kvaliteta</p>
-      <h2 class="nwc-h2">Higijena i <em>vrhunska kvaliteta</em></h2>
-      <p>Oslanjamo se na vrhunski nehrđajući čelik prikladan za hranu za neusporedivu kvalitetu i trajnost, kako bi vaš štapić za hlađenje vina godinama pouzdano radio.</p>
-      <p>Štapić za hlađenje vina ima odvojivi izljev, pa ga je lako temeljito očistiti toplom vodom.</p>
-      <p class="nwc-big">Može se prati u perilici posuđa.</p>
-    </div>
-    <div class="nwc-media"><?php echo $nwc_img( 'wc-higijena.webp', 'NORIKS WineCooler štapić za hlađenje i boca vina' ); ?></div>
-  </div>
-</section>
-
 <style>
+.nwc-stars { color: #00b67a; letter-spacing: 2px; font-size: .8em; vertical-align: middle; }
 .nwc-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #24191b; }
 .nwc-sec * { box-sizing: border-box; }
 .nwc-tint { background: #f8f1ef; }

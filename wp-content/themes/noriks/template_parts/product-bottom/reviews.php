@@ -2801,6 +2801,14 @@ $supportsocks_faq = array(
 );
 
 $polo_faq = array(
+  array('questioon' => 'Od kojeg je materijala?',
+    'answer'    => 'Od prozračne rastezljive pletenine od <strong>100 % PET-a</strong> (reciklirani poliester). Rasteže se u svim smjerovima, odvodi vlagu i ne lijepi se za tijelo na toplom danu.'),
+  array('questioon' => 'Skuplja li se nakon pranja?',
+    'answer'    => 'Ne. Pletenina zadržava oblik i nakon desetaka pranja. Perite na 30 °C i sušite na zraku — tako ovratnik i rubovi ostaju uredni.'),
+  array('questioon' => 'Kakav je kroj — uski ili opušteni?',
+    'answer'    => 'Krojena je atletski: uža u ramenima i rukavima, malo opuštenija u struku. Nije pripijena uz trbuh i ne podiže se kad sjednete.'),
+  array('questioon' => 'Ostaje li ovratnik uredan?',
+    'answer'    => 'Da. Ovratnik je ojačan pa se ne valja i ne gužva — i nakon cijelog dana nošenja izgleda kao ujutro.'),
   array('questioon' => 'Koju veličinu trebam kupiti?',
     'answer'    => 'Naše polo majice odgovaraju standardnim veličinama, odaberite svoju uobičajenu veličinu.<br><br>Ako iz bilo kojeg razloga trebate zamijeniti majicu za drugu veličinu, bez brige — imate <strong>pravo na povrat ili zamjenu u roku od 30 dana</strong>.'),
   array('questioon' => 'Kakva su pravila povrata?',
