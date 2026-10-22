@@ -98,17 +98,7 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 3) SIGURNOSNA NAPOMENA — samo besedilo -->
-<section class="nfs-sec nfs-tint">
-  <div class="nfs-wrap">
-    <div class="nfs-safety">
-      <p class="nfs-kicker nfs-kicker--c">⚠️ Sigurnosna napomena ⚠️</p>
-      <p>NORIKS FloatSuit je pomagalo za plivanje, a <strong>NE sredstvo za spašavanje života</strong>. Nije certificiran kao sredstvo za spašavanje. Potreban je stalan nadzor odrasle osobe — nikad ne ostavljajte djecu bez nadzora u vodi ili blizu nje.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 4) PRUŽA DODATNU POTPORU — slika lijevo -->
+<!-- 3) PRUŽA DODATNU POTPORU — slika lijevo -->
 <section class="nfs-sec">
   <div class="nfs-wrap nfs-row2">
     <div class="nfs-media"><?php echo $nfs_img( 'fs-potpora.webp', 'Plovci NORIKS FloatSuit obavijaju trup u punom krugu' ); ?></div>
@@ -121,7 +111,7 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 5) JAČA SAMOPOUZDANJE U VODI — video desno -->
+<!-- 4) JAČA SAMOPOUZDANJE U VODI — video desno -->
 <section class="nfs-sec nfs-tint">
   <div class="nfs-wrap nfs-row2 nfs-row2--rev">
     <div class="nfs-copy">
@@ -134,7 +124,7 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 6) ZAŠTO RODITELJI VOLE — infografika lijevo -->
+<!-- 5) ZAŠTO RODITELJI VOLE — infografika lijevo -->
 <section class="nfs-sec">
   <div class="nfs-wrap nfs-row2">
     <div class="nfs-media nfs-media--flat"><?php echo $nfs_img( 'fs-prednosti-hr.webp', 'Lako se zakopča, zaštita od sunca, ugrađeni podesivi plovci, nesputana udobnost' ); ?></div>
@@ -150,7 +140,7 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 7) SUPER ZABAVA — fotografije desno -->
+<!-- 6) SUPER ZABAVA — fotografije desno -->
 <section class="nfs-sec nfs-tint">
   <div class="nfs-wrap nfs-row2 nfs-row2--rev">
     <div class="nfs-copy">
@@ -166,7 +156,7 @@ $nfs_reviews = array(
   </div>
 </section>
 
-<!-- 8) RECENZIJE KUPACA -->
+<!-- 7) RECENZIJE KUPACA -->
 <section class="nfs-sec">
   <div class="nfs-wrap nfs-wrap--rv">
     <h2 class="nfs-h2 nfs-h2--c">Recenzije <em>kupaca</em></h2>
@@ -188,7 +178,7 @@ $nfs_reviews = array(
 </section>
 
 
-<!-- 9) NORIKS pogoji -->
+<!-- 8) NORIKS pogoji -->
 <section class="nfs-sec nfs-tint">
   <div class="nfs-wrap" style="text-align:center">
     <h2 class="nfs-h2">Isprobajte ga <em>bez brige.</em></h2>

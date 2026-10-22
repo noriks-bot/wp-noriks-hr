@@ -26,8 +26,7 @@ $nss_img  = function( $file, $alt, $cls = '' ) use ( $nss, $nss_path ) {
 $nss_video = function( $file, $label ) use ( $nss, $nss_path ) {
   if ( ! file_exists( $nss_path . $file . '.mp4' ) ) { return ''; }
   $poster = file_exists( $nss_path . $file . '-poster.webp' ) ? ' poster="' . esc_url( $nss . $file . '-poster.webp' ) . '"' : '';
-  return '<video class="nss-video__media" loop muted playsinline preload="none"' . $poster . ' aria-label="' . esc_attr( $label ) . '" data-src="' . esc_url( $nss . $file . '.mp4' ) . '"></video>'
-    . '<button class="nss-play" type="button" aria-label="' . esc_attr( 'Pokreni video: ' . $label ) . '"><span aria-hidden="true"></span></button>';
+  return '<video class="nss-video__media" autoplay loop muted playsinline preload="metadata" disablepictureinpicture' . $poster . ' aria-label="' . esc_attr( $label ) . '" src="' . esc_url( $nss . $file . '.mp4' ) . '"></video>';
 };
 
 /* video | besedilo — 1) tri vrstice pod naslovom, 3) tri vrstice; besedila z originala
@@ -323,7 +322,7 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
 .nss-copy p { font-size: 16px; line-height: 1.7; color: var(--nss-text); margin: 0 0 14px; }
 .nss-copy p.nss-kicker { font-size: 12.5px; line-height: 1.4; color: var(--nss-accent); margin: 0 0 10px; }
 .nss-copy p.nss-big { font-size: 19px; font-weight: 800; color: var(--nss-ink); }
-.nss-video { position: relative; aspect-ratio: 1; overflow: hidden; background: #e8ecee;
+.nss-video { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #e8ecee;
   box-shadow: 0 2px 4px rgba(0,30,50,.05), 0 14px 40px rgba(0,30,50,.10); }
 .nss-video__media { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nss-play { position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 64px; height: 64px; padding: 0; border: 0; border-radius: 50%;

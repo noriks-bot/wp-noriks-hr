@@ -34,9 +34,8 @@ $ndg_video = function( $file, $label, $ratio ) use ( $ndg, $ndg_path ) {
   if ( ! file_exists( $ndg_path . $file ) ) { return ''; }
   $poster = str_replace( '.mp4', '-poster.webp', $file );
   return '<div class="ndg-vid" style="aspect-ratio:' . esc_attr( $ratio ) . '">'
-    . '<video data-src="' . esc_url( $ndg . $file ) . '"' . ( file_exists( $ndg_path . $poster ) ? ' poster="' . esc_url( $ndg . $poster ) . '"' : '' )
-    . ' muted playsinline preload="none" aria-label="' . esc_attr( $label ) . '"></video>'
-    . '<button type="button" class="ndg-vid__btn" aria-label="Pokreni video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span></button>'
+    . '<video src="' . esc_url( $ndg . $file ) . '"' . ( file_exists( $ndg_path . $poster ) ? ' poster="' . esc_url( $ndg . $poster ) . '"' : '' )
+    . ' autoplay loop muted playsinline preload="metadata" disablepictureinpicture aria-label="' . esc_attr( $label ) . '"></video>'
     . '</div>';
 };
 $ndg_star  = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 6 6.5.6-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.6z"/></svg>';

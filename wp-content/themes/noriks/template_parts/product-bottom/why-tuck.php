@@ -75,31 +75,7 @@ $ntk_ugc = array(
 
 <div class="ntk">
 
-<!-- 1) DOSAD STE MORALI BIRATI — samo besedilo -->
-<section class="ntk-sec ntk-tint" id="ntk-problem">
-  <div class="ntk-wrap">
-    <p class="ntk-kicker ntk-c">Problem</p>
-    <h2 class="ntk-h2 ntk-c">Dosad ste morali <em>birati</em></h2>
-    <p class="ntk-sub">Ili zaglađen trbuh, ili udobnost cijeli dan. Obično oblikujuće rublje nikad nije uspjelo oboje.</p>
-    <div class="ntk-pr">
-      <div class="ntk-pr__card">
-        <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M9 14h26l-1 6c-1 6-5 11-9 14h-6c-4-3-8-8-9-14z" fill="#2E2420"></path><path d="M8 9.5h28v4.5H8z" fill="#C6BAAA"></path><path d="M8 14c5 2.4 23 2.4 28 0" stroke="#9B2C1F" stroke-width="2" fill="none"></path><path d="M38 6.5v6m-2.2-2.2L38 12.5l2.2-2.2" stroke="#9B2C1F" stroke-width="1.8" fill="none"></path></svg>
-        <h3>Obično oblikujuće rublje</h3>
-        <p>Zaglađuje trbuh.</p>
-        <p class="ntk-pr__bad"><b>Kvaka</b>Smota se čim sjednete, pa ga cijeli dan povlačite gore.</p>
-      </div>
-      <div class="ntk-pr__card">
-        <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M14 6h7.5l-1 32H14zM22.5 6H30l1 32h-6.5z" fill="#2E2420"></path><path d="M17.5 23l3.5-1.5M17.5 28l3.5-1.5M26.5 23L23 21.5M26.5 28L23 26.5" stroke="#9B2C1F" stroke-width="1.8"></path></svg>
-        <h3>Bez ičega</h3>
-        <p>Udobno.</p>
-        <p class="ntk-pr__bad"><b>Kvaka</b>Ništa nije zaglađeno, a bedra se trljaju ispod haljine.</p>
-      </div>
-    </div>
-    <p class="ntk-big ntk-c">NORIKS Tuck radi oboje: zaglađuje trbuh, ostaje na mjestu cijeli dan i nema trljanja bedara.</p>
-  </div>
-</section>
-
-<!-- 2) SUPER STAY™ TEHNOLOGIJA — slika lijevo -->
+<!-- 1) SUPER STAY™ TEHNOLOGIJA — slika lijevo -->
 <section class="ntk-sec" id="ntk-superstay">
   <div class="ntk-wrap ntk-row2">
     <div class="ntk-media">
@@ -138,7 +114,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 3) ZA VELIKI DAN I ZA SVAKI DAN — slike desno -->
+<!-- 2) ZA VELIKI DAN I ZA SVAKI DAN — slike desno -->
 <section class="ntk-sec ntk-tint" id="ntk-bigday">
   <div class="ntk-wrap ntk-row2 ntk-row2--rev">
     <div class="ntk-copy">
@@ -164,7 +140,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 4) ODJENITE HALJINU KOJU STE DOSAD IZBJEGAVALI — slike lijevo -->
+<!-- 3) ODJENITE HALJINU KOJU STE DOSAD IZBJEGAVALI — slike lijevo -->
 <section class="ntk-sec" id="ntk-benefits">
   <div class="ntk-wrap ntk-row2">
     <div class="ntk-media">
@@ -189,7 +165,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 5) PRONAĐITE SVOJU VELIČINU — samo besedilo -->
+<!-- 4) PRONAĐITE SVOJU VELIČINU — samo besedilo -->
 <section class="ntk-sec ntk-tint" id="ntk-fit">
   <div class="ntk-wrap ntk-row2 ntk-row2--top">
     <div class="ntk-copy">
@@ -224,7 +200,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 6) KRATKE HLAČICE ILI TANGE? — slike desno -->
+<!-- 5) KRATKE HLAČICE ILI TANGE? — slike desno -->
 <section class="ntk-sec" id="ntk-chooser">
   <div class="ntk-wrap ntk-row2 ntk-row2--rev">
     <div class="ntk-copy">
@@ -260,7 +236,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 7) USPOREDBA — samo besedilo -->
+<!-- 6) USPOREDBA — samo besedilo -->
 <section class="ntk-sec ntk-tint" id="ntk-compare">
   <div class="ntk-wrap ntk-narrow">
     <h2 class="ntk-h2 ntk-c">Nije svako oblikujuće rublje <em>jednako izrađeno</em></h2>
@@ -280,7 +256,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 8) VEĆINA ŽENA UZME 2+ — slika lijevo -->
+<!-- 7) VEĆINA ŽENA UZME 2+ — slika lijevo -->
 <section class="ntk-sec" id="ntk-offer">
   <div class="ntk-wrap ntk-row2">
     <div class="ntk-media ntk-media--sm"><?php echo $ntk_img( 'tk-paket-2-480.webp', 'NORIKS Tuck 2x kom — crna i smeđa', 480, 480 ); ?></div>
@@ -299,7 +275,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 9) ŠTO ŽENE KAŽU — mnenja (preprosta mreža) -->
+<!-- 8) ŠTO ŽENE KAŽU — mnenja (preprosta mreža) -->
 <section class="ntk-sec ntk-tint" id="ntk-reviews">
   <div class="ntk-wrap">
     <h2 class="ntk-h2 ntk-c">Što žene kažu o <em>Super Stay™ pojasu</em></h2>
@@ -330,7 +306,7 @@ $ntk_ugc = array(
   </div>
 </section>
 
-<!-- 10) ZAŠTO NORIKS — samo besedilo -->
+<!-- 9) ZAŠTO NORIKS — samo besedilo -->
 <section class="ntk-sec ntk-sec--sm" id="ntk-trust" aria-label="Zašto NORIKS">
   <div class="ntk-wrap ntk-trust">
     <div>
@@ -415,7 +391,7 @@ $ntk_ugc = array(
 </script>
 
 
-<!-- 11) NORIKS pogoji -->
+<!-- 10) NORIKS pogoji -->
 <section class="ntk-sec">
   <div class="ntk-wrap" style="text-align:center">
     <h2 class="ntk-h2">Isprobajte ih <em>bez brige.</em></h2>

@@ -671,6 +671,23 @@ function gck_render_bundle_selector() {
 
     ?>
     <style>
+      /* Kratek opis izdelka: zelene kljukice namesto pik — za VSE izdelke s ponudbami. */
+      .woocommerce-product-details__short-description ul {
+        list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
+      .woocommerce-product-details__short-description ul li {
+        list-style: none !important; text-indent: 0 !important; margin: 0 0 7px !important;
+        line-height: 1.45 !important; font-size: 15.5px !important;
+        display: block !important; position: relative !important; padding-left: 31px !important; }
+      .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
+      .woocommerce-product-details__short-description ul li::before { content: none !important; }
+      .woocommerce-product-details__short-description ul li > span[class$="-tick"] {
+        position: absolute !important; left: 0 !important; top: 1px !important;
+        width: 21px; height: 21px; border-radius: 50%;
+        background: #2f9e5f !important; color: #fff !important;
+        font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
+        text-align: center !important; display: inline-block !important; }
+      .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
+
       .single_add_to_cart_button {
           font-family: 'Roboto', sans-serif;
           height: 60px;
@@ -3467,7 +3484,7 @@ function gck_render_bundle_selector() {
            : ( has_term( array( 'orto-blanket' ), 'product_cat', $product_id ) ? "'#9217ff'"
            : ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) ? "'#b57e7e'"
            : ( has_term( array( 'orto-floatsuit' ), 'product_cat', $product_id ) ? "'#0a97d5'"
-           : ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ? "'#3d3d3d'"
+           : ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-winecooler' ), 'product_cat', $product_id ) ? "'#a9683f'"
            : ( has_term( array( 'orto-doggo' ), 'product_cat', $product_id ) ? "'#1c3b4b'"
            : ( has_term( array( 'orto-bracelet' ), 'product_cat', $product_id ) ? "'#105a85'"

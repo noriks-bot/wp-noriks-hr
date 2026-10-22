@@ -50,7 +50,7 @@ $nwc_testimonials = array(
 ?>
 
 <!-- 1) VIDEI KUPACA -->
-<section class="nwc-sec">
+<section class="nwc-sec nwc-tint">
   <div class="nwc-wrap">
     <p class="nwc-kicker nwc-kicker--c">Videi kupaca</p>
     <h2 class="nwc-h2 nwc-h2--c">Poslušajte <em>naše kupce</em> <span class="nwc-stars">★★★★★</span></h2>
@@ -63,7 +63,7 @@ $nwc_testimonials = array(
 </section>
 
 <!-- 2) RECITE ZBOGOM TOPLOM VINU + prednosti -->
-<section class="nwc-sec nwc-tint">
+<section class="nwc-sec">
   <div class="nwc-wrap">
     <h2 class="nwc-h2 nwc-h2--c">Recite zbogom <em>toplom vinu</em></h2>
     <p class="nwc-sub">Sada možete svaki put uživati u savršeno ohlađenom vinu, bez brige o vrućini!</p>
@@ -79,7 +79,7 @@ $nwc_testimonials = array(
 </section>
 
 <!-- 3) ZA LJUBITELJE VINA — slika lijevo -->
-<section class="nwc-sec">
+<section class="nwc-sec nwc-tint">
   <div class="nwc-wrap nwc-row2">
     <div class="nwc-media"><?php echo $nwc_img( 'wc-ljubitelji-vina.webp', 'Točenje ohlađenog vina s NORIKS WineCooler izljevom na plaži' ); ?></div>
     <div class="nwc-copy">
@@ -94,7 +94,7 @@ $nwc_testimonials = array(
 </section>
 
 <!-- 4) HIGIJENA I VRHUNSKA KVALITETA — slika desno -->
-<section class="nwc-sec nwc-tint">
+<section class="nwc-sec">
   <div class="nwc-wrap nwc-row2 nwc-row2--rev">
     <div class="nwc-copy">
       <p class="nwc-kicker">Kvaliteta</p>
@@ -108,7 +108,7 @@ $nwc_testimonials = array(
 </section>
 
 <!-- 5) ODLIČNO 4,8 / 5 -->
-<section class="nwc-sec">
+<section class="nwc-sec nwc-tint">
   <div class="nwc-wrap">
     <h2 class="nwc-h2 nwc-h2--c">Odlično <em>4,8 / 5</em></h2>
     <p class="nwc-rate"><span class="nwc-rate__stars">★★★★★</span> Na temelju <strong>1.081</strong> recenzije</p>
@@ -127,7 +127,7 @@ $nwc_testimonials = array(
 
 
 <!-- 6) NORIKS pogoji -->
-<section class="nwc-sec nwc-tint">
+<section class="nwc-sec">
   <div class="nwc-wrap nwc-c">
     <h2 class="nwc-h2 nwc-h2--c">Isprobajte ga <em>bez brige.</em></h2>
     <p class="nwc-sub">Ohladite prvu bocu i provjerite razliku. Ako niste zadovoljni, imate <strong>30 dana za povrat novca</strong>.</p>
