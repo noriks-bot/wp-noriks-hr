@@ -201,6 +201,7 @@ function noriks_product_type_map() : array {
         'majice-bokserice-paketi' => array( 'majice-i-bokserice-paketi' ),
         'black-friday'            => array( 'black-friday' ),
         'orto'                    => array( 'orto' ),
+        'calendar'                => array( 'orto-calendar', 'calendar' ),
     );
 }
 

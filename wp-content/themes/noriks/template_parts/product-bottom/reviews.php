@@ -56,3 +56,34 @@ $ondersteun_faq = array(
   ),
 );
 
+$calendar_faq = array(
+  array(
+    'questioon' => 'Treba li pretplata?',
+    'answer'    => 'Ne. NORIKS Calendar kupujete jednom i koristite zauvijek. Sve funkcije — kalendar, zadatci, obroci, bodovi — ostaju besplatne.',
+  ),
+  array(
+    'questioon' => 'Koliko članova obitelji može koristiti?',
+    'answer'    => 'Do 8 članova. Svaki dobiva svoju boju i može dodavati termine i zadatke iz aplikacije.',
+  ),
+  array(
+    'questioon' => 'Kako se spaja na WiFi?',
+    'answer'    => 'Pokrenite aplikaciju, spojite se na isti WiFi kao i kalendar, kalendar skenira QR kod iz aplikacije — gotovo.',
+  ),
+  array(
+    'questioon' => 'Može li se mijenjati jezik?',
+    'answer'    => 'Da. Aplikacija podržava hrvatski, engleski, njemački, francuski, talijanski, španjolski i još.',
+  ),
+  array(
+    'questioon' => 'Koliko traje garancija?',
+    'answer'    => '30 dana za povrat bez pitanja, 1 godina jamstva na hardver.',
+  ),
+  array(
+    'questioon' => 'Kako se montira?',
+    'answer'    => 'Priložen je nosač za zid i postolje za stol. USB-C kabel duljine 2 m uključen u paket.',
+  ),
+  array(
+    'questioon' => 'Može li raditi bez WiFi-ja?',
+    'answer'    => 'Ne. Kalendar prikazuje podatke iz aplikacije, pa mora biti spojen na WiFi.',
+  ),
+);
+

@@ -449,5 +449,10 @@ if ( noriks_is_type( 'home' ) ) {
     include $noriks_pb_dir . 'why-home.php';
 }
 
+// NORIKS Calendar (orto-calendar) — digitalni obiteljski kalendar bez pretplate
+if ( noriks_is_type( 'calendar' ) ) {
+    include $noriks_pb_dir . 'why-calendar.php';
+}
+
 // SHARED reviews / social proof (all products)
 include $noriks_pb_dir . 'reviews.php';
