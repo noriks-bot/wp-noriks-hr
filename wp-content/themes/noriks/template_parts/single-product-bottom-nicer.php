@@ -54,6 +54,10 @@ if ( noriks_is_type( 'fisiorest' ) ) {
     include $noriks_pb_dir . 'why-fisiorest.php';
 }
 
+
+if ( noriks_is_type( 'giovasa' ) ) {
+    include $noriks_pb_dir . 'why-giovasa.php';
+}
 // FIELDOPS (taktične slušalke)
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';

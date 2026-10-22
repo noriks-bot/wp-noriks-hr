@@ -45,6 +45,7 @@ function noriks_product_type_map() : array {
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
+        'giovasa'                 => array( 'orto-giovasa' ),
         // FieldOps Pro taktične slušalke
         'fieldops'                => array( 'orto-fieldops' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
