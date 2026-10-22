@@ -79,7 +79,7 @@ $nsp_reviews = array(
     <div class="nsp-cta">
       <p class="nsp-cta__line">Tko se prebaci, ne vraća se natrag.</p>
       <a class="nsp-btn" href="#bundle-selector">Naruči sada</a>
-      <p class="nsp-trust"><span>Jamstvo 1.000 smjena</span><span>Besplatna dostava</span></p>
+      <p class="nsp-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span></p>
     </div>
   </div>
 </section>
@@ -99,13 +99,13 @@ $nsp_reviews = array(
     </div>
     <div class="nsp-cards">
       <div class="nsp-card"><h3>Zonsko jastučenje</h3><p>Gusti jastučići ispod pete i prednjeg dijela stopala, točno ondje gdje beton udara. Svugdje drugdje tanko, pa ublažava udarce, a ne puni čizmu.</p></div>
-      <div class="nsp-card"><h3>Ojačana peta i prsti</h3><p>Dvostruko pleteni najlon na dva mjesta gdje čarape prve popuste. Rupe su razlog broj 1 zašto čarapa završi u smeću, zato smo ojačali točno ondje gdje nastaju — i dali jamstvo na 1.000 smjena.</p></div>
+      <div class="nsp-card"><h3>Ojačana peta i prsti</h3><p>Dvostruko pleteni najlon na dva mjesta gdje čarape prve popuste. Rupe su razlog broj 1 zašto čarapa završi u smeću, zato smo pletivo udvostručili točno ondje gdje nastaju.</p></div>
       <div class="nsp-card"><h3>Prozračne i suhe</h3><p>Mrežasti dijelovi odvode znoj, pa su stopala suha od prvog do dvanaestog sata. Mješavina bez vune, dakle ništa ne grebe i nema sparine u srpnju.</p></div>
     </div>
     <div class="nsp-cta">
       <p class="nsp-cta__line">Vašim stopalima zarađujete za život.</p>
       <a class="nsp-btn" href="#bundle-selector">Naruči sada</a>
-      <p class="nsp-trust"><span>Jamstvo 1.000 smjena</span><span>Besplatna dostava</span></p>
+      <p class="nsp-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span></p>
     </div>
   </div>
 </section>
@@ -164,7 +164,7 @@ $nsp_reviews = array(
           <tr><th scope="row">Hladno i suho u zatvorenoj čizmi</th><td class="nsp-no">✕</td><td class="nsp-no">✕</td><td class="nsp-yes nsp-cmp__us">✓</td></tr>
           <tr><th scope="row">Ne grebe kao vuna, noga se ne pregrijava</th><td class="nsp-no">✕</td><td class="nsp-no">✕</td><td class="nsp-yes nsp-cmp__us">✓</td></tr>
           <tr><th scope="row">Ne spušta se, ne steže list</th><td class="nsp-no">✕</td><td class="nsp-mid">—</td><td class="nsp-yes nsp-cmp__us">✓</td></tr>
-          <tr><th scope="row">Besplatna zamjena ako se probuše</th><td class="nsp-no">✕</td><td class="nsp-mid">—</td><td class="nsp-yes nsp-cmp__us">✓</td></tr>
+          <tr><th scope="row">30 dana za povrat novca</th><td class="nsp-no">✕</td><td class="nsp-mid">—</td><td class="nsp-yes nsp-cmp__us">✓</td></tr>
           <tr class="nsp-cmp__cost"><th scope="row">Koliko stvarno košta</th><td>Jeftino, pa opet kupuješ</td><td>Visoka cijena</td><td class="nsp-cmp__us">Kupiš jednom</td></tr>
         </tbody>
       </table>

@@ -188,6 +188,59 @@
 
            Niste jedini koji žele više potpore za gležanj u sportu.
 
+          <?php elseif ( noriks_is_type( 'slabproof' ) ): ?>
+
+           Niste jedini kojima stopala gore nakon smjene na betonu.
+
+          <?php elseif ( noriks_is_type( 'brassiere' ) ): ?>
+
+           Niste jedini u potrazi za grudnjakom koji ne žulja.
+
+          <?php elseif ( noriks_is_type( 'blanket' ) ): ?>
+
+           Niste jedini koji teško tonu u san.
+
+          <?php elseif ( noriks_is_type( 'bratank' ) ): ?>
+
+           Niste jedini koji žele majicu i grudnjak u jednom.
+
+          <?php elseif ( noriks_is_type( 'floatsuit' ) ): ?>
+
+           Niste jedini roditelji kojima je sigurnost djeteta u vodi na prvom mjestu.
+
+          <?php elseif ( noriks_is_type( 'phonestrap' ) ): ?>
+
+           Niste jedini kojima je mobitel već ispao iz ruke.
+
+          <?php elseif ( noriks_is_type( 'winecooler' ) ): ?>
+
+           Niste jedini kojima se vino u čaši prebrzo ugrije.
+
+          <?php elseif ( noriks_is_type( 'bracelet' ) ): ?>
+
+           Niste jedini koji traže miran fokus kroz cijeli dan.
+
+          <?php elseif ( noriks_is_type( 'doggo' ) ): ?>
+
+           Niste jedini kojima pas u autu nije siguran.
+
+          <?php elseif ( noriks_is_type( 'tuck' ) ): ?>
+
+           Niste jedini u potrazi za glatkom linijom ispod haljine.
+
+          <?php elseif ( noriks_is_type( 'supportsocks' ) ): ?>
+
+           Niste jedini kojima su noge teške na kraju dana.
+
+          <?php elseif ( noriks_is_type( 'polo' ) ): ?>
+
+           Niste jedini u potrazi za polo majicom koja stvarno stoji.
+
+          <?php elseif ( noriks_is_type( 'raincoat' ) ): ?>
+
+           Niste jedini koji traže kišnu jaknu koja izdrži pljusak i dobro izgleda.
+
+
 
 
           <?php else: ?>
@@ -343,6 +396,59 @@
            <?php elseif ( noriks_is_type( 'anklesleeve' ) ): ?>
 
            Tisuće sportaša već trenira uz NORIKS AnkleSleeve – ciljana kompresija, više stabilnosti i udobnost u cipeli.
+
+           <?php elseif ( noriks_is_type( 'slabproof' ) ): ?>
+
+            Tisuće majstora već radi u NORIKS SlabProof čarapama – zonsko jastučenje ondje gdje beton udara, ojačana peta i prsti te suha stopala cijelu smjenu.
+
+           <?php elseif ( noriks_is_type( 'brassiere' ) ): ?>
+
+            Tisuće žena već nosi NORIKS Brassiere – bez žica i bez žuljanja, s prirodnim podizanjem i mekim rubom koji se ne urezuje.
+
+           <?php elseif ( noriks_is_type( 'blanket' ) ): ?>
+
+            Tisuće ljudi već spava pod NORIKS Blanket vrećom – ravnomjeran pritisak koji smiruje tijelo i skraćuje put do sna.
+
+           <?php elseif ( noriks_is_type( 'bratank' ) ): ?>
+
+            Tisuće žena već nosi NORIKS BraTank – ugrađeni grudnjak bez traka, potpora sprijeda i majica koja se ne vuče.
+
+           <?php elseif ( noriks_is_type( 'floatsuit' ) ): ?>
+
+            Tisuće roditelja već vodi djecu u vodu u NORIKS FloatSuit kostimu – ugrađeni plovci drže dijete u ravnoteži, a vi imate mirniji dan na bazenu.
+
+           <?php elseif ( noriks_is_type( 'phonestrap' ) ): ?>
+
+            Tisuće ljudi već koristi NORIKS PhoneStrap – mobitel ostaje u ruci i kad se sagnete, trčite ili slikate u pokretu.
+
+           <?php elseif ( noriks_is_type( 'winecooler' ) ): ?>
+
+            Tisuće ljudi već hladi vino uz NORIKS WineCooler – štapić od nehrđajućeg čelika s izljevom, bez kante leda i bez razvodnjenog vina.
+
+           <?php elseif ( noriks_is_type( 'bracelet' ) ): ?>
+
+            Tisuće muškaraca već nosi NORIKS Bracelet – hematit, magneti i težina koja se osjeti na zapešću.
+
+           <?php elseif ( noriks_is_type( 'doggo' ) ): ?>
+
+            Tisuće vlasnika već vozi psa u NORIKS Doggo krevetu – ISOFIX kopče, visoki rubovi i mirnija vožnja za oboje.
+
+           <?php elseif ( noriks_is_type( 'tuck' ) ): ?>
+
+            Tisuće žena već nosi NORIKS Tuck hlačice – visoki struk, glatka linija i rub koji se ne rola.
+
+           <?php elseif ( noriks_is_type( 'supportsocks' ) ): ?>
+
+            Tisuće ljudi već nosi NORIKS SupportSocks – gradirana kompresija 12–15 mmHg za lakše noge nakon dugog stajanja ili sjedenja.
+
+           <?php elseif ( noriks_is_type( 'polo' ) ): ?>
+
+            Tisuće muškaraca već nosi NORIKS Polo – mekana tkanina koja diše, kroj koji stoji i ovratnik koji se ne gužva.
+
+           <?php elseif ( noriks_is_type( 'raincoat' ) ): ?>
+
+            Tisuće ljudi već nosi NORIKS Raincoat – vodootporna oversized jakna s kapuljačom koja izdrži pljusak i dobro izgleda.
+
 
            <?php else: ?>
         
@@ -2628,7 +2734,7 @@ $slabproof_faq = array(
   array('questioon' => 'Kako ih prati? Moram li paziti?',
     'answer'    => 'Strojno na hladnom, sušilica na niskoj temperaturi, zajedno s radnom odjećom. Bez ručnog pranja, sušenja na konopu i posebnog deterdženta.'),
   array('questioon' => 'Hoće li stvarno izdržati ili će se probušiti kao sve ostale?',
-    'answer'    => 'Peta i prsti ojačani su ondje gdje čarape prve popuste. I to ne samo kažemo, nego dajemo pisano: <strong>jamstvo 1.000 smjena</strong>. Probušite li ih prije toga, zamijenimo par besplatno.'),
+    'answer'    => 'Peta i prsti ojačani su dvostruko pletenim najlonom, točno ondje gdje čarape prve popuste. Ako vam ipak ne odgovaraju, imate <strong>30 dana za povrat novca</strong>.'),
   array('questioon' => 'Kako funkcionira jamstvo? Gdje je kvaka?',
     'answer'    => 'Nema kvake i ništa ne šaljete natrag. Pošaljite nam fotografiju istrošenog para e-mailom i šaljemo vam novi besplatno. Stari par zadržite za krpe u radionici. Bez računa i bez natezanja.'),
   array('questioon' => 'Kada ću osjetiti razliku?',

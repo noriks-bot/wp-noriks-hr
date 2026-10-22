@@ -174,7 +174,7 @@ $nss_row = function( $r, $rev ) use ( $nss_video ) {
 <section class="nss-sec nss-rv-sec" aria-labelledby="nss-rv-h">
   <div class="nss-wrap">
     <h2 id="nss-rv-h" class="nss-h2 nss-h2--c">Recenzije kupaca</h2>
-    <p class="nss-rv-sum"><span class="nss-rv-sum__stars" aria-hidden="true">★★★★☆</span> Ukupna ocjena: <strong>4,3 / 5</strong> na temelju 39 216 recenzija</p>
+    <p class="nss-rv-sum"><span class="nss-rv-sum__stars" aria-hidden="true">★★★★★</span> Ukupna ocjena: <strong>4,8 / 5</strong> na temelju 1.081 recenzije</p>
     <div class="nss-rv-grid">
       <?php foreach ( $nss_reviews as $i => $r ) : ?>
       <article class="nss-rv<?php echo $i >= $nss_rv_first ? ' is-hidden' : ''; ?>">

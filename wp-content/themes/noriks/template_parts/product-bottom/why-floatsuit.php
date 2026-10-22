@@ -170,7 +170,7 @@ $nfs_reviews = array(
 <section class="nfs-sec">
   <div class="nfs-wrap nfs-wrap--rv">
     <h2 class="nfs-h2 nfs-h2--c">Recenzije <em>kupaca</em></h2>
-    <p class="nfs-rate"><span class="nfs-rate__stars">★★★★★</span> <strong>4,94</strong> · na temelju 309 recenzija</p>
+    <p class="nfs-rate"><span class="nfs-rate__stars">★★★★★</span> <strong>4,8</strong> · na temelju 1.081 recenzije</p>
     <div class="nfs-rv-list">
       <?php foreach ( $nfs_reviews as $r ) : ?>
       <article class="nfs-rv">

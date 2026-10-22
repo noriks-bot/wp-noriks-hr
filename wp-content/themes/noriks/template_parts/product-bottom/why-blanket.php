@@ -281,7 +281,7 @@ $nbl_reviews = array(
 <section class="nbl-sec nbl-tint">
   <div class="nbl-wrap">
     <h2 class="nbl-h2 nbl-h2--c">Recenzije <em>kupaca</em></h2>
-    <p class="nbl-rate"><span class="nbl-stars">★★★★★</span> <strong>4,97 od 5</strong> · na temelju 319 recenzija</p>
+    <p class="nbl-rate"><span class="nbl-stars">★★★★★</span> <strong>4,8 od 5</strong> · na temelju 1.081 recenzije</p>
     <div class="nbl-rv">
       <?php foreach ( $nbl_reviews as $r ) : ?>
       <article class="nbl-rv__card">

@@ -247,7 +247,7 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
 <section class="ndg-sec ndg-tint" id="ndg-recenzije">
   <div class="ndg-wrap">
     <h2 class="ndg-h2 ndg-h2--c">Recenzije <em>kupaca</em></h2>
-    <p class="ndg-rv__head"><?php echo $ndg_stars( 5 ); ?> <strong>4.8 / 5</strong> · 919 recenzija</p>
+    <p class="ndg-rv__head"><?php echo $ndg_stars( 5 ); ?> <strong>4,8 / 5</strong> · 1.081 recenzija</p>
     <div class="ndg-rv__sum">
       <h3>Sažetak recenzija</h3>
       <p>Kupci hvale Doggo zbog izvrsne kvalitete, sigurnog ISOFIX pričvršćivanja i udobnosti. Iako je nekima dostava potrajala, većina se slaže da se isplati čekati jer ga njihovi psi obožavaju.</p>

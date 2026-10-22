@@ -6,7 +6,7 @@
  *   1) Videi kupaca (3 videa, preprosta mreza)
  *   2) Recite zbogom toplom vinu + 4 prednosti (harmonike originala kot kartice z besedilom)
  *   3) Za ljubitelje vina — slika levo, besedilo desno
- *   4) Odlično 4.7 / 5 — 6 mnenj v preprosti mrezi (brez tekocega traku)
+ *   4) Odlično 4,8 / 5 — 6 mnenj v preprosti mrezi (brez tekocega traku)
  *   5) Higijena i vrhunska kvaliteta — besedilo levo, slika desno
  * Brez promo pasice, tekocega traku, valovitih razdelilnikov, animacij in dodatkov v nakupni skatli.
  * FAQ originala je v reviews.php ($winecooler_faq), mnenja v auto_reviews/HR_winecooler.php
@@ -93,8 +93,8 @@ $nwc_testimonials = array(
 <!-- 4) ODLIČNO 4.7 / 5 -->
 <section class="nwc-sec nwc-tint">
   <div class="nwc-wrap">
-    <h2 class="nwc-h2 nwc-h2--c">Odlično <em>4.7 / 5</em></h2>
-    <p class="nwc-rate"><span class="nwc-rate__stars">★★★★★</span> Na temelju <strong>168</strong> recenzija</p>
+    <h2 class="nwc-h2 nwc-h2--c">Odlično <em>4,8 / 5</em></h2>
+    <p class="nwc-rate"><span class="nwc-rate__stars">★★★★★</span> Na temelju <strong>1.081</strong> recenzije</p>
     <div class="nwc-rev">
       <?php foreach ( $nwc_testimonials as $t ) : ?>
       <article class="nwc-rev__card">

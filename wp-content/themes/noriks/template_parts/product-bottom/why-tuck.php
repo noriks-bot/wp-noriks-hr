@@ -303,7 +303,7 @@ $ntk_ugc = array(
 <section class="ntk-sec ntk-tint" id="ntk-reviews">
   <div class="ntk-wrap">
     <h2 class="ntk-h2 ntk-c">Što žene kažu o <em>Super Stay™ pojasu</em></h2>
-    <p class="ntk-rate"><span class="ntk-stars">★★★★★</span> <strong>4,7</strong> · Na temelju 1 539 recenzija</p>
+    <p class="ntk-rate"><span class="ntk-stars">★★★★★</span> <strong>4,8</strong> · Na temelju 1.081 recenzije</p>
     <div class="ntk-ugc">
       <?php foreach ( $ntk_ugc as $u ) : ?>
       <article class="ntk-ugc__c">
