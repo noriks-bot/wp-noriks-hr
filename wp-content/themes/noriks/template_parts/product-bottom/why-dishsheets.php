@@ -6,7 +6,8 @@
  *   1)  "Forever Chemicals Don't Belong On Your Dishes"      -> Trajnim kemikalijama nije mjesto na posuđu (video otapanja iz galerije ob besedilu)
  *   2)  "See how ... families are cleaning better"            -> Prije i poslije (3 videi, hrvaški napisi, brez komentarjev s tujo znamko)
  *   3)  "Why choose us?" (primerjalna tabela)                 -> Zašto baš NORIKS DishSheets (tabela ob sliki, brez tujih znamk in vrstice "Aussie owned")
- *   4)–6) "No Plastic Packaging / No Artificial Dyes / Save Money" -> 3 lastnosti, video/slika ob besedilu (izmenično)
+ *   4)–6) "No Plastic Packaging / No Artificial Dyes / Save Money" -> 3 lastnosti, video/slika ob besedilu (izmenično);
+ *         pri 4) namesto animacije razgradnje (angleška embalaža, ki razpade) statična slika škatle v zemlji s hrvaškimi napisi
  *   7)  zavihka "Save on every single wash" + "What's Included" + "Ingredients" -> Uštedite na svakom pranju
  *   8)  zavihek "Extra Details"                               -> Dodatni detalji
  *   9)  "Plant Derived Ingredients — 1 Powerful Formula"      -> 3 sastojka biljnog podrijetla
@@ -48,13 +49,13 @@ $nds_cmp = array(
 
 /* 4)–6) tri lastnosti */
 $nds_rows = array(
-  array( 'media' => $nds_video( 'nds-v-razgradnja.mp4', 'nds-v-razgradnja-poster.webp', 'Kartonska ambalaža se prirodno razgrađuje u zemlji', 'nds-vid--tall' ),
+  array( 'media' => '<div class="nds-vid nds-vid--tall">' . $nds_img( 'nds-razgradnja-hr.webp', 'Kartonska ambalaža NORIKS DishSheets u zemlji — prirodno se razgrađuje' ) . '</div>',
     'k' => 'Bez plastične ambalaže', 'h' => 'Plastika na odlagalištu, <em>karton u prirodi</em>',
     'p' => 'Plastične posude za deterdžent na odlagalištima stoje <strong>500 godina</strong>, a naša kartonska ambalaža <strong>se prirodno razgrađuje</strong>. Lagan dizajn smanjuje emisije pri prijevozu za 90 % i čuva oceane bez plastike.' ),
   array( 'media' => $nds_video( 'nds-v-bez-kemikalija-hr.mp4', 'nds-v-bez-kemikalija-poster.webp', 'Klasični deterdžent ostavlja tragove na tanjuru, NORIKS DishSheets ne', 'nds-vid--sq' ),
     'k' => 'Bez umjetnih bojila', 'h' => 'Blistavo čisto — <em>bez izbjeljivača</em>',
     'p' => 'Posuđe postaje <strong>blistavo čisto</strong> bez izbjeljivača i sintetičkih bojila. Naša <strong>netoksična formula biljnog podrijetla</strong> razgrađuje se u vodenim sustavima.' ),
-  array( 'media' => $nds_img( 'nds-s-usteda.webp', 'NORIKS DishSheets — od 0,16 € po pranju' ),
+  array( 'media' => $nds_img( 'nds-s-usteda-hr.webp', 'NORIKS DishSheets — od 0,16 € po pranju' ),
     'k' => 'Uštedite novac', 'h' => 'Prirodni sastojci, <em>manji trošak</em>',
     'p' => 'Koristimo sastojke <strong>prirodnog podrijetla</strong> i izbacili smo sve štetne tvari — a vi pritom <strong>štedite novac</strong>!' ),
 );
@@ -144,7 +145,7 @@ $nds_cls = function() use ( &$nds_n ) { $nds_n++; return ( $nds_n % 2 ) ? ' nds-
 <section class="nds-sec<?php echo $nds_cls(); ?>">
   <div class="nds-wrap">
     <div class="nds-row2">
-      <div class="nds-media nds-media--sq"><?php echo $nds_img( 'nds-g01-kutija.webp', 'NORIKS DishSheets listići za pranje posuđa — 80 listića' ); ?></div>
+      <div class="nds-media nds-media--sq"><?php echo $nds_img( 'nds-g01-kutija-hr.webp', 'NORIKS DishSheets listići za pranje posuđa — 80 listića' ); ?></div>
       <div class="nds-copy">
         <p class="nds-kicker">Usporedba</p>
         <h2 class="nds-h3">Zašto <em>odabrati nas?</em></h2>
@@ -186,7 +187,7 @@ $nds_cls = function() use ( &$nds_n ) { $nds_n++; return ( $nds_n % 2 ) ? ' nds-
 <section class="nds-sec<?php echo $nds_cls(); ?>">
   <div class="nds-wrap">
     <div class="nds-row2">
-      <div class="nds-media nds-media--sq"><?php echo $nds_img( 'nds-g02-prednosti.webp', 'NORIKS DishSheets — za perilicu, pranje na ruke i četku za posuđe' ); ?></div>
+      <div class="nds-media nds-media--sq"><?php echo $nds_img( 'nds-g02-prednosti-hr.webp', 'NORIKS DishSheets — za perilicu, pranje na ruke i četku za posuđe' ); ?></div>
       <div class="nds-copy">
         <p class="nds-kicker">Uštedite na svakom pranju</p>
         <h2 class="nds-h3">Snažni gdje treba, <em>nježni gdje je važno</em></h2>
@@ -284,7 +285,7 @@ $nds_cls = function() use ( &$nds_n ) { $nds_n++; return ( $nds_n % 2 ) ? ' nds-
 <section class="nds-sec<?php echo $nds_cls(); ?>">
   <div class="nds-wrap">
     <div class="nds-row2 nds-row2--rev">
-      <div class="nds-media nds-media--sq"><?php echo $nds_img( 'nds-g01-kutija.webp', 'NORIKS DishSheets listići za pranje posuđa' ); ?></div>
+      <div class="nds-media nds-media--sq"><?php echo $nds_img( 'nds-g01-kutija-hr.webp', 'NORIKS DishSheets listići za pranje posuđa' ); ?></div>
       <div class="nds-copy">
         <p class="nds-kicker">Bez rizika</p>
         <h2 class="nds-h3">Pravo na povrat <em>u roku od 30 dana</em></h2>
@@ -358,7 +359,7 @@ $nds_cls = function() use ( &$nds_n ) { $nds_n++; return ( $nds_n % 2 ) ? ' nds-
 
 /* videi */
 .nds-vid { position: relative; overflow: hidden; background: #ece6cf; border-radius: 10px; margin: 0 auto; box-shadow: 0 2px 4px rgba(15,35,60,.05), 0 14px 40px rgba(15,35,60,.10); }
-.nds-vid video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.nds-vid video, .nds-media .nds-vid img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
 .nds-vid--sq { aspect-ratio: 1 / 1; max-width: 540px; }
 .nds-vid--tall { aspect-ratio: 9 / 16; max-width: 340px; }
 .nds-vid--ba { aspect-ratio: 480 / 748; }
@@ -366,8 +367,9 @@ $nds_cls = function() use ( &$nds_n ) { $nds_n++; return ( $nds_n % 2 ) ? ' nds-
 
 /* usporedba */
 .nds-cmp { width: 100%; border-collapse: collapse; margin: 6px 0 8px; font-size: 15px; background: #fff; border-radius: 10px; overflow: hidden; }
-.nds-cmp th { font-size: 12.5px; font-weight: 700; color: #fff; padding: 10px 6px; text-align: center; background: #1f568e; line-height: 1.3; }
-.nds-cmp th:first-child { text-align: left; padding-left: 12px; }
+.nds-cmp thead tr, .nds-sec .nds-cmp thead th { background: #1f568e !important; }
+.nds-sec .nds-cmp th { font-size: 12.5px; font-weight: 700; color: #fff !important; padding: 10px 6px; text-align: center; background: #1f568e !important; line-height: 1.3; opacity: 1 !important; text-transform: none; letter-spacing: 0; border: 0; }
+.nds-sec .nds-cmp th:first-child { text-align: left; padding-left: 12px; }
 .nds-cmp td { padding: 10px 8px; border-bottom: 1px solid #ece6cf; color: #2c3742; font-weight: 600; font-size: 14px; }
 .nds-cmp td:first-child { padding-left: 12px; }
 .nds-cmp td.nds-yes, .nds-cmp td.nds-no, .nds-cmp td.nds-price { text-align: center; font-weight: 800; font-size: 17px; width: 21%; }
@@ -426,7 +428,7 @@ $nds_cls = function() use ( &$nds_n ) { $nds_n++; return ( $nds_n % 2 ) ? ' nds-
   .nds-row2--rev .nds-media { order: 0; }
   .nds-reviews, .nds-reviews--fb { grid-template-columns: 1fr; gap: 14px; }
   .nds-trio { gap: 6px; }
-  .nds-cmp th { font-size: 11px; }
+  .nds-sec .nds-cmp th { font-size: 11px; padding: 9px 3px; }
   .nds-cmp td { font-size: 13px; }
 }
 

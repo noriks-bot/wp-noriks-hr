@@ -3,9 +3,9 @@
  * product-bottom: NORIKS FleeceTights — tople hulahopke s flisom koje izgledaju kao koza (orto-fleecetights).
  * Original: irazia.com/products/fleece-leggings — vsebina in vrstni red 1:1 z originalom,
  * oblika po NORIKS stilu (predloga why-hands.php / why-polo.php):
- *   1) Videi kupaca (6 videov, utisani, s hrvaskimi napisi; angleski napisi prekriti)
+ *   1) Videi kupaca (6 videov ob besedilu, utisani, s hrvaskimi napisi; angleski napisi prekriti)
  *   2) "Cozy, Chic, Snatched." -> Tople, elegantne i oblikuju (slika ob besedilu)
- *   3) "Style Inspo" -> Inspiracija za stil (13 fotografij kupk z velikostjo, nijanso in mnenjem)
+ *   3) "Style Inspo" -> Inspiracija za stil (4 izbrane fotografije kupk z mnenjem ob besedilu)
  *   4) Primerjalna tabela NORIKS / ostali (slika ob tabeli; tuja stevilka 200.000 -> nasa 120.000)
  *   5) "30-Day Shade & Size Match Guarantee" -> NORIKS pogoji (30 dana za povrat, dostava iznad 70 €)
  *   6) Slika "Find your shade" iz sekcije FAQ -> Pronadite svoju nijansu (slika ob seznamu nijans)
@@ -29,34 +29,16 @@ $nft_video = function( $n, $label ) use ( $nft, $nft_path ) {
 };
 $nft_allowed = array( 'strong' => array(), 'em' => array() );
 
-/* 3) Inspiracija za stil — 1:1 z originala (velikost, nijansa, mnenje; mere v cm/kg) */
+/* 3) Inspiracija za stil — 4 izbrane fotografije kupk z mnenjem z originala (velikost, nijansa, mnenje) */
 $nft_inspo = array(
-  array( 'foto' => 'ft-ugc-01.webp', 'vel' => 'M/L', 'boja' => 'Karamela (brončana)',
-    'tekst' => 'Ove hulahopke bile su savršene — nosila sam ih na večernjem izlasku u New Yorku i bilo mi je toplo, a unutra se nisam pregrijala. Cure su me pitale kako mi nije hladno u prozirnim hulahopkama 😂 Curo, ove su podstavljene flisom. Uzela sam nijansu Karamela, veličinu M/L. Visoka sam 175 cm i imam 73 kg.' ),
-  array( 'foto' => 'ft-ugc-02.webp', 'vel' => 'L/XL', 'boja' => 'Vanilija (svijetla)',
-    'tekst' => 'Kompresija NIJE šala. Bila sam skeptična oko cijele priče o »oblikovanju struka«, ali WOW. Stvarno sve drže na mjestu, a izgledaju nevidljivo. Kolege me stalno pitaju nosim li hulahopke ili su to samo moje noge 😂' ),
   array( 'foto' => 'ft-ugc-03.webp', 'vel' => 'XS/S', 'boja' => 'Vanilija (svijetla)',
     'tekst' => 'Dobro, a zašto mi nitko nije rekao za ove ranije?? GODINAMA se smrzavam u običnim hulahopkama. Izgledaju točno kao moja koža, a stvarno griju? Ovo mijenja sve. Već sam naručila još 3 para.' ),
-  array( 'foto' => 'ft-ugc-04.webp', 'vel' => '2XL/3XL', 'boja' => 'Latte (preplanula)',
-    'tekst' => 'Super mekane, rastezljive i udobne. Isprva sam mislila da su pretamne, ali kad sam ih obukla, boja je bila sjajna. Sigurno ću naručiti još, a konačno mogu nositi i kraće haljine.' ),
-  array( 'foto' => 'ft-ugc-05.webp', 'vel' => 'L/XL', 'boja' => 'Vanilija (svijetla)',
-    'tekst' => 'Jako slatke i mekane hulahopke. Brinula sam se oko boje, kvalitete i izdržljivosti. Materijal je dobar, debeo i ne čini se da se lako trga. Izašla sam van provjeriti boju — savršeno se slaže. Visoka sam 163 cm, imam 83 kg i uzela sam L/XL u svijetloj nijansi.' ),
-  array( 'foto' => 'ft-ugc-06.webp', 'vel' => 'XS/S', 'boja' => 'Latte (preplanula)',
-    'tekst' => 'Stvarno mekane, stvarno tople, stvarno vrijede! Probala sam toliko hulahopki s flisom koje grebu ili čudno izgledaju. Ove su iznutra zaista mekane, ne izgledaju debelo ni glomazno, a nijansa Latte savršeno mi odgovara. Upravo stavljam još jedan par u košaricu.' ),
-  array( 'foto' => 'ft-ugc-07.webp', 'vel' => 'XS/S', 'boja' => 'Karamela (brončana)',
-    'tekst' => 'Fantastične! Nosim ih barem 3 puta tjedno. Jedino žalim što ih nisam kupila ranije! Trik: kad je JAKO hladno, nosite ih ispod hlača. Služe i kao hulahopke i kao termo rublje. Uzimam si još 😅' ),
-  array( 'foto' => 'ft-ugc-08.webp', 'vel' => 'M/L', 'boja' => 'Vanilija (svijetla)',
-    'tekst' => 'Uživo stvarno izgledaju TAKO dobro. Mislila sam da su fotografije obrađene, ali ne — stvarno se stope s kožom. Mama me pitala gdje sam kupila »te najlonke boje kože« i bila je šokirana kad sam joj rekla da su podstavljene flisom!' ),
-  array( 'foto' => 'ft-ugc-09.webp', 'vel' => 'L/XL', 'boja' => 'Vanilija (svijetla)',
-    'tekst' => 'Lako se oznojim. Ove su me grijale vani na velikoj hladnoći, a unutra uz upaljeni kamin nisam se pregrijala. Inače nosim L, a uzela sam L/XL umjesto M/L jer sam se bojala da će biti premale. Stoje dobro, samo sam ih morala malo namjestiti. Visoka sam 168 cm i imam oko 86 kg. Sve u svemu — oduševljena sam.' ),
   array( 'foto' => 'ft-ugc-10.webp', 'vel' => 'L/XL', 'boja' => 'Karamela (brončana)',
     'tekst' => 'Izgledaju odlično, ugodne su i savršeno stoje! Uzela sam L/XL u brončanoj nijansi. Da sam ih barem imala ranije! Konačno mogu nositi slatke haljine, a da se ne SMRZNEM!' ),
   array( 'foto' => 'ft-ugc-11.webp', 'vel' => 'L/XL', 'boja' => 'Karamela (brončana)',
     'tekst' => 'Lijepo stoje, a izgled je savršen. Zaglađuju noge i stvarno izgledaju kao koža. Muž je mislio da izlazim iz kuće samo u majici, haha.' ),
   array( 'foto' => 'ft-ugc-12.webp', 'vel' => 'L/XL', 'boja' => 'Vanilija (svijetla)',
     'tekst' => 'Obožavam, obožavam, OBOŽAVAM ove hulahopke! Točno ono što nisam ni znala da tražim. Ne možete mi reći da to nije moja koža. Tako su mekane i ugodne, a i oblikuju 🥰' ),
-  array( 'foto' => 'ft-ugc-13.webp', 'vel' => 'XXS/XS', 'boja' => 'Latte (preplanula)',
-    'tekst' => 'Ove hulahopke su stvarno debele i tople. Kupila sam neke druge na Amazonu misleći da sam dobro prošla, ali su nakon nekoliko nošenja imale rupe i paranja. Trebala sam odmah uzeti ove. Obožavam ih!!' ),
 );
 
 /* 4) primerjalna tabela 1:1 (NORIKS namesto tuje znamke) */
@@ -79,29 +61,24 @@ $nft_shades = array(
 ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 
-<!-- 1) VIDEI KUPACA -->
-<section class="nft-sec nft-tint nft-sec--videos">
+<!-- 1) VIDEI KUPACA — 6 videov ob besedilu -->
+<section class="nft-sec nft-tint">
   <div class="nft-wrap">
-    <p class="nft-kicker nft-c">Videi kupaca</p>
-    <h2 class="nft-h2 nft-c">Izgledaju kao koža, <em>griju kao flis</em></h2>
-    <div class="nft-vids">
-      <?php for ( $n = 1; $n <= 6; $n++ ) { echo $nft_video( $n, 'Video kupca ' . $n . ' — NORIKS FleeceTights' ); } ?>
-    </div>
-  </div>
-</section>
-
-<!-- 2) TOPLE, ELEGANTNE I OBLIKUJU — slika ob besedilu -->
-<section class="nft-sec">
-  <div class="nft-wrap">
-    <div class="nft-row2">
-      <div class="nft-media"><?php echo $nft_img( 'ft-flis.webp', 'Debela i mekana podstava od flisa — NORIKS FleeceTights' ); ?></div>
+    <div class="nft-row2 nft-row2--top">
+      <div class="nft-media">
+        <div class="nft-vids">
+          <?php for ( $n = 1; $n <= 6; $n++ ) { echo $nft_video( $n, 'Video kupca ' . $n . ' — NORIKS FleeceTights' ); } ?>
+        </div>
+      </div>
       <div class="nft-copy">
-        <p class="nft-kicker">Flis + kompresija</p>
-        <h2 class="nft-h3">Tople, elegantne <em>i oblikuju liniju.</em></h2>
-        <p>Jedine hulahopke s flisom s <strong>kompresijskim pojasom koji oblikuje struk</strong>, koje izgledaju kao <strong>koža</strong>, a osjećaj je kao <strong>topli zagrljaj</strong>.</p>
+        <p class="nft-kicker">Videi kupaca</p>
+        <h2 class="nft-h3">Izgledaju kao koža, <em>griju kao flis</em></h2>
+        <p>Pogledajte kako NORIKS FleeceTights izgledaju uživo — na ulici, u uredu i na večernjem izlasku. Izvana prozirni izgled golih nogu, iznutra <strong>debela i mekana podstava od flisa</strong>.</p>
         <ul class="nft-points">
-          <li><span class="nft-dot" aria-hidden="true">✓</span> 4 nijanse za <strong>svaki ton kože</strong></li>
-          <li><span class="nft-dot" aria-hidden="true">✓</span> Veličine od XXS do 5XL za <strong>svako tijelo</strong></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>Nijansa koja <strong>savršeno odgovara koži</strong></span></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span><strong>Kompresijski pojas</strong> koji oblikuje struk</span></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>Ultra fleksibilne, <strong>rastežu se u 4 smjera</strong></span></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span><strong>Ne trgaju se</strong> i ne paraju</span></li>
         </ul>
         <p class="nft-big">Izgled golih nogu, toplina debelih tajica.</p>
       </div>
@@ -109,21 +86,53 @@ $nft_shades = array(
   </div>
 </section>
 
-<!-- 3) INSPIRACIJA ZA STIL — fotografije kupaca -->
+<!-- 2) TOPLE, ELEGANTNE I OBLIKUJU — slika ob besedilu -->
+<section class="nft-sec">
+  <div class="nft-wrap">
+    <div class="nft-row2 nft-row2--rev">
+      <div class="nft-media"><?php echo $nft_img( 'ft-flis.webp', 'Debela i mekana podstava od flisa — NORIKS FleeceTights' ); ?></div>
+      <div class="nft-copy">
+        <p class="nft-kicker">Flis + kompresija</p>
+        <h2 class="nft-h3">Tople, elegantne <em>i oblikuju liniju.</em></h2>
+        <p>Jedine hulahopke s flisom s <strong>kompresijskim pojasom koji oblikuje struk</strong>, koje izgledaju kao <strong>koža</strong>, a osjećaj je kao <strong>topli zagrljaj</strong>.</p>
+        <ul class="nft-points">
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>4 nijanse za <strong>svaki ton kože</strong></span></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>Veličine od XXS do 5XL za <strong>svako tijelo</strong></span></li>
+        </ul>
+        <p class="nft-big">Topli zagrljaj za vaše noge — cijelu zimu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3) INSPIRACIJA ZA STIL — 4 fotografije kupk z mnenji ob besedilu -->
 <section class="nft-sec nft-tint">
   <div class="nft-wrap">
-    <p class="nft-kicker nft-c">Inspiracija za stil</p>
-    <h2 class="nft-h2 nft-c">Kako ih <em>nose kupci</em></h2>
-    <div class="nft-inspo">
-      <?php foreach ( $nft_inspo as $r ) : ?>
-      <article class="nft-card">
-        <div class="nft-card__photo"><?php echo $nft_img( $r['foto'], 'Kupac u NORIKS FleeceTights hulahopkama — ' . $r['boja'] ); ?></div>
-        <div class="nft-card__body">
-          <p class="nft-card__meta"><span>Veličina: <strong><?php echo esc_html( $r['vel'] ); ?></strong></span><span>Nijansa: <strong><?php echo esc_html( $r['boja'] ); ?></strong></span></p>
-          <p class="nft-card__txt">„<?php echo esc_html( $r['tekst'] ); ?>”</p>
+    <div class="nft-row2 nft-row2--top">
+      <div class="nft-media">
+        <div class="nft-inspo">
+          <?php foreach ( $nft_inspo as $r ) : ?>
+          <article class="nft-card">
+            <div class="nft-card__photo"><?php echo $nft_img( $r['foto'], 'Kupac u NORIKS FleeceTights hulahopkama — ' . $r['boja'] ); ?></div>
+            <div class="nft-card__body">
+              <p class="nft-card__meta"><span>Veličina: <strong><?php echo esc_html( $r['vel'] ); ?></strong></span><span>Nijansa: <strong><?php echo esc_html( $r['boja'] ); ?></strong></span></p>
+              <p class="nft-card__txt">„<?php echo esc_html( $r['tekst'] ); ?>”</p>
+            </div>
+          </article>
+          <?php endforeach; ?>
         </div>
-      </article>
-      <?php endforeach; ?>
+      </div>
+      <div class="nft-copy">
+        <p class="nft-kicker">Inspiracija za stil</p>
+        <h2 class="nft-h3">Kako ih <em>nose kupci</em></h2>
+        <p>Stvarne kupke, stvarne nijanse i veličine. Uz haljine, suknje i čizme NORIKS FleeceTights izgledaju kao <strong>gole noge</strong> — a griju kao <strong>debele tajice</strong>.</p>
+        <ul class="nft-points">
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>4 nijanse za <strong>svaki ton kože</strong></span></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>Veličine od XXS do 5XL za <strong>svako tijelo</strong></span></li>
+          <li><span class="nft-dot" aria-hidden="true">✓</span> <span>Kraće haljine i suknje <strong>i usred zime</strong></span></li>
+        </ul>
+        <p class="nft-big">Konačno haljine i suknje — bez smrzavanja.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -206,6 +215,7 @@ $nft_shades = array(
 
 /* slika ob besedilu */
 .nft-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.nft-row2--top { align-items: start; }
 .nft-row2--rev .nft-media { order: 2; }
 .nft-media img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(40,25,15,.05), 0 14px 40px rgba(40,25,15,.10); }
 .nft-media--sq img { aspect-ratio: 1 / 1; }
@@ -218,25 +228,25 @@ $nft_shades = array(
 .nft-dot { flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: #a9683f; color: #fff; font-size: 12px; font-weight: 800; line-height: 22px; text-align: center; margin-top: 2px; }
 
 /* videi kupaca */
-.nft-vids { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 960px; margin: 0 auto; }
+.nft-vids { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .nft-vid { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #ece3da; border-radius: 10px; }
 .nft-vid video { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* inspiracija za stil */
-.nft-inspo { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.nft-inspo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
 .nft-card { background: #fff; border: 1px solid #ecdfd3; border-radius: 10px; overflow: hidden; }
-.nft-card__photo img { aspect-ratio: 4 / 5; object-fit: cover; }
-.nft-card__body { padding: 14px 16px 16px; }
-.nft-card__meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: #8a7a6e; margin: 0 0 10px; }
+.nft-card__photo img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: 0; box-shadow: none; }
+.nft-card__body { padding: 12px 14px 14px; }
+.nft-card__meta { display: flex; flex-wrap: wrap; gap: 2px 10px; font-size: 12px; color: #8a7a6e; margin: 0 0 8px; }
 .nft-card__meta strong { color: #a9683f; font-weight: 600; }
-.nft-card__txt { font-size: 14.5px; line-height: 1.6; color: #3a302a; margin: 0; }
+.nft-card__txt { font-size: 13.5px; line-height: 1.55; color: #3a302a; margin: 0; }
 
 /* usporedba */
 .nft-cmp { border: 1px solid #ecdfd3; border-radius: 10px; overflow: hidden; background: #fff; margin-top: 6px; }
 .nft-cmp__row { display: grid; grid-template-columns: 1fr 84px 84px; align-items: center; border-top: 1px solid #f1e7de; }
 .nft-cmp__row > span { padding: 12px 14px; font-size: 15px; line-height: 1.4; }
 .nft-cmp__head { border-top: 0; background: #f7f2ec; }
-.nft-cmp__head span { font-weight: 700; font-size: 14px; text-align: center; color: #231d19; }
+.nft-cmp__head span { font-weight: 700; font-size: 14px; text-align: center; color: #231d19; white-space: nowrap; }
 .nft-cmp__head span:nth-child(2) { color: #a9683f; }
 .nft-cmp__lbl { color: #231d19; font-weight: 500; }
 .nft-cmp__yes, .nft-cmp__no { text-align: center; font-weight: 800; font-size: 17px; }
@@ -255,18 +265,21 @@ $nft_shades = array(
 .nft-shade { flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); }
 
 @media (max-width: 989px) {
-  .nft-inspo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nft-row2 { gap: 32px; }
 }
 @media (max-width: 749px) {
   .nft-sec { padding: 42px 0; }
   .nft-wrap { padding: 0 16px; }
-  .nft-vids { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .nft-inspo { grid-template-columns: 1fr; gap: 14px; }
+  .nft-vids { gap: 6px; }
+  .nft-inspo { gap: 8px; }
+  .nft-card__body { padding: 10px 10px 12px; }
+  .nft-card__meta { font-size: 11px; flex-direction: column; }
+  .nft-card__txt { font-size: 12.5px; }
   .nft-row2 { grid-template-columns: 1fr; gap: 24px; }
   .nft-row2--rev .nft-media { order: 0; }
-  .nft-cmp__row { grid-template-columns: 1fr 64px 64px; }
+  .nft-cmp__row { grid-template-columns: 1fr 68px 60px; }
   .nft-cmp__row > span { padding: 10px 10px; font-size: 14px; }
+  .nft-cmp__row.nft-cmp__head > span { padding: 10px 4px; font-size: 12px; }
 }
 
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */

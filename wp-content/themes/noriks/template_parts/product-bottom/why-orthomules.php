@@ -6,7 +6,7 @@
  *   1) opis + 3 lastnosti iz nakupne škatle        -> Lijepe i bez boli (slika ob besedilu)
  *   2) zavihek "Shipping Information"              -> Brza i sigurna dostava (ikona ob besedilu, NORIKS pogoji)
  *   3) zavihek "Returns & Refunds"                 -> Pravo na povrat u roku od 30 dana (ikona ob besedilu)
- *   4) "Trusted by Over 51,000+ Customers"         -> Kupci nam vjeruju (3 mnenja, število konkurenta izpuščeno -> 1081)
+ *   4) "Trusted by Over 51,000+ Customers"         -> Kupci nam vjeruju (2 mnenji o NORIKS-u; 3. z originala je o drugem izdelku -> izpuščeno; število konkurenta -> 1081)
  *   5) "30-Day Money Back Guarantee"               -> 30 dana za povrat (slika z logotipom znamke nadomeščena s sliko izdelka)
  * Izpusceno: glava, pasica (60 % popusta, dostava nad 99 $), "You may also like", noga, seznam prevoznikov konkurenta.
  * Original nima FAQ in nima mnenj o izdelku — FAQ (reviews.php, $orthomules_faq) je sestavljen iz podatkov originala
@@ -26,11 +26,10 @@ $nom_stars = function( $n ) {
   return '<span class="nom-stars" aria-label="' . (int) $n . ' od 5 zvjezdica">' . str_repeat( '★', (int) $n ) . '<span class="nom-stars__off">' . str_repeat( '★', 5 - (int) $n ) . '</span></span>';
 };
 
-/* 4) mnenja z originala (prevedena; 3. mnenje se na originalu nanaša na drug izdelek — prilagojeno na natikače) */
+/* 4) mnenja z originala (prevedena; 3. mnenje z originala se nanaša na drug izdelek — jopico — zato je izpuščeno) */
 $nom_quotes = array(
   array( 'ime' => 'Mia R.',    'tekst' => 'Korisnička podrška bila je izuzetno susretljiva! Danas je rijetkost naići na toliko brige.' ),
-  array( 'ime' => 'Taylor M.', 'tekst' => 'Odlična kvaliteta i brza dostava! Sve je stiglo savršeno zapakirano.' ),
-  array( 'ime' => 'Lena S.',   'tekst' => 'Natikače su bile pun pogodak — savršeno pristaju i imaju jedinstven dizajn!' ),
+  array( 'ime' => 'Tamara M.', 'tekst' => 'Odlična kvaliteta i brza dostava! Sve je stiglo savršeno zapakirano.' ),
 );
 
 $nom_n = 0; // števec sekcij za izmenična ozadja
@@ -174,7 +173,7 @@ $nom_rev = function() use ( &$nom_side ) { $nom_side++; return ( $nom_side % 2 )
 .nom-score__num { font-size: 30px; font-weight: 700; color: #231d19; }
 .nom-score .nom-stars { font-size: 20px; }
 .nom-score__txt { font-size: 14.5px; color: #6b625a; }
-.nom-quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; max-width: 1040px; margin: 0 auto; }
+.nom-quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: stretch; max-width: 760px; margin: 0 auto; }
 .nom-card { background: #fff; border: 1px solid #ecdfd3; border-radius: 10px; padding: 20px 20px 18px; }
 .nom-card__txt { font-size: 15.5px; line-height: 1.6; color: #3a302a; margin: 10px 0 12px; font-style: italic; }
 .nom-card__name { font-size: 14px; font-weight: 600; color: #231d19; margin: 0; }

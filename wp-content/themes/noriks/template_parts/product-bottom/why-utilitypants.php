@@ -7,8 +7,8 @@
  *   2) "Water repellent" (video) -> Vodoodbojne (video ob besedilu, hrvaški napis)
  *   3) "Ultra comfort" (video) -> Ultra udobnost (besedilo ob videu)
  *   4) "Guaranteed to last" (video) -> Stvorene da traju (video ob besedilu)
- *   5) "Over 12,000+ Sold Worldwide" (3 mnenja s fotografijo) -> Iskustva kupaca
- *   6) "Customer Reviews" (Loox, mnenja s fotografijami) -> Recenzije kupaca (9 mnenj s fotografijo, 1081 recenzija)
+ *   5) "Over 12,000+ Sold Worldwide" + "Customer Reviews" (Loox) -> Iskustva naših kupaca: ena sekcija,
+ *      4 izbrana mnenja s fotografijo (mreža 2x2) ob besedilu, 1081 recenzija
  * Izpusceno: glava, pasica "Halloween Sale", "UPDATE: ... limited stock", tekoci trak "PROMOTION ENDS TODAY", noga.
  * Opis, tablica velicin in pogoji (dostava/povrat) so v standardnih harmonikah (meta.php), FAQ v reviews.php
  * ($utilitypants_faq), mnenja tudi v auto_reviews/HR_utilitypants.php. Znamka konkurenta odstranjena iz besedil in slik.
@@ -55,24 +55,12 @@ $nup_rows = array(
     'big' => 'Dizajnirane da vam traju godinama.' ),
 );
 
-/* 5) Iskustva kupaca — 3 mnenja s fotografijo z originala */
-$nup_testi = array(
-  array( 'img' => 'up-t1-kupac.webp', 'h' => 'Konačno — hlače koje stvarno rade', 'tekst' => 'Radim vani cijeli dan, svaki dan, i ove su mi spasile život. Nevjerojatno su čvrste, a vodootpornost stvarno radi.', 'ime' => 'Hrvoje D., 36' ),
-  array( 'img' => 'up-t2-kupac.webp', 'h' => 'Udobne cijeli dan', 'tekst' => 'Sumnjao sam hoće li stvarno izdržati i biti udobne na gradilištu, ali odlične su! Bilo da lijeva kao iz kabla ili klečim u blatu, cijeli dan ostajem suh.', 'ime' => 'Krešimir J., 33' ),
-  array( 'img' => 'up-t3-kupac.webp', 'h' => 'Radne hlače za cijelu godinu', 'tekst' => 'Prije sam na posao stalno nosio kratke hlače, ali htio sam nešto urednije i ove su savršene. Super udobne i dobro me štite. 10/10', 'ime' => 'Bruno K., 29' ),
-);
-
-/* 6) Recenzije kupaca — 9 mnenj s fotografijo z originala (Loox) */
+/* 5) Iskustva kupaca — 4 izbrana mnenja s fotografijo z originala ("Over 12,000+ Sold Worldwide" + Loox recenzije) */
 $nup_reviews = array(
-  array( 'f' => 'up-r01.webp', 'ime' => 'Kristijan J.', 'z' => 5, 'tekst' => 'Odlične radne hlače, drugačije od standardnih platnenih koje se obično dobiju. Puno fleksibilnije i bolje pristaju, a jednako su izdržljive. Brza dostava, taman za hladnija jutra.' ),
-  array( 'f' => 'up-r02.webp', 'ime' => 'Zoran M.', 'z' => 5, 'tekst' => 'Vidio sam oglase, isprobao ih i moram reći da me nisu iznevjerile! Vrhunska kvaliteta, brza dostava i ne koštaju bogatstvo. Izgledaju uredno, a čvrste su. Nemam se na što požaliti.' ),
-  array( 'f' => 'up-r03.webp', 'ime' => 'Branko F.', 'z' => 5, 'tekst' => 'Obožavam svoje nove radne hlače — puno su udobnije od starih i iznenađen sam koliko su kvalitetne.' ),
-  array( 'f' => 'up-r04.webp', 'ime' => 'Ante R.', 'z' => 5, 'tekst' => 'Dugo su mi trebale nove radne hlače i ove su savršene za vodoinstalatera. Fleksibilnije od standardnih i udobne cijeli dan. Udobne su i na koljenima ako, kao ja, većinu dana provodite na podu. 10/10, preporučio sam ih i prijateljima.' ),
-  array( 'f' => 'up-r05.webp', 'ime' => 'Josip T.', 'z' => 5, 'tekst' => 'Iznenađen sam koliko su dobre. Odlično se rastežu, puno džepova točno tamo gdje trebaju, čvrste kao vol i ne stežu kao mnoge rastezljive tkanine. Svakome tko radi u struci ili treba dobru odjeću za vani — vrijedi probati!' ),
-  array( 'f' => 'up-r06.webp', 'ime' => 'Marin L.', 'z' => 5, 'tekst' => 'Najbolja radna odjeća koju sam probao. Odličan, krojen izgled i nisu široke oko listova kao većina radnih hlača. Džepovi su lijepo duboki, a to mi je inače najveća muka.' ),
-  array( 'f' => 'up-r07.webp', 'ime' => 'Nikola B.', 'z' => 5, 'tekst' => 'Stigle su za nekoliko dana. Griju u hladna jutra, a tijekom dana se ne pregrijavaju. Uvijek imam problem s tijesnim međunožjem pa sam naručio 2XL, broj veći nego inače, i to je riješilo stvar. Dolaze u jednoj duljini pa sam sumnjao zbog dugih nogu, ali pristaju savršeno.' ),
-  array( 'f' => 'up-r08.webp', 'ime' => 'Stjepan M.', 'z' => 5, 'tekst' => 'Nosim ih već mjesec dana i još uvijek izgledaju gotovo kao nove, osim pokoje mrlje. Odlične kad klečite i puno udobnije od uobičajene radne odjeće.' ),
-  array( 'f' => 'up-r09.webp', 'ime' => 'Karlo H.', 'z' => 5, 'tekst' => 'Hlače izgledaju odlično. Stvarno su vodootporne, kao što se vidi na slici. Vrijede svoje cijene.' ),
+  array( 'f' => 'up-t2-kupac.webp', 'ime' => 'Krešimir J., 33', 'h' => 'Udobne cijeli dan', 'tekst' => 'Sumnjao sam hoće li stvarno izdržati i biti udobne na gradilištu, ali odlične su! Bilo da lijeva kao iz kabla ili klečim u blatu, cijeli dan ostajem suh.' ),
+  array( 'f' => 'up-r06.webp', 'ime' => 'Marin L.', 'h' => '', 'tekst' => 'Najbolja radna odjeća koju sam probao. Odličan, krojen izgled i nisu široke oko listova kao većina radnih hlača. Džepovi su lijepo duboki, a to mi je inače najveća muka.' ),
+  array( 'f' => 'up-t3-kupac.webp', 'ime' => 'Bruno K., 29', 'h' => 'Radne hlače za cijelu godinu', 'tekst' => 'Prije sam na posao stalno nosio kratke hlače, ali htio sam nešto urednije i ove su savršene. Super udobne i dobro me štite. 10/10' ),
+  array( 'f' => 'up-r09.webp', 'ime' => 'Karlo H.', 'h' => '', 'tekst' => 'Hlače izgledaju odlično. Stvarno su vodootporne, kao što se vidi na slici. Vrijede svoje cijene.' ),
 );
 ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
@@ -109,43 +97,37 @@ $nup_reviews = array(
 </section>
 <?php endforeach; ?>
 
-<!-- 5) ISKUSTVA KUPACA — 3 mnenja s fotografijo -->
+<!-- 5) ISKUSTVA NAŠIH KUPACA — 4 mnenja s fotografijo ob besedilu -->
 <section class="nup-sec nup-tint">
   <div class="nup-wrap">
-    <p class="nup-rate nup-c"><span class="nup-stars">★★★★★</span> Tisuće zadovoljnih majstora</p>
-    <h2 class="nup-h2 nup-c">Iskustva <em>naših kupaca</em></h2>
-    <div class="nup-grid3">
-      <?php foreach ( $nup_testi as $t ) : ?>
-      <article class="nup-card">
-        <div class="nup-card__photo nup-card__photo--sq"><?php echo $nup_img( $t['img'], 'Kupac u NORIKS UtilityPants radnim hlačama — ' . $t['ime'] ); ?></div>
-        <div class="nup-card__body">
-          <?php echo $nup_stars( 5 ); ?>
-          <p class="nup-card__h"><?php echo esc_html( $t['h'] ); ?></p>
-          <p class="nup-card__txt"><?php echo esc_html( $t['tekst'] ); ?></p>
-          <p class="nup-card__name"><?php echo esc_html( $t['ime'] ); ?> <span class="nup-ok">✓ Potvrđena kupnja</span></p>
+    <div class="nup-row2 nup-row2--rev nup-row2--top">
+      <div class="nup-media">
+        <div class="nup-grid2">
+          <?php foreach ( $nup_reviews as $r ) : ?>
+          <article class="nup-card">
+            <div class="nup-card__photo"><?php echo $nup_img( $r['f'], 'Fotografija kupca — NORIKS UtilityPants, ' . $r['ime'] ); ?></div>
+            <div class="nup-card__body">
+              <?php echo $nup_stars( 5 ); ?>
+              <?php if ( $r['h'] ) : ?><p class="nup-card__h"><?php echo esc_html( $r['h'] ); ?></p><?php endif; ?>
+              <p class="nup-card__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
+              <p class="nup-card__name"><?php echo esc_html( $r['ime'] ); ?> <span class="nup-ok">✓ Potvrđena kupnja</span></p>
+            </div>
+          </article>
+          <?php endforeach; ?>
         </div>
-      </article>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- 6) RECENZIJE KUPACA — 9 mnenj s fotografijo -->
-<section class="nup-sec">
-  <div class="nup-wrap">
-    <p class="nup-rate nup-c"><span class="nup-stars">★★★★★</span> 1081 recenzija</p>
-    <h2 class="nup-h2 nup-c">Recenzije <em>kupaca</em></h2>
-    <div class="nup-grid3 nup-real">
-      <?php foreach ( $nup_reviews as $r ) : ?>
-      <article class="nup-card">
-        <div class="nup-card__photo"><?php echo $nup_img( $r['f'], 'Fotografija kupca — NORIKS UtilityPants, ' . $r['ime'] ); ?></div>
-        <div class="nup-card__body">
-          <?php echo $nup_stars( $r['z'] ); ?>
-          <p class="nup-card__name"><?php echo esc_html( $r['ime'] ); ?> <span class="nup-ok">✓ Potvrđena kupnja</span></p>
-          <p class="nup-card__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
-        </div>
-      </article>
-      <?php endforeach; ?>
+      </div>
+      <div class="nup-copy">
+        <p class="nup-kicker">Iskustva kupaca</p>
+        <h2 class="nup-h3">Tisuće zadovoljnih majstora — <em>stvarni dojmovi</em></h2>
+        <p class="nup-rate"><span class="nup-stars">★★★★★</span> 1081 recenzija</p>
+        <p>Vodoinstalateri, majstori na gradilištu i svi koji rade vani — NORIKS UtilityPants nose od ranog jutra do kraja smjene, po kiši, u blatu i na koljenima.</p>
+        <ul class="nup-points">
+          <li><span class="nup-dot" aria-hidden="true">✓</span><span><strong>Suhi cijeli dan</strong> — voda se odbija od tkanine</span></li>
+          <li><span class="nup-dot" aria-hidden="true">✓</span><span><strong>Rastežu se u 4 smjera</strong> i ne stežu pri klečanju</span></li>
+          <li><span class="nup-dot" aria-hidden="true">✓</span><span><strong>Duboki džepovi</strong> točno tamo gdje trebaju</span></li>
+        </ul>
+        <p class="nup-big">Radne hlače koje se osjećaju jednako dobro koliko i rade.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -177,6 +159,7 @@ $nup_reviews = array(
 
 /* video ob besedilu */
 .nup-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.nup-row2--top { align-items: start; }
 .nup-row2--rev .nup-media { order: 2; }
 .nup-copy p { font-size: 16px; line-height: 1.7; color: #4f443d; margin: 0 0 14px; }
 .nup-copy p strong { color: #231d19; font-weight: 600; }
@@ -188,20 +171,22 @@ $nup_reviews = array(
 /* mnenja s fotografijo */
 .nup-stars { color: #f2a516; letter-spacing: 1px; font-size: 15px; }
 .nup-stars__off { color: #e6dbd2; }
-.nup-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.nup-grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.nup-points { list-style: none; margin: 0 0 16px; padding: 0; }
+.nup-points li { font-size: 16px; line-height: 1.6; color: #4f443d; margin: 0 0 10px; display: flex; gap: 12px; align-items: flex-start; }
+.nup-points li strong { color: #231d19; font-weight: 600; }
+.nup-dot { flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: #a9683f; color: #fff; font-size: 12px; font-weight: 800; line-height: 22px; text-align: center; margin-top: 2px; }
 .nup-card { background: #fff; border: 1px solid #ecdfd3; border-radius: 10px; overflow: hidden; }
 .nup-card__photo img { aspect-ratio: 4 / 5; object-fit: cover; }
-.nup-card__photo--sq img { aspect-ratio: 1 / 1; }
-.nup-card__body { padding: 14px 16px 16px; }
-.nup-card__h { font-size: 15px !important; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; line-height: 1.35; margin: 6px 0 8px; color: #231d19; }
-.nup-card__name { font-size: 14px; font-weight: 600; color: #231d19; margin: 4px 0 8px; }
+.nup-card__body { padding: 12px 14px 14px; }
+.nup-card__h { font-size: 13.5px !important; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; line-height: 1.35; margin: 6px 0 8px; color: #231d19; }
+.nup-card__name { font-size: 13px; font-weight: 600; color: #231d19; margin: 0; }
 .nup-ok { display: block; color: #2f9e5f; font-weight: 600; font-size: 12px; }
-.nup-card__txt { font-size: 14.5px; line-height: 1.6; color: #3a302a; margin: 0 0 10px; }
-.nup-real .nup-card__txt { font-size: 14px; margin: 0; }
+.nup-card__txt { font-size: 13.5px; line-height: 1.55; color: #3a302a; margin: 4px 0 8px; }
+.nup-copy p.nup-rate { font-size: 14px; margin: -6px 0 14px; }
 
 @media (max-width: 989px) {
   .nup-row2 { gap: 32px; }
-  .nup-grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 749px) {
   .nup-sec { padding: 42px 0; }
@@ -209,7 +194,10 @@ $nup_reviews = array(
   .nup-row2 { grid-template-columns: 1fr; gap: 24px; }
   .nup-row2--rev .nup-media { order: 0; }
   .nup-icons { grid-template-columns: 1fr; gap: 22px; }
-  .nup-grid3 { grid-template-columns: 1fr; gap: 14px; }
+  .nup-grid2 { gap: 8px; }
+  .nup-card__body { padding: 10px 10px 12px; }
+  .nup-card__txt { font-size: 12.5px; }
+  .nup-card__h { font-size: 12.5px !important; }
 }
 
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
