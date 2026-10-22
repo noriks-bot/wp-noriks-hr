@@ -61,6 +61,7 @@ function noriks_product_type_map() : array {
         // NORIKS BRA — grudnjak s prednjim zakopcavanjem i potporom drzanja.
         'bra'                     => array( 'orto-bra' ),
         'ondersteun'              => array( 'orto-ondersteun' ),
+        'destapacan'              => array( 'orto-destapacan' ),
         // NORIKS HYD — boca za vodikovu vodu (PEM/SPE elektroliza), bez atributa.
         'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
