@@ -54,6 +54,11 @@ if ( noriks_is_type( 'fisiorest' ) ) {
     include $noriks_pb_dir . 'why-fisiorest.php';
 }
 
+// FIELDOPS (taktične slušalke)
+if ( noriks_is_type( 'fieldops' ) ) {
+    include $noriks_pb_dir . 'why-fieldops.php';
+}
+
 // NORIKSHERS (novi proizvod — sekcije + videi u pripremi)
 if ( noriks_is_type( 'norikshers' ) ) {
     include $noriks_pb_dir . 'why-norikshers.php';

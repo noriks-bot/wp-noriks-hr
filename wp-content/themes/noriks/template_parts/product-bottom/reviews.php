@@ -52,6 +52,10 @@
 
            Nisi sam u potrazi za olakšanjem napetosti u vratu.
 
+          <?php elseif ( noriks_is_type( 'fieldops' ) ): ?>
+
+           Niste jedini koji traže zaštitu sluha bez gubitka zvuka.
+
           <?php elseif ( noriks_is_type( 'bunion' ) ): ?>
 
            Nisi sam u potrazi za olakšanjem od čukljeva.
@@ -373,6 +377,10 @@
            <?php if ( noriks_is_type( 'fisiorest' ) ): ?>
 
            Tisuće ljudi već koristi NORIKS FisioRest za manje bolova i napetosti u vratu – trakcija, vibracija i toplina u jednom uređaju.
+
+           <?php elseif ( noriks_is_type( 'fieldops' ) ): ?>
+
+           Tisuće lovaca i strelaca već koristi NORIKS FieldOps za vrhunsku zaštitu sluha – blokirate pucnjeve, čujete prirodu 4× jasnije.
 
            <?php elseif ( noriks_is_type( 'bunion' ) ): ?>
 
@@ -2006,6 +2014,38 @@ $kompmajice_faq = array(
   array(
     'questioon' => 'Kako se pere i od čega je izrađen?',
     'answer'    => 'Izrađen je od 80 % najlona i 20 % elastana. Perite ga na hladnom, nježnom programu kako biste sačuvali kompresiju i produžili vijek trajanja tkanine.'
+  ),
+);
+
+// NORIKS FIELDOPS (taktične slušalke) — product FAQ
+$fieldops_faq = array(
+  array(
+    'questioon' => 'Kako FieldOps štiti sluh, a istovremeno pojačava zvukove prirode?',
+    'answer'    => 'Tehnologija s dvostrukom zaštitom koristi ugrađene mikrofone koji pojačavaju tihe zvukove do 4×. Kada se otkrije glasan zvuk iznad 82 dB (poput pucnja), slušalice ga odmah u 0,01 sekunde prigušuju na sigurnu razinu — brže nego što trepnete. Čujete svaki korak i pokret plena jasno, ali pucnjevi zvuče samo kao tihi prasci.'
+  ),
+  array(
+    'questioon' => 'Koliko dugo traje baterija?',
+    'answer'    => 'Ukupno do 40 sati sa futrolom za punjenje (Pro verzija 50 sati). Slušalice same daju oko 8 sati po punjenju, a čvrsta futrola nosi dodatna punjenja. USB-C brzo punjenje — potpuno napunjene za samo 2 sata.'
+  ),
+  array(
+    'questioon' => 'Koja je razlika između Standard i Pro verzije?',
+    'answer'    => 'Pro verzija (25 $ skuplja) nudi pojačanu zaštitu 31 dB (umjesto 27 dB), premium comfort fit, prikaz postotka baterije na futroli te BESPLATNU vodootpornu futrolu (vrijednost 25 $) i BESPLATNU vrpcu (vrijednost 12 $). Većina ozbiljnih lovaca odabire Pro za dodatnu zaštitu i dodanu vrijednost.'
+  ),
+  array(
+    'questioon' => 'Mogu li ih koristiti i na streljani?',
+    'answer'    => 'Da! FieldOps savršeno funkcionira za pucanje na strelištu, natjecateljsko streljanje i taktički trening. Zaštita od 27 dB (ili 31 dB Pro) blokira sve vrste vatrenog oružja od .22 do .50 BMG, dok i dalje jasno čujete naredbe i razgovore.'
+  ),
+  array(
+    'questioon' => 'Je li teško koristiti FieldOps?',
+    'answer'    => 'Uopće ne. FieldOps ima jednostavnu kontrolu s jednim gumbom. Pritisnite jednom za uključivanje, pritisnite za prebacivanje između načina (vanjsko pojačanje, unutarnje prigušivanje, smanjenje buke) i držite za isključivanje. Bez kompliciranih izbornika ili postavki — samo uključite i idite u lov.'
+  ),
+  array(
+    'questioon' => 'Što dobivam u paketu?',
+    'answer'    => 'Dobivate slušalice, čvrstu futrolu za punjenje, USB-C kabel, tri veličine naušnica (S/M/L) i priručnik za korisnike. Sve što vam treba da odmah počnete koristiti.'
+  ),
+  array(
+    'questioon' => 'Jesu li vodootporne?',
+    'answer'    => 'Da. IPX5 certifikat znači otpornost na kišu, snijeg, znoj ili vlagu — izgrađene za najteže uvjete lova. Ne brinite o vremenskim uvjetima.'
   ),
 );
 

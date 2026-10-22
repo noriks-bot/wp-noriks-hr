@@ -45,6 +45,8 @@ function noriks_product_type_map() : array {
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
+        // FieldOps Pro taktične slušalke
+        'fieldops'                => array( 'orto-fieldops' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
         'nosilka'                 => array( 'orto-nosilka', 'nosilka', 'nosiljka' ),
@@ -847,5 +849,12 @@ if ( ! function_exists( 'noriks_fleecetights_sizes' ) ) {
             array( 'L',   '72 – 82 cm', '97 – 107 cm', '165 – 175 cm' ),
             array( 'XL',  '80 – 92 cm', '105 – 117 cm', '170 – 180 cm' ),
         );
+    }
+}
+
+if ( ! function_exists( 'noriks_fieldops_sizes' ) ) {
+    /** NORIKS FieldOps Pro (taktične slušalke) — nema veličina, samo boja (Carbon Black, Army Green). */
+    function noriks_fieldops_sizes() {
+        return array();
     }
 }
