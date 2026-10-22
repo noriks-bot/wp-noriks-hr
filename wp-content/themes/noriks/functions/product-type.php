@@ -134,6 +134,8 @@ function noriks_product_type_map() : array {
         'tuck'                    => array( 'orto-tuck', 'tuck' ),
         // NORIKS FleeceTights — tople hulahopke s flisom koje izgledaju kao koza (boja + velicina XXS/XS–4XL/5XL).
         'fleecetights'            => array( 'orto-fleecetights', 'fleecetights' ),
+        // NORIKS SculptBrief — oblikujuce gacice visokog struka s 360° krizim pojasom (boja + velicina XS–5XL).
+        'sculptbrief'             => array( 'orto-sculptbrief', 'sculptbrief' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -589,6 +591,24 @@ if ( ! function_exists( 'noriks_fleecetights_sizes' ) ) {
             array( 'L/XL',    '12–16', '91–102',  '112–122', '61–102' ),
             array( '2XL/3XL', '18–24', '104–114', '124–147', '61–102' ),
             array( '4XL/5XL', '26–32', '117–132', '150–173', '61–102' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_sculptbrief_sizes' ) ) {
+    /** NORIKS SculptBrief: velicina, US broj, opseg struka (cm), opseg struka (inci).
+     *  1:1 s tablice originala saybeam.com ("Size Chart" / kalkulator velicine). */
+    function noriks_sculptbrief_sizes() {
+        return array(
+            array( 'XS',  '0–2',   '64–69',   '25–27' ),
+            array( 'S',   '4–6',   '71–74',   '28–29' ),
+            array( 'M',   '8–10',  '76–81',   '30–32' ),
+            array( 'L',   '12–14', '86–94',   '34–37' ),
+            array( 'XL',  '16–18', '99–104',  '39–41' ),
+            array( '2XL', '20–22', '107–112', '42–44' ),
+            array( '3XL', '24–26', '114–118', '45–46' ),
+            array( '4XL', '28–30', '119–122', '47–48' ),
+            array( '5XL', '32–34', '124–127', '49–50' ),
         );
     }
 }

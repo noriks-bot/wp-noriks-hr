@@ -123,6 +123,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-fleecetights' );
             return;
         }
+        // NORIKS SculptBrief: opseg struka u cm (XS–5XL), 1:1 s originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'sculptbrief' ) ) {
+            get_template_part( 'template_parts/size-chart-sculptbrief' );
+            return;
+        }
         // NORIKS SupportSocks: veličina prema broju cipela (M / L / XL).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'supportsocks' ) ) {
             get_template_part( 'template_parts/size-chart-supportsocks' );

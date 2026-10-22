@@ -224,6 +224,10 @@
 
            Niste jedini kojima pas u autu nije siguran.
 
+          <?php elseif ( noriks_is_type( 'sculptbrief' ) ): ?>
+
+           Niste jedini kojima se trbuh nakon poroda nije vratio.
+
           <?php elseif ( noriks_is_type( 'fleecetights' ) ): ?>
 
            Niste jedini kojima je zimi hladno u hulahopkama.
@@ -437,6 +441,10 @@
 
             Tisuće vlasnika već vozi psa u NORIKS Doggo krevetu – ISOFIX kopče, visoki rubovi i mirnija vožnja za oboje.
 
+           <?php elseif ( noriks_is_type( 'sculptbrief' ) ): ?>
+
+            Tisuće mama već nosi NORIKS SculptBrief – 360° križni pojas, ravan trbuh ispod odjeće i rub koji se ne smotava.
+
            <?php elseif ( noriks_is_type( 'fleecetights' ) ): ?>
 
             Tisuće žena već nosi NORIKS FleeceTights – topli flis, nijansa koja izgleda kao koža i pojas koji oblikuje struk.
@@ -594,11 +602,12 @@
   $is_supportsocks_page = noriks_is_type( 'supportsocks', $current_product_id );
   $is_tuck_page        = noriks_is_type( 'tuck', $current_product_id );
   $is_fleecetights_page = noriks_is_type( 'fleecetights', $current_product_id );
+  $is_sculptbrief_page = noriks_is_type( 'sculptbrief', $current_product_id );
   $is_bowl_page       = noriks_is_type( 'bowl', $current_product_id );
   $is_seal_page       = noriks_is_type( 'seal', $current_product_id );
   $is_sr_page         = noriks_is_type( 'sr', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_slippers_page ? 'NORIKS Slippers papuče'
@@ -612,6 +621,7 @@
                      : ( $is_doggo_page ? 'NORIKS Doggo autokrevet za pse'
                      : ( $is_bracelet_page ? 'NORIKS Bracelet narukvica od hematita'
                      : ( $is_winecooler_page ? 'NORIKS WineCooler hladnjak za vino'
+                     : ( $is_sculptbrief_page ? 'NORIKS SculptBrief oblikujuće gaćice'
                      : ( $is_fleecetights_page ? 'NORIKS FleeceTights hulahopke s flisom'
                      : ( $is_tuck_page ? 'NORIKS Tuck oblikujuće hlačice'
                      : ( $is_supportsocks_page ? 'NORIKS SupportSocks potporne čarape'
@@ -663,7 +673,7 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per product group)
   if ( $is_slippers_page ) {
@@ -688,6 +698,8 @@
     include get_stylesheet_directory() . '/auto_reviews/HR_bracelet.php';
   } elseif ( $is_winecooler_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_winecooler.php';
+  } elseif ( $is_sculptbrief_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_sculptbrief.php';
   } elseif ( $is_fleecetights_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_fleecetights.php';
   } elseif ( $is_tuck_page ) {
@@ -1163,7 +1175,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_cloath_page || $is_bra_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_cloath_page || $is_bra_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -1240,7 +1252,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page && ! $is_seal_page && ! $is_sr_page && ! $is_home_page && ! $is_red_page && ! $is_snug_page && ! $is_kompwom_page && ! $is_pal_page && ! $is_slim_page && ! $is_bowl_page && ! $is_relief_page && ! $is_gelseat_page && ! $is_kneetape_page && ! $is_celleg_page && ! $is_stepcloud_page && ! $is_buildshirt_page && ! $is_kneebrace_page && ! $is_hands_page && ! $is_slabproof_page && ! $is_brassiere_page && ! $is_blanket_page && ! $is_bratank_page && ! $is_floatsuit_page && ! $is_phonestrap_page && ! $is_winecooler_page && ! $is_bracelet_page && ! $is_doggo_page && ! $is_polo_page && ! $is_raincoat_page && ! $is_titaniumpan_page && ! $is_harness_page && ! $is_seatcover_page && ! $is_corksandals_page && ! $is_anklesleeve_page && ! $is_slippers_page && ! $is_supportsocks_page && ! $is_tuck_page && ! $is_fleecetights_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page && ! $is_seal_page && ! $is_sr_page && ! $is_home_page && ! $is_red_page && ! $is_snug_page && ! $is_kompwom_page && ! $is_pal_page && ! $is_slim_page && ! $is_bowl_page && ! $is_relief_page && ! $is_gelseat_page && ! $is_kneetape_page && ! $is_celleg_page && ! $is_stepcloud_page && ! $is_buildshirt_page && ! $is_kneebrace_page && ! $is_hands_page && ! $is_slabproof_page && ! $is_brassiere_page && ! $is_blanket_page && ! $is_bratank_page && ! $is_floatsuit_page && ! $is_phonestrap_page && ! $is_winecooler_page && ! $is_bracelet_page && ! $is_doggo_page && ! $is_polo_page && ! $is_raincoat_page && ! $is_titaniumpan_page && ! $is_harness_page && ! $is_seatcover_page && ! $is_corksandals_page && ! $is_anklesleeve_page && ! $is_slippers_page && ! $is_supportsocks_page && ! $is_tuck_page && ! $is_fleecetights_page && ! $is_sculptbrief_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -1279,7 +1291,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
           </div>
           <div class="stars"><?php echo $stars; ?></div>
           <div class="identity">
-            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page && ! $is_seal_page && ! $is_sr_page && ! $is_home_page && ! $is_red_page && ! $is_snug_page && ! $is_kompwom_page && ! $is_pal_page && ! $is_slim_page && ! $is_bowl_page && ! $is_relief_page && ! $is_gelseat_page && ! $is_kneetape_page && ! $is_celleg_page && ! $is_stepcloud_page && ! $is_buildshirt_page && ! $is_kneebrace_page && ! $is_hands_page && ! $is_slabproof_page && ! $is_brassiere_page && ! $is_blanket_page && ! $is_bratank_page && ! $is_floatsuit_page && ! $is_phonestrap_page && ! $is_winecooler_page && ! $is_bracelet_page && ! $is_doggo_page && ! $is_polo_page && ! $is_raincoat_page && ! $is_titaniumpan_page && ! $is_harness_page && ! $is_seatcover_page && ! $is_corksandals_page && ! $is_anklesleeve_page && ! $is_slippers_page && ! $is_supportsocks_page && ! $is_tuck_page && ! $is_fleecetights_page ) : ?>
+            <?php if ( ! $is_nogavice_page && ! $is_ortopas_page && ! $is_bunion_page && ! $is_fisiorest_page && ! $is_norikshers_page && ! $is_jastuk_page && ! $is_nosilka_page && ! $is_kidsnest_page && ! $is_cloath_page && ! $is_bra_page && ! $is_hyd_page && ! $is_kneefix_page && ! $is_controlpro_page && ! $is_noriks_cards_page && ! $is_brush_page && ! $is_hairmagic_page && ! $is_lift_page && ! $is_kneeheat_page && ! $is_pre_page && ! $is_hug_page && ! $is_dental_page && ! $is_cloud_page && ! $is_snore_page && ! $is_seal_page && ! $is_sr_page && ! $is_home_page && ! $is_red_page && ! $is_snug_page && ! $is_kompwom_page && ! $is_pal_page && ! $is_slim_page && ! $is_bowl_page && ! $is_relief_page && ! $is_gelseat_page && ! $is_kneetape_page && ! $is_celleg_page && ! $is_stepcloud_page && ! $is_buildshirt_page && ! $is_kneebrace_page && ! $is_hands_page && ! $is_slabproof_page && ! $is_brassiere_page && ! $is_blanket_page && ! $is_bratank_page && ! $is_floatsuit_page && ! $is_phonestrap_page && ! $is_winecooler_page && ! $is_bracelet_page && ! $is_doggo_page && ! $is_polo_page && ! $is_raincoat_page && ! $is_titaniumpan_page && ! $is_harness_page && ! $is_seatcover_page && ! $is_corksandals_page && ! $is_anklesleeve_page && ! $is_slippers_page && ! $is_supportsocks_page && ! $is_tuck_page && ! $is_fleecetights_page && ! $is_sculptbrief_page ) : ?>
               <?php if ($avatar_url) : ?>
                 <div class="avatar"><img src="<?php echo esc_url($avatar_url); ?>" alt="" loading="lazy" /></div>
               <?php else : ?>
@@ -1317,7 +1329,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     // Data from PHP (already include product_title/product_url/assigned_date/avatar_url)
     const chunksProduct = <?php echo json_encode($chunks_product); ?>;
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
-    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
+    const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
 
     let nextProduct = 0;
@@ -1689,6 +1701,7 @@ $is_slippers        = ( function_exists('noriks_is_type') && noriks_is_type('sli
 $is_supportsocks    = ( function_exists('noriks_is_type') && noriks_is_type('supportsocks') );
 $is_tuck            = ( function_exists('noriks_is_type') && noriks_is_type('tuck') );
 $is_fleecetights    = ( function_exists('noriks_is_type') && noriks_is_type('fleecetights') );
+$is_sculptbrief     = ( function_exists('noriks_is_type') && noriks_is_type('sculptbrief') );
 $is_bowl          = ( function_exists('noriks_is_type') && noriks_is_type('bowl') );
 $is_seal          = ( function_exists('noriks_is_type') && noriks_is_type('seal') );
 $is_sr            = ( function_exists('noriks_is_type') && noriks_is_type('sr') );
@@ -2775,6 +2788,35 @@ $brassiere_faq = array(
     'answer'    => 'Ne, široka i dobro prilagođena donja traka ostaje na mjestu cijeli dan. Za razliku od modela koji se podižu ili smotaju, NORIKS Brassiere osigurava stabilnu potporu bez nelagode i bez stalnog namještanja.'),
 );
 
+$sculptbrief_faq = array(
+  array('questioon' => 'Po čemu se razlikuju od običnog steznika ili oblikujućeg rublja?',
+    'answer'    => 'Većina oblikujućeg rublja i pojaseva nakon poroda steže samo prednji dio trbuha — zato se smotavaju i zaglađuju samo jedno mjesto. NORIKS SculptBrief imaju <strong>360° križni pojas</strong> koji istodobno obuhvaća trbuh sprijeda, sa strane i straga, po uzoru na stoljetnu malezijsku tehniku omatanja bengkung. Ravnomjerno drže cijeli trup, pa ništa ne klizi, a rezultat izgleda prirodno.'),
+  array('questioon' => 'Koju veličinu trebam naručiti?',
+    'answer'    => 'Ravnajte se prema <strong>opsegu struka</strong>, a ne prema uobičajenoj veličini odjeće — nakon poroda te dvije mjere često se više ne poklapaju, a upravo za to su napravljene. Izmjerite opseg oko <strong>najužeg dijela torza</strong>, nekoliko centimetara iznad pupka, s metrom u ravnini; ako ste nedavno rodili, mjerite <strong>iznad</strong> najpunijeg dijela trbuha, a ne preko njega. Zatim mjeru usporedite s tablicom veličina.<br><br>Između dvije veličine? <strong>Uzmite veću.</strong> Veličine idu od XS do 5XL:<br>XS: 64–69 cm · S: 71–74 cm · M: 76–81 cm · L: 86–94 cm · XL: 99–104 cm · 2XL: 107–112 cm · 3XL: 114–118 cm · 4XL: 119–122 cm · 5XL: 124–127 cm'),
+  array('questioon' => 'Hoće li se smotavati ili kliziti tijekom dana?',
+    'answer'    => 'Ne, i to iz dva razloga. Široki <strong>360° križni pojas</strong> obuhvaća cijeli opseg — sprijeda, sa strane i straga — pa je pritisak ravnomjerno raspoređen, a ne na jednom mjestu.<br><br>Uz to pojas ima <strong>integrirani silikonski držač i rebra protiv smotavanja</strong> koji ga drže točno ondje gdje ste ga namjestili. Ostaju na mjestu cijeli dan, i kad sjedite, saginjete se ili se krećete. Bez smotavanja, bez podizanja i bez namještanja u kupaonici.'),
+  array('questioon' => 'Hoće li se vidjeti ispod odjeće?',
+    'answer'    => 'Ne. Tkanina je tanka i <strong>spojena bez šivanja</strong>, pa nema debelih šavova koji bi se ocrtavali, a otvori za noge završeni su <strong>nevidljivim rubom</strong> umjesto elastike koja se urezuje i ostavlja trag.<br><br>Nestaju ispod uskih haljina, traperica, tajica i poslovne odjeće. Uvijek glatka linija.'),
+  array('questioon' => 'Jesu li dovoljno udobne za cjelodnevno nošenje?',
+    'answer'    => 'Da. Mekane su, prozračne i lagane, a oblikuju <strong>bez onog stezanja koje oduzima dah</strong> kao kod krutih steznika. Većina žena kaže da zaboravi da ih uopće nosi, od jutra do večeri.'),
+  array('questioon' => 'Kada ih mogu početi nositi nakon poroda, i nakon carskog reza?',
+    'answer'    => 'Većina žena počne oko <strong>2 tjedna nakon vaginalnog poroda</strong> i <strong>6 tjedana nakon carskog reza</strong>, kad dobiju odobrenje liječnika. Nemaju tvrdih žica — samo mekanu, bešavnu potporu. Ako se oporavljate od operacije, prvo se posavjetujte sa svojim liječnikom.'),
+  array('questioon' => 'Rodila sam prije mnogo godina (5, 10, pa i 20+). Hoće li mi i dalje pomoći?',
+    'answer'    => 'Da — i evo dijela koji gotovo nitko ne objašnjava: razmak koji trudnoća ostavi u trbušnoj stijenci <strong>ne zatvara se sam od sebe s vremenom</strong>. Ako vam donji dio trbuha i godinama poslije strši prema naprijed, to je zato što su ti mišići i dalje <strong>razmaknuti</strong> — a upravo njih <strong>360° križni pojas</strong> drži i podupire cijelim opsegom.<br><br>Zato djeluju bez obzira jeste li rodili prošle godine ili prije nekoliko desetljeća. Naše ih kupice nose od <strong>nekoliko dana nakon poroda do desetljećima poslije</strong>. Nikad nije bilo pitanje koliko je vremena prošlo — <strong>nikad nije kasno za početak</strong>.'),
+  array('questioon' => 'Od čega su izrađene i jesu li prozračne?',
+    'answer'    => '<strong>83 % poliamid (najlon), 17 % elastan</strong>, s prozračnim mrežastim umetcima i <strong>pamučnim umetkom u međunožju</strong>. Zbog te mješavine ne djeluju kao kruto, plastično oblikujuće rublje.<br><br><strong>Najlon</strong> ih čini tankima, svilenkastima i <strong>prozračnima</strong>, pa ostaju nevidljive ispod odjeće i ne zadržavaju toplinu ni tijekom cijelog dana — i ostaju mekane kao druga koža i na osjetljivoj koži koja zacjeljuje.<br><br><strong>Elastan</strong> daje pravu kompresiju <strong>koja se vraća u oblik</strong>: čvrsto drži, kreće se s vama kad sjedite, saginjete se ili podižete bebu, a zatim se vrati u oblik umjesto da nakon nekoliko nošenja popusti.<br><br>Bez lateksa, bez tvrdih žica i bez plastičnih rubova koji se urezuju.'),
+  array('questioon' => 'Nosim li ih preko gaćica ili samostalno?',
+    'answer'    => 'Može i jedno i drugo — potpuno je na vama.<br><br>Većina žena nosi ih <strong>samostalno</strong>, baš kao obične gaćice, i za to su napravljene: međunožje ima <strong>pamučni umetak</strong>, pa su mekane, prozračne i higijenske na koži cijeli dan.<br><br>Ako ispod želite nositi tanke gaćice, i to je <strong>sasvim u redu</strong> i ne mijenja ništa u oblikovanju i držanju. Nema pogrešnog odgovora — samo ono što vam je najudobnije.'),
+  array('questioon' => 'Moram li ih nositi svaki dan?',
+    'answer'    => 'Ne morate, ali <strong>razlika dolazi od svakodnevnog nošenja.</strong> Većina žena nosi ih nekoliko sati dnevno ili cijeli dan, jer stalna, dosljedna potpora čini puno više od povremenog nošenja.<br><br>Ako preskočite dan, ništa nije izgubljeno. Ali ako im želite dati pravu priliku, neka postanu dio jutarnjeg odijevanja. Toliko su mekane da stvarno zaboravite da ih nosite.'),
+  array('questioon' => 'Mogu li ih nositi noću?',
+    'answer'    => 'Možete, ali <strong>ne morate.</strong> Napravljene su za dnevno nošenje — većina žena nosi ih danju, a noću tijelu da odmor.<br><br>Nekima su dovoljno udobne i za drijemanje ili večer na kauču, i to je sasvim u redu. Jedino pravilo: uvijek trebaju pružati potporu, a nikad sputavati. <strong>Ako vam se ikad čine pretijesne za opuštanje, skinite ih.</strong>'),
+  array('questioon' => 'Kako ih prati i održavati?',
+    'answer'    => 'Strojno pranje na hladnom, na nježnom programu (u mrežici za rublje), ili ručno pranje, zatim <strong>sušenje na zraku</strong>. Bez izbjeljivača, omekšivača i sušilice — tako elastan i 360° pojas ostaju kao novi.'),
+  array('questioon' => 'Kada ću vidjeti razliku i što ako mi ne odgovaraju?',
+    'answer'    => 'Ispod odjeće ćete izgledati <strong>ravno i glatko čim ih obučete</strong>. Uz svakodnevno nošenje većina žena kaže da im je trbuh čvršći za 2 do 3 tjedna. A ako vam ne odgovaraju, imate <strong>pravo na povrat u roku od 30 dana</strong> — javite nam se i pomoći ćemo vam. Besplatna dostava za narudžbe iznad 70 €.'),
+);
+
 $fleecetights_faq = array(
   array('questioon' => 'Vide li se kroz njih kad se sagnem?',
     'answer'    => 'Ne! Izgledaju prozirno, ali su potpuno neprozirne. Čučnite, sagnite se ili sjednite prekriženih nogu — ništa se ne vidi. U tome je cijela čarolija: izgled golih nogu, a potpuna pokrivenost.'),
@@ -3083,7 +3125,7 @@ $blanket_faq = array(
     'answer'    => 'Naravno. Mnoge obitelji koriste NORIKS Blanket za senzorne pauze, gledanje filmova ili čak na putovanjima. Odličan je umirujući alat za trenutke prestimulacije tijekom dana.'),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_slippers && $is_info ) {
     return $slippers_faq;
@@ -3108,6 +3150,9 @@ $faq_pick = function( $title, $list ) use ( $is_fleecetights, $fleecetights_faq,
   }
   if ( $is_polo && $is_info ) {
     return $polo_faq;
+  }
+  if ( $is_sculptbrief && $is_info ) {
+    return $sculptbrief_faq;
   }
   if ( $is_fleecetights && $is_info ) {
     return $fleecetights_faq;

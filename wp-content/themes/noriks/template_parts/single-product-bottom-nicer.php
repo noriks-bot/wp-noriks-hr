@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS SculptBrief (orto-sculptbrief) — oblikujuce gacice visokog struka s 360° krizim pojasom
+if ( noriks_is_type( 'sculptbrief' ) ) {
+    include $noriks_pb_dir . 'why-sculptbrief.php';
+}
+
 // NORIKS RED (orto-red) — terapija crvenim svjetlom za zapesce
 if ( noriks_is_type( 'red' ) ) {
     include $noriks_pb_dir . 'why-red.php';
