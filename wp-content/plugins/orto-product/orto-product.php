@@ -60,6 +60,7 @@ function gck_get_bundle_offers( $product_id = null ) : array {
         $p1  = trim((string)($row['p1'] ?? ''));
         $p2  = trim((string)($row['p2'] ?? ''));
         $tip = trim((string)($row['tip'] ?? '')); // NEW
+        $unit = trim((string)($row['tekst_2'] ?? '')); // enota na kartici: "/ kom", "/ par" ...
 
         // unique offer id per row
         $offer_id = $qty . '__' . $idx;
@@ -77,6 +78,7 @@ function gck_get_bundle_offers( $product_id = null ) : array {
                 "p1"     => $p1,
                 "p2"     => $p2,
                 "tip"    => $tip,
+                "unit"   => $unit,
             ];
             continue;
         }
@@ -96,6 +98,7 @@ function gck_get_bundle_offers( $product_id = null ) : array {
             "p1"     => $p1,
             "p2"     => $p2,
             "tip"    => $tip,
+            "unit"   => $unit,
         ];
     }
 
@@ -3897,7 +3900,6 @@ function gck_render_bundle_selector() {
         // NORIKS BraTank: kao na originalu je predizbrana srednja ponuda.
         if ( has_term( array( 'orto-bratank' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         // NORIKS Tuck: kao na originalu je predizbrana ponuda 2x kom.
-        if ( has_term( array( 'orto-tuck' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         // NORIKS PhoneStrap: kao na originalu je predizbrana zadnja ponuda (4x, "Best Value").
         if ( has_term( array( 'orto-phonestrap' ), 'product_cat', $product_id ) && count( $offers ) > 3 ) { $default_index = 3; }
         // NORIKS Polo: kao na originalu je predizbrana zadnja ponuda (6x kom).
@@ -3985,6 +3987,11 @@ function gck_render_bundle_selector() {
     && !has_term( array( 'starter-paketi' ), 'product_cat', $product_id ) 
     
     )  :  ?>
+                <?php
+                  // enota na kartici ponudbe: privzeto "/ kom", carape imajo "/ par" (ACF tekst_2)
+                  $gck_unit = isset( $data['unit'] ) ? trim( (string) $data['unit'] ) : '';
+                  if ( '' === $gck_unit ) { $gck_unit = '/ kom'; }
+                ?>
                 <?php if ( $show_price_highlights ) : ?>
                     <br class="gck-hl-break">
                     <span class="gck-offer-prices">
@@ -3992,14 +3999,14 @@ function gck_render_bundle_selector() {
                         <?php if ( $per_regular > $gck_per_new ) : ?>
                             <span class="gck-per-old"><?php echo number_format( $per_regular, 2 ); ?>€</span>
                         <?php endif; ?>
-                        <span class="gck-per-new"><?php echo number_format( $gck_per_new, 2 ); ?>€ / kom</span>
+                        <span class="gck-per-new" data-unit="<?php echo esc_attr( $gck_unit ); ?>"><?php echo number_format( $gck_per_new, 2 ); ?>€ <?php echo esc_html( $gck_unit ); ?></span>
                     </span>
                     <?php if ( $discount_pct > 0 ) : ?>
                         <span class="gck-discount-badge">−<?php echo (int) $discount_pct; ?>%</span>
                     <?php endif; ?>
                     </span>
                 <?php else : ?>
-                    — <span class="bundle-option-title"><?php echo number_format( $gck_per_new, 2 ); ?>€ / kom</span>
+                    — <span class="bundle-option-title" data-unit="<?php echo esc_attr( $gck_unit ); ?>"><?php echo number_format( $gck_per_new, 2 ); ?>€ <?php echo esc_html( $gck_unit ); ?></span>
                 <?php endif; ?>
 
                 
@@ -4538,8 +4545,9 @@ document.addEventListener('DOMContentLoaded', function () {
             radio.dataset.total = (t.sale / 100).toFixed(2);
             const per = qty > 1 ? Math.floor(t.sale / qty) : t.sale;
             const titles = card.querySelectorAll('.gck-offer-head .bundle-option-title');
-            if (titles.length > 1) titles[titles.length - 1].textContent = fmtCard(per) + '€ / kom';
-            card.querySelectorAll('.gck-per-new').forEach(el => el.textContent = fmtCard(per) + '€ / kom');
+            const unitOf = el => (el && el.dataset && el.dataset.unit) ? el.dataset.unit : '/ kom';
+            if (titles.length > 1) { const el = titles[titles.length - 1]; el.textContent = fmtCard(per) + '€ ' + unitOf(el); }
+            card.querySelectorAll('.gck-per-new').forEach(el => el.textContent = fmtCard(per) + '€ ' + unitOf(el));
             card.querySelectorAll('.gck-per-old').forEach(el => el.textContent = fmtCard(Math.round(t.reg / qty)) + '€');
             card.querySelectorAll('.line-total').forEach(el => el.textContent = fmtCard(t.sale) + '€');
             card.querySelectorAll('.gck-regular-price').forEach(el => el.textContent = fmtCard(t.reg) + '€');

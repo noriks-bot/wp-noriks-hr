@@ -22,6 +22,11 @@ function my_add_price_to_button_text( $text, $prod = null ) {
         return $text;
     }
 
+    // Izdelki s ponudbami (orto vticnik): cena je na kartici ponude, v gumbu je NE sme biti.
+    if ( function_exists( 'gck_is_orto_bundle_enabled' ) && gck_is_orto_bundle_enabled( $prod->get_id() ) ) {
+        return $text;
+    }
+
     $price_text = '';
 
     if ( $prod->is_type( 'simple' ) ) {

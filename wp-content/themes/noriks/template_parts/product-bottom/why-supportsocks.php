@@ -117,19 +117,27 @@ $nss_row = function( $r, $rev ) use ( $nss_video ) {
     . '</div>';
   return '<div class="nss-row2' . ( $rev ? ' nss-row2--rev' : '' ) . '">' . ( $rev ? $copy . $media : $media . $copy ) . '</div>';
 };
+
+/* vsaka vrstica je svoj pas cez celo sirino; ozadja se izmenjujejo skozi celo stran */
+$nss_band_i = 0;
+$nss_band = function( $html ) use ( &$nss_band_i ) {
+  $tint = ( 0 === $nss_band_i % 2 ) ? ' nss-tint' : '';
+  $nss_band_i++;
+  return '<div class="nss-band' . $tint . '"><div class="nss-wrap">' . $html . '</div></div>';
+};
 ?>
 
 <div class="nss">
 
 <!-- 1) Potporne carape koje se lako oblace — naslov + 3 vrstice video | besedilo (video levo, desno, levo) -->
-<section class="nss-sec nss-tint" aria-labelledby="nss-primary-h">
-  <div class="nss-wrap">
-    <p class="nss-kicker nss-kicker--c">NORIKS SupportSocks</p>
-    <h2 id="nss-primary-h" class="nss-h2 nss-h2--c">Potporne čarape koje se lako oblače <em>i udobne su cijeli dan</em></h2>
-    <div class="nss-rows">
-      <?php foreach ( $nss_rows_1 as $i => $r ) { echo $nss_row( $r, (bool) ( $i % 2 ) ); } ?>
+<section class="nss-sec nss-sec--bands" aria-labelledby="nss-primary-h">
+  <div class="nss-band nss-tint nss-band--head">
+    <div class="nss-wrap">
+      <p class="nss-kicker nss-kicker--c">NORIKS SupportSocks</p>
+      <h2 id="nss-primary-h" class="nss-h2 nss-h2--c">Potporne čarape koje se lako oblače <em>i udobne su cijeli dan</em></h2>
     </div>
   </div>
+  <?php foreach ( $nss_rows_1 as $i => $r ) { echo $nss_band( $nss_row( $r, (bool) ( $i % 2 ) ) ); } ?>
 </section>
 
 <!-- 2) Zato su NORIKS bolje — ikone -->
@@ -145,12 +153,8 @@ $nss_row = function( $r, $rev ) use ( $nss_video ) {
 </section>
 
 <!-- 3) Mekani rub / suha stopala / vrh bez savova — video desno, levo, desno -->
-<section class="nss-sec" aria-label="Još prednosti NORIKS SupportSocks">
-  <div class="nss-wrap">
-    <div class="nss-rows">
-      <?php foreach ( $nss_rows_3 as $i => $r ) { echo $nss_row( $r, ! ( $i % 2 ) ); } ?>
-    </div>
-  </div>
+<section class="nss-sec nss-sec--bands" aria-label="Još prednosti NORIKS SupportSocks">
+  <?php foreach ( $nss_rows_3 as $i => $r ) { echo $nss_band( $nss_row( $r, ! ( $i % 2 ) ) ); } ?>
 </section>
 
 <!-- 4) Mnenja kupcev (original ima "1 000 000+ solgte par" — tuja stevilka, izpuscena) — preprosta mreza mnenj -->
@@ -235,6 +239,12 @@ $nss_row = function( $r, $rev ) use ( $nss_video ) {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nss-ink); }
 .nss *, .nss *::before, .nss *::after { box-sizing: border-box; }
 .nss img, .nss video { display: block; max-width: 100%; height: auto; }
+.nss-sec--bands { padding: 0 !important; background: transparent !important; }
+.nss-band { padding: 60px 0; background: #fff; }
+.nss-band.nss-tint { background: var(--nss-tint); }
+.nss-band--head { padding-bottom: 34px; }
+.nss-band--head + .nss-band.nss-tint { padding-top: 0; }
+@media (max-width: 899px) { .nss-band { padding: 42px 0; } }
 .nss-sec { padding: 60px 0; background: #fff; }
 .nss-tint { background: var(--nss-tint); }
 .nss-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
