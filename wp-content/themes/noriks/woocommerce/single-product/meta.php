@@ -623,6 +623,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS DishSheets</strong> su listići za pranje posuđa — nova alternativa agresivnim, toksičnim deterdžentima za posuđe. Biljnog su podrijetla, biorazgradivi i bez plastičnog otpada.<br><br>Svaki listić je točno odmjeren: <strong>1 listić = 1 puno pranje</strong>. Dovoljno su svestrani za perilicu posuđa, pranje u sudoperu, namakanje tvrdokornih lonaca i tava ili za četku za posuđe.<br><br>Sadrže samo nužne sastojke — <strong>bez izbjeljivača, fosfata, bojila</strong> i drugih nepotrebnih agresivnih kemikalija. Uz to dolaze u <strong>ambalaži bez plastike</strong>.<br><br><strong>Točno odmjereni:</strong> svaki listić je prava količina za jedno puno pranje<br><strong>Višenamjenski:</strong> za perilicu posuđa, pranje na ruke, namakanje lonaca ili četku za posuđe<br><strong>Prikladni za štedljive perilice:</strong> kompatibilni s visokoučinkovitim (HE) perilicama posuđa za optimalan rezultat<br><strong>Bez štetnih tvari:</strong> bez plastične ambalaže i bez agresivnih kemikalija — čistoća u koju možete imati povjerenja<br><strong>Snažni i nježni:</strong> uklanjaju masnoću, prljavštinu i zapečenu hranu<br><br><strong>Pakiranje:</strong> 1 paket = 80 listića (80 pranja), 3 paketa = 240 listića, 6 paketa = 480 listića. Miris: svježi limun.<br><br><strong>Sastojci:</strong> natrijev kokosulfat, polivinil alkohol, lauril glukozid, glicerin, saponini, natrijev citrat, natrijev bikarbonat, miris, enzimi.
 
+         <?php elseif( noriks_is_type( 'dograincoat', $current_product_id ) ): ?>
+
+                Recite zbogom zagušljivim kabanicama koje ne propuštaju zrak. <strong>NORIKS DogRaincoat</strong> prva je prozračna kabanica za pse na svijetu. Izrađena je od naprednih materijala koji propuštaju zrak, a istodobno ostaju vodootporni — vaš pas ostaje udoban i suh.<br><br>&bull; Vodootporan, vjetrootporan, lagan i izdržljiv materijal<br>&bull; Bolja regulacija temperature: višak topline i vlage izlazi van — veća udobnost<br>&bull; Podesivi ovratnik čuva vrat i lice psa suhima, a ne zaklanja mu pogled<br>&bull; Podesive vezice kod stražnjih nogu za lako obavljanje nužde<br>&bull; Kroj koji ne sputava kretanje — pas se kreće slobodno<br>&bull; Lako se oblači i skida, s kopčama sa strane<br>&bull; Unutarnja mrežasta podstava za dodatnu udobnost, ne lijepi se za dlaku<br>&bull; Reflektirajuće trake sa strane kabanice za sigurnost<br>&bull; Otvor za povodac sa zaštitnim preklopom koji ne propušta kišu
+
          <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
 
                 <strong>NORIKS MaternityLeggings</strong> — vaše se tijelo mijenja. Naše tajice rastu s njim.<br><br>Ove tajice za trudnice prilagođavaju se vama – a ne obrnuto. <strong>Podupiru trbuh, rasterećuju leđa</strong> i daju vam osjećaj sigurne potpore, bez stezanja.<br><br>Mekan, prozračan materijal pruža ugodan osjećaj pri nošenju, a u hladnijem dijelu godine ugodno vas grije.<br><br>I jer vaše tijelo čini nešto veliko, zaslužuje odjeću koja ga u tome podupire.<br><br><strong>Rasterećuju trbuh i leđa:</strong> posebna mrežasta tkanina nježno podupire trbuščić i tako rasterećuje donji dio leđa.<br><strong>100 % neprozirne:</strong> zahvaljujući kvalitetnim vlaknima tkanina ostaje potpuno neprozirna i pri intenzivnom kretanju – o tome ne morate brinuti.<br><strong>Ne spuštaju se:</strong> ekstra visok, mekan pojas priljubljuje se uz trbuh bez pritiska – i bez stalnog spuštanja. Na poslu, u šetnji ili na kauču: tajice uvijek stoje točno ondje gdje trebaju.<br><strong>Rastu s vašim trbuhom:</strong> mekan pojas prilagođava se trbuščiću – bilo da ste u 10. ili 35. tjednu trudnoće. Bez pritiska, bez spuštanja, jednostavno udobno od početka do kraja.<br><strong>Oblikuju noge i stražnjicu:</strong> oblikuju bez stezanja – za stražnjicu i noge koje ćete rado pokazati.<br><br><strong>Materijal:</strong> 94 % poliamid, 6 % elastan. Ovaj sastav odabran je namjerno – za ugodnu kompresiju nogu i potporu trbuhu i donjem dijelu leđa. Materijal istodobno pruža ugodnu toplinu, a da se ne oznojite. Rezultat: <strong>100 % neprozirne, elastične, tople, prozračne</strong> – i jednostavno super udobne.<br><br><strong>Zašto su NORIKS tajice za trudnice najbolji izbor</strong><br><strong>Visok, elastičan pojas</strong> – nježno podupire trbuh, bez stezanja<br><strong>Dizajn koji čuva leđa</strong> – podupire i rasterećuje donji dio leđa<br><strong>Udobne za svaku priliku</strong> – savršene za svakodnevicu, slobodno vrijeme ili laganu tjelovježbu<br><strong>Prozračne i mekane</strong> – sprječavaju znojenje i ostaju ugodno prozračne<br><strong>Jednostavno održavanje i dugotrajnost</strong> – zadržavaju oblik i nakon mnogo pranja<br><strong>Jednostavan dizajn</strong> – lako se kombiniraju s majicom, haljinom ili puloverom<br><br>Tajice sjede visoko preko trbuha, pružaju nježnu potporu i istodobno rasterećuju donji dio leđa. Bez spuštanja, bez štipanja, bez stezanja – umjesto toga osjećate se slobodno i poduprto pri svakom pokretu. Mnoge žene potvrđuju: „Napokon tajice koje podupiru trbuh i osjetno rasterećuju leđa.”<br><br><strong>Zaključak – vaše nove omiljene tajice:</strong> NORIKS tajice za trudnice spajaju udobnost, potporu trbuhu i rasterećenje leđa. Za trudnoću, babinje ili jednostavno kao udobne tajice za svaki dan – uz njih ste cijeli dan opušteni.<br><br><strong>Boje:</strong> crna, tamnosiva i svijetlosmeđa.<br><strong>Veličine:</strong> S (36) – XXL (48–50). Odaberite svoju uobičajenu veličinu prije trudnoće (pogledajte tablicu veličina).
@@ -1357,6 +1361,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'dograincoat', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Izmjerite <strong>opseg prsa</strong> (najširi dio odmah iza prednjih nogu) i <strong>duljinu leđa</strong> (od početka vrata do početka repa). <strong>Ako je pas između dviju veličina, odaberite veću.</strong></p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a87508;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina leđa</th>
+                  <th style="padding:9px 8px;text-align:left;">Težina psa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_dograincoat_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fdf3d9' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Veličinu prema pasmini pronaći ćete u tablici veličina uz ponude. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
@@ -2098,6 +2133,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'dishsheets', $current_product_id ) ): ?>
 
                 Jedan listić stavite izravno u pretinac za deterdžent u perilici posuđa i odaberite željeni program. Za manja pranja ili namakanje dovoljna je <strong>polovica listića</strong>. Za pranje na ruke listić otopite u vodi u sudoperu — nastat će lagana pjena — i perite posuđe kao i inače.
+
+             <?php elseif( noriks_is_type( 'dograincoat', $current_product_id ) ): ?>
+
+                Nakon kišne šetnje kabanicu otresite i ostavite da se <strong>osuši na zraku</strong>. Prljavštinu obrišite vlažnom krpom ili isperite mlakom vodom; po potrebi kabanicu operite <strong>ručno u mlakoj vodi</strong> s blagim sredstvom. Ne koristite izbjeljivač ni omekšivač, <strong>ne sušite u sušilici</strong> i ne glačajte — tako će materijal dugo ostati vodootporan i prozračan.
 
              <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
 

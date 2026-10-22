@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS DogRaincoat (orto-dograincoat) — prozracna kabanica za pse
+if ( noriks_is_type( 'dograincoat' ) ) {
+    include $noriks_pb_dir . 'why-dograincoat.php';
+}
+
 // NORIKS MaternityLeggings (orto-maternityleggings) — tajice za trudnice
 if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';

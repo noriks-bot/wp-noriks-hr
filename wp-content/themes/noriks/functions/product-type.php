@@ -160,6 +160,8 @@ function noriks_product_type_map() : array {
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS MaternityLeggings — tajice za trudnice (boja + velicina S–XXL).
         'maternityleggings'       => array( 'orto-maternityleggings', 'maternityleggings' ),
+        // NORIKS DogRaincoat — prozracna kabanica za pse (boja + velicina S–4XL).
+        'dograincoat'             => array( 'orto-dograincoat', 'dograincoat' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -558,6 +560,86 @@ if ( ! function_exists( 'noriks_orthomules_sizes' ) ) {
             array( 'EU 41', '10–10,5', '8–8,5' ),
             array( 'EU 42', '11–11,5', '9–9,5' ),
             array( 'EU 43', '12', '10' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_dograincoat_sizes' ) ) {
+    /** NORIKS DogRaincoat: velicina, opseg prsa (cm), duljina leda (cm), tezina psa (kg).
+     *  1:1 s tablice velicin originala (sparkpaws.com, »Dog Apparel Size Guide« za kabanicu, CM) in slike
+     *  »Find your dog's size« (5–115 lbs -> kg). Savjet originala: ako je pas izmedu dvije velicine, odaberite vecu. */
+    function noriks_dograincoat_sizes() {
+        return array(
+            array( 'S',   '38 cm', '26 cm', '2 – 5 kg' ),
+            array( 'M',   '46 cm', '30 cm', '5 – 7 kg' ),
+            array( 'L',   '54 cm', '36 cm', '7 – 11 kg' ),
+            array( 'XL',  '61 cm', '41 cm', '11 – 18 kg' ),
+            array( '2XL', '66 cm', '48 cm', '18 – 27 kg' ),
+            array( '3XL', '76 cm', '53 cm', '27 – 36 kg' ),
+            array( '4XL', '84 cm', '56 cm', '36 – 52 kg' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_dograincoat_breeds' ) ) {
+    /** NORIKS DogRaincoat: velicina po pasmini (1:1 s »Size by Breed« originala, kg). pasmina => array( array( velicina, kg ), … ). */
+    function noriks_dograincoat_breeds() {
+        return array(
+            'Američki buldog'                 => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Američki stafordski terijer'     => array( array( '2XL', '18–25' ), array( '3XL', '25–32' ) ),
+            'Australski govedarski pas'       => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ) ),
+            'Australski ovčar'                => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Basenji'                         => array( array( 'L', '7–11' ), array( 'XL', '11–18' ) ),
+            'Baset'                           => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Beagle'                          => array( array( 'L', '7–11' ), array( 'XL', '11–16' ), array( '2XL', '16–20' ) ),
+            'Belgijski ovčar malinois'        => array( array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Bišon'                           => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Bladhaund'                       => array( array( '4XL', '27–36' ) ),
+            'Border koli'                     => array( array( 'XL', '9–14' ), array( '2XL', '14–20' ), array( '3XL', '20–27' ) ),
+            'Bostonski terijer'               => array( array( 'M', '5–7' ), array( 'L', '7–11' ), array( 'XL', '11–16' ) ),
+            'Bokser'                          => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Bretonski španijel'              => array( array( 'XL', '9–14' ), array( '2XL', '14–20' ), array( '3XL', '20–27' ) ),
+            'Bulterijer'                      => array( array( 'XL', '14–20' ), array( '2XL', '20–27' ), array( '3XL', '27–36' ) ),
+            'Cane corso'                      => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Cavalier King Charles španijel'  => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Čivava'                          => array( array( 'S', '2–5' ), array( 'M', '5–7' ) ),
+            'Koker španijel'                  => array( array( 'L', '7–11' ), array( 'XL', '11–16' ) ),
+            'Korgi'                           => array( array( 'XL', '9–14' ), array( '2XL', '14–18' ) ),
+            'Jazavčar'                        => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Dalmatinac'                      => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Doberman'                        => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Engleski buldog'                 => array( array( '2XL', '18–23' ), array( '3XL', '23–30' ) ),
+            'Engleski springer španijel'      => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ) ),
+            'Francuski buldog'                => array( array( 'M', '5–7' ), array( 'L', '7–11' ), array( 'XL', '11–16' ) ),
+            'Njemački ovčar'                  => array( array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Njemački kratkodlaki ptičar'     => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Zlatni retriver'                 => array( array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Goldendoodle'                    => array( array( '2XL', '16–20' ), array( '3XL', '20–30' ) ),
+            'Njemačka doga'                   => array( array( '4XL', '36–52' ) ),
+            'Havanski bišon'                  => array( array( 'S', '2–5' ), array( 'M', '5–7' ) ),
+            'Jack Russell terijer'            => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Labrador retriver'               => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Labradoodle'                     => array( array( '2XL', '16–20' ), array( '3XL', '20–30' ) ),
+            'Maltezer'                        => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Mala pudlica'                    => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Mali američki ovčar'             => array( array( 'XL', '7–11' ), array( '2XL', '11–18' ) ),
+            'Patuljasti pinč'                 => array( array( 'S', '2–5' ), array( 'M', '5–7' ) ),
+            'Patuljasti šnaucer'              => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Pitbul'                          => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Pomeranac'                       => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Mops'                            => array( array( 'M', '5–7' ), array( 'L', '7–11' ), array( 'XL', '11–16' ) ),
+            'Rodezijski gonič'                => array( array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Rotvajler'                       => array( array( '3XL', '27–36' ), array( '4XL', '36–52' ) ),
+            'Shar pei'                        => array( array( '2XL', '20–27' ), array( '3XL', '27–36' ) ),
+            'Shiba inu'                       => array( array( 'L', '7–11' ), array( 'XL', '11–16' ) ),
+            'Shih tzu'                        => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Sibirski haski'                  => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Stafordski bulterijer'           => array( array( 'XL', '14–20' ), array( '2XL', '20–27' ), array( '3XL', '27–36' ) ),
+            'Standardna pudlica'              => array( array( '2XL', '20–27' ), array( '3XL', '27–36' ) ),
+            'Vižla'                           => array( array( '2XL', '14–20' ), array( '3XL', '20–27' ), array( '4XL', '27–36' ) ),
+            'Vajmarski ptičar'                => array( array( '2XL', '18–25' ), array( '3XL', '25–36' ), array( '4XL', '36–45' ) ),
+            'Westie (zapadnoškotski terijer)' => array( array( 'M', '5–7' ), array( 'L', '7–11' ) ),
+            'Jorkširski terijer'              => array( array( 'S', '2–5' ), array( 'M', '5–7' ) ),
         );
     }
 }
