@@ -615,6 +615,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS FleeceTights</strong> su tople hulahopke podstavljene flisom koje izgledaju kao gola koža ispod tankih prozirnih hulahopki — a griju kao debele tajice. Idealne su za haljine, suknje i kratke hlače na jesen i zimu.<br><br><strong>Kompresijski pojas koji oblikuje struk:</strong> visoki pojas nježno steže i zaglađuje trbuh i bokove<br><strong>Prozirni izgled u 4 nijanse:</strong> Vanilija (svijetla), Latte (preplanula), Karamela (brončana) i Espresso (tamna) — za svaku nijansu kože<br><strong>Ultra mekan, debeo flis:</strong> toplo vani, a bez pregrijavanja u zatvorenom; flis ne stvara kuglice<br><strong>Samo jedan šav:</strong> glatka silueta, bez urezivanja i neugodnih linija<br><strong>Izrazito rastezljive (4-way stretch):</strong> ne trgaju se i ne paraju, prianjaju uz gležanj i ne nabiru se na koljenima<br><strong>Za visoke i niske:</strong> odgovaraju unutarnjoj duljini noge od 61 do 102 cm<br><br>Izgledaju prozirno, ali su potpuno neprozirne — ništa se ne vidi ni kad čučnete ili se sagnete. Dovoljno su tanke da ih nosite i ispod traperica.<br><br><strong>Sastav:</strong> 38,9 % najlon, 14,9 % elastan, 46,2 % poliester.<br><br><strong>Veličine:</strong> XXS/XS, XS/S, M/L, L/XL, 2XL/3XL i 4XL/5XL. Ako ste između dvije veličine, uzmite manju za čvršće oblikovanje ili veću za opušteniji osjećaj.
 
+         <?php elseif( noriks_is_type( 'smartjacket', $current_product_id ) ): ?>
+
+                <strong>NORIKS SmartJacket</strong> je fleksibilno rješenje za svako vrijeme: <strong>topla flis jakna + reflektirajuća kišna jakna = vodootporna zimska jakna</strong>. Vodootporni vanjski materijal pouzdano štiti od kiše, a odvojivi flis brzo izjednačuje promjene temperature. Idealna je za put na posao, vožnju biciklom i aktivnosti na otvorenom.<br><br>Reflektirajuća tehnologija vanjske površine u mraku vas čini <strong>do 5x ranije uočljivima</strong>, a danju izgleda kao jednostavna, elegantna jakna. Zahvaljujući promišljenim detaljima i podesivim krajevima jakna je praktična i udobna za svaki dan, a promišljen kroj lijepo prati žensku liniju.<br><br><strong>Vodeni stupac 10.000 mm</strong> (vodootporna)<br><strong>Prozračnost:</strong> 10.000 MVTR<br><strong>Materijal:</strong> reflektirajuća membrana, poliester 150D, flis<br><strong>Skriveni prsni džep</strong> s patentnim zatvaračem<br><strong>Džepovi za ruke</strong> s patentnim zatvaračem i flis podstavom (na obje jakne)<br><strong>Kapuljača</strong> se sprema u ovratnik<br><strong>Dvosmjerni prednji patentni zatvarač</strong><br><strong>Podesivi</strong> rukavi, struk i kapuljača<br><strong>Težina</strong> osnovne veličine: 920 g<br><strong>Kroj:</strong> normalan<br><br><strong>Boje:</strong> crvena, tamnoplava, crna i bež. <strong>Veličine:</strong> od XS do 4XL — odaberite veličinu koju inače nosite; ako ste između dvije, od XS do L uzmite manju, a od XL veću.
+
          <?php elseif( noriks_is_type( 'sculptbrief', $current_product_id ) ): ?>
 
                 <strong>NORIKS SculptBrief</strong> su oblikujuće gaćice visokog struka s patentiranim <strong>360° križnim pojasom</strong> koji obuhvaća trbuh sprijeda, sa strane i straga. Trbuh i struk dobivaju nježnu, ciljanu kompresiju, pa izgledaju ravnije i glađe čim ih obučete — bez stezanja, štipanja i nelagode.<br><br><strong>Smanjuju struk do 5 cm</strong> već za nekoliko dana nošenja<br><strong>Zatvaraju razmak koji je ostavila trudnoća</strong> (dijastaza) — 360° križni pojas drži cijelu trbušnu stijenku<br><strong>Nevidljive ispod odjeće:</strong> bešavni rubovi, bez linija i tragova, ne smotavaju se prema dolje<br><strong>Ostaju na mjestu od jutra do večeri:</strong> integrirani silikonski držač i rebrasti pojas protiv smotavanja<br><strong>Prikladne za dojenje, nakon carskog reza i u menopauzi</strong><br><strong>Za svaku mamu:</strong> nose ih žene od nekoliko dana nakon poroda do više od 40 godina nakon poroda — nikad nije kasno<br><br>Inspirirane malezijskim <strong>bengkungom</strong> — stoljetnom tehnikom omatanja koja nakon poroda pridržava i podupire trbušnu stijenku. Uz svakodnevno nošenje većina žena osjeti čvršći trbuh za 2 do 3 tjedna.<br><br><strong>Sastav:</strong> 83 % poliamid (najlon), 17 % elastan, prozračni mrežasti umetci i pamučni umetak u međunožju. Bez lateksa, bez tvrdih žica i bez plastičnih rubova.<br><br><strong>Boje:</strong> crna, bež, tamnoplava, lila, šljiva i fuksija. <strong>Veličine:</strong> od XS do 5XL — ravnajte se prema opsegu struka; ako ste između dvije veličine, uzmite veću.
@@ -1466,6 +1470,42 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           </div>
 
 
+        <?php elseif( noriks_is_type( 'smartjacket', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Normalan do opušten kroj</strong> — odaberite veličinu koju inače nosite. Ako ste između dvije veličine: od XS do L uzmite <strong>manju</strong>, a od XL <strong>veću</strong> veličinu. Sve mjere su u cm.</p>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#2E2420;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">(A) Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">(B) Opseg trbuha</th>
+                  <th style="padding:9px 8px;text-align:left;">(C) Duljina</th>
+                  <th style="padding:9px 8px;text-align:left;">(D) Rukav</th>
+                  <th style="padding:9px 8px;text-align:left;">Konf. broj (DE)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_smartjacket_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f0eb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[5] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Jana je visoka 1,79 m, teži 61 kg i nosi veličinu <strong>S</strong>.</p>
+          </div>
+
+
         <?php elseif( noriks_is_type( 'sculptbrief', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1760,6 +1800,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'fleecetights', $current_product_id ) ): ?>
 
                 Prije pranja izvrnite ih naopako. Perite ručno ili na nježnom programu, u hladnoj ili mlakoj vodi (nikad vrućoj). Sušite na zraku ili u sušilici na najnižoj temperaturi. Bez izbjeljivača i omekšivača — tako ostaju mekane, tople i glatke.
+
+             <?php elseif( noriks_is_type( 'smartjacket', $current_product_id ) ): ?>
+
+                Prije pranja jaknu izvrnite naopako i zatvorite sve patentne zatvarače. Perite na najviše 30 °C na nježnom programu. Tako reflektirajući i vodootporni sloj traju što dulje.
 
              <?php elseif( noriks_is_type( 'sculptbrief', $current_product_id ) ): ?>
 

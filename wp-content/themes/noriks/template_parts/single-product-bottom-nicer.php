@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS SmartJacket (orto-smartjacket) — reflektirajuca vodootporna zenska jakna 3 u 1
+if ( noriks_is_type( 'smartjacket' ) ) {
+    include $noriks_pb_dir . 'why-smartjacket.php';
+}
+
 // NORIKS SculptBrief (orto-sculptbrief) — oblikujuce gacice visokog struka s 360° krizim pojasom
 if ( noriks_is_type( 'sculptbrief' ) ) {
     include $noriks_pb_dir . 'why-sculptbrief.php';

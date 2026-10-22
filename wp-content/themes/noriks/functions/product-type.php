@@ -136,6 +136,8 @@ function noriks_product_type_map() : array {
         'fleecetights'            => array( 'orto-fleecetights', 'fleecetights' ),
         // NORIKS SculptBrief — oblikujuce gacice visokog struka s 360° krizim pojasom (boja + velicina XS–5XL).
         'sculptbrief'             => array( 'orto-sculptbrief', 'sculptbrief' ),
+        // NORIKS SmartJacket — reflektirajuca vodootporna zenska jakna 3 u 1 (boja + velicina XS–4XL).
+        'smartjacket'             => array( 'orto-smartjacket', 'smartjacket' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -609,6 +611,23 @@ if ( ! function_exists( 'noriks_sculptbrief_sizes' ) ) {
             array( '3XL', '24–26', '114–118', '45–46' ),
             array( '4XL', '28–30', '119–122', '47–48' ),
             array( '5XL', '32–34', '124–127', '49–50' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_smartjacket_sizes' ) ) {
+    /** NORIKS SmartJacket: velicina, (A) opseg prsa, (B) opseg trbuha, (C) duljina proizvoda, (D) duljina rukava (cm),
+     *  njemacki konfekcijski broj. 1:1 s tablice originala valkental.com (slika "Normale bis lockere Passform"). */
+    function noriks_smartjacket_sizes() {
+        return array(
+            array( 'XS',  '< 94',    '< 88',   '67', '62',   '34–36' ),
+            array( 'S',   '94–98',   'do 93',  '69', '63,5', '36–38' ),
+            array( 'M',   '98–102',  'do 98',  '71', '65',   '38–40' ),
+            array( 'L',   '102–106', 'do 103', '73', '66,5', '40–42' ),
+            array( 'XL',  '106–111', 'do 109', '74', '67,5', '44–46' ),
+            array( '2XL', '111–116', 'do 115', '75', '68,5', '46–48' ),
+            array( '3XL', '116–121', 'do 121', '75', '68,5', '48–50' ),
+            array( '4XL', '121–126', 'do 127', '75', '68,5', '50–52' ),
         );
     }
 }
