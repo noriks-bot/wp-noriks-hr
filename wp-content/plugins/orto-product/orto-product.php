@@ -39,10 +39,11 @@ function gck_get_bundle_offers( $product_id = null ) : array {
     // preberi navadne post_meta ključe v formatu _singlepp_orto_pairs_{N}_{field}
     if ( empty($rows) || ! is_array($rows) ) {
         $count = (int) get_post_meta( $product_id, '_singlepp_orto_pairs', true );
+        error_log("GCK DEBUG [{$product_id}]: count={$count}, rows_from_acf=" . (is_array($rows) ? count($rows) : 'false'));
         if ( $count > 0 ) {
             $rows = [];
             for ( $i = 0; $i < $count; $i++ ) {
-                $rows[] = array(
+                $row = array(
                     'qty'       => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_qty", true ),
                     'tekst_1'   => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tekst_1", true ),
                     'tekst_2'   => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tekst_2", true ),
@@ -53,6 +54,8 @@ function gck_get_bundle_offers( $product_id = null ) : array {
                     'p2'        => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_p2", true ),
                     'tip'       => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tip", true ),
                 );
+                error_log("GCK DEBUG row {$i}: " . json_encode($row));
+                $rows[] = $row;
             }
         }
     }
