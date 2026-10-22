@@ -142,6 +142,8 @@ function noriks_product_type_map() : array {
         'utilitypants'            => array( 'orto-utilitypants', 'utilitypants' ),
         // NORIKS Hoodie — nosiva deka s kapuljacom i krznom (boja + velicina po visini).
         'hoodie'                  => array( 'orto-hoodie', 'hoodie' ),
+        // NORIKS CatFountain — fontana za macke od nehrdajuceg celika 2,2 L (bez atributov).
+        'catfountain'             => array( 'orto-catfountain', 'catfountain' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).

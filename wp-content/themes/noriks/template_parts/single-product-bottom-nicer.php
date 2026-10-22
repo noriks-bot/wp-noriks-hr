@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS CatFountain (orto-catfountain) — fontana za macke od nehrdajuceg celika 2,2 L
+if ( noriks_is_type( 'catfountain' ) ) {
+    include $noriks_pb_dir . 'why-catfountain.php';
+}
+
 // NORIKS Hoodie (orto-hoodie) — nosiva deka s kapuljacom i krznom
 if ( noriks_is_type( 'hoodie' ) ) {
     include $noriks_pb_dir . 'why-hoodie.php';
