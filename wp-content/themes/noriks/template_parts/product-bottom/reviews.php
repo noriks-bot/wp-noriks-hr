@@ -353,6 +353,10 @@
 
            Niste jedini koji traže kišnu jaknu koja izdrži pljusak i dobro izgleda.
 
+          <?php elseif ( noriks_is_type( 'viinia' ) ): ?>
+
+           Niste jedini čije vino na stolu brzo postane prevrelo.
+
 
 
 
@@ -675,6 +679,10 @@
 
             Tisuće ljudi već nosi NORIKS Raincoat – vodootporna oversized jakna s kapuljačom koja izdrži pljusak i dobro izgleda.
 
+           <?php elseif ( noriks_is_type( 'viinia' ) ): ?>
+
+            Tisuće ljubitelja vina već koristi VIINIA za savršenu temperaturu bijelog i rosé vina bez frižidera.
+
 
            <?php else: ?>
         
@@ -829,8 +837,9 @@
   $is_bowl_page       = noriks_is_type( 'bowl', $current_product_id );
   $is_seal_page       = noriks_is_type( 'seal', $current_product_id );
   $is_sr_page         = noriks_is_type( 'sr', $current_product_id );
+  $is_viinia_page     = noriks_is_type( 'viinia', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_viinia_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_slippers_page ? 'NORIKS Slippers papuče'
@@ -844,6 +853,7 @@
                      : ( $is_doggo_page ? 'NORIKS Doggo autokrevet za pse'
                      : ( $is_bracelet_page ? 'NORIKS Bracelet narukvica od hematita'
                      : ( $is_winecooler_page ? 'NORIKS WineCooler hladnjak za vino'
+                     : ( $is_viinia_page ? 'NORIKS VIINIA štapić za hlađenje vina'
                      : ( $is_orthomules_page ? 'NORIKS OrthoMules ortopedske natikače'
                      : ( $is_sleepearplugs_page ? 'NORIKS SleepEarplugs čepići za spavanje'
                      : ( $is_litterbox_page ? 'NORIKS LitterBox automatska posuda za pijesak'
@@ -904,7 +914,7 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )  ));
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )  ));
   if ( $is_widetoeshoes_page ) { $rv_fallback_title = 'NORIKS WideToeShoes tenisice sa širokim prednjim dijelom'; }
   if ( $is_techtee_page ) { $rv_fallback_title = 'NORIKS TechTee majica s okruglim izrezom'; }
   if ( $is_maternityleggings_page ) { $rv_fallback_title = 'NORIKS MaternityLeggings tajice za trudnice'; }
@@ -3697,7 +3707,24 @@ $blanket_faq = array(
     'answer'    => 'Naravno. Mnoge obitelji koriste NORIKS Blanket za senzorne pauze, gledanje filmova ili čak na putovanjima. Odličan je umirujući alat za trenutke prestimulacije tijekom dana.'),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$viinia_faq = array(
+  array('questioon' => 'Koliko dugo VIINIA održava vino hladnim?',
+    'answer'    => 'VIINIA štapić drži vino hladnim 1–2 sata, ovisno o sobnoj temperaturi. Dovoljno dugo za jedan opuštajući popodnevni ili večernji užitak.'),
+  array('questioon' => 'Je li siguran za sve vrste vina?',
+    'answer'    => 'Da. VIINIA je idealan za bijela i rosé vina. Nije preporučljiv za crvena vina, koja se obično služe na sobnoj temperaturi.'),
+  array('questioon' => 'Koliko dugo prije upotrebe ga moram držati u zamrzivaču?',
+    'answer'    => 'Držite štapić u zamrzivaču najmanje 2–3 sata prije upotrebe. Mnogi ga jednostavno stalno drže zamrznutim i spremnim za korištenje.'),
+  array('questioon' => 'Razrjeđuje li vino?',
+    'answer'    => 'Ne. Za razliku od kockica leda, VIINIA hladi vino bez razrjeđivanja i bez promjene okusa.'),
+  array('questioon' => 'Kako se čisti?',
+    'answer'    => 'Isperite štapić mlakom vodom i sapunom nakon svake upotrebe. Osušite ga i vratite u zamrzivač za sljedeći put.'),
+  array('questioon' => 'Mogu li ga koristiti više puta?',
+    'answer'    => 'Da. VIINIA možete koristiti neograničen broj puta — samo ga ponovno zamrznite i spreman je za novu čašu.'),
+  array('questioon' => 'Koja je duljina štapića? Stane li u standardne boce?',
+    'answer'    => 'VIINIA je dugačak oko 18 cm i dizajniran je da bez problema stane u standardnu vinsku bocu od 0,75 l.'),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_slippers && $is_info ) {
     return $slippers_faq;
@@ -3776,6 +3803,9 @@ $faq_pick = function( $title, $list ) use ( $is_dograincoat, $dograincoat_faq, $
   }
   if ( $is_winecooler && $is_info ) {
     return $winecooler_faq;
+  }
+  if ( $is_viinia && $is_info ) {
+    return $viinia_faq;
   }
   if ( $is_doggo && $is_info ) {
     return $doggo_faq;
