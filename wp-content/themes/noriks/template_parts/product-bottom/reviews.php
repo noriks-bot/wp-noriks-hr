@@ -353,6 +353,10 @@
 
            Niste jedini koji traže kišnu jaknu koja izdrži pljusak i dobro izgleda.
 
+          <?php elseif ( noriks_is_type( 'flomasteri' ) ): ?>
+
+           Niste jedini koji traže flomastere što ne procuravaju kroz papir i rade na tamnim podlogama.
+
           <?php elseif ( noriks_is_type( 'viinia' ) ): ?>
 
            Niste jedini čije vino na stolu brzo postane prevrelo.
@@ -682,6 +686,10 @@
            <?php elseif ( noriks_is_type( 'viinia' ) ): ?>
 
             Tisuće ljubitelja vina već koristi VIINIA za savršenu temperaturu bijelog i rosé vina bez frižidera.
+
+           <?php elseif ( noriks_is_type( 'flomasteri' ) ): ?>
+
+            Tisuće roditelja već koristi NORIKS flomastere – akrilni pigment ne procura, double mine i palete do 168 boja za kreativnost bez granica.
 
 
            <?php else: ?>
@@ -3724,7 +3732,17 @@ $viinia_faq = array(
     'answer'    => 'VIINIA je dugačak oko 18 cm i dizajniran je da bez problema stane u standardnu vinsku bocu od 0,75 l.'),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq ) {
+$flomasteri_faq = array(
+  array("Koliko boja dolazi u setu?", "Setovi su dostupni s 24, 48, 72, 96, 120 ili 168 boja – ovisno o tome što vam treba i koliko prostora želite imati za kreativnost."),
+  array("Rade li flomasteri na tamnim podlogama?", "Da, akrilni pigment pokriva tamne podloge (crni karton, drvo, kamen). Kod svjetlijih nijansi (bijela, pastelne) treba 2–3 tanke slojeve, ali svaki se osuši za par sekundi."),
+  array("Hoće li boja procurati kroz papir?", "Ne. Akrilni flomasteri ostavljaju pigment na površini i ne upijaju se u papir kao obični vodeni flomasteri. S druge strane papira neće biti fleke."),
+  array("Od koliko godina dijete može koristiti ove flomastere?", "Preporučujemo od 3 godine nadalje (pod nadzorom) jer postoje čepići. Oštrica je dovoljno čvrsta da dijete ne mora jako pritiskati."),
+  array("Koliko dugo traje dostava?", "Većina narudžbi stiže unutar 3–5 radnih dana. Besplatna dostava iznad 70 €. Plaćanje pouzećem dostupno."),
+  array("Što ako mi flomasteri ne odgovaraju?", "Imate 30 dana za povrat novca bez dodatnih pitanja. Ako niste zadovoljni kvalitetom ili rezultatom, jednostavno nas kontaktirajte."),
+  array("Treba li miješati ili razrjeđivati boje?", "Ne. Svaki flomaster je spreman za rad – protresite ga sa zatvorenim čepićem, skinite čep i bojajte. Kod svjetlih nijansi pustite da se osuši nekoliko sekundi između slojeva."),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_slippers && $is_info ) {
     return $slippers_faq;
@@ -3806,6 +3824,9 @@ $faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograin
   }
   if ( $is_viinia && $is_info ) {
     return $viinia_faq;
+  }
+  if ( $is_flomasteri && $is_info ) {
+    return $flomasteri_faq;
   }
   if ( $is_doggo && $is_info ) {
     return $doggo_faq;

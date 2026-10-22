@@ -464,4 +464,8 @@ if ( noriks_is_type( 'birdie' ) ) {
 }
 
 // SHARED reviews / social proof (all products)
+if ( noriks_is_type( 'flomasteri' ) ) {
+    include $noriks_pb_dir . 'why-flomasteri.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';

@@ -40,7 +40,8 @@ function noriks_product_type_map() : array {
         // --- sub-variants / special buckets ---
         'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         // Orthopedic back belt (ortopedski pojas za leđa).
-        'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
+        'flomasteri' => array( 'orto-flomasteri' ),
+    'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         // Bunion corrector (korektor čukljeva / halux valgus).
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         // FisioRest (novi proizvod).
