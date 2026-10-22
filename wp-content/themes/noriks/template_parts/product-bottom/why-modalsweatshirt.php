@@ -184,7 +184,8 @@ $nms_cls = function() use ( &$nms_n ) { $nms_n++; return ( $nms_n % 2 ) ? ' nms-
 .nms-score__txt { font-size: 14.5px; color: #5f6a78; }
 
 /* mnenja */
-.nms-reviews { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; margin-top: 44px; }
+.nms-reviews { columns: 4; column-gap: 18px; margin-top: 44px; } /* masonry: kartice s fotografijo in brez nje brez praznin */
+.nms-reviews > .nms-card { break-inside: avoid; margin-bottom: 18px; }
 .nms-card { background: #fff; border: 1px solid #d9e3ee; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
 .nms-sec:not(.nms-tint) .nms-card { background: #f1f5fa; }
 .nms-card__img img { aspect-ratio: 3 / 4; object-fit: cover; }
@@ -196,7 +197,7 @@ $nms_cls = function() use ( &$nms_n ) { $nms_n++; return ( $nms_n % 2 ) ? ' nms-
 
 @media (max-width: 989px) {
   .nms-row2 { gap: 32px; }
-  .nms-reviews { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nms-reviews { columns: 2; }
 }
 @media (max-width: 749px) {
   .nms-sec { padding: 42px 0; }
@@ -204,11 +205,12 @@ $nms_cls = function() use ( &$nms_n ) { $nms_n++; return ( $nms_n % 2 ) ? ' nms-
   .nms-rows { gap: 40px; margin-top: 24px; }
   .nms-row2 { grid-template-columns: 1fr; gap: 24px; }
   .nms-row2--rev .nms-media { order: 0; }
-  .nms-reviews { gap: 12px; margin-top: 28px; }
+  .nms-reviews { column-gap: 12px; margin-top: 28px; }
+  .nms-reviews > .nms-card { margin-bottom: 12px; }
   .nms-card__body { padding: 12px; }
 }
 @media (max-width: 420px) {
-  .nms-reviews { grid-template-columns: 1fr; }
+  .nms-reviews { columns: 1; }
 }
 
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */

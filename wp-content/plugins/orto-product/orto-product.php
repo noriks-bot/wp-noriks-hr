@@ -85,7 +85,7 @@ function gck_get_bundle_offers( $product_id = null ) : array {
 
         // multi-item: floor down per item to 2 decimals
         $per_item       = $sale / $qty;
-        $per_item_fixed = floor($per_item * 100) / 100;
+        $per_item_fixed = floor(round($per_item * 100, 6)) / 100; // round(): 151.98 / 2 ne sme dati 75.98
 
         $offers[$offer_id] = [
             "id"     => $offer_id,
