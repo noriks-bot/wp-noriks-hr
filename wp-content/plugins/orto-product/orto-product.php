@@ -613,12 +613,21 @@ function gck_render_bundle_selector() {
 
     global $product;
 
-    if ( ! is_product() || ! $product || ! gck_is_orto_bundle_enabled( $product->get_id() ) ) return;
+    echo "<!-- GCK DEBUG: gck_render_bundle_selector() called -->\n";
+
+    if ( ! is_product() || ! $product || ! gck_is_orto_bundle_enabled( $product->get_id() ) ) {
+        echo "<!-- GCK DEBUG: early return (not product page or bundle disabled) -->\n";
+        return;
+    }
 
     $product_id = $product->get_id();
 
     $offers = gck_get_bundle_offers( $product_id );
-    if ( empty( $offers ) ) return;
+    echo "<!-- GCK DEBUG: product_id={$product_id}, offers_count=" . count($offers) . " -->\n";
+    if ( empty( $offers ) ) {
+        echo "<!-- GCK DEBUG: no offers, returning -->\n";
+        return;
+    }
 
     // Per-product display toggles (registered in code).
     $precheck_second       = (bool) get_field( 'orto_precheck_second', $product_id );
