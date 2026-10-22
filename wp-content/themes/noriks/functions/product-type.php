@@ -150,6 +150,8 @@ function noriks_product_type_map() : array {
         'litterbox'               => array( 'orto-litterbox', 'litterbox' ),
         // NORIKS SleepEarplugs — cepici za usi za spavanje na boku (samo boja).
         'sleepearplugs'           => array( 'orto-sleepearplugs', 'sleepearplugs' ),
+        // NORIKS TravelPillow — putni jastuk za vrat od memorijske pjene (samo boja).
+        'travelpillow'            => array( 'orto-travelpillow', 'travelpillow' ),
         // NORIKS OrthoMules — ortopedske pletene natikace s remenom (boja + velicina EU 35–43).
         'orthomules'              => array( 'orto-orthomules', 'orthomules' ),
         // NORIKS WideToeShoes — tenisice sa sirokim prednjim dijelom (boja + velicina EU 37–47).

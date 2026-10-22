@@ -639,6 +639,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS OrthoMules</strong> su ortopedske pletene natikače s remenom: <strong>ortopedski uložak</strong> ispod stopala, <strong>prozračan pleteni gornji dio</strong> i remen u stilu Mary Jane koji zaista drži cipelu na nozi — lijep izgled više ne znači bol.<br><br><strong>Istaknuto:</strong><br>• <strong>Ortopedska potpora</strong> — uložak koji podupire stopalo<br>• <strong>Prozračni pleteni gornji dio</strong> — stopalo diše<br>• <strong>Remen koji drži cijeli dan</strong> — cipela ostaje na nozi u svakom koraku<br><br><strong>Boje:</strong> zlatna, bijela, srebrna, crna, svijetlosmeđa i smeđa.<br><strong>Veličine:</strong> EU 35–43 (pogledajte tablicu veličina).
 
+         <?php elseif( noriks_is_type( 'travelpillow', $current_product_id ) ): ?>
+
+                <strong>NORIKS TravelPillow</strong> je putni jastuk za vrat od memorijske pjene — uvijek stignite opušteni i odmorni na odredište. Bilo da vas čeka dugi let ili samo vožnja na posao, jastuk drži vaše tijelo uspravnim i sprječava bol, ukočenost, napetost i bolove u vratu.<br><br><strong>Putovanje bez stresa:</strong><br>• Sprječava bol u vratu, napetost i bolove<br>• Pruža savršenu potporu za vrat, glavu i bradu<br>• Održava uspravno držanje<br>• Bez jet laga<br>• Uvijek stignite opušteni i odmorni na odredište<br>• Puno brže ćete zaspati<br>• Dulje ćete spavati<br>• Glava vam ne pada na rame suputnika<br>• Iznimno kompaktan i lagan za nošenje<br>• Mekan, ugodan i udoban<br><br><strong>Po čemu je poseban?</strong><br>• Putni jastuk koji potpuno podupire i glavu i vrat za najveću udobnost<br>• Tehnologija koja stabilizira vrat prilagođava se svakom obliku vrata, čeljusti i ramena<br>• Bez boli, ukočenosti i bolova u vratu — probudite se odmorni nakon dugog leta i ublažite jet lag<br>• Rasterećuje kralježnicu i mišiće, pa ostajete opušteni i na duljim putovanjima<br>• Udobna potpora za ramena dobro prianja, a glava se odmara u prirodnijem položaju — spavate dublje i dulje, bez klimanja glavom<br>• Iznimno lagan i jednostavan za nošenje, pakiranje ili omatanje oko remena torbe<br>• Bolji od običnih jastuka u obliku slova U<br><br><strong>Materijal:</strong> memorijska pjena visoke kvalitete (isti materijal kao u najskupljim madracima) i mekana pamučna navlaka koja se skida.<br><strong>Pristajanje:</strong> podesivi čičak-remen za savršeno pristajanje.<br><strong>U paketu:</strong> jastuk i torbica za nošenje.<br><br><strong>Boje:</strong> crna, narančasta, ružičasta, zelena, crvena, plava i siva.<br><strong>Veličina:</strong> jedna veličina koja odgovara svima (preporučeno od 14 godina).
+
          <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
 
                 <strong>NORIKS SleepEarplugs</strong> su ultra udobni čepići za uši za spavanje — za mirne noći s manje bučnih ometanja, bilo da spavate na boku, prigušujete hrkanje partnera ili oboje.<br><br><strong>Udobni za spavanje na boku:</strong> nizak profil i naš najmekši silikon smanjuju pritisak na uho za udobnost cijelu noć<br><strong>Dvije vrste nastavaka:</strong> unaprijed postavljeni ovalni nastavci od pjene i silikona prate prirodan oblik uha, a dvostruki nastavci omogućuju još bolju prilagodbu<br><strong>Smanjenje buke 27 dB (SNR):</strong> prigušuje hrkanje partnera, gradsku buku i druga noćna ometanja<br><strong>Sigurno pristajanje:</strong> stvoreni da ostanu u ušima dok spavate na boku i krećete se tijekom noći<br><strong>Prilagodljivo pristajanje:</strong> četiri veličine nastavaka (XS, S, M, L), i za manje uši<br><strong>Višekratni i lako se čiste:</strong> izrađeni od izdržljivog silikona<br><strong>Kutijica za nošenje:</strong> s neklizajućim dnom i prostranim pretincem, uvijek nadohvat ruke uz krevet<br><br><strong>Građa čepića:</strong> vanjski silikonski vrh, memorijska pjena iznutra, čvrsta silikonska jezgra i mekano silikonsko tijelo.<br><br><strong>U paketu:</strong> 1x par NORIKS SleepEarplugs čepića, 1x kutijica za noćni ormarić, 4 para nastavaka od pjene i silikona (XS + S + M + L) i 4 para dvostrukih nastavaka (XS + S + M + L).<br><br><strong>Što znači 27 dB?</strong> Tihi zvukovi (disanje, hladnjak, perilica posuđa) najvjerojatnije se neće čuti, srednje glasni (televizor u drugoj sobi, udaljeni promet) svest će se na tihi šum, a glasni (sirene, lajanje psa, vatromet) i dalje će se čuti, ali puno tiše. Čepići buku smanjuju, ali je ne uklanjaju potpuno.
@@ -1481,6 +1485,20 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'travelpillow', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">NORIKS TravelPillow dolazi u <strong>jednoj veličini</strong> — izrađen je tako da odgovara različitim oblicima i veličinama i podupire vaš vrat za bolji san na putovanju. Podesivim čičak-remenom jastuk zategnete ili olabavite po želji.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <tbody>
+                <tr style="background:#a9683f;color:#fff;"><th style="padding:9px 8px;text-align:left;">Veličina</th><th style="padding:9px 8px;text-align:left;">Preporuka</th></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Jedna veličina</td><td style="padding:9px 8px;">od 14 godina (prosječna visina od oko 160 cm)</td></tr>
+                <tr style="background:#f7f2ec;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Pristajanje</td><td style="padding:9px 8px;">čvršće za ravniji vrat ili malo labavije za više slobode</td></tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako ne možete pronaći pravi položaj, okrenite jastuk naopako i pokušajte ponovno. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2096,6 +2114,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 
                 Natikače čistite mekanom, blago vlažnom krpom, a prašinu iz pletenog dijela uklonite mekanom četkicom. Ne perite ih u perilici i ne namačite u vodi. Ako se smoče, ostavite ih da se polako osuše na zraku, daleko od radijatora i izravnog sunca. Metalik završnu obradu (zlatna i srebrna) ne trljajte grubim sredstvima.
+
+             <?php elseif( noriks_is_type( 'travelpillow', $current_product_id ) ): ?>
+
+                Skinite pamučnu navlaku i <strong>operite je ručno</strong>. NORIKS TravelPillow nije prikladan za pranje u perilici rublja. Navlaku osušite na zraku prije nego što je ponovno navučete na jastuk od memorijske pjene.
 
              <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
 

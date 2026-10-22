@@ -359,6 +359,11 @@ if ( noriks_is_type( 'orthomules' ) ) {
     include $noriks_pb_dir . 'why-orthomules.php';
 }
 
+// NORIKS TravelPillow (orto-travelpillow) — putni jastuk za vrat od memorijske pjene
+if ( noriks_is_type( 'travelpillow' ) ) {
+    include $noriks_pb_dir . 'why-travelpillow.php';
+}
+
 // NORIKS SleepEarplugs (orto-sleepearplugs) — cepici za usi za spavanje na boku
 if ( noriks_is_type( 'sleepearplugs' ) ) {
     include $noriks_pb_dir . 'why-sleepearplugs.php';
