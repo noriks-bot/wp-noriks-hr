@@ -342,6 +342,103 @@ function gck_pair_color_size_groups( array $colors, array $sizes ) : array {
 // ============================================================
 
 // ============================================================
+// BUNDLE OFFERS REPEATER (registered in code)
+// ============================================================
+add_action( 'acf/init', 'gck_register_orto_bundle_offers_fields' );
+function gck_register_orto_bundle_offers_fields() {
+    if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+        return;
+    }
+    acf_add_local_field_group( array(
+        'key'    => 'group_singlepp_orto_pairs',
+        'title'  => 'Orto Bundle – ponude (kartice)',
+        'fields' => array(
+            array(
+                'key'          => 'field_6926d0deb1e5e',
+                'label'        => 'Aktiviraj bundle kartice',
+                'name'         => '_singlepp_orto_ison',
+                'type'         => 'true_false',
+                'ui'           => 1,
+            ),
+            array(
+                'key'          => 'field_692961841385b',
+                'label'        => 'Ponude',
+                'name'         => '_singlepp_orto_pairs',
+                'type'         => 'repeater',
+                'layout'       => 'table',
+                'button_label' => 'Dodaj ponudu',
+                'sub_fields'   => array(
+                    array(
+                        'key'   => 'field_692961991385c',
+                        'label' => 'Količina',
+                        'name'  => 'qty',
+                        'type'  => 'number',
+                        'min'   => 1,
+                    ),
+                    array(
+                        'key'   => 'field_6929619d1385d',
+                        'label' => 'Naslov (npr. "3x kom")',
+                        'name'  => 'tekst_1',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_692961a21385e',
+                        'label' => 'Enota (npr. "kom", "par")',
+                        'name'  => 'tekst_2',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_692961a41385f',
+                        'label' => 'Redovna cijena (ukupno)',
+                        'name'  => 'cena_1',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_692961a913860',
+                        'label' => 'Akcijska cijena (ukupno)',
+                        'name'  => 'cena_2',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_692961ab13861',
+                        'label' => 'Prihranek %',
+                        'name'  => 'prihranek',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_6968dfc7eee25',
+                        'label' => 'p1 (redovna/kom)',
+                        'name'  => 'p1',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_6968dfcceee26',
+                        'label' => 'p2 (akcijska/kom)',
+                        'name'  => 'p2',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_696a45d4a7972',
+                        'label' => 'Tip (npr. "3+1")',
+                        'name'  => 'tip',
+                        'type'  => 'text',
+                    ),
+                ),
+            ),
+        ),
+        'location'   => array(
+            array(
+                array( 'param' => 'post_type', 'operator' => '==', 'value' => 'product' ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position'   => 'normal',
+        'style'      => 'default',
+        'active'     => true,
+    ) );
+}
+
+// ============================================================
 // COUNTDOWN / SCARCITY FIELDS (registered in code)
 // ============================================================
 add_action( 'acf/init', 'gck_register_orto_countdown_fields' );
