@@ -1,3 +1,30 @@
+$insoles_faq = array(
+  array(
+    'questioon' => 'Pomažu li kod plantarnog fasciitisa?',
+    'answer'    => 'Da. Čvrsta baza svoda i duboka petna košarica uzimaju teret s plantarne fascije. Većina kupaca s plantarnim fasciitisom osjeća razliku u roku 1 do 2 tjedna.',
+  ),
+  array(
+    'questioon' => 'Pomažu li kod ravnih stopala?',
+    'answer'    => 'Da. Ravna stopala trebaju svod koji zadržava oblik pod težinom. To je upravo ono za što su Max ulošci napravljeni.',
+  ),
+  array(
+    'questioon' => 'Pristaju li u radne čizme?',
+    'answer'    => 'Da. Uklonite vlastiti uložak čizme i uložak izrežite tako da odgovara veličini. Uložak je prilagodljiv za sve zatvorene cipele s uklonjivim uloškom.',
+  ),
+  array(
+    'questioon' => 'Što ako veličina nije odgovarajuća?',
+    'answer'    => 'Zamjena ili povrat novca u roku od 30 dana, čak i nakon rezanja i nošenja.',
+  ),
+  array(
+    'questioon' => 'Može li se prilagoditi širokim stopalima?',
+    'answer'    => 'Ulošci su standardne širine, ne wide fit. Za vrlo široka stopala možda neće biti prikladni.',
+  ),
+  array(
+    'questioon' => 'Kako očistiti ulošak?',
+    'answer'    => 'Ručno pranje u mlačnoj vodi s blagim sapunom, sušenje na zraku u hladu. Bez mašinskog pranja, izbjeljivača ili topline.',
+  ),
+);
+
 $ondersteun_faq = array(
   array(
     'questioon' => 'Kako odabrati veličinu?',

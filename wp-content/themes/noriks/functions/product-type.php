@@ -100,6 +100,8 @@ function noriks_product_type_map() : array {
         'stepcloud'               => array( 'orto-stepcloud', 'stepcloud' ),
         // NORIKS SlabProof — radne carape s jastucenjem za beton (boja + velicina).
         'slabproof'               => array( 'orto-slabproof', 'slabproof' ),
+        // NORIKS Insoles — ortopedski ulosci s potporom svoda (velicina XS-XL).
+        'insoles'                 => array( 'orto-insoles', 'insoles' ),
         // NORIKS Brassiere — grudnjak bez zica s prirodnim podizanjem (boja + velicina).
         'brassiere'               => array( 'orto-brassiere', 'brassiere' ),
         // NORIKS Blanket — kompresijska vreca za smirenje i bolji san (boja + velicina).
@@ -891,6 +893,19 @@ if ( ! function_exists( 'noriks_ondersteun_sizes' ) ) {
             array( 'L',   'košarica D – E' ),
             array( 'XL',  'košarica E – F' ),
             array( '2XL', 'košarica F+' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_insoles_sizes' ) ) {
+    /** NORIKS Insoles — ortopedski ulošci za potporu stopala. */
+    function noriks_insoles_sizes() {
+        return array(
+            array( 'XS', 'EU 35–38' ),
+            array( 'S',  'EU 38,5–41,5' ),
+            array( 'M',  'EU 42–44' ),
+            array( 'L',  'EU 44,5–46,5' ),
+            array( 'XL', 'EU 47–48' ),
         );
     }
 }
