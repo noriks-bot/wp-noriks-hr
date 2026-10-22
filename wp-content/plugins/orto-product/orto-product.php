@@ -34,6 +34,29 @@ function gck_get_bundle_offers( $product_id = null ) : array {
     }
 
     $rows = get_field('_singlepp_orto_pairs', $product_id);
+
+    // Fallback: če ACF ne vrne podatkov (field ni bil ustvarjen prek ACF UI),
+    // preberi navadne post_meta ključe v formatu _singlepp_orto_pairs_{N}_{field}
+    if ( empty($rows) || ! is_array($rows) ) {
+        $count = (int) get_post_meta( $product_id, '_singlepp_orto_pairs', true );
+        if ( $count > 0 ) {
+            $rows = [];
+            for ( $i = 0; $i < $count; $i++ ) {
+                $rows[] = array(
+                    'qty'       => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_qty", true ),
+                    'tekst_1'   => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tekst_1", true ),
+                    'tekst_2'   => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tekst_2", true ),
+                    'cena_1'    => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_cena_1", true ),
+                    'cena_2'    => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_cena_2", true ),
+                    'prihranek' => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_prihranek", true ),
+                    'p1'        => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_p1", true ),
+                    'p2'        => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_p2", true ),
+                    'tip'       => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tip", true ),
+                );
+            }
+        }
+    }
+
     if ( empty($rows) || ! is_array($rows) ) {
         return [];
     }
