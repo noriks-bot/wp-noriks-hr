@@ -159,7 +159,7 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             return;
         }
         // GelSeat i KneeTape nemaju velicina.
-        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'gelseat' ) || noriks_is_type( 'kneetape' ) || noriks_is_type( 'phonestrap' ) || noriks_is_type( 'winecooler' ) || noriks_is_type( 'bracelet' ) || noriks_is_type( 'seatcover' ) || noriks_is_type( 'catfountain' ) || noriks_is_type( 'litterbox' ) || noriks_is_type( 'sleepearplugs' ) ) ) { return; }
+        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'gelseat' ) || noriks_is_type( 'kneetape' ) || noriks_is_type( 'phonestrap' ) || noriks_is_type( 'winecooler' ) || noriks_is_type( 'bracelet' ) || noriks_is_type( 'seatcover' ) || noriks_is_type( 'catfountain' ) || noriks_is_type( 'dishsheets' ) || noriks_is_type( 'litterbox' ) || noriks_is_type( 'sleepearplugs' ) ) ) { return; }
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kompwom' ) ) {
             get_template_part( 'template_parts/size-chart-kompwom' );
             return;

@@ -144,6 +144,8 @@ function noriks_product_type_map() : array {
         'hoodie'                  => array( 'orto-hoodie', 'hoodie' ),
         // NORIKS CatFountain — fontana za macke od nehrdajuceg celika 2,2 L (bez atributov).
         'catfountain'             => array( 'orto-catfountain', 'catfountain' ),
+        // NORIKS DishSheets — listici za pranje posuda (bez atributov, paketi 1x/3x/6x).
+        'dishsheets'              => array( 'orto-dishsheets', 'dishsheets' ),
         // NORIKS LitterBox — automatska samocisteca posuda za macji pijesak (samo boja).
         'litterbox'               => array( 'orto-litterbox', 'litterbox' ),
         // NORIKS SleepEarplugs — cepici za usi za spavanje na boku (samo boja).

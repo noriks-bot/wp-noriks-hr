@@ -354,6 +354,11 @@ if ( noriks_is_type( 'litterbox' ) ) {
     include $noriks_pb_dir . 'why-litterbox.php';
 }
 
+// NORIKS DishSheets (orto-dishsheets) — listici za pranje posuda
+if ( noriks_is_type( 'dishsheets' ) ) {
+    include $noriks_pb_dir . 'why-dishsheets.php';
+}
+
 // NORIKS CatFountain (orto-catfountain) — fontana za macke od nehrdajuceg celika 2,2 L
 if ( noriks_is_type( 'catfountain' ) ) {
     include $noriks_pb_dir . 'why-catfountain.php';
