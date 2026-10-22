@@ -414,7 +414,21 @@ $ntk_ugc = array(
 })();
 </script>
 
+
+<!-- 11) NORIKS pogoji -->
+<section class="ntk-sec">
+  <div class="ntk-wrap" style="text-align:center">
+    <h2 class="ntk-h2">Isprobajte ih <em>bez brige.</em></h2>
+    <p>Obucite ih pod haljinu i provjerite kako stoje. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong>.</p>
+    <p class="ntk-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+  </div>
+</section>
+
 <style>
+.ntk-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b625a; }
+.ntk-trust span { position: relative; padding-left: 20px; }
+.ntk-trust span::before { content: "\2713"; position: absolute; left: 0; color: #a9683f; }
+
 /* NORIKS stil (predloga why-hands.php): oznaka + naslov z lezecim poudarkom, slika ob besedilu, izmenjujoca ozadja */
 .ntk-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #231d19; }
 .ntk-sec * { box-sizing: border-box; }

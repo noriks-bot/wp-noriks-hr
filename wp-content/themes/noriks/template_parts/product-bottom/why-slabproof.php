@@ -188,7 +188,21 @@ $nsp_reviews = array(
   </div>
 </section>
 
+
+<!-- 7) NORIKS pogoji -->
+<section class="nsp-sec nsp-cream">
+  <div class="nsp-wrap nsp-narrow" style="text-align:center">
+    <h2 class="nsp-h2">Isprobajte ih <em>bez rizika.</em></h2>
+    <p class="nsp-sub">Obujte ih na smjenu, operite ih, provjerite kako drže. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong>.</p>
+    <p class="nsp-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+  </div>
+</section>
+
 <style>
+.nsp-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b625a; }
+.nsp-trust span { position: relative; padding-left: 20px; }
+.nsp-trust span::before { content: "\2713"; position: absolute; left: 0; color: #d2632e; }
+
 .nsp-sec { padding: clamp(46px, 6vw, 88px) 0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #15140f; overflow-x: hidden; }
 .nsp-sec * { box-sizing: border-box; }
 .nsp-cream { background: #f4f0e7; }

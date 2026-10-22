@@ -187,7 +187,21 @@ $nfs_reviews = array(
   </div>
 </section>
 
+
+<!-- 9) NORIKS pogoji -->
+<section class="nfs-sec nfs-tint">
+  <div class="nfs-wrap" style="text-align:center">
+    <h2 class="nfs-h2">Isprobajte ga <em>bez brige.</em></h2>
+    <p>Odvedite dijete na bazen i provjerite kako se drži u vodi. Ako kostim nije za vas, imate <strong>30 dana za povrat novca</strong>.</p>
+    <p class="nfs-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+  </div>
+</section>
+
 <style>
+.nfs-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b625a; }
+.nfs-trust span { position: relative; padding-left: 20px; }
+.nfs-trust span::before { content: "\2713"; position: absolute; left: 0; color: #0a97d5; }
+
 .nfs-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #0e1b4d; }
 .nfs-sec * { box-sizing: border-box; }
 .nfs-tint { background: #eef7fc; }
