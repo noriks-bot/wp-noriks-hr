@@ -26,6 +26,10 @@ if ( ! function_exists( 'noriks_ima_velicine' ) ) {
             $oznaka = function_exists( 'wc_attribute_label' ) ? wc_attribute_label( $ime ) : $ime;
             if ( preg_match( $vzorec, $ime . ' ' . $oznaka ) ) { return true; }
         }
+        if ( function_exists( 'noriks_product_type' ) ) {
+            $tip = noriks_product_type( $product_id );
+            if ( $tip && function_exists( 'noriks_' . str_replace( '-', '_', $tip ) . '_sizes' ) ) { return true; }
+        }
         return false;
     }
 }
@@ -215,6 +219,8 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-kompwom' );
             return;
         }
+        // Brez velikosti ni privzete tabele majic (Dejan, 22.10.2026).
+        if ( function_exists( 'noriks_ima_velicine' ) && ! noriks_ima_velicine() ) { return; }
         get_template_part( 'template_parts/size-chart-modal' );
     }
 }
