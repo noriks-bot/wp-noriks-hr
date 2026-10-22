@@ -65,6 +65,8 @@ $nps_testimonials = array(
     <div class="nps-copy">
       <p class="nps-kicker">Nadogradnja</p>
       <h2 class="nps-h2">3 razloga <em>za nadogradnju</em></h2>
+      <p>Maska štiti mobitel kad padne. NORIKS PhoneStrap pazi da uopće ne padne — a to je jedina zaštita koja radi i kad ste na žičari, na biciklu ili nagnuti preko ograde.</p>
+      <p>Sastavljen je iz tri dijela: tankog podloška koji ide između mobitela i maske, koluta sa sajlom koja se uvlači sama i kukice kojom ga zakačite na odjeću ili ruksak.</p>
       <ul class="nps-check nps-check--big">
         <li>Uvijek osiguran, bilo kad i bilo gdje</li>
         <li>Odgovara svakom pametnom telefonu</li>
@@ -81,7 +83,7 @@ $nps_testimonials = array(
       <p class="nps-kicker">Zašto NORIKS PhoneStrap</p>
       <h2 class="nps-h2">Zašto ćete ga <em>zavoljeti</em></h2>
       <p>Svake godine tisuće mobitela izgube se, razbiju ili unište tijekom aktivnosti na otvorenom. Jedno poskliznuće, jedan nespretan pokret, jedan trenutak nepažnje — i 1.000+ € nestaje zauvijek.</p>
-      <p>NORIKS PhoneStrap stoji 26,95 € i čuva vas od te noćne more.</p>
+      <p>NORIKS PhoneStrap stoji manje od jedne zamjene zaslona — i čuva vas od te noćne more.</p>
       <p>Zakačite ga na jaknu, ruksak ili remen. Idite na skijanje, planinarenje, pecanje ili na najluđi rollercoaster. Mobitel ostaje uz vas.</p>
       <p class="nps-big">Pridružite se tisućama zadovoljnih kupaca koji već vjeruju našem proizvodu!</p>
     </div>
@@ -96,6 +98,7 @@ $nps_testimonials = array(
     <h2 class="nps-h2 nps-h2--c">Pravo na povrat <em>u roku od 30 dana</em></h2>
     <p>Uvjereni smo da ćete zavoljeti <strong>NORIKS PhoneStrap</strong>. Zato za sve narudžbe vrijedi <strong>pravo na povrat u roku od 30 dana</strong>.</p>
     <p>Koristite NORIKS PhoneStrap na skijanju, planinarenju ili bilo kojoj avanturi i čuvajte mobitel na sigurnom. Ako niste potpuno zadovoljni, javite nam se u roku od 30 dana i rado ćemo vam pomoći s povratom.</p>
+    <p class="nps-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
   </div>
 </section>
 
@@ -117,6 +120,10 @@ $nps_testimonials = array(
 </section>
 
 <style>
+.nps-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b6b6b; }
+.nps-trust span { position: relative; padding-left: 20px; }
+.nps-trust span::before { content: "\2713"; position: absolute; left: 0; color: #3d3d3d; }
+
 .nps-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #1d1d1f; }
 .nps-sec * { box-sizing: border-box; }
 .nps-tint { background: #f4f4f2; }

@@ -7,7 +7,8 @@
  *   2) Recite zbogom toplom vinu + 4 prednosti (harmonike originala kot kartice z besedilom)
  *   3) Za ljubitelje vina — slika levo, besedilo desno
  *   4) Higijena i vrhunska kvaliteta — 6 mnenj v preprosti mrezi (brez tekocega traku)
- *   5) Odlično 4,8 / 5 — besedilo levo, slika desno
+ *   5) Odlično 4,8 / 5
+ *   6) NORIKS pogoji (30 dana za povrat, besplatna dostava iznad 70 EUR) — besedilo levo, slika desno
  * Brez promo pasice, tekocega traku, valovitih razdelilnikov, animacij in dodatkov v nakupni skatli.
  * FAQ originala je v reviews.php ($winecooler_faq), mnenja v auto_reviews/HR_winecooler.php
  * (tja so prestavljeni tudi 3 citati iz okvirja "Poslušajte naše kupce" iz nakupne skatle originala).
@@ -84,8 +85,9 @@ $nwc_testimonials = array(
     <div class="nwc-copy">
       <p class="nwc-kicker">Hlađenje</p>
       <h2 class="nwc-h2">Za <em>ljubitelje vina</em></h2>
-      <p>Otkrijte najbolji način uživanja u vinu uz štapić za hlađenje vina.</p>
-      <p>Za samo <strong>10–15 minuta</strong> dovodi vaše vino na idealnu temperaturu posluživanja i održava ga hladnim <strong>do 3 sata</strong>.</p>
+      <p>Otvorena boca na stolu se ugrije za pola sata, a kanta s ledom razvodni vino i ostavi lokvu na stolnjaku. Štapić rješava oboje: ohladite ga u zamrzivaču, gurnete u bocu i hladi vino <strong>iznutra</strong>.</p>
+      <p>Za samo <strong>10–15 minuta</strong> dovede vino na temperaturu posluživanja i drži ga hladnim <strong>do 3 sata</strong> — dovoljno za cijelu večer na terasi.</p>
+      <p>Ugrađeni izljev znači da štapić ostaje u boci dok točite: ne vadite ga, ne kapa i vino se ne stigne ugrijati između dvije čaše.</p>
       <p class="nwc-big">Uz ovaj štapić za hlađenje vaše vino ostaje savršeno ohlađeno od prvog točenja do zadnjeg gutljaja.</p>
     </div>
   </div>
@@ -123,7 +125,22 @@ $nwc_testimonials = array(
   </div>
 </section>
 
+
+<!-- 6) NORIKS pogoji -->
+<section class="nwc-sec nwc-tint">
+  <div class="nwc-wrap nwc-c">
+    <h2 class="nwc-h2 nwc-h2--c">Isprobajte ga <em>bez brige.</em></h2>
+    <p class="nwc-sub">Ohladite prvu bocu i provjerite razliku. Ako niste zadovoljni, imate <strong>30 dana za povrat novca</strong>.</p>
+    <p class="nwc-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+  </div>
+</section>
+
 <style>
+.nwc-c { text-align: center; }
+.nwc-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b625a; }
+.nwc-trust span { position: relative; padding-left: 20px; }
+.nwc-trust span::before { content: "\2713"; position: absolute; left: 0; color: #a9683f; }
+
 .nwc-stars { color: #00b67a; letter-spacing: 2px; font-size: .8em; vertical-align: middle; }
 .nwc-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #24191b; }
 .nwc-sec * { box-sizing: border-box; }
