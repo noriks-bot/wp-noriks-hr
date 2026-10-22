@@ -941,168 +941,190 @@
 
   // Include review pools (own pool per product group)
   if ( $is_slippers_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_slippers.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_slippers.php';
   } elseif ( $is_anklesleeve_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_anklesleeve.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_anklesleeve.php';
   } elseif ( $is_corksandals_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_corksandals.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_corksandals.php';
   } elseif ( $is_seatcover_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_seatcover.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_seatcover.php';
   } elseif ( $is_harness_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_harness.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_harness.php';
   } elseif ( $is_titaniumpan_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_titaniumpan.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_titaniumpan.php';
   } elseif ( $is_raincoat_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_raincoat.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_raincoat.php';
   } elseif ( $is_polo_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_polo.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_polo.php';
   } elseif ( $is_doggo_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_doggo.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_doggo.php';
   } elseif ( $is_bracelet_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_bracelet.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bracelet.php';
   } elseif ( $is_winecooler_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_winecooler.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_winecooler.php';
   } elseif ( $is_travelpillow_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_travelpillow.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_travelpillow.php';
   } elseif ( $is_dograincoat_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_dograincoat.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_dograincoat.php';
   } elseif ( $is_maternityleggings_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_maternityleggings.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_maternityleggings.php';
   } elseif ( $is_techtee_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_techtee.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_techtee.php';
   } elseif ( $is_widetoeshoes_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_widetoeshoes.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_widetoeshoes.php';
   } elseif ( $is_orthomules_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_orthomules.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_orthomules.php';
   } elseif ( $is_sleepearplugs_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_sleepearplugs.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_sleepearplugs.php';
   } elseif ( $is_litterbox_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_litterbox.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_litterbox.php';
   } elseif ( $is_dishsheets_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_dishsheets.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_dishsheets.php';
   } elseif ( $is_catfountain_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_catfountain.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_catfountain.php';
   } elseif ( $is_hoodie_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_hoodie.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_hoodie.php';
   } elseif ( $is_utilitypants_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_utilitypants.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_utilitypants.php';
   } elseif ( $is_smartjacket_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_smartjacket.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_smartjacket.php';
   } elseif ( $is_sculptbrief_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_sculptbrief.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_sculptbrief.php';
   } elseif ( $is_fleecetights_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_fleecetights.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fleecetights.php';
   } elseif ( $is_tuck_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_tuck.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_tuck.php';
   } elseif ( $is_supportsocks_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_supportsocks.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_supportsocks.php';
   } elseif ( $is_phonestrap_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_phonestrap.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_phonestrap.php';
   } elseif ( $is_floatsuit_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_floatsuit.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_floatsuit.php';
   } elseif ( $is_bratank_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_bratank.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bratank.php';
   } elseif ( $is_blanket_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_blanket.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_blanket.php';
   } elseif ( $is_brassiere_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_brassiere.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_brassiere.php';
   } elseif ( $is_slabproof_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_slabproof.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_slabproof.php';
   } elseif ( $is_hands_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_hands.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_hands.php';
   } elseif ( $is_kneebrace_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kneebrace.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kneebrace.php';
   } elseif ( $is_buildshirt_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_buildshirt.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_buildshirt.php';
   } elseif ( $is_relief_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_relief.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_relief.php';
   } elseif ( $is_gelseat_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_gelseat.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_gelseat.php';
   } elseif ( $is_kneetape_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kneetape.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kneetape.php';
   } elseif ( $is_celleg_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_celleg.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_celleg.php';
   } elseif ( $is_stepcloud_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_stepcloud.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_stepcloud.php';
   } elseif ( $is_slim_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_slim.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_slim.php';
   } elseif ( $is_bowl_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_bowl.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bowl.php';
   } elseif ( $is_snug_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_snug.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_snug.php';
   } elseif ( $is_kompwom_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kompwom.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kompwom.php';
   } elseif ( $is_pal_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_pal.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_pal.php';
   } elseif ( $is_red_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_red.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_red.php';
   } elseif ( $is_home_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_home.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_home.php';
   } elseif ( $is_seal_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_seal.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_seal.php';
   } elseif ( $is_sr_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_sr.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_sr.php';
   } elseif ( $is_dental_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_dental.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_dental.php';
   } elseif ( $is_hug_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_hug.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_hug.php';
   } elseif ( $is_pre_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_pre.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_pre.php';
   } elseif ( $is_kneeheat_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kneeheat.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kneeheat.php';
   } elseif ( $is_lift_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_lift.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_lift.php';
   } elseif ( $is_hairmagic_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_hairmagic.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_hairmagic.php';
   } elseif ( $is_brush_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_norikshersbrush.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_norikshersbrush.php';
   } elseif ( $is_noriks_cards_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_noriks_cards.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_noriks_cards.php';
   } elseif ( $is_controlpro_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_controlpro.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_controlpro.php';
   } elseif ( $is_snore_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_snore.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_snore.php';
   } elseif ( $is_cloud_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_cloud.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_cloud.php';
   } elseif ( $is_cloath_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_cloath.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_cloath.php';
   } elseif ( $is_bra_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_bra.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bra.php';
   } elseif ( $is_hyd_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_hyd.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_hyd.php';
   } elseif ( $is_kneefix_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kneefix.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kneefix.php';
   } elseif ( $is_kidsnest_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kidsnest.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kidsnest.php';
   } elseif ( $is_nosilka_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_nosilka.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_nosilka.php';
   } elseif ( $is_jastuk_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_ortopedski_jastuk.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_ortopedski_jastuk.php';
   } elseif ( $is_leakboxers_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_leakboxers.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_leakboxers.php';
   } elseif ( $is_kompmajice_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_kompresijske-majice.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_kompresijske-majice.php';
   } elseif ( $is_norikshers_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_norikshers.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_norikshers.php';
   } elseif ( $is_fisiorest_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_fisiorest.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fisiorest.php';
   } elseif ( $is_bunion_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_bunion.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bunion.php';
   } elseif ( $is_ortopas_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_ortopas.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_ortopas.php';
   } elseif ( $is_nogavice_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_nogavice.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_nogavice.php';
   } elseif ( $is_bokserice_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_bokserice.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bokserice.php';
   } elseif ( $is_flomasteri_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_flomasteri.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_flomasteri.php';
   } elseif ( $is_fieldops_page ) {
-    include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
   } else {
-    include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
 
   include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'-2.php';
+
+  // Nekatere datoteke z mnenji polje vrnejo (return array(...)) namesto da nastavijo
+  // $auto_reviews_en, in uporabljajo druge kljuce (ime/t, author/text). Tedaj so bila mnenja
+  // prazna (Dejan, 23. 10.). Tu to poenotimo, da velja za vse izdelke.
+  if ( ! function_exists( 'noriks_normaliziraj_mnenja' ) ) {
+    function noriks_normaliziraj_mnenja( $vir ) {
+      $out = array();
+      foreach ( (array) $vir as $r ) {
+        if ( ! is_array( $r ) ) { continue; }
+        $ime = isset( $r['name'] ) ? $r['name'] : ( isset( $r['ime'] ) ? $r['ime'] : ( isset( $r['author'] ) ? $r['author'] : '' ) );
+        $txt = isset( $r['text'] ) ? $r['text'] : ( isset( $r['t'] ) ? $r['t'] : '' );
+        if ( $txt === '' ) { continue; }
+        $r['name'] = $ime;
+        $r['text'] = $txt;
+        $out[] = $r;
+      }
+      return $out;
+    }
+  }
+  if ( empty( $auto_reviews_en ) && isset( $noriks_mnenja_vrnjeno ) && is_array( $noriks_mnenja_vrnjeno ) ) {
+    $auto_reviews_en = noriks_normaliziraj_mnenja( $noriks_mnenja_vrnjeno );
+  }
 
   // Ensure arrays exist
   $auto_reviews_en   = is_array($auto_reviews_en)   ? $auto_reviews_en   : [];
