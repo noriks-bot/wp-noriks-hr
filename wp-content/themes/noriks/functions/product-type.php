@@ -140,6 +140,8 @@ function noriks_product_type_map() : array {
         'smartjacket'             => array( 'orto-smartjacket', 'smartjacket' ),
         // NORIKS UtilityPants — rastezljive vodootporne radne hlace s 10 dzepova (boja + velicina S–3XL).
         'utilitypants'            => array( 'orto-utilitypants', 'utilitypants' ),
+        // NORIKS Hoodie — nosiva deka s kapuljacom i krznom (boja + velicina po visini).
+        'hoodie'                  => array( 'orto-hoodie', 'hoodie' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -645,6 +647,21 @@ if ( ! function_exists( 'noriks_utilitypants_sizes' ) ) {
             array( 'XL',  '36',    '91–96',   '107–112', '185–190', '108', '78,6' ),
             array( '2XL', '38',    '96–102',  '112–118', '185–190', '110', '79,4' ),
             array( '3XL', '40–42', '103–109', '119–125', '190–195', '111', '80,2' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_hoodie_sizes' ) ) {
+    /** NORIKS Hoodie: velicina po visini, A duljina tijela, B 1/2 prsa, C duljina rukava, D visina rukava, E donji rub (cm).
+     *  1:1 s tablice originala (freethesheep.com, Eden Hoodie: velicine 0-4 = visina do 5'2" ... od 6'6").
+     *  Mjere proizvoda, ne mjere tijela. */
+    function noriks_hoodie_sizes() {
+        return array(
+            array( 'do 157 cm',  '106,5', '147,5', '62,5', '101,5', '66' ),
+            array( '160–168 cm', '122',   '147,5', '62,5', '114,5', '91,5' ),
+            array( '170–185 cm', '132',   '157,5', '67,5', '124,5', '101,5' ),
+            array( '188–196 cm', '142',   '167,5', '72,5', '134,5', '112' ),
+            array( 'od 198 cm',  '152,5', '178',   '78',   '145',   '122' ),
         );
     }
 }

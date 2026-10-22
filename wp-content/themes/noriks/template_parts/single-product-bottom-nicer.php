@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS Hoodie (orto-hoodie) — nosiva deka s kapuljacom i krznom
+if ( noriks_is_type( 'hoodie' ) ) {
+    include $noriks_pb_dir . 'why-hoodie.php';
+}
+
 // NORIKS UtilityPants (orto-utilitypants) — rastezljive vodootporne radne hlace s 10 dzepova
 if ( noriks_is_type( 'utilitypants' ) ) {
     include $noriks_pb_dir . 'why-utilitypants.php';

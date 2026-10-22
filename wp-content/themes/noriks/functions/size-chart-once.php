@@ -123,6 +123,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-fleecetights' );
             return;
         }
+        // NORIKS Hoodie: mjere proizvoda u cm po visini (do 157 cm ... od 198 cm), 1:1 s originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hoodie' ) ) {
+            get_template_part( 'template_parts/size-chart-hoodie' );
+            return;
+        }
         // NORIKS UtilityPants: struk, bokovi, visina, duljina i unutarnja duljina nogavice u cm (S–3XL), 1:1 s originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'utilitypants' ) ) {
             get_template_part( 'template_parts/size-chart-utilitypants' );
