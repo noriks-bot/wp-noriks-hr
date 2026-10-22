@@ -619,6 +619,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS CatFountain</strong> je fontana za mačke od nehrđajućeg čelika s mlazom u obliku slavine koji budi prirodni nagon vaše mačke da pije više vode — <strong>i do 3x više</strong>. Bolja hidracija pomaže smanjiti rizik od problema s bubrezima i urinarnih infekcija.<br><br><strong>Nehrđajući čelik 304:</strong> bez BPA, siguran za mačke; zaustavlja 99 % bakterija i sprječava sluz, mirise i mačje akne koje uzrokuju plastične zdjelice<br><strong>Mlaz u obliku slavine:</strong> oponaša slavinu iz koje mačke ionako vole piti<br><strong>Ultra tiha pumpa (&lt; 20 dB):</strong> može raditi cijelu noć bez ometanja sna<br><strong>Filtriranje u 3 sloja:</strong> filtar s aktivnim ugljenom i spužva za predfiltriranje zadržavaju dlake, ostatke, mirise i nečistoće<br><strong>Kapacitet 2,2 L:</strong> dovoljno vode za 8–10 dana, s pokazivačem razine vode<br><strong>Čišćenje za manje od 5 minuta:</strong> dijelovi od nehrđajućeg čelika mogu se prati u perilici posuđa<br><strong>Široka i plitka posuda:</strong> bez zamora brkova, prikladna i za više mačaka<br><br><strong>U kutiji:</strong> 1x NORIKS CatFountain fontana 2,2 L, 1x filtri za 2 mjeseca, 1x adapter za napajanje, 1x upute za upotrebu.<br><br><strong>Specifikacije:</strong> fontana s kabelom (napajanje preko adaptera, mora biti priključena na struju); filtre mijenjajte svaka 2–4 tjedna; dimenzije (D × Š × V): 17,5 × 17,5 × 17,5 cm.
 
+         <?php elseif( noriks_is_type( 'litterbox', $current_product_id ) ): ?>
+
+                <strong>NORIKS LitterBox</strong> je automatska samočisteća posuda za mačji pijesak — dođite kući u čist dom, bez razmišljanja o tome. Zamislite da uđete u svoj dom i ne osjetite nikakav miris: bez podsjetnika da pijesak treba očistiti i bez grižnje savjesti zbog čišćenja za kasnije. NORIKS LitterBox to radi umjesto vas — tiho, dosljedno i sigurno.<br><br>Kad mačka priđe, posuda to primijeti. Kad mačka ode, posuda pričeka. A kad čisti, radi kontroliranim pokretima i s ugrađenom zaštitom.<br><br><strong>6 parova infracrvenih senzora</strong> nadzire ulaz<br><strong>4 Hallova senzora</strong> prate točan položaj bubnja<br><strong>Mehanički graničnik od 30°</strong> sprječava nesigurno zatvaranje<br><strong>Aktivna zaštita od priklještenja</strong> zaustavlja rad čim se mačka previše približi<br><br><strong>Bez Wi-Fija, bez aplikacija, bez pretplate:</strong> samo je uključite i postat će tihi dio vaše svakodnevice.<br><strong>Zatvorena ladica za otpad</strong> zadržava mirise, a <strong>četvrtasta komora</strong> osigurava stabilno okretanje. Prikladna za do 3 mačke.<br><br>Ovo nije spravica koju isprobate tjedan dana — ovo je trenutak kad svakodnevno čišćenje pijeska prestaje biti dio vašeg života. Jer vaš dom treba biti čist — bez truda.<br><br><strong>U paketu:</strong> glavna jedinica, spremnik za otpad, 4 noge, adapter za napajanje (12 V DC, 2 A), 1 rola vrećica (20 kom), prednja stepenica za ulaz, upute za upotrebu i vodič za brzi početak.<br><br><strong>Dimenzije:</strong> visina 55,5 cm, širina 53,5 cm, dubina 40 cm, visina ulaza 31,5 cm.<br><br><strong>Pijesak:</strong> koristite sitnozrnati grudajući mineralni ili bentonitni pijesak (ne kristalni, ne negrudajući i ne dugi tofu pijesak). Automatski način namijenjen je mačkama težim od 1,4 kg i starijim od 6 mjeseci.
+
          <?php elseif( noriks_is_type( 'hoodie', $current_product_id ) ): ?>
 
                 <strong>NORIKS Hoodie</strong> je vrhunska nosiva deka s kapuljačom, stvorena za potpunu udobnost i opuštanje. <strong>Lagano je otežan (oko 1,8 kg)</strong> i stvara nježan, umirujući pritisak koji pomaže opuštanju, smanjuje stres i ublažava tjeskobu.<br><br>Ima <strong>prozračne otvore</strong> i <strong>senzorno ugodnu podstavu od umjetnog krzna</strong> koja stvara umirujući, topao osjećaj — idealno za opuštanje nakon dugog dana ili za udobnost na putovanju.<br><br>Napravljen je za svakoga: otvoren kroj udobno pristaje veličinama <strong>od XS do 6XL</strong>. Bilo kod kuće ili u pokretu, NORIKS Hoodie pruža udobnost, toplinu i osjećaj sigurnosti gdje god se nalazili.<br><br><strong>Lagano otežan:</strong> oko 1,8 kg<br><strong>Senzorno ugodno umjetno krzno</strong><br><strong>Unisex:</strong> napravljen za svakoga<br><strong>Pažljivo izrađen</strong><br><strong>Pomaže smanjiti stres i tjeskobu</strong><br><br><strong>Vanjski materijal:</strong> 100 % pamuk<br><strong>Podstava od krzna:</strong> 100 % poliester (senzorno ugodna, netoksična, bez štetnih kemikalija)<br><strong>Boja krzna:</strong> kod nekih boja prljavo bijela, kod ostalih u boji vanjskog materijala.<br><br><strong>Veličine:</strong> prema visini — do 157 cm, 160–168 cm, 170–185 cm, 188–196 cm i od 198 cm. Savjet: za još više udobnosti odaberite veću veličinu.
@@ -1327,6 +1331,24 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'litterbox', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">NORIKS LitterBox dolazi u <strong>jednoj veličini</strong>, prikladnoj za do 3 mačke. Automatski način namijenjen je mačkama težim od 1,4 kg i starijim od 6 mjeseci.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <tbody>
+                <tr style="background:#a9683f;color:#fff;"><th style="padding:9px 8px;text-align:left;">Mjera</th><th style="padding:9px 8px;text-align:left;">Vrijednost</th></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Visina</td><td style="padding:9px 8px;">55,5 cm</td></tr>
+                <tr style="background:#f7f2ec;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Širina</td><td style="padding:9px 8px;">53,5 cm</td></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Dubina</td><td style="padding:9px 8px;">40 cm</td></tr>
+                <tr style="background:#f7f2ec;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Visina bočne strane</td><td style="padding:9px 8px;">31,5 cm</td></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Dubina bočne strane</td><td style="padding:9px 8px;">38,5 cm</td></tr>
+                <tr style="background:#f7f2ec;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Visina ulaza</td><td style="padding:9px 8px;">31,5 cm</td></tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;">Postavite je na ravnu, čvrstu podlogu u zatvorenom prostoru, s dovoljno mjesta za ulaz i vađenje ladice. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1890,6 +1912,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'catfountain', $current_product_id ) ): ?>
 
                 Prije čišćenja fontanu isključite iz struje. Rastavite je na glavne dijelove — nema sitnih dijelova ni teško dostupnih kutova. Dijelove od nehrđajućeg čelika operite u sudoperu ili ih stavite u <strong>perilicu posuđa</strong>; čišćenje traje <strong>manje od 5 minuta</strong>. Filtre mijenjajte svaka 2–4 tjedna (češće ako imate više mačaka) kako bi voda ostala čista i svježa.
+
+             <?php elseif( noriks_is_type( 'litterbox', $current_product_id ) ): ?>
+
+                Prije čišćenja posudu isključite iz struje. Spremnik za otpad praznite <strong>svakih 5 dana, a najkasnije nakon 7 dana</strong> (u kućanstvima s više mačaka češće), a perite ga otprilike svakih 15 dana. Jednom mjesečno potpuno zamijenite pijesak i operite komoru: komora za pijesak i podloga mogu se isprati vodom i očistiti mekanom četkom; prije sastavljanja neka se potpuno osuše. Vanjski dio i infracrvene senzore obrišite mekom, vlažnom krpom. Osnovu s elektronikom, adapter i priključke nikad ne ispirite vodom i ne koristite agresivna sredstva.
 
              <?php elseif( noriks_is_type( 'hoodie', $current_product_id ) ): ?>
 

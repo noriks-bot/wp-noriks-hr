@@ -144,6 +144,8 @@ function noriks_product_type_map() : array {
         'hoodie'                  => array( 'orto-hoodie', 'hoodie' ),
         // NORIKS CatFountain — fontana za macke od nehrdajuceg celika 2,2 L (bez atributov).
         'catfountain'             => array( 'orto-catfountain', 'catfountain' ),
+        // NORIKS LitterBox — automatska samocisteca posuda za macji pijesak (samo boja).
+        'litterbox'               => array( 'orto-litterbox', 'litterbox' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).

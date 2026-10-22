@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS LitterBox (orto-litterbox) — automatska samocisteca posuda za macji pijesak
+if ( noriks_is_type( 'litterbox' ) ) {
+    include $noriks_pb_dir . 'why-litterbox.php';
+}
+
 // NORIKS CatFountain (orto-catfountain) — fontana za macke od nehrdajuceg celika 2,2 L
 if ( noriks_is_type( 'catfountain' ) ) {
     include $noriks_pb_dir . 'why-catfountain.php';
