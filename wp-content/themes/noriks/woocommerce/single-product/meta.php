@@ -615,6 +615,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS FleeceTights</strong> su tople hulahopke podstavljene flisom koje izgledaju kao gola koža ispod tankih prozirnih hulahopki — a griju kao debele tajice. Idealne su za haljine, suknje i kratke hlače na jesen i zimu.<br><br><strong>Kompresijski pojas koji oblikuje struk:</strong> visoki pojas nježno steže i zaglađuje trbuh i bokove<br><strong>Prozirni izgled u 4 nijanse:</strong> Vanilija (svijetla), Latte (preplanula), Karamela (brončana) i Espresso (tamna) — za svaku nijansu kože<br><strong>Ultra mekan, debeo flis:</strong> toplo vani, a bez pregrijavanja u zatvorenom; flis ne stvara kuglice<br><strong>Samo jedan šav:</strong> glatka silueta, bez urezivanja i neugodnih linija<br><strong>Izrazito rastezljive (4-way stretch):</strong> ne trgaju se i ne paraju, prianjaju uz gležanj i ne nabiru se na koljenima<br><strong>Za visoke i niske:</strong> odgovaraju unutarnjoj duljini noge od 61 do 102 cm<br><br>Izgledaju prozirno, ali su potpuno neprozirne — ništa se ne vidi ni kad čučnete ili se sagnete. Dovoljno su tanke da ih nosite i ispod traperica.<br><br><strong>Sastav:</strong> 38,9 % najlon, 14,9 % elastan, 46,2 % poliester.<br><br><strong>Veličine:</strong> XXS/XS, XS/S, M/L, L/XL, 2XL/3XL i 4XL/5XL. Ako ste između dvije veličine, uzmite manju za čvršće oblikovanje ili veću za opušteniji osjećaj.
 
+         <?php elseif( noriks_is_type( 'utilitypants', $current_product_id ) ): ?>
+
+                <strong>NORIKS UtilityPants</strong> su radne hlače za <strong>sva 4 godišnja doba</strong> koje spajaju izdržljivost i potpunu udobnost. Tkanina koja se <strong>rasteže u 4 smjera</strong> kreće se s vama i drži vas udobnima kroz duge dane na gradilištu ili na otvorenom. Dizajnirane su posebno za majstore i radnike na otvorenom, s <strong>ojačanim mjestima naprezanja i tkaninom otpornom na paranje</strong> koja izdrži teške uvjete bez pucanja.<br><br>S <strong>10 funkcionalnih džepova</strong> i modernim, profesionalnim krojem ovo su jedine radne hlače koje će vam trebati ove sezone.<br><br><strong>10 džepova:</strong><br>2 duboka gornja prednja džepa<br>2 sigurna bočna džepa na bedrima s patentnim zatvaračem<br>2 džepa za metar s čičkom<br>2 stražnja džepa<br>2 džepa za odvijač ili škare<br><br><strong>Dodatno:</strong> ojačana koljena i kopča za alat na petlji remena.<br><strong>Vodootporne:</strong> softshell ne upija vodu — voda se odbija od tkanine.<br><strong>Prozračne:</strong> sloj koji odvodi vlagu sprječava zadržavanje znoja.<br><br><strong>Kroj:</strong> normalan do uzak — prije kupnje pogledajte tablicu veličina. <strong>Preporučujemo da naručite veličinu veću</strong> ako ste između dvije.<br><br><strong>Boje:</strong> siva, crna, kaki i maslinasta. <strong>Veličine:</strong> od S do 3XL.
+
          <?php elseif( noriks_is_type( 'smartjacket', $current_product_id ) ): ?>
 
                 <strong>NORIKS SmartJacket</strong> je fleksibilno rješenje za svako vrijeme: <strong>topla flis jakna + reflektirajuća kišna jakna = vodootporna zimska jakna</strong>. Vodootporni vanjski materijal pouzdano štiti od kiše, a odvojivi flis brzo izjednačuje promjene temperature. Idealna je za put na posao, vožnju biciklom i aktivnosti na otvorenom.<br><br>Reflektirajuća tehnologija vanjske površine u mraku vas čini <strong>do 5x ranije uočljivima</strong>, a danju izgleda kao jednostavna, elegantna jakna. Zahvaljujući promišljenim detaljima i podesivim krajevima jakna je praktična i udobna za svaki dan, a promišljen kroj lijepo prati žensku liniju.<br><br><strong>Vodeni stupac 10.000 mm</strong> (vodootporna)<br><strong>Prozračnost:</strong> 10.000 MVTR<br><strong>Materijal:</strong> reflektirajuća membrana, poliester 150D, flis<br><strong>Skriveni prsni džep</strong> s patentnim zatvaračem<br><strong>Džepovi za ruke</strong> s patentnim zatvaračem i flis podstavom (na obje jakne)<br><strong>Kapuljača</strong> se sprema u ovratnik<br><strong>Dvosmjerni prednji patentni zatvarač</strong><br><strong>Podesivi</strong> rukavi, struk i kapuljača<br><strong>Težina</strong> osnovne veličine: 920 g<br><strong>Kroj:</strong> normalan<br><br><strong>Boje:</strong> crvena, tamnoplava, crna i bež. <strong>Veličine:</strong> od XS do 4XL — odaberite veličinu koju inače nosite; ako ste između dvije, od XS do L uzmite manju, a od XL veću.
@@ -1470,6 +1474,44 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           </div>
 
 
+        <?php elseif( noriks_is_type( 'utilitypants', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Kroj: normalan do uzak.</strong> Ako ste između dvije veličine, <strong>preporučujemo da naručite veću veličinu</strong>. Mjere su u cm (struk UK/US u inčima).</p>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#2E2420;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">UK/US (inča)</th>
+                  <th style="padding:9px 8px;text-align:left;">Struk</th>
+                  <th style="padding:9px 8px;text-align:left;">Bokovi</th>
+                  <th style="padding:9px 8px;text-align:left;">Visina</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina</th>
+                  <th style="padding:9px 8px;text-align:left;">Unutarnja duljina nogavice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_utilitypants_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f0eb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[5] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[6] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Struk:</strong> opseg na pola puta između vrha zdjelične kosti i dna rebara. <strong>Bokovi:</strong> preko najšireg dijela, oko 4 cm ispod patentnog zatvarača. <strong>Unutarnja duljina nogavice:</strong> od međunožja do gležnja (mjera hlača, ne tijela).</p>
+          </div>
+
+
         <?php elseif( noriks_is_type( 'smartjacket', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1800,6 +1842,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'fleecetights', $current_product_id ) ): ?>
 
                 Prije pranja izvrnite ih naopako. Perite ručno ili na nježnom programu, u hladnoj ili mlakoj vodi (nikad vrućoj). Sušite na zraku ili u sušilici na najnižoj temperaturi. Bez izbjeljivača i omekšivača — tako ostaju mekane, tople i glatke.
+
+             <?php elseif( noriks_is_type( 'utilitypants', $current_product_id ) ): ?>
+
+                Prije pranja hlače izvrnite naopako, ispraznite džepove i zatvorite patentne zatvarače. Perite na najviše 30 °C na nježnom programu, bez omekšivača i izbjeljivača. Sušite na zraku — tako softshell dulje ostaje vodootporan i rastezljiv.
 
              <?php elseif( noriks_is_type( 'smartjacket', $current_product_id ) ): ?>
 

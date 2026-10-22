@@ -138,6 +138,8 @@ function noriks_product_type_map() : array {
         'sculptbrief'             => array( 'orto-sculptbrief', 'sculptbrief' ),
         // NORIKS SmartJacket — reflektirajuca vodootporna zenska jakna 3 u 1 (boja + velicina XS–4XL).
         'smartjacket'             => array( 'orto-smartjacket', 'smartjacket' ),
+        // NORIKS UtilityPants — rastezljive vodootporne radne hlace s 10 dzepova (boja + velicina S–3XL).
+        'utilitypants'            => array( 'orto-utilitypants', 'utilitypants' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -628,6 +630,21 @@ if ( ! function_exists( 'noriks_smartjacket_sizes' ) ) {
             array( '2XL', '111–116', 'do 115', '75', '68,5', '46–48' ),
             array( '3XL', '116–121', 'do 121', '75', '68,5', '48–50' ),
             array( '4XL', '121–126', 'do 127', '75', '68,5', '50–52' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_utilitypants_sizes' ) ) {
+    /** NORIKS UtilityPants: velicina, opseg struka (inci, UK/US), struk, bokovi, visina, duljina, unutarnja duljina nogavice (cm).
+     *  1:1 s tablice originala thetruetailorcompany.com (preporuka: ako ste izmedu dvije velicine, uzmite vecu). */
+    function noriks_utilitypants_sizes() {
+        return array(
+            array( 'S',   '31',    '78–82',   '94–98',   '170–175', '102', '76,2' ),
+            array( 'M',   '32',    '82–86',   '98–102',  '175–180', '104', '77' ),
+            array( 'L',   '34',    '86–91',   '102–107', '180–185', '106', '77,8' ),
+            array( 'XL',  '36',    '91–96',   '107–112', '185–190', '108', '78,6' ),
+            array( '2XL', '38',    '96–102',  '112–118', '185–190', '110', '79,4' ),
+            array( '3XL', '40–42', '103–109', '119–125', '190–195', '111', '80,2' ),
         );
     }
 }

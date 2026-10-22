@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS UtilityPants (orto-utilitypants) — rastezljive vodootporne radne hlace s 10 dzepova
+if ( noriks_is_type( 'utilitypants' ) ) {
+    include $noriks_pb_dir . 'why-utilitypants.php';
+}
+
 // NORIKS SmartJacket (orto-smartjacket) — reflektirajuca vodootporna zenska jakna 3 u 1
 if ( noriks_is_type( 'smartjacket' ) ) {
     include $noriks_pb_dir . 'why-smartjacket.php';
