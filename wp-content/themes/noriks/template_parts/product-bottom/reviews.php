@@ -188,6 +188,59 @@
 
            Niste jedini koji žele više potpore za gležanj u sportu.
 
+          <?php elseif ( noriks_is_type( 'hands' ) ): ?>
+
+           Niste jedini kojima palac boli od svakodnevnih pokreta.
+
+          <?php elseif ( noriks_is_type( 'kneebrace' ) ): ?>
+
+           Niste jedini kojima koljeno popusti pri čučnju ili stepenicama.
+
+          <?php elseif ( noriks_is_type( 'buildshirt' ) ): ?>
+
+           Niste jedini u potrazi za majicom koja stvarno pristaje.
+
+          <?php elseif ( noriks_is_type( 'bowl' ) ): ?>
+
+           Niste jedini kojima pas jede sagnut nad zdjelicom na podu.
+
+          <?php elseif ( noriks_is_type( 'slim' ) ): ?>
+
+           Niste jedini u potrazi za glatkom linijom ispod odjeće.
+
+          <?php elseif ( noriks_is_type( 'snug' ) ): ?>
+
+           Niste jedini kojima je grudnjak nelagodan cijeli dan.
+
+          <?php elseif ( noriks_is_type( 'pal' ) ): ?>
+
+           Niste jedini kojima su stopala umorna na kraju dana.
+
+          <?php elseif ( noriks_is_type( 'relief' ) ): ?>
+
+           Niste jedini koje muči napetost u mišićima.
+
+          <?php elseif ( noriks_is_type( 'gelseat' ) ): ?>
+
+           Niste jedini kojima duga vožnja ili sjedenje stvara bolove.
+
+          <?php elseif ( noriks_is_type( 'kneetape' ) ): ?>
+
+           Niste jedini kojima koljeno treba dodatnu potporu.
+
+          <?php elseif ( noriks_is_type( 'celleg' ) ): ?>
+
+           Niste jedini u potrazi za glađom kožom nogu.
+
+          <?php elseif ( noriks_is_type( 'stepcloud' ) ): ?>
+
+           Niste jedini kojima stopala bole nakon cijelog dana na nogama.
+
+          <?php elseif ( noriks_is_type( 'carape' ) ): ?>
+
+           Niste jedini kojima su noge teške na kraju dana.
+
+
           <?php elseif ( noriks_is_type( 'slabproof' ) ): ?>
 
            Niste jedini kojima stopala gore nakon smjene na betonu.
@@ -436,6 +489,59 @@
            <?php elseif ( noriks_is_type( 'anklesleeve' ) ): ?>
 
            Tisuće sportaša već trenira uz NORIKS AnkleSleeve – ciljana kompresija, više stabilnosti i udobnost u cipeli.
+
+           <?php elseif ( noriks_is_type( 'hands' ) ): ?>
+
+            Tisuće ljudi već nosi NORIKS Hands – ciljana potpora baze palca, a dlan i prsti ostaju slobodni.
+
+           <?php elseif ( noriks_is_type( 'kneebrace' ) ): ?>
+
+            Tisuće ljudi već nosi NORIKS KneeBrace – patelarna potpora koja stabilizira koljeno bez sputavanja pokreta.
+
+           <?php elseif ( noriks_is_type( 'buildshirt' ) ): ?>
+
+            Tisuće muškaraca već nosi NORIKS BuildShirt – kroj koji prati ramena i struk, bez vrećastog pada.
+
+           <?php elseif ( noriks_is_type( 'bowl' ) ): ?>
+
+            Tisuće vlasnika već hrani pse iz NORIKS Bowl zdjelice – nagib 15° i povišeno postolje za prirodniji položaj glave.
+
+           <?php elseif ( noriks_is_type( 'slim' ) ): ?>
+
+            Tisuće žena već nosi NORIKS Slim – oblikujuće rublje koje zaglađuje liniju i ostaje na mjestu.
+
+           <?php elseif ( noriks_is_type( 'snug' ) ): ?>
+
+            Tisuće žena već nosi NORIKS Snug – potpora bez žica i bez tragova na koži.
+
+           <?php elseif ( noriks_is_type( 'pal' ) ): ?>
+
+            Tisuće ljudi već nosi NORIKS PAL – ulošci koji rasterećuju stopala tijekom cijelog dana.
+
+           <?php elseif ( noriks_is_type( 'relief' ) ): ?>
+
+            Tisuće ljudi već koristi NORIKS Relief – ciljano opuštanje napetih mišića kod kuće.
+
+           <?php elseif ( noriks_is_type( 'gelseat' ) ): ?>
+
+            Tisuće ljudi već sjedi na NORIKS GelSeat jastuku – gel koji raspoređuje pritisak i rasterećuje trticu.
+
+           <?php elseif ( noriks_is_type( 'kneetape' ) ): ?>
+
+            Tisuće ljudi već koristi NORIKS KneeTape – potpora koljena pri sportu i svakodnevnom kretanju.
+
+           <?php elseif ( noriks_is_type( 'celleg' ) ): ?>
+
+            Tisuće žena već koristi NORIKS CelLeg – njega kože nogu koja se vidi i osjeti.
+
+           <?php elseif ( noriks_is_type( 'stepcloud' ) ): ?>
+
+            Tisuće ljudi već hoda u NORIKS StepCloud ulošcima – amortizacija koja se osjeti na kraju smjene.
+
+           <?php elseif ( noriks_is_type( 'carape' ) ): ?>
+
+            Tisuće ljudi već nosi NORIKS kompresijske čarape – lakše noge nakon dugog stajanja ili sjedenja.
+
 
            <?php elseif ( noriks_is_type( 'slabproof' ) ): ?>
 

@@ -541,7 +541,7 @@
                               autoplay muted loop playsinline 
                               class="why-video">
                               <source src="https://mensbestbasics.com/cdn/shop/videos/c/vp/89e20d28314147559987bfa06ca3ead8/89e20d28314147559987bfa06ca3ead8.HD-1080p-2.5Mbps-47090714.mp4?v=0" type="video/mp4">
-                              Your browser does not support the video tag.
+                              Vaš preglednik ne podržava video.
                             </video>
                           </div>
                           </div>

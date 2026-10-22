@@ -14,7 +14,7 @@
           autoplay muted loop playsinline 
           class="why-video">
           <source src="https://noriks.com/hr/wp-content/uploads/2025/09/noriks_gif_hr_2-1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+          Vaš preglednik ne podržava video.
         </video>
       </div>
     </div>
