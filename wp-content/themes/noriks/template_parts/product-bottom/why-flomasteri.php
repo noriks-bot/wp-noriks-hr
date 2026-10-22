@@ -25,12 +25,12 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
 </style>
 
 <!-- 1. 168 boja: uvod, double mine -->
-<div class="nss-band">
+<section class="nss-band">
   <div class="nss-wrap">
     <div class="nss-grid">
       <div class="nss-media">
         <img src="<?php echo esc_url( $nf . 'noriks-flomasteri-paketi.webp' ); ?>" alt="NORIKS flomasteri – do 168 boja u jednom setu">
-      </div>
+      </section>
       <div class="nss-text">
         <p class="nss-kick">Kreativni pribor</p>
         <h2 class="nss-h2">Do <em>168 boja</em> u jednom setu</h2>
@@ -38,18 +38,18 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
         <p class="nss-p">Od najjasnije pastelne do najintenzivnije tamne – palete su slojevite tako da dijete može kreirati bilo što od crtića do složenih kompozicija.</p>
         <p class="nss-p">Nema potrebe za miješanjem ili razrjeđivanjem. Svaka boja je spremna za rad.</p>
         <p class="nss-strong">Setovi: 24, 48, 72, 96, 120 ili 168 boja – ovisno o potrebi i budžetu.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </section>
+  </section>
+</section>
 
 <!-- 2. Ne procura: opaque, ne prodire -->
-<div class="nss-band --rev">
+<section class="nss-band --rev">
   <div class="nss-wrap">
     <div class="nss-grid">
       <div class="nss-media">
         <img src="<?php echo esc_url( $nf . 'noriks-flomasteri-primerjava.webp' ); ?>" alt="Akrilni flomasteri ne prodiru kroz papir">
-      </div>
+      </section>
       <div class="nss-text">
         <p class="nss-kick">Akrilna pigmentacija</p>
         <h2 class="nss-h2">Boja <em>ne prodire</em> kroz papir</h2>
@@ -57,18 +57,18 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
         <p class="nss-p">Zahvaljujući tome boja je potpuno pokrivna (opaque) i možete bojati preko tamnih podloga, a papir s druge strane ostaje čist.</p>
         <p class="nss-p">Kod svjetlijih nijansa (bijela, bež, pastelne) je potrebno nanijeti 2–3 tanke slojeve, kao i kod svih akrilnih flomastera.</p>
         <p class="nss-strong">Ne morate čekati dugo – svaki sloj se osuši za nekoliko sekundi.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </section>
+  </section>
+</section>
 
 <!-- 3. Od 3 godine: za djecu, čvrsta oštrica -->
-<div class="nss-band">
+<section class="nss-band">
   <div class="nss-wrap">
     <div class="nss-grid">
       <div class="nss-media">
         <img src="<?php echo esc_url( $nf . 'noriks-flomasteri-24c.webp' ); ?>" alt="Sigurno za djecu od 3 godine">
-      </div>
+      </section>
       <div class="nss-text">
         <p class="nss-kick">Dječja kreativnost</p>
         <h2 class="nss-h2">Sigurno od <em>3 godine</em> nadalje</h2>
@@ -76,18 +76,18 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
         <p class="nss-p">Oštrica flomastera je čvrsta i dovoljno otporna da dijete ne mora jako pritiskati. Rezultat je odmah zadovoljavajući – svaki potez ostavlja intenzivnu boju bez razmazivanja.</p>
         <p class="nss-p">Ne treba nikakva priprema: protresite flomaster sa zatvorenim čepićem, skinite čep i bojajte. Za svjetle nijanse pustite da se osuši nekoliko sekundi između slojeva.</p>
         <p class="nss-strong">Jednostavna upotreba – bez mućkanja, razrjeđivanja ili prljanja ruku.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </section>
+  </section>
+</section>
 
 <!-- 4. Dva vrha: debela + tanka -->
-<div class="nss-band --rev">
+<section class="nss-band --rev">
   <div class="nss-wrap">
     <div class="nss-grid">
       <div class="nss-media">
         <img src="<?php echo esc_url( $nf . 'noriks-flomasteri-lastnosti.webp' ); ?>" alt="Dvostruka oštrica – debela i tanka strana">
-      </div>
+      </section>
       <div class="nss-text">
         <p class="nss-kick">Praktičnost</p>
         <h2 class="nss-h2">Dva vrha u <em>jednom flomasteru</em></h2>
@@ -95,18 +95,18 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
         <p class="nss-p">To znači da s jednim flomaster možete nacrtati veliki oblik i zatim dodati sve detalje – bez da morate mijenjati alat.</p>
         <p class="nss-p">Osobito je to korisno kada dijete radi na složenijim crtežima ili kada želite šarene detalje na tamnijim podlogama (karton, drvo, kamen).</p>
         <p class="nss-strong">Dva vrha = dupla mogućnost, pola alata u torbi.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </section>
+  </section>
+</section>
 
 <!-- 5. Paket i organizacija -->
-<div class="nss-band">
+<section class="nss-band">
   <div class="nss-wrap">
     <div class="nss-grid">
       <div class="nss-media">
         <img src="<?php echo esc_url( $nf . 'noriks-flomasteri-96c.webp' ); ?>" alt="Organizirane kutije za sve setove">
-      </div>
+      </section>
       <div class="nss-text">
         <p class="nss-kick">Skladištenje</p>
         <h2 class="nss-h2">Kutija s <em>pregradama</em> za svaki flomaster</h2>
@@ -114,18 +114,18 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
         <p class="nss-p">To znači da nakon crtanja sve možete vratiti na mjesto za nekoliko sekundi, a sljedeći put ćete odmah pronaći boju koju trebate.</p>
         <p class="nss-p">Kutije su kompaktne i mogu stajati na polici ili u ladici bez da zauzimaju puno prostora.</p>
         <p class="nss-strong">Red i preglednost – nikakvo traženje po kutiji.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </section>
+  </section>
+</section>
 
 <!-- 6. NORIKS pogoji (zaključek) -->
-<div class="nss-band --rev">
+<section class="nss-band --rev">
   <div class="nss-wrap">
     <div class="nss-grid">
       <div class="nss-media">
         <img src="<?php echo esc_url( $nf . 'noriks-flomasteri-168c.webp' ); ?>" alt="NORIKS flomasteri – zajamčeno zadovoljstvo">
-      </div>
+      </section>
       <div class="nss-text">
         <p class="nss-kick">Zajamčeno</p>
         <h2 class="nss-h2"><em>30 dana</em> za povrat novca</h2>
@@ -133,7 +133,7 @@ $nf = get_template_directory_uri() . '/img/flomasteri/';
         <p class="nss-p">Besplatna dostava iznad 70 €. Plaćanje pouzećem na raspolaganju. Više od 120.000 kupaca je vjerovalo NORIKS-u. Prosječna ocjena 4,8 na temelju 1.081 recenzije.</p>
         <p class="nss-p">Želimo da vaše dijete (ili vi) imate najbolju kreativnu alatku koja radi odmah i daje rezultat vrijedan prikaza.</p>
         <p class="nss-strong">Ako flomasteri ne zadovolje, vratite ih – bez pitanja.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
+    </section>
+  </section>
+</section>

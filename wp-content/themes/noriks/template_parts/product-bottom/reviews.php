@@ -1084,6 +1084,8 @@
     include get_stylesheet_directory() . '/auto_reviews/HR_nogavice.php';
   } elseif ( $is_bokserice_page ) {
     include get_stylesheet_directory() . '/auto_reviews/HR_bokserice.php';
+  } elseif ( noriks_is_type('flomasteri') ) {
+    include get_stylesheet_directory() . '/auto_reviews/HR_flomasteri.php';
   } else {
     include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
