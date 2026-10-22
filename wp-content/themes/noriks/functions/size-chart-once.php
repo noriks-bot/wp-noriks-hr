@@ -98,6 +98,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-anklesleeve' );
             return;
         }
+        // NORIKS WideToeShoes: EU 37–47 po duljini uloska (cm) + sirina, UK i US velicine iz tablice originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'widetoeshoes' ) ) {
+            get_template_part( 'template_parts/size-chart-widetoeshoes' );
+            return;
+        }
         // NORIKS OrthoMules: EU 35–43 + US/UK velicine iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'orthomules' ) ) {
             get_template_part( 'template_parts/size-chart-orthomules' );

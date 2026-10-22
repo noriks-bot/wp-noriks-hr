@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS WideToeShoes (orto-widetoeshoes) — tenisice sa sirokim prednjim dijelom
+if ( noriks_is_type( 'widetoeshoes' ) ) {
+    include $noriks_pb_dir . 'why-widetoeshoes.php';
+}
+
 // NORIKS OrthoMules (orto-orthomules) — ortopedske pletene natikace s remenom
 if ( noriks_is_type( 'orthomules' ) ) {
     include $noriks_pb_dir . 'why-orthomules.php';

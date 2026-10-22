@@ -623,6 +623,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS DishSheets</strong> su listići za pranje posuđa — nova alternativa agresivnim, toksičnim deterdžentima za posuđe. Biljnog su podrijetla, biorazgradivi i bez plastičnog otpada.<br><br>Svaki listić je točno odmjeren: <strong>1 listić = 1 puno pranje</strong>. Dovoljno su svestrani za perilicu posuđa, pranje u sudoperu, namakanje tvrdokornih lonaca i tava ili za četku za posuđe.<br><br>Sadrže samo nužne sastojke — <strong>bez izbjeljivača, fosfata, bojila</strong> i drugih nepotrebnih agresivnih kemikalija. Uz to dolaze u <strong>ambalaži bez plastike</strong>.<br><br><strong>Točno odmjereni:</strong> svaki listić je prava količina za jedno puno pranje<br><strong>Višenamjenski:</strong> za perilicu posuđa, pranje na ruke, namakanje lonaca ili četku za posuđe<br><strong>Prikladni za štedljive perilice:</strong> kompatibilni s visokoučinkovitim (HE) perilicama posuđa za optimalan rezultat<br><strong>Bez štetnih tvari:</strong> bez plastične ambalaže i bez agresivnih kemikalija — čistoća u koju možete imati povjerenja<br><strong>Snažni i nježni:</strong> uklanjaju masnoću, prljavštinu i zapečenu hranu<br><br><strong>Pakiranje:</strong> 1 paket = 80 listića (80 pranja), 3 paketa = 240 listića, 6 paketa = 480 listića. Miris: svježi limun.<br><br><strong>Sastojci:</strong> natrijev kokosulfat, polivinil alkohol, lauril glukozid, glicerin, saponini, natrijev citrat, natrijev bikarbonat, miris, enzimi.
 
+         <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
+
+                <strong>NORIKS WideToeShoes</strong> su prozračne tenisice sa širokim prednjim dijelom i debljim potplatom — vaš prvi korak prema slobodi hodanja kao bosonogi. Prostran prednji dio omogućuje prstima da se prirodno rašire i smanjuje pritisak na stopala tijekom dugog hodanja, a lagana izrada smanjuje umor i ostaje izdržljiva.<br><br>Kvalitetni materijali propuštaju zrak, pa stopala ostaju suha i udobna. Potplat pouzdano prianja i na kamenitim i neravnim podlogama, a ojačani prednji dio štiti prste od udaraca. Bilo da hodate planinskim stazama, gradom ili istražujete prirodu, ove tenisice spajaju udobnost i svakodnevnu nosivost.<br><br><strong>Gornji dio:</strong> sintetička koža + tkanina<br><strong>Podstava:</strong> mrežasta tkanina<br><strong>Potplat:</strong> guma<br><strong>Debljina potplata:</strong> debeli gumeni potplat za fleksibilnost i otpornost na klizanje<br><strong>Vodootpornost:</strong> nisu vodootporne, ali se brzo suše<br><strong>Zatvaranje:</strong> vezice<br><br><strong>Boje:</strong> bijelo-siva, smeđa, bež-zelena, bež-crvena, crno-bijela, bež-siva, kaki i tamnosmeđa.<br><strong>Veličine:</strong> EU 37–47. Tenisice mogu biti malo manje — veličinu odaberite prema tablici veličina (duljina uloška = duljina stopala + 1–1,5 cm).
+
          <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 
                 <strong>NORIKS OrthoMules</strong> su ortopedske pletene natikače s remenom: <strong>ortopedski uložak</strong> ispod stopala, <strong>prozračan pleteni gornji dio</strong> i remen u stilu Mary Jane koji zaista drži cipelu na nozi — lijep izgled više ne znači bol.<br><br><strong>Istaknuto:</strong><br>• <strong>Ortopedska potpora</strong> — uložak koji podupire stopalo<br>• <strong>Prozračni pleteni gornji dio</strong> — stopalo diše<br>• <strong>Remen koji drži cijeli dan</strong> — cipela ostaje na nozi u svakom koraku<br><br><strong>Boje:</strong> zlatna, bijela, srebrna, crna, svijetlosmeđa i smeđa.<br><strong>Veličine:</strong> EU 35–43 (pogledajte tablicu veličina).
@@ -1343,6 +1347,41 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>EU 37 do EU 47</strong>. Tenisice mogu biti malo manje, zato veličinu odaberite prema duljini stopala. <strong>Duljina uloška = duljina stopala + 1–1,5 cm.</strong></p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Uložak</th>
+                  <th style="padding:9px 8px;text-align:left;">Širina</th>
+                  <th style="padding:9px 8px;text-align:left;">UK</th>
+                  <th style="padding:9px 8px;text-align:left;">US M</th>
+                  <th style="padding:9px 8px;text-align:left;">US Ž</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_widetoeshoes_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[5] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1971,6 +2010,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'dishsheets', $current_product_id ) ): ?>
 
                 Jedan listić stavite izravno u pretinac za deterdžent u perilici posuđa i odaberite željeni program. Za manja pranja ili namakanje dovoljna je <strong>polovica listića</strong>. Za pranje na ruke listić otopite u vodi u sudoperu — nastat će lagana pjena — i perite posuđe kao i inače.
+
+             <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
+
+                Tenisice čistite mekanom, blago vlažnom krpom ili četkicom i malo blagog sapuna; prljavštinu s gumenog potplata isperite mlakom vodom. Ne perite ih u perilici rublja i ne namačite ih. Nisu vodootporne, ali se brzo suše — ostavite ih da se osuše na zraku, daleko od radijatora i izravnog sunca. Uloške po potrebi izvadite i osušite zasebno.
 
              <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 

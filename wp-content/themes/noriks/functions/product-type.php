@@ -152,6 +152,8 @@ function noriks_product_type_map() : array {
         'sleepearplugs'           => array( 'orto-sleepearplugs', 'sleepearplugs' ),
         // NORIKS OrthoMules — ortopedske pletene natikace s remenom (boja + velicina EU 35–43).
         'orthomules'              => array( 'orto-orthomules', 'orthomules' ),
+        // NORIKS WideToeShoes — tenisice sa sirokim prednjim dijelom (boja + velicina EU 37–47).
+        'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -550,6 +552,26 @@ if ( ! function_exists( 'noriks_orthomules_sizes' ) ) {
             array( 'EU 41', '10–10,5', '8–8,5' ),
             array( 'EU 42', '11–11,5', '9–9,5' ),
             array( 'EU 43', '12', '10' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_widetoeshoes_sizes' ) ) {
+    /** NORIKS WideToeShoes: EU velicina, duljina uloska (cm), sirina cipele (cm), UK, US muskarci, US zene.
+     *  1:1 s tablice velicin originala (hobibear.com, Hareball). Duljina uloska = duljina stopala + 1–1,5 cm. */
+    function noriks_widetoeshoes_sizes() {
+        return array(
+            array( 'EU 37', '23,8 cm', '8,80 cm', '4', '4,5', '5,5' ),
+            array( 'EU 38', '24,4 cm', '8,95 cm', '5', '5,5', '6,5' ),
+            array( 'EU 39', '25,0 cm', '9,10 cm', '6', '6,5', '7,5' ),
+            array( 'EU 40', '25,7 cm', '9,25 cm', '6,5', '7', '8' ),
+            array( 'EU 41', '26,4 cm', '9,40 cm', '7', '7,5', '8,5' ),
+            array( 'EU 42', '27,0 cm', '9,55 cm', '8', '8,5', '9,5' ),
+            array( 'EU 43', '27,7 cm', '9,70 cm', '9', '9,5', '10,5' ),
+            array( 'EU 44', '28,4 cm', '9,85 cm', '9,5', '10', '11' ),
+            array( 'EU 45', '29,0 cm', '10,00 cm', '10', '10,5', '11,5' ),
+            array( 'EU 46', '29,7 cm', '10,15 cm', '11', '11,5', '12,5' ),
+            array( 'EU 47', '30,5 cm', '10,30 cm', '12', '12,5', '13,5' ),
         );
     }
 }
