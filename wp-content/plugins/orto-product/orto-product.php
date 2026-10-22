@@ -677,16 +677,19 @@ function gck_render_bundle_selector() {
         text-align: center !important; display: inline-block !important; }
       .woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
 
-      /* Kartice ponud: debelejsi robovi (kot na FisioRest). */
-      /* Manjsi razmik nad in pod povezavo "Tablica velicina". */
-      .summary .gck-size-link { margin-top: 2px !important; margin-bottom: 0 !important; }
-      .summary .gck-size-link + * { margin-top: 10px !important; }
-      #bundle-selector { margin-top: 12px !important; }
+      /* Tesnejsi razmiki okoli cene, tablice velicin in odstevalnika. */
+      .summary .price, .summary p.price { margin: 8px 0 8px !important; }
+      .summary .price-badge { margin-left: 10px !important; }
+      .summary .gck-size-link { margin-top: 0 !important; margin-bottom: 0 !important; }
+      .summary .gck-size-link + * { margin-top: 8px !important; }
+      .summary .gck-stock-pill, .summary .gck-countdown-box, .summary .gck-urgency { margin: 8px 0 !important; }
+      #bundle-selector { margin-top: 8px !important; }
 
-      #bundle-selector .bundle-option { border-width: 2px !important; }
+      /* Kartice ponud: tanki robovi (kot na FisioRest). */
+      #bundle-selector .bundle-option { border-width: 1px !important; }
+      #bundle-selector .bundle-option.active { border-width: 2px !important; }
       /* Znacka popusta je zelena (kot na FisioRest), cena na kos ostane v barvi izdelka. */
       #bundle-selector .gck-discount-badge { background: #2f7d4f !important; color: #fff !important; }
-      #bundle-selector .bundle-option.active { border-width: 3px !important; }
 
       .single_add_to_cart_button {
           font-family: 'Roboto', sans-serif;

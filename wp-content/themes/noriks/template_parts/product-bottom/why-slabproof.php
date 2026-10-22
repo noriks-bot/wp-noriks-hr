@@ -53,7 +53,30 @@ $nsp_reviews = array(
 ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap">
 
-<!-- 1) RECENZIJE -->
+<!-- 1) JASTUČIĆ TAMO GDJE BETON UDARA -->
+<section class="nsp-sec nsp-dark">
+  <div class="nsp-wrap">
+    <div class="nsp-row2">
+      <div class="nsp-row2__copy">
+        <h2 class="nsp-h2">Jastučić smo stavili tamo <em>gdje beton najjače udara.</em></h2>
+        <p class="nsp-sub">Nismo izmislili jastučenje. Napravili smo prvo koje je namijenjeno podu na kojem stojite cijeli dan: gusto ondje gdje udaraju peta i prednji dio stopala, tanko svugdje drugdje, pa vam čizma nikad ne postane pretijesna.</p>
+      </div>
+    <div class="nsp-viz">
+      <?php echo $nsp_img( 'sp-04-zone-jastucenja.webp', 'NORIKS SlabProof — zone jastučenja, prozračna mrežica i ojačana peta i prsti' ); ?>
+      <span class="nsp-cl nsp-cl--right" style="left:71%;top:65%"><i class="dot"></i><i class="line"></i><b class="lbl">Zonsko jastučenje</b></span>
+      <span class="nsp-cl nsp-cl--left" style="left:46%;top:60%"><i class="dot"></i><i class="line"></i><b class="lbl">Prozračna mrežica</b></span>
+      <span class="nsp-cl nsp-cl--down" style="left:24%;top:80%"><i class="dot"></i><i class="line"></i><b class="lbl">Ojačana peta i prsti</b></span>
+    </div>
+    </div>
+    <div class="nsp-cards">
+      <div class="nsp-card"><h3>Zonsko jastučenje</h3><p>Gusti jastučići ispod pete i prednjeg dijela stopala, točno ondje gdje beton udara. Svugdje drugdje tanko, pa ublažava udarce, a ne puni čizmu.</p></div>
+      <div class="nsp-card"><h3>Ojačana peta i prsti</h3><p>Dvostruko pleteni najlon na dva mjesta gdje čarape prve popuste. Rupe su razlog broj 1 zašto čarapa završi u smeću, zato smo pletivo udvostručili točno ondje gdje nastaju.</p></div>
+      <div class="nsp-card"><h3>Prozračne i suhe</h3><p>Mrežasti dijelovi odvode znoj, pa su stopala suha od prvog do dvanaestog sata. Mješavina bez vune, dakle ništa ne grebe i nema sparine u srpnju.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2) RECENZIJE -->
 <section class="nsp-sec nsp-cream">
   <div class="nsp-wrap">
     <div class="nsp-head">
@@ -82,31 +105,8 @@ $nsp_reviews = array(
   </div>
 </section>
 
-<!-- 2) JASTUČIĆ TAMO GDJE BETON UDARA -->
-<section class="nsp-sec nsp-dark">
-  <div class="nsp-wrap">
-    <div class="nsp-row2">
-      <div class="nsp-row2__copy">
-        <h2 class="nsp-h2">Jastučić smo stavili tamo <em>gdje beton najjače udara.</em></h2>
-        <p class="nsp-sub">Nismo izmislili jastučenje. Napravili smo prvo koje je namijenjeno podu na kojem stojite cijeli dan: gusto ondje gdje udaraju peta i prednji dio stopala, tanko svugdje drugdje, pa vam čizma nikad ne postane pretijesna.</p>
-      </div>
-    <div class="nsp-viz">
-      <?php echo $nsp_img( 'sp-04-zone-jastucenja.webp', 'NORIKS SlabProof — zone jastučenja, prozračna mrežica i ojačana peta i prsti' ); ?>
-      <span class="nsp-cl nsp-cl--right" style="left:71%;top:65%"><i class="dot"></i><i class="line"></i><b class="lbl">Zonsko jastučenje</b></span>
-      <span class="nsp-cl nsp-cl--left" style="left:46%;top:60%"><i class="dot"></i><i class="line"></i><b class="lbl">Prozračna mrežica</b></span>
-      <span class="nsp-cl nsp-cl--down" style="left:24%;top:80%"><i class="dot"></i><i class="line"></i><b class="lbl">Ojačana peta i prsti</b></span>
-    </div>
-    </div>
-    <div class="nsp-cards">
-      <div class="nsp-card"><h3>Zonsko jastučenje</h3><p>Gusti jastučići ispod pete i prednjeg dijela stopala, točno ondje gdje beton udara. Svugdje drugdje tanko, pa ublažava udarce, a ne puni čizmu.</p></div>
-      <div class="nsp-card"><h3>Ojačana peta i prsti</h3><p>Dvostruko pleteni najlon na dva mjesta gdje čarape prve popuste. Rupe su razlog broj 1 zašto čarapa završi u smeću, zato smo pletivo udvostručili točno ondje gdje nastaju.</p></div>
-      <div class="nsp-card"><h3>Prozračne i suhe</h3><p>Mrežasti dijelovi odvode znoj, pa su stopala suha od prvog do dvanaestog sata. Mješavina bez vune, dakle ništa ne grebe i nema sparine u srpnju.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- 3) NIKAD NISU BILE ČIZME -->
-<section class="nsp-sec nsp-cream">
+<section class="nsp-sec nsp-light">
   <div class="nsp-wrap">
     <div class="nsp-row2">
       <div class="nsp-test">
@@ -125,7 +125,7 @@ $nsp_reviews = array(
 </section>
 
 <!-- 4) NE SPUŠTAJU SE, NE STEŽU -->
-<section class="nsp-sec nsp-light">
+<section class="nsp-sec nsp-cream">
   <div class="nsp-wrap">
     <div class="nsp-head">
       <h2 class="nsp-h2">Ne spuštaju se. <em>Ne stežu list.</em></h2>
@@ -146,7 +146,7 @@ $nsp_reviews = array(
 </section>
 
 <!-- 5) USPOREDBA -->
-<section class="nsp-sec nsp-cream nsp-sec--line">
+<section class="nsp-sec nsp-light nsp-sec--line">
   <div class="nsp-wrap nsp-narrow">
     <div class="nsp-head">
       <h2 class="nsp-h2">Nisu sve radne čarape <em>napravljene jednako.</em></h2>
