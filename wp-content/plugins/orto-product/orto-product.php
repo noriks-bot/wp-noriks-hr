@@ -1955,15 +1955,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-karamela-broncana             { background: #7e3f00 !important; }
       #bundle-selector .swatch-circle.color-espresso-tamna                { background: #5c4033 !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
@@ -1999,15 +1999,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-svijetlosmeda   { background: #b98a52 !important; }
       #bundle-selector .swatch-circle.color-smeda           { background: #8a5226 !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; font-weight: 700 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
@@ -2038,15 +2038,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-lila            { background: #b9a2dd !important; }
       #bundle-selector .swatch-circle.color-breskva         { background: #f0b48f !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; font-weight: 700 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
@@ -2076,15 +2076,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-bijela          { background: #f6f5f2 !important; }
       #bundle-selector .swatch-circle.color-ruzicasta       { background: #f0b4b1 !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; font-weight: 700 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
@@ -2117,15 +2117,15 @@ function gck_render_bundle_selector() {
       /* NORIKS CatFountain: kartice ponud barvne in zaobljene v privzeti topli rjavi paleti NORIKS (kot orto-hands, #a9683f).
          Izdelek nima atributov, zato krogcev ni. */
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border: 2px solid #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; font-weight: 700 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
     </style>
@@ -2176,15 +2176,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-lavanda                { background: #cbb3c6 !important; }
       #bundle-selector .swatch-circle.color-bez                    { background: #a6957a !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
@@ -2215,15 +2215,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-kaki               { background: #b39466 !important; }
       #bundle-selector .swatch-circle.color-maslinasta         { background: #2f4a33 !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
@@ -2254,15 +2254,15 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-crna               { background: #1c1c1e !important; }
       #bundle-selector .swatch-circle.color-bez                { background: #d9bf98 !important; }
       #bundle-selector .bundle-option {
-          border: 2px solid #ecdfd3 !important; background: #fdfaf7 !important; border-radius: 8px !important;
+          border: 2px solid #dcc3ad !important; background: #f7ece2 !important; border-radius: 8px !important;
           box-shadow: 0 1px 2px rgba(40,25,15,.10), 0 2px 6px 2px rgba(40,25,15,.06) !important; }
-      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #f7f2ec !important; }
+      #bundle-selector .bundle-option.active { border-color: #a9683f !important; background: #eeddcd !important; }
       #bundle-selector .bundle-option-title { color: #231d19 !important; }
       #bundle-selector .bundle-option input[type="radio"] { border-color: #a9683f !important; }
       #bundle-selector .bundle-option input[type="radio"]::before { background: #a9683f !important; }
       #bundle-selector .bundle-option .gck-per-chip { background: #c00 !important; }
       #bundle-selector .bundle-option .gck-discount-badge { background: #2e7d32 !important; }
-      #bundle-selector .bundle-pairs { border-top-color: #ecdfd3 !important; }
+      #bundle-selector .bundle-pairs { border-top-color: #dcc3ad !important; }
       #bundle-selector .bundle-total-line .line-total { color: #a9683f !important; }
       #bundle-selector .bundle-total-line .gck-regular-price { color: #8a7a6e !important; }
       #bundle-selector .gck-offer-sub { color: #8a7a6e !important; }
