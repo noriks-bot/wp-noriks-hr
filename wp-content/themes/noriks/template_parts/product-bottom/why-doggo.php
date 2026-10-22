@@ -12,7 +12,6 @@
  *   7) 6 prednosti s slikami (kartice: slika ob besedilu)
  *   8) Ikone: besplatna dostava iznad 70 € / 30 dana za povrat / povjerenje tisuća kupaca
  *   9) Video izdelka: otkopča se u krevet (video levo, besedilo z originala desno; brez samodejnega predvajanja)
- *  10) Tko je NORIKS?
  *  11) Recenzije kupaca (4.8 / 919, sažetak, mreža 40 mnenj s fotografijami, "Prikaži više")
  * Nakupna skatla: samo standardni NORIKS bloki — opis, velicine in pasmine ter "Sigurnost psa u vožnji" so v meta.php
  * (Detalji o proizvodu) in v tablici velicin (size-chart-doggo.php / noriks_doggo_sizes()).
@@ -232,18 +231,8 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
   </div>
 </section>
 
-<!-- 10) Tko je NORIKS? -->
-<section class="ndg-sec">
-  <div class="ndg-wrap ndg-center">
-    <p class="ndg-kicker">O nama</p>
-    <h2 class="ndg-h2">Tko je <em>NORIKS?</em></h2>
-    <p>Mi smo brend koji stvara proizvode sa strašću i pažnjom. Naša misija je jednostavna: <strong>zaštititi pse i učiniti stvarnu razliku</strong>.</p>
-    <p>Doggo nije samo proizvod — to je naše obećanje psima i njihovim vlasnicima.</p>
-  </div>
-</section>
-
-<!-- 11) recenzije kupaca -->
-<section class="ndg-sec ndg-tint" id="ndg-recenzije">
+<!-- 10) recenzije kupaca -->
+<section class="ndg-sec" id="ndg-recenzije">
   <div class="ndg-wrap">
     <h2 class="ndg-h2 ndg-h2--c">Recenzije <em>kupaca</em></h2>
     <p class="ndg-rv__head"><?php echo $ndg_stars( 5 ); ?> <strong>4,8 / 5</strong> · 1.081 recenzija</p>
