@@ -42,10 +42,10 @@ $nml_feat = array(
 /* 2) mnenja s fotografijami (»Über 120.000+ zufriedene Kundinnen«) */
 $nml_t = array(
   array( 'ime' => 'Jana D.',       'img' => 'nml-t1.webp', 'tekst' => 'Super su udobne u trudnoći i nije važno koliko je trbuh velik – tajice rastu s njim.' ),
-  array( 'ime' => 'Christina K.',  'img' => 'nml-t2.webp', 'tekst' => 'Prvo sam naručila L i bile su prevelike, ali u manjoj veličini sjede super. Nijedne druge hlače za trudnice ne sjede tako savršeno i ne podupiru trbuh tako dobro.' ),
-  array( 'ime' => 'Jacqueline L.', 'img' => 'nml-t3.webp', 'tekst' => 'Super udobne, tkanina je mega mekana. Jako ugodne za nošenje i savršeno se prilagođavaju. Ne stežu i nemam osjećaj tijesnoga. Jednostavno savršene 😍' ),
-  array( 'ime' => 'Sophie U.',     'img' => 'nml-t4.webp', 'tekst' => 'Jako lijepe i odlično pristaju. Ravnala sam se po tablici veličina i S mi uz 1,68 m sjedi optimalno. Ima i dovoljno mjesta da trbuh raste…' ),
-  array( 'ime' => 'Svenja K.',     'img' => 'nml-t5.webp', 'tekst' => 'Tako sam dugo tražila udobne i duge tajice! Napokon sam pronašla savršene. Imam duge noge, a ove sežu do gležnja. Napokon! Uvijek iznova rado!' ),
+  array( 'ime' => 'Kristina K.',  'img' => 'nml-t2.webp', 'tekst' => 'Prvo sam naručila L i bile su prevelike, ali u manjoj veličini sjede super. Nijedne druge hlače za trudnice ne sjede tako savršeno i ne podupiru trbuh tako dobro.' ),
+  array( 'ime' => 'Jelena L.', 'img' => 'nml-t3.webp', 'tekst' => 'Super udobne, tkanina je mega mekana. Jako ugodne za nošenje i savršeno se prilagođavaju. Ne stežu i nemam osjećaj tijesnoga. Jednostavno savršene 😍' ),
+  array( 'ime' => 'Sofija U.',     'img' => 'nml-t4.webp', 'tekst' => 'Jako lijepe i odlično pristaju. Ravnala sam se po tablici veličina i S mi uz 1,68 m sjedi optimalno. Ima i dovoljno mjesta da trbuh raste…' ),
+  array( 'ime' => 'Sanja K.',     'img' => 'nml-t5.webp', 'tekst' => 'Tako sam dugo tražila udobne i duge tajice! Napokon sam pronašla savršene. Imam duge noge, a ove sežu do gležnja. Napokon! Uvijek iznova rado!' ),
 );
 
 /* 3) faze trudnoće */
@@ -65,14 +65,14 @@ $nml_stat = array(
 
 /* 5) mnenja kupcev s fotografijami (Loox, samo mnenja o tajicah; ime znamke zamenjano z NORIKS) */
 $nml_rv = array(
-  array( 'ime' => 'Jennifer U.', 'img' => 'nml-rv-1.webp', 'z' => 5, 'tekst' => 'Jako udobne tajice. Još sam na samom početku pa su gore malo široke, ali sigurna sam da će savršeno pristajati.' ),
-  array( 'ime' => 'Ma R.',       'img' => 'nml-rv-2.webp', 'z' => 5, 'tekst' => 'Tajice za trudnice koje odlično sjede. Stvarno sam oduševljena – dobro pristaju, a materijal je lijep. Naručit ću još jedne.' ),
-  array( 'ime' => 'Eileen A.',   'img' => 'nml-rv-3.webp', 'z' => 5, 'tekst' => 'Stvarno su super! Navečer nisam imala teške noge, trbuh i leđa imali su odličnu potporu, a tajice su neprozirne. Služba za korisnike odgovorila je brzo i jako ljubazno. NORIKS mogu samo preporučiti!' ),
-  array( 'ime' => 'Janine F.',   'img' => 'nml-rv-4.webp', 'z' => 5, 'tekst' => 'Mega udobne, trbuh je odlično poduprt – nema usporedbe s uobičajenim tajicama za trudnice. Vrijede svakog centa i sigurno ću naručiti još.' ),
-  array( 'ime' => 'Jasmine H.',  'img' => 'nml-rv-5.webp', 'z' => 5, 'tekst' => 'Super udobne i odlično pristaju, drže i dobro podupiru. U trudnoći više ništa drugo neću oblačiti.' ),
-  array( 'ime' => 'Franziska',   'img' => 'nml-rv-6.webp', 'z' => 5, 'tekst' => 'Wow! Nakon što sam ih isprobala, nisam ih skidala cijeli dan! Prije sam probala tri druga modela i nijedan nije bio osobito dobar. Ove su savršene – najradije bih imala sve boje. :)' ),
-  array( 'ime' => 'Jessica S.',  'img' => 'nml-rv-7.webp', 'z' => 5, 'tekst' => 'U 26. sam tjednu druge trudnoće. Voljela bih da sam ih imala već u prvoj – jednako udobne danju i noću. Odlično rastu s trbuhom, pa radije posežem za njima nego za hlačama za trudnice.' ),
-  array( 'ime' => 'Anna H.',     'img' => 'nml-rv-8.webp', 'z' => 5, 'tekst' => 'Super tajice za svaku priliku – odmah sam naručila još i svijetlosmeđe i tamnosive. Jednostavno odlične 🫶😊' ),
+  array( 'ime' => 'Josipa U.', 'img' => 'nml-rv-1.webp', 'z' => 5, 'tekst' => 'Jako udobne tajice. Još sam na samom početku pa su gore malo široke, ali sigurna sam da će savršeno pristajati.' ),
+  array( 'ime' => 'Mia R.',       'img' => 'nml-rv-2.webp', 'z' => 5, 'tekst' => 'Tajice za trudnice koje odlično sjede. Stvarno sam oduševljena – dobro pristaju, a materijal je lijep. Naručit ću još jedne.' ),
+  array( 'ime' => 'Ema A.',   'img' => 'nml-rv-3.webp', 'z' => 5, 'tekst' => 'Stvarno su super! Navečer nisam imala teške noge, trbuh i leđa imali su odličnu potporu, a tajice su neprozirne. Služba za korisnike odgovorila je brzo i jako ljubazno. NORIKS mogu samo preporučiti!' ),
+  array( 'ime' => 'Ivana F.',   'img' => 'nml-rv-4.webp', 'z' => 5, 'tekst' => 'Mega udobne, trbuh je odlično poduprt – nema usporedbe s uobičajenim tajicama za trudnice. Vrijede svakog centa i sigurno ću naručiti još.' ),
+  array( 'ime' => 'Jasmina H.',  'img' => 'nml-rv-5.webp', 'z' => 5, 'tekst' => 'Super udobne i odlično pristaju, drže i dobro podupiru. U trudnoći više ništa drugo neću oblačiti.' ),
+  array( 'ime' => 'Franka',   'img' => 'nml-rv-6.webp', 'z' => 5, 'tekst' => 'Wow! Nakon što sam ih isprobala, nisam ih skidala cijeli dan! Prije sam probala tri druga modela i nijedan nije bio osobito dobar. Ove su savršene – najradije bih imala sve boje. :)' ),
+  array( 'ime' => 'Jasna S.',  'img' => 'nml-rv-7.webp', 'z' => 5, 'tekst' => 'U 26. sam tjednu druge trudnoće. Voljela bih da sam ih imala već u prvoj – jednako udobne danju i noću. Odlično rastu s trbuhom, pa radije posežem za njima nego za hlačama za trudnice.' ),
+  array( 'ime' => 'Ana H.',     'img' => 'nml-rv-8.webp', 'z' => 5, 'tekst' => 'Super tajice za svaku priliku – odmah sam naručila još i svijetlosmeđe i tamnosive. Jednostavno odlične 🫶😊' ),
 );
 
 $nml_n = 0; // števec sekcij za izmenična ozadja

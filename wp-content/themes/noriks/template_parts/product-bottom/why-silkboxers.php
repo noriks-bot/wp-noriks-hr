@@ -37,14 +37,14 @@ $nsb_kupci = array(
 
 /* 2) mnenja (Trustpilot originala, prevedena) */
 $nsb_tp = array(
-  array( 'ime' => 'Brad M.',    'z' => 5, 'naslov' => 'Sve je izvrsno',                  'tekst' => 'Cijelo iskustvo je izvrsno. Jednostavna narudžba i fantastičan proizvod!' ),
-  array( 'ime' => 'Joe B.',     'z' => 5, 'naslov' => 'Najudobnije bokserice koje imam',  'tekst' => 'Ovo su najudobnije bokserice koje posjedujem. I noću me drže ugodno svježim.' ),
-  array( 'ime' => 'Mark K.',    'z' => 5, 'naslov' => 'Bio sam skeptičan, ali…',         'tekst' => 'Bio sam skeptičan, ali ove su nevjerojatne i drže svježinu. Tako su glatke na koži i nema iritacija kao kod drugih. Sad ću obnoviti cijelu ladicu donjeg rublja.' ),
-  array( 'ime' => 'Richard R.', 'z' => 5, 'naslov' => 'Nisam vjerovao da rublje može toliko promijeniti', 'tekst' => 'Svaki put kad ih obučem, nasmijem se. Nikad nisam osjetio takvu udobnost i potporu kao u ovim boksericama. Hvala!' ),
+  array( 'ime' => 'Branko M.',    'z' => 5, 'naslov' => 'Sve je izvrsno',                  'tekst' => 'Cijelo iskustvo je izvrsno. Jednostavna narudžba i fantastičan proizvod!' ),
+  array( 'ime' => 'Josip B.',     'z' => 5, 'naslov' => 'Najudobnije bokserice koje imam',  'tekst' => 'Ovo su najudobnije bokserice koje posjedujem. I noću me drže ugodno svježim.' ),
+  array( 'ime' => 'Marko K.',    'z' => 5, 'naslov' => 'Bio sam skeptičan, ali…',         'tekst' => 'Bio sam skeptičan, ali ove su nevjerojatne i drže svježinu. Tako su glatke na koži i nema iritacija kao kod drugih. Sad ću obnoviti cijelu ladicu donjeg rublja.' ),
+  array( 'ime' => 'Rikard R.', 'z' => 5, 'naslov' => 'Nisam vjerovao da rublje može toliko promijeniti', 'tekst' => 'Svaki put kad ih obučem, nasmijem se. Nikad nisam osjetio takvu udobnost i potporu kao u ovim boksericama. Hvala!' ),
   array( 'ime' => 'Andrej N.',  'z' => 5, 'naslov' => 'Napokon sam našao ono što sam tražio!', 'tekst' => 'Tražio sam rublje koje je jako mekano, a ipak daje potporu gdje treba i ostaje na mjestu i nakon sati kretanja. Nakon mnogo godina traženja napokon sam našao savršen izbor!' ),
-  array( 'ime' => 'Jim',        'z' => 5, 'naslov' => 'Stiglo danas',                    'tekst' => 'Narudžba je stigla danas. Sve kako je obećano. Izvrsna kvaliteta, kroj i udobnost. Moje novo omiljeno rublje.' ),
-  array( 'ime' => 'Kevin C.',   'z' => 5, 'naslov' => 'Savršeno pristaju!',              'tekst' => 'Savršeno pristaju! Glatke i svilenkaste na dodir. I supruga obožava kako izgledaju i kakve su na dodir.' ),
-  array( 'ime' => 'Steven T.',  'z' => 5, 'naslov' => 'Obožavam osjećaj',                'tekst' => 'Obožavam osjećaj i kroj. Tako su udobne, uvijek ostaju na mjestu – ne podvrću se ni na nogama ni u struku.' ),
+  array( 'ime' => 'Ivan',        'z' => 5, 'naslov' => 'Stiglo danas',                    'tekst' => 'Narudžba je stigla danas. Sve kako je obećano. Izvrsna kvaliteta, kroj i udobnost. Moje novo omiljeno rublje.' ),
+  array( 'ime' => 'Krešimir C.',   'z' => 5, 'naslov' => 'Savršeno pristaju!',              'tekst' => 'Savršeno pristaju! Glatke i svilenkaste na dodir. I supruga obožava kako izgledaju i kakve su na dodir.' ),
+  array( 'ime' => 'Stjepan T.',  'z' => 5, 'naslov' => 'Obožavam osjećaj',                'tekst' => 'Obožavam osjećaj i kroj. Tako su udobne, uvijek ostaju na mjestu – ne podvrću se ni na nogama ni u struku.' ),
 );
 
 /* 4) rezultati */
@@ -56,14 +56,14 @@ $nsb_stat = array(
 
 /* 6) recenzije kupaca s fotografijami (Loox originala, prevedene) */
 $nsb_rv = array(
-  array( 'ime' => 'Jonny N.',  'z' => 5, 'naslov' => 'Toliko udobne – zaboravite da ih nosite', 'tekst' => 'Bio je mali rizik kupiti 11 pari odjednom, ali čovječe, nevjerojatno su udobne! Stvarno zaboravite da išta nosite, i to i tijekom dugih dana. Dobro se peru (hladna voda, sušenje na zraku) i zadržavaju oblik, kvalitetu i osjećaj.' ),
-  array( 'ime' => 'Steven E.', 'z' => 5, 'img' => 'nsb-rv-1.webp', 'naslov' => 'Odlično izgledaju', 'tekst' => 'Obožavam ove bokserice. Odlično izgledaju, ugodne su, a i djevojka ih obožava na meni!' ),
-  array( 'ime' => 'Steven E.', 'z' => 5, 'img' => 'nsb-rv-2.webp', 'naslov' => 'Fantastičan kroj',  'tekst' => 'Rublje fantastično pristaje i osjećaj je nevjerojatan!' ),
-  array( 'ime' => 'Scott S.',  'z' => 5, 'naslov' => 'Udobne i moderne', 'tekst' => 'Odlično pristaju, udobne su i moderne.' ),
-  array( 'ime' => 'Clay K.',   'z' => 5, 'img' => 'nsb-rv-3.webp', 'naslov' => 'Osjećaj je FANTASTIČAN', 'tekst' => 'Osjećaj je FANTASTIČAN.' ),
-  array( 'ime' => 'James C.',  'z' => 5, 'img' => 'nsb-rv-5.webp', 'naslov' => 'Bez neugodnog mirisa', 'tekst' => 'Kao bivši sportaš navikao sam na tkanine koje ne ograničavaju. Ovaj svileni materijal djeluje vrlo funkcionalno – ne steže i nema mirisa znoja nakon treninga. A moje gaćice usto i dobro izgledaju.' ),
-  array( 'ime' => 'Ray O.',    'z' => 5, 'img' => 'nsb-rv-6.webp', 'naslov' => 'Kao da ih ne nosim', 'tekst' => 'Ove gaćice su odlične – zapravo uopće ne osjećam da ih nosim.' ),
-  array( 'ime' => 'Made A.',   'z' => 4, 'img' => 'nsb-rv-4.webp', 'naslov' => 'Dobar proizvod',     'tekst' => 'Proizvod je dobar. Možda sam samo odabrao pogrešnu veličinu, pa su mi malo prevelike.' ),
+  array( 'ime' => 'Ivica N.',  'z' => 5, 'naslov' => 'Toliko udobne – zaboravite da ih nosite', 'tekst' => 'Bio je mali rizik kupiti 11 pari odjednom, ali čovječe, nevjerojatno su udobne! Stvarno zaboravite da išta nosite, i to i tijekom dugih dana. Dobro se peru (hladna voda, sušenje na zraku) i zadržavaju oblik, kvalitetu i osjećaj.' ),
+  array( 'ime' => 'Stipe E.', 'z' => 5, 'img' => 'nsb-rv-1.webp', 'naslov' => 'Odlično izgledaju', 'tekst' => 'Obožavam ove bokserice. Odlično izgledaju, ugodne su, a i djevojka ih obožava na meni!' ),
+  array( 'ime' => 'Stipe E.', 'z' => 5, 'img' => 'nsb-rv-2.webp', 'naslov' => 'Fantastičan kroj',  'tekst' => 'Rublje fantastično pristaje i osjećaj je nevjerojatan!' ),
+  array( 'ime' => 'Siniša S.',  'z' => 5, 'naslov' => 'Udobne i moderne', 'tekst' => 'Odlično pristaju, udobne su i moderne.' ),
+  array( 'ime' => 'Kruno K.',   'z' => 5, 'img' => 'nsb-rv-3.webp', 'naslov' => 'Osjećaj je FANTASTIČAN', 'tekst' => 'Osjećaj je FANTASTIČAN.' ),
+  array( 'ime' => 'Jakov C.',  'z' => 5, 'img' => 'nsb-rv-5.webp', 'naslov' => 'Bez neugodnog mirisa', 'tekst' => 'Kao bivši sportaš navikao sam na tkanine koje ne ograničavaju. Ovaj svileni materijal djeluje vrlo funkcionalno – ne steže i nema mirisa znoja nakon treninga. A moje gaćice usto i dobro izgledaju.' ),
+  array( 'ime' => 'Ranko O.',    'z' => 5, 'img' => 'nsb-rv-6.webp', 'naslov' => 'Kao da ih ne nosim', 'tekst' => 'Ove gaćice su odlične – zapravo uopće ne osjećam da ih nosim.' ),
+  array( 'ime' => 'Mate A.',   'z' => 4, 'img' => 'nsb-rv-4.webp', 'naslov' => 'Dobar proizvod',     'tekst' => 'Proizvod je dobar. Možda sam samo odabrao pogrešnu veličinu, pa su mi malo prevelike.' ),
 );
 
 $nsb_n = 0; // števec sekcij za izmenična ozadja

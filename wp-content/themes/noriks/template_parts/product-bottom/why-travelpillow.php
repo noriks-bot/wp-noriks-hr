@@ -66,9 +66,9 @@ $ntp_kompakt = array(
 
 /* 6) zajednica putnika — 3 mnenja s fotografijami */
 $ntp_zaj = array(
-  array( 'ime' => 'Peter R.', 'img' => 'ntp-rv-1.webp', 'tekst' => 'Užasno slabo spavam u avionu, ali na noćnom letu MORAO sam se odmoriti. NORIKS TravelPillow mi je omogućio da zaspim. Spavam na boku i bio je odličan!' ),
-  array( 'ime' => 'Cathy S.', 'img' => 'ntp-rv-2.webp', 'tekst' => 'Suprug i ja oboje obožavamo ovaj putni jastuk za vrat! Napravio je ogromnu razliku na našim letovima. Ako ga još nemate, a puno putujete, nabavite ga! Obožavam ga!' ),
-  array( 'ime' => 'Jill R.', 'img' => 'ntp-rv-3.webp', 'tekst' => 'Bolji nego što sam očekivala! Ne samo da mi je glava ostala uspravna, nego mi je bilo i toplo i udobno na dugom noćnom međunarodnom letu! Jako sam zadovoljna kupnjom. Hvala, NORIKS!' ),
+  array( 'ime' => 'Petar R.', 'img' => 'ntp-rv-1.webp', 'tekst' => 'Užasno slabo spavam u avionu, ali na noćnom letu MORAO sam se odmoriti. NORIKS TravelPillow mi je omogućio da zaspim. Spavam na boku i bio je odličan!' ),
+  array( 'ime' => 'Katarina S.', 'img' => 'ntp-rv-2.webp', 'tekst' => 'Suprug i ja oboje obožavamo ovaj putni jastuk za vrat! Napravio je ogromnu razliku na našim letovima. Ako ga još nemate, a puno putujete, nabavite ga! Obožavam ga!' ),
+  array( 'ime' => 'Iva R.', 'img' => 'ntp-rv-3.webp', 'tekst' => 'Bolji nego što sam očekivala! Ne samo da mi je glava ostala uspravna, nego mi je bilo i toplo i udobno na dugom noćnom međunarodnom letu! Jako sam zadovoljna kupnjom. Hvala, NORIKS!' ),
 );
 
 /* 7) tri ikone (drsnik originala) */
@@ -80,10 +80,10 @@ $ntp_ikone = array(
 
 /* 9) recenzije kupaca (Okendo; mnenje o torbi = drug izdelek izpuščeno) */
 $ntp_reviews = array(
-  array( 'ime' => 'Caroline S.', 'z' => 5, 'h' => 'Putni jastuk — stvarno radi.', 'tekst' => 'U autu sam spavala kao beba, nevjerojatno udoban, a glava mi se nije mogla klimati. Obožavam ga.' ),
-  array( 'ime' => 'Heather M.', 'z' => 5, 'h' => 'Obožavam svoj NORIKS putni jastuk!', 'tekst' => 'Pruža odličnu potporu, a opet je mekan i udoban. Uz to se ne pregrijavam dok ga nosim. Moj muž, koji NIKAD ne spava u avionu, uzeo ga je sebi. Sad moram naručiti još jedan!' ),
-  array( 'ime' => 'Zach B.', 'z' => 5, 'h' => 'Najbolji putni jastuk koji sam ikad imao', 'tekst' => 'Ovaj jastuk koristim već dugo i lako je najbolji putni jastuk koji sam ikad imao. Jednostavno se pakira, a let je s njim puno udobniji.' ),
-  array( 'ime' => 'Emily M.', 'z' => 5, 'h' => 'Odličan za 11, 14, 44 i 45 godina na 10 letova u 2,5 tjedna', 'tekst' => 'Spavanje u avionu nikad nije savršeno, ali ovi su nam puno pomogli da uhvatimo san kad god je bilo moguće tijekom dugog putovanja po Ekvadoru i Peruu. Posebno mi se sviđa što se mogu nositi čvršće za ravniji vrat ili malo labavije za više slobode (djeca su ih voljela labavije). Lako se nose, udobni su i sprječavaju klimanje glavom za mirniji san. Kod kuće smo skinuli navlake, oprali ih i sve je odlično.' ),
+  array( 'ime' => 'Karolina S.', 'z' => 5, 'h' => 'Putni jastuk — stvarno radi.', 'tekst' => 'U autu sam spavala kao beba, nevjerojatno udoban, a glava mi se nije mogla klimati. Obožavam ga.' ),
+  array( 'ime' => 'Helena M.', 'z' => 5, 'h' => 'Obožavam svoj NORIKS putni jastuk!', 'tekst' => 'Pruža odličnu potporu, a opet je mekan i udoban. Uz to se ne pregrijavam dok ga nosim. Moj muž, koji NIKAD ne spava u avionu, uzeo ga je sebi. Sad moram naručiti još jedan!' ),
+  array( 'ime' => 'Zoran B.', 'z' => 5, 'h' => 'Najbolji putni jastuk koji sam ikad imao', 'tekst' => 'Ovaj jastuk koristim već dugo i lako je najbolji putni jastuk koji sam ikad imao. Jednostavno se pakira, a let je s njim puno udobniji.' ),
+  array( 'ime' => 'Ema M.', 'z' => 5, 'h' => 'Odličan za 11, 14, 44 i 45 godina na 10 letova u 2,5 tjedna', 'tekst' => 'Spavanje u avionu nikad nije savršeno, ali ovi su nam puno pomogli da uhvatimo san kad god je bilo moguće tijekom dugog putovanja po Ekvadoru i Peruu. Posebno mi se sviđa što se mogu nositi čvršće za ravniji vrat ili malo labavije za više slobode (djeca su ih voljela labavije). Lako se nose, udobni su i sprječavaju klimanje glavom za mirniji san. Kod kuće smo skinuli navlake, oprali ih i sve je odlično.' ),
 );
 
 $ntp_n = 0; // števec sekcij za izmenična ozadja

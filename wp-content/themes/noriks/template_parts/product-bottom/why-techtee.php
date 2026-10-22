@@ -36,26 +36,26 @@ $ntt_gradje = array(
 
 /* 2) mnenja z originala (Trustpilot, prevedena; ime znamke zamenjano z NORIKS) */
 $ntt_tp = array(
-  array( 'ime' => 'Guillaume M.', 'naslov' => 'Jednostavan, ali vrlo pomno izrađen', 'tekst' => 'Jednostavan proizvod, ali vrlo pomno izrađen. Elegantna gradska majica koju preporučujem svima.' ),
-  array( 'ime' => 'Eliel M.',     'naslov' => 'Kvaliteta je zaista na visini',       'tekst' => 'Kvaliteta je zaista na visini. Kroj lijepo ističe tijelo, a pad je besprijekoran. Iskreno, nemam nijedne zamjerke — jako sam zadovoljan!' ),
-  array( 'ime' => 'Didier C.',    'naslov' => 'Ne nosim ništa drugo',                'tekst' => 'Otkad znam za NORIKS, ne kupujem druge majice i nosim samo njih. Materijal i kako stoje na tijelu su savršeni. Obožavam ih.' ),
-  array( 'ime' => 'Romain D.',    'naslov' => 'Jako sam zadovoljan majicama',        'tekst' => 'Kroj je odličan, tkanina je ugodna za nošenje, a kvaliteta je na visini. Preporučujem bez razmišljanja!' ),
-  array( 'ime' => 'Meggan S.',    'naslov' => 'Super majice za mog muža',            'tekst' => 'Kupila sam ih mužu — kroj ga jako lijepo ističe, a služba za korisnike je vrhunska!' ),
-  array( 'ime' => 'Tom E.',       'naslov' => 'Druga narudžba, i dalje oduševljen',  'tekst' => 'Savršeno, druga narudžba i jednako sam zadovoljan. Imam već 10 majica ove marke.' ),
-  array( 'ime' => 'Bart Q.',      'naslov' => 'Kvaliteta je na visini',              'tekst' => 'Kvaliteta je na visini! Udobne su i, iskreno, nemaju veze s jeftinom konfekcijom.' ),
+  array( 'ime' => 'Goran M.', 'naslov' => 'Jednostavan, ali vrlo pomno izrađen', 'tekst' => 'Jednostavan proizvod, ali vrlo pomno izrađen. Elegantna gradska majica koju preporučujem svima.' ),
+  array( 'ime' => 'Emil M.',     'naslov' => 'Kvaliteta je zaista na visini',       'tekst' => 'Kvaliteta je zaista na visini. Kroj lijepo ističe tijelo, a pad je besprijekoran. Iskreno, nemam nijedne zamjerke — jako sam zadovoljan!' ),
+  array( 'ime' => 'Damir C.',    'naslov' => 'Ne nosim ništa drugo',                'tekst' => 'Otkad znam za NORIKS, ne kupujem druge majice i nosim samo njih. Materijal i kako stoje na tijelu su savršeni. Obožavam ih.' ),
+  array( 'ime' => 'Robert D.',    'naslov' => 'Jako sam zadovoljan majicama',        'tekst' => 'Kroj je odličan, tkanina je ugodna za nošenje, a kvaliteta je na visini. Preporučujem bez razmišljanja!' ),
+  array( 'ime' => 'Martina S.',    'naslov' => 'Super majice za mog muža',            'tekst' => 'Kupila sam ih mužu — kroj ga jako lijepo ističe, a služba za korisnike je vrhunska!' ),
+  array( 'ime' => 'Tomislav E.',       'naslov' => 'Druga narudžba, i dalje oduševljen',  'tekst' => 'Savršeno, druga narudžba i jednako sam zadovoljan. Imam već 10 majica ove marke.' ),
+  array( 'ime' => 'Boris K.',      'naslov' => 'Kvaliteta je na visini',              'tekst' => 'Kvaliteta je na visini! Udobne su i, iskreno, nemaju veze s jeftinom konfekcijom.' ),
   array( 'ime' => 'Bruno M.',     'naslov' => 'Kvalitetne majice',                   'tekst' => 'Kvalitetna majica. Ne treba je glačati i odlično stoji. Brza i pažljivo zapakirana dostava. Uzmite svoju uobičajenu veličinu.' ),
 );
 
 /* 4) mnenja s fotografijami z originala (prevedena) */
 $ntt_rv = array(
-  array( 'ime' => 'Jérôme W.',    'img' => 'ntt-rv-1.webp', 'z' => 5, 'tekst' => 'Sve je besprijekorno! Materijal, kroj, lagana je i prozračna! Oduševljen sam!' ),
-  array( 'ime' => 'Stanislas M.', 'img' => 'ntt-rv-2.webp', 'z' => 5, 'tekst' => 'Super materijal i lijepo stoji oko ruku i trbuha — savršeno za moju novu figuru nakon 40 izgubljenih kilograma ovog ljeta. Opet ću naručiti, ali broj veću 😁' ),
-  array( 'ime' => 'Jacqueline F.', 'img' => 'ntt-rv-3.webp', 'z' => 5, 'tekst' => 'Obožavam vaše majice — i za sport i za izlazak.' ),
-  array( 'ime' => 'Julien L.',    'img' => 'ntt-rv-4.webp', 'z' => 4, 'tekst' => 'Dobro pristaje oko ruku i trbuha, a u ramenima ostavlja malo prostora. Donji rub je mrvicu uži, pa se na trbuhu stvara pokoji nabor.' ),
-  array( 'ime' => 'Henri L.',     'img' => 'ntt-rv-5.webp', 'z' => 5, 'tekst' => 'Izvrsna kvaliteta i savršen kroj 😁' ),
-  array( 'ime' => 'Alaa I.',      'img' => 'ntt-rv-6.webp', 'z' => 5, 'tekst' => 'Upravo sam ponovno naručio paket od 3 majice — kvaliteta je i dalje vrhunska. Toplo preporučujem NORIKS majice 💯' ),
-  array( 'ime' => 'Madjid A.',    'img' => 'ntt-rv-7.webp', 'z' => 5, 'tekst' => 'Vrhunski.' ),
-  array( 'ime' => 'Philippe Z.',  'img' => 'ntt-rv-8.webp', 'z' => 5, 'tekst' => 'Isprva sam se dvoumio oko narudžbe, ali kad sam se odlučio, nisam se razočarao: dostava je bila vrlo brza, a kvaliteta je točno kao u reklami. Oduševljen sam kupnjom.' ),
+  array( 'ime' => 'Josip V.',    'img' => 'ntt-rv-1.webp', 'z' => 5, 'tekst' => 'Sve je besprijekorno! Materijal, kroj, lagana je i prozračna! Oduševljen sam!' ),
+  array( 'ime' => 'Stjepan M.', 'img' => 'ntt-rv-2.webp', 'z' => 5, 'tekst' => 'Super materijal i lijepo stoji oko ruku i trbuha — savršeno za moju novu figuru nakon 40 izgubljenih kilograma ovog ljeta. Opet ću naručiti, ali broj veću 😁' ),
+  array( 'ime' => 'Jasna F.', 'img' => 'ntt-rv-3.webp', 'z' => 5, 'tekst' => 'Obožavam vaše majice — i za sport i za izlazak.' ),
+  array( 'ime' => 'Luka L.',    'img' => 'ntt-rv-4.webp', 'z' => 4, 'tekst' => 'Dobro pristaje oko ruku i trbuha, a u ramenima ostavlja malo prostora. Donji rub je mrvicu uži, pa se na trbuhu stvara pokoji nabor.' ),
+  array( 'ime' => 'Hrvoje L.',     'img' => 'ntt-rv-5.webp', 'z' => 5, 'tekst' => 'Izvrsna kvaliteta i savršen kroj 😁' ),
+  array( 'ime' => 'Ante I.',      'img' => 'ntt-rv-6.webp', 'z' => 5, 'tekst' => 'Upravo sam ponovno naručio paket od 3 majice — kvaliteta je i dalje vrhunska. Toplo preporučujem NORIKS majice 💯' ),
+  array( 'ime' => 'Mario A.',    'img' => 'ntt-rv-7.webp', 'z' => 5, 'tekst' => 'Vrhunski.' ),
+  array( 'ime' => 'Filip Z.',  'img' => 'ntt-rv-8.webp', 'z' => 5, 'tekst' => 'Isprva sam se dvoumio oko narudžbe, ali kad sam se odlučio, nisam se razočarao: dostava je bila vrlo brza, a kvaliteta je točno kao u reklami. Oduševljen sam kupnjom.' ),
 );
 
 $ntt_n = 0; // števec sekcij za izmenična ozadja

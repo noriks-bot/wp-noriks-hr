@@ -63,14 +63,14 @@ $nms_detalji = array(
 
 /* 2) mnenja z originala (Okendo, prevedena) */
 $nms_rv = array(
-  array( 'ime' => 'Jordan',    'z' => 5, 'img' => 'nms-rv-1.webp', 'naslov' => 'Odlična za slojevito odijevanje', 'tekst' => 'Dovoljno topla za zimu, a dovoljno lagana za jesen. Nosim je ispod jakne za hladnih jutara — nevjerojatno svestrana.' ),
-  array( 'ime' => 'Jason',     'z' => 5, 'naslov' => 'Mekana kao maslac',             'tekst' => 'Nevjerojatno mekana čim je izvadite iz pakiranja! Tkanina je poput svile na koži, a sa svakim pranjem postaje još mekša.' ),
-  array( 'ime' => 'Daniel',    'z' => 5, 'naslov' => 'Mekana kao oblak',              'tekst' => 'Tkanina s modalom je kao druga koža! Nevjerojatno mekana na rukama i sa svakim pranjem sve mekša. Moja nova omiljena dukserica.' ),
-  array( 'ime' => 'Lucas',     'z' => 5, 'naslov' => 'Savršen okrugli izrez',         'tekst' => 'Klasični okrugli izrez laska svakoj građi. Sjedi točno kako treba — ni pretijesno ni preširoko, savršena ravnoteža.' ),
-  array( 'ime' => 'Anthony',   'z' => 5, 'naslov' => 'Savršen poklon',                'tekst' => 'Kupio sam jednu partneru i sad ne želi nositi ništa drugo. Savršen udoban poklon za svakoga!' ),
-  array( 'ime' => 'Wes S.',    'z' => 5, 'naslov' => 'Izgleda vrhunski!',             'tekst' => 'Izgled je savršen! Opušten, a opet elegantan… i definitivno privlači poglede.' ),
-  array( 'ime' => 'Martin G.', 'z' => 5, 'naslov' => 'Izvrsna kvaliteta!',            'tekst' => 'Izvrsna kvaliteta! Kupit ću još jednu — to će mi biti već treća.' ),
-  array( 'ime' => 'James D.',  'z' => 4, 'naslov' => 'Dukserica s okruglim izrezom',  'tekst' => 'Sviđa mi se sve osim izreza — volio bih da je malo uži i 2–3 cm viši.' ),
+  array( 'ime' => 'Jurica',    'z' => 5, 'img' => 'nms-rv-1.webp', 'naslov' => 'Odlična za slojevito odijevanje', 'tekst' => 'Dovoljno topla za zimu, a dovoljno lagana za jesen. Nosim je ispod jakne za hladnih jutara — nevjerojatno svestrana.' ),
+  array( 'ime' => 'Josip',     'z' => 5, 'naslov' => 'Mekana kao maslac',             'tekst' => 'Nevjerojatno mekana čim je izvadite iz pakiranja! Tkanina je poput svile na koži, a sa svakim pranjem postaje još mekša.' ),
+  array( 'ime' => 'Danijel',    'z' => 5, 'naslov' => 'Mekana kao oblak',              'tekst' => 'Tkanina s modalom je kao druga koža! Nevjerojatno mekana na rukama i sa svakim pranjem sve mekša. Moja nova omiljena dukserica.' ),
+  array( 'ime' => 'Luka',     'z' => 5, 'naslov' => 'Savršen okrugli izrez',         'tekst' => 'Klasični okrugli izrez laska svakoj građi. Sjedi točno kako treba — ni pretijesno ni preširoko, savršena ravnoteža.' ),
+  array( 'ime' => 'Antonio',   'z' => 5, 'naslov' => 'Savršen poklon',                'tekst' => 'Kupio sam jednu partneru i sad ne želi nositi ništa drugo. Savršen udoban poklon za svakoga!' ),
+  array( 'ime' => 'Vedran S.',    'z' => 5, 'naslov' => 'Izgleda vrhunski!',             'tekst' => 'Izgled je savršen! Opušten, a opet elegantan… i definitivno privlači poglede.' ),
+  array( 'ime' => 'Marin G.', 'z' => 5, 'naslov' => 'Izvrsna kvaliteta!',            'tekst' => 'Izvrsna kvaliteta! Kupit ću još jednu — to će mi biti već treća.' ),
+  array( 'ime' => 'Jakov D.',  'z' => 4, 'naslov' => 'Dukserica s okruglim izrezom',  'tekst' => 'Sviđa mi se sve osim izreza — volio bih da je malo uži i 2–3 cm viši.' ),
 );
 
 $nms_n = 0; // števec sekcij za izmenična ozadja

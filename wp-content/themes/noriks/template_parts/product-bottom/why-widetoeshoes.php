@@ -39,14 +39,14 @@ $nwt_bars = array(
 
 /* 9) mnenja z originala (prevedena; mnenja o pogojih vračila konkurenta in o drugih izdelkih izpuščena) */
 $nwt_reviews = array(
-  array( 'ime' => 'Sarah H.',    'img' => 'nwt-k-03-crno-bijela.webp', 'tekst' => 'Kupila sam ih za posao, da odmorim stopala od teških čizama na betonskom podu. Sada su mi najdraži par cipela. Vozim bicikl u njima i nosim ih posvuda — stopala me ne bole otkako sam prešla na njih. Naručila sam broj 41 i pristaje savršeno.' ),
-  array( 'ime' => 'Tunesha C.',  'img' => 'nwt-k-29-bijelo-siva.webp', 'tekst' => 'Ove cipele su nevjerojatno udobne! Medicinska sam sestra i radim dugo na nogama, a ove široke cipele me nisu razočarale. I moderne su i udobne, pa sam na kraju naručila 2 para.' ),
-  array( 'ime' => 'Angelica C.', 'img' => 'nwt-k-27-smeda.webp',       'tekst' => 'Obožavam svoje cipele! Tako su udobne i lagane na nozi, a to mi puno znači jer imam vijke i pločicu u gležnju. Već sam spremna naručiti i smeđi par!' ),
-  array( 'ime' => 'Ellen L.',    'img' => 'nwt-k-01-tamnosmeda.webp',  'tekst' => 'Obožavam ove cipele — najbolja investicija ikad. Uskoro kupujem još jedan par!' ),
-  array( 'ime' => 'Carolyn G.',  'img' => '', 'tekst' => 'Plantarni fasciitis mi se toliko pogoršao da gotovo nisam mogla hodati bez pridržavanja. Nakon 3 dana nošenja novih cipela shvatila sam da ponovno normalno hodam.' ),
-  array( 'ime' => 'Carolina R.', 'img' => '', 'tekst' => 'Na nogama sam 8 sati dnevno, stalno gore-dolje stepenicama, a stopala obožavaju ove cipele — kao da hodam po oblacima. Prsti se osjećaju odlično s više prostora.' ),
-  array( 'ime' => 'Shae M.',     'img' => '', 'tekst' => 'Godinama nosim klasične barefoot cipele. Ove imaju deblji potplat, ali su odlične kao prijelazna cipela za početnike. Veličina je savršena, a kvaliteta odlična.' ),
-  array( 'ime' => 'Ashley B.',   'img' => '', 'tekst' => 'Apsolutno ih obožavam! Dobila sam toliko komplimenata da sam poveznicu poslala valjda šestorici prijatelja!' ),
+  array( 'ime' => 'Petra H.',    'img' => 'nwt-k-03-crno-bijela.webp', 'tekst' => 'Kupila sam ih za posao, da odmorim stopala od teških čizama na betonskom podu. Sada su mi najdraži par cipela. Vozim bicikl u njima i nosim ih posvuda — stopala me ne bole otkako sam prešla na njih. Naručila sam broj 41 i pristaje savršeno.' ),
+  array( 'ime' => 'Marija Č.',  'img' => 'nwt-k-29-bijelo-siva.webp', 'tekst' => 'Ove cipele su nevjerojatno udobne! Medicinska sam sestra i radim dugo na nogama, a ove široke cipele me nisu razočarale. I moderne su i udobne, pa sam na kraju naručila 2 para.' ),
+  array( 'ime' => 'Anđela C.', 'img' => 'nwt-k-27-smeda.webp',       'tekst' => 'Obožavam svoje cipele! Tako su udobne i lagane na nozi, a to mi puno znači jer imam vijke i pločicu u gležnju. Već sam spremna naručiti i smeđi par!' ),
+  array( 'ime' => 'Lucija L.',    'img' => 'nwt-k-01-tamnosmeda.webp',  'tekst' => 'Obožavam ove cipele — najbolja investicija ikad. Uskoro kupujem još jedan par!' ),
+  array( 'ime' => 'Kristina G.',  'img' => '', 'tekst' => 'Plantarni fasciitis mi se toliko pogoršao da gotovo nisam mogla hodati bez pridržavanja. Nakon 3 dana nošenja novih cipela shvatila sam da ponovno normalno hodam.' ),
+  array( 'ime' => 'Karla R.', 'img' => '', 'tekst' => 'Na nogama sam 8 sati dnevno, stalno gore-dolje stepenicama, a stopala obožavaju ove cipele — kao da hodam po oblacima. Prsti se osjećaju odlično s više prostora.' ),
+  array( 'ime' => 'Maja M.',     'img' => '', 'tekst' => 'Godinama nosim klasične barefoot cipele. Ove imaju deblji potplat, ali su odlične kao prijelazna cipela za početnike. Veličina je savršena, a kvaliteta odlična.' ),
+  array( 'ime' => 'Ana B.',   'img' => '', 'tekst' => 'Apsolutno ih obožavam! Dobila sam toliko komplimenata da sam poveznicu poslala valjda šestorici prijatelja!' ),
 );
 
 $nwt_n = 0; // števec sekcij za izmenična ozadja
