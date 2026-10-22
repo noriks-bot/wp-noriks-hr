@@ -354,6 +354,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS ModalSweatshirt (orto-modalsweatshirt) — dukserica od modala s okruglim izrezom
+if ( noriks_is_type( 'modalsweatshirt' ) ) {
+    include $noriks_pb_dir . 'why-modalsweatshirt.php';
+}
+
 // NORIKS TechTee (orto-techtee) — ikonicna muska majica s okruglim izrezom
 if ( noriks_is_type( 'techtee' ) ) {
     include $noriks_pb_dir . 'why-techtee.php';

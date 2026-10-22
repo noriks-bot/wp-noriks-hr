@@ -631,6 +631,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS MaternityLeggings</strong> — vaše se tijelo mijenja. Naše tajice rastu s njim.<br><br>Ove tajice za trudnice prilagođavaju se vama – a ne obrnuto. <strong>Podupiru trbuh, rasterećuju leđa</strong> i daju vam osjećaj sigurne potpore, bez stezanja.<br><br>Mekan, prozračan materijal pruža ugodan osjećaj pri nošenju, a u hladnijem dijelu godine ugodno vas grije.<br><br>I jer vaše tijelo čini nešto veliko, zaslužuje odjeću koja ga u tome podupire.<br><br><strong>Rasterećuju trbuh i leđa:</strong> posebna mrežasta tkanina nježno podupire trbuščić i tako rasterećuje donji dio leđa.<br><strong>100 % neprozirne:</strong> zahvaljujući kvalitetnim vlaknima tkanina ostaje potpuno neprozirna i pri intenzivnom kretanju – o tome ne morate brinuti.<br><strong>Ne spuštaju se:</strong> ekstra visok, mekan pojas priljubljuje se uz trbuh bez pritiska – i bez stalnog spuštanja. Na poslu, u šetnji ili na kauču: tajice uvijek stoje točno ondje gdje trebaju.<br><strong>Rastu s vašim trbuhom:</strong> mekan pojas prilagođava se trbuščiću – bilo da ste u 10. ili 35. tjednu trudnoće. Bez pritiska, bez spuštanja, jednostavno udobno od početka do kraja.<br><strong>Oblikuju noge i stražnjicu:</strong> oblikuju bez stezanja – za stražnjicu i noge koje ćete rado pokazati.<br><br><strong>Materijal:</strong> 94 % poliamid, 6 % elastan. Ovaj sastav odabran je namjerno – za ugodnu kompresiju nogu i potporu trbuhu i donjem dijelu leđa. Materijal istodobno pruža ugodnu toplinu, a da se ne oznojite. Rezultat: <strong>100 % neprozirne, elastične, tople, prozračne</strong> – i jednostavno super udobne.<br><br><strong>Zašto su NORIKS tajice za trudnice najbolji izbor</strong><br><strong>Visok, elastičan pojas</strong> – nježno podupire trbuh, bez stezanja<br><strong>Dizajn koji čuva leđa</strong> – podupire i rasterećuje donji dio leđa<br><strong>Udobne za svaku priliku</strong> – savršene za svakodnevicu, slobodno vrijeme ili laganu tjelovježbu<br><strong>Prozračne i mekane</strong> – sprječavaju znojenje i ostaju ugodno prozračne<br><strong>Jednostavno održavanje i dugotrajnost</strong> – zadržavaju oblik i nakon mnogo pranja<br><strong>Jednostavan dizajn</strong> – lako se kombiniraju s majicom, haljinom ili puloverom<br><br>Tajice sjede visoko preko trbuha, pružaju nježnu potporu i istodobno rasterećuju donji dio leđa. Bez spuštanja, bez štipanja, bez stezanja – umjesto toga osjećate se slobodno i poduprto pri svakom pokretu. Mnoge žene potvrđuju: „Napokon tajice koje podupiru trbuh i osjetno rasterećuju leđa.”<br><br><strong>Zaključak – vaše nove omiljene tajice:</strong> NORIKS tajice za trudnice spajaju udobnost, potporu trbuhu i rasterećenje leđa. Za trudnoću, babinje ili jednostavno kao udobne tajice za svaki dan – uz njih ste cijeli dan opušteni.<br><br><strong>Boje:</strong> crna, tamnosiva i svijetlosmeđa.<br><strong>Veličine:</strong> S (36) – XXL (48–50). Odaberite svoju uobičajenu veličinu prije trudnoće (pogledajte tablicu veličina).
 
+         <?php elseif( noriks_is_type( 'modalsweatshirt', $current_product_id ) ): ?>
+
+                <strong>NORIKS ModalSweatshirt</strong> dizajnirana je za uzdignutu svakodnevnu udobnost: spaja mekan, gladak osjećaj s urednim, profinjenim izgledom. Izrađena je od visokotehnološke tkanine s <strong>LENZING™ modalom</strong> koja sadrži prirodna celulozna vlakna, pa je ugodna na koži i pomaže regulirati tjelesnu temperaturu u promjenjivim uvjetima.<br><br>Klasični <strong>okrugli izrez</strong> daje bezvremenski, svestran izgled, a <strong>rastezljivost u 4 smjera</strong> omogućuje prirodne pokrete bez osjećaja sputanosti. Glatka, strukturirana silueta spaja svakodnevnu udobnost s dotjeranim izgledom, pa se lako kombinira s ležernim hlačama, trapericama ili krojenim hlačama.<br><br>Stvorena za dugotrajnu udobnost i svestranost: tkanina je <strong>otporna na pilanje</strong> i zadržava glatki izgled i nakon mnogo nošenja. Diskretan sjaj daje profinjen dodir, pa je ova dukserica praktičan izbor za posao, putovanja, vikende i opušteno svakodnevno nošenje.<br><br><strong>Značajke:</strong><br><strong>Tkanina s modalom:</strong> mekan, gladak osjećaj na koži<br><strong>Prirodna celulozna vlakna:</strong> pomažu regulirati tjelesnu temperaturu za svakodnevnu udobnost<br><strong>Rastezljivost u 4 smjera:</strong> fleksibilni pokreti bez ograničenja<br><strong>Klasični okrugli izrez:</strong> uredna, bezvremenska silueta<br><strong>Tkanina otporna na pilanje:</strong> zadržava glatki izgled i nakon mnogo nošenja<br><strong>Diskretan sjaj tkanine:</strong> profinjena, dotjerana završna obrada<br><strong>Strukturirana silueta:</strong> spaja svakodnevnu udobnost s urednim izgledom<br><strong>Svestran svakodnevni stil:</strong> lako se kombinira s trapericama, ležernim ili krojenim hlačama<br><br><strong>Kroj:</strong> udoban regularni kroj s prirodnim prostorom u prsima, ramenima i rukama. Omogućuje slobodne pokrete, a zadržava urednu, strukturiranu siluetu za svakodnevno nošenje.<br><br><strong>Sastav:</strong> 42 % LENZING™ modal, 49 % poliester, 9 % elastan<br><strong>Boje:</strong> sivoplava, bijela, crna i tamnoplava.<br><strong>Veličine:</strong> S–3XL (pogledajte tablicu veličina).
+
          <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
 
                 <strong>NORIKS TechTee</strong> — ikonična majica, usavršena. <strong>Pripijen kroj</strong>, savršeno izbalansiran: pada točno kako treba, oblikuje siluetu i prirodno se prilagođava svakoj građi.<br><br>Nudi izvanrednu <strong>mekoću</strong>, besprijekorno drži oblik i dugo traje. <strong>Tiskana unutarnja etiketa</strong> zamjenjuje klasične ušivene etikete — za udobnost bez imalo iritacije.<br><br>Apsolutni osnovni komad. Bezvremenski. Neizostavan.<br><br><strong>Materijal i izrada:</strong> drugačiji dodir — namjerno. Tkanina spaja češljani pamuk i Sorona®, poliester biljnog podrijetla (od kukuruznog škroba) koji je razvio DuPont, pažljivo doziran kako bi majica besprijekorno držala oblik kroz vrijeme. Na tijelu je drukčija: mekša, fluidnija, s diskretnim sjajem koji tkanini daje blago satensku završnu obradu — daleko od običnog mat pamuka. Besprijekoran pad koji traje. Ako očekujete klasični pamuk, iznenadit će vas. Ako joj date priliku, nećete je htjeti skinuti.<br><br><strong>Sastav:</strong> 72 % češljani pamuk, 28 % Sorona®<br><strong>Kroj:</strong> okrugli izrez, pripijen kroj<br><br><strong>Boje:</strong> crna, bijela, tamnoplava, kaki, siva, nebeskoplava, lososova i tirkizna.<br><strong>Veličine:</strong> S–4XL. Uzmite svoju uobičajenu veličinu (pogledajte tablicu veličina).
@@ -1425,6 +1429,40 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Primjer: Marta je visoka 170 cm i nosi veličinu M. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'modalsweatshirt', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>S do 3XL</strong> — mjere proizvoda u centimetrima. Udoban <strong>regularni kroj</strong>: u prosjeku odgovara uobičajenoj veličini.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina leđa</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina rukava</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_modalsweatshirt_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f1f5fa' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:12px 0 0;line-height:1.6;font-size:13px;">*Zbog prirodne elastičnosti tkanine moguće je odstupanje mjera do 2 %.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2141,6 +2179,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'maternityleggings', $current_product_id ) ): ?>
 
                 Perite na <strong>najviše 30 °C</strong>. Ne koristite <strong>omekšivač ni izbjeljivač</strong>. Perite odvojeno po bojama. <strong>Ne sušite u sušilici</strong> — tajice osušite na zraku, tako će dugo zadržati oblik i elastičnost.
+
+             <?php elseif( noriks_is_type( 'modalsweatshirt', $current_product_id ) ): ?>
+
+                Perite u perilici <strong>na hladno</strong>, na nježnom programu sa sličnim bojama (ne perite s grubim ili hrapavim tkaninama kako biste spriječili pilanje ili oštećenja). Sušite u sušilici na <strong>niskoj temperaturi</strong>, glačajte na niskoj temperaturi. <strong>Ne izbjeljujte.</strong><br><br>U uobičajenom pranju i sušenju dukserica se može malo skupiti (1 % ili manje — praktički ništa). Da bi dugo izgledala kao nova, sušite je položenu na ravnoj podlozi ili u sušilici na niskoj temperaturi.
 
              <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
 

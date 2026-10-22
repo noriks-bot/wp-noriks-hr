@@ -160,6 +160,8 @@ function noriks_product_type_map() : array {
         'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
+        // NORIKS ModalSweatshirt — dukserica od modala s okruglim izrezom (boja + velicina S–3XL).
+        'modalsweatshirt'         => array( 'orto-modalsweatshirt', 'modalsweatshirt' ),
         // NORIKS MaternityLeggings — tajice za trudnice (boja + velicina S–XXL).
         'maternityleggings'       => array( 'orto-maternityleggings', 'maternityleggings' ),
         // NORIKS DogRaincoat — prozracna kabanica za pse (boja + velicina S–4XL).
@@ -657,6 +659,21 @@ if ( ! function_exists( 'noriks_maternityleggings_sizes' ) ) {
             array( 'L',   '40 – 42', '83 – 108 cm', '102 cm' ),
             array( 'XL',  '44 – 46', '88 – 113 cm', '104 cm' ),
             array( 'XXL', '48 – 50', '94 – 119 cm', '105 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_modalsweatshirt_sizes' ) ) {
+    /** NORIKS ModalSweatshirt: velicina, duljina leda, opseg prsa, opseg struka, duljina rukava (cm) — mjere proizvoda.
+     *  1:1 s tablice originala (fioboc.com, »Product Measurements«, CM); odstupanje do 2 % zbog elasticnosti tkanine. */
+    function noriks_modalsweatshirt_sizes() {
+        return array(
+            array( 'S',   '66,5 cm', '101 cm', '97 cm',  '61 cm' ),
+            array( 'M',   '68 cm',   '106 cm', '102 cm', '62 cm' ),
+            array( 'L',   '69,5 cm', '111 cm', '107 cm', '63 cm' ),
+            array( 'XL',  '71 cm',   '116 cm', '112 cm', '64 cm' ),
+            array( '2XL', '73 cm',   '124 cm', '120 cm', '65,5 cm' ),
+            array( '3XL', '75 cm',   '132 cm', '128 cm', '67 cm' ),
         );
     }
 }

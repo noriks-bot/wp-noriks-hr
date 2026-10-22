@@ -108,6 +108,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-maternityleggings' );
             return;
         }
+        // NORIKS ModalSweatshirt: S–3XL po mjerama proizvoda (duljina leda, prsa, struk, rukav) + slika mjerenja.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'modalsweatshirt' ) ) {
+            get_template_part( 'template_parts/size-chart-modalsweatshirt' );
+            return;
+        }
         // NORIKS TechTee: S–4XL po opsegu prsa, visini i tezini (savjet originala: uobicajena velicina).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'techtee' ) ) {
             get_template_part( 'template_parts/size-chart-techtee' );
