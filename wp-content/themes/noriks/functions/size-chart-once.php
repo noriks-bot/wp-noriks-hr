@@ -229,6 +229,8 @@ if ( ! function_exists( 'noriks_size_chart_secondary_once' ) ) {
     function noriks_size_chart_secondary_once() {
         static $done = false;
         if ( $done ) { return; }
+        // Brez velikosti tudi sekundarne tabele ni (Dejan, 22.10.2026).
+        if ( function_exists( 'noriks_ima_velicine' ) && ! noriks_ima_velicine() ) { return; }
         $done = true;
         get_template_part( 'template_parts/size-chart-secondary' );
     }
