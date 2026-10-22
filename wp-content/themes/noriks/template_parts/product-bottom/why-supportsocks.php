@@ -34,16 +34,26 @@ $nss_video = function( $file, $label ) use ( $nss, $nss_path ) {
  * (kartice videov + "Produktinformasjon" originala za zakljucno vrstico).
  * [ video, kicker, naslov, poudarek, odstavek, zakljucna vrstica ] */
 $nss_rows_1 = array(
-  array( 'ss-video-1', 'Lako oblačenje', 'Lako se oblače', 'i skidaju', 'Mekani, elastični materijal čini da se potporne čarape NORIKS SupportSocks lako oblače i skidaju.', 'Ne morate se mučiti s njima.' ),
-  array( 'ss-video-2', 'Kompresija', '12–15 mmHg', 'stupnjevana kompresija', 'Pritisak je najjači oko gležnja i smanjuje se prema listu. Tako noge ostaju lakše nakon dugog stajanja ili sjedenja.', 'Može ublažiti umor i oticanje nogu.' ),
-  array( 'ss-video-3', 'Udobnost', 'Udobne', 'cijeli dan', 'NORIKS SupportSocks pružaju potporu, a ne stežu previše. Ugodno ih je nositi od jutra do večeri.', 'Savršene za svakodnevno nošenje, posao, putovanja i još mnogo toga.' ),
-);
-$nss_rows_3 = array(
-  array( 'ss-video-4', 'Mekani rub', 'Mekani rub', 'koji se ne usijeca', 'Rub ostaje na mjestu, a ne usijeca se. Kad skinete čarape, na nogama nema crvenih tragova.', 'Ne ostavlja tragove na koži.' ),
-  array( 'ss-video-5', 'Prozračan materijal', 'Pomažu da stopala', 'ostanu suha', 'Mekana mješavina s bambusom odvodi vlagu i održava stopala suhima cijeli dan.', 'Materijal: 60 % poliester, 18 % bambus, 15 % lycra, 7 % pamuk.' ),
-  array( 'ss-video-6', 'Vrh bez šavova', 'Vrh bez šavova', 'za dodatnu udobnost', 'Nema šava kod prstiju koji bi pritiskao ili žuljao.', 'Ne žulja.' ),
-);
-/* 2) sest ikon */
+  array( 'ss-video-1', 'Lako oblačenje', 'Lako se oblače', 'i skidaju',
+    'Klasične kompresijske čarape znaju biti borba: navlačite ih po pet minuta, a navečer ih jedva skinete. NORIKS SupportSocks napravljene su od mekanog, elastičnog pletiva koje popusti kad ga navlačite i stegne se kad je čarapa na nozi.',
+    'Ne morate se mučiti s njima — ni ujutro ni navečer.' ),
+  array( 'ss-video-2', 'Kompresija', '12–15 mmHg', 'stupnjevana kompresija',
+    'Pritisak je najjači oko gležnja i postupno popušta prema listu. Takva stupnjevana kompresija je blaga — nije medicinska stezanje koje vam treba recept, nego razina koju možete nositi svaki dan.',
+    'Noge ostaju lakše nakon dugog stajanja ili sjedenja.' ),
+  array( 'ss-video-3', 'Udobnost', 'Udobne', 'cijeli dan',
+    'Daju potporu, a ne stežu previše. Pletivo prati oblik lista, pa se ne nabire u gležnju i ne klizi prema dolje tijekom dana.',
+    'Za posao, putovanja i duge dane na nogama.' ),
+);$nss_rows_3 = array(
+  array( 'ss-video-4', 'Mekani rub', 'Mekani rub', 'koji se ne usijeca',
+    'Uska guma na vrhu klasičnih čarapa ostavi crveni prsten na listu i prekine dan. Rub NORIKS SupportSocks je širok i mekan: drži čarapu gore cijelu smjenu, ali se ne urezuje u kožu.',
+    'Kad ih skinete, na nogama nema tragova.' ),
+  array( 'ss-video-5', 'Prozračan materijal', 'Pomažu da stopala', 'ostanu suha',
+    'Mješavina s bambusom odvodi vlagu od kože, pa stopala ostaju suha i u zatvorenoj cipeli. Sastav: 60 % poliester, 18 % bambus, 15 % lycra i 7 % pamuk.',
+    'Suha stopala od jutra do večeri.' ),
+  array( 'ss-video-6', 'Vrh bez šavova', 'Vrh bez šavova', 'za dodatnu udobnost',
+    'Šav kod prstiju je mjesto gdje čarapa najčešće žulja — osobito ako cijeli dan hodate. Kod NORIKS SupportSocks ga jednostavno nema.',
+    'Ništa ne pritišće prste.' ),
+);/* 2) sest ikon */
 $nss_icons = array(
   array( 'ss-ic-1-lako-oblacenje.webp', 'Lako se oblače' ),
   array( 'ss-ic-2-kompresija.webp', '12–15 mmHg stupnjevana kompresija' ),
@@ -235,11 +245,59 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
 })();
 </script>
 
+
+<!-- 6) PRONAĐITE SVOJU VELIČINU -->
+<div class="nss-band nss-tint">
+  <div class="nss-wrap">
+    <div class="nss-row2 nss-row2--rev">
+      <div class="nss-copy">
+        <p class="nss-kicker">Veličina</p>
+        <h2 class="nss-h2">Veličina ide <em>po broju cipele.</em></h2>
+        <p>Ne mjerite list ni duljinu stopala — uzmite broj cipele koji inače nosite. Pletivo je rastezljivo, pa jedna veličina pokriva nekoliko brojeva.</p>
+        <div class="nss-table-wrap">
+          <table class="nss-size">
+            <thead><tr><th scope="col">Veličina</th><th scope="col">Broj cipele</th></tr></thead>
+            <tbody>
+              <?php foreach ( ( function_exists( 'noriks_supportsocks_sizes' ) ? noriks_supportsocks_sizes() : array() ) as $nss_s ) : ?>
+              <tr><th scope="row"><?php echo esc_html( $nss_s[0] ); ?></th><td><?php echo esc_html( $nss_s[1] ); ?></td></tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+        <p class="nss-big">Između dva broja? Uzmite veću veličinu.</p>
+      </div>
+      <div class="nss-media"><?php echo $nss_img( 'ss-g-4-hr.webp', 'Veličine NORIKS SupportSocks po broju cipele' ); ?></div>
+    </div>
+  </div>
+</div>
+
+<!-- 7) NORIKS pogoji -->
+<div class="nss-band">
+  <div class="nss-wrap nss-c">
+    <h2 class="nss-h2 nss-h2--c">Isprobajte ih <em>bez brige.</em></h2>
+    <p class="nss-promise">Obujte ih na posao, na put ili na dugu smjenu. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong>.</p>
+    <p class="nss-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+  </div>
+</div>
+
 <style>
 .nss { --nss-ink: #1c2a33; --nss-text: #4f5b62; --nss-navy: #002e49; --nss-accent: #1f6f9a; --nss-line: #dce2e5; --nss-tint: #f3f6f7;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nss-ink); }
 .nss *, .nss *::before, .nss *::after { box-sizing: border-box; }
 .nss img, .nss video { display: block; max-width: 100%; height: auto; }
+
+/* 6) tablica velicin + 7) NORIKS pogoji */
+.nss-table-wrap { overflow-x: auto; margin: 0 0 16px; }
+.nss-size { width: 100%; border-collapse: collapse; font-size: 15.5px; background: #fff; border: 1px solid #e6e2db; border-radius: 10px; overflow: hidden; }
+.nss-size th, .nss-size td { padding: 11px 14px; text-align: left; border-bottom: 1px solid #f1eee8; }
+.nss-size thead th { background: #f7f2ec; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #6b625a; }
+.nss-size tbody th { font-weight: 700; color: #121212; }
+.nss-size tbody tr:last-child th, .nss-size tbody tr:last-child td { border-bottom: 0; }
+.nss-promise { max-width: 720px; margin: 0 auto 20px; font-size: 17px; line-height: 1.7; color: #4d4640; }
+.nss-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 0; font-size: 14px; font-weight: 600; color: #6b625a; }
+.nss-trust span { position: relative; padding-left: 20px; }
+.nss-trust span::before { content: "\2713"; position: absolute; left: 0; color: #a9683f; }
+.nss-c { text-align: center; }
 .nss-sec--bands { padding: 0 !important; background: transparent !important; }
 .nss-band { padding: 60px 0; background: #fff; }
 .nss-band.nss-tint { background: var(--nss-tint); }
