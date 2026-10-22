@@ -9,6 +9,27 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+/**
+ * Univerzalno pravilo (22.10.2026, Dejan): proizvod bez velicina nema tablicu velicina.
+ * Umjesto crne liste tipova provjeravamo ima li proizvod atribut s velicinom.
+ */
+if ( ! function_exists( 'noriks_ima_velicine' ) ) {
+    function noriks_ima_velicine( $product_id = null ) {
+        if ( ! function_exists( 'wc_get_product' ) ) { return false; }
+        if ( ! $product_id && function_exists( 'noriks_resolve_product_id' ) ) { $product_id = noriks_resolve_product_id( $product_id ); }
+        if ( ! $product_id ) { $product_id = get_the_ID(); }
+        $product = $product_id ? wc_get_product( $product_id ) : null;
+        if ( ! $product ) { return false; }
+        $vzorec = '/veli[c\x{010d}\x{0107}]in|size|broj (cipel|obu)|\x{0161}tevilk/iu';
+        foreach ( (array) $product->get_attributes() as $kljuc => $atribut ) {
+            $ime = is_object( $atribut ) && method_exists( $atribut, 'get_name' ) ? $atribut->get_name() : (string) $kljuc;
+            $oznaka = function_exists( 'wc_attribute_label' ) ? wc_attribute_label( $ime ) : $ime;
+            if ( preg_match( $vzorec, $ime . ' ' . $oznaka ) ) { return true; }
+        }
+        return false;
+    }
+}
+
 if ( ! function_exists( 'noriks_size_chart_once' ) ) {
     function noriks_size_chart_once() {
         static $done = false;

@@ -441,6 +441,7 @@ wp_reset_postdata();
 						    
 						    
 						    
+                            if ( ! function_exists( 'noriks_ima_velicine' ) || noriks_ima_velicine() )
                             echo ' <a href="#" id="open-size-chart" style="margin-left: 10px;
     color: black;
     float: right;
