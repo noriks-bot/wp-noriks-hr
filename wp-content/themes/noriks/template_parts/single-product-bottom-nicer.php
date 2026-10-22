@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS TechTee (orto-techtee) — ikonicna muska majica s okruglim izrezom
+if ( noriks_is_type( 'techtee' ) ) {
+    include $noriks_pb_dir . 'why-techtee.php';
+}
+
 // NORIKS WideToeShoes (orto-widetoeshoes) — tenisice sa sirokim prednjim dijelom
 if ( noriks_is_type( 'widetoeshoes' ) ) {
     include $noriks_pb_dir . 'why-widetoeshoes.php';

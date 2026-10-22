@@ -98,6 +98,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-anklesleeve' );
             return;
         }
+        // NORIKS TechTee: S–4XL po opsegu prsa, visini i tezini (savjet originala: uobicajena velicina).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'techtee' ) ) {
+            get_template_part( 'template_parts/size-chart-techtee' );
+            return;
+        }
         // NORIKS WideToeShoes: EU 37–47 po duljini uloska (cm) + sirina, UK i US velicine iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'widetoeshoes' ) ) {
             get_template_part( 'template_parts/size-chart-widetoeshoes' );

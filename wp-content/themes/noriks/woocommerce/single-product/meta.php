@@ -623,6 +623,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS DishSheets</strong> su listići za pranje posuđa — nova alternativa agresivnim, toksičnim deterdžentima za posuđe. Biljnog su podrijetla, biorazgradivi i bez plastičnog otpada.<br><br>Svaki listić je točno odmjeren: <strong>1 listić = 1 puno pranje</strong>. Dovoljno su svestrani za perilicu posuđa, pranje u sudoperu, namakanje tvrdokornih lonaca i tava ili za četku za posuđe.<br><br>Sadrže samo nužne sastojke — <strong>bez izbjeljivača, fosfata, bojila</strong> i drugih nepotrebnih agresivnih kemikalija. Uz to dolaze u <strong>ambalaži bez plastike</strong>.<br><br><strong>Točno odmjereni:</strong> svaki listić je prava količina za jedno puno pranje<br><strong>Višenamjenski:</strong> za perilicu posuđa, pranje na ruke, namakanje lonaca ili četku za posuđe<br><strong>Prikladni za štedljive perilice:</strong> kompatibilni s visokoučinkovitim (HE) perilicama posuđa za optimalan rezultat<br><strong>Bez štetnih tvari:</strong> bez plastične ambalaže i bez agresivnih kemikalija — čistoća u koju možete imati povjerenja<br><strong>Snažni i nježni:</strong> uklanjaju masnoću, prljavštinu i zapečenu hranu<br><br><strong>Pakiranje:</strong> 1 paket = 80 listića (80 pranja), 3 paketa = 240 listića, 6 paketa = 480 listića. Miris: svježi limun.<br><br><strong>Sastojci:</strong> natrijev kokosulfat, polivinil alkohol, lauril glukozid, glicerin, saponini, natrijev citrat, natrijev bikarbonat, miris, enzimi.
 
+         <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
+
+                <strong>NORIKS TechTee</strong> — ikonična majica, usavršena. <strong>Pripijen kroj</strong>, savršeno izbalansiran: pada točno kako treba, oblikuje siluetu i prirodno se prilagođava svakoj građi.<br><br>Nudi izvanrednu <strong>mekoću</strong>, besprijekorno drži oblik i dugo traje. <strong>Tiskana unutarnja etiketa</strong> zamjenjuje klasične ušivene etikete — za udobnost bez imalo iritacije.<br><br>Apsolutni osnovni komad. Bezvremenski. Neizostavan.<br><br><strong>Materijal i izrada:</strong> drugačiji dodir — namjerno. Tkanina spaja češljani pamuk i Sorona®, poliester biljnog podrijetla (od kukuruznog škroba) koji je razvio DuPont, pažljivo doziran kako bi majica besprijekorno držala oblik kroz vrijeme. Na tijelu je drukčija: mekša, fluidnija, s diskretnim sjajem koji tkanini daje blago satensku završnu obradu — daleko od običnog mat pamuka. Besprijekoran pad koji traje. Ako očekujete klasični pamuk, iznenadit će vas. Ako joj date priliku, nećete je htjeti skinuti.<br><br><strong>Sastav:</strong> 72 % češljani pamuk, 28 % Sorona®<br><strong>Kroj:</strong> okrugli izrez, pripijen kroj<br><br><strong>Boje:</strong> crna, bijela, tamnoplava, kaki, siva, nebeskoplava, lososova i tirkizna.<br><strong>Veličine:</strong> S–4XL. Uzmite svoju uobičajenu veličinu (pogledajte tablicu veličina).
+
          <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 
                 <strong>NORIKS WideToeShoes</strong> su prozračne tenisice sa širokim prednjim dijelom i debljim potplatom — vaš prvi korak prema slobodi hodanja kao bosonogi. Prostran prednji dio omogućuje prstima da se prirodno rašire i smanjuje pritisak na stopala tijekom dugog hodanja, a lagana izrada smanjuje umor i ostaje izdržljiva.<br><br>Kvalitetni materijali propuštaju zrak, pa stopala ostaju suha i udobna. Potplat pouzdano prianja i na kamenitim i neravnim podlogama, a ojačani prednji dio štiti prste od udaraca. Bilo da hodate planinskim stazama, gradom ili istražujete prirodu, ove tenisice spajaju udobnost i svakodnevnu nosivost.<br><br><strong>Gornji dio:</strong> sintetička koža + tkanina<br><strong>Podstava:</strong> mrežasta tkanina<br><strong>Potplat:</strong> guma<br><strong>Debljina potplata:</strong> debeli gumeni potplat za fleksibilnost i otpornost na klizanje<br><strong>Vodootpornost:</strong> nisu vodootporne, ali se brzo suše<br><strong>Zatvaranje:</strong> vezice<br><br><strong>Boje:</strong> bijelo-siva, smeđa, bež-zelena, bež-crvena, crno-bijela, bež-siva, kaki i tamnosmeđa.<br><strong>Veličine:</strong> EU 37–47. Tenisice mogu biti malo manje — veličinu odaberite prema tablici veličina (duljina uloška = duljina stopala + 1–1,5 cm).
@@ -1347,6 +1351,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>S do 4XL</strong>. Majica ima <strong>pripijen kroj</strong> — <strong>uzmite svoju uobičajenu veličinu</strong>. Ako ste između dvije veličine ili volite malo opušteniji kroj, odaberite veću.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Visina</th>
+                  <th style="padding:9px 8px;text-align:left;">Težina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_techtee_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2010,6 +2045,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'dishsheets', $current_product_id ) ): ?>
 
                 Jedan listić stavite izravno u pretinac za deterdžent u perilici posuđa i odaberite željeni program. Za manja pranja ili namakanje dovoljna je <strong>polovica listića</strong>. Za pranje na ruke listić otopite u vodi u sudoperu — nastat će lagana pjena — i perite posuđe kao i inače.
+
+             <?php elseif( noriks_is_type( 'techtee', $current_product_id ) ): ?>
+
+                Preporučujemo <strong>pranje na hladno</strong> i sušenje na ravnoj podlozi ili u sušilici na niskoj temperaturi. Pri sušenju u sušilici majica se može malo skupiti (otprilike <strong>5 %</strong>). Majicu ne treba glačati.
 
              <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 

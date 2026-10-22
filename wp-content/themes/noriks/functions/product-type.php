@@ -154,6 +154,8 @@ function noriks_product_type_map() : array {
         'orthomules'              => array( 'orto-orthomules', 'orthomules' ),
         // NORIKS WideToeShoes — tenisice sa sirokim prednjim dijelom (boja + velicina EU 37–47).
         'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
+        // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
+        'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -552,6 +554,24 @@ if ( ! function_exists( 'noriks_orthomules_sizes' ) ) {
             array( 'EU 41', '10–10,5', '8–8,5' ),
             array( 'EU 42', '11–11,5', '9–9,5' ),
             array( 'EU 43', '12', '10' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_techtee_sizes' ) ) {
+    /** NORIKS TechTee: velicina, opseg prsa (cm), visina (cm), tezina (kg).
+     *  Original (fincutmen.com) nima staticne tablice (samo kalkulator SIZETECH+); razponi so standardni za
+     *  pripijeno musko majico in usklajeni s podatki originala (video: S 178 cm/66 kg, XL 192 cm/91 kg,
+     *  2XL 184 cm/105 kg; mnenje 191 cm/105 kg -> 2XL). Savjet originala: uzmite uobicajenu velicinu. */
+    function noriks_techtee_sizes() {
+        return array(
+            array( 'S',   '88 – 94 cm',   '165 – 180 cm', '55 – 68 kg' ),
+            array( 'M',   '94 – 100 cm',  '170 – 183 cm', '65 – 77 kg' ),
+            array( 'L',   '100 – 106 cm', '175 – 188 cm', '74 – 86 kg' ),
+            array( 'XL',  '106 – 112 cm', '180 – 193 cm', '84 – 96 kg' ),
+            array( '2XL', '112 – 118 cm', '182 – 196 cm', '94 – 107 kg' ),
+            array( '3XL', '118 – 124 cm', '183 – 198 cm', '105 – 118 kg' ),
+            array( '4XL', '124 – 132 cm', '185 – 200 cm', '116 – 130 kg' ),
         );
     }
 }
