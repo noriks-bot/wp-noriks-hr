@@ -339,6 +339,11 @@ if ( noriks_is_type( 'fleecetights' ) ) {
     include $noriks_pb_dir . 'why-fleecetights.php';
 }
 
+// NORIKS SleepEarplugs (orto-sleepearplugs) — cepici za usi za spavanje na boku
+if ( noriks_is_type( 'sleepearplugs' ) ) {
+    include $noriks_pb_dir . 'why-sleepearplugs.php';
+}
+
 // NORIKS LitterBox (orto-litterbox) — automatska samocisteca posuda za macji pijesak
 if ( noriks_is_type( 'litterbox' ) ) {
     include $noriks_pb_dir . 'why-litterbox.php';

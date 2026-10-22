@@ -146,6 +146,8 @@ function noriks_product_type_map() : array {
         'catfountain'             => array( 'orto-catfountain', 'catfountain' ),
         // NORIKS LitterBox — automatska samocisteca posuda za macji pijesak (samo boja).
         'litterbox'               => array( 'orto-litterbox', 'litterbox' ),
+        // NORIKS SleepEarplugs — cepici za usi za spavanje na boku (samo boja).
+        'sleepearplugs'           => array( 'orto-sleepearplugs', 'sleepearplugs' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).

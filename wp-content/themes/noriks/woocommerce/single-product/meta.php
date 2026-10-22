@@ -619,6 +619,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS CatFountain</strong> je fontana za mačke od nehrđajućeg čelika s mlazom u obliku slavine koji budi prirodni nagon vaše mačke da pije više vode — <strong>i do 3x više</strong>. Bolja hidracija pomaže smanjiti rizik od problema s bubrezima i urinarnih infekcija.<br><br><strong>Nehrđajući čelik 304:</strong> bez BPA, siguran za mačke; zaustavlja 99 % bakterija i sprječava sluz, mirise i mačje akne koje uzrokuju plastične zdjelice<br><strong>Mlaz u obliku slavine:</strong> oponaša slavinu iz koje mačke ionako vole piti<br><strong>Ultra tiha pumpa (&lt; 20 dB):</strong> može raditi cijelu noć bez ometanja sna<br><strong>Filtriranje u 3 sloja:</strong> filtar s aktivnim ugljenom i spužva za predfiltriranje zadržavaju dlake, ostatke, mirise i nečistoće<br><strong>Kapacitet 2,2 L:</strong> dovoljno vode za 8–10 dana, s pokazivačem razine vode<br><strong>Čišćenje za manje od 5 minuta:</strong> dijelovi od nehrđajućeg čelika mogu se prati u perilici posuđa<br><strong>Široka i plitka posuda:</strong> bez zamora brkova, prikladna i za više mačaka<br><br><strong>U kutiji:</strong> 1x NORIKS CatFountain fontana 2,2 L, 1x filtri za 2 mjeseca, 1x adapter za napajanje, 1x upute za upotrebu.<br><br><strong>Specifikacije:</strong> fontana s kabelom (napajanje preko adaptera, mora biti priključena na struju); filtre mijenjajte svaka 2–4 tjedna; dimenzije (D × Š × V): 17,5 × 17,5 × 17,5 cm.
 
+         <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
+
+                <strong>NORIKS SleepEarplugs</strong> su ultra udobni čepići za uši za spavanje — za mirne noći s manje bučnih ometanja, bilo da spavate na boku, prigušujete hrkanje partnera ili oboje.<br><br><strong>Udobni za spavanje na boku:</strong> nizak profil i naš najmekši silikon smanjuju pritisak na uho za udobnost cijelu noć<br><strong>Dvije vrste nastavaka:</strong> unaprijed postavljeni ovalni nastavci od pjene i silikona prate prirodan oblik uha, a dvostruki nastavci omogućuju još bolju prilagodbu<br><strong>Smanjenje buke 27 dB (SNR):</strong> prigušuje hrkanje partnera, gradsku buku i druga noćna ometanja<br><strong>Sigurno pristajanje:</strong> stvoreni da ostanu u ušima dok spavate na boku i krećete se tijekom noći<br><strong>Prilagodljivo pristajanje:</strong> četiri veličine nastavaka (XS, S, M, L), i za manje uši<br><strong>Višekratni i lako se čiste:</strong> izrađeni od izdržljivog silikona<br><strong>Kutijica za nošenje:</strong> s neklizajućim dnom i prostranim pretincem, uvijek nadohvat ruke uz krevet<br><br><strong>Građa čepića:</strong> vanjski silikonski vrh, memorijska pjena iznutra, čvrsta silikonska jezgra i mekano silikonsko tijelo.<br><br><strong>U paketu:</strong> 1x par NORIKS SleepEarplugs čepića, 1x kutijica za noćni ormarić, 4 para nastavaka od pjene i silikona (XS + S + M + L) i 4 para dvostrukih nastavaka (XS + S + M + L).<br><br><strong>Što znači 27 dB?</strong> Tihi zvukovi (disanje, hladnjak, perilica posuđa) najvjerojatnije se neće čuti, srednje glasni (televizor u drugoj sobi, udaljeni promet) svest će se na tihi šum, a glasni (sirene, lajanje psa, vatromet) i dalje će se čuti, ali puno tiše. Čepići buku smanjuju, ali je ne uklanjaju potpuno.
+
          <?php elseif( noriks_is_type( 'litterbox', $current_product_id ) ): ?>
 
                 <strong>NORIKS LitterBox</strong> je automatska samočisteća posuda za mačji pijesak — dođite kući u čist dom, bez razmišljanja o tome. Zamislite da uđete u svoj dom i ne osjetite nikakav miris: bez podsjetnika da pijesak treba očistiti i bez grižnje savjesti zbog čišćenja za kasnije. NORIKS LitterBox to radi umjesto vas — tiho, dosljedno i sigurno.<br><br>Kad mačka priđe, posuda to primijeti. Kad mačka ode, posuda pričeka. A kad čisti, radi kontroliranim pokretima i s ugrađenom zaštitom.<br><br><strong>6 parova infracrvenih senzora</strong> nadzire ulaz<br><strong>4 Hallova senzora</strong> prate točan položaj bubnja<br><strong>Mehanički graničnik od 30°</strong> sprječava nesigurno zatvaranje<br><strong>Aktivna zaštita od priklještenja</strong> zaustavlja rad čim se mačka previše približi<br><br><strong>Bez Wi-Fija, bez aplikacija, bez pretplate:</strong> samo je uključite i postat će tihi dio vaše svakodnevice.<br><strong>Zatvorena ladica za otpad</strong> zadržava mirise, a <strong>četvrtasta komora</strong> osigurava stabilno okretanje. Prikladna za do 3 mačke.<br><br>Ovo nije spravica koju isprobate tjedan dana — ovo je trenutak kad svakodnevno čišćenje pijeska prestaje biti dio vašeg života. Jer vaš dom treba biti čist — bez truda.<br><br><strong>U paketu:</strong> glavna jedinica, spremnik za otpad, 4 noge, adapter za napajanje (12 V DC, 2 A), 1 rola vrećica (20 kom), prednja stepenica za ulaz, upute za upotrebu i vodič za brzi početak.<br><br><strong>Dimenzije:</strong> visina 55,5 cm, širina 53,5 cm, dubina 40 cm, visina ulaza 31,5 cm.<br><br><strong>Pijesak:</strong> koristite sitnozrnati grudajući mineralni ili bentonitni pijesak (ne kristalni, ne negrudajući i ne dugi tofu pijesak). Automatski način namijenjen je mačkama težim od 1,4 kg i starijim od 6 mjeseci.
@@ -1331,6 +1335,20 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">NORIKS SleepEarplugs dolaze u <strong>jednoj veličini</strong> — u paketu su nastavci u četiri veličine, pa pristajanje prilagođavate svom uhu. Veličina se može razlikovati od jednog uha do drugog.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <tbody>
+                <tr style="background:#a9683f;color:#fff;"><th style="padding:9px 8px;text-align:left;">Nastavci</th><th style="padding:9px 8px;text-align:left;">Veličine u paketu</th></tr>
+                <tr style="background:#fff;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Nastavci od pjene i silikona</td><td style="padding:9px 8px;">XS, S, M, L (4 para)</td></tr>
+                <tr style="background:#f7f2ec;border-bottom:1px solid #eee;"><td style="padding:9px 8px;font-weight:700;">Dvostruki nastavci</td><td style="padding:9px 8px;">XS, S, M, L (4 para)</td></tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;">Pravilno pristajanje je udobno i primjetno smanjuje okolnu buku. Isprobajte različite veličine i obje vrste nastavaka dok ne pronađete onu koja najbolje brtvi. Ako vam ne odgovaraju, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'litterbox', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1912,6 +1930,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'catfountain', $current_product_id ) ): ?>
 
                 Prije čišćenja fontanu isključite iz struje. Rastavite je na glavne dijelove — nema sitnih dijelova ni teško dostupnih kutova. Dijelove od nehrđajućeg čelika operite u sudoperu ili ih stavite u <strong>perilicu posuđa</strong>; čišćenje traje <strong>manje od 5 minuta</strong>. Filtre mijenjajte svaka 2–4 tjedna (češće ako imate više mačaka) kako bi voda ostala čista i svježa.
+
+             <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
+
+                Čepiće redovito čistite kako bi ostali udobni i higijenski: nastavke skinite i operite mlakom vodom s malo blagog sapuna, isperite i ostavite da se potpuno osuše na zraku prije ponovne upotrebe. Silikonsko tijelo obrišite vlažnom krpom. Ne koristite alkohol, agresivna sredstva ni abrazivne alate. Kad nastavci izgube oblik ili se istroše, zamijenite ih. Čepiće između upotreba držite u kutijici.
 
              <?php elseif( noriks_is_type( 'litterbox', $current_product_id ) ): ?>
 
