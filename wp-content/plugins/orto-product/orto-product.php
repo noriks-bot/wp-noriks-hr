@@ -39,7 +39,6 @@ function gck_get_bundle_offers( $product_id = null ) : array {
     // preberi navadne post_meta ključe v formatu _singlepp_orto_pairs_{N}_{field}
     if ( empty($rows) || ! is_array($rows) ) {
         $count = (int) get_post_meta( $product_id, '_singlepp_orto_pairs', true );
-        error_log("GCK DEBUG [{$product_id}]: count={$count}, rows_from_acf=" . (is_array($rows) ? count($rows) : 'false'));
         if ( $count > 0 ) {
             $rows = [];
             for ( $i = 0; $i < $count; $i++ ) {
@@ -54,7 +53,6 @@ function gck_get_bundle_offers( $product_id = null ) : array {
                     'p2'        => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_p2", true ),
                     'tip'       => get_post_meta( $product_id, "_singlepp_orto_pairs_{$i}_tip", true ),
                 );
-                error_log("GCK DEBUG row {$i}: " . json_encode($row));
                 $rows[] = $row;
             }
         }
@@ -613,19 +611,15 @@ function gck_render_bundle_selector() {
 
     global $product;
 
-    echo "<!-- GCK DEBUG: gck_render_bundle_selector() called -->\n";
 
     if ( ! is_product() || ! $product || ! gck_is_orto_bundle_enabled( $product->get_id() ) ) {
-        echo "<!-- GCK DEBUG: early return (not product page or bundle disabled) -->\n";
         return;
     }
 
     $product_id = $product->get_id();
 
     $offers = gck_get_bundle_offers( $product_id );
-    echo "<!-- GCK DEBUG: product_id={$product_id}, offers_count=" . count($offers) . " -->\n";
     if ( empty( $offers ) ) {
-        echo "<!-- GCK DEBUG: no offers, returning -->\n";
         return;
     }
 
