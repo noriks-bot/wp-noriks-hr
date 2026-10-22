@@ -939,6 +939,20 @@
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
 
+  // Univerzalno (Dejan, 23. 10.): ce za izdelek ni posebej dolocenega naslova, naj kartice mnenj
+  // navajajo TA izdelek in ne privzete sive majice. Velja za vse nove izdelke (kategorija orto-*).
+  if ( $rv_fallback_title === 'Jedna Siva Majica' && ! empty( $current_product_id ) ) {
+    $rv_kategorije = wp_get_post_terms( $current_product_id, 'product_cat', array( 'fields' => 'slugs' ) );
+    $rv_je_orto = is_array( $rv_kategorije ) && count( array_filter( $rv_kategorije, function ( $slug ) {
+      return strpos( $slug, 'orto-' ) === 0;
+    } ) ) > 0;
+    if ( $rv_je_orto ) {
+      $rv_fallback_title = get_the_title( $current_product_id );
+      $rv_fallback_url   = get_permalink( $current_product_id );
+    }
+  }
+  if ( ! isset( $rv_fallback_url ) ) { $rv_fallback_url = '#'; }
+
   // Include review pools (own pool per product group)
   if ( $is_slippers_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_slippers.php';
@@ -1552,7 +1566,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
         $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
-        $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
+        $url   = !empty($review['product_url'])   ? $review['product_url']   : $rv_fallback_url;
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
         $avatar_url   = !empty($review['avatar_url']) ? $review['avatar_url'] : '';
@@ -1589,7 +1603,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
         $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
-        $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
+        $url   = !empty($review['product_url'])   ? $review['product_url']   : $rv_fallback_url;
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
         $avatar_url   = !empty($review['avatar_url']) ? $review['avatar_url'] : '';
@@ -1647,6 +1661,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     const chunksShip    = <?php echo json_encode($chunks_ship); ?>;
     const isNogavice    = <?php echo ( $is_nogavice_page || $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page ) ? 'true' : 'false'; ?>; // text-only (socks + belt + bunion + fisiorest + norikshers + jastuk)
     const rvFallback    = <?php echo json_encode($rv_fallback_title); ?>;
+    const rvFallbackUrl = <?php echo json_encode($rv_fallback_url); ?>;
 
     let nextProduct = 0;
     let nextShip    = 0;
@@ -1696,7 +1711,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
         const article = document.createElement('article');
         article.className = 'review-card is-new';
 
-        const url       = review.product_url   || '#';
+        const url       = review.product_url   || rvFallbackUrl;
         const title     = review.product_title || rvFallback;
         const name      = review.name          || 'Anonymní';
         const text      = review.text          || '';
