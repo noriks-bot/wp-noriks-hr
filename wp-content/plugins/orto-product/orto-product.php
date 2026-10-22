@@ -714,7 +714,7 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array();
     }
 
-    $gck_no_attrs    = has_term( array( 'orto-viinia', 'orto-destapacan', 'orto-ondersteun', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-giovasa', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-viinia', 'orto-destapacan', 'orto-ondersteun', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-giovasa', 'orto-fieldops', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush' ), 'product_cat', $product_id );
     $gck_single_size = has_term( array( 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
