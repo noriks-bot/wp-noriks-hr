@@ -873,19 +873,6 @@ if ( ! function_exists( 'noriks_hoodie_sizes' ) ) {
     }
 }
 
-if ( ! function_exists( 'noriks_fleecetights_sizes' ) ) {
-    /** Fleecies™ Classics (fleece-lined tights): veličina, obim struka, obim bokova, visina tijela.
-     *  Original (myfleecies.com) nudi veličine S–XL s standardnim rasponima za žensko donje rublje. */
-    function noriks_fleecetights_sizes() {
-        return array(
-            array( 'S',   '60 – 68 cm', '85 – 93 cm',  '155 – 165 cm' ),
-            array( 'M',   '66 – 74 cm', '91 – 99 cm',  '160 – 170 cm' ),
-            array( 'L',   '72 – 82 cm', '97 – 107 cm', '165 – 175 cm' ),
-            array( 'XL',  '80 – 92 cm', '105 – 117 cm', '170 – 180 cm' ),
-        );
-    }
-}
-
 if ( ! function_exists( 'noriks_fieldops_sizes' ) ) {
     /** NORIKS FieldOps Pro (taktične slušalke) — nema veličina, samo boja (Carbon Black, Army Green). */
     function noriks_fieldops_sizes() {
