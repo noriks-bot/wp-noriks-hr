@@ -83,15 +83,15 @@ $nbl_uses = array(
 /* 6) Znanost */
 $nbl_science = array(
   array( 'Kompresijska terapija od 360°', 'Nježnom kompresijom obavija cijelo tijelo sa svih strana.' ),
-  array( 'Šalje signale opuštanja mozgu', 'Nježna kompresija oponaša osjećaj zagrljaja i potiče receptore serotonina u mozgu.' ),
-  array( 'Stvara stanje smirenosti', 'Osjećaj dodira opušta mišiće, što prirodno smiruje tjeskoban um.' ),
+  array( 'Šalje tijelu signal da se može opustiti', 'Nježna kompresija oponaša osjećaj zagrljaja — tijelo ga prepozna kao sigurnost.' ),
+  array( 'Stvara stanje smirenosti', 'Osjećaj obuhvaćenosti opušta mišiće i tijelo se lakše spusti u mirovanje.' ),
   array( 'Za miran san koji obnavlja', 'Tjeskoba i stres prelaze u umor, pa brže zaspite i dulje spavate.' ),
 );
 
 /* 8) DTP */
 $nbl_dtp = array(
-  array( 'ikona' => 'bl-dtp-1.webp', 'naslov' => 'Smiruje živčani sustav i ublažava tjeskobu',
-    'tekst' => 'DTP aktivira umirujući dio živčanog sustava i snižava razinu hormona stresa. Djeci s tjeskobom, ADHD-om ili senzornim teškoćama pomaže da se osjećaju sigurno i smireno.' ),
+  array( 'ikona' => 'bl-dtp-1.webp', 'naslov' => 'Daje osjećaj sigurnosti i pomaže pri smirivanju',
+    'tekst' => 'Ravnomjeran, nježan pritisak po cijelom tijelu daje osjećaj sigurnosti i pomaže da se lakše smirite. Mnogi ga koriste navečer, kad je teško doći do mira.' ),
   array( 'ikona' => 'bl-dtp-2.webp', 'naslov' => 'Brže uspavljivanje i kvalitetniji san',
     'tekst' => 'Istraživanja pokazuju da DTP pomaže djeci da brže zaspu i dublje spavaju. Nježan pritisak signalizira sigurnost, pa se navečer lakše opuste.' ),
   array( 'ikona' => 'bl-dtp-3.webp', 'naslov' => 'Podupire senzornu regulaciju i smanjuje nemir',

@@ -6,7 +6,7 @@
  *   1) Potporne carape koje se lako oblace ... — naslov + 3 vrstice video | besedilo (svetlo siva)
  *   2) Zato su NORIKS bolje od obicnih potpornih carapa — vrstica 6 ikon (temno modra)
  *   3) Mekani rub / Suha stopala / Vrh bez savova — 3 vrstice video | besedilo (bela)
- *   4) 1 000 000+ prodanih pari — 6 mnenj v preprosti mrezi (svetlo siva)
+ *   4) Mnenja kupcev (original ima "1 000 000+ solgte par" — tuja stevilka, izpuscena) — 6 mnenj v preprosti mrezi (svetlo siva)
  *   5) Recenzije kupaca (Loox na originalu: ocena 4,3 / 5, 40 mnenj, 7 fotografij kupcev)
  * FAQ originala (med 4 in 5) je v reviews.php ($supportsocks_faq), kratka mnenja v auto_reviews/HR_supportsocks.php,
  * dolg opis v meta.php, velikosti v size-chart-supportsocks.php (noriks_supportsocks_sizes()).
@@ -35,7 +35,7 @@ $nss_video = function( $file, $label ) use ( $nss, $nss_path ) {
  * [ video, kicker, naslov, poudarek, odstavek, zakljucna vrstica ] */
 $nss_rows_1 = array(
   array( 'ss-video-1', 'Lako oblačenje', 'Lako se oblače', 'i skidaju', 'Mekani, elastični materijal čini da se potporne čarape NORIKS SupportSocks lako oblače i skidaju.', 'Ne morate se mučiti s njima.' ),
-  array( 'ss-video-2', 'Kompresija', '12–15 mmHg', 'stupnjevana kompresija', 'Pritisak je najjači oko gležnja i smanjuje se prema listu. To pomaže cirkulaciji krvi i smanjuje rizik od oticanja.', 'Može ublažiti umor i oticanje nogu.' ),
+  array( 'ss-video-2', 'Kompresija', '12–15 mmHg', 'stupnjevana kompresija', 'Pritisak je najjači oko gležnja i smanjuje se prema listu. Tako noge ostaju lakše nakon dugog stajanja ili sjedenja.', 'Može ublažiti umor i oticanje nogu.' ),
   array( 'ss-video-3', 'Udobnost', 'Udobne', 'cijeli dan', 'NORIKS SupportSocks pružaju potporu, a ne stežu previše. Ugodno ih je nositi od jutra do večeri.', 'Savršene za svakodnevno nošenje, posao, putovanja i još mnogo toga.' ),
 );
 $nss_rows_3 = array(
@@ -153,11 +153,11 @@ $nss_row = function( $r, $rev ) use ( $nss_video ) {
   </div>
 </section>
 
-<!-- 4) 1 000 000+ prodanih pari — preprosta mreza mnenj -->
+<!-- 4) Mnenja kupcev (original ima "1 000 000+ solgte par" — tuja stevilka, izpuscena) — preprosta mreza mnenj -->
 <section class="nss-sec nss-tint" aria-labelledby="nss-quotes-h">
   <div class="nss-wrap">
     <p class="nss-kicker nss-kicker--c">Recenzije</p>
-    <h2 id="nss-quotes-h" class="nss-h2 nss-h2--c">1 000 000+ prodanih pari – <em>evo što kažu kupci</em></h2>
+    <h2 id="nss-quotes-h" class="nss-h2 nss-h2--c">Tisuće zadovoljnih kupaca – <em>evo što kažu</em></h2>
     <div class="nss-quotes">
       <?php foreach ( $nss_quotes as $q ) : ?>
       <article class="nss-qcard">

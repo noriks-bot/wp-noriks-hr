@@ -79,12 +79,12 @@ $nbr_circ = 2 * M_PI * 52;
       <h2 class="nbr-h2">Probudite svoju <em>iskonsku oštrinu</em></h2>
       <p><strong>Spartanski ratnici</strong> nikad je nisu skidali. <strong>Samurajski gospodari rata</strong> s njom su bili pokopani. <strong>Egipatski kraljevi</strong> tražili su je u svojim grobnicama.</p>
       <p>Znali su ono što su moderni muškarci zaboravili.</p>
-      <p><strong>NORIKS narukvica</strong> donosi <strong>čisti magnetski hematit</strong> — drevni kamen <strong>jasnoće, dominacije i snažne prisutnosti</strong>. Bez tableta. Bez nuspojava. Samo <strong>30 g magnetske snage</strong> koja tiho djeluje na vašoj koži — <strong>osjetite je čim dotakne vaše zapešće</strong>.</p>
+      <p><strong>NORIKS narukvica</strong> donosi <strong>čisti magnetski hematit</strong> — drevni kamen <strong>jasnoće, dominacije i snažne prisutnosti</strong>. Bez tableta. Samo <strong>30 g hematita s magnetima</strong> koja tiho djeluje na vašoj koži — <strong>osjetite je čim dotakne vaše zapešće</strong>.</p>
       <p class="nbr-big">Ovo nije nakit. Ovo je nepoštena prednost.</p>
       <p><em>„Drugi tjedan: oštriji fokus, bolji san i motivacija mi je kao u dvadesetima. Djevojka misli da nešto uzimam.“</em><br>— <strong>Ryan M., 38</strong></p>
       <ul class="nbr-check">
-        <li><strong>Prirodno potiče testosteron</strong></li>
-        <li><strong>Vraća samopouzdanje</strong></li>
+        <li><strong>Prirodni hematit s magnetima</strong></li>
+        <li><strong>Težina koja se osjeti na zapešću</strong></li>
       </ul>
     </div>
   </div>

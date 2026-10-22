@@ -153,7 +153,7 @@ $ntk_ugc = array(
       <blockquote class="ntk-quote"><span class="ntk-stars">★★★★★</span>„Kupila sam ih da ih nosim ispod svečane haljine na sinovom vjenčanju. Ne samo da su me vitkije oblikovale i nisu se vidjeli nikakvi rubovi, nego su bile i jako udobne! Zaboravila sam da ih uopće nosim!“<cite>Denise H. · Provjereni kupac · vjenčanje</cite></blockquote>
       <blockquote class="ntk-quote"><span class="ntk-stars">★★★★★</span>„Odlične za svakodnevno nošenje“<cite>Helen W. · Provjereni kupac · svaki dan</cite></blockquote>
       <blockquote class="ntk-quote"><span class="ntk-stars">★★★★★</span>„Nevjerojatno oblikujuće rublje, materijal prianja uz tijelo i ne smota se, toliko je udobno i lagano da stvarno zaboravite da ga nosite.“<cite>Vicky I. · Provjereni kupac · svaki dan</cite></blockquote>
-      <p class="ntk-note">Komadi: podaci trgovine, broj prodanih kratkih hlačica. Postoci: anketa nakon kupnje, 15 000+ kupaca.</p>
+      <p class="ntk-note">Komadi: podaci trgovine, broj prodanih kratkih hlačica. Postoci: anketa nakon kupnje među NORIKS kupcima.</p>
     </div>
     <div class="ntk-media">
       <div class="ntk-duo">

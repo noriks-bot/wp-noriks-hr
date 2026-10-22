@@ -5,6 +5,9 @@
  * oblika po NORIKS stilu (predloga why-hands.php / why-bratank.php):
  *   1) Recenzije (preprosta mreza kartic, brez drsnika)
  *   2) Kako osigurava savrsenu potporu? (3 kartice originala -> 3 vrstice slika ob besedilu, strani in ozadja se izmenjujejo)
+ *   3) Pronadite svoju velicinu (originalov "Trouvez votre taille en 5 secondes" — koraki + tablica XS-5XL 1:1)
+ *   4) Sastav i njega (originalov akordeon "Composition et conseils d'entretien": 90 % poliamid / 10 % elastan, 30 °C)
+ *   5) NORIKS pogoji (30 dana za povrat, besplatna dostava iznad 70 EUR)
  * "Nous avons ete vu dans" (logotipi medija) je izpuscen — trgovinski modul.
  * FAQ originala je v reviews.php ($brassiere_faq), mnenja v auto_reviews/HR_brassiere.php.
  * Slike: img/brassiere/ (original, brez napisov in logotipa).
@@ -110,6 +113,70 @@ $nbs_stars = '<span class="nbs-stars" aria-label="5 od 5 zvjezdica">' . str_repe
 </section>
 <?php endforeach; ?>
 
+<!-- 3) PRONAĐITE SVOJU VELIČINU — kot na originalu ("Trouvez votre taille"), tablica 1:1 -->
+<section class="nbs-sec">
+  <div class="nbs-wrap">
+    <div class="nbs-row2 nbs-row2--rev">
+      <div class="nbs-copy">
+        <p class="nbs-kicker">Veličina</p>
+        <h2 class="nbs-h2">Pronađite svoju veličinu <em>u pet sekundi.</em></h2>
+        <ol class="nbs-steps">
+          <li><span class="nbs-num">1</span><div><strong>Izmjerite širinu trake.</strong> Krojačkim metrom obuhvatite trup odmah ispod grudi, položeno i pripijeno uz tijelo.</div></li>
+          <li><span class="nbs-num">2</span><div><strong>Izmjerite opseg grudi.</strong> Metar vodite preko najistaknutijeg dijela grudi, bez stezanja.</div></li>
+          <li><span class="nbs-num">3</span><div><strong>Pronađite svoj red u tablici.</strong> Zadnji stupac pokazuje klasičnu oznaku grudnjaka, pa možete usporediti s onim što već nosite.</div></li>
+        </ol>
+        <div class="nbs-table-wrap">
+          <table class="nbs-size">
+            <thead><tr><th scope="col">Veličina</th><th scope="col">Širina trake</th><th scope="col">Opseg grudi</th><th scope="col">Klasični ekv.</th></tr></thead>
+            <tbody>
+              <?php foreach ( ( function_exists( 'noriks_brassiere_sizes' ) ? noriks_brassiere_sizes() : array() ) as $nbs_r ) : ?>
+              <tr><th scope="row"><?php echo esc_html( $nbs_r[0] ); ?></th>
+                  <td><?php echo esc_html( $nbs_r[1] ); ?></td>
+                  <td><?php echo esc_html( $nbs_r[2] ); ?></td>
+                  <td><?php echo esc_html( $nbs_r[3] ); ?></td></tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+        <p class="nbs-big">Niste sigurni? Uzmite svoju uobičajenu veličinu.</p>
+        <p>Bešavni materijal se rasteže i prilagođava, pa radi i kad ste između dvije veličine. Dostupne su sve veličine od XS do 5XL.</p>
+      </div>
+      <div class="nbs-media"><?php echo $nbs_img( 'bs-04-crna-bok.webp', 'Veličine NORIKS Brassiere — od XS do 5XL' ); ?></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4) SASTAV I NJEGA — akordeon originala ("Composition et conseils d'entretien") kot sekcija -->
+<section class="nbs-sec nbs-tint">
+  <div class="nbs-wrap">
+    <div class="nbs-row2">
+      <div class="nbs-media"><?php echo $nbs_img( 'bs-03-crna-detalj.webp', 'Bešavna tkanina NORIKS Brassiere izbliza' ); ?></div>
+      <div class="nbs-copy">
+        <p class="nbs-kicker">Sastav i njega</p>
+        <h2 class="nbs-h2">Tkanina koja <em>zadrži oblik.</em></h2>
+        <p><strong>90 % poliamid, 10 % elastan.</strong> Mješavina koja se rasteže u svim smjerovima, diše na toplim danima i vraća se u oblik nakon nošenja.</p>
+        <ul class="nbs-care">
+          <li>Perite na <strong>30 °C</strong>, na programu za osjetljivo rublje.</li>
+          <li>Bez omekšivača i bez izbjeljivača — oni razgrađuju elastan.</li>
+          <li>Sušite na zraku, ne u sušilici i ne na radijatoru.</li>
+          <li>Ne glačajte i ne čistite kemijski.</li>
+        </ul>
+        <p class="nbs-big">Tako elastičnost ostaje ista i nakon desetaka pranja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5) NORIKS pogoji -->
+<section class="nbs-sec">
+  <div class="nbs-wrap nbs-c">
+    <h2 class="nbs-h2 nbs-c">Isprobajte ga <em>bez brige.</em></h2>
+    <p class="nbs-promise">Nosite ga, operite ga, provjerite kako stoji ispod odjeće. Ako nije za vas, imate <strong>30 dana za povrat novca</strong>.</p>
+    <p class="nbs-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+  </div>
+</section>
+
+
 <style>
 /* NORIKS stil (predloga why-hands.php): oznaka + naslov z lezecim poudarkom, slika ob besedilu, izmenjujoca ozadja */
 .nbs-sec { padding: 60px 0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #121212; background: #fff; }
@@ -148,6 +215,29 @@ $nbs_stars = '<span class="nbs-stars" aria-label="5 od 5 zvjezdica">' . str_repe
 .nbs-copy p { font-size: 16px; line-height: 1.7; color: #4d4446; margin: 0 0 14px; }
 .nbs-copy p.nbs-big { font-size: 19px; font-weight: 700; color: #121212; line-height: 1.45; margin-top: 6px; }
 
+/* 3) velicine — koraki in tablica */
+.nbs-steps { list-style: none; margin: 0 0 22px; padding: 0; }
+.nbs-steps li { display: flex; gap: 14px; align-items: flex-start; margin: 0 0 14px; font-size: 16px; line-height: 1.65; color: #4d4446; }
+.nbs-num { flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%; background: #a65a5d; color: #fff; font-size: 14px; font-weight: 700; line-height: 28px; text-align: center; }
+.nbs-steps strong { color: #121212; font-weight: 600; }
+.nbs-table-wrap { overflow-x: auto; margin: 0 0 18px; }
+.nbs-size { width: 100%; border-collapse: collapse; font-size: 15px; background: #fff; border: 1px solid #eadcdb; border-radius: 10px; overflow: hidden; }
+.nbs-size th, .nbs-size td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #f1e6e5; white-space: nowrap; }
+.nbs-size thead th { background: #f7efee; font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #6b5f61; }
+.nbs-size tbody th { font-weight: 700; color: #121212; }
+.nbs-size tbody tr:last-child th, .nbs-size tbody tr:last-child td { border-bottom: 0; }
+
+/* 4) njega */
+.nbs-care { list-style: none; margin: 0 0 16px; padding: 0; }
+.nbs-care li { position: relative; padding-left: 26px; margin: 0 0 10px; font-size: 16px; line-height: 1.65; color: #4d4446; }
+.nbs-care li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #a65a5d; font-weight: 700; }
+
+/* 5) NORIKS pogoji */
+.nbs-promise { max-width: 760px; margin: 0 auto 22px; font-size: 17px; line-height: 1.7; color: #4d4446; }
+.nbs-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 0; font-size: 14px; font-weight: 600; color: #6b5f61; }
+.nbs-trust span { position: relative; padding-left: 20px; }
+.nbs-trust span::before { content: "✓"; position: absolute; left: 0; color: #a65a5d; }
+
 @media (max-width: 989px) {
   .nbs-revs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nbs-row2 { gap: 32px; }
@@ -159,6 +249,8 @@ $nbs_stars = '<span class="nbs-stars" aria-label="5 od 5 zvjezdica">' . str_repe
   .nbs-revs { grid-template-columns: 1fr; gap: 14px; }
   .nbs-row2 { grid-template-columns: 1fr; gap: 24px; }
   .nbs-row2--rev .nbs-media { order: 0; }
+  .nbs-size { font-size: 13.5px; }
+  .nbs-size th, .nbs-size td { padding: 8px 9px; }
   .nbs-h2--top { margin-bottom: 28px; }
 }
 

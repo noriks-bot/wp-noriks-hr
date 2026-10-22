@@ -4,7 +4,7 @@
  * Original: lunara-comfort.com/products/front-support-built-in-bra-tank — vsebina in vrstni red 1:1
  * z originalom, oblika po NORIKS stilu (kot why-hands.php: oznaka + naslov z lezecim poudarkom,
  * izmenicna ozadja, brez drsnikov, pasic in odstevalnikov).
- *   1) Pridruzite se 20.000+ zadovoljnih kupaca (6 mnenj, mreza)
+ *   1) Pridruzite se 120.000+ zadovoljnih kupaca (NORIKS stevilka, original ima 20.000+) (6 mnenj, mreza)
  *   2) Sto smo promijenili + Kako djeluje — sloj po sloj (4 kartice)
  *   3) Vasa nova jutarnja rutina (3 koraki)
  *   4) Usporedba (tabela, stolpec NORIKS)
@@ -53,11 +53,11 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 ?>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 
-<!-- 1) PRIDRUZITE SE 20.000+ ZADOVOLJNIH KUPACA -->
+<!-- 1) PRIDRUZITE SE 120.000+ ZADOVOLJNIH KUPACA -->
 <section class="nbt-sec">
   <div class="nbt-wrap nbt-wrap--wide">
     <p class="nbt-kicker">Recenzije kupaca</p>
-    <h2 class="nbt-h2">Pridružite se više od <em>20.000 zadovoljnih kupaca.</em></h2>
+    <h2 class="nbt-h2">Pridružite se više od <em>120.000 zadovoljnih kupaca.</em></h2>
     <p class="nbt-score">Odlično <strong>4.8</strong> <strong>/ 5</strong>
       <span class="nbt-stars" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( '<i>' . $nbt_star . '</i>', 5 ); ?></span></p>
     <div class="nbt-revs">

@@ -7,7 +7,7 @@
  *   2) Vrhunski materijali koji odolijevaju vremenu (slika ob besedilu, obrnjeno)
  *   3) Nosite je u svakoj prilici (slika ob besedilu)
  *   4) Mnenje Nate H. (fotografija ob citatu, obrnjeno)
- *   5) "Vise od 300.000 zadovoljnih kupaca!" + recenzije kupcev (preprosta mreza, brez drsnika;
+ *   5) "Vise od 120.000 zadovoljnih kupaca!" (NORIKS stevilka, original ima 300.000) + recenzije kupcev (preprosta mreza, brez drsnika;
  *      citat John A. iz nakupne skatle in "Nose je Joe, Nate i jos 16.914 drugih" sta premaknjena sem)
  *   6) Dostava / 30 dana / jednostavni povrati (po NORIKS pogojih)
  * "You may also like" je izpuscen (trgovinski modul); FAQ originala je v reviews.php ($polo_faq),
@@ -181,7 +181,7 @@ $npo_trust = array(
 <section class="npo-sec npo-tint npo-sec--reviews">
   <div class="npo-wrap">
     <p class="npo-kicker npo-c">Recenzije kupaca</p>
-    <h2 class="npo-h2 npo-c">Više od <em>300.000 zadovoljnih kupaca!</em></h2>
+    <h2 class="npo-h2 npo-c">Više od <em>120.000 zadovoljnih kupaca!</em></h2>
     <div class="npo-summary">
       <span class="npo-summary__avatars"><?php echo $npo_img( 'po-nose-ga.webp', 'Kupci u NORIKS Polo majici' ); ?></span>
       <span class="npo-summary__txt">Nose je Joe, Nate i još <strong>16.914</strong> drugih<br><?php echo $npo_stars( 4 ); ?> <strong>4,3 / 5</strong> na temelju 3977 recenzija</span>

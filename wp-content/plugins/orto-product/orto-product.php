@@ -120,6 +120,17 @@ function gck_size_prices( $product_id ) : array {
             'factor'  => array( 1 => 1, 2 => 0.9, 3 => 0.8 ),
         );
     }
+    if ( $product_id && has_term( 'orto-doggo', 'product_cat', $product_id ) ) {
+        // original EUR 170/340 (M) in 210/420 (XL) — cene z originalne strani
+        return array(
+            'default' => 'M',
+            'sizes'   => array(
+                'M'  => array( 170.00, 340.00 ),
+                'XL' => array( 210.00, 420.00 ),
+            ),
+            'factor'  => array( 1 => 1 ),
+        );
+    }
     return array();
 }
 

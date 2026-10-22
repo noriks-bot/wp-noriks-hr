@@ -7,7 +7,7 @@
  *   2) 3 razloga za nadogradnju   (video levo, besedilo desno)
  *   3) Zasto cete ga zavoljeti    (besedilo levo, slika desno)
  *   4) 30 dana za povrat          (samo besedilo — po NORIKS pogojih namesto "90-day guarantee")
- *   5) 80.000+ zadovoljnih kupaca (preprosta mreza 7 kartic s fotografijami kupcev)
+ *   5) 120.000+ zadovoljnih kupaca (preprosta mreza 7 kartic s fotografijami kupcev)
  * Skatla z jamstvom 90 dni (na originalu pod nakupno skatlo) in promo pasica originala sta odstranjeni
  * (NORIKS pogoji / NORIKS stil). FAQ je v reviews.php ($phonestrap_faq), mnenja v auto_reviews/HR_phonestrap.php,
  * dolg opis v woocommerce/single-product/meta.php.
@@ -27,7 +27,7 @@ $nps_video = function( $file, $poster, $label ) use ( $nps, $nps_path ) {
     . ' autoplay muted loop playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video>';
 };
 
-/* 5) 80.000+ zadovoljnih kupaca — 1:1 z originala (isti vrstni red, iste fotografije kupcev). */
+/* 5) 120.000+ zadovoljnih kupaca — 1:1 z originala (isti vrstni red, iste fotografije kupcev). */
 $nps_testimonials = array(
   array( 'foto' => 'ps-rv-annartimm.webp', 'ime' => '@Annartimm', 'tekst' => 'Ovo mijenja sve. Na zadnjem skijanju ispao mi je mobitel, a sad se osjećam puno sigurnije.' ),
   array( 'foto' => 'ps-rv-johnny.webp',    'ime' => '@Johnny',    'tekst' => 'Super čvrst i jednostavan za korištenje — upravo ono što mi je trebalo za skijanje i planinarenje.' ),
@@ -99,7 +99,7 @@ $nps_testimonials = array(
   </div>
 </section>
 
-<!-- 5) 80.000+ ZADOVOLJNIH KUPACA -->
+<!-- 5) 120.000+ ZADOVOLJNIH KUPACA -->
 <section class="nps-sec nps-tint">
   <div class="nps-wrap">
     <h2 class="nps-h2 nps-h2--c"><em>80.000+</em> zadovoljnih kupaca</h2>

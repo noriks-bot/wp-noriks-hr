@@ -75,7 +75,7 @@ $ntp_rows = array(
 $ntp_past = array(
   array( 'PFAS / teflon', 'Neljepljivi premazi troše se, grebu i ljušte u hranu — a pri pregrijavanju ispuštaju pare.', false ),
   array( 'Nehrđajući čelik', 'Siguran je, ali bez prave tehnike i stalnog pazenja na temperaturu sve se lijepi.', false ),
-  array( 'Čisti titanij', 'Površina bez premaza koja lijepo zapeče hranu i prirodno je otpušta — za cijeli život, ne za jednu sezonu.', true ),
+  array( 'Čisti titanij', 'Površina bez premaza koja lijepo zapeče hranu i prirodno je otpušta — godinama, ne jednu sezonu.', true ),
 );
 
 /* 10) primerjava */
@@ -152,7 +152,7 @@ $ntp_dist = array( 5 => array( '574', 83 ), 4 => array( '104', 15 ), 3 => array(
       <div class="ntp-copy">
         <p class="ntp-kicker">Pregled</p>
         <h2 class="ntp-h3">Posljednja tava <em>koja vam ikad treba</em></h2>
-        <p>Ova tava izrađena je da bude <strong>neuništiva i da traje cijeli život</strong>. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih svjetskih kuhara.</p>
+        <p>Ova tava izrađena je da bude <strong>iznimno izdržljiva i da traje godinama</strong>. Kovana površina daje profesionalnu raspodjelu topline i izvedbu dostojnu vrhunskih svjetskih kuhara.</p>
         <p>Testirano bez PFAS-a · <strong>Light Labs</strong></p>
         <p class="ntp-big">Bez premaza. Bez toksina. Bez kompromisa.</p>
       </div>
