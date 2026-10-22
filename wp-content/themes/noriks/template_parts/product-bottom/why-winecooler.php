@@ -27,7 +27,8 @@ $nwc_video = function( $n, $label ) use ( $nwc, $nwc_path ) {
   if ( ! file_exists( $nwc_path . $file ) ) { return ''; }
   return '<div class="nwc-vid"><video src="' . esc_url( $nwc . $file ) . '"'
     . ( file_exists( $nwc_path . $poster ) ? ' poster="' . esc_url( $nwc . $poster ) . '"' : '' )
-    . ' controls playsinline preload="none" aria-label="' . esc_attr( $label ) . '"></video></div>';
+    . ' playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video>'
+    . '<button type="button" class="nwc-play" aria-label="' . esc_attr( 'Pokreni video: ' . $label ) . '"></button></div>';
 };
 
 /* 2) prednosti — 1:1 z originala (harmonike) */
@@ -136,6 +137,18 @@ $nwc_testimonials = array(
 </section>
 
 <style>
+/* videi kupcev: sirsi okvir in lastni gumb za predvajanje na sredini */
+.nwc-vids { max-width: 1100px; margin: 0 auto; gap: 22px; }
+.nwc-vid { position: relative; }
+.nwc-vid > video { width: 100%; display: block; }
+.nwc-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  width: 76px; height: 76px; border: 0; border-radius: 50%; background: rgba(255,255,255,.94);
+  box-shadow: 0 10px 28px rgba(40,20,10,.28); cursor: pointer; display: grid; place-items: center; padding: 0; }
+.nwc-play[hidden] { display: none; }
+.nwc-play::before { content: ""; width: 0; height: 0; margin-left: 6px;
+  border-top: 13px solid transparent; border-bottom: 13px solid transparent; border-left: 21px solid #8a2a3a; }
+@media (max-width: 749px) { .nwc-play { width: 60px; height: 60px; } }
+
 /* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
 .nwc-row2 { align-items: center; }
 .nwc-media > img, .nwc-media > video,
@@ -170,7 +183,7 @@ $nwc_testimonials = array(
 .nwc-sub { text-align: center; font-size: 16px; line-height: 1.6; color: #6b5a5d; max-width: 760px; margin: 0 auto 28px; }
 
 /* 1) videi kupaca */
-.nwc-vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 960px; margin: 0 auto; }
+.nwc-vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1100px; margin: 0 auto; }
 .nwc-vid { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #f1ecea; }
 .nwc-vid video { display: block; width: 100%; height: 100%; object-fit: cover; }
 
@@ -221,3 +234,16 @@ $nwc_testimonials = array(
   .nwc-feat, .nwc-rev { grid-template-columns: 1fr; }
 }
 </style>
+
+<script>
+(function(){
+  document.querySelectorAll('.nwc-vid .nwc-play').forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.parentNode.querySelector('video');
+      if (!v) return;
+      v.setAttribute('controls','');
+      v.play(); b.hidden = true;
+    });
+  });
+})();
+</script>

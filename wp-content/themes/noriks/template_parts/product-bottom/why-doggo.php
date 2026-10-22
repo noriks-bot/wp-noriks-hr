@@ -355,7 +355,7 @@ $ndg_ugc = array( 'dg-ugc-1.mp4', 'dg-ugc-2.mp4', 'dg-ugc-3.mp4', 'dg-ugc-4.mp4'
 .ndg-ver { width: 14px; height: 14px; color: var(--ndg-ink); flex: 0 0 auto; vertical-align: middle; }
 
 /* 4) videi kupcev */
-.ndg-ugc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto; }
+.ndg-ugc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: none; margin: 0; }
 
 /* 7) prednosti */
 .ndg-hl { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }

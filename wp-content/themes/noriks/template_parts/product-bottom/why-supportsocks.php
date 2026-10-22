@@ -161,24 +161,7 @@ $nss_band = function( $html ) use ( &$nss_band_i ) {
   <?php foreach ( $nss_rows_3 as $i => $r ) { echo $nss_band( $nss_row( $r, ! ( $i % 2 ) ) ); } ?>
 </section>
 
-<!-- 4) Mnenja kupcev (original ima "1 000 000+ solgte par" — tuja stevilka, izpuscena) — preprosta mreza mnenj -->
-<section class="nss-sec nss-tint" aria-labelledby="nss-quotes-h">
-  <div class="nss-wrap">
-    <p class="nss-kicker nss-kicker--c">Recenzije</p>
-    <h2 id="nss-quotes-h" class="nss-h2 nss-h2--c">Tisuće zadovoljnih kupaca – <em>evo što kažu</em></h2>
-    <div class="nss-quotes">
-      <?php foreach ( $nss_quotes as $q ) : ?>
-      <article class="nss-qcard">
-        <div class="nss-qcard__stars" aria-label="5 od 5 zvjezdica">★★★★★</div>
-        <blockquote>„<?php echo esc_html( $q[1] ); ?>"</blockquote>
-        <footer><cite><?php echo esc_html( $q[0] ); ?></cite> <span class="nss-qcard__ver">✓ Provjereni kupac</span></footer>
-      </article>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- 5) PRONAĐITE SVOJU VELIČINU -->
+<!-- 4) PRONAĐITE SVOJU VELIČINU -->
 <div class="nss-band nss-tint">
   <div class="nss-wrap">
     <div class="nss-row2 nss-row2--rev">

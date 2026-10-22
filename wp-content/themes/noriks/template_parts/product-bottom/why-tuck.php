@@ -375,15 +375,39 @@ $ntk_ugc = array(
 
 
 <!-- 9) NORIKS pogoji -->
-<section class="ntk-sec ntk-tint">
-  <div class="ntk-wrap" style="text-align:center">
-    <h2 class="ntk-h2">Isprobajte ih <em>bez brige.</em></h2>
-    <p>Obucite ih pod haljinu i provjerite kako stoje. Ako nisu za vas, imate <strong>30 dana za povrat novca</strong>.</p>
-    <p class="ntk-trust"><span>30 dana za povrat</span><span>Besplatna dostava iznad 70 €</span><span>Plaćanje pouzećem</span></p>
+<section class="ntk-sec ntk-tint" aria-label="NORIKS pogoji">
+  <div class="ntk-wrap">
+    <div class="ntk-promise">
+      <p class="ntk-kicker ntk-kicker--c">Bez rizika</p>
+      <h2 class="ntk-h2 ntk-h2--c">Isprobajte ih <em>bez brige.</em></h2>
+      <p class="ntk-promise__lead">Obucite ih pod haljinu i provjerite kako stoje. Ako nisu za vas, vratite ih — bez objašnjavanja.</p>
+      <div class="ntk-promise__grid">
+        <div class="ntk-promise__it"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="ntk-promise__it"><strong>Besplatna dostava</strong><span>za narudžbe iznad 70 €</span></div>
+        <div class="ntk-promise__it"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <style>
+/* 9) NORIKS pogoji — premium zakljucek */
+.ntk-promise { max-width: 980px; margin: 0 auto; background: #fff; border: 1px solid #ece4da;
+  border-radius: 18px; padding: 48px 40px 42px; text-align: center;
+  box-shadow: 0 2px 4px rgba(46,36,32,.04), 0 18px 48px rgba(46,36,32,.08); }
+.ntk-promise__lead { max-width: 640px; margin: 0 auto 32px; font-size: 17px; line-height: 1.7; color: #5b5048; }
+.ntk-promise__grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border-top: 1px solid #f0e9e1; }
+.ntk-promise__it { padding: 26px 16px 4px; position: relative; }
+.ntk-promise__it + .ntk-promise__it::before { content: ""; position: absolute; left: 0; top: 26px; bottom: 8px; width: 1px; background: #f0e9e1; }
+.ntk-promise__it strong { display: block; font-size: 19px; font-weight: 800; color: #2E2420; letter-spacing: -.01em; }
+.ntk-promise__it span { display: block; margin-top: 6px; font-size: 14.5px; color: #7a6d63; }
+@media (max-width: 749px) {
+  .ntk-promise { padding: 34px 20px 28px; border-radius: 14px; }
+  .ntk-promise__grid { grid-template-columns: 1fr; }
+  .ntk-promise__it + .ntk-promise__it::before { display: none; }
+  .ntk-promise__it + .ntk-promise__it { border-top: 1px solid #f0e9e1; }
+}
+
 .ntk-why { list-style: none; margin: 18px 0 18px; padding: 0; }
 .ntk-why li { position: relative; padding-left: 28px; margin: 0 0 14px; }
 .ntk-why li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: #a9683f; font-weight: 800; }

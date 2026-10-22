@@ -157,6 +157,12 @@ $nfs_reviews = array(
 </section>
 
 <style>
+/* stran slike doloca razred, ne vrstni red v kodi (brez tega sta bili dve zaporedni sekciji s sliko levo) */
+.nfs-row2 .nfs-media { order: 1; }
+.nfs-row2 .nfs-copy  { order: 2; }
+.nfs-row2--rev .nfs-media { order: 2; }
+.nfs-row2--rev .nfs-copy  { order: 1; }
+
 /* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
 .nfs-row2 { align-items: center; }
 .nfs-media > img, .nfs-media > video,
@@ -229,7 +235,8 @@ $nfs_reviews = array(
 
 @media (max-width: 980px) {
   .nfs-row2 { grid-template-columns: 1fr; gap: 28px; }
-  .nfs-row2--rev .nfs-media { order: -1; }
+  .nfs-row2 .nfs-media, .nfs-row2--rev .nfs-media { order: -1 !important; }
+  .nfs-row2 .nfs-copy, .nfs-row2--rev .nfs-copy { order: 0 !important; }
 }
 @media (max-width: 560px) {
   .nfs-sec { padding: 42px 0; }
