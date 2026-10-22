@@ -99,7 +99,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 3) PRUŽA DODATNU POTPORU — slika lijevo -->
-<section class="nfs-sec">
+<section class="nfs-sec nfs-tint">
   <div class="nfs-wrap nfs-row2">
     <div class="nfs-media"><?php echo $nfs_img( 'fs-potpora.webp', 'Plovci NORIKS FloatSuit obavijaju trup u punom krugu' ); ?></div>
     <div class="nfs-copy">
@@ -112,7 +112,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 4) JAČA SAMOPOUZDANJE U VODI — video desno -->
-<section class="nfs-sec nfs-tint">
+<section class="nfs-sec">
   <div class="nfs-wrap nfs-row2 nfs-row2--rev">
     <div class="nfs-copy">
       <p class="nfs-kicker">Potiče veću samostalnost</p>
@@ -125,7 +125,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 5) ZAŠTO RODITELJI VOLE — infografika lijevo -->
-<section class="nfs-sec">
+<section class="nfs-sec nfs-tint">
   <div class="nfs-wrap nfs-row2">
     <div class="nfs-media nfs-media--flat"><?php echo $nfs_img( 'fs-prednosti-hr.webp', 'Lako se zakopča, zaštita od sunca, ugrađeni podesivi plovci, nesputana udobnost' ); ?></div>
     <div class="nfs-copy">
@@ -141,7 +141,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 6) SUPER ZABAVA — fotografije desno -->
-<section class="nfs-sec nfs-tint">
+<section class="nfs-sec">
   <div class="nfs-wrap nfs-row2 nfs-row2--rev">
     <div class="nfs-copy">
       <p class="nfs-kicker">Super zabava!</p>
@@ -157,7 +157,7 @@ $nfs_reviews = array(
 </section>
 
 <!-- 7) RECENZIJE KUPACA -->
-<section class="nfs-sec">
+<section class="nfs-sec nfs-tint">
   <div class="nfs-wrap nfs-wrap--rv">
     <h2 class="nfs-h2 nfs-h2--c">Recenzije <em>kupaca</em></h2>
     <p class="nfs-rate"><span class="nfs-rate__stars">★★★★★</span> <strong>4,8</strong> · na temelju 1.081 recenzije</p>
@@ -179,7 +179,7 @@ $nfs_reviews = array(
 
 
 <!-- 8) NORIKS pogoji -->
-<section class="nfs-sec nfs-tint">
+<section class="nfs-sec">
   <div class="nfs-wrap" style="text-align:center">
     <h2 class="nfs-h2">Isprobajte ga <em>bez brige.</em></h2>
     <p>Odvedite dijete na bazen i provjerite kako se drži u vodi. Ako kostim nije za vas, imate <strong>30 dana za povrat novca</strong>.</p>
