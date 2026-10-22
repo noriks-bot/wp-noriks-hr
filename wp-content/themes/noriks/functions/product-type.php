@@ -148,6 +148,8 @@ function noriks_product_type_map() : array {
         'litterbox'               => array( 'orto-litterbox', 'litterbox' ),
         // NORIKS SleepEarplugs — cepici za usi za spavanje na boku (samo boja).
         'sleepearplugs'           => array( 'orto-sleepearplugs', 'sleepearplugs' ),
+        // NORIKS OrthoMules — ortopedske pletene natikace s remenom (boja + velicina EU 35–43).
+        'orthomules'              => array( 'orto-orthomules', 'orthomules' ),
         // NORIKS Hugger — nosivi termofor (samo boja).
         'hug'                     => array( 'orto-hug', 'hug' ),
         // NORIKS Pre — jastuk za trudnice (bez atributa).
@@ -528,6 +530,24 @@ if ( ! function_exists( 'noriks_harness_sizes' ) ) {
             array( 'M',  '55–67 cm', 'koker španijel, beagle, stafordski bul terijer, whippet, cockapoo (standardni), springer španijel (manji), velški springer španijel, bedlington terijer, basenji, mini labradoodle' ),
             array( 'L',  '67–84 cm', 'labrador retriver (vitki / ženka), border koli, engleski springer španijel, standardna pudla, bokser, vižla, vajmarski ptičar (manji), dalmatinac, australski ovčar, škotski ovčar (koli)' ),
             array( 'XL', '80–107 cm', 'labrador retriver (veći), zlatni retriver, njemački ovčar, rotvajler, doberman, sibirski haski, aljaški malamut, akita, rodezijski gonič, cane corso' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_orthomules_sizes' ) ) {
+    /** NORIKS OrthoMules: EU velicina, US zene, UK.
+     *  1:1 s tablice velicin originala bomre.com (Kiwi "Women Main": US 4–12 -> EU 35–43; original nima duljine stopala v cm). */
+    function noriks_orthomules_sizes() {
+        return array(
+            array( 'EU 35', '4–4,5', '2–2,5' ),
+            array( 'EU 36', '5–5,5', '3–3,5' ),
+            array( 'EU 37', '6–6,5', '4–4,5' ),
+            array( 'EU 38', '7–7,5', '5–5,5' ),
+            array( 'EU 39', '8–8,5', '6–6,5' ),
+            array( 'EU 40', '9–9,5', '7–7,5' ),
+            array( 'EU 41', '10–10,5', '8–8,5' ),
+            array( 'EU 42', '11–11,5', '9–9,5' ),
+            array( 'EU 43', '12', '10' ),
         );
     }
 }

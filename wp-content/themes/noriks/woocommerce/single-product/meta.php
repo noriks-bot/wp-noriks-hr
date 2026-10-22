@@ -619,6 +619,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS CatFountain</strong> je fontana za mačke od nehrđajućeg čelika s mlazom u obliku slavine koji budi prirodni nagon vaše mačke da pije više vode — <strong>i do 3x više</strong>. Bolja hidracija pomaže smanjiti rizik od problema s bubrezima i urinarnih infekcija.<br><br><strong>Nehrđajući čelik 304:</strong> bez BPA, siguran za mačke; zaustavlja 99 % bakterija i sprječava sluz, mirise i mačje akne koje uzrokuju plastične zdjelice<br><strong>Mlaz u obliku slavine:</strong> oponaša slavinu iz koje mačke ionako vole piti<br><strong>Ultra tiha pumpa (&lt; 20 dB):</strong> može raditi cijelu noć bez ometanja sna<br><strong>Filtriranje u 3 sloja:</strong> filtar s aktivnim ugljenom i spužva za predfiltriranje zadržavaju dlake, ostatke, mirise i nečistoće<br><strong>Kapacitet 2,2 L:</strong> dovoljno vode za 8–10 dana, s pokazivačem razine vode<br><strong>Čišćenje za manje od 5 minuta:</strong> dijelovi od nehrđajućeg čelika mogu se prati u perilici posuđa<br><strong>Široka i plitka posuda:</strong> bez zamora brkova, prikladna i za više mačaka<br><br><strong>U kutiji:</strong> 1x NORIKS CatFountain fontana 2,2 L, 1x filtri za 2 mjeseca, 1x adapter za napajanje, 1x upute za upotrebu.<br><br><strong>Specifikacije:</strong> fontana s kabelom (napajanje preko adaptera, mora biti priključena na struju); filtre mijenjajte svaka 2–4 tjedna; dimenzije (D × Š × V): 17,5 × 17,5 × 17,5 cm.
 
+         <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
+
+                <strong>NORIKS OrthoMules</strong> su ortopedske pletene natikače s remenom: <strong>ortopedski uložak</strong> ispod stopala, <strong>prozračan pleteni gornji dio</strong> i remen u stilu Mary Jane koji zaista drži cipelu na nozi — lijep izgled više ne znači bol.<br><br><strong>Istaknuto:</strong><br>• <strong>Ortopedska potpora</strong> — uložak koji podupire stopalo<br>• <strong>Prozračni pleteni gornji dio</strong> — stopalo diše<br>• <strong>Remen koji drži cijeli dan</strong> — cipela ostaje na nozi u svakom koraku<br><br><strong>Boje:</strong> zlatna, bijela, srebrna, crna, svijetlosmeđa i smeđa.<br><strong>Veličine:</strong> EU 35–43 (pogledajte tablicu veličina).
+
          <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
 
                 <strong>NORIKS SleepEarplugs</strong> su ultra udobni čepići za uši za spavanje — za mirne noći s manje bučnih ometanja, bilo da spavate na boku, prigušujete hrkanje partnera ili oboje.<br><br><strong>Udobni za spavanje na boku:</strong> nizak profil i naš najmekši silikon smanjuju pritisak na uho za udobnost cijelu noć<br><strong>Dvije vrste nastavaka:</strong> unaprijed postavljeni ovalni nastavci od pjene i silikona prate prirodan oblik uha, a dvostruki nastavci omogućuju još bolju prilagodbu<br><strong>Smanjenje buke 27 dB (SNR):</strong> prigušuje hrkanje partnera, gradsku buku i druga noćna ometanja<br><strong>Sigurno pristajanje:</strong> stvoreni da ostanu u ušima dok spavate na boku i krećete se tijekom noći<br><strong>Prilagodljivo pristajanje:</strong> četiri veličine nastavaka (XS, S, M, L), i za manje uši<br><strong>Višekratni i lako se čiste:</strong> izrađeni od izdržljivog silikona<br><strong>Kutijica za nošenje:</strong> s neklizajućim dnom i prostranim pretincem, uvijek nadohvat ruke uz krevet<br><br><strong>Građa čepića:</strong> vanjski silikonski vrh, memorijska pjena iznutra, čvrsta silikonska jezgra i mekano silikonsko tijelo.<br><br><strong>U paketu:</strong> 1x par NORIKS SleepEarplugs čepića, 1x kutijica za noćni ormarić, 4 para nastavaka od pjene i silikona (XS + S + M + L) i 4 para dvostrukih nastavaka (XS + S + M + L).<br><br><strong>Što znači 27 dB?</strong> Tihi zvukovi (disanje, hladnjak, perilica posuđa) najvjerojatnije se neće čuti, srednje glasni (televizor u drugoj sobi, udaljeni promet) svest će se na tihi šum, a glasni (sirene, lajanje psa, vatromet) i dalje će se čuti, ali puno tiše. Čepići buku smanjuju, ali je ne uklanjaju potpuno.
@@ -1335,6 +1339,35 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Pristaje na sjedala u osobnim automobilima, SUV-ovima, kamionetima i terencima — jednostavno je prebacite preko naslona za glavu. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">NORIKS OrthoMules odgovaraju standardnim ženskim veličinama — naručite svoj uobičajeni broj. Veličine od <strong>EU 35 do EU 43</strong>.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">US</th>
+                  <th style="padding:9px 8px;text-align:left;">UK</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_orthomules_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -1930,6 +1963,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'catfountain', $current_product_id ) ): ?>
 
                 Prije čišćenja fontanu isključite iz struje. Rastavite je na glavne dijelove — nema sitnih dijelova ni teško dostupnih kutova. Dijelove od nehrđajućeg čelika operite u sudoperu ili ih stavite u <strong>perilicu posuđa</strong>; čišćenje traje <strong>manje od 5 minuta</strong>. Filtre mijenjajte svaka 2–4 tjedna (češće ako imate više mačaka) kako bi voda ostala čista i svježa.
+
+             <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
+
+                Natikače čistite mekanom, blago vlažnom krpom, a prašinu iz pletenog dijela uklonite mekanom četkicom. Ne perite ih u perilici i ne namačite u vodi. Ako se smoče, ostavite ih da se polako osuše na zraku, daleko od radijatora i izravnog sunca. Metalik završnu obradu (zlatna i srebrna) ne trljajte grubim sredstvima.
 
              <?php elseif( noriks_is_type( 'sleepearplugs', $current_product_id ) ): ?>
 
