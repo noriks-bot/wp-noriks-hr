@@ -172,6 +172,8 @@ function noriks_product_type_map() : array {
         'bottlesling'             => array( 'orto-bottlesling', 'bottlesling' ),
         // NORIKS ShowerTowel — antibakterijski rucnik za piling tijela (samo boja: crna, roza, plava, bijela; jedna velicina 122 cm, brez tablice).
         'showertowel'             => array( 'orto-showertowel', 'showertowel' ),
+        // NORIKS PetDental — sprej za njegu zubi pasa i macaka (brez atributov; ponudbe 1x/2x/3x kom, brez tablice).
+        'petdental'               => array( 'orto-petdental', 'petdental' ),
         // NORIKS SilkBoxers — svilene bokserice za cjelodnevnu udobnost (samo velicina M–3XL, tamnoplava).
         'silkboxers'              => array( 'orto-silkboxers', 'silkboxers' ),
         // NORIKS ModalSweatshirt — dukserica od modala s okruglim izrezom (boja + velicina S–3XL).

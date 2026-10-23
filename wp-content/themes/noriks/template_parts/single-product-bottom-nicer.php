@@ -369,6 +369,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS PetDental (orto-petdental) — sprej za njegu zubi pasa i macaka
+if ( noriks_is_type( 'petdental' ) ) {
+    include $noriks_pb_dir . 'why-petdental.php';
+}
+
 // NORIKS ShowerTowel (orto-showertowel) — antibakterijski rucnik za piling tijela
 if ( noriks_is_type( 'showertowel' ) ) {
     include $noriks_pb_dir . 'why-showertowel.php';
