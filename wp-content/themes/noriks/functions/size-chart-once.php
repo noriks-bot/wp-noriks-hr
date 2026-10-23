@@ -173,6 +173,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-slingbag' );
             return;
         }
+        // NORIKS ComfortJeans: XXS–XXL po opsegu struka i bokova + mjere hlaca, duljina 26–36 po visini (z originala).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'comfortjeans' ) ) {
+            get_template_part( 'template_parts/size-chart-comfortjeans' );
+            return;
+        }
         // NORIKS HoodieDress: S–3XL po EU velicini, opsegu struka i prsa (»uzmite svoju uobicajenu velicinu hudice«).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hoodiedress' ) ) {
             get_template_part( 'template_parts/size-chart-hoodiedress' );

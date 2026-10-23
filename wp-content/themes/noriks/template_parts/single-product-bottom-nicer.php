@@ -449,6 +449,11 @@ if ( noriks_is_type( 'slingbag' ) ) {
     include $noriks_pb_dir . 'why-slingbag.php';
 }
 
+// NORIKS ComfortJeans (orto-comfortjeans) — opustene traperice sirokih nogavica
+if ( noriks_is_type( 'comfortjeans' ) ) {
+    include $noriks_pb_dir . 'why-comfortjeans.php';
+}
+
 // NORIKS HoodieDress (orto-hoodiedress) — oversized haljina s kapuljacom
 if ( noriks_is_type( 'hoodiedress' ) ) {
     include $noriks_pb_dir . 'why-hoodiedress.php';

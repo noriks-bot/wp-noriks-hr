@@ -699,6 +699,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <strong>NORIKS SlingBag 2.0</strong> je putna torbica preko ramena za sigurno i praktično nošenje bez ruku, kamo god išli. Izrađena je od <strong>500D najlonske tkanine</strong> – istog materijala kao u vrhunskoj opremi za prirodu – pa je čvršća, otpornija na vremenske uvjete i izrađena da traje godinama. Remen ima <strong>unutarnju čeličnu sajlu</strong> otpornu na rezanje, a <strong>sustav zaključavanja s 3 točke</strong> zamjenjuje staru plastičnu kopču. Uz tijelo je <strong>skriveni stražnji džep</strong> za gotovinu i kartice, posvuda su <strong>YKK® patentni zatvarači</strong>, podstava od tkanine koja <strong>blokira RFID</strong> štiti kartice i putovnicu, a unutra je kopča za ključeve.<br><br><strong>Specifikacije:</strong><br>• <strong>Mini:</strong> 19 × 14 × 4 cm – mobitel, ključevi, putovnica, kabeli i prijenosna baterija<br>• <strong>Regular:</strong> 22 × 15 × 4 cm – plus grickalice, sunčane naočale, punjač i mali tablet<br>• <strong>Max:</strong> 28 × 19,5 × 6 cm – plus knjiga, slušalice preko ušiju ili tablet do 11"<br>• <strong>Remen:</strong> podesivi, najviše 130 cm – jedna veličina za sve<br>• <strong>Materijal:</strong> 500D najlon, YKK® patentni zatvarači, RFID tkanina (0,022 – 0,047 Ω, 75 g/m²)<br>• Sve veličine uklapaju se u ograničenja za osobni predmet u zrakoplovu (Ryanair, easyJet, United, American Airlines).
 
 
+         <?php elseif( noriks_is_type( 'comfortjeans', $current_product_id ) ): ?>
+
+                <strong>NORIKS ComfortJeans</strong> spajaju klasičan izgled trapera s udobnošću nevjerojatne rastezljivosti. Ove traperice visokog struka, opuštenog kroja i širokih ravnih nogavica izrađene su od posebne mješavine trapera koja je vrlo rastezljiva, a ipak zadržava osjećaj pravog, klasičnog trapera. Svestrane su i savršene za svakodnevno nošenje — komad koji mora imati svaka osnovna garderoba.<br><br>• Opušten kroj nogavica<br>• Rastezljiv pravi traper<br>• Visoki struk<br>• Metalni patentni zatvarač YKK®<br>• Dva stražnja i dva prednja džepa<br>• Kožna etiketa na stražnjem dijelu struka<br><br><strong>Kroj:</strong> prianjaju u struku, a od donjeg dijela bedara padaju opušteno i poluširoko ravno. Možete ih nositi duge (ispod gležnja, iznad poda u cipelama) ili skraćene (do gležnja).<br><strong>Tkanina:</strong> rastezljivi traper od 12 oz, tkan s elastičnom potkom za udobnost i s izgledom pravog krutog trapera — klasična tekstura i moderna sloboda pokreta.<br><strong>Sastav:</strong> pamuk / poliester / elastan<br><br><strong>Boje:</strong> tamnoplava, srednje plava, vintage plava, crna, svijetloplava, isprana crna i prljavobijela.<br><strong>Veličine:</strong> XXS (22/23) – XXL (34/35), EU 32 – 50.<br><strong>Duljine:</strong> L26 (66 cm), L28 (71 cm), L30 (76 cm), L32 (81 cm), L34 (86 cm) i L36 (91 cm) — duljinu odaberite prema svojoj visini (tablica veličina).
+
          <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
                 <strong>NORIKS HoodieDress</strong> je više od hudice — to je vaš novi omiljeni komad za udoban i opušten stil bez puno truda. Dizajnirana je s prozračnim <strong>oversized krojem</strong> koji laska svakoj figuri, a izrađena od pamučne tkanine: <strong>vanjski sloj od 100 % pamuka</strong> i plišana unutrašnjost mekana poput deke. Savršena za lagana jutra, užurbane dane ili dotjerani izgled bez odricanja od udobnosti.<br><br><strong>Kroj i materijal:</strong> odgovara uobičajenoj veličini — uzmite veličinu hudice koju inače nosite. 100 % pamuk izvana, mekani flis poput deke iznutra.<br><br><strong>Udobnost u svakom detalju:</strong><br>• Iznutra mekana poput deke<br>• Vanjski sloj od 100 % pamuka<br>• Produžena duljina za bolju pokrivenost<br>• Kroj koji laska figuri<br><br><strong>Boje:</strong> crna, zelena, tamnoplava, kadulja zelena, crvena, ljubičasta, svijetloplava, krem, ružičasta, tamnosiva, smeđa, siva i tamnoljubičasta s leptir rukavima.<br><strong>Veličine:</strong> S – 3XL. U paketu za svaki komad zasebno birate boju i veličinu.
@@ -1785,6 +1789,60 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           </div>
 
 
+        <?php elseif( noriks_is_type( 'comfortjeans', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Opušten kroj</strong> koji prianja u struku i pada poluširoko ravno. Veličine od <strong>XXS do XXL</strong> (EU 32 – 50), duljine od <strong>L26 do L36</strong> (66 – 91 cm).</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg bokova</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_comfortjeans_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#ebf2f9' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:18px 0 10px;line-height:1.6;"><strong>Koju duljinu odabrati?</strong> Uz ravne cipele ili tenisice hlače završavaju tik iznad poda.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Duljina</th>
+                  <th style="padding:9px 8px;text-align:left;">Preporučena visina</th>
+                  <th style="padding:9px 8px;text-align:left;">Unutarnji šav bosonogo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_comfortjeans_lengths() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#ebf2f9' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako uglavnom nosite potpetice ili čizme, uzmite jednu duljinu više. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2567,6 +2625,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 Torbicu čistite <strong>blago vlažnom krpom</strong> i malo blagog sapuna, a mrlje nježno istrljajte mekanom četkicom. Ne perite je u perilici rublja, ne izbjeljujte i ne glačajte. Prije čišćenja ispraznite sve džepove, a nakon čišćenja ostavite je otvorenu da se osuši na zraku, daleko od radijatora i izravnog sunca.
 
+
+             <?php elseif( noriks_is_type( 'comfortjeans', $current_product_id ) ): ?>
+
+                Perite u perilici u <strong>hladnoj vodi do 30 °C</strong>, okrenuto naopako, sa sličnim tkaninama i bojama. Sušite na zraku (na užetu) — <strong>nikada u sušilici</strong> i izbjegavajte toplinu. Ne izbjeljujte, ne glačajte i ne čistite kemijski. Tako traper dulje zadržava rastezljivost, oblik i boju.
 
              <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 

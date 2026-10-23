@@ -170,6 +170,8 @@ function noriks_product_type_map() : array {
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
         'hoodiedress'             => array( 'orto-hoodiedress', 'hoodiedress' ),
+        // NORIKS ComfortJeans — opustene traperice sirokih nogavica od rastezljivog trapera (boja 7 + velicina XXS–XXL + duljina 26–36).
+        'comfortjeans'            => array( 'orto-comfortjeans', 'comfortjeans' ),
         // NORIKS SlingBag — putna torbica preko ramena 2.0 sa zastitom od krade (boja 4 + velicina Mini / Regular / Max).
         'slingbag'                => array( 'orto-slingbag', 'slingbag' ),
         // NORIKS DogBed — premium ortopedski krevet za pse (boja 8 + velicina M / L / XL / 2XL).
@@ -849,6 +851,38 @@ if ( ! function_exists( 'noriks_slingbag_sizes' ) ) {
             array( 'Mini',    '19 × 14 × 4 cm',   'do 130 cm', 'mobitel, ključevi, putovnica, kabeli za punjenje i prijenosna baterija' ),
             array( 'Regular', '22 × 15 × 4 cm',   'do 130 cm', 'sve iz Mini + grickalice, sunčane naočale, punjač, deblji novčanik, mali tablet' ),
             array( 'Max',     '28 × 19,5 × 6 cm', 'do 130 cm', 'sve iz Regular + knjiga, slušalice preko ušiju, tablet do 11"' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_comfortjeans_sizes' ) ) {
+    /** NORIKS ComfortJeans: velicina (struk u incima), EU velicina, opseg struka tijela, opseg bokova tijela (cm),
+     *  struk hlaca B (nerastegnut), bokovi hlaca, sirina nogavice C (cm).
+     *  1:1 s tablice velicina originala (ninepine, »Size suggestions« + »Measurements of the pants«). */
+    function noriks_comfortjeans_sizes() {
+        return array(
+            array( 'XXS (22/23)', 'EU 32',    '56 – 63 cm', '82 – 92 cm',   '58 cm', '84 cm',  '49 cm' ),
+            array( 'XS (24/25)',  'EU 34',    '62 – 70 cm', '88 – 98 cm',   '64 cm', '90 cm',  '50,5 cm' ),
+            array( 'S (26/27)',   'EU 36–38', '68 – 76 cm', '94 – 105 cm',  '70 cm', '96 cm',  '52 cm' ),
+            array( 'M (28/29)',   'EU 40–42', '74 – 83 cm', '100 – 111 cm', '76 cm', '102 cm', '53,5 cm' ),
+            array( 'L (30/31)',   'EU 44',    '80 – 94 cm', '106 – 124 cm', '82 cm', '108 cm', '55 cm' ),
+            array( 'XL (32/33)',  'EU 46–48', '88 – 104 cm', '114 – 133 cm', '90 cm', '116 cm', '57 cm' ),
+            array( 'XXL (34/35)', 'EU 48–50', '96 – 113 cm', '122 – 143 cm', '98 cm', '124 cm', '59 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_comfortjeans_lengths' ) ) {
+    /** NORIKS ComfortJeans: duljina nogavice (unutarnji sav, in / cm), preporucena visina, unutarnji sav bosonogo.
+     *  1:1 s tablice originala »Which length (inseam) should I choose?« (racunano za ravne cipele). */
+    function noriks_comfortjeans_lengths() {
+        return array(
+            array( 'L26 (66 cm)', 'do 156 cm',    'do 66 cm' ),
+            array( 'L28 (71 cm)', '153 – 163 cm', '65 – 71 cm' ),
+            array( 'L30 (76 cm)', '160 – 171 cm', '70 – 76 cm' ),
+            array( 'L32 (81 cm)', '168 – 179 cm', '75 – 81 cm' ),
+            array( 'L34 (86 cm)', '176 – 186 cm', '80 – 86 cm' ),
+            array( 'L36 (91 cm)', 'od 183 cm',    'od 83 cm' ),
         );
     }
 }
