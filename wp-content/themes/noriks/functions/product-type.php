@@ -180,6 +180,8 @@ function noriks_product_type_map() : array {
         'dogbed'                  => array( 'orto-dogbed', 'dogbed' ),
         // NORIKS MinimizerBra — rashladujuci minimizer grudnjak s punim pokricem (boja 4 + velicina 70C–115G, 74 velicine).
         'minimizerbra'            => array( 'orto-minimizerbra', 'minimizerbra' ),
+        // NORIKS NursingBra — grudnjak za dojenje bez savova (boja 7 + velicina S–4XL po kosarici in traki).
+        'nursingbra'              => array( 'orto-nursingbra', 'nursingbra' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS FleeceShawl — mekani sal-ogrtac od flisa (samo boja, 11 boja; jedna velicina 158 x 110 cm, brez tablice).
@@ -858,6 +860,34 @@ if ( ! function_exists( 'noriks_minimizerbra_sizes' ) ) {
             array( '105', '46', '92–96', array( '102–108', '104–111', '107–114', '109–116', '112–119', '115–121', '117–123', '' ) ),
             array( '110', '48', '96–100', array( '106–113', '108–115', '111–118', '114–120', '116–122', '119–125', '', '' ) ),
             array( '115', '50', '100–104', array( '110–117', '113–119', '115–121', '118–124', '120–126', '122–129', '', '' ) ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_nursingbra_bands' ) ) {
+    /** NORIKS NursingBra: stupci tablice = traka EU (opseg ispod grudi) in ustrezna UK traka z originala (28–48). */
+    function noriks_nursingbra_bands() {
+        return array( array( '60', '28' ), array( '65', '30' ), array( '70', '32' ), array( '75', '34' ), array( '80', '36' ), array( '85', '38' ),
+                      array( '90', '40' ), array( '95', '42' ), array( '100', '44' ), array( '105', '46' ), array( '110', '48' ) );
+    }
+}
+
+if ( ! function_exists( 'noriks_nursingbra_sizes' ) ) {
+    /** NORIKS NursingBra: kosarica EU, kosarica UK, velicina (S–4XL) po traki EU 60–110 (UK 28–48).
+     *  1:1 s tablice originala (maternique.com, BlissSizeChart: AU/UK B–H, US/CA B–K x Underbust 28–48);
+     *  prazno polje = velicine ni. */
+    function noriks_nursingbra_sizes() {
+        return array(
+            array( 'B', 'B',  array( '', '', 'S', 'M', 'M', 'L', 'L', 'XL', 'XL', '', '' ) ),
+            array( 'C', 'C',  array( '', 'S', 'S', 'M', 'L', 'L', 'XL', 'XL', '2XL', '2XL', '3XL' ) ),
+            array( 'D', 'D',  array( 'S', 'S', 'S', 'M', 'L', 'L', 'XL', '2XL', '2XL', '2XL', '3XL' ) ),
+            array( 'E', 'DD', array( 'S', 'S', 'M', 'L', 'L', 'XL', 'XL', '2XL', '2XL', '3XL', '3XL' ) ),
+            array( 'F', 'E',  array( 'S', 'S', 'M', 'L', 'L', 'XL', '2XL', '2XL', '2XL', '3XL', '3XL' ) ),
+            array( 'G', 'F',  array( 'S', 'S', 'M', 'L', 'L', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL' ) ),
+            array( 'H', 'FF', array( 'S', 'M', 'M', 'L', 'XL', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL' ) ),
+            array( 'I', 'G',  array( 'S', 'M', 'M', 'L', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '4XL' ) ),
+            array( 'J', 'GG', array( 'M', 'M', 'L', 'XL', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '4XL' ) ),
+            array( 'K', 'H',  array( '', '', 'L', 'XL', '2XL', '2XL', '2XL', '3XL', '4XL', '4XL', '4XL' ) ),
         );
     }
 }

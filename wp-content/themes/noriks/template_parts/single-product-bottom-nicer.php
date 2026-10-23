@@ -489,6 +489,11 @@ if ( noriks_is_type( 'minimizerbra' ) ) {
     include $noriks_pb_dir . 'why-minimizerbra.php';
 }
 
+// NORIKS NursingBra (orto-nursingbra) — grudnjak za dojenje bez savova, mekan kao druga koza
+if ( noriks_is_type( 'nursingbra' ) ) {
+    include $noriks_pb_dir . 'why-nursingbra.php';
+}
+
 // NORIKS HikingShoes (orto-hikingshoes) — barefoot pohodne cipele
 if ( noriks_is_type( 'hikingshoes' ) ) {
     include $noriks_pb_dir . 'why-hikingshoes.php';
