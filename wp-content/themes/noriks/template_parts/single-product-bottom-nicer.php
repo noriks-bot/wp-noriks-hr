@@ -429,6 +429,11 @@ if ( noriks_is_type( 'antitheftbag' ) ) {
     include $noriks_pb_dir . 'why-antitheftbag.php';
 }
 
+// NORIKS PillOrganizer (orto-pillorganizer) — organizator za tablete s 14 vrecica sa zatvaracem
+if ( noriks_is_type( 'pillorganizer' ) ) {
+    include $noriks_pb_dir . 'why-pillorganizer.php';
+}
+
 // NORIKS BottleSling (orto-bottlesling) — izolirana torbica za termo casu s naramenicom
 if ( noriks_is_type( 'bottlesling' ) ) {
     include $noriks_pb_dir . 'why-bottlesling.php';
