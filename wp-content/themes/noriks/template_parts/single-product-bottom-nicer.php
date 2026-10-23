@@ -379,6 +379,11 @@ if ( noriks_is_type( 'airtravel' ) ) {
     include $noriks_pb_dir . 'why-airtravel.php';
 }
 
+// NORIKS SeatCushion (orto-seatcushion) — ortopedski jastuk za sjedenje (GelSeat je drug izdelek: why-gelseat.php)
+if ( noriks_is_type( 'seatcushion' ) ) {
+    include $noriks_pb_dir . 'why-seatcushion.php';
+}
+
 // NORIKS GrillBasket (orto-grillbasket) — valjkasta kosara za rostilj
 if ( noriks_is_type( 'grillbasket' ) ) {
     include $noriks_pb_dir . 'why-grillbasket.php';

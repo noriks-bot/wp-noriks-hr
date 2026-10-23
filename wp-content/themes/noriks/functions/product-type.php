@@ -204,6 +204,8 @@ function noriks_product_type_map() : array {
         'dualpillow'              => array( 'orto-dualpillow', 'dualpillow' ),
         // NORIKS GrillBasket — valjkasta kosara za rostilj (brez atributov; ponudbe 1x/2x/4x kom kot Kaching paketi originala, brez tablice).
         'grillbasket'             => array( 'orto-grillbasket', 'grillbasket' ),
+        // NORIKS SeatCushion — ortopedski jastuk za sjedenje s potporom za donja leda (brez atributov; ponudbe 1x/2x/4x kom kot Kaching paketi originala, brez tablice).
+        'seatcushion'             => array( 'orto-seatcushion', 'seatcushion' ),
         // NORIKS PetHairGlove — rukavica za uklanjanje dlaka kucnih ljubimaca (brez atributov; ponudbe 1x/2x/3x/4x kom kot Kaching paketi originala, brez tablice).
         'pethairglove'            => array( 'orto-pethairglove', 'pethairglove' ),
         // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
