@@ -439,6 +439,11 @@ if ( noriks_is_type( 'thermoboots' ) ) {
     include $noriks_pb_dir . 'why-thermoboots.php';
 }
 
+// NORIKS DogBed (orto-dogbed) — premium ortopedski krevet za pse
+if ( noriks_is_type( 'dogbed' ) ) {
+    include $noriks_pb_dir . 'why-dogbed.php';
+}
+
 // NORIKS SlingBag (orto-slingbag) — putna torbica preko ramena 2.0
 if ( noriks_is_type( 'slingbag' ) ) {
     include $noriks_pb_dir . 'why-slingbag.php';

@@ -163,6 +163,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-thermoboots' );
             return;
         }
+        // NORIKS DogBed: M / L / XL / 2XL po vanjskih merah, prostoru za lezanje, duljini in tezi psa (z originala).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'dogbed' ) ) {
+            get_template_part( 'template_parts/size-chart-dogbed' );
+            return;
+        }
         // NORIKS SlingBag: Mini / Regular / Max po merah torbice (cm), remen do 130 cm, kaj stane (z originala).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'slingbag' ) ) {
             get_template_part( 'template_parts/size-chart-slingbag' );

@@ -172,6 +172,8 @@ function noriks_product_type_map() : array {
         'hoodiedress'             => array( 'orto-hoodiedress', 'hoodiedress' ),
         // NORIKS SlingBag — putna torbica preko ramena 2.0 sa zastitom od krade (boja 4 + velicina Mini / Regular / Max).
         'slingbag'                => array( 'orto-slingbag', 'slingbag' ),
+        // NORIKS DogBed — premium ortopedski krevet za pse (boja 8 + velicina M / L / XL / 2XL).
+        'dogbed'                  => array( 'orto-dogbed', 'dogbed' ),
         // NORIKS MinimizerBra — rashladujuci minimizer grudnjak s punim pokricem (boja 4 + velicina 70C–115G, 74 velicine).
         'minimizerbra'            => array( 'orto-minimizerbra', 'minimizerbra' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
@@ -822,6 +824,19 @@ if ( ! function_exists( 'noriks_minimizerbra_sizes' ) ) {
             array( '105', '46', '92–96', array( '102–108', '104–111', '107–114', '109–116', '112–119', '115–121', '117–123', '' ) ),
             array( '110', '48', '96–100', array( '106–113', '108–115', '111–118', '114–120', '116–122', '119–125', '', '' ) ),
             array( '115', '50', '100–104', array( '110–117', '113–119', '115–121', '118–124', '120–126', '122–129', '', '' ) ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_dogbed_sizes' ) ) {
+    /** NORIKS DogBed: velicina, vanjske mjere D x S x V (cm), unutarnji prostor za lezanje (cm), duljina psa, idealna tezina, pasmine.
+     *  1:1 s tablice originala (doulia-store.com, »Guide des tailles«; »ako ste u dvojbi, odaberite vecu velicinu«). */
+    function noriks_dogbed_sizes() {
+        return array(
+            array( 'M',   '60 × 45 × 30 cm',  '35 ± 5 × 30 ± 5 cm', 'do 30 cm', 'do 8 kg',  'jorkširski terijer, patuljasti jazavčar, shih tzu, pomeranac, čivava, mops' ),
+            array( 'L',   '80 × 57 × 33 cm',  '55 ± 5 × 37 ± 5 cm', 'do 45 cm', 'do 15 kg', 'francuski buldog, jazavčar, patuljasti šnaucer' ),
+            array( 'XL',  '100 × 67 × 40 cm', '71 ± 5 × 42 ± 5 cm', 'do 55 cm', 'do 25 kg', 'pudla, buldog, beagle, koli, bostonski terijer, shiba inu' ),
+            array( '2XL', '120 × 75 × 40 cm', '87 ± 5 × 47 ± 5 cm', 'do 65 cm', 'do 35 kg', 'labrador, zlatni retriver, australski ovčar' ),
         );
     }
 }
