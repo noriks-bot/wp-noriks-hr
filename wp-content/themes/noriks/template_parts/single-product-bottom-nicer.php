@@ -369,6 +369,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS BottleSling (orto-bottlesling) — izolirana torbica za termo casu s naramenicom
+if ( noriks_is_type( 'bottlesling' ) ) {
+    include $noriks_pb_dir . 'why-bottlesling.php';
+}
+
 // NORIKS FleeceShawl (orto-fleeceshawl) — mekani sal-ogrtac od flisa
 if ( noriks_is_type( 'fleeceshawl' ) ) {
     include $noriks_pb_dir . 'why-fleeceshawl.php';

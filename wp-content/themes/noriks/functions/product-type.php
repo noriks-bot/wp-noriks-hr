@@ -168,6 +168,8 @@ function noriks_product_type_map() : array {
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS FleeceShawl — mekani sal-ogrtac od flisa (samo boja, 11 boja; jedna velicina 158 x 110 cm, brez tablice).
         'fleeceshawl'             => array( 'orto-fleeceshawl', 'fleeceshawl' ),
+        // NORIKS BottleSling — izolirana torbica za termo casu s naramenicom (samo boja, 15 boja; jedna velicina 25 x 8 x 7,5 cm, brez tablice).
+        'bottlesling'             => array( 'orto-bottlesling', 'bottlesling' ),
         // NORIKS SilkBoxers — svilene bokserice za cjelodnevnu udobnost (samo velicina M–3XL, tamnoplava).
         'silkboxers'              => array( 'orto-silkboxers', 'silkboxers' ),
         // NORIKS ModalSweatshirt — dukserica od modala s okruglim izrezom (boja + velicina S–3XL).
