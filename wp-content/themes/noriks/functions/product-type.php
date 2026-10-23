@@ -212,6 +212,8 @@ function noriks_product_type_map() : array {
         'seatcushion'             => array( 'orto-seatcushion', 'seatcushion' ),
         // NORIKS GroundingMat — podloga za uzemljenje (brez atributov: za HR samo EU adapter; ponudbe 1x/2x/3x/5x kom kot paketi originala, brez tablice).
         'groundingmat'            => array( 'orto-groundingmat', 'groundingmat' ),
+        // NORIKS NeckMassager — masazer za vrat i ramena (brez atributov; original nima kolicinskih paketov -> 1x/2x/3x kom po lestvici, brez tablice).
+        'neckmassager'            => array( 'orto-neckmassager', 'neckmassager' ),
         // NORIKS PetHairGlove — rukavica za uklanjanje dlaka kucnih ljubimaca (brez atributov; ponudbe 1x/2x/3x/4x kom kot Kaching paketi originala, brez tablice).
         'pethairglove'            => array( 'orto-pethairglove', 'pethairglove' ),
         // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
