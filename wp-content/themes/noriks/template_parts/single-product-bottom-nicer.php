@@ -434,6 +434,11 @@ if ( noriks_is_type( 'widetoeshoes' ) ) {
     include $noriks_pb_dir . 'why-widetoeshoes.php';
 }
 
+// NORIKS ThermoBoots (orto-thermoboots) — vodootporne zimske cizme s podstavom od flisa
+if ( noriks_is_type( 'thermoboots' ) ) {
+    include $noriks_pb_dir . 'why-thermoboots.php';
+}
+
 // NORIKS SlingBag (orto-slingbag) — putna torbica preko ramena 2.0
 if ( noriks_is_type( 'slingbag' ) ) {
     include $noriks_pb_dir . 'why-slingbag.php';

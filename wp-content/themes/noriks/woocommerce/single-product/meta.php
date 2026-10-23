@@ -683,6 +683,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS WideToeShoes</strong> su prozračne tenisice sa širokim prednjim dijelom i debljim potplatom — vaš prvi korak prema slobodi hodanja kao bosonogi. Prostran prednji dio omogućuje prstima da se prirodno rašire i smanjuje pritisak na stopala tijekom dugog hodanja, a lagana izrada smanjuje umor i ostaje izdržljiva.<br><br>Kvalitetni materijali propuštaju zrak, pa stopala ostaju suha i udobna. Potplat pouzdano prianja i na kamenitim i neravnim podlogama, a ojačani prednji dio štiti prste od udaraca. Bilo da hodate planinskim stazama, gradom ili istražujete prirodu, ove tenisice spajaju udobnost i svakodnevnu nosivost.<br><br><strong>Gornji dio:</strong> sintetička koža + tkanina<br><strong>Podstava:</strong> mrežasta tkanina<br><strong>Potplat:</strong> guma<br><strong>Debljina potplata:</strong> debeli gumeni potplat za fleksibilnost i otpornost na klizanje<br><strong>Vodootpornost:</strong> nisu vodootporne, ali se brzo suše<br><strong>Zatvaranje:</strong> vezice<br><br><strong>Boje:</strong> bijelo-siva, smeđa, bež-zelena, bež-crvena, crno-bijela, bež-siva, kaki i tamnosmeđa.<br><strong>Veličine:</strong> EU 37–47. Tenisice mogu biti malo manje — veličinu odaberite prema tablici veličina (duljina uloška = duljina stopala + 1–1,5 cm).
 
+         <?php elseif( noriks_is_type( 'thermoboots', $current_product_id ) ): ?>
+
+                <strong>NORIKS ThermoBoots</strong> su vodootporne zimske čizme s toplom podstavom od flisa, izrađene za pravu toplinu, zaštitu i svakodnevnu udobnost. Potpuno zatvorena izrada drži stopala suhima na kiši, snijegu i bljuzgavici, a debela, mekana podstava od flisa grije cijeli dan — čak i bez čarapa. Lagane su, bez glomaznosti, a neklizajući potplat pouzdano prianja na mokrim i zaleđenim površinama.<br><br>Bočni patentni zatvarač omogućuje obuvanje za 3 sekunde — bez saginjanja i vezica. Čizme sežu iznad gležnja za dodatnu potporu i stabilnost na neravnom terenu, a unisex dizajn odgovara i muškarcima i ženama — za posao, šetnje sa psom i vikende.<br><br><strong>Značajke:</strong><br>• <strong>100 % vodootporne:</strong> potpuno zatvorena izrada, suha stopala na kiši, snijegu i u lokvama<br>• <strong>Topla podstava od flisa:</strong> debela i mekana iznutra, ugodna i bez čarapa<br>• <strong>Lagane i neklizajuće:</strong> za cjelodnevno nošenje, potplat prianja na mokrim i zaleđenim površinama<br>• <strong>Bočni patentni zatvarač:</strong> obuvanje za 3 sekunde, bez vezica<br>• <strong>Potpora gležnju:</strong> visina iznad gležnja za stabilnost na neravnom terenu<br>• <strong>Unisex dizajn:</strong> za muškarce i žene<br><br><strong>Materijali:</strong> topla termo podstava od flisa, 100 % vodootporan vodoodbojni tekstilni gornji dio koji se lako čisti, robustan potplat za sve terene.<br><strong>Boje:</strong> crna, siva i svijetlosmeđa.<br><strong>Veličine:</strong> EU 37–48 (unisex) — odgovaraju uobičajenoj veličini, pogledajte tablicu veličina.
+
          <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
                 <strong>NORIKS MinimizerBra</strong> je rashlađujući minimizer grudnjak s punim pokrićem, izgrađen oko <strong>krutog središnjeg panela za razdvajanje</strong>. Gotovo svaki minimizer radi na principu kompresije: gura tkivo zajedno i prema naprijed, pa se ono nagomila u sredini prsa i stvara »policu« zbog koje se pripijene majice napuhnu, a košulje razmiču među gumbima. NORIKS MinimizerBra umjesto toga razdvaja — kruti panel oslanja se na prsnu kost i drži svaku stranu punijih grudi u njezinu prostoru tijekom cijelog dana kretanja. Nema mase, nema police, nema efekta šatora.<br><br><strong>Kako je izrađen:</strong><br>• Kruti panel za razdvajanje — oslanja se na prsnu kost i ne urušava se do podneva<br>• Potpuno bez podstave — bez dodatnog volumena<br>• Košarica s punim pokrićem — drži oblik punijih grudi umjesto da ih spljošti<br>• Debele podstavljene naramenice i široka traka — težina se raspoređuje preko leđa<br>• Rashlađujuća, prozračna tkanina — bez nakupljanja topline ispod grudi<br>• Žica koja ne bode — oblikuje košaricu bez urezivanja<br><br><strong>Boje:</strong> bež, crna, bijela i boja kave.<br><strong>Veličine:</strong> trake 70 – 115 i košarice B – I (74 veličine) — svoju veličinu pronađite u tablici veličina; ako ste između dvije veličine, uzmite veću. U paketu za svaki komad zasebno birate boju i veličinu.
@@ -1645,6 +1649,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'thermoboots', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>EU 37 do EU 48</strong>, unisex. Čizme odgovaraju uobičajenoj veličini — <strong>odaberite svoju uobičajenu veličinu obuće</strong> ili je provjerite prema duljini stopala.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">UK</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
+                  <th style="padding:9px 8px;text-align:left;">Unutarnja duljina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_thermoboots_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2477,6 +2512,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 
                 Tenisice čistite mekanom, blago vlažnom krpom ili četkicom i malo blagog sapuna; prljavštinu s gumenog potplata isperite mlakom vodom. Ne perite ih u perilici rublja i ne namačite ih. Nisu vodootporne, ali se brzo suše — ostavite ih da se osuše na zraku, daleko od radijatora i izravnog sunca. Uloške po potrebi izvadite i osušite zasebno.
+
+             <?php elseif( noriks_is_type( 'thermoboots', $current_product_id ) ): ?>
+
+                Za najbolje rezultate čizme čistite <strong>blago vlažnom krpom</strong>. Tvrdokorne mrlje nježno očistite mekanom četkicom s malo blagog sapuna i vode, a zatim ih ostavite da se osuše na zraku, daleko od radijatora i izravnog sunca. <strong>Ne perite ih u perilici rublja</strong> — tako vodootporna izrada i podstava od flisa dugo ostaju kao nove.
 
              <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
