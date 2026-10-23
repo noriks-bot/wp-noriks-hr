@@ -731,6 +731,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS WaffleLongSleeve</strong> je vafel majica dugih rukava koja nikad dugo ne ostaje u ladici. Umirujuće je mekana — izrađena od udobne <strong>pamučne vafel tkanine</strong> koja lijepo pada i izgleda promišljeno, a od prvog nošenja osjeća se kao da ste je već dugo nosili.<br><br><strong>Značajke:</strong><br>• <strong>Mekano pamučno vafel pletivo:</strong> ugodno od prvog nošenja<br>• <strong>Spuštena ramena:</strong> ravan kroj od ramena do struka, seže do bokova ili malo ispod<br>• <strong>Rebrasti završeci:</strong> suptilna obrada koja daje strukturu bez krutosti<br>• <strong>Predskupljena tkanina:</strong> nakon pranja i sušenja ostaje iste veličine<br>• <strong>Ne gužva se:</strong> iz sušilice izlazi jednako uredna kao što je ušla<br><br><strong>Kroj:</strong> opušten — malo više prostora od uobičajene veličine u prsima i ramenima, bez viška materijala kao kod oversized modela.<br><strong>Materijal:</strong> 60 % pamuk, 40 % poliester.<br><strong>Boje:</strong> kadulja zelena, sivoplava, tirkizna, bordo, lososova, sivosmeđa, crna, starinska roza, svijetloplava, plava, svijetložuta, bijela, jarko ružičasta, svijetloružičasta, mentol zelena, krem i lila.<br><strong>Veličine:</strong> XS–3XL (unisex) — pogledajte tablicu veličina.
 
+         <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
+
+                <strong>NORIKS PlushBlanket</strong> je super mekana, oversized plišana deka nalik oblaku – baršunasta s obje strane, ugodno rastezljiva u četiri smjera, a mekoća joj ostaje i nakon brojnih pranja. Deka koju je teško opisati riječima – i još teže odložiti.<br><br><strong>Značajke:</strong><br>• <strong>Super mekan pliš:</strong> bez grubih rubova, svaki položaj jednako je ugodan<br>• <strong>Rastezljivost u četiri smjera:</strong> prilagođava se tijelu, a ne gubi oblik<br>• <strong>Četiri veličine:</strong> od osobnog pokrivača do pokrivenosti velikog bračnog kreveta<br>• <strong>17 boja i uzoraka:</strong> lako za poklon, lako se uklapa u svaki prostor<br>• <strong>Pere se u perilici i ostaje mekana:</strong> hladno pranje, sušenje na zraku<br><br><strong>Savršena za:</strong> pretvaranje svakog kreveta ili kauča u najmekše mjesto u prostoriji i kao poklon nakon kojeg se ljudi pitaju kako su ikad živjeli bez nje.<br><strong>Materijal:</strong> 95 % poliester, 5 % elastan – plišana i baršunasta s unutarnje i vanjske strane.<br><strong>Boje:</strong> tamnoplava, svijetlosiva, ružičasti vrtlog, ljubičasti tigar, sivi tigar, bjelokosni tigar, plavi tigar, maslinasti tigar, bengalski tigar, jarko ružičasta, plavi val, lavanda, ružičasti kvarc, plava, bordo, mentol i ciklama.<br><strong>Veličine:</strong> Srednja 127 x 152 cm, Velika 152 x 203 cm, XL 229 x 229 cm, Mega 254 x 274 cm – pogledajte tablicu veličina.
+
          <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
 
                 <strong>NORIKS CloudClogs</strong> su 3D klompe napravljene za ljude koji su <strong>cijeli dan na nogama</strong> — izdržljive, a na nogama mekane kao oblak. Debeo, mekan potplat ublažava svaki korak, a <strong>protuklizni potplat</strong> daje sigurnost i u dugim radnim smjenama.<br><br>Otvori na gornjem dijelu čine ih <strong>prozračnima</strong> i udobnima i za šira stopala, a <strong>vodootporan</strong> materijal ostaje suh i po kišnim danima. Nosite ih <strong>kao papuče ili natikače</strong> — od jutarnjih obaveza do druženja u dvorištu — ili kao cipele vani; <strong>podesivi remen</strong> omogućuje pristajanje po vašoj mjeri.<br><br>Unisex veličine EU 39–46 (i polovične veličine), u pet boja: crna, bijela, plava, roza i siva.
@@ -1838,6 +1842,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </table>
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Opseg prsa izmjerite oko najšireg dijela prsa, odmah ispod pazuha; struk u visini pupka; bokove oko najšireg dijela. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Četiri veličine – od osobnog pokrivača za kauč do deke za <strong>veliki bračni krevet</strong>. Mjere su približne i mogu malo odstupati zbog mekane i rastezljive tkanine.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Dimenzije</th>
+                  <th style="padding:9px 8px;text-align:left;">Težina</th>
+                  <th style="padding:9px 8px;text-align:left;">Idealna za</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_plushblanket_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f1f6fb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
@@ -3002,6 +3037,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'wafflelongsleeve', $current_product_id ) ): ?>
 
                 Majicu <strong>perite u hladnoj vodi</strong>, <strong>zajedno sa sličnim bojama</strong>. Sušite je u sušilici na <strong>niskoj temperaturi</strong>. <strong>Ne glačajte</strong> — tkanina je predskupljena i ne gužva se, pa i nakon pranja ostaje iste veličine i uredna. Sastav: 60 % pamuk, 40 % poliester.
+
+             <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
+
+                Deku <strong>perite u perilici na hladno, zasebno</strong>; tamne boje perite odvojeno. <strong>Ne koristite omekšivač</strong> i ne izbjeljujte. <strong>Sušite je na zraku</strong> ili položenu ravno. Ne glačajte i ne čistite kemijski. Tako će ostati jednako mekana pranje za pranjem. Sastav: 95 % poliester, 5 % elastan.
 
              <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
 

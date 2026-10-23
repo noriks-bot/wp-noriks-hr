@@ -174,6 +174,9 @@ function noriks_product_type_map() : array {
         'cloudclogs'              => array( 'orto-cloudclogs', 'cloudclogs' ),
         // NORIKS WaffleLongSleeve — majica dugih rukava od vafel pletiva, unisex (boja 17 + velicina XS–3XL).
         'wafflelongsleeve'        => array( 'orto-wafflelongsleeve', 'wafflelongsleeve' ),
+        // NORIKS PlushBlanket — super mekana oversized plisana deka (boja 17 + velicina Srednja / Velika / XL / Mega, cijena po velicini kot original).
+        // Ni povezano z NORIKS Blanket (orto-blanket) ni FleeceShawl.
+        'plushblanket'            => array( 'orto-plushblanket', 'plushblanket' ),
         // NORIKS HikingShoes — barefoot pohodne cipele od brusene koze (boja + velicina EU 36–46).
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
@@ -921,6 +924,19 @@ if ( ! function_exists( 'noriks_wafflelongsleeve_sizes' ) ) {
             array( 'XL',  '104 – 114', '84 – 91',   '107 – 112', '132 cm', '121 cm', '76 cm' ),
             array( '2XL', '114 – 127', '91 – 102',  '114 – 122', '142 cm', '131 cm', '79 cm' ),
             array( '3XL', '124 – 135', '102 – 112', '124 – 132', '152 cm', '141 cm', '81 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_plushblanket_sizes' ) ) {
+    /** NORIKS PlushBlanket: velicina (= ime opcije Velicina brez mer), dimenzije (cm), dimenzije originala (palci), priblizna tezina, idealna za.
+     *  1:1 z originala (comfrt.com, zavihek »Size« + »Dreamer Blanket Size Guide«), palci -> cm, lbs -> kg. Kids Size originala ni naprodaj. */
+    function noriks_plushblanket_sizes() {
+        return array(
+            array( 'Srednja', '127 x 152 cm', '50" x 60"',   'pribl. 2,3 kg', 'maženje na kauču ili osobni pokrivač' ),
+            array( 'Velika',  '152 x 203 cm', '60" x 80"',   'pribl. 3,2 kg', 'ušuškavanje ili dodatni sloj na krevetu' ),
+            array( 'XL',      '229 x 229 cm', '90" x 90"',   'pribl. 5,2 kg', 'bračni krevet (queen) s dodatnim prepustom' ),
+            array( 'Mega',    '254 x 274 cm', '100" x 108"', 'pribl. 6,8 kg', 'veliki bračni krevet (king) i maksimalna udobnost' ),
         );
     }
 }

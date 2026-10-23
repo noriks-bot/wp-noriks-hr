@@ -504,6 +504,11 @@ if ( noriks_is_type( 'wafflelongsleeve' ) ) {
     include $noriks_pb_dir . 'why-wafflelongsleeve.php';
 }
 
+// NORIKS PlushBlanket (orto-plushblanket) — super mekana oversized plisana deka
+if ( noriks_is_type( 'plushblanket' ) ) {
+    include $noriks_pb_dir . 'why-plushblanket.php';
+}
+
 // NORIKS DogBed (orto-dogbed) — premium ortopedski krevet za pse
 if ( noriks_is_type( 'dogbed' ) ) {
     include $noriks_pb_dir . 'why-dogbed.php';
