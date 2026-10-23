@@ -723,6 +723,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS LeatherBoots</strong> su muške udobne kožne čizme koje spajaju udobnost za cijeli dan i čist izgled kože — u čizmama koje ćete obuvati iznova i iznova. Uložak oblikovan prema svodu stopala i mekano jastučenje upijaju udarce svakog koraka, pa stopala, koljena i leđa ostaju manje opterećeni i nakon dugog dana na nogama. Širok prednji dio daje prstima prostor umjesto da ih stišće, a izgledaju kao obične kožne čizme, ne kao glomazna ortopedska obuća.<br><br>Neklizajući gumeni potplat pouzdano prianja na mokrim i sklizavim površinama, gornji dio otporan na vodu odbija laganu kišu i prskanje, a lagana i fleksibilna izrada nema mrtve težine teških čizama. Svaki par izrađen je s naglaskom na izdržljivost, udobnost i pouzdanost u svakodnevnom nošenju — na poslu, u šetnji i vikendom. Dostupne u pet boja (smeđa, svijetlosmeđa, crna, plava i zelena) i veličinama od EU 37 do EU 48.
 
+         <?php elseif( noriks_is_type( 'wafflelongsleeve', $current_product_id ) ): ?>
+
+                <strong>NORIKS WaffleLongSleeve</strong> je vafel majica dugih rukava koja nikad dugo ne ostaje u ladici. Umirujuće je mekana — izrađena od udobne <strong>pamučne vafel tkanine</strong> koja lijepo pada i izgleda promišljeno, a od prvog nošenja osjeća se kao da ste je već dugo nosili.<br><br><strong>Značajke:</strong><br>• <strong>Mekano pamučno vafel pletivo:</strong> ugodno od prvog nošenja<br>• <strong>Spuštena ramena:</strong> ravan kroj od ramena do struka, seže do bokova ili malo ispod<br>• <strong>Rebrasti završeci:</strong> suptilna obrada koja daje strukturu bez krutosti<br>• <strong>Predskupljena tkanina:</strong> nakon pranja i sušenja ostaje iste veličine<br>• <strong>Ne gužva se:</strong> iz sušilice izlazi jednako uredna kao što je ušla<br><br><strong>Kroj:</strong> opušten — malo više prostora od uobičajene veličine u prsima i ramenima, bez viška materijala kao kod oversized modela.<br><strong>Materijal:</strong> 60 % pamuk, 40 % poliester.<br><strong>Boje:</strong> kadulja zelena, sivoplava, tirkizna, bordo, lososova, sivosmeđa, crna, starinska roza, svijetloplava, plava, svijetložuta, bijela, jarko ružičasta, svijetloružičasta, mentol zelena, krem i lila.<br><strong>Veličine:</strong> XS–3XL (unisex) — pogledajte tablicu veličina.
+
          <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
 
                 <strong>NORIKS CloudClogs</strong> su 3D klompe napravljene za ljude koji su <strong>cijeli dan na nogama</strong> — izdržljive, a na nogama mekane kao oblak. Debeo, mekan potplat ublažava svaki korak, a <strong>protuklizni potplat</strong> daje sigurnost i u dugim radnim smjenama.<br><br>Otvori na gornjem dijelu čine ih <strong>prozračnima</strong> i udobnima i za šira stopala, a <strong>vodootporan</strong> materijal ostaje suh i po kišnim danima. Nosite ih <strong>kao papuče ili natikače</strong> — od jutarnjih obaveza do druženja u dvorištu — ili kao cipele vani; <strong>podesivi remen</strong> omogućuje pristajanje po vašoj mjeri.<br><br>Unisex veličine EU 39–46 (i polovične veličine), u pet boja: crna, bijela, plava, roza i siva.
@@ -1774,6 +1778,62 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </table>
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'wafflelongsleeve', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Unisex veličine od <strong>XS do 3XL</strong>, <strong>opušten kroj</strong> — malo više prostora u prsima i ramenima. Veličine odgovaraju sljedećim <strong>mjerama tijela</strong> (cm):</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#4d7a5a;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg bokova</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_wafflelongsleeve_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f1f6f1' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:16px 0 10px;line-height:1.6;"><strong>Mjere majice</strong> (stvarne dimenzije proizvoda, cm):</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#4d7a5a;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_wafflelongsleeve_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f1f6f1' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[5] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[6] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Opseg prsa izmjerite oko najšireg dijela prsa, odmah ispod pazuha; struk u visini pupka; bokove oko najšireg dijela. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
@@ -2930,6 +2990,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'leatherboots', $current_product_id ) ): ?>
 
                 Nakon nošenja čizme obrišite <strong>blago vlažnom krpom</strong>. Za najbolje rezultate ostavite ih da se <strong>prirodno osuše na zraku</strong> i izbjegavajte izravnu toplinu (radijator, sušilo, izravno sunce). Ne perite ih u perilici rublja i ne namačite ih. Redovito čišćenje čuva njihov izgled i produljuje im vijek trajanja.
+
+             <?php elseif( noriks_is_type( 'wafflelongsleeve', $current_product_id ) ): ?>
+
+                Majicu <strong>perite u hladnoj vodi</strong>, <strong>zajedno sa sličnim bojama</strong>. Sušite je u sušilici na <strong>niskoj temperaturi</strong>. <strong>Ne glačajte</strong> — tkanina je predskupljena i ne gužva se, pa i nakon pranja ostaje iste veličine i uredna. Sastav: 60 % pamuk, 40 % poliester.
 
              <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
 

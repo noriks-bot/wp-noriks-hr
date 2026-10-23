@@ -172,6 +172,8 @@ function noriks_product_type_map() : array {
         'snugboot'                => array( 'orto-snugboot', 'snugboot' ),
         // NORIKS CloudClogs — 3D klompe mekane kao oblak (boja 5 + velicina EU 39–46). Ni povezano z NORIKS Cloud (orto-cloud, jastuk) ni StepCloud.
         'cloudclogs'              => array( 'orto-cloudclogs', 'cloudclogs' ),
+        // NORIKS WaffleLongSleeve — majica dugih rukava od vafel pletiva, unisex (boja 17 + velicina XS–3XL).
+        'wafflelongsleeve'        => array( 'orto-wafflelongsleeve', 'wafflelongsleeve' ),
         // NORIKS HikingShoes — barefoot pohodne cipele od brusene koze (boja + velicina EU 36–46).
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
@@ -901,6 +903,22 @@ if ( ! function_exists( 'noriks_cloudclogs_sizes' ) ) {
             array( 'EU 45',   '11 M / 12,5 Ž',  '10,5', '29,0 cm' ),
             array( 'EU 45,5', '11,5 M / 13 Ž',  '11',   '29,5 cm' ),
             array( 'EU 46',   '12 M / 13,5 Ž',  '11,5', '30,0 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_wafflelongsleeve_sizes' ) ) {
+    /** NORIKS WaffleLongSleeve: velicina, mjere tijela (opseg prsa / struka / bokova) in mjere majice (opseg prsa / struka, duljina), cm.
+     *  1:1 s tablice originala (comfrt.com, »Waffle Lounge Long Sleeve – Relaxed Fit«, Body / Product measurements v cm). Unisex. */
+    function noriks_wafflelongsleeve_sizes() {
+        return array(
+            array( 'XS',  '81 – 89',   '61 – 66',   '86 – 91',   '112 cm', '95 cm',  '71 cm' ),
+            array( 'S',   '86 – 94',   '66 – 71',   '91 – 97',   '117 cm', '100 cm', '72 cm' ),
+            array( 'M',   '91 – 102',  '71 – 76',   '97 – 102',  '122 cm', '105 cm', '74 cm' ),
+            array( 'L',   '97 – 104',  '76 – 84',   '102 – 107', '127 cm', '110 cm', '75 cm' ),
+            array( 'XL',  '104 – 114', '84 – 91',   '107 – 112', '132 cm', '121 cm', '76 cm' ),
+            array( '2XL', '114 – 127', '91 – 102',  '114 – 122', '142 cm', '131 cm', '79 cm' ),
+            array( '3XL', '124 – 135', '102 – 112', '124 – 132', '152 cm', '141 cm', '81 cm' ),
         );
     }
 }

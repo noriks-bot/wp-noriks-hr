@@ -494,6 +494,11 @@ if ( noriks_is_type( 'cloudclogs' ) ) {
     include $noriks_pb_dir . 'why-cloudclogs.php';
 }
 
+// NORIKS WaffleLongSleeve (orto-wafflelongsleeve) — majica dugih rukava od vafel pletiva
+if ( noriks_is_type( 'wafflelongsleeve' ) ) {
+    include $noriks_pb_dir . 'why-wafflelongsleeve.php';
+}
+
 // NORIKS DogBed (orto-dogbed) — premium ortopedski krevet za pse
 if ( noriks_is_type( 'dogbed' ) ) {
     include $noriks_pb_dir . 'why-dogbed.php';

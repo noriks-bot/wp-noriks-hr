@@ -178,6 +178,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-cloudclogs' );
             return;
         }
+        // NORIKS WaffleLongSleeve: XS–3XL, mjere tijela in mjere majice (cm) iz tablice originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'wafflelongsleeve' ) ) {
+            get_template_part( 'template_parts/size-chart-wafflelongsleeve' );
+            return;
+        }
         // NORIKS DogBed: M / L / XL / 2XL po vanjskih merah, prostoru za lezanje, duljini in tezi psa (z originala).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'dogbed' ) ) {
             get_template_part( 'template_parts/size-chart-dogbed' );
