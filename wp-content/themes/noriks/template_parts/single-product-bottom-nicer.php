@@ -414,6 +414,11 @@ if ( noriks_is_type( 'widetoeshoes' ) ) {
     include $noriks_pb_dir . 'why-widetoeshoes.php';
 }
 
+// NORIKS HikingShoes (orto-hikingshoes) — barefoot pohodne cipele
+if ( noriks_is_type( 'hikingshoes' ) ) {
+    include $noriks_pb_dir . 'why-hikingshoes.php';
+}
+
 // NORIKS OrthoMules (orto-orthomules) — ortopedske pletene natikace s remenom
 if ( noriks_is_type( 'orthomules' ) ) {
     include $noriks_pb_dir . 'why-orthomules.php';

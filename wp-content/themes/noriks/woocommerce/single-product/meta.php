@@ -667,6 +667,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS WideToeShoes</strong> su prozračne tenisice sa širokim prednjim dijelom i debljim potplatom — vaš prvi korak prema slobodi hodanja kao bosonogi. Prostran prednji dio omogućuje prstima da se prirodno rašire i smanjuje pritisak na stopala tijekom dugog hodanja, a lagana izrada smanjuje umor i ostaje izdržljiva.<br><br>Kvalitetni materijali propuštaju zrak, pa stopala ostaju suha i udobna. Potplat pouzdano prianja i na kamenitim i neravnim podlogama, a ojačani prednji dio štiti prste od udaraca. Bilo da hodate planinskim stazama, gradom ili istražujete prirodu, ove tenisice spajaju udobnost i svakodnevnu nosivost.<br><br><strong>Gornji dio:</strong> sintetička koža + tkanina<br><strong>Podstava:</strong> mrežasta tkanina<br><strong>Potplat:</strong> guma<br><strong>Debljina potplata:</strong> debeli gumeni potplat za fleksibilnost i otpornost na klizanje<br><strong>Vodootpornost:</strong> nisu vodootporne, ali se brzo suše<br><strong>Zatvaranje:</strong> vezice<br><br><strong>Boje:</strong> bijelo-siva, smeđa, bež-zelena, bež-crvena, crno-bijela, bež-siva, kaki i tamnosmeđa.<br><strong>Veličine:</strong> EU 37–47. Tenisice mogu biti malo manje — veličinu odaberite prema tablici veličina (duljina uloška = duljina stopala + 1–1,5 cm).
 
+         <?php elseif( noriks_is_type( 'hikingshoes', $current_product_id ) ): ?>
+
+                <strong>NORIKS HikingShoes</strong> su vodoodbojne pohodne cipele od brušene kože, osmišljene za avanture u prirodi u stilu hodanja bosonogi. Prostran prednji dio i fleksibilna izrada omogućuju stopalima da se prirodno kreću, a ravan, neklizajući potplat poboljšava ravnotežu na stazama i neravnom terenu. Završna obrada od brušene kože izgleda jednako dobro u gradu kao i na stazi — za sve koji žele prirodan osjećaj tla pod nogama bez kompromisa u stilu i izvedbi.<br><br><strong>Specifikacije:</strong><br>• <strong>Namjena:</strong> planinarenje, trekking, trail trčanje, višednevne ture, istraživanje prirode<br>• <strong>Značajke:</strong> barefoot oblik, tanak i fleksibilan potplat, vodoodbojnost, neklizajući potplat i na mokrom, stabilizator pete, potpuno zatvoreni jezik, vezanje cijelom duljinom<br>• <strong>Materijali:</strong> gornji dio od brušene kože, gumeni potplat, uložak od prirodnog pluta<br>• <strong>Potplat:</strong> baza 4 mm, kramponi 4 mm, ukupno 8 mm (zero drop)<br>• <strong>Težina:</strong> muške oko 750 g, ženske oko 600 g (par)<br>• <strong>Sezona:</strong> cijela godina<br><br><strong>Boje:</strong> žuta, svijetlosiva, terakota, petrolej plava, crna i maslinasto zelena.
+
          <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 
                 <strong>NORIKS OrthoMules</strong> su ortopedske pletene natikače s remenom: <strong>ortopedski uložak</strong> ispod stopala, <strong>prozračan pleteni gornji dio</strong> i remen u stilu Mary Jane koji zaista drži cipelu na nozi — lijep izgled više ne znači bol.<br><br><strong>Istaknuto:</strong><br>• <strong>Ortopedska potpora</strong> — uložak koji podupire stopalo<br>• <strong>Prozračni pleteni gornji dio</strong> — stopalo diše<br>• <strong>Remen koji drži cijeli dan</strong> — cipela ostaje na nozi u svakom koraku<br><br><strong>Boje:</strong> zlatna, bijela, srebrna, crna, svijetlosmeđa i smeđa.<br><strong>Veličine:</strong> EU 35–43 (pogledajte tablicu veličina).
@@ -1583,6 +1587,39 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'hikingshoes', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>EU 36 do EU 46</strong>. Veličinu odaberite prema <strong>duljini stopala od pete do vrha prstiju</strong> — raspon već uključuje potreban prostor u cipeli. <strong>Ako ste između dvije veličine, odaberite manju.</strong></p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#3f6b45;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Stopalo</th>
+                  <th style="padding:9px 8px;text-align:left;">UK</th>
+                  <th style="padding:9px 8px;text-align:left;">US Ž</th>
+                  <th style="padding:9px 8px;text-align:left;">US M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_hikingshoes_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#edf3ea' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Cipele odgovaraju stopalima srednjeg volumena; za vrlo široka stopala odaberite veću veličinu. Za planinarenje preporučujemo deblje čarape. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2269,6 +2306,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 
                 Tenisice čistite mekanom, blago vlažnom krpom ili četkicom i malo blagog sapuna; prljavštinu s gumenog potplata isperite mlakom vodom. Ne perite ih u perilici rublja i ne namačite ih. Nisu vodootporne, ali se brzo suše — ostavite ih da se osuše na zraku, daleko od radijatora i izravnog sunca. Uloške po potrebi izvadite i osušite zasebno.
+
+             <?php elseif( noriks_is_type( 'hikingshoes', $current_product_id ) ): ?>
+
+                Cipele od brušene kože čistite mekanom četkicom kada su suhe, a mrlje uklonite blago vlažnom krpom. Prljavštinu s gumenog potplata isperite mlakom vodom. Ne perite ih u perilici rublja i ne namačite ih. Ako se smoče, napunite ih papirom i ostavite da se osuše na zraku, daleko od radijatora i izravnog sunca. Za dulju zaštitu od vode i prljavštine povremeno ih zaštitite sprejem za impregnaciju brušene kože.
 
              <?php elseif( noriks_is_type( 'orthomules', $current_product_id ) ): ?>
 
