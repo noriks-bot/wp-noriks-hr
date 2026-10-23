@@ -1,5 +1,5 @@
 <?php
-// Review pool za NORIKS AirTravel — putni ruksak s vakuumskom kompresijom (orto-legcompression, SKU NORIKS-LEGCOMPRESSION).
+// Review pool za NORIKS AirTravel — putni ruksak s vakuumskom kompresijom (orto-airtravel, SKU NORIKS-AIRTRAVEL).
 // Kratka hrvatska mnenja po vzoru mnenj originala (flovir.com: "Why Travelers Love It!"),
 // brez tuje znamke in brez obljub izven NORIKS pogojev.
 $auto_reviews_en = array(

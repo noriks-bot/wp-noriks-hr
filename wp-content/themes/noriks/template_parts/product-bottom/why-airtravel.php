@@ -1,7 +1,7 @@
 <?php
 /**
- * product-bottom: NORIKS AirTravel — putni ruksak s vakuumskom kompresijom (SKU NORIKS-LEGCOMPRESSION, tip legcompression,
- * kategorija orto-legcompression; SKU iz izbora, izdelek na originalu je potovalni nahrbtnik, ne kompresija za noge).
+ * product-bottom: NORIKS AirTravel — putni ruksak s vakuumskom kompresijom (SKU NORIKS-AIRTRAVEL, tip airtravel,
+ * kategorija orto-airtravel; SKU iz izbora, izdelek na originalu je potovalni nahrbtnik, ne kompresija za noge).
  * Original: flovir.com/products/air-travel-bag®-2nd-gen ("Air Pro® Compression System") — vsebina in vrstni red 1:1 z
  * originalom, oblika po NORIKS stilu (predloga why-grillbasket.php / why-hands.php), poudarek po barvah izdelka
  * (crna + crveni detalji: rdeča #b8282e, temno #1d1b1c, nevtralno toplo sivo ozadje #f5f2f0):
@@ -18,13 +18,13 @@
  * Izpusceno: pasica trgovine, "Add Air Pump" dodatek, darila "3 travel gifts ($94 value)", "SUMMER BUNDLE" z darili,
  * 3-Year Warranty, 90-Day Trial, Ships from USA, harmoniki 90-Day Money Back Guarantee in Shipping (velja NORIKS),
  * "Ask a Question" (e-pošta podpore), noga trgovine.
- * FAQ (6) je v reviews.php ($legcompression_faq), mnenja v auto_reviews/HR_legcompression.php, opis + nega v meta.php.
- * Slike in videi: img/legcompression/ (nlc-…).
+ * FAQ (6) je v reviews.php ($airtravel_faq), mnenja v auto_reviews/HR_airtravel.php, opis + nega v meta.php.
+ * Slike in videi: img/airtravel/ (nlc-…).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-$nlc      = get_template_directory_uri() . '/img/legcompression/';
-$nlc_path = get_template_directory() . '/img/legcompression/';
+$nlc      = get_template_directory_uri() . '/img/airtravel/';
+$nlc_path = get_template_directory() . '/img/airtravel/';
 $nlc_img  = function( $file, $alt, $cls = '' ) use ( $nlc, $nlc_path ) {
   if ( ! $file || ! file_exists( $nlc_path . $file ) ) { return ''; }
   return '<img src="' . esc_url( $nlc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
@@ -432,7 +432,7 @@ $nlc_cls = function() use ( &$nlc_n ) { $nlc_n++; return ( $nlc_n % 2 ) ? ' nlc-
 }
 
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
-.product_cat-orto-legcompression .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
+.product_cat-orto-airtravel .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
 
 /* kratek opis izdelka: zelene kljukice namesto pik (REST pobriše inline slog) */
 .woocommerce div.product .woocommerce-product-details__short-description ul,
