@@ -374,6 +374,11 @@ if ( noriks_is_type( 'vacuumsealer' ) ) {
     include $noriks_pb_dir . 'why-vacuumsealer.php';
 }
 
+// NORIKS AirTravel (orto-legcompression, SKU NORIKS-LEGCOMPRESSION) — putni ruksak s vakuumskom kompresijom
+if ( noriks_is_type( 'legcompression' ) ) {
+    include $noriks_pb_dir . 'why-legcompression.php';
+}
+
 // NORIKS GrillBasket (orto-grillbasket) — valjkasta kosara za rostilj
 if ( noriks_is_type( 'grillbasket' ) ) {
     include $noriks_pb_dir . 'why-grillbasket.php';

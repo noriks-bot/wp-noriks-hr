@@ -200,6 +200,8 @@ function noriks_product_type_map() : array {
         'mattresstopper'          => array( 'orto-mattresstopper', 'mattresstopper' ),
         // NORIKS VacuumSealer — bezicni rucni vakuumski aparat za hranu (en izbirnik Velicina pakiranja 10/20/30 vrecic s cenami originala, brez tablice).
         'vacuumsealer'            => array( 'orto-vacuumsealer', 'vacuumsealer' ),
+        // NORIKS AirTravel — putni ruksak z vakuumsko kompresijo (SKU NORIKS-LEGCOMPRESSION; en izbirnik Boja s cenami po barvi kot original, brez tablice).
+        'legcompression'          => array( 'orto-legcompression', 'legcompression' ),
         // NORIKS SilkBoxers — svilene bokserice za cjelodnevnu udobnost (samo velicina M–3XL, tamnoplava).
         'silkboxers'              => array( 'orto-silkboxers', 'silkboxers' ),
         // NORIKS ModalSweatshirt — dukserica od modala s okruglim izrezom (boja + velicina S–3XL).
