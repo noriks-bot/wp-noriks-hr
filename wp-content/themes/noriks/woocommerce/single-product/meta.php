@@ -663,6 +663,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS FleeceShawl</strong> — obavijte se laganom toplinom i elegancijom. Izrađen od raskošno mekanog, <strong>vrhunskog flisa</strong>, ovaj svestrani komad prekrasno pada preko ramena za profinjen, a opušten izgled. Lagana, <strong>prozračna tkanina grije bez pregrijavanja</strong> – savršeno za slojevito odijevanje u uredu, elegantna putovanja ili dotjeran večernji izgled.<br><br>Bezvremenski dizajn laska svakom tipu tijela i lako se kombinira sa svime, od traperica do haljina. Bilo da obavljate obveze ili idete na večeru, ovaj šal pruža dotjeranu udobnost koja se bez napora prilagođava svakoj prilici. Dovoljno je lagan da ga lako spakirate, a dovoljno topao za hladne dane – omiljeni dodatak svima koji cijene profinjenu svakodnevnu eleganciju.<br><br><strong>Značajke:</strong><br><strong>Super mekan</strong> – raskošno mekan flis ugodan na koži<br><strong>Elegantan</strong> – prirodno pada preko ramena, uredan i dotjeran izgled<br><strong>Jedna veličina za sve</strong> – kroj koji laska svakom tipu tijela<br><strong>Prozračan</strong> – grije bez pregrijavanja<br><br><strong>Dimenzije:</strong> duljina 158 cm (62,2 inča), širina 110 cm (43,3 inča) – jedna veličina za sve.<br><strong>Održavanje:</strong> može se prati u perilici.<br><strong>Boje:</strong> svijetlosiva, bež, karamel, kaki, tamnosiva, bordo, tamnozelena i crna te u ograničenom izdanju ljubičasta, tamnoplava i bijela.<br><br>Uz NORIKS kupujete bez brige: <strong>pravo na povrat u roku od 30 dana</strong> i <strong>besplatna dostava za narudžbe iznad 70 €</strong>.
 
+         <?php elseif( noriks_is_type( 'mattresstopper', $current_product_id ) ): ?>
+
+                <strong>NORIKS MattressTopper</strong> — umorni ste od buđenja s bolovima ili osjećaja umora? Pridružite se tisućama zadovoljnih kupaca i <strong>nadogradite svoj madrac u nekoliko minuta</strong> uz luksuzni, ekstra debeli nadmadrac od <strong>10 cm</strong>.<br><br>Jednostavno ga stavite na svoj madrac i <strong>poboljšajte san, ublažite bolove</strong> te se svako jutro budite <strong>odmorni i puni energije</strong>. Zašto mijenjati madrac kada možete nadograditi svoj san?<br><br><strong>Zašto ćete ga voljeti:</strong><br><strong>Udobnost kao na oblaku</strong> – osjećaj kao da spavate u hotelu s 5 zvjezdica<br><strong>Ublažava bolove</strong> – podupire i ublažava pritisak na leđa, vrat i kukove<br><strong>Dugotrajan</strong> – može se prati u perilici, a punjenje dugo zadržava oblik<br><strong>Tisuće zadovoljnih kupaca</strong> – vole ga ljudi diljem Europe<br><br><strong>Značajke:</strong><br>– ultra mekana udobnost<br>– luksuzno punjenje debljine 10 cm<br>– prozračna tkanina<br>– duboke elastične trake na uglovima drže nadmadrac na mjestu<br><br><strong>Visina:</strong> 10 cm.<br><strong>Veličine:</strong> 90 × 190, 120 × 190, 137 × 190, 152 × 203 i 198 × 203 cm (pogledajte tablicu veličina).<br><strong>Održavanje:</strong> može se prati u perilici.<br><br>Uz NORIKS kupujete bez brige: <strong>pravo na povrat u roku od 30 dana</strong> i <strong>besplatna dostava za narudžbe iznad 70 €</strong>.
+
          <?php elseif( noriks_is_type( 'silkboxers', $current_product_id ) ): ?>
 
                 <strong>NORIKS SilkBoxers</strong> — svakodnevni luksuz: <strong>gladak osjećaj svile</strong> uz izdržljivost i potporu potrebne za svakodnevno nošenje. Izrađene od kvalitetne <strong>mješavine svile, najlona, viskoze i elastana</strong>, pružaju iznimnu udobnost, prozračnost i dugotrajnu izdržljivost.<br><br><strong>Ključne značajke:</strong><br><strong>Vrhunska tkanina od svilene mješavine</strong> – iznimno glatka, prozračna i nježna prema osjetljivoj koži<br><strong>Udobnost koja regulira temperaturu</strong> – pomaže da ostanete svježi i suhi cijeli dan<br><strong>Anatomski oblikovan prednji dio</strong> – za prirodan položaj i potporu<br><strong>Konstrukcija protiv trljanja</strong> – manje trenja za udobnost cijeli dan, i pri dugom nošenju<br><strong>Pojas koji se ne uvija</strong> – ostaje ravan i siguran ispod svake odjeće<br><strong>Svakodnevna izdržljivost</strong> – zadržavaju oblik, mekoću i kroj<br><strong>Jednostavno održavanje</strong> – pranje u perilici na nježnom programu (preporučujemo mrežastu vrećicu za rublje)<br><br><strong>Materijal:</strong> vrhunska svilena mješavina, svila gustoće 23 momme, u kombinaciji s viskozom, najlonom i malo elastana za kroj, rastezljivost i strukturu. Prirodno prozračna, regulira temperaturu i sprječava neugodne mirise.<br><br><strong>Kroj:</strong> krojene za muško tijelo – za udobnost cijeli dan.<br>→ Pojas bez šavova: bez pritiska, bez tragova, bez umora.<br>→ Suženi dio za bedra: bez trenja i bez žuljanja pri svakom koraku.<br>→ Anatomski oblikovan prednji dio: ističe i podupire bez stezanja.<br>→ Oblikovan stražnji dio: drži oblik, a ne sputava.<br>→ Antibakterijska unutarnja podstava: mekana na dodir, za kožu kojoj treba najviše pažnje.<br><br>Savršene za poslovne ljude, česte putnike, aktivan način života i muškarce koji traže vrhunsku udobnost bez kompromisa.<br><br><strong>Boja:</strong> tamnoplava.<br><strong>Veličine:</strong> M–3XL (pogledajte tablicu veličina).<br><strong>Proizvedeno:</strong> u Kini, u tvornici vrhunske kvalitete, iz etičnih izvora.
@@ -1479,6 +1483,36 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </table>
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Primjer: Marta je visoka 170 cm i nosi veličinu M. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'mattresstopper', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Pet veličina za <strong>svaki krevet</strong> – sve s luksuznom udobnošću od <strong>10 cm</strong>. Odaberite veličinu prema dimenzijama svojeg madraca.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Krevet</th>
+                  <th style="padding:9px 8px;text-align:left;">Dimenzije (š × d × v)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_mattresstopper_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fdf8f5' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:12px 0 0;line-height:1.6;">Izmjerite širinu i duljinu svojeg madraca i odaberite odgovarajuću veličinu – elastične trake na uglovima drže nadmadrac na mjestu.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'silkboxers', $current_product_id ) ): ?>
@@ -2423,6 +2457,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'fleeceshawl', $current_product_id ) ): ?>
 
                 Perite u perilici <strong>na hladno</strong>, sušite u sušilici na <strong>niskoj temperaturi</strong> te izbjegavajte <strong>glačanje i omekšivače</strong> – tako će vaš NORIKS FleeceShawl godinama zadržati mekoću i udobnost.
+
+             <?php elseif( noriks_is_type( 'mattresstopper', $current_product_id ) ): ?>
+
+                NORIKS MattressTopper <strong>može se prati u perilici</strong>. Pridržavajte se uputa za njegu na etiketi proizvoda – tako će nadmadrac dugo zadržati mekoću i debljinu od 10 cm.
 
              <?php elseif( noriks_is_type( 'silkboxers', $current_product_id ) ): ?>
 

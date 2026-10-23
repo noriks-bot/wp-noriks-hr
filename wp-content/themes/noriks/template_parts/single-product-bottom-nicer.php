@@ -379,6 +379,11 @@ if ( noriks_is_type( 'therapillow' ) ) {
     include $noriks_pb_dir . 'why-therapillow.php';
 }
 
+// NORIKS MattressTopper (orto-mattresstopper) — ekstra debeli nadmadrac od 10 cm
+if ( noriks_is_type( 'mattresstopper' ) ) {
+    include $noriks_pb_dir . 'why-mattresstopper.php';
+}
+
 // NORIKS DualPillow (orto-dualpillow) — jastuk 2 u 1
 if ( noriks_is_type( 'dualpillow' ) ) {
     include $noriks_pb_dir . 'why-dualpillow.php';

@@ -188,6 +188,8 @@ function noriks_product_type_map() : array {
         'therapillow'             => array( 'orto-therapillow', 'therapillow' ),
         // NORIKS DualPillow — jastuk 2 u 1 (brez atributov; ponudbe 1x/2x/3x/4x kom kot paketi originala, brez tablice).
         'dualpillow'              => array( 'orto-dualpillow', 'dualpillow' ),
+        // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
+        'mattresstopper'          => array( 'orto-mattresstopper', 'mattresstopper' ),
         // NORIKS VacuumSealer — bezicni rucni vakuumski aparat za hranu (en izbirnik Velicina pakiranja 10/20/30 vrecic s cenami originala, brez tablice).
         'vacuumsealer'            => array( 'orto-vacuumsealer', 'vacuumsealer' ),
         // NORIKS SilkBoxers — svilene bokserice za cjelodnevnu udobnost (samo velicina M–3XL, tamnoplava).
@@ -709,6 +711,21 @@ if ( ! function_exists( 'noriks_silkboxers_sizes' ) ) {
             array( 'XL',  '91–97 cm',   '36–38' ),
             array( '2XL', '99–104 cm',  '39–41' ),
             array( '3XL', '107–112 cm', '42–44' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_mattresstopper_sizes' ) ) {
+    /** NORIKS MattressTopper: velicina (opcija izdelka), naziv, dimenzije nadmadraca (s x d x visina).
+     *  1:1 s slike »Available sizes« originala (casanuve.co.uk): Single 90 x 190, Small Double 120 x 190, Double 137 x 190,
+     *  King 152 x 203, Super King 198 x 203 — vse 10 cm visine. */
+    function noriks_mattresstopper_sizes() {
+        return array(
+            array( '90 x 190 cm',  'Jednostruki',          '90 × 190 × 10 cm' ),
+            array( '120 x 190 cm', 'Mali bračni',          '120 × 190 × 10 cm' ),
+            array( '137 x 190 cm', 'Bračni',               '137 × 190 × 10 cm' ),
+            array( '152 x 203 cm', 'Veliki bračni',        '152 × 203 × 10 cm' ),
+            array( '198 x 203 cm', 'Ekstra veliki bračni', '198 × 203 × 10 cm' ),
         );
     }
 }

@@ -133,6 +133,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-maternityleggings' );
             return;
         }
+        // NORIKS MattressTopper: 5 velicin nadmadraca 90 x 190 … 198 x 203 cm (slika »Available sizes« originala).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'mattresstopper' ) ) {
+            get_template_part( 'template_parts/size-chart-mattresstopper' );
+            return;
+        }
         // NORIKS SilkBoxers: M–3XL po opsegu struka (cm + inci), savjet originala: izmedu velicina odaberite vecu.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'silkboxers' ) ) {
             get_template_part( 'template_parts/size-chart-silkboxers' );
