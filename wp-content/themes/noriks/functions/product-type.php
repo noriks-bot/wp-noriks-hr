@@ -170,6 +170,8 @@ function noriks_product_type_map() : array {
         'leatherboots'            => array( 'orto-leatherboots', 'leatherboots' ),
         // NORIKS SnugBoot — zimske barefoot cizme s krznenom podstavom, unisex (boja 5 + velicina EU 36–46).
         'snugboot'                => array( 'orto-snugboot', 'snugboot' ),
+        // NORIKS CloudClogs — 3D klompe mekane kao oblak (boja 5 + velicina EU 39–46). Ni povezano z NORIKS Cloud (orto-cloud, jastuk) ni StepCloud.
+        'cloudclogs'              => array( 'orto-cloudclogs', 'cloudclogs' ),
         // NORIKS HikingShoes — barefoot pohodne cipele od brusene koze (boja + velicina EU 36–46).
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
@@ -877,6 +879,28 @@ if ( ! function_exists( 'noriks_snugboot_sizes' ) ) {
             array( 'EU 44', '13 – 13,5',   '11 – 11,5',   '27,0 cm', '9,6 cm' ),
             array( 'EU 45', '14',          '12',          '27,7 cm', '9,8 cm' ),
             array( 'EU 46', '15',          '13',          '28,4 cm', '9,9 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_cloudclogs_sizes' ) ) {
+    /** NORIKS CloudClogs: EU velicina, US (muske / zenske), UK, duljina stopala (cm).
+     *  1:1 s tablice originala (varaletti.com, »Sizing Chart« 3D Performance Cloud Clogs, 13 velicin US 6M / 7.5W – 12M / 13.5W). Unisex. */
+    function noriks_cloudclogs_sizes() {
+        return array(
+            array( 'EU 39',   '6 M / 7,5 Ž',    '5,5',  '24,0 cm' ),
+            array( 'EU 39,5', '6,5 M / 8 Ž',    '6',    '24,5 cm' ),
+            array( 'EU 40',   '7 M / 8,5 Ž',    '6,5',  '25,0 cm' ),
+            array( 'EU 40,5', '7,5 M / 9 Ž',    '7',    '25,5 cm' ),
+            array( 'EU 41',   '8 M / 9,5 Ž',    '7,5',  '26,0 cm' ),
+            array( 'EU 42',   '8,5 M / 10 Ž',   '8',    '26,5 cm' ),
+            array( 'EU 42,5', '9 M / 10,5 Ž',   '8,5',  '27,0 cm' ),
+            array( 'EU 43',   '9,5 M / 11 Ž',   '9',    '27,5 cm' ),
+            array( 'EU 44',   '10 M / 11,5 Ž',  '9,5',  '28,0 cm' ),
+            array( 'EU 44,5', '10,5 M / 12 Ž',  '10',   '28,5 cm' ),
+            array( 'EU 45',   '11 M / 12,5 Ž',  '10,5', '29,0 cm' ),
+            array( 'EU 45,5', '11,5 M / 13 Ž',  '11',   '29,5 cm' ),
+            array( 'EU 46',   '12 M / 13,5 Ž',  '11,5', '30,0 cm' ),
         );
     }
 }

@@ -173,6 +173,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-snugboot' );
             return;
         }
+        // NORIKS CloudClogs: EU 39–46 + US (muske / zenske), UK in duljina stopala (cm) iz tablice originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'cloudclogs' ) ) {
+            get_template_part( 'template_parts/size-chart-cloudclogs' );
+            return;
+        }
         // NORIKS DogBed: M / L / XL / 2XL po vanjskih merah, prostoru za lezanje, duljini in tezi psa (z originala).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'dogbed' ) ) {
             get_template_part( 'template_parts/size-chart-dogbed' );

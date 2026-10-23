@@ -723,6 +723,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS LeatherBoots</strong> su muške udobne kožne čizme koje spajaju udobnost za cijeli dan i čist izgled kože — u čizmama koje ćete obuvati iznova i iznova. Uložak oblikovan prema svodu stopala i mekano jastučenje upijaju udarce svakog koraka, pa stopala, koljena i leđa ostaju manje opterećeni i nakon dugog dana na nogama. Širok prednji dio daje prstima prostor umjesto da ih stišće, a izgledaju kao obične kožne čizme, ne kao glomazna ortopedska obuća.<br><br>Neklizajući gumeni potplat pouzdano prianja na mokrim i sklizavim površinama, gornji dio otporan na vodu odbija laganu kišu i prskanje, a lagana i fleksibilna izrada nema mrtve težine teških čizama. Svaki par izrađen je s naglaskom na izdržljivost, udobnost i pouzdanost u svakodnevnom nošenju — na poslu, u šetnji i vikendom. Dostupne u pet boja (smeđa, svijetlosmeđa, crna, plava i zelena) i veličinama od EU 37 do EU 48.
 
+         <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
+
+                <strong>NORIKS CloudClogs</strong> su 3D klompe napravljene za ljude koji su <strong>cijeli dan na nogama</strong> — izdržljive, a na nogama mekane kao oblak. Debeo, mekan potplat ublažava svaki korak, a <strong>protuklizni potplat</strong> daje sigurnost i u dugim radnim smjenama.<br><br>Otvori na gornjem dijelu čine ih <strong>prozračnima</strong> i udobnima i za šira stopala, a <strong>vodootporan</strong> materijal ostaje suh i po kišnim danima. Nosite ih <strong>kao papuče ili natikače</strong> — od jutarnjih obaveza do druženja u dvorištu — ili kao cipele vani; <strong>podesivi remen</strong> omogućuje pristajanje po vašoj mjeri.<br><br>Unisex veličine EU 39–46 (i polovične veličine), u pet boja: crna, bijela, plava, roza i siva.
+
          <?php elseif( noriks_is_type( 'snugboot', $current_product_id ) ): ?>
 
                 <strong>NORIKS SnugBoot</strong> su tople zimske barefoot čizme s mekanom krznenom podstavom — unisex, za žene i muškarce. Obične zimske cipele stežu stopala i već nakon nekoliko sati izazivaju bol; NORIKS SnugBoot su drugačije. <strong>Širok prostor za prste</strong> omogućuje prstima da se prirodno rašire, a <strong>tanak, mekan i fleksibilan potplat</strong> prilagođava se obliku stopala i daje pravi barefoot osjećaj i prirodan hod.<br><br><strong>Udobna krznena podstava</strong> grije stopala po svakom vremenu, a pritom im omogućuje da dišu. Neklizajući potplat pomaže spriječiti slučajna klizanja i padove na snijegu i skliskim površinama. Dizajn osmišljen prema ortopedskim načelima rasterećuje stopala i zglobove i podupire uspravno držanje. Mekane i lagane, savršene su za svakodnevno zimsko nošenje — u zatvorenom i na otvorenom.<br><br><strong>Boje:</strong> smeđa, crna, svijetlosiva, kava, krem. <strong>Veličine:</strong> EU 36–46 (unisex).
@@ -1764,6 +1768,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Unisex veličine od <strong>EU 39 do EU 46</strong> (i polovične veličine). Izmjerite duljinu stopala od pete do najduljeg prsta i odaberite veličinu čija <strong>duljina stopala</strong> odgovara vašoj mjeri.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">US (muške / ženske)</th>
+                  <th style="padding:9px 8px;text-align:left;">UK</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_cloudclogs_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f2f6fb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -2895,6 +2930,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'leatherboots', $current_product_id ) ): ?>
 
                 Nakon nošenja čizme obrišite <strong>blago vlažnom krpom</strong>. Za najbolje rezultate ostavite ih da se <strong>prirodno osuše na zraku</strong> i izbjegavajte izravnu toplinu (radijator, sušilo, izravno sunce). Ne perite ih u perilici rublja i ne namačite ih. Redovito čišćenje čuva njihov izgled i produljuje im vijek trajanja.
+
+             <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
+
+                Klompe jednostavno <strong>isperite mlakom vodom</strong>, a tvrdokornu prljavštinu uklonite mekanom četkicom i malo blagog sapuna. Ostavite ih da se <strong>prirodno osuše na zraku</strong>, daleko od radijatora, sušila i izravnog sunca. <strong>Ne perite ih u perilici rublja</strong> i ne sušite u sušilici — tako dugo zadržavaju oblik i mekoću.
 
              <?php elseif( noriks_is_type( 'snugboot', $current_product_id ) ): ?>
 
