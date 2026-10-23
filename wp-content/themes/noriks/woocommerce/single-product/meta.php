@@ -710,6 +710,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
                 <strong>NORIKS MinimizerBra</strong> je rashlađujući minimizer grudnjak s punim pokrićem, izgrađen oko <strong>krutog središnjeg panela za razdvajanje</strong>. Gotovo svaki minimizer radi na principu kompresije: gura tkivo zajedno i prema naprijed, pa se ono nagomila u sredini prsa i stvara »policu« zbog koje se pripijene majice napuhnu, a košulje razmiču među gumbima. NORIKS MinimizerBra umjesto toga razdvaja — kruti panel oslanja se na prsnu kost i drži svaku stranu punijih grudi u njezinu prostoru tijekom cijelog dana kretanja. Nema mase, nema police, nema efekta šatora.<br><br><strong>Kako je izrađen:</strong><br>• Kruti panel za razdvajanje — oslanja se na prsnu kost i ne urušava se do podneva<br>• Potpuno bez podstave — bez dodatnog volumena<br>• Košarica s punim pokrićem — drži oblik punijih grudi umjesto da ih spljošti<br>• Debele podstavljene naramenice i široka traka — težina se raspoređuje preko leđa<br>• Rashlađujuća, prozračna tkanina — bez nakupljanja topline ispod grudi<br>• Žica koja ne bode — oblikuje košaricu bez urezivanja<br><br><strong>Boje:</strong> bež, crna, bijela i boja kave.<br><strong>Veličine:</strong> trake 70 – 115 i košarice B – I (74 veličine) — svoju veličinu pronađite u tablici veličina; ako ste između dvije veličine, uzmite veću. U paketu za svaki komad zasebno birate boju i veličinu.
+         <?php elseif( noriks_is_type( 'cashmeresweater', $current_product_id ) ): ?>
+
+                <strong>NORIKS CashmereSweater</strong> je pulover s okruglim izrezom izrađen od <strong>mješavine kašmira i svile</strong> – nevjerojatno mekan, prirodnog i lepršavog pada. Dizajniran je sa <strong>spuštenim ramenima i opuštenim krojem</strong>, pa odiše jednostavnom, nenametljivom elegancijom. Svestran je i savršeno ide uz hlače ili suknje – od radnog dana do vikenda.<br><br><strong>Sastav:</strong> 74,7 % kašmir, 25,3 % mulberry svila (osim rebrastih rubova)<br><strong>Njega:</strong> preporučujemo profesionalno kemijsko čišćenje<br><strong>Kroj:</strong> opušteni kroj sa spuštenim ramenima, okrugli izrez<br><br><strong>Boje:</strong> sivosmeđa, čokoladno smeđa, bijela, svijetlosiva, tamnosiva, crna, nježno ružičasta, ljubičasto crvena, ljubičasta, plava, sivoplava, borovo zelena, crvena i bordo.<br><strong>Veličina:</strong> jedna veličina – M (US 6–10). Duljina 54 cm, duljina rukava 45 cm, širina ramena 73 cm, opseg prsa 144 cm.
+
          <?php elseif( noriks_is_type( 'nursingbra', $current_product_id ) ): ?>
 
                 <strong>NORIKS NursingBra</strong> je grudnjak za dojenje bez šavova »sve u jednom« – za dojenje, spavanje i svakodnevno nošenje. Pruža <strong>udobnost cijeli dan, čak i za najosjetljiviju kožu</strong>, a zahvaljujući rastezljivom dizajnu prilagođava se promjenjivoj veličini i obliku tijela tijekom trudnoće i dojenja. Jedinstvena tkanina mekana poput pera izrađena je od glatkog, prozračnog materijala koji je nježan prema koži, prsima i rebrima i prianja uz obline bez šavova koji pritišću kožu ili ostavljaju tragove. Ispod odjeće je nevidljiv.<br><br><strong>Značajke:</strong><br>• Vrhunska udobnost – bez žice, bez šavova<br>• Otporan na curenje – upijajuća podstava, vodootporan<br>• Svilenkasto mekan – prozračna tkanina poput druge kože<br>• Savršeno pristaje – daje potporu, podesiv<br>• Košarice koje se otvaraju jednom rukom – kopčice za dojenje jednim klikom<br>• Jastučići koji se ne vade<br>• Široke podesive naramenice i čvrste kopče na leđima<br>• Svaka košarica pokriva do 3 veće veličine<br>• Uz svaki grudnjak besplatni produžetak trake u istoj boji (5 cm)<br><br><strong>Boje:</strong> crna, bež, zelena, sivo-smeđa, ružičasta, bijela i bež čipka.<br><strong>Veličine:</strong> S – 4XL (bež čipka S – 2XL) — veličinu pronađite u tablici veličina prema košarici i opsegu ispod grudi. U paketu za svaki komad zasebno birate boju i veličinu.
@@ -1774,6 +1778,41 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Košarica E odgovara američkoj DD, a F američkoj DDD; »–« znači da se veličina ne izrađuje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
+        <?php elseif( noriks_is_type( 'cashmeresweater', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Jedna veličina – M</strong> (US 6–10). Opušteni kroj sa spuštenim ramenima.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">US</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina rukava</th>
+                  <th style="padding:9px 8px;text-align:left;">Širina ramena</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_cashmeresweater_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[5] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[6] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Mjere proizvoda (cm). Mjere tijela: opseg prsa 130 – 134 cm. Sve mjere uzete su ručno, moguće je odstupanje od 2–3 cm. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'nursingbra', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2721,6 +2760,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
                 Perite <strong>ručno u hladnoj vodi</strong> blagim deterdžentom i objesite da se osuši na zraku. Ne izbjeljujte. Ne glačajte. Ne čistite kemijski. Ne sušite u sušilici i ne cijedite uvijanjem — tako žica, panel i rashlađujuća tkanina dugo zadržavaju oblik, a grudnjak ostaje kao nov.
+             <?php elseif( noriks_is_type( 'cashmeresweater', $current_product_id ) ): ?>
+
+                Preporučujemo <strong>profesionalno kemijsko čišćenje</strong>.
+
              <?php elseif( noriks_is_type( 'nursingbra', $current_product_id ) ): ?>
 
                 Perite <strong>ručno u hladnoj vodi</strong> blagim deterdžentom ili u perilici na programu za osjetljivo rublje u vrećici za rublje, s kopčama zakopčanima. Ne izbjeljujte, ne glačajte, ne čistite kemijski i ne sušite u sušilici — grudnjak osušite na zraku, polegnut, kako bi mekana tkanina bez šavova i jastučići dugo zadržali oblik.

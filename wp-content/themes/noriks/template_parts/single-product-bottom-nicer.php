@@ -489,6 +489,11 @@ if ( noriks_is_type( 'minimizerbra' ) ) {
     include $noriks_pb_dir . 'why-minimizerbra.php';
 }
 
+// NORIKS CashmereSweater (orto-cashmeresweater) — pulover od kasmira i svile opustenog kroja
+if ( noriks_is_type( 'cashmeresweater' ) ) {
+    include $noriks_pb_dir . 'why-cashmeresweater.php';
+}
+
 // NORIKS NursingBra (orto-nursingbra) — grudnjak za dojenje bez savova, mekan kao druga koza
 if ( noriks_is_type( 'nursingbra' ) ) {
     include $noriks_pb_dir . 'why-nursingbra.php';

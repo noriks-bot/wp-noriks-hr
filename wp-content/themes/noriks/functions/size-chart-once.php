@@ -193,6 +193,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-minimizerbra' );
             return;
         }
+        // NORIKS CashmereSweater: jedna velicina M (US 6–10), mjere proizvoda i tijela iz »SIZE GUIDE« originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'cashmeresweater' ) ) {
+            get_template_part( 'template_parts/size-chart-cashmeresweater' );
+            return;
+        }
         // NORIKS NursingBra: velicina S–4XL po kosarici (EU B–K) in traki EU 60–110 (UK 28–48) iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'nursingbra' ) ) {
             get_template_part( 'template_parts/size-chart-nursingbra' );

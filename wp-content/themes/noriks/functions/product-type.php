@@ -182,6 +182,8 @@ function noriks_product_type_map() : array {
         'minimizerbra'            => array( 'orto-minimizerbra', 'minimizerbra' ),
         // NORIKS NursingBra — grudnjak za dojenje bez savova (boja 7 + velicina S–4XL po kosarici in traki).
         'nursingbra'              => array( 'orto-nursingbra', 'nursingbra' ),
+        // NORIKS CashmereSweater — pulover od kasmira i svile opustenog kroja (boja 14; jedna velicina M = US 6–10, tablica mjera).
+        'cashmeresweater'         => array( 'orto-cashmeresweater', 'cashmeresweater' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS FleeceShawl — mekani sal-ogrtac od flisa (samo boja, 11 boja; jedna velicina 158 x 110 cm, brez tablice).
@@ -888,6 +890,17 @@ if ( ! function_exists( 'noriks_nursingbra_sizes' ) ) {
             array( 'I', 'G',  array( 'S', 'M', 'M', 'L', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '4XL' ) ),
             array( 'J', 'GG', array( 'M', 'M', 'L', 'XL', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '4XL' ) ),
             array( 'K', 'H',  array( '', '', 'L', 'XL', '2XL', '2XL', '2XL', '3XL', '4XL', '4XL', '4XL' ) ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_cashmeresweater_sizes' ) ) {
+    /** NORIKS CashmereSweater: velicina, US, opseg prsa tijela, duljina, duljina rukava, sirina ramena, opseg prsa proizvoda.
+     *  1:1 s »SIZE GUIDE« originala (meilleur-moment.com; Body Measurement US 6-10 / M / bust 130-134 cm, Product Measurement
+     *  length 54 / sleeve 45 / shoulder 73 / bust 144 cm). Jedna velicina, opusteni kroj. */
+    function noriks_cashmeresweater_sizes() {
+        return array(
+            array( 'M', 'US 6–10', '130 – 134 cm', '54 cm', '45 cm', '73 cm', '144 cm' ),
         );
     }
 }
