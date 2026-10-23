@@ -200,6 +200,8 @@ function noriks_product_type_map() : array {
         'fleeceshawl'             => array( 'orto-fleeceshawl', 'fleeceshawl' ),
         // NORIKS BottleSling — izolirana torbica za termo casu s naramenicom (samo boja, 15 boja; jedna velicina 25 x 8 x 7,5 cm, brez tablice).
         'bottlesling'             => array( 'orto-bottlesling', 'bottlesling' ),
+        // NORIKS UltrasonicCleaner — ultrazvucni i UV-C cistac za dentalna pomagala (samo boja: biserno bijela, oniks crna; bez velicina, brez tablice).
+        'ultrasoniccleaner'       => array( 'orto-ultrasoniccleaner', 'ultrasoniccleaner' ),
         // NORIKS PillOrganizer — organizator za tablete s 14 vrecica sa zatvaracem (samo boja, 7 boja; jedna velicina 16 x 12 x 6 cm, brez tablice).
         'pillorganizer'           => array( 'orto-pillorganizer', 'pillorganizer' ),
         // NORIKS AntiTheftBag — luksuzna hobo torba sa zastitom od krade (samo boja, 6 boja; jedna velicina, brez tablice).

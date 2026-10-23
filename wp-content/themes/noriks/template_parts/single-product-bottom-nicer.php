@@ -439,6 +439,11 @@ if ( noriks_is_type( 'antitheftbag' ) ) {
     include $noriks_pb_dir . 'why-antitheftbag.php';
 }
 
+// NORIKS UltrasonicCleaner (orto-ultrasoniccleaner) — ultrazvucni i UV-C cistac za dentalna pomagala
+if ( noriks_is_type( 'ultrasoniccleaner' ) ) {
+    include $noriks_pb_dir . 'why-ultrasoniccleaner.php';
+}
+
 // NORIKS PillOrganizer (orto-pillorganizer) — organizator za tablete s 14 vrecica sa zatvaracem
 if ( noriks_is_type( 'pillorganizer' ) ) {
     include $noriks_pb_dir . 'why-pillorganizer.php';
