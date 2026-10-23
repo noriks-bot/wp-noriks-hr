@@ -379,6 +379,11 @@ if ( noriks_is_type( 'therapillow' ) ) {
     include $noriks_pb_dir . 'why-therapillow.php';
 }
 
+// NORIKS DualPillow (orto-dualpillow) — jastuk 2 u 1
+if ( noriks_is_type( 'dualpillow' ) ) {
+    include $noriks_pb_dir . 'why-dualpillow.php';
+}
+
 // NORIKS CalmingCollar (orto-calmingcollar) — umirujuca ovratnica s feromonima za macke
 if ( noriks_is_type( 'calmingcollar' ) ) {
     include $noriks_pb_dir . 'why-calmingcollar.php';
