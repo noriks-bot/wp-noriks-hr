@@ -166,6 +166,8 @@ function noriks_product_type_map() : array {
         'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
         // NORIKS ThermoBoots — vodootporne zimske cizme s podstavom od flisa (boja 3 + velicina EU 37–48).
         'thermoboots'             => array( 'orto-thermoboots', 'thermoboots' ),
+        // NORIKS LeatherBoots — muske udobne kozne cizme (boja 5 + velicina EU 37–48).
+        'leatherboots'            => array( 'orto-leatherboots', 'leatherboots' ),
         // NORIKS HikingShoes — barefoot pohodne cipele od brusene koze (boja + velicina EU 36–46).
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
@@ -814,6 +816,28 @@ if ( ! function_exists( 'noriks_thermoboots_sizes' ) ) {
             array( 'EU 46', '11',    '28,2 cm', '29,2 cm' ),
             array( 'EU 47', '12',    '28,8 cm', '29,8 cm' ),
             array( 'EU 48', '13',    '29,4 cm', '30,4 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_leatherboots_sizes' ) ) {
+    /** NORIKS LeatherBoots: EU velicina, US velicina (muska), duljina stopala (cm).
+     *  1:1 s tablice velicin originala (movaracare.com, »Men's Size Guide«, US 5–14, duljina stopala v cm z originala);
+     *  US velicine (s polovicnimi) zdruzene v cijele EU velicine. Odgovaraju uobicajenoj velicini. */
+    function noriks_leatherboots_sizes() {
+        return array(
+            array( 'EU 37', '5',         '22,2 cm' ),
+            array( 'EU 38', '5,5',       '22,5 cm' ),
+            array( 'EU 39', '6 – 6,5',   '23,8 – 24,1 cm' ),
+            array( 'EU 40', '7',         '24,5 cm' ),
+            array( 'EU 41', '7,5 – 8',   '25,1 – 25,4 cm' ),
+            array( 'EU 42', '8,5',       '25,7 cm' ),
+            array( 'EU 43', '9 – 9,5',   '26,4 – 26,7 cm' ),
+            array( 'EU 44', '10',        '27,0 cm' ),
+            array( 'EU 45', '10,5 – 11', '27,6 – 27,9 cm' ),
+            array( 'EU 46', '11,5 – 12', '28,3 – 28,9 cm' ),
+            array( 'EU 47', '12,5 – 13', '29,2 – 29,5 cm' ),
+            array( 'EU 48', '13,5 – 14', '30,0 – 30,5 cm' ),
         );
     }
 }

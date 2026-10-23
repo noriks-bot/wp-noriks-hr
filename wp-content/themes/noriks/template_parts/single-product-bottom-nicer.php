@@ -459,6 +459,11 @@ if ( noriks_is_type( 'thermoboots' ) ) {
     include $noriks_pb_dir . 'why-thermoboots.php';
 }
 
+// NORIKS LeatherBoots (orto-leatherboots) — muske udobne kozne cizme
+if ( noriks_is_type( 'leatherboots' ) ) {
+    include $noriks_pb_dir . 'why-leatherboots.php';
+}
+
 // NORIKS DogBed (orto-dogbed) — premium ortopedski krevet za pse
 if ( noriks_is_type( 'dogbed' ) ) {
     include $noriks_pb_dir . 'why-dogbed.php';
