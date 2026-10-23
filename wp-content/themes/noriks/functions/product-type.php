@@ -184,6 +184,8 @@ function noriks_product_type_map() : array {
         'fleeceshawl'             => array( 'orto-fleeceshawl', 'fleeceshawl' ),
         // NORIKS BottleSling — izolirana torbica za termo casu s naramenicom (samo boja, 15 boja; jedna velicina 25 x 8 x 7,5 cm, brez tablice).
         'bottlesling'             => array( 'orto-bottlesling', 'bottlesling' ),
+        // NORIKS AntiTheftBag — luksuzna hobo torba sa zastitom od krade (samo boja, 6 boja; jedna velicina, brez tablice).
+        'antitheftbag'            => array( 'orto-antitheftbag', 'antitheftbag' ),
         // NORIKS ShowerTowel — antibakterijski rucnik za piling tijela (samo boja: crna, roza, plava, bijela; jedna velicina 122 cm, brez tablice).
         'showertowel'             => array( 'orto-showertowel', 'showertowel' ),
         // NORIKS PetDental — sprej za njegu zubi pasa i macaka (brez atributov; ponudbe 1x/2x/3x kom, brez tablice).

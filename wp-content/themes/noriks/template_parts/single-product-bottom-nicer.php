@@ -414,6 +414,11 @@ if ( noriks_is_type( 'showertowel' ) ) {
     include $noriks_pb_dir . 'why-showertowel.php';
 }
 
+// NORIKS AntiTheftBag (orto-antitheftbag) — luksuzna hobo torba sa zastitom od krade
+if ( noriks_is_type( 'antitheftbag' ) ) {
+    include $noriks_pb_dir . 'why-antitheftbag.php';
+}
+
 // NORIKS BottleSling (orto-bottlesling) — izolirana torbica za termo casu s naramenicom
 if ( noriks_is_type( 'bottlesling' ) ) {
     include $noriks_pb_dir . 'why-bottlesling.php';
