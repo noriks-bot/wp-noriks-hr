@@ -178,6 +178,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-slingbag' );
             return;
         }
+        // NORIKS TravelBag: model Classic / Roller (51 x 23 x 32 cm), nacin nosenja, za koga (z originala »Which one is for me?«).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'travelbag' ) ) {
+            get_template_part( 'template_parts/size-chart-travelbag' );
+            return;
+        }
         // NORIKS ComfortJeans: XXS–XXL po opsegu struka i bokova + mjere hlaca, duljina 26–36 po visini (z originala).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'comfortjeans' ) ) {
             get_template_part( 'template_parts/size-chart-comfortjeans' );

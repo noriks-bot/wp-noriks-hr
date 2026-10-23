@@ -176,6 +176,8 @@ function noriks_product_type_map() : array {
         'comfortjeans'            => array( 'orto-comfortjeans', 'comfortjeans' ),
         // NORIKS SlingBag — putna torbica preko ramena 2.0 sa zastitom od krade (boja 4 + velicina Mini / Regular / Max).
         'slingbag'                => array( 'orto-slingbag', 'slingbag' ),
+        // NORIKS TravelBag — putna torba za rucnu prtljagu s odvojivim kotacicima (boja 3 + model Classic / Roller kao Velicina, cijena po modelu kot original).
+        'travelbag'               => array( 'orto-travelbag', 'travelbag' ),
         // NORIKS DogBed — premium ortopedski krevet za pse (boja 8 + velicina M / L / XL / 2XL).
         'dogbed'                  => array( 'orto-dogbed', 'dogbed' ),
         // NORIKS MinimizerBra — rashladujuci minimizer grudnjak s punim pokricem (boja 4 + velicina 70C–115G, 74 velicine).
@@ -928,6 +930,17 @@ if ( ! function_exists( 'noriks_slingbag_sizes' ) ) {
             array( 'Mini',    '19 × 14 × 4 cm',   'do 130 cm', 'mobitel, ključevi, putovnica, kabeli za punjenje i prijenosna baterija' ),
             array( 'Regular', '22 × 15 × 4 cm',   'do 130 cm', 'sve iz Mini + grickalice, sunčane naočale, punjač, deblji novčanik, mali tablet' ),
             array( 'Max',     '28 × 19,5 × 6 cm', 'do 130 cm', 'sve iz Regular + knjiga, slušalice preko ušiju, tablet do 11"' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_travelbag_sizes' ) ) {
+    /** NORIKS TravelBag: model, dimenzije (cm), nacin nosenja, za koga.
+     *  1:1 z originala (luhxe.com, okno »Which one is for me?« + »other details«: 20" x 9" x 12.5" = 51 x 23 x 32 cm, 1,1 kg). */
+    function noriks_travelbag_sizes() {
+        return array(
+            array( 'Classic', '51 × 23 × 32 cm', 'u ruci ili preko ramena', 'Za brza putovanja i putnike u pokretu – lagana, praktična i elegantna. Ravno dno, bez kotačića.' ),
+            array( 'Roller',  '51 × 23 × 32 cm', 'na kotačićima, u ruci ili preko ramena', 'Odvojiva ručka i kotačići skidaju se u nekoliko sekundi – torba na kotačićima kad vam treba, putna torba kad ne treba.' ),
         );
     }
 }

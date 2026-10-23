@@ -479,6 +479,11 @@ if ( noriks_is_type( 'slingbag' ) ) {
     include $noriks_pb_dir . 'why-slingbag.php';
 }
 
+// NORIKS TravelBag (orto-travelbag) — putna torba za rucnu prtljagu s odvojivim kotacicima
+if ( noriks_is_type( 'travelbag' ) ) {
+    include $noriks_pb_dir . 'why-travelbag.php';
+}
+
 // NORIKS ComfortJeans (orto-comfortjeans) — opustene traperice sirokih nogavica
 if ( noriks_is_type( 'comfortjeans' ) ) {
     include $noriks_pb_dir . 'why-comfortjeans.php';

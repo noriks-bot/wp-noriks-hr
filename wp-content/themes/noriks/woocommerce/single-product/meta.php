@@ -730,6 +730,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <strong>NORIKS SlingBag 2.0</strong> je putna torbica preko ramena za sigurno i praktično nošenje bez ruku, kamo god išli. Izrađena je od <strong>500D najlonske tkanine</strong> – istog materijala kao u vrhunskoj opremi za prirodu – pa je čvršća, otpornija na vremenske uvjete i izrađena da traje godinama. Remen ima <strong>unutarnju čeličnu sajlu</strong> otpornu na rezanje, a <strong>sustav zaključavanja s 3 točke</strong> zamjenjuje staru plastičnu kopču. Uz tijelo je <strong>skriveni stražnji džep</strong> za gotovinu i kartice, posvuda su <strong>YKK® patentni zatvarači</strong>, podstava od tkanine koja <strong>blokira RFID</strong> štiti kartice i putovnicu, a unutra je kopča za ključeve.<br><br><strong>Specifikacije:</strong><br>• <strong>Mini:</strong> 19 × 14 × 4 cm – mobitel, ključevi, putovnica, kabeli i prijenosna baterija<br>• <strong>Regular:</strong> 22 × 15 × 4 cm – plus grickalice, sunčane naočale, punjač i mali tablet<br>• <strong>Max:</strong> 28 × 19,5 × 6 cm – plus knjiga, slušalice preko ušiju ili tablet do 11"<br>• <strong>Remen:</strong> podesivi, najviše 130 cm – jedna veličina za sve<br>• <strong>Materijal:</strong> 500D najlon, YKK® patentni zatvarači, RFID tkanina (0,022 – 0,047 Ω, 75 g/m²)<br>• Sve veličine uklapaju se u ograničenja za osobni predmet u zrakoplovu (Ryanair, easyJet, United, American Airlines).
 
 
+         <?php elseif( noriks_is_type( 'travelbag', $current_product_id ) ): ?>
+
+                <strong>NORIKS TravelBag</strong> je putna torba za ručnu prtljagu s kojom pakirate pametnije, putujete lakše i izbjegavate naknade za prtljagu – sa stilom. Stane <strong>više od 38 komada odjeće i do 5 pari cipela</strong>, ugrađena vješalica i podstava otporna na gužvanje čuvaju odjeću urednom, a model <strong>Roller</strong> ima odvojivu teleskopsku ručku i kotačiće koji se pričvršćuju i skidaju u nekoliko sekundi.<br><br><strong>Što je čini posebnom:</strong><br>• Prostor za svaku kombinaciju i još malo više<br>• Mogućnost odvojivih kotačića (model Roller)<br>• Više džepova za šminku i sitnice<br>• Sustav pakiranja bez gužvanja s ugrađenom vješalicom<br>• Poseban pretinac za cipele<br>• Dimenzije ručne prtljage<br><br><strong>U paketu:</strong><br>• 1x podstavljena naramenica<br>• 1x torbica za kozmetiku / cipele<br><br><strong>Ostali detalji:</strong><br>• <strong>Dimenzije:</strong> 51 × 23 × 32 cm (dimenzije ručne prtljage)<br>• <strong>Materijal:</strong> kvalitetna, ekološki prihvatljiva PU koža<br>• <strong>Vodoodbojni premaz:</strong> štiti od prolivenih tekućina i slabe kiše<br>• <strong>Težina:</strong> 1,1 kg<br>• Patentni zatvarači koji ne zapinju<br><br><strong>Boje:</strong> ružičasta, crna i bijela.<br><strong>Model:</strong> Classic (ravno dno, nosi se u ruci ili preko ramena) ili Roller (dno s utorom, odvojiva ručka i kotačići). U paketu za svaku torbu zasebno birate boju i model.
+
          <?php elseif( noriks_is_type( 'comfortjeans', $current_product_id ) ): ?>
 
                 <strong>NORIKS ComfortJeans</strong> spajaju klasičan izgled trapera s udobnošću nevjerojatne rastezljivosti. Ove traperice visokog struka, opuštenog kroja i širokih ravnih nogavica izrađene su od posebne mješavine trapera koja je vrlo rastezljiva, a ipak zadržava osjećaj pravog, klasičnog trapera. Svestrane su i savršene za svakodnevno nošenje — komad koji mora imati svaka osnovna garderoba.<br><br>• Opušten kroj nogavica<br>• Rastezljiv pravi traper<br>• Visoki struk<br>• Metalni patentni zatvarač YKK®<br>• Dva stražnja i dva prednja džepa<br>• Kožna etiketa na stražnjem dijelu struka<br><br><strong>Kroj:</strong> prianjaju u struku, a od donjeg dijela bedara padaju opušteno i poluširoko ravno. Možete ih nositi duge (ispod gležnja, iznad poda u cipelama) ili skraćene (do gležnja).<br><strong>Tkanina:</strong> rastezljivi traper od 12 oz, tkan s elastičnom potkom za udobnost i s izgledom pravog krutog trapera — klasična tekstura i moderna sloboda pokreta.<br><strong>Sastav:</strong> pamuk / poliester / elastan<br><br><strong>Boje:</strong> tamnoplava, srednje plava, vintage plava, crna, svijetloplava, isprana crna i prljavobijela.<br><strong>Veličine:</strong> XXS (22/23) – XXL (34/35), EU 32 – 50.<br><strong>Duljine:</strong> L26 (66 cm), L28 (71 cm), L30 (76 cm), L32 (81 cm), L34 (86 cm) i L36 (91 cm) — duljinu odaberite prema svojoj visini (tablica veličina).
@@ -1916,6 +1920,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           </div>
 
 
+        <?php elseif( noriks_is_type( 'travelbag', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Oba modela iste su veličine: 51 × 23 × 32 cm</strong> (dimenzije ručne prtljage), težina 1,1 kg. <strong>Classic</strong> ima ravno dno, a <strong>Roller</strong> dno s utorom i odvojivu ručku s kotačićima.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Model</th>
+                  <th style="padding:9px 8px;text-align:left;">Dimenzije</th>
+                  <th style="padding:9px 8px;text-align:left;">Nošenje</th>
+                  <th style="padding:9px 8px;text-align:left;">Za koga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_travelbag_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Pravila za ručnu prtljagu razlikuju se od kompanije do kompanije – prije leta provjerite dopuštene dimenzije. Ako vam model ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'comfortjeans', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2783,6 +2818,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 Torbicu čistite <strong>blago vlažnom krpom</strong> i malo blagog sapuna, a mrlje nježno istrljajte mekanom četkicom. Ne perite je u perilici rublja, ne izbjeljujte i ne glačajte. Prije čišćenja ispraznite sve džepove, a nakon čišćenja ostavite je otvorenu da se osuši na zraku, daleko od radijatora i izravnog sunca.
 
+
+             <?php elseif( noriks_is_type( 'travelbag', $current_product_id ) ): ?>
+
+                Torbu od PU kože čistite <strong>blago vlažnom krpom</strong> i malo blagog sapuna, a zatim je obrišite suhom krpom. Ne perite je u perilici rublja, ne izbjeljujte i ne glačajte. Prije čišćenja ispraznite sve džepove i skinite kotačiće (model Roller), a nakon čišćenja ostavite torbu otvorenu da se osuši na zraku, daleko od radijatora i izravnog sunca. Torbu za odjeću i podstavu po potrebi samo prozračite ili obrišite vlažnom krpom.
 
              <?php elseif( noriks_is_type( 'comfortjeans', $current_product_id ) ): ?>
 
