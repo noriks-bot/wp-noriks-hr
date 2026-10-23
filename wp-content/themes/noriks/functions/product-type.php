@@ -184,6 +184,8 @@ function noriks_product_type_map() : array {
         'calmingcollar'           => array( 'orto-calmingcollar', 'calmingcollar' ),
         // NORIKS TheraPillow — terapijski jastuk za vrat 3 u 1 (brez atributov; ponudbi 1x/2x kom kot paketa originala, brez tablice).
         'therapillow'             => array( 'orto-therapillow', 'therapillow' ),
+        // NORIKS VacuumSealer — bezicni rucni vakuumski aparat za hranu (en izbirnik Velicina pakiranja 10/20/30 vrecic s cenami originala, brez tablice).
+        'vacuumsealer'            => array( 'orto-vacuumsealer', 'vacuumsealer' ),
         // NORIKS SilkBoxers — svilene bokserice za cjelodnevnu udobnost (samo velicina M–3XL, tamnoplava).
         'silkboxers'              => array( 'orto-silkboxers', 'silkboxers' ),
         // NORIKS ModalSweatshirt — dukserica od modala s okruglim izrezom (boja + velicina S–3XL).
