@@ -172,7 +172,7 @@ $natb_cls = function() use ( &$natb_n ) { $natb_n++; return ( $natb_n % 2 ) ? ' 
 <section class="natb-sec<?php echo $natb_cls(); ?>">
   <div class="natb-wrap">
     <p class="natb-kicker natb-c">Recenzije kupaca</p>
-    <h2 class="natb-h2 natb-c">Pogledajte zašto nam vjeruje <em>258.437+ kupaca</em></h2>
+    <h2 class="natb-h2 natb-c">Pogledajte zašto nam vjeruju <em>tisuće kupaca</em></h2>
     <div class="natb-score">
       <span class="natb-score__num">4,9 / 5</span>
       <?php echo $natb_stars( 5 ); ?>
