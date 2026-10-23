@@ -374,6 +374,11 @@ if ( noriks_is_type( 'vacuumsealer' ) ) {
     include $noriks_pb_dir . 'why-vacuumsealer.php';
 }
 
+// NORIKS GrillBasket (orto-grillbasket) — valjkasta kosara za rostilj
+if ( noriks_is_type( 'grillbasket' ) ) {
+    include $noriks_pb_dir . 'why-grillbasket.php';
+}
+
 // NORIKS TheraPillow (orto-therapillow) — terapijski jastuk za vrat 3 u 1
 if ( noriks_is_type( 'therapillow' ) ) {
     include $noriks_pb_dir . 'why-therapillow.php';

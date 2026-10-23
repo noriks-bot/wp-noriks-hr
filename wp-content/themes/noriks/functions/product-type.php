@@ -194,6 +194,8 @@ function noriks_product_type_map() : array {
         'therapillow'             => array( 'orto-therapillow', 'therapillow' ),
         // NORIKS DualPillow — jastuk 2 u 1 (brez atributov; ponudbe 1x/2x/3x/4x kom kot paketi originala, brez tablice).
         'dualpillow'              => array( 'orto-dualpillow', 'dualpillow' ),
+        // NORIKS GrillBasket — valjkasta kosara za rostilj (brez atributov; ponudbe 1x/2x/4x kom kot Kaching paketi originala, brez tablice).
+        'grillbasket'             => array( 'orto-grillbasket', 'grillbasket' ),
         // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
         'mattresstopper'          => array( 'orto-mattresstopper', 'mattresstopper' ),
         // NORIKS VacuumSealer — bezicni rucni vakuumski aparat za hranu (en izbirnik Velicina pakiranja 10/20/30 vrecic s cenami originala, brez tablice).
