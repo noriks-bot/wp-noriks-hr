@@ -723,6 +723,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS LeatherBoots</strong> su muške udobne kožne čizme koje spajaju udobnost za cijeli dan i čist izgled kože — u čizmama koje ćete obuvati iznova i iznova. Uložak oblikovan prema svodu stopala i mekano jastučenje upijaju udarce svakog koraka, pa stopala, koljena i leđa ostaju manje opterećeni i nakon dugog dana na nogama. Širok prednji dio daje prstima prostor umjesto da ih stišće, a izgledaju kao obične kožne čizme, ne kao glomazna ortopedska obuća.<br><br>Neklizajući gumeni potplat pouzdano prianja na mokrim i sklizavim površinama, gornji dio otporan na vodu odbija laganu kišu i prskanje, a lagana i fleksibilna izrada nema mrtve težine teških čizama. Svaki par izrađen je s naglaskom na izdržljivost, udobnost i pouzdanost u svakodnevnom nošenju — na poslu, u šetnji i vikendom. Dostupne u pet boja (smeđa, svijetlosmeđa, crna, plava i zelena) i veličinama od EU 37 do EU 48.
 
+         <?php elseif( noriks_is_type( 'snugboot', $current_product_id ) ): ?>
+
+                <strong>NORIKS SnugBoot</strong> su tople zimske barefoot čizme s mekanom krznenom podstavom — unisex, za žene i muškarce. Obične zimske cipele stežu stopala i već nakon nekoliko sati izazivaju bol; NORIKS SnugBoot su drugačije. <strong>Širok prostor za prste</strong> omogućuje prstima da se prirodno rašire, a <strong>tanak, mekan i fleksibilan potplat</strong> prilagođava se obliku stopala i daje pravi barefoot osjećaj i prirodan hod.<br><br><strong>Udobna krznena podstava</strong> grije stopala po svakom vremenu, a pritom im omogućuje da dišu. Neklizajući potplat pomaže spriječiti slučajna klizanja i padove na snijegu i skliskim površinama. Dizajn osmišljen prema ortopedskim načelima rasterećuje stopala i zglobove i podupire uspravno držanje. Mekane i lagane, savršene su za svakodnevno zimsko nošenje — u zatvorenom i na otvorenom.<br><br><strong>Boje:</strong> smeđa, crna, svijetlosiva, kava, krem. <strong>Veličine:</strong> EU 36–46 (unisex).
+
          <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
                 <strong>NORIKS MinimizerBra</strong> je rashlađujući minimizer grudnjak s punim pokrićem, izgrađen oko <strong>krutog središnjeg panela za razdvajanje</strong>. Gotovo svaki minimizer radi na principu kompresije: gura tkivo zajedno i prema naprijed, pa se ono nagomila u sredini prsa i stvara »policu« zbog koje se pripijene majice napuhnu, a košulje razmiču među gumbima. NORIKS MinimizerBra umjesto toga razdvaja — kruti panel oslanja se na prsnu kost i drži svaku stranu punijih grudi u njezinu prostoru tijekom cijelog dana kretanja. Nema mase, nema police, nema efekta šatora.<br><br><strong>Kako je izrađen:</strong><br>• Kruti panel za razdvajanje — oslanja se na prsnu kost i ne urušava se do podneva<br>• Potpuno bez podstave — bez dodatnog volumena<br>• Košarica s punim pokrićem — drži oblik punijih grudi umjesto da ih spljošti<br>• Debele podstavljene naramenice i široka traka — težina se raspoređuje preko leđa<br>• Rashlađujuća, prozračna tkanina — bez nakupljanja topline ispod grudi<br>• Žica koja ne bode — oblikuje košaricu bez urezivanja<br><br><strong>Boje:</strong> bež, crna, bijela i boja kave.<br><strong>Veličine:</strong> trake 70 – 115 i košarice B – I (74 veličine) — svoju veličinu pronađite u tablici veličina; ako ste između dvije veličine, uzmite veću. U paketu za svaki komad zasebno birate boju i veličinu.
@@ -1760,6 +1764,39 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'snugboot', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Unisex veličine od <strong>EU 36 do EU 46</strong>. Zbog mekane, debele krznene podstave čizme mogu u početku biti <strong>tijesne, osobito oko hrpta stopala</strong>; nošenjem se podstava prirodno slegne i pristajanje postaje udobnije. Za čvršće pristajanje odaberite <strong>svoju uobičajenu veličinu</strong>, a ako imate visok hrbat stopala, volite više prostora ili nosite deblje čarape, odaberite <strong>jednu veličinu veću</strong>.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">US (ženske)</th>
+                  <th style="padding:9px 8px;text-align:left;">US (muške)</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
+                  <th style="padding:9px 8px;text-align:left;">Širina stopala</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_snugboot_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -2858,6 +2895,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'leatherboots', $current_product_id ) ): ?>
 
                 Nakon nošenja čizme obrišite <strong>blago vlažnom krpom</strong>. Za najbolje rezultate ostavite ih da se <strong>prirodno osuše na zraku</strong> i izbjegavajte izravnu toplinu (radijator, sušilo, izravno sunce). Ne perite ih u perilici rublja i ne namačite ih. Redovito čišćenje čuva njihov izgled i produljuje im vijek trajanja.
+
+             <?php elseif( noriks_is_type( 'snugboot', $current_product_id ) ): ?>
+
+                Čizme čistite <strong>mekanom četkicom ili blago vlažnom krpom</strong>; tvrdokorne mrlje nježno očistite s malo blagog sapuna i vode. Ostavite ih da se <strong>prirodno osuše na zraku</strong>, daleko od radijatora i izravnog sunca. <strong>Ne perite ih u perilici rublja</strong> i ne namačite ih — tako gornji dio i krznena podstava dugo ostaju kao novi.
 
              <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 

@@ -168,6 +168,8 @@ function noriks_product_type_map() : array {
         'thermoboots'             => array( 'orto-thermoboots', 'thermoboots' ),
         // NORIKS LeatherBoots — muske udobne kozne cizme (boja 5 + velicina EU 37–48).
         'leatherboots'            => array( 'orto-leatherboots', 'leatherboots' ),
+        // NORIKS SnugBoot — zimske barefoot cizme s krznenom podstavom, unisex (boja 5 + velicina EU 36–46).
+        'snugboot'                => array( 'orto-snugboot', 'snugboot' ),
         // NORIKS HikingShoes — barefoot pohodne cipele od brusene koze (boja + velicina EU 36–46).
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
@@ -854,6 +856,27 @@ if ( ! function_exists( 'noriks_leatherboots_sizes' ) ) {
             array( 'EU 46', '11,5 – 12', '28,3 – 28,9 cm' ),
             array( 'EU 47', '12,5 – 13', '29,2 – 29,5 cm' ),
             array( 'EU 48', '13,5 – 14', '30,0 – 30,5 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_snugboot_sizes' ) ) {
+    /** NORIKS SnugBoot: EU velicina, US (zenske), US (muske), duljina stopala (cm), sirina stopala (cm).
+     *  1:1 s tablice originala (peak-footwear.com, »Snug Boot Size Table«; velicine na prodaju US Women 6–15 = EU 36–46).
+     *  Unisex. Zbog debele krznene podstave: uobicajena velicina za cvrsce pristajanje, visok hrbat / deblje carape -> broj vise. */
+    function noriks_snugboot_sizes() {
+        return array(
+            array( 'EU 36', '6',           '4',           '21,8 cm', '8,4 cm' ),
+            array( 'EU 37', '7',           '5',           '22,4 cm', '8,5 cm' ),
+            array( 'EU 38', '7,5',         '5,5',         '23,1 cm', '8,7 cm' ),
+            array( 'EU 39', '8 – 8,5',     '6 – 6,5',     '23,7 cm', '8,8 cm' ),
+            array( 'EU 40', '9 – 9,5',     '7 – 7,5',     '24,4 cm', '9,0 cm' ),
+            array( 'EU 41', '10 – 10,5',   '8 – 8,5',     '25,1 cm', '9,2 cm' ),
+            array( 'EU 42', '11 – 11,5',   '9 – 9,5',     '25,7 cm', '9,3 cm' ),
+            array( 'EU 43', '12 – 12,5',   '10 – 10,5',   '26,4 cm', '9,5 cm' ),
+            array( 'EU 44', '13 – 13,5',   '11 – 11,5',   '27,0 cm', '9,6 cm' ),
+            array( 'EU 45', '14',          '12',          '27,7 cm', '9,8 cm' ),
+            array( 'EU 46', '15',          '13',          '28,4 cm', '9,9 cm' ),
         );
     }
 }

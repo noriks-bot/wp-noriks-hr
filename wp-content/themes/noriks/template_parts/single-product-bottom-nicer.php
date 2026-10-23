@@ -484,6 +484,11 @@ if ( noriks_is_type( 'leatherboots' ) ) {
     include $noriks_pb_dir . 'why-leatherboots.php';
 }
 
+// NORIKS SnugBoot (orto-snugboot) — zimske barefoot cizme s krznenom podstavom (ne Snug jastuk!)
+if ( noriks_is_type( 'snugboot' ) ) {
+    include $noriks_pb_dir . 'why-snugboot.php';
+}
+
 // NORIKS DogBed (orto-dogbed) — premium ortopedski krevet za pse
 if ( noriks_is_type( 'dogbed' ) ) {
     include $noriks_pb_dir . 'why-dogbed.php';
