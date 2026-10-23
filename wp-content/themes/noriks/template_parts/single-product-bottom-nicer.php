@@ -369,6 +369,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS FleeceShawl (orto-fleeceshawl) — mekani sal-ogrtac od flisa
+if ( noriks_is_type( 'fleeceshawl' ) ) {
+    include $noriks_pb_dir . 'why-fleeceshawl.php';
+}
+
 // NORIKS SilkBoxers (orto-silkboxers) — svilene bokserice za cjelodnevnu udobnost
 if ( noriks_is_type( 'silkboxers' ) ) {
     include $noriks_pb_dir . 'why-silkboxers.php';
