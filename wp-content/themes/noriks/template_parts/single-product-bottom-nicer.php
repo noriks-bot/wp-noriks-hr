@@ -369,6 +369,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS CalmingCollar (orto-calmingcollar) — umirujuca ovratnica s feromonima za macke
+if ( noriks_is_type( 'calmingcollar' ) ) {
+    include $noriks_pb_dir . 'why-calmingcollar.php';
+}
+
 // NORIKS PetDental (orto-petdental) — sprej za njegu zubi pasa i macaka
 if ( noriks_is_type( 'petdental' ) ) {
     include $noriks_pb_dir . 'why-petdental.php';
