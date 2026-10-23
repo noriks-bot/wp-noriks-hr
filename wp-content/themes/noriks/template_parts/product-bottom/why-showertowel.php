@@ -385,7 +385,7 @@ $nst_cls = function() use ( &$nst_n ) { $nst_n++; return ( $nst_n % 2 ) ? ' nst-
 .nst-list { list-style: none; margin: 0 0 16px; padding: 0; }
 .nst-list li { position: relative; padding-left: 32px; margin: 0 0 11px; font-size: 16px; line-height: 1.55; color: #2c3a48; font-weight: 500; }
 .nst-list li::before { content: "✓"; position: absolute; left: 0; top: 1px; width: 21px; height: 21px; border-radius: 50%; background: #2f6fa8; color: #fff; font-size: 12px; font-weight: 800; line-height: 21px; text-align: center; }
-.nst-olist { margin: 0; padding-left: 20px; }
+.nst-olist { margin: 0; padding-left: 0; list-style: none; }
 .nst-olist li { font-size: 15.5px; line-height: 1.6; color: #3f4d5c; margin: 0 0 6px; }
 .nst-small { font-size: 15px !important; margin: 18px 0 8px !important; }
 

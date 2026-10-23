@@ -7,7 +7,7 @@
  *   2) zavihek "Specs" v nakupni škatli                     -> Specifikacije (tabela ob sliki)
  *   3) "unfold your Adventure" (zvit čevelj)               -> Rasklopite svoju avanturu
  *   4) Zero Drop / Wide Toe / Flexible (3 kartice)          -> Zero drop · Širok prednji dio · Fleksibilnost
- *   5) "WILD LOOK" (video + drsnik 15 fotografij)           -> Divlji stil (video brez napisov/HUD, utišan; statična mreža 8 fotografij)
+ *   5) "WILD LOOK" (video + drsnik 15 fotografij)           -> Divlji stil (video brez napisov/HUD, utišan) + Kombinacije (mreža 2x2 fotografij ob besedilu)
  *   6) "THE PROFESSIONAL WILD LIFE" (video + IG reels)      -> Profesionalni divlji život (video utišan; Instagram vdelave izpuščene)
  *   7) "heard it before? Wild Facts" (4 miti)               -> Čuli ste to već? (4 miti; odstotki in navedbe študij izpuščeni)
  *   8) SHIELD   (plakat lastnosti)                          -> Zaštita
@@ -56,8 +56,8 @@ $nhk_feats = array(
   array( 'nhk-s04-fleksibilno.webp', 'Fleksibilnost', 'Potplat se savija zajedno sa stopalom na svakom koraku.' ),
 );
 
-/* 5) Wild Look — fotografije (statična mreža namesto drsnika) */
-$nhk_look = array( 'nhk-lb-01.webp', 'nhk-lb-02.webp', 'nhk-lb-03.webp', 'nhk-lb-04.webp', 'nhk-lb-05.webp', 'nhk-lb-06.webp', 'nhk-lb-07.webp', 'nhk-lb-08.webp' );
+/* 5b) Wild Look — fotografije (mreža 2x2 ob besedilu namesto drsnika) */
+$nhk_look = array( 'nhk-lb-02.webp', 'nhk-lb-04.webp', 'nhk-lb-06.webp', 'nhk-lb-08.webp' );
 
 /* 7) Wild Facts — miti (brez odstotkov in navedb študij konkurenta) */
 $nhk_myths = array(
@@ -160,22 +160,36 @@ $nhk_rev = function() use ( &$nhk_side ) { $nhk_side++; return ( $nhk_side % 2 )
   </div>
 </section>
 
-<!-- 5) DIVLJI STIL — "WILD LOOK": video (utišan, brez napisov) + statična mreža fotografij -->
+<!-- 5) DIVLJI STIL — "WILD LOOK": video (utišan, brez napisov) ob besedilu -->
 <section class="nhk-sec<?php echo $nhk_cls(); ?>">
   <div class="nhk-wrap">
     <div class="nhk-row2<?php echo $nhk_rev(); ?>">
       <div class="nhk-media nhk-media--vid"><?php echo $nhk_vid( 'nhk-s05-wild-look.mp4', 'nhk-s05-wild-look.webp' ); ?></div>
       <div class="nhk-copy">
-        <p class="nhk-kicker">Wild look</p>
-        <h2 class="nhk-h3">Divlji stil — <em>na stazi i u gradu</em></h2>
-        <p>Od planinskih staza do gradskih ulica: brušena koža, crni gumeni potplat i šarene vezice slažu se s planinarskom opremom jednako kao s trapericama, suknjom ili širokim hlačama.</p>
-        <p class="nhk-big">Jedna cipela, bezbroj kombinacija.</p>
+        <p class="nhk-kicker">Divlji stil</p>
+        <h2 class="nhk-h3">Jednako dobro <em>na stazi i u gradu</em></h2>
+        <p>Završna obrada od <strong>brušene kože</strong> izgleda profinjeno i daleko od staze — od planinskih puteljaka do gradskih ulica.</p>
+        <p class="nhk-big">Spremne za divljinu, lijepe za svaki dan.</p>
       </div>
     </div>
-    <div class="nhk-look">
-      <?php foreach ( $nhk_look as $i => $lf ) : ?>
-      <div class="nhk-look__ph"><?php echo $nhk_img( $lf, 'Kombinacija odjeće s NORIKS HikingShoes ' . ( $i + 1 ) ); ?></div>
-      <?php endforeach; ?>
+  </div>
+</section>
+
+<!-- 5b) DIVLJI STIL — fotografije lookbooka (drsnik originala -> mreža 2x2 ob besedilu) -->
+<section class="nhk-sec<?php echo $nhk_cls(); ?>">
+  <div class="nhk-wrap">
+    <div class="nhk-row2<?php echo $nhk_rev(); ?>">
+      <div class="nhk-media nhk-look">
+        <?php foreach ( $nhk_look as $i => $lf ) : ?>
+        <div class="nhk-look__ph"><?php echo $nhk_img( $lf, 'Kombinacija odjeće s NORIKS HikingShoes ' . ( $i + 1 ) ); ?></div>
+        <?php endforeach; ?>
+      </div>
+      <div class="nhk-copy">
+        <p class="nhk-kicker">Kombinacije</p>
+        <h2 class="nhk-h3">Jedna cipela, <em>bezbroj kombinacija</em></h2>
+        <p>Brušena koža, crni gumeni potplat i šarene vezice slažu se s planinarskom opremom jednako kao s <strong>trapericama, suknjom ili širokim hlačama</strong>.</p>
+        <p class="nhk-big">Obujte ih uz ruksak ili uz omiljeni gradski komad.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -394,8 +408,8 @@ $nhk_rev = function() use ( &$nhk_side ) { $nhk_side++; return ( $nhk_side % 2 )
 /* wild look */
 .nhk-media--vid video { aspect-ratio: 854 / 410; }
 .nhk-media--sq.nhk-media--vid video { aspect-ratio: 1 / 1; }
-.nhk-look { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
-.nhk-look__ph img { aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; }
+.nhk-look { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 480px; width: 100%; margin: 0 auto; }
+.nhk-look__ph img { aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; max-width: none; box-shadow: 0 2px 4px rgba(20,40,25,.05), 0 10px 26px rgba(20,40,25,.10); }
 
 /* miti */
 .nhk-myths { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
@@ -450,7 +464,7 @@ $nhk_rev = function() use ( &$nhk_side ) { $nhk_side++; return ( $nhk_side % 2 )
   .nhk-row2--rev .nhk-media { order: 0; }
   .nhk-specs > div { grid-template-columns: 1fr; gap: 2px; }
   .nhk-feats { grid-template-columns: 1fr; gap: 14px; }
-  .nhk-look { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .nhk-look { gap: 10px; }
   .nhk-myths, .nhk-reviews { gap: 12px; }
   .nhk-card__body, .nhk-myth__body { padding: 12px; }
   .nhk-mm strong { font-size: 22px; }
