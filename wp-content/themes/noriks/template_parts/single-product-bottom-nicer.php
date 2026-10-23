@@ -419,6 +419,11 @@ if ( noriks_is_type( 'widetoeshoes' ) ) {
     include $noriks_pb_dir . 'why-widetoeshoes.php';
 }
 
+// NORIKS HoodieDress (orto-hoodiedress) — oversized haljina s kapuljacom
+if ( noriks_is_type( 'hoodiedress' ) ) {
+    include $noriks_pb_dir . 'why-hoodiedress.php';
+}
+
 // NORIKS HikingShoes (orto-hikingshoes) — barefoot pohodne cipele
 if ( noriks_is_type( 'hikingshoes' ) ) {
     include $noriks_pb_dir . 'why-hikingshoes.php';

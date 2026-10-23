@@ -166,6 +166,8 @@ function noriks_product_type_map() : array {
         'widetoeshoes'            => array( 'orto-widetoeshoes', 'widetoeshoes' ),
         // NORIKS HikingShoes — barefoot pohodne cipele od brusene koze (boja + velicina EU 36–46).
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
+        // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
+        'hoodiedress'             => array( 'orto-hoodiedress', 'hoodiedress' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS FleeceShawl — mekani sal-ogrtac od flisa (samo boja, 11 boja; jedna velicina 158 x 110 cm, brez tablice).
@@ -752,6 +754,22 @@ if ( ! function_exists( 'noriks_widetoeshoes_sizes' ) ) {
             array( 'EU 45', '29,0 cm', '10,00 cm', '10', '10,5', '11,5' ),
             array( 'EU 46', '29,7 cm', '10,15 cm', '11', '11,5', '12,5' ),
             array( 'EU 47', '30,5 cm', '10,30 cm', '12', '12,5', '13,5' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_hoodiedress_sizes' ) ) {
+    /** NORIKS HoodieDress: velicina, EU velicina, opseg struka (cm), opseg prsa (cm).
+     *  1:1 s tablice originala (the-warmy.com, Kiwi »Hoodie Dress Size Chart«, »Take your normal hoodie size.«):
+     *  US 4-6 ... 24-26 -> EU (+30), struk iz palcev (in -> cm), prsa iz tablice »Measurements (CM)« originala. */
+    function noriks_hoodiedress_sizes() {
+        return array(
+            array( 'S',   'EU 34–36', '58 – 71 cm',   '105 cm' ),
+            array( 'M',   'EU 38–40', '64 – 81 cm',   '110 cm' ),
+            array( 'L',   'EU 42–44', '69 – 89 cm',   '115 cm' ),
+            array( 'XL',  'EU 46–48', '71 – 104 cm',  '122 cm' ),
+            array( '2XL', 'EU 50–52', '89 – 112 cm',  '131 cm' ),
+            array( '3XL', 'EU 54–56', '114 – 122 cm', '138 cm' ),
         );
     }
 }

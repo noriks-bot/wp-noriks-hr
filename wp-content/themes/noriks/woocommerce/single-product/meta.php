@@ -671,6 +671,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS WideToeShoes</strong> su prozračne tenisice sa širokim prednjim dijelom i debljim potplatom — vaš prvi korak prema slobodi hodanja kao bosonogi. Prostran prednji dio omogućuje prstima da se prirodno rašire i smanjuje pritisak na stopala tijekom dugog hodanja, a lagana izrada smanjuje umor i ostaje izdržljiva.<br><br>Kvalitetni materijali propuštaju zrak, pa stopala ostaju suha i udobna. Potplat pouzdano prianja i na kamenitim i neravnim podlogama, a ojačani prednji dio štiti prste od udaraca. Bilo da hodate planinskim stazama, gradom ili istražujete prirodu, ove tenisice spajaju udobnost i svakodnevnu nosivost.<br><br><strong>Gornji dio:</strong> sintetička koža + tkanina<br><strong>Podstava:</strong> mrežasta tkanina<br><strong>Potplat:</strong> guma<br><strong>Debljina potplata:</strong> debeli gumeni potplat za fleksibilnost i otpornost na klizanje<br><strong>Vodootpornost:</strong> nisu vodootporne, ali se brzo suše<br><strong>Zatvaranje:</strong> vezice<br><br><strong>Boje:</strong> bijelo-siva, smeđa, bež-zelena, bež-crvena, crno-bijela, bež-siva, kaki i tamnosmeđa.<br><strong>Veličine:</strong> EU 37–47. Tenisice mogu biti malo manje — veličinu odaberite prema tablici veličina (duljina uloška = duljina stopala + 1–1,5 cm).
 
+         <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
+
+                <strong>NORIKS HoodieDress</strong> je više od hudice — to je vaš novi omiljeni komad za udoban i opušten stil bez puno truda. Dizajnirana je s prozračnim <strong>oversized krojem</strong> koji laska svakoj figuri, a izrađena od pamučne tkanine: <strong>vanjski sloj od 100 % pamuka</strong> i plišana unutrašnjost mekana poput deke. Savršena za lagana jutra, užurbane dane ili dotjerani izgled bez odricanja od udobnosti.<br><br><strong>Kroj i materijal:</strong> odgovara uobičajenoj veličini — uzmite veličinu hudice koju inače nosite. 100 % pamuk izvana, mekani flis poput deke iznutra.<br><br><strong>Udobnost u svakom detalju:</strong><br>• Iznutra mekana poput deke<br>• Vanjski sloj od 100 % pamuka<br>• Produžena duljina za bolju pokrivenost<br>• Kroj koji laska figuri<br><br><strong>Boje:</strong> crna, zelena, tamnoplava, kadulja zelena, crvena, ljubičasta, svijetloplava, krem, ružičasta, tamnosiva, smeđa, siva i tamnoljubičasta s leptir rukavima.<br><strong>Veličine:</strong> S – 3XL. U paketu za svaki komad zasebno birate boju i veličinu.
+
          <?php elseif( noriks_is_type( 'hikingshoes', $current_product_id ) ): ?>
 
                 <strong>NORIKS HikingShoes</strong> su vodoodbojne pohodne cipele od brušene kože, osmišljene za avanture u prirodi u stilu hodanja bosonogi. Prostran prednji dio i fleksibilna izrada omogućuju stopalima da se prirodno kreću, a ravan, neklizajući potplat poboljšava ravnotežu na stazama i neravnom terenu. Završna obrada od brušene kože izgleda jednako dobro u gradu kao i na stazi — za sve koji žele prirodan osjećaj tla pod nogama bez kompromisa u stilu i izvedbi.<br><br><strong>Specifikacije:</strong><br>• <strong>Namjena:</strong> planinarenje, trekking, trail trčanje, višednevne ture, istraživanje prirode<br>• <strong>Značajke:</strong> barefoot oblik, tanak i fleksibilan potplat, vodoodbojnost, neklizajući potplat i na mokrom, stabilizator pete, potpuno zatvoreni jezik, vezanje cijelom duljinom<br>• <strong>Materijali:</strong> gornji dio od brušene kože, gumeni potplat, uložak od prirodnog pluta<br>• <strong>Potplat:</strong> baza 4 mm, kramponi 4 mm, ukupno 8 mm (zero drop)<br>• <strong>Težina:</strong> muške oko 750 g, ženske oko 600 g (par)<br>• <strong>Sezona:</strong> cijela godina<br><br><strong>Boje:</strong> žuta, svijetlosiva, terakota, petrolej plava, crna i maslinasto zelena.
@@ -1591,6 +1595,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Uzmite veličinu hudice koju inače nosite.</strong> Veličine od <strong>S do 3XL</strong>, prozračan oversized kroj s produženom duljinom.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_hoodiedress_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Opseg prsa je mjera haljine (oversized kroj), opseg struka odgovara mjeri tijela. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'hikingshoes', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2314,6 +2349,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 
                 Tenisice čistite mekanom, blago vlažnom krpom ili četkicom i malo blagog sapuna; prljavštinu s gumenog potplata isperite mlakom vodom. Ne perite ih u perilici rublja i ne namačite ih. Nisu vodootporne, ali se brzo suše — ostavite ih da se osuše na zraku, daleko od radijatora i izravnog sunca. Uloške po potrebi izvadite i osušite zasebno.
+
+             <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
+
+                Perite na <strong>30 °C</strong>, okrenuto naopako, sa sličnim bojama. Ne izbjeljujte. Sušite na zraku ili u sušilici na niskoj temperaturi kako bi unutarnji flis ostao mekan i pahuljast. Ne glačajte izravno, ne kemijski čistite i ne koristite omekšivač u velikim količinama — tako tkanina dulje zadržava mekoću i boju.
 
              <?php elseif( noriks_is_type( 'hikingshoes', $current_product_id ) ): ?>
 

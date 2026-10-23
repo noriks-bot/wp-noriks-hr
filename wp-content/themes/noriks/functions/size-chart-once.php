@@ -153,6 +153,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-widetoeshoes' );
             return;
         }
+        // NORIKS HoodieDress: S–3XL po EU velicini, opsegu struka i prsa (»uzmite svoju uobicajenu velicinu hudice«).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hoodiedress' ) ) {
+            get_template_part( 'template_parts/size-chart-hoodiedress' );
+            return;
+        }
         // NORIKS HikingShoes: EU 36–46 po duljini stopala (peta–prst, cm), UK i US velicine iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hikingshoes' ) ) {
             get_template_part( 'template_parts/size-chart-hikingshoes' );
