@@ -650,6 +650,9 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
                 <strong>NORIKS SeatCushion</strong> — ortopedski jastuk za sjedenje s potporom za donja leđa. <strong>Izrez za trticu</strong> uklanja izravan pritisak s trtice, a oblikovana površina podupire kralježnicu i vraća zdravo držanje. Memorijska pjena visoke gustoće ravnomjerno raspoređuje težinu na kukove i bedra, pa noge ne utrnu.<br><br><strong>Vanjska navlaka:</strong> prozračna pletena tkanina, skidljiva i periva, hipoalergena.<br><strong>Jezgra:</strong> prilagodljiva ortopedska memorijska pjena – netoksična, s certifikatom OEKO-TEX®, osmišljena za ublažavanje pritiska i pravilno držanje.<br><strong>Dimenzije:</strong> 44 × 42 cm, visina naslona 32 cm.<br><br><strong>Za svako sjedalo:</strong> protuklizna podloga drži ga na mjestu na autosjedalima, uredskim i blagovaonskim stolicama te invalidskim kolicima.
+         <?php elseif( noriks_is_type( 'upholsterycleaner', $current_product_id ) ): ?>
+
+                <strong>NORIKS UpholsteryCleaner</strong> — prenosni usisavač za mokro čišćenje presvlaka, kauča, tepiha, madraca i autosjedala. Ima <strong>dva odvojena spremnika</strong>: jedan za čistu vodu i jedan za usisanu prljavu vodu. Ciljano prska svježu vodu na presvlaku, otapa duboko ukorijenjenu prljavštinu, a zatim prljavu vodu ponovno usisava. Uklanja grinje, mrlje od znoja i neugodne mirise, a presvlake se brzo suše (manje od 20 minuta).<br><br><strong>Dimenzije:</strong> 49 × 24 × 30 cm.<br><strong>Težina:</strong> 6 kg.<br><strong>Snaga:</strong> 600 W (maksimalno).<br><strong>Usisna snaga:</strong> više od 15.000 Pa.<br><strong>Duljina kabela:</strong> 5 m. <strong>Duljina crijeva:</strong> 1,7 m.<br><strong>Spremnik za čistu vodu:</strong> 3 L. <strong>Spremnik za prljavu vodu:</strong> 1,5 L.<br><strong>Utikač:</strong> EU. CE oznaka kvalitete.<br><br><strong>U paketu:</strong> 1x NORIKS UpholsteryCleaner usisavač za mokro čišćenje, 3x nastavka, 1x četka za čišćenje, 1x kabel za napajanje, 1x upute za uporabu.<br><br><strong>Prikladan za:</strong> kauče i presvlake (mikrovlakna, velur, uobičajene tkanine za presvlake), tepihe i tepisone, madrace i autosjedala. Nije prikladan za tanke zavjese i pravo krzno.<br><br>Uz NORIKS kupujete bez brige: <strong>pravo na povrat u roku od 30 dana</strong> i <strong>besplatna dostava za narudžbe iznad 70 €</strong>.
 
          <?php elseif( noriks_is_type( 'neckmassager', $current_product_id ) ): ?>
 
@@ -2990,6 +2993,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
                 Navlaka je <strong>skidljiva i može se prati u perilici</strong> – otvorite patentni zatvarač, izvadite jezgru i navlaku operite na <strong>nježnom programu s blagim deterdžentom</strong>. Sušite je na zraku. Jezgru od memorijske pjene <strong>ne perite u perilici</strong> i ne namačite – po potrebi je obrišite vlažnom krpom i pustite da se potpuno osuši prije nego vratite navlaku.
+
+             <?php elseif( noriks_is_type( 'upholsterycleaner', $current_product_id ) ): ?>
+
+                Prije čišćenja uređaj <strong>isključite iz struje</strong>. Nakon svake upotrebe <strong>ispraznite spremnik za prljavu vodu</strong> i isperite ga čistom vodom, a nastavke isperite pod tekućom vodom i ostavite da se <strong>osuše na zraku</strong>. Kućište obrišite mekom, lagano vlažnom krpom. Uređaj <strong>ne uranjajte u vodu</strong> i čuvajte ga na suhom mjestu.
 
              <?php elseif( noriks_is_type( 'neckmassager', $current_product_id ) ): ?>
 
