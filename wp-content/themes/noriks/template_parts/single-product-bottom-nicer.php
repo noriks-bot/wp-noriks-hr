@@ -424,6 +424,11 @@ if ( noriks_is_type( 'widetoeshoes' ) ) {
     include $noriks_pb_dir . 'why-widetoeshoes.php';
 }
 
+// NORIKS SlingBag (orto-slingbag) — putna torbica preko ramena 2.0
+if ( noriks_is_type( 'slingbag' ) ) {
+    include $noriks_pb_dir . 'why-slingbag.php';
+}
+
 // NORIKS HoodieDress (orto-hoodiedress) — oversized haljina s kapuljacom
 if ( noriks_is_type( 'hoodiedress' ) ) {
     include $noriks_pb_dir . 'why-hoodiedress.php';

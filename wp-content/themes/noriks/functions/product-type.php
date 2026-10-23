@@ -168,6 +168,8 @@ function noriks_product_type_map() : array {
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
         'hoodiedress'             => array( 'orto-hoodiedress', 'hoodiedress' ),
+        // NORIKS SlingBag — putna torbica preko ramena 2.0 sa zastitom od krade (boja 4 + velicina Mini / Regular / Max).
+        'slingbag'                => array( 'orto-slingbag', 'slingbag' ),
         // NORIKS MinimizerBra — rashladujuci minimizer grudnjak s punim pokricem (boja 4 + velicina 70C–115G, 74 velicine).
         'minimizerbra'            => array( 'orto-minimizerbra', 'minimizerbra' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
@@ -778,6 +780,18 @@ if ( ! function_exists( 'noriks_minimizerbra_sizes' ) ) {
             array( '105', '46', '92–96', array( '102–108', '104–111', '107–114', '109–116', '112–119', '115–121', '117–123', '' ) ),
             array( '110', '48', '96–100', array( '106–113', '108–115', '111–118', '114–120', '116–122', '119–125', '', '' ) ),
             array( '115', '50', '100–104', array( '110–117', '113–119', '115–121', '118–124', '120–126', '122–129', '', '' ) ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_slingbag_sizes' ) ) {
+    /** NORIKS SlingBag: velicina, visina x sirina x dubina (cm), podesivi remen, sto stane.
+     *  1:1 z originala (conceptglobal.co, zavihek »Sizing & Capacity« + okno »Compare sizes«; mere originala v cm). */
+    function noriks_slingbag_sizes() {
+        return array(
+            array( 'Mini',    '19 × 14 × 4 cm',   'do 130 cm', 'mobitel, ključevi, putovnica, kabeli za punjenje i prijenosna baterija' ),
+            array( 'Regular', '22 × 15 × 4 cm',   'do 130 cm', 'sve iz Mini + grickalice, sunčane naočale, punjač, deblji novčanik, mali tablet' ),
+            array( 'Max',     '28 × 19,5 × 6 cm', 'do 130 cm', 'sve iz Regular + knjiga, slušalice preko ušiju, tablet do 11"' ),
         );
     }
 }

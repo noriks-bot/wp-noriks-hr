@@ -153,6 +153,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-widetoeshoes' );
             return;
         }
+        // NORIKS SlingBag: Mini / Regular / Max po merah torbice (cm), remen do 130 cm, kaj stane (z originala).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'slingbag' ) ) {
+            get_template_part( 'template_parts/size-chart-slingbag' );
+            return;
+        }
         // NORIKS HoodieDress: S–3XL po EU velicini, opsegu struka i prsa (»uzmite svoju uobicajenu velicinu hudice«).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hoodiedress' ) ) {
             get_template_part( 'template_parts/size-chart-hoodiedress' );

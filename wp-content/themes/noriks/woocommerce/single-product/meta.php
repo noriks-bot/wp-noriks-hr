@@ -678,6 +678,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
                 <strong>NORIKS MinimizerBra</strong> je rashlađujući minimizer grudnjak s punim pokrićem, izgrađen oko <strong>krutog središnjeg panela za razdvajanje</strong>. Gotovo svaki minimizer radi na principu kompresije: gura tkivo zajedno i prema naprijed, pa se ono nagomila u sredini prsa i stvara »policu« zbog koje se pripijene majice napuhnu, a košulje razmiču među gumbima. NORIKS MinimizerBra umjesto toga razdvaja — kruti panel oslanja se na prsnu kost i drži svaku stranu punijih grudi u njezinu prostoru tijekom cijelog dana kretanja. Nema mase, nema police, nema efekta šatora.<br><br><strong>Kako je izrađen:</strong><br>• Kruti panel za razdvajanje — oslanja se na prsnu kost i ne urušava se do podneva<br>• Potpuno bez podstave — bez dodatnog volumena<br>• Košarica s punim pokrićem — drži oblik punijih grudi umjesto da ih spljošti<br>• Debele podstavljene naramenice i široka traka — težina se raspoređuje preko leđa<br>• Rashlađujuća, prozračna tkanina — bez nakupljanja topline ispod grudi<br>• Žica koja ne bode — oblikuje košaricu bez urezivanja<br><br><strong>Boje:</strong> bež, crna, bijela i boja kave.<br><strong>Veličine:</strong> trake 70 – 115 i košarice B – I (74 veličine) — svoju veličinu pronađite u tablici veličina; ako ste između dvije veličine, uzmite veću. U paketu za svaki komad zasebno birate boju i veličinu.
+         <?php elseif( noriks_is_type( 'slingbag', $current_product_id ) ): ?>
+
+                <strong>NORIKS SlingBag 2.0</strong> je putna torbica preko ramena za sigurno i praktično nošenje bez ruku, kamo god išli. Izrađena je od <strong>500D najlonske tkanine</strong> – istog materijala kao u vrhunskoj opremi za prirodu – pa je čvršća, otpornija na vremenske uvjete i izrađena da traje godinama. Remen ima <strong>unutarnju čeličnu sajlu</strong> otpornu na rezanje, a <strong>sustav zaključavanja s 3 točke</strong> zamjenjuje staru plastičnu kopču. Uz tijelo je <strong>skriveni stražnji džep</strong> za gotovinu i kartice, posvuda su <strong>YKK® patentni zatvarači</strong>, podstava od tkanine koja <strong>blokira RFID</strong> štiti kartice i putovnicu, a unutra je kopča za ključeve.<br><br><strong>Specifikacije:</strong><br>• <strong>Mini:</strong> 19 × 14 × 4 cm – mobitel, ključevi, putovnica, kabeli i prijenosna baterija<br>• <strong>Regular:</strong> 22 × 15 × 4 cm – plus grickalice, sunčane naočale, punjač i mali tablet<br>• <strong>Max:</strong> 28 × 19,5 × 6 cm – plus knjiga, slušalice preko ušiju ili tablet do 11"<br>• <strong>Remen:</strong> podesivi, najviše 130 cm – jedna veličina za sve<br>• <strong>Materijal:</strong> 500D najlon, YKK® patentni zatvarači, RFID tkanina (0,022 – 0,047 Ω, 75 g/m²)<br>• Sve veličine uklapaju se u ograničenja za osobni predmet u zrakoplovu (Ryanair, easyJet, United, American Airlines).
+
 
          <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
@@ -1637,6 +1641,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Košarica E odgovara američkoj DD, a F američkoj DDD; »–« znači da se veličina ne izrađuje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
+        <?php elseif( noriks_is_type( 'slingbag', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Jedna veličina za sve.</strong> Podesivi remen dug je najviše <strong>130 cm</strong> i pristaje svakoj građi. Odaberite kapacitet: <strong>Mini</strong>, <strong>Regular</strong> (najprodavanija) ili <strong>Max</strong>.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">V × Š × D</th>
+                  <th style="padding:9px 8px;text-align:left;">Remen</th>
+                  <th style="padding:9px 8px;text-align:left;">Što stane</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_slingbag_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Sve tri veličine uklapaju se u ograničenja za osobni predmet u zrakoplovu. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
 
         <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
@@ -2400,6 +2435,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
 
                 Perite <strong>ručno u hladnoj vodi</strong> blagim deterdžentom i objesite da se osuši na zraku. Ne izbjeljujte. Ne glačajte. Ne čistite kemijski. Ne sušite u sušilici i ne cijedite uvijanjem — tako žica, panel i rashlađujuća tkanina dugo zadržavaju oblik, a grudnjak ostaje kao nov.
+             <?php elseif( noriks_is_type( 'slingbag', $current_product_id ) ): ?>
+
+                Torbicu čistite <strong>blago vlažnom krpom</strong> i malo blagog sapuna, a mrlje nježno istrljajte mekanom četkicom. Ne perite je u perilici rublja, ne izbjeljujte i ne glačajte. Prije čišćenja ispraznite sve džepove, a nakon čišćenja ostavite je otvorenu da se osuši na zraku, daleko od radijatora i izravnog sunca.
+
 
              <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
