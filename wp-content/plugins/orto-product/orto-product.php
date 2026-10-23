@@ -186,6 +186,7 @@ function gck_size_prices( $product_id ) : array {
             ),
             'factor'  => array( 1 => 1, 2 => 0.5 ),
             'exact'   => true,
+            'reg_from_sale' => true, // 2 kosa: precrtano 2 x akcijska (M 59,98) -> -50 % kot na originalu
         );
     }
     if ( $product_id && has_term( 'orto-slingbag', 'product_cat', $product_id ) ) {
@@ -275,6 +276,9 @@ function gck_size_priced_totals( array $table, array $sizes ) {
         if ( ! isset( $table['sizes'][ $s ] ) ) return null;
         $sale_c += (int) round( $table['sizes'][ $s ][0] * 100 );
         $reg_c  += (int) round( $table['sizes'][ $s ][1] * 100 );
+    }
+    if ( $qty > 1 && ! empty( $table['reg_from_sale'] ) ) {
+        $reg_c = $sale_c; // precrtana cena paketa = vsota akcijskih cen (kot Kaching na originalu)
     }
     if ( ! empty( $table['unit_off'][ $qty ] ) ) {
         $sale_c -= (int) round( $table['unit_off'][ $qty ] * 100 ) * $qty; // fiksni popust na kos (npr. Kaching "amount")
@@ -6284,6 +6288,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sale += Math.round(p[0] * 100);
             reg  += Math.round(p[1] * 100);
         }
+        if (sizes.length > 1 && SP.reg_from_sale) reg = sale; // precrtana cena paketa = vsota akcijskih cen
         if (SP.unit_off && SP.unit_off[sizes.length]) sale -= Math.round(SP.unit_off[sizes.length] * 100) * sizes.length; // fiksni popust na kos
         if (sizes.length > 1 && SP.exact) sale = Math.round(sale * f); // cene 1:1 z originala (brez .99)
         else if (sizes.length > 1) sale = Math.floor(Math.round(sale * f) / 100) * 100 - 1;
