@@ -494,6 +494,11 @@ if ( noriks_is_type( 'slingbag' ) ) {
     include $noriks_pb_dir . 'why-slingbag.php';
 }
 
+// NORIKS BathMat (orto-bathmat) — upijajuci protuklizni tepih za kupaonicu
+if ( noriks_is_type( 'bathmat' ) ) {
+    include $noriks_pb_dir . 'why-bathmat.php';
+}
+
 // NORIKS TravelBag (orto-travelbag) — putna torba za rucnu prtljagu s odvojivim kotacicima
 if ( noriks_is_type( 'travelbag' ) ) {
     include $noriks_pb_dir . 'why-travelbag.php';

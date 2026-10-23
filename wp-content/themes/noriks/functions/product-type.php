@@ -176,6 +176,8 @@ function noriks_product_type_map() : array {
         'comfortjeans'            => array( 'orto-comfortjeans', 'comfortjeans' ),
         // NORIKS SlingBag — putna torbica preko ramena 2.0 sa zastitom od krade (boja 4 + velicina Mini / Regular / Max).
         'slingbag'                => array( 'orto-slingbag', 'slingbag' ),
+        // NORIKS BathMat — upijajuci protuklizni tepih za kupaonicu (boja 5 + velicina 40 x 60 / 50 x 80 cm, cijena po velicini kot original).
+        'bathmat'                 => array( 'orto-bathmat', 'bathmat' ),
         // NORIKS TravelBag — putna torba za rucnu prtljagu s odvojivim kotacicima (boja 3 + model Classic / Roller kao Velicina, cijena po modelu kot original).
         'travelbag'               => array( 'orto-travelbag', 'travelbag' ),
         // NORIKS DogBed — premium ortopedski krevet za pse (boja 8 + velicina M / L / XL / 2XL).
@@ -936,6 +938,18 @@ if ( ! function_exists( 'noriks_slingbag_sizes' ) ) {
             array( 'Mini',    '19 × 14 × 4 cm',   'do 130 cm', 'mobitel, ključevi, putovnica, kabeli za punjenje i prijenosna baterija' ),
             array( 'Regular', '22 × 15 × 4 cm',   'do 130 cm', 'sve iz Mini + grickalice, sunčane naočale, punjač, deblji novčanik, mali tablet' ),
             array( 'Max',     '28 × 19,5 × 6 cm', 'do 130 cm', 'sve iz Regular + knjiga, slušalice preko ušiju, tablet do 11"' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_bathmat_sizes' ) ) {
+    /** NORIKS BathMat: velicina, dimenzije (cm), debljina, gdje.
+     *  1:1 z originala (modrnizd.com, zavihek »Care & Sizing«: Small 40cm x 60cm / 16in x 24in, Regular 50cm x 80cm / 20in x 32in;
+     *  FAQ »Will it fit under my door?« under 5mm, »What size should I get?«). */
+    function noriks_bathmat_sizes() {
+        return array(
+            array( 'Mala',       '40 × 60 cm', 'manje od 5 mm', 'manje kupaonice, toaleti i uski prostori' ),
+            array( 'Standardna', '50 × 80 cm', 'manje od 5 mm', 'kupaonice standardne veličine – ispred tuša, kade ili umivaonika' ),
         );
     }
 }

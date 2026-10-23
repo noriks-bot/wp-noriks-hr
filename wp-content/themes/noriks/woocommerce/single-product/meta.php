@@ -742,6 +742,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <strong>NORIKS SlingBag 2.0</strong> je putna torbica preko ramena za sigurno i praktično nošenje bez ruku, kamo god išli. Izrađena je od <strong>500D najlonske tkanine</strong> – istog materijala kao u vrhunskoj opremi za prirodu – pa je čvršća, otpornija na vremenske uvjete i izrađena da traje godinama. Remen ima <strong>unutarnju čeličnu sajlu</strong> otpornu na rezanje, a <strong>sustav zaključavanja s 3 točke</strong> zamjenjuje staru plastičnu kopču. Uz tijelo je <strong>skriveni stražnji džep</strong> za gotovinu i kartice, posvuda su <strong>YKK® patentni zatvarači</strong>, podstava od tkanine koja <strong>blokira RFID</strong> štiti kartice i putovnicu, a unutra je kopča za ključeve.<br><br><strong>Specifikacije:</strong><br>• <strong>Mini:</strong> 19 × 14 × 4 cm – mobitel, ključevi, putovnica, kabeli i prijenosna baterija<br>• <strong>Regular:</strong> 22 × 15 × 4 cm – plus grickalice, sunčane naočale, punjač i mali tablet<br>• <strong>Max:</strong> 28 × 19,5 × 6 cm – plus knjiga, slušalice preko ušiju ili tablet do 11"<br>• <strong>Remen:</strong> podesivi, najviše 130 cm – jedna veličina za sve<br>• <strong>Materijal:</strong> 500D najlon, YKK® patentni zatvarači, RFID tkanina (0,022 – 0,047 Ω, 75 g/m²)<br>• Sve veličine uklapaju se u ograničenja za osobni predmet u zrakoplovu (Ryanair, easyJet, United, American Airlines).
 
 
+         <?php elseif( noriks_is_type( 'bathmat', $current_product_id ) ): ?>
+
+                <strong>NORIKS BathMat</strong> je upijajući protuklizni tepih za kupaonicu. Nema više natopljenih tepiha, nema više mokrog poda: <strong>trenutačno upija vodu</strong>, brzo se suši i čvrsto prianja uz pod pa nikad ne kliže. Otporan je na neugodne mirise i plijesan – kupaonica svaki dan ostaje čista, sigurna i svježa.<br><br><strong>Zašto su tisuće kućanstava prešle na njega:</strong><br>• Trenutačno upija vodu<br>• Brzo se suši i ostaje svjež<br>• Ne kliže – siguran za djecu i starije osobe<br>• Otporan na neugodne mirise i plijesan<br><br><strong>4 sloja:</strong><br>• <strong>Brzosušeća površina</strong> – upija vlagu u nekoliko sekundi<br>• <strong>Jezgra otvorenih ćelija</strong> – odvodi vodu i ubrzava isparavanje<br>• <strong>Sloj za kontrolu vlage</strong> – sprječava natapanje i plijesan<br>• <strong>Protuklizna baza</strong> – čvrsto drži tepih na pločicama, drvu, vinilu i drugim podlogama<br><br><strong>Veličine:</strong> Mala 40 × 60 cm i Standardna 50 × 80 cm, debljina manje od 5 mm (stane ispod većine vrata).<br><strong>Boje:</strong> antracit, svijetloplava, svijetlosiva, šumsko zelena i bež. U paketu za svaki tepih zasebno birate boju i veličinu.<br><strong>Gdje ga koristiti:</strong> svugdje gdje voda dolazi na pod – ispred tuša i kade, ispred umivaonika, u kuhinji, na ulazu, na terasi ili ispod zdjelice za kućnog ljubimca.
+
          <?php elseif( noriks_is_type( 'travelbag', $current_product_id ) ): ?>
 
                 <strong>NORIKS TravelBag</strong> je putna torba za ručnu prtljagu s kojom pakirate pametnije, putujete lakše i izbjegavate naknade za prtljagu – sa stilom. Stane <strong>više od 38 komada odjeće i do 5 pari cipela</strong>, ugrađena vješalica i podstava otporna na gužvanje čuvaju odjeću urednom, a model <strong>Roller</strong> ima odvojivu teleskopsku ručku i kotačiće koji se pričvršćuju i skidaju u nekoliko sekundi.<br><br><strong>Što je čini posebnom:</strong><br>• Prostor za svaku kombinaciju i još malo više<br>• Mogućnost odvojivih kotačića (model Roller)<br>• Više džepova za šminku i sitnice<br>• Sustav pakiranja bez gužvanja s ugrađenom vješalicom<br>• Poseban pretinac za cipele<br>• Dimenzije ručne prtljage<br><br><strong>U paketu:</strong><br>• 1x podstavljena naramenica<br>• 1x torbica za kozmetiku / cipele<br><br><strong>Ostali detalji:</strong><br>• <strong>Dimenzije:</strong> 51 × 23 × 32 cm (dimenzije ručne prtljage)<br>• <strong>Materijal:</strong> kvalitetna, ekološki prihvatljiva PU koža<br>• <strong>Vodoodbojni premaz:</strong> štiti od prolivenih tekućina i slabe kiše<br>• <strong>Težina:</strong> 1,1 kg<br>• Patentni zatvarači koji ne zapinju<br><br><strong>Boje:</strong> ružičasta, crna i bijela.<br><strong>Model:</strong> Classic (ravno dno, nosi se u ruci ili preko ramena) ili Roller (dno s utorom, odvojiva ručka i kotačići). U paketu za svaku torbu zasebno birate boju i model.
@@ -1932,6 +1936,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
           </div>
 
 
+        <?php elseif( noriks_is_type( 'bathmat', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Dvije veličine: Mala 40 × 60 cm i Standardna 50 × 80 cm</strong>, debljina manje od 5 mm – stane ispod većine vrata i ne smeta robotskim usisavačima.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Dimenzije</th>
+                  <th style="padding:9px 8px;text-align:left;">Debljina</th>
+                  <th style="padding:9px 8px;text-align:left;">Idealan za</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_bathmat_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#ebf2f9' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Većina kupaca uzme dva po kupaonici – jedan ispred tuša ili kade i drugi ispred umivaonika. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'travelbag', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2842,6 +2877,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 Torbicu čistite <strong>blago vlažnom krpom</strong> i malo blagog sapuna, a mrlje nježno istrljajte mekanom četkicom. Ne perite je u perilici rublja, ne izbjeljujte i ne glačajte. Prije čišćenja ispraznite sve džepove, a nakon čišćenja ostavite je otvorenu da se osuši na zraku, daleko od radijatora i izravnog sunca.
 
+
+             <?php elseif( noriks_is_type( 'bathmat', $current_product_id ) ): ?>
+
+                Za površinsko čišćenje tepih samo obrišite <strong>vlažnom spužvom</strong> (neabrazivnom stranom) ili mekom krpom. Za temeljito čišćenje upotrijebite <strong>blagi sprej za čišćenje ili sapun</strong> i obrišite tepih, zatim ga isperite toplom vodom i objesite da se osuši.
 
              <?php elseif( noriks_is_type( 'travelbag', $current_product_id ) ): ?>
 

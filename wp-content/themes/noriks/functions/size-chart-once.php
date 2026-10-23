@@ -178,6 +178,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-slingbag' );
             return;
         }
+        // NORIKS BathMat: Mala 40 x 60 cm / Standardna 50 x 80 cm, debljina manje od 5 mm (z originala »Care & Sizing« + FAQ).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bathmat' ) ) {
+            get_template_part( 'template_parts/size-chart-bathmat' );
+            return;
+        }
         // NORIKS TravelBag: model Classic / Roller (51 x 23 x 32 cm), nacin nosenja, za koga (z originala »Which one is for me?«).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'travelbag' ) ) {
             get_template_part( 'template_parts/size-chart-travelbag' );
