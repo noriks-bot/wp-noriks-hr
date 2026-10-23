@@ -369,6 +369,11 @@ if ( noriks_is_type( 'maternityleggings' ) ) {
     include $noriks_pb_dir . 'why-maternityleggings.php';
 }
 
+// NORIKS ShowerTowel (orto-showertowel) — antibakterijski rucnik za piling tijela
+if ( noriks_is_type( 'showertowel' ) ) {
+    include $noriks_pb_dir . 'why-showertowel.php';
+}
+
 // NORIKS BottleSling (orto-bottlesling) — izolirana torbica za termo casu s naramenicom
 if ( noriks_is_type( 'bottlesling' ) ) {
     include $noriks_pb_dir . 'why-bottlesling.php';
