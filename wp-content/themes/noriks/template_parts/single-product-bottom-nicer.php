@@ -384,6 +384,11 @@ if ( noriks_is_type( 'seatcushion' ) ) {
     include $noriks_pb_dir . 'why-seatcushion.php';
 }
 
+// NORIKS GroundingMat (orto-groundingmat) — podloga za uzemljenje
+if ( noriks_is_type( 'groundingmat' ) ) {
+    include $noriks_pb_dir . 'why-groundingmat.php';
+}
+
 // NORIKS GrillBasket (orto-grillbasket) — valjkasta kosara za rostilj
 if ( noriks_is_type( 'grillbasket' ) ) {
     include $noriks_pb_dir . 'why-grillbasket.php';
