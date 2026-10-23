@@ -158,6 +158,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-hoodiedress' );
             return;
         }
+        // NORIKS MinimizerBra: traka EU 70–115 x kosarica B–I po opsegu ispod grudi i opsegu grudi (cm) iz tablice originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'minimizerbra' ) ) {
+            get_template_part( 'template_parts/size-chart-minimizerbra' );
+            return;
+        }
         // NORIKS HikingShoes: EU 36–46 po duljini stopala (peta–prst, cm), UK i US velicine iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hikingshoes' ) ) {
             get_template_part( 'template_parts/size-chart-hikingshoes' );

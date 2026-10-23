@@ -671,6 +671,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS WideToeShoes</strong> su prozračne tenisice sa širokim prednjim dijelom i debljim potplatom — vaš prvi korak prema slobodi hodanja kao bosonogi. Prostran prednji dio omogućuje prstima da se prirodno rašire i smanjuje pritisak na stopala tijekom dugog hodanja, a lagana izrada smanjuje umor i ostaje izdržljiva.<br><br>Kvalitetni materijali propuštaju zrak, pa stopala ostaju suha i udobna. Potplat pouzdano prianja i na kamenitim i neravnim podlogama, a ojačani prednji dio štiti prste od udaraca. Bilo da hodate planinskim stazama, gradom ili istražujete prirodu, ove tenisice spajaju udobnost i svakodnevnu nosivost.<br><br><strong>Gornji dio:</strong> sintetička koža + tkanina<br><strong>Podstava:</strong> mrežasta tkanina<br><strong>Potplat:</strong> guma<br><strong>Debljina potplata:</strong> debeli gumeni potplat za fleksibilnost i otpornost na klizanje<br><strong>Vodootpornost:</strong> nisu vodootporne, ali se brzo suše<br><strong>Zatvaranje:</strong> vezice<br><br><strong>Boje:</strong> bijelo-siva, smeđa, bež-zelena, bež-crvena, crno-bijela, bež-siva, kaki i tamnosmeđa.<br><strong>Veličine:</strong> EU 37–47. Tenisice mogu biti malo manje — veličinu odaberite prema tablici veličina (duljina uloška = duljina stopala + 1–1,5 cm).
 
+         <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
+
+                <strong>NORIKS MinimizerBra</strong> je rashlađujući minimizer grudnjak s punim pokrićem, izgrađen oko <strong>krutog središnjeg panela za razdvajanje</strong>. Gotovo svaki minimizer radi na principu kompresije: gura tkivo zajedno i prema naprijed, pa se ono nagomila u sredini prsa i stvara »policu« zbog koje se pripijene majice napuhnu, a košulje razmiču među gumbima. NORIKS MinimizerBra umjesto toga razdvaja — kruti panel oslanja se na prsnu kost i drži svaku stranu punijih grudi u njezinu prostoru tijekom cijelog dana kretanja. Nema mase, nema police, nema efekta šatora.<br><br><strong>Kako je izrađen:</strong><br>• Kruti panel za razdvajanje — oslanja se na prsnu kost i ne urušava se do podneva<br>• Potpuno bez podstave — bez dodatnog volumena<br>• Košarica s punim pokrićem — drži oblik punijih grudi umjesto da ih spljošti<br>• Debele podstavljene naramenice i široka traka — težina se raspoređuje preko leđa<br>• Rashlađujuća, prozračna tkanina — bez nakupljanja topline ispod grudi<br>• Žica koja ne bode — oblikuje košaricu bez urezivanja<br><br><strong>Boje:</strong> bež, crna, bijela i boja kave.<br><strong>Veličine:</strong> trake 70 – 115 i košarice B – I (74 veličine) — svoju veličinu pronađite u tablici veličina; ako ste između dvije veličine, uzmite veću. U paketu za svaki komad zasebno birate boju i veličinu.
+
          <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
                 <strong>NORIKS HoodieDress</strong> je više od hudice — to je vaš novi omiljeni komad za udoban i opušten stil bez puno truda. Dizajnirana je s prozračnim <strong>oversized krojem</strong> koji laska svakoj figuri, a izrađena od pamučne tkanine: <strong>vanjski sloj od 100 % pamuka</strong> i plišana unutrašnjost mekana poput deke. Savršena za lagana jutra, užurbane dane ili dotjerani izgled bez odricanja od udobnosti.<br><br><strong>Kroj i materijal:</strong> odgovara uobičajenoj veličini — uzmite veličinu hudice koju inače nosite. 100 % pamuk izvana, mekani flis poput deke iznutra.<br><br><strong>Udobnost u svakom detalju:</strong><br>• Iznutra mekana poput deke<br>• Vanjski sloj od 100 % pamuka<br>• Produžena duljina za bolju pokrivenost<br>• Kroj koji laska figuri<br><br><strong>Boje:</strong> crna, zelena, tamnoplava, kadulja zelena, crvena, ljubičasta, svijetloplava, krem, ružičasta, tamnosiva, smeđa, siva i tamnoljubičasta s leptir rukavima.<br><strong>Veličine:</strong> S – 3XL. U paketu za svaki komad zasebno birate boju i veličinu.
@@ -1595,6 +1599,41 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličina ima dva dijela: <strong>broj trake</strong> (70 – 115) prema <strong>opsegu ispod grudi</strong> i <strong>slovo košarice</strong> (B – I) prema <strong>opsegu grudi</strong>. Sve mjere su u cm; ako ste između dvije veličine, uzmite veću.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:13px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:8px 6px;text-align:left;white-space:nowrap;">Traka</th>
+                  <th style="padding:8px 6px;text-align:left;white-space:nowrap;">US</th>
+                  <th style="padding:8px 6px;text-align:left;white-space:nowrap;">Ispod grudi</th>
+                  <?php foreach ( array( 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' ) as $nmb_c ) : ?>
+                  <th style="padding:8px 6px;text-align:left;"><?php echo esc_html( $nmb_c ); ?></th>
+                  <?php endforeach; ?>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_minimizerbra_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:8px 6px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:8px 6px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:8px 6px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <?php foreach ( $r[3] as $v ) : ?>
+                    <td style="padding:8px 6px;white-space:nowrap;"><?php echo $v === '' ? '–' : esc_html( $v ); ?></td>
+                    <?php endforeach; ?>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Košarica E odgovara američkoj DD, a F američkoj DDD; »–« znači da se veličina ne izrađuje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 
           <div class="noriks-size">
@@ -2349,6 +2388,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'widetoeshoes', $current_product_id ) ): ?>
 
                 Tenisice čistite mekanom, blago vlažnom krpom ili četkicom i malo blagog sapuna; prljavštinu s gumenog potplata isperite mlakom vodom. Ne perite ih u perilici rublja i ne namačite ih. Nisu vodootporne, ali se brzo suše — ostavite ih da se osuše na zraku, daleko od radijatora i izravnog sunca. Uloške po potrebi izvadite i osušite zasebno.
+
+             <?php elseif( noriks_is_type( 'minimizerbra', $current_product_id ) ): ?>
+
+                Perite <strong>ručno u hladnoj vodi</strong> blagim deterdžentom i objesite da se osuši na zraku. Ne izbjeljujte. Ne glačajte. Ne čistite kemijski. Ne sušite u sušilici i ne cijedite uvijanjem — tako žica, panel i rashlađujuća tkanina dugo zadržavaju oblik, a grudnjak ostaje kao nov.
 
              <?php elseif( noriks_is_type( 'hoodiedress', $current_product_id ) ): ?>
 

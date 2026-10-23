@@ -168,6 +168,8 @@ function noriks_product_type_map() : array {
         'hikingshoes'             => array( 'orto-hikingshoes', 'hikingshoes' ),
         // NORIKS HoodieDress — oversized haljina s kapuljacom (boja 13 + velicina S–3XL).
         'hoodiedress'             => array( 'orto-hoodiedress', 'hoodiedress' ),
+        // NORIKS MinimizerBra — rashladujuci minimizer grudnjak s punim pokricem (boja 4 + velicina 70C–115G, 74 velicine).
+        'minimizerbra'            => array( 'orto-minimizerbra', 'minimizerbra' ),
         // NORIKS TechTee — ikonicna muska majica s okruglim izrezom (boja + velicina S–4XL).
         'techtee'                 => array( 'orto-techtee', 'techtee' ),
         // NORIKS FleeceShawl — mekani sal-ogrtac od flisa (samo boja, 11 boja; jedna velicina 158 x 110 cm, brez tablice).
@@ -754,6 +756,26 @@ if ( ! function_exists( 'noriks_widetoeshoes_sizes' ) ) {
             array( 'EU 45', '29,0 cm', '10,00 cm', '10', '10,5', '11,5' ),
             array( 'EU 46', '29,7 cm', '10,15 cm', '11', '11,5', '12,5' ),
             array( 'EU 47', '30,5 cm', '10,30 cm', '12', '12,5', '13,5' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_minimizerbra_sizes' ) ) {
+    /** NORIKS MinimizerBra: traka EU, traka US, opseg ispod grudi (cm), opseg grudi (cm) po kosaricama B, C, D, E (DD), F (DDD), G, H, I.
+     *  1:1 s tablice originala (sculptdclothing.com, »Find Your Fit – SCULPTD Size Chart«, palci -> cm, zaokruzeno);
+     *  prazno polje = velicina se ne izraduje (AVAILABLE originala). Ako ste izmedu dvije velicine, uzmite vecu. */
+    function noriks_minimizerbra_sizes() {
+        return array(
+            array( '70', '32', '60–64', array( '', '72–79', '75–82', '77–84', '80–87', '83–89', '85–91', '87–94' ) ),
+            array( '75', '34', '64–68', array( '74–81', '76–83', '79–86', '82–88', '84–90', '87–93', '89–96', '91–98' ) ),
+            array( '80', '36', '68–72', array( '78–85', '81–87', '83–89', '86–92', '88–94', '90–97', '93–100', '96–102' ) ),
+            array( '85', '38', '72–76', array( '82–88', '85–91', '87–93', '89–96', '92–99', '94–101', '97–103', '100–106' ) ),
+            array( '90', '40', '80–84', array( '90–97', '92–99', '95–102', '98–104', '100–106', '103–109', '105–112', '107–114' ) ),
+            array( '95', '42', '84–88', array( '94–101', '97–103', '99–105', '102–108', '104–110', '106–113', '109–116', '112–118' ) ),
+            array( '100', '44', '88–92', array( '98–104', '101–107', '103–109', '105–112', '108–115', '110–117', '113–119', '116–122' ) ),
+            array( '105', '46', '92–96', array( '102–108', '104–111', '107–114', '109–116', '112–119', '115–121', '117–123', '' ) ),
+            array( '110', '48', '96–100', array( '106–113', '108–115', '111–118', '114–120', '116–122', '119–125', '', '' ) ),
+            array( '115', '50', '100–104', array( '110–117', '113–119', '115–121', '118–124', '120–126', '122–129', '', '' ) ),
         );
     }
 }
