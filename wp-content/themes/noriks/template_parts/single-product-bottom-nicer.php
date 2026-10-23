@@ -499,6 +499,11 @@ if ( noriks_is_type( 'cloudclogs' ) ) {
     include $noriks_pb_dir . 'why-cloudclogs.php';
 }
 
+// NORIKS CompressionSocks (orto-compressionsocks) — siroke bambusove kompresijske carape (ne SupportSocks ne Relief!)
+if ( noriks_is_type( 'compressionsocks' ) ) {
+    include $noriks_pb_dir . 'why-compressionsocks.php';
+}
+
 // NORIKS WaffleLongSleeve (orto-wafflelongsleeve) — majica dugih rukava od vafel pletiva
 if ( noriks_is_type( 'wafflelongsleeve' ) ) {
     include $noriks_pb_dir . 'why-wafflelongsleeve.php';

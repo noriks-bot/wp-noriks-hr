@@ -735,6 +735,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS PlushBlanket</strong> je super mekana, oversized plišana deka nalik oblaku – baršunasta s obje strane, ugodno rastezljiva u četiri smjera, a mekoća joj ostaje i nakon brojnih pranja. Deka koju je teško opisati riječima – i još teže odložiti.<br><br><strong>Značajke:</strong><br>• <strong>Super mekan pliš:</strong> bez grubih rubova, svaki položaj jednako je ugodan<br>• <strong>Rastezljivost u četiri smjera:</strong> prilagođava se tijelu, a ne gubi oblik<br>• <strong>Četiri veličine:</strong> od osobnog pokrivača do pokrivenosti velikog bračnog kreveta<br>• <strong>17 boja i uzoraka:</strong> lako za poklon, lako se uklapa u svaki prostor<br>• <strong>Pere se u perilici i ostaje mekana:</strong> hladno pranje, sušenje na zraku<br><br><strong>Savršena za:</strong> pretvaranje svakog kreveta ili kauča u najmekše mjesto u prostoriji i kao poklon nakon kojeg se ljudi pitaju kako su ikad živjeli bez nje.<br><strong>Materijal:</strong> 95 % poliester, 5 % elastan – plišana i baršunasta s unutarnje i vanjske strane.<br><strong>Boje:</strong> tamnoplava, svijetlosiva, ružičasti vrtlog, ljubičasti tigar, sivi tigar, bjelokosni tigar, plavi tigar, maslinasti tigar, bengalski tigar, jarko ružičasta, plavi val, lavanda, ružičasti kvarc, plava, bordo, mentol i ciklama.<br><strong>Veličine:</strong> Srednja 127 x 152 cm, Velika 152 x 203 cm, XL 229 x 229 cm, Mega 254 x 274 cm – pogledajte tablicu veličina.
 
+         <?php elseif( noriks_is_type( 'compressionsocks', $current_product_id ) ): ?>
+
+                <strong>NORIKS CompressionSocks</strong> su bambusove kompresijske čarape do koljena, <strong>posebno osmišljene za široke listove</strong>. Prava <strong>postupna kompresija (15–20 mmHg)</strong> podržava cirkulaciju i pomaže ublažiti oticanje i osjećaj teških, umornih nogu — a pritom ne steže i ne usijeca se u kožu.<br><br>Izrađene su od mekane mješavine <strong>60 % bambusa, 25 % poliestera i 15 % elastana</strong>: nježne su prema osjetljivoj koži, prozračne i odvode vlagu, a zahvaljujući <strong>rastezljivosti u 4 smjera</strong> lakše se oblače i skidaju od klasičnih kompresijskih čarapa. Manžeta ne ostavlja crvene tragove, a čarape zadržavaju oblik i nakon mnogo pranja.<br><br>Nosite ih cijeli dan (obično 8–12 sati) — na poslu, kod kuće, na putovanjima i dugim letovima. Veličine M–3XL za listove opsega do 71 cm, u 10 boja i uzoraka. Čarape nisu lijek ni zamjena za terapiju; kod zdravstvenih tegoba posavjetujte se s liječnikom.
+
          <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
 
                 <strong>NORIKS CloudClogs</strong> su 3D klompe napravljene za ljude koji su <strong>cijeli dan na nogama</strong> — izdržljive, a na nogama mekane kao oblak. Debeo, mekan potplat ublažava svaki korak, a <strong>protuklizni potplat</strong> daje sigurnost i u dugim radnim smjenama.<br><br>Otvori na gornjem dijelu čine ih <strong>prozračnima</strong> i udobnima i za šira stopala, a <strong>vodootporan</strong> materijal ostaje suh i po kišnim danima. Nosite ih <strong>kao papuče ili natikače</strong> — od jutarnjih obaveza do druženja u dvorištu — ili kao cipele vani; <strong>podesivi remen</strong> omogućuje pristajanje po vašoj mjeri.<br><br>Unisex veličine EU 39–46 (i polovične veličine), u pet boja: crna, bijela, plava, roza i siva.
@@ -1873,6 +1877,35 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </table>
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'compressionsocks', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu odaberite prema <strong>opsegu lista</strong>: izmjerite najširi dio lista i pronađite svoju mjeru u tablici. <strong>Opseg lista ima prednost pred težinom.</strong></p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#b8264f;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg lista</th>
+                  <th style="padding:9px 8px;text-align:left;">Težina*</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_compressionsocks_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fcf0f3' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">*Opseg lista ima prednost pred težinom. S većom veličinom veći je i dio za stopalo. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
@@ -3041,6 +3074,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
 
                 Deku <strong>perite u perilici na hladno, zasebno</strong>; tamne boje perite odvojeno. <strong>Ne koristite omekšivač</strong> i ne izbjeljujte. <strong>Sušite je na zraku</strong> ili položenu ravno. Ne glačajte i ne čistite kemijski. Tako će ostati jednako mekana pranje za pranjem. Sastav: 95 % poliester, 5 % elastan.
+
+             <?php elseif( noriks_is_type( 'compressionsocks', $current_product_id ) ): ?>
+
+                Čarape perite na <strong>niskoj temperaturi (ispod 40 °C)</strong> na nježnom programu, <strong>okrenute naopako</strong>, s blagim deterdžentom. <strong>Ne koristite izbjeljivač, omekšivač ni sredstva s aktivnim kisikom</strong> — tako bambusova vlakna ostaju mekana i svježa. Sušite ih <strong>položeno na zraku</strong>, ne u sušilici — tako dugo zadržavaju oblik i kompresiju.
 
              <?php elseif( noriks_is_type( 'cloudclogs', $current_product_id ) ): ?>
 

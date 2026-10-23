@@ -172,6 +172,9 @@ function noriks_product_type_map() : array {
         'snugboot'                => array( 'orto-snugboot', 'snugboot' ),
         // NORIKS CloudClogs — 3D klompe mekane kao oblak (boja 5 + velicina EU 39–46). Ni povezano z NORIKS Cloud (orto-cloud, jastuk) ni StepCloud.
         'cloudclogs'              => array( 'orto-cloudclogs', 'cloudclogs' ),
+        // NORIKS CompressionSocks — siroke bambusove kompresijske carape do koljena, 15–20 mmHg (boja 10 + velicina M–3XL po opsegu lista).
+        // Ni povezano s SupportSocks (orto-supportsocks), Relief (orto-relief) ni kompresijskimi carapami (orto-kompresijske-carape / tip carape).
+        'compressionsocks'        => array( 'orto-compressionsocks', 'compressionsocks' ),
         // NORIKS WaffleLongSleeve — majica dugih rukava od vafel pletiva, unisex (boja 17 + velicina XS–3XL).
         'wafflelongsleeve'        => array( 'orto-wafflelongsleeve', 'wafflelongsleeve' ),
         // NORIKS PlushBlanket — super mekana oversized plisana deka (boja 17 + velicina Srednja / Velika / XL / Mega, cijena po velicini kot original).
@@ -937,6 +940,21 @@ if ( ! function_exists( 'noriks_plushblanket_sizes' ) ) {
             array( 'Velika',  '152 x 203 cm', '60" x 80"',   'pribl. 3,2 kg', 'ušuškavanje ili dodatni sloj na krevetu' ),
             array( 'XL',      '229 x 229 cm', '90" x 90"',   'pribl. 5,2 kg', 'bračni krevet (queen) s dodatnim prepustom' ),
             array( 'Mega',    '254 x 274 cm', '100" x 108"', 'pribl. 6,8 kg', 'veliki bračni krevet (king) i maksimalna udobnost' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_compressionsocks_sizes' ) ) {
+    /** NORIKS CompressionSocks: velicina, opseg lista (cm), tezina (kg).
+     *  1:1 s tablice originala (everstridesocks.com, sizechart-28inches: Size / Calf Girth / Weight*); opseg lista ima prednost pred tezinom.
+     *  3XL: palci 23–28 -> 58–71 cm (original v cm navaja 56–71, kar se prekriva z 2XL). */
+    function noriks_compressionsocks_sizes() {
+        return array(
+            array( 'M',   '28 – 36 cm', 'do 65 kg' ),
+            array( 'L',   '36 – 43 cm', '65 – 85 kg' ),
+            array( 'XL',  '43 – 51 cm', '85 – 100 kg' ),
+            array( '2XL', '51 – 58 cm', '100 – 120 kg' ),
+            array( '3XL', '58 – 71 cm', '120 kg i više' ),
         );
     }
 }
