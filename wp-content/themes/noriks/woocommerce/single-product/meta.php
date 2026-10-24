@@ -650,6 +650,16 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
                 <strong>NORIKS SeatCushion</strong> — ortopedski jastuk za sjedenje s potporom za donja leđa. <strong>Izrez za trticu</strong> uklanja izravan pritisak s trtice, a oblikovana površina podupire kralježnicu i vraća zdravo držanje. Memorijska pjena visoke gustoće ravnomjerno raspoređuje težinu na kukove i bedra, pa noge ne utrnu.<br><br><strong>Vanjska navlaka:</strong> prozračna pletena tkanina, skidljiva i periva, hipoalergena.<br><strong>Jezgra:</strong> prilagodljiva ortopedska memorijska pjena – netoksična, s certifikatom OEKO-TEX®, osmišljena za ublažavanje pritiska i pravilno držanje.<br><strong>Dimenzije:</strong> 44 × 42 cm, visina naslona 32 cm.<br><br><strong>Za svako sjedalo:</strong> protuklizna podloga drži ga na mjestu na autosjedalima, uredskim i blagovaonskim stolicama te invalidskim kolicima.
+         <?php elseif( noriks_is_type( 'travelkit', $current_product_id ) ): ?>
+
+                <strong>NORIKS TravelKit</strong> — vakuumska putna vrećica za odjeću s <strong>električnom pumpom na USB punjenje</strong>. Spakirajte odjeću kao u kofer, zatvorite hermetički patentni zatvarač, priključite pumpu i pritisnite tipku – za nekoliko sekundi vrećica se smanji na otprilike pola. Tako u <strong>istu torbu stane do 60 % više</strong>, a 10 – 15 komada odjeće (majice, traperice, haljine, džemperi) stane u ručnu prtljagu.<br><br>
+                <strong>Mjere vrećice:</strong> 45 × 30 × 20 cm (zapremina 27 l) – stane u kofer za ručnu prtljagu, ruksak, putnu torbu ili predanu prtljagu. Pravila za ručnu prtljagu razlikuju se od kompanije do kompanije, zato prije leta provjerite dopuštene dimenzije i težinu kod svoje zrakoplovne kompanije.<br>
+                <strong>Materijal:</strong> izdržljiv najlon s TPU zaštitom, otporan na trganje i vodootporan; nepropusni patentni zatvarač koji zadržava i neugodne mirise. Težina vrećice samo 0,24 kg.<br>
+                <strong>Električna pumpa:</strong> kompaktna 8,5 × 3,5 cm, USB-C punjenje, do 20 kompresija po punjenju. Vrećicu možete komprimirati i ručno – smotajte je i istisnite zrak kroz ventil.<br>
+                <strong>U paketu (1 kom):</strong> vakuumska putna vrećica + električna pumpa (punjenje USB-C).<br><br>
+                Pravo na povrat u roku od 30 dana · Besplatna dostava za narudžbe iznad 70 €
+
+
          <?php elseif( noriks_is_type( 'kneelight', $current_product_id ) ): ?>
 
                 <strong>NORIKS KneeLight</strong> — bežični uređaj za koljeno koji u jednom omotaču spaja <strong>toplinu, vibracijsku masažu i crveno svjetlo</strong> (630 + 850 nm). Pričvrstite ga na koljeno, odaberite postavke i pritisnite start – za ugodnu toplinu i opuštanje kod kuće, na kauču ili u krevetu.<br><br><strong>Upravljanje:</strong> tri tipke i LED zaslon.<br><strong>Toplina:</strong> 3 razine – 41 °C, 49 °C i 60 °C.<br><strong>Vibracija:</strong> niska, visoka ili automatska.<br><strong>Baterija i punjenje:</strong> bežično, punjenje USB-C kabelom (u paketu) za 2 – 5 sati, do 8 – 10 tretmana po punjenju; za punjenje koristite USB punjač s EU utikačem.<br><strong>Težina:</strong> 0,86 kg – lagan i prenosiv.<br><strong>Veličina:</strong> jedna veličina s potpuno podesivim remenima.<br><strong>Sigurnost:</strong> automatsko isključivanje nakon 10 minuta.<br><br><em>Napomena: NORIKS KneeLight nije medicinski proizvod i ne zamjenjuje pregled ni savjet liječnika. Ako imate zdravstvenih tegoba, ozljedu, implantate ili elektrostimulator srca ili ste trudni, prije upotrebe se posavjetujte s liječnikom. Ne koristite ga kod djece.</em>
@@ -2997,6 +3007,11 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
                 Navlaka je <strong>skidljiva i može se prati u perilici</strong> – otvorite patentni zatvarač, izvadite jezgru i navlaku operite na <strong>nježnom programu s blagim deterdžentom</strong>. Sušite je na zraku. Jezgru od memorijske pjene <strong>ne perite u perilici</strong> i ne namačite – po potrebi je obrišite vlažnom krpom i pustite da se potpuno osuši prije nego vratite navlaku.
+
+             <?php elseif( noriks_is_type( 'travelkit', $current_product_id ) ): ?>
+
+                Vrećicu očistite <strong>mekom, lagano vlažnom krpom</strong> i blagim sredstvom za pranje, zatim je ostavite otvorenu da se <strong>potpuno osuši</strong> prije sljedećeg pakiranja. Ne perite je u perilici i ne sušite u sušilici, a patentni zatvarač držite čistim od pijeska i mrvica kako bi ostao nepropusan. Pumpu <strong>ne uranjajte u vodu</strong> – obrišite je suhom krpom i punite isključivo USB-C kabelom.
+
 
              <?php elseif( noriks_is_type( 'kneelight', $current_product_id ) ): ?>
 

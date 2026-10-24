@@ -414,6 +414,11 @@ if ( noriks_is_type( 'pethairglove' ) ) {
     include $noriks_pb_dir . 'why-pethairglove.php';
 }
 
+// NORIKS TravelKit (orto-travelkit) — vakuumska putna vrecica za odjecu s elektricnom pumpom
+if ( noriks_is_type( 'travelkit' ) ) {
+    include $noriks_pb_dir . 'why-travelkit.php';
+}
+
 // NORIKS TheraPillow (orto-therapillow) — terapijski jastuk za vrat 3 u 1
 if ( noriks_is_type( 'therapillow' ) ) {
     include $noriks_pb_dir . 'why-therapillow.php';
