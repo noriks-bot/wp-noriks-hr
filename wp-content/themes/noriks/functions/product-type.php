@@ -243,6 +243,10 @@ function noriks_product_type_map() : array {
         'travelkit'               => array( 'orto-travelkit', 'travelkit' ),
         // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
         'mattresstopper'          => array( 'orto-mattresstopper', 'mattresstopper' ),
+        // NORIKS KidsPillow — ergonomski djecji jastuk za miran san (samo Velicina po dobi djeteta 1-3 / 3-8 / 8-18 godina kot
+        // Child's Age originala, ena cena za vse; ponudbe 1x/2x/3x kom kot Moon paketi Single / Duo / Trio, tablica velicin).
+        // Lasten tip, locen od kidsnest / dualpillow / therapillow / travelpillow / ortopedski-jastuk.
+        'kidspillow'              => array( 'orto-kidspillow', 'kidspillow' ),
         // NORIKS VacuumSealer — bezicni rucni vakuumski aparat za hranu (en izbirnik Velicina pakiranja 10/20/30 vrecic s cenami originala, brez tablice).
         'vacuumsealer'            => array( 'orto-vacuumsealer', 'vacuumsealer' ),
         // NORIKS AirTravel — putni ruksak z vakuumsko kompresijo (SKU NORIKS-AIRTRAVEL; en izbirnik Boja s cenami po barvi kot original, brez tablice).
@@ -781,6 +785,19 @@ if ( ! function_exists( 'noriks_mattresstopper_sizes' ) ) {
             array( '137 x 190 cm', 'Bračni',               '137 × 190 × 10 cm' ),
             array( '152 x 203 cm', 'Veliki bračni',        '152 × 203 × 10 cm' ),
             array( '198 x 203 cm', 'Ekstra veliki bračni', '198 × 203 × 10 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_kidspillow_sizes' ) ) {
+    /** NORIKS KidsPillow: velicina (opcija izdelka = dob djeteta), dob, dimenzije jastuka (d x s), visina.
+     *  1:1 z originala (trylittlebear.com, FAQ »What are the sizes?« in slika Sizes): Ages 1-3 18.9 x 11.4 in (48 x 29 cm),
+     *  visina 0.8-1.6 in; Ages 3-8 19.7 x 11.8 in (50 x 30 cm), 1.6-2.4 in; Ages 8-18 20.9 x 12.6 in (53 x 32 cm), 2.4-3.5 in. */
+    function noriks_kidspillow_sizes() {
+        return array(
+            array( '1-3 godine',  '1–3 godine',  '48 × 29 cm', '2–4 cm' ),
+            array( '3-8 godina',  '3–8 godina',  '50 × 30 cm', '4–6 cm' ),
+            array( '8-18 godina', '8–18 godina', '53 × 32 cm', '6–9 cm' ),
         );
     }
 }

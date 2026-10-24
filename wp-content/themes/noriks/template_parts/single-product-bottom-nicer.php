@@ -424,6 +424,11 @@ if ( noriks_is_type( 'therapillow' ) ) {
     include $noriks_pb_dir . 'why-therapillow.php';
 }
 
+// NORIKS KidsPillow (orto-kidspillow) — ergonomski djecji jastuk za miran san
+if ( noriks_is_type( 'kidspillow' ) ) {
+    include $noriks_pb_dir . 'why-kidspillow.php';
+}
+
 // NORIKS MattressTopper (orto-mattresstopper) — ekstra debeli nadmadrac od 10 cm
 if ( noriks_is_type( 'mattresstopper' ) ) {
     include $noriks_pb_dir . 'why-mattresstopper.php';

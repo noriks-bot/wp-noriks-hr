@@ -716,6 +716,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS FleeceShawl</strong> — obavijte se laganom toplinom i elegancijom. Izrađen od raskošno mekanog, <strong>vrhunskog flisa</strong>, ovaj svestrani komad prekrasno pada preko ramena za profinjen, a opušten izgled. Lagana, <strong>prozračna tkanina grije bez pregrijavanja</strong> – savršeno za slojevito odijevanje u uredu, elegantna putovanja ili dotjeran večernji izgled.<br><br>Bezvremenski dizajn laska svakom tipu tijela i lako se kombinira sa svime, od traperica do haljina. Bilo da obavljate obveze ili idete na večeru, ovaj šal pruža dotjeranu udobnost koja se bez napora prilagođava svakoj prilici. Dovoljno je lagan da ga lako spakirate, a dovoljno topao za hladne dane – omiljeni dodatak svima koji cijene profinjenu svakodnevnu eleganciju.<br><br><strong>Značajke:</strong><br><strong>Super mekan</strong> – raskošno mekan flis ugodan na koži<br><strong>Elegantan</strong> – prirodno pada preko ramena, uredan i dotjeran izgled<br><strong>Jedna veličina za sve</strong> – kroj koji laska svakom tipu tijela<br><strong>Prozračan</strong> – grije bez pregrijavanja<br><br><strong>Dimenzije:</strong> duljina 158 cm (62,2 inča), širina 110 cm (43,3 inča) – jedna veličina za sve.<br><strong>Održavanje:</strong> može se prati u perilici.<br><strong>Boje:</strong> svijetlosiva, bež, karamel, kaki, tamnosiva, bordo, tamnozelena i crna te u ograničenom izdanju ljubičasta, tamnoplava i bijela.<br><br>Uz NORIKS kupujete bez brige: <strong>pravo na povrat u roku od 30 dana</strong> i <strong>besplatna dostava za narudžbe iznad 70 €</strong>.
 
+         <?php elseif( noriks_is_type( 'kidspillow', $current_product_id ) ): ?>
+
+                <strong>NORIKS KidsPillow</strong> — ergonomski jastuk oblikovan za dječju glavu. Nježna kontura drži <strong>glavu i vrat u neutralnom položaju</strong>, pa mnogoj djeci lakše ostaju zatvorena usta i dišu na nos cijelu noć. Mnogi roditelji primijete <strong>mirnije disanje i manje hrkanja</strong> već u prvih 7 noći.<br><br><strong>Značajke:</strong><br><strong>NORIKS kontura</strong> – nježno udubljenje koje potiče disanje na nos, bez neugodnog pritiska na vrat<br><strong>Prozračna jezgra</strong> – TPE saće i 3D mreža propuštaju zrak kroz jastuk, bez znojenja i nemirnih noći<br><strong>Hipoalergenska Tencel površina</strong> – otporna na grinje, nježna prema osjetljivoj koži<br><strong>Dimenzije za djecu</strong> – nije smanjeni jastuk za odrasle, nego jastuk osmišljen prema dječjim proporcijama<br><strong>Za spavanje na leđima i na boku</strong> – glava i vrat u pravilnom položaju u oba položaja<br><br><strong>Materijali:</strong> vanjska tkanina od pletiva sa slojem zraka, Lenzing Tencela u tkanju „ptičje oko” i 3D mreže; unutrašnjost od mekanih TPE cjevčica u obliku saća, antibakterijskog pamuka Invista i bisernog pamuka.<br><strong>Veličine (dob djeteta):</strong> 1–3 godine (48 × 29 cm, visina 2–4 cm), 3–8 godina (50 × 30 cm, visina 4–6 cm), 8–18 godina (53 × 32 cm, visina 6–9 cm) – pogledajte tablicu veličina. Između dvije veličine odaberite veću.<br><strong>Održavanje:</strong> mrlje očistite vlažnom krpom i blagim sapunom te ostavite da se potpuno osuši na zraku.<br><br><em>NORIKS KidsPillow nije medicinski proizvod i ne zamjenjuje savjet pedijatra ili stomatologa. Za djecu mlađu od 18 mjeseci prije upotrebe se posavjetujte s pedijatrom.</em><br><br>Uz NORIKS kupujete bez brige: <strong>pravo na povrat u roku od 30 dana</strong> i <strong>besplatna dostava za narudžbe iznad 70 €</strong>.
+
          <?php elseif( noriks_is_type( 'mattresstopper', $current_product_id ) ): ?>
 
                 <strong>NORIKS MattressTopper</strong> — umorni ste od buđenja s bolovima ili osjećaja umora? Pridružite se tisućama zadovoljnih kupaca i <strong>nadogradite svoj madrac u nekoliko minuta</strong> uz luksuzni, ekstra debeli nadmadrac od <strong>10 cm</strong>.<br><br>Jednostavno ga stavite na svoj madrac i <strong>poboljšajte san, ublažite bolove</strong> te se svako jutro budite <strong>odmorni i puni energije</strong>. Zašto mijenjati madrac kada možete nadograditi svoj san?<br><br><strong>Zašto ćete ga voljeti:</strong><br><strong>Udobnost kao na oblaku</strong> – osjećaj kao da spavate u hotelu s 5 zvjezdica<br><strong>Ublažava bolove</strong> – podupire i ublažava pritisak na leđa, vrat i kukove<br><strong>Dugotrajan</strong> – može se prati u perilici, a punjenje dugo zadržava oblik<br><strong>Tisuće zadovoljnih kupaca</strong> – vole ga ljudi diljem Europe<br><br><strong>Značajke:</strong><br>– ultra mekana udobnost<br>– luksuzno punjenje debljine 10 cm<br>– prozračna tkanina<br>– duboke elastične trake na uglovima drže nadmadrac na mjestu<br><br><strong>Visina:</strong> 10 cm.<br><strong>Veličine:</strong> 90 × 190, 120 × 190, 137 × 190, 152 × 203 i 198 × 203 cm (pogledajte tablicu veličina).<br><strong>Održavanje:</strong> može se prati u perilici.<br><br>Uz NORIKS kupujete bez brige: <strong>pravo na povrat u roku od 30 dana</strong> i <strong>besplatna dostava za narudžbe iznad 70 €</strong>.
@@ -1587,6 +1591,36 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </table>
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Primjer: Marta je visoka 170 cm i nosi veličinu M. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'kidspillow', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Tri veličine prema <strong>dobi djeteta</strong> – svaka s visinom i konturom prilagođenom dječjim proporcijama.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1f568e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Dob djeteta</th>
+                  <th style="padding:9px 8px;text-align:left;">Dimenzije (d × š)</th>
+                  <th style="padding:9px 8px;text-align:left;">Visina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_kidspillow_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f8fc' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:12px 0 0;line-height:1.6;">Dijete je točno na granici (3 ili 8 godina) ili je krupnije od vršnjaka? Odaberite <strong>veću veličinu</strong> – u nju može urasti.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'mattresstopper', $current_product_id ) ): ?>
@@ -3068,6 +3102,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'fleeceshawl', $current_product_id ) ): ?>
 
                 Perite u perilici <strong>na hladno</strong>, sušite u sušilici na <strong>niskoj temperaturi</strong> te izbjegavajte <strong>glačanje i omekšivače</strong> – tako će vaš NORIKS FleeceShawl godinama zadržati mekoću i udobnost.
+
+             <?php elseif( noriks_is_type( 'kidspillow', $current_product_id ) ): ?>
+
+                NORIKS KidsPillow <strong>čistite lokalno</strong>: mrlje očistite vlažnom krpom i blagim sapunom, a zatim ostavite da se jastuk <strong>potpuno osuši na zraku</strong> prije nego što ga vratite u krevet. Za svakodnevnu upotrebu stavite jastučnicu (standardna 50 × 70 cm odgovara svim veličinama) i perite je zajedno s posteljinom.
 
              <?php elseif( noriks_is_type( 'mattresstopper', $current_product_id ) ): ?>
 

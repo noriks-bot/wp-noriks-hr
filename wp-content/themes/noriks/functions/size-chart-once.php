@@ -133,6 +133,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-maternityleggings' );
             return;
         }
+        // NORIKS KidsPillow: 3 velicine po dobi djeteta 1–3 / 3–8 / 8–18 godina (FAQ in slika Sizes originala, inci -> cm).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'kidspillow' ) ) {
+            get_template_part( 'template_parts/size-chart-kidspillow' );
+            return;
+        }
         // NORIKS MattressTopper: 5 velicin nadmadraca 90 x 190 … 198 x 203 cm (slika »Available sizes« originala).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'mattresstopper' ) ) {
             get_template_part( 'template_parts/size-chart-mattresstopper' );
