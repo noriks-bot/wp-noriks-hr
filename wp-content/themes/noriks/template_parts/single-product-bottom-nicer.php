@@ -419,6 +419,11 @@ if ( noriks_is_type( 'travelkit' ) ) {
     include $noriks_pb_dir . 'why-travelkit.php';
 }
 
+// NORIKS BreadBag (orto-breadbag) — vrecica za kruh od pamuka i pcelinjeg voska
+if ( noriks_is_type( 'breadbag' ) ) {
+    include $noriks_pb_dir . 'why-breadbag.php';
+}
+
 // NORIKS TheraPillow (orto-therapillow) — terapijski jastuk za vrat 3 u 1
 if ( noriks_is_type( 'therapillow' ) ) {
     include $noriks_pb_dir . 'why-therapillow.php';

@@ -650,6 +650,17 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
          <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
                 <strong>NORIKS SeatCushion</strong> — ortopedski jastuk za sjedenje s potporom za donja leđa. <strong>Izrez za trticu</strong> uklanja izravan pritisak s trtice, a oblikovana površina podupire kralježnicu i vraća zdravo držanje. Memorijska pjena visoke gustoće ravnomjerno raspoređuje težinu na kukove i bedra, pa noge ne utrnu.<br><br><strong>Vanjska navlaka:</strong> prozračna pletena tkanina, skidljiva i periva, hipoalergena.<br><strong>Jezgra:</strong> prilagodljiva ortopedska memorijska pjena – netoksična, s certifikatom OEKO-TEX®, osmišljena za ublažavanje pritiska i pravilno držanje.<br><strong>Dimenzije:</strong> 44 × 42 cm, visina naslona 32 cm.<br><br><strong>Za svako sjedalo:</strong> protuklizna podloga drži ga na mjestu na autosjedalima, uredskim i blagovaonskim stolicama te invalidskim kolicima.
+         <?php elseif( noriks_is_type( 'breadbag', $current_product_id ) ): ?>
+
+                <strong>NORIKS BreadBag</strong> — vrećica za kruh od pamuka i <strong>pravog pčelinjeg voska</strong>. Vosak je utrljan duboko u tkaninu, pa vrećica diše taman koliko treba: vlaga izlazi polako, <strong>korica ostaje hrskava, a sredina mekana</strong> – kruh ostaje <strong>do 3× dulje svjež</strong>. Bez plastike, bez hladnjaka, jednostavno na radnoj ploči.<br><br>
+                <strong>Materijal:</strong> pamuk s pravim pčelinjim voskom (ručno utrljan), bez plastike.<br>
+                <strong>Veličina:</strong> 33 × 43 cm – stane velika pogača iz lijevanog lonca ili dva manja kruha jedan uz drugi.<br>
+                <strong>Zatvaranje:</strong> rolanjem, s kopčama na obje strane.<br>
+                <strong>Prikladno za:</strong> kruh, kruh od kiselog tijesta, baguette, pecivo.<br>
+                <strong>Upotreba:</strong> kruh ostavite da se ohladi, stavite ga u vrećicu reznom stranom prema dolje, gornji rub zarolajte 2 – 3 puta i zakopčajte. Vrećicu držite na sobnoj temperaturi, ne na izravnom suncu i ne u hladnjaku.<br>
+                <strong>U paketu:</strong> 2, 4 ili 6 vrećica, ovisno o odabranom kompletu.<br><br>
+                Pravo na povrat u roku od 30 dana · Besplatna dostava za narudžbe iznad 70 €
+
          <?php elseif( noriks_is_type( 'travelkit', $current_product_id ) ): ?>
 
                 <strong>NORIKS TravelKit</strong> — vakuumska putna vrećica za odjeću s <strong>električnom pumpom na USB punjenje</strong>. Spakirajte odjeću kao u kofer, zatvorite hermetički patentni zatvarač, priključite pumpu i pritisnite tipku – za nekoliko sekundi vrećica se smanji na otprilike pola. Tako u <strong>istu torbu stane do 60 % više</strong>, a 10 – 15 komada odjeće (majice, traperice, haljine, džemperi) stane u ručnu prtljagu.<br><br>
@@ -3080,6 +3091,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
                 Navlaka je <strong>skidljiva i može se prati u perilici</strong> – otvorite patentni zatvarač, izvadite jezgru i navlaku operite na <strong>nježnom programu s blagim deterdžentom</strong>. Sušite je na zraku. Jezgru od memorijske pjene <strong>ne perite u perilici</strong> i ne namačite – po potrebi je obrišite vlažnom krpom i pustite da se potpuno osuši prije nego vratite navlaku.
+
+             <?php elseif( noriks_is_type( 'breadbag', $current_product_id ) ): ?>
+
+                Vrećicu okrenite, <strong>istresite mrvice</strong> i iznutra je obrišite <strong>vlažnom spužvom, hladnom vodom</strong> i s malo blagog sapuna, zatim je ostavite da se <strong>osuši na zraku</strong>. Ne perite je u <strong>perilici rublja ni perilici posuđa</strong> i ne koristite <strong>vruću vodu</strong> – vosak bi se otopio. U početku vrećica lagano miriše na med; to brzo nestane.
 
              <?php elseif( noriks_is_type( 'travelkit', $current_product_id ) ): ?>
 

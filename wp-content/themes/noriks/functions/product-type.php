@@ -244,6 +244,9 @@ function noriks_product_type_map() : array {
         // NORIKS TravelKit — vakuumska putna vrecica za odjecu s elektricnom pumpom (brez atributov: ena izvedba; ponudbi 2x/4x kom
         // kot BOGO paketa originala Buy 1 Get 1 / Buy 2 Get 2, brez tablice). Lasten tip, locen od travelbag / airtravel / travelpillow.
         'travelkit'               => array( 'orto-travelkit', 'travelkit' ),
+        // NORIKS BreadBag — vrecica za kruh od pamuka i pcelinjeg voska (brez atributov: ena izvedba 33 x 43 cm; ponudbe 2x/4x/6x kom
+        // kot kompleti originala 2 / 4 / 6 Beutel, predizbrano 4x, brez tablice). Lasten tip breadbag (predpona nbb-).
+        'breadbag'                => array( 'orto-breadbag', 'breadbag' ),
         // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
         'mattresstopper'          => array( 'orto-mattresstopper', 'mattresstopper' ),
         // NORIKS KidsPillow — ergonomski djecji jastuk za miran san (samo Velicina po dobi djeteta 1-3 / 3-8 / 8-18 godina kot
