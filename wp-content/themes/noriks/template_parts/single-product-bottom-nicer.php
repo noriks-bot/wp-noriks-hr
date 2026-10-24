@@ -384,6 +384,11 @@ if ( noriks_is_type( 'seatcushion' ) ) {
     include $noriks_pb_dir . 'why-seatcushion.php';
 }
 
+// NORIKS KneeLight (orto-kneelight) — uredaj za koljeno s toplinom, vibracijom i crvenim svjetlom
+if ( noriks_is_type( 'kneelight' ) ) {
+    include $noriks_pb_dir . 'why-kneelight.php';
+}
+
 // NORIKS UpholsteryCleaner (orto-upholsterycleaner) — usisavac za mokro ciscenje presvlaka
 if ( noriks_is_type( 'upholsterycleaner' ) ) {
     include $noriks_pb_dir . 'why-upholsterycleaner.php';

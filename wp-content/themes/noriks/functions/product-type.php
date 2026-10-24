@@ -233,6 +233,9 @@ function noriks_product_type_map() : array {
         // NORIKS UpholsteryCleaner — prenosni usisavac za mokro ciscenje presvlaka, tepiha i autosjedala (brez atributov: za HR samo EU utikac;
         // original nima kolicinskih paketov -> 1x/2x/3x kom po lestvici, brez tablice).
         'upholsterycleaner'       => array( 'orto-upholsterycleaner', 'upholsterycleaner' ),
+        // NORIKS KneeLight — bezicni uredaj za koljeno s toplinom, vibracijom i crvenim svjetlom (brez atributov: ena izvedba,
+        // polnjenje USB-C; ponudbi 1x/2x kom kot paketa originala Device Only / 2 Devices Only, brez tablice).
+        'kneelight'               => array( 'orto-kneelight', 'kneelight' ),
         // NORIKS PetHairGlove — rukavica za uklanjanje dlaka kucnih ljubimaca (brez atributov; ponudbe 1x/2x/3x/4x kom kot Kaching paketi originala, brez tablice).
         'pethairglove'            => array( 'orto-pethairglove', 'pethairglove' ),
         // NORIKS MattressTopper — ekstra debeli nadmadrac od 10 cm (samo velicina 90x190 … 198x203 cm s cenami po velicini kot original, tablica velicin).
