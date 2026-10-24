@@ -193,6 +193,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-wafflelongsleeve' );
             return;
         }
+        // NORIKS SleepSet: XS–XL, mjere pidzame (cm) iz tablice originala (Kiwi »Valentine Jersey«).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'sleepset' ) ) {
+            get_template_part( 'template_parts/size-chart-sleepset' );
+            return;
+        }
         // NORIKS PlushBlanket: Srednja / Velika / XL / Mega (cm, kg) iz zavihka Size + vodica za velicine originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'plushblanket' ) ) {
             get_template_part( 'template_parts/size-chart-plushblanket' );

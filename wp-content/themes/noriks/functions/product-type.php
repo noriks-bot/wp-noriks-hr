@@ -177,6 +177,9 @@ function noriks_product_type_map() : array {
         'compressionsocks'        => array( 'orto-compressionsocks', 'compressionsocks' ),
         // NORIKS WaffleLongSleeve — majica dugih rukava od vafel pletiva, unisex (boja 17 + velicina XS–3XL).
         'wafflelongsleeve'        => array( 'orto-wafflelongsleeve', 'wafflelongsleeve' ),
+        // NORIKS SleepSet — zenska pamucna pidzama: majica dugih rukava + kratke hlacice (boja 8 + velicina XS–XL).
+        // Ni povezano s SleepEarplugs (orto-sleepearplugs).
+        'sleepset'                => array( 'orto-sleepset', 'sleepset' ),
         // NORIKS PlushBlanket — super mekana oversized plisana deka (boja 17 + velicina Srednja / Velika / XL / Mega, cijena po velicini kot original).
         // Ni povezano z NORIKS Blanket (orto-blanket) ni FleeceShawl.
         'plushblanket'            => array( 'orto-plushblanket', 'plushblanket' ),
@@ -953,6 +956,20 @@ if ( ! function_exists( 'noriks_wafflelongsleeve_sizes' ) ) {
             array( 'XL',  '104 – 114', '84 – 91',   '107 – 112', '132 cm', '121 cm', '76 cm' ),
             array( '2XL', '114 – 127', '91 – 102',  '114 – 122', '142 cm', '131 cm', '79 cm' ),
             array( '3XL', '124 – 135', '102 – 112', '124 – 132', '152 cm', '141 cm', '81 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_sleepset_sizes' ) ) {
+    /** NORIKS SleepSet: velicina, duljina majice, opseg prsa, opseg struka (hlacice), duljina rukava, duljina nogavice (cm).
+     *  1:1 s tablice originala (doreandrose.com, Kiwi »Valentine Jersey«, mjere odjevnog predmeta v cm). */
+    function noriks_sleepset_sizes() {
+        return array(
+            array( 'XS', '51,5 cm', '77 cm', '62 cm', '59,5 cm', '18,5 cm' ),
+            array( 'S',  '52,5 cm', '81 cm', '67 cm', '60,5 cm', '19,5 cm' ),
+            array( 'M',  '53,5 cm', '86 cm', '72 cm', '61,5 cm', '20,5 cm' ),
+            array( 'L',  '54,5 cm', '91 cm', '77 cm', '62,5 cm', '21,5 cm' ),
+            array( 'XL', '55,5 cm', '96 cm', '82 cm', '63,5 cm', '22,5 cm' ),
         );
     }
 }

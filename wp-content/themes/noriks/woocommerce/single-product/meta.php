@@ -752,6 +752,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
                 <strong>NORIKS WaffleLongSleeve</strong> je vafel majica dugih rukava koja nikad dugo ne ostaje u ladici. Umirujuće je mekana — izrađena od udobne <strong>pamučne vafel tkanine</strong> koja lijepo pada i izgleda promišljeno, a od prvog nošenja osjeća se kao da ste je već dugo nosili.<br><br><strong>Značajke:</strong><br>• <strong>Mekano pamučno vafel pletivo:</strong> ugodno od prvog nošenja<br>• <strong>Spuštena ramena:</strong> ravan kroj od ramena do struka, seže do bokova ili malo ispod<br>• <strong>Rebrasti završeci:</strong> suptilna obrada koja daje strukturu bez krutosti<br>• <strong>Predskupljena tkanina:</strong> nakon pranja i sušenja ostaje iste veličine<br>• <strong>Ne gužva se:</strong> iz sušilice izlazi jednako uredna kao što je ušla<br><br><strong>Kroj:</strong> opušten — malo više prostora od uobičajene veličine u prsima i ramenima, bez viška materijala kao kod oversized modela.<br><strong>Materijal:</strong> 60 % pamuk, 40 % poliester.<br><strong>Boje:</strong> kadulja zelena, sivoplava, tirkizna, bordo, lososova, sivosmeđa, crna, starinska roza, svijetloplava, plava, svijetložuta, bijela, jarko ružičasta, svijetloružičasta, mentol zelena, krem i lila.<br><strong>Veličine:</strong> XS–3XL (unisex) — pogledajte tablicu veličina.
 
+         <?php elseif( noriks_is_type( 'sleepset', $current_product_id ) ): ?>
+
+                <strong>NORIKS SleepSet</strong> je pamučna pidžama u kojoj ćete poželjeti živjeti. Osmišljena je u <strong>opuštenom kroju s dugim rukavima i kratkim hlačicama</strong> i izrađena od laganog pamuka koji se na koži osjeća kao druga koža. Mekana, prozračna i jednostavna za nošenje, prirodno pada niz tijelo za udobnost danju i noću. Nježni rubovi s volančićima daju joj suptilan, ženstven završetak, a ne oduzimaju ništa od njezine jednostavnosti.<br><br>Stvorena je za spora jutra, rane večeri i sve između – bezvremenski pogled na udobnost: nenametljiva, laskava i prekrasno jednostavna. Dovoljno udobna za krevet, dovoljno slatka za opuštanje.<br><br><strong>Materijal:</strong> 92 % pamuk, 8 % elastan – mekana, prirodno prozračna mješavina s blagom rastezljivošću, glatka na dodir, za opušten kroj i udobnost cijeli dan.<br><strong>Kroj:</strong> modelica je visoka 173 cm i nosi veličinu S. Niste sigurni u veličinu? Uzmite jednu veličinu veću.<br><strong>Boje:</strong> bijela sa srcima, smeđa sa srcima, svijetloplava, ružičasta, crna, siva, bjelokosna i maslinasta.<br><strong>Veličine:</strong> XS–XL — pogledajte tablicu veličina.
+
          <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
 
                 <strong>NORIKS PlushBlanket</strong> je super mekana, oversized plišana deka nalik oblaku – baršunasta s obje strane, ugodno rastezljiva u četiri smjera, a mekoća joj ostaje i nakon brojnih pranja. Deka koju je teško opisati riječima – i još teže odložiti.<br><br><strong>Značajke:</strong><br>• <strong>Super mekan pliš:</strong> bez grubih rubova, svaki položaj jednako je ugodan<br>• <strong>Rastezljivost u četiri smjera:</strong> prilagođava se tijelu, a ne gubi oblik<br>• <strong>Četiri veličine:</strong> od osobnog pokrivača do pokrivenosti velikog bračnog kreveta<br>• <strong>17 boja i uzoraka:</strong> lako za poklon, lako se uklapa u svaki prostor<br>• <strong>Pere se u perilici i ostaje mekana:</strong> hladno pranje, sušenje na zraku<br><br><strong>Savršena za:</strong> pretvaranje svakog kreveta ili kauča u najmekše mjesto u prostoriji i kao poklon nakon kojeg se ljudi pitaju kako su ikad živjeli bez nje.<br><strong>Materijal:</strong> 95 % poliester, 5 % elastan – plišana i baršunasta s unutarnje i vanjske strane.<br><strong>Boje:</strong> tamnoplava, svijetlosiva, ružičasti vrtlog, ljubičasti tigar, sivi tigar, bjelokosni tigar, plavi tigar, maslinasti tigar, bengalski tigar, jarko ružičasta, plavi val, lavanda, ružičasti kvarc, plava, bordo, mentol i ciklama.<br><strong>Veličine:</strong> Srednja 127 x 152 cm, Velika 152 x 203 cm, XL 229 x 229 cm, Mega 254 x 274 cm – pogledajte tablicu veličina.
@@ -1897,6 +1901,41 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             </table>
             </div>
             <p style="margin:14px 0 0;line-height:1.6;">Opseg prsa izmjerite oko najšireg dijela prsa, odmah ispod pazuha; struk u visini pupka; bokove oko najšireg dijela. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'sleepset', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličine od <strong>XS do XL</strong>, <strong>opušten kroj</strong>. Mjere su <strong>stvarne dimenzije pidžame</strong> (cm):</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a8323e;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina majice</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg struka</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina rukava</th>
+                  <th style="padding:9px 8px;text-align:left;">Duljina nogavice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_sleepset_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fbf0f1' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[5] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;">Modelica je visoka 173 cm i nosi veličinu S. Niste sigurni u veličinu? Uzmite jednu veličinu veću. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
@@ -3138,6 +3177,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'wafflelongsleeve', $current_product_id ) ): ?>
 
                 Majicu <strong>perite u hladnoj vodi</strong>, <strong>zajedno sa sličnim bojama</strong>. Sušite je u sušilici na <strong>niskoj temperaturi</strong>. <strong>Ne glačajte</strong> — tkanina je predskupljena i ne gužva se, pa i nakon pranja ostaje iste veličine i uredna. Sastav: 60 % pamuk, 40 % poliester.
+
+             <?php elseif( noriks_is_type( 'sleepset', $current_product_id ) ): ?>
+
+                Pidžamu perite na <strong>nježnom programu na najviše 30 °C</strong>, <strong>okrenutu naopako</strong> i <strong>sa sličnim bojama</strong>. <strong>Ne sušite u sušilici</strong>, ne izbjeljujte i ne čistite kemijski. <strong>Sušite vješanjem</strong>, a po potrebi glačajte na srednjoj temperaturi. Sastav: 92 % pamuk, 8 % elastan.
 
              <?php elseif( noriks_is_type( 'plushblanket', $current_product_id ) ): ?>
 

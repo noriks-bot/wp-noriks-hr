@@ -529,6 +529,11 @@ if ( noriks_is_type( 'wafflelongsleeve' ) ) {
     include $noriks_pb_dir . 'why-wafflelongsleeve.php';
 }
 
+// NORIKS SleepSet (orto-sleepset) — zenska pamucna pidzama dugih rukava s kratkim hlacicama (ni SleepEarplugs)
+if ( noriks_is_type( 'sleepset' ) ) {
+    include $noriks_pb_dir . 'why-sleepset.php';
+}
+
 // NORIKS PlushBlanket (orto-plushblanket) — super mekana oversized plisana deka
 if ( noriks_is_type( 'plushblanket' ) ) {
     include $noriks_pb_dir . 'why-plushblanket.php';
