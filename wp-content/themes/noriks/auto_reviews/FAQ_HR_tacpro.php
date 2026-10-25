@@ -1,6 +1,6 @@
 <?php
 /**
- * FAQ za NORIKS TacPro (orto-fieldops) — HR trg.
+ * FAQ za NORIKS TacPro (orto-tacpro) — HR trg.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 

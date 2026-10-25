@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto-recenzije za NORIKS TacPro (orto-fieldops) — HR trg.
+ * Auto-recenzije za NORIKS TacPro (orto-tacpro) — HR trg.
  * 16 mnenj hrvaških kupcev, ocena 4,8. Text-only (no images).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }

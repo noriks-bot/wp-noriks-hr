@@ -1,15 +1,15 @@
 <?php
 /**
- * product-bottom: NORIKS GlassPro — krpa od mikrovlakana (orto-giovasa).
- * Original: giovasa.com/products/panno-giovasa (IT).
+ * product-bottom: NORIKS GlassPro — krpa od mikrovlakana (orto-glasspro).
+ * Original: glasspro.com/products/panno-glasspro (IT).
  * Sekcije 1:1 z originalom, isti vrstni red: kupci -> problem (mrlje se vrnejo) -> tri pokreta ->
  * po cem se razlikuje (600 g/m2) -> 3x gusca od krpe iz trgovine -> usporedba -> mnenja -> NORIKS pogoji
  * (namesto 100-dnevne garancije originala).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-$ngv      = get_template_directory_uri() . '/img/giovasa/';
-$ngv_path = get_template_directory() . '/img/giovasa/';
+$ngv      = get_template_directory_uri() . '/img/glasspro/';
+$ngv_path = get_template_directory() . '/img/glasspro/';
 $ngv_img  = function( $file, $alt ) use ( $ngv, $ngv_path ) {
   if ( ! $file || ! file_exists( $ngv_path . $file ) ) { return ''; }
   return '<img src="' . esc_url( $ngv . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';

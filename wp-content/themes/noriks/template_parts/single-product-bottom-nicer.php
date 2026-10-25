@@ -55,10 +55,10 @@ if ( noriks_is_type( 'fisiorest' ) ) {
 }
 
 
-if ( noriks_is_type( 'giovasa' ) ) {
-    include $noriks_pb_dir . 'why-giovasa.php';
+if ( noriks_is_type( 'glasspro' ) ) {
+    include $noriks_pb_dir . 'why-glasspro.php';
 }
-// FIELDOPS (taktične slušalke)
+// TACPRO (taktične slušalke)
 if ( noriks_is_type( 'acryliques' ) ) {
     include $noriks_pb_dir . 'why-acryliques.php';
 }
@@ -83,8 +83,8 @@ if ( noriks_is_type( 'devotions' ) ) {
 if ( noriks_is_type( 'classics' ) ) {
     include $noriks_pb_dir . 'why-classics.php';
 }
-if ( noriks_is_type( 'munna' ) ) {
-    include $noriks_pb_dir . 'why-munna.php';
+if ( noriks_is_type( 'ritual' ) ) {
+    include $noriks_pb_dir . 'why-ritual.php';
 }
 if ( noriks_is_type( 'corrector' ) ) {
     include $noriks_pb_dir . 'why-corrector.php';
@@ -101,8 +101,8 @@ if ( noriks_is_type( 'travel' ) ) {
 if ( noriks_is_type( 'daily' ) ) {
     include $noriks_pb_dir . 'why-daily.php';
 }
-if ( noriks_is_type( 'fieldops' ) ) {
-    include $noriks_pb_dir . 'why-fieldops.php';
+if ( noriks_is_type( 'tacpro' ) ) {
+    include $noriks_pb_dir . 'why-tacpro.php';
 }
 
 // NORIKSHERS (novi proizvod — sekcije + videi u pripremi)

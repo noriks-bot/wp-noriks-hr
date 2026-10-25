@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto-recenzije za NORIKS GlassPro (orto-giovasa) — HR trg.
+ * Auto-recenzije za NORIKS GlassPro (orto-glasspro) — HR trg.
  * 16 mnenj hrvaških kupcev, ocena 4,8.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }

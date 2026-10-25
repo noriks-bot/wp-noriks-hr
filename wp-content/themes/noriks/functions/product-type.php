@@ -46,7 +46,7 @@ function noriks_product_type_map() : array {
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
-        'giovasa'                 => array( 'orto-giovasa' ),
+        'glasspro'                 => array( 'orto-glasspro' ),
         // NORIKS TacPro taktične slušalke
         'acryliques' => array( 'orto-acryliques' ),
         'midnight' => array( 'orto-midnight' ),
@@ -56,11 +56,11 @@ function noriks_product_type_map() : array {
         'faith' => array( 'orto-faith' ),
         'devotions' => array( 'orto-devotions' ),
         'classics' => array( 'orto-classics' ),
-        'munna' => array( 'orto-munna' ),
+        'ritual' => array( 'orto-ritual' ),
         'salon' => array( 'orto-salon' ),
         'flops' => array( 'orto-flops' ),
         'daily' => array( 'orto-daily' ),
-        'fieldops'                => array( 'orto-fieldops' ),
+        'tacpro'                => array( 'orto-tacpro' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
         'nosilka'                 => array( 'orto-nosilka', 'nosilka', 'nosiljka' ),
@@ -1354,9 +1354,9 @@ if ( ! function_exists( 'noriks_hoodie_sizes' ) ) {
     }
 }
 
-if ( ! function_exists( 'noriks_fieldops_sizes' ) ) {
+if ( ! function_exists( 'noriks_tacpro_sizes' ) ) {
     /** NORIKS TacPro (taktične slušalke) — nema veličina, samo boja (Carbon Black, Army Green). */
-    function noriks_fieldops_sizes() {
+    function noriks_tacpro_sizes() {
         return array();
     }
 }
