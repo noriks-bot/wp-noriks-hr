@@ -1188,6 +1188,7 @@
   $is_nogavice_page   = noriks_is_type( 'kompresijske-nogavice', $current_product_id );
   $is_ortopas_page    = noriks_is_type( 'ortopas', $current_product_id );
   $is_bunion_page     = noriks_is_type( 'bunion', $current_product_id );
+  $is_birdie_page     = noriks_is_type( 'birdie', $current_product_id );
   $is_fisiorest_page  = noriks_is_type( 'fisiorest', $current_product_id );
   $is_norikshers_page = noriks_is_type( 'norikshers', $current_product_id );
   $is_leakboxers_page = noriks_is_type( 'leakboxers', $current_product_id );
@@ -1697,6 +1698,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fisiorest.php';
   } elseif ( $is_bunion_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bunion.php';
+  } elseif ( $is_birdie_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_birdie.php';
   } elseif ( $is_ortopas_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_ortopas.php';
   } elseif ( $is_nogavice_page ) {
@@ -2592,6 +2595,7 @@ $faq_list3 = get_field('faq_list_3', 'option');
 <?php
 $is_ortopas   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
 $is_bunion    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
+$is_birdie    = ( function_exists('noriks_is_type') && noriks_is_type('birdie') );
 $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
 $is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
 $is_leakboxers = ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') );
@@ -2904,6 +2908,42 @@ $fisiorest_faq = array(
     'questioon' => 'Mogu li ga vratiti ako ne vidim rezultate?',
     'answer'    => 'Naravno! Nudimo puno jamstvo povrata novca unutar 30 dana od isporuke ako niste zadovoljni proizvodom. Javite nam se na info@noriks.com i odgovorit ćemo u roku od 12 sati od primitka poruke!'
   ),
+);
+
+// Birdie personal safety alarm — product FAQ
+$birdie_faq = array(
+  array(
+    'questioon' => 'Koliko je Birdie glasan?',
+    'answer'    => 'Birdie emitira 130 dB — to je glasnoća reaktivnog zrakoplova. Dovoljno glasno da se čuje na 100 metara i privuče pozornost svih u blizini.'
+  ),
+  array(
+    'questioon' => 'Kako ga aktiviram?',
+    'answer'    => 'Jednostavno povucite mesing pin i alarm se trenutno uključuje. Nema gumba, ekrana ili složenih koraka. Vraćanjem pina na mjesto isključujete alarm.'
+  ),
+  array(
+    'questioon' => 'Mogu li ga nositi na avionu?',
+    'answer'    => 'Da, Birdie je dozvoljena na letovima jer nije oružje i ne koristi kemikalije. Možete je staviti u ručnu prtljagu.'
+  ),
+  array(
+    'questioon' => 'Koliko dugo traje baterija?',
+    'answer'    => 'Birdie se puni preko USB-C kabela (uključen) u 2 sata i traje tjednima bez aktivacije. LED indikator pokazuje stanje punjenja — zeleno = puna, crveno = napunite.'
+  ),
+  array(
+    'questioon' => 'Može li se slučajno aktivirati u torbici?',
+    'answer'    => 'Birdie 3.0 ima prekidač za uključivanje/isključivanje. Kada alarm nije potreban, možete ga isključiti da se ne aktivira slučajno.'
+  ),
+  array(
+    'questioon' => 'Što je uključeno u paket?',
+    'answer'    => 'U paketu dobivate Birdie alarm (visina 10 cm), mesing karabiner za privjesak, USB-C kabel za punjenje i priručnik.'
+  ),
+  array(
+    'questioon' => 'Ima li bljeskalicu?',
+    'answer'    => 'Da, Birdie 3.0 ima ugrađenu LED bljeskalicu. Pritisnite gornji gumb za upaliti bijelo svjetlo — korisno za traženje ključeva u torbici, otključavanje auta u mraku ili šetnju psa navečer.'
+  ),
+  array(
+    'questioon' => 'Razlikuju li se boje po funkciji?',
+    'answer'    => 'Ne, sve boje (Aqua, Blossom, Cantaloupe, Indigo, Noir) imaju iste funkcije — 130 dB sirena, stroboskop i bljeskalica. Biraju se samo po osobnom ukusu.'
+  )
 );
 
 // Bunion corrector — product FAQ (prijevod engleske reference, NORIKS).
@@ -5766,6 +5806,9 @@ $faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograin
   }
   if ( $is_bunion && $is_info ) {
     return $bunion_faq;
+  }
+  if ( $is_birdie && $is_info ) {
+    return $birdie_faq;
   }
   if ( $is_ortopas && $is_info ) {
     return $ortopas_faq;
