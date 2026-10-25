@@ -107,6 +107,20 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s">
     <div class="wmidnight__v wmidnight__v--rev">
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-14.png' ); ?>" alt="Vlakno koje je nekad odijevalo svijet" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__tekst">
+        <div class="wmidnight__kicker">KONOPLJA</div>
+        <h2 class="wmidnight__h2">Vlakno koje je nekad <em>odijevalo svijet</em></h2>
+        <p class="wmidnight__p">U 17. i 18. stoljeću konoplja je bila temelj tekstila, užadi i jedara — od nje se izrađivao velik dio svjetske tkanine. U 1930-ima je potisnuta zakonima i kampanjama koje su pogodovale pamuku i sintetici.</p>
+        <p class="wmidnight__p">Desetljećima je zatim bila u sjeni, sve dok je zakoni ponovno nisu priznali kao sigurnu i svestranu sirovinu. Danas se vraća u odjeću kao čvrsto, prirodno vlakno bez plastike.</p>
+        <p class="wmidnight__p">NORIKS Midnight vraća konoplju tamo gdje joj je mjesto: u majicu koju nosite svaki dan.</p>
+        <p class="wmidnight__zak">Staro vlakno, nova crna majica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wmidnight__s wmidnight__s--bg">
+    <div class="wmidnight__v">
       <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-10.png' ); ?>" alt="Dvostruki šavovi, ovratnik bez rastezanja" loading="lazy" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">ŠAVOVI</div>
@@ -119,8 +133,8 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
     </div>
   </section>
 
-  <section class="wmidnight__s wmidnight__s--bg">
-    <div class="wmidnight__v">
+  <section class="wmidnight__s">
+    <div class="wmidnight__v wmidnight__v--rev">
       <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-11.png' ); ?>" alt="Zaobljen donji rub, leđa ostaju pokrivena" loading="lazy" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">ZAOBLJENI RUB</div>
@@ -129,20 +143,6 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
         <p class="wmidnight__p">Stražnji dio je dovoljno dug da ostane pokriven kad se sagnete, čučnete ili podignete ruke. Nema podizanja majice i otkrivanja leđa.</p>
         <p class="wmidnight__p">Duža linija straga daje i vizualno izduženiji izgled. Majica izgleda uredno i kad je nosite izvan hlača.</p>
         <p class="wmidnight__zak">Sagnite se slobodno — majica ostaje na mjestu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wmidnight__s">
-    <div class="wmidnight__v wmidnight__v--rev">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-14.png' ); ?>" alt="Vlakno koje je nekad odijevalo svijet" loading="lazy" decoding="async"></div>
-      <div class="wmidnight__tekst">
-        <div class="wmidnight__kicker">KONOPLJA</div>
-        <h2 class="wmidnight__h2">Vlakno koje je nekad <em>odijevalo svijet</em></h2>
-        <p class="wmidnight__p">U 17. i 18. stoljeću konoplja je bila temelj tekstila, užadi i jedara — od nje se izrađivao velik dio svjetske tkanine. U 1930-ima je potisnuta zakonima i kampanjama koje su pogodovale pamuku i sintetici.</p>
-        <p class="wmidnight__p">Desetljećima je zatim bila u sjeni, sve dok je zakoni ponovno nisu priznali kao sigurnu i svestranu sirovinu. Danas se vraća u odjeću kao čvrsto, prirodno vlakno bez plastike.</p>
-        <p class="wmidnight__p">NORIKS Midnight vraća konoplju tamo gdje joj je mjesto: u majicu koju nosite svaki dan.</p>
-        <p class="wmidnight__zak">Staro vlakno, nova crna majica.</p>
       </div>
     </div>
   </section>
