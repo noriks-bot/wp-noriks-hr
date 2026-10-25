@@ -543,7 +543,7 @@
 
           <?php elseif ( noriks_is_type( 'viinia' ) ): ?>
 
-           Niste jedini čije vino na stolu brzo postane prevrelo.
+           Niste jedini čije vino na stolu brzo postane toplo.
 
           <?php elseif ( noriks_is_type( 'acryliques' ) ): ?>
 

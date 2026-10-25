@@ -93,10 +93,10 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s winsoles__s--bg">
     <div class="winsoles__v">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-06.webp' ); ?>" alt="Jedan skupi par, svako jutro u drugu cipelu?" loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-06.webp' ); ?>" alt="Jedan skupi par svako jutro u drugu cipelu" loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
         <div class="winsoles__kicker">PAR U SVAKOJ CIPELI</div>
-        <h2 class="winsoles__h2">Jedan skupi par, <em>svako jutro u drugu cipelu</em>?</h2>
+        <h2 class="winsoles__h2">Jedan skupi par, <em>svako jutro u drugu cipelu?</em></h2>
         <p class="winsoles__p">Ulošci izrađeni po mjeri koštaju stotine, a drugi par košta isto toliko. Zato jedan par svako jutro selite iz cipele u cipelu. A jeftiniji ulošci koje ste probali spljoštili su se pod vašom težinom za tjedan ili dva.</p>
         <p class="winsoles__p">Mekani ulošci iz drogerije uglavnom popuste pod težinom. NORIKS Insoles ostaje podignut, a daje čvrstu strukturnu potporu za dio cijene uložaka po mjeri — i stiže za nekoliko dana, a ne tjedana.</p>
         <p class="winsoles__p">Kupci kažu da su jednako dobri kao njihovi ulošci po mjeri ili bolji. Zato mnogi drže po jedan par u svakoj cipeli koju najčešće nose — bez prebacivanja.</p>
@@ -134,6 +134,20 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
   </section>
 
   <section class="winsoles__s">
+    <div class="winsoles__v winsoles__v--rev">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-koraki.webp' ); ?>" alt="Uložak se stavlja u cipelu umjesto originalnog uloška" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">TRI JEDNOSTAVNA KORAKA</div>
+        <h2 class="winsoles__h2">Udobno hodanje <em>u tri jednostavna koraka</em></h2>
+        <p class="winsoles__p"><strong>1. korak — stavite ih u cipelu.</strong> Izvadite originalni uložak iz cipele i umjesto njega stavite NORIKS Insoles. Ako je potrebno, prednji dio skratite škarama da točno pristaje.</p>
+        <p class="winsoles__p"><strong>2. korak — pustite stopalima da se naviknu.</strong> Počnite s 2 do 3 sata nošenja dnevno i svaki dan dodajte malo više. Blaga nelagoda u prvim danima je normalna.</p>
+        <p class="winsoles__p"><strong>3. korak — hodajte udobno.</strong> Nakon tjedan do dva svakodnevnog nošenja većina ljudi udobno izdrži smjenu od 8 i više sati. Ako vam ne odgovaraju, imate 30 dana za povrat novca.</p>
+        <p class="winsoles__zak">Stavite, naviknite se, hodajte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s winsoles__s--bg">
     <div class="winsoles__v winsoles__v--polna">
       <div class="winsoles__tekst winsoles__tekst--sredina">
         <div class="winsoles__kicker">KUPUJTE BEZ BRIGE</div>

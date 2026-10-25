@@ -142,19 +142,6 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
   </section>
 
   <section class="wbirdie__s wbirdie__s--bg">
-    <div class="wbirdie__v">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-12.jpg' ); ?>" alt="Poklonite sigurnost" loading="lazy" decoding="async"></div>
-      <div class="wbirdie__tekst">
-        <div class="wbirdie__kicker">POKLON</div>
-        <h2 class="wbirdie__h2">Poklonite <em>sigurnost</em></h2>
-        <p class="wbirdie__p">NORIKS Guard je savršen poklon za prijateljice i članove obitelji koji su stalno u pokretu. Poklonite im sigurnost koju mogu nositi svuda.</p>
-        <p class="wbirdie__p">Idealan je za kćer ili unuku koja odlazi na studij, za prijateljicu koja putuje sama ili za svakoga tko se kasno vraća kući. Malen je, šaren i uvijek pri ruci.</p>
-        <p class="wbirdie__zak">Poklon koji se nosi svaki dan.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wbirdie__s">
     <div class="wbirdie__v wbirdie__v--polna">
       <div class="wbirdie__tekst wbirdie__tekst--sredina">
         <div class="wbirdie__kicker">KUPUJTE BEZ BRIGE</div>
