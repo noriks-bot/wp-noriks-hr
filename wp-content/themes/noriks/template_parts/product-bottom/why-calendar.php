@@ -28,7 +28,7 @@ j kalendar, bez pretplate, zauvijek.</p>
 <!-- sekcija 2: Sto moze Calendar — sve na jednom ekranu -->
 <section class="nss-sect nss--bg2 nss--rev">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-features.png' ); ?>" alt="Prikaz funkcija — kalendar, zadatci, obroci" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija1.png' ); ?>" alt="Prikaz funkcija — kalendar, zadatci, obroci" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Sve sto vam treba</p>
       <h2 class="nss-h2"><em>Zajednicki</em> kalendar, zadatci, obroci i bodovi</h2>
@@ -43,7 +43,7 @@ j kalendar, bez pretplate, zauvijek.</p>
 <!-- sekcija 3: Sinkronizacija — aplikacija + tablica -->
 <section class="nss-sect nss--bg1">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-sync.png' ); ?>" alt="NORIKS Calendar sync s mobitelom i tabletom" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija4.png' ); ?>" alt="NORIKS Calendar sync s mobitelom i tabletom" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Sinkronizacija uživo</p>
       <h2 class="nss-h2">Uređujte s mobitela, <em>vidite na zidu</em></h2>
@@ -57,7 +57,7 @@ j kalendar, bez pretplate, zauvijek.</p>
 <!-- sekcija 4: Montaža — visi ili stoji -->
 <section class="nss-sect nss--bg2 nss--rev">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-mounting.png' ); ?>" alt="Montaza — postav ili objesi" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija3.png' ); ?>" alt="Montaza — postav ili objesi" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Montaža po želji</p>
       <h2 class="nss-h2">Visi na zidu ili <em>stoji na stolu</em></h2>
@@ -71,7 +71,7 @@ j kalendar, bez pretplate, zauvijek.</p>
 <!-- sekcija 5: Bodovi za djecu — motivacija kroz igru -->
 <section class="nss-sect nss--bg1">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-points.png' ); ?>" alt="Sustav bodova — djeca se natječu tko više zavrsi zadatke" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija6.png' ); ?>" alt="Sustav bodova — djeca se natječu tko više zavrsi zadatke" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Sustav bodova</p>
       <h2 class="nss-h2">Djeca <em>vole</em> sakupljati bodove</h2>
@@ -86,7 +86,7 @@ j kalendar, bez pretplate, zauvijek.</p>
 <!-- sekcija 6: Planiranje obroka -->
 <section class="nss-sect nss--bg2 nss--rev">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-meals.png' ); ?>" alt="Tjedni jelovnik — planirajte obroke unaprijed" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija8.png' ); ?>" alt="Tjedni jelovnik — planirajte obroke unaprijed" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Planiranje obroka</p>
       <h2 class="nss-h2"><em>Tjedni jelovnik</em> za cijelu obitelj</h2>
