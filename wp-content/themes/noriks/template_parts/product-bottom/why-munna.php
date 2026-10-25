@@ -26,7 +26,7 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Zašto kapi</div>
         <h2 class="nmunna__h2">Tekuće kapi, svako jutro.</h2>
-        <p class="nmunna__p">Munna dolazi u tekućem obliku, kao kapi. Za razliku od kapsula, kapi se uzimaju jednostavno i brzo, kao dio jutarnje rutine. Daj ritualu punih 90 dana – žene koje ostanu dosljedne one su koje ostanu uz svoju rutinu i vide kako se njihova silueta postupno mijenja.</p>
+        <p class="nmunna__p">Munna dolazi u tekućem obliku, kao kapi. Za razliku od kapsula, kapi se uzimaju jednostavno i brzo, kao dio jutarnje rutine. Daj ritualu puna tri mjeseca – žene koje ostanu dosljedne one su koje ostanu uz svoju rutinu i vide kako se njihova silueta postupno mijenja.</p>
       </div>
       <div class="nmunna__media"><?php echo $slika( 'munna-02.jpg', 'Tekuće kapi, svako jutro.' ); ?></div>
     </div>
@@ -37,7 +37,7 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Tvoj put korak po korak</div>
         <h2 class="nmunna__h2">Ključ je dosljednost.</h2>
-        <p class="nmunna__p">Prvi tjedan: rutina počinje i tijelo se navikava na svakodnevne kapi. Prvi mjesec: mnoge primjećuju da im omiljene traperice drugačije stoje na bokovima. Tri mjeseca: puni ritual od 90 dana. Šest mjeseci: uz svakodnevnu upotrebu rutina postaje dio života. Rezultati su postupni i razlikuju se od osobe do osobe.</p>
+        <p class="nmunna__p">Prvi tjedan: rutina počinje i tijelo se navikava na svakodnevne kapi. Prvi mjesec: mnoge primjećuju da im omiljene traperice drugačije stoje na bokovima. Tri mjeseca: puni ritual od tri mjeseca. Šest mjeseci: uz svakodnevnu upotrebu rutina postaje dio života. Rezultati su postupni i razlikuju se od osobe do osobe.</p>
       </div>
       <div class="nmunna__media"><?php echo $slika( 'munna-03.jpg', 'Ključ je dosljednost.' ); ?></div>
     </div>
