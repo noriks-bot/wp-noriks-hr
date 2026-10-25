@@ -1310,6 +1310,7 @@
   $is_draps_page = noriks_is_type( 'draps', $current_product_id );
   $is_faith_page = noriks_is_type( 'faith', $current_product_id );
   $is_classics_page = noriks_is_type( 'classics', $current_product_id );
+  $is_pikseland_page = noriks_is_type( 'pikseland', $current_product_id );
   $is_fieldops_page = noriks_is_type( 'fieldops', $current_product_id );
   $is_destapacan_page = noriks_is_type( 'destapacan', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
@@ -1780,6 +1781,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_faith.php';
   } elseif ( $is_classics_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_classics.php';
+  } elseif ( $is_pikseland_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_pikseland.php';
   } elseif ( $is_fieldops_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
   } elseif ( $is_destapacan_page ) {

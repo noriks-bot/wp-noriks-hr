@@ -99,6 +99,9 @@ $pik_vs = array(
         </div>
       <?php endforeach; ?>
     </div>
+    <div class="pik-vs-img">
+      <img src="<?php echo esc_url( $pik_i . 'pik-games.webp' ); ?>" alt="PIKSELAND konzola s 58.000 igara" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -157,7 +160,7 @@ $pik_vs = array(
 
   /* 4) Usporedba */
   .pik-vs { background: #f0efe9; padding: 50px 0; }
-  .pik-table { max-width: 700px; margin: 0 auto; background: #fff; border-radius: 12px; overflow: hidden; }
+  .pik-table { max-width: 700px; margin: 0 auto 30px; background: #fff; border-radius: 12px; overflow: hidden; }
   .pik-thead { display: grid; grid-template-columns: 1.2fr 1fr 1fr; background: #1c1c1c; color: #fff; font-weight: 700; font-size: 15px; padding: 14px 20px; }
   .pik-tr { display: grid; grid-template-columns: 1.2fr 1fr 1fr; border-bottom: 1px solid #e5e5e5; font-size: 15px; }
   .pik-tr:last-child { border-bottom: 0; }
@@ -165,6 +168,8 @@ $pik_vs = array(
   .pik-td-val { padding: 14px 20px; color: #333; text-align: center; }
   .pik-td-pik { background: #d4f4dd; font-weight: 600; }
   .pik-td-old { background: #f9f9f9; }
+  .pik-vs-img { max-width: 500px; margin: 0 auto; }
+  .pik-vs-img img { width: 100%; height: auto; border-radius: 12px; display: block; }
 
   /* 5) Family */
   .pik-family { background: #fff; padding: 50px 0; }
