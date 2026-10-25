@@ -1,18 +1,20 @@
 <?php
-// NORIKS Razgovorna Igra za Pravu Vjeru — mnenja kupcev. Generirano z postavi.js.
-$auto_reviews_en = array(
-    array("name" => "Ana M.", "text" => "Igrali smo u nedjelju. Bio nas je sedam i Bog je bio u zgradi. Plakali smo, jako puno se smijali i upoznali smo se kroz Krista. Bio je to otvoren i autentičan razgovor."),
-    array("name" => "Tomislav K.", "text" => "Četvero djece i svi mole za drugi paket! Nikad nisam vidio da toliko brzo zatraže nastavak igre."),
-    array("name" => "Petra S.", "text" => "Osam parova i nitko nije htio stati. Razgovarali smo do kasno u noć — o vjeri, o borbi, o milosti. Najbolje druženje ikad."),
-    array("name" => "Marko J.", "text" => "Igrala sam igru s mojom grupom djevojčica iz 9. razreda. Ja sam njihova voditeljica. Postavile su najtvrđa pitanja i bile su potpuno iskrene. Osjećala sam kako Bog radi."),
-    array("name" => "Ivana L.", "text" => "Ova igra je otvorila razgovore koje smo izbjegavali godinama. Duboko zahvalna za ovu igru."),
-    array("name" => "Josip P.", "text" => "Moja obitelj nikad nije toliko otvoreno razgovarala o vjeri. Wildcards su bili ključni — molitva usred igre je sve promijenila."),
-    array("name" => "Dina R.", "text" => "Nisam mislila da će me igra razgovoriti do suza, ali pitanja su bila tako iskrena. Preporučujem svima."),
-    array("name" => "Luka B.", "text" => "Savršeno za moju malu grupu. Pitanja su dovoljno duboka da potaknu razmišljanje, ali dovoljno jednostavna da svatko može sudjelovati."),
-    array("name" => "Nina T.", "text" => "Kupila sam za poklon i svi su bili oduševljeni. Odmah su otvorili i počeli igrati — trajalo je tri sata!"),
-    array("name" => "Filip G.", "text" => "Imam tri paketa — jedan kod kuće, jedan u crkvi i jedan za poklon. To govori sve."),
-    array("name" => "Maja D.", "text" => "Wildcards su genijalni. Nitko nije očekivao molitvu usred igre, ali bilo je to najljepše iskustvo."),
-    array("name" => "Tin V.", "text" => "Igra je pomogla mom sinu da se otvori o svojoj vjeri. Kao otac, to mi je značilo više nego što mogu izraziti riječima."),
-    array("name" => "Iva H.", "text" => "Nikad nisam igrala igru koja te tako duboko dotakne. Preporučujem svima koji traže autenticitet u vjeri."),
-    array("name" => "Mateo Š.", "text" => "Moja grupa prijatelja je igrala nakon crkve. Bili smo svi skeptični, ali završili smo u suzama zahvalnosti. Bog je bio prisutan."),
+// AUTO-GENERATED faith reviews — NORIKS Ne Samo Nedjeljom
+return array(
+    array( 'ocjena' => 5, 'osoba' => 'Marko B.', 'mjesto' => 'Zagreb', 'naslov' => 'Najbolja igra za malu grupu', 'komentar' => 'Koristimo je svaki tjedan nakon susreta male grupe. Pitanja su stvarno dobra — neka su lagana, neka duboka. Nema pritiska. Mogu preporuciti.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Ana K.', 'mjesto' => 'Split', 'naslov' => 'Konacno razgovori s dubinom', 'komentar' => 'Igrali smo s prijateljima nakon vecere i razgovor trajao do kasno u noc. Kartice su nam pomogle prijeći s povrsnih tema na stvarne stvari. Stvarno preporucujem.' ),
+    array( 'ocjena' => 4, 'osoba' => 'Josip M.', 'mjesto' => 'Rijeka', 'naslov' => 'Izazovno na pravi nacin', 'komentar' => 'Neka pitanja su bila nezgodna, ali u dobrom smislu. Pomoglo mi je da vidim vjeru prijatelja na nov nacin. Jedino bih volio jos kartica.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Petra S.', 'mjesto' => 'Osijek', 'naslov' => 'Savrseno za obitelj', 'komentar' => 'Igramo s tinejdzerima. Ne moram ih prisiljavati da pricaju — kartice to rade umjesto mene. Bas je dobro osmisljeno.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Ivan R.', 'mjesto' => 'Zadar', 'naslov' => 'Wildcards su bili hit', 'komentar' => 'Nisam ocekivao da ce mi Wildcard kartice toliko znaciti, ali kada netko izvuce "molitva za osobu lijevo" — stvarno je snazno. Preporucujem svima.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Maja T.', 'mjesto' => 'Pula', 'naslov' => 'Jednostavno i duboko', 'komentar' => 'Igra je jednostavna za igrati, ali razgovori su bili duboki. Nije bilo neudobnosti — sve je teklo prirodno. Definitivno vrijedi novca.' ),
+    array( 'ocjena' => 4, 'osoba' => 'Luka P.', 'mjesto' => 'Slavonski Brod', 'naslov' => 'Dobro za one koji pocinu', 'komentar' => 'Tek sam poceo istrazivati vjeru i ova igra mi je pomogla otvoriti se bez osjecaja suda. Cijenim taj pristup.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Nina D.', 'mjesto' => 'Karlovac', 'naslov' => 'Tri razine su savrsene', 'komentar' => 'Zagrijavanje je lagano, Iskrenost postaje ozbiljnija, a Dubina — to je gdje stvarno raste povezanost. Bas je dobro osmisljeno.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Stjepan Z.', 'mjesto' => 'Varazdin', 'naslov' => 'Obavezno za crkvu', 'komentar' => 'Koristimo je u crkvenoj mladezi. Mladima se jako svidja — konacno nesto sto nije dosadno.' ),
+    array( 'ocjena' => 4, 'osoba' => 'Ivana H.', 'mjesto' => 'Sibenik', 'naslov' => 'Pomoglo mi da se otvorim', 'komentar' => 'Nisam osoba koja lako dijeli stvari, ali kartice su mi olaksale. Osjecam se vise povezana s grupom sada.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Tomislav V.', 'mjesto' => 'Dubrovnik', 'naslov' => 'Sjajno osmisljeno', 'komentar' => 'Pitanja su precizno sastavljena — niti prelagana niti pretesca. Bas je uravnotezeno. Koristimo je svaki mjesec.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Kristina L.', 'mjesto' => 'Zabok', 'naslov' => 'Razgovori koji traju', 'komentar' => 'Igrali smo prije mjesec dana i jos uvijek pricamo o nekim pitanjima. To je tocno ono sto treba.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Damir C.', 'mjesto' => 'Samobor', 'naslov' => 'Odlicna zamjena za dosadne veceri', 'komentar' => 'Umjesto gledanja TV-a, izvucemo kartice. Svaki put naucimo nesto novo jedno o drugom.' ),
+    array( 'ocjena' => 4, 'osoba' => 'Elena F.', 'mjesto' => 'Koprivnica', 'naslov' => 'Malo je bilo izazovno', 'komentar' => 'Neka pitanja su bila tesca nego sto sam ocekivala, ali upravo to je bio cilj. Bilo je vrijedno.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Marijan K.', 'mjesto' => 'Bjelovar', 'naslov' => 'Savrseno za hod vjere', 'komentar' => 'Bez obzira gdje ste u hodu vjere, ove kartice ce vas pogurati dalje. Jako mi se svidja koncept.' ),
+    array( 'ocjena' => 5, 'osoba' => 'Lucija G.', 'mjesto' => 'Virovitica', 'naslov' => 'Najbolji poklon koji sam dala', 'komentar' => 'Kupila sam je za prijateljicu i sad svi u tom krugu koriste je. Najboljih 17 eura koje sam potrosila.' )
 );

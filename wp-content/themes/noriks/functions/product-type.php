@@ -304,6 +304,7 @@ function noriks_product_type_map() : array {
         'black-friday'            => array( 'black-friday' ),
         'orto'                    => array( 'orto' ),
         'calendar'                => array( 'orto-calendar', 'calendar' ),
+        'faith'                   => array( 'orto-faith', 'faith' ),
         // NORIKS Travel — posteljica za pse u automobilu.
         'travel'                  => array( 'orto-travel', 'travel' ),
     );
@@ -1387,6 +1388,13 @@ if ( ! function_exists( 'noriks_insoles_sizes' ) ) {
 if ( ! function_exists( 'noriks_calendar_sizes' ) ) {
     /** NORIKS Calendar — digitalni obiteljski kalendar (bez velicina). */
     function noriks_calendar_sizes() {
+        return array();
+    }
+}
+
+if ( ! function_exists( 'noriks_faith_sizes' ) ) {
+    /** NORIKS Faith — igra razgovora za pravu vjeru (bez velicina). */
+    function noriks_faith_sizes() {
         return array();
     }
 }

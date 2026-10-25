@@ -580,6 +580,14 @@
           <?php elseif ( noriks_is_type( 'calendar' ) ): ?>
 
            Niste jedini koji traže jednostavan način organizacije obiteljskog života.
+          <?php elseif ( noriks_is_type( 'faith' ) ): ?>
+
+           Niste jedini koji traže dublji razgovor o vjeri.
+
+
+          <?php elseif ( noriks_is_type( 'travel' ) ): ?>
+
+           Niste jedini koji svog psa voze na stražnjem sjedalu bez udobne posteljice.
 
 
 
@@ -1130,6 +1138,14 @@
            <?php elseif ( noriks_is_type( 'calendar' ) ): ?>
 
             Tisuće obitelji već koristi NORIKS Calendar – svi termini, zadaci i obiteljski raspored vidljivi na jednom ekranu, bez papira i bez pokušaja da dijete zapamti što je dogovoreno.
+           <?php elseif ( noriks_is_type( 'faith' ) ): ?>
+
+            Tisuće grupa i obitelji već koristi NORIKS Faith – 150 kartica za duboke razgovore o vjeri, tri razine dubine i Wildcards za molitvu, zahvalnost i ohrabrenje.
+
+
+           <?php elseif ( noriks_is_type( 'travel' ) ): ?>
+
+            Tisuće vlasnika pasa već koristi NORIKS Travel posteljicu – 5 cm pjene koja ublažava pritisak na kukove i zglobove, skidiva navlaka na patent zatvarač i neklizuća baza koja drži posteljicu na mjestu čak i na zavojima.
 
 
            <?php else: ?>
@@ -1241,6 +1257,8 @@
   $is_snug_page       = noriks_is_type( 'snug', $current_product_id );
   $is_kompwom_page    = noriks_is_type( 'kompwom', $current_product_id );
   $is_calendar_page   = noriks_is_type( 'calendar', $current_product_id );
+  $is_faith_page     = noriks_is_type( 'faith', $current_product_id );
+  $is_travel_page     = noriks_is_type( 'travel', $current_product_id );
   $is_pal_page        = noriks_is_type( 'pal', $current_product_id );
   $is_slim_page       = noriks_is_type( 'slim', $current_product_id );
   $is_relief_page      = noriks_is_type( 'relief', $current_product_id );
@@ -1343,7 +1361,7 @@
   $is_viinia_page     = noriks_is_type( 'viinia', $current_product_id );
   $is_flomasteri_page = noriks_is_type( 'flomasteri', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_calendar_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_viinia_page || $is_flomasteri_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_calendar_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_viinia_page || $is_flomasteri_page || $is_faith_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_slippers_page ? 'NORIKS Slippers papuče'
@@ -1475,6 +1493,7 @@
   if ( $is_vacuumsealer_page ) { $rv_fallback_title = 'NORIKS VacuumSealer vakuumski aparat'; }
   if ( $is_airtravel_page ) { $rv_fallback_title = 'NORIKS AirTravel putni ruksak'; }
   if ( $is_calendar_page ) { $rv_fallback_title = 'NORIKS Calendar digitalni obiteljski kalendar'; }
+  if ( $is_faith_page ) { $rv_fallback_title = 'NORIKS Faith igra razgovora za pravu vjeru'; }
 
   // Univerzalno (Dejan, 23. 10.): ce za izdelek ni posebej dolocenega naslova, naj kartice mnenj
   // navajajo TA izdelek in ne privzete sive majice. Velja za vse nove izdelke (kategorija orto-*).
@@ -1759,6 +1778,10 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_destapacan.php';
   } elseif ( $is_calendar_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_calendar.php';
+  } elseif ( $is_faith_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_faith.php';
+  } elseif ( $is_travel_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_travel.php';
   } else {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
@@ -3322,6 +3345,74 @@ $calendar_faq = array(
   array(
     'questioon' => 'Što ako nisam zadovoljan?',
     'answer'    => 'Imate 30 dana za povrat novca bez ikakvih pitanja. Ako kalendar ne odgovara vašoj obitelji, vraćamo pun iznos.',
+  ),
+);
+
+// NORIKS Faith (orto-faith) — igra razgovora za pravu vjeru.
+$faith_faq = array(
+    array(
+        'q' => 'Koliko kartica je u igri?',
+        'a' => 'Igra sadrzi 150 kartica podijeljenih u tri razine dubine — Zagrijavanje, Iskrenost i Dubina — plus Wildcard kartice za molitvu, zahvalnost i ohrabrenje.'
+    ),
+    array(
+        'q' => 'Je li igra prikladna za sve dobne skupine?',
+        'a' => 'Da. Pitanja su osmisljena tako da budu dostupna tinejdzerima i odraslima, ali dubina dijaloga ovisi o skupini. Neke kartice mogu biti izazovnije — procjenite prema dobnoj strukturi i ugodi grupe.'
+    ),
+    array(
+        'q' => 'Koliko osoba moze igrati?',
+        'a' => 'Igra je savrsena za 2–8 osoba, ali moze se prilagoditi i za vece skupine u razgovoru u krugu.'
+    ),
+    array(
+        'q' => 'Je li potrebno biti vjernik?',
+        'a' => 'Ne. Igra poziva na iskreno razmisljanje o vjeri, ali je otvorena svima — ukljucujuci one koji istrazuju, sumnjaju ili postavljaju pitanja.'
+    ),
+    array(
+        'q' => 'Koliko dugo traje jedna igra?',
+        'a' => '30–90 minuta, ovisno o broju kartica koje izvucete i koliko duboko idete u razgovor. Mozete je prekinuti i nastaviti kasnije.'
+    ),
+    array(
+        'q' => 'Kako vracam proizvod ako nisam zadovoljan?',
+        'a' => '30 dana imate pravo na povrat novca, bez dodatnih pitanja. Dovoljno je kontaktirati nasu podrsku za klijente.'
+    ),
+    array(
+        'q' => 'Je li dostava besplatna?',
+        'a' => 'Da, besplatna dostava vrijedi za narudzbe iznad 70 €. Isporuka obicno traje 3–7 radnih dana.'
+    )
+);
+
+// NORIKS Travel (orto-travel) — posteljica za pse u automobilu.
+$travel_faq = array(
+  array(
+    'questioon' => 'Koje veličine posteljica ima?',
+    'answer'    => 'Standardna (130 × 61 cm) odgovara većini automobila, SUV-ova i manjih pick-upova. XL (152 × 61 cm) za full-size pick-upove i full-size SUV-ove. Obje su duboke 5 cm.',
+  ),
+  array(
+    'questioon' => 'Može li se prati u mašini?',
+    'answer'    => 'Da. Izvadite pjenu, skinite navlaku na patent zatvarač i operite je na nježnom programu. Zatim sušite na zraku. Pjenu čistite vlažnom krpom.',
+  ),
+  array(
+    'questioon' => 'Hoće li posteljica klizati po sjedalu?',
+    'answer'    => 'Ne. Donja strana koristi silikonske točke preko sloja za vuču koje drže posteljicu na mjestu na koži, tkanini ili plastici — čak i na zavojima i naglom kočenju.',
+  ),
+  array(
+    'questioon' => 'Jel posteljica vodootporna?',
+    'answer'    => 'Da. Oxford 600D tkanina s poliuretanskim premazom blokira slinu, vodu i prolijevanja. Jednostavno obrišite površinu ili operite navlaku.',
+  ),
+  array(
+    'questioon' => 'Mogu li je koristiti i kod kuće?',
+    'answer'    => 'Da. Idealna je kao posteljica u dnevnoj sobi, hodniku ili bilo gdje gdje pas voli drijemati — ne-klizuća baza radi na svim podovima.',
+  ),
+  array(
+    'questioon' => 'Za koje pasmine je prikladna?',
+    'answer'    => 'Standardna veličina odgovara većini pasmina (labrador, zlatni retriver, bokser ili dva manja psa). XL za najveće pasmine (njemački ovčar, mastif, danski dog).',
+  ),
+  array(
+    'questioon' => 'Postaje li pjena ravna nakon nekog vremena?',
+    'answer'    => 'Ne. Koristimo 25D rebound pjenu koja vraća oblik nakon svakog korištenja. Čak nakon stotina vožnji i godina upotrebe, pjena zadržava potporu.',
+  ),
+  array(
+    'questioon' => 'Što ako nisam zadovoljan?',
+    'answer'    => 'Imate 30 dana za povrat novca bez ikakvih pitanja. Ako posteljica ne odgovara vašem psu ili automobilu, vraćamo pun iznos.',
   ),
 );
 
