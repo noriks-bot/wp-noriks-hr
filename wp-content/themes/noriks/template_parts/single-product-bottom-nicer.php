@@ -86,6 +86,9 @@ if ( noriks_is_type( 'classics' ) ) {
 if ( noriks_is_type( 'munna' ) ) {
     include $noriks_pb_dir . 'why-munna.php';
 }
+if ( noriks_is_type( 'corrector' ) ) {
+    include $noriks_pb_dir . 'why-corrector.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
