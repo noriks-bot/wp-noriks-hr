@@ -1192,7 +1192,7 @@
             Tisuće obitelji već koristi NORIKS Calendar – svi termini, zadaci i obiteljski raspored vidljivi na jednom ekranu, bez papira i bez pokušaja da dijete zapamti što je dogovoreno.
            <?php elseif ( noriks_is_type( 'faith' ) ): ?>
 
-            Tisuće grupa i obitelji već koristi NORIKS Faith – 150 kartica za duboke razgovore o vjeri, tri razine dubine i Wildcards za molitvu, zahvalnost i ohrabrenje.
+            Tisuće grupa i obitelji već koristi NORIKS razgovornu igru – 165 karata za duboke razgovore o vjeri, tri razine dubine i jokeri za molitvu i ohrabrenje.
 
 
            <?php elseif ( noriks_is_type( 'devotions' ) ): ?>
@@ -3454,32 +3454,32 @@ $pikseland_faq = array(
 
 $faith_faq = array(
     array(
-        'q' => 'Koliko kartica je u igri?',
-        'a' => 'Igra sadrzi 150 kartica podijeljenih u tri razine dubine — Zagrijavanje, Iskrenost i Dubina — plus Wildcard kartice za molitvu, zahvalnost i ohrabrenje.'
+        'q' => 'Za koju je dob igra namijenjena?',
+        'a' => 'Pitanja su osmišljena za tinejdžere i odrasle, otprilike od 14 godina. Igra odlično funkcionira u grupama mladih, studentskim i odraslim malim grupama, u obitelji ili s prijateljima koji žele produbiti razgovore o vjeri.'
     ),
     array(
-        'q' => 'Je li igra prikladna za sve dobne skupine?',
-        'a' => 'Da. Pitanja su osmisljena tako da budu dostupna tinejdzerima i odraslima, ali dubina dijaloga ovisi o skupini. Neke kartice mogu biti izazovnije — procjenite prema dobnoj strukturi i ugodi grupe.'
+        'q' => 'Je li samo za kršćane ili za one koji su već čvrsti u vjeri?',
+        'a' => 'Nikako. Namjerno je sastavljena tako da u iskren i otvoren razgovor pozove i vjernike i one koji tek traže – bez pritiska i osuđivanja. Bez obzira jeste li duboko ukorijenjeni u vjeri ili još istražujete, pitanja su smislena i pristupačna.'
     ),
     array(
-        'q' => 'Koliko osoba moze igrati?',
-        'a' => 'Igra je savrsena za 2–8 osoba, ali moze se prilagoditi i za vece skupine u razgovoru u krugu.'
+        'q' => 'Koliko osoba može igrati odjednom?',
+        'a' => 'Najbolje 2 do 8 igrača, ali stroge granice nema. Igru možete prilagoditi za razgovor u dvoje, za grupu ili čak za osobno razmišljanje i pisanje dnevnika.'
     ),
     array(
-        'q' => 'Je li potrebno biti vjernik?',
-        'a' => 'Ne. Igra poziva na iskreno razmisljanje o vjeri, ali je otvorena svima — ukljucujuci one koji istrazuju, sumnjaju ili postavljaju pitanja.'
+        'q' => 'Jesu li pitanja preintenzivna ili preosobna?',
+        'a' => 'Igra ima tri razine – počinje lagano i postupno ide dublje. Svaku kartu uvijek možete preskočiti ako vam se čini preosobnom. Cilj je iskrena povezanost, a ne prisilne emocije.'
     ),
     array(
-        'q' => 'Koliko dugo traje jedna igra?',
-        'a' => '30–90 minuta, ovisno o broju kartica koje izvucete i koliko duboko idete u razgovor. Mozete je prekinuti i nastaviti kasnije.'
+        'q' => 'Može li se koristiti u crkvi, u malim grupama ili na susretima mladih?',
+        'a' => 'Naravno. Mnoge zajednice koriste je za početak rada malih grupa, za dublju povezanost ili za vođenje grupnih razgovora. Sadržaj je iskren i utemeljen na Svetom pismu, bez pretjerane formalnosti.'
     ),
     array(
-        'q' => 'Kako vracam proizvod ako nisam zadovoljan?',
-        'a' => '30 dana imate pravo na povrat novca, bez dodatnih pitanja. Dovoljno je kontaktirati nasu podrsku za klijente.'
+        'q' => 'Po čemu se razlikuje od drugih igara s pitanjima?',
+        'a' => 'Spaja humor, svjedočanstvo, razmišljanje i vjeru na način koji djeluje stvarno. Ne radi se samo o tome da se bolje upoznate – nego o otvaranju srca i stvaranju prostora za nešto trajno. U igri je 165 karata kroz tri razine, s 15 jokera pomiješanih kroz sve razine.'
     ),
     array(
-        'q' => 'Je li dostava besplatna?',
-        'a' => 'Da, besplatna dostava vrijedi za narudzbe iznad 70 €. Isporuka obicno traje 3–7 radnih dana.'
+        'q' => 'Mogu li vratiti igru ako mi ne odgovara?',
+        'a' => 'Da. Imate 30 dana za povrat novca. Dostava je besplatna iznad 70 €, a plaćate pouzećem kad paket stigne.'
     )
 );
 
