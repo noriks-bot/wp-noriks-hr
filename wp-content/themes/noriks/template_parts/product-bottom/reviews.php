@@ -2204,7 +2204,15 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     function avatarHtml(avatarUrl){
       if(isNogavice){ return ''; }
       if(avatarUrl){
-        return '<div class="avatar"><img src="' + esc(avatarUrl) + '" alt="" loading="lazy" /></div>';
+        const escaped = esc(avatarUrl);
+        const div = document.createElement('div');
+        div.className = 'avatar';
+        const img = document.createElement('img');
+        img.src = escaped;
+        img.alt = '';
+        img.loading = 'lazy';
+        div.appendChild(img);
+        return div.outerHTML;
       }
       return '<div class="avatar">👤</div>';
     }
