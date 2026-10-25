@@ -132,7 +132,7 @@ $nf = get_template_directory_uri() . '/img/birdie/';
 <!-- 2. Strobe Light -->
 <section class="nss-sect --rev">
   <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-strobe.webp' ); ?>" alt="NORIKS Birdie stroboskopska svjetla">
+    <img src="<?php echo esc_url( $nf . 'noriks-birdie-aqua.webp' ); ?>" alt="NORIKS Birdie stroboskopska svjetla">
   </div>
   <div class="nss-txt">
     <div class="nss-kicker">Utripajoća svjetla</div>
@@ -163,7 +163,7 @@ $nf = get_template_directory_uri() . '/img/birdie/';
 <!-- 3. Rechargeable -->
 <section class="nss-sect nss-band">
   <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-punjenje.webp' ); ?>" alt="NORIKS Birdie USB-C punjenje">
+    <img src="<?php echo esc_url( $nf . 'noriks-birdie-blossom.webp' ); ?>" alt="NORIKS Birdie USB-C punjenje">
   </div>
   <div class="nss-txt">
     <div class="nss-kicker">Punljiva baterija</div>
@@ -189,7 +189,7 @@ $nf = get_template_directory_uri() . '/img/birdie/';
 <!-- 4. Flashlight -->
 <section class="nss-sect --rev">
   <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-svjetlo.webp' ); ?>" alt="NORIKS Birdie bljeskalica">
+    <img src="<?php echo esc_url( $nf . 'noriks-birdie-cantaloupe.webp' ); ?>" alt="NORIKS Birdie bljeskalica">
   </div>
   <div class="nss-txt">
     <div class="nss-kicker">Nova funkcija</div>

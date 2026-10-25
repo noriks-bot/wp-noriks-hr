@@ -65,6 +65,9 @@ if ( noriks_is_type( 'acryliques' ) ) {
 if ( noriks_is_type( 'midnight' ) ) {
     include $noriks_pb_dir . 'why-midnight.php';
 }
+if ( noriks_is_type( 'gordura' ) ) {
+    include $noriks_pb_dir . 'why-gordura.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
