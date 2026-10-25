@@ -695,4 +695,9 @@ if ( noriks_is_type( 'flomasteri' ) ) {
     include $noriks_pb_dir . 'why-flomasteri.php';
 }
 
+// PIKSELAND — retro gaming konzola (64GB/128GB/256GB)
+if ( noriks_is_type( 'pikseland' ) ) {
+    include $noriks_pb_dir . 'why-pikseland.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';

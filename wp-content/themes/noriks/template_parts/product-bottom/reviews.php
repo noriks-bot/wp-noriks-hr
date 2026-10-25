@@ -261,6 +261,10 @@
 
            Niste jedini kojima prozori i staklo ostanu s tragovima nakon čišćenja.
 
+          <?php elseif ( noriks_is_type( 'pikseland' ) ): ?>
+
+           Niste jedini u potrazi za savršenom retro-konzolom.
+
           <?php elseif ( noriks_is_type( 'brassiere' ) ): ?>
 
            Niste jedini u potrazi za grudnjakom koji ne žulja.
@@ -814,6 +818,10 @@
            <?php elseif ( noriks_is_type( 'giovasa' ) ): ?>
 
             Tisuće kućanstava već čisti staklo i površine s NORIKS Giovasa krpom – blistavo čisto samo s vodom, bez kemikalija i do 300+ pranja.
+
+           <?php elseif ( noriks_is_type( 'pikseland' ) ): ?>
+
+            Tisuće igrača već uživa u PIKSELAND konzoli – do 58.000 retro-igara, 40+ emulatora i 2 bežična kontrolera na jednom malom uređaju.
 
            <?php elseif ( noriks_is_type( 'brassiere' ) ): ?>
 
