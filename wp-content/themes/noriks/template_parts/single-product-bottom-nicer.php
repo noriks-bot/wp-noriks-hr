@@ -74,6 +74,12 @@ if ( noriks_is_type( 'womens' ) ) {
 if ( noriks_is_type( 'draps' ) ) {
     include $noriks_pb_dir . 'why-draps.php';
 }
+if ( noriks_is_type( 'faith' ) ) {
+    include $noriks_pb_dir . 'why-faith.php';
+}
+if ( noriks_is_type( 'classics' ) ) {
+    include $noriks_pb_dir . 'why-classics.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
