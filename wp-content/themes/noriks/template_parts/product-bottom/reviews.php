@@ -2670,6 +2670,7 @@ $is_mattresstopper  = ( function_exists('noriks_is_type') && noriks_is_type('mat
 $is_kidspillow      = ( function_exists('noriks_is_type') && noriks_is_type('kidspillow') );
 $is_vacuumsealer    = ( function_exists('noriks_is_type') && noriks_is_type('vacuumsealer') );
 $is_airtravel  = ( function_exists('noriks_is_type') && noriks_is_type('airtravel') );
+$is_viinia        = ( function_exists('noriks_is_type') && noriks_is_type('viinia') );
 $is_bowl          = ( function_exists('noriks_is_type') && noriks_is_type('bowl') );
 $is_seal          = ( function_exists('noriks_is_type') && noriks_is_type('seal') );
 $is_sr            = ( function_exists('noriks_is_type') && noriks_is_type('sr') );
