@@ -1416,6 +1416,7 @@
   if ( $is_maternityleggings_page ) { $rv_fallback_title = 'NORIKS MaternityLeggings tajice za trudnice'; }
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
+  if ( $is_slabproof_page ) { $rv_fallback_title = 'NORIKS SlabProof™ Radne Čarape'; }
   if ( $is_womens_page ) { $rv_fallback_title = 'NORIKS Ortopedske Cipele za Žene'; }
   if ( $is_gordura_page ) { $rv_fallback_title = 'NORIKS Seka Body Modelador'; }
   if ( $is_midnight_page ) { $rv_fallback_title = 'NORIKS Midnight Premium Majica'; }
@@ -2110,7 +2111,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // Avatar pools based on page category
   // Leak boxers + kompresijske majice + fieldops + insoles + giovasa + destapacan + calendar: text-only (no photos). Others: existing pools.
-  $avatar_type = ( $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page || $is_calendar_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
+  $avatar_type = ( $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
