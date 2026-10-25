@@ -4220,14 +4220,12 @@ $slabproof_faq = array(
     'answer'    => 'Strojno na hladnom, sušilica na niskoj temperaturi, zajedno s radnom odjećom. Bez ručnog pranja, sušenja na konopu i posebnog deterdženta.'),
   array('questioon' => 'Hoće li stvarno izdržati ili će se probušiti kao sve ostale?',
     'answer'    => 'Peta i prsti ojačani su dvostruko pletenim najlonom, točno ondje gdje čarape prve popuste. Ako vam ipak ne odgovaraju, imate <strong>30 dana za povrat novca</strong>.'),
-  array('questioon' => 'Kako funkcionira jamstvo? Gdje je kvaka?',
-    'answer'    => 'Nema kvake i ništa ne šaljete natrag. Pošaljite nam fotografiju istrošenog para e-mailom i šaljemo vam novi besplatno. Stari par zadržite za krpe u radionici. Bez računa i bez natezanja.'),
   array('questioon' => 'Kada ću osjetiti razliku?',
     'answer'    => 'Jastučenje već kad prvi put stanete u njima. Da ne spuštaju i da su suhe, kroz smjenu. Većina to primijeti već na putu kući prvi dan, a pravi znak je kad ih sljedeće jutro opet uzmete.'),
-  array('questioon' => 'Koliko košta dostava i koliko traje?',
-    'answer'    => 'Dostava je brza na kućnu adresu, a plaćate pouzećem pri preuzimanju.'),
+  array('questioon' => 'Koliko košta dostava i kako se plaća?',
+    'answer'    => 'Dostava je <strong>besplatna za narudžbe iznad 70 €</strong>, a plaćate pouzećem pri preuzimanju paketa.'),
   array('questioon' => 'Što ako mi jednostavno ne odgovaraju?',
-    'answer'    => 'Nosite ih par tjedana na poslu. Ako nisu najbolje radne čarape koje imate, vratite ih i dobivate cijeli iznos. Imate <strong>30 dana</strong> — nošene ili oprane, svejedno.'),
+    'answer'    => 'Imate <strong>30 dana za povrat novca</strong>. Ako niste zadovoljni, javite nam se i vraćamo vam novac.'),
 );
 
 $brassiere_faq = array(
