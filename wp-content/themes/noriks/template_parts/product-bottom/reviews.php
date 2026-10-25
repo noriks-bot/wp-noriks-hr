@@ -1459,6 +1459,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_travelpillow.php';
   } elseif ( $is_airtravel_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_airtravel.php';
+  } elseif ( $is_viinia_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_viinia.php';
   } elseif ( $is_vacuumsealer_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_vacuumsealer.php';
   } elseif ( $is_kidspillow_page ) {
