@@ -533,6 +533,10 @@
 
            Niste jedini koji traže savršenu zaštitu sluha za lov.
 
+          <?php elseif ( noriks_is_type( 'destapacano' ) ): ?>
+
+           Niste jedini kojima odvodi začepe mašću i kosom.
+
 
 
 
@@ -1035,6 +1039,10 @@
 
             Tisuće lovaca i strelaca već koristi NORIKS FieldOps Pro – zaštita sluha 27-31 dB, amplifikacija 4× i baterija 40 sati za sigurnost na lovu.
 
+           <?php elseif ( noriks_is_type( 'destapacano' ) ): ?>
+
+            Tisuće kućanstava već koristi NORIKS Destapacaño – aktivna pjena otpušuje odvod za 15 minuta, sigurno za sve cijevi i bez poziva vodoinstalatera.
+
 
            <?php else: ?>
         
@@ -1178,6 +1186,7 @@
   $is_utilitypants_page = noriks_is_type( 'utilitypants', $current_product_id );
   $is_hoodie_page = noriks_is_type( 'hoodie', $current_product_id );
   $is_fieldops_page = noriks_is_type( 'fieldops', $current_product_id );
+  $is_destapacano_page = noriks_is_type( 'destapacano', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
   $is_dishsheets_page = noriks_is_type( 'dishsheets', $current_product_id );
   $is_litterbox_page = noriks_is_type( 'litterbox', $current_product_id );
@@ -1616,6 +1625,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_flomasteri.php';
   } elseif ( $is_fieldops_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
+  } elseif ( $is_destapacano_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_destapacano.php';
   } else {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
@@ -2605,6 +2616,34 @@ $is_sr            = ( function_exists('noriks_is_type') && noriks_is_type('sr') 
 $is_dental        = ( function_exists('noriks_is_type') && noriks_is_type('dental') );
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
 if ( $is_cloath || $is_bra || $is_hyd || $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic || $is_lift || $is_kneeheat || $is_pre || $is_hug || $is_dental || $is_cloud || $is_snore || $is_seal || $is_sr || $is_home || $is_red || $is_snug || $is_kompwom || $is_pal || $is_slim || $is_bowl || $is_relief || $is_gelseat || $is_kneetape || $is_celleg || $is_stepcloud ) { $is_knc = false; } // carry sock cat but are NOT socks
+
+// NORIKS Destapacaño (prah za čišćenje odvoda) — product FAQ (NORIKS).
+$destapacano_faq = array(
+  array(
+    'questioon' => 'Služi li za otpušavanje cijevi i umivaonika?',
+    'answer'    => 'Da. NORIKS Destapacaño otapa mast, kosu i nakupljenu prljavštinu u cijevima i odvodima. Djeluje već pri prvoj upotrebi, bez alata i bez napora.'
+  ),
+  array(
+    'questioon' => 'Uklanja li neugodne mirise?',
+    'answer'    => 'Da. Uklanja ostatke i bakterije koji stvaraju miris iznutra cijevi, ne samo na površini. Rezultat je odmah primjetan.'
+  ),
+  array(
+    'questioon' => 'Kako se pravilno koristi?',
+    'answer'    => 'Vrlo jednostavno: dodajte prah direktno u odvod i polijte vrućom vodom. Pričekajte 10 do 15 minuta i gotovo. Bez alata i bez vodoinstalatera.'
+  ),
+  array(
+    'questioon' => 'Je li sigurno za cijevi?',
+    'answer'    => 'Da. Dizajnirano je da djeluje bez oštećivanja kućnih cijevi, uključujući PVC i metal. Sigurna i učinkovita formula.'
+  ),
+  array(
+    'questioon' => 'Koliko često se preporučuje korištenje?',
+    'answer'    => 'Jednom tjedno za održavanje i prevenciju. Tako izbjegavate čepove i mirise prije nego se pojave i uštedite pozive vodoinstalatera.'
+  ),
+  array(
+    'questioon' => 'Koliko traje dostava?',
+    'answer'    => 'Obrađujemo narudžbe u 24–72 sata i dostava stiže za 2 do 5 radnih dana. Besplatna dostava iznad 70 €.'
+  ),
+);
 
 // NORIKS FIT (kompresijska/oblikujuća majica) — product FAQ, replaces ONLY the
 // "Informacije o Proizvodu" container. (Prijevod s reference, NORIKS FIT.)

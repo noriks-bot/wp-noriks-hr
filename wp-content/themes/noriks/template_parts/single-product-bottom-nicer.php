@@ -118,10 +118,11 @@ if ( noriks_is_type( 'bra' ) ) {
     include $noriks_pb_dir . 'why-bra.php';
 }
 if ( noriks_is_type( 'ondersteun' ) ) {
-if ( noriks_is_type( 'destapacan' ) ) {
-    include $noriks_pb_dir . 'why-destapacan.php';
-}
     include $noriks_pb_dir . 'why-ondersteun.php';
+}
+
+if ( noriks_is_type( 'destapacan' ) ) {
+    include $noriks_pb_dir . 'why-destapacano.php';
 }
 
 // NORIKS HYD (orto-hyd) — boca za vodikovu vodu
