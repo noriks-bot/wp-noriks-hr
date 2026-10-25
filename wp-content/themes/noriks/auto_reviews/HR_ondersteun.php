@@ -1,5 +1,5 @@
 <?php
-// auto_reviews: NORIKS ONDERSTEUN (orto-ondersteun) — grudnjak s potporom za grudi i leda.
+// auto_reviews: NORIKS SoftBack (orto-ondersteun) — grudnjak s potporom za grudi i leda.
 // 16 recenzija, prevedeno iz izvorne nizozemske stranice.
 return array(
   array('name'=>'Ivana K.','city'=>'Zagreb','date'=>'2025-08-12','rating'=>5,'text'=>'Dostava je bila brza i sve je bilo kao što je opisano. Kupila bih ga opet bez razmišljanja. Imam košaricu D i nikad se nisam osjećala tako dobro poduprtom u grudnjaku bez žice.'),

@@ -692,7 +692,7 @@
 
            <?php elseif ( noriks_is_type( 'ondersteun' ) ): ?>
 
-           Tisuće žena već nosi NORIKS ONDERSTEUN – prekrižena potpora za leđa, lift bez žica i široke naramenice koje ne sijeku.
+           Tisuće žena već nosi NORIKS SoftBack – prekrižena potpora za leđa, lift bez žica i široke naramenice koje ne sijeku.
 
            <?php elseif ( noriks_is_type( 'hyd' ) ): ?>
 
@@ -1177,7 +1177,7 @@
 
            <?php elseif ( noriks_is_type( 'destapacan' ) ): ?>
 
-            Tisuće kućanstava već koristi NORIKS Destapacaño – aktivna pjena otpušuje odvod za 15 minuta, sigurno za sve cijevi i bez poziva vodoinstalatera.
+            Tisuće kućanstava već koristi NORIKS DrainPro – aktivna pjena otpušuje odvod za 15 minuta, sigurno za sve cijevi i bez poziva vodoinstalatera.
 
            <?php elseif ( noriks_is_type( 'calendar' ) ): ?>
 
@@ -1471,7 +1471,7 @@
                      : ( $is_cloud_page ? 'NORIKS Cloud jastuk za koljena'
                      : ( $is_cloath_page ? 'Polar NORIKS Cloth XXL krpa'
                      : ( $is_bra_page ? 'NORIKS BRA grudnjak'
-                     : ( $is_ondersteun_page ? 'NORIKS ONDERSTEUN grudnjak'
+                     : ( $is_ondersteun_page ? 'NORIKS SoftBack grudnjak'
                      : ( $is_hyd_page ? 'NORIKS HYD boca za vodikovu vodu'
                      : ( $is_dental_page ? 'NORIKS ProSonic ultrazvučni čistač zubnih pomagala'
                      : ( $is_hug_page ? 'NORIKS Hugger nosivi termofor'
@@ -2851,11 +2851,11 @@ $is_dental        = ( function_exists('noriks_is_type') && noriks_is_type('denta
 $is_knc = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') );
 if ( $is_cloath || $is_bra || $is_hyd || $is_ortopas || $is_bunion || $is_fisiorest || $is_norikshers || $is_leakboxers || $is_kompmajice || $is_jastuk || $is_nosilka || $is_kidsnest || $is_kneefix || $is_controlpro || $is_noriks_cards || $is_brush || $is_hairmagic || $is_lift || $is_kneeheat || $is_pre || $is_hug || $is_dental || $is_cloud || $is_snore || $is_seal || $is_sr || $is_home || $is_red || $is_snug || $is_kompwom || $is_pal || $is_slim || $is_bowl || $is_relief || $is_gelseat || $is_kneetape || $is_celleg || $is_stepcloud ) { $is_knc = false; } // carry sock cat but are NOT socks
 
-// NORIKS Destapacaño (prah za čišćenje odvoda) — product FAQ (NORIKS).
+// NORIKS DrainPro (prah za čišćenje odvoda) — product FAQ (NORIKS).
 $destapacan_faq = array(
   array(
     'questioon' => 'Služi li za otpušavanje cijevi i umivaonika?',
-    'answer'    => 'Da. NORIKS Destapacaño otapa mast, kosu i nakupljenu prljavštinu u cijevima i odvodima. Djeluje već pri prvoj upotrebi, bez alata i bez napora.'
+    'answer'    => 'Da. NORIKS DrainPro otapa mast, kosu i nakupljenu prljavštinu u cijevima i odvodima. Djeluje već pri prvoj upotrebi, bez alata i bez napora.'
   ),
   array(
     'questioon' => 'Uklanja li neugodne mirise?',

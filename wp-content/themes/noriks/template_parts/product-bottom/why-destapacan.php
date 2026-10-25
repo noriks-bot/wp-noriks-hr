@@ -1,6 +1,6 @@
 <?php
 /**
- * NORIKS Destapacaño — why sekcije 1:1 z originalom (8 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ * NORIKS DrainPro — why sekcije 1:1 z originalom (8 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/destapacan/';
@@ -13,7 +13,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">CIJELA KUĆA</div>
         <h2 class="wdestapacan__h2">Jedan proizvod, <em>više rješenja</em></h2>
-        <p class="wdestapacan__p">NORIKS Destapacaño je profesionalni prah za otčepljivanje odvoda. Otčepljuje začepljene cijevi, uklanja neugodne mirise iz samog izvora i otapa mast, kosu i čepove. Granule se sipaju izravno u odvod, a ostalo obavi reakcija s vrućom vodom.</p>
+        <p class="wdestapacan__p">NORIKS DrainPro je profesionalni prah za otčepljivanje odvoda. Otčepljuje začepljene cijevi, uklanja neugodne mirise iz samog izvora i otapa mast, kosu i čepove. Granule se sipaju izravno u odvod, a ostalo obavi reakcija s vrućom vodom.</p>
         <p class="wdestapacan__p">Koristi se u cijeloj kući: u kuhinjskom sudoperu, umivaoniku, tušu, kadi, WC školjki, cijevima i praonici. Tri različita čepa — mast u kuhinji, kosa u kupaonici i papir u WC-u — a ista posuda za sve.</p>
         <p class="wdestapacan__p">Ne oštećuje PVC cijevi i ne traži alat ni vodoinstalatera. Budući da je riječ o lužini, uvijek radite s rukavicama.</p>
         <p class="wdestapacan__zak">Sudoper, tuš, WC i praonica — jedna posuda za sve.</p>
@@ -28,7 +28,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
         <div class="wdestapacan__kicker">KUHINJSKI SUDOPER</div>
         <h2 class="wdestapacan__h2">Mast i ostaci hrane <em>nestaju s vodom</em></h2>
         <p class="wdestapacan__p">U kuhinjskom sudoperu najčešći je problem hladna mast i ostaci hrane koji se zalijepe za stijenku cijevi. Mast se skrućuje na zidovima cijevi i zatvara put vodi, a ostaci hrane uzrokuju neugodne mirise i čepove. Odvod se sužava i voda otječe sve sporije.</p>
-        <p class="wdestapacan__p">NORIKS Destapacaño je granulirani natrijev hidroksid čistoće 99 % — lužina visoke čistoće koja djeluje na mast, kosu i organske ostatke. U dodiru s mašću pretvara je u sapun — ta se reakcija zove saponifikacija — pa se ono što je bilo zalijepljeno za cijev jednostavno ispere vodom.</p>
+        <p class="wdestapacan__p">NORIKS DrainPro je granulirani natrijev hidroksid čistoće 99 % — lužina visoke čistoće koja djeluje na mast, kosu i organske ostatke. U dodiru s mašću pretvara je u sapun — ta se reakcija zove saponifikacija — pa se ono što je bilo zalijepljeno za cijev jednostavno ispere vodom.</p>
         <p class="wdestapacan__p">Ne trebate rastavljati sifon niti gurati žicu u odvod. Prah radi unutar cijevi, točno tamo gdje se nakupila mast, dok vi radite nešto drugo. Isto vrijedi i za ostatke sapuna te druge svakodnevne organske ostatke koji se s vremenom nakupljaju u odvodu.</p>
         <p class="wdestapacan__zak">Mast se pretvara u sapun i odlazi s vodom.</p>
       </div>
@@ -42,7 +42,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
         <div class="wdestapacan__kicker">KADA I TUŠ</div>
         <h2 class="wdestapacan__h2">Kosa i sapun u sifonu, <em>bez rastavljanja</em></h2>
         <p class="wdestapacan__p">U kadi i tušu odvod začepi kosa isprepletena sa sapunom. Kosa je jedan od glavnih uzroka začepljenja u kupaonicama, a sapunski ostaci nakupljaju se s vremenom i smanjuju protok vode. Taj čep sjedi duboko u sifonu, gdje ga ne možete dohvatiti rukom.</p>
-        <p class="wdestapacan__p">Kosa je čisti protein, a lužnata formula NORIKS Destapacaño razgrađuje je izravno u cijevi. Ne morate rastavljati sifon, ne morate gurati ruku u odvod i ne trebate nikakav alat. Lužina razbija kosu i ostatke prilijepljene uz stijenke cijevi, a ne samo vrh čepa koji vidite odozgo.</p>
+        <p class="wdestapacan__p">Kosa je čisti protein, a lužnata formula NORIKS DrainPro razgrađuje je izravno u cijevi. Ne morate rastavljati sifon, ne morate gurati ruku u odvod i ne trebate nikakav alat. Lužina razbija kosu i ostatke prilijepljene uz stijenke cijevi, a ne samo vrh čepa koji vidite odozgo.</p>
         <p class="wdestapacan__p">Nakon razgradnje dovoljno je isprati odvod vodom. Voda ponovno otječe, a vi niste morali dirati ništa od onoga što je bilo u cijevi.</p>
         <p class="wdestapacan__zak">Kosa se razgradi u cijevi — vi ne dirate ništa.</p>
       </div>
@@ -56,7 +56,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
         <div class="wdestapacan__kicker">WC ŠKOLJKA</div>
         <h2 class="wdestapacan__h2">Papir i organski ostaci <em>u zavoju cijevi</em></h2>
         <p class="wdestapacan__p">U WC školjki papir i organski ostaci zapnu u zavoju cijevi. Toaletni papir može izazvati potpuno ili djelomično začepljenje, voda se diže, a ispiranje ne radi kako treba. Jedino rješenje koje većina zna je pumpa ili poziv vodoinstalateru.</p>
-        <p class="wdestapacan__p">NORIKS Destapacaño razgrađuje sve organsko iznutra. Školjka ponovno normalno ispire — bez pumpe i bez poziva vodoinstalateru. Nakon toga školjku koristite kao i prije.</p>
+        <p class="wdestapacan__p">NORIKS DrainPro razgrađuje sve organsko iznutra. Školjka ponovno normalno ispire — bez pumpe i bez poziva vodoinstalateru. Nakon toga školjku koristite kao i prije.</p>
         <p class="wdestapacan__p">Isti prah koristite u cijeloj kući: u sudoperu, kadi, WC školjki i praonici. Ne oštećuje PVC cijevi. Uvijek ga koristite s rukavicama, jer je nagrizajući za kožu.</p>
         <p class="wdestapacan__zak">Tri različita čepa, jedna ista posuda.</p>
       </div>
@@ -111,9 +111,9 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">AKTIVNA PJENA</div>
         <h2 class="wdestapacan__h2">Pjena dolazi <em>tamo gdje tekućine procure</em></h2>
-        <p class="wdestapacan__p">NORIKS Destapacaño nije još jedna tekućina. To je formula koja se pretvara unutar cijevi i ostaje točno tamo gdje je problem. U dodiru s vrućom vodom prah reagira i raste u gustu pjenu u cijevi. Upravo ta pjena čini razliku između praha i običnog tekućeg sredstva.</p>
+        <p class="wdestapacan__p">NORIKS DrainPro nije još jedna tekućina. To je formula koja se pretvara unutar cijevi i ostaje točno tamo gdje je problem. U dodiru s vrućom vodom prah reagira i raste u gustu pjenu u cijevi. Upravo ta pjena čini razliku između praha i običnog tekućeg sredstva.</p>
         <p class="wdestapacan__p">Za razliku od tekućine koja padne i za nekoliko sekundi procuri, pjena ostaje prilijepljena točno na mjestu začepljenja. Radi na masti, ostacima i kosi dok vi radite nešto drugo — a zatim kanta vode i gotovo. Nema čekanja na majstora i nema rastavljanja cijevi.</p>
-        <p class="wdestapacan__p">Klasične metode traže više truda i vremena, a daju manje: tekuća sredstva i ocat često samo pomaknu vodu, a čep ostaje; pumpa i žica probiju prolaz, ali ostatke ostave na stijenkama. Bocu tekućine izlijete i za nekoliko sekundi je više nema u cijevi — pjena NORIKS Destapacaño ostaje, zato dolazi tamo gdje tekućina ne dolazi.</p>
+        <p class="wdestapacan__p">Klasične metode traže više truda i vremena, a daju manje: tekuća sredstva i ocat često samo pomaknu vodu, a čep ostaje; pumpa i žica probiju prolaz, ali ostatke ostave na stijenkama. Bocu tekućine izlijete i za nekoliko sekundi je više nema u cijevi — pjena NORIKS DrainPro ostaje, zato dolazi tamo gdje tekućina ne dolazi.</p>
         <p class="wdestapacan__zak">Tekućina procuri, pjena ostaje na čepu.</p>
       </div>
     </div>
@@ -124,7 +124,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
       <div class="wdestapacan__tekst wdestapacan__tekst--sredina">
         <div class="wdestapacan__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wdestapacan__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wdestapacan__p">NORIKS Destapacaño isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+        <p class="wdestapacan__p">NORIKS DrainPro isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
       </div>
       <div class="wdestapacan__pogoji">
         <div class="wdestapacan__pog"><strong>30 dana</strong><span>za povrat novca</span></div>

@@ -1361,14 +1361,14 @@ if ( ! function_exists( 'noriks_fieldops_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_destapacan_sizes' ) ) {
-    /** NORIKS Destapacaño (prah za čišćenje odvoda) — nema veličina, nema boja. */
+    /** NORIKS DrainPro (prah za čišćenje odvoda) — nema veličina, nema boja. */
     function noriks_destapacan_sizes() {
         return array();
     }
 }
 
 if ( ! function_exists( 'noriks_ondersteun_sizes' ) ) {
-    /** NORIKS ONDERSTEUN: veličina, košarica / opseg. */
+    /** NORIKS SoftBack: veličina, košarica / opseg. */
     function noriks_ondersteun_sizes() {
         return array(
             array( 'XS',  'košarica A – B' ),

@@ -1,5 +1,5 @@
 <?php
-// Review pool for NORIKS Destapacaño — prah za čišćenje odvoda.
+// Review pool for NORIKS DrainPro — prah za čišćenje odvoda.
 // Text-only (no images), Croatian — hand-written for this product.
 $auto_reviews_en = array(
     array("name" => "Marko T.",     "text" => "Odvod u tuš-kabini bio je gotovo potpuno začepljen kosom. Dodao sam prah, polio vrućom vodom i čekao 15 minuta — voda sad slobodno otječe. Preporučujem."),
