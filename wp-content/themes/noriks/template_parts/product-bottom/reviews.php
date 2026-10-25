@@ -4181,20 +4181,20 @@ $stepcloud_faq = array(
 );
 
 $giovasa_faq = array(
-  array('questioon' => 'Treba li mi kemijsko sredstvo za čišćenje?',
-    'answer'    => 'Ne. NORIKS GlassPro krpa čisti staklo i površine samo s vodom — mikrofilamentna vlakna učinkovito odstranjuju prah, masnoću i otiske prstiju bez ijedne kapi deterdženta.'),
-  array('questioon' => 'Koliko puta mogu oprati krpu prije nego što prestane raditi?',
-    'answer'    => 'Do 300+ pranja u perilici rublja na 60°C. Mikrofilamentna vlakna ne gube učinkovitost — krpa će vam služiti mjesecima, a nakon svakog pranja je spremna za ponovnu uporabu.'),
-  array('questioon' => 'Može li upijati tekućinu ili je samo za staklo?',
-    'answer'    => 'Upija do 1 litra vode — koristite je i za brisanje prolivene tekućine, čišćenje kuhinjskih površina, čišćenje kupaonice ili za obrisavanje automobila nakon pranja.'),
-  array('questioon' => 'Hoće li ostaviti tragove ili mrlje na staklu?',
-    'answer'    => 'Ne. Mikrofilamentna struktura briše bez tragova — samo navlažite krpu i obrišite staklo kružnim pokretima. Nema potrebe za dodatnim poliranjem ni papirom.'),
-  array('questioon' => 'Mogu li je koristiti za bilo koju površinu ili samo za staklo?',
-    'answer'    => 'Za staklo, ogledala, keramičke pločice, nehrđajući čelik, drvene površine, PVC, kuhinjske radne ploče — bilo koju glatku površinu. Ne koristi se na grubim ili neobrađenim površinama.'),
+  array('questioon' => 'Kako se pere NORIKS GlassPro?',
+    'answer'    => 'Perite je u perilici do 60 °C, bez omekšivača i bez sušilice. Tako zadržava sva svoja svojstva upijanja.'),
+  array('questioon' => 'Zadržava li učinkovitost nakon pranja?',
+    'answer'    => 'Da. Zahvaljujući gustim vlaknima od 600 g/m², krpa ostaje učinkovita i nakon više od 300 pranja.'),
+  array('questioon' => 'Je li učinkovita za pločice i stakla?',
+    'answer'    => 'Apsolutno. Čisti stakla, ogledala, pločice i sjajne površine bez mrlja, i to bez sredstava za čišćenje.'),
+  array('questioon' => 'Koliko je velika i od čega je?',
+    'answer'    => 'Dimenzije su 40 × 40 cm. Materijal: mikrovlakna i pamuk. Gušća strana hvata kamenac i prljavštinu, glatka strana polira.'),
+  array('questioon' => 'Kako se koristi?',
+    'answer'    => 'Navlažite krpu, iscijedite je i obrišite. Nema spreja prije ni ispiranja poslije — voda i vlakno obave posao.'),
   array('questioon' => 'Što ako mi ne odgovara?',
-    'answer'    => 'Imate <strong>30 dana za povrat novca</strong> — koristite krpu, operite je, testirajte na prozorima i površinama. Ako nije najbolja krpa koju ste imali, vratite je i dobivate puni iznos.'),
-  array('questioon' => 'Koliko košta dostava i koliko traje?',
-    'answer'    => 'Besplatna dostava iznad 70 € — naručite danas i krpa stiže na vašu kućnu adresu u roku nekoliko dana. Plaćanje pouzećem pri preuzimanju.'),
+    'answer'    => 'Imate <strong>30 dana za povrat novca</strong>. Ako niste zadovoljni, javite nam se i vraćamo vam novac.'),
+  array('questioon' => 'Kako se plaća i koliko košta dostava?',
+    'answer'    => 'Plaćate pouzećem pri preuzimanju paketa. Dostava je besplatna za narudžbe iznad 70 €.'),
 );
 
 $slabproof_faq = array(

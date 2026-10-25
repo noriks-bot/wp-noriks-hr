@@ -1,9 +1,10 @@
 <?php
 /**
- * product-bottom: NORIKS GlassPro — krpa iz mikrofilamenata (orto-giovasa).
- * Original: giovasa.com/products/panno-giovasa (IT) — čistilna krpa iz mikrofilamenata,
- * vpija do 1L vode, 300+ pranj, brez kemikalij, za steklo in površine.
- * Struktura: 6 sekcij, izmenjujoča ozadja, slika/video ob besedilu, NORIKS pogoji namesto 100-dnevne garancije originala.
+ * product-bottom: NORIKS GlassPro — krpa od mikrovlakana (orto-giovasa).
+ * Original: giovasa.com/products/panno-giovasa (IT).
+ * Sekcije 1:1 z originalom, isti vrstni red: kupci -> problem (mrlje se vrnejo) -> tri pokreta ->
+ * po cem se razlikuje (600 g/m2) -> 3x gusca od krpe iz trgovine -> usporedba -> mnenja -> NORIKS pogoji
+ * (namesto 100-dnevne garancije originala).
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -11,172 +12,198 @@ $ngv      = get_template_directory_uri() . '/img/giovasa/';
 $ngv_path = get_template_directory() . '/img/giovasa/';
 $ngv_img  = function( $file, $alt ) use ( $ngv, $ngv_path ) {
   if ( ! $file || ! file_exists( $ngv_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ngv . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ngv . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';
 };
-$ngv_video = function( $file, $poster, $label, $cls = '' ) use ( $ngv, $ngv_path ) {
-  if ( ! file_exists( $ngv_path . $file ) ) { return ''; }
-  return '<div class="ngv-vid ' . esc_attr( $cls ) . '"><video src="' . esc_url( $ngv . $file ) . '" poster="' . esc_url( $ngv . $poster ) . '"'
-    . ' muted autoplay loop playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video></div>';
-};
-$ngv_kses = array( 'strong' => array(), 'em' => array(), 'br' => array() );
-$ngv_tick = '<span class="ngv-dot" aria-hidden="true">✓</span>';
 
-/* koraki uporabe */
-$ngv_steps = array(
-  array( 'Navlažite krpu', 'Krpu navlažite pod mlazom vode — ne potrebujete nobenih čistil.' ),
-  array( 'Očistite površino', 'Brišite steklo, kuhinjske površine ali kopalnico — mikrovlakna učinkovito odstranjujejo prah in maščobo.' ),
-  array( 'Operite in ponovno uporabite', 'Po uporabi krpo operite v pralnem stroju pri 60°C in ponovno uporabite — do 300+ pranj.' ),
+$ngv_usporedba = array(
+  'Profesionalna gustoća 600 g/m²',
+  'Uklanja mrlje bez sredstava za čišćenje',
+  'Upija do 1 litre vode',
+  'Jednostavna za korištenje',
+  'Zadržava upijanje i nakon 300+ pranja',
 );
 
-$ngv_n = 0; // števec sekcij
-$ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-tint' : ''; };
+$ngv_mnenja = array(
+  array( 'noriks-glasspro-kupac-1.jpg', 'Ivana D.', 'Bila sam prilično skeptična… ali ove krpe upijaju apsolutno sve u trenu. Štedim puno vremena, a moja ogledala nikad nisu bila ovako čista!' ),
+  array( 'noriks-glasspro-kupac-2.jpg', 'Petra K.', 'Samo jedan potez po stijenci tuša i već je bila suha. Nisam morala ponovno prelaziti. Nevjerojatno.' ),
+  array( 'noriks-glasspro-kupac-3.jpg', 'Marina H.', 'Vrlo izdržljiva, nema znakova trošenja ni nakon više pranja. I dalje upija kao prvi dan.' ),
+);
 ?>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<div class="ngv">
 
-<!-- 1) BREZ KEMIKALIJ -->
-<section class="ngv-sec<?php echo $ngv_cls(); ?>">
-  <div class="ngv-wrap">
-    <div class="ngv-row2">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-upotreba.webp', 'NORIKS GlassPro krpa čisti steklo brez kemikalij' ); ?></div>
-      <div class="ngv-copy">
-        <p class="ngv-kicker">Čisto brez kemikalij</p>
-        <h2 class="ngv-h3">Steklo blistavo čisto — <em>samo s vodom</em></h2>
-        <p>Krpa iz <strong>mikrofilamenata</strong> čisti prozore, steklo in gladke površine <strong>brez kemikalij</strong>. Samo navlažite krpu in brišite — mikroskopska vlakna učinkovito odstranjujejo prah, maščobo i otiske prstiju, ne ostavljajući tragove.</p>
-        <p>Bez mirisa kemikalija, bez ostataka — samo blistavo čiste površine.</p>
+  <!-- 1) KUPCI -->
+  <section class="ngv-s ngv-s--bg">
+    <div class="ngv-v">
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-hero.jpg', 'NORIKS GlassPro krpa u stvarnoj kupaonici' ); ?></div>
+      <div class="ngv-tekst">
+        <div class="ngv-kicker">Pravi ljudi, prave kupaonice</div>
+        <h2 class="ngv-h2">Kamenac, mrlje, bijeli veo. <em>Dovoljna je jedna krpa.</em></h2>
+        <p class="ngv-p">Od stvarnih ljudi, u stvarnim kuhinjama i kupaonicama. Pogledajte što kažu nakon mjesec dana s NORIKS GlassPro krpom.</p>
+        <p class="ngv-p">Stakla bez mrlja, čak i na jakom suncu. Krpa upija do 1 litre vode, a čisti bez spreja i bez kemijskih sredstava — samo voda i vlakno.</p>
+        <p class="ngv-p">Muka s kamencem? Gotova. Gusta vlakna od 600 g/m² hvataju prljavštinu, a krpa se pere u perilici više od 300 puta.</p>
+        <p class="ngv-zak">Ocjena 4,8 od 120.000 NORIKS kupaca.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 2) VPIJANJE 1L VODE -->
-<section class="ngv-sec<?php echo $ngv_cls(); ?>">
-  <div class="ngv-wrap">
-    <div class="ngv-row2 ngv-row2--rev">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-vpijanje.webp', 'Mikrofilamenti vpijajo do 1 litra vode' ); ?></div>
-      <div class="ngv-copy">
-        <p class="ngv-kicker">Visoka vpojnost</p>
-        <h2 class="ngv-h3">Vpije do <em>1 litra vode</em></h2>
-        <p>Ena sama krpa <strong>vpije do 1 litra vode</strong> — idealno za čiščenje velikih površin brez dodatnega ožemanja. Mikrovlakna zadržijo vodo in vlago, tako da lahko s krpo enostavno obrišete steklo, ploščice ali kuhinjske površine.</p>
-        <ul class="ngv-points">
-          <li><?php echo $ngv_tick; ?><span>Vpije <strong>do 1L vode</strong></span></li>
-          <li><?php echo $ngv_tick; ?><span>Brez kapljanja in madežev</span></li>
-        </ul>
+  <!-- 2) PROBLEM -->
+  <section class="ngv-s">
+    <div class="ngv-v ngv-v--rev">
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-problem.gif', 'Mrlje od vode na slavini nakon brisanja' ); ?></div>
+      <div class="ngv-tekst">
+        <div class="ngv-kicker">Zašto se mrlje vraćaju</div>
+        <h2 class="ngv-h2">Obrišete. Deset minuta kasnije <em>mrlje su se vratile.</em></h2>
+        <p class="ngv-p">Bijeli veo na miješalici, mrlje na stijenci tuša, kolutovi na inoxu. To nije prljavština: <strong>to je voda koja se osušila na mjestu.</strong></p>
+        <p class="ngv-p">Obična krpa zasiti se u tri poteza, počne razmazivati umjesto upijati, a kamenac se taloži točno tamo gdje ste upravo očistili.</p>
+        <p class="ngv-p">NORIKS GlassPro upija do 1 litre vode prije nego što se zasiti. Površina je suha već nakon prvog poteza, ne ostaje ništa za brisanje, pa <strong>nema ničega što bi ostavilo mrlju.</strong></p>
+        <p class="ngv-zak">Suho nakon prvog poteza — bez mrlja.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 3) TRAJNOSTNOST 300+ PRANJ -->
-<section class="ngv-sec<?php echo $ngv_cls(); ?>">
-  <div class="ngv-wrap">
-    <div class="ngv-row2">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-trajnostnost.webp', 'Krpa se opere 300+ krat' ); ?></div>
-      <div class="ngv-copy">
-        <p class="ngv-kicker">Dolga življenjska doba</p>
-        <h2 class="ngv-h3">Lahko oprete <em>več kot 300-krat</em></h2>
-        <p>Krpa NORIKS GlassPro zdržuje <strong>300+ pranj</strong> v pralnem stroju pri 60°C. Po uporabi jo preprosto vrzite v pralni stroj, posušite in ponovno uporabite — mesece čistih površin brez potrebe po novih krpah ali papirnate brisačah.</p>
-        <p class="ngv-big">Trajnostna izbira, ki varčuje z denarjem in varuje okolje.</p>
+  <!-- 3) TRI POKRETA -->
+  <section class="ngv-s ngv-s--bg">
+    <div class="ngv-v">
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-tri-pokreta.gif', 'Navlažite, iscijedite i obrišite' ); ?></div>
+      <div class="ngv-tekst">
+        <div class="ngv-kicker">Kako se koristi</div>
+        <h2 class="ngv-h2">Tri pokreta. <em>Bez sredstava.</em> To je sve.</h2>
+        <p class="ngv-p">Navlažite krpu. Iscijedite je. I obrišite. <strong>Nema četvrtog koraka</strong>, nema spreja prije, nema ispiranja poslije. Voda i vlakno obave posao.</p>
+        <p class="ngv-p">Gušća strana hvata kamenac i prljavštinu. Glatka strana polira i daje sjaj. Okrenete krpu, prijeđete jednom, i površina je suha, čista, bez mrlja.</p>
+        <p class="ngv-p">Ogledalo, staklo, miješalica, pločice: <strong>isti pokret posvuda.</strong></p>
+        <p class="ngv-zak">Navlažite, iscijedite, obrišite.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 4) KAKO UPORABITI -->
-<section class="ngv-sec<?php echo $ngv_cls(); ?>">
-  <div class="ngv-wrap">
-    <div class="ngv-row2 ngv-row2--rev">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-koraki.webp', 'Kako uporabljati NORIKS GlassPro krpo — 3 koraki' ); ?></div>
-      <div class="ngv-copy">
-        <p class="ngv-kicker">Kako uporabljati</p>
-        <h2 class="ngv-h3">Tri koraka <em>do čistih površin</em></h2>
-        <ol class="ngv-steps">
-          <?php foreach ( $ngv_steps as $k => $s ) : ?>
-          <li><span class="ngv-step__n"><?php echo (int) ( $k + 1 ); ?></span><span><strong><?php echo esc_html( $s[0] ); ?></strong> <?php echo esc_html( $s[1] ); ?></span></li>
-          <?php endforeach; ?>
-        </ol>
+  <!-- 4) PO CEMU SE RAZLIKUJE -->
+  <section class="ngv-s">
+    <div class="ngv-v ngv-v--rev">
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-razlika.gif', 'NORIKS GlassPro upija vodu u jednom potezu' ); ?></div>
+      <div class="ngv-tekst">
+        <div class="ngv-kicker">Gustoća 600 g/m²</div>
+        <h2 class="ngv-h2">Po čemu se NORIKS GlassPro <em>razlikuje</em></h2>
+        <p class="ngv-p"><span class="ngv-tick" aria-hidden="true">✓</span> <strong>Kraj kamenca, kraj muke.</strong> Bijeli veo na staklima, kolutovi na inoxu, mrlje na ogledalu u kupaonici. S NORIKS GlassPro krpom <strong>dovoljan je jedan potez</strong>: površina je čista i takva ostaje dok se suši.</p>
+        <p class="ngv-p"><span class="ngv-tick" aria-hidden="true">✓</span> <strong>Upija do 1 litre vode i zadržava je.</strong> Tamo gdje se klasična mikrovlakna zasite i počnu razmazivati, NORIKS GlassPro <strong>nastavlja upijati</strong>. Prijeđete jednom, površina je suha. Nema drugog poteza ni mrlje koja se vrati dok se suši.</p>
+        <p class="ngv-p"><span class="ngv-tick" aria-hidden="true">✓</span> <strong>Napravljena da traje godinama.</strong> Pere se u perilici i zadržava moć upijanja pranje za pranjem. Jedna kupnja koja zamjenjuje desetke jednokratnih proizvoda.</p>
+        <p class="ngv-zak">Gusta vlakna od 600 g/m² — jedan potez je dovoljan.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 5) PRIMERI UPORABE -->
-<section class="ngv-sec<?php echo $ngv_cls(); ?>">
-  <div class="ngv-wrap">
-    <div class="ngv-row2">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-primeri.webp', 'Krpa za prozore, kuhinjske površine, kopalnico' ); ?></div>
-      <div class="ngv-copy">
-        <p class="ngv-kicker">Vsestransko čiščenje</p>
-        <h2 class="ngv-h3">Za prozore, kuhinjo <em>in kopalnico</em></h2>
-        <p>Uporabite krpo za <strong>prozore, steklene površine, kuhinjske ploščice, kopalniško opremo, avtomobilska stekla</strong> in vse gladke površine. Mikrovlakna učinkovito čistijo brez prask in odrgnin.</p>
-        <ul class="ngv-points">
-          <li><?php echo $ngv_tick; ?><span>Prozori in steklene površine</span></li>
-          <li><?php echo $ngv_tick; ?><span>Kuhinjske ploščice in delovne površine</span></li>
-          <li><?php echo $ngv_tick; ?><span>Kopalnica, ogledala, pipa</span></li>
-          <li><?php echo $ngv_tick; ?><span>Avtomobilska stekla</span></li>
-        </ul>
+  <!-- 5) TRI PUTA GUSCA -->
+  <section class="ngv-s ngv-s--bg">
+    <div class="ngv-v">
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-gustoca.gif', 'NORIKS GlassPro je tri puta gušća od obične krpe' ); ?></div>
+      <div class="ngv-tekst">
+        <div class="ngv-kicker">Isplati se</div>
+        <h2 class="ngv-h2">Skuplja od krpe iz trgovine. <em>Ali i tri puta gušća.</em></h2>
+        <p class="ngv-p">Tri pakiranja mikrovlakana, sprej protiv kamenca, rolice kuhinjskog papira. I mrlje koje se svejedno vrate deset minuta kasnije. Nije skupa cijena krpe, <strong>skupo je sve što ponovno kupujete da popravite čišćenje.</strong></p>
+        <p class="ngv-p"><strong>NORIKS GlassPro kupujete samo jednom.</strong> I prestajete kupovati sve ostalo.</p>
+        <p class="ngv-p">Isprobajte je na površini koja vas najviše živcira. Razliku ćete vidjeti odmah.</p>
+        <p class="ngv-zak">Jedna krpa umjesto sprejeva, papira i hrpe mikrovlakana.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 6) NORIKS POGOJI -->
-<section class="ngv-sec<?php echo $ngv_cls(); ?>">
-  <div class="ngv-wrap">
-    <div class="ngv-row2 ngv-row2--rev">
-      <div class="ngv-media ngv-media--sq"><?php echo $ngv_img( 'noriks-glasspro-packshot.webp', 'NORIKS GlassPro krpa iz mikrofilamenata' ); ?></div>
-      <div class="ngv-copy">
-        <p class="ngv-kicker">Brez rizika</p>
-        <h2 class="ngv-h3">Pravo na povrat <em>u roku od 30 dana</em></h2>
-        <p>Stojimo iza svakog NORIKS proizvoda. Ako niste potpuno zadovoljni svojom novom krpom za čišćenje, javite nam se u roku od <strong>30 dana</strong> od primitka narudžbe i pomoći ćemo vam. Bez stresa i bez komplikacija — samo proizvodi koji rade onako kako trebaju.</p>
-        <p>Narudžbu šaljemo brzo, a platiti možete i <strong>pouzećem</strong>. Za narudžbe iznad 70 € dostava je besplatna.</p>
-        <p class="ngv-trust"><span>Pravo na povrat u roku od 30 dana</span><span>Besplatna dostava za narudžbe iznad 70 €</span><span>Plaćanje pouzećem</span><span>120.000 zadovoljnih kupaca</span><span>Ocjena 4,8</span></p>
+  <!-- 6) USPOREDBA -->
+  <section class="ngv-s">
+    <div class="ngv-v ngv-v--rev">
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-packshot.webp', 'NORIKS GlassPro krpa od mikrovlakana' ); ?></div>
+      <div class="ngv-tekst">
+        <div class="ngv-kicker">Usporedba</div>
+        <h2 class="ngv-h2">Zašto NORIKS GlassPro, a ne <em>mikrovlakna iz trgovine?</em></h2>
+        <p class="ngv-p">NORIKS GlassPro ultra upijajuća krpa napravljena je posebno s ovim prednostima:</p>
+        <table class="ngv-tab">
+          <thead><tr><th scope="col"></th><th scope="col">NORIKS GlassPro</th><th scope="col">Ostale</th></tr></thead>
+          <tbody>
+            <?php foreach ( $ngv_usporedba as $ngv_r ) : ?>
+            <tr><th scope="row"><?php echo esc_html( $ngv_r ); ?></th><td class="ngv-da">✓</td><td class="ngv-ne">✗</td></tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+        <p class="ngv-p ngv-p--mala">Dimenzije 40 × 40 cm. Materijal: mikrovlakna i pamuk. Za stakla, ogledala, pločice, slavine i sve sjajne površine. Pranje u perilici do 60 °C, bez omekšivača i bez sušilice.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- 7) MNENJA -->
+  <section class="ngv-s ngv-s--bg">
+    <div class="ngv-wrap">
+      <div class="ngv-kicker ngv-c">Mišljenja</div>
+      <h2 class="ngv-h2 ngv-c">Što kažu <em>naši kupci</em></h2>
+      <div class="ngv-mnenja">
+        <?php foreach ( $ngv_mnenja as $ngv_m ) : ?>
+        <figure class="ngv-mn">
+          <div class="ngv-media"><?php echo $ngv_img( $ngv_m[0], 'NORIKS GlassPro — iskustvo kupca ' . $ngv_m[1] ); ?></div>
+          <figcaption><strong><?php echo esc_html( $ngv_m[1] ); ?></strong><span>★★★★★</span><p><?php echo esc_html( $ngv_m[2] ); ?></p></figcaption>
+        </figure>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8) NORIKS POGOJI -->
+  <section class="ngv-s">
+    <div class="ngv-wrap ngv-c">
+      <div class="ngv-kicker">Kupujte bez brige</div>
+      <h2 class="ngv-h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+      <p class="ngv-p ngv-p--sredina">Isprobajte NORIKS GlassPro na površini koja vas najviše živcira. Ako niste zadovoljni, imate 30 dana za povrat novca — bez kompliciranja.</p>
+      <div class="ngv-pogoji">
+        <div class="ngv-pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="ngv-pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="ngv-pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="ngv-pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 
 <style>
-/* NORIKS GlassPro — mikrovlaknasta krpa */
-.ngv-sec { padding: 80px 0; position: relative; }
-.ngv-tint { background: #f8f9fa; }
-.ngv-wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
-.ngv-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.ngv-row2--rev { grid-template-columns: 1fr 1fr; }
-.ngv-row2--rev .ngv-media { order: 2; }
-.ngv-row2--rev .ngv-copy { order: 1; }
-
-.ngv-media img, .ngv-media video { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-.ngv-media--sq img { aspect-ratio: 1/1; object-fit: cover; }
-
-.ngv-kicker { font-size: 14px; font-weight: 600; text-transform: uppercase; color: #8b7355; letter-spacing: 1px; margin-bottom: 12px; }
-.ngv-h2 { font-size: 42px; font-weight: 700; line-height: 1.2; margin: 0 0 24px; }
-.ngv-h3 { font-size: 36px; font-weight: 700; line-height: 1.2; margin: 0 0 20px; }
-.ngv-h2 em, .ngv-h3 em { font-style: italic; color: #8b7355; }
-.ngv-c { text-align: center; }
-.ngv-lead { font-size: 18px; line-height: 1.6; color: #555; margin: 0 0 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
-.ngv-copy p { font-size: 17px; line-height: 1.7; margin: 0 0 16px; color: #333; }
-.ngv-big { font-size: 20px; font-weight: 600; color: #222; margin-top: 24px; }
-
-.ngv-points { list-style: none; padding: 0; margin: 24px 0; }
-.ngv-points li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
-.ngv-dot { display: inline-block; width: 24px; height: 24px; background: #8b7355; color: #fff; border-radius: 50%; text-align: center; line-height: 24px; flex-shrink: 0; font-size: 14px; }
-.ngv-points span { font-size: 16px; line-height: 1.6; }
-
-.ngv-steps { list-style: none; padding: 0; margin: 24px 0; counter-reset: ngv-step; }
-.ngv-steps li { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
-.ngv-step__n { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #8b7355; color: #fff; border-radius: 50%; font-size: 20px; font-weight: 700; flex-shrink: 0; }
-.ngv-steps span { font-size: 16px; line-height: 1.6; }
-
-.ngv-trust { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.ngv-trust span { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-
-@media (max-width: 768px) {
-  .ngv-sec { padding: 48px 0; }
-  .ngv-row2, .ngv-row2--rev { grid-template-columns: 1fr; gap: 32px; }
-  .ngv-row2--rev .ngv-media { order: 1; }
-  .ngv-row2--rev .ngv-copy { order: 2; }
-  .ngv-h2 { font-size: 32px; }
-  .ngv-h3 { font-size: 28px; }
-  .ngv-copy p { font-size: 16px; }
+/* NORIKS GlassPro — krpa od mikrovlakana */
+.ngv{color:#1c1c1c;font-family:inherit}
+.ngv-s{padding:56px 0;background:#fff}
+.ngv-s--bg{background:#f4f3ef}
+.ngv-wrap,.ngv-v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.ngv-v{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.ngv-v--rev .ngv-media{order:2}
+.ngv-v--rev .ngv-tekst{order:1}
+.ngv-media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.ngv-media img{width:100%;height:100%;object-fit:cover;display:block}
+.ngv-kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.ngv-h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.ngv-h2 em{font-style:italic}
+.ngv-p{font-size:16px;line-height:1.65;margin:0 0 14px;color:#333}
+.ngv-p--mala{font-size:14px;color:#666;margin-top:16px}
+.ngv-p--sredina{max-width:720px;margin-left:auto;margin-right:auto}
+.ngv-zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.ngv-tick{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;background:#1c1c1c;color:#fff;font-size:13px;margin-right:4px}
+.ngv-c{text-align:center}
+.ngv-tab{width:100%;border-collapse:collapse;margin:8px 0 0;font-size:15px}
+.ngv-tab th,.ngv-tab td{padding:11px 10px;border-bottom:1px solid #e6e3dc;text-align:center}
+.ngv-tab th[scope="row"]{text-align:left;font-weight:600}
+.ngv-tab thead th{font-weight:800;background:#f4f3ef}
+.ngv-da{color:#2e7d32;font-weight:800;font-size:18px}
+.ngv-ne{color:#b23b3b;font-weight:800;font-size:18px}
+.ngv-mnenja{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.ngv-mn{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.ngv-mn .ngv-media{border-radius:0;box-shadow:none}
+.ngv-mn figcaption{padding:16px 18px 20px}
+.ngv-mn figcaption strong{display:block;font-size:16px}
+.ngv-mn figcaption span{color:#f5a623;font-size:14px}
+.ngv-mn figcaption p{font-size:15px;line-height:1.6;margin:8px 0 0;color:#333}
+.ngv-pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.ngv-pog{background:#f4f3ef;border-radius:14px;padding:18px 12px}
+.ngv-pog strong{display:block;font-size:17px;font-weight:800}
+.ngv-pog span{font-size:14px;color:#555}
+@media (max-width:768px){
+  .ngv-s{padding:40px 0}
+  .ngv-v{grid-template-columns:1fr;gap:22px}
+  .ngv-v--rev .ngv-media,.ngv-media{order:0}
+  .ngv-v--rev .ngv-tekst,.ngv-tekst{order:1}
+  .ngv-mnenja{grid-template-columns:1fr}
+  .ngv-pogoji{grid-template-columns:1fr 1fr}
+  .ngv-tab{font-size:13px}
+  .ngv-tab th,.ngv-tab td{padding:9px 6px}
 }
 </style>
