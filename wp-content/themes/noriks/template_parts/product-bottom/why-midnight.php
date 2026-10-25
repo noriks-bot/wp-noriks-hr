@@ -1,6 +1,6 @@
 <?php
 /**
- * NORIKS Midnight – Konoplja Bambus Trajnostna Majica — why sekcije (1:1 z originalom). Generirano z postavi.js.
+ * NORIKS Project 001: Midnight — why sekcije (1:1 z originalom). Generirano z postavi.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $slika = function ( $dat, $alt ) {
@@ -13,66 +13,88 @@ $slika = function ( $dat, $alt ) {
   <section class="nmidnight__sekcija">
     <div class="nmidnight__v">
       <div class="nmidnight__tekst">
-        <div class="nmidnight__kicker">NAJJAČA TKANINA</div>
-        <h2 class="nmidnight__h2">9× jača od običnog pamuka</h2>
-        <p class="nmidnight__p">DuraFlow™ tkanina temelji se na konoplji – biljci koja je tisućljećima bila kraljica tekstila prije nego što je industrijski pamuk preuzeo tržište 1930-ih. Konopljina vlakna su prirodno otpornija na habanje, kidanje i rastezanje. Rezultat? Majica koja izgleda i osjeća se kao nova čak i nakon 50+ pranja. Dok se obični pamuk istanči, izblijedi i formi grudice, Midnight zadržava boju, oblik i strukturu godinama.</p>
+        <div class="nmidnight__kicker">POVRATAK KONOPLJE</div>
+        <h2 class="nmidnight__h2">Zašto je konoplja nestala s tržišta?</h2>
+        <p class="nmidnight__p">Prije 1930-ih, konoplja je pokrivala 80% svjetskog tekstila — najčvršća, najsvjetija, najfleksibilnija vlakna na planetu. Koristila se u brodogradnji, odjeći, istraživanjima, prehrani. Onda je počela politička propaganda. Cilj? Zaštititi profite industrije pamuka, sintetike i drvne mase. Konoplja je označena kao opasnost i praktički zabranjena na 90 godina. Danas vam vraćamo ono što vam je oduzeto. Project 001: Midnight je prvi korak u vraćanju konoplje tamo gdje joj je mjesto — na vaše tijelo.</p>
       </div>
-      <div class="nmidnight__media"><?php echo $slika( 'midnight-01.webp', '9× jača od običnog pamuka' ); ?></div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-01.webp', 'Zašto je konoplja nestala s tržišta?' ); ?></div>
     </div>
   </section>
 
   <section class="nmidnight__sekcija nmidnight__sekcija--bg">
     <div class="nmidnight__v">
       <div class="nmidnight__tekst">
-        <div class="nmidnight__kicker">PROZRAČNOST</div>
-        <h2 class="nmidnight__h2">Bez znoja. Bez mirisa.</h2>
-        <p class="nmidnight__p">Bambus (31% DuraFlow™ mješavine) prirodno upija vlagu i propušta zrak bolje od bilo koje sintetike. To znači da vaša koža ostaje suha čak i kad se znojite – majica ne lijepi, ne grije, ne ostavlja mrlje. Dok standardne crne majice nakon par sati počinju smrditi, Midnight ostaje svježa cijeli dan. Antibakterijska svojstva bambusa sprječavaju razvoj bakterija koje uzrokuju neugodan miris.</p>
+        <div class="nmidnight__kicker">DURAFLOW™ TEHNOLOGIJA</div>
+        <h2 class="nmidnight__h2">Kako majica može biti i čvrsta i prozračna?</h2>
+        <p class="nmidnight__p">DuraFlow™ je svjetska prvina. Spaja snagu konoplje, prozračnost bambusa i mekanoću organskog pamuka u tkaninsku strukturu od tri niti. Zašto tri? Dvonitna struktura je slabija. Četveronitna stvara konflikte među vlaknima i gubi stabilnost. Tri niti daju savršenu ravnotežu — jednoliku napetost, maksimalnu čvrstoću, optimalni protok zraka. Rezultat? Majica koja traje godinama, ali ne guši tijelo. Patent pending tehnologija koja mijenja pravila igre.</p>
       </div>
-      <div class="nmidnight__media"><?php echo $slika( 'midnight-02.webp', 'Bez znoja. Bez mirisa.' ); ?></div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-02.webp', 'Kako majica može biti i čvrsta i prozračna?' ); ?></div>
     </div>
   </section>
 
   <section class="nmidnight__sekcija">
     <div class="nmidnight__v">
       <div class="nmidnight__tekst">
-        <div class="nmidnight__kicker">KROJ ZA SNAŽNE</div>
-        <h2 class="nmidnight__h2">Podiže ramena. Skriva trbuh.</h2>
-        <p class="nmidnight__p">Midnight nije dizajniran za mršave tipove. Kroj je osmišljen za snažnije muškarce – širi prsi, prostorniji trbuh, duži kroj koji pokriva pojas. Ramena su strukturirana tako da vizualno šire gornji dio tijela, dok tamnija boja i vertikalni šavovi vizualno smanjuju pivski trbuh. Nećete izgledati kao da nosite vreću, niti kao da ste se utjerali u majicu 2 broja manju. Savršen balans između udobnosti i oblikovanja.</p>
+        <div class="nmidnight__kicker">ANTIMIKROBNO I PROZRAČNO</div>
+        <h2 class="nmidnight__h2">Zašto ne smrdi nakon cijelog dana?</h2>
+        <p class="nmidnight__p">Konoplja i bambus prirodno odbijaju bakterije. To nije marketinška priča — to su antimikrobna svojstva koja dolaze izravno iz vlakana. Znojenje se odvlači od kože, isparava brzo, ne ostaje u majici. Nema sintetičkih kemikalija, nema PFAS-a, nema plastike. Samo prirodna vlakna koja rade ono što priroda zna najbolje. Ostaješ suh. Ostaješ svjež. Ostaješ udoban — cijeli dan.</p>
       </div>
-      <div class="nmidnight__media"><?php echo $slika( 'midnight-03.webp', 'Podiže ramena. Skriva trbuh.' ); ?></div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-03.webp', 'Zašto ne smrdi nakon cijelog dana?' ); ?></div>
     </div>
   </section>
 
   <section class="nmidnight__sekcija nmidnight__sekcija--bg">
     <div class="nmidnight__v">
       <div class="nmidnight__tekst">
-        <div class="nmidnight__kicker">BEZ PFAS</div>
-        <h2 class="nmidnight__h2">Bez otrova na koži</h2>
-        <p class="nmidnight__p">PFAS kemikalije ('zauvijek kemikalije') koriste se u jeftinim sintetičkim majicama da bi bile vodootporne ili otporne na mrlje. Problem? Te kemikalije se ne razgrađuju, apsorbiraju se kroz kožu i nakupljaju u tijelu godinama. Povezane su s hormonalnim poremećajima, problemima s plodnošću i povećanim rizikom od raka. Midnight ne koristi niti jedan PFAS spoj. Čista konoplja, čisti bambus, čisti organski pamuk. Ništa između vas i prirode.</p>
+        <div class="nmidnight__kicker">BEZ POSEBNE NJEGE</div>
+        <h2 class="nmidnight__h2">Je li potrebna posebna briga?</h2>
+        <p class="nmidnight__p">Ne. Perete je normalno, sušite na niskoj temperaturi, nosit ćete je godinama. Nema posebnih uputa, nema glačanja, nema gužvanja. Vlakna konoplje i bambusa prirodno zadržavaju oblik i ne gube strukturu. Čak i nakon desetak pranja, majica izgleda kao nova. To je ono što se događa kad upotrijebite prava vlakna umjesto sintetičkih zamjena.</p>
       </div>
-      <div class="nmidnight__media"><?php echo $slika( 'midnight-04.webp', 'Bez otrova na koži' ); ?></div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-04.webp', 'Je li potrebna posebna briga?' ); ?></div>
     </div>
   </section>
 
   <section class="nmidnight__sekcija">
     <div class="nmidnight__v">
       <div class="nmidnight__tekst">
-        <div class="nmidnight__kicker">EKOLOGIJA</div>
-        <h2 class="nmidnight__h2">Majica koja ne uništava planetu</h2>
-        <p class="nmidnight__p">Konoplja raste bez pesticida, bez herbicida, bez umjetnih gnojiva. Koristi 50% manje vode od pamuka i obnavlja tlo umjesto da ga iscrpljuje. Bambus je najbrže rastuća biljka na planetu – može narasti 1 metar u 24 sata – i ne zahtijeva ponovno sadnje. Organski pamuk (18% mješavine) uzgaja se bez GMO sjemena i otrovnih kemikalija koje zagađuju rijeke i more. Svaka majica Midnight štedi otprilike 2.700 litara vode u usporedbi s konvencionalnom pamučnom majicom.</p>
+        <div class="nmidnight__kicker">DOŽIVOTNO JAMSTVO</div>
+        <h2 class="nmidnight__h2">Zašto dajete doživotno jamstvo?</h2>
+        <p class="nmidnight__p">Jer znamo koliko traje. Konoplja je najčvršće prirodno vlakno na planetu — nekad se koristila za brodska jedra i užad jer ništa drugo nije moglo izdržati vjetar, sol, vlagu i vrijeme. Danas to koristimo za majicu. Ako pukne, vratite je. Ako izgubi oblik, vratite je. Ako se ne svidite — vratite je bez pitanja. To nije marketinška trika. To je samopouzdanje u proizvod koji traje.</p>
       </div>
-      <div class="nmidnight__media"><?php echo $slika( 'midnight-05.webp', 'Majica koja ne uništava planetu' ); ?></div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-05.webp', 'Zašto dajete doživotno jamstvo?' ); ?></div>
     </div>
   </section>
 
   <section class="nmidnight__sekcija nmidnight__sekcija--bg">
     <div class="nmidnight__v">
       <div class="nmidnight__tekst">
-        <div class="nmidnight__kicker">DOŽIVOTNA GARANCIJA</div>
-        <h2 class="nmidnight__h2">Jednom kupite. Zauvijek nosite.</h2>
-        <p class="nmidnight__p">Noriks garantira da će Midnight izdržati dulje od bilo koje druge majice koju ste ikad nosili. Ako pukne šav, ako se majica istanči, ako se istegne ili deformira – kontaktirate nas i mi vam šaljemo novu. Bez dokaza o kupnji. Bez pitanja. Zato što vjerujemo da svaka majica treba trajati godinama, a ne mjesecima. To je naša obećanje – i zato stojimo iza svakog komada koji napusti našu tvornicu.</p>
+        <div class="nmidnight__kicker">100% EKOLOŠKO</div>
+        <h2 class="nmidnight__h2">Zašto je važno da je bez PFAS-a?</h2>
+        <p class="nmidnight__p">PFAS (per- i polifluoroalkilne tvari) su sintetičke kemikalije koje se ne razgrađuju u prirodi — poznate kao &quot;kemikalije zauvijek&quot;. Koriste se u fast fashion industriji za vodootpornost, mrlje, performanse. Problem? Ostaju u vašem tijelu i u okolini desetljećima. Mi koristimo konoplju, bambus i organski pamuk — bez sintetike, bez mikroplastike, bez toksina. 100% prirodno. 100% razgradivo. 100% odgovorno.</p>
       </div>
-      <div class="nmidnight__media"><?php echo $slika( 'midnight-06.webp', 'Jednom kupite. Zauvijek nosite.' ); ?></div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-06.webp', 'Zašto je važno da je bez PFAS-a?' ); ?></div>
+    </div>
+  </section>
+
+  <section class="nmidnight__sekcija">
+    <div class="nmidnight__v">
+      <div class="nmidnight__tekst">
+        <div class="nmidnight__kicker">OGRANIČENA PROIZVODNJA</div>
+        <h2 class="nmidnight__h2">Zašto dodajete samo 6.837 kupaca mjesečno?</h2>
+        <p class="nmidnight__p">Konoplja nije fast fashion materijal. Proizvodnja je mala, batch-ovi su ograničeni, kvaliteta je prioritet. Ne možemo praviti tisuće majica tjedno kao Zara ili H&M. Zato ograničavamo broj novih kupaca svaki mjesec — samo oni koji stvarno žele kvalitetu dobivaju pristup. Jednom kad ovaj batch nestane, čekate sljedeći. Ne guramo brzinu. Guramo trajnost.</p>
+      </div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-07.webp', 'Zašto dodajete samo 6.837 kupaca mjesečno?' ); ?></div>
+    </div>
+  </section>
+
+  <section class="nmidnight__sekcija nmidnight__sekcija--bg">
+    <div class="nmidnight__v">
+      <div class="nmidnight__tekst">
+        <div class="nmidnight__kicker">UNDRDOG KOLEKTIV</div>
+        <h2 class="nmidnight__h2">Što dobijete nakon kupnje?</h2>
+        <p class="nmidnight__p">Project 001: Midnight je ulaznica u Undrdog kolektiv. Nakon kupnje dobivate pristup budućim limited edition projektima — različitim bojama, stilovima, dizajnima koji neće biti dostupni nikome drugome. Ne kupujete samo majicu. Kupujete članstvo u pokretu koji vraća konopl ji njeno mjesto u muškoj odjeći. A usput? Možda izvučete i čvrsto zlato od 1 grama — jer dok fast fashion industrija krade od vas, mi vas nagrađujemo.</p>
+      </div>
+      <div class="nmidnight__media"><?php echo $slika( 'midnight-08.webp', 'Što dobijete nakon kupnje?' ); ?></div>
     </div>
   </section>
 </div>
