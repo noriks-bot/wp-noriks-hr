@@ -54,6 +54,7 @@ function noriks_product_type_map() : array {
         'womens' => array( 'orto-womens' ),
         'draps' => array( 'orto-draps' ),
         'faith' => array( 'orto-faith' ),
+        'devotions' => array( 'orto-devotions' ),
         'classics' => array( 'orto-classics' ),
         'fieldops'                => array( 'orto-fieldops' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
@@ -75,6 +76,8 @@ function noriks_product_type_map() : array {
         'hyd'                     => array( 'orto-hyd' ),
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
+        // NORIKS Corrector — korektor drzanja s nevidljivom podporom (samo velicina S / M / L).
+        'corrector'               => array( 'orto-corrector', 'corrector' ),
         // NORIKS Seal — rucni vakuumski aparat za hranu (bez atributa).
         'seal'                    => array( 'orto-seal', 'seal' ),
         // NORIKS FlexShirt — rastezljiva kosulja (boja + velicina + rukav).
@@ -305,6 +308,7 @@ function noriks_product_type_map() : array {
         'orto'                    => array( 'orto' ),
         'calendar'                => array( 'orto-calendar', 'calendar' ),
         'faith'                   => array( 'orto-faith', 'faith' ),
+        'devotions'               => array( 'orto-devotions', 'devotions' ),
         // NORIKS Travel — posteljica za pse u automobilu.
         'travel'                  => array( 'orto-travel', 'travel' ),
         // PIKSELAND — retro gaming konzola s 40+ emulatorima (64GB/128GB/256GB).
@@ -1397,6 +1401,13 @@ if ( ! function_exists( 'noriks_calendar_sizes' ) ) {
 if ( ! function_exists( 'noriks_faith_sizes' ) ) {
     /** NORIKS Faith — igra razgovora za pravu vjeru (bez velicina). */
     function noriks_faith_sizes() {
+        return array();
+    }
+}
+
+if ( ! function_exists( 'noriks_devotions_sizes' ) ) {
+    /** NORIKS Devotions — 365 dnevnih molitava (bez velicina). */
+    function noriks_devotions_sizes() {
         return array();
     }
 }

@@ -77,6 +77,9 @@ if ( noriks_is_type( 'draps' ) ) {
 if ( noriks_is_type( 'faith' ) ) {
     include $noriks_pb_dir . 'why-faith.php';
 }
+if ( noriks_is_type( 'devotions' ) ) {
+    include $noriks_pb_dir . 'why-devotions.php';
+}
 if ( noriks_is_type( 'classics' ) ) {
     include $noriks_pb_dir . 'why-classics.php';
 }

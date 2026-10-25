@@ -569,6 +569,10 @@
 
            Niste jedini koji traže dublje razgovore o vjeri
 
+          <?php elseif ( noriks_is_type( 'devotions' ) ): ?>
+
+           Niste jedini koji traže smislene trenutke vjere prije spavanja
+
           <?php elseif ( noriks_is_type( 'classics' ) ): ?>
 
            Niste jedini koji vole Fleecies
@@ -587,6 +591,10 @@
           <?php elseif ( noriks_is_type( 'faith' ) ): ?>
 
            Niste jedini koji traže dublji razgovor o vjeri.
+
+          <?php elseif ( noriks_is_type( 'devotions' ) ): ?>
+
+           Hiljade roditelja već koristi NORIKS Devotions za svakodnevnu molitvu s djecom — jednostavno, smisleno i bez prisiljavanja.
 
 
           <?php elseif ( noriks_is_type( 'travel' ) ): ?>
@@ -1265,7 +1273,8 @@
   $is_snug_page       = noriks_is_type( 'snug', $current_product_id );
   $is_kompwom_page    = noriks_is_type( 'kompwom', $current_product_id );
   $is_calendar_page   = noriks_is_type( 'calendar', $current_product_id );
-  $is_faith_page     = noriks_is_type( 'faith', $current_product_id );
+  $is_faith_page || $is_devotions_page     = noriks_is_type( 'faith', $current_product_id );
+  $is_devotions_page  = noriks_is_type( 'devotions', $current_product_id );
   $is_travel_page     = noriks_is_type( 'travel', $current_product_id );
   $is_pal_page        = noriks_is_type( 'pal', $current_product_id );
   $is_slim_page       = noriks_is_type( 'slim', $current_product_id );
@@ -1308,7 +1317,8 @@
   $is_gordura_page = noriks_is_type( 'gordura', $current_product_id );
   $is_womens_page = noriks_is_type( 'womens', $current_product_id );
   $is_draps_page = noriks_is_type( 'draps', $current_product_id );
-  $is_faith_page = noriks_is_type( 'faith', $current_product_id );
+  $is_faith_page || $is_devotions_page = noriks_is_type( 'faith', $current_product_id );
+  $is_devotions_page = noriks_is_type( 'devotions', $current_product_id );
   $is_classics_page = noriks_is_type( 'classics', $current_product_id );
   $is_pikseland_page = noriks_is_type( 'pikseland', $current_product_id );
   $is_fieldops_page = noriks_is_type( 'fieldops', $current_product_id );
@@ -1370,7 +1380,7 @@
   $is_viinia_page     = noriks_is_type( 'viinia', $current_product_id );
   $is_flomasteri_page = noriks_is_type( 'flomasteri', $current_product_id );
   // Back belt / bunion / fisiorest / norikshers / leak boxers / kompresijske majice / ortopedski jastuk take precedence even if they still carry the socks category.
-  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_calendar_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_viinia_page || $is_flomasteri_page || $is_faith_page || $is_pikseland_page ) { $is_nogavice_page = false; }
+  if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_page || $is_leakboxers_page || $is_kompmajice_page || $is_jastuk_page || $is_nosilka_page || $is_kidsnest_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_calendar_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_viinia_page || $is_flomasteri_page || $is_faith_page || $is_devotions_page || $is_pikseland_page ) { $is_nogavice_page = false; }
 
   // Fallback product name shown in review cards.
   $rv_fallback_title = $is_slippers_page ? 'NORIKS Slippers papuče'
@@ -1471,7 +1481,7 @@
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
   if ( $is_classics_page ) { $rv_fallback_title = 'NORIKS Classics'; }
-  if ( $is_faith_page ) { $rv_fallback_title = 'NORIKS Razgovorna Igra za Pravu Vjeru'; }
+  if ( $is_faith_page || $is_devotions_page ) { $rv_fallback_title = 'NORIKS Razgovorna Igra za Pravu Vjeru'; }
   if ( $is_draps_page ) { $rv_fallback_title = 'NORIKS EasySleep® 2 u 1 Pokrivač Koji Zamjenjuje Plahte'; }
   if ( $is_slabproof_page ) { $rv_fallback_title = 'NORIKS SlabProof™ Radne Čarape'; }
   if ( $is_womens_page ) { $rv_fallback_title = 'NORIKS Ortopedske Cipele za Žene'; }
@@ -1502,7 +1512,7 @@
   if ( $is_vacuumsealer_page ) { $rv_fallback_title = 'NORIKS VacuumSealer vakuumski aparat'; }
   if ( $is_airtravel_page ) { $rv_fallback_title = 'NORIKS AirTravel putni ruksak'; }
   if ( $is_calendar_page ) { $rv_fallback_title = 'NORIKS Calendar digitalni obiteljski kalendar'; }
-  if ( $is_faith_page ) { $rv_fallback_title = 'NORIKS Faith igra razgovora za pravu vjeru'; }
+  if ( $is_faith_page || $is_devotions_page ) { $rv_fallback_title = 'NORIKS Faith igra razgovora za pravu vjeru'; }
 
   // Univerzalno (Dejan, 23. 10.): ce za izdelek ni posebej dolocenega naslova, naj kartice mnenj
   // navajajo TA izdelek in ne privzete sive majice. Velja za vse nove izdelke (kategorija orto-*).
@@ -1779,6 +1789,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_draps.php';
   } elseif ( $is_faith_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_faith.php';
+  } elseif ( $is_devotions_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_devotions.php';
   } elseif ( $is_classics_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_classics.php';
   } elseif ( $is_pikseland_page ) {
@@ -1791,6 +1803,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_calendar.php';
   } elseif ( $is_faith_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_faith.php';
+  } elseif ( $is_devotions_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_devotions.php';
   } elseif ( $is_travel_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_travel.php';
   } else {
@@ -2181,12 +2195,12 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // Avatar pools based on page category
   // Leak boxers + kompresijske majice + fieldops + insoles + giovasa + destapacan + calendar: text-only (no photos). Others: existing pools.
-  $avatar_type = ( $is_classics_page || $is_faith_page || $is_pikseland_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
+  $avatar_type = ( $is_classics_page || $is_faith_page || $is_devotions_page || $is_pikseland_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_classics_page || $is_faith_page || $is_pikseland_page || $is_draps_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_destapacan_page || $is_calendar_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_insoles_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_viinia_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_birdie_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_classics_page || $is_faith_page || $is_devotions_page || $is_pikseland_page || $is_draps_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_destapacan_page || $is_calendar_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_insoles_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_viinia_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_birdie_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -3390,6 +3404,45 @@ $faith_faq = array(
     array(
         'q' => 'Koliko dugo traje jedna igra?',
         'a' => '30–90 minuta, ovisno o broju kartica koje izvucete i koliko duboko idete u razgovor. Mozete je prekinuti i nastaviti kasnije.'
+    ),
+    array(
+        'q' => 'Kako vracam proizvod ako nisam zadovoljan?',
+        'a' => '30 dana imate pravo na povrat novca, bez dodatnih pitanja. Dovoljno je kontaktirati nasu podrsku za klijente.'
+    ),
+    array(
+        'q' => 'Je li dostava besplatna?',
+        'a' => 'Da, besplatna dostava vrijedi za narudzbe iznad 70 €. Isporuka obicno traje 3–7 radnih dana.'
+    )
+);
+
+$devotions_faq = array(
+    array(
+        'q' => 'Za koju dob je ova molitva dizajnirana?',
+        'a' => 'One Moment With God For Kids dizajniran je za djecu od 6 do 12 godina. Molitve su napisane jednostavnim i privlacnim nacinom kako bi djeca razumjela znacajne lekcije o Bogu, vjeri, karakteru i svakodnevnom zivotu.'
+    ),
+    array(
+        'q' => 'Kako je strukturirana svaka molitva?',
+        'a' => 'Svaka molitva sadrzi kratku lekciju s biblijskim stihom, primjenu u zivotu djeteta i jednostavnu molitvu koja povezuje sve zajedno. Traje oko 1 minute.'
+    ),
+    array(
+        'q' => 'Koliko dugo traje svaka molitva?',
+        'a' => 'Molitve su dizajnirane da traju oko jedne minute. Dosta da djeca zadrze pozornost, a kratko dovoljno za rutinu prije spavanja.'
+    ),
+    array(
+        'q' => 'Moze li dijete citati samostalno?',
+        'a' => 'Da! Djeca koja citaju na osnovnoj razini mogu citati sama. Za mlađu djecu, roditelji mogu citati naglas ili citati zajedno.'
+    ),
+    array(
+        'q' => 'Zasto je dizajnirano za vrijeme spavanja?',
+        'a' => 'Vrijeme spavanja je prirodno mirno i usredotoceno doba — savrseno za kratki, smisleni trenutak povezivanja s Bogom. Isto postaje tiha, postojana navika koju djeca nose sa sobom dok rastu.'
+    ),
+    array(
+        'q' => 'Koji biblijski prijevod koristi?',
+        'a' => 'Molitve koriste New International Version (NIV) za jasnocu i citljivost.'
+    ),
+    array(
+        'q' => 'Sto ovu knjigu cini drugacijijom od ostalih djecjih molitava?',
+        'a' => 'Kratka, lako razumljiva, fokusirana na svakodnevni zivot djeteta. Svaka molitva pise tako da se osjecaju viđeni, cuti i shvaceni — ne propovijedani.'
     ),
     array(
         'q' => 'Kako vracam proizvod ako nisam zadovoljan?',
