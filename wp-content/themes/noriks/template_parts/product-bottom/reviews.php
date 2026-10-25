@@ -2204,9 +2204,9 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     function avatarHtml(avatarUrl){
       if(isNogavice){ return ''; }
       if(avatarUrl){
-        return `<div class="avatar"><img src="${esc(avatarUrl)}" alt="" loading="lazy" /></div>`;
+        return '<div class="avatar"><img src="' + esc(avatarUrl) + '" alt="" loading="lazy" /></div>';
       }
-      return `<div class="avatar">👤</div>`;
+      return '<div class="avatar">👤</div>';
     }
 
     // Append a chunk of cards into a grid
