@@ -7,7 +7,8 @@
 
 include(get_template_directory() . '/functions/product-type.php'); // central product-type resolver (load first)
 include(get_template_directory() . '/functions/performance.php');  // safe front-end performance tweaks
-include(get_template_directory() . '/functions/size-chart-once.php'); // tabela velikosti samo enkrat
+include(get_template_directory() . '/functions/size-chart-once.php');
+include(get_template_directory() . '/functions/vsebina-izdelka.php'); // podatkovni izdelki // tabela velikosti samo enkrat
 include(get_template_directory() . '/functions/checkout_mods.php');
 include(get_template_directory() . '/functions/klaviyo-email-links.php'); // Klaviyo maili: obnova kosarice + samodejni kupon
 include(get_template_directory() . '/functions/acf-text-fix.php'); // popravki besedil iz ACF nastavitev

@@ -18,6 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $noriks_pb_dir = get_template_directory() . '/template_parts/product-bottom/';
 
+// Podatkovni izdelek: vsebina je pri izdelku (_noriks_vsebina), koda po tipu ni potrebna.
+if ( function_exists( 'noriks_vsebina_izdelka' ) && noriks_vsebina_izdelka() ) {
+    include $noriks_pb_dir . 'why-podatki.php';
+}
+
 // STARTER (starter-paketi / orto-starter / orto-majica-bokserica)
 if ( noriks_is_type( 'starter' ) ) {
     include $noriks_pb_dir . 'why-starter.php';
