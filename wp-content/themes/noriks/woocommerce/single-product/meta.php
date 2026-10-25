@@ -506,8 +506,12 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
-         <?php if( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+
+         <?php if( noriks_is_type( 'destapacan', $current_product_id ) ): ?>
+
+                NORIKS Destapacaño je prah za čišćenje odvoda koji reagira s toplom vodom i stvara aktivnu pjenu. Ta pjena prodire duboko kroz cijevi, otapa nakupine masti, kose, sapunskih ostataka i organskih tvari, te čisti začepljenja za 10 do 15 minuta — bez raščlanjivanja sifona i bez posebnih alata.<br><br>Formula je sigurna za sve vrste kućnih instalacija — PVC, metal i druge materijale — i ne oštećuje cijevi. Istovremeno uklanja neugodne mirise iznutra cijevi i sprječava razvoj bakterija.<br><br>Preporučuje se redovito korištenje jednom tjedno kao preventiva — tako održavate odvode slobodne, bez nakupina i neugodnih mirisa, i izbjegavate skupe popravke i pozive vodoinstalatera.<br><br>Jedan paket traje dugo uz preventivno korištenje. NORIKS nudi 30 dana za povrat novca, besplatnu dostavu iznad 70 € i mogućnost plaćanja pouzećem. Već 120.000 kupaca diljem Europe koristi NORIKS proizvode.
+
+         <?php elseif( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
                 NORIKS KidsNest izrađen je od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA — s prozračnom pletenom navlakom.<br><br>Njegova 3-zonska ergonomska struktura nježno prihvaća glavu, podupire vrat i pomaže održati kralježnicu u prirodnom poravnanju — čak i kad se dijete tijekom noći puno okreće. Tako potiče disanje kroz nos i mirniji, dublji san.<br><br>Dostupan u tri veličine (1–3, 3–9 i 9–14 godina), raste s vašim djetetom i pruža pravu visinu potpore u svakoj fazi razvoja.
 
