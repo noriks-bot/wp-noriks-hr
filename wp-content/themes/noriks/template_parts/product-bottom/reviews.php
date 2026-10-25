@@ -108,6 +108,10 @@
 
            Niste jedini u potrazi za udobnom potporom i uspravnijim držanjem.
 
+          <?php elseif ( noriks_is_type( 'ondersteun' ) ): ?>
+
+           Niste jedini u potrazi za grudnjakom koji podiže i podupire bez žica.
+
           <?php elseif ( noriks_is_type( 'hyd' ) ): ?>
 
            Niste jedini u potrazi za boljom svakodnevnom hidracijom.
@@ -605,6 +609,10 @@
            <?php elseif ( noriks_is_type( 'bra' ) ): ?>
 
            Tisuće žena već nosi NORIKS BRA – bez žice, s prednjim zakopčavanjem i prekriženom potporom na leđima.
+
+           <?php elseif ( noriks_is_type( 'ondersteun' ) ): ?>
+
+           Tisuće žena već nosi NORIKS ONDERSTEUN – prekrižena potpora za leđa, lift bez žica i široke naramenice koje ne sijeku.
 
            <?php elseif ( noriks_is_type( 'hyd' ) ): ?>
 
@@ -1119,6 +1127,7 @@
   $is_cloud_page      = noriks_is_type( 'cloud', $current_product_id );
   $is_snore_page      = noriks_is_type( 'snore', $current_product_id );
   $is_bra_page        = noriks_is_type( 'bra', $current_product_id );
+  $is_ondersteun_page = noriks_is_type( 'ondersteun', $current_product_id );
   $is_hyd_page        = noriks_is_type( 'hyd', $current_product_id );
   $is_kneefix_page    = noriks_is_type( 'kneefix', $current_product_id );
   $is_controlpro_page = noriks_is_type( 'controlpro', $current_product_id );
@@ -1281,6 +1290,7 @@
                      : ( $is_cloud_page ? 'NORIKS Cloud jastuk za koljena'
                      : ( $is_cloath_page ? 'Polar NORIKS Cloth XXL krpa'
                      : ( $is_bra_page ? 'NORIKS BRA grudnjak'
+                     : ( $is_ondersteun_page ? 'NORIKS ONDERSTEUN grudnjak'
                      : ( $is_hyd_page ? 'NORIKS HYD boca za vodikovu vodu'
                      : ( $is_dental_page ? 'NORIKS ProSonic ultrazvučni čistač zubnih pomagala'
                      : ( $is_hug_page ? 'NORIKS Hugger nosivi termofor'
@@ -1301,7 +1311,7 @@
                      : ( $is_fisiorest_page ? 'NORIKS FisioRest'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
-                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )  ));
+                     : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )  ));
   if ( $is_widetoeshoes_page ) { $rv_fallback_title = 'NORIKS WideToeShoes tenisice sa širokim prednjim dijelom'; }
   if ( $is_thermoboots_page ) { $rv_fallback_title = 'NORIKS ThermoBoots vodootporne čizme s flisom'; }
   if ( $is_leatherboots_page ) { $rv_fallback_title = 'NORIKS LeatherBoots muške udobne kožne čizme'; }
@@ -1574,6 +1584,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_cloath.php';
   } elseif ( $is_bra_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bra.php';
+  } elseif ( $is_ondersteun_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_ondersteun.php';
   } elseif ( $is_hyd_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_hyd.php';
   } elseif ( $is_kneefix_page ) {
@@ -2919,6 +2931,41 @@ $cloath_faq = array(
   array(
     'questioon' => 'Je li dobra kao poklon?',
     'answer'    => 'Jest — paketi 3+3 i 8+4 su među najčešćim darovima za useljenje i blagdane. Krpa dolazi uredno složena i spremna za darivanje.',
+  ),
+);
+
+$ondersteun_faq = array(
+  array(
+    'questioon' => 'Kako odabrati veličinu?',
+    'answer'    => 'Izmjerite opseg ispod grudi i svoju košaricu, zatim pronađite odgovarajuću veličinu u tablici. Ako ste između dvije, uzmite veću — zatvarač ima 3 razine podešavanja, pa slobodno možete podesiti kako vam odgovara.',
+  ),
+  array(
+    'questioon' => 'Ima li žicu?',
+    'answer'    => 'Nema. Potporna košarica i široka traka ispod grudi pružaju lift i stabilnost bez ikakvih metalnih dijelova koji bi se zabijali u rebra ili klizili.',
+  ),
+  array(
+    'questioon' => 'Kako radi potpora za leđa?',
+    'answer'    => 'Prekriženi panel na leđima nježno povlači ramena unatrag i raspoređuje težinu preko cijelih leđa. To smanjuje opterećenje na vrat i lopatice tijekom cijelog dana.',
+  ),
+  array(
+    'questioon' => 'Vidi se li ispod majice?',
+    'answer'    => 'Glatke košarice i mekani rubovi ne ocrtavaju se ispod uske odjeće. Bež ili crna boja najbolje funkcionira ispod bijele ili tanke tkanine.',
+  ),
+  array(
+    'questioon' => 'Koliko razina podešavanja ima?',
+    'answer'    => 'Prednji zatvarač ima 3 reda kopči, što znači više od 10 mogućih kombinacija pritiska — možete podesiti koliko čvrsto ili opušteno želite.',
+  ),
+  array(
+    'questioon' => 'Kako ga održavati?',
+    'answer'    => 'Perite na 30 °C u programu za osjetljivo rublje ili ručno, sušite na zraku. Bez omekšivača i bez sušilice. Zatvarač zakopčajte prije pranja, tako tkanina zadržava oblik.',
+  ),
+  array(
+    'questioon' => 'Je li pogodan za yoga ili trening?',
+    'answer'    => 'Jest — pruža čvrstu potporu, ali bez ograničavanja pokreta. Koristi ga većina korisnica za pilates, laganu yoga vježbu i svakodnevno nošenje.',
+  ),
+  array(
+    'questioon' => 'Koliko traje materijal?',
+    'answer'    => 'Uz ispravno pranje grudnjak zadržava elastičnost i potporu i nakon 60+ pranja. Korisnice ga obično nose godinu ili dvije prije nego što vide bilo kakvo slabljenje.',
   ),
 );
 
@@ -5133,7 +5180,7 @@ $flomasteri_faq = array(
   array("Treba li miješati ili razrjeđivati boje?", "Ne. Svaki flomaster je spreman za rad – protresite ga sa zatvorenim čepićem, skinite čep i bojajte. Kod svjetlih nijansi pustite da se osuši nekoliko sekundi između slojeva."),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_fleeceshawl, $fleeceshawl_faq, $is_bottlesling, $bottlesling_faq, $is_pillorganizer, $pillorganizer_faq, $is_ultrasoniccleaner, $ultrasoniccleaner_faq, $is_antitheftbag, $antitheftbag_faq, $is_showertowel, $showertowel_faq, $is_petdental, $petdental_faq, $is_calmingcollar, $calmingcollar_faq, $is_therapillow, $therapillow_faq, $is_grillbasket, $grillbasket_faq, $is_seatcushion, $seatcushion_faq, $is_groundingmat, $groundingmat_faq, $is_neckmassager, $neckmassager_faq, $is_upholsterycleaner, $upholsterycleaner_faq, $is_kneelight, $kneelight_faq, $is_travelkit, $travelkit_faq, $is_breadbag, $breadbag_faq, $is_pethairglove, $pethairglove_faq, $is_dualpillow, $dualpillow_faq, $is_mattresstopper, $mattresstopper_faq, $is_kidspillow, $kidspillow_faq, $is_vacuumsealer, $vacuumsealer_faq, $is_airtravel, $airtravel_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_hikingshoes, $hikingshoes_faq, $is_hoodiedress, $hoodiedress_faq, $is_comfortjeans, $comfortjeans_faq, $is_slingbag, $slingbag_faq, $is_travelbag, $travelbag_faq, $is_bathmat, $bathmat_faq, $is_dogbed, $dogbed_faq, $is_minimizerbra, $minimizerbra_faq, $is_nursingbra, $nursingbra_faq, $is_cashmeresweater, $cashmeresweater_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_thermoboots, $thermoboots_faq, $is_leatherboots, $leatherboots_faq, $is_snugboot, $snugboot_faq, $is_cloudclogs, $cloudclogs_faq, $is_compressionsocks, $compressionsocks_faq, $is_wafflelongsleeve, $wafflelongsleeve_faq, $is_sleepset, $sleepset_faq, $is_plushblanket, $plushblanket_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_fleeceshawl, $fleeceshawl_faq, $is_bottlesling, $bottlesling_faq, $is_pillorganizer, $pillorganizer_faq, $is_ultrasoniccleaner, $ultrasoniccleaner_faq, $is_antitheftbag, $antitheftbag_faq, $is_showertowel, $showertowel_faq, $is_petdental, $petdental_faq, $is_calmingcollar, $calmingcollar_faq, $is_therapillow, $therapillow_faq, $is_grillbasket, $grillbasket_faq, $is_seatcushion, $seatcushion_faq, $is_groundingmat, $groundingmat_faq, $is_neckmassager, $neckmassager_faq, $is_upholsterycleaner, $upholsterycleaner_faq, $is_kneelight, $kneelight_faq, $is_travelkit, $travelkit_faq, $is_breadbag, $breadbag_faq, $is_pethairglove, $pethairglove_faq, $is_dualpillow, $dualpillow_faq, $is_mattresstopper, $mattresstopper_faq, $is_kidspillow, $kidspillow_faq, $is_vacuumsealer, $vacuumsealer_faq, $is_airtravel, $airtravel_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_hikingshoes, $hikingshoes_faq, $is_hoodiedress, $hoodiedress_faq, $is_comfortjeans, $comfortjeans_faq, $is_slingbag, $slingbag_faq, $is_travelbag, $travelbag_faq, $is_bathmat, $bathmat_faq, $is_dogbed, $dogbed_faq, $is_minimizerbra, $minimizerbra_faq, $is_nursingbra, $nursingbra_faq, $is_cashmeresweater, $cashmeresweater_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_thermoboots, $thermoboots_faq, $is_leatherboots, $leatherboots_faq, $is_snugboot, $snugboot_faq, $is_cloudclogs, $cloudclogs_faq, $is_compressionsocks, $compressionsocks_faq, $is_wafflelongsleeve, $wafflelongsleeve_faq, $is_sleepset, $sleepset_faq, $is_plushblanket, $plushblanket_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_ondersteun, $ondersteun_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
   if ( $is_slippers && $is_info ) {
     return $slippers_faq;
@@ -5401,6 +5448,9 @@ $faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograin
   }
   if ( $is_bra && $is_info ) {
     return $bra_faq;
+  }
+  if ( $is_ondersteun && $is_info ) {
+    return $ondersteun_faq;
   }
   if ( $is_hyd && $is_info ) {
     return $hyd_faq;
