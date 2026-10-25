@@ -50,7 +50,18 @@ $slika = function ( $dat, $alt ) {
         <h2 class="ndevotions__h2">Jedna minuta s Bogom u odnosu na druge dječje molitvenike.</h2>
         <p class="ndevotions__p">Kratka razmatranja za laku noć koja se lako prate – da. Napisano tako da mladi umovi razumiju – da. Bez dugih i zamornih lekcija – da. Sveto pismo i molitva svaki dan – da. Pomaže izgraditi trajnu naviku vjere – da. Kod drugih dječjih molitvenika to najčešće nije tako.</p>
       </div>
-      <div class="ndevotions__media"><?php echo $slika( 'devotions-04.jpg', 'Jedna minuta s Bogom u odnosu na druge dječje molitvenike.' ); ?></div>
+      <div class="ndevotions__media">
+        <table class="ndevotions__tablica">
+          <thead><tr><th></th><th>Jedna minuta s Bogom</th><th>Drugi dječji molitvenici</th></tr></thead>
+          <tbody>
+            <tr><td>Kratka razmatranja za laku noć koja se lako prate</td><td class="ndevotions__da">✓</td><td class="ndevotions__ne">×</td></tr>
+            <tr><td>Napisano tako da mladi umovi razumiju</td><td class="ndevotions__da">✓</td><td class="ndevotions__ne">×</td></tr>
+            <tr><td>Bez dugih i zamornih lekcija</td><td class="ndevotions__da">✓</td><td class="ndevotions__ne">×</td></tr>
+            <tr><td>Sveto pismo i molitva svaki dan</td><td class="ndevotions__da">✓</td><td class="ndevotions__ne">×</td></tr>
+            <tr><td>Pomaže izgraditi trajnu naviku vjere</td><td class="ndevotions__da">✓</td><td class="ndevotions__ne">×</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -98,5 +109,13 @@ $slika = function ( $dat, $alt ) {
 .ndevotions__h2{font-size:30px;line-height:1.15;margin:0 0 12px}
 .ndevotions__p{font-size:16px;line-height:1.6;margin:0}
 .ndevotions__media img{width:100%;height:auto;display:block;border-radius:12px}
+.ndevotions__tablica{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(18,16,48,.08);font-size:15px}
+.ndevotions__tablica th{background:#121030;color:#fff;font-weight:700;padding:14px 10px;font-size:14px;line-height:1.2}
+.ndevotions__tablica td{padding:14px 10px;border-top:1px solid #ece9e3;line-height:1.35}
+.ndevotions__tablica td:first-child{text-align:left;font-weight:600}
+.ndevotions__tablica .ndevotions__da,.ndevotions__tablica .ndevotions__ne{text-align:center;width:24%}
+.ndevotions__da{color:#2f8f4e;font-size:22px;font-weight:700}
+.ndevotions__ne{color:#b8463c;font-size:20px}
+@media(max-width:480px){.ndevotions__tablica{font-size:12px}.ndevotions__tablica th{font-size:11px;padding:10px 5px}.ndevotions__tablica td{padding:10px 6px}}
 @media(max-width:860px){.ndevotions__v{grid-template-columns:1fr}.ndevotions__h2{font-size:24px}}
 </style>
