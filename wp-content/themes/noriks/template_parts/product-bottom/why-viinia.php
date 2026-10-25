@@ -7,7 +7,7 @@ defined('ABSPATH') || exit;
 
 $nf = get_template_directory_uri() . '/img/viinia/';
 ?>
-<!-- TEST-VIINIA-PULL-<?php echo time(); ?> -->
+<!-- DEBUG: is_viinia_page=<?php echo function_exists('noriks_is_type') ? (noriks_is_type('viinia') ? 'TRUE' : 'FALSE') : 'FUNC_NOT_EXISTS'; ?> -->
 
 <style>
 .nss-viinia {
