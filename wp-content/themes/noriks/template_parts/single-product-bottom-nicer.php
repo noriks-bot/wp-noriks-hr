@@ -92,6 +92,9 @@ if ( noriks_is_type( 'corrector' ) ) {
 if ( noriks_is_type( 'salon' ) ) {
     include $noriks_pb_dir . 'why-salon.php';
 }
+if ( noriks_is_type( 'flops' ) ) {
+    include $noriks_pb_dir . 'why-flops.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
