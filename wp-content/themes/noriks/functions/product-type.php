@@ -49,6 +49,7 @@ function noriks_product_type_map() : array {
         'giovasa'                 => array( 'orto-giovasa' ),
         // FieldOps Pro taktične slušalke
         'acryliques' => array( 'orto-acryliques' ),
+        'midnight' => array( 'orto-midnight' ),
         'fieldops'                => array( 'orto-fieldops' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
@@ -1359,5 +1360,12 @@ if ( ! function_exists( 'noriks_insoles_sizes' ) ) {
             array( 'L',  '11 – 12', '12,5 – 14', '10 – 11',   '44,5 – 46,5' ),
             array( 'XL', '12,5 – 14','14,5',     '11,5 – 12', '47 – 48' ),
         );
+    }
+}
+
+if ( ! function_exists( 'noriks_calendar_sizes' ) ) {
+    /** NORIKS Calendar — digitalni obiteljski kalendar (bez velicina). */
+    function noriks_calendar_sizes() {
+        return array();
     }
 }
