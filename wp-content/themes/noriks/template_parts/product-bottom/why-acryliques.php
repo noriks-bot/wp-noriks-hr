@@ -1,6 +1,6 @@
 <?php
 /**
- * NORIKS Akrilni Flomasteri | Dvostrani set — why sekcije (1:1 z originalom). Generirano z postavi.js.
+ * NORIKS Akrilni Flomasteri — why sekcije (1:1 z originalom). Generirano z postavi.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $slika = function ( $dat, $alt ) {

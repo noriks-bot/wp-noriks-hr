@@ -1,5 +1,5 @@
 <?php
-// NORIKS Akrilni Flomasteri | Dvostrani set — mnenja kupcev. Generirano z postavi.js.
+// NORIKS Akrilni Flomasteri — mnenja kupcev. Generirano z postavi.js.
 $auto_reviews_en = array(
     array("name" => "Marija T.", "text" => "Dugo sam tražila flomaster koji ne probija papir u mojim knjigama za bojanje. NORIKS rješava taj problem savršeno — bojim obje strane bez straha. Preporuka!"),
     array("name" => "Andrej K.", "text" => "Kupila sam set od 48 boja za kćerku — to je zapravo 96 tonova! Dvostruki vrh je genijalan koncept, a boje su predivne. Kvaliteta vrhunska."),
