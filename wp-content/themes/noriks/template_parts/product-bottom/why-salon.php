@@ -7,8 +7,27 @@ $slika = function ( $dat, $alt ) {
     $url = get_template_directory_uri() . '/img/salon/' . $dat;
     return '<img src="' . esc_url( $url ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';
 };
+$video = function ( $dat ) {
+    $url = get_template_directory_uri() . '/img/salon/' . $dat;
+    return '<video src="' . esc_url( $url ) . '" autoplay muted loop playsinline preload="metadata"></video>';
+};
 ?>
 <div class="nsalon">
+
+  <section class="nsalon__sekcija nsalon__sekcija--bg nsalon__sekcija--video">
+    <div class="nsalon__v nsalon__v--video">
+      <div class="nsalon__glava">
+        <div class="nsalon__kicker">Pogledajte kako se nanosi</div>
+        <h2 class="nsalon__h2">Otkrijte koliko je lako dobiti <em>gušće obrve</em> ✨</h2>
+        <p class="nsalon__p">Okrenite četkicu, lagano pritisnite da se oslobodi boja i prijeđite preko obrva u smjeru rasta dlačica. Rijetki dijelovi ispune se mekanim potezima koji izgledaju kao prave dlačice – bez olovke, sjenila i kompliciranja.</p>
+      </div>
+      <div class="nsalon__videi">
+        <div class="nsalon__vid"><?php echo $video( 'noriks-salon-video-1.mp4' ); ?></div>
+        <div class="nsalon__vid"><?php echo $video( 'noriks-salon-video-2.mp4' ); ?></div>
+        <div class="nsalon__vid"><?php echo $video( 'noriks-salon-video-3.mp4' ); ?></div>
+      </div>
+    </div>
+  </section>
 
   <section class="nsalon__sekcija">
     <div class="nsalon__v">
@@ -99,4 +118,9 @@ $slika = function ( $dat, $alt ) {
 .nsalon__p{font-size:16px;line-height:1.6;margin:0}
 .nsalon__media img{width:100%;height:auto;display:block;border-radius:12px}
 @media(max-width:860px){.nsalon__v{grid-template-columns:1fr}.nsalon__h2{font-size:24px}}
+.nsalon__v--video{display:block;max-width:1180px}
+.nsalon__glava{max-width:760px;margin:0 auto 26px;text-align:center}
+.nsalon__videi{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nsalon__vid video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.08);background:#000}
+@media(max-width:860px){.nsalon__videi{grid-template-columns:repeat(3,72%);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.nsalon__vid{scroll-snap-align:start}}
 </style>
