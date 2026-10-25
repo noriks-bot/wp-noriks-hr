@@ -52,6 +52,10 @@
 
            Nisi sam u potrazi za olakšanjem napetosti u vratu.
 
+          <?php elseif ( noriks_is_type( 'insoles' ) ): ?>
+
+           Niste jedini kojima stopala bole nakon cijelog dana na nogama.
+
           <?php elseif ( noriks_is_type( 'bunion' ) ): ?>
 
            Nisi sam u potrazi za olakšanjem od čukljeva.
@@ -923,6 +927,10 @@
 
             Tisuće putnica već putuje s NORIKS TravelBag torbom – dimenzije ručne prtljage, odvojivi kotačići i odjeća koja stiže bez gužvanja.
 
+           <?php elseif ( noriks_is_type( 'insoles' ) ): ?>
+
+            Tisuće kupaca već hoda sa NORIKS Insoles – čvrsta potpora svoda koji se ne spljošti, olakšanje kod plantarnog fasciitisa i pravilno poravnanje stopala.
+
            <?php elseif ( noriks_is_type( 'comfortjeans' ) ): ?>
 
             Tisuće kupaca već nosi NORIKS ComfortJeans – rastezljivi pravi traper, visoki struk i široke nogavice u duljini koja vam stvarno odgovara.
@@ -1173,6 +1181,7 @@
   $is_corksandals_page = noriks_is_type( 'corksandals', $current_product_id );
   $is_anklesleeve_page = noriks_is_type( 'anklesleeve', $current_product_id );
   $is_slippers_page    = noriks_is_type( 'slippers', $current_product_id );
+  $is_insoles_page     = noriks_is_type( 'insoles', $current_product_id );
   $is_floatsuit_page   = noriks_is_type( 'floatsuit', $current_product_id );
   $is_phonestrap_page  = noriks_is_type( 'phonestrap', $current_product_id );
   $is_winecooler_page  = noriks_is_type( 'winecooler', $current_product_id );
@@ -1385,6 +1394,8 @@
   // Include review pools (own pool per product group)
   if ( $is_slippers_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_slippers.php';
+  } elseif ( $is_insoles_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_insoles.php';
   } elseif ( $is_anklesleeve_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_anklesleeve.php';
   } elseif ( $is_corksandals_page ) {
@@ -2743,6 +2754,38 @@ $nosilka_faq = array(
   array( 'questioon' => 'Kako se nosiljka pere?', 'answer' => 'Tkanina se može prati — preporučujemo pranje na nižoj temperaturi i sušenje na zraku, da nosiljka zadrži oblik i čvrstoću.' ),
   array( 'questioon' => 'Mogu li je dijeliti s partnerom?', 'answer' => 'Da. Nosiljka se brzo i jednostavno prilagodi, pa je mogu koristiti mama i tata bez kompliciranog podešavanja.' ),
   array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, vrijedi naše jamstvo povrata novca. Ako niste zadovoljni, kontaktirajte nas i riješit ćemo to.' ),
+);
+
+// NORIKS Insoles — product FAQ (HR).
+$insoles_faq = array(
+  array(
+    'questioon' => 'Kako NORIKS Insoles pomaže kod plantarnog fasciitisa?',
+    'answer'    => 'NORIKS Insoles ima čvrstu potporu svoda (visina 3,5 cm) koja uzima teret s plantarne fascije — trake ispod stopala koja se povlači kod svakog koraka. Duboka petna košarica drži stopalo u pravilnom položaju i smanjuje napetost. Većina ljudi s plantarnim fasciitisom osjeća razliku nakon 1 do 2 tjedna redovitog korištenja.'
+  ),
+  array(
+    'questioon' => 'Mogu li rezati ulošak da stane u moje cipele?',
+    'answer'    => 'Da. Na svakom ulošku su ucrtane linije za rezanje po veličinama. Možete izrezati prema svojoj veličini. Nakon rezanja uložak se ne može vratiti, ali naše jamstvo povrata novca vrijedi čak i za izrezane i nošene ulošk e.'
+  ),
+  array(
+    'questioon' => 'Koliko dugo traju ulošci?',
+    'answer'    => 'Uz svakodnevnu uporabu baza od EVA pjene zadržava potporu svoda 4 do 6 mjeseci. Gornji sloj otporan je na zadržavanje mirisa i obrisavanje, pa ulošci ostaju svježi i higijenski. Kada osjetite da potpora popušta, vrijeme je za novi par.'
+  ),
+  array(
+    'questioon' => 'Mogu li ih nositi cijeli dan ili samo za trening?',
+    'answer'    => 'NORIKS Insoles napravljen je za cijeli dan — stajanje, hodanje, rad. Mnogi ljudi ih nose u radnim cipelama, tenisicama i svakodnevnoj obući jer im stopala manje bole do kraja smjene.'
+  ),
+  array(
+    'questioon' => 'Hoće li mi stopala boljeti dok se privikavam?',
+    'answer'    => 'Prvi put kad stopalo drži pravilnu potporu, može se osjetiti neobično — kao kad prve dane nosite ortozu. Preporučujemo da započnete s 2–3 sata dnevno i postupno povećavate. Unutar tjedan dana većina se navikne i osjeća se bolje nego ikad.'
+  ),
+  array(
+    'questioon' => 'Imaju li ulošci garanciju povrata novca?',
+    'answer'    => 'Da! Vrijedi jamstvo povrata novca unutar 30 dana od isporuke — čak i ako ste ih izrezali i nosili. Ako niste zadovoljni, javite nam se na info@noriks.com i odgovorit ćemo u roku od 12 sati.'
+  ),
+  array(
+    'questioon' => 'Jesu li prikladni za ravna stopala ili visoki svod?',
+    'answer'    => 'Oboje. Potporu svoda visine 3,5 cm napravili smo čvrstu da se ne spljošti ni pod punom težinom (do 150 kg). Za ravna stopala podiže svod i smanjuje naprezanje na koljena i leđa. Za visoki svod puni prazninu koju obični ulošci ne dohvaćaju.'
+  )
 );
 
 // FisioRest — product FAQ (prijevod engleske reference, NORIKS).
@@ -5255,6 +5298,9 @@ $faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograin
   }
   if ( $is_travelpillow && $is_info ) {
     return $travelpillow_faq;
+  }
+  if ( $is_insoles_page && $is_info ) {
+    return $insoles_faq;
   }
   if ( $is_kidspillow && $is_info ) {
     return $kidspillow_faq;
