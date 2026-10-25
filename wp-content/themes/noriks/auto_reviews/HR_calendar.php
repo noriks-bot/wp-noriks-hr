@@ -1,7 +1,7 @@
 <?php
 // Review pool for the NORIKS Calendar family digital calendar.
 // Text-only (no images), Croatian — adapted from original reviews.
-$auto_reviews_en = array(
+$auto_reviews = array(
     array("name" => "Jana K.",       "text" => "Jednostavno za postaviti. Dijete od 14 godina se moglo spojiti i sve samostalno urediti. Konačno svi vidimo tko ima termine i što je dogovoreno."),
     array("name" => "Ilonka M.",     "text" => "Sviđa nam se jako. Nitko više ne pita 'Gdje si to zapisala?', jer je sve na jednom mjestu. Kalendar je uvijek uključen i odmah vidljiv."),
     array("name" => "Maya P.",       "text" => "Gamechanger. Naš tinejdžer uči planirati termine, a osnovnoškolac se bolje strukturira. Umjesto stalne svađe oko kupaoni i domaće zadaće, sad sami pregledaju zadatke. Nedostaje mi samo push notifikacija kad netko doda novi događaj."),

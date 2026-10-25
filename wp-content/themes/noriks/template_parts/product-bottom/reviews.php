@@ -1212,6 +1212,7 @@
   $is_smartjacket_page = noriks_is_type( 'smartjacket', $current_product_id );
   $is_utilitypants_page = noriks_is_type( 'utilitypants', $current_product_id );
   $is_hoodie_page = noriks_is_type( 'hoodie', $current_product_id );
+  $is_acryliques_page = noriks_is_type( 'acryliques', $current_product_id );
   $is_fieldops_page = noriks_is_type( 'fieldops', $current_product_id );
   $is_destapacan_page = noriks_is_type( 'destapacan', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
@@ -1371,6 +1372,7 @@
   if ( $is_maternityleggings_page ) { $rv_fallback_title = 'NORIKS MaternityLeggings tajice za trudnice'; }
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
+  if ( $is_acryliques_page ) { $rv_fallback_title = 'NORIKS Akrilni Flomasteri | Dvostrani set'; }
   if ( $is_fleeceshawl_page ) { $rv_fallback_title = 'NORIKS FleeceShawl šal-ogrtač od flisa'; }
   if ( $is_bottlesling_page ) { $rv_fallback_title = 'NORIKS BottleSling torbica za termo čašu'; }
   if ( $is_pillorganizer_page ) { $rv_fallback_title = 'NORIKS PillOrganizer organizator za tablete'; }
@@ -1654,6 +1656,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_bokserice.php';
   } elseif ( $is_flomasteri_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_flomasteri.php';
+  } elseif ( $is_acryliques_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_acryliques.php';
   } elseif ( $is_fieldops_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
   } elseif ( $is_destapacan_page ) {
@@ -2047,8 +2051,8 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
   $daily_seed = $today_obj->format('Y-m-d');
 
   // Avatar pools based on page category
-  // Leak boxers + kompresijske majice + fieldops + insoles + giovasa + destapacan: text-only (no photos). Others: existing pools.
-  $avatar_type = ( $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
+  // Leak boxers + kompresijske majice + fieldops + insoles + giovasa + destapacan + calendar: text-only (no photos). Others: existing pools.
+  $avatar_type = ( $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page || $is_calendar_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should

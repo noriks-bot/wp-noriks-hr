@@ -48,6 +48,7 @@ function noriks_product_type_map() : array {
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'giovasa'                 => array( 'orto-giovasa' ),
         // FieldOps Pro taktične slušalke
+        'acryliques' => array( 'orto-acryliques' ),
         'fieldops'                => array( 'orto-fieldops' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
