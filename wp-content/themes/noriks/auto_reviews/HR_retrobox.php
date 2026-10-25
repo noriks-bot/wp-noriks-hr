@@ -1,6 +1,6 @@
 <?php
 /**
- * auto_reviews/HR_pikseland.php
+ * auto_reviews/HR_retrobox.php
  * 16 recenzija za NORIKS RetroBox retro gaming konzolu (HR).
  */
 return array(
