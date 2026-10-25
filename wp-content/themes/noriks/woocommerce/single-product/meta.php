@@ -516,7 +516,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php if( $noriks_opis_iz_wc ): ?>
 
-                <?php $noriks_p = wc_get_product( $current_product_id ); echo $noriks_p ? wp_kses_post( wpautop( $noriks_p->get_description() ) ) : ''; ?>
+                <?php global $product; $noriks_p = ( $product instanceof WC_Product ) ? $product : wc_get_product( get_the_ID() ); echo $noriks_p ? wp_kses_post( wpautop( $noriks_p->get_description() ) ) : ''; ?>
 
          <?php elseif( noriks_is_type( 'destapacan', $current_product_id ) ): ?>
 
