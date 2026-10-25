@@ -59,6 +59,7 @@ function noriks_product_type_map() : array {
         'munna' => array( 'orto-munna' ),
         'salon' => array( 'orto-salon' ),
         'flops' => array( 'orto-flops' ),
+        'daily' => array( 'orto-daily' ),
         'fieldops'                => array( 'orto-fieldops' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).

@@ -98,6 +98,9 @@ if ( noriks_is_type( 'flops' ) ) {
 if ( noriks_is_type( 'travel' ) ) {
     include $noriks_pb_dir . 'why-travel.php';
 }
+if ( noriks_is_type( 'daily' ) ) {
+    include $noriks_pb_dir . 'why-daily.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
