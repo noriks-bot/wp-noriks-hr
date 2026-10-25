@@ -29,7 +29,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
         <h2 class="wviinia__h2">Nehrđajući čelik, <em>prikladan za hranu</em></h2>
         <p class="wviinia__p">Štapić NORIKS Viinia izrađen je od visokokvalitetnog nehrđajućeg čelika prikladnog za kontakt s hranom. Čelična jezgra je dio koji ulazi u bocu i hladi vino iznutra, izravno u tekućini. Tako hlađenje počinje odmah, a ne izvana kroz staklo kao kod kante s ledom. Kad ga izvadite iz zamrzivača, hladan čelik vino hladi izravno i ravnomjerno, od grla boce do dna.</p>
         <p class="wviinia__p">Takav materijal pruža dugotrajnu izdržljivost i pouzdanost u svakodnevnoj upotrebi. Štapić je elegantan, čvrst i namijenjen višekratnoj upotrebi — jednostavno ga ponovno zamrznete i spreman je za sljedeću bocu. Nema jednokratnih vrećica leda ni kockica koje se tope u čaši.</p>
-        <p class="wviinia__p">Uz čelični štapić za hlađenje tu su akrilni izljev za točenje i silikonska brtva koja ne propušta. Brtva drži štapić čvrsto u grlu boce, a izljev omogućuje da vino točite bez vađenja štapića. Sve dijelove lako sastavite i rastavite. Sve je osmišljeno da bude čvrsto, uredno i elegantno na stolu.</p>
+        <p class="wviinia__p">Na vrhu čeličnog štapića za hlađenje nalazi se izljev za točenje, tako da vino točite bez vađenja štapića iz boce. Izljev se skida, pa štapić i izljev lako očistite toplom vodom, a štapić podnosi i pranje u perilici posuđa.</p>
         <p class="wviinia__zak">Jedan čvrst štapić od čelika umjesto kante leda — i služi vam iz večeri u večer.</p>
       </div>
     </div>
@@ -55,8 +55,8 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">SAVRŠENO TOČENJE</div>
         <h2 class="wviinia__h2">Izljev koji ne <em>kaplje</em></h2>
-        <p class="wviinia__p">Zbogom prolijevanju i mrljama na stolnjaku. Na vrhu štapića NORIKS Viinia nalazi se akrilni izljev koji osigurava ravnomjerno točenje bez kapanja, svaki put. Izljev je proziran, pa uvijek vidite kako vino teče.</p>
-        <p class="wviinia__p">Ne trebate vaditi štapić iz boce da biste natočili vino. Vino teče kroz izljev izravno u čašu, mlaz je miran i kontroliran, a zadnja kap ostaje u izljevu umjesto na stolu. Točenje je jednako jednostavno kao iz obične boce, samo urednije. Brtva drži izljev čvrsto u grlu boce, tako da se ništa ne prolije ni kad bocu nagnete jače.</p>
+        <p class="wviinia__p">Zbogom prolijevanju i mrljama na stolnjaku. Na vrhu štapića NORIKS Viinia nalazi se izljev koji osigurava ravnomjerno točenje bez kapanja, svaki put.</p>
+        <p class="wviinia__p">Ne trebate vaditi štapić iz boce da biste natočili vino. Vino teče kroz izljev izravno u čašu, mlaz je miran i kontroliran, a zadnja kap ostaje u izljevu umjesto na stolu. Točenje je jednako jednostavno kao iz obične boce, samo urednije.</p>
         <p class="wviinia__p">Tako i vaše vino i vaš stol ostaju uredni — bilo da točite na terasi, za blagdanskim stolom ili na večeri s prijateljima. Nema više podmetača ispod boce ni salveta oko grla. Izljev ostaje na boci cijelu večer, pa svaki put točite jednako mirno i precizno.</p>
         <p class="wviinia__zak">Točite izravno iz boce, bez kapanja i bez mrlja na stolu.</p>
       </div>

@@ -5677,20 +5677,20 @@ $blanket_faq = array(
 );
 
 $viinia_faq = array(
-  array('questioon' => 'Koliko dugo VIINIA održava vino hladnim?',
-    'answer'    => 'VIINIA štapić drži vino hladnim 1–2 sata, ovisno o sobnoj temperaturi. Dovoljno dugo za jedan opuštajući popodnevni ili večernji užitak.'),
-  array('questioon' => 'Je li siguran za sve vrste vina?',
-    'answer'    => 'Da. VIINIA je idealan za bijela i rosé vina. Nije preporučljiv za crvena vina, koja se obično služe na sobnoj temperaturi.'),
-  array('questioon' => 'Koliko dugo prije upotrebe ga moram držati u zamrzivaču?',
-    'answer'    => 'Držite štapić u zamrzivaču najmanje 2–3 sata prije upotrebe. Mnogi ga jednostavno stalno drže zamrznutim i spremnim za korištenje.'),
+  array('questioon' => 'Kako se koristi?',
+    'answer'    => 'Stavite štapić u zamrzivač na najmanje sat vremena. Zatim ohlađeni štapić umetnite u bocu vina — ako je boca puna, prvo natočite gutljaj da napravite mjesta — i uživajte u savršeno ohlađenom vinu pri svakom točenju.'),
+  array('questioon' => 'Koliko brzo hladi i koliko dugo drži vino hladnim?',
+    'answer'    => 'Za samo 10–15 minuta ohladi vino na idealnu temperaturu za posluživanje i drži ga hladnim do 3 sata — od prvog točenja do zadnjeg gutljaja.'),
   array('questioon' => 'Razrjeđuje li vino?',
-    'answer'    => 'Ne. Za razliku od kockica leda, VIINIA hladi vino bez razrjeđivanja i bez promjene okusa.'),
+    'answer'    => 'Ne. Za razliku od kockica leda, štapić hladi vino iznutra, a da ga ne razrjeđuje.'),
+  array('questioon' => 'Od čega je napravljen?',
+    'answer'    => 'Od visokokvalitetnog nehrđajućeg čelika prikladnog za kontakt s hranom, koji pruža dugotrajnu izdržljivost u svakodnevnoj upotrebi.'),
   array('questioon' => 'Kako se čisti?',
-    'answer'    => 'Isperite štapić mlakom vodom i sapunom nakon svake upotrebe. Osušite ga i vratite u zamrzivač za sljedeći put.'),
-  array('questioon' => 'Mogu li ga koristiti više puta?',
-    'answer'    => 'Da. VIINIA možete koristiti neograničen broj puta — samo ga ponovno zamrznite i spreman je za novu čašu.'),
-  array('questioon' => 'Koja je duljina štapića? Stane li u standardne boce?',
-    'answer'    => 'VIINIA je dugačak oko 18 cm i dizajniran je da bez problema stane u standardnu vinsku bocu od 0,75 l.'),
+    'answer'    => 'Štapić se može prati u perilici posuđa, a izljev se skida, pa se sve lako temeljito očisti toplom vodom.'),
+  array('questioon' => 'Što ako mi ne odgovara?',
+    'answer'    => 'Imate <strong>30 dana za povrat novca</strong> od primitka narudžbe. Javite nam se i pomoći ćemo vam s povratom.'),
+  array('questioon' => 'Kako se plaća i koliko košta dostava?',
+    'answer'    => 'Plaćate pouzećem pri preuzimanju paketa. Dostava je besplatna za narudžbe iznad 70 €.'),
 );
 
 $flomasteri_faq = array(
