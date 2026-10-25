@@ -1,21 +1,21 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) exit;
-
-return array(
-  array( 'author' => 'Marko T.', 'location' => 'Zagreb', 'rating' => 5, 'text' => 'Sudoper u kuhinji bio je totalno začepljen — voda stajala. Probao sam prvo običnu tekućinu, ništa. S ovim prahom za 15 minuta sve riješeno. Pjena se stvarno vidi kako radi.' ),
-  array( 'author' => 'Ana K.', 'location' => 'Split', 'rating' => 5, 'text' => 'Koristim jednom mjesečno preventivno u tuš kabini i sudoperu. Od tada više nema sporo tečenja ni mirisa. Pakovanje traje dugo jer jedna posuda je dovoljna.' ),
-  array( 'author' => 'Ivica P.', 'location' => 'Rijeka', 'rating' => 4, 'text' => 'Radi dobro, ali kod jako tvrdokornog začepljenja s kosom trebao sam dva puta primijeniti. Nakon toga odvod čist kao nov. Bolje nego zvati vodoinstalatera.' ),
-  array( 'author' => 'Maja B.', 'location' => 'Osijek', 'rating' => 5, 'text' => 'Mnogo praktičnije od tekućine. Prah odmah reagira s vodom, pjena se diže i ostaje unutra. Nisam morala raščlanjivati sifon, sve se samo otopilo.' ),
-  array( 'author' => 'Tomislav S.', 'location' => 'Zadar', 'rating' => 5, 'text' => 'U kući imamo troje djece, pa se svakodnevno nakuplja sve po sudoperu. Otpad od hrane, mast — stalno bi se začepljivalo. Sad svaki mjesec bacim prah i nema problema.' ),
-  array( 'author' => 'Petra V.', 'location' => 'Dubrovnik', 'rating' => 5, 'text' => 'Tuš odvod bio je užasno spor, voda stajala 5–10 minuta. Nakon jedne primjene teče kao mlaz. Nisam vjerovala da može biti tako jednostavno.' ),
-  array( 'author' => 'Davor M.', 'location' => 'Pula', 'rating' => 5, 'text' => 'Platio sam jednom vodoinstalatera 80 eura za to što sam sad napravio sam za 15 minuta s ovim prahom. Toplo preporučujem.' ),
-  array( 'author' => 'Lana R.', 'location' => 'Varaždin', 'rating' => 4, 'text' => 'Djeluje dobro, samo treba pričekati punih 15 minuta — ja sam jednom požurila i nisam ispirala dovoljno, pa sam morala ponoviti. Drugi put sve po uputama — savršeno.' ),
-  array( 'author' => 'Josip N.', 'location' => 'Karlovac', 'rating' => 5, 'text' => 'Sviđa mi se da ne moram miješati ništa, samo bacim prah i vodu. Pjena radi svoj posao, ja radim drugo. Kroz 15 minuta cijev slobodna.' ),
-  array( 'author' => 'Nikolina D.', 'location' => 'Šibenik', 'rating' => 5, 'text' => 'Imali smo problema sa smradom iz odvoda u kuhinji — mast i ostatci hrane zalijepe se i smrdi. Prah je otopilo sve, više nema mirisa.' ),
-  array( 'author' => 'Stipe K.', 'location' => 'Slavonski Brod', 'rating' => 5, 'text' => 'Praktično pakovanje, jedna posuda po upotrebi. Držim ga u ormarić ispod sudopera, uvijek pri ruci. Mnogo bolje od one tekućine što istječe za 10 sekundi.' ),
-  array( 'author' => 'Ivana H.', 'location' => 'Sisak', 'rating' => 5, 'text' => 'Kosa mi se svakodnevno nakuplja u tuš odvodu. Svakih mjesec dana bacim prah i nema problema — odvod čist, voda teče brzo.' ),
-  array( 'author' => 'Ante L.', 'location' => 'Makarska', 'rating' => 4, 'text' => 'Kod potpuno začepljene cijevi trebao sam dva kruga, ali je pomoglo. Cijena je pristupačna, a štedim vrijeme i živce.' ),
-  array( 'author' => 'Mirela G.', 'location' => 'Koprivnica', 'rating' => 5, 'text' => 'Najjednostavnije rješenje što sam ikad probala za odvode. Bacim prah, zalijем vrućom vodom, pričekam, isperem — gotovo. Nema alata, nema razbijanja.' ),
-  array( 'author' => 'Karlo J.', 'location' => 'Čakovec', 'rating' => 5, 'text' => 'Koristim već 3 mjeseca preventivno jednom mjesečno i odvod nikad nije bio čistiji. Voda prolazi momentalno.' ),
-  array( 'author' => 'Sandra P.', 'location' => 'Bjelovar', 'rating' => 5, 'text' => 'Pazite da ulijete stvarno toplu vodu — prvi put sam stavila mlaku i pjena nije dobro išla. Drugi put s vrućom vodom savršeno. Sad znam.' ),
+// Review pool for NORIKS Destapacaño — prah za čišćenje odvoda.
+// Text-only (no images), Croatian — hand-written for this product.
+$auto_reviews_en = array(
+    array("name" => "Marko T.",     "text" => "Odvod u tuš-kabini bio je gotovo potpuno začepljen kosom. Dodao sam prah, polio vrućom vodom i čekao 15 minuta — voda sad slobodno otječe. Preporučujem."),
+    array("name" => "Ivana S.",     "text" => "Koristim ga jednom tjedno u kuhinji i kupaonici. Odvodi mirišu svježe i nikad se ne začepe. Puno bolje nego ručno čišćenje sifona."),
+    array("name" => "Dražen P.",    "text" => "Imali smo neugodan miris iz odvoda u kuhinji. Ovaj prah nije samo otpušio, već je uklonio i sam miris. Odlično."),
+    array("name" => "Ana K.",       "text" => "Skeptična sam bila, ali djeluje. Nisam morala zvati vodoinstalatera, sve sam riješila za 20 minuta. Vrijedan novca."),
+    array("name" => "Josip M.",     "text" => "Prah stvara pjenu koja se vidi kako reagira. Osjeti se kako čisti cijevi iznutra. Koristim ga preventivno jednom tjedno."),
+    array("name" => "Petra R.",     "text" => "Brzo i jednostavno rješenje. Ne mora se rasklapati ništa, samo dodat prah i vodu. Za mene spas."),
+    array("name" => "Tomislav B.",  "text" => "Odvod u umivaonici bio je spor. Nakon korištenja ovog praha, voda otječe bez problema. Siguran sam da je i čist iznutra."),
+    array("name" => "Maja L.",      "text" => "Koristim ga redovito jer ne želim ponovo imati začepljen odvod. Cijevi su čiste, nema mirisa i voda teče brzo."),
+    array("name" => "Zvonimir N.",  "text" => "Odličan proizvod. Djeluje brzo, ne oštećuje cijevi i nakon korištenja nema kemijskog mirisa kao kod nekih drugih sredstava."),
+    array("name" => "Nikolina D.",  "text" => "Vodoinstalater bi me koštao stotine kuna. Ovim prahom sam sama riješila problem za 15 minuta. Presretna sam."),
+    array("name" => "Robert H.",    "text" => "Koristim ga i u kuhinji i u kupaoni. Prah stvara pjenu koja prodire duboko i rastapa ostatke. Praktičan."),
+    array("name" => "Lucija V.",    "text" => "Bila sam skeptična jer sam probala razna sredstva i ništa nije radilo. Ovo je zaista otpušilo odvod. Isplati se."),
+    array("name" => "Goran Š.",     "text" => "Dobar omjer cijene i kvalitete. Jedna posudica traje dugo ako se koristi preventivno. Preporučujem."),
+    array("name" => "Katarina J.",  "text" => "Ne znam zašto nisam ovo kupila ranije. Odvodi su čisti, nema više spornog otjecanja i neugodnih mirisa."),
+    array("name" => "Filip P.",     "text" => "Siguran za PVC cijevi i učinkovit. Koristim ga svaki vikend kao održavanje i nemam problema."),
+    array("name" => "Snježana M.",  "text" => "Moj odvod u kupaonici bio je začepljen kosom. Dodala sam prah, čekala 15 minuta i sve je proteklo. Odlično sredstvo."),
 );

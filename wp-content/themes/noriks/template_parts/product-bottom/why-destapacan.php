@@ -1,403 +1,174 @@
 <?php
 /**
- * NORIKS Destapacaño — prah za odpiranje odtokov
- * SKU: NORIKS-DESTAPACAN
+ * product-bottom: NORIKS Destapacaño — prah za čišćenje odvoda (orto-destapacano).
+ * 5 sekcij: 1) Kako djeluje 2) Prednosti 3) Uporaba u 3 koraka 4) Sigurno i učinkovito 5) NORIKS uvjeti
  */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-if ( ! defined( 'ABSPATH' ) ) exit;
-$nf = get_template_directory_uri() . '/img/destapacan/';
+// Slike uporabljamo iz WP uploads (že naložene v galerijo)
+$dst = 'https://devhr.noriks.com/wp-content/uploads/2026/10/';
 ?>
 
 <style>
-/* ========== DESTAPACAÑO ========== */
+.dst-sec { padding: 60px 24px; }
+.dst-wrap { max-width: 1240px; margin: 0 auto; }
+.dst-grey { background: #f7f7f7; }
+.dst-white { background: #fff; }
+.dst-h2 { font-family: Inter, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.2; color: #000; margin: 0 0 16px; }
+.dst-tagline { font-size: 17px; line-height: 1.6; color: #555; margin: 0 0 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
+.dst-center { text-align: center; }
+.dst-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; }
+.dst-row:last-child { margin-bottom: 0; }
+.dst-row.dst-rev { grid-template-columns: 1fr 1fr; }
+.dst-row.dst-rev > *:first-child { order: 2; }
+.dst-media { position: relative; aspect-ratio: 4/5; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+.dst-media img, .dst-media video { width: 100%; height: 100%; object-fit: cover; }
+.dst-copy h3 { font-family: Inter, sans-serif; font-size: 26px; font-weight: 700; line-height: 1.25; color: #000; margin: 0 0 16px; }
+.dst-copy p { font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 14px; }
+.dst-copy p:last-child { margin-bottom: 0; }
+.dst-copy strong { font-weight: 600; color: #000; }
+.dst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+.dst-card { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; }
+.dst-card-ico { width: 64px; height: 64px; margin: 0 auto 20px; background: #f0f0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+.dst-card h4 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 12px; color: #000; }
+.dst-card p { font-size: 15px; line-height: 1.6; color: #555; margin: 0; }
+.dst-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; }
+.dst-step { text-align: center; }
+.dst-step-num { font-family: Inter, sans-serif; font-size: 48px; font-weight: 800; color: #d32f2f; line-height: 1; margin: 0 0 16px; }
+.dst-step h4 { font-family: Inter, sans-serif; font-size: 19px; font-weight: 700; margin: 0 0 12px; color: #000; }
+.dst-step p { font-size: 15px; line-height: 1.6; color: #555; margin: 0; }
+.dst-step-img { aspect-ratio: 1; border-radius: 12px; overflow: hidden; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.dst-step-img img { width: 100%; height: 100%; object-fit: cover; }
+.dst-final { background: #f7f7f7; border-radius: 16px; padding: 40px; text-align: center; margin-top: 48px; }
+.dst-final h3 { font-family: Inter, sans-serif; font-size: 24px; font-weight: 700; margin: 0 0 20px; color: #000; }
+.dst-final ul { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
+.dst-final li { font-size: 16px; line-height: 2; color: #333; position: relative; padding-left: 28px; }
+.dst-final li:before { content: '✓'; position: absolute; left: 0; color: #2e7d32; font-weight: 700; font-size: 18px; }
 
-.nss-destapacan {
-  --bg-light: #f8f9fb;
-  --bg-img: #e8ecf2;
-  --border-soft: rgba(45,65,95,0.08);
-  --text: #1a2332;
-  --accent: #1a5ccc;
-  --shadow: rgba(20,35,60,0.06);
-}
-
-.nss-band {
-  position: relative;
-  padding: 60px 24px;
-  background: #fff;
-}
-.nss-band--rev { background: var(--bg-light); }
-.nss-container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-/* === Sekcija === */
-.nss-flex {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-@media(min-width:900px){
-  .nss-flex { grid-template-columns: 1fr 1fr; gap: 56px; }
-  .nss-band:nth-child(odd) .nss-flex { direction: ltr; }
-  .nss-band:nth-child(even) .nss-flex { direction: rtl; }
-}
-
-.nss-media {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--bg-img);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 6px 24px var(--shadow);
-}
-.nss-media img,
-.nss-media video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.nss-body {
-  max-width: 540px;
-}
-.nss-kicker {
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--accent);
-  margin: 0 0 10px;
-  display: block;
-}
-.nss-h2 {
-  font-size: clamp(26px, 4vw, 36px);
-  font-weight: 800;
-  line-height: 1.15;
-  color: var(--text);
-  margin: 0 0 20px;
-}
-.nss-h2 em {
-  font-style: italic;
-  font-weight: inherit;
-  color: var(--accent);
-}
-.nss-body p {
-  font-size: 17px;
-  line-height: 1.65;
-  color: #3e4a5d;
-  margin: 0 0 16px;
-}
-.nss-body p:last-child { margin-bottom: 0; }
-.nss-body strong {
-  font-weight: 700;
-  color: var(--text);
-}
-
-/* === Koraki (timeline sekcija) === */
-.nss-steps {
-  display: grid;
-  gap: 36px;
-  margin: 40px 0 0;
-}
-.nss-step {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  align-items: start;
-}
-.nss-step-num {
-  width: 46px;
-  height: 46px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: 800;
-  flex-shrink: 0;
-}
-.nss-step-body h3 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text);
-  margin: 0 0 8px;
-}
-.nss-step-body p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #3e4a5d;
-  margin: 0;
-}
-
-/* === Lista (espuma sekcija) === */
-.nss-list {
-  display: grid;
-  gap: 24px;
-  margin: 32px 0 0;
-  list-style: none;
-  padding: 0;
-}
-.nss-list-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px;
-  align-items: start;
-  padding: 20px;
-  background: #fff;
-  border: 1px solid var(--border-soft);
-  border-radius: 12px;
-}
-.nss-band--rev .nss-list-item { background: var(--bg-light); border-color: transparent; }
-.nss-list-num {
-  width: 38px;
-  height: 38px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 800;
-  flex-shrink: 0;
-}
-.nss-list-item strong {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text);
-  display: block;
-  margin: 0 0 6px;
-}
-.nss-list-item p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #3e4a5d;
-  margin: 0;
-}
-
-/* === Zadnja sekcija (pogoji) === */
-.nss-final {
-  padding: 50px 32px;
-  background: #f4f7fc;
-  border-radius: 16px;
-  text-align: center;
-}
-.nss-final h3 {
-  font-size: clamp(22px, 4vw, 28px);
-  font-weight: 800;
-  line-height: 1.3;
-  color: var(--text);
-  margin: 0 0 24px;
-}
-.nss-final-grid {
-  display: grid;
-  gap: 16px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.nss-final-row {
-  padding: 16px;
-  background: #fff;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-}
-
-@media(max-width:899px){
-  .nss-band { padding: 48px 20px; }
-  .nss-flex { gap: 32px; }
-  .nss-media { border-radius: 16px; }
-  .nss-steps { gap: 28px; }
+@media (max-width: 768px) {
+  .dst-sec { padding: 40px 24px; }
+  .dst-h2 { font-size: 26px; margin-bottom: 12px; }
+  .dst-tagline { font-size: 16px; margin-bottom: 32px; }
+  .dst-row { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
+  .dst-row.dst-rev > *:first-child { order: 0; }
+  .dst-grid { grid-template-columns: 1fr; gap: 24px; }
+  .dst-steps { grid-template-columns: 1fr; gap: 32px; }
+  .dst-copy h3 { font-size: 22px; }
 }
 </style>
 
-<!-- ====== 1. Uvod (hero) ====== -->
-<div class="nss-band">
-  <div class="nss-container">
-    <div class="nss-flex">
-      <div class="nss-media">
-        <img src="<?php echo esc_url( $nf . 'noriks-destapacan-hero.webp' ); ?>" alt="NORIKS Destapacaño — prah za čišćenje odvoda">
+<!-- 1) Kako djeluje -->
+<section class="dst-sec dst-white">
+  <div class="dst-wrap">
+    <h2 class="dst-h2 dst-center">Prah koji reagira s vodom i otpušuje odvod za 15 minuta</h2>
+    <p class="dst-tagline dst-center">NORIKS Destapacaño reagira s toplom vodom i stvara aktivnu pjenu koja prodire duboko u cijevi, otapa mast, kosu i ostatke te čisti odvod bez alata i bez raščlanjivanja sifona.</p>
+
+    <div class="dst-row">
+      <div class="dst-media">
+        <img src="<?php echo esc_url( $dst . 'noriks-destapacan-pjena.webp' ); ?>" alt="Prah Destapacaño stvara aktivnu pjenu" loading="lazy">
       </div>
-      <div class="nss-body">
-        <span class="nss-kicker">Otpušite odvod za 15 minuta</span>
-        <h2 class="nss-h2">Odvod zapušen? <em>Otvori ga bez vodoinstalatera.</em></h2>
-        <p>NORIKS Destapacaño je prah koji reagira s toplom vodom i stvara pjenu — ona se širi, lijepi uz zidove cijevi i dolazi tamo gdje tekućine istječu. Bez alata, bez raščlanjivanja, bez plombar računa.</p>
-        <p>Dovoljno je jedna čepasta posuda praha po upotrebi — pakovanje nosi nekoliko upotreba. Za 15 minuta otapa mast, ostatke hrane i kosu.</p>
-        <p><strong>Upotrebite kada vam voda stoji u sudoperu ili u tušu, ili preventivno jednom mjesečno — odvod će ostati čist.</strong></p>
+      <div class="dst-copy">
+        <h3>Aktivna formula koja doseže i čisti začepljenja</h3>
+        <p>Kada se prah dodade u odtok i polije vrućom vodom, <strong>nastaje pjena koja se širi kroz cijevi</strong> i otapa nakupine koje začepe odvod.</p>
+        <p>Pjena se <strong>lijepi uz zidove cijevi</strong> i rastapa mast, kosu, sapunske ostatke i druge organske tvari koje su uzrok začepljenja i neugodnih mirisa.</p>
+        <p>Ne trebaju vam ni posebni alati ni poznavanje vodoinstalatera — prah radi umjesto vas.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ====== 2. Kako se koristi (koraci) ====== -->
-<div class="nss-band nss-band--rev">
-  <div class="nss-container">
-    <div class="nss-flex">
-      <div class="nss-media">
-        <img src="<?php echo esc_url( $nf . 'noriks-destapacan-koraci.webp' ); ?>" alt="3 koraka do čistog odvoda">
+<!-- 2) Prednosti -->
+<section class="dst-sec dst-grey">
+  <div class="dst-wrap">
+    <h2 class="dst-h2 dst-center">Zašto NORIKS Destapacaño</h2>
+    <p class="dst-tagline dst-center">Tri stvari koje korisnici najčešće spominju nakon prvog korištenja.</p>
+
+    <div class="dst-grid">
+      <div class="dst-card">
+        <div class="dst-card-ico">⚙️</div>
+        <h4>Otpušuje za 15 minuta</h4>
+        <p>Dodajte prah, polijte vodom i pričekajte 10–15 minuta. Pjena otapa čep i čisti cijevi bez dodatnog rada.</p>
       </div>
-      <div class="nss-body">
-        <span class="nss-kicker">Postupak</span>
-        <h2 class="nss-h2">Tri koraka do <em>slobodnog odvoda</em></h2>
-        <p>Ne morate dodati ništa drugo. Ne morate razvoditi. Prah djeluje odmah pri kontaktu s vodom — vi samo čekate.</p>
-        <div class="nss-steps">
-          <div class="nss-step">
-            <div class="nss-step-num">1</div>
-            <div class="nss-step-body">
-              <h3>Stavite čepašku poklopac praha u odvod</h3>
-              <p>Bez prethodne vode, bez miješanja. Prah ulazi u maksimalnoj koncentraciji od prvog dodira i ide pravo u začepljenje.</p>
-            </div>
-          </div>
-          <div class="nss-step">
-            <div class="nss-step-num">2</div>
-            <div class="nss-step-body">
-              <h3>Zalijte vrelom vodom i pričekajte 15 minuta</h3>
-              <p>Čim topla voda dodirne prah, reagira i diže gustu pjenu koja se lijepi uz zidove cijevi. Pjena dolazi tamo gdje tekućine istječu — otapa mast, ostatke i kosu. Vi ne dirate ništa.</p>
-            </div>
-          </div>
-          <div class="nss-step">
-            <div class="nss-step-num">3</div>
-            <div class="nss-step-body">
-              <h3>Isperite kantom vode</h3>
-              <p>Nakon 15 minuta bacite kantu vode — cijev ponovno teče kao prvog dana. Bez alata, bez raščlanjivanja, bez plaćanja vodoinstalatera.</p>
-            </div>
-          </div>
+      <div class="dst-card">
+        <div class="dst-card-ico">🛡️</div>
+        <h4>Sigurno za cijevi</h4>
+        <p>Djeluje bez oštećivanja PVC, metala ili drugih materijala cijevi. Sigurna formula za sve vrste kućnih instalacija.</p>
+      </div>
+      <div class="dst-card">
+        <div class="dst-card-ico">🌿</div>
+        <h4>Uklanja neugodne mirise</h4>
+        <p>Ne samo da otpušuje odvod, već čisti i bakterije koje uzrokuju neugodan miris iznutra cijevi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3) Uporaba u 3 koraka -->
+<section class="dst-sec dst-white">
+  <div class="dst-wrap">
+    <h2 class="dst-h2 dst-center">Uporaba u 3 jednostavna koraka</h2>
+    <p class="dst-tagline dst-center">Bez alata, bez raščlanjivanja, bez poziva vodoinstalatera.</p>
+
+    <div class="dst-steps">
+      <div class="dst-step">
+        <div class="dst-step-num">1</div>
+        <div class="dst-step-img">
+          <img src="<?php echo esc_url( $dst . 'noriks-destapacan-koraci.webp' ); ?>" alt="Dodajte prah u odvod" loading="lazy">
         </div>
+        <h4>Dodajte prah</h4>
+        <p>Ulijte mjerenu količinu praha direktno u odtok umivaonika, tuša ili kuhinje.</p>
+      </div>
+
+      <div class="dst-step">
+        <div class="dst-step-num">2</div>
+        <div class="dst-step-img">
+          <img src="<?php echo esc_url( $dst . 'noriks-destapacan-djelovanje.webp' ); ?>" alt="Polijte vrućom vodom" loading="lazy">
+        </div>
+        <h4>Polijte vrućom vodom</h4>
+        <p>Dodajte vruću vodu (ne kipuću). Prah reagira i stvara pjenu koja prodire u cijevi.</p>
+      </div>
+
+      <div class="dst-step">
+        <div class="dst-step-num">3</div>
+        <div class="dst-step-img">
+          <img src="<?php echo esc_url( $dst . 'noriks-destapacan-primjene.webp' ); ?>" alt="Pričekajte 15 minuta" loading="lazy">
+        </div>
+        <h4>Pričekajte 10–15 minuta</h4>
+        <p>Pjena otapa začepljenje. Nakon toga isperite običnom vodom — gotovo.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ====== 3. Zašto pjena (mehanizam) ====== -->
-<div class="nss-band">
-  <div class="nss-container">
-    <div class="nss-flex">
-      <div class="nss-media">
-        <img src="<?php echo esc_url( $nf . 'noriks-destapacan-pjena.webp' ); ?>" alt="Pjena doseže gdje tekućine ne dosežu">
+<!-- 4) Sigurno i učinkovito -->
+<section class="dst-sec dst-grey">
+  <div class="dst-wrap">
+    <div class="dst-row dst-rev">
+      <div class="dst-copy">
+        <h3>Sigurno za sve vrste cijevi i redovito korištenje</h3>
+        <p>NORIKS Destapacaño je <strong>formuliran da bude siguran za PVC, metal i druge materijale cijevi</strong> u kućanstvu.</p>
+        <p>Za održavanje preporučuje se <strong>jednom tjedno</strong> — tako sprječavate začepljenja i neugodne mirise prije nego se pojave, i uštedite na popravcima i pozivima vodoinstalaterima.</p>
+        <p>Bez agresivnih kemikalija koje oštećuju cijevi ili stvaraju opasne pare. Djeluje djelotvorno, ali bez rizika.</p>
       </div>
-      <div class="nss-body">
-        <span class="nss-kicker">Mehanizam</span>
-        <h2 class="nss-h2">Pjena doseže tamo gdje <em>tekućine istječu</em></h2>
-        <p>Destapacaño nije još jedna tekućina. To je formula koja se pretvara unutar cijevi i ostaje upravo tamo gdje je problem.</p>
-        <ul class="nss-list">
-          <li class="nss-list-item">
-            <div class="nss-list-num">1</div>
-            <div>
-              <strong>Diže se i širi</strong>
-              <p>Pri dodiru s toplom vodom, prah reagira i raste u gustu pjenu unutar cijevi.</p>
-            </div>
-          </li>
-          <li class="nss-list-item">
-            <div class="nss-list-num">2</div>
-            <div>
-              <strong>Lijepi se uz zidove</strong>
-              <p>Za razliku od tekućine koja pada i istječe u sekundama, pjena ostaje priljubljena upravo gdje je začepljenje.</p>
-            </div>
-          </li>
-          <li class="nss-list-item">
-            <div class="nss-list-num">3</div>
-            <div>
-              <strong>Djeluje sama, 15 minuta</strong>
-              <p>Radi na masti, ostacima i kosi dok vi radite drugo. Zatim, kanta vode i gotovo.</p>
-            </div>
-          </li>
-        </ul>
-        <p style="margin-top:28px;"><strong>Bacite bocu tekućine i za nekoliko sekundi više je nema. Pjena Destapacaño ostaje — zato doseže tamo gdje tekućina ne doseže.</strong></p>
+      <div class="dst-media">
+        <img src="<?php echo esc_url( $dst . 'noriks-destapacan-hero.webp' ); ?>" alt="Siguran za sve vrste cijevi" loading="lazy">
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ====== 4. Za što (primjene) ====== -->
-<div class="nss-band nss-band--rev">
-  <div class="nss-container">
-    <div class="nss-flex">
-      <div class="nss-media">
-        <img src="<?php echo esc_url( $nf . 'noriks-destapacan-primjene.webp' ); ?>" alt="Sudoper, tuš, umivaonik — sve cijevi">
-      </div>
-      <div class="nss-body">
-        <span class="nss-kicker">Primjene</span>
-        <h2 class="nss-h2">Sudoper, tuš, umivaonik — <em>sve cijevi</em></h2>
-        <p>Destapacaño radi svugdje gdje se odvod začepi — kuhinja, kupaonica, praonica rublja. Ne oštećuje cijevi, ni plastične ni metalne.</p>
-        <p>Upotrijebite preventivno jednom mjesečno kako bi spriječili stvaranje začepljenja — jeftinije je od jednog poziva vodoinstalatera.</p>
-        <p><strong>Pakovanje nosi nekoliko upotreba — jedna čepasta posuda po upotrebi.</strong> Zatvorite dobro nakon upotrebe i držite podalje od djece.</p>
-      </div>
+<!-- 5) NORIKS uvjeti -->
+<section class="dst-sec dst-white">
+  <div class="dst-wrap">
+    <div class="dst-final">
+      <h3>NORIKS jamči najbolju kupovinu</h3>
+      <ul>
+        <li>30 dana za povrat novca — isprobajte bez rizika</li>
+        <li>Besplatna dostava iznad 70 €</li>
+        <li>Plaćanje pouzećem dostupno</li>
+        <li>120.000 zadovoljnih kupaca diljem Europe</li>
+        <li>Ocjena 4,8 na temelju 1.081 recenzije</li>
+      </ul>
     </div>
   </div>
-</div>
-
-<!-- ====== 5. Što otapa (djelovanje) ====== -->
-<div class="nss-band">
-  <div class="nss-container">
-    <div class="nss-flex">
-      <div class="nss-media">
-        <img src="<?php echo esc_url( $nf . 'noriks-destapacan-djelovanje.webp' ); ?>" alt="Otapa mast, kosu, ostatke hrane">
-      </div>
-      <div class="nss-body">
-        <span class="nss-kicker">Djelovanje</span>
-        <h2 class="nss-h2"><em>Otapa mast, kosu i ostatke</em> — bez mehaničkog rada</h2>
-        <p>Aktivna formula napada slojeve masti koji se lijepiju uz cijevi, rastavlja nakupine kose iz tuša i sudopera te razbija ostatke hrane koji se nakupljaju u kuhinji.</p>
-        <p>Pjena ostaje priljubljena uz problema 15 minuta — dovoljno da ga rastvori i otpusti odvod bez vašeg dodira.</p>
-        <p><strong>Ne morate koristiti žicu ili rastaviti sifon. Formula radi umjesto vas.</strong></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ====== 6. NORIKS garancije ====== -->
-<div class="nss-band nss-band--rev">
-  <div class="nss-container">
-    <div class="nss-final">
-      <h3>NORIKS — 120.000 kupaca, ocjena 4,8</h3>
-      <div class="nss-final-grid">
-        <div class="nss-final-row">✓ 30 dana za povrat novca</div>
-        <div class="nss-final-row">✓ Besplatna dostava iznad 70 €</div>
-        <div class="nss-final-row">✓ Plaćanje pouzećem</div>
-        <div class="nss-final-row">✓ Siguran proizvod za sve vrste cijevi</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<?php
-// FAQ za Destapacaño
-$destapacan_faq = array(
-  array(
-    'questioon' => 'Koliko praha staviti po upotrebi?',
-    'answer'    => 'Jedna čepasta poklopac praha dovoljno je za jedan odvod. Pakovanje nosi nekoliko upotreba.',
-  ),
-  array(
-    'questioon' => 'Djeluje li u potpuno začepljenoj cijevi?',
-    'answer'    => 'Djeluje na većinu začepljenja uzrokovanih masnoćom, kosom i ostatcima hrane. Ako voda uopće ne prolazi, koristite dva puta zaredom ili kombinirajte s mehaničkim čišćenjem.',
-  ),
-  array(
-    'questioon' => 'Koliko vruća voda mora biti?',
-    'answer'    => 'Što toplija, to bolja reakcija — ali ne mora kipjeti. Voda iz slavine zagrijana na najvišu temperaturu (50–70 °C) već je dovoljna.',
-  ),
-  array(
-    'questioon' => 'Je li sigurno za plastične cijevi?',
-    'answer'    => 'Da. Formula ne oštećuje plastiku, ni metal. Samo pratite upute — jedno primjenjivanje, 15 minuta, ispiranje.',
-  ),
-  array(
-    'questioon' => 'Može li se koristiti preventivno?',
-    'answer'    => 'Da, preporučljivo je jednom mjesečno kako bi spriječili nakupljanje masti i ostataka. Jeftinije je od jednog poziva vodoinstalatera.',
-  ),
-  array(
-    'questioon' => 'Koliko dugo traje jedno pakovanje?',
-    'answer'    => 'Ovisi o broju odvoda i učestalosti — tipično pakovanje pokriva 4–6 upotreba.',
-  ),
-  array(
-    'questioon' => 'Što ako nakon 15 minuta odvod još nije slobodan?',
-    'answer'    => 'Isperite i ponovite postupak drugi put. Ponekad je začepljenje jako duboko ili jako debelo, pa treba dva kruga.',
-  ),
-);
-?>
+</section>
