@@ -304,6 +304,8 @@ function noriks_product_type_map() : array {
         'black-friday'            => array( 'black-friday' ),
         'orto'                    => array( 'orto' ),
         'calendar'                => array( 'orto-calendar', 'calendar' ),
+        // NORIKS Travel — posteljica za pse u automobilu.
+        'travel'                  => array( 'orto-travel', 'travel' ),
     );
 }
 
@@ -447,6 +449,20 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
     }
 }
 
+
+if ( ! function_exists( 'noriks_classics_sizes' ) ) {
+    /** NORIKS Classics (Fleecies): velicina (za akordeon i modal). */
+    function noriks_classics_sizes() {
+        return array(
+            array( 'S' ),
+            array( 'M' ),
+            array( 'L' ),
+            array( 'XL' ),
+            array( '2XL' ),
+            array( '3XL' ),
+        );
+    }
+}
 if ( ! function_exists( 'noriks_buildshirt_sizes' ) ) {
     /** NORIKS BuildShirt: velicina, opseg grudi, opseg struka, duzina. */
     function noriks_buildshirt_sizes() {
@@ -1372,5 +1388,15 @@ if ( ! function_exists( 'noriks_calendar_sizes' ) ) {
     /** NORIKS Calendar — digitalni obiteljski kalendar (bez velicina). */
     function noriks_calendar_sizes() {
         return array();
+    }
+}
+
+if ( ! function_exists( 'noriks_travel_sizes' ) ) {
+    /** NORIKS Travel — posteljica za pse u automobilu (2 veličine). */
+    function noriks_travel_sizes() {
+        return array(
+            array( 'Standard', '130 × 61 cm (automobili / SUV / mali pick-up)' ),
+            array( 'XL',       '152 × 61 cm (full-size pick-up / full-size SUV)' ),
+        );
     }
 }
