@@ -1,6 +1,6 @@
 <?php
 /**
- * product-bottom: NORIKS Giovasa — krpa iz mikrofilamenata (orto-giovasa).
+ * product-bottom: NORIKS GlassPro — krpa iz mikrofilamenata (orto-giovasa).
  * Original: giovasa.com/products/panno-giovasa (IT) — čistilna krpa iz mikrofilamenata,
  * vpija do 1L vode, 300+ pranj, brez kemikalij, za steklo in površine.
  * Struktura: 6 sekcij, izmenjujoča ozadja, slika/video ob besedilu, NORIKS pogoji namesto 100-dnevne garancije originala.
@@ -37,7 +37,7 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 <section class="ngv-sec<?php echo $ngv_cls(); ?>">
   <div class="ngv-wrap">
     <div class="ngv-row2">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-giovasa-upotreba.webp', 'NORIKS Giovasa krpa čisti steklo brez kemikalij' ); ?></div>
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-upotreba.webp', 'NORIKS GlassPro krpa čisti steklo brez kemikalij' ); ?></div>
       <div class="ngv-copy">
         <p class="ngv-kicker">Čisto brez kemikalij</p>
         <h2 class="ngv-h3">Steklo blistavo čisto — <em>samo s vodom</em></h2>
@@ -52,7 +52,7 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 <section class="ngv-sec<?php echo $ngv_cls(); ?>">
   <div class="ngv-wrap">
     <div class="ngv-row2 ngv-row2--rev">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-giovasa-vpijanje.webp', 'Mikrofilamenti vpijajo do 1 litra vode' ); ?></div>
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-vpijanje.webp', 'Mikrofilamenti vpijajo do 1 litra vode' ); ?></div>
       <div class="ngv-copy">
         <p class="ngv-kicker">Visoka vpojnost</p>
         <h2 class="ngv-h3">Vpije do <em>1 litra vode</em></h2>
@@ -70,11 +70,11 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 <section class="ngv-sec<?php echo $ngv_cls(); ?>">
   <div class="ngv-wrap">
     <div class="ngv-row2">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-giovasa-trajnostnost.webp', 'Krpa se opere 300+ krat' ); ?></div>
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-trajnostnost.webp', 'Krpa se opere 300+ krat' ); ?></div>
       <div class="ngv-copy">
         <p class="ngv-kicker">Dolga življenjska doba</p>
         <h2 class="ngv-h3">Lahko oprete <em>več kot 300-krat</em></h2>
-        <p>Krpa NORIKS Giovasa zdržuje <strong>300+ pranj</strong> v pralnem stroju pri 60°C. Po uporabi jo preprosto vrzite v pralni stroj, posušite in ponovno uporabite — mesece čistih površin brez potrebe po novih krpah ali papirnate brisačah.</p>
+        <p>Krpa NORIKS GlassPro zdržuje <strong>300+ pranj</strong> v pralnem stroju pri 60°C. Po uporabi jo preprosto vrzite v pralni stroj, posušite in ponovno uporabite — mesece čistih površin brez potrebe po novih krpah ali papirnate brisačah.</p>
         <p class="ngv-big">Trajnostna izbira, ki varčuje z denarjem in varuje okolje.</p>
       </div>
     </div>
@@ -85,7 +85,7 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 <section class="ngv-sec<?php echo $ngv_cls(); ?>">
   <div class="ngv-wrap">
     <div class="ngv-row2 ngv-row2--rev">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-giovasa-koraki.webp', 'Kako uporabljati NORIKS Giovasa krpo — 3 koraki' ); ?></div>
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-koraki.webp', 'Kako uporabljati NORIKS GlassPro krpo — 3 koraki' ); ?></div>
       <div class="ngv-copy">
         <p class="ngv-kicker">Kako uporabljati</p>
         <h2 class="ngv-h3">Tri koraka <em>do čistih površin</em></h2>
@@ -103,7 +103,7 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 <section class="ngv-sec<?php echo $ngv_cls(); ?>">
   <div class="ngv-wrap">
     <div class="ngv-row2">
-      <div class="ngv-media"><?php echo $ngv_img( 'noriks-giovasa-primeri.webp', 'Krpa za prozore, kuhinjske površine, kopalnico' ); ?></div>
+      <div class="ngv-media"><?php echo $ngv_img( 'noriks-glasspro-primeri.webp', 'Krpa za prozore, kuhinjske površine, kopalnico' ); ?></div>
       <div class="ngv-copy">
         <p class="ngv-kicker">Vsestransko čiščenje</p>
         <h2 class="ngv-h3">Za prozore, kuhinjo <em>in kopalnico</em></h2>
@@ -123,7 +123,7 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 <section class="ngv-sec<?php echo $ngv_cls(); ?>">
   <div class="ngv-wrap">
     <div class="ngv-row2 ngv-row2--rev">
-      <div class="ngv-media ngv-media--sq"><?php echo $ngv_img( 'noriks-giovasa-packshot.webp', 'NORIKS Giovasa krpa iz mikrofilamenata' ); ?></div>
+      <div class="ngv-media ngv-media--sq"><?php echo $ngv_img( 'noriks-glasspro-packshot.webp', 'NORIKS GlassPro krpa iz mikrofilamenata' ); ?></div>
       <div class="ngv-copy">
         <p class="ngv-kicker">Brez rizika</p>
         <h2 class="ngv-h3">Pravo na povrat <em>u roku od 30 dana</em></h2>
@@ -136,7 +136,7 @@ $ngv_cls = function() use ( &$ngv_n ) { $ngv_n++; return ( $ngv_n % 2 ) ? ' ngv-
 </section>
 
 <style>
-/* NORIKS Giovasa — mikrovlaknasta krpa */
+/* NORIKS GlassPro — mikrovlaknasta krpa */
 .ngv-sec { padding: 80px 0; position: relative; }
 .ngv-tint { background: #f8f9fa; }
 .ngv-wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }

@@ -1,7 +1,7 @@
 <?php
 /**
  * auto_reviews/HR_pikseland.php
- * 16 recenzija za PIKSELAND retro gaming konzolu (HR).
+ * 16 recenzija za NORIKS RetroBox retro gaming konzolu (HR).
  */
 return array(
   array( 'name' => 'Marko T.', 'stars' => 5, 'text' => 'Pokrenuo prvu igru i odmah su me preplavile uspomene iz djetinjstva. Nevjerojatno kako brzo radi i koliko igara ima! Preporuka svima koji vole retro klasike.' ),
@@ -16,8 +16,8 @@ return array(
   array( 'name' => 'Ivana J.', 'stars' => 5, 'text' => 'Kupila sam kao poklon za muža i on je oduševljen! Sad svake večeri igra stare igre. Odličan izbor!' ),
   array( 'name' => 'Goran Z.', 'stars' => 5, 'text' => 'Postavljanje je bilo brzo — HDMI, struja, gotovo. Za par sekundi sam igrao prvu igru. Bez frustracija, bez čitanja uputa.' ),
   array( 'name' => 'Jelena K.', 'stars' => 4, 'text' => 'Kontroleri rade odlično, izbor igara je ogroman. Jedino što, neki emulatori su malo sporiji, ali generalno zadovoljna.' ),
-  array( 'name' => 'Filip D.', 'stars' => 5, 'text' => 'Za tu cijenu dobivate tisuće igara i dva bežična kontrolera. Ne morate kupovati stare konzole po pijacama, sve je tu.' ),
-  array( 'name' => 'Sandra W.', 'stars' => 5, 'text' => 'Moja djeca su prestala tražiti PlayStation! Sad svi zajedno uživamo u starim arkadnim igrama. Pravi hit kod kuće.' ),
+  array( 'name' => 'Filip D.', 'stars' => 5, 'text' => 'Za tu cijenu dobivate tisuće igara i dva bežična kontrolera. Ne morate kupovati stare konzole po buvljacima, sve je tu.' ),
+  array( 'name' => 'Sandra V.', 'stars' => 5, 'text' => 'Moja djeca više ne traže novu konzolu! Sad svi zajedno uživamo u starim arkadnim igrama. Pravi hit kod kuće.' ),
   array( 'name' => 'Josip L.', 'stars' => 5, 'text' => 'Ovu konzolu imam već mjesec dana, radi perfektno. Igre se učitavaju brzo, nema zapinjanja. Jako sam zadovoljan.' ),
-  array( 'name' => 'Katarina F.', 'stars' => 5, 'text' => 'Odlična kupovina! Sve radi, dostava je bila brza, kutija uredna. PIKSELAND je bio najbolji dar koji sam mogla kupiti za muža.' ),
+  array( 'name' => 'Katarina F.', 'stars' => 5, 'text' => 'Odlična kupovina! Sve radi, dostava je bila brza, kutija uredna. NORIKS RetroBox je bio najbolji dar koji sam mogla kupiti za muža.' ),
 );

@@ -1,5 +1,5 @@
 <?php
-// NORIKS Munna | Biljne kapi za svakodnevni ritual — mnenja kupcev. Generirano z postavi.js.
+// NORIKS Ritual | Biljne kapi za svakodnevni ritual — mnenja kupcev. Generirano z postavi.js.
 $auto_reviews_en = array(
     array("name" => "Aleksandra T.", "text" => "Dugo sam pokušavala jesti više i bilo mi je jako teško. S Munnom imam više apetita tijekom dana i lakše održavam obroke. Ostajem dosljedna i želim vidjeti kako će se razvijati."),
     array("name" => "Marijana L.", "text" => "Oduvijek sam jako mršava i teško dobivam volumen. Nakon nekoliko tjedana primjećujem više oblika na bokovima i bedrima i osjećam da napokon napredujem prema svom cilju."),

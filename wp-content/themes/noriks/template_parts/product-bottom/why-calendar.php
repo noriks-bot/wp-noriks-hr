@@ -1,170 +1,168 @@
 <?php
 /**
- * product-bottom: NORIKS CALENDAR (orto-calendar)
- *
- * Obiteljski digitalni kalendar — organizacija za cijelu obitelj bez pretplate.
+ * NORIKS Calendar — why sekcije 1:1 z originalom (8 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-$cal = get_template_directory_uri() . '/img/calendar/';
+$wdir = get_template_directory_uri() . '/img/calendar/';
 ?>
+<div class="wcalendar">
 
-<!-- sekcija 1: Hero — Obitelj organizirana na jednom mjestu -->
-<section class="nss-sect nss--bg1">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-glavni.png' ); ?>" alt="NORIKS Calendar na zidu obiteljske kuhinje" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Organizacija obitelji</p>
-      <h2 class="nss-h2">Svi termini, zadatci i planovi na <em>jednom mjestu</em></h2>
-      <p>Papir se gubi. Poruke tonu u grupi. NORIKS Calendar stavlja sve važne stvari — termine, zadatke, obroke — na jedan ekran koji cijela obitelj vidi.</p>
-      <p>15,6" Full HD zaslon visi na zidu i sinkronizira se s aplikacijom — <strong>bilo tko može dodati, bilo tko može vidjeti, nitko ništa ne propušta</strong>.</p>
-      <p class="nss-strong">Vaš obitelj
-
-j kalendar, bez pretplate, zauvijek.</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 2: Sto moze Calendar — sve na jednom ekranu -->
-<section class="nss-sect nss--bg2 nss--rev">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija1.png' ); ?>" alt="Prikaz funkcija — kalendar, zadatci, obroci" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Sve sto vam treba</p>
-      <h2 class="nss-h2"><em>Zajednicki</em> kalendar, zadatci, obroci i bodovi</h2>
-      <p>Termini roditelja, treninga djece, doktorskih pregleda — sve to u jednom prikazu koji svi vide.</p>
-      <p><strong>Dijete dodaje trening iz aplikacije.</strong> Tata rezervira servis auta s tableta. Mama planira obrok za vikend.</p>
-      <p>Sustav bodova <strong>motivira djecu da dovršavaju zadatke</strong> — svaki zadatak donosi bodove, svaki tjedan prikazuje tko je najmarljiviji.</p>
-      <p class="nss-strong">Nema pretplate — sve što danas dobijete, ostaje zauvijek besplatno.</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 3: Sinkronizacija — aplikacija + tablica -->
-<section class="nss-sect nss--bg1">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija4.png' ); ?>" alt="NORIKS Calendar sync s mobitelom i tabletom" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Sinkronizacija uživo</p>
-      <h2 class="nss-h2">Uređujte s mobitela, <em>vidite na zidu</em></h2>
-      <p>Kalendar prima podatke preko WiFi i Bluetooth. Svaka promjena — dodan termin, obavljena zadaća, planirani obrok — <strong>odmah se prikazuje na ekranu</strong>.</p>
-      <p>Do 8 članova obitelji može koristiti jednu aplikaciju. Svatko dodaje svoje, nitko ništa ne briše slučajno.</p>
-      <p class="nss-strong">iOS, Android, Web — sinkronizirate odakle god želite.</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 4: Montaža — visi ili stoji -->
-<section class="nss-sect nss--bg2 nss--rev">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija3.png' ); ?>" alt="Montaza — postav ili objesi" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Montaža po želji</p>
-      <h2 class="nss-h2">Visi na zidu ili <em>stoji na stolu</em></h2>
-      <p>U paketu dolazi <strong>nosač za zid i postolje</strong> — odaberite položaj koji vam odgovara.</p>
-      <p>Objesiti u hodniku, postaviti na kuhinju ili radni stol — kalendar je čitljiv iz svakog kuta, a USB-C kabel osigurava stalno napajanje.</p>
-      <p class="nss-strong">Mere: 39,5 × 29,5 cm — stane na svaki zid ili policu.</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 5: Bodovi za djecu — motivacija kroz igru -->
-<section class="nss-sect nss--bg1">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija6.png' ); ?>" alt="Sustav bodova — djeca se natječu tko više zavrsi zadatke" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Sustav bodova</p>
-      <h2 class="nss-h2">Djeca <em>vole</em> sakupljati bodove</h2>
-      <p>Svaki obavljen zadatak donosi bodove. Tko dovršuje više — vidi se na zaslonu.</p>
-      <p><strong>Djeca se počinju natjecati</strong> — tko će prvi završiti, tko će skupiti više bodova ovaj tjedan.</p>
-      <p>Umjesto svađe „zašto moram ja?", djeca traže dodatne zadatke. Roditelj raspoređuje, djeca ispunjavaju — a svi vide tko je danas najmarljiviji.</p>
-      <p class="nss-strong">Funkcija bodova — besplatno, zauvijek (samo za rane kupce).</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 6: Planiranje obroka -->
-<section class="nss-sect nss--bg2 nss--rev">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija8.png' ); ?>" alt="Tjedni jelovnik — planirajte obroke unaprijed" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Planiranje obroka</p>
-      <h2 class="nss-h2"><em>Tjedni jelovnik</em> za cijelu obitelj</h2>
-      <p>Umjesto svakodnevnog „Što je za ručak?", postavite tjedni raspored obroka — doručak, ručak, večeru.</p>
-      <p>Svaki član može vidjeti što se kuha sutra, što se planira za petak. <strong>Jedno planiranje, manje pitanja, manje stresa.</strong></p>
-      <p class="nss-strong">Dodajte fotografije jela, zapamtite recepte — sve na jednom mjestu.</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 7: Cijela obitelj na jednom ekranu -->
-<section class="nss-sect nss--bg1">
-  <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija5.png' ); ?>" alt="Razlicite boje za svakog clana obitelji" loading="lazy"></div>
-    <div class="nss-text">
-      <p class="nss-kicker">Za cijelu obitelj</p>
-      <h2 class="nss-h2">Boje po članovima — <em>pregled na prvi pogled</em></h2>
-      <p>Svaki član obitelji dobiva svoju boju. Termini mame — narančasti. Treninzi djeteta — plavi. Doktor za bebu — ružičasti.</p>
-      <p><strong>Jedan pogled kaže tko ima termine danas, tko je sutra zauzet.</strong></p>
-      <p>Kalendar prikazuje sve, ali jasno — ne mora se čitati svaki termin, boja odmah govori čiji je.</p>
-      <p class="nss-strong">8 članova, 8 boja, jedan zajednički kalendar.</p>
-    </div>
-  </div>
-</section>
-
-<!-- sekcija 8: NORIKS pogoji — zadnja sekcija -->
-<section class="nss-sect nss--bg2">
-  <div class="nss-wrap nss-center">
-    <h2 class="nss-h2">Zašto više od 120.000 obitelji vjeruje NORIKS-u?</h2>
-    <div class="nss-grid3">
-      <div class="nss-card">
-        <div class="nss-card-ico">✓</div>
-        <h3 class="nss-card-title">30 dana za povrat novca</h3>
-        <p>Isprobajte NORIKS Calendar bez rizika — ako vam ne odgovara, vratite ga i dobijte puni povrat.</p>
-      </div>
-      <div class="nss-card">
-        <div class="nss-card-ico">✓</div>
-        <h3 class="nss-card-title">Besplatna dostava iznad 70 €</h3>
-        <p>Uključujući sigurno pakiranje i praćenje pošiljke.</p>
-      </div>
-      <div class="nss-card">
-        <div class="nss-card-ico">✓</div>
-        <h3 class="nss-card-title">Ocjena 4,8 / 692 recenzija</h3>
-        <p>Tisuće obitelji već organizira dan uz NORIKS.</p>
+  <section class="wcalendar__s wcalendar__s--bg">
+    <div class="wcalendar__v">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija2.png' ); ?>" alt="Svi termini obitelji, u stvarnom vremenu" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">OBITELJSKI PLANER</div>
+        <h2 class="wcalendar__h2">Svi termini obitelji, <em>u stvarnom vremenu</em></h2>
+        <p class="wcalendar__p">NORIKS Calendar je digitalni obiteljski planer s ekranom osjetljivim na dodir. Možete ga objesiti na zid kao pametni zidni kalendar ili ga postaviti na stol, policu ili komodu — kako vam u domu više odgovara. Na jednom mjestu cijela obitelj vidi što se kada događa.</p>
+        <p class="wcalendar__p">Kalendar povezujete s Google, Apple i Outlook kalendarima svih članova obitelji. Termini koje netko već ima u svom kalendaru automatski se pojavljuju na zaslonu, pa ništa ne morate prepisivati dvaput. Sve što se promijeni na mobitelu, odmah je vidljivo i na kalendaru u kući.</p>
+        <p class="wcalendar__p">Uz kalendar dobivate i popise zadataka i rutina, planiranje obroka te popise za kupnju i provjeru. NORIKS Calendar radi uz Apple i Android uređaje, tako da se svatko u obitelji može uključiti sa svojim mobitelom.</p>
+        <p class="wcalendar__zak">Jedan ekran — i svi u kući znaju što ih danas čeka.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="wcalendar__s">
+    <div class="wcalendar__v wcalendar__v--rev">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija3.png' ); ?>" alt="Velik ekran od 15,6 inča" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">ZID ILI STOL</div>
+        <h2 class="wcalendar__h2">Velik ekran od <em>15,6 inča</em></h2>
+        <p class="wcalendar__p">Zaslon NORIKS Calendara ima dijagonalu od 15,6 inča, a sam uređaj dug je 40,1 cm i širok 26,1 cm. Dovoljno je velik da se termini, zadaci i popisi lijepo vide i iz drugog kraja prostorije, a opet dovoljno nenametljiv za hodnik, kuhinju ili dnevni boravak.</p>
+        <p class="wcalendar__p">Postolje je ugrađeno u uređaj, a nosač za zid je integriran. Za montažu na zid u paketu su šablona za bušenje, 4 vijka, 3 tiple i odvijač, pa vam ne treba ništa dodatno. Napaja se preko adaptera i kabela dugog 1,8 m, uz maksimalnu snagu od 24 W.</p>
+        <p class="wcalendar__p">U paketu se nalaze NORIKS Calendar sa zaslonom od 15,6 inča, adapter i kabel za napajanje, postolje, integrirani nosač za zid, pribor za montažu i upute za korištenje. Uz to dobivate i besplatnu mobilnu aplikaciju za sve članove obitelji.</p>
+        <p class="wcalendar__zak">Objesite ga na zid ili ga stavite na stol — sve je već u kutiji.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s wcalendar__s--bg">
+    <div class="wcalendar__v">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-glavni.png' ); ?>" alt="Što danas kupite, ostaje vaše" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">BEZ PRETPLATE</div>
+        <h2 class="wcalendar__h2">Što danas kupite, <em>ostaje vaše</em></h2>
+        <p class="wcalendar__p">Trebate li pretplatu? Ne. NORIKS Calendar radi potpuno bez pretplate — kupite ga jednom i sve funkcije koje danas dobivate ostaju vam besplatne. Nema mjesečnih računa i nema skrivenih troškova. Kalendar kupujete jednom i on je u potpunosti vaš.</p>
+        <p class="wcalendar__p">Bodovi i obroci inače su funkcije koje se plaćaju kroz pretplatu, ali u sadašnjoj ponudi dobivate ih trajno besplatno. Ta ponuda vrijedi samo ograničeno vrijeme.</p>
+        <p class="wcalendar__p">U budućnosti mogu doći dodatne funkcije po izboru, no jedno je jasno: sve što danas dobivate besplatno, besplatno i ostaje. To vrijedi i za redovita ažuriranja koja stižu automatski.</p>
+        <p class="wcalendar__zak">Jednom kupite — i sve funkcije su vaše, bez mjesečne rate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s">
+    <div class="wcalendar__v wcalendar__v--rev">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-01.jpg' ); ?>" alt="Kalendar, zadaci, kupnja — u jednom sustavu" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">SVE U JEDNOM</div>
+        <h2 class="wcalendar__h2">Kalendar, zadaci, kupnja — <em>u jednom sustavu</em></h2>
+        <p class="wcalendar__p">Termini, zadaci, popis za kupnju, rutine — obitelji se za organizaciju u prosjeku služe s pet različitih alata. Papirić na hladnjaku, nekoliko aplikacija na mobitelu, poruke u grupi i kalendar na zidu, a ništa od toga nije na istom mjestu.</p>
+        <p class="wcalendar__p">NORIKS Calendar sve to spaja u jedan sustav. Termini, zadaci, popisi za kupnju i rutine nalaze se na istom zaslonu, a svaki član obitelji ih vidi na isti način. Više nema pitanja tko je što zapisao i gdje.</p>
+        <p class="wcalendar__p">Uz kalendar tu su i rasporedi sati za školu, planiranje obroka s receptima, zajednički popisi te bodovi za obavljene zadatke. Sve je složeno tako da se i djeca brzo snađu, a odrasli više ne moraju voditi nekoliko sustava usporedno.</p>
+        <p class="wcalendar__zak">Pet alata manje — jedan kalendar za cijelu obitelj.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s wcalendar__s--bg">
+    <div class="wcalendar__v">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-02.jpg' ); ?>" alt="Svaki član obitelji, svoja boja" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">KALENDARI I BOJE</div>
+        <h2 class="wcalendar__h2">Svaki član obitelji, <em>svoja boja</em></h2>
+        <p class="wcalendar__p">Sinkronizirajte online kalendare svih članova obitelji na jedno mjesto u samo 5 minuta. Google, Apple i Outlook kalendari spajaju se izravno, pa se termini koje već imate odmah prikazuju na zaslonu.</p>
+        <p class="wcalendar__p">Svaki član obitelji dobiva svoju boju. Na prvi pogled vidite tko ide na trening, tko ima liječnika, a tko rođendan kod prijatelja — bez čitanja svakog unosa posebno. Boje ostaju iste na zaslonu i u aplikaciji, pa se svatko odmah snađe.</p>
+        <p class="wcalendar__p">Termini se usklađuju u stvarnom vremenu. Kada netko doda ili promijeni događaj u svom kalendaru, promjena se pojavljuje i na NORIKS Calendaru, tako da su svi uvijek u tijeku.</p>
+        <p class="wcalendar__zak">Povežete jednom — i svaki termin stigne tamo gdje ga svi vide.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s">
+    <div class="wcalendar__v wcalendar__v--rev">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-03.jpg' ); ?>" alt="Svatko zna što je na redu" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">ZADACI I APLIKACIJA</div>
+        <h2 class="wcalendar__h2">Svatko zna <em>što je na redu</em></h2>
+        <p class="wcalendar__p">Zadaci i rutine pokazuju tko što i kada treba napraviti. Jutarnje, dnevne i večernje rutine jasno su vidljive na zaslonu, pa nema stalnog podsjećanja i ponavljanja istih uputa. Svaki zadatak ima svoje mjesto i vrijeme, a kada je obavljen, jednostavno ga označite kvačicom.</p>
+        <p class="wcalendar__p">Djeca za obavljene zadatke skupljaju bodove i nagrade. Tako rutina postaje igra, a djeca postaju mali samostalni pomagači koji sami gledaju što ih čeka.</p>
+        <p class="wcalendar__p">S besplatnom mobilnom aplikacijom za Apple i Android imate pristup svim funkcijama — kalendaru, popisima, zadacima — gdje god bili. Svaki član obitelji može koristiti aplikaciju, a popis za kupnju uvijek imate uz sebe.</p>
+        <p class="wcalendar__zak">Jasno, vidljivo i uvijek pri ruci — na zidu i na mobitelu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s wcalendar__s--bg">
+    <div class="wcalendar__v">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija8.png' ); ?>" alt="Sve spremljeno, sve na što se želite sjetiti" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">POPISI I SLIKE</div>
+        <h2 class="wcalendar__h2">Sve spremljeno, <em>sve na što se želite sjetiti</em></h2>
+        <p class="wcalendar__p">Zajednički popisi za sve: kupnju, pakiranje za more, stvari za školu ili kućanske poslove. Popisi su spremljeni na kalendaru i u aplikaciji, pa su vidljivi svima u obitelji i uvijek dostupni u pokretu.</p>
+        <p class="wcalendar__p">Djeca mogu sudjelovati u planiranju kupnje, a roditelji isti popis imaju izravno na mobitelu. Kada nešto kupite ili obavite, jednostavno to označite i svi odmah vide što je još ostalo.</p>
+        <p class="wcalendar__p">Kada se NORIKS Calendar ne koristi kao planer, prelazi u način slikovnog okvira i prikazuje vaše obiteljske fotografije kao dijaprojekciju. Trenutno možete prikazati do 15 slika.</p>
+        <p class="wcalendar__zak">Popisi za sve, vidljivi svima — a između toga vaše najdraže fotografije.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s">
+    <div class="wcalendar__v wcalendar__v--rev">
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-04.jpg' ); ?>" alt="Kalendar koji raste svaki dan" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__tekst">
+        <div class="wcalendar__kicker">NOVE FUNKCIJE</div>
+        <h2 class="wcalendar__h2">Kalendar koji <em>raste svaki dan</em></h2>
+        <p class="wcalendar__p">NORIKS Calendar se razvija svaki dan. Ažuriranja se na vaš uređaj instaliraju automatski i potpuno besplatno, pa s vremenom dobivate nove mogućnosti bez ikakvog dodatnog truda. Ne morate ništa ručno instalirati niti pratiti nove verzije.</p>
+        <p class="wcalendar__p">Bodovi i planiranje obroka među novijim su funkcijama, a u planu su i nove — od pomoćnika s umjetnom inteligencijom do automatiziranog planiranja zadataka. Plan obroka za cijeli tjedan složite u nekoliko minuta, a djeca sama mogu pogledati što je za ručak.</p>
+        <p class="wcalendar__p">Svaka nova funkcija stiže na isti uređaj koji već imate na zidu ili stolu, bez kupnje novog kalendara. Ažuriranja dolaze sama, a vi samo nastavljate koristiti NORIKS Calendar kao i dosad.</p>
+        <p class="wcalendar__zak">Kupujete ga danas — a dobiva nove mogućnosti i sutra.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wcalendar__s wcalendar__s--bg">
+    <div class="wcalendar__v wcalendar__v--polna">
+      <div class="wcalendar__tekst wcalendar__tekst--sredina">
+        <div class="wcalendar__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="wcalendar__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="wcalendar__p">NORIKS Calendar isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="wcalendar__pogoji">
+        <div class="wcalendar__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wcalendar__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wcalendar__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wcalendar__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-/* ===== NORIKS Calendar — why sekcije ===== */
-.nss-sect { padding: 80px 24px; }
-.nss-wrap { max-width: 1240px; margin: 0 auto; }
-.nss-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.nss-media img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-.nss-kicker { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #999; margin-bottom: 12px; }
-.nss-h2 { font-size: 38px; line-height: 1.15; font-weight: 800; margin: 0 0 20px; }
-.nss-h2 em { font-style: italic; font-weight: inherit; }
-.nss-text p { font-size: 17px; line-height: 1.6; margin-bottom: 16px; color: #333; }
-.nss-text p.nss-strong { font-weight: 700; margin-top: 24px; color: #000; }
-.nss--bg1 { background: #f9f9f9; }
-.nss--bg2 { background: #fff; }
-.nss--rev .nss-2col { grid-template-areas: "text media"; }
-.nss--rev .nss-media { grid-area: media; }
-.nss--rev .nss-text { grid-area: text; }
-.nss-center { text-align: center; }
-.nss-grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 40px; }
-.nss-card { background: #fff; padding: 32px 24px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-.nss-card-ico { font-size: 40px; color: #4caf50; margin-bottom: 16px; }
-.nss-card-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
-.nss-card p { font-size: 15px; line-height: 1.5; color: #666; margin: 0; }
-
-@media (max-width: 768px) {
-  .nss-sect { padding: 60px 20px; }
-  .nss-2col { grid-template-columns: 1fr; gap: 32px; }
-  .nss--rev .nss-2col { grid-template-areas: "media" "text"; }
-  .nss-media { order: -1; }
-  .nss-h2 { font-size: 28px; }
-  .nss-grid3 { grid-template-columns: 1fr; gap: 24px; }
+.wcalendar{color:#1c1c1c;font-family:inherit}
+.wcalendar__s{padding:56px 0;background:#fff}
+.wcalendar__s--bg{background:#f4f3ef}
+.wcalendar__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wcalendar__v--rev .wcalendar__media{order:2}
+.wcalendar__v--rev .wcalendar__tekst{order:1}
+.wcalendar__v--polna{grid-template-columns:1fr;gap:28px}
+.wcalendar__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.wcalendar__media img,.wcalendar__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wcalendar__media--polna{aspect-ratio:auto}
+.wcalendar__media--polna img,.wcalendar__media--polna video{height:auto}
+.wcalendar__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wcalendar__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wcalendar__h2 em{font-style:italic}
+.wcalendar__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wcalendar__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.wcalendar__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.wcalendar__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wcalendar__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.wcalendar__s:not(.wcalendar__s--bg) .wcalendar__pog{background:#f4f3ef;box-shadow:none}
+.wcalendar__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.wcalendar__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .wcalendar__s{padding:38px 0}
+  .wcalendar__v{grid-template-columns:1fr;gap:22px}
+  .wcalendar__v--rev .wcalendar__media,.wcalendar__media{order:0}
+  .wcalendar__v--rev .wcalendar__tekst,.wcalendar__tekst{order:1}
+  .wcalendar__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>

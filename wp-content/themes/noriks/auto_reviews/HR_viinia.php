@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto-generated reviews for NORIKS Viinia (viinijäähdytin)
+ * Auto-generated reviews for NORIKS Viinia (štapić za hlađenje vina)
  * Market: HR
  */
 
@@ -19,7 +19,7 @@ return array(
     'city'    => 'Split',
     'rating'  => 5,
     'date'    => '2026-10-10',
-    'text'    => 'Više ne moram nositi velike kante s ledom na terasu. Jednostavno stavim Viinia štapić u zamrzivač i kad dođe vrijeme za čašu vina, on je spreman.',
+    'text'    => 'Više ne moram nositi velike kante s ledom na terasu. Jednostavno stavim NORIKS Viinia štapić u zamrzivač i kad dođe vrijeme za čašu vina, on je spreman.',
   ),
   array(
     'name'    => 'Ivana Jurić',
@@ -75,28 +75,28 @@ return array(
     'city'    => 'Karlovac',
     'rating'  => 5,
     'date'    => '2026-09-20',
-    'text'    => 'Ne samo da funkcionira savršeno, nego i dodaje dozu stila vašem vinarskom iskustvu. Kad ga izvučete iz zamrzivača i stavite u bocu, gosti će odmah primjetiti.',
+    'text'    => 'Ne samo da funkcionira savršeno, nego i dodaje dozu stila vašem uživanju u vinu. Kad ga izvučete iz zamrzivača i stavite u bocu, gosti će odmah primijetiti.',
   ),
   array(
     'name'    => 'Danijel Perić',
     'city'    => 'Šibenik',
     'rating'  => 5,
     'date'    => '2026-09-18',
-    'text'    => 'Apsolutno ga preporučujem svima koji žele bolje vinarsko iskustvo. Bijela vina ostaju na idealnoj temperaturi satima.',
+    'text'    => 'Apsolutno ga preporučujem svima koji žele bolji doživljaj vina. Bijela vina ostaju na idealnoj temperaturi satima.',
   ),
   array(
     'name'    => 'Sara Kralj',
     'city'    => 'Slavonski Brod',
     'rating'  => 5,
     'date'    => '2026-09-15',
-    'text'    => 'Savršen dodatak za terasu ili večeri s prijateljima. Vino ostaje hladno bez dodatnih kockica leda ili blatnjave kante.',
+    'text'    => 'Savršen dodatak za terasu ili večeri s prijateljima. Vino ostaje hladno bez dodatnih kockica leda ili velike kante s ledom.',
   ),
   array(
     'name'    => 'Filip Matić',
     'city'    => 'Koprivnica',
     'rating'  => 4,
     'date'    => '2026-09-12',
-    'text'    => 'Izrađen od nerđajućeg čelika, izgleda kvalitetno i traje. Već mjesecima ga koristim i nema tragova habanja.',
+    'text'    => 'Izrađen od nehrđajućeg čelika, izgleda kvalitetno i traje. Već mjesecima ga koristim i nema tragova habanja.',
   ),
   array(
     'name'    => 'Ema Grgić',

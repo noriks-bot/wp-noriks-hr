@@ -1,290 +1,154 @@
 <?php
 /**
- * NORIKS Viinia – viinijäähdytin
- * Product bottom section — why sekcije
+ * NORIKS Viinia — why sekcije 1:1 z originalom (7 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
-defined('ABSPATH') || exit;
-
-$nf = get_template_directory_uri() . '/img/viinia/';
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+$wdir = get_template_directory_uri() . '/img/viinia/';
 ?>
+<div class="wviinia">
 
+  <section class="wviinia__s wviinia__s--bg">
+    <div class="wviinia__v">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-04.jpg' ); ?>" alt="Savršeno hladno vino — svaki put" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">ZBOGOM TOPLOM VINU</div>
+        <h2 class="wviinia__h2">Savršeno hladno vino — <em>svaki put</em></h2>
+        <p class="wviinia__p">Poznato vam je: otvorite bocu bijelog vina, natočite prvu čašu i dok stignete do druge, vino na stolu već je mlako. Kanta s ledom zauzima pola stola, a kockice leda razrjeđuju okus. NORIKS Viinia rješava to na najjednostavniji mogući način — hladi vino iznutra, izravno u boci. Bez obzira točite li bijelo, rosé ili crno vino, temperatura ostaje pod kontrolom.</p>
+        <p class="wviinia__p">NORIKS Viinia je štapić za hlađenje vina od nehrđajućeg čelika koji se drži u zamrzivaču i stavlja ravno u bocu. Nema kante, nema leda, nema hladnjaka za vino. Vino ostaje u svojoj boci, a štapić preuzima posao hlađenja. Štapić je tanak i diskretan, pa boca na stolu izgleda jednako elegantno kao i prije.</p>
+        <p class="wviinia__p">Od sada možete uživati u savršeno ohlađenom vinu svaki put kad otvorite bocu — bez brige o tome hoće li se zagrijati prije nego što ga popijete. Bilo da je riječ o vrućem ljetnom danu na terasi ili o večeri kod kuće, čaša vina ostaje onakva kakvu želite. Štapić je u boci, a vi se možete posvetiti društvu i razgovoru umjesto temperaturi vina.</p>
+        <p class="wviinia__zak">Bez kante s ledom i bez razrijeđenog vina — samo hladno vino iz vlastite boce, na vašem stolu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s">
+    <div class="wviinia__v wviinia__v--rev">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'noriks-viinia-2.webp' ); ?>" alt="Nehrđajući čelik, prikladan za hranu" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">VISOKA KVALITETA</div>
+        <h2 class="wviinia__h2">Nehrđajući čelik, <em>prikladan za hranu</em></h2>
+        <p class="wviinia__p">Štapić NORIKS Viinia izrađen je od visokokvalitetnog nehrđajućeg čelika prikladnog za kontakt s hranom. Čelična jezgra je dio koji ulazi u bocu i hladi vino iznutra, izravno u tekućini. Tako hlađenje počinje odmah, a ne izvana kroz staklo kao kod kante s ledom. Kad ga izvadite iz zamrzivača, hladan čelik vino hladi izravno i ravnomjerno, od grla boce do dna.</p>
+        <p class="wviinia__p">Takav materijal pruža dugotrajnu izdržljivost i pouzdanost u svakodnevnoj upotrebi. Štapić je elegantan, čvrst i namijenjen višekratnoj upotrebi — jednostavno ga ponovno zamrznete i spreman je za sljedeću bocu. Nema jednokratnih vrećica leda ni kockica koje se tope u čaši.</p>
+        <p class="wviinia__p">Uz čelični štapić za hlađenje tu su akrilni izljev za točenje i silikonska brtva koja ne propušta. Brtva drži štapić čvrsto u grlu boce, a izljev omogućuje da vino točite bez vađenja štapića. Sve dijelove lako sastavite i rastavite. Sve je osmišljeno da bude čvrsto, uredno i elegantno na stolu.</p>
+        <p class="wviinia__zak">Jedan čvrst štapić od čelika umjesto kante leda — i služi vam iz večeri u večer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s wviinia__s--bg">
+    <div class="wviinia__v">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-07.png' ); ?>" alt="Jednostavno za korištenje, brzo spremno" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">UŽITAK ODMAH</div>
+        <h2 class="wviinia__h2">Jednostavno za korištenje, <em>brzo spremno</em></h2>
+        <p class="wviinia__p">NORIKS Viinia je jednostavan za korištenje, brzo je spreman i nevjerojatno praktičan. Nema podešavanja, nema čekanja da se cijela boca ohladi u hladnjaku — štapić je rješenje za uživanje u vinu bez ikakve muke. Sve što trebate je mjesto u zamrzivaču i boca vina.</p>
+        <p class="wviinia__p">Postupak je kratak: stavite štapić u zamrzivač na najmanje jedan sat. Kad dođe vrijeme za čašu vina, otpijte mali gutljaj da napravite mjesta, umetnite ohlađeni štapić u bocu i uživajte u savršeno ohlađenom vinu pri svakom točenju. Cijeli postupak traje nekoliko sekundi i ne zahtijeva nikakav dodatni pribor.</p>
+        <p class="wviinia__p">Mnogi ga jednostavno drže stalno u zamrzivaču. Kad dođu gosti ili kad vam se poželi čaša vina, štapić je odmah pri ruci i spreman za upotrebu. Nema planiranja unaprijed ni hlađenja boce satima u hladnjaku. Kad je boca prazna, štapić izvadite, operete i vratite u zamrzivač za sljedeći put.</p>
+        <p class="wviinia__zak">Iz zamrzivača u bocu — i vino je za nekoliko minuta spremno za posluživanje.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s">
+    <div class="wviinia__v wviinia__v--rev">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-05.png' ); ?>" alt="Izljev koji ne kaplje" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">SAVRŠENO TOČENJE</div>
+        <h2 class="wviinia__h2">Izljev koji ne <em>kaplje</em></h2>
+        <p class="wviinia__p">Zbogom prolijevanju i mrljama na stolnjaku. Na vrhu štapića NORIKS Viinia nalazi se akrilni izljev koji osigurava ravnomjerno točenje bez kapanja, svaki put. Izljev je proziran, pa uvijek vidite kako vino teče.</p>
+        <p class="wviinia__p">Ne trebate vaditi štapić iz boce da biste natočili vino. Vino teče kroz izljev izravno u čašu, mlaz je miran i kontroliran, a zadnja kap ostaje u izljevu umjesto na stolu. Točenje je jednako jednostavno kao iz obične boce, samo urednije. Brtva drži izljev čvrsto u grlu boce, tako da se ništa ne prolije ni kad bocu nagnete jače.</p>
+        <p class="wviinia__p">Tako i vaše vino i vaš stol ostaju uredni — bilo da točite na terasi, za blagdanskim stolom ili na večeri s prijateljima. Nema više podmetača ispod boce ni salveta oko grla. Izljev ostaje na boci cijelu večer, pa svaki put točite jednako mirno i precizno.</p>
+        <p class="wviinia__zak">Točite izravno iz boce, bez kapanja i bez mrlja na stolu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s wviinia__s--bg">
+    <div class="wviinia__v">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-06.gif' ); ?>" alt="Ugrađeno prozračivanje za bogatiji okus" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">PUNI OKUS</div>
+        <h2 class="wviinia__h2">Ugrađeno prozračivanje za <em>bogatiji okus</em></h2>
+        <p class="wviinia__p">U izljev NORIKS Viinia ugrađeno je prozračivanje. Dok vino teče kroz izljev, dolazi u dodir sa zrakom i njegove arome se potpuno otvaraju. Zato se okus razvija već u trenutku kad vino stigne u čašu. Arome se otvaraju upravo onda kad vino ulazi u čašu.</p>
+        <p class="wviinia__p">Rezultat je izraženiji okus i bogatiji doživljaj vina u čaši — bez posebnog dekantera i bez dodatnog pribora na stolu. Hlađenje, točenje i prozračivanje rješavate jednim štapićem. Sve se događa usput, dok točite, bez ikakvog dodatnog koraka. Za ljubitelje vina to znači da svaka čaša ima puniji miris i okus, a stol ostaje jednostavan i uredan.</p>
+        <p class="wviinia__p">Zato je NORIKS Viinia prikladan i za bijelo i za crno vino: bijelo i rosé ostaju svježi i hladni, a svako vino pri točenju dobije malo zraka. Jedan pribor zamjenjuje kantu s ledom, izljev i dekanter. Tako uživate u vinu onako kako je zamišljeno, na pravoj temperaturi i s punim okusom.</p>
+        <p class="wviinia__zak">Jedan štapić hladi, toči i prozračuje — sve izravno iz boce.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s">
+    <div class="wviinia__v wviinia__v--rev">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-08.jpg' ); ?>" alt="Za 10–15 minuta na idealnoj temperaturi" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">ZA LJUBITELJE VINA</div>
+        <h2 class="wviinia__h2">Za <em>10–15 minuta</em> na idealnoj temperaturi</h2>
+        <p class="wviinia__p">Otkrijte savršen način uživanja u vinu uz NORIKS Viinia. Za samo 10–15 minuta štapić hladi vino na idealnu temperaturu posluživanja i održava ga hladnim do 3 sata. To je dovoljno za cijelu opuštenu večer uz bocu vina. Hlađenje počinje čim štapić uđe u bocu.</p>
+        <p class="wviinia__p">Uz ovaj štapić za hlađenje vino ostaje savršeno hladno od prvog točenja do zadnjeg gutljaja. Ne morate unaprijed hladiti bocu u hladnjaku niti paziti da se vino zagrije dok stoji na stolu. Vino se ne razrjeđuje jer u bocu ne ide led, nego čelični štapić. Vino ne gubi okus i ostaje onakvo kakvo je u boci — samo hladnije, točno onako kako ga želite poslužiti.</p>
+        <p class="wviinia__p">Savršen je za ljetne večeri, večere s gostima ili kad jednostavno želite uživati u čaši vina na pravoj temperaturi. Odgovara većini vinskih boca. Štapić se jednostavno umetne u otvorenu bocu i ostaje u njoj dok točite.</p>
+        <p class="wviinia__zak">Od prve čaše do zadnjeg gutljaja — vino ostaje hladno, a vi uživate bez žurbe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s wviinia__s--bg">
+    <div class="wviinia__v">
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'noriks-viinia-3.webp' ); ?>" alt="Lako se čisti, traje godinama" loading="lazy" decoding="async"></div>
+      <div class="wviinia__tekst">
+        <div class="wviinia__kicker">HIGIJENA I KVALITETA</div>
+        <h2 class="wviinia__h2">Lako se čisti, <em>traje godinama</em></h2>
+        <p class="wviinia__p">Za NORIKS Viinia koristi se prvoklasni nehrđajući čelik siguran za hranu, koji osigurava kvalitetu i izdržljivost — štapić pouzdano služi godinama. Čelik je glatka, neporozna površina koja se lako održava čistom. Kvaliteta materijala vidi se i osjeti već kad štapić prvi put uzmete u ruku.</p>
+        <p class="wviinia__p">Štapić za hlađenje može se prati u perilici posuđa. Izljev se skida, pa je temeljito čišćenje toplom vodom brzo i jednostavno. Za brzo pranje dovoljna je i topla voda pod slavinom. Nema skrivenih kutova u kojima bi se zadržavali ostaci vina, pa je štapić nakon pranja odmah spreman za zamrzivač.</p>
+        <p class="wviinia__p">Nakon pranja štapić samo osušite i vratite u zamrzivač. Tako je uvijek čist i spreman za sljedeću bocu. Uz malo brige vaš NORIKS Viinia ostaje uredan i spreman za mnoge večeri uz vino. Nakon svakog korištenja on je ponovno kao nov.</p>
+        <p class="wviinia__zak">Skinite izljev, operite, zamrznite — i NORIKS Viinia je spreman za sljedeću bocu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wviinia__s">
+    <div class="wviinia__v wviinia__v--polna">
+      <div class="wviinia__tekst wviinia__tekst--sredina">
+        <div class="wviinia__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="wviinia__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="wviinia__p">NORIKS Viinia isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="wviinia__pogoji">
+        <div class="wviinia__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wviinia__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wviinia__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wviinia__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-.nss-viinia {
-  --viinia-pr: #7a5aa3;
-  --viinia-bg: #f7f3fb;
-  --br: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-}
-.nss-viinia__hero {
-  background: var(--viinia-bg);
-  padding: 60px 0;
-}
-.nss-viinia__wrap {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-.nss-viinia__section {
-  padding: 48px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-.nss-viinia__section--rev {
-  direction: rtl;
-}
-.nss-viinia__section--rev > * {
-  direction: ltr;
-}
-.nss-viinia__section--bg {
-  background: var(--viinia-bg);
-}
-.nss-viinia__media {
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: var(--br);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  width: 100%;
-}
-.nss-viinia__kicker {
-  color: var(--viinia-pr);
-  font-weight: 600;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 12px;
-}
-.nss-viinia__h2 {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #000;
-}
-.nss-viinia__h2 em {
-  font-style: italic;
-  color: var(--viinia-pr);
-}
-.nss-viinia__p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 16px;
-}
-.nss-viinia__strong {
-  font-weight: 700;
-  color: #000;
-  display: block;
-  margin-top: 20px;
-  font-size: 17px;
-}
-.nss-viinia__final {
-  background: var(--viinia-bg);
-  padding: 60px 0;
-  text-align: center;
-}
-.nss-viinia__final h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: #000;
-}
-.nss-viinia__final-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
-}
-.nss-viinia__final-item {
-  padding: 24px;
-}
-.nss-viinia__final-item strong {
-  display: block;
-  font-size: 18px;
-  color: var(--viinia-pr);
-  margin-bottom: 8px;
-}
-.nss-viinia__final-item p {
-  color: #555;
-  font-size: 15px;
-  line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .nss-viinia__section {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    padding: 32px 0;
-  }
-  .nss-viinia__section--rev {
-    direction: ltr;
-  }
-  .nss-viinia__h2 {
-    font-size: 26px;
-  }
-  .nss-viinia__hero, .nss-viinia__final {
-    padding: 40px 0;
-  }
+.wviinia{color:#1c1c1c;font-family:inherit}
+.wviinia__s{padding:56px 0;background:#fff}
+.wviinia__s--bg{background:#f4f3ef}
+.wviinia__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wviinia__v--rev .wviinia__media{order:2}
+.wviinia__v--rev .wviinia__tekst{order:1}
+.wviinia__v--polna{grid-template-columns:1fr;gap:28px}
+.wviinia__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.wviinia__media img,.wviinia__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wviinia__media--polna{aspect-ratio:auto}
+.wviinia__media--polna img,.wviinia__media--polna video{height:auto}
+.wviinia__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wviinia__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wviinia__h2 em{font-style:italic}
+.wviinia__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wviinia__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.wviinia__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.wviinia__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wviinia__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.wviinia__s:not(.wviinia__s--bg) .wviinia__pog{background:#f4f3ef;box-shadow:none}
+.wviinia__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.wviinia__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .wviinia__s{padding:38px 0}
+  .wviinia__v{grid-template-columns:1fr;gap:22px}
+  .wviinia__v--rev .wviinia__media,.wviinia__media{order:0}
+  .wviinia__v--rev .wviinia__tekst,.wviinia__tekst{order:1}
+  .wviinia__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>
-
-<div class="nss-viinia">
-
-<!-- Sekcija 1: Savršeno hlađenje bez kanti s ledom -->
-<section class="nss-viinia__section nss-viinia__section--bg">
-  <div class="nss-viinia__wrap">
-    <div>
-      <img src="<?php echo esc_url($nf . 'noriks-viinia-1.webp'); ?>" alt="NORIKS Viinia viinijäähdytin u čaši vina" class="nss-viinia__media">
-    </div>
-    <div>
-      <div class="nss-viinia__kicker">Bez odvraćanja pažnje</div>
-      <h2 class="nss-viinia__h2">Savršeno hlađenje bez <em>kanti s ledom</em></h2>
-      <p class="nss-viinia__p">
-        Bila sam skeptična na početku, ali štapić za hlađenje vina premašio je sva moja očekivanja.
-        Čak i vrućim ljetnim danima vino ostaje savršeno hladno satima.
-      </p>
-      <p class="nss-viinia__p">
-        Više ne morate nositi velike kante s ledom na terasu ili piknik.
-        Jednostavno stavite Viinia štapić u zamrzivač, a kad dođe vrijeme za čašu vina, on je spreman.
-      </p>
-      <strong class="nss-viinia__strong">Vaše vino ostaje hladne temperature bez kanti, bez nereda.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Sekcija 2: Savršeno za ljetna bijela vina -->
-<section class="nss-viinia__section">
-  <div class="nss-viinia__wrap">
-    <div>
-      <img src="<?php echo esc_url($nf . 'noriks-viinia-2.webp'); ?>" alt="Bijelo vino s NORIKS Viinia" class="nss-viinia__media">
-    </div>
-    <div>
-      <div class="nss-viinia__kicker">Idealna temperatura</div>
-      <h2 class="nss-viinia__h2">Savršeno za <em>ljetna bijela vina</em></h2>
-      <p class="nss-viinia__p">
-        Bila sam na početku malo skeptična, ali ovaj hladnjak za vino premašio je sva očekivanja.
-        Održava vino hladnim bez razrjeđivanja, a još i izgleda elegantno u boci.
-      </p>
-      <p class="nss-viinia__p">
-        Bijela vina zahtijevaju točnu temperaturu – previše toplo i gube svježinu, previše hladno i gube aromu.
-        Viinia štapić omogućuje vam da održavate tu ravnotežu sate nakon što otvorite bocu.
-      </p>
-      <strong class="nss-viinia__strong">Absolutna kupnja za sve ljubitelje vina.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Sekcija 3: Kvalitetan, praktičan i vrijedan svakog eura -->
-<section class="nss-viinia__section nss-viinia__section--rev nss-viinia__section--bg">
-  <div class="nss-viinia__wrap">
-    <div>
-      <img src="<?php echo esc_url($nf . 'noriks-viinia-3.webp'); ?>" alt="NORIKS Viinia u rukama" class="nss-viinia__media">
-    </div>
-    <div>
-      <div class="nss-viinia__kicker">Траjan kvalitet</div>
-      <h2 class="nss-viinia__h2">Kvalitetan, praktičan i <em>vrijedan svakog eura</em></h2>
-      <p class="nss-viinia__p">
-        Kakav genijalan izum! I kvaliteta materijala i praktična funkcija čine ovaj štapić za hlađenje vina vrijednim svakog eura.
-        Već sam kupila nekoliko za poklon – jednostavno je savršen!
-      </p>
-      <p class="nss-viinia__p">
-        Izrađen od nerđajućeg čelika i neoprena, Viinia štapić izdržava godine upotrebe.
-        Ne treba baterije, ne troši struju – samo ga držite u zamrzivaču i spreman je za korištenje.
-      </p>
-      <strong class="nss-viinia__strong">Investicija koja se isplati svakim korištenjem.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Sekcija 4: Praktično i jednostavno za korištenje -->
-<section class="nss-viinia__section">
-  <div class="nss-viinia__wrap">
-    <div>
-      <img src="<?php echo esc_url($nf . 'noriks-viinia-4.webp'); ?>" alt="Jednostavno korištenje NORIKS Viinia" class="nss-viinia__media">
-    </div>
-    <div>
-      <div class="nss-viinia__kicker">Bez pripreme</div>
-      <h2 class="nss-viinia__h2">Praktično i <em>jednostavno za korištenje</em></h2>
-      <p class="nss-viinia__p">
-        Koristila sam ovaj hladnjak za vino nekoliko puta i bio je stvarno zgodan.
-        Čuvam ga u zamrzivaču, a kad dođu gosti ili poželim čašu, mogu ga odmah upotrijebiti.
-      </p>
-      <p class="nss-viinia__p">
-        Vino ostaje ugodno hladno bez potrebe da se boca hladi u hladnjaku unaprijed.
-        Bez planiranja, bez čekanja – jednostavno izvadite štapić, ubacite u bocu i uživajte.
-      </p>
-      <strong class="nss-viinia__strong">Apsolutno preporučujem ako volite uživati u vinu bez dodatnog posla.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Sekcija 5: Ovo je brzo postalo dio svake vinarske večeri -->
-<section class="nss-viinia__section nss-viinia__section--rev nss-viinia__section--bg">
-  <div class="nss-viinia__wrap">
-    <div>
-      <img src="<?php echo esc_url($nf . 'noriks-viinia-5.webp'); ?>" alt="Večernja čaša vina s NORIKS Viinia" class="nss-viinia__media">
-    </div>
-    <div>
-      <div class="nss-viinia__kicker">Nezamjenjivo</div>
-      <h2 class="nss-viinia__h2">Ovo je brzo postalo dio <em>svake vinarske večeri</em></h2>
-      <p class="nss-viinia__p">
-        Nisam ni razmišljala da mi treba takav proizvod, ali sada se pitam kako sam živjela bez njega.
-        Štapić za hlađenje vina jednostavan je za korištenje i radi upravo kao što obećava.
-      </p>
-      <p class="nss-viinia__p">
-        Plus je i to što bocu ne treba otvoriti unaprijed – štapić ide direktno unutra i vino ostaje savršeno hladno.
-        Bilo da pijete na terasi ili u dnevnoj sobi, iskustvo je uvijek jednako ugodno.
-      </p>
-      <strong class="nss-viinia__strong">Izvanredna kupnja!</strong>
-    </div>
-  </div>
-</section>
-
-<!-- Sekcija 6: Vino ostaje hladno i izgleda luksuzno -->
-<section class="nss-viinia__section">
-  <div class="nss-viinia__wrap">
-    <div>
-      <img src="<?php echo esc_url($nf . 'noriks-viinia-6.webp'); ?>" alt="Elegantni izgled NORIKS Viinia u boci vina" class="nss-viinia__media">
-    </div>
-    <div>
-      <div class="nss-viinia__kicker">Elegancija i funkcija</div>
-      <h2 class="nss-viinia__h2">Vino ostaje hladno i <em>izgleda luksuzno</em></h2>
-      <p class="nss-viinia__p">
-        Kao prava ljubiteljica vina, ovaj štapić za hlađenje napravio je veliku razliku za mene.
-        Održava vino hladnim dugo vremena i izgleda stvarno elegantno.
-      </p>
-      <p class="nss-viinia__p">
-        Ne samo da funkcionira savršeno, nego i dodaje dozu stila vašem vinarskom iskustvu.
-        Kad ga izvučete iz zamrzivača i stavite u bocu, gosti će odmah primjetiti – i pitati gdje mogu nabaviti svoj.
-      </p>
-      <strong class="nss-viinia__strong">Apsolutno ga preporučujem svima koji žele bolje vinarsko iskustvo.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- NORIKS pogoji -->
-<section class="nss-viinia__final">
-  <div class="nss-viinia__wrap">
-    <h2>Kupnja bez brige</h2>
-    <div class="nss-viinia__final-grid">
-      <div class="nss-viinia__final-item">
-        <strong>30 dana za povrat novca</strong>
-        <p>Ako niste zadovoljni, vratite proizvod bez pitanja</p>
-      </div>
-      <div class="nss-viinia__final-item">
-        <strong>Besplatna dostava iznad 70 €</strong>
-        <p>Brza i pouzdana dostava diljem Hrvatske</p>
-      </div>
-      <div class="nss-viinia__final-item">
-        <strong>Plaćanje pouzećem</strong>
-        <p>Platite tek kad pregledate robu</p>
-      </div>
-      <div class="nss-viinia__final-item">
-        <strong>Preko 120.000 kupaca</strong>
-        <p>Ocjena 4,8 iz 1.081 recenzija</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-</div>

@@ -1,248 +1,168 @@
 <?php
 /**
- * product-bottom: FIELDOPS (orto-fieldops)
- *
- * Dedicated bottom-nicer for the NORIKS FieldOps Pro product.
- * Shown via single-product-bottom-nicer.php when noriks_is_type('fieldops').
+ * NORIKS TacPro — why sekcije 1:1 z originalom (8 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-$nfd      = get_template_directory_uri() . '/img/fieldops/';
-$nfd_path = get_template_directory() . '/img/fieldops/';
-$nfd_img  = function( $file, $alt ) use ( $nfd, $nfd_path ) {
-  if ( ! $file || ! file_exists( $nfd_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nfd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
-};
+$wdir = get_template_directory_uri() . '/img/fieldops/';
 ?>
+<div class="wfieldops">
 
+  <section class="wfieldops__s wfieldops__s--bg">
+    <div class="wfieldops__v">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'nfd-07-spec.webp' ); ?>" alt="Čujte divljač. Prigušite prasak." loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">ZA LOV I STRELIŠTE</div>
+        <h2 class="wfieldops__h2">Čujte divljač. <em>Prigušite</em> prasak.</h2>
+        <p class="wfieldops__p">NORIKS TacPro su taktičke slušalice koje se nose u uhu, napravljene za lovce i strelce. Mali, lagani čepići sjede u uhu, a ne preko njega, pa ih nosite cijeli dan bez glomaznih štitnika na glavi. Dizajnirane su da štite uši i istovremeno ostave sluh otvoren za sve što se događa oko vas.</p>
+        <p class="wfieldops__p">U prirodi vas ne odvajaju od okoline. Ugrađeni mikrofoni propuštaju korake, glasove i šuškanje lišća, dok glasne zvukove poput pucnja prigušuju u istom trenutku. Vjetar, kiša i lišće ostaju u pozadini, a vi se usredotočite na ono što je važno. Pucanj se pretvara u tihi, daleki prasak.</p>
+        <p class="wfieldops__p">Sve se upravlja jednim gumbom. Uključite ih, odaberete način rada i krenete — bez izbornika, aplikacija i kompliciranih postavki.</p>
+        <p class="wfieldops__zak">Čujete svaki korak u šumi, a pucanj zvuči kao daleki prasak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s">
+    <div class="wfieldops__v wfieldops__v--rev">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'tacpro-03.webp' ); ?>" alt="Pojačanje zvuka do 4 puta" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">4X POJAČANJE</div>
+        <h2 class="wfieldops__h2">Pojačanje zvuka <em>do 4 puta</em></h2>
+        <p class="wfieldops__p">U vanjskom načinu rada NORIKS TacPro pojačava tihe zvukove iz okoline do četiri puta. Razgovor, pokret životinje i udaljeni zvukovi čuju se jasnije nego golim uhom. Slušalice tako rade kao pojačalo za uši dok ste na terenu.</p>
+        <p class="wfieldops__p">Koraci jelena, glasanje purana i lepet pačjih krila čuju se na udaljenostima na kojima ih prije niste mogli čuti. Upravo zato su vam u lovu uvijek na ušima, a ne u džepu. Na čeki ili u zasjedi čujete više i ranije.</p>
+        <p class="wfieldops__p">Tihi zvukovi niske razine, poput koraka i glasova, prolaze jasno i bez izobličenja. Dok čekate na čeki, ne propuštate ništa što se događa oko vas. Mikrofoni na slušalicama hvataju zvuk iz okoline i prenose ga izravno u uho.</p>
+        <p class="wfieldops__zak">Čujete okolinu bolje — i dalje imate punu kontrolu nad situacijom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s wfieldops__s--bg">
+    <div class="wfieldops__v">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'tacpro-04.webp' ); ?>" alt="Zaštita od buke u trenutku" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">27–31 dB ZAŠTITA</div>
+        <h2 class="wfieldops__h2">Zaštita od buke <em>u trenutku</em></h2>
+        <p class="wfieldops__p">NORIKS TacPro ima ocjenu prigušenja buke NRR od 27 do 31 dB, ovisno o izvedbi. Inteligentni čipovi prepoznaju zvukove iznad 82 dB i prigušuju ih za samo 0,01 sekunde. Zaštita se uključuje sama čim se pojavi glasan zvuk.</p>
+        <p class="wfieldops__p">Kad opali pucanj, slušalice ga odmah stišaju na siguran nivo, a nakon toga se vraća normalan zvuk okoline. Ne morate ih ni dirati ni prebacivati — sve se događa automatski. Za vas to znači da pucanj čujete kao daleki prasak, a ne kao udarac u uho.</p>
+        <p class="wfieldops__p">Tehnologija aktivno smanjuje visoke, oštre zvukove, a ambijentalne zvukove pojačava. Na strelištu tako i dalje jasno čujete naredbe i razgovor, od kalibra .22 do .50 BMG.</p>
+        <p class="wfieldops__zak">Pucanj prigušen za 0,01 sekunde — okolina se čuje i dalje.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s">
+    <div class="wfieldops__v wfieldops__v--rev">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'tacpro-10.webp' ); ?>" alt="Do 40 sati rada s kutijom za punjenje" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">40 SATI BATERIJE</div>
+        <h2 class="wfieldops__h2">Do <em>40 sati</em> rada s kutijom za punjenje</h2>
+        <p class="wfieldops__p">Ukupno do 40 sati rada s kutijom za punjenje. Same slušalice rade oko 8 sati na jedno punjenje, a čvrsta kutija ih može napuniti više puta. Kutija ima indikator razine baterije pa vidite kada ju treba napuniti.</p>
+        <p class="wfieldops__p">Punjenje je preko USB-C priključka, a slušalice se potpuno napune za oko 2 sata. Tako ste brzo ponovno na terenu i ne morate brinuti da će se zaštita isprazniti usred lova.</p>
+        <p class="wfieldops__p">Kutija za punjenje istovremeno služi i za spremanje. Slušalice su u njoj zaštićene u ruksaku ili džepu jakne i spremne kad vam zatrebaju. Kutija ima priključak za punjenje i pregradu za oba čepića.</p>
+        <p class="wfieldops__zak">Jedno punjenje kutije — tjedni lova.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s wfieldops__s--bg">
+    <div class="wfieldops__v">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'tacpro-06.webp' ); ?>" alt="Što donosi Pro izvedba" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">STANDARD ILI PRO</div>
+        <h2 class="wfieldops__h2">Što donosi <em>Pro</em> izvedba</h2>
+        <p class="wfieldops__p">Postoje dvije izvedbe. Standardna ima prigušenje od 27 dB i do 40 sati baterije, a Pro izvedba pojačanu zaštitu od 31 dB i do 50 sati baterije. Obje pojačavaju zvuk do 4 puta. Kod oba modela princip rada je isti: tihi zvukovi se pojačavaju, a glasni prigušuju.</p>
+        <p class="wfieldops__p">Pro izvedba ima i udobniji oblik čepića za cjelodnevno nošenje te čvršću kutiju za punjenje s prikazom postotka baterije, pa uvijek znate koliko vam je energije ostalo. Čepići su oblikovani da sjede mirno i udobno i nakon više sati na terenu.</p>
+        <p class="wfieldops__p">Uz Pro izvedbu dolaze i vodootporna kutija za spremanje te čvrsta vrpca za nošenje oko vrata, da slušalice imate uvijek pri ruci.</p>
+        <p class="wfieldops__zak">Više zaštite, više baterije i dodatna oprema za teren.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s">
+    <div class="wfieldops__v wfieldops__v--rev">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'tacpro-14.webp' ); ?>" alt="Što se krije unutra" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">TEHNOLOGIJA</div>
+        <h2 class="wfieldops__h2">Što se krije <em>unutra</em></h2>
+        <p class="wfieldops__p">Prigušenje NRR od 27 do 31 dB odmah blokira opasnu buku pucnja, a istovremeno propušta svaki zvuk iz šume. Baterija do 40 sati s USB-C brzim punjenjem znači da se zaštita ne prazni usred lova. Zvukovi u šumi ostaju jasni, a buka pucnja prigušena.</p>
+        <p class="wfieldops__p">Pojačanje zvuka do 4 puta donosi korake divljači na udaljenosti koju prije niste čuli. Zaštita IPX5 znači da kiša, znoj, snijeg i vlaga ne zaustavljaju slušalice ni u najtežim uvjetima. Napravljene su za najteže uvjete u kojima se lovi.</p>
+        <p class="wfieldops__p">Bluetooth povezivanje omogućuje da primate pozive bez skidanja zaštite. Slušalice ostaju u ušima, a vi ostajete na vezi. Ne morate birati između zaštite sluha i telefona.</p>
+        <p class="wfieldops__zak">27–31 dB, 4x pojačanje, 40 sati, IPX5 i Bluetooth — u jednom paru.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s wfieldops__s--bg">
+    <div class="wfieldops__v">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'nfd-05-vodootporno.webp' ); ?>" alt="Bez glomaznih štitnika na glavi" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">ZAŠTO BAŠ OVE</div>
+        <h2 class="wfieldops__h2">Bez glomaznih <em>štitnika</em> na glavi</h2>
+        <p class="wfieldops__p">Za razliku od glomaznih štitnika za uši koji smetaju, NORIKS TacPro je nizak dizajn koji se nosi u uhu i ne ometa oružje. Kundak uvijek savršeno naliježe na obraz, bilo da pucate iz puške, sačmarice ili lukom. Nema naslanjanja preko luka štitnika ni pomicanja glave prije hica.</p>
+        <p class="wfieldops__p">Lagani ergonomski oblik dovoljno je udoban za cijeli dan nošenja, bez pritiska i iritacije. U paketu su nastavci u tri veličine (S, M, L), pa svako uho dobiva sigurno i čvrsto prianjanje. Nastavci se lako mijenjaju: manji sjedaju plitko, srednji dublje, a veći daju udobno brtvljenje.</p>
+        <p class="wfieldops__p">Slušalice su jednako dobre za lov, streljanu, natjecateljsko gađanje i taktički trening. Jedan gumb za uključivanje, prebacivanje načina i isključivanje. Upravljanje je jednostavno i bez ikakvog izbornika.</p>
+        <p class="wfieldops__zak">Mala slušalica u uhu umjesto velikog štitnika na glavi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s">
+    <div class="wfieldops__v wfieldops__v--rev">
+      <div class="wfieldops__media"><img src="<?php echo esc_url( $wdir . 'tacpro-15.webp' ); ?>" alt="Kako se koriste" loading="lazy" decoding="async"></div>
+      <div class="wfieldops__tekst">
+        <div class="wfieldops__kicker">3 JEDNOSTAVNA KORAKA</div>
+        <h2 class="wfieldops__h2">Kako se <em>koriste</em></h2>
+        <p class="wfieldops__p"><em>Napunite i uparite.</em> Potpuno napunite kutiju preko USB-C kabela, otvorite poklopac i izvadite slušalice — spremne su za upotrebu. <em>Pronađite svoju veličinu.</em> Odaberite jedan od tri nastavka (S/M/L) za sigurno prianjanje koje se ne pomiče cijeli dan.</p>
+        <p class="wfieldops__p"><em>Odaberite način rada i krenite.</em> Jednim klikom prebacujete između vanjskog načina, unutarnjeg načina i načina smanjenja buke. Pritisnite jednom za uključivanje, kratko za promjenu načina, a držite za isključivanje. Vanjski način pojačava zvukove okoline, unutarnji način ih prigušuje, a treći način smanjuje pozadinsku buku poput vjetra, kiše i lišća.</p>
+        <p class="wfieldops__p">U paketu dobivate slušalice, čvrstu kutiju za punjenje, USB-C kabel, nastavke u tri veličine (S/M/L) i upute za korištenje — sve što vam treba da ih odmah počnete koristiti. Nema dodatnih aplikacija ni registracija.</p>
+        <p class="wfieldops__zak">Čujte sve. Prigušite prasak. Lovite cijeli dan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfieldops__s wfieldops__s--bg">
+    <div class="wfieldops__v wfieldops__v--polna">
+      <div class="wfieldops__tekst wfieldops__tekst--sredina">
+        <div class="wfieldops__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="wfieldops__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="wfieldops__p">NORIKS TacPro isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="wfieldops__pogoji">
+        <div class="wfieldops__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wfieldops__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wfieldops__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wfieldops__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-/* Osnovno */
-.nfd-sec { padding: 64px 0; }
-.nfd-wrap { max-width: 1240px; padding: 0 24px; margin: 0 auto; }
-.nfd-alt { background: #f7f7f7; }
-
-/* Tipografija */
-.nfd-h2 { font-size: 38px; font-weight: 800; line-height: 1.15; margin: 0 0 24px; color: #000; }
-.nfd-kicker { display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 0.8px; color: #777; margin-bottom: 8px; }
-.nfd-sec p { font-size: 16px; line-height: 1.6; color: #444; margin: 0 0 16px; }
-.nfd-sec p strong { color: #000; font-weight: 700; }
-.nfd-note { font-size: 14px; color: #777; font-style: italic; margin-top: 20px; }
-.nfd-center { text-align: center; }
-
-/* Dvostupčani raspored */
-.nfd-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.nfd-row2.nfd--rev { direction: rtl; }
-.nfd-row2.nfd--rev > * { direction: ltr; }
-
-/* Mediji */
-.nfd-media img, .nfd-media video { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-.nfd-media-wide img, .nfd-media-wide video { aspect-ratio: 16/9; }
-
-/* Kartice zaštite */
-.nfd-protect-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 32px; }
-.nfd-protect-card { background: #fff; padding: 28px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-.nfd-protect-card h3 { font-size: 18px; font-weight: 700; margin: 0 0 12px; color: #000; }
-.nfd-protect-card p { margin: 0; font-size: 15px; color: #555; }
-
-/* Spec tablice */
-.nfd-spec-list { list-style: none; padding: 0; margin: 24px 0 0; }
-.nfd-spec-list li { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid #e0e0e0; }
-.nfd-spec-list li strong { color: #000; }
-.nfd-spec-list li span { color: #444; }
-
-/* Načini rada */
-.nfd-modes-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 32px; }
-.nfd-mode-card { background: #fff; padding: 24px; border-radius: 8px; text-align: center; }
-.nfd-mode-card img { width: 72px; height: 72px; margin: 0 auto 16px; }
-.nfd-mode-card h3 { font-size: 17px; font-weight: 700; margin: 0 0 10px; color: #000; }
-.nfd-mode-card p { margin: 0; font-size: 14px; color: #555; }
-
-/* Usporedba */
-.nfd-comp { background: #fff; border-radius: 8px; overflow: hidden; margin-top: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-.nfd-comp-head { display: grid; grid-template-columns: 1fr 120px 120px; gap: 16px; background: #000; color: #fff; padding: 16px 24px; font-weight: 700; }
-.nfd-comp-row { display: grid; grid-template-columns: 1fr 120px 120px; gap: 16px; padding: 14px 24px; border-bottom: 1px solid #e0e0e0; }
-.nfd-comp-row:last-child { border-bottom: none; }
-.nfd-comp-row .nfd-yes { color: #16a34a; font-weight: 700; text-align: center; }
-.nfd-comp-row .nfd-no { color: #ccc; text-align: center; }
-
-/* Garancija */
-.nfd-guarantee { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: #fff; padding: 48px 32px; border-radius: 12px; text-align: center; margin-top: 48px; }
-.nfd-guarantee h2 { color: #fff; margin-bottom: 16px; }
-.nfd-guarantee p { color: #e0e7ff; max-width: 600px; margin: 0 auto 8px; }
-
-@media (max-width: 768px) {
-  .nfd-sec { padding: 48px 0; }
-  .nfd-h2 { font-size: 28px; margin-bottom: 16px; }
-  .nfd-row2, .nfd-protect-grid, .nfd-modes-grid, .nfd-comp-head, .nfd-comp-row { grid-template-columns: 1fr; gap: 24px; }
-  .nfd-row2.nfd--rev { direction: ltr; }
-  .nfd-spec-list li { grid-template-columns: 1fr; gap: 4px; }
-  .nfd-comp-head, .nfd-comp-row { font-size: 14px; padding: 12px 16px; }
+.wfieldops{color:#1c1c1c;font-family:inherit}
+.wfieldops__s{padding:56px 0;background:#fff}
+.wfieldops__s--bg{background:#f4f3ef}
+.wfieldops__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wfieldops__v--rev .wfieldops__media{order:2}
+.wfieldops__v--rev .wfieldops__tekst{order:1}
+.wfieldops__v--polna{grid-template-columns:1fr;gap:28px}
+.wfieldops__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.wfieldops__media img,.wfieldops__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wfieldops__media--polna{aspect-ratio:auto}
+.wfieldops__media--polna img,.wfieldops__media--polna video{height:auto}
+.wfieldops__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wfieldops__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wfieldops__h2 em{font-style:italic}
+.wfieldops__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wfieldops__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.wfieldops__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.wfieldops__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wfieldops__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.wfieldops__s:not(.wfieldops__s--bg) .wfieldops__pog{background:#f4f3ef;box-shadow:none}
+.wfieldops__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.wfieldops__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .wfieldops__s{padding:38px 0}
+  .wfieldops__v{grid-template-columns:1fr;gap:22px}
+  .wfieldops__v--rev .wfieldops__media,.wfieldops__media{order:0}
+  .wfieldops__v--rev .wfieldops__tekst,.wfieldops__tekst{order:1}
+  .wfieldops__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>
-
-<!-- ============ 1) Zaštita sluha + pojačanje ============ -->
-<section class="nfd-sec nfd-alt">
-  <div class="nfd-wrap nfd-row2">
-    <div class="nfd-copy">
-      <span class="nfd-kicker">ČUJTE VIŠE, ŠTITITE BOLJE</span>
-      <h2 class="nfd-h2">Taktička zaštita sluha s <em>inteligentnom</em> amplifikacijom</h2>
-      <p>NORIKS FieldOps Pro taktične slušalice štite vaš sluh od štetnih zvukova iznad 82 dB i istovremeno pojačavaju tihe zvukove do 4× — čujete svaki korak i pokret u prirodi, dok pucnjevi postaju samo tihi prasak.</p>
-      <p>Tehnologija s dvostrukom zaštitom <strong>blokira opasnu buku odmah u 0,01 sekunde</strong> — brže nego što pucanj može oštetiti vaš sluh.</p>
-      <p>Savršene za lov, streljanu i taktički trening.</p>
-    </div>
-    <div class="nfd-media"><?php echo $nfd_img('nfd-01-zastita.webp','NORIKS FieldOps Pro taktične slušalice'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 2) Četiri razine zaštite ============ -->
-<section class="nfd-sec">
-  <div class="nfd-wrap">
-    <h2 class="nfd-h2 nfd-center">Četiri razine zaštite po mjeri vaših potreba</h2>
-    <div class="nfd-protect-grid">
-      <div class="nfd-protect-card">
-        <h3>Zaštita 27 dB (Standard)</h3>
-        <p>Osnovna razina sigurne zaštite od štetnih zvukova — sprječava oštećenje sluha kod svih kalibara od .22 do .50 BMG.</p>
-      </div>
-      <div class="nfd-protect-card">
-        <h3>Zaštita 31 dB (Pro)</h3>
-        <p>Pojačana razina zaštite za dugotrajno izlaganje jakim zvukovima — idealna za profesionalne lovce i strelce.</p>
-      </div>
-      <div class="nfd-protect-card">
-        <h3>Amplifikacija do 4×</h3>
-        <p>U vanjskim uvjetima slušate prirodu bolje nego golim uhom — razgovor, zvukove životinja i udaljene korake.</p>
-      </div>
-      <div class="nfd-protect-card">
-        <h3>Instant blokada 0,01 s</h3>
-        <p>Inteligentni čipovi prepoznaju štetni zvuk i ga blokiraju brže nego što može oštetiti vaš sluh.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 3) Tri načina rada ============ -->
-<section class="nfd-sec nfd-alt">
-  <div class="nfd-wrap nfd-row2 nfd--rev">
-    <div class="nfd-copy">
-      <span class="nfd-kicker">PRILAGODITE SE SVAKOJ SITUACIJI</span>
-      <h2 class="nfd-h2">Tri načina rada — <em>jedan</em> klik</h2>
-      <p>Prebacite se između načina rada jednim pritiskom gumba — bez kompliciranih izbornika ili postavki.</p>
-      <p><strong>Vanjski način:</strong> pojačava zvukove prirode do 4× za bolje praćenje plena.<br>
-      <strong>Unutarnji način:</strong> potpuna zaštita za zatvorene streljane.<br>
-      <strong>Smanjenje buke:</strong> aktivno filtriranje vjetra i pozadinskih šumova.</p>
-      <p>Jednostavna kontrola — uključite, odaberite način, idite u lov.</p>
-    </div>
-    <div class="nfd-media"><?php echo $nfd_img('nfd-03-nacini.webp','Tri načina rada NORIKS FieldOps'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 4) 40 sati baterije ============ -->
-<section class="nfd-sec">
-  <div class="nfd-wrap nfd-row2">
-    <div class="nfd-copy">
-      <span class="nfd-kicker">NIKAD NEMATE DOSTA</span>
-      <h2 class="nfd-h2">40 sati baterije — lovite <em>tjednima</em> bez punjenja</h2>
-      <p>Slušalice same nude do 8 sati korištenja, a čvrsta futrola za punjenje donosi ukupno <strong>40 sati zaštite sluha</strong> (Pro verzija 50 sati).</p>
-      <p>USB-C brzo punjenje — potpuno napunjene za samo 2 sata. Nikada vam neće ponestati zaštite usred lova.</p>
-      <p>Idealno za višednevne lovne izlete, treninге i dugotrajne smjene na streljani.</p>
-    </div>
-    <div class="nfd-media"><?php echo $nfd_img('nfd-04-baterija.webp','40 sati baterije u slučaju'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 5) IPX5 vodootporno + Bluetooth ============ -->
-<section class="nfd-sec nfd-alt">
-  <div class="nfd-wrap nfd-row2 nfd--rev">
-    <div class="nfd-copy">
-      <span class="nfd-kicker">IZGRAĐENO ZA NAJTEŽE UVJETE</span>
-      <h2 class="nfd-h2">IPX5 vodootporno + Bluetooth povezivost</h2>
-      <p>Kiša, snijeg, znoj ili vlaga ne zaustavljaju vašu zaštitu. <strong>IPX5 certifikat</strong> znači otpornost na sve vremenske uvjete tijekom lova.</p>
-      <p>Bluetooth povezivost omogućava vam primanje poziva bez skidanja zaštite — ostajete povezani i sigurni.</p>
-      <p>Lagane, udobne i gotovo neosjetne tijekom cijelog dana — zaboravite na glomazne slušalice.</p>
-    </div>
-    <div class="nfd-media"><?php echo $nfd_img('nfd-05-vodootporno.webp','IPX5 vodootporna zaštita'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 6) Usporedba: zašto smo #1 izbor ============ -->
-<section class="nfd-sec">
-  <div class="nfd-wrap">
-    <h2 class="nfd-h2 nfd-center">Zašto smo #1 izbor lovaca i strelaca</h2>
-    <div class="nfd-comp">
-      <div class="nfd-comp-head">
-        <div></div>
-        <div style="text-align:center;">NORIKS FieldOps</div>
-        <div style="text-align:center;">Drugi</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Zaštita sluha (dB)</div>
-        <div class="nfd-yes">27–31 dB</div>
-        <div class="nfd-no">20–25 dB</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Amplifikacija zvuka</div>
-        <div class="nfd-yes">Do 4×</div>
-        <div class="nfd-no">2×</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Vrijeme blokade buke</div>
-        <div class="nfd-yes">0,01 s</div>
-        <div class="nfd-no">0,5 s</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Trajanje baterije</div>
-        <div class="nfd-yes">40–50 h</div>
-        <div class="nfd-no">20 h</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Vodootpornost</div>
-        <div class="nfd-yes">IPX5</div>
-        <div class="nfd-no">—</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Bluetooth</div>
-        <div class="nfd-yes">✓</div>
-        <div class="nfd-no">—</div>
-      </div>
-      <div class="nfd-comp-row">
-        <div>Jednostavnost korištenja</div>
-        <div class="nfd-yes">1 gumb</div>
-        <div class="nfd-no">Komplicirano</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7) Tehnički podaci ============ -->
-<section class="nfd-sec nfd-alt">
-  <div class="nfd-wrap nfd-row2">
-    <div class="nfd-copy">
-      <span class="nfd-kicker">SPECIFIKACIJE</span>
-      <h2 class="nfd-h2">Tehnički podaci</h2>
-      <ul class="nfd-spec-list">
-        <li><strong>Zaštita od buke:</strong> <span>27 dB (Standard), 31 dB (Pro)</span></li>
-        <li><strong>Amplifikacija:</strong> <span>do 4× (vanjski način)</span></li>
-        <li><strong>Vrijeme reakcije:</strong> <span>0,01 s</span></li>
-        <li><strong>Baterija slušalica:</strong> <span>8 h</span></li>
-        <li><strong>Ukupno s futrolom:</strong> <span>40 h (Standard), 50 h (Pro)</span></li>
-        <li><strong>Punjenje:</strong> <span>USB-C brzo punjenje, 2 h</span></li>
-        <li><strong>Vodootpornost:</strong> <span>IPX5</span></li>
-        <li><strong>Bluetooth:</strong> <span>da, potpuna povezivost</span></li>
-        <li><strong>Načini rada:</strong> <span>vanjski / unutarnji / smanjenje buke</span></li>
-        <li><strong>Boje:</strong> <span>Carbon Black, Army Green</span></li>
-        <li><strong>U paketu:</strong> <span>slušalice, punjač USB-C, 3 para naušnica (S/M/L), upute</span></li>
-      </ul>
-    </div>
-    <div class="nfd-media"><?php echo $nfd_img('nfd-07-spec.webp','Tehnički podaci NORIKS FieldOps'); ?></div>
-  </div>
-</section>
-
-<!-- ============ 8) NORIKS garancija ============ -->
-<section class="nfd-sec">
-  <div class="nfd-wrap">
-    <div class="nfd-guarantee">
-      <h2 class="nfd-h2">30 dana za povrat novca — bez rizika</h2>
-      <p>Isprobajte NORIKS FieldOps Pro bez ikakve brige. Ako niste potpuno zadovoljni, vratite ih u roku od 30 dana za potpuni povrat novca.</p>
-      <p>Besplatna dostava iznad 70 €. Plaćanje pouzećem. Preko 120.000 zadovoljnih kupaca.</p>
-    </div>
-  </div>
-</section>

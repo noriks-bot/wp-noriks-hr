@@ -1,174 +1,168 @@
 <?php
 /**
- * product-bottom: NORIKS Destapacaño — prah za čišćenje odvoda (orto-destapacano).
- * 5 sekcij: 1) Kako djeluje 2) Prednosti 3) Uporaba u 3 koraka 4) Sigurno i učinkovito 5) NORIKS uvjeti
+ * NORIKS Destapacaño — why sekcije 1:1 z originalom (8 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-// Slike uporabljamo iz WP uploads (že naložene v galerijo)
-$dst = 'https://devhr.noriks.com/wp-content/uploads/2026/10/';
+$wdir = get_template_directory_uri() . '/img/destapacan/';
 ?>
+<div class="wdestapacan">
 
+  <section class="wdestapacan__s wdestapacan__s--bg">
+    <div class="wdestapacan__v">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-01.webp' ); ?>" alt="Jedan proizvod, više rješenja" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">CIJELA KUĆA</div>
+        <h2 class="wdestapacan__h2">Jedan proizvod, <em>više rješenja</em></h2>
+        <p class="wdestapacan__p">NORIKS Destapacaño je profesionalni prah za otčepljivanje odvoda. Otčepljuje začepljene cijevi, uklanja neugodne mirise iz samog izvora i otapa mast, kosu i čepove. Granule se sipaju izravno u odvod, a ostalo obavi reakcija s vrućom vodom.</p>
+        <p class="wdestapacan__p">Koristi se u cijeloj kući: u kuhinjskom sudoperu, umivaoniku, tušu, kadi, WC školjki, cijevima i praonici. Tri različita čepa — mast u kuhinji, kosa u kupaonici i papir u WC-u — a ista posuda za sve.</p>
+        <p class="wdestapacan__p">Ne oštećuje PVC cijevi i ne traži alat ni vodoinstalatera. Budući da je riječ o lužini, uvijek radite s rukavicama.</p>
+        <p class="wdestapacan__zak">Sudoper, tuš, WC i praonica — jedna posuda za sve.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s">
+    <div class="wdestapacan__v wdestapacan__v--rev">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-05.webp' ); ?>" alt="Mast i ostaci hrane nestaju s vodom" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">KUHINJSKI SUDOPER</div>
+        <h2 class="wdestapacan__h2">Mast i ostaci hrane <em>nestaju s vodom</em></h2>
+        <p class="wdestapacan__p">U kuhinjskom sudoperu najčešći je problem hladna mast i ostaci hrane koji se zalijepe za stijenku cijevi. Mast se skrućuje na zidovima cijevi i zatvara put vodi, a ostaci hrane uzrokuju neugodne mirise i čepove. Odvod se sužava i voda otječe sve sporije.</p>
+        <p class="wdestapacan__p">NORIKS Destapacaño je granulirani natrijev hidroksid čistoće 99 % — lužina visoke čistoće koja djeluje na mast, kosu i organske ostatke. U dodiru s mašću pretvara je u sapun — ta se reakcija zove saponifikacija — pa se ono što je bilo zalijepljeno za cijev jednostavno ispere vodom.</p>
+        <p class="wdestapacan__p">Ne trebate rastavljati sifon niti gurati žicu u odvod. Prah radi unutar cijevi, točno tamo gdje se nakupila mast, dok vi radite nešto drugo. Isto vrijedi i za ostatke sapuna te druge svakodnevne organske ostatke koji se s vremenom nakupljaju u odvodu.</p>
+        <p class="wdestapacan__zak">Mast se pretvara u sapun i odlazi s vodom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s wdestapacan__s--bg">
+    <div class="wdestapacan__v">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-06.webp' ); ?>" alt="Kosa i sapun u sifonu, bez rastavljanja" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">KADA I TUŠ</div>
+        <h2 class="wdestapacan__h2">Kosa i sapun u sifonu, <em>bez rastavljanja</em></h2>
+        <p class="wdestapacan__p">U kadi i tušu odvod začepi kosa isprepletena sa sapunom. Kosa je jedan od glavnih uzroka začepljenja u kupaonicama, a sapunski ostaci nakupljaju se s vremenom i smanjuju protok vode. Taj čep sjedi duboko u sifonu, gdje ga ne možete dohvatiti rukom.</p>
+        <p class="wdestapacan__p">Kosa je čisti protein, a lužnata formula NORIKS Destapacaño razgrađuje je izravno u cijevi. Ne morate rastavljati sifon, ne morate gurati ruku u odvod i ne trebate nikakav alat. Lužina razbija kosu i ostatke prilijepljene uz stijenke cijevi, a ne samo vrh čepa koji vidite odozgo.</p>
+        <p class="wdestapacan__p">Nakon razgradnje dovoljno je isprati odvod vodom. Voda ponovno otječe, a vi niste morali dirati ništa od onoga što je bilo u cijevi.</p>
+        <p class="wdestapacan__zak">Kosa se razgradi u cijevi — vi ne dirate ništa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s">
+    <div class="wdestapacan__v wdestapacan__v--rev">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-07.webp' ); ?>" alt="Papir i organski ostaci u zavoju cijevi" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">WC ŠKOLJKA</div>
+        <h2 class="wdestapacan__h2">Papir i organski ostaci <em>u zavoju cijevi</em></h2>
+        <p class="wdestapacan__p">U WC školjki papir i organski ostaci zapnu u zavoju cijevi. Toaletni papir može izazvati potpuno ili djelomično začepljenje, voda se diže, a ispiranje ne radi kako treba. Jedino rješenje koje većina zna je pumpa ili poziv vodoinstalateru.</p>
+        <p class="wdestapacan__p">NORIKS Destapacaño razgrađuje sve organsko iznutra. Školjka ponovno normalno ispire — bez pumpe i bez poziva vodoinstalateru. Nakon toga školjku koristite kao i prije.</p>
+        <p class="wdestapacan__p">Isti prah koristite u cijeloj kući: u sudoperu, kadi, WC školjki i praonici. Ne oštećuje PVC cijevi. Uvijek ga koristite s rukavicama, jer je nagrizajući za kožu.</p>
+        <p class="wdestapacan__zak">Tri različita čepa, jedna ista posuda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s wdestapacan__s--bg">
+    <div class="wdestapacan__v">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-08.webp' ); ?>" alt="Jedan poklopac praha izravno u odvod" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">KORAK 1</div>
+        <h2 class="wdestapacan__h2">Jedan poklopac praha <em>izravno u odvod</em></h2>
+        <p class="wdestapacan__p">Put do prohodne cijevi ne traži vodoinstalatera, alat ni napor. Prvi korak: stavite jedan poklopac praha izravno u odvod — bez prethodnog puštanja vode i bez miješanja.</p>
+        <p class="wdestapacan__p">Jedan poklopac dovoljan je za jednu upotrebu, a posuda traje za više upotreba. Prah u odvod ulazi u najvećoj koncentraciji već od prvog dodira i odlazi ravno do začepljenja. Zato prah ne treba prethodno otapati niti miješati s drugim sredstvima.</p>
+        <p class="wdestapacan__p">Količinu prilagodite začepljenju: kad voda samo sporo otječe, dovoljna je četvrtina do polovica posude; kad u odvodu stoji voda, polovica posude; kad odvod uopće ne otječe, cijela posuda od 350 g.</p>
+        <p class="wdestapacan__zak">Bez vode prije, bez miješanja — samo prah u odvod.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s">
+    <div class="wdestapacan__v wdestapacan__v--rev">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-09.webp' ); ?>" alt="Vrlo vruća voda, i čekate" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">KORAK 2</div>
+        <h2 class="wdestapacan__h2">Vrlo vruća voda, <em>i čekate</em></h2>
+        <p class="wdestapacan__p">Na prah izlijte pola litre do litru vrlo vruće vode — ne kipuće i ne pod pritiskom. Čim vruća voda dotakne prah, nastaje lužnata reakcija i diže se gusta pjena. Ta se pjena lijepi za stijenke cijevi i dolazi i tamo gdje tekućine samo procure.</p>
+        <p class="wdestapacan__p">Pustite je da djeluje 15 minuta. U tom vremenu otapa mast, ostatke hrane i kosu — a vi ne dirate ništa. Pjenu ne treba miješati ni gurati; dovoljno je ostaviti je na miru dok djeluje u cijevi.</p>
+        <p class="wdestapacan__p">Pjena razbija mast, kosu i ostatke prilijepljene uz stijenke cijevi i pretvara organsku tvar u topive spojeve. Kod potpunog začepljenja ostavite je da djeluje dulje, najbolje preko noći.</p>
+        <p class="wdestapacan__zak">15 minuta pjena radi umjesto vas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s wdestapacan__s--bg">
+    <div class="wdestapacan__v">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-10.webp' ); ?>" alt="Isperite kantom vode" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">KORAK 3</div>
+        <h2 class="wdestapacan__h2">Isperite <em>kantom vode</em></h2>
+        <p class="wdestapacan__p">Nakon 15 minuta izlijte kantu vode u odvod i cijev ponovno teče kao prvi dan. Ako je začepljenje bilo potpuno i prah je djelovao preko noći, ujutro samo isperite obilnom vodom.</p>
+        <p class="wdestapacan__p">Bez alata, bez rastavljanja i bez plaćanja dolaska vodoinstalatera. Za održavanje se preporučuje upotreba svaka dva mjeseca, da se odvod ne začepi ponovno. Tako je odvod ponovno spreman za svakodnevnu upotrebu.</p>
+        <p class="wdestapacan__p">Ispiranje obilnom vodom odnosi sve ono što je pjena otopila. Cijev ostaje čista, bez začepljenja i s boljim protokom vode — i to u kuhinji, kupaonici i praonici.</p>
+        <p class="wdestapacan__zak">Prah, vruća voda, kanta vode — i odvod je slobodan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s">
+    <div class="wdestapacan__v wdestapacan__v--rev">
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-02.webp' ); ?>" alt="Pjena dolazi tamo gdje tekućine procure" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__tekst">
+        <div class="wdestapacan__kicker">AKTIVNA PJENA</div>
+        <h2 class="wdestapacan__h2">Pjena dolazi <em>tamo gdje tekućine procure</em></h2>
+        <p class="wdestapacan__p">NORIKS Destapacaño nije još jedna tekućina. To je formula koja se pretvara unutar cijevi i ostaje točno tamo gdje je problem. U dodiru s vrućom vodom prah reagira i raste u gustu pjenu u cijevi. Upravo ta pjena čini razliku između praha i običnog tekućeg sredstva.</p>
+        <p class="wdestapacan__p">Za razliku od tekućine koja padne i za nekoliko sekundi procuri, pjena ostaje prilijepljena točno na mjestu začepljenja. Radi na masti, ostacima i kosi dok vi radite nešto drugo — a zatim kanta vode i gotovo. Nema čekanja na majstora i nema rastavljanja cijevi.</p>
+        <p class="wdestapacan__p">Klasične metode traže više truda i vremena, a daju manje: tekuća sredstva i ocat često samo pomaknu vodu, a čep ostaje; pumpa i žica probiju prolaz, ali ostatke ostave na stijenkama. Bocu tekućine izlijete i za nekoliko sekundi je više nema u cijevi — pjena NORIKS Destapacaño ostaje, zato dolazi tamo gdje tekućina ne dolazi.</p>
+        <p class="wdestapacan__zak">Tekućina procuri, pjena ostaje na čepu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wdestapacan__s wdestapacan__s--bg">
+    <div class="wdestapacan__v wdestapacan__v--polna">
+      <div class="wdestapacan__tekst wdestapacan__tekst--sredina">
+        <div class="wdestapacan__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="wdestapacan__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="wdestapacan__p">NORIKS Destapacaño isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="wdestapacan__pogoji">
+        <div class="wdestapacan__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wdestapacan__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wdestapacan__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wdestapacan__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-.dst-sec { padding: 60px 24px; }
-.dst-wrap { max-width: 1240px; margin: 0 auto; }
-.dst-grey { background: #f7f7f7; }
-.dst-white { background: #fff; }
-.dst-h2 { font-family: Inter, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.2; color: #000; margin: 0 0 16px; }
-.dst-tagline { font-size: 17px; line-height: 1.6; color: #555; margin: 0 0 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
-.dst-center { text-align: center; }
-.dst-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; }
-.dst-row:last-child { margin-bottom: 0; }
-.dst-row.dst-rev { grid-template-columns: 1fr 1fr; }
-.dst-row.dst-rev > *:first-child { order: 2; }
-.dst-media { position: relative; aspect-ratio: 4/5; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-.dst-media img, .dst-media video { width: 100%; height: 100%; object-fit: cover; }
-.dst-copy h3 { font-family: Inter, sans-serif; font-size: 26px; font-weight: 700; line-height: 1.25; color: #000; margin: 0 0 16px; }
-.dst-copy p { font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 14px; }
-.dst-copy p:last-child { margin-bottom: 0; }
-.dst-copy strong { font-weight: 600; color: #000; }
-.dst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
-.dst-card { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; }
-.dst-card-ico { width: 64px; height: 64px; margin: 0 auto 20px; background: #f0f0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; }
-.dst-card h4 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 12px; color: #000; }
-.dst-card p { font-size: 15px; line-height: 1.6; color: #555; margin: 0; }
-.dst-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; }
-.dst-step { text-align: center; }
-.dst-step-num { font-family: Inter, sans-serif; font-size: 48px; font-weight: 800; color: #d32f2f; line-height: 1; margin: 0 0 16px; }
-.dst-step h4 { font-family: Inter, sans-serif; font-size: 19px; font-weight: 700; margin: 0 0 12px; color: #000; }
-.dst-step p { font-size: 15px; line-height: 1.6; color: #555; margin: 0; }
-.dst-step-img { aspect-ratio: 1; border-radius: 12px; overflow: hidden; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.dst-step-img img { width: 100%; height: 100%; object-fit: cover; }
-.dst-final { background: #f7f7f7; border-radius: 16px; padding: 40px; text-align: center; margin-top: 48px; }
-.dst-final h3 { font-family: Inter, sans-serif; font-size: 24px; font-weight: 700; margin: 0 0 20px; color: #000; }
-.dst-final ul { list-style: none; padding: 0; margin: 0; display: inline-block; text-align: left; }
-.dst-final li { font-size: 16px; line-height: 2; color: #333; position: relative; padding-left: 28px; }
-.dst-final li:before { content: '✓'; position: absolute; left: 0; color: #2e7d32; font-weight: 700; font-size: 18px; }
-
-@media (max-width: 768px) {
-  .dst-sec { padding: 40px 24px; }
-  .dst-h2 { font-size: 26px; margin-bottom: 12px; }
-  .dst-tagline { font-size: 16px; margin-bottom: 32px; }
-  .dst-row { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
-  .dst-row.dst-rev > *:first-child { order: 0; }
-  .dst-grid { grid-template-columns: 1fr; gap: 24px; }
-  .dst-steps { grid-template-columns: 1fr; gap: 32px; }
-  .dst-copy h3 { font-size: 22px; }
+.wdestapacan{color:#1c1c1c;font-family:inherit}
+.wdestapacan__s{padding:56px 0;background:#fff}
+.wdestapacan__s--bg{background:#f4f3ef}
+.wdestapacan__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wdestapacan__v--rev .wdestapacan__media{order:2}
+.wdestapacan__v--rev .wdestapacan__tekst{order:1}
+.wdestapacan__v--polna{grid-template-columns:1fr;gap:28px}
+.wdestapacan__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.wdestapacan__media img,.wdestapacan__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wdestapacan__media--polna{aspect-ratio:auto}
+.wdestapacan__media--polna img,.wdestapacan__media--polna video{height:auto}
+.wdestapacan__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wdestapacan__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wdestapacan__h2 em{font-style:italic}
+.wdestapacan__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wdestapacan__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.wdestapacan__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.wdestapacan__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wdestapacan__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.wdestapacan__s:not(.wdestapacan__s--bg) .wdestapacan__pog{background:#f4f3ef;box-shadow:none}
+.wdestapacan__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.wdestapacan__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .wdestapacan__s{padding:38px 0}
+  .wdestapacan__v{grid-template-columns:1fr;gap:22px}
+  .wdestapacan__v--rev .wdestapacan__media,.wdestapacan__media{order:0}
+  .wdestapacan__v--rev .wdestapacan__tekst,.wdestapacan__tekst{order:1}
+  .wdestapacan__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>
-
-<!-- 1) Kako djeluje -->
-<section class="dst-sec dst-white">
-  <div class="dst-wrap">
-    <h2 class="dst-h2 dst-center">Prah koji reagira s vodom i otpušuje odvod za 15 minuta</h2>
-    <p class="dst-tagline dst-center">NORIKS Destapacaño reagira s toplom vodom i stvara aktivnu pjenu koja prodire duboko u cijevi, otapa mast, kosu i ostatke te čisti odvod bez alata i bez raščlanjivanja sifona.</p>
-
-    <div class="dst-row">
-      <div class="dst-media">
-        <img src="<?php echo esc_url( $dst . 'noriks-destapacan-pjena.webp' ); ?>" alt="Prah Destapacaño stvara aktivnu pjenu" loading="lazy">
-      </div>
-      <div class="dst-copy">
-        <h3>Aktivna formula koja doseže i čisti začepljenja</h3>
-        <p>Kada se prah dodade u odtok i polije vrućom vodom, <strong>nastaje pjena koja se širi kroz cijevi</strong> i otapa nakupine koje začepe odvod.</p>
-        <p>Pjena se <strong>lijepi uz zidove cijevi</strong> i rastapa mast, kosu, sapunske ostatke i druge organske tvari koje su uzrok začepljenja i neugodnih mirisa.</p>
-        <p>Ne trebaju vam ni posebni alati ni poznavanje vodoinstalatera — prah radi umjesto vas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 2) Prednosti -->
-<section class="dst-sec dst-grey">
-  <div class="dst-wrap">
-    <h2 class="dst-h2 dst-center">Zašto NORIKS Destapacaño</h2>
-    <p class="dst-tagline dst-center">Tri stvari koje korisnici najčešće spominju nakon prvog korištenja.</p>
-
-    <div class="dst-grid">
-      <div class="dst-card">
-        <div class="dst-card-ico">⚙️</div>
-        <h4>Otpušuje za 15 minuta</h4>
-        <p>Dodajte prah, polijte vodom i pričekajte 10–15 minuta. Pjena otapa čep i čisti cijevi bez dodatnog rada.</p>
-      </div>
-      <div class="dst-card">
-        <div class="dst-card-ico">🛡️</div>
-        <h4>Sigurno za cijevi</h4>
-        <p>Djeluje bez oštećivanja PVC, metala ili drugih materijala cijevi. Sigurna formula za sve vrste kućnih instalacija.</p>
-      </div>
-      <div class="dst-card">
-        <div class="dst-card-ico">🌿</div>
-        <h4>Uklanja neugodne mirise</h4>
-        <p>Ne samo da otpušuje odvod, već čisti i bakterije koje uzrokuju neugodan miris iznutra cijevi.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 3) Uporaba u 3 koraka -->
-<section class="dst-sec dst-white">
-  <div class="dst-wrap">
-    <h2 class="dst-h2 dst-center">Uporaba u 3 jednostavna koraka</h2>
-    <p class="dst-tagline dst-center">Bez alata, bez raščlanjivanja, bez poziva vodoinstalatera.</p>
-
-    <div class="dst-steps">
-      <div class="dst-step">
-        <div class="dst-step-num">1</div>
-        <div class="dst-step-img">
-          <img src="<?php echo esc_url( $dst . 'noriks-destapacan-koraci.webp' ); ?>" alt="Dodajte prah u odvod" loading="lazy">
-        </div>
-        <h4>Dodajte prah</h4>
-        <p>Ulijte mjerenu količinu praha direktno u odtok umivaonika, tuša ili kuhinje.</p>
-      </div>
-
-      <div class="dst-step">
-        <div class="dst-step-num">2</div>
-        <div class="dst-step-img">
-          <img src="<?php echo esc_url( $dst . 'noriks-destapacan-djelovanje.webp' ); ?>" alt="Polijte vrućom vodom" loading="lazy">
-        </div>
-        <h4>Polijte vrućom vodom</h4>
-        <p>Dodajte vruću vodu (ne kipuću). Prah reagira i stvara pjenu koja prodire u cijevi.</p>
-      </div>
-
-      <div class="dst-step">
-        <div class="dst-step-num">3</div>
-        <div class="dst-step-img">
-          <img src="<?php echo esc_url( $dst . 'noriks-destapacan-primjene.webp' ); ?>" alt="Pričekajte 15 minuta" loading="lazy">
-        </div>
-        <h4>Pričekajte 10–15 minuta</h4>
-        <p>Pjena otapa začepljenje. Nakon toga isperite običnom vodom — gotovo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4) Sigurno i učinkovito -->
-<section class="dst-sec dst-grey">
-  <div class="dst-wrap">
-    <div class="dst-row dst-rev">
-      <div class="dst-copy">
-        <h3>Sigurno za sve vrste cijevi i redovito korištenje</h3>
-        <p>NORIKS Destapacaño je <strong>formuliran da bude siguran za PVC, metal i druge materijale cijevi</strong> u kućanstvu.</p>
-        <p>Za održavanje preporučuje se <strong>jednom tjedno</strong> — tako sprječavate začepljenja i neugodne mirise prije nego se pojave, i uštedite na popravcima i pozivima vodoinstalaterima.</p>
-        <p>Bez agresivnih kemikalija koje oštećuju cijevi ili stvaraju opasne pare. Djeluje djelotvorno, ali bez rizika.</p>
-      </div>
-      <div class="dst-media">
-        <img src="<?php echo esc_url( $dst . 'noriks-destapacan-hero.webp' ); ?>" alt="Siguran za sve vrste cijevi" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5) NORIKS uvjeti -->
-<section class="dst-sec dst-white">
-  <div class="dst-wrap">
-    <div class="dst-final">
-      <h3>NORIKS jamči najbolju kupovinu</h3>
-      <ul>
-        <li>30 dana za povrat novca — isprobajte bez rizika</li>
-        <li>Besplatna dostava iznad 70 €</li>
-        <li>Plaćanje pouzećem dostupno</li>
-        <li>120.000 zadovoljnih kupaca diljem Europe</li>
-        <li>Ocjena 4,8 na temelju 1.081 recenzije</li>
-      </ul>
-    </div>
-  </div>
-</section>

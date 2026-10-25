@@ -547,7 +547,7 @@
 
           <?php elseif ( noriks_is_type( 'acryliques' ) ): ?>
 
-           Niste jedini koji traže flomastere koji ne procuraju.
+           Niste jedini koji traže flomastere koji ne probijaju papir.
 
           <?php elseif ( noriks_is_type( 'midnight' ) ): ?>
 
@@ -555,7 +555,7 @@
 
           <?php elseif ( noriks_is_type( 'gordura' ) ): ?>
 
-           Niste jedini koji želi se osjećati vitko i samopouzdano svaki dan
+           Niste jedini koji traže body koji se ne vidi ispod odjeće.
 
           <?php elseif ( noriks_is_type( 'womens' ) ): ?>
 
@@ -575,7 +575,7 @@
 
           <?php elseif ( noriks_is_type( 'classics' ) ): ?>
 
-           Niste jedini koji vole Fleecies
+           Niste jedini koji traže tople tajice za hladne dane.
 
           <?php elseif ( noriks_is_type( 'munna' ) ): ?>
 
@@ -700,7 +700,7 @@
 
            <?php elseif ( noriks_is_type( 'birdie' ) ): ?>
 
-           Tisuće žena već nosi NORIKS Birdie na ključevima – 130 dB sirena i stroboskop koji upozoravaju okolinu u sekundi.
+           Tisuće žena već nosi NORIKS Guard na ključevima – 130 dB sirena i stroboskop koji upozoravaju okolinu u sekundi.
 
            <?php elseif ( noriks_is_type( 'controlpro' ) ): ?>
 
@@ -833,11 +833,11 @@
 
            <?php elseif ( noriks_is_type( 'giovasa' ) ): ?>
 
-            Tisuće kućanstava već čisti staklo i površine s NORIKS Giovasa krpom – blistavo čisto samo s vodom, bez kemikalija i do 300+ pranja.
+            Tisuće kućanstava već čisti staklo i površine s NORIKS GlassPro krpom – blistavo čisto samo s vodom, bez kemikalija i do 300+ pranja.
 
            <?php elseif ( noriks_is_type( 'pikseland' ) ): ?>
 
-            Tisuće igrača već uživa u PIKSELAND konzoli – do 58.000 retro-igara, 40+ emulatora i 2 bežična kontrolera na jednom malom uređaju.
+            Tisuće igrača već uživa u NORIKS RetroBox konzoli – do 58.000 retro-igara, 40+ emulatora i 2 bežična kontrolera na jednom malom uređaju.
 
            <?php elseif ( noriks_is_type( 'brassiere' ) ): ?>
 
@@ -1133,7 +1133,7 @@
 
            <?php elseif ( noriks_is_type( 'gordura' ) ): ?>
 
-           Tisuće kupaca već koristi NORIKS Seka Body i vidi rezultate odmah
+           Tisuće kupaca već nosi NORIKS ShapeBody ispod svakodnevne odjeće.
 
            <?php elseif ( noriks_is_type( 'womens' ) ): ?>
 
@@ -1141,7 +1141,7 @@
 
            <?php elseif ( noriks_is_type( 'draps' ) ): ?>
 
-           Tisuće kupaca već koristi EasySleep® i svaki tjedan uštedi sat vremena na posteljini.
+           Tisuće kupaca već koristi NORIKS DuoSleep i svaki tjedan uštedi sat vremena na posteljini.
 
            <?php elseif ( noriks_is_type( 'faith' ) ): ?>
 
@@ -1149,11 +1149,11 @@
 
            <?php elseif ( noriks_is_type( 'classics' ) ): ?>
 
-           Tisuce kupaca vec koristi Fleecies svaki dan
+           Tisuće kupaca već koristi NORIKS Classics svaki dan
 
            <?php elseif ( noriks_is_type( 'munna' ) ): ?>
 
-           Tisuće žena već koristi NORIKS Munna kapi kao dio jutarnje rutine.
+           Tisuće žena već koristi NORIKS Ritual kapi kao dio jutarnje rutine.
 
            <?php elseif ( noriks_is_type( 'corrector' ) ): ?>
 
@@ -1165,7 +1165,7 @@
 
            <?php elseif ( noriks_is_type( 'fieldops' ) ): ?>
 
-            Tisuće lovaca i strelaca već koristi NORIKS FieldOps Pro – zaštita sluha 27-31 dB, amplifikacija 4× i baterija 40 sati za sigurnost na lovu.
+            Tisuće lovaca i strelaca već koristi NORIKS TacPro – zaštita sluha 27-31 dB, amplifikacija 4× i baterija 40 sati za sigurnost na lovu.
 
            <?php elseif ( noriks_is_type( 'destapacan' ) ): ?>
 
@@ -1509,15 +1509,15 @@
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
   if ( $is_salon_page ) { $rv_fallback_title = 'NORIKS Salon | Četkica za obrve s bojom'; }
   if ( $is_corrector_page ) { $rv_fallback_title = 'NORIKS Corrector | Korektor držanja'; }
-  if ( $is_munna_page ) { $rv_fallback_title = 'NORIKS Munna | Biljne kapi za svakodnevni ritual'; }
+  if ( $is_munna_page ) { $rv_fallback_title = 'NORIKS Ritual | Biljne kapi za svakodnevni ritual'; }
   if ( $is_classics_page ) { $rv_fallback_title = 'NORIKS Classics'; }
   if ( $is_faith_page ) { $rv_fallback_title = 'NORIKS Razgovorna Igra za Pravu Vjeru'; }
   if ( $is_devotions_page ) { $rv_fallback_title = 'NORIKS Jedna minuta s Bogom za djecu'; }
-  if ( $is_draps_page ) { $rv_fallback_title = 'NORIKS EasySleep® 2 u 1 Pokrivač Koji Zamjenjuje Plahte'; }
+  if ( $is_draps_page ) { $rv_fallback_title = 'NORIKS DuoSleep 2 u 1 Pokrivač Koji Zamjenjuje Plahte'; }
   if ( $is_slabproof_page ) { $rv_fallback_title = 'NORIKS SlabProof™ Radne Čarape'; }
   if ( $is_womens_page ) { $rv_fallback_title = 'NORIKS Ortopedske Cipele za Žene'; }
-  if ( $is_gordura_page ) { $rv_fallback_title = 'NORIKS Seka Body Modelador'; }
-  if ( $is_midnight_page ) { $rv_fallback_title = 'NORIKS Midnight Premium Majica'; }
+  if ( $is_gordura_page ) { $rv_fallback_title = 'NORIKS ShapeBody oblikujući body'; }
+  if ( $is_midnight_page ) { $rv_fallback_title = 'NORIKS Midnight majica'; }
   if ( $is_acryliques_page ) { $rv_fallback_title = 'NORIKS Akrilni Flomasteri | Dvostrani set'; }
   if ( $is_fleeceshawl_page ) { $rv_fallback_title = 'NORIKS FleeceShawl šal-ogrtač od flisa'; }
   if ( $is_bottlesling_page ) { $rv_fallback_title = 'NORIKS BottleSling torbica za termo čašu'; }
@@ -2974,7 +2974,7 @@ $insoles_faq = array(
   ),
   array(
     'questioon' => 'Mogu li rezati ulošak da stane u moje cipele?',
-    'answer'    => 'Da. Na svakom ulošku su ucrtane linije za rezanje po veličinama. Možete izrezati prema svojoj veličini. Nakon rezanja uložak se ne može vratiti, ali naše jamstvo povrata novca vrijedi čak i za izrezane i nošene ulošk e.'
+    'answer'    => 'Da. Na svakom ulošku su ucrtane linije za rezanje po veličinama. Možete izrezati prema svojoj veličini. Nakon rezanja uložak se ne može vratiti, ali naše jamstvo povrata novca vrijedi čak i za izrezane i nošene uloške.'
   ),
   array(
     'questioon' => 'Koliko dugo traju ulošci?',
@@ -3034,11 +3034,11 @@ $fisiorest_faq = array(
   ),
 );
 
-// Birdie personal safety alarm — product FAQ
+// NORIKS Guard personal safety alarm — product FAQ
 $birdie_faq = array(
   array(
-    'questioon' => 'Koliko je Birdie glasan?',
-    'answer'    => 'Birdie emitira 130 dB — to je glasnoća reaktivnog zrakoplova. Dovoljno glasno da se čuje na 100 metara i privuče pozornost svih u blizini.'
+    'questioon' => 'Koliko je NORIKS Guard glasan?',
+    'answer'    => 'NORIKS Guard emitira 130 dB — to je glasnoća reaktivnog zrakoplova. Dovoljno glasno da se čuje na 100 metara i privuče pozornost svih u blizini.'
   ),
   array(
     'questioon' => 'Kako ga aktiviram?',
@@ -3046,23 +3046,23 @@ $birdie_faq = array(
   ),
   array(
     'questioon' => 'Mogu li ga nositi na avionu?',
-    'answer'    => 'Da, Birdie je dozvoljena na letovima jer nije oružje i ne koristi kemikalije. Možete je staviti u ručnu prtljagu.'
+    'answer'    => 'Da, NORIKS Guard je dozvoljena na letovima jer nije oružje i ne koristi kemikalije. Možete je staviti u ručnu prtljagu.'
   ),
   array(
     'questioon' => 'Koliko dugo traje baterija?',
-    'answer'    => 'Birdie se puni preko USB-C kabela (uključen) u 2 sata i traje tjednima bez aktivacije. LED indikator pokazuje stanje punjenja — zeleno = puna, crveno = napunite.'
+    'answer'    => 'NORIKS Guard se puni preko USB-C kabela (uključen) u 2 sata i traje tjednima bez aktivacije. LED indikator pokazuje stanje punjenja — zeleno = puna, crveno = napunite.'
   ),
   array(
     'questioon' => 'Može li se slučajno aktivirati u torbici?',
-    'answer'    => 'Birdie 3.0 ima prekidač za uključivanje/isključivanje. Kada alarm nije potreban, možete ga isključiti da se ne aktivira slučajno.'
+    'answer'    => 'NORIKS Guard ima prekidač za uključivanje/isključivanje. Kada alarm nije potreban, možete ga isključiti da se ne aktivira slučajno.'
   ),
   array(
     'questioon' => 'Što je uključeno u paket?',
-    'answer'    => 'U paketu dobivate Birdie alarm (visina 10 cm), mesing karabiner za privjesak, USB-C kabel za punjenje i priručnik.'
+    'answer'    => 'U paketu dobivate NORIKS Guard alarm (visina 10 cm), mesing karabiner za privjesak, USB-C kabel za punjenje i priručnik.'
   ),
   array(
     'questioon' => 'Ima li bljeskalicu?',
-    'answer'    => 'Da, Birdie 3.0 ima ugrađenu LED bljeskalicu. Pritisnite gornji gumb za upaliti bijelo svjetlo — korisno za traženje ključeva u torbici, otključavanje auta u mraku ili šetnju psa navečer.'
+    'answer'    => 'Da, NORIKS Guard ima ugrađenu LED bljeskalicu. Pritisnite gornji gumb za upaliti bijelo svjetlo — korisno za traženje ključeva u torbici, otključavanje auta u mraku ili šetnju psa navečer.'
   ),
   array(
     'questioon' => 'Razlikuju li se boje po funkciji?',
@@ -3417,7 +3417,7 @@ $pikseland_faq = array(
     array('q' => 'Koliko igara je uključeno?', 'a' => 'Do <strong>58.000 igara</strong> i podrška za preko <strong>40 emulatora</strong> — od 8-bitnih klasika do 3D avantura. Broj igara ovisi o odabranom kapacitetu (64GB / 128GB / 256GB).'),
     array('q' => 'Moram li nešto instalirati ili podešavati?', 'a' => '<strong>Ne</strong>. Priključite HDMI kabel, spojite struju i upalite konzolu — <strong>30 sekundi do prve igre</strong>. Bez instalacije, bez interneta, bez komplikacija.'),
     array('q' => 'Jesu li kontroleri uključeni?', 'a' => 'Da, dobivate <strong>dva bežična kontrolera</strong> u kutiji — spremna za igru odmah nakon raspakivanja.'),
-    array('q' => 'Koje konzole podržava PIKSELAND?', 'a' => 'Podržava preko 40 emulatora, uključujući NES, SNES, Sega, PlayStation, Arcade i mnoge druge klasične konzole.'),
+    array('q' => 'Koje konzole podržava NORIKS RetroBox?', 'a' => 'Podržava preko 40 emulatora, uključujući NES, SNES, Sega, PlayStation, Arcade i mnoge druge klasične konzole.'),
     array('q' => 'Mogu li dodati vlastite igre?', 'a' => 'Konzola dolazi s unaprijed učitanim igrama. Za dodavanje vlastitih potrebno je poznavati emulatoru i imati ROM datoteke — to nije dio uobičajene uporabe.'),
     array('q' => 'Koliko košta dostava i koliko traje?', 'a' => '<strong>Besplatna dostava iznad 70 €</strong>. Dostava je brza na kućnu adresu, a plaćate pouzećem pri preuzimanju.'),
     array('q' => 'Što ako mi ne odgovara?', 'a' => 'Imate <strong>30 dana za povrat novca</strong>. Ako niste zadovoljni, vratite konzolu i dobivate cijeli iznos natrag.'),
@@ -4165,7 +4165,7 @@ $stepcloud_faq = array(
 
 $giovasa_faq = array(
   array('questioon' => 'Treba li mi kemijsko sredstvo za čišćenje?',
-    'answer'    => 'Ne. NORIKS Giovasa krpa čisti staklo i površine samo s vodom — mikrofilamentna vlakna učinkovito odstranjuju prah, masnoću i otiske prstiju bez ijedne kapi deterdženta.'),
+    'answer'    => 'Ne. NORIKS GlassPro krpa čisti staklo i površine samo s vodom — mikrofilamentna vlakna učinkovito odstranjuju prah, masnoću i otiske prstiju bez ijedne kapi deterdženta.'),
   array('questioon' => 'Koliko puta mogu oprati krpu prije nego što prestane raditi?',
     'answer'    => 'Do 300+ pranja u perilici rublja na 60°C. Mikrofilamentna vlakna ne gube učinkovitost — krpa će vam služiti mjesecima, a nakon svakog pranja je spremna za ponovnu uporabu.'),
   array('questioon' => 'Može li upijati tekućinu ili je samo za staklo?',
@@ -5686,8 +5686,25 @@ $flomasteri_faq = array(
   array("Treba li miješati ili razrjeđivati boje?", "Ne. Svaki flomaster je spreman za rad – protresite ga sa zatvorenim čepićem, skinite čep i bojajte. Kod svjetlih nijansi pustite da se osuši nekoliko sekundi između slojeva."),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_devotions, $devotions_faq, $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_fleeceshawl, $fleeceshawl_faq, $is_bottlesling, $bottlesling_faq, $is_pillorganizer, $pillorganizer_faq, $is_ultrasoniccleaner, $ultrasoniccleaner_faq, $is_antitheftbag, $antitheftbag_faq, $is_showertowel, $showertowel_faq, $is_petdental, $petdental_faq, $is_calmingcollar, $calmingcollar_faq, $is_therapillow, $therapillow_faq, $is_grillbasket, $grillbasket_faq, $is_seatcushion, $seatcushion_faq, $is_groundingmat, $groundingmat_faq, $is_neckmassager, $neckmassager_faq, $is_upholsterycleaner, $upholsterycleaner_faq, $is_kneelight, $kneelight_faq, $is_travelkit, $travelkit_faq, $is_breadbag, $breadbag_faq, $is_pethairglove, $pethairglove_faq, $is_dualpillow, $dualpillow_faq, $is_mattresstopper, $mattresstopper_faq, $is_kidspillow, $kidspillow_faq, $is_vacuumsealer, $vacuumsealer_faq, $is_airtravel, $airtravel_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_hikingshoes, $hikingshoes_faq, $is_hoodiedress, $hoodiedress_faq, $is_comfortjeans, $comfortjeans_faq, $is_slingbag, $slingbag_faq, $is_travelbag, $travelbag_faq, $is_bathmat, $bathmat_faq, $is_dogbed, $dogbed_faq, $is_minimizerbra, $minimizerbra_faq, $is_nursingbra, $nursingbra_faq, $is_cashmeresweater, $cashmeresweater_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_thermoboots, $thermoboots_faq, $is_leatherboots, $leatherboots_faq, $is_snugboot, $snugboot_faq, $is_cloudclogs, $cloudclogs_faq, $is_compressionsocks, $compressionsocks_faq, $is_wafflelongsleeve, $wafflelongsleeve_faq, $is_sleepset, $sleepset_faq, $is_plushblanket, $plushblanket_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_giovasa, $giovasa_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_ondersteun, $ondersteun_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
+// Lastni FAQ (Informacije o proizvodu) za nove izdelke — brez tega se pokaze FAQ za majice.
+// Najprej auto_reviews/FAQ_HR_<tip>.php (datoteka vrne polje), sicer $<tip>_faq iz te datoteke.
+$noriks_faq_lastni = null;
+foreach ( array( 'classics' => 'classics', 'fieldops' => 'fieldops', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'giovasa' => 'giovasa', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'pikseland' => 'pikseland', 'munna' => 'munna', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel' ) as $noriks_ft => $noriks_fv ) {
+  if ( function_exists( 'noriks_is_type' ) && noriks_is_type( $noriks_ft ) ) {
+    $noriks_ff = get_stylesheet_directory() . '/auto_reviews/FAQ_HR_' . $noriks_ft . '.php';
+    if ( file_exists( $noriks_ff ) ) {
+      $noriks_faq_lastni = include $noriks_ff;
+    } elseif ( isset( ${$noriks_fv . '_faq'} ) && is_array( ${$noriks_fv . '_faq'} ) ) {
+      $noriks_faq_lastni = ${$noriks_fv . '_faq'};
+    }
+    break;
+  }
+}
+$faq_pick = function( $title, $list ) use ( $noriks_faq_lastni, $is_devotions, $devotions_faq, $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_fleeceshawl, $fleeceshawl_faq, $is_bottlesling, $bottlesling_faq, $is_pillorganizer, $pillorganizer_faq, $is_ultrasoniccleaner, $ultrasoniccleaner_faq, $is_antitheftbag, $antitheftbag_faq, $is_showertowel, $showertowel_faq, $is_petdental, $petdental_faq, $is_calmingcollar, $calmingcollar_faq, $is_therapillow, $therapillow_faq, $is_grillbasket, $grillbasket_faq, $is_seatcushion, $seatcushion_faq, $is_groundingmat, $groundingmat_faq, $is_neckmassager, $neckmassager_faq, $is_upholsterycleaner, $upholsterycleaner_faq, $is_kneelight, $kneelight_faq, $is_travelkit, $travelkit_faq, $is_breadbag, $breadbag_faq, $is_pethairglove, $pethairglove_faq, $is_dualpillow, $dualpillow_faq, $is_mattresstopper, $mattresstopper_faq, $is_kidspillow, $kidspillow_faq, $is_vacuumsealer, $vacuumsealer_faq, $is_airtravel, $airtravel_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_hikingshoes, $hikingshoes_faq, $is_hoodiedress, $hoodiedress_faq, $is_comfortjeans, $comfortjeans_faq, $is_slingbag, $slingbag_faq, $is_travelbag, $travelbag_faq, $is_bathmat, $bathmat_faq, $is_dogbed, $dogbed_faq, $is_minimizerbra, $minimizerbra_faq, $is_nursingbra, $nursingbra_faq, $is_cashmeresweater, $cashmeresweater_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_thermoboots, $thermoboots_faq, $is_leatherboots, $leatherboots_faq, $is_snugboot, $snugboot_faq, $is_cloudclogs, $cloudclogs_faq, $is_compressionsocks, $compressionsocks_faq, $is_wafflelongsleeve, $wafflelongsleeve_faq, $is_sleepset, $sleepset_faq, $is_plushblanket, $plushblanket_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_giovasa, $giovasa_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_ondersteun, $ondersteun_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( is_array( $noriks_faq_lastni ) && $noriks_faq_lastni && $is_info ) {
+    return $noriks_faq_lastni;
+  }
   if ( $is_devotions && $is_info ) {
     return $devotions_faq;
   }
@@ -6066,7 +6083,12 @@ $faq_pick = function( $title, $list ) use ( $is_devotions, $devotions_faq, $is_v
 // Shared item renderer.
 $render_faq_items = function( $list ) {
   if ( $list && is_array( $list ) ):
-    foreach ( $list as $faq_item ): ?>
+    foreach ( $list as $faq_item ):
+      // FAQ polja imajo tri oblike: questioon/answer, q/a ali [vprasanje, odgovor]
+      if ( ! isset( $faq_item['questioon'] ) ) {
+        $faq_item = array( 'questioon' => isset( $faq_item['q'] ) ? $faq_item['q'] : ( isset( $faq_item[0] ) ? $faq_item[0] : '' ),
+                           'answer'    => isset( $faq_item['a'] ) ? $faq_item['a'] : ( isset( $faq_item[1] ) ? $faq_item[1] : '' ) );
+      } ?>
       <div class="faq-item">
         <button class="faq-question">
           <?php echo function_exists('noriks_no_free_exchange') ? noriks_no_free_exchange( $faq_item["questioon"] ) : $faq_item["questioon"]; ?>

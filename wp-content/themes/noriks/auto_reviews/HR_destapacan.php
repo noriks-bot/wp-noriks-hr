@@ -11,7 +11,7 @@ $auto_reviews_en = array(
     array("name" => "Tomislav B.",  "text" => "Odvod u umivaonici bio je spor. Nakon korištenja ovog praha, voda otječe bez problema. Siguran sam da je i čist iznutra."),
     array("name" => "Maja L.",      "text" => "Koristim ga redovito jer ne želim ponovo imati začepljen odvod. Cijevi su čiste, nema mirisa i voda teče brzo."),
     array("name" => "Zvonimir N.",  "text" => "Odličan proizvod. Djeluje brzo, ne oštećuje cijevi i nakon korištenja nema kemijskog mirisa kao kod nekih drugih sredstava."),
-    array("name" => "Nikolina D.",  "text" => "Vodoinstalater bi me koštao stotine kuna. Ovim prahom sam sama riješila problem za 15 minuta. Presretna sam."),
+    array("name" => "Nikolina D.",  "text" => "Vodoinstalater bi me koštao puno više novca. Ovim prahom sam sama riješila problem za 15 minuta. Presretna sam."),
     array("name" => "Robert H.",    "text" => "Koristim ga i u kuhinji i u kupaoni. Prah stvara pjenu koja prodire duboko i rastapa ostatke. Praktičan."),
     array("name" => "Lucija V.",    "text" => "Bila sam skeptična jer sam probala razna sredstva i ništa nije radilo. Ovo je zaista otpušilo odvod. Isplati se."),
     array("name" => "Goran Š.",     "text" => "Dobar omjer cijene i kvalitete. Jedna posudica traje dugo ako se koristi preventivno. Preporučujem."),

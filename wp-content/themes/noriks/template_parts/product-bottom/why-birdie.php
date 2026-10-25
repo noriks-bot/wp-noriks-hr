@@ -1,376 +1,203 @@
 <?php
 /**
- * NORIKS Birdie — osobni sigurnosni alarm s 130 dB sirenom i stroboskopom
- * 
- * Struktura:
- * 1. Loud Siren (130 dB)
- * 2. Strobe Light (utripajoća svjetla)
- * 3. Rechargeable (USB-C punjenje)
- * 4. Flashlight (bljeskalica)
- * 5. Easy to Use (jednostavno korištenje)
- * 6. NORIKS uvjeti
+ * NORIKS Guard — why sekcije 1:1 z originalom (11 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
-
-$nf = get_template_directory_uri() . '/img/birdie/';
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+$wdir = get_template_directory_uri() . '/img/birdie/';
 ?>
+<div class="wbirdie">
 
+  <section class="wbirdie__s wbirdie__s--bg">
+    <div class="wbirdie__v">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-lifestyle2.jpg' ); ?>" alt="Kao protupožarni alarm — u vašem džepu" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">UPOZNAJTE GA</div>
+        <h2 class="wbirdie__h2">Kao protupožarni alarm — <em>u vašem džepu</em></h2>
+        <p class="wbirdie__p">NORIKS Guard je osobni sigurnosni alarm osmišljen za žene. Mali je i šaren, a u sebi skriva glasnu sirenu i treperavo stroboskopsko svjetlo koji su tu da odvrate napad.</p>
+        <p class="wbirdie__p">Princip je jednostavan: kada povučete pin, uređaj zabljeska i oglasi se nevjerojatno glasno. Tako u trenutku privlačite pažnju svih oko sebe — jednako kao protupožarni alarm koji nosite u džepu.</p>
+        <p class="wbirdie__p">Glasan je poput mlaznog motora iznad glave, a napravljen je za svakodnevnu upotrebu. Nosite ga sa sobom kamo god idete — za mir u glavi, svaki dan.</p>
+        <p class="wbirdie__zak">Mali uređaj, velika buka — točno onda kada vam treba.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s">
+    <div class="wbirdie__v wbirdie__v--rev">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-11.png' ); ?>" alt="Sve što treba, već u kutiji" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">ŠTO DOBIVATE</div>
+        <h2 class="wbirdie__h2">Sve što treba, <em>već u kutiji</em></h2>
+        <p class="wbirdie__p">NORIKS Guard donosi tri praktične funkcije: punjivu bateriju, prekidač za uključivanje i isključivanje te ugrađenu svjetiljku. Uz to ima glasnu sirenu od 130 dB i treperavo stroboskopsko svjetlo.</p>
+        <p class="wbirdie__p">U paketu dobivate alarm NORIKS Guard sa sirenom i stroboskopom, privjesak od punog mesinga, USB-C kabel za punjenje i korisnički priručnik. Ništa ne trebate dokupiti — alarm je spreman za upotrebu.</p>
+        <p class="wbirdie__p">Dimenzije alarma su 8,9 × 2,9 × 1,3 cm. Dovoljno je malen da stane na privjesak za ključeve ili na torbu, a dovoljno velik da ga lako uhvatite rukom.</p>
+        <p class="wbirdie__zak">Alarm, privjesak, kabel i priručnik — sve u jednom paketu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s wbirdie__s--bg">
+    <div class="wbirdie__v">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-putovanje.webp' ); ?>" alt="Ide s vama — kamo god krenete" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">ZA PUTOVANJA</div>
+        <h2 class="wbirdie__h2">Ide s vama — <em>kamo god krenete</em></h2>
+        <p class="wbirdie__p">Za razliku od paprenog spreja, elektrošokera i oružja, NORIKS Guard možete ponijeti sa sobom bilo kamo. To je zvučni i svjetlosni alarm, a ne sredstvo za napad.</p>
+        <p class="wbirdie__p">Zato je pravi suputnik ako redovito vježbate na otvorenom, putujete sami ili jednostavno želite uložiti u vlastitu sigurnost. Zakačite ga na ruksak, torbu ili ključeve i zaboravite na njega — dok vam ne zatreba.</p>
+        <p class="wbirdie__zak">Jedan alarm za grad, planinu i put.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s">
+    <div class="wbirdie__v wbirdie__v--rev">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-nenasilno.webp' ); ?>" alt="Odvraća napadača bez borbe" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">BEZ NASILJA</div>
+        <h2 class="wbirdie__h2">Odvraća napadača <em>bez borbe</em></h2>
+        <p class="wbirdie__p">Tradicionalna sredstva za samoobranu traže od vas da se borite. NORIKS Guard je osmišljen da odvrati napadača bez potrebe za upotrebom sile.</p>
+        <p class="wbirdie__p">Umjesto fizičkog sukoba, NORIKS Guard koristi glasnu sirenu i treperavo svjetlo. Oni prekidaju neugodnu situaciju i usmjeravaju poglede ljudi u blizini prema vama.</p>
+        <p class="wbirdie__p">Ne morate biti spremni na obračun ni znati tehnike samoobrane. Dovoljno je imati alarm uz sebe i povući pin kada se osjećate nesigurno.</p>
+        <p class="wbirdie__zak">Buka i svjetlo umjesto sile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s wbirdie__s--bg">
+    <div class="wbirdie__v">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-glasan.webp' ); ?>" alt="Samo povucite — i alarm radi" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">LAKO ZA UPOTREBU</div>
+        <h2 class="wbirdie__h2">Samo povucite — <em>i alarm radi</em></h2>
+        <p class="wbirdie__p">Nema više mučenja s paprenim sprejem ili elektrošokerom. NORIKS Guard aktivirate jednim potezom: samo povucete pin.</p>
+        <p class="wbirdie__p">U istom trenutku uključuju se glasna sirena i stroboskopsko svjetlo. Nema nišanjenja, nema traženja pravog gumba — pokret je isti u svakoj situaciji, pa ga možete napraviti i kada ste pod stresom.</p>
+        <p class="wbirdie__zak">Jedan potez — sirena i svjetlo istovremeno.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s">
+    <div class="wbirdie__v wbirdie__v--rev">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-noriks.webp' ); ?>" alt="Nadamo se da vam nikad neće trebati" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">MIR U GLAVI</div>
+        <h2 class="wbirdie__h2">Nadamo se da vam <em>nikad neće trebati</em></h2>
+        <p class="wbirdie__p">Iskreno se nadamo da NORIKS Guard nikada nećete morati upotrijebiti. Ali možete se osjećati sigurnije znajući da ga imate na privjesku za ključeve.</p>
+        <p class="wbirdie__p">Kombinacija izgleda i praktičnosti teško je odoljiva: NORIKS Guard izgleda kao šareni modni dodatak, a zapravo je sigurnosni alarm koji je uvijek pri ruci. Nosite ga na torbi, torbici oko struka ili ključevima.</p>
+        <p class="wbirdie__zak">Sigurnost koja izgleda kao modni dodatak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s wbirdie__s--bg">
+    <div class="wbirdie__v">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-13.jpg' ); ?>" alt="Od privjeska do alarma u jednom pokretu" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">KAKO SE KORISTI</div>
+        <h2 class="wbirdie__h2">Od privjeska do alarma <em>u jednom pokretu</em></h2>
+        <p class="wbirdie__p">Zakačite NORIKS Guard pomoću mesinganog privjeska na ključeve, torbu ili ruksak. Prekidačem ga uključite kada izlazite, kako bi se aktivirao samo kada vi to želite.</p>
+        <p class="wbirdie__p">Kada vam zatreba, povucite pin — sirena od 130 dB i stroboskop odmah se uključuju. Svjetiljku možete koristiti zasebno, bez uključivanja sirene, na primjer kada tražite ključeve u mraku.</p>
+        <p class="wbirdie__p">Bateriju punite USB-C kabelom koji je u paketu. Indikator napunjenosti svijetli kada je baterija pri kraju, pa znate kada je vrijeme za punjenje.</p>
+        <p class="wbirdie__zak">Uključite, nosite, povucite kad zatreba.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s">
+    <div class="wbirdie__v wbirdie__v--rev">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-14.png' ); ?>" alt="Kad ste u nedoumici — povucite" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">VJERUJTE OSJEĆAJU</div>
+        <h2 class="wbirdie__h2">Kad ste u nedoumici — <em>povucite</em></h2>
+        <p class="wbirdie__p">Osjećate se neugodno? Vjerujte svom osjećaju. Aktivirajte glasni alarm NORIKS Guard od 130 dB i treperavo svjetlo kako biste prekinuli situaciju i privukli poglede na sebe.</p>
+        <p class="wbirdie__p">Ne bojte se napraviti buku! NORIKS Guard možete koristiti uvijek iznova — nije jednokratan, nego je tu za vas svaki put kada vam zatreba.</p>
+        <p class="wbirdie__zak">Bolje jednom previše nego jednom premalo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s wbirdie__s--bg">
+    <div class="wbirdie__v">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-prekidac.webp' ); ?>" alt="Punjiv, s prekidačem i svjetiljkom" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">NOVE FUNKCIJE</div>
+        <h2 class="wbirdie__h2">Punjiv, s prekidačem i <em>svjetiljkom</em></h2>
+        <p class="wbirdie__p">NORIKS Guard je punjiv, pa ga koristite bez zamjene baterija. Uz punjivu bateriju ima i svjetlo koje upozorava na slabu bateriju.</p>
+        <p class="wbirdie__p">Ima prekidač za uključivanje i isključivanje, tako da se aktivira samo kada vi to stvarno želite. Ugrađena svjetiljka radi bez uključivanja sirene, a kraći mesingani privjesak lakše se nosi na ključevima.</p>
+        <p class="wbirdie__zak">Tri nove funkcije, isti jednostavan pin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s">
+    <div class="wbirdie__v wbirdie__v--rev">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-upotreba.webp' ); ?>" alt="Drugačiji od klasične samoobrane" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">USPOREDBA</div>
+        <h2 class="wbirdie__h2">Drugačiji od <em>klasične samoobrane</em></h2>
+        <p class="wbirdie__p">Za razliku od tradicionalnih sredstava za samoobranu, NORIKS Guard je osmišljen za žene. Nije nasilan, može se nositi na putovanjima i dizajniran je da se neprimjetno uklopi u vaš način života.</p>
+        <p class="wbirdie__p">Dolazi u nizu boja — od klasične crne do leopard uzorka i metalik nijansi — pa ga lako uskladite s torbom ili privjeskom. To je mir u glavi koji možete nositi svuda.</p>
+        <p class="wbirdie__zak">Nenasilan, prenosiv, uvijek uz vas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s wbirdie__s--bg">
+    <div class="wbirdie__v">
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-12.jpg' ); ?>" alt="Poklonite sigurnost" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__tekst">
+        <div class="wbirdie__kicker">POKLON</div>
+        <h2 class="wbirdie__h2">Poklonite <em>sigurnost</em></h2>
+        <p class="wbirdie__p">NORIKS Guard je savršen poklon za prijateljice i članove obitelji koji su stalno u pokretu. Poklonite im sigurnost koju mogu nositi svuda.</p>
+        <p class="wbirdie__p">Idealan je za kćer ili unuku koja odlazi na studij, za prijateljicu koja putuje sama ili za svakoga tko se kasno vraća kući. Malen je, šaren i uvijek pri ruci.</p>
+        <p class="wbirdie__zak">Poklon koji se nosi svaki dan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wbirdie__s">
+    <div class="wbirdie__v wbirdie__v--polna">
+      <div class="wbirdie__tekst wbirdie__tekst--sredina">
+        <div class="wbirdie__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="wbirdie__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="wbirdie__p">NORIKS Guard isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="wbirdie__pogoji">
+        <div class="wbirdie__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wbirdie__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wbirdie__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wbirdie__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-.nss-birdie { 
-  width: 100%; 
-  overflow: hidden; 
-  font-family: system-ui, -apple-system, sans-serif; 
-}
-.nss-birdie .nss-sect { 
-  max-width: 1240px; 
-  padding: 80px 24px; 
-  margin: 0 auto; 
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 60px; 
-  align-items: center; 
-}
-.nss-birdie .nss-sect.--rev { 
-  grid-template-columns: 1fr 1fr; 
-}
-.nss-birdie .nss-sect.--rev .nss-vis { 
-  order: -1; 
-}
-.nss-birdie .nss-vis { 
-  position: relative; 
-}
-.nss-birdie .nss-vis img, 
-.nss-birdie .nss-vis video { 
-  width: 100%; 
-  aspect-ratio: 4/5; 
-  object-fit: cover; 
-  border-radius: 16px; 
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
-}
-.nss-birdie .nss-band { 
-  background: #faf8f4; 
-}
-.nss-birdie .nss-kicker { 
-  font-size: 14px; 
-  font-weight: 600; 
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
-  color: #d97a3a; 
-  margin-bottom: 12px; 
-}
-.nss-birdie .nss-h { 
-  font-size: 38px; 
-  font-weight: 700; 
-  line-height: 1.2; 
-  margin: 0 0 24px; 
-}
-.nss-birdie .nss-h em { 
-  font-style: italic; 
-  font-weight: 700; 
-}
-.nss-birdie .nss-p { 
-  font-size: 17px; 
-  line-height: 1.7; 
-  color: #333; 
-  margin-bottom: 16px; 
-}
-.nss-birdie .nss-final { 
-  font-size: 17px; 
-  font-weight: 600; 
-  margin-top: 24px; 
-  color: #000; 
-}
-@media (max-width: 768px) {
-  .nss-birdie .nss-sect, 
-  .nss-birdie .nss-sect.--rev { 
-    grid-template-columns: 1fr; 
-    padding: 60px 24px; 
-    gap: 32px; 
-  }
-  .nss-birdie .nss-sect.--rev .nss-vis { 
-    order: 0; 
-  }
-  .nss-birdie .nss-h { 
-    font-size: 30px; 
-  }
+.wbirdie{color:#1c1c1c;font-family:inherit}
+.wbirdie__s{padding:56px 0;background:#fff}
+.wbirdie__s--bg{background:#f4f3ef}
+.wbirdie__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wbirdie__v--rev .wbirdie__media{order:2}
+.wbirdie__v--rev .wbirdie__tekst{order:1}
+.wbirdie__v--polna{grid-template-columns:1fr;gap:28px}
+.wbirdie__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.wbirdie__media img,.wbirdie__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wbirdie__media--polna{aspect-ratio:auto}
+.wbirdie__media--polna img,.wbirdie__media--polna video{height:auto}
+.wbirdie__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wbirdie__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wbirdie__h2 em{font-style:italic}
+.wbirdie__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wbirdie__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.wbirdie__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.wbirdie__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wbirdie__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.wbirdie__s:not(.wbirdie__s--bg) .wbirdie__pog{background:#f4f3ef;box-shadow:none}
+.wbirdie__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.wbirdie__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .wbirdie__s{padding:38px 0}
+  .wbirdie__v{grid-template-columns:1fr;gap:22px}
+  .wbirdie__v--rev .wbirdie__media,.wbirdie__media{order:0}
+  .wbirdie__v--rev .wbirdie__tekst,.wbirdie__tekst{order:1}
+  .wbirdie__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>
-
-<div class="nss-birdie">
-
-<!-- 1. Loud Siren -->
-<section class="nss-sect nss-band">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-glasan.webp' ); ?>" alt="NORIKS Birdie osobni alarm glasnoća 130 dB">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Glasna sirena</div>
-    <h2 class="nss-h">Glasna kao <em>mlaznjak</em></h2>
-    <p class="nss-p">
-      Birdie emitira 130 dB — to je glasnoća reaktivnog zrakoplova iznad glave. 
-    <p class="nss-p">
-      Studije pokazuju da većina napada na ulici ovisi o faktoru iznenadjenja i tišini. 
-    <p class="nss-p">
-      130 dB je glasnije od koncerta rock grupe, glasnije od vatrometa, glasnije od većine 
-      alarma na zgradama. To nije nešto što možete ignorirati — ni vi, ni nitko oko vas. 
-      Kada povučete pin, svi u radijusu 100 metara znaju da nešto nije u redu.
-    </p>
-      Napadač ne želi svjedoke, ne želi pozornost. Birdie uništava tu prednost — trenutno.
-    </p>
-      Kada povučete pin, sirena će privući pozornost svih u blizini — na ulici, 
-      u parku ili parkiralištu.
-    </p>
-    <p class="nss-p">
-      Napadači se oslanjaju na diskreciju. Birdie to uništava — glasno i trenutno. 
-      Ne trebate vikati ili se boriti; samo povucite i cijela okolina zna da nešto nije u redu.
-    </p>
-    <p class="nss-final">
-      Glasnoća koja zaustavlja situaciju prije nego ona eskalira.
-    </p>
-  </div>
-</section>
-
-<!-- 2. Strobe Light -->
-<section class="nss-sect --rev">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-aqua.webp' ); ?>" alt="NORIKS Birdie stroboskopska svjetla">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Utripajoća svjetla</div>
-    <h2 class="nss-h">Svijetli <em>stroboskop</em> privlači poglede</h2>
-    <p class="nss-p">
-      Osim sirene, Birdie koristi snažan bijeli stroboskop koji trepće kada je aktivirana. 
-    <p class="nss-p">
-      Birdie kombinira zvuk i svjetlo jer rade zajedno: u buci ili gužvi, svjetlo privlači pozornost; 
-    <p class="nss-p">
-      Istraživanja pokazuju da vizualni i zvučni podražaji zajedno imaju veći učinak nego bilo koji od 
-      njih sam. Napadač koji čuje alarm možda misli da može pobjeći — ali kada ga stroboskop osvijetli, 
-      postaje vidljiv svima oko njega.
-    </p>
-      u tami ili na praznoj ulici, sirena signalizira opasnost.
-    </p>
-      To dodatno povećava vidljivost — čak i ako zvuk ne dopire, svjetlo privlači pozornost.
-    </p>
-    <p class="nss-p">
-      U tami ili gužvi, stroboskopsko svjetlo signalizira da trebate pomoć. Ljudi prirodno 
-      reagiraju na bljeskalice — pridružuju se, snimaju ili zovu sigurnost.
-    </p>
-    <p class="nss-final">
-      Dvostruka zaštita: glasno i svijetlo.
-    </p>
-  </div>
-</section>
-
-<!-- 3. Rechargeable -->
-<section class="nss-sect nss-band">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-blossom.webp' ); ?>" alt="NORIKS Birdie USB-C punjenje">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Punljiva baterija</div>
-    <h2 class="nss-h"><em>USB-C</em> punjenje — bez zamjene baterija</h2>
-    <p class="nss-p">
-      Birdie 3.0 dolazi s ugrađenom baterijom koja se puni preko USB-C kabela (uključen). 
-      Nema potrebe za kupovanjem baterija ili strahom da je alarm prazan kada vam zatreba.
-    </p>
-    <p class="nss-p">
-      LED indikator pokazuje stanje punjenja — zeleno kada je puna, crveno kada treba punjenje. 
-    <p class="nss-p">
-      Birdie se puni u 2 sata punim punjenjem i može trajati tjednima bez aktivacije. Kada je koristite, 
-      baterija izdržava mnoge aktivacije, a USB-C kabel je univerzalan — isti što punite telefon.
-    </p>
-      Jedna naboj traje tjednima normalnog korištenja.
-    </p>
-    <p class="nss-final">
-      Uvijek spremna, uvijek nabijena.
-    </p>
-  </div>
-</section>
-
-<!-- 4. Flashlight -->
-<section class="nss-sect --rev">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-cantaloupe.webp' ); ?>" alt="NORIKS Birdie bljeskalica">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Nova funkcija</div>
-    <h2 class="nss-h"><em>Ugrađena</em> bljeskalica za svakodnevnu upotrebu</h2>
-    <p class="nss-p">
-      Osim alarma, Birdie sada ima i funkciju svjetiljke. Pritisnite gornji gumb za upali bijelo LED svjetlo — 
-    <p class="nss-p">
-      Svjetiljka nije dodatak — to je dio filosofije Birdie: uređaj koji koristite svaki dan 
-      bit će kod vas kada zatreba. Ako Birdie samo leži u ladici, neće vam pomoći. 
-      Ako je koristite za traženje ključeva, ona je već na vašim ključevima.
-    </p>
-      korisno kada tražite ključeve u torbici, otključavate auto u mraku ili šetate psa navečer.
-    </p>
-    <p class="nss-p">
-      Više nije samo uređaj za hitne slučajeve — Birdie postaje svakodnevni alat koji imate kod sebe. 
-    <p class="nss-p">
-      Žene koje koriste Birdie kažu da funkcija svjetiljke znači da je koriste svaki dan — 
-      što znači da je uvijek imaju kod sebe. To je ključno: najbolji alarm je onaj koji stvarno nosite.
-    </p>
-      To znači da je uvijek u džepu ili torbi, spremna ako zatreba.
-    </p>
-    <p class="nss-final">
-      Dva uređaja u jednom: alarm i svjetiljka.
-    </p>
-  </div>
-</section>
-
-<!-- 5. Easy to Use -->
-<section class="nss-sect nss-band">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-upotreba.webp' ); ?>" alt="NORIKS Birdie jednostavna upotreba">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Jednostavnost</div>
-    <h2 class="nss-h">Povuci pin — <em>to je sve</em></h2>
-    <p class="nss-p">
-      U stresnoj situaciji nemate vremena za složene korake. Birdie je dizajnirana da reagira instinktivno: 
-      povucite mesing pin i alarm se uključuje trenutno. Nema gumba, ekrana ili koda.
-    </p>
-    <p class="nss-p">
-      Birdie dolazi s karabinerom za privjesak — pričvrstite je na ključeve, ruksak ili torbicu. 
-      Kada joj trebate, jednostavno uhvatite i povucite. Alarm možete isključiti vraćanjem pina na mjesto.
-    <p class="nss-p">
-      Mesing karabiner je izrađen od trajnog metala koji ne puca ni nakon godina upotrebe. 
-      Pin je dovoljno čvrst da se ne izvlači slučajno, ali dovoljno lagan da ga možete povući 
-    <p class="nss-p">
-      Birdie ne zahtijeva instrukcije. Ne morate pročitati priručnik ili zapamtiti sekvence. 
-      Čak i ako ste u panici, instinkt vas vodi: povucite ono što visi — alarm se aktivira.
-    </p>
-      jednom rukom kada zatrebate.
-    </p>
-    </p>
-    <p class="nss-final">
-      Dizajnirano za trenuti u kojem svaka sekunda računa.
-    </p>
-  </div>
-</section>
-
-<!-- 5b. Travel Safe -->
-<section class="nss-sect --rev">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-putovanje.webp' ); ?>" alt="NORIKS Birdie putovanje">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Putujte sigurno</div>
-    <h2 class="nss-h">Ponesi je <em>bilo gdje</em></h2>
-    <p class="nss-p">
-      Birdie je dozvoljena na letovima — nije oružje, ne koristi opasne kemikalije, ne širi plin. 
-      Samo glasnoća i svjetlo. To znači da je možete staviti u ručnu prtljagu kada putujete.
-    <p class="nss-p">
-      Birdie je dizajnirana za svakodnevno nošenje — ne samo za hitne slučajeve. 
-    <p class="nss-p">
-      Statistike pokazuju da veliki dio napada se događa u poznatim područjima — parkirališta, 
-      prilazni putevi, pješačke staze koje koristite svaki dan. Birdie nije za paranoju — 
-      to je za pripremljenost.
-    </p>
-      Žene koje je koriste kažu da osjećaju mir kada šetaju u sumrak, parkiraju auto kasno navečer, 
-      ili putuju same. To ne znači da živite u strahu — znači da ste spremni.
-    </p>
-    </p>
-    <p class="nss-p">
-      Mala je koliko privjesak (10 cm visina), što znači da ne zauzima mjesta. Stavite je na torbu, 
-      ključeve ili u džep — neće vas smetati, ali je uvijek pri ruci.
-    </p>
-    <p class="nss-final">
-      Vaša sigurnost ne ostaje kod kuće.
-    </p>
-  </div>
-</section>
-
-<!-- 5a. On/Off Switch -->
-<section class="nss-sect">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-prekidac.webp' ); ?>" alt="NORIKS Birdie prekidač">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Nova verzija 3.0</div>
-    <h2 class="nss-h"><em>Prekidač</em> za kontrolu</h2>
-    <p class="nss-p">
-      Birdie 3.0 sada dolazi s prekidačem za uključivanje i isključivanje. Kada alarm nije potreban, 
-    <p class="nss-p">
-      To je bitna razlika u odnosu na starije modele: verzija 3.0 nudi više kontrole. Možete je koristiti 
-      svaki dan bez straha da će se aktivirati u torbi ili džepu — što znači da ćete je stvarno nositi, 
-    <p class="nss-p">
-      Birdie je postala simbol ženskog osnaženja — poznata na društvenim mrežama, preporučena od 
-      strane stotina influencerica i korisnica diljem svijeta.
-    </p>
-      ne ostaviti kod kuće.
-    </p>
-      možete ga isključiti kako se ne bi slučajno aktivirao u torbici.
-    </p>
-    <p class="nss-p">
-      To također znači da možete testirati alarm bez brige da će ostati uključen — prekidač vam daje 
-      potpunu kontrolu. Indikator punjenja također pokazuje status, tako da uvijek znate je li uređaj spreman.
-    </p>
-    <p class="nss-p">
-      Verzija 3.0 uključuje i LED indikator punjenja — crveno znači da treba napuniti, zeleno da je spremna.
-    <p class="nss-p">
-      Birdie 3.0 je rezultat povratnih informacija tisića korisnica — dodali smo sve što je zatraženo: 
-      svjetiljku, prekidač, lakše punjenje, bolju kontrolu. Starije verzije su bile sjajne, ali ova 
-      verzija je savršenstvo.
-    </p>
-    </p>
-    <p class="nss-final">
-      Najnovija verzija, najdetaljnija kontrola.
-    </p>
-  </div>
-</section>
-
-
-<!-- 5c. Non-Violent -->
-<section class="nss-sect nss-band">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-nenasilno.webp' ); ?>" alt="NORIKS Birdie nenasilna obrana">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">Nenasilna obrana</div>
-    <h2 class="nss-h">Odvrati napadača <em>bez borbe</em></h2>
-    <p class="nss-p">
-      Većina napadača odustaje kada privuče pozornost. Birdie stvara javnu scenu — glasno i vidljivo — 
-      što je suprotno od onoga što napadač želi. Želje za diskreciju nestaje u sekundi.
-    </p>
-    <p class="nss-p">
-      Ne morate biti fizički spreman ili obučen za borilačke vještine. Ne morate se doticati napadača. 
-      Samo aktivirajte alarm i okolina postaje vaš saveznik — ljudi se okreću, prilaze, snimaju.
-    </p>
-    <p class="nss-final">
-      Prevencija je najbolja obrana.
-    </p>
-  </div>
-</section>
-
-
-<!-- 6. NORIKS uvjeti -->
-<section class="nss-sect --rev">
-  <div class="nss-vis">
-    <img src="<?php echo esc_url( $nf . 'noriks-birdie-noriks.webp' ); ?>" alt="NORIKS Birdie jamstvo">
-  </div>
-  <div class="nss-txt">
-    <div class="nss-kicker">NORIKS jamstvo</div>
-    <h2 class="nss-h">30 dana za povrat i <em>besplatna dostava</em></h2>
-    <p class="nss-p">
-      Kao i svi NORIKS proizvodi, Birdie dolazi s pravom povrata u roku od 30 dana bez pitanja. 
-      Ako iz bilo kojeg razloga niste zadovoljni, vratite je i dobijete povrat novca.
-    </p>
-    <p class="nss-p">
-      Besplatna dostava za narudžbe iznad 70 € i plaćanje pouzećem dostupno. 
-    <p class="nss-p">
-      NORIKS Birdie nije samo uređaj — to je osjećaj sigurnosti koji nosite sa sobom. 
-    <p class="nss-p">
-      Mnogi kupci kupuju Birdie kao poklon kćerima, sestrama, prijateljicama. To nije samo stvar sigurnosti — 
-      to je poruka: "Želim da budeš sigurna." I to je nešto što svaka žena cijeni.
-    </p>
-      Ne morate se bojati — samo budite spremni.
-    </p>
-      Preko 120.000 kupaca diljem Europe nam vjeruje — ocjena 4,8 na temelju 1.081 recenzija.
-    </p>
-    <p class="nss-final">
-      Siguran proizvod. Siguran izbor.
-    </p>
-  </div>
-</section>
-
-</div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * NORIKS Munna | Biljne kapi za svakodnevni ritual — why sekcije (1:1 z originalom). Generirano z postavi.js.
+ * NORIKS Ritual | Biljne kapi za svakodnevni ritual — why sekcije (1:1 z originalom). Generirano z postavi.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $slika = function ( $dat, $alt ) {
@@ -15,9 +15,9 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Nikad nisi bila ti</div>
         <h2 class="nmunna__h2">Nije stvar u disciplini.</h2>
-        <p class="nmunna__p">Ako se osjećaš bez obline, bez energije ili se jednostavno ne prepoznaješ u ogledalu, gotovo nikad nije riječ o nedostatku discipline. Mnoge žene jedu dobro, brinu o sebi, a tijelo ipak ne izgleda kao prije. Munna je svakodnevni ritual u kapima s biljnom formulom, usmjeren na bokove, bedra i stražnjicu.</p>
+        <p class="nmunna__p">Ako se osjećaš bez obline, bez energije ili se jednostavno ne prepoznaješ u ogledalu, gotovo nikad nije riječ o nedostatku discipline. Mnoge žene jedu dobro, brinu o sebi, a tijelo ipak ne izgleda kao prije. NORIKS Ritual je svakodnevni ritual u kapima s biljnom formulom, usmjeren na bokove, bedra i stražnjicu.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-01.jpg', 'Nije stvar u disciplini.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-01.jpg', 'Nije stvar u disciplini.' ); ?></div>
     </div>
   </section>
 
@@ -26,9 +26,9 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Zašto kapi</div>
         <h2 class="nmunna__h2">Tekuće kapi, svako jutro.</h2>
-        <p class="nmunna__p">Munna dolazi u tekućem obliku, kao kapi. Za razliku od kapsula, kapi se uzimaju jednostavno i brzo, kao dio jutarnje rutine. Daj ritualu puna tri mjeseca – žene koje ostanu dosljedne one su koje ostanu uz svoju rutinu i vide kako se njihova silueta postupno mijenja.</p>
+        <p class="nmunna__p">NORIKS Ritual dolazi u tekućem obliku, kao kapi. Za razliku od kapsula, kapi se uzimaju jednostavno i brzo, kao dio jutarnje rutine. Daj ritualu puna tri mjeseca – žene koje ostanu dosljedne one su koje ostanu uz svoju rutinu i vide kako se njihova silueta postupno mijenja.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-02.jpg', 'Tekuće kapi, svako jutro.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-02.jpg', 'Tekuće kapi, svako jutro.' ); ?></div>
     </div>
   </section>
 
@@ -39,7 +39,7 @@ $slika = function ( $dat, $alt ) {
         <h2 class="nmunna__h2">Ključ je dosljednost.</h2>
         <p class="nmunna__p">Prvi tjedan: rutina počinje i tijelo se navikava na svakodnevne kapi. Prvi mjesec: mnoge primjećuju da im omiljene traperice drugačije stoje na bokovima. Tri mjeseca: puni ritual od tri mjeseca. Šest mjeseci: uz svakodnevnu upotrebu rutina postaje dio života. Rezultati su postupni i razlikuju se od osobe do osobe.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-03.jpg', 'Ključ je dosljednost.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-03.jpg', 'Ključ je dosljednost.' ); ?></div>
     </div>
   </section>
 
@@ -48,9 +48,9 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Što je unutra</div>
         <h2 class="nmunna__h2">Korijen make i ashwagandha.</h2>
-        <p class="nmunna__p">Formula je biljnog podrijetla. Andska maka je tradicionalni adaptogen koji se stoljećima koristi u prehrani. Ashwagandha je biljka iz tradicionalne prakse, poznata kao adaptogen. Obje su osnova formule Munna kapi.</p>
+        <p class="nmunna__p">Formula je biljnog podrijetla. Andska maka je tradicionalni adaptogen koji se stoljećima koristi u prehrani. Ashwagandha je biljka iz tradicionalne prakse, poznata kao adaptogen. Obje su osnova formule NORIKS Ritual kapi.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-04.jpg', 'Korijen make i ashwagandha.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-04.jpg', 'Korijen make i ashwagandha.' ); ?></div>
     </div>
   </section>
 
@@ -61,7 +61,7 @@ $slika = function ( $dat, $alt ) {
         <h2 class="nmunna__h2">Cikla, piskavica i L-arginin.</h2>
         <p class="nmunna__p">Cikla je bogata prirodnim nitratima. Piskavica se tradicionalno koristi u ženskoj rutini njege i prehrani. L-arginin je aminokiselina koja zaokružuje formulu. Pet sastojaka, jedna biljna formula, svako jutro u nekoliko kapi.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-05.jpg', 'Cikla, piskavica i L-arginin.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-05.jpg', 'Cikla, piskavica i L-arginin.' ); ?></div>
     </div>
   </section>
 
@@ -69,10 +69,10 @@ $slika = function ( $dat, $alt ) {
     <div class="nmunna__v">
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Usporedba</div>
-        <h2 class="nmunna__h2">Munna u odnosu na kreme, gelove i tablete.</h2>
+        <h2 class="nmunna__h2">NORIKS Ritual u odnosu na kreme, gelove i tablete.</h2>
         <p class="nmunna__p">Usmjerena na bokove i stražnjicu – da. Koncentrirane kapi koje se jednostavno uzimaju – da. Čista biljna formula – da. Postupni rezultati uz dosljednu rutinu – da. Napravljeno za žene – da. Kod uobičajenih krema, gelova i tableta to najčešće nije tako.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-06.jpg', 'Munna u odnosu na kreme, gelove i tablete.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-06.jpg', 'NORIKS Ritual u odnosu na kreme, gelove i tablete.' ); ?></div>
     </div>
   </section>
 
@@ -81,9 +81,9 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Bez rizika</div>
         <h2 class="nmunna__h2">Sve za dobiti, ništa za izgubiti.</h2>
-        <p class="nmunna__p">Isprobaj Munna kapi bez brige: imaš 30 dana za povrat novca. Besplatna dostava iznad 70 € i plaćanje pouzećem. Više od 120.000 zadovoljnih kupaca i prosječna ocjena 4,8.</p>
+        <p class="nmunna__p">Isprobaj NORIKS Ritual kapi bez brige: imaš 30 dana za povrat novca. Besplatna dostava iznad 70 € i plaćanje pouzećem. Više od 120.000 zadovoljnih kupaca i prosječna ocjena 4,8.</p>
       </div>
-      <div class="nmunna__media"><?php echo $slika( 'munna-07.jpg', 'Sve za dobiti, ništa za izgubiti.' ); ?></div>
+      <div class="nmunna__media"><?php echo $slika( 'ritual-07.jpg', 'Sve za dobiti, ništa za izgubiti.' ); ?></div>
     </div>
   </section>
 </div>

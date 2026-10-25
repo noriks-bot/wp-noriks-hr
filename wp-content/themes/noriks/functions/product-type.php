@@ -47,7 +47,7 @@ function noriks_product_type_map() : array {
         // FisioRest (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'giovasa'                 => array( 'orto-giovasa' ),
-        // FieldOps Pro taktične slušalke
+        // NORIKS TacPro taktične slušalke
         'acryliques' => array( 'orto-acryliques' ),
         'midnight' => array( 'orto-midnight' ),
         'gordura' => array( 'orto-gordura' ),
@@ -460,7 +460,7 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
 
 
 if ( ! function_exists( 'noriks_classics_sizes' ) ) {
-    /** NORIKS Classics (Fleecies): velicina (za akordeon i modal). */
+    /** NORIKS Classics: velicina (za akordeon i modal). */
     function noriks_classics_sizes() {
         return array(
             array( 'S' ),
@@ -1353,7 +1353,7 @@ if ( ! function_exists( 'noriks_hoodie_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_fieldops_sizes' ) ) {
-    /** NORIKS FieldOps Pro (taktične slušalke) — nema veličina, samo boja (Carbon Black, Army Green). */
+    /** NORIKS TacPro (taktične slušalke) — nema veličina, samo boja (Carbon Black, Army Green). */
     function noriks_fieldops_sizes() {
         return array();
     }

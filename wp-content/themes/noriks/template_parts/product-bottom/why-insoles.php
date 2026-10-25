@@ -1,166 +1,196 @@
 <?php
 /**
- * product-bottom: NORIKS Insoles — ortopedski ulosci za potporu stopala (orto-insoles).
- * Original: orthoflexx.com/products/max-arch-support-insoles
- * Sekcije slijede original (collapsed arch, first step, high arches, bunion, flat feet, NORIKS pogoji).
- * Slike: img/insoles/
+ * NORIKS Insoles — why sekcije 1:1 z originalom (10 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-$nif = get_template_directory_uri() . '/img/insoles/';
+$wdir = get_template_directory_uri() . '/img/insoles/';
 ?>
+<div class="winsoles">
 
+  <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-02-before-after.webp' ); ?>" alt="Čvrst svod koji se ne spljošti" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">ZAŠTO DRUGAČIJI</div>
+        <h2 class="winsoles__h2">Čvrst svod koji se <em>ne spljošti</em></h2>
+        <p class="winsoles__p">Većina uložaka za potporu svoda spljošti se u trenutku kad na njih stanete. NORIKS Insoles se ne spljošti: čvrsta baza svoda ostaje podignuta 8, 10 i 12 sati, cijelu smjenu.</p>
+        <p class="winsoles__p">Duboka čašica za petu drži petu u sredini, tako da se stopalo ne prevrće prema unutra. Čvrsto pritom ne znači tvrdo — jastučići ispod pete i ispod prednjeg dijela stopala čine svaki korak udobnim.</p>
+        <p class="winsoles__p">Ulošci su čvrsti od prvog dana. Prvih dana nosite ih kraće i postupno produljujte vrijeme nošenja — većina ljudi nakon tjedan do dva redovitog nošenja bez problema stoji i hoda kroz smjenu od 8 i više sati.</p>
+        <p class="winsoles__zak">Čvrsto od prvog dana, a udobno cijelu smjenu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s">
+    <div class="winsoles__v winsoles__v--rev">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-05-podpor.webp' ); ?>" alt="Tri dijela, jedan zadatak" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">KAKO JE NAPRAVLJEN</div>
+        <h2 class="winsoles__h2">Tri dijela, <em>jedan zadatak</em></h2>
+        <p class="winsoles__p">NORIKS Insoles ima sustav potpore iz tri dijela: čvrstu, visoko podignutu platformu svoda, duboku čašicu za petu i slojeve jastučenja. Mekši gornji sloj leži uz stopalo, a čvrsta baza drži svod.</p>
+        <p class="winsoles__p">Uložak drži do 150 kg bez urušavanja. Ide cijelom dužinom stopala i izrezuje se po otisnutim linijama, tako da ga prilagodite točno svojoj cipeli. Dostupan je u veličinama od XS do XL i prodaje se kao jedan par.</p>
+        <p class="winsoles__p">Odgovara u tenisice, radne čizme, cipele za hodanje i većinu zatvorenih cipela s uloškom koji se vadi. Širina je standardna, nije riječ o širokom kroju.</p>
+        <p class="winsoles__zak">Drži do 150 kg, izrezuje se po mjeri vaše cipele.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-03-detail.webp' ); ?>" alt="Stopala gotova do dva popodne? Svod se spušta." loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">CIJELI DAN NA NOGAMA</div>
+        <h2 class="winsoles__h2">Stopala gotova do dva popodne? <em>Svod se spušta.</em></h2>
+        <p class="winsoles__p">Kad se svod spusti, stopalo se pri svakom koraku prevrće prema unutra, a opterećenje ide prema gore — gležanj, koljeno, kuk i donji dio leđa. Do sredine smjene sva težina sjedi na petama.</p>
+        <p class="winsoles__p">Loptica, traka i led pomognu na sat vremena. Duže šetnje i trčanje polako nestaju iz rasporeda, a sve to se lako pripiše godinama.</p>
+        <p class="winsoles__p">Nisu godine — riječ je o svodu. NORIKS Insoles ga drži podignutim cijeli dan, pod punom težinom tijela.</p>
+        <p class="winsoles__zak">Svod ostaje podignut od jutra do kraja smjene.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s">
+    <div class="winsoles__v winsoles__v--rev">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-01.webp' ); ?>" alt="Prvi korak iz kreveta? Počinje u svodu." loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">PETA</div>
+        <h2 class="winsoles__h2">Prvi korak iz kreveta? <em>Počinje u svodu.</em></h2>
+        <p class="winsoles__p">Traka ispod stopala drži svod napetim poput tetive luka. Kad se svod spusti, ona cijeli dan vuče na mjestu gdje se spaja s petom, a preko noći se stegne pa je prvi jutarnji korak opet povuče.</p>
+        <p class="winsoles__p">Istezanje, led i noćna udlaga pomognu za jedno jutro, ali svod se i dalje spušta. Zato NORIKS Insoles ima tri dijela usmjerena na petu i svod.</p>
+        <p class="winsoles__p">Čvrsta potpora svoda drži svod podignutim pod punom težinom tijela. Jastučić za petu ublažava svaki udarac pete, a duboka čašica drži petu na mjestu, da se osjetljivo mjesto ne pomiče po cipeli.</p>
+        <p class="winsoles__zak">Svod podignut, peta na jastučiću i u čašici.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-02.webp' ); ?>" alt="Peta i prednji dio stopala nose sve" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">VISOK SVOD</div>
+        <h2 class="winsoles__h2">Peta i prednji dio stopala <em>nose sve</em></h2>
+        <p class="winsoles__p">Većina uložaka napravljena je za prosječan svod. Ispod visokog svoda ostave prazninu, pa dvije male točke nose svu težinu — peta i prednji dio stopala. Takozvana potpora svoda nikad ne dotakne vaš svod, a verzija za visoki svod se spljošti za mjesec dana.</p>
+        <p class="winsoles__p">Većina proizvođača ni ne navodi visinu svoda. Kod NORIKS Insoles ona iznosi 3,5 cm, na bazi koja ne popušta. Svod ispunjava prazninu ispod stopala i dijeli opterećenje po cijelom stopalu.</p>
+        <p class="winsoles__p">Visok i krut svod sam ne ublažava udarce, zato to radi jastučić za petu. Jastučenje ispod prednjeg dijela stopala preuzima pritisak tamo gdje visok svod najjače pritišće.</p>
+        <p class="winsoles__zak">Visina svoda 3,5 cm — napisana, ne skrivena.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s">
+    <div class="winsoles__v winsoles__v--rev">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-03.webp' ); ?>" alt="Svaki odraz ide preko palca" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">NOŽNI PALAC</div>
+        <h2 class="winsoles__h2">Svaki odraz ide <em>preko palca</em></h2>
+        <p class="winsoles__p">Kad se svod spusti, stopalo se prevrće prema unutra i odražavate se preko bočne strane zgloba nožnog palca — tisuće puta dnevno. Šire cipele pomognu protiv trljanja sa strane cipele.</p>
+        <p class="winsoles__p">Nijedan uložak ne mijenja oblik stopala. NORIKS Insoles drži svod podignutim, a jastučenje se nalazi odmah iza zgloba nožnog palca, na mjestu gdje je pritisak pri odrazu najveći.</p>
+        <p class="winsoles__p">Uložak ide cijelom dužinom i izrezuje se prema originalnom ulošku vaše cipele, tako da prednji dio stopala u cipeli nije stisnut.</p>
+        <p class="winsoles__zak">Svod gore, jastučenje odmah iza palca.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-04.webp' ); ?>" alt="Sve počinje od poda" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">RAVNA STOPALA</div>
+        <h2 class="winsoles__h2">Sve počinje <em>od poda</em></h2>
+        <p class="winsoles__p">Svod se spusti, gležanj se prevrne prema unutra, koljeno ga prati, a kuk se nagne. Donji dio leđa plaća račun za sve to — posebno nakon puno hodanja ili stajanja.</p>
+        <p class="winsoles__p">Mekani ulošci se zgnječe i stopala se i dalje prevrću prema unutra. Platforma svoda visine 3,5 cm daje ravnom stopalu svod koji mu nedostaje, a čvrsta je, pa se ne spljošti kad na nju stanete.</p>
+        <p class="winsoles__p">Duboka čašica za petu drži petu u sredini, da se ne prevrće prema unutra — upravo to prevrtanje naginje gležnjeve i koljena. Platforma drži svod, čašica drži petu, i to pod punom težinom tijela.</p>
+        <p class="winsoles__zak">Nisu godine. Počinje od poda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s">
+    <div class="winsoles__v winsoles__v--rev">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-05.webp' ); ?>" alt="Na betonu svod nikad ne odmara" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">DUGE SMJENE</div>
+        <h2 class="winsoles__h2">Na betonu svod <em>nikad ne odmara</em></h2>
+        <p class="winsoles__p">Na betonu svod nema predaha. Nakon nekoliko sati mišići se umore i svod se spusti — do trećeg sata prebacujete težinu s noge na nogu, a svaki uložak koji ste probali spljoštio se za par tjedana.</p>
+        <p class="winsoles__p">NORIKS Insoles napravljen je za smjene od 12 sati na betonu. Čvrsta baza drži do 150 kg i ne spljošti se do sredine smjene, pa linija stopala ostaje ista cijeli dan, a ne samo ujutro.</p>
+        <p class="winsoles__p">Slojevi jastučenja ublažavaju udarce tvrdog poda pri svakom koraku. Napravljen je za medicinske sestre, skladištare, trgovce, radnike u tvornicama i ugostiteljstvu na smjenama od 8 do 12 sati.</p>
+        <p class="winsoles__zak">Svod ne pada ni na kraju duge smjene.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-06.webp' ); ?>" alt="Jedan skupi par, svako jutro u drugu cipelu?" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">PAR U SVAKOJ CIPELI</div>
+        <h2 class="winsoles__h2">Jedan skupi par, <em>svako jutro u drugu cipelu</em>?</h2>
+        <p class="winsoles__p">Ulošci izrađeni po mjeri koštaju stotine, a drugi par košta isto toliko. Zato jedan par svako jutro selite iz cipele u cipelu. A jeftiniji ulošci koje ste probali spljoštili su se pod vašom težinom za tjedan ili dva.</p>
+        <p class="winsoles__p">Mekani ulošci iz drogerije uglavnom popuste pod težinom. NORIKS Insoles ostaje podignut, a daje čvrstu strukturnu potporu za dio cijene uložaka po mjeri — i stiže za nekoliko dana, a ne tjedana.</p>
+        <p class="winsoles__p">Kupci kažu da su jednako dobri kao njihovi ulošci po mjeri ili bolji. Zato mnogi drže po jedan par u svakoj cipeli koju najčešće nose — bez prebacivanja.</p>
+        <p class="winsoles__zak">Po jedan par u svakoj cipeli, bez prebacivanja.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s">
+    <div class="winsoles__v winsoles__v--rev">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-04-uporaba.webp' ); ?>" alt="Potpora koja traje cijeli dan" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">SUSTAV POTPORE</div>
+        <h2 class="winsoles__h2">Potpora koja traje <em>cijeli dan</em></h2>
+        <p class="winsoles__p">Tri dijela, jedan zadatak: potpora koja traje cijeli dan. Čvrsta potpora svoda daje 3,5 cm podizanja koje se ne spljošti pod vašom težinom, ni nakon smjene od 12 sati.</p>
+        <p class="winsoles__p">Čašica za petu u obliku slova U drži petu u sredini, tako da se stopalo ne prevrće prema unutra. Slojevi jastučenja ispod pete i prednjeg dijela stopala ublažavaju svaki korak, a gornji sloj od prozračne tkanine leži uz stopalo.</p>
+        <p class="winsoles__p">Njega: ručno pranje u mlakoj vodi s blagim sapunom i sušenje na zraku u hladu. Bez pranja u perilici, izbjeljivača i topline.</p>
+        <p class="winsoles__zak">Svod, peta i jastučenje — zajedno, cijeli dan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v winsoles__v--polna">
+      <div class="winsoles__tekst winsoles__tekst--sredina">
+        <div class="winsoles__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="winsoles__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="winsoles__p">NORIKS Insoles isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="winsoles__pogoji">
+        <div class="winsoles__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="winsoles__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="winsoles__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="winsoles__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-.nif-sec { padding: 56px 24px; max-width: 1240px; margin: 0 auto; }
-.nif-sec.nif-tint { background: #f7f6f2; }
-.nif-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.nif-row2--rev { direction: rtl; } .nif-row2--rev > * { direction: ltr; }
-.nif-copy { }
-.nif-kicker { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #666; margin-bottom: 8px; }
-.nif-h2 { font-size: 32px; line-height: 1.15; font-weight: 800; margin: 0 0 20px; }
-.nif-h2 em { font-style: italic; font-weight: 700; }
-.nif-copy > p { margin: 0 0 16px; font-size: 16px; line-height: 1.6; }
-.nif-copy > p:last-child { margin-bottom: 0; }
-.nif-copy strong { font-weight: 700; color: #222; }
-.nif-media { aspect-ratio: 4/5; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-.nif-media img, .nif-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.nif-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
-.nif-facts > div { }
-.nif-facts h3 { font-size: 16px; font-weight: 700; margin: 0 0 6px; }
-.nif-facts p { font-size: 14px; line-height: 1.5; margin: 0; color: #555; }
-
-.nif-points { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
-.nif-point { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; }
-.nif-point h3 { font-size: 16px; font-weight: 700; margin: 0 0 10px; }
-.nif-point p { margin: 0; font-size: 15px; line-height: 1.5; }
-
-.nif-pogoji { background: #222; color: #fff; padding: 56px 24px; }
-.nif-pogoji-wrap { max-width: 1000px; margin: 0 auto; text-align: center; }
-.nif-pogoji h2 { font-size: 28px; margin: 0 0 32px; }
-.nif-pogoji-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.nif-pogoji-item { }
-.nif-pogoji-item .ico { font-size: 40px; margin-bottom: 12px; }
-.nif-pogoji-item strong { display: block; font-size: 16px; margin-bottom: 6px; }
-.nif-pogoji-item p { font-size: 14px; color: #ccc; margin: 0; line-height: 1.4; }
-
-@media (max-width: 768px) {
-  .nif-sec { padding: 40px 20px; }
-  .nif-row2 { grid-template-columns: 1fr; gap: 32px; }
-  .nif-row2--rev { direction: ltr; }
-  .nif-h2 { font-size: 26px; }
-  .nif-media { max-width: 100%; }
-  .nif-facts { grid-template-columns: 1fr; gap: 16px; }
-  .nif-points { grid-template-columns: 1fr; gap: 16px; }
-  .nif-pogoji-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+.winsoles{color:#1c1c1c;font-family:inherit}
+.winsoles__s{padding:56px 0;background:#fff}
+.winsoles__s--bg{background:#f4f3ef}
+.winsoles__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.winsoles__v--rev .winsoles__media{order:2}
+.winsoles__v--rev .winsoles__tekst{order:1}
+.winsoles__v--polna{grid-template-columns:1fr;gap:28px}
+.winsoles__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.winsoles__media img,.winsoles__media video{width:100%;height:100%;object-fit:cover;display:block}
+.winsoles__media--polna{aspect-ratio:auto}
+.winsoles__media--polna img,.winsoles__media--polna video{height:auto}
+.winsoles__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.winsoles__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.winsoles__h2 em{font-style:italic}
+.winsoles__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.winsoles__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.winsoles__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.winsoles__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.winsoles__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.winsoles__s:not(.winsoles__s--bg) .winsoles__pog{background:#f4f3ef;box-shadow:none}
+.winsoles__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.winsoles__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .winsoles__s{padding:38px 0}
+  .winsoles__v{grid-template-columns:1fr;gap:22px}
+  .winsoles__v--rev .winsoles__media,.winsoles__media{order:0}
+  .winsoles__v--rev .winsoles__tekst,.winsoles__tekst{order:1}
+  .winsoles__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>
-
-<!-- 1) STOPALA BOLE VEC PRIJEPODNE — slika lijevo -->
-<section class="nif-sec nif-tint">
-  <div class="nif-row2">
-    <div class="nif-media">
-      <img src="<?php echo esc_url( $nif . 'noriks-insoles-hero.webp' ); ?>" alt="NORIKS Insoles ortopedski ulošci za potporu stopala" loading="lazy">
-    </div>
-    <div class="nif-copy">
-      <p class="nif-kicker">Stopala bole već prijepodne</p>
-      <h2 class="nif-h2">Vaš svod <em>se urušava</em></h2>
-      <p>Urušeni svod stopala gura stopalo prema unutra pri svakom koraku. Naprezanje se prenosi prema gore: gležanj, koljeno, kuk, donji dio leđa.</p>
-      <p>Zvuči poznato? Usred smjene sav teret pada na pete.</p>
-      <p><strong>NORIKS Insoles podupiru svod</strong> čak i pod punom tjelesnom težinom, održavaju stopalo u pravilnom položaju i smanjuju opterećenje na pete, koljena i donji dio leđa.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 2) PRVI KORAK IZ KREVETA NAJGORI — slika desno -->
-<section class="nif-sec">
-  <div class="nif-row2 nif-row2--rev">
-    <div class="nif-media">
-      <img src="<?php echo esc_url( $nif . 'noriks-insoles-before-after.webp' ); ?>" alt="Prije i poslije NORIKS Insoles — poravnanje stopala" loading="lazy">
-    </div>
-    <div class="nif-copy">
-      <p class="nif-kicker">Prvi korak iz kreveta najgori</p>
-      <h2 class="nif-h2">Počinje u <em>svodu stopala</em></h2>
-      <p>Traka ispod stopala drži svod poput tetive luka. Kada se svod spusti, povlači na peti. Cijeli dan. Preko noći se steže, a prvi korak ponovno povlači.</p>
-      <p>Poznato? Ruka na zidu na putu do kupaonice.</p>
-      <p><strong>NORIKS Insoles sa čvrstom bazom svoda i dubokom petnom košaricom</strong> uzimaju teret s plantarne fascije. Većina ljudi s plantarnim fasciitisom osjeća razliku nakon 1 do 2 tjedna.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 3) VISOKI SVOD — slika lijevo -->
-<section class="nif-sec nif-tint">
-  <div class="nif-row2">
-    <div class="nif-media">
-      <img src="<?php echo esc_url( $nif . 'noriks-insoles-detail1.webp' ); ?>" alt="Detalj potpore visokog svoda NORIKS Insoles" loading="lazy">
-    </div>
-    <div class="nif-copy">
-      <p class="nif-kicker">Visoki svod stopala</p>
-      <h2 class="nif-h2">Peta i prednji dio <em>nose sve</em></h2>
-      <p>Većina uložaka napravljena je za prosječan svod. Ispod visokog svoda ostaje praznina, pa dvije male točke nose svu težinu.</p>
-      <p>„Potpora svodu" nikad ne dodiruje vaš svod.</p>
-      <p><strong>NORIKS Insoles s visokim, čvrstim svodom (3,5 cm)</strong> pune prazninu i raspodijele pritisak ravnomjerno po cijelom stopalu. Potpora koja stvarno podupire.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 4) BUNION — slika desno -->
-<section class="nif-sec">
-  <div class="nif-row2 nif-row2--rev">
-    <div class="nif-media">
-      <img src="<?php echo esc_url( $nif . 'noriks-insoles-detail2.webp' ); ?>" alt="Rasterećenje palca i buniona sa NORIKS Insoles" loading="lazy">
-    </div>
-    <div class="nif-copy">
-      <p class="nif-kicker">Bunion boli do navečer</p>
-      <h2 class="nif-h2">Veliki prst <em>prima svaki potisak</em></h2>
-      <p>Kada se svod spusti, stopalo se preklopi prema unutra. Odgurnete se sa strane zgloba velikog prsta, tisuće puta dnevno.</p>
-      <p>Zglob boli i otekne do kraja dana.</p>
-      <p><strong>NORIKS Insoles vraćaju stopalo u pravilnu liniju</strong>, smanjuju pritisak na bunion i ublažavaju bol. Osjeća se razlika već nakon prvog tjedna.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 5) RAVNA STOPALA — slika lijevo -->
-<section class="nif-sec nif-tint">
-  <div class="nif-row2">
-    <div class="nif-media">
-      <img src="<?php echo esc_url( $nif . 'noriks-insoles-detail3.webp' ); ?>" alt="Biomehani čka potpora za ravna stopala — NORIKS Insoles" loading="lazy">
-    </div>
-    <div class="nif-copy">
-      <p class="nif-kicker">Ravna stopala</p>
-      <h2 class="nif-h2">Zato <em>bole koljena, kukovi i leđa</em></h2>
-      <p>Svod se spušta, gležanj se prevrće prema unutra, koljeno slijedi, kuk se nagne. Donji dio leđa plaća za sve to.</p>
-      <p>Puno hodanja ili stajanja, pa kukovi i leđa počnu boljeti.</p>
-      <p><strong>NORIKS Insoles drže svod podignutim</strong> pod punom težinom (do 150 kg). Ravna stopala trebaju potporu koja zadržava oblik — to je ono za što je Max napravljen.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6) NORIKS POGOJI -->
-<section class="nif-pogoji">
-  <div class="nif-pogoji-wrap">
-    <h2>S NORIKS-om kupujete sigurno</h2>
-    <div class="nif-pogoji-grid">
-      <div class="nif-pogoji-item">
-        <div class="ico">✓</div>
-        <strong>30 dana za povrat</strong>
-        <p>Bez pitanja. Čak i izrezani i nošeni ulošci se mogu vratiti.</p>
-      </div>
-      <div class="nif-pogoji-item">
-        <div class="ico">📦</div>
-        <strong>Besplatna dostava</strong>
-        <p>Iznad 70 € na svaku narudžbu</p>
-      </div>
-      <div class="nif-pogoji-item">
-        <div class="ico">😊</div>
-        <strong>120.000 kupaca</strong>
-        <p>Ocjena 4,8 na temelju 1.081 recenzija</p>
-      </div>
-      <div class="nif-pogoji-item">
-        <div class="ico">💳</div>
-        <strong>Plaćanje pouzećem</strong>
-        <p>Plaćate tek po preuzimanju</p>
-      </div>
-    </div>
-  </div>
-</section>
