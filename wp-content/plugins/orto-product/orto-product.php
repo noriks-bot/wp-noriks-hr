@@ -2268,6 +2268,22 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
+    <?php if ( has_term( array( 'orto-salon' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS Salon: nijanse cetkice za obrve (5, kot na originalu). Pravila tudi brez predpone (probni element izven #bundle-selector). */
+      .swatch-circle.color-pepeljasto-siva { background: #8e8b86 !important; }
+      #bundle-selector .swatch-circle.color-pepeljasto-siva { background: #8e8b86 !important; }
+      .swatch-circle.color-tamnosmeda { background: #4a3428 !important; }
+      #bundle-selector .swatch-circle.color-tamnosmeda { background: #4a3428 !important; }
+      .swatch-circle.color-prirodno-smeda { background: #7a5638 !important; }
+      #bundle-selector .swatch-circle.color-prirodno-smeda { background: #7a5638 !important; }
+      .swatch-circle.color-svijetlosmeda { background: #a8825f !important; }
+      #bundle-selector .swatch-circle.color-svijetlosmeda { background: #a8825f !important; }
+      .swatch-circle.color-crna { background: #1e1d1f !important; }
+      #bundle-selector .swatch-circle.color-crna { background: #1e1d1f !important; }
+    </style>
+    <?php endif; ?>
+
     <?php if ( has_term( array( 'orto-orthomules' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* NORIKS OrthoMules: kartice ponud barvne in zaobljene v privzeti topli rjavi paleti NORIKS (kot orto-hands, #a9683f).
