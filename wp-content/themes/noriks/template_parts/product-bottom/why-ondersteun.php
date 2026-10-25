@@ -2,13 +2,14 @@
 /**
  * product-bottom: NORIKS ONDERSTEUN — grudnjak koji podupire grudi i leda (orto-ondersteun).
  *
- * Sekcije (6):
+ * Sekcije (7):
  *   1. Prekrizena potpora za leda — bolje drzanje
  *   2. Prirodna potpora bez zica
  *   3. Siroke naramenice — bez pritiska
  *   4. Praktican prednji zatvarac
- *   5. Detalji — siroki pojas, 3-razinska podesivost
- *   6. NORIKS jamstva
+ *   5. Stil koji radi s tobom
+ *   6. Detalji — siroki pojas, 3-razinska podesivost
+ *   7. NORIKS jamstva
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $nf = get_template_directory_uri() . '/img/ondersteun/';
@@ -103,7 +104,21 @@ $nf = get_template_directory_uri() . '/img/ondersteun/';
   </div>
 </section>
 
-<!-- ============ 5) Detalji — široki pojas, podesivost, kvaliteta ============ -->
+<!-- ============ 5) Stil koji radi s tobom ============ -->
+<section class="nos-sec">
+  <div class="nos-wrap nos-row2">
+    <div class="nos-media">
+      <img src="<?php echo esc_url($nf.'noriks-ondersteun-worn-pinkleopard.webp'); ?>" alt="Stil koji radi s tobom" loading="lazy">
+    </div>
+    <div class="nos-copy">
+      <h2 class="nos-h2">Stil koji <em>radi s tobom</em></h2>
+      <p>Elegantni izgled koji funkcionira — neutralne i živopisne opcije pružaju klasiku za svaki dan ili nešto veselo ispod bijele košulje.</p>
+      <p>Bez obzira na izbor, dobit ćeš istu razinu podrške i udobnosti na koju se možeš osloniti.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6) Detalji — široki pojas, podesivost, kvaliteta ============ -->
 <section class="nos-sec nos-alt">
   <div class="nos-wrap">
     <h2 class="nos-h2" style="text-align:center; margin-bottom:8px;">Svaki detalj <em>osmišljen za tebe</em></h2>
@@ -129,7 +144,7 @@ $nf = get_template_directory_uri() . '/img/ondersteun/';
   </div>
 </section>
 
-<!-- ============ 6) NORIKS jamstva ============ -->
+<!-- ============ 7) NORIKS jamstva ============ -->
 <section class="nos-final">
   <div class="nos-wrap">
     <h2>NORIKS jamstva za tebe</h2>
