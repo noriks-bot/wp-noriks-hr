@@ -594,7 +594,7 @@
 
           <?php elseif ( noriks_is_type( 'devotions' ) ): ?>
 
-           Hiljade roditelja već koristi NORIKS Devotions za svakodnevnu molitvu s djecom — jednostavno, smisleno i bez prisiljavanja.
+           Tisuće roditelja već koristi NORIKS Jedna minuta s Bogom za svakodnevnu molitvu s djecom — jednostavno, smisleno i bez prisiljavanja.
 
 
           <?php elseif ( noriks_is_type( 'travel' ) ): ?>
@@ -1273,7 +1273,7 @@
   $is_snug_page       = noriks_is_type( 'snug', $current_product_id );
   $is_kompwom_page    = noriks_is_type( 'kompwom', $current_product_id );
   $is_calendar_page   = noriks_is_type( 'calendar', $current_product_id );
-  $is_faith_page || $is_devotions_page     = noriks_is_type( 'faith', $current_product_id );
+  $is_faith_page     = noriks_is_type( 'faith', $current_product_id );
   $is_devotions_page  = noriks_is_type( 'devotions', $current_product_id );
   $is_travel_page     = noriks_is_type( 'travel', $current_product_id );
   $is_pal_page        = noriks_is_type( 'pal', $current_product_id );
@@ -1317,7 +1317,7 @@
   $is_gordura_page = noriks_is_type( 'gordura', $current_product_id );
   $is_womens_page = noriks_is_type( 'womens', $current_product_id );
   $is_draps_page = noriks_is_type( 'draps', $current_product_id );
-  $is_faith_page || $is_devotions_page = noriks_is_type( 'faith', $current_product_id );
+  $is_faith_page = noriks_is_type( 'faith', $current_product_id );
   $is_devotions_page = noriks_is_type( 'devotions', $current_product_id );
   $is_classics_page = noriks_is_type( 'classics', $current_product_id );
   $is_pikseland_page = noriks_is_type( 'pikseland', $current_product_id );
@@ -1481,7 +1481,8 @@
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
   if ( $is_classics_page ) { $rv_fallback_title = 'NORIKS Classics'; }
-  if ( $is_faith_page || $is_devotions_page ) { $rv_fallback_title = 'NORIKS Razgovorna Igra za Pravu Vjeru'; }
+  if ( $is_faith_page ) { $rv_fallback_title = 'NORIKS Razgovorna Igra za Pravu Vjeru'; }
+  if ( $is_devotions_page ) { $rv_fallback_title = 'NORIKS Jedna minuta s Bogom za djecu'; }
   if ( $is_draps_page ) { $rv_fallback_title = 'NORIKS EasySleep® 2 u 1 Pokrivač Koji Zamjenjuje Plahte'; }
   if ( $is_slabproof_page ) { $rv_fallback_title = 'NORIKS SlabProof™ Radne Čarape'; }
   if ( $is_womens_page ) { $rv_fallback_title = 'NORIKS Ortopedske Cipele za Žene'; }
@@ -1512,7 +1513,8 @@
   if ( $is_vacuumsealer_page ) { $rv_fallback_title = 'NORIKS VacuumSealer vakuumski aparat'; }
   if ( $is_airtravel_page ) { $rv_fallback_title = 'NORIKS AirTravel putni ruksak'; }
   if ( $is_calendar_page ) { $rv_fallback_title = 'NORIKS Calendar digitalni obiteljski kalendar'; }
-  if ( $is_faith_page || $is_devotions_page ) { $rv_fallback_title = 'NORIKS Faith igra razgovora za pravu vjeru'; }
+  if ( $is_faith_page ) { $rv_fallback_title = 'NORIKS Faith igra razgovora za pravu vjeru'; }
+  if ( $is_devotions_page ) { $rv_fallback_title = 'NORIKS Jedna minuta s Bogom za djecu'; }
 
   // Univerzalno (Dejan, 23. 10.): ce za izdelek ni posebej dolocenega naslova, naj kartice mnenj
   // navajajo TA izdelek in ne privzete sive majice. Velja za vse nove izdelke (kategorija orto-*).
@@ -2792,6 +2794,7 @@ $is_kidspillow      = ( function_exists('noriks_is_type') && noriks_is_type('kid
 $is_vacuumsealer    = ( function_exists('noriks_is_type') && noriks_is_type('vacuumsealer') );
 $is_airtravel  = ( function_exists('noriks_is_type') && noriks_is_type('airtravel') );
 $is_viinia        = ( function_exists('noriks_is_type') && noriks_is_type('viinia') );
+$is_devotions     = ( function_exists('noriks_is_type') && noriks_is_type('devotions') );
 $is_bowl          = ( function_exists('noriks_is_type') && noriks_is_type('bowl') );
 $is_seal          = ( function_exists('noriks_is_type') && noriks_is_type('seal') );
 $is_sr            = ( function_exists('noriks_is_type') && noriks_is_type('sr') );
@@ -3417,40 +3420,40 @@ $faith_faq = array(
 
 $devotions_faq = array(
     array(
-        'q' => 'Za koju dob je ova molitva dizajnirana?',
-        'a' => 'One Moment With God For Kids dizajniran je za djecu od 6 do 12 godina. Molitve su napisane jednostavnim i privlacnim nacinom kako bi djeca razumjela znacajne lekcije o Bogu, vjeri, karakteru i svakodnevnom zivotu.'
+        'q' => 'Za koju je dob ova knjiga namijenjena?',
+        'a' => 'Knjiga je namijenjena djeci od 6 do 12 godina. Molitve su napisane jednostavno i zanimljivo kako bi djeca razumjela važne pouke o Bogu, vjeri, karakteru i svakodnevnom životu.'
     ),
     array(
-        'q' => 'Kako je strukturirana svaka molitva?',
-        'a' => 'Svaka molitva sadrzi kratku lekciju s biblijskim stihom, primjenu u zivotu djeteta i jednostavnu molitvu koja povezuje sve zajedno. Traje oko 1 minute.'
+        'q' => 'Kako je složena svaka večernja molitva?',
+        'a' => 'Svaki dan sadrži kratko i lako razumljivo razmatranje, odlomak iz Svetog pisma, Božji odgovor i jednostavnu molitvu – smislen trenutak s Bogom prije spavanja.'
     ),
     array(
-        'q' => 'Koliko dugo traje svaka molitva?',
-        'a' => 'Molitve su dizajnirane da traju oko jedne minute. Dosta da djeca zadrze pozornost, a kratko dovoljno za rutinu prije spavanja.'
+        'q' => 'Koliko traje jedna molitva?',
+        'a' => 'Samo nekoliko minuta. Svaka je namjerno kratka da zadrži pažnju djece, a ipak im da nešto o čemu mogu razmišljati, razgovarati i moliti.'
     ),
     array(
-        'q' => 'Moze li dijete citati samostalno?',
-        'a' => 'Da! Djeca koja citaju na osnovnoj razini mogu citati sama. Za mlađu djecu, roditelji mogu citati naglas ili citati zajedno.'
+        'q' => 'Može li dijete čitati samo?',
+        'a' => 'Da. Starija djeca mogu čitati samostalno, a mlađa uživaju čitati zajedno s roditeljem ili skrbnikom. Knjiga jednako dobro funkcionira na oba načina.'
     ),
     array(
-        'q' => 'Zasto je dizajnirano za vrijeme spavanja?',
-        'a' => 'Vrijeme spavanja je prirodno mirno i usredotoceno doba — savrseno za kratki, smisleni trenutak povezivanja s Bogom. Isto postaje tiha, postojana navika koju djeca nose sa sobom dok rastu.'
+        'q' => 'Zašto je namijenjena vremenu prije spavanja?',
+        'a' => 'Vrijeme prije spavanja djetetu daje tihi trenutak daleko od dnevnih ometanja. Knjiga tih nekoliko minuta pretvara u jednostavnu rutinu čitanja, razmišljanja, molitve i vremena s Bogom.'
     ),
     array(
-        'q' => 'Koji biblijski prijevod koristi?',
-        'a' => 'Molitve koriste New International Version (NIV) za jasnocu i citljivost.'
+        'q' => 'Koji prijevod Biblije koristi?',
+        'a' => 'Svi biblijski navodi u knjizi su iz King James Version (KJV) prijevoda.'
     ),
     array(
-        'q' => 'Sto ovu knjigu cini drugacijijom od ostalih djecjih molitava?',
-        'a' => 'Kratka, lako razumljiva, fokusirana na svakodnevni zivot djeteta. Svaka molitva pise tako da se osjecaju viđeni, cuti i shvaceni — ne propovijedani.'
+        'q' => 'Po čemu se razlikuje od drugih dječjih molitvenika?',
+        'a' => 'Stvorena je da svakodnevna navika vjere bude jednostavna, a ne zahtjevna. S 365 kratkih večernjih razmatranja, Svetim pismom i molitvom dijete svaku večer provede smislen trenutak s Bogom – bez dugih lekcija.'
     ),
     array(
-        'q' => 'Kako vracam proizvod ako nisam zadovoljan?',
-        'a' => '30 dana imate pravo na povrat novca, bez dodatnih pitanja. Dovoljno je kontaktirati nasu podrsku za klijente.'
+        'q' => 'Je li dobra kao poklon?',
+        'a' => 'Svakako. Smislen je poklon za rođendan, Božić, krštenje, prvu pričest, Uskrs ili jednostavno kao poticaj djetetu dok raste u vjeri.'
     ),
     array(
-        'q' => 'Je li dostava besplatna?',
-        'a' => 'Da, besplatna dostava vrijedi za narudzbe iznad 70 €. Isporuka obicno traje 3–7 radnih dana.'
+        'q' => 'Što ako se djetetu ne svidi?',
+        'a' => 'Imate 30 dana za povrat novca. Ako knjiga nije prava za vašu obitelj, javite nam se unutar 30 dana. Plaćanje je pouzećem, a dostava je besplatna iznad 70 €.'
     )
 );
 
@@ -5647,8 +5650,11 @@ $flomasteri_faq = array(
   array("Treba li miješati ili razrjeđivati boje?", "Ne. Svaki flomaster je spreman za rad – protresite ga sa zatvorenim čepićem, skinite čep i bojajte. Kod svjetlih nijansi pustite da se osuši nekoliko sekundi između slojeva."),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_fleeceshawl, $fleeceshawl_faq, $is_bottlesling, $bottlesling_faq, $is_pillorganizer, $pillorganizer_faq, $is_ultrasoniccleaner, $ultrasoniccleaner_faq, $is_antitheftbag, $antitheftbag_faq, $is_showertowel, $showertowel_faq, $is_petdental, $petdental_faq, $is_calmingcollar, $calmingcollar_faq, $is_therapillow, $therapillow_faq, $is_grillbasket, $grillbasket_faq, $is_seatcushion, $seatcushion_faq, $is_groundingmat, $groundingmat_faq, $is_neckmassager, $neckmassager_faq, $is_upholsterycleaner, $upholsterycleaner_faq, $is_kneelight, $kneelight_faq, $is_travelkit, $travelkit_faq, $is_breadbag, $breadbag_faq, $is_pethairglove, $pethairglove_faq, $is_dualpillow, $dualpillow_faq, $is_mattresstopper, $mattresstopper_faq, $is_kidspillow, $kidspillow_faq, $is_vacuumsealer, $vacuumsealer_faq, $is_airtravel, $airtravel_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_hikingshoes, $hikingshoes_faq, $is_hoodiedress, $hoodiedress_faq, $is_comfortjeans, $comfortjeans_faq, $is_slingbag, $slingbag_faq, $is_travelbag, $travelbag_faq, $is_bathmat, $bathmat_faq, $is_dogbed, $dogbed_faq, $is_minimizerbra, $minimizerbra_faq, $is_nursingbra, $nursingbra_faq, $is_cashmeresweater, $cashmeresweater_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_thermoboots, $thermoboots_faq, $is_leatherboots, $leatherboots_faq, $is_snugboot, $snugboot_faq, $is_cloudclogs, $cloudclogs_faq, $is_compressionsocks, $compressionsocks_faq, $is_wafflelongsleeve, $wafflelongsleeve_faq, $is_sleepset, $sleepset_faq, $is_plushblanket, $plushblanket_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_giovasa, $giovasa_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_ondersteun, $ondersteun_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_devotions, $devotions_faq, $is_viinia, $viinia_faq, $is_dograincoat, $dograincoat_faq, $is_travelpillow, $travelpillow_faq, $is_fleeceshawl, $fleeceshawl_faq, $is_bottlesling, $bottlesling_faq, $is_pillorganizer, $pillorganizer_faq, $is_ultrasoniccleaner, $ultrasoniccleaner_faq, $is_antitheftbag, $antitheftbag_faq, $is_showertowel, $showertowel_faq, $is_petdental, $petdental_faq, $is_calmingcollar, $calmingcollar_faq, $is_therapillow, $therapillow_faq, $is_grillbasket, $grillbasket_faq, $is_seatcushion, $seatcushion_faq, $is_groundingmat, $groundingmat_faq, $is_neckmassager, $neckmassager_faq, $is_upholsterycleaner, $upholsterycleaner_faq, $is_kneelight, $kneelight_faq, $is_travelkit, $travelkit_faq, $is_breadbag, $breadbag_faq, $is_pethairglove, $pethairglove_faq, $is_dualpillow, $dualpillow_faq, $is_mattresstopper, $mattresstopper_faq, $is_kidspillow, $kidspillow_faq, $is_vacuumsealer, $vacuumsealer_faq, $is_airtravel, $airtravel_faq, $is_maternityleggings, $maternityleggings_faq, $is_techtee, $techtee_faq, $is_hikingshoes, $hikingshoes_faq, $is_hoodiedress, $hoodiedress_faq, $is_comfortjeans, $comfortjeans_faq, $is_slingbag, $slingbag_faq, $is_travelbag, $travelbag_faq, $is_bathmat, $bathmat_faq, $is_dogbed, $dogbed_faq, $is_minimizerbra, $minimizerbra_faq, $is_nursingbra, $nursingbra_faq, $is_cashmeresweater, $cashmeresweater_faq, $is_widetoeshoes, $widetoeshoes_faq, $is_thermoboots, $thermoboots_faq, $is_leatherboots, $leatherboots_faq, $is_snugboot, $snugboot_faq, $is_cloudclogs, $cloudclogs_faq, $is_compressionsocks, $compressionsocks_faq, $is_wafflelongsleeve, $wafflelongsleeve_faq, $is_sleepset, $sleepset_faq, $is_plushblanket, $plushblanket_faq, $is_orthomules, $orthomules_faq, $is_sleepearplugs, $sleepearplugs_faq, $is_litterbox, $litterbox_faq, $is_catfountain, $catfountain_faq, $is_dishsheets, $dishsheets_faq, $is_hoodie, $hoodie_faq, $is_utilitypants, $utilitypants_faq, $is_smartjacket, $smartjacket_faq, $is_sculptbrief, $sculptbrief_faq, $is_fleecetights, $fleecetights_faq, $is_slippers, $slippers_faq, $is_anklesleeve, $anklesleeve_faq, $is_corksandals, $corksandals_faq, $is_seatcover, $seatcover_faq, $is_harness, $harness_faq, $is_titaniumpan, $titaniumpan_faq, $is_raincoat, $raincoat_faq, $is_polo, $polo_faq, $is_doggo, $doggo_faq, $is_bracelet, $bracelet_faq, $is_winecooler, $winecooler_faq, $is_tuck, $tuck_faq, $is_supportsocks, $supportsocks_faq, $is_phonestrap, $phonestrap_faq, $is_floatsuit, $floatsuit_faq, $is_bratank, $bratank_faq, $is_blanket, $blanket_faq, $is_brassiere, $brassiere_faq, $is_slabproof, $slabproof_faq, $is_giovasa, $giovasa_faq, $is_hands, $hands_faq, $is_kneebrace, $kneebrace_faq, $is_buildshirt, $buildshirt_faq, $is_relief, $relief_faq, $is_gelseat, $gelseat_faq, $is_kneetape, $kneetape_faq, $is_celleg, $celleg_faq, $is_stepcloud, $stepcloud_faq, $is_slim, $slim_faq, $is_bowl, $bowl_faq, $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_snore, $snore_faq, $is_cloud, $cloud_faq, $is_cloath, $cloath_faq, $is_bra, $bra_faq, $is_ondersteun, $ondersteun_faq, $is_hyd, $hyd_faq, $is_dental, $dental_faq, $is_hairmagic, $hairmagic_faq, $is_lift, $lift_faq, $is_kneeheat, $kneeheat_faq, $is_pre, $pre_faq, $is_hug, $hug_faq, $is_seal, $seal_faq, $is_home, $home_faq, $is_sr, $sr_faq, $is_brush, $brush_faq, $is_noriks_cards, $noriks_cards_faq, $is_controlpro, $controlpro_faq, $is_kneefix, $kneefix_faq, $is_knc, $knc_faq, $is_ortopas, $ortopas_faq, $is_bunion, $bunion_faq, $is_fisiorest, $fisiorest_faq, $is_norikshers, $norikshers_faq, $is_leakboxers, $leakboxers_faq, $is_kompmajice, $kompmajice_faq, $is_jastuk, $jastuk_faq, $is_nosilka, $nosilka_faq, $is_kidsnest, $kidsnest_faq, $is_flomasteri, $flomasteri_faq ) {
   $is_info = ( stripos( (string) $title, 'Informacije o Proizvodu' ) !== false );
+  if ( $is_devotions && $is_info ) {
+    return $devotions_faq;
+  }
   if ( $is_slippers && $is_info ) {
     return $slippers_faq;
   }
