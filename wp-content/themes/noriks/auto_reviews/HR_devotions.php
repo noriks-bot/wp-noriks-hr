@@ -1,20 +1,17 @@
 <?php
-// AUTO-GENERATED devotions reviews — NORIKS One Moment With God For Kids
-return array(
-    array( 'ocjena' => 5, 'osoba' => 'Petra M.', 'mjesto' => 'Zagreb', 'naslov' => 'Savrsena rutina prije spavanja', 'komentar' => 'Kcer (8 god.) ceka svaku vecer da procitamo sljedecu molitvu. Lekcije su kratke i razumljive. Postalo je nas najbolji dio dana.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Marko B.', 'mjesto' => 'Split', 'naslov' => 'Djeca ostanu pozorna', 'komentar' => 'Molitve traju samo minutu, bas dovoljno da sin (7 god.) zadrzi paznju. Biblijskistihovi su jednostavni i primjenjivi. Preporucujem.' ),
-    array( 'ocjena' => 4, 'osoba' => 'Ana K.', 'mjesto' => 'Rijeka', 'naslov' => 'Pomaze izgraditi naviku', 'komentar' => 'Koristimo knjigu vec mjesec dana. Kcerka (9 god.) sada trazi da citamo zajedno svaku vecer. Molitve su lijepo napisane.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Ivan S.', 'mjesto' => 'Osijek', 'naslov' => 'Lako za razumijevanje', 'komentar' => 'Sin (6 god.) moze pratiti svaku lekciju. Jezik je jednostavan, a poruke znacajne. Nije predugacko, nije prekratko — bas dobro.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Maja T.', 'mjesto' => 'Zadar', 'naslov' => 'Odlicno dizajniran', 'komentar' => 'Svaka stranica ima lekciju, stih i molitvu. Format je konzistentan i djeca znaju sta ocekivati. Jako dobro osmisljen proizvod.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Josip R.', 'mjesto' => 'Pula', 'naslov' => 'Najbolji poklon za roditelje', 'komentar' => 'Kupio sam za sestricu i sad cijela obitelj koristi knjigu. Djeca (6 i 10 god.) oboje uzivaju. Preporucujem svima.' ),
-    array( 'ocjena' => 4, 'osoba' => 'Nina D.', 'mjesto' => 'Slavonski Brod', 'naslov' => 'Pomaze pricati o vjeri', 'komentar' => 'Prije nisam znala kako poceti razgovore o Bogu s djecom. Ove molitve cine to prirodnim. Jako sam zahvalna.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Luka P.', 'mjesto' => 'Karlovac', 'naslov' => 'Djeca vole traziti sljedecu', 'komentar' => 'Sin (8 god.) cesto pita: "Koja je danas lekcija?" To mi govori da radi. Definitivno vrijedi novca.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Kristina L.', 'mjesto' => 'Varazdin', 'naslov' => 'Stvara povezanost', 'komentar' => 'Vrijeme molitve postalo je nas zajednicki trenutak. Kcer (7 god.) sada zeli podijeliti sto je naucila. To je bas lijepo vidjeti.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Tomislav V.', 'mjesto' => 'Sibenik', 'naslov' => '365 dana stvarno vrijedi', 'komentar' => 'Koristimo knjigu vec 4 mjeseca. Svaka molitva je jedinstvena i relevantna. Nema ponavljanja. Jako dobro napisano.' ),
-    array( 'ocjena' => 4, 'osoba' => 'Elena F.', 'mjesto' => 'Dubrovnik', 'naslov' => 'Savrseno za dob 6-12', 'komentar' => 'Imam dvoje djece (7 i 11 god.) i oboje mogu pratiti. Molitve su prilagodene razini razumijevanja. Preporucujem.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Damir C.', 'mjesto' => 'Samobor', 'naslov' => 'Bas sto smo trebali', 'komentar' => 'Trazili smo nesto sto nije predugacko, ali je znacajno. Ova knjiga je tocno to. Koristimo je svaku vecer.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Ivana H.', 'mjesto' => 'Koprivnica', 'naslov' => 'Djeca uče o Bogu prirodno', 'komentar' => 'Ne osjecam da propovijedam — molitve vode razgovor. Sin (9 god.) postavlja pitanja i razgovaramo. Bas je dobro.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Stjepan Z.', 'mjesto' => 'Bjelovar', 'naslov' => 'Pomaze prije spavanja', 'komentar' => 'Kcerka (6 god.) smiruje se nakon citanja. Molitve su umirujuce i daju nam trenutak povezanosti. Jako smo zadovoljni.' ),
-    array( 'ocjena' => 4, 'osoba' => 'Lucija G.', 'mjesto' => 'Virovitica', 'naslov' => 'Odlican materijal', 'komentar' => 'Papir je dobar, font je citljiv, molitve su kvalitetno napisane. Vrijedi svake lipe. Definitivno preporucujem.' ),
-    array( 'ocjena' => 5, 'osoba' => 'Marijan K.', 'mjesto' => 'Zabok', 'naslov' => 'Najbolja rutina ikad', 'komentar' => 'Djeca (8 i 10 god.) cekaju vrijeme molitve svaku vecer. Postalo je nesto na sto se svi radujemo. Odlicna kupnja.' )
+// NORIKS Jedna minuta s Bogom za djecu | 365 večernjih molitava — mnenja kupcev. Generirano z postavi.js.
+$auto_reviews_en = array(
+    array("name" => "Ivan D.", "text" => "Kupio sam je sinovima i brzo je postala dio naše večernje rutine. Pouke su dovoljno jednostavne da ih razumiju, a dovoljno smislene da o njima uvijek razgovaramo nakon čitanja."),
+    array("name" => "Nataša C.", "text" => "Imamo je tek kratko, a kći se već veseli čitanju prije spavanja. Posebno volim molitvu na kraju svakog razmatranja."),
+    array("name" => "Ana V.", "text" => "Prekrasna knjiga i divna ideja. Moja sedmogodišnjakinja razumije pouke, a dovoljno su kratke da je drže pažljivom cijelo vrijeme."),
+    array("name" => "Renata S.", "text" => "Čitam je s djecom i iskreno sam impresionirana. Pouke su razumljive djeci, a nama kao obitelji daju nešto smisleno za razgovor."),
+    array("name" => "Maja R.", "text" => "Kći je već pitala možemo li je čitati svake večeri. Razmatranja su kratka, lako ih prati i potaknula su jako lijepe razgovore o Bogu."),
+    array("name" => "Josip T.", "text" => "Čitam je s osmogodišnjim sinom prije spavanja i točno je ono što sam tražio. Dovoljno jednostavno da razumije, a poruka nije razvodnjena."),
+    array("name" => "Lucija B.", "text" => "Djeca inače teško izdrže dulja razmatranja, ali ovo im je zadržalo pažnju. Pročitamo stranicu, porazgovaramo o pouci i završimo molitvom."),
+    array("name" => "Jelena M.", "text" => "Sin sada sam traži da čitamo prije spavanja. Pouke su dovoljno kratke da zadrže njegovu pažnju, a volim što svaku večer završimo razgovorom o onome što je naučio."),
+    array("name" => "Rajna T.", "text" => "Kupila sam je devetogodišnjoj kćeri i oduševljena je. Razmatranja su joj razumljiva, a ne djeluju previše djetinjasto."),
+    array("name" => "Danijel R.", "text" => "Kao tata tražio sam jednostavan način da Boga uključim u večernju rutinu. Pročitamo jedno razmatranje, malo porazgovaramo i zajedno molimo. Ništa komplicirano, samo smisleno vrijeme sa sinom."),
+    array("name" => "Melita K.", "text" => "Djeca brzo izgube interes kad nešto previše sliči lekciji, ali ovo iskreno vole. Kratko, smisleno i savršeno prije spavanja."),
+    array("name" => "Andrea P.", "text" => "Kupila sam je kćeri za osmi rođendan. Drži je pokraj kreveta i počela je sama čitati neke stranice. Gledati kako postaje znatiželjna o Bogu najljepši mi je dio."),
+    array("name" => "Krešimir B.", "text" => "Točno ono što sam htio za svoje dečke. Lako se čita, lako se razumije i nije predugo prije spavanja."),
 );
