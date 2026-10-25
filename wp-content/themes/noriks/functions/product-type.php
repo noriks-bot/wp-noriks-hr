@@ -308,7 +308,7 @@ function noriks_product_type_map() : array {
         // NORIKS Travel — posteljica za pse u automobilu.
         'travel'                  => array( 'orto-travel', 'travel' ),
         // PIKSELAND — retro gaming konzola s 40+ emulatorima (64GB/128GB/256GB).
-        'pikseland'               => array( 'pikseland' ),
+        'pikseland'               => array( 'orto-pikseland', 'pikseland' ),
     );
 }
 
