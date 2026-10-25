@@ -5701,7 +5701,7 @@ $flomasteri_faq = array(
 // Lastni FAQ (Informacije o proizvodu) za nove izdelke — brez tega se pokaze FAQ za majice.
 // Najprej auto_reviews/FAQ_HR_<tip>.php (datoteka vrne polje), sicer $<tip>_faq iz te datoteke.
 $noriks_faq_lastni = null;
-foreach ( array( 'classics' => 'classics', 'fieldops' => 'fieldops', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'giovasa' => 'giovasa', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'pikseland' => 'pikseland', 'munna' => 'munna', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel' ) as $noriks_ft => $noriks_fv ) {
+foreach ( array( 'classics' => 'classics', 'fieldops' => 'fieldops', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'giovasa' => 'giovasa', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'pikseland' => 'pikseland', 'munna' => 'munna', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel', 'flops' => 'flops' ) as $noriks_ft => $noriks_fv ) {
   if ( function_exists( 'noriks_is_type' ) && noriks_is_type( $noriks_ft ) ) {
     $noriks_ff = get_stylesheet_directory() . '/auto_reviews/FAQ_HR_' . $noriks_ft . '.php';
     if ( file_exists( $noriks_ff ) ) {

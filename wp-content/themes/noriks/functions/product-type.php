@@ -1435,3 +1435,13 @@ if ( ! function_exists( 'noriks_corrector_sizes' ) ) {
         );
     }
 }
+
+if ( ! function_exists( 'noriks_flops_sizes' ) ) {
+    /** NORIKS Flops: dvojni EU brojevi 1:1 z originala (original nema tablice mjera). */
+    function noriks_flops_sizes() {
+        return array(
+            array( '34/35' ), array( '36/37' ), array( '38/39' ), array( '40/41' ),
+            array( '42/43' ), array( '44/45' ), array( '46/47' ),
+        );
+    }
+}
