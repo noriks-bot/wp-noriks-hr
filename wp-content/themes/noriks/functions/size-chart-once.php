@@ -263,6 +263,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-orthomules' );
             return;
         }
+        // NORIKS Travel: Standard / XL, mjere 1:1 z originala (inci preracunani v cm).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'travel' ) ) {
+            get_template_part( 'template_parts/size-chart-travel' );
+            return;
+        }
         // NORIKS Flops: dvojni EU brojevi 34/35–46/47 (original nema tablice mjera).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'flops' ) ) {
             get_template_part( 'template_parts/size-chart-flops' );

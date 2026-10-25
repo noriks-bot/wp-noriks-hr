@@ -1419,8 +1419,8 @@ if ( ! function_exists( 'noriks_travel_sizes' ) ) {
     /** NORIKS Travel — posteljica za pse u automobilu (2 veličine). */
     function noriks_travel_sizes() {
         return array(
-            array( 'Standard', '130 × 61 cm (automobili / SUV / mali pick-up)' ),
-            array( 'XL',       '152 × 61 cm (full-size pick-up / full-size SUV)' ),
+            array( 'Standard', '131 × 61 × 5 cm', 'osobni automobili, SUV i pick-up srednje veličine', 'najmanje 132 cm' ),
+            array( 'XL',       '153 × 61 × 5 cm', 'veliki pick-up, veliki SUV, kombi', 'najmanje 155 cm' ),
         );
     }
 }
