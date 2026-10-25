@@ -88,6 +88,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-slabproof' );
             return;
         }
+        // NORIKS Insoles: velicine XS–XL po broju obuce (US/UK/EUR), 1:1 s originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'insoles' ) ) {
+            get_template_part( 'template_parts/size-chart-insoles' );
+            return;
+        }
         // NORIKS Brassiere: tablica po sirini trake in opsegu grudi (XS–5XL).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'brassiere' ) ) {
             get_template_part( 'template_parts/size-chart-brassiere' );

@@ -1,39 +1,11 @@
 <?php
 /**
- * NORIKS Insoles — why sekcije 1:1 z originalom (10 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ * NORIKS Insoles — why sekcije 1:1 z originalom (9 vsebinskih + NORIKS pogoji, vrstni red kot original: 7 stanj, Koji problem, Tri Support). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/insoles/';
 ?>
 <div class="winsoles">
-
-  <section class="winsoles__s winsoles__s--bg">
-    <div class="winsoles__v">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-02-before-after.webp' ); ?>" alt="Čvrst svod koji se ne spljošti" loading="lazy" decoding="async"></div>
-      <div class="winsoles__tekst">
-        <div class="winsoles__kicker">ZAŠTO DRUGAČIJI</div>
-        <h2 class="winsoles__h2">Čvrst svod koji se <em>ne spljošti</em></h2>
-        <p class="winsoles__p">Većina uložaka za potporu svoda spljošti se u trenutku kad na njih stanete. NORIKS Insoles se ne spljošti: čvrsta baza svoda ostaje podignuta 8, 10 i 12 sati, cijelu smjenu.</p>
-        <p class="winsoles__p">Duboka čašica za petu drži petu u sredini, tako da se stopalo ne prevrće prema unutra. Čvrsto pritom ne znači tvrdo — jastučići ispod pete i ispod prednjeg dijela stopala čine svaki korak udobnim.</p>
-        <p class="winsoles__p">Ulošci su čvrsti od prvog dana. Prvih dana nosite ih kraće i postupno produljujte vrijeme nošenja — većina ljudi nakon tjedan do dva redovitog nošenja bez problema stoji i hoda kroz smjenu od 8 i više sati.</p>
-        <p class="winsoles__zak">Čvrsto od prvog dana, a udobno cijelu smjenu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="winsoles__s">
-    <div class="winsoles__v winsoles__v--rev">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-05-podpor.webp' ); ?>" alt="Tri dijela, jedan zadatak" loading="lazy" decoding="async"></div>
-      <div class="winsoles__tekst">
-        <div class="winsoles__kicker">KAKO JE NAPRAVLJEN</div>
-        <h2 class="winsoles__h2">Tri dijela, <em>jedan zadatak</em></h2>
-        <p class="winsoles__p">NORIKS Insoles ima sustav potpore iz tri dijela: čvrstu, visoko podignutu platformu svoda, duboku čašicu za petu i slojeve jastučenja. Mekši gornji sloj leži uz stopalo, a čvrsta baza drži svod.</p>
-        <p class="winsoles__p">Uložak drži do 150 kg bez urušavanja. Ide cijelom dužinom stopala i izrezuje se po otisnutim linijama, tako da ga prilagodite točno svojoj cipeli. Dostupan je u veličinama od XS do XL i prodaje se kao jedan par.</p>
-        <p class="winsoles__p">Odgovara u tenisice, radne čizme, cipele za hodanje i većinu zatvorenih cipela s uloškom koji se vadi. Širina je standardna, nije riječ o širokom kroju.</p>
-        <p class="winsoles__zak">Drži do 150 kg, izrezuje se po mjeri vaše cipele.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="winsoles__s winsoles__s--bg">
     <div class="winsoles__v">
@@ -135,19 +107,33 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s">
     <div class="winsoles__v winsoles__v--rev">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-04-uporaba.webp' ); ?>" alt="Potpora koja traje cijeli dan" loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-02-before-after.webp' ); ?>" alt="Čvrst svod koji se ne spljošti" loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
-        <div class="winsoles__kicker">SUSTAV POTPORE</div>
-        <h2 class="winsoles__h2">Potpora koja traje <em>cijeli dan</em></h2>
-        <p class="winsoles__p">Tri dijela, jedan zadatak: potpora koja traje cijeli dan. Čvrsta potpora svoda daje 3,5 cm podizanja koje se ne spljošti pod vašom težinom, ni nakon smjene od 12 sati.</p>
-        <p class="winsoles__p">Čašica za petu u obliku slova U drži petu u sredini, tako da se stopalo ne prevrće prema unutra. Slojevi jastučenja ispod pete i prednjeg dijela stopala ublažavaju svaki korak, a gornji sloj od prozračne tkanine leži uz stopalo.</p>
-        <p class="winsoles__p">Njega: ručno pranje u mlakoj vodi s blagim sapunom i sušenje na zraku u hladu. Bez pranja u perilici, izbjeljivača i topline.</p>
-        <p class="winsoles__zak">Svod, peta i jastučenje — zajedno, cijeli dan.</p>
+        <div class="winsoles__kicker">ZAŠTO DRUGAČIJI</div>
+        <h2 class="winsoles__h2">Čvrst svod koji se <em>ne spljošti</em></h2>
+        <p class="winsoles__p">Većina uložaka za potporu svoda spljošti se u trenutku kad na njih stanete. NORIKS Insoles se ne spljošti: čvrsta baza svoda ostaje podignuta 8, 10 i 12 sati, cijelu smjenu.</p>
+        <p class="winsoles__p">Duboka čašica za petu drži petu u sredini, tako da se stopalo ne prevrće prema unutra. Čvrsto pritom ne znači tvrdo — jastučići ispod pete i ispod prednjeg dijela stopala čine svaki korak udobnim.</p>
+        <p class="winsoles__p">Ulošci su čvrsti od prvog dana. Prvih dana nosite ih kraće i postupno produljujte vrijeme nošenja — većina ljudi nakon tjedan do dva redovitog nošenja bez problema stoji i hoda kroz smjenu od 8 i više sati.</p>
+        <p class="winsoles__zak">Čvrsto od prvog dana, a udobno cijelu smjenu.</p>
       </div>
     </div>
   </section>
 
   <section class="winsoles__s winsoles__s--bg">
+    <div class="winsoles__v">
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-05-podpor.webp' ); ?>" alt="Sustav potpore iz tri dijela" loading="lazy" decoding="async"></div>
+      <div class="winsoles__tekst">
+        <div class="winsoles__kicker">KAKO RADI SUSTAV POTPORE</div>
+        <h2 class="winsoles__h2">Tri dijela, jedan zadatak: <em>potpora koja traje cijeli dan</em></h2>
+        <p class="winsoles__p"><strong>Čvrsta potpora svoda</strong> — 3,5 cm čvrstog podizanja koje se ne spljošti pod vašom težinom, ni nakon smjene od 12 sati. Uložak drži do 150 kg bez urušavanja.</p>
+        <p class="winsoles__p"><strong>Čašica za petu u obliku slova U</strong> drži petu u sredini, tako da se stopalo ne prevrće prema unutra. <strong>Slojevi jastučenja</strong> ispod pete i prednjeg dijela stopala ublažavaju svaki korak.</p>
+        <p class="winsoles__p">Uložak ide cijelom dužinom stopala i izrezuje se po otisnutim linijama, tako da ga prilagodite točno svojoj cipeli. Dostupan je u veličinama od XS do XL i prodaje se kao jedan par.</p>
+        <p class="winsoles__zak">Svod, peta i jastučenje — zajedno, cijeli dan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="winsoles__s">
     <div class="winsoles__v winsoles__v--polna">
       <div class="winsoles__tekst winsoles__tekst--sredina">
         <div class="winsoles__kicker">KUPUJTE BEZ BRIGE</div>

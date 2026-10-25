@@ -1013,7 +1013,7 @@
 
            <?php elseif ( noriks_is_type( 'insoles' ) ): ?>
 
-            Tisuće kupaca već hoda sa NORIKS Insoles – čvrsta potpora svoda koji se ne spljošti, olakšanje kod plantarnog fasciitisa i pravilno poravnanje stopala.
+            Tisuće kupaca već hoda sa NORIKS Insoles – čvrsta potpora svoda koja se ne spljošti, duboka čašica za petu i jastučenje cijelom dužinom.
 
            <?php elseif ( noriks_is_type( 'comfortjeans' ) ): ?>
 
@@ -2982,32 +2982,36 @@ $nosilka_faq = array(
 // NORIKS Insoles — product FAQ (HR).
 $insoles_faq = array(
   array(
-    'questioon' => 'Kako NORIKS Insoles pomaže kod plantarnog fasciitisa?',
-    'answer'    => 'NORIKS Insoles ima čvrstu potporu svoda (visina 3,5 cm) koja uzima teret s plantarne fascije — trake ispod stopala koja se povlači kod svakog koraka. Duboka petna košarica drži stopalo u pravilnom položaju i smanjuje napetost. Većina ljudi s plantarnim fasciitisom osjeća razliku nakon 1 do 2 tjedna redovitog korištenja.'
+    'questioon' => 'Koju veličinu da naručim?',
+    'answer'    => 'Odaberite svoj uobičajeni broj cipele prema tablici veličina. Ako ste između dvije veličine, uzmite veću i skratite uložak na vrhu prstiju.'
   ),
   array(
-    'questioon' => 'Mogu li rezati ulošak da stane u moje cipele?',
-    'answer'    => 'Da. Na svakom ulošku su ucrtane linije za rezanje po veličinama. Možete izrezati prema svojoj veličini. Nakon rezanja uložak se ne može vratiti, ali naše jamstvo povrata novca vrijedi čak i za izrezane i nošene uloške.'
+    'questioon' => 'Hoće li mi biti pretvrdi?',
+    'answer'    => 'NORIKS Insoles je namjerno čvršći od većine uložaka za potporu svoda. Drugi ulošci se spljošte čim stanete na njih, a NORIKS Insoles drži do 150 kg bez urušavanja.'
   ),
   array(
-    'questioon' => 'Koliko dugo traju ulošci?',
-    'answer'    => 'Uz svakodnevnu uporabu baza od EVA pjene zadržava potporu svoda 4 do 6 mjeseci. Gornji sloj otporan je na zadržavanje mirisa i obrisavanje, pa ulošci ostaju svježi i higijenski. Kada osjetite da potpora popušta, vrijeme je za novi par.'
+    'questioon' => 'Koliko dugo traje privikavanje?',
+    'answer'    => 'Počnite s 2 do 3 sata dnevno i svaki dan dodajte malo više. Blaga nelagoda prvih dan ili dva je normalna — stopala se prilagođavaju. Većina ljudi nakon 1 do 2 tjedna bez problema nosi uloške kroz smjenu od 8 i više sati.'
   ),
   array(
-    'questioon' => 'Mogu li ih nositi cijeli dan ili samo za trening?',
-    'answer'    => 'NORIKS Insoles napravljen je za cijeli dan — stajanje, hodanje, rad. Mnogi ljudi ih nose u radnim cipelama, tenisicama i svakodnevnoj obući jer im stopala manje bole do kraja smjene.'
+    'questioon' => 'Hoće li stati u moje cipele?',
+    'answer'    => 'Odgovaraju u većinu tenisica, radnih čizama, cipela za hodanje i ležernih cipela. Najprije izvadite tvornički uložak iz cipele. Širina je standardna, nije riječ o širokom kroju. U uske svečane cipele i balerinke obično ne stanu.'
   ),
   array(
-    'questioon' => 'Hoće li mi stopala boljeti dok se privikavam?',
-    'answer'    => 'Prvi put kad stopalo drži pravilnu potporu, može se osjetiti neobično — kao kad prve dane nosite ortozu. Preporučujemo da započnete s 2–3 sata dnevno i postupno povećavate. Unutar tjedan dana većina se navikne i osjeća se bolje nego ikad.'
+    'questioon' => 'Po čemu se razlikuje od drugih uložaka za potporu svoda?',
+    'answer'    => 'Većina uložaka za potporu svoda spljošti se u trenutku kad na njih stanete. NORIKS Insoles se ne spljošti — čvrsta baza drži svod podignutim cijeli dan.'
   ),
   array(
-    'questioon' => 'Imaju li ulošci garanciju povrata novca?',
-    'answer'    => 'Da! Vrijedi jamstvo povrata novca unutar 30 dana od isporuke — čak i ako ste ih izrezali i nosili. Ako niste zadovoljni, javite nam se na info@noriks.com i odgovorit ćemo u roku od 12 sati.'
+    'questioon' => 'Moram li ih skratiti?',
+    'answer'    => 'Obično samo malo na vrhu prstiju. Kao predložak koristite svoj stari uložak. Skratite manje nego što mislite, zatim isprobajte kako sjedi.'
   ),
   array(
-    'questioon' => 'Jesu li prikladni za ravna stopala ili visoki svod?',
-    'answer'    => 'Oboje. Potporu svoda visine 3,5 cm napravili smo čvrstu da se ne spljošti ni pod punom težinom (do 150 kg). Za ravna stopala podiže svod i smanjuje naprezanje na koljena i leđa. Za visoki svod puni prazninu koju obični ulošci ne dohvaćaju.'
+    'questioon' => 'Mogu li ih vratiti nakon skraćivanja?',
+    'answer'    => 'Da. Imate 30 dana za povrat novca od dana isporuke, i to vrijedi i za skraćene i nošene uloške.'
+  ),
+  array(
+    'questioon' => 'Koliko traju i kako ih čistiti?',
+    'answer'    => 'Mnogim kupcima jedan par traje i par godina. Zamijenite ih kad se svod spljošti ili kad se gornji sloj istroši. Čistite ih vlažnom krpom i blagim sapunom. Ne namačite ih i ne perite u perilici.'
   )
 );
 
