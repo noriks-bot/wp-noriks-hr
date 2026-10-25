@@ -12,7 +12,7 @@ $cal = get_template_directory_uri() . '/img/calendar/';
 <!-- sekcija 1: Hero — Obitelj organizirana na jednom mjestu -->
 <section class="nss-sect nss--bg1">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-hero.png' ); ?>" alt="NORIKS Calendar na zidu obiteljske kuhinje" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-glavni.png' ); ?>" alt="NORIKS Calendar na zidu obiteljske kuhinje" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Organizacija obitelji</p>
       <h2 class="nss-h2">Svi termini, zadatci i planovi na <em>jednom mjestu</em></h2>
@@ -100,7 +100,7 @@ j kalendar, bez pretplate, zauvijek.</p>
 <!-- sekcija 7: Cijela obitelj na jednom ekranu -->
 <section class="nss-sect nss--bg1">
   <div class="nss-wrap nss-2col">
-    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-family.png' ); ?>" alt="Razlicite boje za svakog clana obitelji" loading="lazy"></div>
+    <div class="nss-media"><img src="<?php echo esc_url( $cal . 'noriks-calendar-galerija5.png' ); ?>" alt="Razlicite boje za svakog clana obitelji" loading="lazy"></div>
     <div class="nss-text">
       <p class="nss-kicker">Za cijelu obitelj</p>
       <h2 class="nss-h2">Boje po članovima — <em>pregled na prvi pogled</em></h2>

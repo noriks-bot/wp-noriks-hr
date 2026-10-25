@@ -62,6 +62,9 @@ if ( noriks_is_type( 'giovasa' ) ) {
 if ( noriks_is_type( 'acryliques' ) ) {
     include $noriks_pb_dir . 'why-acryliques.php';
 }
+if ( noriks_is_type( 'midnight' ) ) {
+    include $noriks_pb_dir . 'why-midnight.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
