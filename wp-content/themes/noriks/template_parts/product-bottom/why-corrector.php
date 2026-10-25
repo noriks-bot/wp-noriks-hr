@@ -24,22 +24,22 @@ $slika = function ( $dat, $alt ) {
   <section class="ncorrector__sekcija ncorrector__sekcija--bg">
     <div class="ncorrector__v">
       <div class="ncorrector__tekst">
-        <div class="ncorrector__kicker">Nevidljiva potpora</div>
-        <h2 class="ncorrector__h2">Neprimjetan ispod svakodnevne odjeće.</h2>
-        <p class="ncorrector__p">Tanak i lagan dizajn ostaje potpuno neprimjetan ispod obične odjeće. Osmišljen je da nježno vrati ramena u pravilan položaj i pomaže mišićima da se naviknu na ispravno držanje i kad ga ne nosite. Idealan za ured, sastanke i javna mjesta gdje je diskrecija važna.</p>
+        <div class="ncorrector__kicker">Sve u jednom</div>
+        <h2 class="ncorrector__h2">Za dugo sjedenje i rad za ekranom.</h2>
+        <p class="ncorrector__p">Idealan protiv posljedica dugog sjedenja i korištenja uređaja. Odličan i za one koji prelaze na stol za rad u stojećem položaju ili žele poboljšati ergonomiju na poslu. Dostupan u veličinama S, M i L, a zategnutost se podešava prema vašem tijelu.</p>
       </div>
-      <div class="ncorrector__media"><?php echo $slika( 'corrector-02.jpg', 'Neprimjetan ispod svakodnevne odjeće.' ); ?></div>
+      <div class="ncorrector__media"><?php echo $slika( 'corrector-02.jpg', 'Za dugo sjedenje i rad za ekranom.' ); ?></div>
     </div>
   </section>
 
   <section class="ncorrector__sekcija">
     <div class="ncorrector__v">
       <div class="ncorrector__tekst">
-        <div class="ncorrector__kicker">Pametna kompresija</div>
-        <h2 class="ncorrector__h2">Čvrsta potpora, sloboda pokreta.</h2>
-        <p class="ncorrector__p">Unutarnja tkanina s osmerokutnim porama daje uravnoteženu kompresiju točno tamo gdje treba. Fleksibilni materijali prate pokrete tijela bez ograničavanja prirodnog kretanja. Potpora koja tijelo podsjeća na pravilan položaj – bez krutih stezanja.</p>
+        <div class="ncorrector__kicker">Nevidljiva potpora</div>
+        <h2 class="ncorrector__h2">Neprimjetan ispod svakodnevne odjeće.</h2>
+        <p class="ncorrector__p">Tanak i lagan dizajn ostaje potpuno neprimjetan ispod obične odjeće. Osmišljen je da nježno vrati ramena u pravilan položaj i pomaže mišićima da se naviknu na ispravno držanje i kad ga ne nosite. Idealan za ured, sastanke i javna mjesta gdje je diskrecija važna.</p>
       </div>
-      <div class="ncorrector__media"><?php echo $slika( 'corrector-03.jpg', 'Čvrsta potpora, sloboda pokreta.' ); ?></div>
+      <div class="ncorrector__media"><?php echo $slika( 'corrector-03.jpg', 'Neprimjetan ispod svakodnevne odjeće.' ); ?></div>
     </div>
   </section>
 
@@ -57,11 +57,11 @@ $slika = function ( $dat, $alt ) {
   <section class="ncorrector__sekcija">
     <div class="ncorrector__v">
       <div class="ncorrector__tekst">
-        <div class="ncorrector__kicker">Sve u jednom</div>
-        <h2 class="ncorrector__h2">Za dugo sjedenje i rad za ekranom.</h2>
-        <p class="ncorrector__p">Idealan protiv posljedica dugog sjedenja i korištenja uređaja. Odličan i za one koji prelaze na stol za rad u stojećem položaju ili žele poboljšati ergonomiju na poslu. Dostupan u veličinama S, M i L, a zategnutost se podešava prema vašem tijelu.</p>
+        <div class="ncorrector__kicker">Pametna kompresija</div>
+        <h2 class="ncorrector__h2">Čvrsta potpora, sloboda pokreta.</h2>
+        <p class="ncorrector__p">Unutarnja tkanina s osmerokutnim porama daje uravnoteženu kompresiju točno tamo gdje treba. Fleksibilni materijali prate pokrete tijela bez ograničavanja prirodnog kretanja. Potpora koja tijelo podsjeća na pravilan položaj – bez krutih stezanja.</p>
       </div>
-      <div class="ncorrector__media"><?php echo $slika( 'corrector-05.jpg', 'Za dugo sjedenje i rad za ekranom.' ); ?></div>
+      <div class="ncorrector__media"><?php echo $slika( 'corrector-05.jpg', 'Čvrsta potpora, sloboda pokreta.' ); ?></div>
     </div>
   </section>
 
