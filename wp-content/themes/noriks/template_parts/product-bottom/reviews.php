@@ -545,6 +545,10 @@
 
            Niste jedini kojima odvodi začepe mašću i kosom.
 
+          <?php elseif ( noriks_is_type( 'calendar' ) ): ?>
+
+           Niste jedini koji traže jednostavan način organizacije obiteljskog života.
+
 
 
 
@@ -1059,6 +1063,10 @@
 
             Tisuće kućanstava već koristi NORIKS Destapacaño – aktivna pjena otpušuje odvod za 15 minuta, sigurno za sve cijevi i bez poziva vodoinstalatera.
 
+           <?php elseif ( noriks_is_type( 'calendar' ) ): ?>
+
+            Tisuće obitelji već koristi NORIKS Calendar – svi termini, zadaci i obiteljski raspored vidljivi na jednom ekranu, bez papira i bez pokušaja da dijete zapamti što je dogovoreno.
+
 
            <?php else: ?>
         
@@ -1167,6 +1175,7 @@
   $is_red_page        = noriks_is_type( 'red', $current_product_id );
   $is_snug_page       = noriks_is_type( 'snug', $current_product_id );
   $is_kompwom_page    = noriks_is_type( 'kompwom', $current_product_id );
+  $is_calendar_page   = noriks_is_type( 'calendar', $current_product_id );
   $is_pal_page        = noriks_is_type( 'pal', $current_product_id );
   $is_slim_page       = noriks_is_type( 'slim', $current_product_id );
   $is_relief_page      = noriks_is_type( 'relief', $current_product_id );
@@ -1649,6 +1658,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
   } elseif ( $is_destapacan_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_destapacan.php';
+  } elseif ( $is_calendar_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_calendar.php';
   } else {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
@@ -2036,13 +2047,13 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
   $daily_seed = $today_obj->format('Y-m-d');
 
   // Avatar pools based on page category
-  // Leak boxers + kompresijske majice + fieldops + insoles + giovasa: text-only (no photos). Others: existing pools.
-  $avatar_type = ( $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
+  // Leak boxers + kompresijske majice + fieldops + insoles + giovasa + destapacan: text-only (no photos). Others: existing pools.
+  $avatar_type = ( $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_insoles_page || $is_giovasa_page || $is_destapacan_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_insoles_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_fieldops_page || $is_destapacan_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_giovasa_page || $is_insoles_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -3138,6 +3149,42 @@ $hyd_faq = array(
   array(
     'questioon' => 'Što ako nisam zadovoljan?',
     'answer'    => 'Imate 30 dana za povrat novca. Uz to, na uređaj dobivate 1 godinu jamstva.',
+  ),
+);
+
+// NORIKS Calendar (orto-calendar) — product FAQ za "Informacije o Proizvodu".
+$calendar_faq = array(
+  array(
+    'questioon' => 'Što je sve uključeno u paket?',
+    'answer'    => 'NORIKS Calendar dolazi s 15.6″ zaslonom osjetljivim na dodir, nosačem za montažu, WiFi povezivanjem, aplikacijom za mobitele i unaprijed instaliranim funkcijama za obitelj. Nema skrivenih troškova ni pretplata.',
+  ),
+  array(
+    'questioon' => 'Je li potrebna pretplata?',
+    'answer'    => 'Ne. Sve funkcije su besplatne i trajno uključene nakon kupnje. Ne plaćate mjesečno za aplikaciju ili sinkronizaciju.',
+  ),
+  array(
+    'questioon' => 'Mogu li dodavati termine sa mobitela?',
+    'answer'    => 'Da. Sinkronizacija radi putem aplikacije, odmah se prikazuje i na ekranu i na mobitelu. Svi članovi obitelji mogu dodavati, uređivati i brisati termine.',
+  ),
+  array(
+    'questioon' => 'Kako se montira?',
+    'answer'    => 'Kalendar dolazi s nosačem za zidnu montažu. Potrebna su dva vijka; cijeli proces traje oko 10 minuta. Može se montirati i na hladnjak magnetskom trakom.',
+  ),
+  array(
+    'questioon' => 'Koliko članova obitelji može koristiti kalendar?',
+    'answer'    => 'Nema ograničenja. Svaki član obitelji dobiva svoju boju, zaslon prikazuje sve termine na jednom mjestu.',
+  ),
+  array(
+    'questioon' => 'Treba li biti uključen cijelo vrijeme?',
+    'answer'    => 'Da. Kalendar je namijenjen da bude stalno uključen, s niskom potrošnjom energije. Tako je uvijek vidljiv i ažuran.',
+  ),
+  array(
+    'questioon' => 'Mogu li dodati fotografije ili bilješke?',
+    'answer'    => 'Da. Uz termine možete dodavati fotografije, povezivati zadatke i pisati bilješke koje vidi cijela obitelj.',
+  ),
+  array(
+    'questioon' => 'Što ako nisam zadovoljan?',
+    'answer'    => 'Imate 30 dana za povrat novca bez ikakvih pitanja. Ako kalendar ne odgovara vašoj obitelji, vraćamo pun iznos.',
   ),
 );
 
