@@ -63,6 +63,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-buildshirt' );
             return;
         }
+        // NORIKS Corrector: velicine S–M–L (original ne navodi mjere, samo tezinu).
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'corrector' ) ) {
+            get_template_part( 'template_parts/size-chart-corrector' );
+            return;
+        }
         // NORIKS Hands: tablica po opsegu dlana (S–L).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'hands' ) ) {
             get_template_part( 'template_parts/size-chart-hands' );

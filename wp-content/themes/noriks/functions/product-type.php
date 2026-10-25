@@ -1422,3 +1422,14 @@ if ( ! function_exists( 'noriks_travel_sizes' ) ) {
         );
     }
 }
+
+if ( ! function_exists( 'noriks_corrector_sizes' ) ) {
+    /** NORIKS Corrector — korektor drzanja: velicina, tezina (podaci s originala). */
+    function noriks_corrector_sizes() {
+        return array(
+            array( 'S', '151 g' ),
+            array( 'M', '157,5 g' ),
+            array( 'L', '162,5 g' ),
+        );
+    }
+}
