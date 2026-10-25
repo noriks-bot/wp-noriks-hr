@@ -212,6 +212,13 @@ $is_carape = noriks_is_type( 'carape', $current_product_id );
 
 $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 
+// Novi izdelki brez lastne veje: Detalji o proizvodu = opis izdelka iz WooCommerce,
+// savjeti za pranje za majice se ne prikazejo (prej je bilo tu besedilo za majice 70 % pamuk).
+$noriks_opis_iz_wc = false;
+foreach ( array( 'classics', 'fieldops', 'ondersteun', 'insoles', 'giovasa', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'pikseland', 'devotions', 'munna', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
+    if ( noriks_is_type( $noriks_t, $current_product_id ) ) { $noriks_opis_iz_wc = true; break; }
+}
+
 ?>
 
 
@@ -507,7 +514,11 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
       </div>
       <div class="accordion-content">
 
-         <?php if( noriks_is_type( 'destapacan', $current_product_id ) ): ?>
+         <?php if( $noriks_opis_iz_wc ): ?>
+
+                <?php $noriks_p = wc_get_product( $current_product_id ); echo $noriks_p ? wp_kses_post( wpautop( $noriks_p->get_description() ) ) : ''; ?>
+
+         <?php elseif( noriks_is_type( 'destapacan', $current_product_id ) ): ?>
 
                 NORIKS Destapacaño je prah za čišćenje odvoda koji reagira s toplom vodom i stvara aktivnu pjenu. Ta pjena prodire duboko kroz cijevi, otapa nakupine masti, kose, sapunskih ostataka i organskih tvari, te čisti začepljenja za 10 do 15 minuta — bez raščlanjivanja sifona i bez posebnih alata.<br><br>Formula je sigurna za sve vrste kućnih instalacija — PVC, metal i druge materijale — i ne oštećuje cijevi. Istovremeno uklanja neugodne mirise iznutra cijevi i sprječava razvoj bakterija.<br><br>Preporučuje se redovito korištenje jednom tjedno kao preventiva — tako održavate odvode slobodne, bez nakupina i neugodnih mirisa, i izbjegavate skupe popravke i pozive vodoinstalatera.<br><br>Jedan paket traje dugo uz preventivno korištenje. NORIKS nudi 30 dana za povrat novca, besplatnu dostavu iznad 70 € i mogućnost plaćanja pouzećem. Već 120.000 kupaca diljem Europe koristi NORIKS proizvode.
 
@@ -2981,7 +2992,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
     <?php endif; // /hide size accordion on bunion ?>
 
     <!-- 3 - savjeti za pranje--> <!-- skriveno na ortopas pojasu + bunion + fisiorest + ortopedski jastuk + kidsnest + kneefix -->
-    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) && ! noriks_is_type( 'gelseat', $current_product_id ) && ! noriks_is_type( 'kneetape', $current_product_id ) && ! noriks_is_type( 'phonestrap', $current_product_id ) && ! noriks_is_type( 'winecooler', $current_product_id ) && ! noriks_is_type( 'bracelet', $current_product_id ) ) : ?>
+    <?php if ( ! noriks_is_type( 'cloath', $current_product_id ) && ! noriks_is_type( 'hyd', $current_product_id ) && ! noriks_is_type( 'ortopas', $current_product_id ) && ! noriks_is_type( 'bunion', $current_product_id ) && ! noriks_is_type( 'fisiorest', $current_product_id ) && ! noriks_is_type( 'norikshers', $current_product_id ) && ! noriks_is_type( 'ortopedski-jastuk', $current_product_id ) && ! noriks_is_type( 'kidsnest', $current_product_id ) && ! noriks_is_type( 'kneefix', $current_product_id ) && ! noriks_is_type( 'controlpro', $current_product_id ) && ! noriks_is_type( 'noriks-cards', $current_product_id ) && ! noriks_is_type( 'norikshersbrush', $current_product_id ) && ! noriks_is_type( 'hairmagic', $current_product_id ) && ! noriks_is_type( 'dental', $current_product_id ) && ! noriks_is_type( 'lift', $current_product_id ) && ! noriks_is_type( 'kneeheat', $current_product_id ) && ! noriks_is_type( 'pre', $current_product_id ) && ! noriks_is_type( 'hug', $current_product_id ) && ! noriks_is_type( 'seal', $current_product_id ) && ! noriks_is_type( 'home', $current_product_id ) && ! noriks_is_type( 'red', $current_product_id ) && ! noriks_is_type( 'snug', $current_product_id ) && ! noriks_is_type( 'pal', $current_product_id ) && ! noriks_is_type( 'bowl', $current_product_id ) && ! noriks_is_type( 'gelseat', $current_product_id ) && ! noriks_is_type( 'kneetape', $current_product_id ) && ! noriks_is_type( 'phonestrap', $current_product_id ) && ! noriks_is_type( 'winecooler', $current_product_id ) && ! noriks_is_type( 'bracelet', $current_product_id ) && ! $noriks_opis_iz_wc ) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>

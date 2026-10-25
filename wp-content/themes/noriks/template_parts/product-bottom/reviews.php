@@ -604,10 +604,6 @@
 
            Niste jedini koji traže dublji razgovor o vjeri.
 
-          <?php elseif ( noriks_is_type( 'devotions' ) ): ?>
-
-           Tisuće roditelja već koristi NORIKS Jedna minuta s Bogom za svakodnevnu molitvu s djecom — jednostavno, smisleno i bez prisiljavanja.
-
 
           <?php elseif ( noriks_is_type( 'travel' ) ): ?>
 
@@ -1182,6 +1178,10 @@
 
             Tisuće grupa i obitelji već koristi NORIKS Faith – 150 kartica za duboke razgovore o vjeri, tri razine dubine i Wildcards za molitvu, zahvalnost i ohrabrenje.
 
+
+           <?php elseif ( noriks_is_type( 'devotions' ) ): ?>
+
+            Tisuće roditelja već koristi NORIKS Jedna minuta s Bogom za svakodnevnu molitvu s djecom — jednostavno, smisleno i bez prisiljavanja.
 
            <?php elseif ( noriks_is_type( 'travel' ) ): ?>
 
