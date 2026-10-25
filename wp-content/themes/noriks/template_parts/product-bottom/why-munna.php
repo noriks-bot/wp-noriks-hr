@@ -15,7 +15,7 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Nikad nisi bila ti</div>
         <h2 class="nmunna__h2">Nije stvar u disciplini.</h2>
-        <p class="nmunna__p">Ako se osjećaš bez obline, bez energije ili se jednostavno ne prepoznaješ u ogledalu, gotovo nikad nije riječ o nedostatku discipline. Mnoge žene jedu dobro, brinu o sebi, a tijelo ipak ne izgleda kao prije. NORIKS Ritual je svakodnevni ritual u kapima s biljnom formulom, usmjeren na bokove, bedra i stražnjicu.</p>
+        <p class="nmunna__p">Mnoge žene jedu dobro i brinu o sebi, a ipak traže jednostavnu dnevnu rutinu koju će zaista držati. Gotovo nikad nije riječ o nedostatku discipline, nego o rutini koja je previše komplicirana. NORIKS Ritual je svakodnevni ritual u kapima s biljnom formulom.</p>
       </div>
       <div class="nmunna__media"><?php echo $slika( 'ritual-01.jpg', 'Nije stvar u disciplini.' ); ?></div>
     </div>
@@ -26,7 +26,7 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Zašto kapi</div>
         <h2 class="nmunna__h2">Tekuće kapi, svako jutro.</h2>
-        <p class="nmunna__p">NORIKS Ritual dolazi u tekućem obliku, kao kapi. Za razliku od kapsula, kapi se uzimaju jednostavno i brzo, kao dio jutarnje rutine. Daj ritualu puna tri mjeseca – žene koje ostanu dosljedne one su koje ostanu uz svoju rutinu i vide kako se njihova silueta postupno mijenja.</p>
+        <p class="nmunna__p">NORIKS Ritual dolazi u tekućem obliku, kao kapi. Za razliku od kapsula, kapi se uzimaju jednostavno i brzo, kao dio jutarnje rutine. Daj ritualu puna tri mjeseca – ključ je dosljednost.</p>
       </div>
       <div class="nmunna__media"><?php echo $slika( 'ritual-02.jpg', 'Tekuće kapi, svako jutro.' ); ?></div>
     </div>
@@ -37,7 +37,7 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Tvoj put korak po korak</div>
         <h2 class="nmunna__h2">Ključ je dosljednost.</h2>
-        <p class="nmunna__p">Prvi tjedan: rutina počinje i tijelo se navikava na svakodnevne kapi. Prvi mjesec: mnoge primjećuju da im omiljene traperice drugačije stoje na bokovima. Tri mjeseca: puni ritual od tri mjeseca. Šest mjeseci: uz svakodnevnu upotrebu rutina postaje dio života. Rezultati su postupni i razlikuju se od osobe do osobe.</p>
+        <p class="nmunna__p">Prvi tjedan: rutina počinje i tijelo se navikava na svakodnevne kapi. Prvi mjesec: kapi postaju navika, kao jutarnja kava. Tri mjeseca: puni ritual od tri mjeseca. Šest mjeseci: uz svakodnevnu upotrebu rutina postaje dio života. Iskustva se razlikuju od osobe do osobe.</p>
       </div>
       <div class="nmunna__media"><?php echo $slika( 'ritual-03.jpg', 'Ključ je dosljednost.' ); ?></div>
     </div>
@@ -70,7 +70,7 @@ $slika = function ( $dat, $alt ) {
       <div class="nmunna__tekst">
         <div class="nmunna__kicker">Usporedba</div>
         <h2 class="nmunna__h2">NORIKS Ritual u odnosu na kreme, gelove i tablete.</h2>
-        <p class="nmunna__p">Usmjerena na bokove i stražnjicu – da. Koncentrirane kapi koje se jednostavno uzimaju – da. Čista biljna formula – da. Postupni rezultati uz dosljednu rutinu – da. Napravljeno za žene – da. Kod uobičajenih krema, gelova i tableta to najčešće nije tako.</p>
+        <p class="nmunna__p">Koncentrirane kapi koje se jednostavno uzimaju – da. Čista biljna formula – da. Jednostavna svakodnevna rutina – da. Napravljeno za žene – da. Kod uobičajenih krema, gelova i tableta to najčešće nije tako.</p>
       </div>
       <div class="nmunna__media"><?php echo $slika( 'ritual-06.jpg', 'NORIKS Ritual u odnosu na kreme, gelove i tablete.' ); ?></div>
     </div>
