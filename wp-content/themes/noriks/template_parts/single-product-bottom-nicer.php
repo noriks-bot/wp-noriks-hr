@@ -68,6 +68,9 @@ if ( noriks_is_type( 'midnight' ) ) {
 if ( noriks_is_type( 'gordura' ) ) {
     include $noriks_pb_dir . 'why-gordura.php';
 }
+if ( noriks_is_type( 'womens' ) ) {
+    include $noriks_pb_dir . 'why-womens.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
