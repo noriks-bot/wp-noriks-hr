@@ -1186,7 +1186,7 @@
   $is_utilitypants_page = noriks_is_type( 'utilitypants', $current_product_id );
   $is_hoodie_page = noriks_is_type( 'hoodie', $current_product_id );
   $is_fieldops_page = noriks_is_type( 'fieldops', $current_product_id );
-  $is_destapacan_page = noriks_is_type( 'destapacano', $current_product_id );
+  $is_destapacan_page = noriks_is_type( 'destapacan', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
   $is_dishsheets_page = noriks_is_type( 'dishsheets', $current_product_id );
   $is_litterbox_page = noriks_is_type( 'litterbox', $current_product_id );
@@ -1626,7 +1626,7 @@
   } elseif ( $is_fieldops_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_fieldops.php';
   } elseif ( $is_destapacan_page ) {
-    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_destapacano.php';
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_destapacan.php';
   } else {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/'.$reviews_language.'.php';
   }
