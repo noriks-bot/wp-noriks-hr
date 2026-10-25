@@ -83,6 +83,9 @@ if ( noriks_is_type( 'devotions' ) ) {
 if ( noriks_is_type( 'classics' ) ) {
     include $noriks_pb_dir . 'why-classics.php';
 }
+if ( noriks_is_type( 'munna' ) ) {
+    include $noriks_pb_dir . 'why-munna.php';
+}
 if ( noriks_is_type( 'fieldops' ) ) {
     include $noriks_pb_dir . 'why-fieldops.php';
 }
