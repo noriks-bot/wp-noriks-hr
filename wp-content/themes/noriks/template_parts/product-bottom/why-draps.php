@@ -1,95 +1,67 @@
 <?php
 /**
- * NORIKS DuoSleep 2 u 1 Pokrivač Koji Zamjenjuje Plahte — why sekcije 1:1 z originalom
- * (3 vsebinske sekcije v istem vrstnem redu + NORIKS pogoji namesto tujega jamstva).
+ * NORIKS DuoSleep — why sekcije po natancni strukturi originala (lunex-officiel.com/products/couverture-easysleep). Generirano s struk.py.
+ *
+ * STRUKTURA ORIGINALA:
+   1. image_with_text — video levo, besedilo desno (pospravite posteljo v 10 sekundah)
+   2. image_with_text — slika desno, besedilo levo (pere se kot plahta)
+   3. image_with_text — video levo, besedilo desno (vedno prava temperatura)
+   4. multicolumn — naslov + 3 fotografije v vrsti (60 noci brez tveganja -> pri nas 30 dana)
+   5. testimonials — 8 kartic mnenj s fotografijo (karusel)
+   6. FAQ — harmonika (pri nas v reviews.php)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wdir = get_template_directory_uri() . '/img/draps/';
 ?>
-<div class="wdraps">
-
-  <section class="wdraps__s wdraps__s--bg">
-    <div class="wdraps__v">
-      <div class="wdraps__media"><video src="<?php echo esc_url( $wdir . 'noriks-duosleep-sekcija-1.mp4' ); ?>" poster="<?php echo esc_url( $wdir . 'noriks-duosleep-sekcija-1-poster.webp' ); ?>" autoplay muted loop playsinline preload="metadata" aria-label="Krevet pospremljen u 10 sekundi s NORIKS DuoSleep pokrivačem"></video></div>
-      <div class="wdraps__tekst">
-        <div class="wdraps__kicker">BEZ NAVLAKA</div>
-        <h2 class="wdraps__h2">Gotovo zauvijek. <em>Pospremite krevet u 10 sekundi.</em></h2>
-        <p class="wdraps__p">Nema više plahta. Nema više navlaka. Nema više muke.</p>
-        <p class="wdraps__p">Znamo koliko je frustrirajuće boriti se s navlakom za pokrivač. NORIKS DuoSleep spaja pokrivač i navlaku u jedan proizvod – sve u jednom.</p>
-        <p class="wdraps__p">Ne treba vam nikakav drugi dodatak. Krevet je čist i pospremljen u tren oka.</p>
-        <p class="wdraps__zak">Jedan pokrivač umjesto pokrivača i navlake.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wdraps__s">
-    <div class="wdraps__v wdraps__v--rev">
-      <div class="wdraps__media"><img src="<?php echo esc_url( $wdir . 'noriks-duosleep-sekcija-2.webp' ); ?>" alt="Žena spava pod NORIKS DuoSleep pokrivačem" loading="lazy" decoding="async"></div>
-      <div class="wdraps__tekst">
-        <div class="wdraps__kicker">PRANJE</div>
-        <h2 class="wdraps__h2">Pere se jednako lako <em>kao obična plahta.</em></h2>
-        <p class="wdraps__p">Pokrivač stane u svaku standardnu perilicu rublja.</p>
-        <p class="wdraps__p">Kod klasičnog pokrivača pere se samo navlaka – sam pokrivač skuplja bakterije, a nikad se ne opere. S NORIKS DuoSleep pokrivačem sve ide u perilicu: jedno pranje i sve je čisto.</p>
-        <p class="wdraps__p">Na zraku se osuši za oko 2 sata – u sušilici još brže.</p>
-        <p class="wdraps__zak">Sve u perilicu, suho za 2 sata.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wdraps__s wdraps__s--bg">
-    <div class="wdraps__v">
-      <div class="wdraps__media"><video src="<?php echo esc_url( $wdir . 'noriks-duosleep-sekcija-3.mp4' ); ?>" poster="<?php echo esc_url( $wdir . 'noriks-duosleep-sekcija-3-poster.webp' ); ?>" autoplay muted loop playsinline preload="metadata" aria-label="Lagani NORIKS DuoSleep pokrivač"></video></div>
-      <div class="wdraps__tekst">
-        <div class="wdraps__kicker">TEMPERATURA</div>
-        <h2 class="wdraps__h2">Uvijek <em>prava temperatura.</em></h2>
-        <p class="wdraps__p">Termoregulacijska vlakna punjenja prilagođavaju se toplini vašeg tijela.</p>
-        <p class="wdraps__p">Ljeti svježe i lagano. Zimi mekano i ugodno toplo.</p>
-        <p class="wdraps__p">Bez znojenja i bez drhtanja – pokrivač je prozračan i toplina se ispod njega ne nakuplja.</p>
-        <p class="wdraps__zak">Prozračan ljeti, topao zimi.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wdraps__s">
-    <div class="wdraps__v wdraps__v--rev">
-      <div class="wdraps__media"><img src="<?php echo esc_url( $wdir . 'noriks-duosleep-sekcija-4.webp' ); ?>" alt="Kupac drži NORIKS DuoSleep pokrivač" loading="lazy" decoding="async"></div>
-      <div class="wdraps__tekst">
-        <div class="wdraps__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wdraps__h2">Isprobajte ga <em>bez rizika</em></h2>
-        <p class="wdraps__p">NORIKS DuoSleep isprobajte kod kuće, u vlastitom krevetu. Ako vam ne odgovara, imate 30 dana za povrat novca – bez kompliciranja.</p>
-        <p class="wdraps__p">Dostava je besplatna iznad 70 €, a platiti možete pouzećem, kad paket stigne na vaša vrata. NORIKS-u vjeruje više od 120.000 kupaca, s prosječnom ocjenom 4,8.</p>
-        <div class="wdraps__pogoji">
-          <div class="wdraps__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-          <div class="wdraps__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-          <div class="wdraps__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-          <div class="wdraps__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="wsdraps">
+<section class="wsdraps__s wsdraps__s--bg"><div class="wsdraps__v wsdraps__dva"><div class="wsdraps__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-sekcija-1.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsdraps__kicker">Bez plahti</div><h2 class="wsdraps__h2">Gotovo zauvijek. <em>Pospremite krevet u 10 sekundi.</em></h2><p class="wsdraps__p">Nema više plahta. Nema više navlaka. Nema više muke. Znamo koliko je frustrirajuće boriti se s navlakom za pokrivač.</p><p class="wsdraps__p">NORIKS DuoSleep spaja pokrivač i navlaku u jedan proizvod – sve u jednom. Ne treba vam nikakav drugi dodatak. Krevet je čist i pospremljen u tren oka.</p></div></div></section>
+<section class="wsdraps__s"><div class="wsdraps__v wsdraps__dva wsdraps__dva--rev"><div class="wsdraps__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-sekcija-2.webp' ); ?>" alt="Pere se jednako lako kao obična plahta." loading="lazy" decoding="async"></div><div><div class="wsdraps__kicker">Pranje</div><h2 class="wsdraps__h2">Pere se jednako lako <em>kao obična plahta.</em></h2><p class="wsdraps__p">Pokrivač stane u svaku standardnu perilicu rublja. Kod klasičnog pokrivača pere se samo navlaka – sam pokrivač nikad se ne opere. S NORIKS DuoSleep pokrivačem sve ide u perilicu: jedno pranje i sve je čisto.</p><p class="wsdraps__p">Na zraku se osuši za oko 2 sata.</p></div></div></section>
+<section class="wsdraps__s wsdraps__s--bg"><div class="wsdraps__v wsdraps__dva"><div class="wsdraps__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-sekcija-3.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsdraps__kicker">Temperatura</div><h2 class="wsdraps__h2">Uvijek <em>prava temperatura.</em></h2><p class="wsdraps__p">Termoregulacijska vlakna punjenja prilagođavaju se toplini vašeg tijela. Ljeti svježe i lagano. Zimi mekano i ugodno toplo.</p><p class="wsdraps__p">Bez znojenja i bez drhtanja – pokrivač je prozračan i toplina se ispod njega ne nakuplja.</p></div></div></section>
+<section class="wsdraps__s"><div class="wsdraps__v"><h2 class="wsdraps__h2 wsdraps__c">Isprobajte ga <em>bez rizika</em> – 30 dana</h2><div class="wsdraps__grid wsdraps__g3"><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-bez-rizika-1.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsdraps__kt"></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-bez-rizika-2.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsdraps__kt"></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-bez-rizika-3.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsdraps__kt"></div></div></div></div></section>
+<section class="wsdraps__s wsdraps__s--bg"><div class="wsdraps__v"><h2 class="wsdraps__h2 wsdraps__c">Nedavna <em>mišljenja kupaca</em></h2><div class="wsdraps__grid wsdraps__g4 wsdraps__kar"><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-1.webp' ); ?>" alt="Ugodan osjećaj, dobro sam spavala, odličan omjer cijene i kvalitete." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Ugodan osjećaj, dobro sam spavala, odličan omjer cijene i kvalitete.</p><span class="wsdraps__ime">Kamila M.</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-2.webp' ); ?>" alt="Jako lijep pokrivač. Nakon pranja bio je stvarno suh za otprilike 2 sata." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Jako lijep pokrivač. Nakon pranja bio je stvarno suh za otprilike 2 sata.</p><span class="wsdraps__ime">Ines H.</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-3.webp' ); ?>" alt="Pokrivač je jako lagan i ugodan." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Pokrivač je jako lagan i ugodan.</p><span class="wsdraps__ime">Biserka</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-4.webp' ); ?>" alt="Iskreno oduševljena, nisam mislila da pokrivač može biti tako lagan i tako topao u isto vrijeme." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Iskreno oduševljena, nisam mislila da pokrivač može biti tako lagan i tako topao u isto vrijeme.</p><span class="wsdraps__ime">Sofija M.</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-5.webp' ); ?>" alt="Spavam puno bolje otkad ga imam. Mekan je, lagan i jako brzo se osuši nakon pranja." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Spavam puno bolje otkad ga imam. Mekan je, lagan i jako brzo se osuši nakon pranja.</p><span class="wsdraps__ime">Aurelija D.</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-6.webp' ); ?>" alt="Prava ljubav. Grije, a nije težak – upravo ono što sam tražila." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Prava ljubav. Grije, a nije težak – upravo ono što sam tražila.</p><span class="wsdraps__ime">Marina R.</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-7.webp' ); ?>" alt="Kvaliteta stvarno na razini za ovu cijenu. Preporučujem bez razmišljanja." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Kvaliteta stvarno na razini za ovu cijenu. Preporučujem bez razmišljanja.</p><span class="wsdraps__ime">Cvijeta B.</span></div></div><div class="wsdraps__k"><div class="wsdraps__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/draps/noriks-duosleep-kupac-8.webp' ); ?>" alt="Prala sam ga nekoliko puta i drži oblik. Stvarno čvrst i ugodan na dodir." loading="lazy" decoding="async"></div><div class="wsdraps__kt"><span class="wsdraps__zv">★★★★★</span><p>Prala sam ga nekoliko puta i drži oblik. Stvarno čvrst i ugodan na dodir.</p><span class="wsdraps__ime">Laura T.</span></div></div></div></div></section>
+<section class="wsdraps__s wsdraps__s--bg"><div class="wsdraps__v"><div class="wsdraps__kicker wsdraps__c">KUPUJTE BEZ BRIGE</div><h2 class="wsdraps__h2 wsdraps__c">Uz NORIKS kupujete <em>bez rizika</em></h2><p class="wsdraps__p wsdraps__c">NORIKS DuoSleep isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p><div class="wsdraps__red4 wsdraps__pog"><div><strong>30 dana</strong><span>za povrat novca</span></div><div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div><div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div></div></div></section>
 </div>
 <style>
-.wdraps{color:#1c1c1c;font-family:inherit}
-.wdraps__s{padding:56px 0;background:#fff}
-.wdraps__s--bg{background:#f4f3ef}
-.wdraps__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.wdraps__v--rev .wdraps__media{order:2}
-.wdraps__v--rev .wdraps__tekst{order:1}
-.wdraps__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
-.wdraps__media img,.wdraps__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wdraps__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
-.wdraps__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
-.wdraps__h2 em{font-style:italic}
-.wdraps__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
-.wdraps__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wdraps__pogoji{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
-.wdraps__pog{background:#f4f3ef;border-radius:14px;padding:18px 14px;text-align:center}
-.wdraps__pog strong{display:block;font-size:16px;font-weight:800;margin:0 0 4px}
-.wdraps__pog span{font-size:14px;color:#444}
-@media (max-width:860px){
-  .wdraps__s{padding:38px 0}
-  .wdraps__v{grid-template-columns:1fr;gap:22px}
-  .wdraps__v--rev .wdraps__media,.wdraps__media{order:0}
-  .wdraps__v--rev .wdraps__tekst,.wdraps__tekst{order:1}
-}
+.wsdraps{color:#1c1c1c;font-family:inherit}
+.wsdraps__s{padding:56px 0;background:#fff}.wsdraps__s--bg{background:#f4f3ef}
+.wsdraps__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsdraps__c{text-align:center}
+.wsdraps__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wsdraps__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsdraps__h2 em{font-style:italic}
+.wsdraps__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wsdraps__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
+.wsdraps__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wsdraps__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wsdraps__red4 strong{display:block;font-size:18px;font-weight:800}.wsdraps__red4 span{font-size:13.5px;opacity:.85}
+.wsdraps__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wsdraps__dva--rev>div:first-child{order:2}
+.wsdraps__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wsdraps__media img,.wsdraps__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsdraps__polna{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);margin-top:10px}.wsdraps__polna img,.wsdraps__polna video{width:100%;height:auto;display:block}
+.wsdraps__grid{display:grid;gap:22px;margin-top:22px}.wsdraps__g2{grid-template-columns:repeat(2,1fr)}.wsdraps__g3{grid-template-columns:repeat(3,1fr)}.wsdraps__g4{grid-template-columns:repeat(4,1fr)}.wsdraps__g5{grid-template-columns:repeat(5,1fr)}
+.wsdraps__k{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wsdraps__k--temna{background:#1d2b4f;border:0}.wsdraps__k--temna p,.wsdraps__k--temna strong{color:#fff}
+.wsdraps__km img,.wsdraps__km video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.wsdraps__km--v video{aspect-ratio:9/16}
+.wsdraps__kt{padding:16px 18px 20px}.wsdraps__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wsdraps__kt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wsdraps__ime{display:block;margin-top:8px;font-weight:700;font-size:14px}.wsdraps__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wsdraps__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}.wsdraps__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #eee}.wsdraps__red3 strong{display:block;font-size:15px}.wsdraps__red3 span{font-size:13px;color:#555}
+.wsdraps__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wsdraps__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wsdraps__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wsdraps__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wsdraps__kv{list-style:none;margin:0 0 6px;padding:0}.wsdraps__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wsdraps__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wsdraps__tw{overflow-x:auto}.wsdraps__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+.wsdraps__tab th,.wsdraps__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsdraps__tab th{background:#1d2b4f;color:#fff;font-weight:700}.wsdraps__tab td:first-child,.wsdraps__tab th:first-child{text-align:left}
+.wsdraps__da{color:#1f8a4c;font-weight:800}.wsdraps__ne{color:#c0392b;font-weight:800}
+.wsdraps__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wsdraps__pog{margin-top:22px}.wsdraps__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsdraps__pog span{color:#444;opacity:1}
+.wsdraps__karw{position:relative}.wsdraps__kar{grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.wsdraps__kar::-webkit-scrollbar{display:none}.wsdraps__kar>*{scroll-snap-align:start}
+.wsdraps__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}.wsdraps__pus--l{left:-14px}.wsdraps__pus--d{right:-14px}
+@media (max-width:860px){.wsdraps__kar{grid-auto-columns:82%}.wsdraps__pus--l{left:4px}.wsdraps__pus--d{right:4px}}
+@media (max-width:860px){.wsdraps__s{padding:38px 0}.wsdraps__dva{grid-template-columns:1fr;gap:22px}.wsdraps__dva--rev>div:first-child{order:0}
+.wsdraps__g3,.wsdraps__g4,.wsdraps__g5{grid-template-columns:1fr 1fr}.wsdraps__red4{grid-template-columns:1fr 1fr}.wsdraps__plavo{margin-top:-38px}}
+@media (max-width:560px){.wsdraps__g2,.wsdraps__g3,.wsdraps__g4{grid-template-columns:1fr}}
 </style>
+<script>
+(function(){document.querySelectorAll('.wsdraps__kar').forEach(function(k){
+  var w=document.createElement('div');w.className='wsdraps__karw';k.parentNode.insertBefore(w,k);w.appendChild(k);
+  ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wsdraps__pus wsdraps__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
+    b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
+});})();
+</script>

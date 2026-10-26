@@ -893,7 +893,7 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array();
     }
 
-    $gck_no_attrs    = has_term( array( 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-draps', 'orto-womens', 'orto-midnight', 'orto-acryliques', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-acryliques', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
     $gck_single_size = has_term( array( 'orto-calm', 'orto-classics', 'orto-corrector', 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
@@ -2097,6 +2097,29 @@ function gck_render_bundle_selector() {
       /* NORIKS ShapeBody: Boja (3 barve originala) kot krogci + Velicina (P–2XG kot na originalu). */
       .swatch-circle.color-bez, #bundle-selector .swatch-circle.color-bez { background: #d9bfa3 !important; }
       .swatch-circle.color-smeda, #bundle-selector .swatch-circle.color-smeda { background: #6b4a35 !important; }
+      .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #1c1c1e !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-draps' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS DuoSleep: Boja (9 barv kot original) kot krogci + Velicina. */
+      .swatch-circle.color-plava, #bundle-selector .swatch-circle.color-plava { background: #5b8fb9 !important; }
+      .swatch-circle.color-bez, #bundle-selector .swatch-circle.color-bez { background: #d9c7ab !important; }
+      .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #1f1f22 !important; }
+      .swatch-circle.color-bijela, #bundle-selector .swatch-circle.color-bijela { background: #f6f6f4 !important; }
+      .swatch-circle.color-siva, #bundle-selector .swatch-circle.color-siva { background: #8a8d91 !important; }
+      .swatch-circle.color-mentol, #bundle-selector .swatch-circle.color-mentol { background: #a9c8a6 !important; }
+      .swatch-circle.color-narancasta, #bundle-selector .swatch-circle.color-narancasta { background: #d98a4b !important; }
+      .swatch-circle.color-crvena, #bundle-selector .swatch-circle.color-crvena { background: #a8443d !important; }
+      .swatch-circle.color-ljubicasta, #bundle-selector .swatch-circle.color-ljubicasta { background: #7a5aa3 !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-webshot' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS WebShot: Boja (plava = Original, crna = Blackout). */
+      .swatch-circle.color-plava, #bundle-selector .swatch-circle.color-plava { background: #2aa7e0 !important; }
       .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #1c1c1e !important; }
     </style>
     <?php endif; ?>

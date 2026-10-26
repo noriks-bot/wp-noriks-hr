@@ -606,6 +606,19 @@ if ( ! function_exists( 'noriks_gordura_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_draps_sizes' ) ) {
+    /** NORIKS DuoSleep: velicina, za koji krevet, perilica (original lunex-officiel.com, Guide des tailles). */
+    function noriks_draps_sizes() {
+        return array(
+            array( '90 × 200 cm',  'pomoćni krevet i kauč na razvlačenje · 1 osoba', '–' ),
+            array( '140 × 200 cm', 'krevet za jednu osobu (90–120 cm) · 1 osoba', 'najmanje 4 kg' ),
+            array( '160 × 210 cm', 'krevet za jednu osobu XL (produženi) · 1 osoba', 'najmanje 5 kg' ),
+            array( '200 × 200 cm', 'bračni krevet (140–160 cm) · 2 osobe', 'najmanje 6 kg' ),
+            array( '230 × 230 cm', 'veliki bračni krevet (180–200 cm) · 2 osobe', 'najmanje 7 kg' ),
+        );
+    }
+}
+
 if ( ! function_exists( 'noriks_zipcomp_sizes' ) ) {
     /** NORIKS ZipComp: velicina, broj cipele, opseg lista, visina (original covexia.es, Guia de tallas S/M–XXL). */
     function noriks_zipcomp_sizes() {
@@ -1597,6 +1610,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Body dolazi u <strong>šest veličina</strong> s oznakama kao na originalu (P – 2XG). U drugom stupcu je odgovarajuća međunarodna oznaka.',
                 'glava' => array( 'Veličina', 'Međunarodna oznaka' ), 'vrstice' => noriks_gordura_sizes(),
                 'opomba' => 'Odaberite veličinu koju inače nosite.' );
+        }
+        if ( noriks_is_type( 'draps', $product_id ) ) {
+            return array( 'uvod' => 'Odaberite veličinu prema <strong>širini kreveta</strong>.',
+                'glava' => array( 'Veličina', 'Prikladno za', 'Perilica' ), 'vrstice' => noriks_draps_sizes(),
+                'opomba' => 'Pokrivač se mora slobodno okretati u bubnju perilice.' );
         }
         if ( noriks_is_type( 'zipcomp', $product_id ) ) {
             return array( 'uvod' => 'Izmjerite <strong>opseg lista na najširem dijelu</strong> – to određuje veličinu, a ne broj cipele.',
