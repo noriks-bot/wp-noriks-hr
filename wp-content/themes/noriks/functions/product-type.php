@@ -64,6 +64,7 @@ function noriks_product_type_map() : array {
         'muslin' => array( 'orto-muslin' ),
         'silkcase' => array( 'orto-silkcase' ),
         'sunover' => array( 'orto-sunover' ),
+        'struja' => array( 'orto-struja' ),
         'calm' => array( 'orto-calm' ),
         'shapetank' => array( 'orto-shapetank' ),
         'tacpro'                => array( 'orto-tacpro' ),
