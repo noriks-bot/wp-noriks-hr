@@ -288,6 +288,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-travel' );
             return;
         }
+        // NORIKS Classics (velicine 1:1 z originala) in NORIKS SoftBack (EU + kosarica 1:1 z originala) - skupni modal.
+        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'classics' ) || noriks_is_type( 'ondersteun' ) ) ) {
+            get_template_part( 'template_parts/size-chart-tabela' );
+            return;
+        }
         // NORIKS Flops: dvojni EU brojevi 34/35–46/47 (original nema tablice mjera).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'flops' ) ) {
             get_template_part( 'template_parts/size-chart-flops' );

@@ -469,15 +469,13 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
 
 
 if ( ! function_exists( 'noriks_classics_sizes' ) ) {
-    /** NORIKS Classics: velicina (za akordeon i modal). */
+    /** NORIKS Classics: velicina, US, visina, tezina, unutarnja duljina noge.
+     *  1:1 z originala (myfleecies.com, Size Guide), palci -> cm, lbs -> kg. */
     function noriks_classics_sizes() {
         return array(
-            array( 'S' ),
-            array( 'M' ),
-            array( 'L' ),
-            array( 'XL' ),
-            array( '2XL' ),
-            array( '3XL' ),
+            array( 'XS-S',   '0–4',   '142–173 cm', '41–64 kg', '69 cm' ),
+            array( 'M-L',    '6–8',   '152–175 cm', '50–68 kg', '70 cm' ),
+            array( 'XL-2XL', '10–12', '152–175 cm', '68–95 kg', '71 cm' ),
         );
     }
 }
@@ -1491,5 +1489,67 @@ if ( ! function_exists( 'noriks_flops_sizes' ) ) {
             array( '34/35' ), array( '36/37' ), array( '38/39' ), array( '40/41' ),
             array( '42/43' ), array( '44/45' ), array( '46/47' ),
         );
+    }
+}
+
+if ( ! function_exists( 'noriks_size_tabela' ) ) {
+    /**
+     * Tablica velicina izdelka za harmoniko "Tablica veličina" (meta.php) in skupni modal
+     * (template_parts/size-chart-tabela.php). Vrne null, ce tip nima lastne tablice -
+     * takrat ostane dosedanje obnasanje. Podatki iz noriks_<tip>_sizes() (1:1 z originalov).
+     */
+    function noriks_size_tabela( $product_id = null ) {
+        if ( ! function_exists( 'noriks_is_type' ) ) { return null; }
+        if ( noriks_is_type( 'muslin', $product_id ) ) {
+            $v = array(); foreach ( noriks_muslin_sizes() as $r ) { $v[] = array( $r[0], $r[1] ); }
+            return array( 'uvod' => 'Četiri veličine – od <strong>prekrivača za kauč</strong> do pokrivača za <strong>veliki obiteljski krevet</strong>.',
+                'glava' => array( 'Veličina', 'Dimenzije' ), 'vrstice' => $v,
+                'opomba' => 'Muslin je prirodan i lagano elastičan materijal, pa su manja odstupanja u dimenzijama normalna.' );
+        }
+        if ( noriks_is_type( 'silkcase', $product_id ) ) {
+            return array( 'uvod' => 'Odaberite veličinu prema <strong>dimenzijama svojeg jastuka</strong>.',
+                'glava' => array( 'Veličina', 'Dimenzije', 'Za jastuk' ), 'vrstice' => noriks_silkcase_sizes(), 'opomba' => '' );
+        }
+        if ( noriks_is_type( 'corrector', $product_id ) ) {
+            return array( 'uvod' => 'NORIKS Corrector dostupan je u veličinama <strong>S, M i L</strong>. Zategnutost se podešava prema vašem tijelu.',
+                'glava' => array( 'Veličina', 'Težina korektora' ), 'vrstice' => noriks_corrector_sizes(),
+                'opomba' => '250 × 275 × 110 mm.' );
+        }
+        if ( noriks_is_type( 'flops', $product_id ) ) {
+            $v = array(); foreach ( noriks_flops_sizes() as $r ) { $b = explode( '/', $r[0] ); $v[] = array( $r[0], $b[0] . ' ili ' . $b[1] ); }
+            return array( 'uvod' => 'Papuče su <strong>unisex</strong> i dolaze u <strong>dvojnim EU brojevima</strong> — odaberite raspon u kojem je vaš uobičajeni broj cipela.',
+                'glava' => array( 'Veličina', 'Vaš broj cipela (EU)' ), 'vrstice' => $v, 'opomba' => '' );
+        }
+        if ( noriks_is_type( 'insoles', $product_id ) ) {
+            return array( 'uvod' => 'Odaberite <strong>svoju veličinu</strong> prema donjoj tablici. Ulošci se mogu skratiti po oznaci na vrhu kako bi odgovarali vašoj cipeli.',
+                'glava' => array( 'Veličina', 'US/CA (muški)', 'US/CA (ženski)', 'UK/AUS', 'EUR' ), 'vrstice' => noriks_insoles_sizes(),
+                'opomba' => 'Ulošci se stavljaju umjesto tvorničkog uloška, nikada preko njega.' );
+        }
+        if ( noriks_is_type( 'travel', $product_id ) ) {
+            return array( 'uvod' => 'Prije narudžbe izmjerite <strong>širinu stražnjeg sjedala</strong> i odaberite veličinu koja mu odgovara.',
+                'glava' => array( 'Veličina', 'Mjere', 'Vozila', 'Širina sjedala' ), 'vrstice' => noriks_travel_sizes(), 'opomba' => '' );
+        }
+        if ( noriks_is_type( 'classics', $product_id ) ) {
+            return array( 'uvod' => 'Materijal se rasteže u svim smjerovima, pa svaka veličina pokriva <strong>raspon visine i težine</strong>.',
+                'glava' => array( 'Veličina', 'US', 'Visina', 'Težina', 'Unutarnja duljina noge' ), 'vrstice' => noriks_classics_sizes(),
+                'opomba' => 'Između dvije veličine ili ste višeg rasta? Uzmite veću veličinu.' );
+        }
+        if ( noriks_is_type( 'ondersteun', $product_id ) ) {
+            // 1:1 z originala (lindraco.nl, Maattabel): opseg ispod grudi -> EU, razlika do najpunijeg dijela grudi -> kosarica.
+            // Prikazane samo velicine, ki jih nudimo (XS–2XL); kosarici F in G imata pri originalu samo 3XL–5XL.
+            return array( 'uvod' => '<strong>1.</strong> Izmjerite opseg tijela tik ispod grudi (gdje inače sjedi traka grudnjaka). <strong>2.</strong> Izmjerite opseg preko najpunijeg dijela grudi i oduzmite prvu mjeru – razlika određuje košaricu.',
+                'glava' => array( 'Ispod grudi (EU)', 'A (+10–12 cm)', 'B (+12–14 cm)', 'C (+14–16 cm)', 'D (+16–18 cm)', 'E (+18–20 cm)' ),
+                'vrstice' => array(
+                    array( '63–67 cm (65)',  'XS', 'XS',  'S',   '–',   '–' ),
+                    array( '68–72 cm (70)',  'XS', 'S',   'S',   'S',   'M' ),
+                    array( '73–77 cm (75)',  'S',  'S',   'M',   'M',   'L' ),
+                    array( '78–82 cm (80)',  'M',  'M',   'L',   'L',   'XL' ),
+                    array( '83–87 cm (85)',  '–',  'L',   'L',   'XL',  '2XL' ),
+                    array( '88–92 cm (90)',  '–',  'XL',  'XL',  'XL',  '2XL' ),
+                    array( '93–97 cm (95)',  '–',  '2XL', '2XL', '2XL', '–' ),
+                ),
+                'opomba' => 'Između dvije veličine? Preporučujemo veću veličinu za najbolju udobnost.' );
+        }
+        return null;
     }
 }
