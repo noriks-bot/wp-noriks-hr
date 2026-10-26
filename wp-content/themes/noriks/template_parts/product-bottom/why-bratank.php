@@ -180,20 +180,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 
 
 <!-- 5) NORIKS POGOJI -->
-<section class="nbt-sec nbt-tint nbt-sec--bg">
-  <div class="nbt-wrap">
-    <p class="nbt-kicker">Kupujte bez brige</p>
-    <h2 class="nbt-h2">Uz NORIKS kupujete <em>bez rizika.</em></h2>
-    <div class="nbt-media nbt-media--sm"><?php echo $nbt_img( 'bt-05-bez.webp', 'NORIKS BraTank majica s ugrađenim grudnjakom u bež boji' ); ?></div>
-    <p class="nbt-sub">Majicu isprobajte kod kuće, uz svoju odjeću i svoj dan. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-    <div class="nbt-pogoji">
-      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
-      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-    </div>
-  </div>
-</section>
+<section class="nbt-sec nbt-tint nbt-sec--bg npg-s"><?php $npg = array( 'izdelek' => 'NORIKS BraTank', 'barva' => '#b57e7e' ); include __DIR__ . '/noriks-pogoji.php'; ?></section>
 
 <style>
 /* slike v sekcijah (standard prejsnjih izdelkov) */
@@ -301,6 +288,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 .nbt-pog strong,.nbt-pog span:not(.nbt-pi){display:block}span.nbt-pi{width:58px;height:58px;border-radius:50%;background:#ecdcdc;border:1px solid #b57e7e;color:#8f5656;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.nbt-pi svg{width:28px;height:28px}
 @media (max-width:767px){.nbt-sec{padding:46px 0}.nbt-wrap{padding:0 16px}.nbt-pog{padding:22px 12px}}
 /* /dizajn */
+/* brez-obrob */ .nbt-av,.nbt-card,.nbt-rv,span.nbt-pi{border:0!important}
 </style>
 <script>
 (function(){var k=document.querySelector('.nbt-revs'),n=document.querySelector('.nbt-kar');if(!k||!n)return;

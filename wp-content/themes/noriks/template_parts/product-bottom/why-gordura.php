@@ -170,31 +170,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s">
-    <div class="wgordura__v">
-      <div class="wgordura__media wgordura__media--pecat">
-        <div class="wgordura__pecat" role="img" aria-label="30 dana za povrat">
-          <div class="wgordura__pecat-in">
-            <span class="wgordura__pecat-top">Pravo na povrat</span>
-            <span class="wgordura__pecat-num">30</span>
-            <span class="wgordura__pecat-dani">DANA</span>
-            <span class="wgordura__pecat-bot">Bez rizika</span>
-          </div>
-        </div>
-      </div>
-      <div class="wgordura__tekst">
-        <div class="wgordura__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wgordura__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wgordura__p">NORIKS ShapeBody isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-        <div class="wgordura__pogoji wgordura__pogoji--ob">
-        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-      </div>
-    </div>
-  </div>
-  </section>
+  <section class="wgordura__s npg-s"><?php $npg = array( 'izdelek' => 'NORIKS ShapeBody', 'barva' => '#890053' ); include __DIR__ . '/noriks-pogoji.php'; ?></section>
 </div>
 <style>
 .wgordura__lv{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;text-align:center}
@@ -221,33 +197,11 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 .wgordura__h2 em{font-style:italic}
 .wgordura__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
 .wgordura__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wgordura__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
-.wgordura__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.wgordura__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
-.wgordura__s:not(.wgordura__s--bg) .wgordura__pog{background:#f4f3ef;box-shadow:none}
-.wgordura__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
-.wgordura__pog span{font-size:14px;color:#444}
 @media (max-width:860px){
   .wgordura__s{padding:38px 0}
   .wgordura__v{grid-template-columns:1fr;gap:22px}
   .wgordura__v--rev .wgordura__media,.wgordura__media{order:0}
   .wgordura__v--rev .wgordura__tekst,.wgordura__tekst{order:1}
-  .wgordura__pogoji{grid-template-columns:1fr 1fr}
-}
-/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
-.wgordura__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
-.wgordura__s--bg .wgordura__media--pecat{background:#fff}
-.wgordura__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.wgordura__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
-.wgordura__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.wgordura__pecat-top,.wgordura__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
-.wgordura__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
-.wgordura__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
-@media (max-width:860px){
-  .wgordura__pecat{width:230px;height:230px}
-  .wgordura__pecat-in{width:170px;height:170px}
-  .wgordura__pecat-num{font-size:64px}
-  .wgordura__pecat-top,.wgordura__pecat-bot{font-size:10px;max-width:118px}
 }
 /* dizajn.py */
 .wgordura__s{padding:72px 0}.wgordura__s.wgordura__s--bg{background:#ecd6e3}.wgordura__s.wgordura__traka{padding:40px 0}.wgordura__s.wgordura__traka:not(.wgordura__s--bg){background:#fff}
@@ -255,15 +209,11 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 .wgordura__h2 em{color:#890053}.wgordura__dva .wgordura__zak{border-left:3px solid #890053;padding-left:14px}
 .wgordura__media,.wgordura__polna{box-shadow:0 14px 34px rgba(137,0,83,.22);border:1px solid rgba(137,0,83,.25)}
 .wgordura__k{border:1px solid rgba(137,0,83,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wgordura__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(137,0,83,.22)}
-.wgordura__pog>div{border:1px solid rgba(137,0,83,.35);border-radius:16px;padding:28px 18px;transition:transform .2s,box-shadow .2s}.wgordura__pog>div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(137,0,83,.22)}
-span.wgordura__pi{opacity:1;width:58px;height:58px;border-radius:50%;background:#dcb2cb;border:1px solid #890053;color:#890053;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.wgordura__pi svg{width:28px;height:28px}
-.wgordura__red3 span.wgordura__pi{width:44px;height:44px;margin-bottom:8px}.wgordura__red3 .wgordura__pi svg{width:22px;height:22px}.wgordura__red3>div{border-color:rgba(137,0,83,.35)}
-.wgordura__pog strong{color:#1c1c1c}.wgordura__st,.wgordura__kv li::before{background:#890053}.wgordura__tab th{background:#890053!important}
 .wgordura__ti{background:linear-gradient(135deg,#890053,#a33879);box-shadow:0 6px 14px rgba(137,0,83,.30)}.wgordura__tk{border-color:rgba(137,0,83,.30)}
 .wgordura__ime{display:flex;align-items:center;gap:10px}.wgordura__av{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#dcb2cb;border:1px solid #890053;color:#890053;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
-div.wgordura__pog{text-align:center;border:1px solid rgba(137,0,83,.35);border-radius:16px;transition:transform .2s,box-shadow .2s}div.wgordura__pog:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(137,0,83,.22)}div.wgordura__pog>strong,div.wgordura__pog>span:not(.wgordura__pi){display:block}
 .wgordura__pus{color:#890053}.wgordura__plavo{background:#890053;margin-top:-72px}.wgordura__k--temna{background:#890053}
 @media (max-width:860px){.wgordura__s{padding:46px 0}.wgordura__s.wgordura__traka{padding:30px 0}.wgordura__plavo{margin-top:-46px}.wgordura__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wgordura__lv,.wgordura__v{padding:0 16px}}
 /* /dizajn.py */
+/* brez-obrob */ .wgordura__av,.wgordura__k,.wgordura__lk,.wgordura__media,.wgordura__polna{border:0!important}
 </style>

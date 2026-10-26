@@ -165,19 +165,7 @@ $gc_op = array(
   </section>
 
   <!-- 10) NORIKS pogoji -->
-  <section class="wgc__s wgc__s--bg">
-    <div class="wgc__v">
-      <div class="wgc__kicker wgc__c">KUPUJTE BEZ BRIGE</div>
-      <h2 class="wgc__h2 wgc__c">Uz NORIKS kupujete <em>bez rizika</em></h2>
-      <p class="wgc__p wgc__c">NORIKS GelCushion isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p>
-      <div class="wgc__red4 wgc__pog">
-        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-      </div>
-    </div>
-  </section>
+  <section class="wgc__s wgc__s--bg npg-s"><?php $npg = array( 'izdelek' => 'NORIKS GelCushion', 'barva' => '#003a78' ); include __DIR__ . '/noriks-pogoji.php'; ?></section>
 </div>
 <style>
 .wgc__traka{padding:36px 0;background:linear-gradient(135deg,#eef1f7 0%,#f8f6f1 100%);color:#1c1c1c}.wgc__tmreza{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wgc__tk{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(29,43,79,.08);border-radius:16px;padding:20px 18px;box-shadow:0 8px 24px rgba(29,43,79,.08)}.wgc__ti{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1d2b4f,#33477a);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(29,43,79,.25)}.wgc__tt strong{display:block;font-size:16.5px;font-weight:800;line-height:1.25;color:#1c1c1c}.wgc__tt span{display:block;font-size:13.5px;line-height:1.4;color:#5a5f6b;margin-top:3px}@media (max-width:860px){.wgc__traka{padding:28px 0}.wgc__tmreza{grid-template-columns:1fr 1fr;gap:12px}.wgc__tk{flex-direction:column;text-align:center;padding:18px 12px;gap:10px}.wgc__tt strong{font-size:15px}}
@@ -272,6 +260,7 @@ div.wgc__pog{text-align:center;border:1px solid rgba(0,58,120,.35);border-radius
 @media (max-width:860px){.wgc__s{padding:46px 0}.wgc__s.wgc__traka{padding:30px 0}.wgc__plavo{margin-top:-46px}.wgc__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wgc__v{padding:0 16px}}
 /* /dizajn.py */
+/* brez-obrob */ .wgc__av,.wgc__k,.wgc__media,.wgc__polna,.wgc__tk,span.wgc__pi{border:0!important}
 </style>
 <script>
 (function(){document.querySelectorAll('.wgc__kar').forEach(function(k){

@@ -171,32 +171,7 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
     </div>
   </section>
 
-  <section class="wgsit__s wgsit__s--bg">
-    <div class="wgsit__v">
-      <div class="wgsit__media wgsit__media--pecat">
-        <div class="wgsit__pecat" role="img" aria-label="30 dana za povrat">
-          <div class="wgsit__pecat-in">
-            <span class="wgsit__pecat-top">Pravo na povrat</span>
-            <span class="wgsit__pecat-num">30</span>
-            <span class="wgsit__pecat-dani">DANA</span>
-            <span class="wgsit__pecat-bot">Bez rizika</span>
-          </div>
-        </div>
-      </div>
-      <div class="wgsit__tekst">
-        <div class="wgsit__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wgsit__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wgsit__p">Isprobajte NORIKS GelSit kod kuće – u fotelji, za stolom ili u autu. Ako niste zadovoljni, imate 30 dana za povrat novca, bez kompliciranja i bez pitanja. Pridružite se zajednici od 120.000 zadovoljnih kupaca.</p>
-        <div class="wgsit__pogoji">
-          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
-          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-        </div>
-        <p class="wgsit__zak">Udobno sjedenje – ili povrat novca.</p>
-      </div>
-    </div>
-  </section>
+  <section class="wgsit__s wgsit__s--bg npg-s"><?php $npg = array( 'izdelek' => 'NORIKS GelSit', 'barva' => '#0e5249' ); include __DIR__ . '/noriks-pogoji.php'; ?></section>
 </div>
 <style>
 .wgsit{color:#1c1c1c;font-family:inherit}
@@ -298,4 +273,5 @@ div.wgsit__pog{text-align:center;border:1px solid rgba(14,82,73,.35);border-radi
 .wgsit__brojke span.wgsit__pi{width:48px;height:48px;margin:0 auto 10px}.wgsit__brojke .wgsit__pi svg{width:24px;height:24px}.wgsit__brojke strong{color:#0e5249}
 .wgsit__kart span.wgsit__pi{width:42px;height:42px;margin:0 0 10px}.wgsit__kart .wgsit__pi svg{width:22px;height:22px}
 /* /dizajn.py */
+/* brez-obrob */ .wgsit__av,.wgsit__k,.wgsit__media,.wgsit__polna,span.wgsit__pi{border:0!important}
 </style>
