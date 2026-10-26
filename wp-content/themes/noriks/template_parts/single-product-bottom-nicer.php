@@ -101,6 +101,9 @@ if ( noriks_is_type( 'travel' ) ) {
 if ( noriks_is_type( 'daily' ) ) {
     include $noriks_pb_dir . 'why-daily.php';
 }
+if ( noriks_is_type( 'sunover' ) ) {
+    include $noriks_pb_dir . 'why-sunover.php';
+}
 if ( noriks_is_type( 'silkcase' ) ) {
     include $noriks_pb_dir . 'why-silkcase.php';
 }

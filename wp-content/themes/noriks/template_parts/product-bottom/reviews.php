@@ -593,6 +593,10 @@
 
            Niste jedini kojima stopala traže odmor nakon cijelog dana.
 
+          <?php elseif ( noriks_is_type( 'sunover' ) ): ?>
+
+           Niste jedini koji na suncu biraju između oštrog vida i zaštite od bliještanja.
+
           <?php elseif ( noriks_is_type( 'silkcase' ) ): ?>
 
            Niste jedini koji se ujutro bude s neposlušnom kosom i tragovima jastuka.
@@ -1187,6 +1191,10 @@
 
            Tisuće kupaca već nosi NORIKS Flops – mekani EVA potplat, lagane i otporne na vodu.
 
+           <?php elseif ( noriks_is_type( 'sunover' ) ): ?>
+
+           Tisuće kupaca već nosi NORIKS SunOver preko svojih dioptrijskih naočala – polarizirane leće, UV400, bez drugog para.
+
            <?php elseif ( noriks_is_type( 'silkcase' ) ): ?>
 
            Tisuće kupaca već spava na NORIKS SilkCase jastučnici – 100 % mulberry svila, 22 momme, glatka i svježa cijelu noć.
@@ -1393,6 +1401,7 @@
   $is_quiet_page = noriks_is_type( 'quiet', $current_product_id );
   $is_muslin_page = noriks_is_type( 'muslin', $current_product_id );
   $is_silkcase_page = noriks_is_type( 'silkcase', $current_product_id );
+  $is_sunover_page = noriks_is_type( 'sunover', $current_product_id );
   $is_tacpro_page = noriks_is_type( 'tacpro', $current_product_id );
   $is_destapacan_page = noriks_is_type( 'destapacan', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
@@ -1552,6 +1561,7 @@
   if ( $is_maternityleggings_page ) { $rv_fallback_title = 'NORIKS MaternityLeggings tajice za trudnice'; }
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
+  if ( $is_sunover_page ) { $rv_fallback_title = 'NORIKS SunOver | Polarizirane sunčane naočale preko dioptrijskih naočala'; }
   if ( $is_silkcase_page ) { $rv_fallback_title = 'NORIKS SilkCase | Jastučnica od 100 % mulberry svile'; }
   if ( $is_muslin_page ) { $rv_fallback_title = 'NORIKS Muslin | Muslinski pokrivač od 100 % pamuka'; }
   if ( $is_quiet_page ) { $rv_fallback_title = 'NORIKS Quiet | Čepići za uši za smanjenje buke'; }
@@ -1886,6 +1896,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_salon.php';
   } elseif ( $is_flops_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_flops.php';
+  } elseif ( $is_sunover_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_sunover.php';
   } elseif ( $is_silkcase_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_silkcase.php';
   } elseif ( $is_muslin_page ) {
@@ -2294,12 +2306,12 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // Avatar pools based on page category
   // Leak boxers + kompresijske majice + tacpro + insoles + glasspro + destapacan + calendar: text-only (no photos). Others: existing pools.
-  $avatar_type = ( $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_insoles_page || $is_glasspro_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
+  $avatar_type = ( $is_sunover_page || $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_insoles_page || $is_glasspro_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
   // reference THIS product (via $rv_fallback_title), not random pool products.
-  $product_pool = ( $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_destapacan_page || $is_calendar_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_glasspro_page || $is_insoles_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_viinia_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_birdie_page ) ? array() : get_wc_product_pool();
+  $product_pool = ( $is_sunover_page || $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_cloath_page || $is_bra_page || $is_ondersteun_page || $is_hyd_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_destapacan_page || $is_calendar_page || $is_kneefix_page || $is_controlpro_page || $is_noriks_cards_page || $is_brush_page || $is_hairmagic_page || $is_lift_page || $is_kneeheat_page || $is_pre_page || $is_hug_page || $is_dental_page || $is_cloud_page || $is_snore_page || $is_seal_page || $is_sr_page || $is_home_page || $is_red_page || $is_snug_page || $is_kompwom_page || $is_pal_page || $is_slim_page || $is_bowl_page || $is_relief_page || $is_gelseat_page || $is_kneetape_page || $is_celleg_page || $is_stepcloud_page || $is_buildshirt_page || $is_kneebrace_page || $is_hands_page || $is_slabproof_page || $is_glasspro_page || $is_insoles_page || $is_brassiere_page || $is_blanket_page || $is_bratank_page || $is_floatsuit_page || $is_phonestrap_page || $is_winecooler_page || $is_viinia_page || $is_bracelet_page || $is_doggo_page || $is_polo_page || $is_raincoat_page || $is_titaniumpan_page || $is_harness_page || $is_seatcover_page || $is_corksandals_page || $is_anklesleeve_page || $is_slippers_page || $is_supportsocks_page || $is_tuck_page || $is_fleecetights_page || $is_sculptbrief_page || $is_smartjacket_page || $is_utilitypants_page || $is_hoodie_page || $is_catfountain_page || $is_dishsheets_page || $is_litterbox_page || $is_sleepearplugs_page || $is_orthomules_page || $is_widetoeshoes_page || $is_thermoboots_page || $is_leatherboots_page || $is_snugboot_page || $is_cloudclogs_page || $is_compressionsocks_page || $is_wafflelongsleeve_page || $is_sleepset_page || $is_plushblanket_page || $is_hikingshoes_page || $is_hoodiedress_page || $is_comfortjeans_page || $is_slingbag_page || $is_travelbag_page || $is_bathmat_page || $is_dogbed_page || $is_minimizerbra_page || $is_nursingbra_page || $is_cashmeresweater_page || $is_techtee_page || $is_maternityleggings_page || $is_dograincoat_page || $is_travelpillow_page || $is_fleeceshawl_page || $is_bottlesling_page || $is_pillorganizer_page || $is_ultrasoniccleaner_page || $is_antitheftbag_page || $is_showertowel_page || $is_petdental_page || $is_calmingcollar_page || $is_therapillow_page || $is_grillbasket_page || $is_seatcushion_page || $is_groundingmat_page || $is_neckmassager_page || $is_upholsterycleaner_page || $is_kneelight_page || $is_travelkit_page || $is_breadbag_page || $is_pethairglove_page || $is_dualpillow_page || $is_mattresstopper_page || $is_kidspillow_page || $is_vacuumsealer_page || $is_airtravel_page || $is_birdie_page ) ? array() : get_wc_product_pool();
 
   // 1) Stable daily shuffle of review pools
   $auto_reviews_en   = shuffle_with_seed($auto_reviews_en,   'pool-en:'   . $daily_seed);
@@ -5752,7 +5764,7 @@ $flomasteri_faq = array(
 // Lastni FAQ (Informacije o proizvodu) za nove izdelke — brez tega se pokaze FAQ za majice.
 // Najprej auto_reviews/FAQ_HR_<tip>.php (datoteka vrne polje), sicer $<tip>_faq iz te datoteke.
 $noriks_faq_lastni = null;
-foreach ( array( 'silkcase' => 'silkcase', 'muslin' => 'muslin', 'quiet' => 'quiet', 'daily' => 'daily', 'classics' => 'classics', 'tacpro' => 'tacpro', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'glasspro' => 'glasspro', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'retrobox' => 'retrobox', 'ritual' => 'ritual', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel', 'flops' => 'flops' ) as $noriks_ft => $noriks_fv ) {
+foreach ( array( 'sunover' => 'sunover', 'silkcase' => 'silkcase', 'muslin' => 'muslin', 'quiet' => 'quiet', 'daily' => 'daily', 'classics' => 'classics', 'tacpro' => 'tacpro', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'glasspro' => 'glasspro', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'retrobox' => 'retrobox', 'ritual' => 'ritual', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel', 'flops' => 'flops' ) as $noriks_ft => $noriks_fv ) {
   if ( function_exists( 'noriks_is_type' ) && noriks_is_type( $noriks_ft ) ) {
     $noriks_ff = get_stylesheet_directory() . '/auto_reviews/FAQ_HR_' . $noriks_ft . '.php';
     if ( file_exists( $noriks_ff ) ) {
