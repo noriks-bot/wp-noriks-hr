@@ -1,167 +1,254 @@
 <?php
 /**
- * NORIKS GelCushion — why sekcije 1:1 z originalom (8 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ * NORIKS GelCushion — why sekcije po natancni strukturi originala (covexia.es/products/cojin-de-gel-covexia).
+ *
+ * STRUKTURA ORIGINALA:
+   1. press — trak logotipov medijev v vrsti -> pri nas trak NORIKS zaupanja v vrsti (tujih medijev ne prenasamo)
+   2. situaciones — naslov "Te pasa…?" + 3 kartice v vrsti (slika zgoraj, tekst spodaj na modri podlagi)
+   3. concerns — slika jastuka levo + desno stevilcen seznam 01–05 (kje boli, kako pomaga) + 3 podatki v vrsti (mere, brez montaze, gel)
+   4. imgtext — infografika levo, desno naslov + 3 alineje s kljukico
+   5. videos — 3 video mnenja kupcev v vrsti (navpicni videi)
+   6. fbreviews — komentarji kupcev v mrezi 3 v vrsti (fotografija, ime, besedilo)
+   7. results — modri trak z jamstvom + 3 kartice v vrsti "kaj opazijo" (odstotki ankete izpusceni)
+   8. faq — harmonika (pri nas FAQ v reviews.php)
+   9. opiniones — mreza mnenj s fotografijo 3 v vrsti
+   10. contact — kontakt (pri nas NORIKS pogoji na koncu)
+   Primerjalne tabele ta original nima.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wdir = get_template_directory_uri() . '/img/gelcushion/';
+$wd = get_template_directory_uri() . '/img/gelcushion/';
+$gc_sit = array(
+  array( 'noriks-gelcushion-sit-1.webp', 'Sjednete, a nakon nekoliko minuta trtica počne smetati – sve više i više.' ),
+  array( 'noriks-gelcushion-sit-2.webp', 'Križa vuku i peku, a nakon pola sata više ne možete mirno sjediti.' ),
+  array( 'noriks-gelcushion-sit-3.webp', 'Noge vam trnu i svakih 20 minuta morate ustati sa stolice.' ),
+);
+$gc_tocke = array(
+  array( 'Pritisak na trticu', 'Gel u obliku saća popusti točno ispod trtice i drži ostatak tijela. Trtica više ne nosi vašu težinu – ona se rasporedi po cijelom jastuku, pa možete duže sjediti.' ),
+  array( 'Sjedenje u autu i za stolom', 'Kad propadnete u sjedalo, zdjelica se nagne. S jastukom kukovi ostaju u ravnini, a leđa uspravnija – za volanom, za stolom ili za ručkom koji se oduži.' ),
+  array( 'Križa', 'Većina stolica ostavlja križa bez potpore i leđa se pogrbe. Debljina jastuka podigne vas taman toliko da kralježnica zadrži svoj prirodni oblik.' ),
+  array( 'Bedra i noge', 'Ulegnuto sjedalo ili ravan jastuk pritišću bedra. Zaobljeni rubovi jastuka ne pritišću bedra, a gel ne zadržava toplinu – noge ostaju lagane i nakon sati sjedenja.' ),
+  array( 'Osjetljiva mjesta', 'Kad nešto smeta, smeta i najmanji dodir. Jastuk je čvrst gdje treba, mekan na dodir i svjež – da se možete opustiti i sjediti duže.' ),
+);
+$gc_fb = array(
+  array( 'noriks-gelcushion-fb-1.webp', 'Isabela R.', 'prije 3 tjedna', 'Odnedavno sam u invalidskim kolicima i cijeli dan sjedim. Jastuk koristim svaki dan i razlika je ogromna.' ),
+  array( 'noriks-gelcushion-fb-4.webp', 'Albert M.', 'prije 12 h', 'Dobar jastuk, ne ulegne se i ne grije. Preporučujem.' ),
+  array( 'noriks-gelcushion-fb-5.webp', 'Josipa G.', 'prije 6 h', 'Stigao je brzo. Koristim ga svaki dan na poslu: udoban je i osjeti se kad sjediš puno sati.' ),
+  array( 'noriks-gelcushion-fb-3.webp', 'Marko D.', 'prije 2 tjedna', 'Imam ga od prošlog tjedna. Cijeli dan sjedim i na kraju dana leđa su mi bila u lošem stanju. S jastukom je sasvim druga priča.' ),
+  array( 'noriks-gelcushion-fb-2.webp', 'Tomislav C.', 'prije 1 dan', 'Vozim kamion, puno sati za volanom. Otkad ga imam u kabini, puno lakše podnosim vožnju, a gel se ne zagrijava.' ),
+  array( 'noriks-gelcushion-fb-6.webp', 'Karolina P.', 'prije 3 h', 'Radim od kuće četiri dana tjedno na prilično lošoj stolici. S jastukom je kao da imam novu stolicu. Više me ne muči 8 sati sjedenja.' ),
+);
+$gc_op = array(
+  array( 'noriks-gelcushion-op-1.webp', 'Karmen S.', 'Puno sati sjedim zbog posla i osjećala sam velik pritisak na trtici. S jastukom izdržim radni dan bez stalnog ustajanja.' ),
+  array( 'noriks-gelcushion-op-2.webp', 'Antonio R.', 'Koristim ga najviše u autu, vozim duge relacije. Razlika u križima osjeti se od prve vožnje.' ),
+  array( 'noriks-gelcushion-op-3.webp', 'Mihael Á.', 'Dobra kvaliteta, gel se ne ulegne kao spužve koje sam prije probao. Lako se čisti i ne grije.' ),
+  array( 'noriks-gelcushion-op-4.webp', 'Ružica M.', 'Kupila sam ga mami, koja puno vremena provodi sjedeći. Oduševljena je.' ),
+  array( 'noriks-gelcushion-op-5.webp', 'Lucija F.', 'Isprva sam sumnjala zbog debljine, ali se jako dobro prilagodi mojoj uredskoj stolici. Jako je udoban i ne kliže.' ),
+  array( 'noriks-gelcushion-op-6.webp', 'Javor T.', 'Stigao je prije roka. Ispunjava obećano, posebno ako ste puno sati u istom položaju.' ),
+);
 ?>
-<div class="wgelcushion">
+<div class="wgc">
 
-  <section class="wgelcushion__s wgelcushion__s--bg">
-    <div class="wgelcushion__v">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-uredska-stolica.webp' ); ?>" alt="Što se mijenja u svakodnevici" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Recenzije kupaca</div>
-        <h2 class="wgelcushion__h2">Što se mijenja u <em>svakodnevici</em></h2>
-        <p class="wgelcushion__p">„Napokon jedan koji se ne ulegne. Probao sam nekoliko jastuka i nijedan nije bio dobar. Ovaj je stabilan, ne tone i stvarno osjećam manje pritiska na trtici. Sad mogu sjediti puno duže bez ustajanja.“ — Mihael Á., 62</p>
-        <p class="wgelcushion__p">„Koristimo ga svaki dan. Mislili smo da će biti još jedan jastuk za ormar, a ispalo je da ga koristimo svakodnevno: ne spljošti se i sjedimo puno duže bez nelagode.“ — Pavica i Ivan, 70 i 73</p>
-        <p class="wgelcushion__p">„Udoban je i ne grije. Od prvog dana najviše sam primijetila udobnost. Ne grije, ne pomiče se sa sjedala i sad sjedim bez razmišljanja o tome.“ — Tereza L., 58</p>
-        <p class="wgelcushion__zak">Prosječna ocjena 4,8 – udobno sjedenje satima.</p>
+  <!-- 1) trak zaupanja (na originalu trak medijev) -->
+  <section class="wgc__s wgc__traka">
+    <div class="wgc__v wgc__red4">
+      <div><strong>120.000+</strong><span>zadovoljnih kupaca</span></div>
+      <div><strong>4,8 / 5</strong><span>prosječna ocjena</span></div>
+      <div><strong>30 dana</strong><span>za povrat novca</span></div>
+      <div><strong>Pouzećem</strong><span>platite kad paket stigne</span></div>
+    </div>
+  </section>
+
+  <!-- 2) situacije: 3 kartice v vrsti -->
+  <section class="wgc__s">
+    <div class="wgc__v">
+      <h2 class="wgc__h2 wgc__c">Događa li vam se <em>nešto od ovoga</em>?</h2>
+      <div class="wgc__grid3">
+        <?php foreach ( $gc_sit as $s ) : ?>
+        <div class="wgc__sit">
+          <img src="<?php echo esc_url( $wd . $s[0] ); ?>" alt="<?php echo esc_attr( $s[1] ); ?>" loading="lazy" decoding="async">
+          <p><?php echo esc_html( $s[1] ); ?></p>
+        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s">
-    <div class="wgelcushion__v wgelcushion__v--rev">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-situacija.webp' ); ?>" alt="Događa li vam se nešto od ovoga?" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Prepoznajete li se?</div>
-        <h2 class="wgelcushion__h2">Događa li vam se <em>nešto od ovoga</em>?</h2>
-        <p class="wgelcushion__p">Sjednete, a nakon nekoliko minuta trtica počne smetati, sve više i više.</p>
-        <p class="wgelcushion__p">Križa vas vuku i peku, a nakon pola sata više ne možete mirno sjediti.</p>
-        <p class="wgelcushion__p">Noge vam trnu i svakih 20 minuta morate ustati sa stolice.</p>
-        <p class="wgelcushion__zak">Često nije stvar godina – nego toga gdje pada vaša težina.</p>
+  <!-- 3) kako pomaga: slika + stevilcen seznam 01-05 + 3 podatki -->
+  <section class="wgc__s wgc__s--bg">
+    <div class="wgc__v wgc__dva">
+      <div class="wgc__media wgc__media--sq"><img src="<?php echo esc_url( $wd . 'noriks-gelcushion-jastuk.webp' ); ?>" alt="NORIKS GelCushion – gel u obliku saća" loading="lazy" decoding="async"></div>
+      <div>
+        <div class="wgc__kicker">NORIKS GelCushion · gel u obliku saća</div>
+        <h2 class="wgc__h2">Kako vam pomaže, <em>ovisno o tome gdje smeta</em></h2>
+        <p class="wgc__p">Nelagoda dolazi s različitih mjesta. Jastuk raspoređuje vašu težinu i rasterećuje ih sve odjednom.</p>
+        <div class="wgc__red3">
+          <div><strong>40 × 35 × 2,5 cm</strong><span>mjere</span></div>
+          <div><strong>Bez montaže</strong><span>spreman za 2 sekunde</span></div>
+          <div><strong>Gel</strong><span>ne spljošti se</span></div>
+        </div>
+        <ol class="wgc__tocke">
+          <?php foreach ( $gc_tocke as $i => $t ) : ?>
+          <li><span class="wgc__st"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span><div><strong><?php echo esc_html( $t[0] ); ?></strong><p><?php echo esc_html( $t[1] ); ?></p></div></li>
+          <?php endforeach; ?>
+        </ol>
+        <p class="wgc__zak">Gel u obliku saća popusti ispod trtice i drži ostatak tijela – težinu nosi cijeli jastuk, a ne vaša trtica.</p>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s wgelcushion__s--bg">
-    <div class="wgelcushion__v">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-jastuk.webp' ); ?>" alt="Kako vam pomaže" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Gel u obliku saća</div>
-        <h2 class="wgelcushion__h2">Kako vam <em>pomaže</em></h2>
-        <p class="wgelcushion__p"><em>Trtica:</em> gel popusti točno ispod trtice i drži ostatak tijela, pa se težina rasporedi po cijelom jastuku umjesto da sve nosi jedna točka. <em>Kukovi i leđa:</em> kukovi ostaju u ravnini, a debljina jastuka podigne vas taman toliko da leđa ostanu uspravnija.</p>
-        <p class="wgelcushion__p"><em>Bedra:</em> zaobljeni rubovi ne pritišću bedra, a gel ne zadržava toplinu – noge ostaju lagane i nakon sati sjedenja.</p>
-        <p class="wgelcushion__p"><em>Osjetljiva mjesta:</em> jastuk je čvrst gdje treba, mekan na dodir i svjež, pa se možete opustiti i sjediti duže bez nelagode. Mjere 40 × 35 × 2,5 cm, bez montaže, spreman za 2 sekunde.</p>
-        <p class="wgelcushion__zak">Cijeli jastuk nosi vašu težinu – ne vaša trtica.</p>
+  <!-- 4) zakaj deluje: infografika + 3 alineje -->
+  <section class="wgc__s">
+    <div class="wgc__v wgc__dva wgc__dva--rev">
+      <div class="wgc__media wgc__media--sq"><img src="<?php echo esc_url( $wd . 'noriks-gelcushion-kako-radi.webp' ); ?>" alt="Kako NORIKS GelCushion raspoređuje pritisak" loading="lazy" decoding="async"></div>
+      <div>
+        <div class="wgc__kicker">Zašto djeluje</div>
+        <h2 class="wgc__h2">Razlika se osjeti <em>čim sjednete</em></h2>
+        <p class="wgc__p">Težina vam se rasporedi, sjedalo ostaje stabilno i nakon mjeseci i nemate onaj osjećaj propadanja – čak ni nakon sati sjedenja.</p>
+        <ul class="wgc__kv">
+          <li><strong>Olakšanje od prvog trenutka</strong> – težina počiva na gelu, ne na kosti.</li>
+          <li><strong>Postavljen za 2 sekunde</strong> – fotelja, auto, uredska stolica ili invalidska kolica.</li>
+          <li><strong>Nikad se ne spljošti</strong> – gel visoke gustoće vraća oblik nakon svake upotrebe.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s">
-    <div class="wgelcushion__v wgelcushion__v--rev">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-auto.webp' ); ?>" alt="Razlika se osjeti čim sjednete" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Zašto djeluje</div>
-        <h2 class="wgelcushion__h2">Razlika se osjeti <em>čim sjednete</em></h2>
-        <p class="wgelcushion__p">Težina vam se rasporedi, sjedalo ostaje stabilno i nakon mjeseci, i nemate onaj osjećaj propadanja, čak ni nakon sati sjedenja.</p>
-        <p class="wgelcushion__p"><em>Olakšanje od prvog trenutka:</em> težina počiva na gelu. <em>Postavljen za 2 sekunde:</em> fotelja, auto, uredska stolica ili invalidska kolica.</p>
-        <p class="wgelcushion__p"><em>Nikad se ne spljošti:</em> gel visoke gustoće vraća oblik nakon svake upotrebe.</p>
-        <p class="wgelcushion__zak">Stabilan, čvrst i svjež – svaki dan.</p>
+  <!-- 5) 3 video mnenja v vrsti -->
+  <section class="wgc__s wgc__s--bg">
+    <div class="wgc__v">
+      <h2 class="wgc__h2 wgc__c">Ovako ga koriste <em>svaki dan</em></h2>
+      <p class="wgc__p wgc__c">Pravi videi kupaca koji ga već imaju kod kuće.</p>
+      <div class="wgc__grid3 wgc__videi">
+        <?php foreach ( array( '/img/gelcushion/noriks-gelcushion-test-jajeta.mp4', '/img/gelcushion/noriks-gelcushion-video-2.mp4', '/img/gelcushion/noriks-gelcushion-video-3.mp4' ) as $v ) : ?>
+        <div class="wgc__vid"><video src="<?php echo esc_url( get_template_directory_uri() . $v ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s wgelcushion__s--bg">
-    <div class="wgelcushion__v">
-      <div class="wgelcushion__media"><video src="<?php echo esc_url( $wdir . 'noriks-gelcushion-test-jajeta.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Videi kupaca</div>
-        <h2 class="wgelcushion__h2">Ovako ga koriste <em>svaki dan</em></h2>
-        <p class="wgelcushion__p">Pravi videi kupaca koji ga već imaju kod kuće: jaje stavljeno na jastuk ne pukne ni kad se na njega pritisne – gel u obliku saća raspodijeli pritisak po cijeloj površini.</p>
-        <p class="wgelcushion__p">Jastuk stavite na sjedalo, sjednete normalno i pustite da se gel prilagodi vašoj težini.</p>
-        <p class="wgelcushion__zak">Bez podešavanja, bez montaže.</p>
+  <!-- 6) komentarji kupcev v mrezi -->
+  <section class="wgc__s">
+    <div class="wgc__v">
+      <h2 class="wgc__h2 wgc__c">Što nam <em>pričaju</em> kupci</h2>
+      <div class="wgc__grid3">
+        <?php foreach ( $gc_fb as $f ) : ?>
+        <div class="wgc__fb">
+          <div class="wgc__fbh"><img src="<?php echo esc_url( $wd . $f[0] ); ?>" alt="<?php echo esc_attr( $f[1] ); ?>" loading="lazy" decoding="async"><div><strong><?php echo esc_html( $f[1] ); ?></strong><span><?php echo esc_html( $f[2] ); ?></span></div></div>
+          <p><?php echo esc_html( $f[3] ); ?></p>
+        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s">
-    <div class="wgelcushion__v wgelcushion__v--rev">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-iskustva.webp' ); ?>" alt="Što nam pričaju kupci" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Iskustva</div>
-        <h2 class="wgelcushion__h2">Što nam <em>pričaju</em> kupci</h2>
-        <p class="wgelcushion__p">„Odnedavno sam u invalidskim kolicima i cijeli dan sjedim. Jastuk koristim svaki dan i razlika je ogromna.“ — Isabela R. • „Stigao je brzo. Koristim ga svaki dan na poslu: udoban je i osjeti se kad sjediš puno sati.“ — Josipa G.</p>
-        <p class="wgelcushion__p">„Cijeli dan sjedim i na kraju dana leđa su mi bila u lošem stanju. S jastukom je sasvim druga priča.“ — Marko D. • „Vozim kamion, puno sati za volanom. Otkad ga imam u kabini, puno lakše podnosim vožnju, a gel se ne zagrijava.“ — Tomislav C.</p>
-        <p class="wgelcushion__p">„Radim od kuće četiri dana tjedno na prilično lošoj stolici. S jastukom je kao da imam novu stolicu. Više me ne muči 8 sati sjedenja.“ — Karolina P.</p>
-        <p class="wgelcushion__zak">Ured, auto, fotelja ili invalidska kolica – svugdje isti osjećaj.</p>
+  <!-- 7) trak z jamstvom + 3 kartice -->
+  <section class="wgc__s wgc__s--bg">
+    <div class="wgc__plavo">30 dana za povrat novca · isprobajte ga kod kuće, bez obveze</div>
+    <div class="wgc__v">
+      <h2 class="wgc__h2 wgc__c">Što kupci primjećuju <em>nakon nekoliko tjedana</em></h2>
+      <div class="wgc__grid3">
+        <div class="wgc__rez"><strong>Udobnije sjedenje</strong><p>Većina razliku osjeti već prvi put kad sjedne – težina se rasporedi, sjedalo ostaje stabilno.</p></div>
+        <div class="wgc__rez"><strong>Ponovno udobno sjede</strong><p>Više nema stalnog premještanja i ustajanja sa stolice svakih dvadesetak minuta.</p></div>
+        <div class="wgc__rez"><strong>Lakši dugi dani</strong><p>Duge dane za stolom ili za volanom podnose puno lakše.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s wgelcushion__s--bg">
-    <div class="wgelcushion__v">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-blagovaonica.webp' ); ?>" alt="Što kupci primjećuju" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Nakon nekoliko tjedana</div>
-        <h2 class="wgelcushion__h2">Što kupci <em>primjećuju</em></h2>
-        <p class="wgelcushion__p">Većina kupaca razliku osjeti već prvi put kad sjedne: težina se rasporedi, a sjedalo ostaje stabilno.</p>
-        <p class="wgelcushion__p">Zatim primijete da ponovno udobno sjede i da lakše podnose duge dane za stolom ili za volanom.</p>
-        <p class="wgelcushion__p">Isprobajte ga kod kuće, bez obveze – imate 30 dana za povrat novca.</p>
-        <p class="wgelcushion__zak">Udobno sjedenje, dan za danom.</p>
+  <!-- 9) mnenja s fotografijo -->
+  <section class="wgc__s">
+    <div class="wgc__v">
+      <h2 class="wgc__h2 wgc__c">Provjerene recenzije – <em>što kažu oni koji ga koriste svaki dan</em></h2>
+      <p class="wgc__p wgc__c">★★★★★ 4,8 · 1.081 recenzija</p>
+      <div class="wgc__grid3">
+        <?php foreach ( $gc_op as $o ) : ?>
+        <div class="wgc__op">
+          <img src="<?php echo esc_url( $wd . $o[0] ); ?>" alt="Fotografija kupca – <?php echo esc_attr( $o[1] ); ?>" loading="lazy" decoding="async">
+          <div class="wgc__opt"><span class="wgc__zv">★★★★★</span><strong><?php echo esc_html( $o[1] ); ?> · provjereni kupac</strong><p><?php echo esc_html( $o[2] ); ?></p></div>
+        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-  <section class="wgelcushion__s">
-    <div class="wgelcushion__v wgelcushion__v--rev">
-      <div class="wgelcushion__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelcushion-svugdje.webp' ); ?>" alt="Što kažu oni koji ga koriste svaki dan" loading="lazy" decoding="async"></div>
-      <div class="wgelcushion__tekst">
-        <div class="wgelcushion__kicker">Provjerene recenzije</div>
-        <h2 class="wgelcushion__h2">Što kažu oni koji ga <em>koriste svaki dan</em></h2>
-        <p class="wgelcushion__p">„Puno sati sjedim zbog posla i osjećala sam velik pritisak na trtici. S jastukom izdržim cijeli radni dan bez stalnog ustajanja.“ — Karmen S. • „Koristim ga najviše u autu, vozim duge relacije. Razlika u križima osjeti se od prve vožnje.“ — Antonio R.</p>
-        <p class="wgelcushion__p">„Dobra kvaliteta, gel se ne ulegne kao spužve koje sam prije probao. Lako se čisti i ne grije.“ — Mihael Á. • „Kupila sam ga mami koja puno sjedi. Oduševljena je.“ — Ružica M.</p>
-        <p class="wgelcushion__p">„Isprva sam sumnjala zbog debljine, ali se jako dobro prilagodi mojoj uredskoj stolici. Jako je udoban i ne kliže.“ — Lucija F. • „Stigao je prije roka. Ispunjava obećano, posebno ako ste puno sati u istom položaju.“ — Javor T.</p>
-        <p class="wgelcushion__zak">Tisuće zadovoljnih kupaca, prosječna ocjena 4,8.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wgelcushion__s wgelcushion__s--bg">
-    <div class="wgelcushion__v wgelcushion__v--polna">
-      <div class="wgelcushion__tekst wgelcushion__tekst--sredina">
-        <div class="wgelcushion__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wgelcushion__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wgelcushion__p">NORIKS GelCushion isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-      </div>
-      <div class="wgelcushion__pogoji">
-        <div class="wgelcushion__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div class="wgelcushion__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div class="wgelcushion__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div class="wgelcushion__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+  <!-- 10) NORIKS pogoji -->
+  <section class="wgc__s wgc__s--bg">
+    <div class="wgc__v">
+      <div class="wgc__kicker wgc__c">KUPUJTE BEZ BRIGE</div>
+      <h2 class="wgc__h2 wgc__c">Uz NORIKS kupujete <em>bez rizika</em></h2>
+      <p class="wgc__p wgc__c">NORIKS GelCushion isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p>
+      <div class="wgc__red4 wgc__pog">
+        <div><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
   </section>
 </div>
 <style>
-.wgelcushion{color:#1c1c1c;font-family:inherit}
-.wgelcushion__s{padding:56px 0;background:#fff}
-.wgelcushion__s--bg{background:#f4f3ef}
-.wgelcushion__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.wgelcushion__v--rev .wgelcushion__media{order:2}
-.wgelcushion__v--rev .wgelcushion__tekst{order:1}
-.wgelcushion__v--polna{grid-template-columns:1fr;gap:28px}
-.wgelcushion__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
-.wgelcushion__media img,.wgelcushion__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wgelcushion__media--polna{aspect-ratio:auto}
-.wgelcushion__media--polna img,.wgelcushion__media--polna video{height:auto}
-.wgelcushion__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
-.wgelcushion__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
-.wgelcushion__h2 em{font-style:italic}
-.wgelcushion__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
-.wgelcushion__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wgelcushion__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
-.wgelcushion__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.wgelcushion__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
-.wgelcushion__s:not(.wgelcushion__s--bg) .wgelcushion__pog{background:#f4f3ef;box-shadow:none}
-.wgelcushion__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
-.wgelcushion__pog span{font-size:14px;color:#444}
+.wgc{color:#1c1c1c;font-family:inherit}
+.wgc__s{padding:56px 0;background:#fff}
+.wgc__s--bg{background:#f4f3ef}
+.wgc__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wgc__c{text-align:center}
+.wgc__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wgc__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wgc__h2 em{font-style:italic}
+.wgc__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wgc__zak{font-size:16px;font-weight:800;line-height:1.5;margin:14px 0 0}
+.wgc__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wgc__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.wgc__red4 strong{display:block;font-size:18px;font-weight:800}
+.wgc__red4 span{font-size:13.5px;opacity:.85}
+.wgc__grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+.wgc__sit{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);background:#1d2b4f}
+.wgc__sit img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.wgc__sit p{color:#fff;font-size:16px;line-height:1.5;font-weight:600;margin:0;padding:18px 20px 22px}
+.wgc__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wgc__dva--rev > div:first-child{order:2}
+.wgc__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wgc__media img{width:100%;height:100%;object-fit:cover;display:block}
+.wgc__media--sq img{object-fit:contain}
+.wgc__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}
+.wgc__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center}
+.wgc__red3 strong{display:block;font-size:15px}
+.wgc__red3 span{font-size:13px;color:#555}
+.wgc__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.wgc__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wgc__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.wgc__tocke strong{font-size:16px}
+.wgc__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wgc__kv{list-style:none;margin:0;padding:0}
+.wgc__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wgc__kv li::before{content:"\2713";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wgc__vid{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:9/16;background:#000}
+.wgc__vid video{width:100%;height:100%;object-fit:cover;display:block}
+.wgc__fb{background:#fff;border:1px solid #e6e6e6;border-radius:14px;padding:16px 18px}
+.wgc__fbh{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.wgc__fbh img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.wgc__fbh strong{display:block;font-size:15px}
+.wgc__fbh span{font-size:12.5px;color:#777}
+.wgc__fb p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wgc__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wgc__rez{background:#fff;border-radius:14px;padding:22px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.wgc__rez strong{display:block;font-size:17px;margin-bottom:8px}
+.wgc__rez p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wgc__op{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden}
+.wgc__op img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.wgc__opt{padding:14px 16px 18px}
+.wgc__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wgc__opt strong{font-size:14px;display:block;margin-bottom:6px}
+.wgc__opt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wgc__pog{margin-top:22px}
+.wgc__pog > div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}
+.wgc__pog span{color:#444;opacity:1}
 @media (max-width:860px){
-  .wgelcushion__s{padding:38px 0}
-  .wgelcushion__v{grid-template-columns:1fr;gap:22px}
-  .wgelcushion__v--rev .wgelcushion__media,.wgelcushion__media{order:0}
-  .wgelcushion__v--rev .wgelcushion__tekst,.wgelcushion__tekst{order:1}
-  .wgelcushion__pogoji{grid-template-columns:1fr 1fr}
+  .wgc__s{padding:38px 0}
+  .wgc__dva{grid-template-columns:1fr;gap:22px}
+  .wgc__dva--rev > div:first-child{order:0}
+  .wgc__grid3{grid-template-columns:1fr}
+  .wgc__videi{grid-template-columns:repeat(3,1fr);gap:8px}
+  .wgc__red4{grid-template-columns:1fr 1fr}
+  .wgc__plavo{margin-top:-38px}
 }
 </style>
