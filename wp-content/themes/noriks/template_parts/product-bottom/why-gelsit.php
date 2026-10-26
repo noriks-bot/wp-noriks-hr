@@ -48,10 +48,10 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
       </div>
       <div class="wgsit__g3">
         <div class="wgsit__obj"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-objava-1.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Paula F.</strong><span>14. veljače · javno</span></div></div><p>Tata ima 78 godina i posljednjih je godina sve rjeđe dolazio na nedjeljni ručak. Kad sam ga napokon pitala, rekao je da mu je sjedenje postalo neugodno – nakon dvadesetak minuta na bilo kojoj stolici. Kupila sam mu jedan jastuk za fotelju i jedan za auto. Prošli mjesec odsjedio je cijelu nogometnu utakmicu mog sina i nijednom nije tražio da idemo. Na putu kući rekao je: „Zaboravio sam kako je kad samo sjedneš i ne razmišljaš o tome.”</p><div class="wgsit__objf">👍 ❤️ · Sviđa mi se · Komentiraj · Podijeli</div></div>
-        <div class="wgsit__obj"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-objava-2.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Snježana B.</strong><span>jučer · javno</span></div></div><p>Mama ima 79 godina i satima sjedi u fotelji. Tek sam kasno shvatila da se pjenasti jastuk na kojem je sjedila potpuno spljoštio – praktički je sjedila na tvrdoj podlozi. Patronažna sestra savjetovala nam je gel jastuk s izrezom za trtičnu kost. Prošla su četiri mjeseca, a gel se i dalje vraća u oblik svaki put kad ga pritisnem – isti kao prvog dana.</p><div class="wgsit__objf">👍 ❤️ · Sviđa mi se · Komentiraj · Podijeli</div></div>
+        <div class="wgsit__obj"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-objava-2.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Snježana B.</strong><span>jučer · javno</span></div></div><p>Mama ima 79 godina i satima sjedi u fotelji. Tek sam kasno shvatila da se pjenasti jastuk na kojem je sjedila potpuno spljoštio – praktički je sjedila na tvrdoj podlozi. Prijateljica nam je preporučila gel jastuk s izrezom za trtičnu kost. Prošla su četiri mjeseca, a gel se i dalje vraća u oblik svaki put kad ga pritisnem – isti kao prvog dana.</p><div class="wgsit__objf">👍 ❤️ · Sviđa mi se · Komentiraj · Podijeli</div></div>
         <div class="wgsit__obj"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-objava-3.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Mirela M.</strong><span>2. siječnja · javno</span></div></div><p>Mama je u invalidskim kolicima tri godine i promijenili smo hrpu jastuka – pjenasti su se brzo spljoštili, drugi nisu bili ono što su obećavali. Ovo je prvi koji je izdržao. Šest mjeseci kasnije gel je isti kao kad smo ga dobili, ništa se nije stisnulo.</p><div class="wgsit__objf">👍 ❤️ · Sviđa mi se · Komentiraj · Podijeli</div></div>
       </div>
-      <p class="wgsit__zak" style="text-align:center">Ako vaš roditelj tiho preskače druženja – možda je vrijeme da ga pitate zašto.</p>
+      <p class="wgsit__zak">Ako vaš roditelj tiho preskače druženja – možda je vrijeme da ga pitate zašto.</p>
     </div>
   </section>
 
@@ -145,18 +145,18 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
       </div>
       <div class="wgsit__kar">
         <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-1.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Suzana G.</strong><span>kći i njegovateljica</span></div></div><span class="wgsit__tag">Za mamu</span><p class="wgsit__zv">★★★★★</p><p>„Ne spljošti se kao pjenasti jastuci koje smo prije imali. Mama u fotelji sjedi mirno, bez stalnog namještanja.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
-        <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-2.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Margareta H.</strong><span>provjereni kupac</span></div></div><span class="wgsit__tag">Bol u trtici</span><p class="wgsit__zv">★★★★★</p><p>„Ovo je prvi jastuk na kojem na trtičnoj kosti ne osjećam ništa. Napokon mogu odgledati cijeli film.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
+        <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-2.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Margareta H.</strong><span>provjereni kupac</span></div></div><span class="wgsit__tag">Večeri u fotelji</span><p class="wgsit__zv">★★★★★</p><p>„Ovo je prvi jastuk na kojem mogu dugo sjediti bez stalnog namještanja. Napokon mogu odgledati cijeli film.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
         <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-3.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Josip R.</strong><span>brine o ocu</span></div></div><span class="wgsit__tag">Invalidska kolica</span><p class="wgsit__zv">★★★★★</p><p>„Tata opet s nama sjedi za večerom. Jastuk ostaje na mjestu i ne treba ga stalno namještati.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
         <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-4.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Antun P.</strong><span>provjereni kupac</span></div></div><span class="wgsit__tag">Ured</span><p class="wgsit__zv">★★★★★</p><p>„Svaki drugi jastuk bio je spljošten do ručka. Ovaj je čvrst i svjež od jutarnjeg sastanka do zadnjeg maila.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
-        <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-5.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Robert</strong><span>provjereni kupac</span></div></div><span class="wgsit__tag">Vožnja</span><p class="wgsit__zv">★★★★★</p><p>„Prvi je mužu toliko promijenio dan da smo naručili još jedan za auto. Nakon nekoliko mjeseci i dalje je kao prvi dan.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
-        <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-6.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Patricija M.</strong><span>nakon operacije</span></div></div><span class="wgsit__tag">Nakon operacije</span><p class="wgsit__zv">★★★★★</p><p>„Prvih tjedana kod kuće sjedenje mi je bilo naporno. Izrez i mekani gel učinili su ga podnošljivim – koristila sam ga svaki dan.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
+        <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-5.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Robert K.</strong><span>provjereni kupac</span></div></div><span class="wgsit__tag">Vožnja</span><p class="wgsit__zv">★★★★★</p><p>„Prvi mi je toliko promijenio dan da sam naručio još jedan za auto. Nakon nekoliko mjeseci i dalje je kao prvi dan.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
+        <div class="wgsit__rev"><div class="wgsit__objh"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-kupac-6.webp' ); ?>" alt="" loading="lazy" decoding="async"><div><strong>Patricija M.</strong><span>radi od kuće</span></div></div><span class="wgsit__tag">Rad od kuće</span><p class="wgsit__zv">★★★★★</p><p>„Za stolom sjedim po cijeli dan i prije sam se stalno vrpoljila. Izrez i mekani gel učinili su sjedenje puno ugodnijim – koristim ga svaki dan.”</p><span class="wgsit__ver">✓ provjereni kupac</span></div>
       </div>
     </div>
   </section>
 
   <section class="wgsit__s">
     <div class="wgsit__v wgsit__v--rev">
-      <div class="wgsit__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-pitanja.webp?v=1' ); ?>" alt="Stariji muškarac satima udobno sjedi u fotelji na gel jastuku NORIKS GelSit" loading="lazy" decoding="async"></div>
+      <div class="wgsit__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-temperatura.webp' ); ?>" alt="Ruka podiže navlaku s gel jastuka NORIKS GelSit – otvorene saće propuštaju zrak" loading="lazy" decoding="async"></div>
       <div class="wgsit__tekst">
         <div class="wgsit__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wgsit__h2">Česta <em>pitanja</em></h2>
@@ -256,8 +256,16 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
   .wgsit__pecat-num{font-size:64px}
   .wgsit__pecat-top,.wgsit__pecat-bot{font-size:10px;max-width:118px}
 }
-.wgsit__g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px}
+.wgsit__v--polna{display:block;max-width:1188px}
+.wgsit__tekst--sredina{text-align:center;max-width:760px;margin:0 auto 26px}
+.wgsit__tekst--sredina .wgsit__p{margin-bottom:0}
+.wgsit__v--polna .wgsit__zak{text-align:center;max-width:760px;margin:26px auto 0}
+.wgsit__g3{display:grid;grid-template-columns:repeat(3,minmax(300px,1fr));gap:22px;align-items:stretch;margin-top:0}
+.wgsit__g3 .wgsit__obj{display:flex;flex-direction:column;padding:22px 24px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.wgsit__g3 .wgsit__obj p{font-size:15.5px;line-height:1.55;flex:1 1 auto}
+.wgsit__g3 .wgsit__objf{margin-top:auto}
 .wgsit__obj,.wgsit__rev{background:#fff;border:1px solid #e4e6eb;border-radius:12px;padding:16px 18px;text-align:left}
+.wgsit__kar .wgsit__rev{padding:22px 24px;box-shadow:0 6px 20px rgba(0,0,0,.06)}.wgsit__kar .wgsit__rev p{font-size:15.5px;line-height:1.55}
 .wgsit__objh{display:flex;gap:10px;align-items:center;margin-bottom:10px}.wgsit__objh img{width:44px;height:44px;border-radius:50%;object-fit:cover}
 .wgsit__objh strong{display:block;font-size:15px}.wgsit__objh span{font-size:12.5px;color:#65676b}
 .wgsit__obj p,.wgsit__rev p{font-size:14.5px;line-height:1.6;color:#1c1e21;margin:0 0 10px}
@@ -266,5 +274,7 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
 .wgsit__kar>*{scroll-snap-align:start}
 .wgsit__tag{display:inline-block;background:#eef3f8;color:#1d2b4f;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700;margin-bottom:6px}
 .wgsit__zv{color:#e0a33c!important;letter-spacing:2px;margin:0 0 4px!important}.wgsit__ver{font-size:12.5px;color:#1f8a4c;font-weight:700}
-@media (max-width:860px){.wgsit__g3{grid-template-columns:1fr}.wgsit__kar{grid-auto-columns:82%}}
+@media (max-width:1000px){.wgsit__g3{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(300px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}.wgsit__g3>*{scroll-snap-align:start}}
+@media (max-width:860px){.wgsit__kar{grid-auto-columns:82%}}
+@media (max-width:420px){.wgsit__g3{grid-auto-columns:86%}}
 </style>
