@@ -1290,10 +1290,13 @@ body.single-product {
            }
 
 
-/* Tablica velicina pod ceno - manj razmika zgoraj (~9 px) in spodaj (~7-8 px), za vse izdelke (Dejan 26.10.2026).
-   Globalna povezava (theme): blok cene nad njo ima -10 px, njegova vsebina pa ~23 px spodnjega odmika (robova se strneta), obrazec pod njo 10 px.
-   Orto povezava: odstevalnik nad njo ima 14 px, #bundle-selector pod njo 8 px. */
-.summary .noriks-global-sizechart { display: flex !important; width: max-content; margin: -14px 0 0 !important; }
-.summary .noriks-global-sizechart ~ form.cart { margin-top: 7px !important; }
+/* Tablica velicina pod ceno - manj razmika: ~9 px pod znacko cene in ~7-8 px do naslednjega elementa, za vse izdelke (Dejan 26.10.2026).
+   Globalna povezava (theme): p.price ima 10 px spodnjega roba, za njim prazen prostor bloka cene; pod povezavo je odstevalnik v obrazcu (14 px zgoraj).
+   Orto povezava: odstevalnik nad njo ima 14 px, #bundle-selector pod njo 8 px.
+   Globalna povezava se skrije, ce ima izdelek svojo orto povezavo (JS doda display:none) - tega ne prepisi. */
+.summary:has(.gck-size-link) .noriks-global-sizechart { display: none !important; }
+.summary .noriks-global-sizechart:not([style*="display: none"]) { display: flex !important; width: max-content; margin: -25px 0 0 !important; }
+.summary .noriks-global-sizechart ~ form.cart { margin-top: 0 !important; }
+.summary .noriks-global-sizechart ~ form.cart .gck-countdown { margin-top: 8px !important; }
 .summary .gck-countdown:has(~ .gck-size-link-wrap) { margin-bottom: 9px !important; }
 .summary .gck-size-link-wrap { display: flex; justify-content: flex-end; margin-top: 0 !important; margin-bottom: 0 !important; }
