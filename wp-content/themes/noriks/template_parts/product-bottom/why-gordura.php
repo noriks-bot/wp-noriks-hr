@@ -3,17 +3,31 @@
  * NORIKS ShapeBody — why sekcije 1:1 z originalom (10 vsebinskih + NORIKS pogoji). Generirano z why.js.
  *
  * STRUKTURA ORIGINALA: (lojaisaleblanc.com.br/products/nina-body-premium-ultra-modelador-copia)
-   Stran originala za botom/brskalnikom brez oglasa pokaze samo "CARREGANDO AMBIENTE SEGURO" (preverjeno 26. 10. s curl in
-   headless Chrome), body_html izdelka je prazen. Vidna vsebina originala je samo galerija 11 slik + izbirnika:
-   1. galerija — 11 slik izdelka (pri nas vsaka slika svoja sekcija slika/besedilo, izmenicno levo/desno)
-   2. izbirnik Velicina P-2XG in Cor Bege/Marrom/Preto (pri nas Velicina + Boja)
-   3. tablica velikosti (pri nas size-chart)
+   Vsebina originala je v HTML (zakrita za document.write, body_html izdelka je prazen):
+   1. pod izbirniki blok "Caracteristicas do produto" — 4 ikone v vrsti (Anti Pilling, Toque Macio, Respiravel,
+      Secagem Rapida) -> pri nas 1. sekcija: 4 lastnosti v vrsti z ikonami originala
+   2. galerija — 11 slik izdelka (pri nas vsaka slika svoja sekcija slika/besedilo, izmenicno levo/desno)
+   3. izbirnik Velicina (P-2XG = S-3XL) in Cor Bege/Marrom/Preto (pri nas Velicina S-3XL + Boja)
+   4. tablica velikosti (pri nas size-chart)
    Brez videov, tabel in karuselov na originalu.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/gordura/';
 ?>
 <div class="wgordura">
+
+  <section class="wgordura__s wgordura__las">
+    <div class="wgordura__lv">
+      <div class="wgordura__kicker">KARAKTERISTIKE PROIZVODA</div>
+      <h2 class="wgordura__h2">Četiri stvari koje <em>osjetite svaki dan</em></h2>
+      <div class="wgordura__lg">
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-bez-kuglica.svg' ); ?>" alt="Ne stvara kuglice" loading="lazy" decoding="async"></span><strong>Ne stvara kuglice</strong><span>Tkanina ostaje glatka i nakon nošenja i pranja.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-mekan.svg' ); ?>" alt="Mekan na dodir" loading="lazy" decoding="async"></span><strong>Mekan na dodir</strong><span>Ugodan uz kožu cijeli dan.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-prozracan.svg' ); ?>" alt="Prozračan" loading="lazy" decoding="async"></span><strong>Prozračan</strong><span>Tkanina propušta zrak.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-brzo-susenje.svg' ); ?>" alt="Brzo se suši" loading="lazy" decoding="async"></span><strong>Brzo se suši</strong><span>Nakon pranja brzo je spreman za nošenje.</span></div>
+      </div>
+    </div>
+  </section>
 
   <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v">
@@ -143,11 +157,11 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od P do 2XG" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od S do 3XL" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">VELIČINE</div>
-        <h2 class="wgordura__h2">Šest veličina, <em>od P do 2XG</em></h2>
-        <p class="wgordura__p">NORIKS ShapeBody dostupan je u šest veličina, od P do 2XG. Na fotografijama ga nose žene različitih građa, sprijeda i straga, u svim trima bojama.</p>
+        <h2 class="wgordura__h2">Šest veličina, <em>od S do 3XL</em></h2>
+        <p class="wgordura__p">NORIKS ShapeBody dostupan je u šest veličina, od S do 3XL. Na fotografijama ga nose žene različitih građa, sprijeda i straga, u svim trima bojama.</p>
         <p class="wgordura__p">Body je krojen da prilijega uz tijelo, a kukice sprijeda zatvarate jednu po jednu. Ako ste između dvije veličine, javite nam se prije narudžbe i pomoći ćemo vam odabrati.</p>
         <p class="wgordura__p">Ako vam veličina ne odgovara, NORIKS ShapeBody možete vratiti. Kod nas imate 30 dana za povrat, a plaćate tek kad vam paket stigne.</p>
         <p class="wgordura__zak">Šest veličina, isti kroj u svakoj.</p>
@@ -182,6 +196,14 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
   </section>
 </div>
 <style>
+.wgordura__lv{max-width:1140px;margin:0 auto;padding:0 24px;box-sizing:border-box;text-align:center}
+.wgordura__lg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.wgordura__lk{background:#fff;border:1px solid #ece8e2;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.06);padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.wgordura__lki{width:84px;height:84px;border-radius:50%;background:#f4f3ef;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.wgordura__lki img{width:56px;height:56px;object-fit:contain;display:block}
+.wgordura__lk strong{font-size:17px;font-weight:800;color:#1c1c1c}
+.wgordura__lk span:last-child{font-size:14px;line-height:1.5;color:#555}
+@media (max-width:860px){.wgordura__lg{grid-template-columns:1fr 1fr;gap:12px}.wgordura__lk{padding:22px 12px}}
 .wgordura{color:#1c1c1c;font-family:inherit}
 .wgordura__s{padding:56px 0;background:#fff}
 .wgordura__s--bg{background:#f4f3ef}

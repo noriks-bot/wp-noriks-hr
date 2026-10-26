@@ -595,15 +595,15 @@ if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_gordura_sizes' ) ) {
-    /** NORIKS ShapeBody: velicine tocno kot na originalu (brazilske oznake P–2XG) in ustrezna mednarodna oznaka. */
+    /** NORIKS ShapeBody: sest velicin originala (P–2XG) z mednarodnimi oznakami S–3XL; original mer ne navaja. */
     function noriks_gordura_sizes() {
         return array(
-            array( 'P',   'S' ),
-            array( 'M',   'M' ),
-            array( 'G',   'L' ),
-            array( 'GG',  'XL' ),
-            array( 'XG',  '2XL' ),
-            array( '2XG', '3XL' ),
+            array( 'S' ),
+            array( 'M' ),
+            array( 'L' ),
+            array( 'XL' ),
+            array( '2XL' ),
+            array( '3XL' ),
         );
     }
 }
@@ -1627,8 +1627,8 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
                 'glava' => array( 'Veličina', 'Mjere', 'Vozila', 'Širina sjedala' ), 'vrstice' => noriks_travel_sizes(), 'opomba' => '' );
         }
         if ( noriks_is_type( 'gordura', $product_id ) ) {
-            return array( 'uvod' => 'Body dolazi u <strong>šest veličina</strong> s oznakama kao na originalu (P – 2XG). U drugom stupcu je odgovarajuća međunarodna oznaka.',
-                'glava' => array( 'Veličina', 'Međunarodna oznaka' ), 'vrstice' => noriks_gordura_sizes(),
+            return array( 'uvod' => 'Body dolazi u <strong>šest veličina</strong>, od S do 3XL.',
+                'glava' => array( 'Veličina' ), 'vrstice' => noriks_gordura_sizes(),
                 'opomba' => 'Odaberite veličinu koju inače nosite.' );
         }
         if ( noriks_is_type( 'draps', $product_id ) ) {

@@ -1,5 +1,5 @@
 <?php
-// NORIKS ShapeBody Modelador — mnenja kupcev. Generirano z postavi.js.
+// NORIKS ShapeBody — mnenja kupcev. Generirano z postavi.js.
 $auto_reviews_en = array(
     array("name" => "Marija K.", "text" => "Nisam mogla vjerovati kada sam prvi put obukla ovaj body — haljina mi je odmah ljepše sjela. Nosim ga skoro svaki dan i osjećam se puno samopouzdanije. Najbolja kupovina ikad!"),
     array("name" => "Ana M.", "text" => "Nakon poroda nisam mogla ući u svoje stare traperice. S ovim body-jem ne samo da sam ušla u njih, već mi sad i super pristaju. Jako sam zadovoljna, preporučujem svim mamama!"),

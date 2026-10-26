@@ -2111,7 +2111,7 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-gordura' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS ShapeBody: Boja (3 barve originala) kot krogci + Velicina (P–2XG kot na originalu). */
+      /* NORIKS ShapeBody: Boja (3 barve originala) kot krogci + Velicina S–3XL. */
       .swatch-circle.color-bez, #bundle-selector .swatch-circle.color-bez { background: #d9bfa3 !important; }
       .swatch-circle.color-smeda, #bundle-selector .swatch-circle.color-smeda { background: #6b4a35 !important; }
       .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #1c1c1e !important; }
