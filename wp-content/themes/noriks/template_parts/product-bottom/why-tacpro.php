@@ -124,7 +124,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
       <div class="wtacpro__tekst wtacpro__tekst--sredina">
         <div class="wtacpro__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wtacpro__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wtacpro__p">NORIKS TacPro isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+        <p class="wtacpro__p">NORIKS TacPro isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja. Pridružite se zajednici od 120.000 zadovoljnih kupaca.</p>
       </div>
       <div class="wtacpro__pogoji">
         <div class="wtacpro__pog"><strong>30 dana</strong><span>za povrat novca</span></div>

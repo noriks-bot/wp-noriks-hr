@@ -41,6 +41,7 @@ $ngv_mnenja = array(
         <p class="ngv-p">Od stvarnih ljudi, u stvarnim kuhinjama i kupaonicama. Pogledajte što kažu nakon mjesec dana s NORIKS GlassPro krpom.</p>
         <p class="ngv-p">Stakla bez mrlja, čak i na jakom suncu. Krpa upija do 1 litre vode, a čisti bez spreja i bez kemijskih sredstava — samo voda i vlakno.</p>
         <p class="ngv-p">Muka s kamencem? Gotova. Gusta vlakna od 600 g/m² hvataju prljavštinu, a krpa se pere u perilici više od 300 puta.</p>
+        <p class="ngv-p">„Prije narudžbe bila sam skeptična, jer kod reklama na društvenim mrežama nikad ne znaš. Ali rekla sam si: zašto ne probati? Moram reći da su jednostavno čarobne — upijaju apsolutno sve u trenu. Štedim puno vremena i olakšavaju mi život. Preporučujem!“ <span style="color:#666">— Gordana D.</span></p>
         <p class="ngv-zak">Ocjena 4,8 od 120.000 NORIKS kupaca.</p>
       </div>
     </div>
@@ -71,6 +72,7 @@ $ngv_mnenja = array(
         <p class="ngv-p">Navlažite krpu. Iscijedite je. I obrišite. <strong>Nema četvrtog koraka</strong>, nema spreja prije, nema ispiranja poslije. Voda i vlakno obave posao.</p>
         <p class="ngv-p">Gušća strana hvata kamenac i prljavštinu. Glatka strana polira i daje sjaj. Okrenete krpu, prijeđete jednom, i površina je suha, čista, bez mrlja.</p>
         <p class="ngv-p">Ogledalo, staklo, miješalica, pločice: <strong>isti pokret posvuda.</strong></p>
+        <p class="ngv-p">Čisti stakla, ogledala, pločice i sjajne površine <strong>bez mrlja, i bez deterdženata</strong> — bez spreja protiv kamenca i bez kuhinjskog papira za sušenje.</p>
         <p class="ngv-zak">Navlažite, iscijedite, obrišite.</p>
       </div>
     </div>
@@ -86,6 +88,7 @@ $ngv_mnenja = array(
         <p class="ngv-p"><span class="ngv-tick" aria-hidden="true">✓</span> <strong>Kraj kamenca, kraj muke.</strong> Bijeli veo na staklima, kolutovi na inoxu, mrlje na ogledalu u kupaonici. S NORIKS GlassPro krpom <strong>dovoljan je jedan potez</strong>: površina je čista i takva ostaje dok se suši.</p>
         <p class="ngv-p"><span class="ngv-tick" aria-hidden="true">✓</span> <strong>Upija do 1 litre vode i zadržava je.</strong> Tamo gdje se klasična mikrovlakna zasite i počnu razmazivati, NORIKS GlassPro <strong>nastavlja upijati</strong>. Prijeđete jednom, površina je suha. Nema drugog poteza ni mrlje koja se vrati dok se suši.</p>
         <p class="ngv-p"><span class="ngv-tick" aria-hidden="true">✓</span> <strong>Napravljena da traje godinama.</strong> Pere se u perilici i zadržava moć upijanja pranje za pranjem. Jedna kupnja koja zamjenjuje desetke jednokratnih proizvoda.</p>
+        <p class="ngv-p">Bijeli veo na staklima, kolutovi na inoxu, mrlje na ogledalu u kupaonici: s NORIKS GlassPro dovoljan je <strong>jedan potez</strong> — površina je čista i takva ostaje dok se suši.</p>
         <p class="ngv-zak">Gusta vlakna od 600 g/m² — jedan potez je dovoljan.</p>
       </div>
     </div>
@@ -100,6 +103,7 @@ $ngv_mnenja = array(
         <h2 class="ngv-h2">Skuplja od krpe iz trgovine. <em>Ali i tri puta gušća.</em></h2>
         <p class="ngv-p">Tri pakiranja mikrovlakana, sprej protiv kamenca, rolice kuhinjskog papira. I mrlje koje se svejedno vrate deset minuta kasnije. Nije skupa cijena krpe, <strong>skupo je sve što ponovno kupujete da popravite čišćenje.</strong></p>
         <p class="ngv-p"><strong>NORIKS GlassPro kupujete samo jednom.</strong> I prestajete kupovati sve ostalo.</p>
+        <p class="ngv-p">Napravljena je da traje godinama: pere se u perilici i zadržava moć upijanja pranje za pranjem. Jednokratna kupnja koja zamjenjuje desetke potrošnih proizvoda za jednokratnu upotrebu.</p>
         <p class="ngv-p">Isprobajte je na površini koja vas najviše živcira. Razliku ćete vidjeti odmah.</p>
         <p class="ngv-zak">Jedna krpa umjesto sprejeva, papira i hrpe mikrovlakana.</p>
       </div>
@@ -123,6 +127,9 @@ $ngv_mnenja = array(
           </tbody>
         </table>
         <p class="ngv-p ngv-p--mala">Dimenzije 40 × 40 cm. Materijal: mikrovlakna i pamuk. Za stakla, ogledala, pločice, slavine i sve sjajne površine. Pranje u perilici do 60 °C, bez omekšivača i bez sušilice.</p>
+        <p class="ngv-p">Gdje se obična mikrovlakna nakon nekoliko poteza zasite i počnu razmazivati vodu, NORIKS GlassPro <strong>i dalje upija — do 1 litre vode</strong> i zadržava je. Prijeđete jednom i površina je suha: bez drugog prolaza i bez mrlja koje se ponovno pojave dok se suši.</p>
+        <p class="ngv-p">Vlakna od 600 g/m² ostaju učinkovita i nakon <strong>više od 300 pranja</strong>. Da krpa sačuva sva svojstva upijanja, perite je u perilici do 60 °C, bez omekšivača i bez sušilice.</p>
+        <p class="ngv-zak">Jedna krpa za stakla, ogledala, pločice i slavine — bez deterdženata.</p>
       </div>
     </div>
   </section>

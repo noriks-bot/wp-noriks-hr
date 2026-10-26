@@ -123,6 +123,14 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
         <h2 class="wbirdie__h2">Punjiv, s prekidačem i <em>svjetiljkom</em></h2>
         <p class="wbirdie__p">NORIKS Guard je punjiv, pa ga koristite bez zamjene baterija. Uz punjivu bateriju ima i svjetlo koje upozorava na slabu bateriju.</p>
         <p class="wbirdie__p">Ima prekidač za uključivanje i isključivanje, tako da se aktivira samo kada vi to stvarno želite. Ugrađena svjetiljka radi bez uključivanja sirene, a kraći mesingani privjesak lakše se nosi na ključevima.</p>
+        <ul class="wbirdie__p" style="padding-left:20px;margin:0 0 14px">
+          <li><strong>Glasna sirena (130 dB) i stroboskopsko svjetlo</strong> – aktiviraju se povlačenjem pina.</li>
+          <li><strong>Mesingani privjesak</strong> – za ključeve, torbu ili ruksak.</li>
+          <li><strong>Svjetiljka (novo)</strong> – za mračne ulaze, stubišta i parkirališta.</li>
+          <li><strong>Prekidač za uključivanje i isključivanje (novo)</strong>.</li>
+          <li><strong>Punjenje preko USB-C priključka, kabel uključen (novo)</strong>.</li>
+          <li><strong>Svjetlo indikatora punjenja (novo)</strong>.</li>
+        </ul>
         <p class="wbirdie__zak">Tri nove funkcije, isti jednostavan pin.</p>
       </div>
     </div>
