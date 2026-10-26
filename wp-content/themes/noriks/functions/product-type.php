@@ -1650,7 +1650,7 @@ if ( ! function_exists( 'noriks_bra_tabela_html' ) ) {
             'G' => array( '', '', '', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '' ),
             'H' => array( '', '', '', '2XL', '2XL', '3XL', '3XL', '4XL', '', '' ),
         );
-        $td = 'padding:7px 4px;text-align:center;border-bottom:1px solid #eee;font-size:13px;white-space:nowrap;';
+        $td = 'padding:7px 2px;text-align:center;border-bottom:1px solid #eee;font-size:12px;white-space:nowrap;';
         $h  = '<table' . ( $id ? ' id="' . esc_attr( $id ) . '"' : '' ) . ' style="width:100%;border-collapse:collapse;margin:0 0 14px;">';
         $h .= '<thead><tr><th style="' . $td . 'background:#111;color:#fff;font-weight:700;text-align:left;">Košarica</th>';
         $h .= '<th colspan="10" style="' . $td . 'background:#111;color:#fff;font-weight:700;">Opseg ispod grudi (EU)</th></tr>';
