@@ -13,7 +13,7 @@ $wdir = get_template_directory_uri() . '/img/sculptleg/';
 
   <section class="wsclp__s wsclp__s--bg">
     <div class="wsclp__v">
-      <div class="wsclp__media"><img src="<?php echo esc_url( $wdir . 'noriks-sculptleg-kupac.webp?v=1' ); ?>" alt="Kupčica u sivim tajicama NORIKS SculptLeg ispred ogledala" loading="lazy" decoding="async"></div>
+      <div class="wsclp__media"><img src="<?php echo esc_url( $wdir . 'noriks-sculptleg-kupac.webp?v=2' ); ?>" alt="Kupčica u sivim tajicama NORIKS SculptLeg ispred ogledala" loading="lazy" decoding="async"></div>
       <div class="wsclp__tekst">
         <div class="wsclp__kicker">OCJENA 4,8 · 120.000 KUPACA NORIKS</div>
         <h2 class="wsclp__h2">Tajice koje žene <em>nose gotovo svaki dan</em></h2>

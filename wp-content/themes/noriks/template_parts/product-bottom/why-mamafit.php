@@ -53,7 +53,7 @@ $wdir = get_template_directory_uri() . '/img/mamafit/';
 
   <section class="wmamf__s wmamf__s--bg">
     <div class="wmamf__v">
-      <div class="wmamf__media"><img src="<?php echo esc_url( $wdir . 'noriks-mamafit-boje.webp?v=1' ); ?>" alt="NORIKS MamaFit u četiri boje: crna, tamnoplava, boja kože i ružičasta" loading="lazy" decoding="async"></div>
+      <div class="wmamf__media"><img src="<?php echo esc_url( $wdir . 'noriks-mamafit-boje.webp?v=1' ); ?>" alt="Ružičaste gaćice NORIKS MamaFit na polici u kupaonici" loading="lazy" decoding="async"></div>
       <div class="wmamf__tekst">
         <div class="wmamf__kicker">NAJČEŠĆA PITANJA</div>
         <h2 class="wmamf__h2">Što mame <em>najčešće pitaju</em></h2>
@@ -115,7 +115,7 @@ $wdir = get_template_directory_uri() . '/img/mamafit/';
 
   <section class="wmamf__s wmamf__s--bg">
     <div class="wmamf__v">
-      <div class="wmamf__media"><img src="<?php echo esc_url( $wdir . 'noriks-mamafit-kupci-1.webp?v=1' ); ?>" alt="Kupčica u trapericama i bijeloj majici s gaćicama NORIKS MamaFit ispod odjeće" loading="lazy" decoding="async"></div>
+      <div class="wmamf__media"><img src="<?php echo esc_url( $wdir . 'noriks-mamafit-kupci-1.webp?v=1' ); ?>" alt="Kupčica u gaćicama NORIKS MamaFit u boji kože" loading="lazy" decoding="async"></div>
       <div class="wmamf__tekst">
         <div class="wmamf__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wmamf__h2">Što o njima <em>misle mame</em></h2>
@@ -132,7 +132,7 @@ $wdir = get_template_directory_uri() . '/img/mamafit/';
 
   <section class="wmamf__s">
     <div class="wmamf__v wmamf__v--rev">
-      <div class="wmamf__media"><img src="<?php echo esc_url( $wdir . 'noriks-mamafit-kupci-2.webp?v=1' ); ?>" alt="Kupčica u cvjetnoj haljini s gaćicama NORIKS MamaFit ispod haljine" loading="lazy" decoding="async"></div>
+      <div class="wmamf__media"><img src="<?php echo esc_url( $wdir . 'noriks-mamafit-kupci-2.webp?v=1' ); ?>" alt="Kupčica u trapericama i bijeloj majici s gaćicama NORIKS MamaFit ispod odjeće" loading="lazy" decoding="async"></div>
       <div class="wmamf__tekst">
         <div class="wmamf__kicker">JOŠ ISKUSTAVA</div>
         <h2 class="wmamf__h2">Bolje od svih pojaseva <em>koje sam kupila</em></h2>
