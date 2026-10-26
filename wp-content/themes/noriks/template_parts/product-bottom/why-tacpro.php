@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wstacpro__traka{padding:36px 0;background:linear-gradient(135deg,#eef1f7 0%,#f8f6f1 100%);color:#1c1c1c}.wstacpro__tmreza{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wstacpro__tk{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(29,43,79,.08);border-radius:16px;padding:20px 18px;box-shadow:0 8px 24px rgba(29,43,79,.08)}.wstacpro__ti{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1d2b4f,#33477a);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(29,43,79,.25)}.wstacpro__tt strong{display:block;font-size:16.5px;font-weight:800;line-height:1.25;color:#1c1c1c}.wstacpro__tt span{display:block;font-size:13.5px;line-height:1.4;color:#5a5f6b;margin-top:3px}@media (max-width:860px){.wstacpro__traka{padding:28px 0}.wstacpro__tmreza{grid-template-columns:1fr 1fr;gap:12px}.wstacpro__tk{flex-direction:column;text-align:center;padding:18px 12px;gap:10px}.wstacpro__tt strong{font-size:15px}}
 .wstacpro{color:#1c1c1c;font-family:inherit}
 .wstacpro__s{padding:56px 0;background:#fff}.wstacpro__s--bg{background:#f4f3ef}
-.wstacpro__v{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box}
+.wstacpro__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wstacpro__c{text-align:center}
 .wstacpro__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wstacpro__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wstacpro__h2 em{font-style:italic}
@@ -89,6 +89,7 @@ span.wstacpro__pi{opacity:1;width:58px;height:58px;border-radius:50%;background:
 .wstacpro__ti{background:linear-gradient(135deg,#9c661e,#b28850);box-shadow:0 6px 14px rgba(156,102,30,.30)}.wstacpro__tk{border-color:rgba(213,138,40,.30)}
 .wstacpro__pus{color:#9c661e}.wstacpro__plavo{background:#9c661e;margin-top:-72px}.wstacpro__k--temna{background:#9c661e}
 @media (max-width:860px){.wstacpro__s{padding:46px 0}.wstacpro__s.wstacpro__traka{padding:30px 0}.wstacpro__plavo{margin-top:-46px}.wstacpro__pog>div{padding:22px 12px}}
+@media (max-width:767px){.wstacpro__v{padding:0 16px}}
 /* /dizajn.py */
 </style>
 <script>
