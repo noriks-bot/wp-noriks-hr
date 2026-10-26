@@ -215,7 +215,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 // Novi izdelki brez lastne veje: Detalji o proizvodu = opis izdelka iz WooCommerce,
 // savjeti za pranje za majice se ne prikazejo (prej je bilo tu besedilo za majice 70 % pamuk).
 $noriks_opis_iz_wc = false;
-foreach ( array( 'mamafit', 'odorpro', 'gelsit', 'struja', 'calm', 'shapetank', 'classics', 'flops', 'destapacan', 'tacpro', 'ondersteun', 'insoles', 'glasspro', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'retrobox', 'devotions', 'ritual', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
+foreach ( array( 'vinocool', 'mamafit', 'odorpro', 'gelsit', 'struja', 'calm', 'shapetank', 'classics', 'flops', 'destapacan', 'tacpro', 'ondersteun', 'insoles', 'glasspro', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'retrobox', 'devotions', 'ritual', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
     if ( noriks_is_type( $noriks_t, $current_product_id ) ) { $noriks_opis_iz_wc = true; break; }
 }
 

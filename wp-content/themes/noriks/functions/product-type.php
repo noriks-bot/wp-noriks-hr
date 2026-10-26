@@ -64,6 +64,7 @@ function noriks_product_type_map() : array {
         'muslin' => array( 'orto-muslin' ),
         'silkcase' => array( 'orto-silkcase' ),
         'sunover' => array( 'orto-sunover' ),
+        'vinocool' => array( 'orto-vinocool' ),
         'odorpro' => array( 'orto-odorpro' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
