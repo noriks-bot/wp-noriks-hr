@@ -1,125 +1,60 @@
 <?php
 /**
- * NORIKS WebShot — why sekcije 1:1 z originalom (5 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ * NORIKS WebShot — why sekcije po natancni strukturi originala (zipstring.com/products/zipstring-aracna). Generirano s struk.py.
+ *
+ * STRUKTURA ORIGINALA:
+   1. hero — video lansiranja + citat kupca (dva stolpca)
+   2. 4 ikone lastnosti v vrsti (90 dni -> pri nas 30 dana, svijetli u mraku, 100+ trikova, USB-C)
+   3. See it live — 5 UGC videov z vzganimi angleskimi podnapisi (izpusceno)
+   4. trak logotipov medijev (izpusceno, tuji mediji)
+   5. Better with two — video + besedilo
+   6. Features — 6 slik lastnosti v mrezi 3 v vrsti
+   7. Don't just take our word — 5 kartic mnenj (2 s fotografijo)
+   8. Our toy story — video zgodbe podjetja (izpusceno, tuja znamka)
+   9. 4000+ 5 Star Reviews — widget mnenj (pri nas zavihek mnenj, 16 mnenj)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wdir = get_template_directory_uri() . '/img/webshot/';
 ?>
-<div class="wwebshot">
-
-  <section class="wwebshot__s wwebshot__s--bg">
-    <div class="wwebshot__v">
-      <div class="wwebshot__media"><img src="<?php echo esc_url( $wdir . 'noriks-webshot-lansiraj.webp' ); ?>" alt="Lansiraj, leti i uvuci" loading="lazy" decoding="async"></div>
-      <div class="wwebshot__tekst">
-        <div class="wwebshot__kicker">Pogledajte ga u akciji</div>
-        <h2 class="wwebshot__h2">Lansiraj, leti i <em>uvuci</em></h2>
-        <p class="wwebshot__p">NORIKS WebShot je lanser niti koji se nosi na ruci: jednim pritiskom ispali svjetleću petlju niti, koja leti kroz zrak i vraća se natrag.</p>
-        <p class="wwebshot__p">Brzo lansiranje i automatsko uvlačenje — nit se pri lansiranju sama rasplete, a kad pustite gumb, odmah se uvuče u lanser.</p>
-        <p class="wwebshot__p">Vaša superherojska avantura počinje sada.</p>
-        <p class="wwebshot__zak">Nit koja leti, svijetli i vraća se — na vašoj ruci.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wwebshot__s">
-    <div class="wwebshot__v wwebshot__v--rev">
-      <div class="wwebshot__media"><img src="<?php echo esc_url( $wdir . 'noriks-webshot-udvoje.webp' ); ?>" alt="Dvostruka zabava udvoje" loading="lazy" decoding="async"></div>
-      <div class="wwebshot__tekst">
-        <div class="wwebshot__kicker">Bolje udvoje</div>
-        <h2 class="wwebshot__h2">Dvostruka zabava <em>udvoje</em></h2>
-        <p class="wwebshot__p">Lanser je osmišljen tako da radi na objema rukama — na lijevoj i na desnoj.</p>
-        <p class="wwebshot__p">Uzmite dva i lansirajte niti s obje ruke odjednom, ili se natječite s prijateljem, bratom ili sestrom tko će izvesti bolji trik.</p>
-        <p class="wwebshot__zak">Dva lansera, dvostruko više zabave.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wwebshot__s wwebshot__s--bg">
-    <div class="wwebshot__v">
-      <div class="wwebshot__media"><img src="<?php echo esc_url( $wdir . 'noriks-webshot-remen.webp' ); ?>" alt="Sve što dobivate" loading="lazy" decoding="async"></div>
-      <div class="wwebshot__tekst">
-        <div class="wwebshot__kicker">Značajke</div>
-        <h2 class="wwebshot__h2">Sve što <em>dobivate</em></h2>
-        <p class="wwebshot__p"><em>Jedna veličina za sve:</em> remen s čičkom stane na svaku ruku. <em>Lansiranje i uvlačenje:</em> brzo lansiranje i automatsko uvlačenje niti.</p>
-        <p class="wwebshot__p"><em>Svijetli u mraku:</em> ugrađeni LED puni nit da svijetli. <em>Zamjenjive niti:</em> nit promijenite u nekoliko sekundi — u pakiranju su duga, srednje i kratke niti, uključujući one koje svijetle.</p>
-        <p class="wwebshot__p"><em>Bez baterija:</em> punjenje preko USB-C kabela, koji je u pakiranju. <em>Nema potrošnog materijala:</em> bez limenki ljepljive niti ili tekućine — samo neprekidna zabava.</p>
-        <p class="wwebshot__zak">Punjiv, svjetleći i spreman za više od 100 trikova.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wwebshot__s">
-    <div class="wwebshot__v wwebshot__v--rev">
-      <div class="wwebshot__media"><img src="<?php echo esc_url( $wdir . 'noriks-webshot-poklon.webp' ); ?>" alt="Ne vjerujte nam samo na riječ" loading="lazy" decoding="async"></div>
-      <div class="wwebshot__tekst">
-        <div class="wwebshot__kicker">Recenzije kupaca</div>
-        <h2 class="wwebshot__h2">Ne vjerujte nam <em>samo na riječ</em></h2>
-        <p class="wwebshot__p">„NIŠTA SLIČNO! Nije novi auto na daljinsko, ni blaster, ni kocke za slaganje. Ova igračka je zaista nešto potpuno novo.“ — Ana S. • „Kupila sam ih pet, za djecu od 6, 7, 9, 10 i 13 godina. Svi su ih zavoljeli i, što je još bolje, svi se mogu igrati sami.“ — Danica F.</p>
-        <p class="wwebshot__p">„Uvijek počnem s: pokazat ću ti nešto što nikad nisi vidio. Pokazao sam ga barem šezdesetorici ljudi i svi su oduševljeni.“ — Davor M. • „Morali smo kupiti tri da se djeca ne svađaju oko reda.“ — Helena B.</p>
-        <p class="wwebshot__p">„Unucima od 8 i 10 godina poklonili smo ga za Božić i stalno smišljaju nove trikove i izazove.“ — Vesna C.</p>
-        <p class="wwebshot__zak">Poklon koji oduševljava i djecu i odrasle.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wwebshot__s wwebshot__s--bg">
-    <div class="wwebshot__v">
-      <div class="wwebshot__media"><img src="<?php echo esc_url( $wdir . 'noriks-webshot-svijetli.webp' ); ?>" alt="Tisuće recenzija s 5 zvjezdica" loading="lazy" decoding="async"></div>
-      <div class="wwebshot__tekst">
-        <div class="wwebshot__kicker">120.000+ kupaca</div>
-        <h2 class="wwebshot__h2">Tisuće recenzija s <em>5 zvjezdica</em></h2>
-        <p class="wwebshot__p">„Djeca ga ne ispuštaju iz ruku — igraju se dok se baterija ne isprazni, napune ga i krenu ispočetka.“ • „Sinu sam ga kupila za 6. rođendan. Oduševili su se i on, i brat od 15 i sestra od 12 godina.“</p>
-        <p class="wwebshot__p">„Odlično izrađen i jednostavan za korištenje. Sviđa mi se što u pakiranju ima dodatnih niti koje se mogu promijeniti bilo kad.“ • „Svjetleća nit u mraku je ono što ih je potpuno oduševilo.“</p>
-        <p class="wwebshot__p">„Treba malo vremena da shvate da je bolje držati gumb nego ga samo kratko pritisnuti — nakon toga se nit više ne zapetlja.“</p>
-        <p class="wwebshot__zak">Prosječna ocjena 4,8 — osmijesi na svakom licu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wwebshot__s">
-    <div class="wwebshot__v wwebshot__v--polna">
-      <div class="wwebshot__tekst wwebshot__tekst--sredina">
-        <div class="wwebshot__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wwebshot__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wwebshot__p">NORIKS WebShot isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-      </div>
-      <div class="wwebshot__pogoji">
-        <div class="wwebshot__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div class="wwebshot__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div class="wwebshot__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div class="wwebshot__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-      </div>
-    </div>
-  </section>
+<div class="wswebshot">
+<section class="wswebshot__s wswebshot__s--bg"><div class="wswebshot__v wswebshot__dva"><div class="wswebshot__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-akcija.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wswebshot__kicker">Pogledajte ga u akciji</div><h2 class="wswebshot__h2">Lansiraj, leti i <em>uvuci</em></h2><p class="wswebshot__p">Prvi lanser niti koji se nosi na ruci! Lansirajte svjetleću petlju niti, pustite je da leti i uvucite je natrag. Vaša superherojska avantura počinje sada.</p><p class="wswebshot__p">„Bio mu je najdraži poklon i nije ga ispuštao iz ruku – ni zbog nove igraće konzole!“ — Branko J., provjereni kupac</p></div></div></section>
+<section class="wswebshot__s"><div class="wswebshot__v"><h2 class="wswebshot__h2 wswebshot__c">Zašto ga djeca <em>obožavaju</em></h2><div class="wswebshot__grid wswebshot__g4"><div class="wswebshot__k"><div class="wswebshot__kt"><strong>30 dana za povrat</strong><p>Isprobajte ga kod kuće bez rizika.</p></div></div><div class="wswebshot__k"><div class="wswebshot__kt"><strong>Svijetli u mraku</strong><p>Zamračena soba? Nema problema!</p></div></div><div class="wswebshot__k"><div class="wswebshot__kt"><strong>100+ trikova</strong><p>Naučite ih ili izmislite svoje.</p></div></div><div class="wswebshot__k"><div class="wswebshot__kt"><strong>USB-C punjenje</strong><p>Oko 1,5 sat igre na jedno punjenje.</p></div></div></div></div></section>
+<section class="wswebshot__s wswebshot__s--bg"><div class="wswebshot__v wswebshot__dva wswebshot__dva--rev"><div class="wswebshot__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-udvoje.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wswebshot__kicker">Bolje udvoje</div><h2 class="wswebshot__h2">Dvostruka zabava <em>udvoje</em></h2><p class="wswebshot__p">Lanser je osmišljen tako da radi na objema rukama – za dvostruko više zabave.</p><p class="wswebshot__p">Uzmite dva i lansirajte niti s obje ruke odjednom, ili se natječite s prijateljem tko će izvesti bolji trik.</p></div></div></section>
+<section class="wswebshot__s"><div class="wswebshot__v"><h2 class="wswebshot__h2 wswebshot__c"><em>Značajke</em></h2><div class="wswebshot__grid wswebshot__g3"><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-remen.webp' ); ?>" alt="Jedna veličina za sve" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><strong>Jedna veličina za sve</strong><p>Remen s čičkom stane na svaku ruku.</p></div></div><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-lansiraj.webp' ); ?>" alt="Lansiraj i uvuci" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><strong>Lansiraj i uvuci</strong><p>Brzo lansiranje i automatsko uvlačenje niti.</p></div></div><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-svijetli.webp' ); ?>" alt="Svijetli u mraku" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><strong>Svijetli u mraku</strong><p>Ugrađeni LED puni nit da svijetli.</p></div></div><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-niti.webp' ); ?>" alt="Zamjenjive niti" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><strong>Zamjenjive niti</strong><p>Duga, srednje i kratke niti – i svjetleće.</p></div></div><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-punjenje.webp' ); ?>" alt="Bez baterija" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><strong>Bez baterija</strong><p>USB-C punjenje, kabel je u pakiranju.</p></div></div><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-bez-potrosnog.webp' ); ?>" alt="Bez potrošnog materijala" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><strong>Bez potrošnog materijala</strong><p>Bez limenki niti ili tekućine – samo zabava.</p></div></div></div></div></section>
+<section class="wswebshot__s wswebshot__s--bg"><div class="wswebshot__v"><h2 class="wswebshot__h2 wswebshot__c">Ne vjerujte nam <em>samo na riječ</em></h2><div class="wswebshot__grid wswebshot__g3"><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-kupac-1.webp' ); ?>" alt="NIŠTA SLIČNO!" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><span class="wswebshot__zv">★★★★★</span><strong>NIŠTA SLIČNO!</strong><p>Nije novi auto na daljinsko, ni blaster, ni kocke za slaganje. Ova igračka je zaista nešto potpuno novo. Sjajna ideja!</p><span class="wswebshot__ime">Ana S.</span></div></div><div class="wswebshot__k"><div class="wswebshot__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/webshot/noriks-webshot-kupac-2.webp' ); ?>" alt="LAKO ZA SVAKOGA" loading="lazy" decoding="async"></div><div class="wswebshot__kt"><span class="wswebshot__zv">★★★★★</span><strong>LAKO ZA SVAKOGA</strong><p>Kupila sam ih pet, za djecu od 6, 7, 9, 10 i 13 godina. Svi su ih zavoljeli i svi se mogu igrati sami.</p><span class="wswebshot__ime">Danica F.</span></div></div><div class="wswebshot__k"><div class="wswebshot__kt"><span class="wswebshot__zv">★★★★★</span><strong>Tema za razgovor</strong><p>Uvijek počnem s: pokazat ću ti nešto što nikad nisi vidio. Pokazao sam ga barem šezdesetorici ljudi i svi su oduševljeni.</p><span class="wswebshot__ime">Davor M.</span></div></div><div class="wswebshot__k"><div class="wswebshot__kt"><span class="wswebshot__zv">★★★★★</span><strong>Svatko treba svoj!</strong><p>Morali smo kupiti tri da se djeca ne svađaju oko reda. Ha ha!</p><span class="wswebshot__ime">Helena B.</span></div></div><div class="wswebshot__k"><div class="wswebshot__kt"><span class="wswebshot__zv">★★★★★</span><strong>Beskrajna zabava</strong><p>Unucima od 8 i 10 godina poklonili smo ga za Božić i stalno smišljaju nove trikove i izazove.</p><span class="wswebshot__ime">Vesna C.</span></div></div></div></div></section>
+<section class="wswebshot__s wswebshot__s--bg"><div class="wswebshot__v"><div class="wswebshot__kicker wswebshot__c">KUPUJTE BEZ BRIGE</div><h2 class="wswebshot__h2 wswebshot__c">Uz NORIKS kupujete <em>bez rizika</em></h2><p class="wswebshot__p wswebshot__c">NORIKS WebShot isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p><div class="wswebshot__red4 wswebshot__pog"><div><strong>30 dana</strong><span>za povrat novca</span></div><div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div><div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div></div></div></section>
 </div>
 <style>
-.wwebshot{color:#1c1c1c;font-family:inherit}
-.wwebshot__s{padding:56px 0;background:#fff}
-.wwebshot__s--bg{background:#f4f3ef}
-.wwebshot__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.wwebshot__v--rev .wwebshot__media{order:2}
-.wwebshot__v--rev .wwebshot__tekst{order:1}
-.wwebshot__v--polna{grid-template-columns:1fr;gap:28px}
-.wwebshot__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
-.wwebshot__media img,.wwebshot__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wwebshot__media--polna{aspect-ratio:auto}
-.wwebshot__media--polna img,.wwebshot__media--polna video{height:auto}
-.wwebshot__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
-.wwebshot__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
-.wwebshot__h2 em{font-style:italic}
-.wwebshot__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
-.wwebshot__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wwebshot__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
-.wwebshot__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.wwebshot__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
-.wwebshot__s:not(.wwebshot__s--bg) .wwebshot__pog{background:#f4f3ef;box-shadow:none}
-.wwebshot__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
-.wwebshot__pog span{font-size:14px;color:#444}
-@media (max-width:860px){
-  .wwebshot__s{padding:38px 0}
-  .wwebshot__v{grid-template-columns:1fr;gap:22px}
-  .wwebshot__v--rev .wwebshot__media,.wwebshot__media{order:0}
-  .wwebshot__v--rev .wwebshot__tekst,.wwebshot__tekst{order:1}
-  .wwebshot__pogoji{grid-template-columns:1fr 1fr}
-}
+.wswebshot{color:#1c1c1c;font-family:inherit}
+.wswebshot__s{padding:56px 0;background:#fff}.wswebshot__s--bg{background:#f4f3ef}
+.wswebshot__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wswebshot__c{text-align:center}
+.wswebshot__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wswebshot__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wswebshot__h2 em{font-style:italic}
+.wswebshot__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wswebshot__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
+.wswebshot__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wswebshot__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wswebshot__red4 strong{display:block;font-size:18px;font-weight:800}.wswebshot__red4 span{font-size:13.5px;opacity:.85}
+.wswebshot__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wswebshot__dva--rev>div:first-child{order:2}
+.wswebshot__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wswebshot__media img,.wswebshot__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wswebshot__polna{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);margin-top:10px}.wswebshot__polna img,.wswebshot__polna video{width:100%;height:auto;display:block}
+.wswebshot__grid{display:grid;gap:22px;margin-top:22px}.wswebshot__g2{grid-template-columns:repeat(2,1fr)}.wswebshot__g3{grid-template-columns:repeat(3,1fr)}.wswebshot__g4{grid-template-columns:repeat(4,1fr)}
+.wswebshot__k{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wswebshot__k--temna{background:#1d2b4f;border:0}.wswebshot__k--temna p,.wswebshot__k--temna strong{color:#fff}
+.wswebshot__km img,.wswebshot__km video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.wswebshot__km--v video{aspect-ratio:9/16}
+.wswebshot__kt{padding:16px 18px 20px}.wswebshot__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wswebshot__kt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wswebshot__ime{display:block;margin-top:8px;font-weight:700;font-size:14px}.wswebshot__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wswebshot__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}.wswebshot__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #eee}.wswebshot__red3 strong{display:block;font-size:15px}.wswebshot__red3 span{font-size:13px;color:#555}
+.wswebshot__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wswebshot__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wswebshot__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wswebshot__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wswebshot__kv{list-style:none;margin:0 0 6px;padding:0}.wswebshot__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wswebshot__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wswebshot__tw{overflow-x:auto}.wswebshot__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+.wswebshot__tab th,.wswebshot__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wswebshot__tab th{background:#1d2b4f;color:#fff;font-weight:700}.wswebshot__tab td:first-child,.wswebshot__tab th:first-child{text-align:left}
+.wswebshot__da{color:#1f8a4c;font-weight:800}.wswebshot__ne{color:#c0392b;font-weight:800}
+.wswebshot__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wswebshot__pog{margin-top:22px}.wswebshot__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wswebshot__pog span{color:#444;opacity:1}
+@media (max-width:860px){.wswebshot__s{padding:38px 0}.wswebshot__dva{grid-template-columns:1fr;gap:22px}.wswebshot__dva--rev>div:first-child{order:0}
+.wswebshot__g3,.wswebshot__g4{grid-template-columns:1fr 1fr}.wswebshot__red4{grid-template-columns:1fr 1fr}.wswebshot__plavo{margin-top:-38px}}
+@media (max-width:560px){.wswebshot__g2,.wswebshot__g3,.wswebshot__g4{grid-template-columns:1fr}}
 </style>
