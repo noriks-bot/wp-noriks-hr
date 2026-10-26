@@ -589,6 +589,20 @@ if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_gordura_sizes' ) ) {
+    /** NORIKS ShapeBody: velicine tocno kot na originalu (brazilske oznake P–2XG) in ustrezna mednarodna oznaka. */
+    function noriks_gordura_sizes() {
+        return array(
+            array( 'P',   'S' ),
+            array( 'M',   'M' ),
+            array( 'G',   'L' ),
+            array( 'GG',  'XL' ),
+            array( 'XG',  '2XL' ),
+            array( '2XG', '3XL' ),
+        );
+    }
+}
+
 if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
     /** NORIKS SculptLeg: velicina, EU, opseg struka, opseg bokova (original luveon.com, Guide des tailles XS–5XL). */
     function noriks_sculptleg_sizes() {
@@ -1564,6 +1578,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         if ( noriks_is_type( 'travel', $product_id ) ) {
             return array( 'uvod' => 'Prije narudžbe izmjerite <strong>širinu stražnjeg sjedala</strong> i odaberite veličinu koja mu odgovara.',
                 'glava' => array( 'Veličina', 'Mjere', 'Vozila', 'Širina sjedala' ), 'vrstice' => noriks_travel_sizes(), 'opomba' => '' );
+        }
+        if ( noriks_is_type( 'gordura', $product_id ) ) {
+            return array( 'uvod' => 'Body dolazi u <strong>šest veličina</strong> s oznakama kao na originalu (P – 2XG). U drugom stupcu je odgovarajuća međunarodna oznaka.',
+                'glava' => array( 'Veličina', 'Međunarodna oznaka' ), 'vrstice' => noriks_gordura_sizes(),
+                'opomba' => 'Odaberite veličinu koju inače nosite.' );
         }
         if ( noriks_is_type( 'sculptleg', $product_id ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
