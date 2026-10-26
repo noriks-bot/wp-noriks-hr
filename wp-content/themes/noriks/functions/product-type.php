@@ -61,6 +61,7 @@ function noriks_product_type_map() : array {
         'flops' => array( 'orto-flops' ),
         'daily' => array( 'orto-daily' ),
         'quiet' => array( 'orto-quiet' ),
+        'muslin' => array( 'orto-muslin' ),
         'tacpro'                => array( 'orto-tacpro' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
@@ -1008,6 +1009,18 @@ if ( ! function_exists( 'noriks_sleepset_sizes' ) ) {
             array( 'M',  '53,5 cm', '86 cm', '72 cm', '61,5 cm', '20,5 cm' ),
             array( 'L',  '54,5 cm', '91 cm', '77 cm', '62,5 cm', '21,5 cm' ),
             array( 'XL', '55,5 cm', '96 cm', '82 cm', '63,5 cm', '22,5 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_muslin_sizes' ) ) {
+    /** NORIKS Muslin: velicina (= ime opcije Velicina), dimenzije (cm). 1:1 z originala (swiatmuslinu.pl, Rozmiar (cm)). */
+    function noriks_muslin_sizes() {
+        return array(
+            array( 'Prekrivač 130 × 150',        '130 × 150 cm' ),
+            array( 'Veliki prekrivač 150 × 200', '150 × 200 cm' ),
+            array( 'Dvostruki 200 × 230',        '200 × 230 cm' ),
+            array( 'Obiteljski 230 × 230',       '230 × 230 cm' ),
         );
     }
 }
