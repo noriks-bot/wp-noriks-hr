@@ -11,9 +11,10 @@
  *   5) NORIKS pogoji (zakljucna sekcija)
  *
  * STRUKTURA ORIGINALA: (lunara-comfort.com/products/front-support-built-in-bra-tank)
-   1. trustpilot_reviews — 6 kartic mnenj s fotografijami kupk v mrezi (pri nas mreza 6 kartic)
+   1. trustpilot_reviews — 6 kartic mnenj BREZ fotografij (samo zvezdice, besedilo, ime); namizje mreza 3 v vrsti,
+      mobilno karusel 1 kartica + puscici in pike (splide data-slides-mobile=1) — pri nas enako (.nbt-revs)
    2. What We Changed + How It Works — besedilo + 4 kartice slojev v mrezi 2 stolpca
-   3. Your New Morning Routine — 3 koraki v vrsti
+   3. Your New Morning Routine — 3 stevilceni koraki navpicno (eden pod drugim)
    4. How It Compares — primerjalna tabela (klasicen / sportni / s polico / mi) z oceno 2/8–8/8
    5. FAQ — harmonika (pri nas v reviews.php)
    Original nima videov.
@@ -87,6 +88,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
       </article>
       <?php endforeach; ?>
     </div>
+    <div class="nbt-kar"><button type="button" data-d="-1" aria-label="Prethodno">&#8249;</button><div class="nbt-dots"></div><button type="button" data-d="1" aria-label="Sljedeće">&#8250;</button></div>
   </div>
 </section>
 
@@ -263,7 +265,9 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 
 @media (max-width: 749px) {
   .nbt-sec { padding: 42px 0; }
-  .nbt-revs { grid-template-columns: 1fr; gap: 14px; }
+  .nbt-revs { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .nbt-revs::-webkit-scrollbar { display: none; }
+  .nbt-revs .nbt-rv { flex: 0 0 100%; scroll-snap-align: center; box-sizing: border-box; }
   .nbt-grid { grid-template-columns: 1fr; }
   .nbt-pogoji { grid-template-columns: 1fr 1fr; }
   .nbt-cmp th, .nbt-cmp td { padding: 11px 3px; }
@@ -274,7 +278,25 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
   .nbt-cmp .score td { font-size: 13px; }
 }
 
+/* 1) mnenja — mobilni karusel (puscici + pike), na namizju skrito */
+.nbt-kar { display: none; }
+@media (max-width: 749px) {
+  .nbt-kar { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
+  .nbt-kar button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--nbt-line); background: #fff; color: var(--nbt-ink); font-size: 20px; line-height: 1; padding: 0; cursor: pointer; }
+  .nbt-dots { display: flex; gap: 7px; }
+  .nbt-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--nbt-line); transition: background .2s; }
+  .nbt-dots span.on { background: var(--nbt-rose); }
+}
+
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
 .product_cat-orto-bratank .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
 
 </style>
+<script>
+(function(){var k=document.querySelector('.nbt-revs'),n=document.querySelector('.nbt-kar');if(!k||!n)return;
+var c=k.children,d=n.querySelector('.nbt-dots');for(var i=0;i<c.length;i++)d.appendChild(document.createElement('span'));
+function idx(){return Math.round(k.scrollLeft/(k.clientWidth||1));}
+function upd(){var j=idx();[].forEach.call(d.children,function(s,m){s.className=m===j?'on':'';});}
+n.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var j=Math.max(0,Math.min(c.length-1,idx()+(+b.getAttribute('data-d'))));k.scrollTo({left:c[j].offsetLeft-k.offsetLeft,behavior:'smooth'});});
+k.addEventListener('scroll',upd,{passive:true});upd();})();
+</script>
