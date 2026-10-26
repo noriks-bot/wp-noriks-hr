@@ -2,7 +2,7 @@
 // Review pool za NORIKS GelCushion — gel jastuk za sjedenje 40 x 35 cm s navlakom (orto-gelcushion). Prevedeno z originala
 // (15 mnenj) + 1 napisano po navodilih; hrvaska imena, brez tuje znamke in brez zdravstvenih trditev.
 $auto_reviews_en = array(
-    array("name" => "Mihael Á.", "text" => "Napokon jedan koji se ne ulegne. Probao sam nekoliko jastuka i nijedan nije bio dobar. Ovaj je stabilan, ne tone i stvarno osjećam manje pritiska na trtici."),
+    array("name" => "Mihael A.", "text" => "Napokon jedan koji se ne ulegne. Probao sam nekoliko jastuka i nijedan nije bio dobar. Ovaj je stabilan, ne tone i stvarno osjećam manje pritiska na trtici."),
     array("name" => "Pavica i Ivan", "text" => "Mislili smo da će biti još jedan jastuk za ormar, a koristimo ga svaki dan: ne spljošti se i sjedimo puno duže bez nelagode."),
     array("name" => "Tereza L.", "text" => "Od prvog dana najviše sam primijetila udobnost. Ne grije, ne pomiče se sa sjedala i sad sjedim bez razmišljanja o tome."),
     array("name" => "Isabela R.", "text" => "Odnedavno sam u invalidskim kolicima i cijeli dan sjedim. Jastuk koristim svaki dan i razlika je ogromna."),

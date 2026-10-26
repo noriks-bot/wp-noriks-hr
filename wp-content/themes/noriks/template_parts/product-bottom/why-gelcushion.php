@@ -18,9 +18,9 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wd = get_template_directory_uri() . '/img/gelcushion/';
 $gc_sit = array(
-  array( 'noriks-gelcushion-sit-1.webp', 'Sjednete, a nakon nekoliko minuta trtica počne smetati – sve više i više.' ),
-  array( 'noriks-gelcushion-sit-2.webp', 'Križa vuku i peku, a nakon pola sata više ne možete mirno sjediti.' ),
-  array( 'noriks-gelcushion-sit-3.webp', 'Noge vam trnu i svakih 20 minuta morate ustati sa stolice.' ),
+  array( 'noriks-gelcushion-sit-1b.webp', 'Sjednete, a nakon nekoliko minuta trtica počne smetati – sve više i više.' ),
+  array( 'noriks-gelcushion-sit-2b.webp', 'Križa vuku i peku, a nakon pola sata više ne možete mirno sjediti.' ),
+  array( 'noriks-gelcushion-sit-3b.webp', 'Noge vam trnu i svakih 20 minuta morate ustati sa stolice.' ),
 );
 $gc_tocke = array(
   array( 'Pritisak na trticu', 'Gel u obliku saća popusti točno ispod trtice i drži ostatak tijela. Trtica više ne nosi vašu težinu – ona se rasporedi po cijelom jastuku, pa možete duže sjediti.' ),
@@ -39,8 +39,8 @@ $gc_fb = array(
 );
 $gc_op = array(
   array( 'noriks-gelcushion-op-1.webp', 'Karmen S.', 'Puno sati sjedim zbog posla i osjećala sam velik pritisak na trtici. S jastukom izdržim radni dan bez stalnog ustajanja.' ),
-  array( 'noriks-gelcushion-op-2.webp', 'Antonio R.', 'Koristim ga najviše u autu, vozim duge relacije. Razlika u križima osjeti se od prve vožnje.' ),
-  array( 'noriks-gelcushion-op-3.webp', 'Mihael Á.', 'Dobra kvaliteta, gel se ne ulegne kao spužve koje sam prije probao. Lako se čisti i ne grije.' ),
+  array( 'noriks-gelcushion-op-2b.webp', 'Antonio R.', 'Koristim ga najviše u autu, vozim duge relacije. Razlika u križima osjeti se od prve vožnje.' ),
+  array( 'noriks-gelcushion-op-3.webp', 'Mihael A.', 'Dobra kvaliteta, gel se ne ulegne kao spužve koje sam prije probao. Lako se čisti i ne grije.' ),
   array( 'noriks-gelcushion-op-4.webp', 'Ružica M.', 'Kupila sam ga mami, koja puno vremena provodi sjedeći. Oduševljena je.' ),
   array( 'noriks-gelcushion-op-5.webp', 'Lucija F.', 'Isprva sam sumnjala zbog debljine, ali se jako dobro prilagodi mojoj uredskoj stolici. Jako je udoban i ne kliže.' ),
   array( 'noriks-gelcushion-op-6.webp', 'Javor T.', 'Stigao je prije roka. Ispunjava obećano, posebno ako ste puno sati u istom položaju.' ),
@@ -112,7 +112,7 @@ $gc_op = array(
       <h2 class="wgc__h2 wgc__c">Ovako ga koriste <em>svaki dan</em></h2>
       <p class="wgc__p wgc__c">Pravi videi kupaca koji ga već imaju kod kuće.</p>
       <div class="wgc__grid3 wgc__videi wgc__kar">
-        <?php foreach ( array( '/img/gelcushion/noriks-gelcushion-test-jajeta.mp4', '/img/gelcushion/noriks-gelcushion-video-2.mp4', '/img/gelcushion/noriks-gelcushion-video-3.mp4' ) as $v ) : ?>
+        <?php foreach ( array( '/img/gelcushion/noriks-gelcushion-test-jajeta.mp4', '/img/gelcushion/noriks-gelcushion-video-2b.mp4', '/img/gelcushion/noriks-gelcushion-video-3b.mp4' ) as $v ) : ?>
         <div class="wgc__vid"><video src="<?php echo esc_url( get_template_directory_uri() . $v ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
         <?php endforeach; ?>
       </div>
