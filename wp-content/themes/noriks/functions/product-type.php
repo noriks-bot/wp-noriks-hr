@@ -62,6 +62,7 @@ function noriks_product_type_map() : array {
         'daily' => array( 'orto-daily' ),
         'quiet' => array( 'orto-quiet' ),
         'muslin' => array( 'orto-muslin' ),
+        'silkcase' => array( 'orto-silkcase' ),
         'tacpro'                => array( 'orto-tacpro' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
@@ -1009,6 +1010,18 @@ if ( ! function_exists( 'noriks_sleepset_sizes' ) ) {
             array( 'M',  '53,5 cm', '86 cm', '72 cm', '61,5 cm', '20,5 cm' ),
             array( 'L',  '54,5 cm', '91 cm', '77 cm', '62,5 cm', '21,5 cm' ),
             array( 'XL', '55,5 cm', '96 cm', '82 cm', '63,5 cm', '22,5 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_silkcase_sizes' ) ) {
+    /** NORIKS SilkCase: velicina (= ime opcije Velicina), dimenzije (cm). 1:1 z originala (kinubrand.com, Tamaño). */
+    function noriks_silkcase_sizes() {
+        return array(
+            array( 'Queen 50 × 75',      '50 × 75 cm',  'standardni pravokutni jastuk' ),
+            array( 'King 50 × 90',       '50 × 90 cm',  'dulji pravokutni jastuk' ),
+            array( 'Kvadratna 66 × 66',  '66 × 66 cm',  'kvadratni jastuk' ),
+            array( 'Dvostruka 45 × 150', '45 × 150 cm', 'dugi jastuk za dvije osobe' ),
         );
     }
 }

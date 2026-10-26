@@ -209,6 +209,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             return;
         }
         // NORIKS PlushBlanket: Srednja / Velika / XL / Mega (cm, kg) iz zavihka Size + vodica za velicine originala.
+        // NORIKS SilkCase: 4 mere jastucnice (cm) z originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'silkcase' ) ) {
+            get_template_part( 'template_parts/size-chart-silkcase' );
+            return;
+        }
         // NORIKS Muslin: 4 mere pokrivaca (cm) z originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'muslin' ) ) {
             get_template_part( 'template_parts/size-chart-muslin' );

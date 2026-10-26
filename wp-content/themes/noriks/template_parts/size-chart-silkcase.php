@@ -1,0 +1,107 @@
+<?php
+/**
+ * Tablica velicina za NORIKS Muslin (orto-muslin) — muslinski pokrivac od 100 % pamuka.
+ * Izvor tabele: noriks_silkcase_sizes() v functions/product-type.php. 1:1 z originala (kinubrand.com, Tamaño),
+ * nega iz opisa originala.
+ *
+ * VAZNO: id #custom-size-chart-modal i klasa .show su ugovor koji ocekuje vticnik
+ * (orto-product.php). Modal je JEDAN prekrivni sloj, bez zasebnog backdropa.
+ */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+?>
+<div id="custom-size-chart-modal" class="kwsc" role="dialog" aria-modal="true" aria-labelledby="kwsc-title">
+  <div class="kwsc-box">
+  <div class="kwsc-bar">
+    <h2 id="kwsc-title">Koju veličinu odabrati?</h2>
+    <span id="close-size-chart-x" role="button" tabindex="0" aria-label="Zatvori">&times;</span>
+  </div>
+
+  <div class="kwsc-body">
+    <p class="kwsc-lead"><strong>Četiri veličine – odaberite prema dimenzijama svog jastuka.</strong> Jastučnica se zatvara diskretnim skrivenim patentnim zatvaračem.</p>
+
+    <div class="kwsc-scroll">
+      <table class="kwsc-table">
+        <thead>
+          <tr><th scope="col">Veličina</th><th scope="col">Dimenzije</th><th scope="col">Za</th></tr>
+        </thead>
+        <tbody>
+          <?php foreach ( noriks_silkcase_sizes() as $r ) : ?>
+          <tr><th scope="row"><?php echo esc_html( preg_replace( '/\s*\d+ × \d+$/u', '', $r[0] ) ); ?></th>
+              <td class="kwsc-nw"><?php echo esc_html( $r[1] ); ?></td>
+              <td><?php echo esc_html( $r[2] ); ?></td></tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kwsc-how">
+      <h3>Kako njegovati svilu?</h3>
+      <ol>
+        <li><strong>Pranje:</strong> program za osjetljivo rublje ili ručno pranje na 30 °C, bez centrifuge.</li>
+        <li><strong>Sušenje:</strong> objesite da se osuši, a suhu jastučnicu izglačajte za glatku, svilenkastu završnicu.</li>
+      </ol>
+    </div>
+
+    <p class="kwsc-note">Ako vam veličina ne odgovara, imate 30 dana za povrat.</p>
+  </div>
+  </div>
+</div>
+
+<style>
+#custom-size-chart-modal.kwsc {
+  display: none; position: fixed; inset: 0; z-index: 9999999;
+  background: rgba(15,25,40,.7); align-items: center; justify-content: center; padding: 20px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #1b2233;
+}
+#custom-size-chart-modal.kwsc.show { display: flex; }
+#custom-size-chart-modal.kwsc * { box-sizing: border-box; }
+.kwsc-box { background: #fff; border-radius: 14px; width: 100%; max-width: 720px;
+  max-height: min(800px, 88vh); display: flex; flex-direction: column; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,.32); }
+.kwsc-bar { display: flex; align-items: center; justify-content: space-between; padding: 15px 22px; border-bottom: 1px solid #d6e2ef; flex: 0 0 auto; }
+.kwsc-bar h2 { margin: 0; font-size: 19px; font-weight: 700; color: #1b2233; }
+#close-size-chart-x { font-size: 27px; line-height: 1; font-weight: 700; cursor: pointer; color: #5a6275; padding: 0 4px; }
+#close-size-chart-x:hover { color: #1b2233; }
+.kwsc-body { padding: 20px 22px 26px; overflow-y: auto; flex: 1 1 auto; }
+.kwsc-img { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto 14px; border-radius: 8px; }
+.kwsc-lead { font-size: 14.5px; line-height: 1.6; color: #3d4656; margin: 0 0 16px; }
+.kwsc-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 20px; }
+.kwsc-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.kwsc-table th[scope="col"] { background: #ebf2f9 !important; color: #1b2233 !important; font-weight: 700; text-align: left; padding: 12px 12px; white-space: nowrap; border-bottom: 2px solid #1f568e; }
+.kwsc-table th[scope="col"]:first-child { border-top-left-radius: 8px; }
+.kwsc-table th[scope="col"]:last-child { border-top-right-radius: 8px; }
+.kwsc-table th[scope="row"] { text-align: left; font-weight: 700; padding: 11px 12px; white-space: nowrap; vertical-align: top; }
+.kwsc-table td { padding: 11px 12px; color: #3d4656; vertical-align: top; line-height: 1.5; }
+.kwsc-table td.kwsc-nw { white-space: nowrap; font-weight: 600; color: #1b2233; }
+.kwsc-table tbody tr { border-bottom: 1px solid #d6e2ef; }
+.kwsc-table tbody tr:nth-child(odd) { background: #f5f9fd; }
+.kwsc-how h3 { font-size: 16px; font-weight: 700; margin: 0 0 10px; }
+.kwsc-how ol { margin: 0; padding-left: 20px; }
+.kwsc-how li { font-size: 14.5px; line-height: 1.6; color: #3d4656; margin-bottom: 7px; }
+.kwsc-note { font-size: 13px; color: #5a6275; font-style: italic; margin: 12px 0 0; }
+@media (max-width: 560px) {
+  #custom-size-chart-modal.kwsc { padding: 12px; }
+  .kwsc-box { max-height: 88vh; }
+  .kwsc-body { padding: 16px 16px 22px; }
+  .kwsc-table { font-size: 13px; }
+  .kwsc-table th[scope="col"], .kwsc-table th[scope="row"], .kwsc-table td { padding: 9px 8px; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("custom-size-chart-modal");
+  if (!modal) return;
+
+  function open(e) { if (e) e.preventDefault(); modal.classList.add("show"); document.body.style.overflow = "hidden"; }
+  function close() { modal.classList.remove("show"); document.body.style.overflow = ""; }
+
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("#open-size-chartCustom, #open-size-chart, #open-size-chart-secondary, .js-open-size-chart, .gck-size-link")) { open(e); return; }
+    if (e.target.closest("#close-size-chart-x")) { close(); }
+  });
+  modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+
+});
+</script>
