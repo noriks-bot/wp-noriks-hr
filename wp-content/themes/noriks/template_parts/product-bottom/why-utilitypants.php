@@ -1,224 +1,72 @@
 <?php
 /**
- * product-bottom: NORIKS UtilityPants — rastezljive vodootporne radne hlače s 10 džepova (orto-utilitypants).
- * Original: thetruetailorcompany.com/products/ultraflex-waterproof-gortex-utility-trousers-1 — vsebina in vrstni red 1:1
- * z originalom, oblika po NORIKS stilu (predloga why-hands.php / why-smartjacket.php), privzeta topla rjava paleta (#a9683f):
- *   1) ikone "Active-temperature control / Tough stuff / Ultimate comfort" -> 3 prednosti
- *   2) "Water repellent" (video) -> Vodoodbojne (video ob besedilu, hrvaški napis)
- *   3) "Ultra comfort" (video) -> Ultra udobnost (besedilo ob videu)
- *   4) "Guaranteed to last" (video) -> Stvorene da traju (video ob besedilu)
- *   5) "Over 12,000+ Sold Worldwide" + "Customer Reviews" (Loox) -> Iskustva naših kupaca: ena sekcija,
- *      4 izbrana mnenja s fotografijo (mreža 2x2) ob besedilu, 1081 recenzija
- * Izpusceno: glava, pasica "Halloween Sale", "UPDATE: ... limited stock", tekoci trak "PROMOTION ENDS TODAY", noga.
- * Opis, tablica velicin in pogoji (dostava/povrat) so v standardnih harmonikah (meta.php), FAQ v reviews.php
- * ($utilitypants_faq), mnenja tudi v auto_reviews/HR_utilitypants.php. Znamka konkurenta odstranjena iz besedil in slik.
- * Slike/videi: img/utilitypants/ (z originala; videi brez zvoka s hrvaškimi napisi).
+ * NORIKS UtilityPants — why sekcije po natancni strukturi originala (thetruetailorcompany.com/products/ultraflex-waterproof-gortex-utility-trousers-1). Generirano s struk.py.
+ *
+ * STRUKTURA ORIGINALA:
+   1. trak UPDATE: limited stock - IZPUSCENO: nujnost / omejena zaloga
+   2. 3 ikone v vrsti (aktivna kontrola temperature, cvrste, vrhunska udobnost)
+   3. animacija levo (voda se odbija), besedilo desno - vodoodbojne; pri nas utisan mp4 s hrvaskim napisom
+   4. animacija levo (raztezanje), besedilo desno - ultra udobnost
+   5. animacija levo (rip-stop), besedilo desno - stvorene da traju
+   6. tekoci trak PROMOTION ENDS TODAY - IZPUSCENO
+   7. naslov (stevilo prodanih) + drsnik 3 mnenj s fotografijo, imenom in starostjo - tuje stevilo prodanih izpusceno
+   8. mnenja kupcev (pri nas HR_utilitypants.php), FAQ v reviews.php
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-$nup      = get_template_directory_uri() . '/img/utilitypants/';
-$nup_path = get_template_directory() . '/img/utilitypants/';
-$nup_img  = function( $file, $alt ) use ( $nup, $nup_path ) {
-  if ( ! $file || ! file_exists( $nup_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nup . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
-};
-$nup_video = function( $name, $label ) use ( $nup, $nup_path ) {
-  $file = $name . '-hr.mp4'; $poster = $name . '-poster.webp';
-  if ( ! file_exists( $nup_path . $file ) ) { return ''; }
-  return '<div class="nup-vid"><video src="' . esc_url( $nup . $file ) . '" poster="' . esc_url( $nup . $poster ) . '"'
-    . ' muted autoplay loop playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video></div>';
-};
-$nup_stars = function( $n ) {
-  return '<span class="nup-stars" aria-label="' . (int) $n . ' od 5 zvjezdica">' . str_repeat( '★', (int) $n ) . '<span class="nup-stars__off">' . str_repeat( '★', 5 - (int) $n ) . '</span></span>';
-};
-
-/* 1) ikone z originala */
-$nup_icons = array(
-  array( 'img' => 'up-ik-temperatura.webp', 'h' => 'Aktivna kontrola temperature', 'p' => 'Naš izrazito prozračan sloj koji odvodi vlagu sprječava zadržavanje znoja.' ),
-  array( 'img' => 'up-ik-cvrstoca.webp', 'h' => 'Čvrste i izdržljive', 'p' => 'Naša power-shell pro tehnologija odolijeva svakom habanju i trošenju.' ),
-  array( 'img' => 'up-ik-udobnost.webp', 'h' => 'Vrhunska udobnost', 'p' => 'Tkanina nove generacije elastičnija je i lakša — za udobnost 24 sata dnevno.' ),
-);
-
-/* 2)–4) video ob besedilu (izmenicno), 1:1 z originala */
-$nup_rows = array(
-  array( 'vid' => 'up-v-voda', 'alt' => 'Voda se odbija od NORIKS UtilityPants radnih hlača', 'k' => 'Vodoodbojne',
-    'h' => 'Kiša ili sunce — <em>uvijek ste pokriveni.</em>',
-    'p' => array( 'Naš ojačani <strong>softshell</strong> ne upija vodu kao tradicionalne radne hlače od platna ili traperice.', 'Pogledajte — voda se jednostavno odbija, a vi ostajete suhi i udobni cijeli dan.' ),
-    'big' => 'Suhi i udobni cijeli dan.' ),
-  array( 'vid' => 'up-v-udobnost', 'alt' => 'NORIKS UtilityPants se rastežu u 4 smjera', 'k' => 'Ultra udobnost',
-    'h' => 'Savršena ravnoteža <em>udobnosti i izdržljivosti.</em>',
-    'p' => array( 'Nakon godina testiranja usavršili smo ravnotežu između udobnosti i učinkovitosti.', 'Napredna tehnologija <strong>rastezanja u 4 smjera</strong> kreće se s vama, a prozračni sloj koji odvodi vlagu drži vas udobnima i kroz radne dane od 12 sati.' ),
-    'big' => 'Rezultat? Radne hlače koje se osjećaju jednako dobro koliko i rade.' ),
-  array( 'vid' => 'up-v-ripstop', 'alt' => 'Rip-stop tkanina NORIKS UtilityPants ne para se', 'k' => 'Stvorene da traju',
-    'h' => 'Power-shell vanjski sloj — <em>fleksibilan i čvrst.</em>',
-    'p' => array( 'Koristi našu <strong>softshell tehnologiju</strong> koja sprječava vidljive tragove habanja i trošenja.' ),
-    'big' => 'Dizajnirane da vam traju godinama.' ),
-);
-
-/* 5) Iskustva kupaca — 4 izbrana mnenja s fotografijo z originala ("Over 12,000+ Sold Worldwide" + Loox recenzije) */
-$nup_reviews = array(
-  array( 'f' => 'up-t2-kupac.webp', 'ime' => 'Krešimir J., 33', 'h' => 'Udobne cijeli dan', 'tekst' => 'Sumnjao sam hoće li stvarno izdržati i biti udobne na gradilištu, ali odlične su! Bilo da lijeva kao iz kabla ili klečim u blatu, cijeli dan ostajem suh.' ),
-  array( 'f' => 'up-r06.webp', 'ime' => 'Marin L.', 'h' => '', 'tekst' => 'Najbolja radna odjeća koju sam probao. Odličan, krojen izgled i nisu široke oko listova kao većina radnih hlača. Džepovi su lijepo duboki, a to mi je inače najveća muka.' ),
-  array( 'f' => 'up-t3-kupac.webp', 'ime' => 'Bruno K., 29', 'h' => 'Radne hlače za cijelu godinu', 'tekst' => 'Prije sam na posao stalno nosio kratke hlače, ali htio sam nešto urednije i ove su savršene. Super udobne i dobro me štite. 10/10' ),
-  array( 'f' => 'up-r09.webp', 'ime' => 'Karlo H.', 'h' => '', 'tekst' => 'Hlače izgledaju odlično. Stvarno su vodootporne, kao što se vidi na slici. Vrijede svoje cijene.' ),
-);
 ?>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-
-<!-- 1) TRI PREDNOSTI — ikone z originala -->
-<section class="nup-sec nup-tint">
-  <div class="nup-wrap">
-    <div class="nup-icons">
-      <?php foreach ( $nup_icons as $ic ) : ?>
-      <div class="nup-icon">
-        <div class="nup-icon__img"><?php echo $nup_img( $ic['img'], $ic['h'] ); ?></div>
-        <h3 class="nup-icon__h"><?php echo esc_html( $ic['h'] ); ?></h3>
-        <p class="nup-icon__p"><?php echo esc_html( $ic['p'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<?php foreach ( $nup_rows as $i => $w ) : ?>
-<!-- <?php echo (int) ( $i + 2 ); ?>) video ob besedilu -->
-<section class="nup-sec<?php echo ( $i % 2 ) ? ' nup-tint' : ''; ?>">
-  <div class="nup-wrap">
-    <div class="nup-row2<?php echo ( $i % 2 ) ? ' nup-row2--rev' : ''; ?>">
-      <div class="nup-media"><?php echo $nup_video( $w['vid'], $w['alt'] ); ?></div>
-      <div class="nup-copy">
-        <p class="nup-kicker"><?php echo esc_html( $w['k'] ); ?></p>
-        <h2 class="nup-h3"><?php echo wp_kses( $w['h'], array( 'em' => array() ) ); ?></h2>
-        <?php foreach ( $w['p'] as $p ) : ?><p><?php echo wp_kses( $p, array( 'strong' => array() ) ); ?></p><?php endforeach; ?>
-        <p class="nup-big"><?php echo esc_html( $w['big'] ); ?></p>
-      </div>
-    </div>
-  </div>
-</section>
-<?php endforeach; ?>
-
-<!-- 5) ISKUSTVA NAŠIH KUPACA — 4 mnenja s fotografijo ob besedilu -->
-<section class="nup-sec nup-tint">
-  <div class="nup-wrap">
-    <div class="nup-row2 nup-row2--rev nup-row2--top">
-      <div class="nup-media">
-        <div class="nup-grid2">
-          <?php foreach ( $nup_reviews as $r ) : ?>
-          <article class="nup-card">
-            <div class="nup-card__photo"><?php echo $nup_img( $r['f'], 'Fotografija kupca — NORIKS UtilityPants, ' . $r['ime'] ); ?></div>
-            <div class="nup-card__body">
-              <?php echo $nup_stars( 5 ); ?>
-              <?php if ( $r['h'] ) : ?><p class="nup-card__h"><?php echo esc_html( $r['h'] ); ?></p><?php endif; ?>
-              <p class="nup-card__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
-              <p class="nup-card__name"><?php echo esc_html( $r['ime'] ); ?> <span class="nup-ok">✓ Potvrđena kupnja</span></p>
-            </div>
-          </article>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      <div class="nup-copy">
-        <p class="nup-kicker">Iskustva kupaca</p>
-        <h2 class="nup-h3">Tisuće zadovoljnih majstora — <em>stvarni dojmovi</em></h2>
-        <p class="nup-rate"><span class="nup-stars">★★★★★</span> 1081 recenzija</p>
-        <p>Vodoinstalateri, majstori na gradilištu i svi koji rade vani — NORIKS UtilityPants nose od ranog jutra do kraja smjene, po kiši, u blatu i na koljenima.</p>
-        <ul class="nup-points">
-          <li><span class="nup-dot" aria-hidden="true">✓</span><span><strong>Suhi cijeli dan</strong> — voda se odbija od tkanine</span></li>
-          <li><span class="nup-dot" aria-hidden="true">✓</span><span><strong>Rastežu se u 4 smjera</strong> i ne stežu pri klečanju</span></li>
-          <li><span class="nup-dot" aria-hidden="true">✓</span><span><strong>Duboki džepovi</strong> točno tamo gdje trebaju</span></li>
-        </ul>
-        <p class="nup-big">Radne hlače koje se osjećaju jednako dobro koliko i rade.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<div class="wsutilitypants">
+<section class="wsutilitypants__s"><div class="wsutilitypants__v"><div class="wsutilitypants__kicker wsutilitypants__c">Za cijeli radni dan</div><h2 class="wsutilitypants__h2 wsutilitypants__c">Radne hlače koje <em>rade s vama</em></h2><div class="wsutilitypants__grid wsutilitypants__g3"><div class="wsutilitypants__k"><div class="wsutilitypants__km wsutilitypants__km--ikona"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-ik-temperatura.webp' ); ?>" alt="Aktivna kontrola temperature" loading="lazy" decoding="async"></div><div class="wsutilitypants__kt"><strong>Aktivna kontrola temperature</strong><p>Izrazito prozračan sloj koji odvodi vlagu sprječava zadržavanje znoja.</p></div></div><div class="wsutilitypants__k"><div class="wsutilitypants__km wsutilitypants__km--ikona"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-ik-cvrstoca.webp' ); ?>" alt="Čvrste i izdržljive" loading="lazy" decoding="async"></div><div class="wsutilitypants__kt"><strong>Čvrste i izdržljive</strong><p>Power-shell pro tehnologija odolijeva svakom habanju i trošenju.</p></div></div><div class="wsutilitypants__k"><div class="wsutilitypants__km wsutilitypants__km--ikona"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-ik-udobnost.webp' ); ?>" alt="Vrhunska udobnost" loading="lazy" decoding="async"></div><div class="wsutilitypants__kt"><strong>Vrhunska udobnost</strong><p>Tkanina nove generacije elastičnija je i lakša – za udobnost 24 sata dnevno.</p></div></div></div></div></section>
+<section class="wsutilitypants__s wsutilitypants__s--bg"><div class="wsutilitypants__v wsutilitypants__dva"><div class="wsutilitypants__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-v-voda-hr.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsutilitypants__kicker">Vodoodbojne</div><h2 class="wsutilitypants__h2">Kiša ili sunce – <em>uvijek ste pokriveni</em></h2><p class="wsutilitypants__p">Ojačani softshell ne upija vodu kao tradicionalne radne hlače od platna ili traperice.</p><p class="wsutilitypants__p">Pogledajte – voda se jednostavno odbija, a vi ostajete suhi i udobni cijeli dan, i kad klečite u mokroj travi ili radite na kiši.</p><p class="wsutilitypants__zak">Suhi i udobni cijeli dan.</p></div></div></section>
+<section class="wsutilitypants__s"><div class="wsutilitypants__v wsutilitypants__dva"><div class="wsutilitypants__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-v-udobnost-hr.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsutilitypants__kicker">Ultra udobnost</div><h2 class="wsutilitypants__h2">Ravnoteža <em>udobnosti i izdržljivosti</em></h2><p class="wsutilitypants__p">Nakon godina testiranja usavršena je ravnoteža između udobnosti i učinkovitosti.</p><p class="wsutilitypants__p">Tehnologija rastezanja u 4 smjera kreće se s vama, a prozračni sloj koji odvodi vlagu drži vas udobnima i kroz radne dane od 12 sati.</p><p class="wsutilitypants__zak">Radne hlače koje se osjećaju jednako dobro koliko i rade.</p></div></div></section>
+<section class="wsutilitypants__s wsutilitypants__s--bg"><div class="wsutilitypants__v wsutilitypants__dva"><div class="wsutilitypants__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-v-ripstop-hr.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsutilitypants__kicker">Stvorene da traju</div><h2 class="wsutilitypants__h2">Power-shell vanjski sloj – <em>fleksibilan i čvrst</em></h2><p class="wsutilitypants__p">Power-shell vanjski sloj je fleksibilan i čvrst. Softshell tehnologija sprječava vidljive tragove habanja i trošenja.</p><p class="wsutilitypants__p">Hlače su dizajnirane da vam traju godinama – na gradilištu, u radionici i u vrtu.</p><p class="wsutilitypants__zak">Dizajnirane da vam traju godinama.</p></div></div></section>
+<section class="wsutilitypants__s"><div class="wsutilitypants__v"><div class="wsutilitypants__kicker wsutilitypants__c">Iskustva kupaca</div><h2 class="wsutilitypants__h2 wsutilitypants__c">Majstori o <em>NORIKS UtilityPants</em></h2><div class="wsutilitypants__grid wsutilitypants__g3 wsutilitypants__kar"><div class="wsutilitypants__k"><div class="wsutilitypants__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-t1-kupac.webp' ); ?>" alt="Napokon hlače koje rade" loading="lazy" decoding="async"></div><div class="wsutilitypants__kt"><span class="wsutilitypants__zv">★★★★★</span><strong>Napokon hlače koje rade</strong><p>Radim vani cijeli dan, svaki dan, i ove su mi spas. Nevjerojatno izdržljive, a vodootpornost stvarno radi.</p><span class="wsutilitypants__ime">Hrvoje D., 36</span></div></div><div class="wsutilitypants__k"><div class="wsutilitypants__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-t2-kupac.webp' ); ?>" alt="Udobne cijeli dan" loading="lazy" decoding="async"></div><div class="wsutilitypants__kt"><span class="wsutilitypants__zv">★★★★★</span><strong>Udobne cijeli dan</strong><p>Sumnjao sam hoće li stvarno izdržati i biti udobne na gradilištu, ali odlične su! Bilo da lijeva kao iz kabla ili klečim u blatu, cijeli dan ostajem suh.</p><span class="wsutilitypants__ime">Krešimir J., 33</span></div></div><div class="wsutilitypants__k"><div class="wsutilitypants__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/utilitypants/up-t3-kupac.webp' ); ?>" alt="Radne hlače za cijelu godinu" loading="lazy" decoding="async"></div><div class="wsutilitypants__kt"><span class="wsutilitypants__zv">★★★★★</span><strong>Radne hlače za cijelu godinu</strong><p>Prije sam na posao stalno nosio kratke hlače, ali htio sam nešto urednije i ove su savršene. Super udobne i dobro me štite. 10/10</p><span class="wsutilitypants__ime">Bruno K., 29</span></div></div></div></div></section>
+<section class="wsutilitypants__s wsutilitypants__s--bg"><div class="wsutilitypants__v"><div class="wsutilitypants__kicker wsutilitypants__c">KUPUJTE BEZ BRIGE</div><h2 class="wsutilitypants__h2 wsutilitypants__c">Uz NORIKS kupujete <em>bez rizika</em></h2><p class="wsutilitypants__p wsutilitypants__c">NORIKS UtilityPants isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p><div class="wsutilitypants__red4 wsutilitypants__pog"><div><strong>30 dana</strong><span>za povrat novca</span></div><div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div><div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div></div></div></section>
+</div>
 <style>
-/* NORIKS stil (predloga why-hands.php / why-smartjacket.php): oznaka + naslov z ležečim poudarkom, video ob
-   besedilu, izmenjujoča ozadja. Privzeta topla rjava paleta NORIKS (#a9683f). */
-.nup-sec { padding: 60px 0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #231d19; background: #fff; }
-.nup-sec * { box-sizing: border-box; }
-.nup-tint { background: #f7f2ec; }
-.nup-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.nup-c { text-align: center; }
-.nup-sec h2, .nup-sec h3 { font-family: inherit; text-transform: none; letter-spacing: 0; }
-.nup-kicker, .nup-copy p.nup-kicker { font-size: 12.5px; line-height: 1.4; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #a9683f; margin: 0 0 10px; }
-.nup-h2 { font-weight: 700; font-size: clamp(25px, 3.1vw, 36px); line-height: 1.2; margin: 0 0 28px; color: #231d19; }
-.nup-h2 em, .nup-h3 em { font-style: italic; color: #a9683f; }
-.nup-h3 { font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; margin: 0 0 16px; color: #231d19; }
-.nup-sec img { display: block; width: 100%; height: auto; }
-.nup-rate { font-size: 14px; font-weight: 600; color: #6b625a; margin: 0 0 8px; }
-.nup-rate .nup-stars { margin-right: 6px; }
-
-/* 1) ikone */
-.nup-icons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.nup-icon { text-align: center; padding: 6px 10px; }
-.nup-icon__img { width: 84px; height: 84px; margin: 0 auto 16px; }
-.nup-icon__img img { width: 84px; height: 84px; object-fit: contain; }
-.nup-icon__h { font-size: 15px !important; font-weight: 700; letter-spacing: .08em !important; text-transform: uppercase !important; color: #231d19; margin: 0 0 8px; line-height: 1.35; }
-.nup-icon__p { font-size: 15px; line-height: 1.6; color: #4f443d; margin: 0 auto; max-width: 320px; }
-
-/* video ob besedilu */
-.nup-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nup-row2--top { align-items: start; }
-.nup-row2--rev .nup-media { order: 2; }
-.nup-copy p { font-size: 16px; line-height: 1.7; color: #4f443d; margin: 0 0 14px; }
-.nup-copy p strong { color: #231d19; font-weight: 600; }
-.nup-copy p.nup-big { font-size: 19px; font-weight: 700; color: #231d19; line-height: 1.45; margin-top: 6px; }
-.nup-vid { position: relative; overflow: hidden; background: #ece3da; border-radius: 10px; aspect-ratio: 4 / 3;
-  box-shadow: 0 2px 4px rgba(40,25,15,.05), 0 14px 40px rgba(40,25,15,.10); }
-.nup-vid video { display: block; width: 100%; height: 100%; object-fit: cover; }
-
-/* mnenja s fotografijo */
-.nup-stars { color: #f2a516; letter-spacing: 1px; font-size: 15px; }
-.nup-stars__off { color: #e6dbd2; }
-.nup-grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
-.nup-points { list-style: none; margin: 0 0 16px; padding: 0; }
-.nup-points li { font-size: 16px; line-height: 1.6; color: #4f443d; margin: 0 0 10px; display: flex; gap: 12px; align-items: flex-start; }
-.nup-points li strong { color: #231d19; font-weight: 600; }
-.nup-dot { flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: #a9683f; color: #fff; font-size: 12px; font-weight: 800; line-height: 22px; text-align: center; margin-top: 2px; }
-.nup-card { background: #fff; border: 1px solid #ecdfd3; border-radius: 10px; overflow: hidden; }
-.nup-card__photo img { aspect-ratio: 4 / 5; object-fit: cover; }
-.nup-card__body { padding: 12px 14px 14px; }
-.nup-card__h { font-size: 13.5px !important; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; line-height: 1.35; margin: 6px 0 8px; color: #231d19; }
-.nup-card__name { font-size: 13px; font-weight: 600; color: #231d19; margin: 0; }
-.nup-ok { display: block; color: #2f9e5f; font-weight: 600; font-size: 12px; }
-.nup-card__txt { font-size: 13.5px; line-height: 1.55; color: #3a302a; margin: 4px 0 8px; }
-.nup-copy p.nup-rate { font-size: 14px; margin: -6px 0 14px; }
-
-@media (max-width: 989px) {
-  .nup-row2 { gap: 32px; }
-}
-@media (max-width: 749px) {
-  .nup-sec { padding: 42px 0; }
-  .nup-wrap { padding: 0 16px; }
-  .nup-row2 { grid-template-columns: 1fr; gap: 24px; }
-  .nup-row2--rev .nup-media { order: 0; }
-  .nup-icons { grid-template-columns: 1fr; gap: 22px; }
-  .nup-grid2 { gap: 8px; }
-  .nup-card__body { padding: 10px 10px 12px; }
-  .nup-card__txt { font-size: 12.5px; }
-  .nup-card__h { font-size: 12.5px !important; }
-}
-
-/* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
-.product_cat-orto-utilitypants .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
-
-/* kratek opis izdelka: zelene kljukice namesto pik (REST pobrise inline slog) */
-.woocommerce div.product .woocommerce-product-details__short-description ul,
-.woocommerce-product-details__short-description ul {
-  list-style: none !important; margin: 10px 0 14px !important; padding-left: 0 !important; }
-.woocommerce div.product .woocommerce-product-details__short-description ul li,
-.woocommerce-product-details__short-description ul li {
-  list-style: none !important; text-indent: 0 !important; margin: 0 0 7px !important;
-  line-height: 1.45 !important; font-size: 15.5px !important;
-  display: block !important; position: relative !important; padding-left: 31px !important; }
-.woocommerce-product-details__short-description ul li::marker { content: "" !important; }
-.woocommerce-product-details__short-description ul li::before { content: none !important; }
-.woocommerce-product-details__short-description .nup-tick {
-  position: absolute !important; left: 0 !important; top: 1px !important;
-  width: 21px; height: 21px; border-radius: 50%;
-  background: #2f9e5f !important; color: #fff !important;
-  font-size: 12px !important; font-weight: 800 !important; line-height: 21px !important;
-  text-align: center !important; display: inline-block !important; }
-.woocommerce-product-details__short-description p:first-of-type { font-size: 16px; line-height: 1.55; }
+.wsutilitypants{color:#1c1c1c;font-family:inherit}
+.wsutilitypants__s{padding:56px 0;background:#fff}.wsutilitypants__s--bg{background:#f4f3ef}
+.wsutilitypants__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsutilitypants__c{text-align:center}
+.wsutilitypants__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wsutilitypants__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsutilitypants__h2 em{font-style:italic}
+.wsutilitypants__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wsutilitypants__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
+.wsutilitypants__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wsutilitypants__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wsutilitypants__red4 strong{display:block;font-size:18px;font-weight:800}.wsutilitypants__red4 span{font-size:13.5px;opacity:.85}
+.wsutilitypants__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wsutilitypants__dva--rev>div:first-child{order:2}
+.wsutilitypants__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wsutilitypants__media img,.wsutilitypants__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsutilitypants__media--cela{aspect-ratio:auto}.wsutilitypants__media--cela img,.wsutilitypants__media--cela video{height:auto;object-fit:contain}
+.wsutilitypants__polna{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);margin-top:10px}.wsutilitypants__polna img,.wsutilitypants__polna video{width:100%;height:auto;display:block}
+.wsutilitypants__grid{display:grid;gap:22px;margin-top:22px}.wsutilitypants__g2{grid-template-columns:repeat(2,1fr)}.wsutilitypants__g3{grid-template-columns:repeat(3,1fr)}.wsutilitypants__g4{grid-template-columns:repeat(4,1fr)}.wsutilitypants__g5{grid-template-columns:repeat(5,1fr)}
+.wsutilitypants__k{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wsutilitypants__k--temna{background:#1d2b4f;border:0}.wsutilitypants__k--temna p,.wsutilitypants__k--temna strong{color:#fff}
+.wsutilitypants__km img,.wsutilitypants__km video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.wsutilitypants__km--v video{aspect-ratio:9/16}
+.wsutilitypants__kt{padding:16px 18px 20px}.wsutilitypants__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wsutilitypants__kt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wsutilitypants__ime{display:block;margin-top:8px;font-weight:700;font-size:14px}.wsutilitypants__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wsutilitypants__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}.wsutilitypants__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #eee}.wsutilitypants__red3 strong{display:block;font-size:15px}.wsutilitypants__red3 span{font-size:13px;color:#555}
+.wsutilitypants__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wsutilitypants__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wsutilitypants__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wsutilitypants__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wsutilitypants__kv{list-style:none;margin:0 0 6px;padding:0}.wsutilitypants__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wsutilitypants__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wsutilitypants__tw{overflow-x:auto}.wsutilitypants__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+.wsutilitypants__tab th,.wsutilitypants__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsutilitypants__tab th{background:#1d2b4f!important;color:#fff!important;font-weight:700}.wsutilitypants__tab td:first-child,.wsutilitypants__tab th:first-child{text-align:left}
+.wsutilitypants__thimg{display:block;width:96px;max-width:100%;height:auto;margin:0 auto 8px;border-radius:10px}.wsutilitypants__th span{display:block}
+.wsutilitypants__km--ikona{padding:22px 0 0;text-align:center}.wsutilitypants__km--ikona img{width:72px;height:72px;aspect-ratio:auto;object-fit:contain;margin:0 auto}.wsutilitypants__km--ikona+.wsutilitypants__kt{text-align:center}
+.wsutilitypants__da{color:#1f8a4c;font-weight:800}.wsutilitypants__ne{color:#c0392b;font-weight:800}
+.wsutilitypants__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wsutilitypants__pog{margin-top:22px}.wsutilitypants__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsutilitypants__pog span{color:#444;opacity:1}
+.wsutilitypants__karw{position:relative}.wsutilitypants__kar{grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.wsutilitypants__kar::-webkit-scrollbar{display:none}.wsutilitypants__kar>*{scroll-snap-align:start}
+.wsutilitypants__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}.wsutilitypants__pus--l{left:-14px}.wsutilitypants__pus--d{right:-14px}
+@media (max-width:860px){.wsutilitypants__kar{grid-auto-columns:82%}.wsutilitypants__pus--l{left:4px}.wsutilitypants__pus--d{right:4px}}
+@media (max-width:860px){.wsutilitypants__s{padding:38px 0}.wsutilitypants__dva{grid-template-columns:1fr;gap:22px}.wsutilitypants__dva--rev>div:first-child{order:0}
+.wsutilitypants__g3,.wsutilitypants__g4,.wsutilitypants__g5{grid-template-columns:1fr 1fr}.wsutilitypants__red4{grid-template-columns:1fr 1fr}.wsutilitypants__plavo{margin-top:-38px}}
+@media (max-width:560px){.wsutilitypants__g2,.wsutilitypants__g3,.wsutilitypants__g4{grid-template-columns:1fr}}
 </style>
+<script>
+(function(){document.querySelectorAll('.wsutilitypants__kar').forEach(function(k){
+  var w=document.createElement('div');w.className='wsutilitypants__karw';k.parentNode.insertBefore(w,k);w.appendChild(k);
+  ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wsutilitypants__pus wsutilitypants__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
+    b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
+});})();
+</script>
