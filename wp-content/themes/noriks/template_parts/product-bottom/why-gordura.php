@@ -1,6 +1,14 @@
 <?php
 /**
  * NORIKS ShapeBody — why sekcije 1:1 z originalom (10 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ *
+ * STRUKTURA ORIGINALA: (lojaisaleblanc.com.br/products/nina-body-premium-ultra-modelador-copia)
+   Stran originala za botom/brskalnikom brez oglasa pokaze samo "CARREGANDO AMBIENTE SEGURO" (preverjeno 26. 10. s curl in
+   headless Chrome), body_html izdelka je prazen. Vidna vsebina originala je samo galerija 11 slik + izbirnika:
+   1. galerija — 11 slik izdelka (pri nas vsaka slika svoja sekcija slika/besedilo, izmenicno levo/desno)
+   2. izbirnik Velicina P-2XG in Cor Bege/Marrom/Preto (pri nas Velicina + Boja)
+   3. tablica velikosti (pri nas size-chart)
+   Brez videov, tabel in karuselov na originalu.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/gordura/';
