@@ -1290,17 +1290,24 @@ body.single-product {
            }
 
 
-/* Tablica velicina pod ceno - manj razmika: ~9 px pod znacko cene in ~7-8 px do naslednjega elementa, za vse izdelke (Dejan 26.10.2026).
+/* Tablica velicina pod ceno - manj razmika: 8 px nad in 8 px pod povezavo (enako zgoraj in spodaj), za vse izdelke (Dejan 26.10.2026).
    Globalna povezava (theme): p.price ima 10 px spodnjega roba, za njim prazen prostor bloka cene; pod povezavo je odstevalnik v obrazcu (14 px zgoraj).
    Orto povezava: odstevalnik nad njo ima 14 px, #bundle-selector pod njo 8 px.
    Globalna povezava se skrije, ce ima izdelek svojo orto povezavo (JS doda display:none) - tega ne prepisi. */
 .summary:has(.gck-size-link) .noriks-global-sizechart { display: none !important; }
-.summary .noriks-global-sizechart:not([style*="display: none"]) { display: flex !important; width: max-content; margin: -25px 0 0 !important; }
+.summary .noriks-global-sizechart:not([style*="display: none"]) { display: flex !important; width: max-content; margin: -26px 0 0 !important; }
 .summary .noriks-global-sizechart ~ form.cart { margin-top: 0 !important; }
-.summary .noriks-global-sizechart ~ form.cart .gck-countdown { margin-top: 6px !important; }
-.summary .gck-countdown:has(~ .gck-size-link-wrap) { margin-bottom: 9px !important; }
+.summary .noriks-global-sizechart ~ form.cart .gck-countdown { margin-top: 7px !important; }
+.summary .gck-countdown:has(~ .gck-size-link-wrap) { margin-bottom: 8px !important; }
 .summary .gck-size-link-wrap { display: flex; justify-content: flex-end; margin-top: 0 !important; margin-bottom: 0 !important; }
 /* Orto povezava brez odstevalnika (v .gck-benefits-box): forma ima 16 px zgoraj, pod povezavo prazen 10 px razdelilnik + #bundle-selector 8 px. */
 .summary .gck-benefits-box > .gck-size-link:first-child { display: flex; width: max-content; }
-.summary .gck-benefits-box:has(> .gck-size-link:first-child) { margin-top: -22px !important; }
+.summary .gck-benefits-box:has(> .gck-size-link:first-child) { margin-top: -23px !important; }
 .summary .gck-benefits-box:has(> .gck-size-link:first-child) ~ #bundle-selector { margin-top: -2px !important; }
+
+/* Tabela velicin v harmoniki (Tablica velicina) in v modalu: glava vedno crna, besedilo belo krepko (Dejan 26.10.2026) -
+   inline barve glav posameznih izdelkov in sivo ozadje teme (#f8f8f8, bel tekst je bil neviden) se prepisejo. */
+.accordion-content table thead tr,
+.accordion-content table thead th,
+.kwsc-table thead tr,
+.kwsc-table thead th { background: #111 !important; color: #fff !important; font-weight: 700 !important; }

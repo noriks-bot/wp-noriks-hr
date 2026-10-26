@@ -2810,8 +2810,8 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
 
           <div class="bra-size">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp" alt="NORIKS BRA tablica veličina" style="width:100%;height:auto;border-radius:12px;display:block;margin:0 0 14px;">
-            <p style="margin:0;line-height:1.6;"><strong>Kako odabrati?</strong> Izmjerite opseg ispod grudi i pronađite ga u tablici zajedno sa svojom košaricom. Ako ste između dvije veličine, odaberite veću.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><?php echo noriks_bra_tabela_html(); ?></div>
+            <p style="margin:0;line-height:1.6;"><strong>Kako odabrati?</strong> Izmjerite opseg ispod grudi (EU traka, npr. 75) i pronađite ga u tablici zajedno sa svojom košaricom. Ako ste između dvije veličine, odaberite veću.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>

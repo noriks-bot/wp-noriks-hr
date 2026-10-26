@@ -212,9 +212,7 @@
           <strong>PRO SAVJET:</strong> ako ste između dvije veličine, odaberite <strong>veću</strong> — grudnjak je bešavan i lagano se prilagođava tijelu.
         </p>
         <div id="braSizeChartBox" style="width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;">
-          <img id="braSizeChartImg" src="<?php echo get_template_directory_uri(); ?>/img/bra/bra-09-tablica-velicina.webp"
-               alt="NORIKS BRA tablica veličina"
-               style="display:block;width:100%;max-width:100%;height:auto;margin:0 auto;border-radius:12px;">
+          <?php echo noriks_bra_tabela_html( 'braSizeChartImg' ); ?>
         </div>
       </div>
 

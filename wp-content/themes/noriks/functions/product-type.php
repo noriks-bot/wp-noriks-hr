@@ -1589,6 +1589,85 @@ if ( ! function_exists( 'noriks_flops_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
+    /**
+     * Oznake velicin v izbirniku: crka + EU razpon („S - 36 do 38"), ce velikost doloca mera pa mera
+     * („S - 76 do 80 cm") - Dejan 26.10.2026, brez US/UK. Vrednost atributa ostane gola crka
+     * (cene po velicini, kosarica, narocila), spremeni se samo prikazano besedilo.
+     * Podatki 1:1 iz tablic velicin izdelkov; jedrni izdelki (majice, bokserice, kompleti) niso vkljuceni.
+     */
+    function noriks_velikost_oznake( $product_id = null ) {
+        if ( ! function_exists( 'noriks_is_type' ) ) { return array(); }
+        $o = array(
+            'sculptleg'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
+            'mamafit'      => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 50', '3XL' => '50 do 52' ),
+            // ShapeBody: original nima mer (P-2XG) - standardne EU zenske konfekcijske stevilke.
+            'gordura'      => array( 'S' => '36 do 38', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '42 do 44', '2XL' => '44 do 46', '3XL' => '46 do 48' ),
+            'insoles'      => array( 'XS' => '35 do 38', 'S' => '38,5 do 41,5', 'M' => '42 do 44', 'L' => '44,5 do 46,5', 'XL' => '47 do 48' ),
+            'smartjacket'  => array( 'XS' => '34 do 36', 'S' => '36 do 38', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '46 do 48', '3XL' => '48 do 50', '4XL' => '50 do 52' ),
+            'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
+            'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
+            // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
+            'utilitypants' => array( 'S' => '78 do 82 cm', 'M' => '82 do 86 cm', 'L' => '86 do 91 cm', 'XL' => '91 do 96 cm', '2XL' => '96 do 102 cm', '3XL' => '103 do 109 cm' ),
+            'bratank'      => array( 'S' => '76 do 80 cm', 'M' => '81 do 85 cm', 'L' => '86 do 91 cm', 'XL' => '92 do 97 cm', '2XL' => '98 do 103 cm', '3XL' => '104 do 109 cm', '4XL' => '110 do 115 cm' ),
+            'brassiere'    => array( 'XS' => '77 do 83 cm', 'S' => '82 do 88 cm', 'M' => '87 do 93 cm', 'L' => '92 do 98 cm', 'XL' => '97 do 103 cm', '2XL' => '102 do 108 cm', '3XL' => '107 do 113 cm', '4XL' => '112 do 118 cm', '5XL' => '117 do 123 cm' ),
+            'hands'        => array( 'S' => '17,8 do 19,1 cm', 'M' => '19,1 do 21,6 cm', 'L' => '21,6 do 22,9 cm' ),
+            'buildshirt'   => array( 'XS' => 'do 86 cm', 'S' => '86 do 91 cm', 'M' => '91 do 97 cm', 'L' => '97 do 103 cm', 'XL' => '103 do 108 cm', '2XL' => '108 do 113 cm', '3XL' => '113 do 118 cm', '4XL' => '118 do 126 cm', '5XL' => '126 do 133 cm', '6XL' => '133 do 142 cm' ),
+            'celleg'       => array( 'XS' => '56 do 62 cm', 'S' => '62 do 68 cm', 'M' => '68 do 74 cm', 'L' => '74 do 82 cm', 'XL' => '82 do 90 cm', '2XL' => '90 do 98 cm', '3XL' => '98 do 106 cm', '4XL' => '106 do 116 cm', '5XL' => '116 do 126 cm' ),
+            'relief'       => array( 'S' => '32 do 40 cm', 'M' => '40 do 48 cm', 'L' => '48 do 54 cm', 'XL' => '54 do 59 cm', '2XL' => '59 do 64 cm', '3XL' => '64 do 72 cm', '4XL' => '72 do 80 cm' ),
+            // BRA: EU traka (opseg ispod grudi) iz tablice kosarica x traka, US traka 30-48 -> EU 65-110.
+            'bra'          => array( 'S' => '65 do 75', 'M' => '65 do 80', 'L' => '75 do 90', 'XL' => '80 do 95', '2XL' => '80 do 100', '3XL' => '90 do 110', '4XL' => '100 do 110' ),
+            // FlexShirt: velikost po tezini iz tablice visina x tezina.
+            'sr'           => array( 'S' => '59 do 68 kg', 'M' => '69 do 84 kg', 'L' => '84 do 95 kg', 'XL' => '96 do 113 kg', '2XL' => '114 do 129 kg', '3XL' => '130 do 150 kg' ),
+        );
+        foreach ( $o as $tip => $m ) {
+            if ( noriks_is_type( $tip, $product_id ) ) { return $m; }
+        }
+        return array();
+    }
+    function noriks_velikost_oznaka( $val, $product_id = null ) {
+        $m = noriks_velikost_oznake( $product_id );
+        $k = trim( (string) $val );
+        return isset( $m[ $k ] ) ? $k . ' - ' . $m[ $k ] : $val;
+    }
+}
+
+if ( ! function_exists( 'noriks_bra_tabela_html' ) ) {
+    /**
+     * NORIKS BRA: tablica kosarica (A–H) x opseg ispod grudi kot HTML namesto slike bra-09-tablica-velicina.webp,
+     * ki je imela US trake 30–48 - zdaj EU traka 65–110 (US 30 = EU 65 … US 48 = EU 110), polja 1:1 s slike.
+     * Stili inline (LiteSpeed UCSS). $id: id tabele (modal ga uporablja za prilagoditev sirine).
+     */
+    function noriks_bra_tabela_html( $id = '' ) {
+        $trake = array( 65, 70, 75, 80, 85, 90, 95, 100, 105, 110 );
+        $mreza = array(
+            'A' => array( '', 'S', 'S', 'M', 'L', '', '', '', '', '' ),
+            'B' => array( 'S', 'S', 'S', 'M', 'L', 'L', 'XL', '', '', '' ),
+            'C' => array( 'S', 'S', 'M', 'L', 'L', 'XL', 'XL', '2XL', '3XL', '3XL' ),
+            'D' => array( 'S', 'M', 'M', 'L', 'XL', 'XL', '2XL', '3XL', '3XL', '4XL' ),
+            'E' => array( 'M', 'M', 'L', 'L', 'XL', '2XL', '2XL', '3XL', '4XL', '4XL' ),
+            'F' => array( 'M', 'M', 'L', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '4XL' ),
+            'G' => array( '', '', '', 'XL', '2XL', '2XL', '3XL', '3XL', '4XL', '' ),
+            'H' => array( '', '', '', '2XL', '2XL', '3XL', '3XL', '4XL', '', '' ),
+        );
+        $td = 'padding:7px 4px;text-align:center;border-bottom:1px solid #eee;font-size:13px;white-space:nowrap;';
+        $h  = '<table' . ( $id ? ' id="' . esc_attr( $id ) . '"' : '' ) . ' style="width:100%;border-collapse:collapse;margin:0 0 14px;">';
+        $h .= '<thead><tr><th style="' . $td . 'background:#111;color:#fff;font-weight:700;text-align:left;">Košarica</th>';
+        $h .= '<th colspan="10" style="' . $td . 'background:#111;color:#fff;font-weight:700;">Opseg ispod grudi (EU)</th></tr>';
+        $h .= '<tr><th style="' . $td . 'background:#111;color:#fff;"></th>';
+        foreach ( $trake as $t ) { $h .= '<th style="' . $td . 'background:#111;color:#fff;font-weight:700;">' . (int) $t . '</th>'; }
+        $h .= '</tr></thead><tbody>';
+        $i = 0;
+        foreach ( $mreza as $k => $vrsta ) {
+            $bg = ( $i++ % 2 ) ? '#f7f3fb' : '#fff';
+            $h .= '<tr style="background:' . $bg . ';"><th scope="row" style="' . $td . 'font-weight:800;">' . esc_html( $k ) . '</th>';
+            foreach ( $vrsta as $v ) { $h .= '<td style="' . $td . ( $v === '' ? 'color:#bbb;' : 'font-weight:700;' ) . '">' . ( $v === '' ? '–' : esc_html( $v ) ) . '</td>'; }
+            $h .= '</tr>';
+        }
+        return $h . '</tbody></table>';
+    }
+}
+
 if ( ! function_exists( 'noriks_size_tabela' ) ) {
     /**
      * Tablica velicina izdelka za harmoniko "Tablica veličina" (meta.php) in skupni modal
@@ -1628,7 +1707,9 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         }
         if ( noriks_is_type( 'gordura', $product_id ) ) {
             return array( 'uvod' => 'Body dolazi u <strong>šest veličina</strong>, od S do 3XL.',
-                'glava' => array( 'Veličina' ), 'vrstice' => noriks_gordura_sizes(),
+                'glava' => array( 'Veličina', 'EU' ), 'vrstice' => array_map( function ( $r ) use ( $product_id ) {
+                    $m = noriks_velikost_oznake( $product_id ); return array( $r[0], isset( $m[ $r[0] ] ) ? str_replace( ' do ', ' – ', $m[ $r[0] ] ) : '' );
+                }, noriks_gordura_sizes() ),
                 'opomba' => 'Odaberite veličinu koju inače nosite.' );
         }
         if ( noriks_is_type( 'draps', $product_id ) ) {
