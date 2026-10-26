@@ -1310,4 +1310,6 @@ body.single-product {
 .accordion-content table thead tr,
 .accordion-content table thead th,
 .kwsc-table thead tr,
-.kwsc-table thead th { background: #111 !important; color: #fff !important; font-weight: 700 !important; }
+.kwsc-table thead th,
+#custom-size-chart-modal .kwsc-table thead th,
+#custom-size-chart-modal .kwsc-table th[scope="col"] { background: #111 !important; color: #fff !important; font-weight: 700 !important; }
