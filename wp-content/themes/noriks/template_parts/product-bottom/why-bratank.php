@@ -8,9 +8,9 @@
  *   2) Sto smo promijenili + Kako djeluje — sloj po sloj (4 kartice)
  *   3) Vasa nova jutarnja rutina (3 koraki)
  *   4) Usporedba (tabela, stolpec NORIKS)
- *   5) Dostupne boje (8 barv, ki jih izdelek res ima — fotografije z originala)
+ *   5) NORIKS pogoji (zakljucna sekcija)
  * Original ima besedilne sekcije, slike pa samo v galeriji; po NORIKS standardu so fotografije
- * z originala vkljucene tudi v why sekcije (znacilnosti, prije/poslije, mreza barv).
+ * z originala vkljucene tudi v why sekcije (kupci, znacilnosti, prije/poslije, packshot).
  * FAQ originala je v reviews.php ($bratank_faq), mnenja za karusel teme v auto_reviews/HR_bratank.php.
  * Izpusceno (NORIKS stil): promo pasica »FALL SALE« z odstevalnikom, glava, noga, trgovinski moduli.
  */
@@ -23,22 +23,14 @@ $nbt_img  = function( $file, $alt ) use ( $nbt, $nbt_path ) {
   return '<img src="' . esc_url( $nbt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
 };
 
-/* Barve, ki jih izdelek dejansko ima (8 od 17 fotografij v img/bratank). */
-$nbt_colors = array(
-  array( 'bt-05-bez.webp', 'Bež' ), array( 'bt-06-crna.webp', 'Crna' ),
-  array( 'bt-07-bijela.webp', 'Bijela' ), array( 'bt-13-paunovo-plava.webp', 'Paunovo plava' ),
-  array( 'bt-14-stara-ruza.webp', 'Stara ruža' ), array( 'bt-08-siva.webp', 'Siva' ),
-  array( 'bt-15-vinsko-crvena.webp', 'Vinsko crvena' ), array( 'bt-11-kava.webp', 'Kava' ),
-);
-
-/* Mnenja 1:1 z originala (ime in leta ostanejo kot na originalu); jamstvo -> NORIKS pogoji (30 dana za povrat). */
+/* Mnenja 1:1 z originala (besedilo prevedeno, imena hrvaska, leta kot na originalu); jamstvo -> NORIKS pogoji (30 dana za povrat). */
 $nbt_reviews = array(
-  array( 'ime' => 'Janet Mercer, 66', 'tekst' => '»Svako jutro stajala sam pred komodom i pokušavala shvatiti koji grudnjak ide uz ono što nosim. Onaj s jastučićima, onaj bez žica, onaj koji se ne vidi ispod bijelog. Sada uzmem majicu i obučena sam. To je cijela odluka. Ladicu s grudnjacima nisam otvorila mjesecima i ni sekunde mi ne nedostaje.«' ),
-  array( 'ime' => 'Sarah Hartley, 69', 'tekst' => '»Cijeli odrasli život prvo što bih napravila kad uđem u kuću bilo je da posegnem iza leđa i otkopčam grudnjak. Svaki dan. Ovu majicu nosim dva mjeseca i neku sam večer shvatila da legnem u krevet, a nemam što skinuti. Već mi je udobno. Nikad nisam mislila da ću to reći za nešto što nosim cijeli dan.«' ),
-  array( 'ime' => 'Linda White, 67', 'tekst' => '»Iskreno, sada živim u njoj. Obučem je odmah ujutro i nosim je cijeli dan po kući — dok kuham, čistim, idem do poštanskog sandučića, navečer na kauču. Prije bih se čim dođem kući presvukla u nešto mekano. Sada se nemam u što presvući ni što skinuti. Nosim je od trenutka kad ustanem do odlaska na spavanje. Kupila sam po jednu u svakoj boji da uvijek imam čistu u ladici.«' ),
-  array( 'ime' => 'Stephanie Foren, 74', 'tekst' => '»Cijeli život mrzim grudnjake. Žice, uske trake, tragovi grudnjaka — s time se nosim desetljećima. Prijateljica mi je preporučila ovu majicu i iskreno, bila sam skeptična. Ali naručila sam tri jer imam 30 dana za povrat. Najbolja stvar koju sam kupila godinama.«' ),
-  array( 'ime' => 'Erin Elwell, 78', 'tekst' => '»Najbolji dan s unucima 💕 Toliko je udobna da se mogu cijeli dan igrati na podu, a da me grudnjak ne ubija. Ove majice MIJENJAJU SVE! Imam 78 i napokon sam našla nešto što me stvarno podržava!«' ),
-  array( 'ime' => 'Jessica Reller, 72', 'tekst' => '»Godinama sam probala sve i ništa nije pomoglo. Ovo je prva stvar koja zaista pristaje mom tijelu, a da me ne boli. Nosim je cijeli dan, u njoj odspavam, u njoj radim u vrtu. Nitko ne primijeti da ne nosim grudnjak.«' ),
+  array( 'ime' => 'Vesna M., 66', 'tekst' => '»Svako jutro stajala sam pred komodom i pokušavala shvatiti koji grudnjak ide uz ono što nosim. Onaj s jastučićima, onaj bez žica, onaj koji se ne vidi ispod bijelog. Sada uzmem majicu i obučena sam. To je cijela odluka. Ladicu s grudnjacima nisam otvorila mjesecima i ni sekunde mi ne nedostaje.«' ),
+  array( 'ime' => 'Branka K., 69', 'tekst' => '»Cijeli odrasli život prvo što bih napravila kad uđem u kuću bilo je da posegnem iza leđa i otkopčam grudnjak. Svaki dan. Ovu majicu nosim dva mjeseca i neku sam večer shvatila da legnem u krevet, a nemam što skinuti. Već mi je udobno. Nikad nisam mislila da ću to reći za nešto što nosim cijeli dan.«' ),
+  array( 'ime' => 'Ljiljana P., 67', 'tekst' => '»Iskreno, sada živim u njoj. Obučem je odmah ujutro i nosim je cijeli dan po kući — dok kuham, čistim, idem do poštanskog sandučića, navečer na kauču. Prije bih se čim dođem kući presvukla u nešto mekano. Sada se nemam u što presvući ni što skinuti. Nosim je od trenutka kad ustanem do odlaska na spavanje. Kupila sam po jednu u svakoj boji da uvijek imam čistu u ladici.«' ),
+  array( 'ime' => 'Mirjana T., 74', 'tekst' => '»Cijeli život mrzim grudnjake. Žice, uske trake, tragovi grudnjaka — s time se nosim desetljećima. Prijateljica mi je preporučila ovu majicu i iskreno, bila sam skeptična. Ali naručila sam tri jer imam 30 dana za povrat. Najbolja stvar koju sam kupila godinama.«' ),
+  array( 'ime' => 'Dragica B., 78', 'tekst' => '»Najbolji dan s unucima 💕 Toliko je udobna da se mogu cijeli dan igrati na podu, a da me grudnjak ne ubija. Ove majice MIJENJAJU SVE! Imam 78 i napokon sam našla nešto što me stvarno podržava!«' ),
+  array( 'ime' => 'Snježana R., 72', 'tekst' => '»Godinama sam probala sve i ništa nije pomoglo. Ovo je prva stvar koja zaista pristaje mom tijelu, a da me ne boli. Nosim je cijeli dan, u njoj odspavam, u njoj radim u vrtu. Nitko ne primijeti da ne nosim grudnjak.«' ),
 );
 
 $nbt_layers = array(
@@ -72,11 +64,12 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 
 <!-- 1) PRIDRUZITE SE 120.000+ ZADOVOLJNIH KUPACA -->
 <section class="nbt-sec">
-  <div class="nbt-wrap nbt-wrap--wide">
+  <div class="nbt-wrap">
     <p class="nbt-kicker">Recenzije kupaca</p>
     <h2 class="nbt-h2">Pridružite se više od <em>120.000 zadovoljnih kupaca.</em></h2>
     <p class="nbt-score">Odlično <strong>4.8</strong> <strong>/ 5</strong>
       <span class="nbt-stars" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( '<i>' . $nbt_star . '</i>', 5 ); ?></span></p>
+    <div class="nbt-media nbt-media--wide"><?php echo $nbt_img( 'bt-04-kupci.webp', 'Kupci u NORIKS BraTank majicama' ); ?></div>
     <div class="nbt-revs">
       <?php foreach ( $nbt_reviews as $r ) : ?>
       <article class="nbt-rv">
@@ -117,7 +110,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 
 <!-- 3) VASA NOVA JUTARNJA RUTINA -->
 <section class="nbt-sec">
-  <div class="nbt-wrap nbt-wrap--narrow">
+  <div class="nbt-wrap">
     <p class="nbt-kicker">Jutarnja rutina</p>
     <h2 class="nbt-h2">Vaša nova <em>jutarnja rutina</em></h2>
     <div class="nbt-media nbt-media--wide"><?php echo $nbt_img( 'bt-03-prije-poslije.webp', 'NORIKS BraTank — prije i poslije' ); ?></div>
@@ -140,6 +133,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
   <div class="nbt-wrap">
     <p class="nbt-kicker">Usporedba</p>
     <h2 class="nbt-h2">Nije svaka potpora <em>jednaka.</em></h2>
+    <div class="nbt-media nbt-media--sm"><?php echo $nbt_img( 'bt-06-crna.webp', 'NORIKS BraTank majica s ugrađenim grudnjakom u crnoj boji' ); ?></div>
     <table class="nbt-cmp">
       <thead>
         <tr>
@@ -174,41 +168,35 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 </section>
 
 
-<!-- 5) DOSTUPNE BOJE -->
-<section class="nbt-sec nbt-tint">
+<!-- 5) NORIKS POGOJI -->
+<section class="nbt-sec">
   <div class="nbt-wrap">
-    <p class="nbt-kicker">Boje</p>
-    <h2 class="nbt-h2">Osam boja <em>za svaki dan.</em></h2>
-    <p class="nbt-sub">Ista majica, ista potpora — odaberite nijansu koja vam najbolje leži ispod odjeće.</p>
-    <div class="nbt-colors">
-      <?php foreach ( $nbt_colors as $c ) : ?>
-      <figure class="nbt-color">
-        <?php echo $nbt_img( $c[0], 'NORIKS BraTank — ' . $c[1] ); ?>
-        <figcaption><?php echo esc_html( $c[1] ); ?></figcaption>
-      </figure>
-      <?php endforeach; ?>
+    <p class="nbt-kicker">Kupujte bez brige</p>
+    <h2 class="nbt-h2">Uz NORIKS kupujete <em>bez rizika.</em></h2>
+    <div class="nbt-media nbt-media--sm"><?php echo $nbt_img( 'bt-05-bez.webp', 'NORIKS BraTank majica s ugrađenim grudnjakom u bež boji' ); ?></div>
+    <p class="nbt-sub">Majicu isprobajte kod kuće, uz svoju odjeću i svoj dan. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+    <div class="nbt-pogoji">
+      <div class="nbt-pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+      <div class="nbt-pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+      <div class="nbt-pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+      <div class="nbt-pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
     </div>
   </div>
 </section>
 
 <style>
-/* slike v sekcijah + mreza barv (standard prejsnjih izdelkov) */
+/* slike v sekcijah (standard prejsnjih izdelkov) */
 .nbt-sec img { display: block; width: 100%; height: auto; }
 .nbt-media--wide { max-width: 820px; margin: 0 auto 26px; }
 .nbt-media--wide img { border-radius: 12px; box-shadow: 0 2px 4px rgba(30,20,20,.05), 0 14px 40px rgba(30,20,20,.10); }
-.nbt-colors { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
-.nbt-color { margin: 0; }
-.nbt-color img { border-radius: 10px; aspect-ratio: 4/5; object-fit: cover; }
-.nbt-color figcaption { margin-top: 8px; font-size: 14px; font-weight: 600; text-align: center; color: #4d4446; }
-@media (max-width: 749px) { .nbt-colors { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
+.nbt-media--sm { max-width: 400px; margin: 0 auto 26px; }
+.nbt-media--sm img { border-radius: 12px; aspect-ratio: 4/5; object-fit: cover; box-shadow: 0 2px 4px rgba(30,20,20,.05), 0 14px 40px rgba(30,20,20,.10); }
 
 .nbt-sec { --nbt-rose: #b57e7e; --nbt-ink: #1f1b1a; --nbt-muted: #5b5350; --nbt-tint: #f6f2ec; --nbt-line: #e8ded6; --nbt-x: #cbc3bd;
   padding: 60px 0; background: #fff; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--nbt-ink); }
 .nbt-sec * { box-sizing: border-box; }
 .nbt-tint { background: var(--nbt-tint); }
-.nbt-wrap { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px; }
-.nbt-wrap--wide { max-width: 1200px; }
-.nbt-wrap--narrow { max-width: 680px; }
+.nbt-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 .nbt-sec h2, .nbt-sec h3, .nbt-sec h4 { font-family: inherit; text-transform: none; letter-spacing: 0; }
 .nbt-kicker { margin: 0 0 8px; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--nbt-rose); }
 .nbt-h2 { margin: 0 0 14px; text-align: center; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 700; color: var(--nbt-ink); }
@@ -247,6 +235,12 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 .nbt-steps h3 { font-size: 18px; font-weight: 700; color: var(--nbt-ink); margin: 4px 0 6px; }
 .nbt-steps p { font-size: 16px; line-height: 1.6; color: var(--nbt-muted); margin: 0; }
 
+/* 5) NORIKS pogoji */
+.nbt-pogoji { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.nbt-pog { background: var(--nbt-tint); border-radius: 14px; padding: 22px 16px; text-align: center; }
+.nbt-pog strong { display: block; font-size: 17px; font-weight: 800; margin: 0 0 6px; color: var(--nbt-ink); }
+.nbt-pog span { font-size: 14px; color: var(--nbt-muted); }
+
 /* 4) usporedba */
 .nbt-cmp { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 14px 0 0; border: 0; background: #fff; }
 .nbt-cmp th, .nbt-cmp td { padding: 13px 8px; text-align: center; border: 0; border-bottom: 1px solid var(--nbt-line); vertical-align: middle; background: transparent; }
@@ -263,6 +257,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
   .nbt-sec { padding: 42px 0; }
   .nbt-revs { grid-template-columns: 1fr; gap: 14px; }
   .nbt-grid { grid-template-columns: 1fr; }
+  .nbt-pogoji { grid-template-columns: 1fr 1fr; }
   .nbt-cmp th, .nbt-cmp td { padding: 11px 3px; }
   .nbt-cmp thead th { font-size: 12px; }
   .nbt-cmp .feat { font-size: 13px; padding-left: 6px; }
@@ -274,17 +269,4 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
 .product_cat-orto-bratank .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
 
-/* kratek opis izdelka: sive vrstice s kljukico (REST pobrise inline slog, zato je CSS tukaj) */
-.woocommerce-product-details__short-description ul.nbt-points,
-.woocommerce div.product .woocommerce-product-details__short-description ul.nbt-points {
-  list-style: none !important; margin: 14px 0 !important; padding-left: 0 !important; }
-.woocommerce-product-details__short-description ul.nbt-points li {
-  list-style: none !important; text-indent: 0 !important; display: flex !important; align-items: center !important; gap: 12px;
-  background: #f3f3f3; border-radius: 6px; padding: 7px 10px !important; margin: 0 0 10px !important;
-  font-size: 15px !important; line-height: 1.4 !important; color: #121212; }
-.woocommerce-product-details__short-description ul.nbt-points li::marker { content: "" !important; }
-.woocommerce-product-details__short-description ul.nbt-points li::before { content: none !important; }
-.woocommerce-product-details__short-description .nbt-tick {
-  flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: #b57e7e; color: #fff;
-  display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; line-height: 1; }
 </style>
