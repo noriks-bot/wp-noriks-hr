@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wsclassics__traka{padding:36px 0;background:linear-gradient(135deg,#eef1f7 0%,#f8f6f1 100%);color:#1c1c1c}.wsclassics__tmreza{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wsclassics__tk{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(29,43,79,.08);border-radius:16px;padding:20px 18px;box-shadow:0 8px 24px rgba(29,43,79,.08)}.wsclassics__ti{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1d2b4f,#33477a);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(29,43,79,.25)}.wsclassics__tt strong{display:block;font-size:16.5px;font-weight:800;line-height:1.25;color:#1c1c1c}.wsclassics__tt span{display:block;font-size:13.5px;line-height:1.4;color:#5a5f6b;margin-top:3px}@media (max-width:860px){.wsclassics__traka{padding:28px 0}.wsclassics__tmreza{grid-template-columns:1fr 1fr;gap:12px}.wsclassics__tk{flex-direction:column;text-align:center;padding:18px 12px;gap:10px}.wsclassics__tt strong{font-size:15px}}
 .wsclassics{color:#1c1c1c;font-family:inherit}
 .wsclassics__s{padding:56px 0;background:#fff}.wsclassics__s--bg{background:#f4f3ef}
-.wsclassics__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsclassics__v{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box}
 .wsclassics__c{text-align:center}
 .wsclassics__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wsclassics__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsclassics__h2 em{font-style:italic}
