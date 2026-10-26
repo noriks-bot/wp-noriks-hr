@@ -4,11 +4,11 @@
  *
  * STRUKTURA ORIGINALA:
    1. press — trak logotipov medijev v vrsti -> pri nas trak NORIKS zaupanja v vrsti (tujih medijev ne prenasamo)
-   2. situaciones — naslov "Te pasa…?" + 3 kartice v vrsti (slika zgoraj, tekst spodaj na modri podlagi)
+   2. situaciones — naslov "Te pasa…?" + karusel 3 kartic s puscicama (slika zgoraj, tekst spodaj na modri podlagi)
    3. concerns — slika jastuka levo + desno stevilcen seznam 01–05 (kje boli, kako pomaga) + 3 podatki v vrsti (mere, brez montaze, gel)
    4. imgtext — infografika levo, desno naslov + 3 alineje s kljukico
-   5. videos — 3 video mnenja kupcev v vrsti (navpicni videi)
-   6. fbreviews — komentarji kupcev v mrezi 3 v vrsti (fotografija, ime, besedilo)
+   5. videos — karusel 3 video mnenj kupcev s puscicama (navpicni videi)
+   6. fbreviews — karusel komentarjev kupcev s puscicama (fotografija, ime, besedilo)
    7. results — modri trak z jamstvom + 3 kartice v vrsti "kaj opazijo" (odstotki ankete izpusceni)
    8. faq — harmonika (pri nas FAQ v reviews.php)
    9. opiniones — mreza mnenj s fotografijo 3 v vrsti
@@ -62,7 +62,7 @@ $gc_op = array(
   <section class="wgc__s">
     <div class="wgc__v">
       <h2 class="wgc__h2 wgc__c">Događa li vam se <em>nešto od ovoga</em>?</h2>
-      <div class="wgc__grid3">
+      <div class="wgc__grid3 wgc__kar">
         <?php foreach ( $gc_sit as $s ) : ?>
         <div class="wgc__sit">
           <img src="<?php echo esc_url( $wd . $s[0] ); ?>" alt="<?php echo esc_attr( $s[1] ); ?>" loading="lazy" decoding="async">
@@ -118,7 +118,7 @@ $gc_op = array(
     <div class="wgc__v">
       <h2 class="wgc__h2 wgc__c">Ovako ga koriste <em>svaki dan</em></h2>
       <p class="wgc__p wgc__c">Pravi videi kupaca koji ga već imaju kod kuće.</p>
-      <div class="wgc__grid3 wgc__videi">
+      <div class="wgc__grid3 wgc__videi wgc__kar">
         <?php foreach ( array( '/img/gelcushion/noriks-gelcushion-test-jajeta.mp4', '/img/gelcushion/noriks-gelcushion-video-2.mp4', '/img/gelcushion/noriks-gelcushion-video-3.mp4' ) as $v ) : ?>
         <div class="wgc__vid"><video src="<?php echo esc_url( get_template_directory_uri() . $v ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
         <?php endforeach; ?>
@@ -130,7 +130,7 @@ $gc_op = array(
   <section class="wgc__s">
     <div class="wgc__v">
       <h2 class="wgc__h2 wgc__c">Što nam <em>pričaju</em> kupci</h2>
-      <div class="wgc__grid3">
+      <div class="wgc__grid3 wgc__kar">
         <?php foreach ( $gc_fb as $f ) : ?>
         <div class="wgc__fb">
           <div class="wgc__fbh"><img src="<?php echo esc_url( $wd . $f[0] ); ?>" alt="<?php echo esc_attr( $f[1] ); ?>" loading="lazy" decoding="async"><div><strong><?php echo esc_html( $f[1] ); ?></strong><span><?php echo esc_html( $f[2] ); ?></span></div></div>
@@ -251,4 +251,19 @@ $gc_op = array(
   .wgc__red4{grid-template-columns:1fr 1fr}
   .wgc__plavo{margin-top:-38px}
 }
+/* karusel kot na originalu (puscici < >) */
+.wgc__karw{position:relative}
+.wgc__kar{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.wgc__kar::-webkit-scrollbar{display:none}
+.wgc__kar>*{scroll-snap-align:start}
+.wgc__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}
+.wgc__pus--l{left:-14px}.wgc__pus--d{right:-14px}
+@media (max-width:860px){.wgc__kar{grid-auto-columns:82%}.wgc__videi.wgc__kar{grid-auto-columns:62%}.wgc__pus--l{left:4px}.wgc__pus--d{right:4px}}
 </style>
+<script>
+(function(){document.querySelectorAll('.wgc__kar').forEach(function(k){
+  var w=document.createElement('div');w.className='wgc__karw';k.parentNode.insertBefore(w,k);w.appendChild(k);
+  ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wgc__pus wgc__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
+    b.addEventListener('click',function(){var c=k.firstElementChild;var d=c?c.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
+});})();
+</script>
