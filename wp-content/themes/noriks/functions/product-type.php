@@ -479,13 +479,13 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
 
 
 if ( ! function_exists( 'noriks_classics_sizes' ) ) {
-    /** NORIKS Classics: velicina, visina, tezina, unutarnja duljina noge (US velicine izpuscene - samo EUR/cm, Dejan 26.10.2026).
+    /** NORIKS Classics: velicina, EU velicina, visina, tezina, unutarnja duljina noge (US velicine izpuscene - samo EUR/cm, Dejan 26.10.2026).
      *  1:1 z originala (myfleecies.com, Size Guide), palci -> cm, lbs -> kg. */
     function noriks_classics_sizes() {
         return array(
-            array( 'XS-S',   '142–173 cm', '41–64 kg', '69 cm' ),
-            array( 'M-L',    '152–175 cm', '50–68 kg', '70 cm' ),
-            array( 'XL-2XL', '152–175 cm', '68–95 kg', '71 cm' ),
+            array( 'XS-S',   '32–36', '142–173 cm', '41–64 kg', '69 cm' ),
+            array( 'M-L',    '38–42', '152–175 cm', '50–68 kg', '70 cm' ),
+            array( 'XL-2XL', '44–48', '152–175 cm', '68–95 kg', '71 cm' ),
         );
     }
 }
@@ -1618,6 +1618,8 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             // BRA: EU traka (opseg ispod grudi) iz tablice kosarica x traka, US traka 30-48 -> EU 65-110.
             'bra'          => array( 'S' => '65 do 75', 'M' => '65 do 80', 'L' => '75 do 90', 'XL' => '80 do 95', '2XL' => '80 do 100', '3XL' => '90 do 110', '4XL' => '100 do 110' ),
             // FlexShirt: velikost po tezini iz tablice visina x tezina.
+            // Classics: original ima samo visino/tezino - standardne EU zenske konfekcijske stevilke (XS 32/34 ... 2XL 46/48).
+            'classics'     => array( 'XS-S' => '32 do 36', 'M-L' => '38 do 42', 'XL-2XL' => '44 do 48' ),
             'sr'           => array( 'S' => '59 do 68 kg', 'M' => '69 do 84 kg', 'L' => '84 do 95 kg', 'XL' => '96 do 113 kg', '2XL' => '114 do 129 kg', '3XL' => '130 do 150 kg' ),
         );
         foreach ( $o as $tip => $m ) {
@@ -1739,7 +1741,7 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         }
         if ( noriks_is_type( 'classics', $product_id ) ) {
             return array( 'uvod' => 'Materijal se rasteže u svim smjerovima, pa svaka veličina pokriva <strong>raspon visine i težine</strong>.',
-                'glava' => array( 'Veličina', 'Visina', 'Težina', 'Unutarnja duljina noge' ), 'vrstice' => noriks_classics_sizes(),
+                'glava' => array( 'Veličina', 'EU veličina', 'Visina', 'Težina', 'Unutarnja duljina noge' ), 'vrstice' => noriks_classics_sizes(),
                 'opomba' => 'Između dvije veličine ili ste višeg rasta? Uzmite veću veličinu.' );
         }
         if ( noriks_is_type( 'ondersteun', $product_id ) ) {
