@@ -53,19 +53,19 @@ $opz_cmp_rows = array(
 /* Recenzije sa slikom — 8) sekcija */
 $opz_reviews = array(
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-1.webp?v=20261026',
         'title' => 'Velika pomoć protiv bolova u donjem dijelu leđa',
         'text'  => 'NORIKS pojas mi je uistinu jako olakšao život. Radi točno ono što obećava. Ponovno se mogu sagnuti bez bolova.',
         'name'  => 'Elizabeta M.',
     ),
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.jpg',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-2.webp?v=20261026',
         'title' => 'Mekan i udoban',
         'text'  => 'Moj fizioterapeut mi je preporučio pojas protiv bolova u leđima. Prije sam probao i druge pojaseve, ali ovaj je puno udobniji za sjedenje i saginjanje. Ipak pruža izvrsnu potporu!',
         'name'  => 'Julija U.',
     ),
     array(
-        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp',
+        'img'   => get_template_directory_uri() . '/img/ortopas-reviews/review-3.webp?v=20261026',
         'title' => 'Top!',
         'text'  => 'Pomaže mi da sjedim uspravno i imam osjećaj da hodam uspravnije. Bolovi su se višestruko smanjili i konačno mogu bezbolno ustati i nakon duljeg sjedenja. Nosim pojas otprilike 2-3 sata dnevno – uglavnom na poslu.',
         'name'  => 'Ivan D.',
@@ -186,7 +186,7 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
           <tr>
             <th class="opz-th-feat"></th>
             <th class="opz-th-brand">NORIKS</th>
-            <th class="opz-th-alt">Physio</th>
+            <th class="opz-th-alt">Fizioterapija</th>
           </tr>
         </thead>
         <tbody>
