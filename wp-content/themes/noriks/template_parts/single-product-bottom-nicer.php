@@ -104,6 +104,9 @@ if ( noriks_is_type( 'daily' ) ) {
 if ( noriks_is_type( 'odorpro' ) ) {
     include $noriks_pb_dir . 'why-odorpro.php';
 }
+if ( noriks_is_type( 'mamafit' ) ) {
+    include $noriks_pb_dir . 'why-mamafit.php';
+}
 if ( noriks_is_type( 'gelsit' ) ) {
     include $noriks_pb_dir . 'why-gelsit.php';
 }

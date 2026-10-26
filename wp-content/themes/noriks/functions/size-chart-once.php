@@ -289,7 +289,7 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             return;
         }
         // NORIKS Classics (velicine 1:1 z originala) in NORIKS SoftBack (EU + kosarica 1:1 z originala) - skupni modal.
-        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'classics' ) || noriks_is_type( 'ondersteun' ) ) ) {
+        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'classics' ) || noriks_is_type( 'ondersteun' ) || noriks_is_type( 'mamafit' ) ) ) {
             get_template_part( 'template_parts/size-chart-tabela' );
             return;
         }

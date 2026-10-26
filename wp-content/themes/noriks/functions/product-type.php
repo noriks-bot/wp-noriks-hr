@@ -65,6 +65,7 @@ function noriks_product_type_map() : array {
         'silkcase' => array( 'orto-silkcase' ),
         'sunover' => array( 'orto-sunover' ),
         'odorpro' => array( 'orto-odorpro' ),
+        'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
         'struja' => array( 'orto-struja' ),
         'calm' => array( 'orto-calm' ),
@@ -582,6 +583,20 @@ if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
             array( 'Djeca L',   '150 cm', '39 cm', '26 cm', '23 cm', 'djeca 8–12 god.',                   '130–150 cm' ),
             array( 'Odrasli S', '170 cm', '44 cm', '28 cm', '27 cm', 'žene EU 34–40, muškarci S–M',        '150–170 cm' ),
             array( 'Odrasli L', '185 cm', '49 cm', '31 cm', '27 cm', 'žene EU 42–46, muškarci L–XXL',      '170–185 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_mamafit_sizes' ) ) {
+    /** NORIKS MamaFit: velicina po opsegu struka + EU velicina (original belayan.com, Guide des tailles S–3XL). */
+    function noriks_mamafit_sizes() {
+        return array(
+            array( 'S',   '62 – 68 cm',  '34 – 36' ),
+            array( 'M',   '68 – 76 cm',  '38 – 40' ),
+            array( 'L',   '76 – 82 cm',  '40 – 42' ),
+            array( 'XL',  '82 – 90 cm',  '44 – 46' ),
+            array( '2XL', '88 – 100 cm', '48 – 50' ),
+            array( '3XL', '92 – 112 cm', '50 – 52+' ),
         );
     }
 }
@@ -1530,6 +1545,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         if ( noriks_is_type( 'travel', $product_id ) ) {
             return array( 'uvod' => 'Prije narudžbe izmjerite <strong>širinu stražnjeg sjedala</strong> i odaberite veličinu koja mu odgovara.',
                 'glava' => array( 'Veličina', 'Mjere', 'Vozila', 'Širina sjedala' ), 'vrstice' => noriks_travel_sizes(), 'opomba' => '' );
+        }
+        if ( noriks_is_type( 'mamafit', $product_id ) ) {
+            return array( 'uvod' => 'Izmjerite <strong>opseg struka</strong> i odaberite svoju uobičajenu veličinu – tkanina se prilagođava tijelu.',
+                'glava' => array( 'Veličina', 'Opseg struka', 'EU veličina' ), 'vrstice' => noriks_mamafit_sizes(),
+                'opomba' => 'Između dvije veličine? Za čvršću potporu uzmite manju, za više udobnosti cijeli dan veću.' );
         }
         if ( noriks_is_type( 'classics', $product_id ) ) {
             return array( 'uvod' => 'Materijal se rasteže u svim smjerovima, pa svaka veličina pokriva <strong>raspon visine i težine</strong>.',
