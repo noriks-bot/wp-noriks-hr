@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
 
   <section class="wtacpro__s wtacpro__s--bg">
     <div class="wtacpro__v">
-      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'nfd-07-spec.webp' ); ?>" alt="Čujte divljač. Prigušite prasak." loading="lazy" decoding="async"></div>
+      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'nfd-07-spec.webp?v=2' ); ?>" alt="Čujte divljač. Prigušite prasak." loading="lazy" decoding="async"></div>
       <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">ZA LOV I STRELIŠTE</div>
         <h2 class="wtacpro__h2">Čujte divljač. <em>Prigušite</em> prasak.</h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
 
   <section class="wtacpro__s">
     <div class="wtacpro__v wtacpro__v--rev">
-      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-03.webp' ); ?>" alt="Pojačanje zvuka do 4 puta" loading="lazy" decoding="async"></div>
+      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-03.webp?v=2' ); ?>" alt="Pojačanje zvuka do 4 puta" loading="lazy" decoding="async"></div>
       <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">4X POJAČANJE</div>
         <h2 class="wtacpro__h2">Pojačanje zvuka <em>do 4 puta</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
 
   <section class="wtacpro__s wtacpro__s--bg">
     <div class="wtacpro__v">
-      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-04.webp' ); ?>" alt="Zaštita od buke u trenutku" loading="lazy" decoding="async"></div>
+      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-04.webp?v=2' ); ?>" alt="Zaštita od buke u trenutku" loading="lazy" decoding="async"></div>
       <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">27–31 dB ZAŠTITA</div>
         <h2 class="wtacpro__h2">Zaštita od buke <em>u trenutku</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
 
   <section class="wtacpro__s">
     <div class="wtacpro__v wtacpro__v--rev">
-      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-10.webp' ); ?>" alt="Do 40 sati rada s kutijom za punjenje" loading="lazy" decoding="async"></div>
+      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-10.webp?v=2' ); ?>" alt="Do 40 sati rada s kutijom za punjenje" loading="lazy" decoding="async"></div>
       <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">40 SATI BATERIJE</div>
         <h2 class="wtacpro__h2">Do <em>40 sati</em> rada s kutijom za punjenje</h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
 
   <section class="wtacpro__s wtacpro__s--bg">
     <div class="wtacpro__v">
-      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-06.webp' ); ?>" alt="Što donosi Pro izvedba" loading="lazy" decoding="async"></div>
+      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'tacpro-06.webp?v=2' ); ?>" alt="Što donosi Pro izvedba" loading="lazy" decoding="async"></div>
       <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">STANDARD ILI PRO</div>
         <h2 class="wtacpro__h2">Što donosi <em>Pro</em> izvedba</h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
 
   <section class="wtacpro__s wtacpro__s--bg">
     <div class="wtacpro__v">
-      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'nfd-05-vodootporno.webp' ); ?>" alt="Bez glomaznih štitnika na glavi" loading="lazy" decoding="async"></div>
+      <div class="wtacpro__media"><img src="<?php echo esc_url( $wdir . 'nfd-05-vodootporno.webp?v=2' ); ?>" alt="Bez glomaznih štitnika na glavi" loading="lazy" decoding="async"></div>
       <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">ZAŠTO BAŠ OVE</div>
         <h2 class="wtacpro__h2">Bez glomaznih <em>štitnika</em> na glavi</h2>
