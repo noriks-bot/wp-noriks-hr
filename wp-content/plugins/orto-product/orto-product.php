@@ -915,7 +915,7 @@ function gck_render_bundle_selector() {
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']
     // i ovdje ga uzimamo kao dodatni <select> uz par.
     // NORIKS HOME PowerHook: jedini izbor je BOJA i prikazuje se kao krugovi (kao original).
-    $gck_single_color = has_term( array( 'orto-sunover', 'orto-quiet', 'orto-tacpro', 'orto-salon', 'orto-home', 'orto-snug', 'orto-raincoat', 'orto-seatcover', 'orto-litterbox', 'orto-sleepearplugs', 'orto-travelpillow', 'orto-fleeceshawl', 'orto-bottlesling', 'orto-pillorganizer', 'orto-ultrasoniccleaner', 'orto-antitheftbag', 'orto-showertowel', 'orto-birdie', 'orto-birdie-3', 'orto-cashmeresweater' ), 'product_cat', $product_id );
+    $gck_single_color = has_term( array( 'orto-webshot', 'orto-sunover', 'orto-quiet', 'orto-tacpro', 'orto-salon', 'orto-home', 'orto-snug', 'orto-raincoat', 'orto-seatcover', 'orto-litterbox', 'orto-sleepearplugs', 'orto-travelpillow', 'orto-fleeceshawl', 'orto-bottlesling', 'orto-pillorganizer', 'orto-ultrasoniccleaner', 'orto-antitheftbag', 'orto-showertowel', 'orto-birdie', 'orto-birdie-3', 'orto-cashmeresweater' ), 'product_cat', $product_id );
 
     // NORIKS ComfortJeans: treci izbornik Duljina (L26–L36) uz Boju i Velicinu, kao na originalu (Colour / Length / Waist Size).
     $gck_extra_select = has_term( array( 'orto-sr', 'orto-comfortjeans' ), 'product_cat', $product_id );
