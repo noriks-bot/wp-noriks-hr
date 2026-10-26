@@ -135,11 +135,11 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od S do 3XL" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od P do 2XG" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">VELIČINE</div>
-        <h2 class="wgordura__h2">Šest veličina, <em>od S do 3XL</em></h2>
-        <p class="wgordura__p">NORIKS ShapeBody dostupan je u šest veličina, od S do 3XL. Na fotografijama ga nose žene različitih građa, sprijeda i straga, u svim trima bojama.</p>
+        <h2 class="wgordura__h2">Šest veličina, <em>od P do 2XG</em></h2>
+        <p class="wgordura__p">NORIKS ShapeBody dostupan je u šest veličina, od P do 2XG. Na fotografijama ga nose žene različitih građa, sprijeda i straga, u svim trima bojama.</p>
         <p class="wgordura__p">Body je krojen da prilijega uz tijelo, a kukice sprijeda zatvarate jednu po jednu. Ako ste između dvije veličine, javite nam se prije narudžbe i pomoći ćemo vam odabrati.</p>
         <p class="wgordura__p">Ako vam veličina ne odgovara, NORIKS ShapeBody možete vratiti. Kod nas imate 30 dana za povrat, a plaćate tek kad vam paket stigne.</p>
         <p class="wgordura__zak">Šest veličina, isti kroj u svakoj.</p>
