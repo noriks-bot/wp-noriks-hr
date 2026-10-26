@@ -1297,6 +1297,6 @@ body.single-product {
 .summary:has(.gck-size-link) .noriks-global-sizechart { display: none !important; }
 .summary .noriks-global-sizechart:not([style*="display: none"]) { display: flex !important; width: max-content; margin: -25px 0 0 !important; }
 .summary .noriks-global-sizechart ~ form.cart { margin-top: 0 !important; }
-.summary .noriks-global-sizechart ~ form.cart .gck-countdown { margin-top: 8px !important; }
+.summary .noriks-global-sizechart ~ form.cart .gck-countdown { margin-top: 6px !important; }
 .summary .gck-countdown:has(~ .gck-size-link-wrap) { margin-bottom: 9px !important; }
 .summary .gck-size-link-wrap { display: flex; justify-content: flex-end; margin-top: 0 !important; margin-bottom: 0 !important; }
