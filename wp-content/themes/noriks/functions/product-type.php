@@ -479,13 +479,13 @@ if ( ! function_exists( 'noriks_relief_sizes' ) ) {
 
 
 if ( ! function_exists( 'noriks_classics_sizes' ) ) {
-    /** NORIKS Classics: velicina, US, visina, tezina, unutarnja duljina noge.
+    /** NORIKS Classics: velicina, visina, tezina, unutarnja duljina noge (US velicine izpuscene - samo EUR/cm, Dejan 26.10.2026).
      *  1:1 z originala (myfleecies.com, Size Guide), palci -> cm, lbs -> kg. */
     function noriks_classics_sizes() {
         return array(
-            array( 'XS-S',   '0–4',   '142–173 cm', '41–64 kg', '69 cm' ),
-            array( 'M-L',    '6–8',   '152–175 cm', '50–68 kg', '70 cm' ),
-            array( 'XL-2XL', '10–12', '152–175 cm', '68–95 kg', '71 cm' ),
+            array( 'XS-S',   '142–173 cm', '41–64 kg', '69 cm' ),
+            array( 'M-L',    '152–175 cm', '50–68 kg', '70 cm' ),
+            array( 'XL-2XL', '152–175 cm', '68–95 kg', '71 cm' ),
         );
     }
 }
@@ -1357,18 +1357,18 @@ if ( ! function_exists( 'noriks_hikingshoes_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_slippers_sizes' ) ) {
-    /** NORIKS Slippers: EU velicina, duljina stopala (cm), UK, US zene, US muskarci.
+    /** NORIKS Slippers: EU velicina, duljina stopala (cm) - UK/US velicine izpuscene (samo EUR, Dejan 26.10.2026).
      *  1:1 s tablice velicin originala ("US Size Chart" + "UK & International Size Chart", 8 velicin). */
     function noriks_slippers_sizes() {
         return array(
-            array( 'EU 34–35', '20,3–21,5 cm', '2–2,5', '3–4', '2–3' ),
-            array( 'EU 36–37', '21,6–22,7 cm', '3–4', '4,5–5,5', '3,5–4,5' ),
-            array( 'EU 38–39', '22,8–24,0 cm', '4,5–5,5', '6–7', '5–6' ),
-            array( 'EU 40–41', '24,1–25,3 cm', '6–7', '7,5–8,5', '6,5–7,5' ),
-            array( 'EU 42–43', '25,4–26,5 cm', '7,5–8,5', '9–10', '8–9' ),
-            array( 'EU 44–45', '26,6–27,8 cm', '9–10', '10,5–11,5', '9,5–10,5' ),
-            array( 'EU 46–47', '27,9–29,0 cm', '10,5–11,5', '12–13', '11–12' ),
-            array( 'EU 48–49', '29,1–30,2 cm', '12–13', '13,5–14,5', '12,5–13,5' ),
+            array( 'EU 34–35', '20,3–21,5 cm' ),
+            array( 'EU 36–37', '21,6–22,7 cm' ),
+            array( 'EU 38–39', '22,8–24,0 cm' ),
+            array( 'EU 40–41', '24,1–25,3 cm' ),
+            array( 'EU 42–43', '25,4–26,5 cm' ),
+            array( 'EU 44–45', '26,6–27,8 cm' ),
+            array( 'EU 46–47', '27,9–29,0 cm' ),
+            array( 'EU 48–49', '29,1–30,2 cm' ),
         );
     }
 }
@@ -1467,16 +1467,16 @@ if ( ! function_exists( 'noriks_smartjacket_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_utilitypants_sizes' ) ) {
-    /** NORIKS UtilityPants: velicina, opseg struka (inci, UK/US), struk, bokovi, visina, duljina, unutarnja duljina nogavice (cm).
+    /** NORIKS UtilityPants: velicina, struk, bokovi, visina, duljina, unutarnja duljina nogavice (cm) - UK/US palci izpusceni (samo EUR/cm, Dejan 26.10.2026).
      *  1:1 s tablice originala thetruetailorcompany.com (preporuka: ako ste izmedu dvije velicine, uzmite vecu). */
     function noriks_utilitypants_sizes() {
         return array(
-            array( 'S',   '31',    '78–82',   '94–98',   '170–175', '102', '76,2' ),
-            array( 'M',   '32',    '82–86',   '98–102',  '175–180', '104', '77' ),
-            array( 'L',   '34',    '86–91',   '102–107', '180–185', '106', '77,8' ),
-            array( 'XL',  '36',    '91–96',   '107–112', '185–190', '108', '78,6' ),
-            array( '2XL', '38',    '96–102',  '112–118', '185–190', '110', '79,4' ),
-            array( '3XL', '40–42', '103–109', '119–125', '190–195', '111', '80,2' ),
+            array( 'S', '78–82',   '94–98',   '170–175', '102', '76,2' ),
+            array( 'M', '82–86',   '98–102',  '175–180', '104', '77' ),
+            array( 'L', '86–91',   '102–107', '180–185', '106', '77,8' ),
+            array( 'XL', '91–96',   '107–112', '185–190', '108', '78,6' ),
+            array( '2XL', '96–102',  '112–118', '185–190', '110', '79,4' ),
+            array( '3XL', '103–109', '119–125', '190–195', '111', '80,2' ),
         );
     }
 }
@@ -1525,14 +1525,14 @@ if ( ! function_exists( 'noriks_ondersteun_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_insoles_sizes' ) ) {
-    /** NORIKS Insoles — ortopedski ulošci za potporu stopala. */
+    /** NORIKS Insoles — ortopedski ulošci za potporu stopala: velicina, EU broj (samo EUR, Dejan 26.10.2026). */
     function noriks_insoles_sizes() {
         return array(
-            array( 'XS', '7,5',     '5 – 8',     '4 – 5,5',   '35 – 38' ),
-            array( 'S',  '8 – 8,5', '8,5 – 10',  '6 – 7,5',   '38,5 – 41,5' ),
-            array( 'M',  '9 – 10,5','10,5 – 12', '8 – 9,5',   '42 – 44' ),
-            array( 'L',  '11 – 12', '12,5 – 14', '10 – 11',   '44,5 – 46,5' ),
-            array( 'XL', '12,5 – 14','14,5',     '11,5 – 12', '47 – 48' ),
+            array( 'XS', '35 – 38' ),
+            array( 'S', '38,5 – 41,5' ),
+            array( 'M', '42 – 44' ),
+            array( 'L', '44,5 – 46,5' ),
+            array( 'XL', '47 – 48' ),
         );
     }
 }
@@ -1619,7 +1619,7 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         }
         if ( noriks_is_type( 'insoles', $product_id ) ) {
             return array( 'uvod' => 'Odaberite <strong>svoju veličinu</strong> prema donjoj tablici. Ulošci se mogu skratiti po oznaci na vrhu kako bi odgovarali vašoj cipeli.',
-                'glava' => array( 'Veličina', 'US/CA (muški)', 'US/CA (ženski)', 'UK/AUS', 'EUR' ), 'vrstice' => noriks_insoles_sizes(),
+                'glava' => array( 'Veličina', 'EUR' ), 'vrstice' => noriks_insoles_sizes(),
                 'opomba' => 'Ulošci se stavljaju umjesto tvorničkog uloška, nikada preko njega.' );
         }
         if ( noriks_is_type( 'travel', $product_id ) ) {
@@ -1658,7 +1658,7 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         }
         if ( noriks_is_type( 'classics', $product_id ) ) {
             return array( 'uvod' => 'Materijal se rasteže u svim smjerovima, pa svaka veličina pokriva <strong>raspon visine i težine</strong>.',
-                'glava' => array( 'Veličina', 'US', 'Visina', 'Težina', 'Unutarnja duljina noge' ), 'vrstice' => noriks_classics_sizes(),
+                'glava' => array( 'Veličina', 'Visina', 'Težina', 'Unutarnja duljina noge' ), 'vrstice' => noriks_classics_sizes(),
                 'opomba' => 'Između dvije veličine ili ste višeg rasta? Uzmite veću veličinu.' );
         }
         if ( noriks_is_type( 'ondersteun', $product_id ) ) {

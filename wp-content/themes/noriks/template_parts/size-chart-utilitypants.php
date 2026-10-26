@@ -17,11 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
   </div>
 
   <div class="kwsc-body">
-    <p class="kwsc-lead"><strong>Kroj: normalan do uzak.</strong> Ako ste između dvije veličine, <strong>preporučujemo veću veličinu</strong>. Mjere su u cm (struk UK/US u inčima).</p>
+    <p class="kwsc-lead"><strong>Kroj: normalan do uzak.</strong> Ako ste između dvije veličine, <strong>preporučujemo veću veličinu</strong>. Sve mjere su u cm.</p>
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">UK/US (inča)</th><th scope="col">Struk</th><th scope="col">Bokovi</th><th scope="col">Visina</th><th scope="col">Duljina</th><th scope="col">Unutarnja duljina nogavice</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Struk</th><th scope="col">Bokovi</th><th scope="col">Visina</th><th scope="col">Duljina</th><th scope="col">Unutarnja duljina nogavice</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_utilitypants_sizes() as $r ) : ?>
@@ -30,8 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
               <td><?php echo esc_html( $r[2] ); ?></td>
               <td><?php echo esc_html( $r[3] ); ?></td>
               <td><?php echo esc_html( $r[4] ); ?></td>
-              <td><?php echo esc_html( $r[5] ); ?></td>
-              <td><?php echo esc_html( $r[6] ); ?></td></tr>
+              <td><?php echo esc_html( $r[5] ); ?></td></tr>
           <?php endforeach; ?>
         </tbody>
       </table>

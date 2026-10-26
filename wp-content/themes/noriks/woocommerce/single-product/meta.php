@@ -1464,9 +1464,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <tr style="background:#5f7f57;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
-                  <th style="padding:9px 8px;text-align:left;">US žene</th>
-                  <th style="padding:9px 8px;text-align:left;">US muškarci</th>
                 </tr>
               </thead>
               <tbody>
@@ -1476,9 +1473,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -2705,13 +2699,12 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'utilitypants', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;"><strong>Kroj: normalan do uzak.</strong> Ako ste između dvije veličine, <strong>preporučujemo da naručite veću veličinu</strong>. Mjere su u cm (struk UK/US u inčima).</p>
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Kroj: normalan do uzak.</strong> Ako ste između dvije veličine, <strong>preporučujemo da naručite veću veličinu</strong>. Sve mjere su u cm.</p>
             <div style="overflow-x:auto;">
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#2E2420;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 8px;text-align:left;">UK/US (inča)</th>
                   <th style="padding:9px 8px;text-align:left;">Struk</th>
                   <th style="padding:9px 8px;text-align:left;">Bokovi</th>
                   <th style="padding:9px 8px;text-align:left;">Visina</th>
@@ -2730,7 +2723,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                     <td style="padding:9px 8px;"><?php echo esc_html( $r[3] ); ?></td>
                     <td style="padding:9px 8px;"><?php echo esc_html( $r[4] ); ?></td>
                     <td style="padding:9px 8px;"><?php echo esc_html( $r[5] ); ?></td>
-                    <td style="padding:9px 8px;"><?php echo esc_html( $r[6] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
