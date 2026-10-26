@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s winsoles__s--bg">
     <div class="winsoles__v">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-03-detail.webp' ); ?>" alt="Stopala gotova do dva popodne? Svod se spušta." loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-03-detail.webp?v=2' ); ?>" alt="Stopala gotova do dva popodne? Svod se spušta." loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
         <div class="winsoles__kicker">CIJELI DAN NA NOGAMA</div>
         <h2 class="winsoles__h2">Stopala gotova do dva popodne? <em>Svod se spušta.</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s winsoles__s--bg">
     <div class="winsoles__v">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-06.webp' ); ?>" alt="Jedan skupi par svako jutro u drugu cipelu" loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'insoles-06.webp?v=2' ); ?>" alt="Jedan skupi par svako jutro u drugu cipelu" loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
         <div class="winsoles__kicker">PAR U SVAKOJ CIPELI</div>
         <h2 class="winsoles__h2">Jedan skupi par, <em>svako jutro u drugu cipelu?</em></h2>
@@ -107,7 +107,7 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s">
     <div class="winsoles__v winsoles__v--rev">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-02-before-after.webp' ); ?>" alt="Čvrst svod koji se ne spljošti" loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-02-before-after.webp?v=2' ); ?>" alt="Čvrst svod koji se ne spljošti" loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
         <div class="winsoles__kicker">ZAŠTO DRUGAČIJI</div>
         <h2 class="winsoles__h2">Čvrst svod koji se <em>ne spljošti</em></h2>
@@ -121,7 +121,7 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s winsoles__s--bg">
     <div class="winsoles__v">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-05-podpor.webp' ); ?>" alt="Sustav potpore iz tri dijela" loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-05-podpor.webp?v=2' ); ?>" alt="Sustav potpore iz tri dijela" loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
         <div class="winsoles__kicker">KAKO RADI SUSTAV POTPORE</div>
         <h2 class="winsoles__h2">Tri dijela, jedan zadatak: <em>potpora koja traje cijeli dan</em></h2>
@@ -135,7 +135,7 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
 
   <section class="winsoles__s">
     <div class="winsoles__v winsoles__v--rev">
-      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-koraki.webp' ); ?>" alt="Uložak se stavlja u cipelu umjesto originalnog uloška" loading="lazy" decoding="async"></div>
+      <div class="winsoles__media"><img src="<?php echo esc_url( $wdir . 'noriks-insoles-koraki.webp?v=2' ); ?>" alt="Uložak se stavlja u cipelu umjesto originalnog uloška" loading="lazy" decoding="async"></div>
       <div class="winsoles__tekst">
         <div class="winsoles__kicker">TRI JEDNOSTAVNA KORAKA</div>
         <h2 class="winsoles__h2">Udobno hodanje <em>u tri jednostavna koraka</em></h2>
