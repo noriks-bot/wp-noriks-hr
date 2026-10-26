@@ -9,6 +9,14 @@
  *   3) Vasa nova jutarnja rutina (3 koraki)
  *   4) Usporedba (tabela, stolpec NORIKS)
  *   5) NORIKS pogoji (zakljucna sekcija)
+ *
+ * STRUKTURA ORIGINALA: (lunara-comfort.com/products/front-support-built-in-bra-tank)
+   1. trustpilot_reviews — 6 kartic mnenj s fotografijami kupk v mrezi (pri nas mreza 6 kartic)
+   2. What We Changed + How It Works — besedilo + 4 kartice slojev v mrezi 2 stolpca
+   3. Your New Morning Routine — 3 koraki v vrsti
+   4. How It Compares — primerjalna tabela (klasicen / sportni / s polico / mi) z oceno 2/8–8/8
+   5. FAQ — harmonika (pri nas v reviews.php)
+   Original nima videov.
  * Original ima besedilne sekcije, slike pa samo v galeriji; po NORIKS standardu so fotografije
  * z originala vkljucene tudi v why sekcije (kupci, znacilnosti, prije/poslije, packshot).
  * FAQ originala je v reviews.php ($bratank_faq), mnenja za karusel teme v auto_reviews/HR_bratank.php.
