@@ -103,6 +103,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-blanket' );
             return;
         }
+        // NORIKS ShapeTank: velicina po tjelesnoj tezini (S–5XL) z originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'shapetank' ) ) {
+            get_template_part( 'template_parts/size-chart-shapetank' );
+            return;
+        }
         // NORIKS BraTank: tablica po opsegu grudi i kosarici (S–4XL).
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'bratank' ) ) {
             get_template_part( 'template_parts/size-chart-bratank' );

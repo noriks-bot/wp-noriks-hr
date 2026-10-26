@@ -215,7 +215,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 // Novi izdelki brez lastne veje: Detalji o proizvodu = opis izdelka iz WooCommerce,
 // savjeti za pranje za majice se ne prikazejo (prej je bilo tu besedilo za majice 70 % pamuk).
 $noriks_opis_iz_wc = false;
-foreach ( array( 'classics', 'flops', 'destapacan', 'tacpro', 'ondersteun', 'insoles', 'glasspro', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'retrobox', 'devotions', 'ritual', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
+foreach ( array( 'shapetank', 'classics', 'flops', 'destapacan', 'tacpro', 'ondersteun', 'insoles', 'glasspro', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'retrobox', 'devotions', 'ritual', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
     if ( noriks_is_type( $noriks_t, $current_product_id ) ) { $noriks_opis_iz_wc = true; break; }
 }
 
@@ -2940,6 +2940,31 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:12px 0 0;line-height:1.6;">Odaberite veličinu prema svojoj težini. Između dvije veličine? Za jaču kompresiju odaberite manji broj.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'shapetank', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu birajte <strong>prema svojoj tjelesnoj težini</strong>. Ne morate naručiti manju veličinu da biste dobili učinak kompresije.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#1c1c1c;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Tjelesna težina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_shapetank_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f3ef' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Između dvije veličine?</strong> Veća za više udobnosti cijeli dan, manja za čvršći osjećaj.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'ortopas', $current_product_id ) ): ?>

@@ -64,6 +64,7 @@ function noriks_product_type_map() : array {
         'muslin' => array( 'orto-muslin' ),
         'silkcase' => array( 'orto-silkcase' ),
         'sunover' => array( 'orto-sunover' ),
+        'shapetank' => array( 'orto-shapetank' ),
         'tacpro'                => array( 'orto-tacpro' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
         // Bambelle nosiljka za bebe/malisane (sling carrier).
@@ -579,6 +580,22 @@ if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
             array( 'Djeca L',   '150 cm', '39 cm', '26 cm', '23 cm', 'djeca 8–12 god.',                   '130–150 cm' ),
             array( 'Odrasli S', '170 cm', '44 cm', '28 cm', '27 cm', 'žene EU 34–40, muškarci S–M',        '150–170 cm' ),
             array( 'Odrasli L', '185 cm', '49 cm', '31 cm', '27 cm', 'žene EU 42–46, muškarci L–XXL',      '170–185 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_shapetank_sizes' ) ) {
+    /** NORIKS ShapeTank: velicina po tjelesnoj tezini (original alphacore-de.com, Groessentabelle S–5XL). */
+    function noriks_shapetank_sizes() {
+        return array(
+            array( 'S',   '50 – 70 kg' ),
+            array( 'M',   '70 – 90 kg' ),
+            array( 'L',   '90 – 110 kg' ),
+            array( 'XL',  '110 – 130 kg' ),
+            array( '2XL', '130 – 150 kg' ),
+            array( '3XL', '150 – 170 kg' ),
+            array( '4XL', '170 – 190 kg' ),
+            array( '5XL', '190 – 210 kg' ),
         );
     }
 }
