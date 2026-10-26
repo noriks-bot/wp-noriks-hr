@@ -36,6 +36,11 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
         <h2 class="wsilk__h2">Zašto nam vjeruje <em>120.000 kupaca</em></h2>
         <p class="wsilk__p">Pridružite se tisućama kupaca koji su svilom promijenili svoju večernju rutinu i odmor. Od glatke kose ujutro do svježeg osjećaja na licu – svilenu jastučnicu kupci vole zbog mekoće, izgleda i osjećaja koji ne žele više mijenjati.</p>
         <p class="wsilk__p">Mnogi je prvo kupe za sebe, a zatim i za partnera, djecu ili kao poklon. Jednom kad zaspite na svili, teško se vraćate na pamuk.</p>
+        <div class="wsilk__citati">
+          <blockquote><p>„Otkad je koristim budim se bez tragova jastuka na licu, a kosa mi je puno poslušnija. Muž sad hoće jednu za sebe.”</p><cite>Carmen R.</cite></blockquote>
+          <blockquote><p>„Pišem nakon punih mjesec dana. Već sam ih tri puta oprala i izgledaju kao onog dana kad sam ih dobila.”</p><cite>Dijana P.</cite></blockquote>
+          <blockquote><p>„Kvaliteta za 10, svila super mekana, a šavovi savršeno završeni.”</p><cite>Sandra C.</cite></blockquote>
+        </div>
         <p class="wsilk__zak">Prosječna ocjena 4,8 – i sve više kupaca koji spavaju na svili.</p>
       </div>
     </div>
@@ -169,6 +174,10 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 .wsilk__kart div{background:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.06);padding:14px 16px}
 .wsilk__kart strong{display:block;font-size:16px;font-weight:800;margin:0 0 4px}
 .wsilk__kart span{font-size:14.5px;line-height:1.55;color:#333}
+.wsilk__citati{display:grid;gap:10px;margin:0 0 16px}
+.wsilk__citati blockquote{margin:0;background:#f4f3ef;border-radius:12px;padding:14px 16px}
+.wsilk__citati p{font-size:14.5px;line-height:1.55;color:#333;margin:0 0 6px;font-style:italic}
+.wsilk__citati cite{font-size:13px;font-style:normal;font-weight:700;color:#555}
 .wsilk__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
 .wsilk__pogoji{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 16px}
 .wsilk__pog{background:#f4f3ef;border-radius:14px;padding:18px 14px;text-align:center}
