@@ -66,6 +66,7 @@ function noriks_product_type_map() : array {
         'sunover' => array( 'orto-sunover' ),
         'vinocool' => array( 'orto-vinocool' ),
         'odorpro' => array( 'orto-odorpro' ),
+        'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
         'struja' => array( 'orto-struja' ),
@@ -584,6 +585,23 @@ if ( ! function_exists( 'noriks_blanket_sizes' ) ) {
             array( 'Djeca L',   '150 cm', '39 cm', '26 cm', '23 cm', 'djeca 8–12 god.',                   '130–150 cm' ),
             array( 'Odrasli S', '170 cm', '44 cm', '28 cm', '27 cm', 'žene EU 34–40, muškarci S–M',        '150–170 cm' ),
             array( 'Odrasli L', '185 cm', '49 cm', '31 cm', '27 cm', 'žene EU 42–46, muškarci L–XXL',      '170–185 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
+    /** NORIKS SculptLeg: velicina, EU, opseg struka, opseg bokova (original luveon.com, Guide des tailles XS–5XL). */
+    function noriks_sculptleg_sizes() {
+        return array(
+            array( 'XS',  '32 – 34', '50 – 60 cm',   '76 – 85 cm' ),
+            array( 'S',   '34 – 36', '61 – 69 cm',   '86 – 94 cm' ),
+            array( 'M',   '38 – 40', '71 – 80 cm',   '97 – 106 cm' ),
+            array( 'L',   '42 – 44', '84 – 89 cm',   '109 – 115 cm' ),
+            array( 'XL',  '46 – 48', '93 – 99 cm',   '118 – 122 cm' ),
+            array( '2XL', '50 – 52', '104 – 110 cm', '125 – 130 cm' ),
+            array( '3XL', '54 – 56', '113 – 120 cm', '133 – 141 cm' ),
+            array( '4XL', '58 – 60', '121 – 129 cm', '142 – 150 cm' ),
+            array( '5XL', '62 – 64', '130 – 138 cm', '151 – 159 cm' ),
         );
     }
 }
@@ -1546,6 +1564,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         if ( noriks_is_type( 'travel', $product_id ) ) {
             return array( 'uvod' => 'Prije narudžbe izmjerite <strong>širinu stražnjeg sjedala</strong> i odaberite veličinu koja mu odgovara.',
                 'glava' => array( 'Veličina', 'Mjere', 'Vozila', 'Širina sjedala' ), 'vrstice' => noriks_travel_sizes(), 'opomba' => '' );
+        }
+        if ( noriks_is_type( 'sculptleg', $product_id ) ) {
+            return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
+                'glava' => array( 'Veličina', 'EU', 'Opseg struka', 'Opseg bokova' ), 'vrstice' => noriks_sculptleg_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite manju.' );
         }
         if ( noriks_is_type( 'mamafit', $product_id ) ) {
             return array( 'uvod' => 'Izmjerite <strong>opseg struka</strong> i odaberite svoju uobičajenu veličinu – tkanina se prilagođava tijelu.',
