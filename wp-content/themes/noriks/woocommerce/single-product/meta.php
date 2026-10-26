@@ -2942,6 +2942,59 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <p style="margin:12px 0 0;line-height:1.6;">Odaberite veličinu prema svojoj težini. Između dvije veličine? Za jaču kompresiju odaberite manji broj.</p>
           </div>
 
+        <?php elseif( noriks_is_type( 'muslin', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Četiri veličine – od <strong>prekrivača za kauč</strong> do pokrivača za <strong>veliki obiteljski krevet</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Dimenzije</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_muslin_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fdf8f5' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:12px 0 0;line-height:1.6;">Muslin je prirodan i lagano elastičan materijal, pa su manja odstupanja u dimenzijama normalna.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'silkcase', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Odaberite veličinu prema <strong>dimenzijama svojeg jastuka</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a9683f;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 10px;text-align:left;">Dimenzije</th>
+                  <th style="padding:9px 10px;text-align:left;">Za jastuk</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_silkcase_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#fdf8f5' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 10px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;">Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
         <?php elseif( noriks_is_type( 'shapetank', $current_product_id ) ): ?>
 
           <div class="noriks-size">
