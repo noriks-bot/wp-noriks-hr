@@ -49,14 +49,7 @@ $gc_op = array(
 <div class="wgc">
 
   <!-- 1) trak zaupanja (na originalu trak medijev) -->
-  <section class="wgc__s wgc__traka">
-    <div class="wgc__v wgc__red4">
-      <div><strong>120.000+</strong><span>zadovoljnih kupaca</span></div>
-      <div><strong>4,8 / 5</strong><span>prosječna ocjena</span></div>
-      <div><strong>30 dana</strong><span>za povrat novca</span></div>
-      <div><strong>Pouzećem</strong><span>platite kad paket stigne</span></div>
-    </div>
-  </section>
+  <section class="wgc__s wgc__traka"><div class="wgc__v wgc__tmreza"><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><div class="wgc__tt"><strong>120.000+</strong><span>zadovoljnih kupaca</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span><div class="wgc__tt"><strong>4,8 / 5</strong><span>prosječna ocjena</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><div class="wgc__tt"><strong>30 dana</strong><span>za povrat novca</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><div class="wgc__tt"><strong>Pouzećem</strong><span>platite kad paket stigne</span></div></div></div></section>
 
   <!-- 2) situacije: 3 kartice v vrsti -->
   <section class="wgc__s">
@@ -186,6 +179,7 @@ $gc_op = array(
   </section>
 </div>
 <style>
+.wgc__traka{padding:36px 0;background:linear-gradient(135deg,#eef1f7 0%,#f8f6f1 100%);color:#1c1c1c}.wgc__tmreza{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wgc__tk{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(29,43,79,.08);border-radius:16px;padding:20px 18px;box-shadow:0 8px 24px rgba(29,43,79,.08)}.wgc__ti{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1d2b4f,#33477a);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(29,43,79,.25)}.wgc__tt strong{display:block;font-size:16.5px;font-weight:800;line-height:1.25;color:#1c1c1c}.wgc__tt span{display:block;font-size:13.5px;line-height:1.4;color:#5a5f6b;margin-top:3px}@media (max-width:860px){.wgc__traka{padding:28px 0}.wgc__tmreza{grid-template-columns:1fr 1fr;gap:12px}.wgc__tk{flex-direction:column;text-align:center;padding:18px 12px;gap:10px}.wgc__tt strong{font-size:15px}}
 .wgc{color:#1c1c1c;font-family:inherit}
 .wgc__s{padding:56px 0;background:#fff}
 .wgc__s--bg{background:#f4f3ef}
@@ -196,7 +190,7 @@ $gc_op = array(
 .wgc__h2 em{font-style:italic}
 .wgc__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
 .wgc__zak{font-size:16px;font-weight:800;line-height:1.5;margin:14px 0 0}
-.wgc__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+
 .wgc__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
 .wgc__red4 strong{display:block;font-size:18px;font-weight:800}
 .wgc__red4 span{font-size:13.5px;opacity:.85}
