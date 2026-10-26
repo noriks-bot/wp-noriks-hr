@@ -1378,9 +1378,9 @@ if ( ! function_exists( 'noriks_anklesleeve_sizes' ) ) {
      *  1:1 z originala flytex.fr ("Guide des tailles": S = 35-40, M = 41-43, L = 44-47). */
     function noriks_anklesleeve_sizes() {
         return array(
-            array( 'S', '35–40' ),
-            array( 'M', '41–43' ),
-            array( 'L', '44–47' ),
+            array( 'S - 35 do 40', '35 do 40' ),
+            array( 'M - 41 do 43', '41 do 43' ),
+            array( 'L - 44 do 47', '44 do 47' ),
         );
     }
 }
