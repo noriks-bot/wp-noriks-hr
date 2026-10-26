@@ -196,7 +196,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
   </section>
 </div>
 <style>
-.wgordura__lv{max-width:1140px;margin:0 auto;padding:0 24px;box-sizing:border-box;text-align:center}
+.wgordura__lv{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box;text-align:center}
 .wgordura__lg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
 .wgordura__lk{background:#fff;border:1px solid #ece8e2;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.06);padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:6px}
 .wgordura__lki{width:84px;height:84px;border-radius:50%;background:#f4f3ef;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
@@ -207,7 +207,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 .wgordura{color:#1c1c1c;font-family:inherit}
 .wgordura__s{padding:56px 0;background:#fff}
 .wgordura__s--bg{background:#f4f3ef}
-.wgordura__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wgordura__v{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .wgordura__v--rev .wgordura__media{order:2}
 .wgordura__v--rev .wgordura__tekst{order:1}
 .wgordura__v--polna{grid-template-columns:1fr;gap:28px}

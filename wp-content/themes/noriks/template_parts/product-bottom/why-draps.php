@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <style>
 .wsdraps{color:#1c1c1c;font-family:inherit}
 .wsdraps__s{padding:56px 0;background:#fff}.wsdraps__s--bg{background:#f4f3ef}
-.wsdraps__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsdraps__v{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box}
 .wsdraps__c{text-align:center}
 .wsdraps__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wsdraps__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsdraps__h2 em{font-style:italic}

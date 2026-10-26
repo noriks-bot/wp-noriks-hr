@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <style>
 .wsinsoles{color:#1c1c1c;font-family:inherit}
 .wsinsoles__s{padding:56px 0;background:#fff}.wsinsoles__s--bg{background:#f4f3ef}
-.wsinsoles__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsinsoles__v{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box}
 .wsinsoles__c{text-align:center}
 .wsinsoles__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wsinsoles__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsinsoles__h2 em{font-style:italic}
