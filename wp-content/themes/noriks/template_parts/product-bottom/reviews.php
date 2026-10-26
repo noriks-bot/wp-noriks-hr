@@ -593,6 +593,10 @@
 
            Niste jedini kojima stopala traže odmor nakon cijelog dana.
 
+          <?php elseif ( noriks_is_type( 'quiet' ) ): ?>
+
+           Niste jedini kojima buka krade fokus i mir.
+
           <?php elseif ( noriks_is_type( 'daily' ) ): ?>
 
            Niste jedini kojima voće i povrće svaki dan promakne.
@@ -1175,6 +1179,10 @@
 
            Tisuće kupaca već nosi NORIKS Flops – mekani EVA potplat, lagane i otporne na vodu.
 
+           <?php elseif ( noriks_is_type( 'quiet' ) ): ?>
+
+           Tisuće kupaca već koristi NORIKS Quiet čepiće – 24 dB manje buke za rad, učenje, putovanje i odmor.
+
            <?php elseif ( noriks_is_type( 'daily' ) ): ?>
 
            NORIKS Daily: jedna vrećica zelenih gumenih medvjedića na dan – bez shakera i bez okusa trave.
@@ -1366,6 +1374,7 @@
   $is_salon_page = noriks_is_type( 'salon', $current_product_id );
   $is_flops_page = noriks_is_type( 'flops', $current_product_id );
   $is_daily_page = noriks_is_type( 'daily', $current_product_id );
+  $is_quiet_page = noriks_is_type( 'quiet', $current_product_id );
   $is_tacpro_page = noriks_is_type( 'tacpro', $current_product_id );
   $is_destapacan_page = noriks_is_type( 'destapacan', $current_product_id );
   $is_catfountain_page = noriks_is_type( 'catfountain', $current_product_id );
@@ -1857,6 +1866,8 @@
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_salon.php';
   } elseif ( $is_flops_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_flops.php';
+  } elseif ( $is_quiet_page ) {
+    $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_quiet.php';
   } elseif ( $is_daily_page ) {
     $noriks_mnenja_vrnjeno = include get_stylesheet_directory() . '/auto_reviews/HR_daily.php';
   } elseif ( $is_tacpro_page ) {
@@ -5717,7 +5728,7 @@ $flomasteri_faq = array(
 // Lastni FAQ (Informacije o proizvodu) za nove izdelke — brez tega se pokaze FAQ za majice.
 // Najprej auto_reviews/FAQ_HR_<tip>.php (datoteka vrne polje), sicer $<tip>_faq iz te datoteke.
 $noriks_faq_lastni = null;
-foreach ( array( 'daily' => 'daily', 'classics' => 'classics', 'tacpro' => 'tacpro', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'glasspro' => 'glasspro', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'retrobox' => 'retrobox', 'ritual' => 'ritual', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel', 'flops' => 'flops' ) as $noriks_ft => $noriks_fv ) {
+foreach ( array( 'quiet' => 'quiet', 'daily' => 'daily', 'classics' => 'classics', 'tacpro' => 'tacpro', 'ondersteun' => 'ondersteun', 'destapacan' => 'destapacan', 'insoles' => 'insoles', 'glasspro' => 'glasspro', 'calendar' => 'calendar', 'birdie' => 'birdie', 'acryliques' => 'flomasteri', 'midnight' => 'midnight', 'gordura' => 'gordura', 'womens' => 'womens', 'draps' => 'draps', 'retrobox' => 'retrobox', 'ritual' => 'ritual', 'corrector' => 'corrector', 'salon' => 'salon', 'faith' => 'faith', 'travel' => 'travel', 'flops' => 'flops' ) as $noriks_ft => $noriks_fv ) {
   if ( function_exists( 'noriks_is_type' ) && noriks_is_type( $noriks_ft ) ) {
     $noriks_ff = get_stylesheet_directory() . '/auto_reviews/FAQ_HR_' . $noriks_ft . '.php';
     if ( file_exists( $noriks_ff ) ) {

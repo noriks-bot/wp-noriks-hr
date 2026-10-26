@@ -865,7 +865,7 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array();
     }
 
-    $gck_no_attrs    = has_term( array( 'orto-quiet', 'orto-daily', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-draps', 'orto-womens', 'orto-gordura', 'orto-midnight', 'orto-acryliques', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-daily', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-draps', 'orto-womens', 'orto-gordura', 'orto-midnight', 'orto-acryliques', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
     $gck_single_size = has_term( array( 'orto-classics', 'orto-corrector', 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
@@ -887,7 +887,7 @@ function gck_render_bundle_selector() {
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']
     // i ovdje ga uzimamo kao dodatni <select> uz par.
     // NORIKS HOME PowerHook: jedini izbor je BOJA i prikazuje se kao krugovi (kao original).
-    $gck_single_color = has_term( array( 'orto-tacpro', 'orto-salon', 'orto-home', 'orto-snug', 'orto-raincoat', 'orto-seatcover', 'orto-litterbox', 'orto-sleepearplugs', 'orto-travelpillow', 'orto-fleeceshawl', 'orto-bottlesling', 'orto-pillorganizer', 'orto-ultrasoniccleaner', 'orto-antitheftbag', 'orto-showertowel', 'orto-birdie', 'orto-birdie-3', 'orto-cashmeresweater' ), 'product_cat', $product_id );
+    $gck_single_color = has_term( array( 'orto-quiet', 'orto-tacpro', 'orto-salon', 'orto-home', 'orto-snug', 'orto-raincoat', 'orto-seatcover', 'orto-litterbox', 'orto-sleepearplugs', 'orto-travelpillow', 'orto-fleeceshawl', 'orto-bottlesling', 'orto-pillorganizer', 'orto-ultrasoniccleaner', 'orto-antitheftbag', 'orto-showertowel', 'orto-birdie', 'orto-birdie-3', 'orto-cashmeresweater' ), 'product_cat', $product_id );
 
     // NORIKS ComfortJeans: treci izbornik Duljina (L26–L36) uz Boju i Velicinu, kao na originalu (Colour / Length / Waist Size).
     $gck_extra_select = has_term( array( 'orto-sr', 'orto-comfortjeans' ), 'product_cat', $product_id );
@@ -4191,6 +4191,22 @@ function gck_render_bundle_selector() {
       #bundle-selector .bundle-pair select,
       #bundle-selector .bundle-pair .gck-extra-select { border-color: #1f568e !important; color: #1c2430 !important; }
       .gck-size-link { color: #1f568e !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php if ( has_term( array( 'orto-quiet' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS Quiet: en sam atribut (Boja) -> krogci v barvah originala (ljubicasta, bijela, crna, mint). */
+      .swatch-circle.color-ljubicasta, #bundle-selector .swatch-circle.color-ljubicasta { background: #b9a6d6 !important; }
+      .swatch-circle.color-bijela, #bundle-selector .swatch-circle.color-bijela         { background: #f4f4f2 !important; }
+      .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna             { background: #232325 !important; }
+      .swatch-circle.color-mint, #bundle-selector .swatch-circle.color-mint             { background: #a8d8cc !important; }
+      #bundle-selector .color-swatches { display: flex !important; gap: 10px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 44px !important; height: 44px !important; border-radius: 50% !important;
+          border: 2px solid #ecdfd3 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #a9683f !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 32px !important; height: 32px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
     </style>
     <?php endif; ?>
 

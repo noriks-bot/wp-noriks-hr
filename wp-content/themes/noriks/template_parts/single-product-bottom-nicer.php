@@ -101,6 +101,9 @@ if ( noriks_is_type( 'travel' ) ) {
 if ( noriks_is_type( 'daily' ) ) {
     include $noriks_pb_dir . 'why-daily.php';
 }
+if ( noriks_is_type( 'quiet' ) ) {
+    include $noriks_pb_dir . 'why-quiet.php';
+}
 if ( noriks_is_type( 'tacpro' ) ) {
     include $noriks_pb_dir . 'why-tacpro.php';
 }

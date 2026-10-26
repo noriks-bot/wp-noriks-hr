@@ -7,7 +7,7 @@ $auto_reviews_en = array(
     array("name" => "Ivan M.", "text" => "Nosim ih u vlaku na posao svaki dan. Buka vagona postane tihi šum i mogu čitati bez da mi misli lutaju."),
     array("name" => "Petra Š.", "text" => "Studiram u knjižnici koja zna biti bučna. S ovima učim puno mirnije, a mekani silikon ne žulja ni nakon par sati."),
     array("name" => "Tomislav B.", "text" => "Uzeo sam crne jer se manje vide. Srednji nastavci mi sjednu odmah, ne ispadaju kad okrenem glavu."),
-    array("name" => "Ana R.", "text" => "Kutijica s privjeskom je odlična, stalno je na ključevima pa čepiće uvijek imam uz sebe."),
+    array("name" => "Ana R.", "text" => "Kutijica je mala i stane u svaki džep, pa čepiće uvijek imam uz sebe."),
     array("name" => "Luka V.", "text" => "Radim od kuće s dvoje male djece. Ne izoliraju potpuno, što mi i odgovara, ali buka je puno podnošljivija."),
     array("name" => "Maja T.", "text" => "Kupila sam ljubičaste za sebe i mint za sestru. Obje smo zadovoljne, lako se peru i izgledaju kao nove."),
     array("name" => "Dario H.", "text" => "Na letu od tri sata nosio sam ih cijelo vrijeme. Brujanje motora puno tiše, a uši me nisu boljele."),
