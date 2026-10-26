@@ -14,6 +14,7 @@
    9. opiniones — mreza mnenj s fotografijo 3 v vrsti
    10. contact — kontakt (pri nas NORIKS pogoji na koncu)
    Primerjalne tabele ta original nima.
+ * BARVA ORIGINALA: #003a78 (temno modra barva znamke in gumbov originala); svetel ton za --bg #d6dfe9, akcent #003a78
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wd = get_template_directory_uri() . '/img/gelcushion/';
@@ -49,12 +50,12 @@ $gc_op = array(
 <div class="wgc">
 
   <!-- 1) trak zaupanja (na originalu trak medijev) -->
-  <section class="wgc__s wgc__traka"><div class="wgc__v wgc__tmreza"><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><div class="wgc__tt"><strong>120.000+</strong><span>zadovoljnih kupaca</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span><div class="wgc__tt"><strong>4,8 / 5</strong><span>prosječna ocjena</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><div class="wgc__tt"><strong>30 dana</strong><span>za povrat novca</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><div class="wgc__tt"><strong>Pouzećem</strong><span>platite kad paket stigne</span></div></div></div></section>
+  <section class="wgc__s wgc__traka wgc__s--bg"><div class="wgc__v wgc__tmreza"><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><div class="wgc__tt"><strong>120.000+</strong><span>zadovoljnih kupaca</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span><div class="wgc__tt"><strong>4,8 / 5</strong><span>prosječna ocjena</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><div class="wgc__tt"><strong>30 dana</strong><span>za povrat novca</span></div></div><div class="wgc__tk"><span class="wgc__ti"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><div class="wgc__tt"><strong>Pouzećem</strong><span>platite kad paket stigne</span></div></div></div></section>
 
   <!-- 2) situacije: 3 kartice v vrsti -->
   <section class="wgc__s">
     <div class="wgc__v">
-      <h2 class="wgc__h2 wgc__c">Događa li vam se <em>nešto od ovoga</em>?</h2>
+      <div class="wgc__kicker wgc__c">Problem</div><h2 class="wgc__h2 wgc__c">Događa li vam se <em>nešto od ovoga</em>?</h2>
       <div class="wgc__grid3 wgc__kar">
         <?php foreach ( $gc_sit as $s ) : ?>
         <div class="wgc__sit">
@@ -75,9 +76,9 @@ $gc_op = array(
         <h2 class="wgc__h2">Kako vam pomaže, <em>ovisno o tome gdje smeta</em></h2>
         <p class="wgc__p">Nelagoda dolazi s različitih mjesta. Jastuk raspoređuje vašu težinu i rasterećuje ih sve odjednom.</p>
         <div class="wgc__red3">
-          <div><strong>40 × 35 × 2,5 cm</strong><span>mjere</span></div>
-          <div><strong>Bez montaže</strong><span>spreman za 2 sekunde</span></div>
-          <div><strong>Gel</strong><span>ne spljošti se</span></div>
+          <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 15.5l12-12 5 5-12 12z"/><path d="M7 12l2 2M9.5 9.5l1.4 1.4M12 7l2 2M14.5 4.5l1.4 1.4"/></svg></span><strong>40 × 35 × 2,5 cm</strong><span>mjere</span></div>
+          <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg></span><strong>Bez montaže</strong><span>spreman za 2 sekunde</span></div>
+          <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg></span><strong>Gel</strong><span>ne spljošti se</span></div>
         </div>
         <ol class="wgc__tocke">
           <?php foreach ( $gc_tocke as $i => $t ) : ?>
@@ -109,7 +110,7 @@ $gc_op = array(
   <!-- 5) 3 video mnenja v vrsti -->
   <section class="wgc__s wgc__s--bg">
     <div class="wgc__v">
-      <h2 class="wgc__h2 wgc__c">Ovako ga koriste <em>svaki dan</em></h2>
+      <div class="wgc__kicker wgc__c">U svakodnevnoj upotrebi</div><h2 class="wgc__h2 wgc__c">Ovako ga koriste <em>svaki dan</em></h2>
       <p class="wgc__p wgc__c">Pravi videi kupaca koji ga već imaju kod kuće.</p>
       <div class="wgc__grid3 wgc__videi wgc__kar">
         <?php foreach ( array( '/img/gelcushion/noriks-gelcushion-test-jajeta.mp4', '/img/gelcushion/noriks-gelcushion-video-2b.mp4', '/img/gelcushion/noriks-gelcushion-video-3b.mp4' ) as $v ) : ?>
@@ -122,11 +123,11 @@ $gc_op = array(
   <!-- 6) komentarji kupcev v mrezi -->
   <section class="wgc__s">
     <div class="wgc__v">
-      <h2 class="wgc__h2 wgc__c">Što nam <em>pričaju</em> kupci</h2>
+      <div class="wgc__kicker wgc__c">Iskustva kupaca</div><h2 class="wgc__h2 wgc__c">Što nam <em>pričaju</em> kupci</h2>
       <div class="wgc__grid3 wgc__kar">
         <?php foreach ( $gc_fb as $f ) : ?>
         <div class="wgc__fb">
-          <div class="wgc__fbh"><img src="<?php echo esc_url( $wd . $f[0] ); ?>" alt="<?php echo esc_attr( $f[1] ); ?>" loading="lazy" decoding="async"><div><strong><?php echo esc_html( $f[1] ); ?></strong><span><?php echo esc_html( $f[2] ); ?></span></div></div>
+          <div class="wgc__fbh"><img src="<?php echo esc_url( $wd . $f[0] ); ?>" alt="<?php echo esc_attr( $f[1] ); ?>" loading="lazy" decoding="async"><div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg></span><strong><?php echo esc_html( $f[1] ); ?></strong><span><?php echo esc_html( $f[2] ); ?></span></div></div>
           <p><?php echo esc_html( $f[3] ); ?></p>
         </div>
         <?php endforeach; ?>
@@ -138,7 +139,7 @@ $gc_op = array(
   <section class="wgc__s wgc__s--bg">
     <div class="wgc__plavo">30 dana za povrat novca · isprobajte ga kod kuće, bez obveze</div>
     <div class="wgc__v">
-      <h2 class="wgc__h2 wgc__c">Što kupci primjećuju <em>nakon nekoliko tjedana</em></h2>
+      <div class="wgc__kicker wgc__c">Iskustva kupaca</div><h2 class="wgc__h2 wgc__c">Što kupci primjećuju <em>nakon nekoliko tjedana</em></h2>
       <div class="wgc__grid3">
         <div class="wgc__rez"><strong>Udobnije sjedenje</strong><p>Većina razliku osjeti već prvi put kad sjedne – težina se rasporedi, sjedalo ostaje stabilno.</p></div>
         <div class="wgc__rez"><strong>Ponovno udobno sjede</strong><p>Više nema stalnog premještanja i ustajanja sa stolice svakih dvadesetak minuta.</p></div>
@@ -150,7 +151,7 @@ $gc_op = array(
   <!-- 9) mnenja s fotografijo -->
   <section class="wgc__s">
     <div class="wgc__v">
-      <h2 class="wgc__h2 wgc__c">Provjerene recenzije – <em>što kažu oni koji ga koriste svaki dan</em></h2>
+      <div class="wgc__kicker wgc__c">Iskustva kupaca</div><h2 class="wgc__h2 wgc__c">Provjerene recenzije – <em>što kažu oni koji ga koriste svaki dan</em></h2>
       <p class="wgc__p wgc__c">★★★★★ 4,8 · 1.081 recenzija</p>
       <div class="wgc__grid3">
         <?php foreach ( $gc_op as $o ) : ?>
@@ -183,7 +184,7 @@ $gc_op = array(
 .wgc{color:#1c1c1c;font-family:inherit}
 .wgc__s{padding:56px 0;background:#fff}
 .wgc__s--bg{background:#f4f3ef}
-.wgc__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wgc__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wgc__c{text-align:center}
 .wgc__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wgc__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
@@ -253,6 +254,24 @@ $gc_op = array(
 .wgc__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}
 .wgc__pus--l{left:-14px}.wgc__pus--d{right:-14px}
 @media (max-width:860px){.wgc__kar{grid-auto-columns:82%}.wgc__videi.wgc__kar{grid-auto-columns:62%}.wgc__pus--l{left:4px}.wgc__pus--d{right:4px}}
+.wgc__fbh span.wgc__pi{width:20px;height:20px;margin:0 0 4px;border:0;background:none;display:inline-flex}.wgc__fbh .wgc__pi svg{width:18px;height:18px}
+/* dizajn.py */
+.wgc__s{padding:72px 0}.wgc__s.wgc__s--bg{background:#d6dfe9}.wgc__s.wgc__traka{padding:40px 0}.wgc__s.wgc__traka:not(.wgc__s--bg){background:#fff}
+.wgc__kicker{color:#003a78;letter-spacing:1.8px;font-size:12.5px}.wgc__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#003a78;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.wgc__h2 em{color:#003a78}.wgc__dva .wgc__zak{border-left:3px solid #003a78;padding-left:14px}
+.wgc__media,.wgc__polna{box-shadow:0 14px 34px rgba(0,58,120,.22);border:1px solid rgba(0,58,120,.25)}
+.wgc__k{border:1px solid rgba(0,58,120,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wgc__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,58,120,.22)}
+.wgc__pog>div{border:1px solid rgba(0,58,120,.35);border-radius:16px;padding:28px 18px;transition:transform .2s,box-shadow .2s}.wgc__pog>div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,58,120,.22)}
+span.wgc__pi{opacity:1;width:58px;height:58px;border-radius:50%;background:#b2c4d6;border:1px solid #003a78;color:#003a78;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.wgc__pi svg{width:28px;height:28px}
+.wgc__red3 span.wgc__pi{width:44px;height:44px;margin-bottom:8px}.wgc__red3 .wgc__pi svg{width:22px;height:22px}.wgc__red3>div{border-color:rgba(0,58,120,.35)}
+.wgc__pog strong{color:#1c1c1c}.wgc__st,.wgc__kv li::before{background:#003a78}.wgc__tab th{background:#003a78!important}
+.wgc__ti{background:linear-gradient(135deg,#003a78,#386596);box-shadow:0 6px 14px rgba(0,58,120,.30)}.wgc__tk{border-color:rgba(0,58,120,.30)}
+.wgc__ime{display:flex;align-items:center;gap:10px}.wgc__av{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#b2c4d6;border:1px solid #003a78;color:#003a78;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+div.wgc__pog{text-align:center;border:1px solid rgba(0,58,120,.35);border-radius:16px;transition:transform .2s,box-shadow .2s}div.wgc__pog:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,58,120,.22)}div.wgc__pog>strong,div.wgc__pog>span:not(.wgc__pi){display:block}
+.wgc__pus{color:#003a78}.wgc__plavo{background:#003a78;margin-top:-72px}.wgc__k--temna{background:#003a78}
+@media (max-width:860px){.wgc__s{padding:46px 0}.wgc__s.wgc__traka{padding:30px 0}.wgc__plavo{margin-top:-46px}.wgc__pog>div{padding:22px 12px}}
+@media (max-width:767px){.wgc__v{padding:0 16px}}
+/* /dizajn.py */
 </style>
 <script>
 (function(){document.querySelectorAll('.wgc__kar').forEach(function(k){
