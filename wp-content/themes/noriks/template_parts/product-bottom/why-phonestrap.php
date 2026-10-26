@@ -1,181 +1,126 @@
 <?php
 /**
- * product-bottom: NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (orto-phonestrap).
- * Original: holdmategear.com/products/holdmate-anti-drop-strap — vsebina 1:1 z originalom
- * (isti vrstni red, ista besedila v hrvascini), oblika po NORIKS stilu (predloga why-hands.php):
- *   1) Kako ga koristiti          (besedilo levo, video desno)
- *   2) 3 razloga za nadogradnju   (video levo, besedilo desno)
- *   3) Zasto cete ga zavoljeti    (besedilo levo, slika desno)
- *   4) 30 dana za povrat          (samo besedilo — po NORIKS pogojih namesto "90-day guarantee")
- *   5) 120.000+ zadovoljnih kupaca (preprosta mreza 7 kartic s fotografijami kupcev)
- * Skatla z jamstvom 90 dni (na originalu pod nakupno skatlo) in promo pasica originala sta odstranjeni
- * (NORIKS pogoji / NORIKS stil). FAQ je v reviews.php ($phonestrap_faq), mnenja v auto_reviews/HR_phonestrap.php,
- * dolg opis v woocommerce/single-product/meta.php.
- * Slike: img/phonestrap/.
+ * NORIKS PhoneStrap — why sekcije 1:1 z originalom (5 vsebinskih + NORIKS pogoji). Generirano z why.js.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-$nps      = get_template_directory_uri() . '/img/phonestrap/';
-$nps_path = get_template_directory() . '/img/phonestrap/';
-$nps_img  = function( $file, $alt ) use ( $nps, $nps_path ) {
-  if ( ! file_exists( $nps_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nps . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
-};
-$nps_video = function( $file, $poster, $label ) use ( $nps, $nps_path ) {
-  if ( ! file_exists( $nps_path . $file ) ) { return ''; }
-  return '<video src="' . esc_url( $nps . $file ) . '"' . ( file_exists( $nps_path . $poster ) ? ' poster="' . esc_url( $nps . $poster ) . '"' : '' )
-    . ' autoplay muted loop playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video>';
-};
-
-/* 5) 120.000+ zadovoljnih kupaca — 1:1 z originala (isti vrstni red, iste fotografije kupcev). */
-$nps_testimonials = array(
-  array( 'foto' => 'ps-rv-annartimm.webp', 'ime' => '@Annartimm', 'tekst' => 'Ovo mijenja sve. Na zadnjem skijanju ispao mi je mobitel, a sad se osjećam puno sigurnije.' ),
-  array( 'foto' => 'ps-rv-johnny.webp',    'ime' => '@Johnny',    'tekst' => 'Super čvrst i jednostavan za korištenje — upravo ono što mi je trebalo za skijanje i planinarenje.' ),
-  array( 'foto' => 'ps-rv-jacob.webp',     'ime' => '@Jacob',     'tekst' => 'Odlična kvaliteta i pametan dizajn. Mobitel mi je uvijek pri ruci, bez ikakvog rizika.' ),
-  array( 'foto' => 'ps-rv-stephanie.webp', 'ime' => '@Stephanie', 'tekst' => 'Kupila sam jedan za sebe, a onda još dva za djecu — radi savršeno.' ),
-  array( 'foto' => 'ps-rv-robert.webp',    'ime' => '@Robert',    'tekst' => 'Cijeli vikend koristio sam ga na stazama i nijednom se nisam brinuo da će mi ispasti mobitel.' ),
-  array( 'foto' => 'ps-zasto-volite.webp', 'ime' => '@Niko',      'tekst' => 'Napokon držač za mobitel koji stvarno ostaje na mjestu na žičari! Sad se osjećam puno sigurnije.' ),
-  array( 'foto' => 'ps-rv-hanna.webp',     'ime' => '@Hanna',     'tekst' => 'Obožavam koliko je siguran. Čak ni na brzim spustovima mobitel se nije pomaknuo.' ),
-  array( 'foto' => 'ps-3-razloga-poster.webp', 'ime' => '@Marko', 'tekst' => 'Nosim ga na planinarenju i na biciklu. Mobitel visi uz mene, a obje ruke su mi slobodne.' ),
-);
+$wdir = get_template_directory_uri() . '/img/phonestrap/';
 ?>
+<div class="wphonestrap">
 
-<!-- 1) KAKO GA KORISTITI — video desno -->
-<section class="nps-sec nps-tint">
-  <div class="nps-wrap nps-row2 nps-row2--rev">
-    <div class="nps-copy">
-      <p class="nps-kicker">Kako radi</p>
-      <h2 class="nps-h2">Kako ga <em>koristiti</em></h2>
-      <p>Korištenje držača za mobitel brzo je, jednostavno i osmišljeno za maksimalnu sigurnost. Samo umetnite podložak između mobitela i maske, pritisnite da sjedne na mjesto i zakačite kolut na hlače, jaknu ili ruksak. Mobitel vam tako više ne može ispasti — a uvijek je nadohvat ruke.</p>
-      <ul class="nps-check">
-        <li>Postavljanje u nekoliko sekundi — bez alata i muke</li>
-        <li>Čuva mobitel na skijanju, planinarenju, putovanjima i svaki dan</li>
-        <li>Tanak i lagan dizajn koji jedva primjećujete</li>
-        <li>Odgovara svim pametnim telefonima</li>
-      </ul>
-      <p class="nps-big">Daje vam sigurnost da zabilježite svaki trenutak bez straha da ćete izgubiti mobitel.</p>
+  <section class="wphonestrap__s wphonestrap__s--bg">
+    <div class="wphonestrap__v">
+      <div class="wphonestrap__media"><img src="<?php echo esc_url( $wdir . 'noriks-phonestrap-u-ruci.webp' ); ?>" alt="Kako ga koristiti" loading="lazy" decoding="async"></div>
+      <div class="wphonestrap__tekst">
+        <div class="wphonestrap__kicker">Kako radi</div>
+        <h2 class="wphonestrap__h2">Kako ga <em>koristiti</em></h2>
+        <p class="wphonestrap__p">Korištenje držača za mobitel brzo je, jednostavno i osmišljeno za maksimalnu sigurnost. Tanki podložak umetnete između mobitela i maske, pritisnete da sjedne na mjesto, a kolut sa sajlom zakačite na hlače, jaknu ili ruksak.</p>
+        <p class="wphonestrap__p">Mobitel vam tako više ne može ispasti — a uvijek je nadohvat ruke. Postavljanje traje nekoliko sekundi, bez alata i bez muke, a tanak i lagan dizajn jedva primjećujete.</p>
+        <p class="wphonestrap__p">Čuva mobitel na skijanju, planinarenju, putovanjima i svaki dan, i odgovara svim pametnim telefonima.</p>
+        <p class="wphonestrap__zak">Sigurnost da zabilježite svaki trenutak bez straha da ćete izgubiti mobitel.</p>
+      </div>
     </div>
-    <div class="nps-media"><?php echo $nps_video( 'ps-kako-koristiti.mp4', 'ps-kako-koristiti-poster.webp', 'Kako koristiti NORIKS PhoneStrap' ); ?></div>
-  </div>
-</section>
+  </section>
 
-<!-- 2) 3 RAZLOGA ZA NADOGRADNJU — video lijevo -->
-<section class="nps-sec">
-  <div class="nps-wrap nps-row2">
-    <div class="nps-media nps-media--grey"><?php echo $nps_video( 'ps-3-razloga.mp4', 'ps-3-razloga-poster.webp', 'NORIKS PhoneStrap — karabiner, kolut sa sajlom i podložak' ); ?></div>
-    <div class="nps-copy">
-      <p class="nps-kicker">Nadogradnja</p>
-      <h2 class="nps-h2">3 razloga <em>za nadogradnju</em></h2>
-      <p>Maska štiti mobitel kad padne. NORIKS PhoneStrap pazi da uopće ne padne — a to je jedina zaštita koja radi i kad ste na žičari, na biciklu ili nagnuti preko ograde.</p>
-      <p>Sastavljen je iz tri dijela: tankog podloška koji ide između mobitela i maske, koluta sa sajlom koja se uvlači sama i kukice kojom ga zakačite na odjeću ili ruksak.</p>
-      <ul class="nps-check nps-check--big">
-        <li>Uvijek osiguran, bilo kad i bilo gdje</li>
-        <li>Odgovara svakom pametnom telefonu</li>
-        <li>Postavljanje za 8 sekundi</li>
-      </ul>
+  <section class="wphonestrap__s">
+    <div class="wphonestrap__v wphonestrap__v--rev">
+      <div class="wphonestrap__media"><img src="<?php echo esc_url( $wdir . 'noriks-phonestrap-dijelovi.webp' ); ?>" alt="3 razloga za nadogradnju" loading="lazy" decoding="async"></div>
+      <div class="wphonestrap__tekst">
+        <div class="wphonestrap__kicker">Nadogradnja</div>
+        <h2 class="wphonestrap__h2">3 razloga <em>za nadogradnju</em></h2>
+        <p class="wphonestrap__p"><em>Uvijek osiguran, bilo kad i bilo gdje.</em> Maska štiti mobitel kad padne — NORIKS PhoneStrap pazi da uopće ne padne. Mobitel je stalno spojen s vama, i na žičari, i na biciklu, i kad se nagnete preko ograde.</p>
+        <p class="wphonestrap__p"><em>Odgovara svakom pametnom telefonu.</em> Podložak stoji između mobitela i standardne maske, pa model mobitela nije važan.</p>
+        <p class="wphonestrap__p"><em>Postavljanje za 8 sekundi.</em> Karabiner i kukica od nehrđajućeg čelika, čelična sajla od 60 cm i tanki podložak — sve je spremno odmah iz pakiranja.</p>
+        <p class="wphonestrap__zak">Tri dijela, jedan cilj: mobitel koji nikad ne završi na podu.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 3) 120.000+ ZADOVOLJNIH KUPACA -->
-<section class="nps-sec nps-tint">
-  <div class="nps-wrap">
-    <h2 class="nps-h2 nps-h2--c"><em>120.000+</em> zadovoljnih kupaca</h2>
-    <div class="nps-grid">
-      <?php foreach ( $nps_testimonials as $t ) : ?>
-      <article class="nps-tc">
-        <?php echo $nps_img( $t['foto'], 'Fotografija kupca — ' . $t['ime'] ); ?>
-        <p class="nps-tc__stars" aria-label="5 od 5 zvjezdica">★★★★★</p>
-        <p class="nps-tc__txt">„<?php echo esc_html( $t['tekst'] ); ?>“</p>
-        <p class="nps-tc__name"><?php echo esc_html( $t['ime'] ); ?></p>
-      </article>
-      <?php endforeach; ?>
+  <section class="wphonestrap__s wphonestrap__s--bg">
+    <div class="wphonestrap__v">
+      <div class="wphonestrap__media"><img src="<?php echo esc_url( $wdir . 'noriks-phonestrap-planinarenje.webp' ); ?>" alt="Zašto ćete ga zavoljeti" loading="lazy" decoding="async"></div>
+      <div class="wphonestrap__tekst">
+        <div class="wphonestrap__kicker">Zašto NORIKS PhoneStrap</div>
+        <h2 class="wphonestrap__h2">Zašto ćete ga <em>zavoljeti</em></h2>
+        <p class="wphonestrap__p">Svake godine tisuće mobitela izgube se, razbiju ili unište tijekom aktivnosti na otvorenom. Jedno poskliznuće, jedan nespretan pokret, jedan trenutak nepažnje — i 1.000 € i više nestaje zauvijek.</p>
+        <p class="wphonestrap__p">NORIKS PhoneStrap stoji tek djelić te cijene i čuva vas od te noćne more.</p>
+        <p class="wphonestrap__p">Zakačite ga na jaknu, ruksak ili remen. Idite na skijanje, planinarenje, pecanje ili na najluđi rollercoaster. Mobitel ostaje uz vas.</p>
+        <p class="wphonestrap__zak">Pridružite se tisućama zadovoljnih kupaca koji mu već vjeruju.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 4) ZAŠTO ĆETE GA ZAVOLJETI — slika desno -->
-<section class="nps-sec">
-  <div class="nps-wrap nps-row2 nps-row2--rev">
-    <div class="nps-copy">
-      <p class="nps-kicker">Zašto NORIKS PhoneStrap</p>
-      <h2 class="nps-h2">Zašto ćete ga <em>zavoljeti</em></h2>
-      <p>Svake godine tisuće mobitela izgube se, razbiju ili unište tijekom aktivnosti na otvorenom. Jedno poskliznuće, jedan nespretan pokret, jedan trenutak nepažnje — i 1.000+ € nestaje zauvijek.</p>
-      <p>NORIKS PhoneStrap stoji manje od jedne zamjene zaslona — i čuva vas od te noćne more.</p>
-      <p>Zakačite ga na jaknu, ruksak ili remen. Idite na skijanje, planinarenje, pecanje ili na najluđi rollercoaster. Mobitel ostaje uz vas.</p>
-      <p class="nps-big">Pridružite se tisućama zadovoljnih kupaca koji već vjeruju našem proizvodu!</p>
+  <section class="wphonestrap__s">
+    <div class="wphonestrap__v wphonestrap__v--rev">
+      <div class="wphonestrap__media"><img src="<?php echo esc_url( $wdir . 'noriks-phonestrap-na-ruksaku.webp' ); ?>" alt="Isprobajte ga bez rizika" loading="lazy" decoding="async"></div>
+      <div class="wphonestrap__tekst">
+        <div class="wphonestrap__kicker">Bez rizika</div>
+        <h2 class="wphonestrap__h2">Isprobajte ga <em>bez rizika</em></h2>
+        <p class="wphonestrap__p">Uvjereni smo da ćete ga zavoljeti. Zato imate 30 dana za povrat novca na svaku narudžbu.</p>
+        <p class="wphonestrap__p">Koristite NORIKS PhoneStrap na skijanju, planinarenju ili na bilo kojoj avanturi i čuvajte mobitel na sigurnom. Ako niste potpuno zadovoljni, javite nam se u roku od 30 dana i vratit ćemo vam novac — bez kompliciranja i bez pitanja.</p>
+        <p class="wphonestrap__p">Plaćate pouzećem, kad paket stigne, a dostava je besplatna za narudžbe iznad 70 €.</p>
+        <p class="wphonestrap__zak">Sav rizik je na nama, a ne na vama.</p>
+      </div>
     </div>
-    <div class="nps-media"><?php echo $nps_img( 'ps-zasto-volite.webp', 'NORIKS PhoneStrap na ruksaku — mobitel uvijek pri ruci' ); ?></div>
-  </div>
-</section>
+  </section>
 
+  <section class="wphonestrap__s wphonestrap__s--bg">
+    <div class="wphonestrap__v">
+      <div class="wphonestrap__media"><img src="<?php echo esc_url( $wdir . 'noriks-phonestrap-kupci.webp' ); ?>" alt="120.000+ zadovoljnih kupaca" loading="lazy" decoding="async"></div>
+      <div class="wphonestrap__tekst">
+        <div class="wphonestrap__kicker">Recenzije kupaca</div>
+        <h2 class="wphonestrap__h2"><em>120.000+</em> zadovoljnih kupaca</h2>
+        <p class="wphonestrap__p">„Ovo mijenja sve. Na zadnjem skijanju ispao mi je mobitel, a sad se osjećam puno sigurnije.“ — Ana T. • „Super čvrst i jednostavan za korištenje — upravo ono što mi je trebalo za skijanje i planinarenje.“ — Ivan • „Odlična kvaliteta i pametan dizajn. Mobitel mi je uvijek pri ruci, bez ikakvog rizika.“ — Jakov</p>
+        <p class="wphonestrap__p">„Kupila sam jedan za sebe, a onda još dva za djecu — radi savršeno.“ — Stela • „Cijeli vikend koristio sam ga na stazama i nijednom se nisam brinuo da će mi ispasti mobitel.“ — Robert</p>
+        <p class="wphonestrap__p">„Napokon držač za mobitel koji stvarno ostaje na mjestu na žičari! Sad se osjećam puno sigurnije.“ — Niko • „Obožavam koliko je siguran. Čak ni na brzim spustovima mobitel se nije pomaknuo.“ — Hana</p>
+        <p class="wphonestrap__zak">Prosječna ocjena 4,8 — mobitel na sigurnom, ruke slobodne.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wphonestrap__s">
+    <div class="wphonestrap__v wphonestrap__v--polna">
+      <div class="wphonestrap__tekst wphonestrap__tekst--sredina">
+        <div class="wphonestrap__kicker">KUPUJTE BEZ BRIGE</div>
+        <h2 class="wphonestrap__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
+        <p class="wphonestrap__p">NORIKS PhoneStrap isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
+      </div>
+      <div class="wphonestrap__pogoji">
+        <div class="wphonestrap__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wphonestrap__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wphonestrap__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wphonestrap__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      </div>
+    </div>
+  </section>
+</div>
 <style>
-/* NORIKS standard: slika/video zapolni svoj stolpec v razmerju 4/5, besedilo navpicno na sredini */
-.nps-row2 { align-items: center; }
-.nps-media > img, .nps-media > video,
-.nps-media > a > img, .nps-media picture > img {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(25,20,15,.05), 0 14px 40px rgba(25,20,15,.10); }
-@media (max-width: 749px) {
-  .nps-media > img, .nps-media > video { aspect-ratio: 1 / 1; }
-}
-
-.nps-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin: 18px 0 0; font-size: 14px; font-weight: 600; color: #6b6b6b; }
-.nps-trust span { position: relative; padding-left: 20px; }
-.nps-trust span::before { content: "\2713"; position: absolute; left: 0; color: #3d3d3d; }
-
-.nps-sec { padding: 60px 0; background: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color: #1d1d1f; }
-.nps-sec * { box-sizing: border-box; }
-.nps-tint { background: #f4f4f2; }
-.nps-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; }
-.nps-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nps-media img, .nps-media video { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,.05), 0 14px 40px rgba(0,0,0,.10); }
-.nps-media--grey video { background: #f0f0f0; }
-.nps-sec p.nps-kicker { font-size: 12.5px; line-height: 1.4; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #d9480f; margin: 0 0 10px; }
-.nps-sec p.nps-kicker--c { text-align: center; }
-.nps-h2 { font-size: clamp(25px, 3.1vw, 36px); font-weight: 800; line-height: 1.18; letter-spacing: -.01em; margin: 0 0 16px; text-transform: none; }
-.nps-h2--c { text-align: center; }
-.nps-h2 em { font-style: italic; font-weight: 800; color: #d9480f; }
-.nps-copy p, .nps-text p { font-size: 16px; line-height: 1.7; color: #4a4a4f; margin: 0 0 14px; }
-.nps-copy strong, .nps-text strong { color: #1d1d1f; }
-.nps-big { font-size: 19px !important; font-weight: 800; line-height: 1.45 !important; color: #1d1d1f !important; }
-.nps-text { max-width: 760px; text-align: center; }
-.nps-check { list-style: none; padding: 0; margin: 6px 0 18px; display: flex; flex-direction: column; gap: 11px; }
-.nps-check li { position: relative; padding-left: 30px; font-size: 15.5px; line-height: 1.5; color: #1d1d1f; list-style: none; }
-.nps-check li::before { content: "\2713"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
-  background: #1d1d1f; color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
-.nps-check--big li { font-size: 18px; font-weight: 700; padding-left: 34px; }
-.nps-check--big li::before { width: 23px; height: 23px; font-size: 12.5px; }
-
-/* 5) mnenja kupcev — preprosta mreza */
-.nps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px; }
-.nps-tc { background: #fff; border: 1px solid #e4e4e0; padding: 16px 16px 20px; text-align: center; }
-.nps-tc img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 0 12px; }
-.nps-tc__stars { color: #e0a33c; letter-spacing: 2px; font-size: 15px; margin: 0 0 8px; }
-.nps-tc__txt { font-size: 14.8px; line-height: 1.55; color: #4a4a4f; margin: 0 0 10px; }
-.nps-tc__name { font-size: 14px; font-weight: 800; color: #1d1d1f; margin: 0; }
-
-/* kratek opis v nakupni skatli: "Kljucne prednosti" s crnimi kljukicami */
-.nps-benefits { list-style: none !important; padding: 0 !important; margin: 6px 0 10px !important; }
-.nps-benefits li { display: flex; align-items: flex-start; gap: 8px; margin: 0 0 8px; list-style: none !important; }
-.nps-benefits li::before { content: none !important; }
-.nps-tick { flex: 0 0 18px; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; margin-top: 2px;
-  border-radius: 50%; background: #000; color: #fff; font-size: 11px; font-weight: 700; line-height: 1; }
-
-/* NORIKS stil: brez naslova nad ponudbami (vticnik ga izpise s ::before) */
-.product_cat-orto-phonestrap #bundle-selector::before, #bundle-selector::before { content: none !important; display: none !important; }
-
-@media (max-width: 980px) {
-  .nps-row2 { grid-template-columns: 1fr; gap: 28px; }
-  .nps-row2--rev .nps-media { order: -1; }
-  .nps-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .nps-sec { padding: 42px 0; }
-  .nps-wrap { padding: 0 16px; }
-  .nps-grid { gap: 10px; }
-  .nps-tc { padding: 10px 10px 14px; }
-  .nps-tc__txt { font-size: 13.5px; }
+.wphonestrap{color:#1c1c1c;font-family:inherit}
+.wphonestrap__s{padding:56px 0;background:#fff}
+.wphonestrap__s--bg{background:#f4f3ef}
+.wphonestrap__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wphonestrap__v--rev .wphonestrap__media{order:2}
+.wphonestrap__v--rev .wphonestrap__tekst{order:1}
+.wphonestrap__v--polna{grid-template-columns:1fr;gap:28px}
+.wphonestrap__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
+.wphonestrap__media img,.wphonestrap__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wphonestrap__media--polna{aspect-ratio:auto}
+.wphonestrap__media--polna img,.wphonestrap__media--polna video{height:auto}
+.wphonestrap__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wphonestrap__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
+.wphonestrap__h2 em{font-style:italic}
+.wphonestrap__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wphonestrap__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
+.wphonestrap__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
+.wphonestrap__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wphonestrap__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
+.wphonestrap__s:not(.wphonestrap__s--bg) .wphonestrap__pog{background:#f4f3ef;box-shadow:none}
+.wphonestrap__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
+.wphonestrap__pog span{font-size:14px;color:#444}
+@media (max-width:860px){
+  .wphonestrap__s{padding:38px 0}
+  .wphonestrap__v{grid-template-columns:1fr;gap:22px}
+  .wphonestrap__v--rev .wphonestrap__media,.wphonestrap__media{order:0}
+  .wphonestrap__v--rev .wphonestrap__tekst,.wphonestrap__tekst{order:1}
+  .wphonestrap__pogoji{grid-template-columns:1fr 1fr}
 }
 </style>

@@ -2,7 +2,7 @@
 // Review pool za NORIKS PhoneStrap — drzac za mobitel protiv ispadanja (orto-phonestrap).
 // Prvih 5 je prevedenih z originala (Customer Reviews), ostala so v istem duhu.
 $auto_reviews_en = array(
-    array("name" => "Alison C.", "text" => "Odličan proizvod. Jednostavan za korištenje i daje mi mir jer znam da neću izgubiti mobitel niti će mi ga netko ukrasti. Stvarno sam oduševljena."),
+    array("name" => "Alenka C.", "text" => "Odličan proizvod. Jednostavan za korištenje i daje mi mir jer znam da neću izgubiti mobitel niti će mi ga netko ukrasti. Stvarno sam oduševljena."),
     array("name" => "Pavao", "text" => "Oduševljen sam kvalitetom i time koliko se lako koristi."),
     array("name" => "Sanja", "text" => "Trenutačno sam u inozemstvu sa svojim držačem i, budući da sam malo starija i zaboravna, ovo mi je zlata vrijedno. Do sada bih sigurno negdje ostavila mobitel i izgubila ga. Koristim ga stalno, a i dalje je kao nov."),
     array("name" => "Ema Š.", "text" => "Točno kao što je opisano. Kupila sam po jedan za cijelu obitelj — svi su oduševljeni!"),
