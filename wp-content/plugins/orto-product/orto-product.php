@@ -2184,7 +2184,7 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-noiron' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS NoIron: Boja (8 barv originala) kot krogci + Velicina (39 XXS – 48 5XL). */
+      /* NORIKS NoIron: Boja (8 barv originala) kot krogci + Velicina (XXS - 39 ... 5XL - 48). */
       .swatch-circle.color-bijela, #bundle-selector .swatch-circle.color-bijela { background: #f6f6f4 !important; }
       .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #1c1c1e !important; }
       .swatch-circle.color-svijetloplava, #bundle-selector .swatch-circle.color-svijetloplava { background: #a9c6e6 !important; }

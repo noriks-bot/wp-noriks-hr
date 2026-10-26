@@ -636,16 +636,16 @@ if ( ! function_exists( 'noriks_noiron_sizes' ) ) {
     /** NORIKS NoIron: velicina (ovratnik), sirina ramena, opseg prsa, duzina kosulje, duzina rukava v cm - 1:1 z originala (bellutia, tablica dugih rukava). */
     function noriks_noiron_sizes() {
         return array(
-            array( '39 (XXS)', '44,8 cm', '100 cm', '72 cm', '61 cm' ),
-            array( '40 (XS)',  '46 cm',   '104 cm', '74 cm', '62,5 cm' ),
-            array( '41 (S)',   '47,2 cm', '108 cm', '74 cm', '63,5 cm' ),
-            array( '42 (M)',   '48,4 cm', '112 cm', '76 cm', '65 cm' ),
-            array( '43 (L)',   '49,6 cm', '116 cm', '76 cm', '65 cm' ),
-            array( '44 (XL)',  '50,8 cm', '120 cm', '78 cm', '66,5 cm' ),
-            array( '45 (2XL)', '52 cm',   '124 cm', '78 cm', '66,5 cm' ),
-            array( '46 (3XL)', '53,2 cm', '128 cm', '78 cm', '67 cm' ),
-            array( '47 (4XL)', '54,4 cm', '132 cm', '80 cm', '67 cm' ),
-            array( '48 (5XL)', '55,6 cm', '136 cm', '81 cm', '68,5 cm' ),
+            array( 'XXS - 39', '44,8 cm', '100 cm', '72 cm', '61 cm' ),
+            array( 'XS - 40', '46 cm',   '104 cm', '74 cm', '62,5 cm' ),
+            array( 'S - 41', '47,2 cm', '108 cm', '74 cm', '63,5 cm' ),
+            array( 'M - 42', '48,4 cm', '112 cm', '76 cm', '65 cm' ),
+            array( 'L - 43', '49,6 cm', '116 cm', '76 cm', '65 cm' ),
+            array( 'XL - 44', '50,8 cm', '120 cm', '78 cm', '66,5 cm' ),
+            array( '2XL - 45', '52 cm',   '124 cm', '78 cm', '66,5 cm' ),
+            array( '3XL - 46', '53,2 cm', '128 cm', '78 cm', '67 cm' ),
+            array( '4XL - 47', '54,4 cm', '132 cm', '80 cm', '67 cm' ),
+            array( '5XL - 48', '55,6 cm', '136 cm', '81 cm', '68,5 cm' ),
         );
     }
 }
