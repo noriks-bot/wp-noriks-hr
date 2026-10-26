@@ -15,6 +15,7 @@
    8. reviews — vodoravni drsnik 11 kartic mnenj z avatarjem in oznako situacije (pri nas 6, karusel)
    9. FAQ — harmonika
  * Izpusceno: zdravstvene trditve originala (preleznine, celjenje, statistike), imena strokovnjakov, mediji.
+ * BARVA ORIGINALA: #0e5249 (temno zelena barva znamke originala (--brand), ozadja originala kremna #f6f2e9); svetel ton za --bg #d8e3e2, akcent #0e5249
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/gelsit/';
@@ -30,9 +31,9 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
         <p class="wgsit__p">NORIKS GelSit napravljen je za sve koji velik dio dana provode sjedeći – u fotelji, invalidskim kolicima, za radnim stolom ili u autu. Najčešće ga kupuju djeca za svoje roditelje, njegovatelji za ljude o kojima brinu i svi kojima je dosadilo stalno namještanje na tvrdoj stolici.</p>
         <p class="wgsit__p">Umjesto pjene koja se s vremenom spljošti, jastuk ima <strong>saće od gela u dva sloja</strong> i <strong>izrez na mjestu trtične kosti</strong>. Težina se raspoređuje po cijeloj površini sjedala, a najosjetljivije mjesto ostaje bez dodira s podlogom.</p>
         <div class="wgsit__brojke">
-          <div><strong>4,8/5</strong><span>prosječna ocjena</span></div>
-          <div><strong>120.000</strong><span>kupaca NORIKS</span></div>
-          <div><strong>30 dana</strong><span>za povrat novca</span></div>
+          <div><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span><strong>4,8/5</strong><span>prosječna ocjena</span></div>
+          <div><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000</strong><span>kupaca NORIKS</span></div>
+          <div><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
         </div>
         <p class="wgsit__zak">Jedan jastuk – i svaki stolac postaje udobniji.</p>
       </div>
@@ -187,10 +188,10 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
         <h2 class="wgsit__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wgsit__p">Isprobajte NORIKS GelSit kod kuće – u fotelji, za stolom ili u autu. Ako niste zadovoljni, imate 30 dana za povrat novca, bez kompliciranja i bez pitanja. Pridružite se zajednici od 120.000 zadovoljnih kupaca.</p>
         <div class="wgsit__pogoji">
-          <div class="wgsit__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-          <div class="wgsit__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-          <div class="wgsit__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-          <div class="wgsit__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
+          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+          <div class="wgsit__pog"><span class="wgsit__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
         </div>
         <p class="wgsit__zak">Udobno sjedenje – ili povrat novca.</p>
       </div>
@@ -201,7 +202,7 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
 .wgsit{color:#1c1c1c;font-family:inherit}
 .wgsit__s{padding:56px 0;background:#fff}
 .wgsit__s--bg{background:#f4f3ef}
-.wgsit__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wgsit__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .wgsit__v--rev .wgsit__media{order:2}
 .wgsit__v--rev .wgsit__tekst{order:1}
 .wgsit__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
@@ -257,7 +258,7 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
   .wgsit__pecat-num{font-size:64px}
   .wgsit__pecat-top,.wgsit__pecat-bot{font-size:10px;max-width:118px}
 }
-.wgsit__v--polna{display:block;max-width:1188px}
+.wgsit__v--polna{display:block}
 .wgsit__tekst--sredina{text-align:center;max-width:760px;margin:0 auto 26px}
 .wgsit__tekst--sredina .wgsit__p{margin-bottom:0}
 .wgsit__v--polna .wgsit__zak{text-align:center;max-width:760px;margin:26px auto 0}
@@ -275,7 +276,25 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
 .wgsit__kar>*{scroll-snap-align:start}
 .wgsit__tag{display:inline-block;background:#eef3f8;color:#1d2b4f;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700;margin-bottom:6px}
 .wgsit__zv{color:#e0a33c!important;letter-spacing:2px;margin:0 0 4px!important}.wgsit__ver{font-size:12.5px;color:#1f8a4c;font-weight:700}
-@media (max-width:1000px){.wgsit__g3{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(300px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}.wgsit__g3>*{scroll-snap-align:start}}
+@media (max-width:980px){.wgsit__g3{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(300px,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}.wgsit__g3>*{scroll-snap-align:start}}
 @media (max-width:860px){.wgsit__kar{grid-auto-columns:82%}}
 @media (max-width:420px){.wgsit__g3{grid-auto-columns:86%}}
+/* dizajn.py */
+.wgsit__s{padding:72px 0}.wgsit__s.wgsit__s--bg{background:#d8e3e2}.wgsit__s.wgsit__traka{padding:40px 0}.wgsit__s.wgsit__traka:not(.wgsit__s--bg){background:#fff}
+.wgsit__kicker{color:#0e5249;letter-spacing:1.8px;font-size:12.5px}.wgsit__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#0e5249;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.wgsit__h2 em{color:#0e5249}.wgsit__dva .wgsit__zak{border-left:3px solid #0e5249;padding-left:14px}
+.wgsit__media,.wgsit__polna{box-shadow:0 14px 34px rgba(14,82,73,.22);border:1px solid rgba(14,82,73,.25)}
+.wgsit__k{border:1px solid rgba(14,82,73,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wgsit__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,82,73,.22)}
+.wgsit__pog>div{border:1px solid rgba(14,82,73,.35);border-radius:16px;padding:28px 18px;transition:transform .2s,box-shadow .2s}.wgsit__pog>div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,82,73,.22)}
+span.wgsit__pi{opacity:1;width:58px;height:58px;border-radius:50%;background:#b7cbc8;border:1px solid #0e5249;color:#0e5249;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.wgsit__pi svg{width:28px;height:28px}
+.wgsit__red3 span.wgsit__pi{width:44px;height:44px;margin-bottom:8px}.wgsit__red3 .wgsit__pi svg{width:22px;height:22px}.wgsit__red3>div{border-color:rgba(14,82,73,.35)}
+.wgsit__pog strong{color:#1c1c1c}.wgsit__st,.wgsit__kv li::before{background:#0e5249}.wgsit__tab th{background:#0e5249!important}
+.wgsit__ti{background:linear-gradient(135deg,#0e5249,#437871);box-shadow:0 6px 14px rgba(14,82,73,.30)}.wgsit__tk{border-color:rgba(14,82,73,.30)}
+.wgsit__ime{display:flex;align-items:center;gap:10px}.wgsit__av{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#b7cbc8;border:1px solid #0e5249;color:#0e5249;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+div.wgsit__pog{text-align:center;border:1px solid rgba(14,82,73,.35);border-radius:16px;transition:transform .2s,box-shadow .2s}div.wgsit__pog:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,82,73,.22)}div.wgsit__pog>strong,div.wgsit__pog>span:not(.wgsit__pi){display:block}
+.wgsit__pus{color:#0e5249}.wgsit__plavo{background:#0e5249;margin-top:-72px}.wgsit__k--temna{background:#0e5249}
+@media (max-width:860px){.wgsit__s{padding:46px 0}.wgsit__s.wgsit__traka{padding:30px 0}.wgsit__plavo{margin-top:-46px}.wgsit__pog>div{padding:22px 12px}}
+@media (max-width:767px){.wgsit__v{padding:0 16px}}
+.wgsit__brojke span.wgsit__pi{width:48px;height:48px;margin:0 auto 10px}.wgsit__brojke .wgsit__pi svg{width:24px;height:24px}.wgsit__brojke strong{color:#0e5249}
+/* /dizajn.py */
 </style>
