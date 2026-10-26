@@ -141,9 +141,9 @@ $gc_op = array(
     <div class="wgc__v">
       <div class="wgc__kicker wgc__c">Iskustva kupaca</div><h2 class="wgc__h2 wgc__c">Što kupci primjećuju <em>nakon nekoliko tjedana</em></h2>
       <div class="wgc__grid3">
-        <div class="wgc__rez"><strong>Udobnije sjedenje</strong><p>Većina razliku osjeti već prvi put kad sjedne – težina se rasporedi, sjedalo ostaje stabilno.</p></div>
-        <div class="wgc__rez"><strong>Ponovno udobno sjede</strong><p>Više nema stalnog premještanja i ustajanja sa stolice svakih dvadesetak minuta.</p></div>
-        <div class="wgc__rez"><strong>Lakši dugi dani</strong><p>Duge dane za stolom ili za volanom podnose puno lakše.</p></div>
+        <div class="wgc__rez"><span class="wgc__pi wgc__pi--r"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6"/><path d="M4 12h16v3H4z"/><path d="M6 15v5M18 15v5"/></svg></span><strong>Udobnije sjedenje</strong><p>Većina razliku osjeti već prvi put kad sjedne – težina se rasporedi, sjedalo ostaje stabilno.</p></div>
+        <div class="wgc__rez"><span class="wgc__pi wgc__pi--r"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.1 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></span><strong>Ponovno udobno sjede</strong><p>Više nema stalnog premještanja i ustajanja sa stolice svakih dvadesetak minuta.</p></div>
+        <div class="wgc__rez"><span class="wgc__pi wgc__pi--r"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><strong>Lakši dugi dani</strong><p>Duge dane za stolom ili za volanom podnose puno lakše.</p></div>
       </div>
     </div>
   </section>
@@ -171,10 +171,10 @@ $gc_op = array(
       <h2 class="wgc__h2 wgc__c">Uz NORIKS kupujete <em>bez rizika</em></h2>
       <p class="wgc__p wgc__c">NORIKS GelCushion isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p>
       <div class="wgc__red4 wgc__pog">
-        <div><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
   </section>
