@@ -234,9 +234,9 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
   .wgsit__pecat-top,.wgsit__pecat-bot{font-size:10px;max-width:118px}
 }
 .wgsit__v--polna{display:block}
-.wgsit__tekst--sredina{text-align:center;max-width:760px;margin:0 auto 26px}
+.wgsit__tekst--sredina{text-align:center;margin:0 0 26px}.wgsit__tekst--sredina .wgsit__p{max-width:62ch;margin-left:auto;margin-right:auto}
 .wgsit__tekst--sredina .wgsit__p{margin-bottom:0}
-.wgsit__v--polna .wgsit__zak{text-align:center;max-width:760px;margin:26px auto 0}
+.wgsit__v--polna .wgsit__zak{text-align:center;margin:26px 0 0}
 .wgsit__g3{display:grid;grid-template-columns:repeat(3,minmax(300px,1fr));gap:22px;align-items:stretch;margin-top:0}
 .wgsit__g3 .wgsit__obj{display:flex;flex-direction:column;padding:22px 24px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
 .wgsit__g3 .wgsit__obj p{font-size:15.5px;line-height:1.55;flex:1 1 auto}

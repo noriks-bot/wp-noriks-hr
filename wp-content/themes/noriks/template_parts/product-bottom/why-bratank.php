@@ -199,7 +199,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 .nbt-kicker { margin: 0 0 8px; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--nbt-rose); }
 .nbt-h2 { margin: 0 0 14px; text-align: center; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 700; color: var(--nbt-ink); }
 .nbt-h2 em { font-style: italic; color: var(--nbt-rose); }
-.nbt-sub { text-align: center; color: var(--nbt-muted); font-size: 16px; line-height: 1.6; margin: 0 auto 28px; max-width: 640px; }
+.nbt-sub { text-align: center; color: var(--nbt-muted); font-size: 16px; line-height: 1.6; margin: 0 auto 28px; max-width: 62ch; }
 .nbt-big { font-weight: 700; color: var(--nbt-ink); }
 .nbt-big--c { text-align: center; margin: 24px auto 0; max-width: 520px; font-size: 16px; }
 .nbt-num { flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; background: var(--nbt-rose); color: #fff;
