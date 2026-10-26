@@ -1,6 +1,15 @@
 <?php
 /**
  * NORIKS Insoles — why sekcije 1:1 z originalom (9 vsebinskih + NORIKS pogoji, vrstni red kot original: 7 stanj, Koji problem, Tri Support). Generirano z why.js.
+ *
+ * STRUKTURA ORIGINALA: (orthoflexx.com/products/max-arch-support-insoles)
+   1. problem — slika levo + besedilo (stopala gotova do 14h, svod se spusca)
+   2. stanja — izbirnik 5 stanj (ravna stopala, visok svod, peta, cukalj, leda) + slika ob vsakem; pri nas vsako stanje svoja sekcija slika/besedilo
+   3. sistem treh delov — slika + besedilo s tremi deli (cvrst svod, U-casica za peto, blazinjenje)
+   4. mnenja kupcev — kartica z oceno (pri nas spodaj v zavihku mnenj, 16 mnenj)
+   5. trije koraki — slika + besedilo (vstavi, privadi se, nosi)
+   6. FAQ — harmonika (pri nas v reviews.php)
+   7. zakljucek — denar nazaj (pri nas NORIKS pogoji, 30 dana)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/insoles/';
