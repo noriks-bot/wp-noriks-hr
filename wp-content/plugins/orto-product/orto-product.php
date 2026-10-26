@@ -310,6 +310,23 @@ function gck_size_prices( $product_id ) : array {
             'unit_off' => array( 2 => 8.04 ),
         );
     }
+    if ( $product_id && has_term( 'orto-acryliques', 'product_cat', $product_id ) ) {
+        // NORIKS Flomasteri: original (monpetitcurieux.fr, EUR) Pack 24 / 48 / 72 / 96 / 120 / 168 Couleurs
+        // 29,90/59,90, 35,90/79,90, 42,90/99,90, 48,90/109,90, 56,90/119,90, 62,90/149,90 -> na ,99; privzeto 24 boje kot na originalu.
+        // 2 kompleta -20 %, 3 kompleti -30 % na kos.
+        return array(
+            'default' => '24 boje',
+            'sizes'   => array(
+                '24 boje'  => array( 29.99, 59.99 ),
+                '48 boja'  => array( 35.99, 79.99 ),
+                '72 boje'  => array( 42.99, 99.99 ),
+                '96 boja'  => array( 48.99, 109.99 ),
+                '120 boja' => array( 56.99, 119.99 ),
+                '168 boja' => array( 62.99, 149.99 ),
+            ),
+            'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
+        );
+    }
     if ( $product_id && has_term( 'orto-vacuumsealer', 'product_cat', $product_id ) ) {
         // NORIKS VacuumSealer: original (chefpreserve.com) Bag Quantity 10 / 20 / 30 Bags USD 79/162, 89/182, 99/204
         // po ECB 0,89246 (22. 10. 2026), zaokrozeno na .99; privzeto 10 vrecic kot na originalu.
@@ -893,8 +910,8 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array();
     }
 
-    $gck_no_attrs    = has_term( array( 'orto-widebeam', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-acryliques', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-calm', 'orto-classics', 'orto-corrector', 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-widebeam', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-calm', 'orto-classics', 'orto-corrector', 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
     $gck_size_link_force = has_term( array( 'orto-corrector', 'orto-relief', 'orto-titaniumpan', 'orto-anklesleeve', 'orto-silkboxers', 'orto-mattresstopper', 'orto-kidspillow', 'orto-cashmeresweater' ), 'product_cat', $product_id );
