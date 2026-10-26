@@ -1294,6 +1294,6 @@ body.single-product {
    Globalna povezava (theme): blok cene nad njo ze nosi ~13 px, obrazec pod njo 10 px.
    Orto povezava: odstevalnik nad njo ima 14 px, #bundle-selector pod njo 8 px. */
 .summary .noriks-global-sizechart { margin: -4px 0 0 !important; }
-.summary .noriks-global-sizechart + form.cart { margin-top: 7px !important; }
-.summary .gck-countdown:has(+ .gck-size-link-wrap) { margin-bottom: 9px !important; }
-.summary .gck-size-link-wrap { margin-top: 0 !important; margin-bottom: 0 !important; }
+.summary .noriks-global-sizechart ~ form.cart { margin-top: 7px !important; }
+.summary .gck-countdown:has(~ .gck-size-link-wrap) { margin-bottom: 9px !important; }
+.summary .gck-size-link-wrap { display: flex; justify-content: flex-end; margin-top: 0 !important; margin-bottom: 0 !important; }
