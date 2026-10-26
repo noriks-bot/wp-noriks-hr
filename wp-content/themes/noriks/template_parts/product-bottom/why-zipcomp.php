@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/zipcomp/';
 
   <section class="wzipcomp__s wzipcomp__s--bg">
     <div class="wzipcomp__v">
-      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-recenzije.webp' ); ?>" alt="Što se mijenja u svakodnevici" loading="lazy" decoding="async"></div>
+      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-recenzije.webp' ); ?>" alt="Što se mijenja u svakodnevici" loading="eager" decoding="async"></div>
       <div class="wzipcomp__tekst">
         <div class="wzipcomp__kicker">Recenzije kupaca</div>
         <h2 class="wzipcomp__h2">Što se mijenja u <em>svakodnevici</em></h2>
@@ -36,7 +36,7 @@ $wdir = get_template_directory_uri() . '/img/zipcomp/';
 
   <section class="wzipcomp__s wzipcomp__s--bg">
     <div class="wzipcomp__v">
-      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-carape.webp' ); ?>" alt="Što ćete osjetiti" loading="lazy" decoding="async"></div>
+      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-carape.webp' ); ?>" alt="Što ćete osjetiti" loading="eager" decoding="async"></div>
       <div class="wzipcomp__tekst">
         <div class="wzipcomp__kicker">Kako pomažu</div>
         <h2 class="wzipcomp__h2">Što ćete <em>osjetiti</em></h2>
@@ -50,7 +50,7 @@ $wdir = get_template_directory_uri() . '/img/zipcomp/';
 
   <section class="wzipcomp__s">
     <div class="wzipcomp__v wzipcomp__v--rev">
-      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-graduirana.webp' ); ?>" alt="Lagane noge cijeli dan" loading="lazy" decoding="async"></div>
+      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-graduirana.webp' ); ?>" alt="Lagane noge cijeli dan" loading="eager" decoding="async"></div>
       <div class="wzipcomp__tekst">
         <div class="wzipcomp__kicker">Zašto djeluje</div>
         <h2 class="wzipcomp__h2">Lagane noge <em>cijeli dan</em></h2>
@@ -64,7 +64,7 @@ $wdir = get_template_directory_uri() . '/img/zipcomp/';
 
   <section class="wzipcomp__s wzipcomp__s--bg">
     <div class="wzipcomp__v">
-      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-usporedba.webp' ); ?>" alt="NORIKS ZipComp protiv drugih" loading="lazy" decoding="async"></div>
+      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-usporedba.webp' ); ?>" alt="NORIKS ZipComp protiv drugih" loading="eager" decoding="async"></div>
       <div class="wzipcomp__tekst">
         <div class="wzipcomp__kicker">Usporedba</div>
         <h2 class="wzipcomp__h2">NORIKS ZipComp <em>protiv</em> drugih</h2>
@@ -78,7 +78,7 @@ $wdir = get_template_directory_uri() . '/img/zipcomp/';
 
   <section class="wzipcomp__s">
     <div class="wzipcomp__v wzipcomp__v--rev">
-      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-iskustva.webp' ); ?>" alt="Što nam pričaju kupci" loading="lazy" decoding="async"></div>
+      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-iskustva.webp' ); ?>" alt="Što nam pričaju kupci" loading="eager" decoding="async"></div>
       <div class="wzipcomp__tekst">
         <div class="wzipcomp__kicker">Iskustva</div>
         <h2 class="wzipcomp__h2">Što nam <em>pričaju</em> kupci</h2>
@@ -92,7 +92,7 @@ $wdir = get_template_directory_uri() . '/img/zipcomp/';
 
   <section class="wzipcomp__s wzipcomp__s--bg">
     <div class="wzipcomp__v">
-      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-poklon.webp' ); ?>" alt="Što kupci primjećuju" loading="lazy" decoding="async"></div>
+      <div class="wzipcomp__media"><img src="<?php echo esc_url( $wdir . 'noriks-zipcomp-poklon.webp' ); ?>" alt="Što kupci primjećuju" loading="eager" decoding="async"></div>
       <div class="wzipcomp__tekst">
         <div class="wzipcomp__kicker">Nakon nekoliko tjedana</div>
         <h2 class="wzipcomp__h2">Što kupci <em>primjećuju</em></h2>

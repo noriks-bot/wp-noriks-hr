@@ -22,7 +22,7 @@ $nrc      = get_template_directory_uri() . '/img/raincoat/';
 $nrc_path = get_template_directory() . '/img/raincoat/';
 $nrc_img  = function( $file, $alt, $cls = '' ) use ( $nrc, $nrc_path ) {
   if ( ! $file || ! file_exists( $nrc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nrc . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $nrc . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager">';
 };
 $nrc_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

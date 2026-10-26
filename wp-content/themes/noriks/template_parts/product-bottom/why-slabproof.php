@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s wslabproof__s--bg">
     <div class="wslabproof__v">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-01.webp' ); ?>" alt="Radna čarapa s jastučićem, krojena ispod gležnja" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-01.webp' ); ?>" alt="Radna čarapa s jastučićem, krojena ispod gležnja" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NISKI KROJ</div>
         <h2 class="wslabproof__h2">Radna čarapa s jastučićem, <em>krojena ispod gležnja</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Jastučenje točno tamo gdje beton udara najjače" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Jastučenje točno tamo gdje beton udara najjače" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">ZONSKO JASTUČENJE</div>
         <h2 class="wslabproof__h2">Jastučenje točno tamo gdje <em>beton udara najjače</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s wslabproof__s--bg">
     <div class="wslabproof__v">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-07.webp' ); ?>" alt="Ojačano ondje gdje čarape prve popuste" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-07.webp' ); ?>" alt="Ojačano ondje gdje čarape prve popuste" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">OJAČANA PETA I PRSTI</div>
         <h2 class="wslabproof__h2">Ojačano ondje gdje čarape <em>prve popuste</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-03.webp' ); ?>" alt="Suha stopala od prvog do dvanaestog sata" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-03.webp' ); ?>" alt="Suha stopala od prvog do dvanaestog sata" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">PROZRAČNO I SUHO</div>
         <h2 class="wslabproof__h2">Suha stopala od <em>prvog do dvanaestog sata</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s wslabproof__s--bg">
     <div class="wslabproof__v">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-04.webp' ); ?>" alt="Nikad nije bila do cipela" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-04.webp' ); ?>" alt="Nikad nije bila do cipela" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NISU KRIVE CIPELE</div>
         <h2 class="wslabproof__h2">Nikad nije bila <em>do cipela</em></h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-06.webp' ); ?>" alt="Učvršćena na peti, poduprta na svodu" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-06.webp' ); ?>" alt="Učvršćena na peti, poduprta na svodu" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">PETA I SVOD</div>
         <h2 class="wslabproof__h2">Učvršćena na peti, <em>poduprta na svodu</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s wslabproof__s--bg">
     <div class="wslabproof__v">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-02.webp' ); ?>" alt="Nisu sve radne čarape napravljene jednako" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-02.webp' ); ?>" alt="Nisu sve radne čarape napravljene jednako" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">USPOREDBA</div>
         <h2 class="wslabproof__h2">Nisu sve radne čarape <em>napravljene jednako</em></h2>
@@ -107,7 +107,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'sp-07-tko-ih-radi.webp' ); ?>" alt="Nije ih osmislio trgovac čarapama, nego električar" loading="lazy" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'sp-07-tko-ih-radi.webp' ); ?>" alt="Nije ih osmislio trgovac čarapama, nego električar" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">TKO IH RADI</div>
         <h2 class="wslabproof__h2">Nije ih osmislio trgovac čarapama, nego <em>električar</em></h2>

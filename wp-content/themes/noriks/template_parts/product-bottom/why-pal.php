@@ -16,7 +16,7 @@ $pl_vid  = function( $file, $poster, $alt ) use ( $pl, $pl_path ) {
 };
 $pl_img  = function( $file, $alt, $cls = '' ) use ( $pl, $pl_path ) {
   if ( ! file_exists( $pl_path . $file ) ) { return ''; }
-  return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $pl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $pl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

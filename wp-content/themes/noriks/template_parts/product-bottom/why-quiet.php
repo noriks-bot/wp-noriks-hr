@@ -11,7 +11,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s wquiet__s--bg">
     <div class="wquiet__v">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-01-24db.jpg' . $wv ); ?>" alt="Ljubičasti čepići za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-01-24db.jpg' . $wv ); ?>" alt="Ljubičasti čepići za uši NORIKS Quiet" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">24 dB MANJE BUKE</div>
         <h2 class="wquiet__h2">Buka postaje tiha. <em>Vi ostajete usredotočeni.</em></h2>
@@ -31,7 +31,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s">
     <div class="wquiet__v wquiet__v--rev">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-02-silikon.png' . $wv ); ?>" alt="Mekani silikonski čepići NORIKS Quiet s izmjenjivim nastavcima" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-02-silikon.png' . $wv ); ?>" alt="Mekani silikonski čepići NORIKS Quiet s izmjenjivim nastavcima" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">UDOBNOST</div>
         <h2 class="wquiet__h2">Mekani silikon <em>i četiri veličine nastavaka</em></h2>
@@ -49,7 +49,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s wquiet__s--bg">
     <div class="wquiet__v">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-03-cepici.jpg' . $wv ); ?>" alt="Bijeli višekratni čepići za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-03-cepici.jpg' . $wv ); ?>" alt="Bijeli višekratni čepići za uši NORIKS Quiet" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">U PAKETU</div>
         <h2 class="wquiet__h2">Višekratni, lako se čiste <em>i uvijek su uz vas</em></h2>
@@ -68,7 +68,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s">
     <div class="wquiet__v wquiet__v--rev">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-04-odmor.png' . $wv ); ?>" alt="Odmor uz čepiće za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-04-odmor.png' . $wv ); ?>" alt="Odmor uz čepiće za uši NORIKS Quiet" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">ZAŠTO NORIKS QUIET</div>
         <h2 class="wquiet__h2">Mir za odmor, <em>i usred buke</em></h2>
@@ -83,7 +83,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s wquiet__s--bg">
     <div class="wquiet__v">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-05-fokus.png' . $wv ); ?>" alt="Usredotočen rad uz čepiće za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-05-fokus.png' . $wv ); ?>" alt="Usredotočen rad uz čepiće za uši NORIKS Quiet" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">FOKUS</div>
         <h2 class="wquiet__h2">Više fokusa <em>i kreativnosti</em></h2>
@@ -97,7 +97,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s">
     <div class="wquiet__v wquiet__v--rev">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-06-poklon.png' . $wv ); ?>" alt="NORIKS Quiet kao poklon" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-06-poklon.png' . $wv ); ?>" alt="NORIKS Quiet kao poklon" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">POKLON</div>
         <h2 class="wquiet__h2">Poklon na kojem će <em>vam zahvaliti</em></h2>
@@ -112,7 +112,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s wquiet__s--bg">
     <div class="wquiet__v">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-07-ured.jpg' . $wv ); ?>" alt="Kupci s čepićima NORIKS Quiet u uredu" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-07-ured.jpg' . $wv ); ?>" alt="Kupci s čepićima NORIKS Quiet u uredu" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wquiet__h2">Što misle <em>naši kupci</em></h2>
@@ -129,7 +129,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wquiet__s">
     <div class="wquiet__v wquiet__v--rev">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-08-noriks.png' . $wv ); ?>" alt="Crni čepići za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-08-noriks.png' . $wv ); ?>" alt="Crni čepići za uši NORIKS Quiet" loading="eager" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wquiet__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>

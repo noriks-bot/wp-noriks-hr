@@ -22,7 +22,7 @@ $ncs      = get_template_directory_uri() . '/img/corksandals/';
 $ncs_path = get_template_directory() . '/img/corksandals/';
 $ncs_img  = function( $file, $alt ) use ( $ncs, $ncs_path ) {
   if ( ! $file || ! file_exists( $ncs_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ncs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ncs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ncs_vid  = function( $file ) use ( $ncs, $ncs_path ) {
   if ( ! $file || ! file_exists( $ncs_path . $file . '.mp4' ) ) { return ''; }

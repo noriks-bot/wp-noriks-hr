@@ -24,7 +24,7 @@ $ndr      = get_template_directory_uri() . '/img/dograincoat/';
 $ndr_path = get_template_directory() . '/img/dograincoat/';
 $ndr_img  = function( $file, $alt, $cls = '' ) use ( $ndr, $ndr_path ) {
   if ( ! $file || ! file_exists( $ndr_path . $file ) ) { return ''; }
-  return '<img' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' src="' . esc_url( $ndr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' src="' . esc_url( $ndr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ndr_video = function( $name, $label ) use ( $ndr, $ndr_path ) {
   $file = $name . '.mp4'; $poster = $name . '-poster.webp';

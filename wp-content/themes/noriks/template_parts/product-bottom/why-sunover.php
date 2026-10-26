@@ -11,7 +11,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wsun__s wsun__s--bg">
     <div class="wsun__v">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-preko-naocala.webp' . $wv ); ?>" alt="Sunčane naočale NORIKS SunOver nošene preko dioptrijskih naočala" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-preko-naocala.webp' . $wv ); ?>" alt="Sunčane naočale NORIKS SunOver nošene preko dioptrijskih naočala" loading="eager" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">ZAŠTO ĆETE IH VOLJETI</div>
         <h2 class="wsun__h2">Više ne birate između oštrog vida <em>i ugodnog pogleda</em></h2>
@@ -40,7 +40,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wsun__s">
     <div class="wsun__v wsun__v--rev">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-classic.jpg' . $wv ); ?>" alt="Model Classic NORIKS SunOver s plavim zrcalnim lećama" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-classic.jpg' . $wv ); ?>" alt="Model Classic NORIKS SunOver s plavim zrcalnim lećama" loading="eager" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">PRISTAJANJE I MJERE</div>
         <h2 class="wsun__h2">Pet modela – <em>odaberite širi od svojih naočala</em></h2>
@@ -101,7 +101,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wsun__s wsun__s--bg">
     <div class="wsun__v">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-svaki-dan.jpg' . $wv ); ?>" alt="NORIKS SunOver model Luna, crveni okvir s polariziranim lećama" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-svaki-dan.jpg' . $wv ); ?>" alt="NORIKS SunOver model Luna, crveni okvir s polariziranim lećama" loading="eager" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wsun__h2">Kupci <em>o njima</em></h2>
@@ -118,7 +118,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wsun__s">
     <div class="wsun__v wsun__v--rev">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-voznja.webp' . $wv ); ?>" alt="NORIKS SunOver, crno-ljubičasti okvir s polariziranim lećama" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-voznja.webp' . $wv ); ?>" alt="NORIKS SunOver, crno-ljubičasti okvir s polariziranim lećama" loading="eager" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wsun__h2">Česta <em>pitanja</em></h2>
@@ -133,7 +133,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 
   <section class="wsun__s wsun__s--bg">
     <div class="wsun__v">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-luna.jpg' . $wv ); ?>" alt="Model Luna NORIKS SunOver u boji kornjačevine" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-luna.jpg' . $wv ); ?>" alt="Model Luna NORIKS SunOver u boji kornjačevine" loading="eager" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wsun__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>

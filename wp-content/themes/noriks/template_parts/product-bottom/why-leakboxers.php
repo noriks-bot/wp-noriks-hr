@@ -25,7 +25,7 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
       </ul>
       <a class="lbx-cta lbx-cta-solid" href="#bundle-selector">Vrati mi samopouzdanje →</a>
     </div>
-    <div class="lbx-media"><img src="<?php echo esc_url( $lb.'boxer-navy.jpg' ); ?>" alt="NORIKS upijajuće bokserice — tamnoplava" loading="lazy"></div>
+    <div class="lbx-media"><img src="<?php echo esc_url( $lb.'boxer-navy.jpg' ); ?>" alt="NORIKS upijajuće bokserice — tamnoplava" loading="eager"></div>
   </div>
 </section>
 
@@ -43,7 +43,7 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
 <!-- ============ 2) PureDry™ 7 slojeva (slika + tekst) ============ -->
 <section class="lbx-sec">
   <div class="lbx-wrap lbx-row2 lbx-rev">
-    <div class="lbx-media"><img src="<?php echo esc_url( $lb.'features.png' ); ?>" alt="NORIKS PureDry — 7-slojna tehnologija upijanja" loading="lazy"></div>
+    <div class="lbx-media"><img src="<?php echo esc_url( $lb.'features.png' ); ?>" alt="NORIKS PureDry — 7-slojna tehnologija upijanja" loading="eager"></div>
     <div class="lbx-copy">
       <p class="lbx-eyebrow">Tehnologija</p>
       <h2 class="lbx-h2">NORIKS <em>PureDry™</em> — 7 slojeva zaštite</h2>
@@ -79,9 +79,9 @@ $lbv = get_template_directory_uri() . '/img/leakboxers-videos/';
     <p class="lbx-eyebrow lbx-center">Zavoljet ćete ih</p>
     <h2 class="lbx-h2 lbx-center">Perive <em>inkontinencijske bokserice</em></h2>
     <div class="lbx-cards">
-      <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'boxer-black.jpg' ); ?>" alt="Elegantna zaštita" loading="lazy"><figcaption>Elegantna zaštita</figcaption></figure>
-      <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'absorption.jpg' ); ?>" alt="Nenadmašna apsorpcija" loading="lazy"><figcaption>Nenadmašna apsorpcija</figcaption></figure>
-      <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'hydrofuge.jpg' ); ?>" alt="Hidrofobna tehnologija" loading="lazy"><figcaption>Hidrofobna tehnologija</figcaption></figure>
+      <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'boxer-black.jpg' ); ?>" alt="Elegantna zaštita" loading="eager"><figcaption>Elegantna zaštita</figcaption></figure>
+      <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'absorption.jpg' ); ?>" alt="Nenadmašna apsorpcija" loading="eager"><figcaption>Nenadmašna apsorpcija</figcaption></figure>
+      <figure class="lbx-card"><img src="<?php echo esc_url( $lb.'hydrofuge.jpg' ); ?>" alt="Hidrofobna tehnologija" loading="eager"><figcaption>Hidrofobna tehnologija</figcaption></figure>
     </div>
   </div>
 </section>

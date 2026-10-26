@@ -11,7 +11,7 @@ $wdir = get_template_directory_uri() . '/img/faith/';
 
   <section class="wfaith__s wfaith__s--bg">
     <div class="wfaith__v">
-      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-usporedba.webp' ); ?>" alt="Kutija i karta NORIKS razgovorne igre" loading="lazy" decoding="async"></div>
+      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-usporedba.webp' ); ?>" alt="Kutija i karta NORIKS razgovorne igre" loading="eager" decoding="async"></div>
       <div class="wfaith__tekst">
         <div class="wfaith__kicker">OSMIŠLJENO S NAMJEROM</div>
         <h2 class="wfaith__h2">Osmišljeno s namjerom. <em>Drukčije od svega.</em></h2>
@@ -44,7 +44,7 @@ $wdir = get_template_directory_uri() . '/img/faith/';
 
   <section class="wfaith__s wfaith__s--bg">
     <div class="wfaith__v">
-      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-pitanja.webp' ); ?>" alt="Karta s pitanjem o odnosu s Bogom" loading="lazy" decoding="async"></div>
+      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-pitanja.webp' ); ?>" alt="Karta s pitanjem o odnosu s Bogom" loading="eager" decoding="async"></div>
       <div class="wfaith__tekst">
         <div class="wfaith__kicker">ČESTA PITANJA</div>
         <h2 class="wfaith__h2">Sve što vas zanima <em>prije nego što zaigrate.</em></h2>
@@ -58,7 +58,7 @@ $wdir = get_template_directory_uri() . '/img/faith/';
 
   <section class="wfaith__s">
     <div class="wfaith__v wfaith__v--rev">
-      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-razine.webp' ); ?>" alt="Tri špila karata za tri razine razgovora" loading="lazy" decoding="async"></div>
+      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-razine.webp' ); ?>" alt="Tri špila karata za tri razine razgovora" loading="eager" decoding="async"></div>
       <div class="wfaith__tekst">
         <div class="wfaith__kicker">KAKO RAZGOVOR POČINJE</div>
         <h2 class="wfaith__h2">Od smijeha <em>do nečega svetog.</em></h2>
@@ -72,7 +72,7 @@ $wdir = get_template_directory_uri() . '/img/faith/';
 
   <section class="wfaith__s wfaith__s--bg">
     <div class="wfaith__v">
-      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-zajednica.webp' ); ?>" alt="Grupa prijatelja igra razgovornu igru" loading="lazy" decoding="async"></div>
+      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-zajednica.webp' ); ?>" alt="Grupa prijatelja igra razgovornu igru" loading="eager" decoding="async"></div>
       <div class="wfaith__tekst">
         <div class="wfaith__kicker">ZAJEDNICA</div>
         <h2 class="wfaith__h2">Pravi trenuci <em>koje dijeli naša zajednica.</em></h2>
@@ -85,7 +85,7 @@ $wdir = get_template_directory_uri() . '/img/faith/';
 
   <section class="wfaith__s">
     <div class="wfaith__v wfaith__v--rev">
-      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-mnenja.webp' ); ?>" alt="Poruka kupca nakon što je stigla igra" loading="lazy" decoding="async"></div>
+      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-mnenja.webp' ); ?>" alt="Poruka kupca nakon što je stigla igra" loading="eager" decoding="async"></div>
       <div class="wfaith__tekst">
         <div class="wfaith__kicker">MIŠLJENJA KUPACA</div>
         <h2 class="wfaith__h2">Mogli bismo vam reći. <em>Oni to kažu bolje.</em></h2>
@@ -99,7 +99,7 @@ $wdir = get_template_directory_uri() . '/img/faith/';
 
   <section class="wfaith__s wfaith__s--bg">
     <div class="wfaith__v">
-      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-razgovor.webp' ); ?>" alt="Igra stigla na vrata – spremna za večer uz karte" loading="lazy" decoding="async"></div>
+      <div class="wfaith__media"><img src="<?php echo esc_url( $wdir . 'noriks-faith-razgovor.webp' ); ?>" alt="Igra stigla na vrata – spremna za večer uz karte" loading="eager" decoding="async"></div>
       <div class="wfaith__tekst">
         <div class="wfaith__kicker">ZAPOČNITE RAZGOVOR</div>
         <h2 class="wfaith__h2">Dođite znatiželjni. <em>Odlazite drukčiji.</em></h2>

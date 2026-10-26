@@ -10,7 +10,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s wtravel__s--bg">
     <div class="wtravel__v">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-07.jpg' ); ?>" alt="XL NORIKS Travel posteljica preko cijelog stražnjeg sjedala velikog vozila" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-07.jpg' ); ?>" alt="XL NORIKS Travel posteljica preko cijelog stražnjeg sjedala velikog vozila" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Vodič veličina</div>
         <h2 class="wtravel__h2">Hoće li stati u <em>moje vozilo?</em></h2>
@@ -35,7 +35,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s">
     <div class="wtravel__v wtravel__v--rev">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-09.jpg' ); ?>" alt="Pas udobno leži na crnoj NORIKS Travel posteljici na stražnjem sjedalu" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-09.jpg' ); ?>" alt="Pas udobno leži na crnoj NORIKS Travel posteljici na stražnjem sjedalu" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Po čemu smo drugačiji</div>
         <h2 class="wtravel__h2">Pravi ležaj <em>na stražnjem sjedalu</em></h2>
@@ -55,7 +55,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s wtravel__s--bg">
     <div class="wtravel__v">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-06.jpg' ); ?>" alt="Velik pas ispružen na sivoj NORIKS Travel posteljici u automobilu" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-06.jpg' ); ?>" alt="Velik pas ispružen na sivoj NORIKS Travel posteljici u automobilu" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Prostor za protezanje</div>
         <h2 class="wtravel__h2">Dovoljno mjesta <em>i za velike pse</em></h2>
@@ -68,7 +68,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s">
     <div class="wtravel__v wtravel__v--rev">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-10.jpg' ); ?>" alt="Vodootporna gornja strana NORIKS Travel posteljice na stražnjem sjedalu" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-10.jpg' ); ?>" alt="Vodootporna gornja strana NORIKS Travel posteljice na stražnjem sjedalu" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Napravljeno za nered</div>
         <h2 class="wtravel__h2">Napravljeno za nered. <em>Napravljeno da traje.</em></h2>
@@ -87,7 +87,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s wtravel__s--bg">
     <div class="wtravel__v">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-11.jpg' ); ?>" alt="NORIKS Travel posteljica se polaže na stražnje sjedalo" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-11.jpg' ); ?>" alt="NORIKS Travel posteljica se polaže na stražnje sjedalo" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Neklizajuća podloga</div>
         <h2 class="wtravel__h2">Ostaje na mjestu <em>i u zavojima</em></h2>
@@ -100,7 +100,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s">
     <div class="wtravel__v wtravel__v--rev">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-03.jpg' ); ?>" alt="Zadovoljan pas na NORIKS Travel posteljici na stražnjem sjedalu" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-03.jpg' ); ?>" alt="Zadovoljan pas na NORIKS Travel posteljici na stražnjem sjedalu" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Iskustva kupaca</div>
         <h2 class="wtravel__h2">Vole je <em>tisuće vlasnika pasa</em></h2>
@@ -117,7 +117,7 @@ $wdir = get_template_directory_uri() . '/img/travel/';
 
   <section class="wtravel__s wtravel__s--bg">
     <div class="wtravel__v">
-      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-02.jpg' ); ?>" alt="Postavljanje sive NORIKS Travel posteljice na stražnje sjedalo" loading="lazy" decoding="async"></div>
+      <div class="wtravel__media"><img src="<?php echo esc_url( $wdir . 'travel-02.jpg' ); ?>" alt="Postavljanje sive NORIKS Travel posteljice na stražnje sjedalo" loading="eager" decoding="async"></div>
       <div class="wtravel__tekst">
         <div class="wtravel__kicker">Postavljanje</div>
         <h2 class="wtravel__h2">Spremno za vožnju <em>za manje od minute</em></h2>

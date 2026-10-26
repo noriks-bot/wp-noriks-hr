@@ -30,7 +30,7 @@ $nbt      = get_template_directory_uri() . '/img/bratank/';
 $nbt_path = get_template_directory() . '/img/bratank/';
 $nbt_img  = function( $file, $alt ) use ( $nbt, $nbt_path ) {
   if ( ! file_exists( $nbt_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nbt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nbt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 
 /* Mnenja 1:1 z originala (besedilo prevedeno, imena hrvaska, leta kot na originalu); jamstvo -> NORIKS pogoji (30 dana za povrat). */

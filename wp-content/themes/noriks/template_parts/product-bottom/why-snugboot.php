@@ -24,7 +24,7 @@ $nskb      = get_template_directory_uri() . '/img/snugboot/';
 $nskb_path = get_template_directory() . '/img/snugboot/';
 $nskb_img  = function( $file, $alt ) use ( $nskb, $nskb_path ) {
   if ( ! $file || ! file_exists( $nskb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nskb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nskb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nskb_stars = function( $n ) {
   return '<span class="nskb-stars" aria-label="' . (int) $n . ' od 5 zvjezdica">' . str_repeat( '★', (int) $n ) . '<span class="nskb-stars__off">' . str_repeat( '★', 5 - (int) $n ) . '</span></span>';

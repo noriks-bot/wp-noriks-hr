@@ -28,7 +28,7 @@ $nvs      = get_template_directory_uri() . '/img/vacuumsealer/';
 $nvs_path = get_template_directory() . '/img/vacuumsealer/';
 $nvs_img  = function( $file, $alt, $cls = '' ) use ( $nvs, $nvs_path ) {
   if ( ! $file || ! file_exists( $nvs_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nvs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nvs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nvs_video = function( $file, $label, $cls = '' ) use ( $nvs, $nvs_path ) {
   if ( ! file_exists( $nvs_path . $file ) ) { return ''; }

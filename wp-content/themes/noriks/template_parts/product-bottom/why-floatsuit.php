@@ -24,7 +24,7 @@ $nfs_img  = function( $file, $alt ) use ( $nfs, $nfs_path ) {
   if ( ! file_exists( $nfs_path . $file ) ) { return ''; }
   $size = @getimagesize( $nfs_path . $file );
   $wh   = $size ? ' width="' . (int) $size[0] . '" height="' . (int) $size[1] . '"' : '';
-  return '<img src="' . esc_url( $nfs . $file ) . '" alt="' . esc_attr( $alt ) . '"' . $wh . ' loading="lazy">';
+  return '<img src="' . esc_url( $nfs . $file ) . '" alt="' . esc_attr( $alt ) . '"' . $wh . ' loading="eager">';
 };
 $nfs_video = function( $file, $label ) use ( $nfs ) {
   return '<video src="' . esc_url( $nfs . $file ) . '" autoplay loop muted playsinline preload="metadata" aria-label="' . esc_attr( $label ) . '"></video>';

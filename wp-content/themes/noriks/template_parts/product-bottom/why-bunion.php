@@ -120,7 +120,7 @@ $bun_steps = array(
       </ul>
     </div>
     <div class="bun-col bun-media">
-      <img loading="lazy" decoding="async" src="<?php echo esc_url( $bun_img_features ); ?>" alt="Zašto je NORIKS korektor čukljeva drukčiji" />
+      <img loading="eager" decoding="async" src="<?php echo esc_url( $bun_img_features ); ?>" alt="Zašto je NORIKS korektor čukljeva drukčiji" />
     </div>
   </div>
 </section>

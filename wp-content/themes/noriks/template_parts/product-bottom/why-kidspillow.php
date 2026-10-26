@@ -29,7 +29,7 @@ $nkpl      = get_template_directory_uri() . '/img/kidspillow/';
 $nkpl_path = get_template_directory() . '/img/kidspillow/';
 $nkpl_img  = function( $file, $alt, $cls = '' ) use ( $nkpl, $nkpl_path ) {
   if ( ! $file || ! file_exists( $nkpl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nkpl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nkpl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nkpl_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

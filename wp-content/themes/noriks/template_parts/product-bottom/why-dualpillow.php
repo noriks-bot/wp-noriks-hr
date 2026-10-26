@@ -24,7 +24,7 @@ $ndp      = get_template_directory_uri() . '/img/dualpillow/';
 $ndp_path = get_template_directory() . '/img/dualpillow/';
 $ndp_img  = function( $file, $alt, $cls = '' ) use ( $ndp, $ndp_path ) {
   if ( ! $file || ! file_exists( $ndp_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ndp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $ndp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $ndp_video = function( $file, $label, $cls = '' ) use ( $ndp, $ndp_path ) {
   if ( ! file_exists( $ndp_path . $file ) ) { return ''; }

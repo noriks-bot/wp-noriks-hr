@@ -27,7 +27,7 @@ $nlc      = get_template_directory_uri() . '/img/airtravel/';
 $nlc_path = get_template_directory() . '/img/airtravel/';
 $nlc_img  = function( $file, $alt, $cls = '' ) use ( $nlc, $nlc_path ) {
   if ( ! $file || ! file_exists( $nlc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nlc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nlc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nlc_video = function( $file, $label ) use ( $nlc, $nlc_path ) {
   if ( ! file_exists( $nlc_path . $file ) ) { return ''; }

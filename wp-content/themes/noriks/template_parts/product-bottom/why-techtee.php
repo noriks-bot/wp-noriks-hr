@@ -20,7 +20,7 @@ $ntt      = get_template_directory_uri() . '/img/techtee/';
 $ntt_path = get_template_directory() . '/img/techtee/';
 $ntt_img  = function( $file, $alt ) use ( $ntt, $ntt_path ) {
   if ( ! $file || ! file_exists( $ntt_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ntt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ntt_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

@@ -18,7 +18,7 @@ $nb_path = get_template_directory() . '/img/bra/';
 $nb_has = function( $file ) use ( $nb_path ) { return file_exists( $nb_path . $file ); };
 $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   if ( file_exists( $nb_path . $file ) ) {
-    return '<img src="'.esc_url($nb.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($nb.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="nbr-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

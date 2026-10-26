@@ -21,7 +21,7 @@ $nkt      = get_template_directory_uri() . '/img/kneetape/';
 $nkt_path = get_template_directory() . '/img/kneetape/';
 $nkt_img  = function( $file, $alt ) use ( $nkt, $nkt_path ) {
   if ( ! file_exists( $nkt_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nkt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nkt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

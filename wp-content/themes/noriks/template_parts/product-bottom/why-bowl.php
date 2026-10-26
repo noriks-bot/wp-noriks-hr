@@ -14,7 +14,7 @@ $bw      = get_template_directory_uri() . '/img/bowl/';
 $bw_path = get_template_directory() . '/img/bowl/';
 $bw_img  = function( $file, $alt ) use ( $bw, $bw_path ) {
   if ( ! file_exists( $bw_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $bw . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $bw . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

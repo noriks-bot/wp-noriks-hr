@@ -26,7 +26,7 @@ $nhar      = get_template_directory_uri() . '/img/harness/';
 $nhar_path = get_template_directory() . '/img/harness/';
 $nhar_img  = function( $file, $alt ) use ( $nhar, $nhar_path ) {
   if ( ! $file || ! file_exists( $nhar_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nhar . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nhar . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nhar_vid  = function( $file ) use ( $nhar, $nhar_path ) {
   if ( ! $file || ! file_exists( $nhar_path . $file . '.mp4' ) ) { return ''; }

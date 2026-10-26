@@ -20,7 +20,7 @@ $nwc      = get_template_directory_uri() . '/img/winecooler/';
 $nwc_path = get_template_directory() . '/img/winecooler/';
 $nwc_img  = function( $file, $alt ) use ( $nwc, $nwc_path ) {
   if ( ! file_exists( $nwc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nwc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nwc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nwc_video = function( $n, $label ) use ( $nwc, $nwc_path ) {
   $file = 'wc-video-' . $n . '.mp4'; $poster = 'wc-video-' . $n . '-poster.webp';

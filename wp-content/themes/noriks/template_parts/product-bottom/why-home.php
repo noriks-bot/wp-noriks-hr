@@ -18,7 +18,7 @@ $hm_path = get_template_directory() . '/img/home/';
 
 $hm_img = function( $file, $alt, $cls = '' ) use ( $hm, $hm_path ) {
   if ( file_exists( $hm_path . $file ) ) {
-    return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $hm . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+    return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $hm . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
   }
   return '<div class="nhm-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
 };

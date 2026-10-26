@@ -12,7 +12,7 @@ $ngv      = get_template_directory_uri() . '/img/glasspro/';
 $ngv_path = get_template_directory() . '/img/glasspro/';
 $ngv_img  = function( $file, $alt ) use ( $ngv, $ngv_path ) {
   if ( ! $file || ! file_exists( $ngv_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ngv . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';
+  return '<img src="' . esc_url( $ngv . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager" decoding="async">';
 };
 
 $ngv_usporedba = array(

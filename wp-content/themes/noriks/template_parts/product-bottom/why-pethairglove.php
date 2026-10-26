@@ -31,7 +31,7 @@ $nphg      = get_template_directory_uri() . '/img/pethairglove/';
 $nphg_path = get_template_directory() . '/img/pethairglove/';
 $nphg_img  = function( $file, $alt, $cls = '' ) use ( $nphg, $nphg_path ) {
   if ( ! $file || ! file_exists( $nphg_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nphg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nphg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nphg_video = function( $file, $label ) use ( $nphg, $nphg_path ) {
   if ( ! file_exists( $nphg_path . $file ) ) { return ''; }

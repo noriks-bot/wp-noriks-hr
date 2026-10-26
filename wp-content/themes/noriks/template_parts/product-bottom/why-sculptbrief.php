@@ -21,7 +21,7 @@ $nsb      = get_template_directory_uri() . '/img/sculptbrief/';
 $nsb_path = get_template_directory() . '/img/sculptbrief/';
 $nsb_img  = function( $file, $alt, $cls = '' ) use ( $nsb, $nsb_path ) {
   if ( ! $file || ! file_exists( $nsb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nsb . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $nsb . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager">';
 };
 $nsb_video = function( $name, $label, $cls = '' ) use ( $nsb, $nsb_path ) {
   $file = $name . '.mp4'; $poster = $name . '-poster.webp';

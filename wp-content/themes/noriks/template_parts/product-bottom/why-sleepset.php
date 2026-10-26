@@ -24,7 +24,7 @@ $nsst      = get_template_directory_uri() . '/img/sleepset/';
 $nsst_path = get_template_directory() . '/img/sleepset/';
 $nsst_img  = function( $file, $alt, $cls = '' ) use ( $nsst, $nsst_path ) {
   if ( ! $file || ! file_exists( $nsst_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nsst . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nsst . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 
 /* 3) detalji (zavihek Details) */

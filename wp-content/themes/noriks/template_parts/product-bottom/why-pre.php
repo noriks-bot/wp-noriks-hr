@@ -13,7 +13,7 @@ $pr_path = get_template_directory() . '/img/pre/';
 
 $pr_img = function( $file, $alt ) use ( $pr, $pr_path ) {
   if ( file_exists( $pr_path . $file ) ) {
-    return '<img src="' . esc_url( $pr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+    return '<img src="' . esc_url( $pr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
   }
   return '<div class="npr-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
 };

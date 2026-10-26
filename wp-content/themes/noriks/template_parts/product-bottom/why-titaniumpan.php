@@ -26,7 +26,7 @@ $ntp      = get_template_directory_uri() . '/img/titaniumpan/';
 $ntp_path = get_template_directory() . '/img/titaniumpan/';
 $ntp_img  = function( $file, $alt ) use ( $ntp, $ntp_path ) {
   if ( ! $file || ! file_exists( $ntp_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ntp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ntp_vid  = function( $file ) use ( $ntp, $ntp_path ) {
   if ( ! $file || ! file_exists( $ntp_path . $file . '.mp4' ) ) { return ''; }

@@ -38,7 +38,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
       <p>Izrađen od <strong>ionske kompresijske tkanine</strong>, pruža pripijen, potporni kroj koji izglađuje siluetu i nudi cjelodnevnu udobnost — oštriji izgled, bolja svjesnost o držanju i samopouzdanje koje dolazi kad se osjećate dobro u onome što nosite.</p>
       <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
     </div>
-    <div class="kmf-media kmf-hero-media"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT kompresijska majica ispod košulje" loading="lazy"></div>
+    <div class="kmf-media kmf-hero-media"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT kompresijska majica ispod košulje" loading="eager"></div>
   </div>
 </section>
 
@@ -52,7 +52,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
         <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Pivski trbuh? Nestao.</p></div>
         <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Slaninice? Zaključane.</p></div>
       </div>
-      <div class="kmf-weapon-media"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT oblikuje trbuh i siluetu" loading="lazy"></div>
+      <div class="kmf-weapon-media"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT oblikuje trbuh i siluetu" loading="eager"></div>
       <div class="kmf-feat-col">
         <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Prsa? Zaglađena.</p></div>
         <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Nevidljivo. Nezaustavljivo.</p></div>
@@ -76,7 +76,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
       </ul>
       <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
     </div>
-    <div class="kmf-media"><img src="<?php echo esc_url( $km.'ks-hr-04.webp' ); ?>" alt="Prije i poslije NORIKS FIT" loading="lazy"></div>
+    <div class="kmf-media"><img src="<?php echo esc_url( $km.'ks-hr-04.webp' ); ?>" alt="Prije i poslije NORIKS FIT" loading="eager"></div>
   </div>
 </section>
 
@@ -97,7 +97,7 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
     <h2 class="kmf-h2 kmf-center">Zašto NORIKS FIT?</h2>
     <p class="kmf-sub">Usporedite NORIKS FIT s običnim kompresijskim majicama i vidite razliku koja se osjeti čim ga obučete.</p>
     <div class="kmf-cmp-row">
-      <div class="kmf-cmp-media"><img src="<?php echo esc_url( $km.'compare.webp' ); ?>" alt="NORIKS FIT u odnosu na obične majice" loading="lazy"></div>
+      <div class="kmf-cmp-media"><img src="<?php echo esc_url( $km.'compare.webp' ); ?>" alt="NORIKS FIT u odnosu na obične majice" loading="eager"></div>
       <div class="kmf-table">
         <div class="kmf-t-head">
           <span class="kmf-t-feature"></span>
@@ -134,17 +134,17 @@ $kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
     </div>
     <div class="kmf-rev-cards">
       <div class="kmf-rev-card">
-        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="lazy"></div>
+        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="eager"></div>
         <p class="kmf-rev-txt">„Bit ću iskren — bio sam skeptičan. Uvijek sam imao onaj trbuščić koji sam skrivao pod širokim majicama. Nakon 4 tjedna nošenja NORIKS-a 4 sata dnevno, skinuo sam nekoliko centimetara u struku i počeo stajati uspravno bez razmišljanja. Ramena su se otvorila, a djevojka je rekla da izgledam kao da 'blistam'.“</p>
         <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Ivan M. — 34 g.</span></div>
       </div>
       <div class="kmf-rev-card">
-        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'persona.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="lazy"></div>
+        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'persona.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="eager"></div>
         <p class="kmf-rev-txt">„Cijeli dan sjedim za stolom. Pogrbljen, napuhnut, bez samopouzdanja. NORIKS me doslovno natjerao da sjedim uspravno bez ikakvog truda. Za 10 dana napetost u leđima je nestala, a košulje su počele bolje pristajati. Sad ga nosim u ured — diskretan je, prozračan, i iskreno? Prestao sam se skrivati od kamera.“</p>
         <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Marko P. — 42 g.</span></div>
       </div>
       <div class="kmf-rev-card">
-        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="lazy"></div>
+        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="eager"></div>
         <p class="kmf-rev-txt">„Tri godine sam odbijao izlaske jer sam mrzio ono što vidim u ogledalu dok se oblačim. NORIKS je prvi put da sam prestao ratovati s vlastitim odrazom. Jutros sam se obukao za 5 minuta. Bez namještanja. Bez izbjegavanja ogledala. To je to.“</p>
         <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Tomislav K. — 27 g.</span></div>
       </div>

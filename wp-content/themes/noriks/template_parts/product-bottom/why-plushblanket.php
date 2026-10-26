@@ -25,7 +25,7 @@ $npbl      = get_template_directory_uri() . '/img/plushblanket/';
 $npbl_path = get_template_directory() . '/img/plushblanket/';
 $npbl_img  = function( $file, $alt, $cls = '' ) use ( $npbl, $npbl_path ) {
   if ( ! $file || ! file_exists( $npbl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $npbl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $npbl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $npbl_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

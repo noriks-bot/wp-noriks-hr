@@ -22,17 +22,17 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
       <div class="wgordura__kicker">KARAKTERISTIKE PROIZVODA</div>
       <h2 class="wgordura__h2">Četiri stvari koje <em>osjetite svaki dan</em></h2>
       <div class="wgordura__lg">
-        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-bez-kuglica.svg' ); ?>" alt="Ne stvara kuglice" loading="lazy" decoding="async"></span><strong>Ne stvara kuglice</strong><span>Tkanina ostaje glatka i nakon nošenja i pranja.</span></div>
-        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-mekan.svg' ); ?>" alt="Mekan na dodir" loading="lazy" decoding="async"></span><strong>Mekan na dodir</strong><span>Ugodan uz kožu cijeli dan.</span></div>
-        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-prozracan.svg' ); ?>" alt="Prozračan" loading="lazy" decoding="async"></span><strong>Prozračan</strong><span>Tkanina propušta zrak.</span></div>
-        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-brzo-susenje.svg' ); ?>" alt="Brzo se suši" loading="lazy" decoding="async"></span><strong>Brzo se suši</strong><span>Nakon pranja brzo je spreman za nošenje.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-bez-kuglica.svg' ); ?>" alt="Ne stvara kuglice" loading="eager" decoding="async"></span><strong>Ne stvara kuglice</strong><span>Tkanina ostaje glatka i nakon nošenja i pranja.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-mekan.svg' ); ?>" alt="Mekan na dodir" loading="eager" decoding="async"></span><strong>Mekan na dodir</strong><span>Ugodan uz kožu cijeli dan.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-prozracan.svg' ); ?>" alt="Prozračan" loading="eager" decoding="async"></span><strong>Prozračan</strong><span>Tkanina propušta zrak.</span></div>
+        <div class="wgordura__lk"><span class="wgordura__lki"><img src="<?php echo esc_url( $wdir . 'noriks-shapebody-ikona-brzo-susenje.svg' ); ?>" alt="Brzo se suši" loading="eager" decoding="async"></span><strong>Brzo se suši</strong><span>Nakon pranja brzo je spreman za nošenje.</span></div>
       </div>
     </div>
   </section>
 
   <section class="wgordura__s">
     <div class="wgordura__v">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-01.webp' ); ?>" alt="Body koji nosite uz svoj grudnjak" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-01.webp' ); ?>" alt="Body koji nosite uz svoj grudnjak" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">OTVORENI GORNJI DIO</div>
         <h2 class="wgordura__h2">Body koji nosite <em>uz svoj grudnjak</em></h2>
@@ -46,7 +46,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-02.webp' ); ?>" alt="Kroj koji prati tijelo s obje strane" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-02.webp' ); ?>" alt="Kroj koji prati tijelo s obje strane" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">SPRIJEDA I STRAGA</div>
         <h2 class="wgordura__h2">Kroj koji prati tijelo <em>s obje strane</em></h2>
@@ -60,7 +60,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s">
     <div class="wgordura__v">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-03.webp' ); ?>" alt="Kukice po cijeloj dužini prednje trake" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-03.webp' ); ?>" alt="Kukice po cijeloj dužini prednje trake" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">KOPČANJE SPRIJEDA</div>
         <h2 class="wgordura__h2">Kukice <em>po cijeloj dužini</em> prednje trake</h2>
@@ -74,7 +74,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-04.webp' ); ?>" alt="Četiri koraka do ravno namještenog bodyja" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-04.webp' ); ?>" alt="Četiri koraka do ravno namještenog bodyja" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">KAKO SE OBLAČI</div>
         <h2 class="wgordura__h2">Četiri koraka do <em>ravno namještenog</em> bodyja</h2>
@@ -88,7 +88,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s">
     <div class="wgordura__v">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-05.webp' ); ?>" alt="Okomiti šavovi koji drže oblik u struku" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-05.webp' ); ?>" alt="Okomiti šavovi koji drže oblik u struku" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">STRUK</div>
         <h2 class="wgordura__h2">Okomiti šavovi koji <em>drže oblik</em> u struku</h2>
@@ -102,7 +102,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-06.webp' ); ?>" alt="Široke naramenice koje ne upadaju u ramena" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-06.webp' ); ?>" alt="Široke naramenice koje ne upadaju u ramena" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">NARAMENICE</div>
         <h2 class="wgordura__h2">Široke naramenice koje <em>ne upadaju u ramena</em></h2>
@@ -116,7 +116,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s">
     <div class="wgordura__v">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-07.webp' ); ?>" alt="Kratke nogavice s čipkastim rubom" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-07.webp' ); ?>" alt="Kratke nogavice s čipkastim rubom" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">NOGAVICE S ČIPKOM</div>
         <h2 class="wgordura__h2">Kratke nogavice s <em>čipkastim rubom</em></h2>
@@ -130,7 +130,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-09.webp' ); ?>" alt="Bež, smeđa ili crna — prema odjeći" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-09.webp' ); ?>" alt="Bež, smeđa ili crna — prema odjeći" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">TRI BOJE</div>
         <h2 class="wgordura__h2">Bež, smeđa ili <em>crna</em> — prema odjeći</h2>
@@ -144,7 +144,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s">
     <div class="wgordura__v">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-11.webp' ); ?>" alt="Prvi sloj ispod haljine, suknje ili hlača" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-11.webp' ); ?>" alt="Prvi sloj ispod haljine, suknje ili hlača" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">ISPOD ODJEĆE</div>
         <h2 class="wgordura__h2">Prvi sloj ispod <em>haljine, suknje ili hlača</em></h2>
@@ -158,7 +158,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 
   <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
-      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od S do 3XL" loading="lazy" decoding="async"></div>
+      <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od S do 3XL" loading="eager" decoding="async"></div>
       <div class="wgordura__tekst">
         <div class="wgordura__kicker">VELIČINE</div>
         <h2 class="wgordura__h2">Šest veličina, <em>od S do 3XL</em></h2>

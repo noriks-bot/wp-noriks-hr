@@ -19,7 +19,7 @@ $nrl      = get_template_directory_uri() . '/img/relief/';
 $nrl_path = get_template_directory() . '/img/relief/';
 $nrl_img  = function( $file, $alt ) use ( $nrl, $nrl_path ) {
   if ( ! file_exists( $nrl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nrl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nrl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

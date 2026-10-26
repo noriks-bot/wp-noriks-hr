@@ -15,7 +15,7 @@ $sr_path = get_template_directory() . '/img/sr/';
 
 $sr_img = function( $file, $alt ) use ( $sr, $sr_path ) {
   if ( file_exists( $sr_path . $file ) ) {
-    return '<img src="' . esc_url( $sr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+    return '<img src="' . esc_url( $sr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
   }
   return '<div class="nsr-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
 };

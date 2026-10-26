@@ -24,7 +24,7 @@ $nmb      = get_template_directory_uri() . '/img/minimizerbra/';
 $nmb_path = get_template_directory() . '/img/minimizerbra/';
 $nmb_img  = function( $file, $alt, $cls = '' ) use ( $nmb, $nmb_path ) {
   if ( ! $file || ! file_exists( $nmb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nmb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nmb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nmb_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

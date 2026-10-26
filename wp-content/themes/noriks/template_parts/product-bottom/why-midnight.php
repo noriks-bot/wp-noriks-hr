@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s wmidnight__s--bg">
     <div class="wmidnight__v">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-03.webp' ); ?>" alt="Konoplja i bambus — bez poliestera" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-03.webp' ); ?>" alt="Konoplja i bambus — bez poliestera" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">MATERIJAL</div>
         <h2 class="wmidnight__h2">Konoplja i bambus — <em>bez poliestera</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s">
     <div class="wmidnight__v wmidnight__v--rev">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-04.webp' ); ?>" alt="Bez plastike, bez PFAS-a, bez kemikalija" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-04.webp' ); ?>" alt="Bez plastike, bez PFAS-a, bez kemikalija" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">100% PRIRODNO</div>
         <h2 class="wmidnight__h2">Bez plastike, bez PFAS-a, <em>bez kemikalija</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s wmidnight__s--bg">
     <div class="wmidnight__v">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-05.webp' ); ?>" alt="Uska na rukama, opuštena oko trbuha" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-05.webp' ); ?>" alt="Uska na rukama, opuštena oko trbuha" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">KROJ</div>
         <h2 class="wmidnight__h2">Uska na rukama, <em>opuštena oko trbuha</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s">
     <div class="wmidnight__v wmidnight__v--rev">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-06.webp' ); ?>" alt="Zrak prolazi, vrućina ne ostaje" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-06.webp' ); ?>" alt="Zrak prolazi, vrućina ne ostaje" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">PROZRAČNOST</div>
         <h2 class="wmidnight__h2">Zrak prolazi, <em>vrućina ne ostaje</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s wmidnight__s--bg">
     <div class="wmidnight__v">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-07.webp' ); ?>" alt="Do 4 puta čvršća od pamuka" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-07.webp' ); ?>" alt="Do 4 puta čvršća od pamuka" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">ČVRSTOĆA</div>
         <h2 class="wmidnight__h2">Do <em>4 puta čvršća</em> od pamuka</h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s">
     <div class="wmidnight__v wmidnight__v--rev">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-08.webp' ); ?>" alt="Srednja težina, mekana na koži" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-08.webp' ); ?>" alt="Srednja težina, mekana na koži" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">UDOBNOST</div>
         <h2 class="wmidnight__h2">Srednja težina, <em>mekana na koži</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s wmidnight__s--bg">
     <div class="wmidnight__v">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-09.png' ); ?>" alt="Bez znoja na koži, bez neugodnog mirisa" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-09.png' ); ?>" alt="Bez znoja na koži, bez neugodnog mirisa" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">ZNOJ I MIRIS</div>
         <h2 class="wmidnight__h2">Bez znoja na koži, <em>bez neugodnog mirisa</em></h2>
@@ -107,7 +107,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s">
     <div class="wmidnight__v wmidnight__v--rev">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-14.png' ); ?>" alt="Vlakno koje je nekad odijevalo svijet" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-14.png' ); ?>" alt="Vlakno koje je nekad odijevalo svijet" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">KONOPLJA</div>
         <h2 class="wmidnight__h2">Vlakno koje je nekad <em>odijevalo svijet</em></h2>
@@ -121,7 +121,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s wmidnight__s--bg">
     <div class="wmidnight__v">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-10.png' ); ?>" alt="Dvostruki šavovi, ovratnik bez rastezanja" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-10.png' ); ?>" alt="Dvostruki šavovi, ovratnik bez rastezanja" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">ŠAVOVI</div>
         <h2 class="wmidnight__h2">Dvostruki šavovi, <em>ovratnik bez rastezanja</em></h2>
@@ -135,7 +135,7 @@ $wdir = get_template_directory_uri() . '/img/midnight/';
 
   <section class="wmidnight__s">
     <div class="wmidnight__v wmidnight__v--rev">
-      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-11.png' ); ?>" alt="Zaobljen donji rub, leđa ostaju pokrivena" loading="lazy" decoding="async"></div>
+      <div class="wmidnight__media"><img src="<?php echo esc_url( $wdir . 'midnight-11.png' ); ?>" alt="Zaobljen donji rub, leđa ostaju pokrivena" loading="eager" decoding="async"></div>
       <div class="wmidnight__tekst">
         <div class="wmidnight__kicker">ZAOBLJENI RUB</div>
         <h2 class="wmidnight__h2">Zaobljen donji rub, <em>leđa ostaju pokrivena</em></h2>

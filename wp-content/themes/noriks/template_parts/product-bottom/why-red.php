@@ -16,7 +16,7 @@ $rd_path = get_template_directory() . '/img/red/';
 
 $rd_img = function( $file, $alt, $cls = '' ) use ( $rd, $rd_path ) {
   if ( ! file_exists( $rd_path . $file ) ) { return ''; }
-  return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $rd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $rd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $rd_vid = function( $file, $poster, $alt ) use ( $rd, $rd_path ) {
   if ( ! file_exists( $rd_path . $file ) ) { return ''; }

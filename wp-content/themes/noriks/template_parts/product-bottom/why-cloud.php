@@ -26,11 +26,11 @@ $cd_vid = function( $mp4, $fallback, $alt ) use ( $cd, $cd_path ) {
     return '<video class="ncd-video" src="'.esc_url($cd.$mp4).'" poster="'.esc_url($cd.$poster).'"'
          . ' autoplay muted loop playsinline preload="metadata" aria-label="'.esc_attr($alt).'"></video>';
   }
-  return '<img src="'.esc_url($cd.$fallback).'" alt="'.esc_attr($alt).'" loading="lazy">';
+  return '<img src="'.esc_url($cd.$fallback).'" alt="'.esc_attr($alt).'" loading="eager">';
 };
 $cd_img = function( $file, $alt ) use ( $cd, $cd_path ) {
   if ( file_exists( $cd_path . $file ) ) {
-    return '<img src="'.esc_url($cd.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($cd.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="ncd-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

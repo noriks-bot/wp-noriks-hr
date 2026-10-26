@@ -17,7 +17,7 @@ $cl_path = get_template_directory() . '/img/cloath/';
 
 $cl_img = function( $file, $alt ) use ( $cl, $cl_path ) {
   if ( file_exists( $cl_path . $file ) ) {
-    return '<img src="'.esc_url($cl.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($cl.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="ncl-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

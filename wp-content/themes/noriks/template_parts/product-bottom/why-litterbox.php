@@ -25,7 +25,7 @@ $nlb      = get_template_directory_uri() . '/img/litterbox/';
 $nlb_path = get_template_directory() . '/img/litterbox/';
 $nlb_img  = function( $file, $alt ) use ( $nlb, $nlb_path ) {
   if ( ! $file || ! file_exists( $nlb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nlb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nlb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nlb_video = function( $name, $label ) use ( $nlb, $nlb_path ) {
   $file = $name . '-hr.mp4'; $poster = $name . '-poster.webp';

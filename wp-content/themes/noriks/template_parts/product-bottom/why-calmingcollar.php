@@ -31,7 +31,7 @@ $ncc      = get_template_directory_uri() . '/img/calmingcollar/';
 $ncc_path = get_template_directory() . '/img/calmingcollar/';
 $ncc_img  = function( $file, $alt, $cls = '' ) use ( $ncc, $ncc_path ) {
   if ( ! $file || ! file_exists( $ncc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ncc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $ncc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $ncc_video = function( $file, $label, $cls = '' ) use ( $ncc, $ncc_path ) {
   if ( ! file_exists( $ncc_path . $file ) ) { return ''; }

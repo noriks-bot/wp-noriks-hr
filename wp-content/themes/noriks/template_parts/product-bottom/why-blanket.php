@@ -23,7 +23,7 @@ $nbl      = get_template_directory_uri() . '/img/blanket/';
 $nbl_path = get_template_directory() . '/img/blanket/';
 $nbl_img  = function( $file, $alt, $cls = '' ) use ( $nbl, $nbl_path ) {
   if ( ! file_exists( $nbl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nbl . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $nbl . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager">';
 };
 
 /* 1) Iskustva nase zajednice — 1:1 z originala. */

@@ -19,7 +19,7 @@ $nft      = get_template_directory_uri() . '/img/fleecetights/';
 $nft_path = get_template_directory() . '/img/fleecetights/';
 $nft_img  = function( $file, $alt, $cls = '' ) use ( $nft, $nft_path ) {
   if ( ! $file || ! file_exists( $nft_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nft . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $nft . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager">';
 };
 $nft_video = function( $n, $label ) use ( $nft, $nft_path ) {
   $file = 'ft-video-' . $n . '-hr.mp4'; $poster = 'ft-video-' . $n . '-poster.webp';

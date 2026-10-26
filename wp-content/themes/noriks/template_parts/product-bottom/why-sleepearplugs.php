@@ -24,7 +24,7 @@ $nse      = get_template_directory_uri() . '/img/sleepearplugs/';
 $nse_path = get_template_directory() . '/img/sleepearplugs/';
 $nse_img  = function( $file, $alt ) use ( $nse, $nse_path ) {
   if ( ! $file || ! file_exists( $nse_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nse . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nse . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nse_video = function( $name, $label ) use ( $nse, $nse_path ) {
   $file = $name . '-hr.mp4'; $poster = $name . '-poster.webp';

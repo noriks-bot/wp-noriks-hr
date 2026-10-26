@@ -11,7 +11,7 @@ $wdir = get_template_directory_uri() . '/img/vinocool/';
 
   <section class="wvino__s wvino__s--bg">
     <div class="wvino__v">
-      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-pakiranje.webp?v=1' ); ?>" alt="Štapić za hlađenje vina NORIKS VinoCool u boci, uz kutiju i drugi štapić" loading="lazy" decoding="async"></div>
+      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-pakiranje.webp?v=1' ); ?>" alt="Štapić za hlađenje vina NORIKS VinoCool u boci, uz kutiju i drugi štapić" loading="eager" decoding="async"></div>
       <div class="wvino__tekst">
         <div class="wvino__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wvino__h2">Hladno vino – <em>od prve do zadnje čaše</em></h2>
@@ -60,7 +60,7 @@ $wdir = get_template_directory_uri() . '/img/vinocool/';
 
   <section class="wvino__s">
     <div class="wvino__v wvino__v--rev">
-      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-vino.webp?v=1' ); ?>" alt="Bijelo vino se toči kroz izljev štapića NORIKS VinoCool u čašu" loading="lazy" decoding="async"></div>
+      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-vino.webp?v=1' ); ?>" alt="Bijelo vino se toči kroz izljev štapića NORIKS VinoCool u čašu" loading="eager" decoding="async"></div>
       <div class="wvino__tekst">
         <div class="wvino__kicker">ZA LJUBITELJE VINA</div>
         <h2 class="wvino__h2">Idealna temperatura <em>za 10–15 minuta</em></h2>
@@ -97,7 +97,7 @@ $wdir = get_template_directory_uri() . '/img/vinocool/';
 
   <section class="wvino__s">
     <div class="wvino__v wvino__v--rev">
-      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-plaza.webp?v=1' ); ?>" alt="Vino se toči kroz štapić NORIKS VinoCool na plaži pri zalasku sunca" loading="lazy" decoding="async"></div>
+      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-plaza.webp?v=1' ); ?>" alt="Vino se toči kroz štapić NORIKS VinoCool na plaži pri zalasku sunca" loading="eager" decoding="async"></div>
       <div class="wvino__tekst">
         <div class="wvino__kicker">HIGIJENA I KVALITETA</div>
         <h2 class="wvino__h2">Nehrđajući čelik – <em>godinama pouzdan</em></h2>
@@ -110,7 +110,7 @@ $wdir = get_template_directory_uri() . '/img/vinocool/';
 
   <section class="wvino__s wvino__s--bg">
     <div class="wvino__v">
-      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-izljev.webp?v=1' ); ?>" alt="Štapić za hlađenje vina NORIKS VinoCool i bijelo vino koje se toči u čašu" loading="lazy" decoding="async"></div>
+      <div class="wvino__media"><img src="<?php echo esc_url( $wdir . 'noriks-vinocool-izljev.webp?v=1' ); ?>" alt="Štapić za hlađenje vina NORIKS VinoCool i bijelo vino koje se toči u čašu" loading="eager" decoding="async"></div>
       <div class="wvino__tekst">
         <div class="wvino__kicker">IMATE PITANJA?</div>
         <h2 class="wvino__h2">Česta <em>pitanja</em></h2>

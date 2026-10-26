@@ -20,7 +20,7 @@ $nsb      = get_template_directory_uri() . '/img/silkboxers/';
 $nsb_path = get_template_directory() . '/img/silkboxers/';
 $nsb_img  = function( $file, $alt ) use ( $nsb, $nsb_path ) {
   if ( ! $file || ! file_exists( $nsb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nsb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nsb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nsb_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

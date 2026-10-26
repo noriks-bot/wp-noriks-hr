@@ -30,7 +30,7 @@ $nusc      = get_template_directory_uri() . '/img/ultrasoniccleaner/';
 $nusc_path = get_template_directory() . '/img/ultrasoniccleaner/';
 $nusc_img  = function( $file, $alt, $cls = '' ) use ( $nusc, $nusc_path ) {
   if ( ! $file || ! file_exists( $nusc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nusc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nusc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nusc_video = function( $file, $label ) use ( $nusc, $nusc_path ) {
   if ( ! file_exists( $nusc_path . $file ) ) { return ''; }

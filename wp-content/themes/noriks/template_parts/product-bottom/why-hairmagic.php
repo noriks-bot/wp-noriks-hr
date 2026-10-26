@@ -19,7 +19,7 @@ $hm_path = get_template_directory() . '/img/hairmagic/';
 
 $hm_img = function( $file, $alt ) use ( $hm, $hm_path ) {
   if ( file_exists( $hm_path . $file ) ) {
-    return '<img src="'.esc_url($hm.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($hm.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="hgm-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

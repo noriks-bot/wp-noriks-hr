@@ -26,7 +26,7 @@ $nhk      = get_template_directory_uri() . '/img/hikingshoes/';
 $nhk_path = get_template_directory() . '/img/hikingshoes/';
 $nhk_img  = function( $file, $alt ) use ( $nhk, $nhk_path ) {
   if ( ! $file || ! file_exists( $nhk_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nhk . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nhk . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nhk_vid  = function( $file, $poster ) use ( $nhk, $nhk_path ) {
   if ( ! $file || ! file_exists( $nhk_path . $file ) ) { return ''; }

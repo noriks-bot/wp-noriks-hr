@@ -16,7 +16,7 @@ $cp_path = get_template_directory() . '/img/controlpro/';
 /* Ako slika nije na serveru, prikaže se neutralni sivi placeholder. */
 $cp_img = function( $file, $alt ) use ( $cp, $cp_path ) {
   if ( file_exists( $cp_path . $file ) ) {
-    return '<img src="'.esc_url($cp.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($cp.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="cpr-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

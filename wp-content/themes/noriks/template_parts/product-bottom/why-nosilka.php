@@ -13,7 +13,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $ns = get_template_directory_uri() . '/img/nosilka/';
 $ns_img = function( $file, $alt ) use ( $ns ) {
-  return '<img src="'.esc_url($ns.$file).'" alt="'.esc_attr($alt).'" loading="lazy" onerror="this.style.display=\'none\'">';
+  return '<img src="'.esc_url($ns.$file).'" alt="'.esc_attr($alt).'" loading="eager" onerror="this.style.display=\'none\'">';
 };
 ?>
 
@@ -22,7 +22,7 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
   <div class="nsl-gal">
     <div class="nsl-gal-track">
       <?php for ( $r = 0; $r < 2; $r++ ) : for ( $i = 1; $i <= 9; $i++ ) : ?>
-        <img src="<?php echo esc_url( $ns.'galerija/g'.$i.'.jpg' ); ?>" alt="NORIKS BabyGo — roditelji i bebe" loading="lazy" onerror="this.style.display='none'">
+        <img src="<?php echo esc_url( $ns.'galerija/g'.$i.'.jpg' ); ?>" alt="NORIKS BabyGo — roditelji i bebe" loading="eager" onerror="this.style.display='none'">
       <?php endfor; endfor; ?>
     </div>
   </div>
@@ -73,7 +73,7 @@ $ns_img = function( $file, $alt ) use ( $ns ) {
   <div class="nsl-gal">
     <div class="nsl-gal-track">
       <?php for ( $r = 0; $r < 2; $r++ ) : for ( $i = 10; $i <= 17; $i++ ) : ?>
-        <img src="<?php echo esc_url( $ns.'galerija/g'.$i.'.jpg' ); ?>" alt="NORIKS BabyGo — zadovoljni roditelji" loading="lazy" onerror="this.style.display='none'">
+        <img src="<?php echo esc_url( $ns.'galerija/g'.$i.'.jpg' ); ?>" alt="NORIKS BabyGo — zadovoljni roditelji" loading="eager" onerror="this.style.display='none'">
       <?php endfor; endfor; ?>
     </div>
   </div>

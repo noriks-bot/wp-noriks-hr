@@ -22,7 +22,7 @@ $nmt      = get_template_directory_uri() . '/img/mattresstopper/';
 $nmt_path = get_template_directory() . '/img/mattresstopper/';
 $nmt_img  = function( $file, $alt, $cls = '' ) use ( $nmt, $nmt_path ) {
   if ( ! $file || ! file_exists( $nmt_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nmt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nmt . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nmt_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

@@ -30,7 +30,7 @@ $ntp      = get_template_directory_uri() . '/img/therapillow/';
 $ntp_path = get_template_directory() . '/img/therapillow/';
 $ntp_img  = function( $file, $alt, $cls = '' ) use ( $ntp, $ntp_path ) {
   if ( ! $file || ! file_exists( $ntp_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $ntp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $ntp_video = function( $file, $label, $cls = '' ) use ( $ntp, $ntp_path ) {
   if ( ! file_exists( $ntp_path . $file ) ) { return ''; }

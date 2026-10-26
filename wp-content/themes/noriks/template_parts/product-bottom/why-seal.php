@@ -18,7 +18,7 @@ $sl_path = get_template_directory() . '/img/seal/';
 
 $sl_img = function( $file, $alt, $class = '' ) use ( $sl, $sl_path ) {
   if ( file_exists( $sl_path . $file ) ) {
-    return '<img class="' . esc_attr( $class ) . '" src="' . esc_url( $sl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+    return '<img class="' . esc_attr( $class ) . '" src="' . esc_url( $sl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
   }
   return '<div class="nsl-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
 };
@@ -201,8 +201,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
     <h2 class="nsl-h2 nsl-center">Bez vakuuma vs. vakuumirano</h2>
     <p class="nsl-sub nsl-center">*Prema trodnevnom testu čuvanja u stvarnim uvjetima</p>
     <div class="nsl-ba" id="nslBa">
-      <img class="nsl-ba-under" src="<?php echo esc_url( $sl . 'seal-avokado-vakuum-v2.jpg' ); ?>" alt="Vakuumirani avokado nakon tri dana" loading="lazy">
-      <div class="nsl-ba-over"><img src="<?php echo esc_url( $sl . 'seal-avokado-bez-v2.jpg' ); ?>" alt="Avokado bez vakuuma nakon tri dana" loading="lazy"></div>
+      <img class="nsl-ba-under" src="<?php echo esc_url( $sl . 'seal-avokado-vakuum-v2.jpg' ); ?>" alt="Vakuumirani avokado nakon tri dana" loading="eager">
+      <div class="nsl-ba-over"><img src="<?php echo esc_url( $sl . 'seal-avokado-bez-v2.jpg' ); ?>" alt="Avokado bez vakuuma nakon tri dana" loading="eager"></div>
       <span class="nsl-ba-lab nsl-ba-l">Bez vakuuma</span>
       <span class="nsl-ba-lab nsl-ba-r">Vakuumirano</span>
       <div class="nsl-ba-handle"><i></i></div>

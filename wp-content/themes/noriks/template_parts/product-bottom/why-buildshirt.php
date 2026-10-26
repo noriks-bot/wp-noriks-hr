@@ -17,7 +17,7 @@ $nbs      = get_template_directory_uri() . '/img/buildshirt/';
 $nbs_path = get_template_directory() . '/img/buildshirt/';
 $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
   if ( ! file_exists( $nbs_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nbs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nbs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

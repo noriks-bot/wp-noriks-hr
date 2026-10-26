@@ -20,7 +20,7 @@ $nd      = get_template_directory_uri() . '/img/dental/';
 $nd_path = get_template_directory() . '/img/dental/';
 $nd_img  = function( $file, $alt ) use ( $nd, $nd_path ) {
     if ( ! file_exists( $nd_path . $file ) ) { return ''; }
-    return '<img src="' . esc_url( $nd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';
+    return '<img src="' . esc_url( $nd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager" decoding="async">';
 };
 ?>
 

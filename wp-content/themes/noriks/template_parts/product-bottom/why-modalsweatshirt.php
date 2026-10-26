@@ -17,7 +17,7 @@ $nms      = get_template_directory_uri() . '/img/modalsweatshirt/';
 $nms_path = get_template_directory() . '/img/modalsweatshirt/';
 $nms_img  = function( $file, $alt ) use ( $nms, $nms_path ) {
   if ( ! $file || ! file_exists( $nms_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nms . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nms . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nms_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

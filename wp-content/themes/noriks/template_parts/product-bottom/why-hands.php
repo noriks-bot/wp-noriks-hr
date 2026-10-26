@@ -15,7 +15,7 @@ $nhd      = get_template_directory_uri() . '/img/hands/';
 $nhd_path = get_template_directory() . '/img/hands/';
 $nhd_img  = function( $file, $alt ) use ( $nhd, $nhd_path ) {
   if ( ! file_exists( $nhd_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nhd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nhd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $oj  = get_template_directory_uri() . '/img/ortopedski-jastuk/';
 $ojv = get_template_directory_uri() . '/img/ortopedski-jastuk/videos/';
 $oj_img = function( $file, $alt ) use ( $oj ) {
-  return '<img src="'.esc_url($oj.$file).'" alt="'.esc_attr($alt).'" loading="lazy" onerror="this.style.display=\'none\'">';
+  return '<img src="'.esc_url($oj.$file).'" alt="'.esc_attr($alt).'" loading="eager" onerror="this.style.display=\'none\'">';
 };
 ?>
 
@@ -90,7 +90,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   <div class="oj-wrap">
     <div class="oj-stills">
       <?php for ( $i = 1; $i <= 6; $i++ ) : ?>
-        <img src="<?php echo esc_url( $oj.'galerija/li'.$i.'.webp' ); ?>" alt="NORIKS ErgoSit — zadovoljni kupci" loading="lazy" onerror="this.style.display='none'">
+        <img src="<?php echo esc_url( $oj.'galerija/li'.$i.'.webp' ); ?>" alt="NORIKS ErgoSit — zadovoljni kupci" loading="eager" onerror="this.style.display='none'">
       <?php endfor; ?>
     </div>
   </div>

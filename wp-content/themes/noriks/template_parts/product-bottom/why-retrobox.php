@@ -11,7 +11,7 @@ $wdir = get_template_directory_uri() . '/img/retrobox/';
 
   <section class="wretrobox__s wretrobox__s--bg">
     <div class="wretrobox__v">
-      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-mnenja-kupaca.webp' ); ?>" alt="Komentari kupaca o NORIKS RetroBox konzoli" loading="lazy" decoding="async"></div>
+      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-mnenja-kupaca.webp' ); ?>" alt="Komentari kupaca o NORIKS RetroBox konzoli" loading="eager" decoding="async"></div>
       <div class="wretrobox__tekst">
         <div class="wretrobox__kicker">PRAVI KUPCI</div>
         <h2 class="wretrobox__h2">Pogledajte što kažu <em>pravi igrači</em></h2>
@@ -24,7 +24,7 @@ $wdir = get_template_directory_uri() . '/img/retrobox/';
 
   <section class="wretrobox__s">
     <div class="wretrobox__v wretrobox__v--rev">
-      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-retro-era.webp' ); ?>" alt="NORIKS RetroBox s dva kontrolera ispred starog televizora" loading="lazy" decoding="async"></div>
+      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-retro-era.webp' ); ?>" alt="NORIKS RetroBox s dva kontrolera ispred starog televizora" loading="eager" decoding="async"></div>
       <div class="wretrobox__tekst">
         <div class="wretrobox__kicker">SVE IGRE NA JEDNOM MJESTU</div>
         <h2 class="wretrobox__h2">NORIKS RetroBox – <em>cijela retro era u jednom uređaju</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/retrobox/';
 
   <section class="wretrobox__s wretrobox__s--bg">
     <div class="wretrobox__v">
-      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-kupac.webp' ); ?>" alt="Zadovoljan kupac NORIKS RetroBox konzole" loading="lazy" decoding="async"></div>
+      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-kupac.webp' ); ?>" alt="Zadovoljan kupac NORIKS RetroBox konzole" loading="eager" decoding="async"></div>
       <div class="wretrobox__tekst">
         <div class="wretrobox__kicker">★★★★★ OCJENA 4,8</div>
         <h2 class="wretrobox__h2">Zašto kupci <em>vole NORIKS RetroBox</em></h2>
@@ -50,7 +50,7 @@ $wdir = get_template_directory_uri() . '/img/retrobox/';
 
   <section class="wretrobox__s">
     <div class="wretrobox__v wretrobox__v--rev">
-      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-postavljanje.webp' ); ?>" alt="Spajanje NORIKS RetroBox konzole na televizor" loading="lazy" decoding="async"></div>
+      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-postavljanje.webp' ); ?>" alt="Spajanje NORIKS RetroBox konzole na televizor" loading="eager" decoding="async"></div>
       <div class="wretrobox__tekst">
         <div class="wretrobox__kicker">PRIKLJUČI I IGRAJ</div>
         <h2 class="wretrobox__h2">Postavljanje <em>bez ikakve muke</em></h2>
@@ -88,7 +88,7 @@ $wdir = get_template_directory_uri() . '/img/retrobox/';
 
   <section class="wretrobox__s">
     <div class="wretrobox__v wretrobox__v--rev">
-      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-obitelj.webp' ); ?>" alt="Par igra na NORIKS RetroBox konzoli u dnevnom boravku" loading="lazy" decoding="async"></div>
+      <div class="wretrobox__media"><img src="<?php echo esc_url( $wdir . 'noriks-retrobox-obitelj.webp' ); ?>" alt="Par igra na NORIKS RetroBox konzoli u dnevnom boravku" loading="eager" decoding="async"></div>
       <div class="wretrobox__tekst">
         <div class="wretrobox__kicker">ZA CIJELU OBITELJ</div>
         <h2 class="wretrobox__h2">Igre koje će voljeti <em>cijela obitelj</em></h2>

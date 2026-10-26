@@ -20,7 +20,7 @@ $kh_vid = function( $file, $poster, $alt ) use ( $kh, $kh_path ) {
 
 $kh_img = function( $file, $alt ) use ( $kh, $kh_path ) {
   if ( file_exists( $kh_path . $file ) ) {
-    return '<img src="' . esc_url( $kh . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+    return '<img src="' . esc_url( $kh . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
   }
   return '<div class="nkh-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
 };

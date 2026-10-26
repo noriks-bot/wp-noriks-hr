@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s wondersteun__s--bg">
     <div class="wondersteun__v">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-02.png' ); ?>" alt="Grudnjak koji podupire grudi i leđa" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-02.png' ); ?>" alt="Grudnjak koji podupire grudi i leđa" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">ČETIRI U JEDNOM</div>
         <h2 class="wondersteun__h2">Grudnjak koji podupire <em>grudi i leđa</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s">
     <div class="wondersteun__v wondersteun__v--rev">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-03.png' ); ?>" alt="Zaboravit ćete da ga uopće nosite" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-03.png' ); ?>" alt="Zaboravit ćete da ga uopće nosite" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">BEZ ŽICE</div>
         <h2 class="wondersteun__h2">Zaboravit ćete da ga <em>uopće nosite</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s wondersteun__s--bg">
     <div class="wondersteun__v">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-04.png' ); ?>" alt="Ramena ostaju na svom mjestu" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-04.png' ); ?>" alt="Ramena ostaju na svom mjestu" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">CIJELI DAN</div>
         <h2 class="wondersteun__h2">Ramena ostaju <em>na svom mjestu</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s">
     <div class="wondersteun__v wondersteun__v--rev">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-06.png' ); ?>" alt="Ramena se mogu opustiti" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-06.png' ); ?>" alt="Ramena se mogu opustiti" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">ŠIROKE NARAMENICE</div>
         <h2 class="wondersteun__h2">Ramena se mogu <em>opustiti</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s wondersteun__s--bg">
     <div class="wondersteun__v">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-07.png' ); ?>" alt="Dodatna potpora za leđa" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-07.png' ); ?>" alt="Dodatna potpora za leđa" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">LEĐNI PANEL</div>
         <h2 class="wondersteun__h2">Dodatna potpora <em>za leđa</em></h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s">
     <div class="wondersteun__v wondersteun__v--rev">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-08.png' ); ?>" alt="Bez crvenih tragova" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-08.png' ); ?>" alt="Bez crvenih tragova" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">MEKANE STRANICE</div>
         <h2 class="wondersteun__h2">Bez <em>crvenih tragova</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s wondersteun__s--bg">
     <div class="wondersteun__v">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-15.png' ); ?>" alt="Elastične trake na leđima" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'ondersteun-15.png' ); ?>" alt="Elastične trake na leđima" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">ZAŠTO ŽENE BIRAJU</div>
         <h2 class="wondersteun__h2">Elastične trake <em>na leđima</em></h2>
@@ -107,7 +107,7 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
 
   <section class="wondersteun__s">
     <div class="wondersteun__v wondersteun__v--rev">
-      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'noriks-ondersteun-worn-leopard.webp' ); ?>" alt="Obucite, zakopčajte sprijeda i gotovo" loading="lazy" decoding="async"></div>
+      <div class="wondersteun__media"><img src="<?php echo esc_url( $wdir . 'noriks-ondersteun-worn-leopard.webp' ); ?>" alt="Obucite, zakopčajte sprijeda i gotovo" loading="eager" decoding="async"></div>
       <div class="wondersteun__tekst">
         <div class="wondersteun__kicker">NOŠENJE I NJEGA</div>
         <h2 class="wondersteun__h2">Obucite, zakopčajte <em>sprijeda</em> i gotovo</h2>

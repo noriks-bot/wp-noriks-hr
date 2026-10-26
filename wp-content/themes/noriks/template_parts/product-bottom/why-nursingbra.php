@@ -27,7 +27,7 @@ $nnb      = get_template_directory_uri() . '/img/nursingbra/';
 $nnb_path = get_template_directory() . '/img/nursingbra/';
 $nnb_img  = function( $file, $alt, $cls = '' ) use ( $nnb, $nnb_path ) {
   if ( ! $file || ! file_exists( $nnb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nnb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nnb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nnb_video = function( $file, $label ) use ( $nnb, $nnb_path ) {
   if ( ! file_exists( $nnb_path . $file ) ) { return ''; }

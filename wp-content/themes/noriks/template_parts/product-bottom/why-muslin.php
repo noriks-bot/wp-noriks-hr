@@ -30,7 +30,7 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
 
   <section class="wmuslin__s">
     <div class="wmuslin__v wmuslin__v--rev">
-      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-09.webp' ); ?>" alt="Bijeli muslinski pokrivač NORIKS Muslin na krevetu" loading="lazy" decoding="async"></div>
+      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-09.webp' ); ?>" alt="Bijeli muslinski pokrivač NORIKS Muslin na krevetu" loading="eager" decoding="async"></div>
       <div class="wmuslin__tekst">
         <div class="wmuslin__kicker">ISPROBAJTE KOD KUĆE</div>
         <h2 class="wmuslin__h2">Uvjerite se sami <em>kako se spava pod muslinom</em></h2>
@@ -64,7 +64,7 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
 
   <section class="wmuslin__s">
     <div class="wmuslin__v">
-      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-05.webp' ); ?>" alt="Struktura muslinskog tkanja pokrivača NORIKS Muslin izbliza" loading="lazy" decoding="async"></div>
+      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-05.webp' ); ?>" alt="Struktura muslinskog tkanja pokrivača NORIKS Muslin izbliza" loading="eager" decoding="async"></div>
       <div class="wmuslin__tekst">
         <div class="wmuslin__kicker">MATERIJAL</div>
         <h2 class="wmuslin__h2">Od čistog <em>muslinskog pamuka</em></h2>
@@ -85,19 +85,19 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
       </div>
       <div class="wmuslin__koraci">
         <div class="wmuslin__korak">
-          <div class="wmuslin__korak-img"><img src="<?php echo esc_url( $wdir . 'muslin-proces-1.webp' ); ?>" alt="Prirodni pamuk – sirovina za muslinski pokrivač" loading="lazy" decoding="async"></div>
+          <div class="wmuslin__korak-img"><img src="<?php echo esc_url( $wdir . 'muslin-proces-1.webp' ); ?>" alt="Prirodni pamuk – sirovina za muslinski pokrivač" loading="eager" decoding="async"></div>
           <span class="wmuslin__br">1</span>
           <h3>Sve počinje od pamuka</h3>
           <p>Prirodni pamuk se bere i čisti, a zatim se od njega prede tanka, izdržljiva nit. Bez umjetnih vlakana i primjesa – samo pamuk.</p>
         </div>
         <div class="wmuslin__korak">
-          <div class="wmuslin__korak-img"><img src="<?php echo esc_url( $wdir . 'muslin-proces-2.webp' ); ?>" alt="Tkanje muslinske tkanine na tkalačkom stanu" loading="lazy" decoding="async"></div>
+          <div class="wmuslin__korak-img"><img src="<?php echo esc_url( $wdir . 'muslin-proces-2.webp' ); ?>" alt="Tkanje muslinske tkanine na tkalačkom stanu" loading="eager" decoding="async"></div>
           <span class="wmuslin__br">2</span>
           <h3>Zatim nastaje tkanina</h3>
           <p>Nit ide na posebne tkalačke stanove i tka se u višeslojno, otvoreno muslinsko tkanje. Upravo ono daje karakterističnu prozračnost.</p>
         </div>
         <div class="wmuslin__korak">
-          <div class="wmuslin__korak-img"><img src="<?php echo esc_url( $wdir . 'muslin-proces-3.webp' ); ?>" alt="Gotova muslinska tkanina s pamukom" loading="lazy" decoding="async"></div>
+          <div class="wmuslin__korak-img"><img src="<?php echo esc_url( $wdir . 'muslin-proces-3.webp' ); ?>" alt="Gotova muslinska tkanina s pamukom" loading="eager" decoding="async"></div>
           <span class="wmuslin__br">3</span>
           <h3>Na kraju pranje i dorada</h3>
           <p>Svaki pokrivač je prethodno opran i ručno pregledan prije slanja. Mekan je već na početku, a sa svakim pranjem još nježniji.</p>
@@ -109,7 +109,7 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
 
   <section class="wmuslin__s">
     <div class="wmuslin__v wmuslin__v--rev">
-      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-04.webp' ); ?>" alt="Pješčani muslinski pokrivač NORIKS Muslin na fotelji" loading="lazy" decoding="async"></div>
+      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-04.webp' ); ?>" alt="Pješčani muslinski pokrivač NORIKS Muslin na fotelji" loading="eager" decoding="async"></div>
       <div class="wmuslin__tekst">
         <div class="wmuslin__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wmuslin__h2">Vjeruje nam <em>više od 120.000 kupaca</em></h2>
@@ -128,7 +128,7 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
 
   <section class="wmuslin__s wmuslin__s--bg">
     <div class="wmuslin__v">
-      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-15.webp' ); ?>" alt="Sivi muslinski pokrivač NORIKS Muslin izbliza" loading="lazy" decoding="async"></div>
+      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-15.webp' ); ?>" alt="Sivi muslinski pokrivač NORIKS Muslin izbliza" loading="eager" decoding="async"></div>
       <div class="wmuslin__tekst">
         <div class="wmuslin__kicker">SAZNAJTE VIŠE</div>
         <h2 class="wmuslin__h2">Najčešća <em>pitanja</em></h2>
@@ -144,7 +144,7 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
 
   <section class="wmuslin__s">
     <div class="wmuslin__v wmuslin__v--rev">
-      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-14.webp' ); ?>" alt="Sivi muslinski pokrivač NORIKS Muslin na krevetu" loading="lazy" decoding="async"></div>
+      <div class="wmuslin__media"><img src="<?php echo esc_url( $wdir . 'muslin-14.webp' ); ?>" alt="Sivi muslinski pokrivač NORIKS Muslin na krevetu" loading="eager" decoding="async"></div>
       <div class="wmuslin__tekst">
         <div class="wmuslin__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wmuslin__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>

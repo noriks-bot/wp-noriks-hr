@@ -59,7 +59,7 @@ $gc_op = array(
       <div class="wgc__grid3 wgc__kar">
         <?php foreach ( $gc_sit as $s ) : ?>
         <div class="wgc__sit">
-          <img src="<?php echo esc_url( $wd . $s[0] ); ?>" alt="<?php echo esc_attr( $s[1] ); ?>" loading="lazy" decoding="async">
+          <img src="<?php echo esc_url( $wd . $s[0] ); ?>" alt="<?php echo esc_attr( $s[1] ); ?>" loading="eager" decoding="async">
           <p><?php echo esc_html( $s[1] ); ?></p>
         </div>
         <?php endforeach; ?>
@@ -70,7 +70,7 @@ $gc_op = array(
   <!-- 3) kako pomaga: slika + stevilcen seznam 01-05 + 3 podatki -->
   <section class="wgc__s wgc__s--bg">
     <div class="wgc__v wgc__dva">
-      <div class="wgc__media wgc__media--sq"><img src="<?php echo esc_url( $wd . 'noriks-gelcushion-jastuk.webp' ); ?>" alt="NORIKS GelCushion – gel u obliku saća" loading="lazy" decoding="async"></div>
+      <div class="wgc__media wgc__media--sq"><img src="<?php echo esc_url( $wd . 'noriks-gelcushion-jastuk.webp' ); ?>" alt="NORIKS GelCushion – gel u obliku saća" loading="eager" decoding="async"></div>
       <div>
         <div class="wgc__kicker">NORIKS GelCushion · gel u obliku saća</div>
         <h2 class="wgc__h2">Kako vam pomaže, <em>ovisno o tome gdje smeta</em></h2>
@@ -93,7 +93,7 @@ $gc_op = array(
   <!-- 4) zakaj deluje: infografika + 3 alineje -->
   <section class="wgc__s">
     <div class="wgc__v wgc__dva wgc__dva--rev">
-      <div class="wgc__media wgc__media--sq"><img src="<?php echo esc_url( $wd . 'noriks-gelcushion-kako-radi.webp' ); ?>" alt="Kako NORIKS GelCushion raspoređuje pritisak" loading="lazy" decoding="async"></div>
+      <div class="wgc__media wgc__media--sq"><img src="<?php echo esc_url( $wd . 'noriks-gelcushion-kako-radi.webp' ); ?>" alt="Kako NORIKS GelCushion raspoređuje pritisak" loading="eager" decoding="async"></div>
       <div>
         <div class="wgc__kicker">Zašto djeluje</div>
         <h2 class="wgc__h2">Razlika se osjeti <em>čim sjednete</em></h2>
@@ -127,7 +127,7 @@ $gc_op = array(
       <div class="wgc__grid3 wgc__kar">
         <?php foreach ( $gc_fb as $f ) : ?>
         <div class="wgc__fb">
-          <div class="wgc__fbh"><img src="<?php echo esc_url( $wd . $f[0] ); ?>" alt="<?php echo esc_attr( $f[1] ); ?>" loading="lazy" decoding="async"><div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg></span><strong><?php echo esc_html( $f[1] ); ?></strong><span><?php echo esc_html( $f[2] ); ?></span></div></div>
+          <div class="wgc__fbh"><img src="<?php echo esc_url( $wd . $f[0] ); ?>" alt="<?php echo esc_attr( $f[1] ); ?>" loading="eager" decoding="async"><div><span class="wgc__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg></span><strong><?php echo esc_html( $f[1] ); ?></strong><span><?php echo esc_html( $f[2] ); ?></span></div></div>
           <p><?php echo esc_html( $f[3] ); ?></p>
         </div>
         <?php endforeach; ?>
@@ -156,7 +156,7 @@ $gc_op = array(
       <div class="wgc__grid3">
         <?php foreach ( $gc_op as $o ) : ?>
         <div class="wgc__op">
-          <img src="<?php echo esc_url( $wd . $o[0] ); ?>" alt="Fotografija kupca – <?php echo esc_attr( $o[1] ); ?>" loading="lazy" decoding="async">
+          <img src="<?php echo esc_url( $wd . $o[0] ); ?>" alt="Fotografija kupca – <?php echo esc_attr( $o[1] ); ?>" loading="eager" decoding="async">
           <div class="wgc__opt"><span class="wgc__zv">★★★★★</span><strong><?php echo esc_html( $o[1] ); ?> · provjereni kupac</strong><p><?php echo esc_html( $o[2] ); ?></p></div>
         </div>
         <?php endforeach; ?>

@@ -80,7 +80,7 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
 <section class="opz-why opz-customers">
   <div class="opz-wrap opz-row">
     <div class="opz-col opz-media">
-      <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_img_collage ); ?>" alt="Zadovoljni kupci NORIKS ortopedskog pojasa" />
+      <img loading="eager" decoding="async" src="<?php echo esc_url( $opz_img_collage ); ?>" alt="Zadovoljni kupci NORIKS ortopedskog pojasa" />
     </div>
     <div class="opz-col opz-copy">
       <div class="opz-stars" aria-hidden="true">★★★★★</div>
@@ -146,7 +146,7 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
 <section class="opz-why">
   <div class="opz-wrap opz-row">
     <div class="opz-col opz-media">
-      <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_img_indik ); ?>" alt="Indikacije — kod čega pomaže NORIKS ortopedski pojas" />
+      <img loading="eager" decoding="async" src="<?php echo esc_url( $opz_img_indik ); ?>" alt="Indikacije — kod čega pomaže NORIKS ortopedski pojas" />
     </div>
     <div class="opz-col opz-copy">
       <h2 class="opz-title">Kako funkcionira NORIKS pojas?</h2>
@@ -210,7 +210,7 @@ $opz_no  = '<svg class="opz-no" viewBox="0 0 24 24" width="20" height="20" aria-
       <?php foreach ( $opz_reviews as $opz_rev ) : ?>
         <div class="opz-review">
           <div class="opz-review-media">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( $opz_rev['img'] ); ?>" alt="NORIKS pojas — recenzija kupca <?php echo esc_attr( $opz_rev['name'] ); ?>" />
+            <img loading="eager" decoding="async" src="<?php echo esc_url( $opz_rev['img'] ); ?>" alt="NORIKS pojas — recenzija kupca <?php echo esc_attr( $opz_rev['name'] ); ?>" />
           </div>
           <div class="opz-review-stars" aria-hidden="true">★★★★★</div>
           <h3 class="opz-review-title"><?php echo esc_html( $opz_rev['title'] ); ?></h3>

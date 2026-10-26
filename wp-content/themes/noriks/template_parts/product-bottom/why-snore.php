@@ -19,7 +19,7 @@ $sn_path = get_template_directory() . '/img/snore/';
 
 $sn_img = function( $file, $alt ) use ( $sn, $sn_path ) {
   if ( file_exists( $sn_path . $file ) ) {
-    return '<img src="'.esc_url($sn.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($sn.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="nsn-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

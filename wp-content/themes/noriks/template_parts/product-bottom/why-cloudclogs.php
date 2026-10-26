@@ -21,7 +21,7 @@ $nccl      = get_template_directory_uri() . '/img/cloudclogs/';
 $nccl_path = get_template_directory() . '/img/cloudclogs/';
 $nccl_img  = function( $file, $alt ) use ( $nccl, $nccl_path ) {
   if ( ! $file || ! file_exists( $nccl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nccl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nccl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nccl_video = function( $file, $label ) use ( $nccl, $nccl_path ) {
   if ( ! $file || ! file_exists( $nccl_path . $file ) ) { return ''; }

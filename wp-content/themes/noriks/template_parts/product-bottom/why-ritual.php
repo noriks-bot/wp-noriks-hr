@@ -5,7 +5,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $slika = function ( $dat, $alt ) {
     $url = get_template_directory_uri() . '/img/ritual/' . $dat;
-    return '<img src="' . esc_url( $url ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';
+    return '<img src="' . esc_url( $url ) . '" alt="' . esc_attr( $alt ) . '" loading="eager" decoding="async">';
 };
 ?>
 <div class="nritual">

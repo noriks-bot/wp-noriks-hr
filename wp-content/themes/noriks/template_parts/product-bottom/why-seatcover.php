@@ -22,7 +22,7 @@ $nsc      = get_template_directory_uri() . '/img/seatcover/';
 $nsc_path = get_template_directory() . '/img/seatcover/';
 $nsc_img  = function( $file, $alt ) use ( $nsc, $nsc_path ) {
   if ( ! $file || ! file_exists( $nsc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nsc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nsc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nsc_vid  = function( $file ) use ( $nsc, $nsc_path ) {
   if ( ! $file || ! file_exists( $nsc_path . $file . '.mp4' ) ) { return ''; }

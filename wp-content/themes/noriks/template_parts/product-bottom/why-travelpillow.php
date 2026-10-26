@@ -27,7 +27,7 @@ $ntp      = get_template_directory_uri() . '/img/travelpillow/';
 $ntp_path = get_template_directory() . '/img/travelpillow/';
 $ntp_img  = function( $file, $alt ) use ( $ntp, $ntp_path ) {
   if ( ! $file || ! file_exists( $ntp_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ntp . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ntp_video = function( $name, $label ) use ( $ntp, $ntp_path ) {
   $file = $name . '.mp4'; $poster = $name . '-poster.webp';

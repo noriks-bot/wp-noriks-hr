@@ -28,7 +28,7 @@ $nlb      = get_template_directory_uri() . '/img/leatherboots/';
 $nlb_path = get_template_directory() . '/img/leatherboots/';
 $nlb_img  = function( $file, $alt ) use ( $nlb, $nlb_path ) {
   if ( ! $file || ! file_exists( $nlb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nlb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nlb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nlb_vid = function( $file, $poster, $label ) use ( $nlb, $nlb_path ) {
   if ( ! file_exists( $nlb_path . $file ) ) { return ''; }

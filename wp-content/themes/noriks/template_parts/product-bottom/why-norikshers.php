@@ -20,7 +20,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
         <p>Retinol može <strong>peći i nadraživati</strong>.</p>
         <p>Botox <strong>zamrzava</strong> lice umjesto da pomogne koži da se obnovi.</p>
       </div>
-      <div class="nhs-media"><img src="<?php echo esc_url( $nh.'11.png' ); ?>" alt="NORIKS HERS prije i poslije" loading="lazy"></div>
+      <div class="nhs-media"><img src="<?php echo esc_url( $nh.'11.png' ); ?>" alt="NORIKS HERS prije i poslije" loading="eager"></div>
       <div class="nhs-col nhs-pros">
         <p><strong>NORIKS HERS radi s vašom kožom</strong>, ne protiv nje.</p>
         <p>Pomaže koži <strong>zadržati vlagu i obnoviti kolagen</strong>.</p>
@@ -37,7 +37,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
 <!-- ============ 2) Proizvod + koristi ============ -->
 <section class="nhs-benefits">
   <div class="nhs-wrap nhs-row2">
-    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'15.png' ); ?>" alt="NORIKS HERS nanošenje" loading="lazy"></div>
+    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'15.png' ); ?>" alt="NORIKS HERS nanošenje" loading="eager"></div>
     <div class="nhs-b-list">
       <div class="nhs-chip"><span class="nhs-ic">✓</span> Izglađuje bore na čelu, oko očiju i od osmijeha preko noći</div>
       <div class="nhs-chip"><span class="nhs-ic">✓</span> Pomaže koži da izgleda čvršće i svježije</div>
@@ -65,7 +65,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
         <li>Voli ga više od 73.000 žena</li>
       </ul>
     </div>
-    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'02.png' ); ?>" alt="Dermatološka preporuka za NORIKS HERS" loading="lazy"></div>
+    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'02.png' ); ?>" alt="Dermatološka preporuka za NORIKS HERS" loading="eager"></div>
   </div>
 </section>
 
@@ -74,9 +74,9 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
   <div class="nhs-wrap">
     <h2 class="nhs-h2 nhs-center">Dokazano djeluje na <em>bore i ožiljke</em></h2>
     <div class="nhs-proof-grid">
-      <img src="<?php echo esc_url( $nh.'03.png' ); ?>" alt="NORIKS HERS rezultat 1" loading="lazy">
-      <img src="<?php echo esc_url( $nh.'05.png' ); ?>" alt="NORIKS HERS rezultat 2" loading="lazy">
-      <img src="<?php echo esc_url( $nh.'04.png' ); ?>" alt="NORIKS HERS rezultat 3" loading="lazy">
+      <img src="<?php echo esc_url( $nh.'03.png' ); ?>" alt="NORIKS HERS rezultat 1" loading="eager">
+      <img src="<?php echo esc_url( $nh.'05.png' ); ?>" alt="NORIKS HERS rezultat 2" loading="eager">
+      <img src="<?php echo esc_url( $nh.'04.png' ); ?>" alt="NORIKS HERS rezultat 3" loading="eager">
     </div>
     <ul class="nhs-check nhs-check-center">
       <li>Probudite se s vidljivo mekšom, glađom kožom</li>
@@ -97,7 +97,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
         <span>Bez ljuštenja</span><span>Bez osjetljivosti</span><span>Bez stresa</span>
       </div>
     </div>
-    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'10.png' ); ?>" alt="NORIKS HERS pakiranja" loading="lazy"></div>
+    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'10.png' ); ?>" alt="NORIKS HERS pakiranja" loading="eager"></div>
   </div>
 </section>
 
@@ -127,7 +127,7 @@ $nh = get_template_directory_uri() . '/img/norikshers/';
 <!-- ============ 10) Rezultati za 30 dana (zadnja) ============ -->
 <section class="nhs-results">
   <div class="nhs-wrap nhs-row2">
-    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'12.png' ); ?>" alt="NORIKS HERS rezultati" loading="lazy"></div>
+    <div class="nhs-media"><img src="<?php echo esc_url( $nh.'12.png' ); ?>" alt="NORIKS HERS rezultati" loading="eager"></div>
     <div class="nhs-res-copy">
       <h2 class="nhs-h2">Vidi rezultate za 30 dana ili <em>povrat novca!</em></h2>
       <?php

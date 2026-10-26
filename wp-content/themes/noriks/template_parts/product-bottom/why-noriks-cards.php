@@ -25,7 +25,7 @@ $nkv_path = $nk_path . 'videos/';
 /* Ako slika nije na serveru, prikaže se neutralni sivi placeholder. */
 $nk_img = function( $file, $alt ) use ( $nk, $nk_path ) {
   if ( file_exists( $nk_path . $file ) ) {
-    return '<img src="'.esc_url($nk.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($nk.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="nvk-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

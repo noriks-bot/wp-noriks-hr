@@ -86,7 +86,7 @@ $fis_upgrades = array(
     <div class="fis-exp-cards">
       <?php foreach ( $fis_experts as $e ) : ?>
         <div class="fis-exp-card">
-          <img src="<?php echo esc_url( $e['img'] ); ?>" alt="<?php echo esc_attr( $e['name'] . ' — ' . $e['role'] ); ?>" loading="lazy">
+          <img src="<?php echo esc_url( $e['img'] ); ?>" alt="<?php echo esc_attr( $e['name'] . ' — ' . $e['role'] ); ?>" loading="eager">
           <div class="fis-exp-cap">
             <div class="fis-exp-name"><?php echo esc_html( $e['name'] ); ?></div>
             <div class="fis-exp-role"><?php echo esc_html( $e['role'] ); ?></div>
@@ -104,7 +104,7 @@ $fis_upgrades = array(
     <div class="fis-ugc-grid">
       <?php foreach ( $fis_ugc as $u ) : ?>
         <div class="fis-ugc-card">
-          <div class="fis-ugc-media"><img src="<?php echo esc_url( $u['img'] ); ?>" alt="<?php echo esc_attr( $u['cap'] ); ?>" loading="lazy"></div>
+          <div class="fis-ugc-media"><img src="<?php echo esc_url( $u['img'] ); ?>" alt="<?php echo esc_attr( $u['cap'] ); ?>" loading="eager"></div>
           <p class="fis-ugc-cap"><?php echo esc_html( $u['cap'] ); ?></p>
         </div>
       <?php endforeach; ?>
@@ -135,7 +135,7 @@ $fis_upgrades = array(
     <div class="fis-upg-grid">
       <?php foreach ( $fis_upgrades as $g ) : ?>
         <div class="fis-upg-card">
-          <img class="fis-upg-ico" src="<?php echo esc_url( get_template_directory_uri() . '/img/fisiorest-icons/' . $g['ico'] ); ?>" alt="" loading="lazy" width="120" height="120">
+          <img class="fis-upg-ico" src="<?php echo esc_url( get_template_directory_uri() . '/img/fisiorest-icons/' . $g['ico'] ); ?>" alt="" loading="eager" width="120" height="120">
           <div class="fis-upg-title"><?php echo esc_html( $g['t'] ); ?></div>
           <p class="fis-upg-text"><?php echo esc_html( $g['d'] ); ?></p>
         </div>
@@ -158,7 +158,7 @@ $fis_upgrades = array(
 <!-- ============ 8) 14x jeftinije ============ -->
 <section class="fis-cheaper">
   <div class="fis-wrap fis-row2">
-    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' ); ?>" alt="NORIKS FisioRest uređaj za vrat" loading="lazy"></div>
+    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' ); ?>" alt="NORIKS FisioRest uređaj za vrat" loading="eager"></div>
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">SIGURNA I OPUŠTAJUĆA TERAPIJA</p>
       <h2 class="fis-h2">14× jeftinije od tjednih termina</h2>

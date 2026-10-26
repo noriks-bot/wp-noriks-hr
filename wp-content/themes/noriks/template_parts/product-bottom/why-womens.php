@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s wwomens__s--bg">
     <div class="wwomens__v">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-12.png' ); ?>" alt="Za uska, široka i sva stopala između" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-12.png' ); ?>" alt="Za uska, široka i sva stopala između" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">KROJ I PRISTAJANJE</div>
         <h2 class="wwomens__h2">Za uska, široka i <em>sva stopala između</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s">
     <div class="wwomens__v wwomens__v--rev">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-09.jpg' ); ?>" alt="Udobnost za smjene od 12 i više sati" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-09.jpg' ); ?>" alt="Udobnost za smjene od 12 i više sati" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">CIJELI DAN NA NOGAMA</div>
         <h2 class="wwomens__h2">Udobnost za smjene od <em>12 i više sati</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s wwomens__s--bg">
     <div class="wwomens__v">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-04.webp' ); ?>" alt="Više mjesta za prste, mekši korak cijeli dan" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-04.webp' ); ?>" alt="Više mjesta za prste, mekši korak cijeli dan" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">ŠIROKI PREDNJI DIO</div>
         <h2 class="wwomens__h2">Više mjesta za prste, <em>mekši korak</em> cijeli dan</h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s">
     <div class="wwomens__v wwomens__v--rev">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-07.png' ); ?>" alt="Cipela koju odaberete nakon uložaka i memorijske pjene" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-07.png' ); ?>" alt="Cipela koju odaberete nakon uložaka i memorijske pjene" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">KAD NIŠTA DRUGO NE PRISTAJE</div>
         <h2 class="wwomens__h2">Cipela koju odaberete nakon <em>uložaka i memorijske pjene</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s wwomens__s--bg">
     <div class="wwomens__v">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-08.png' ); ?>" alt="Gornji dio koji ne steže, unutrašnjost bez šavova" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-08.png' ); ?>" alt="Gornji dio koji ne steže, unutrašnjost bez šavova" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">DETALJI IZNUTRA</div>
         <h2 class="wwomens__h2">Gornji dio koji <em>ne steže</em>, unutrašnjost bez šavova</h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s">
     <div class="wwomens__v wwomens__v--rev">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-11.png' ); ?>" alt="Stvorena za svakodnevni život" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-11.png' ); ?>" alt="Stvorena za svakodnevni život" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">TEHNOLOGIJA</div>
         <h2 class="wwomens__h2">Stvorena za <em>svakodnevni život</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/womens/';
 
   <section class="wwomens__s wwomens__s--bg">
     <div class="wwomens__v">
-      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-10.webp' ); ?>" alt="Osjetite razliku u odnosu na obične tenisice" loading="lazy" decoding="async"></div>
+      <div class="wwomens__media"><img src="<?php echo esc_url( $wdir . 'womens-10.webp' ); ?>" alt="Osjetite razliku u odnosu na obične tenisice" loading="eager" decoding="async"></div>
       <div class="wwomens__tekst">
         <div class="wwomens__kicker">USPOREDBA</div>
         <h2 class="wwomens__h2">Osjetite <em>razliku</em> u odnosu na obične tenisice</h2>

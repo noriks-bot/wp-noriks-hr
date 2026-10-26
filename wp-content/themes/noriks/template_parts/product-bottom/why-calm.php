@@ -31,7 +31,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s">
     <div class="wcalm__v wcalm__v--rev">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-kupci.webp' . $wv ); ?>" alt="Kupac priprema napitak NORIKS Calm u čaši vode" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-kupci.webp' . $wv ); ?>" alt="Kupac priprema napitak NORIKS Calm u čaši vode" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">KUPCI O SVOM RITUALU</div>
         <h2 class="wcalm__h2">Pripremaju ga svaki dan – <em>i ne odustaju</em></h2>
@@ -48,7 +48,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s wcalm__s--bg">
     <div class="wcalm__v">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-ritual.webp' . $wv ); ?>" alt="Prah iz vrećice NORIKS Calm ulijeva se u čašu vode" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-ritual.webp' . $wv ); ?>" alt="Prah iz vrećice NORIKS Calm ulijeva se u čašu vode" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">TRENUTAK SAMO ZA VAS</div>
         <h2 class="wcalm__h2">Dan je pun obaveza. <em>Ova čaša je vaša.</em></h2>
@@ -67,7 +67,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s">
     <div class="wcalm__v wcalm__v--rev">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-vrecice.webp' . $wv ); ?>" alt="Pojedinačne vrećice NORIKS Calm s voćem" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-vrecice.webp' . $wv ); ?>" alt="Pojedinačne vrećice NORIKS Calm s voćem" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">VAŠA RUTINA</div>
         <h2 class="wcalm__h2">Jedna vrećica dnevno, <em>od ponedjeljka do petka</em></h2>
@@ -86,15 +86,15 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s wcalm__s--bg">
     <div class="wcalm__v">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-ashwagandha.webp' . $wv ); ?>" alt="Korijen ashwagandhe" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-ashwagandha.webp' . $wv ); ?>" alt="Korijen ashwagandhe" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">4 SASTOJKA</div>
         <h2 class="wcalm__h2">Kratak sastav <em>koji možete pročitati</em></h2>
         <p class="wcalm__p">Svaka vrećica sadrži četiri aktivna sastojka u točno navedenim količinama. Nema dugih popisa i nema skrivenih mješavina – samo ono što piše na pakiranju.</p>
         <div class="wcalm__sast">
-          <div><img src="<?php echo esc_url( $wdir . 'noriks-calm-l-teanin.webp' . $wv ); ?>" alt="List čaja – izvor L-teanina" loading="lazy" decoding="async"><strong>L-teanin · 400 mg</strong><span>aminokiselina koja se prirodno nalazi u listovima čaja; za razliku od teina, nije stimulans</span></div>
-          <div><img src="<?php echo esc_url( $wdir . 'noriks-calm-magnezij.webp' . $wv ); ?>" alt="Kristali magnezija" loading="lazy" decoding="async"><strong>Magnezij · 100 mg</strong><span>u obliku magnezijeva bisglicinata, blagog za probavu</span></div>
-          <div><img src="<?php echo esc_url( $wdir . 'noriks-calm-vitamin-d3.webp' . $wv ); ?>" alt="Vitamin D3" loading="lazy" decoding="async"><strong>Vitamin D3 · 1000 IU</strong><span>poznat kao „sunčani vitamin”</span></div>
+          <div><img src="<?php echo esc_url( $wdir . 'noriks-calm-l-teanin.webp' . $wv ); ?>" alt="List čaja – izvor L-teanina" loading="eager" decoding="async"><strong>L-teanin · 400 mg</strong><span>aminokiselina koja se prirodno nalazi u listovima čaja; za razliku od teina, nije stimulans</span></div>
+          <div><img src="<?php echo esc_url( $wdir . 'noriks-calm-magnezij.webp' . $wv ); ?>" alt="Kristali magnezija" loading="eager" decoding="async"><strong>Magnezij · 100 mg</strong><span>u obliku magnezijeva bisglicinata, blagog za probavu</span></div>
+          <div><img src="<?php echo esc_url( $wdir . 'noriks-calm-vitamin-d3.webp' . $wv ); ?>" alt="Vitamin D3" loading="eager" decoding="async"><strong>Vitamin D3 · 1000 IU</strong><span>poznat kao „sunčani vitamin”</span></div>
         </div>
         <p class="wcalm__p"><strong>Ashwagandha · 300 mg</strong> – ekstrakt korijena biljke <em>Withania somnifera</em>, koja se stoljećima koristi u tradiciji ajurvede.</p>
         <p class="wcalm__p">Ostali sastojci: limunska kiselina, prirodna aroma limuna i maline, prah korijena organske cikle, rebaudiozid A (ekstrakt lista stevije). Kod drugih okusa razlikuju se samo arome i ekstrakti.</p>
@@ -105,7 +105,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s">
     <div class="wcalm__v wcalm__v--rev">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-prah.webp' . $wv ); ?>" alt="Prah napitka NORIKS Calm" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-prah.webp' . $wv ); ?>" alt="Prah napitka NORIKS Calm" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">HRANJIVE VRIJEDNOSTI</div>
         <h2 class="wcalm__h2">Što je točno <em>u jednoj vrećici</em></h2>
@@ -133,7 +133,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s wcalm__s--bg">
     <div class="wcalm__v">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-svjedocanstva.webp' . $wv ); ?>" alt="Žena za kuhinjskim stolom s pakiranjem NORIKS Calm i čašom napitka" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-svjedocanstva.webp' . $wv ); ?>" alt="Žena za kuhinjskim stolom s pakiranjem NORIKS Calm i čašom napitka" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">ISKUSTVA KUPACA</div>
         <h2 class="wcalm__h2">Dio dana <em>cijele obitelji</em></h2>
@@ -151,7 +151,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s">
     <div class="wcalm__v wcalm__v--rev">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-okusi.webp' . $wv ); ?>" alt="Pakiranja NORIKS Calm u više voćnih okusa" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-okusi.webp' . $wv ); ?>" alt="Pakiranja NORIKS Calm u više voćnih okusa" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">OKUSI</div>
         <h2 class="wcalm__h2">Osam voćnih okusa – <em>bez dodanog šećera</em></h2>
@@ -169,7 +169,7 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike s tujo
 
   <section class="wcalm__s wcalm__s--bg">
     <div class="wcalm__v">
-      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-list-caja.webp' . $wv ); ?>" alt="Zeleni list čaja" loading="lazy" decoding="async"></div>
+      <div class="wcalm__media"><img src="<?php echo esc_url( $wdir . 'noriks-calm-list-caja.webp' . $wv ); ?>" alt="Zeleni list čaja" loading="eager" decoding="async"></div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wcalm__h2">Česta <em>pitanja</em></h2>

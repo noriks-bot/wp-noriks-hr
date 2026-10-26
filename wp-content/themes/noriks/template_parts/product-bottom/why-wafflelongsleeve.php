@@ -23,7 +23,7 @@ $nwls      = get_template_directory_uri() . '/img/wafflelongsleeve/';
 $nwls_path = get_template_directory() . '/img/wafflelongsleeve/';
 $nwls_img  = function( $file, $alt, $cls = '' ) use ( $nwls, $nwls_path ) {
   if ( ! $file || ! file_exists( $nwls_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nwls . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nwls . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nwls_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

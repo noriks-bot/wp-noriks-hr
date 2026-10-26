@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s wbirdie__s--bg">
     <div class="wbirdie__v">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-lifestyle2.jpg' ); ?>" alt="Kao protupožarni alarm — u vašem džepu" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-lifestyle2.jpg' ); ?>" alt="Kao protupožarni alarm — u vašem džepu" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">UPOZNAJTE GA</div>
         <h2 class="wbirdie__h2">Kao protupožarni alarm — <em>u vašem džepu</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s">
     <div class="wbirdie__v wbirdie__v--rev">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-11.png' ); ?>" alt="Sve što treba, već u kutiji" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-11.png' ); ?>" alt="Sve što treba, već u kutiji" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">ŠTO DOBIVATE</div>
         <h2 class="wbirdie__h2">Sve što treba, <em>već u kutiji</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s wbirdie__s--bg">
     <div class="wbirdie__v">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-putovanje.webp' ); ?>" alt="Ide s vama — kamo god krenete" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-putovanje.webp' ); ?>" alt="Ide s vama — kamo god krenete" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">ZA PUTOVANJA</div>
         <h2 class="wbirdie__h2">Ide s vama — <em>kamo god krenete</em></h2>
@@ -50,7 +50,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s">
     <div class="wbirdie__v wbirdie__v--rev">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-nenasilno.webp' ); ?>" alt="Odvraća napadača bez borbe" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-nenasilno.webp' ); ?>" alt="Odvraća napadača bez borbe" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">BEZ NASILJA</div>
         <h2 class="wbirdie__h2">Odvraća napadača <em>bez borbe</em></h2>
@@ -64,7 +64,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s wbirdie__s--bg">
     <div class="wbirdie__v">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-glasan.webp' ); ?>" alt="Samo povucite — i alarm radi" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-glasan.webp' ); ?>" alt="Samo povucite — i alarm radi" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">LAKO ZA UPOTREBU</div>
         <h2 class="wbirdie__h2">Samo povucite — <em>i alarm radi</em></h2>
@@ -77,7 +77,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s">
     <div class="wbirdie__v wbirdie__v--rev">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-noriks.webp' ); ?>" alt="Nadamo se da vam nikad neće trebati" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-noriks.webp' ); ?>" alt="Nadamo se da vam nikad neće trebati" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">MIR U GLAVI</div>
         <h2 class="wbirdie__h2">Nadamo se da vam <em>nikad neće trebati</em></h2>
@@ -90,7 +90,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s wbirdie__s--bg">
     <div class="wbirdie__v">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-13.jpg' ); ?>" alt="Od privjeska do alarma u jednom pokretu" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-13.jpg' ); ?>" alt="Od privjeska do alarma u jednom pokretu" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">KAKO SE KORISTI</div>
         <h2 class="wbirdie__h2">Od privjeska do alarma <em>u jednom pokretu</em></h2>
@@ -104,7 +104,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s">
     <div class="wbirdie__v wbirdie__v--rev">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-14.png' ); ?>" alt="Kad ste u nedoumici — povucite" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'guard-14.png' ); ?>" alt="Kad ste u nedoumici — povucite" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">VJERUJTE OSJEĆAJU</div>
         <h2 class="wbirdie__h2">Kad ste u nedoumici — <em>povucite</em></h2>
@@ -117,7 +117,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s wbirdie__s--bg">
     <div class="wbirdie__v">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-prekidac.webp' ); ?>" alt="Punjiv, s prekidačem i svjetiljkom" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-prekidac.webp' ); ?>" alt="Punjiv, s prekidačem i svjetiljkom" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">NOVE FUNKCIJE</div>
         <h2 class="wbirdie__h2">Punjiv, s prekidačem i <em>svjetiljkom</em></h2>
@@ -138,7 +138,7 @@ $wdir = get_template_directory_uri() . '/img/birdie/';
 
   <section class="wbirdie__s">
     <div class="wbirdie__v wbirdie__v--rev">
-      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-upotreba.webp' ); ?>" alt="Drugačiji od klasične samoobrane" loading="lazy" decoding="async"></div>
+      <div class="wbirdie__media"><img src="<?php echo esc_url( $wdir . 'noriks-guard-upotreba.webp' ); ?>" alt="Drugačiji od klasične samoobrane" loading="eager" decoding="async"></div>
       <div class="wbirdie__tekst">
         <div class="wbirdie__kicker">USPOREDBA</div>
         <h2 class="wbirdie__h2">Drugačiji od <em>klasične samoobrane</em></h2>

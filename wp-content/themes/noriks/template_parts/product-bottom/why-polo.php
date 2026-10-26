@@ -19,7 +19,7 @@ $npo      = get_template_directory_uri() . '/img/polo/';
 $npo_path = get_template_directory() . '/img/polo/';
 $npo_img  = function( $file, $alt, $cls = '' ) use ( $npo, $npo_path ) {
   if ( ! $file || ! file_exists( $npo_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $npo . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $npo . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager">';
 };
 $npo_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

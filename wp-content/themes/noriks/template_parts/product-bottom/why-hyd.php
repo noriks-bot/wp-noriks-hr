@@ -20,7 +20,7 @@ $nh_path = get_template_directory() . '/img/hyd/';
 $nh_has = function( $file ) use ( $nh_path ) { return file_exists( $nh_path . $file ); };
 $nh_img = function( $file, $alt ) use ( $nh, $nh_path ) {
   if ( file_exists( $nh_path . $file ) ) {
-    return '<img src="'.esc_url($nh.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($nh.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="nhy-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };

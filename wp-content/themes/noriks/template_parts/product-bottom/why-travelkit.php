@@ -29,7 +29,7 @@ $ntvk      = get_template_directory_uri() . '/img/travelkit/';
 $ntvk_path = get_template_directory() . '/img/travelkit/';
 $ntvk_img  = function( $file, $alt, $cls = '' ) use ( $ntvk, $ntvk_path ) {
   if ( ! $file || ! file_exists( $ntvk_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntvk . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $ntvk . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $ntvk_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

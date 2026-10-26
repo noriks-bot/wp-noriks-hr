@@ -75,7 +75,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
     <div class="why-col">
       <div class="video-wrapper">
         <?php if ( $kn_img_1 ) : ?>
-          <img loading="lazy" decoding="async" style="width:100%; aspect-ratio:1/1; object-fit:cover;" src="<?php echo esc_url( $kn_img_1 ); ?>" alt="Kompresijske nogavice">
+          <img loading="eager" decoding="async" style="width:100%; aspect-ratio:1/1; object-fit:cover;" src="<?php echo esc_url( $kn_img_1 ); ?>" alt="Kompresijske nogavice">
         <?php else : echo $kn_placeholder; endif; ?>
       </div>
     </div>

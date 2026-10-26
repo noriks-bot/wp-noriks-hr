@@ -25,7 +25,7 @@ $nuc      = get_template_directory_uri() . '/img/upholsterycleaner/';
 $nuc_path = get_template_directory() . '/img/upholsterycleaner/';
 $nuc_img  = function( $file, $alt, $cls = '' ) use ( $nuc, $nuc_path ) {
   if ( ! $file || ! file_exists( $nuc_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nuc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nuc . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nuc_video = function( $file, $label ) use ( $nuc, $nuc_path ) {
   if ( ! file_exists( $nuc_path . $file ) ) { return ''; }

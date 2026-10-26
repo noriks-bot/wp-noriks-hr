@@ -24,7 +24,7 @@ $ndb      = get_template_directory_uri() . '/img/dogbed/';
 $ndb_path = get_template_directory() . '/img/dogbed/';
 $ndb_img  = function( $file, $alt, $cls = '' ) use ( $ndb, $ndb_path ) {
   if ( ! $file || ! file_exists( $ndb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ndb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $ndb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $ndb_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

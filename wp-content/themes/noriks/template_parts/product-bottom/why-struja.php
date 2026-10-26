@@ -11,7 +11,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s wstr__s--bg">
     <div class="wstr__v">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-podesiv.webp' ); ?>" alt="Podesivi prsten NORIKS Struja s ribicama, otvoren straga" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-podesiv.webp' ); ?>" alt="Podesivi prsten NORIKS Struja s ribicama, otvoren straga" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">IZVOR SNAGE · S PAŽNJOM IZRAĐEN</div>
         <h2 class="wstr__h2">Mali prsten <em>s velikom porukom</em></h2>
@@ -30,7 +30,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s">
     <div class="wstr__v wstr__v--rev">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-svaki-dan.webp' ); ?>" alt="Prsten NORIKS Struja na ruci uz šalicu čaja i knjigu" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-svaki-dan.webp' ); ?>" alt="Prsten NORIKS Struja na ruci uz šalicu čaja i knjigu" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">VIŠE OD PRSTENA</div>
         <h2 class="wstr__h2">Nije samo prsten – <em>to je svakodnevni podsjetnik</em></h2>
@@ -48,7 +48,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s wstr__s--bg">
     <div class="wstr__v">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-kartica.webp' ); ?>" alt="Prsten NORIKS Struja na ruci uz kartičku s porukom" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-kartica.webp' ); ?>" alt="Prsten NORIKS Struja na ruci uz kartičku s porukom" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">ZA KOGA JE OVAJ PRSTEN?</div>
         <h2 class="wstr__h2">Poklon koji <em>dira u srce</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s">
     <div class="wstr__v wstr__v--rev">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-poklon.webp' ); ?>" alt="Prsten NORIKS Struja u poklon kutijici s kartičkom" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-poklon.webp' ); ?>" alt="Prsten NORIKS Struja u poklon kutijici s kartičkom" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wstr__h2">Spreman za darivanje – <em>odmah iz paketa</em></h2>
@@ -83,7 +83,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s wstr__s--bg">
     <div class="wstr__v">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-kupci-1.webp' ); ?>" alt="Fotografija kupca: prsten NORIKS Struja na ruci" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-kupci-1.webp' ); ?>" alt="Fotografija kupca: prsten NORIKS Struja na ruci" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">120.000+ ZADOVOLJNIH KUPACA</div>
         <h2 class="wstr__h2">Što kažu <em>kupci</em></h2>
@@ -99,7 +99,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s">
     <div class="wstr__v wstr__v--rev">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-kupci-2.webp' ); ?>" alt="Fotografija kupca: prsten NORIKS Struja na prstu" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-kupci-2.webp' ); ?>" alt="Fotografija kupca: prsten NORIKS Struja na prstu" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">POKLON S PORUKOM</div>
         <h2 class="wstr__h2">Kupili su ga <em>za svoje najdraže</em></h2>
@@ -116,7 +116,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s wstr__s--bg">
     <div class="wstr__v">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-pitanja.webp' ); ?>" alt="Prsten NORIKS Struja s poklon kutijicom i kartičkom" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-pitanja.webp' ); ?>" alt="Prsten NORIKS Struja s poklon kutijicom i kartičkom" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wstr__h2">Česta <em>pitanja</em></h2>
@@ -132,7 +132,7 @@ $wdir = get_template_directory_uri() . '/img/struja/';
 
   <section class="wstr__s">
     <div class="wstr__v wstr__v--rev">
-      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-na-ruci.webp' ); ?>" alt="Prsten NORIKS Struja na prstu, pozadina zelenog lišća" loading="lazy" decoding="async"></div>
+      <div class="wstr__media"><img src="<?php echo esc_url( $wdir . 'noriks-struja-na-ruci.webp' ); ?>" alt="Prsten NORIKS Struja na prstu, pozadina zelenog lišća" loading="eager" decoding="async"></div>
       <div class="wstr__tekst">
         <div class="wstr__kicker">KUPUJTE BEZ RIZIKA</div>
         <h2 class="wstr__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>

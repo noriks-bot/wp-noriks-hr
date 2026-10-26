@@ -19,7 +19,7 @@ $ncl      = get_template_directory_uri() . '/img/celleg/';
 $ncl_path = get_template_directory() . '/img/celleg/';
 $ncl_img  = function( $file, $alt ) use ( $ncl, $ncl_path ) {
   if ( ! file_exists( $ncl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ncl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ncl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

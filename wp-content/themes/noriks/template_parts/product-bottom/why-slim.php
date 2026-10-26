@@ -20,7 +20,7 @@ $sl      = get_template_directory_uri() . '/img/slim/';
 $sl_path = get_template_directory() . '/img/slim/';
 $sl_img  = function( $file, $alt ) use ( $sl, $sl_path ) {
   if ( ! file_exists( $sl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $sl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $sl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

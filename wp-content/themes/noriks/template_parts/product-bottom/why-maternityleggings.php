@@ -24,7 +24,7 @@ $nml      = get_template_directory_uri() . '/img/maternityleggings/';
 $nml_path = get_template_directory() . '/img/maternityleggings/';
 $nml_img  = function( $file, $alt, $cls = '' ) use ( $nml, $nml_path ) {
   if ( ! $file || ! file_exists( $nml_path . $file ) ) { return ''; }
-  return '<img' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' src="' . esc_url( $nml . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' src="' . esc_url( $nml . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nml_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

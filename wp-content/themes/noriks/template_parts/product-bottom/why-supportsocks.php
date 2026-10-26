@@ -21,7 +21,7 @@ $nss_img  = function( $file, $alt, $cls = '' ) use ( $nss, $nss_path ) {
   if ( ! file_exists( $nss_path . $file ) ) { return ''; }
   $size = @getimagesize( $nss_path . $file );
   $wh   = $size ? ' width="' . (int) $size[0] . '" height="' . (int) $size[1] . '"' : '';
-  return '<img src="' . esc_url( $nss . $file ) . '" alt="' . esc_attr( $alt ) . '"' . $wh . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy" decoding="async">';
+  return '<img src="' . esc_url( $nss . $file ) . '" alt="' . esc_attr( $alt ) . '"' . $wh . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager" decoding="async">';
 };
 $nss_video = function( $file, $label ) use ( $nss, $nss_path ) {
   if ( ! file_exists( $nss_path . $file . '.mp4' ) ) { return ''; }

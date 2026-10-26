@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s wcalendar__s--bg">
     <div class="wcalendar__v">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija2.png' ); ?>" alt="Svi termini obitelji, u stvarnom vremenu" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija2.png' ); ?>" alt="Svi termini obitelji, u stvarnom vremenu" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">OBITELJSKI PLANER</div>
         <h2 class="wcalendar__h2">Svi termini obitelji, <em>u stvarnom vremenu</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s">
     <div class="wcalendar__v wcalendar__v--rev">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija3.png' ); ?>" alt="Velik ekran od 15,6 inča" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija3.png' ); ?>" alt="Velik ekran od 15,6 inča" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">ZID ILI STOL</div>
         <h2 class="wcalendar__h2">Velik ekran od <em>15,6 inča</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s wcalendar__s--bg">
     <div class="wcalendar__v">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-glavni.png' ); ?>" alt="Što danas kupite, ostaje vaše" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-glavni.png' ); ?>" alt="Što danas kupite, ostaje vaše" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">BEZ PRETPLATE</div>
         <h2 class="wcalendar__h2">Što danas kupite, <em>ostaje vaše</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s">
     <div class="wcalendar__v wcalendar__v--rev">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-01.jpg' ); ?>" alt="Kalendar, zadaci, kupnja — u jednom sustavu" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-01.jpg' ); ?>" alt="Kalendar, zadaci, kupnja — u jednom sustavu" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">SVE U JEDNOM</div>
         <h2 class="wcalendar__h2">Kalendar, zadaci, kupnja — <em>u jednom sustavu</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s wcalendar__s--bg">
     <div class="wcalendar__v">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-02.jpg' ); ?>" alt="Svaki član obitelji, svoja boja" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-02.jpg' ); ?>" alt="Svaki član obitelji, svoja boja" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">KALENDARI I BOJE</div>
         <h2 class="wcalendar__h2">Svaki član obitelji, <em>svoja boja</em></h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s">
     <div class="wcalendar__v wcalendar__v--rev">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-03.jpg' ); ?>" alt="Svatko zna što je na redu" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-03.jpg' ); ?>" alt="Svatko zna što je na redu" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">ZADACI I APLIKACIJA</div>
         <h2 class="wcalendar__h2">Svatko zna <em>što je na redu</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s wcalendar__s--bg">
     <div class="wcalendar__v">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija8.png' ); ?>" alt="Sve spremljeno, sve na što se želite sjetiti" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'noriks-calendar-galerija8.png' ); ?>" alt="Sve spremljeno, sve na što se želite sjetiti" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">POPISI I SLIKE</div>
         <h2 class="wcalendar__h2">Sve spremljeno, <em>sve na što se želite sjetiti</em></h2>
@@ -107,7 +107,7 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
 
   <section class="wcalendar__s">
     <div class="wcalendar__v wcalendar__v--rev">
-      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-04.jpg' ); ?>" alt="Kalendar koji raste svaki dan" loading="lazy" decoding="async"></div>
+      <div class="wcalendar__media"><img src="<?php echo esc_url( $wdir . 'calendar-04.jpg' ); ?>" alt="Kalendar koji raste svaki dan" loading="eager" decoding="async"></div>
       <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">NOVE FUNKCIJE</div>
         <h2 class="wcalendar__h2">Kalendar koji <em>raste svaki dan</em></h2>

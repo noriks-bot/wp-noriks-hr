@@ -26,7 +26,7 @@ $ncm      = get_template_directory_uri() . '/img/cashmeresweater/';
 $ncm_path = get_template_directory() . '/img/cashmeresweater/';
 $ncm_img  = function( $file, $alt, $cls = '' ) use ( $ncm, $ncm_path ) {
   if ( ! $file || ! file_exists( $ncm_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ncm . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $ncm . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $ncm_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

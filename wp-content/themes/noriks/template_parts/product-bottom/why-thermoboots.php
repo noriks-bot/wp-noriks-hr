@@ -20,7 +20,7 @@ $ntb      = get_template_directory_uri() . '/img/thermoboots/';
 $ntb_path = get_template_directory() . '/img/thermoboots/';
 $ntb_img  = function( $file, $alt ) use ( $ntb, $ntb_path ) {
   if ( ! $file || ! file_exists( $ntb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ntb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ntb_stars = function( $n ) {
   return '<span class="ntb-stars" aria-label="' . (int) $n . ' od 5 zvjezdica">' . str_repeat( '★', (int) $n ) . '<span class="ntb-stars__off">' . str_repeat( '★', 5 - (int) $n ) . '</span></span>';

@@ -26,7 +26,7 @@ $nkl      = get_template_directory_uri() . '/img/kneelight/';
 $nkl_path = get_template_directory() . '/img/kneelight/';
 $nkl_img  = function( $file, $alt, $cls = '' ) use ( $nkl, $nkl_path ) {
   if ( ! $file || ! file_exists( $nkl_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nkl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $nkl . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $nkl_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

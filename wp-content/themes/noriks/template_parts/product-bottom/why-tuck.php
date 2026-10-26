@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 $ntk     = get_template_directory_uri() . '/img/tuck/';
 $ntk_img = function( $file, $alt, $w, $h ) use ( $ntk ) {
-  return '<img src="' . esc_url( $ntk . $file ) . '" alt="' . esc_attr( $alt ) . '" width="' . (int) $w . '" height="' . (int) $h . '" loading="lazy">';
+  return '<img src="' . esc_url( $ntk . $file ) . '" alt="' . esc_attr( $alt ) . '" width="' . (int) $w . '" height="' . (int) $h . '" loading="eager">';
 };
 $ntk_sizes = function_exists( 'noriks_tuck_sizes' ) ? noriks_tuck_sizes() : array();
 $ntk_star  = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.826 1.608 8.144L12 18.896l-7.544 4.38 1.608-8.144L.587 9.306l8.332-1.151z"></path></svg>';

@@ -20,7 +20,7 @@ $nho      = get_template_directory_uri() . '/img/hoodie/';
 $nho_path = get_template_directory() . '/img/hoodie/';
 $nho_img  = function( $file, $alt ) use ( $nho, $nho_path ) {
   if ( ! $file || ! file_exists( $nho_path . $file ) ) { return ''; }
-  return '<div class="nho-pic"><img src="' . esc_url( $nho . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"></div>';
+  return '<div class="nho-pic"><img src="' . esc_url( $nho . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"></div>';
 };
 $nho_video = function( $name, $label ) use ( $nho, $nho_path ) {
   $file = $name . '.mp4'; $poster = $name . '-poster.webp';

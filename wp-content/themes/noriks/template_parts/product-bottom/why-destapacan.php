@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s wdestapacan__s--bg">
     <div class="wdestapacan__v">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-01.webp' ); ?>" alt="Jedan proizvod, više rješenja" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-01.webp' ); ?>" alt="Jedan proizvod, više rješenja" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">CIJELA KUĆA</div>
         <h2 class="wdestapacan__h2">Jedan proizvod, <em>više rješenja</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s">
     <div class="wdestapacan__v wdestapacan__v--rev">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-05.webp' ); ?>" alt="Mast i ostaci hrane nestaju s vodom" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-05.webp' ); ?>" alt="Mast i ostaci hrane nestaju s vodom" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">KUHINJSKI SUDOPER</div>
         <h2 class="wdestapacan__h2">Mast i ostaci hrane <em>nestaju s vodom</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s wdestapacan__s--bg">
     <div class="wdestapacan__v">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-06.webp' ); ?>" alt="Kosa i sapun u sifonu, bez rastavljanja" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-06.webp' ); ?>" alt="Kosa i sapun u sifonu, bez rastavljanja" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">KADA I TUŠ</div>
         <h2 class="wdestapacan__h2">Kosa i sapun u sifonu, <em>bez rastavljanja</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s">
     <div class="wdestapacan__v wdestapacan__v--rev">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-07.webp' ); ?>" alt="Papir i organski ostaci u zavoju cijevi" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-07.webp' ); ?>" alt="Papir i organski ostaci u zavoju cijevi" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">WC ŠKOLJKA</div>
         <h2 class="wdestapacan__h2">Papir i organski ostaci <em>u zavoju cijevi</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s wdestapacan__s--bg">
     <div class="wdestapacan__v">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-08.webp' ); ?>" alt="Jedan poklopac praha izravno u odvod" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-08.webp' ); ?>" alt="Jedan poklopac praha izravno u odvod" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">KORAK 1</div>
         <h2 class="wdestapacan__h2">Jedan poklopac praha <em>izravno u odvod</em></h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s">
     <div class="wdestapacan__v wdestapacan__v--rev">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-09.webp' ); ?>" alt="Vrlo vruća voda, i čekate" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-09.webp' ); ?>" alt="Vrlo vruća voda, i čekate" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">KORAK 2</div>
         <h2 class="wdestapacan__h2">Vrlo vruća voda, <em>i čekate</em></h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s wdestapacan__s--bg">
     <div class="wdestapacan__v">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-10.webp' ); ?>" alt="Isperite kantom vode" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-10.webp' ); ?>" alt="Isperite kantom vode" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">KORAK 3</div>
         <h2 class="wdestapacan__h2">Isperite <em>kantom vode</em></h2>
@@ -107,7 +107,7 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
 
   <section class="wdestapacan__s">
     <div class="wdestapacan__v wdestapacan__v--rev">
-      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-02.webp' ); ?>" alt="Pjena dolazi tamo gdje tekućine procure" loading="lazy" decoding="async"></div>
+      <div class="wdestapacan__media"><img src="<?php echo esc_url( $wdir . 'destapacan-02.webp' ); ?>" alt="Pjena dolazi tamo gdje tekućine procure" loading="eager" decoding="async"></div>
       <div class="wdestapacan__tekst">
         <div class="wdestapacan__kicker">AKTIVNA PJENA</div>
         <h2 class="wdestapacan__h2">Pjena dolazi <em>tamo gdje tekućine procure</em></h2>

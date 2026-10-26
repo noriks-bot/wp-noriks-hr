@@ -20,7 +20,7 @@ $hg_vid = function( $file, $poster, $alt ) use ( $hg, $hg_path ) {
 
 $hg_img = function( $file, $alt ) use ( $hg, $hg_path ) {
   if ( file_exists( $hg_path . $file ) ) {
-    return '<img src="' . esc_url( $hg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+    return '<img src="' . esc_url( $hg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
   }
   return '<div class="nhg-ph" role="img" aria-label="' . esc_attr( $alt ) . '"><span>' . esc_html( $alt ) . '</span></div>';
 };

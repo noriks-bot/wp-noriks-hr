@@ -24,7 +24,7 @@ $ncf      = get_template_directory_uri() . '/img/catfountain/';
 $ncf_path = get_template_directory() . '/img/catfountain/';
 $ncf_img  = function( $file, $alt ) use ( $ncf, $ncf_path ) {
   if ( ! $file || ! file_exists( $ncf_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ncf . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ncf . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $ncf_video = function( $name, $label ) use ( $ncf, $ncf_path ) {
   $file = $name . '-hr.mp4'; $poster = $name . '-poster.webp';

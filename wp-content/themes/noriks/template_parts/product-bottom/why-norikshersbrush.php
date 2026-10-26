@@ -21,7 +21,7 @@ $nb_path = get_template_directory() . '/img/norikshersbrush/';
 
 $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
   if ( file_exists( $nb_path . $file ) ) {
-    return '<img src="'.esc_url($nb.$file).'" alt="'.esc_attr($alt).'" loading="lazy">';
+    return '<img src="'.esc_url($nb.$file).'" alt="'.esc_attr($alt).'" loading="eager">';
   }
   return '<div class="nhb-ph" role="img" aria-label="'.esc_attr($alt).'"><span>'.esc_html($alt).'</span></div>';
 };
@@ -68,7 +68,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
         ) as $st ) : ?>
           <article class="nhb-card">
             <?php $f = $st[2] . '.jpg'; if ( file_exists( $nb_path . $f ) ) : ?>
-              <div class="nhb-card-media"><img src="<?php echo esc_url( $nb . $f ); ?>" alt="<?php echo esc_attr( $st[1] ); ?>" loading="lazy"></div>
+              <div class="nhb-card-media"><img src="<?php echo esc_url( $nb . $f ); ?>" alt="<?php echo esc_attr( $st[1] ); ?>" loading="eager"></div>
             <?php else : ?>
               <div class="nhb-card-num"><?php echo esc_html( $st[0] ); ?></div>
             <?php endif; ?>
@@ -161,7 +161,7 @@ $nb_img = function( $file, $alt ) use ( $nb, $nb_path ) {
         ) as $st ) : ?>
           <article class="nhb-card">
             <?php $f = $st[2] . '.jpg'; if ( file_exists( $nb_path . $f ) ) : ?>
-              <div class="nhb-card-media"><img src="<?php echo esc_url( $nb . $f ); ?>" alt="<?php echo esc_attr( $st[0] ); ?>" loading="lazy"></div>
+              <div class="nhb-card-media"><img src="<?php echo esc_url( $nb . $f ); ?>" alt="<?php echo esc_attr( $st[0] ); ?>" loading="eager"></div>
             <?php endif; ?>
             <p class="nhb-card-title"><?php echo esc_html( $st[0] ); ?></p>
             <p class="nhb-card-text"><?php echo esc_html( $st[1] ); ?></p>

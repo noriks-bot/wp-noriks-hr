@@ -18,7 +18,7 @@ $nbs      = get_template_directory_uri() . '/img/brassiere/';
 $nbs_path = get_template_directory() . '/img/brassiere/';
 $nbs_img  = function( $file, $alt, $cls = '' ) use ( $nbs, $nbs_path ) {
   if ( ! file_exists( $nbs_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nbs . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="lazy">';
+  return '<img src="' . esc_url( $nbs . $file ) . '" alt="' . esc_attr( $alt ) . '"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ' loading="eager">';
 };
 
 /* Mnenja 1:1 z originala (ime, leta, kraj ostanejo kot na originalu). */

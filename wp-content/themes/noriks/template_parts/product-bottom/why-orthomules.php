@@ -20,7 +20,7 @@ $nom      = get_template_directory_uri() . '/img/orthomules/';
 $nom_path = get_template_directory() . '/img/orthomules/';
 $nom_img  = function( $file, $alt ) use ( $nom, $nom_path ) {
   if ( ! $file || ! file_exists( $nom_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nom . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nom . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nom_stars = function( $n ) {
   return '<span class="nom-stars" aria-label="' . (int) $n . ' od 5 zvjezdica">' . str_repeat( '★', (int) $n ) . '<span class="nom-stars__off">' . str_repeat( '★', 5 - (int) $n ) . '</span></span>';

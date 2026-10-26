@@ -27,7 +27,7 @@ $npd      = get_template_directory_uri() . '/img/petdental/';
 $npd_path = get_template_directory() . '/img/petdental/';
 $npd_img  = function( $file, $alt, $cls = '' ) use ( $npd, $npd_path ) {
   if ( ! $file || ! file_exists( $npd_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $npd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
+  return '<img src="' . esc_url( $npd . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . '>';
 };
 $npd_video = function( $file, $label, $cls = '' ) use ( $npd, $npd_path ) {
   if ( ! file_exists( $npd_path . $file ) ) { return ''; }

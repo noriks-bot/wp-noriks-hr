@@ -14,7 +14,7 @@ $kw      = get_template_directory_uri() . '/img/kompwom/';
 $kw_path = get_template_directory() . '/img/kompwom/';
 $kw_img  = function( $file, $alt, $cls = '' ) use ( $kw, $kw_path ) {
   if ( ! file_exists( $kw_path . $file ) ) { return ''; }
-  return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $kw . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $kw . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

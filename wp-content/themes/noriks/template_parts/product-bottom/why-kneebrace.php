@@ -15,7 +15,7 @@ $nkb      = get_template_directory_uri() . '/img/kneebrace/';
 $nkb_path = get_template_directory() . '/img/kneebrace/';
 $nkb_img  = function( $file, $alt ) use ( $nkb, $nkb_path ) {
   if ( ! file_exists( $nkb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nkb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nkb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

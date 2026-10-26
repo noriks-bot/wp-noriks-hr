@@ -26,7 +26,7 @@ $natb      = get_template_directory_uri() . '/img/antitheftbag/';
 $natb_path = get_template_directory() . '/img/antitheftbag/';
 $natb_img  = function( $file, $alt ) use ( $natb, $natb_path ) {
   if ( ! $file || ! file_exists( $natb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $natb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $natb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $natb_video = function( $file, $poster, $label ) use ( $natb, $natb_path ) {
   if ( ! $file || ! file_exists( $natb_path . $file ) ) { return ''; }

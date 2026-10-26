@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s wdaily__s--bg">
     <div class="wdaily__v">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-07.png' ); ?>" alt="Dnevna vrećica zelenih gumenih medvjedića NORIKS Daily" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-07.png' ); ?>" alt="Dnevna vrećica zelenih gumenih medvjedića NORIKS Daily" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">PREPOZNAJETE LI SE?</div>
         <h2 class="wdaily__h2">Znate da trebate voće i povrće. <em>Ali uspijevate li svaki dan?</em></h2>
@@ -27,7 +27,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s">
     <div class="wdaily__v wdaily__v--rev">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-06.png' ); ?>" alt="Pakiranje NORIKS Daily s 28 dnevnih vrećica" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-06.png' ); ?>" alt="Pakiranje NORIKS Daily s 28 dnevnih vrećica" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">ZAŠTO NORIKS DAILY</div>
         <h2 class="wdaily__h2">Svaki dan, <em>ali jednostavno</em></h2>
@@ -41,7 +41,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s wdaily__s--bg">
     <div class="wdaily__v">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-04.png' ); ?>" alt="Usporedba NORIKS Daily medvjedića i zelenog praha" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-04.png' ); ?>" alt="Usporedba NORIKS Daily medvjedića i zelenog praha" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">USPOREDITE SAMI</div>
         <h2 class="wdaily__h2">NORIKS Daily <em>ili zeleni prah</em></h2>
@@ -64,7 +64,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s">
     <div class="wdaily__v wdaily__v--rev">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-05.png' ); ?>" alt="Tri koraka: otrgnite vrećicu, pojedite medvjediće, spremni ste za danas" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-05.png' ); ?>" alt="Tri koraka: otrgnite vrećicu, pojedite medvjediće, spremni ste za danas" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">KAKO DJELUJE</div>
         <h2 class="wdaily__h2">Tako je <em>jednostavno</em></h2>
@@ -81,7 +81,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s wdaily__s--bg">
     <div class="wdaily__v">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-03.png' ); ?>" alt="Sastojci NORIKS Daily: vitamini, minerali, povrće i voće" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-03.png' ); ?>" alt="Sastojci NORIKS Daily: vitamini, minerali, povrće i voće" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">ŠTO JE UNUTRA</div>
         <h2 class="wdaily__h2">Vitamini, minerali, <em>povrće i voće</em></h2>
@@ -98,7 +98,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s">
     <div class="wdaily__v wdaily__v--rev">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-02.png' ); ?>" alt="Sastav po dnevnoj vrećici od 8 medvjedića" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-02.png' ); ?>" alt="Sastav po dnevnoj vrećici od 8 medvjedića" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">SASTAV</div>
         <h2 class="wdaily__h2">Po dnevnoj vrećici <em>(8 medvjedića)</em></h2>
@@ -136,7 +136,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
 
   <section class="wdaily__s wdaily__s--bg">
     <div class="wdaily__v">
-      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-01.png' ); ?>" alt="Pakiranje NORIKS Daily zelenih gumenih medvjedića" loading="lazy" decoding="async"></div>
+      <div class="wdaily__media"><img src="<?php echo esc_url( $wdir . 'daily-01.png' ); ?>" alt="Pakiranje NORIKS Daily zelenih gumenih medvjedića" loading="eager" decoding="async"></div>
       <div class="wdaily__tekst">
         <div class="wdaily__kicker">ČESTA PITANJA</div>
         <h2 class="wdaily__h2">Kratki odgovori <em>prije kupnje</em></h2>

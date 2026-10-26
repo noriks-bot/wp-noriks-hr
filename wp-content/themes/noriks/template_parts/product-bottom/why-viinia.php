@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s wviinia__s--bg">
     <div class="wviinia__v">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-04.jpg' ); ?>" alt="Savršeno hladno vino — svaki put" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-04.jpg' ); ?>" alt="Savršeno hladno vino — svaki put" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">ZBOGOM TOPLOM VINU</div>
         <h2 class="wviinia__h2">Savršeno hladno vino — <em>svaki put</em></h2>
@@ -23,7 +23,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s">
     <div class="wviinia__v wviinia__v--rev">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'noriks-viinia-2.webp' ); ?>" alt="Nehrđajući čelik, prikladan za hranu" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'noriks-viinia-2.webp' ); ?>" alt="Nehrđajući čelik, prikladan za hranu" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">VISOKA KVALITETA</div>
         <h2 class="wviinia__h2">Nehrđajući čelik, <em>prikladan za hranu</em></h2>
@@ -37,7 +37,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s wviinia__s--bg">
     <div class="wviinia__v">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-07.png' ); ?>" alt="Jednostavno za korištenje, brzo spremno" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-07.png' ); ?>" alt="Jednostavno za korištenje, brzo spremno" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">UŽITAK ODMAH</div>
         <h2 class="wviinia__h2">Jednostavno za korištenje, <em>brzo spremno</em></h2>
@@ -51,7 +51,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s">
     <div class="wviinia__v wviinia__v--rev">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-05.png' ); ?>" alt="Izljev koji ne kaplje" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-05.png' ); ?>" alt="Izljev koji ne kaplje" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">SAVRŠENO TOČENJE</div>
         <h2 class="wviinia__h2">Izljev koji ne <em>kaplje</em></h2>
@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s wviinia__s--bg">
     <div class="wviinia__v">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-06.gif' ); ?>" alt="Ugrađeno prozračivanje za bogatiji okus" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-06.gif' ); ?>" alt="Ugrađeno prozračivanje za bogatiji okus" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">PUNI OKUS</div>
         <h2 class="wviinia__h2">Ugrađeno prozračivanje za <em>bogatiji okus</em></h2>
@@ -79,7 +79,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s">
     <div class="wviinia__v wviinia__v--rev">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-08.jpg' ); ?>" alt="Za 10–15 minuta na idealnoj temperaturi" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'viinia-08.jpg' ); ?>" alt="Za 10–15 minuta na idealnoj temperaturi" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">ZA LJUBITELJE VINA</div>
         <h2 class="wviinia__h2">Za <em>10–15 minuta</em> na idealnoj temperaturi</h2>
@@ -93,7 +93,7 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
 
   <section class="wviinia__s wviinia__s--bg">
     <div class="wviinia__v">
-      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'noriks-viinia-3.webp' ); ?>" alt="Lako se čisti, traje godinama" loading="lazy" decoding="async"></div>
+      <div class="wviinia__media"><img src="<?php echo esc_url( $wdir . 'noriks-viinia-3.webp' ); ?>" alt="Lako se čisti, traje godinama" loading="eager" decoding="async"></div>
       <div class="wviinia__tekst">
         <div class="wviinia__kicker">HIGIJENA I KVALITETA</div>
         <h2 class="wviinia__h2">Lako se čisti, <em>traje godinama</em></h2>

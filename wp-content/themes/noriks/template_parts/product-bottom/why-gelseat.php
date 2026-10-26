@@ -21,7 +21,7 @@ $ngs      = get_template_directory_uri() . '/img/gelseat/';
 $ngs_path = get_template_directory() . '/img/gelseat/';
 $ngs_img  = function( $file, $alt ) use ( $ngs, $ngs_path ) {
   if ( ! file_exists( $ngs_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ngs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $ngs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 ?>
 

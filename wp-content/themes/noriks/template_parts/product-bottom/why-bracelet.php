@@ -23,7 +23,7 @@ $nbr      = get_template_directory_uri() . '/img/bracelet/';
 $nbr_path = get_template_directory() . '/img/bracelet/';
 $nbr_img  = function( $file, $alt ) use ( $nbr, $nbr_path ) {
   if ( ! file_exists( $nbr_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nbr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nbr . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 
 $nbr_star  = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="#00b779"/><path fill="#fff" d="M12 4.2l2.2 5.1 5.5.4-4.2 3.6 1.3 5.4L12 15.8l-4.8 2.9 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>';

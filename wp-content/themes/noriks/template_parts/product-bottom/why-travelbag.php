@@ -32,7 +32,7 @@ $ntb      = get_template_directory_uri() . '/img/travelbag/';
 $ntb_path = get_template_directory() . '/img/travelbag/';
 $ntb_img  = function( $file, $alt, $cls = '', $pos = '' ) use ( $ntb, $ntb_path ) {
   if ( ! $file || ! file_exists( $ntb_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ntb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"'
+  return '<img src="' . esc_url( $ntb . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"'
     . ( $cls ? ' class="' . esc_attr( $cls ) . '"' : '' ) . ( $pos ? ' style="object-position:' . esc_attr( $pos ) . '"' : '' ) . '>';
 };
 $ntb_video = function( $file, $label ) use ( $ntb, $ntb_path ) {

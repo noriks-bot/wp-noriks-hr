@@ -26,7 +26,7 @@ $ndg      = get_template_directory_uri() . '/img/doggo/';
 $ndg_path = get_template_directory() . '/img/doggo/';
 $ndg_img  = function( $file, $alt, $extra = '' ) use ( $ndg, $ndg_path ) {
   if ( ! file_exists( $ndg_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $ndg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy"' . $extra . '>';
+  return '<img src="' . esc_url( $ndg . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager"' . $extra . '>';
 };
 /* video s posterjem in gumbom (nalozi in predvaja se sele ob kliku) — brez zvoka */
 $ndg_video = function( $file, $label, $ratio ) use ( $ndg, $ndg_path ) {

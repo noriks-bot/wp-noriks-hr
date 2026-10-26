@@ -19,7 +19,7 @@ $nfs      = get_template_directory_uri() . '/img/fleeceshawl/';
 $nfs_path = get_template_directory() . '/img/fleeceshawl/';
 $nfs_img  = function( $file, $alt ) use ( $nfs, $nfs_path ) {
   if ( ! $file || ! file_exists( $nfs_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nfs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nfs . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nfs_stars = function( $n ) {
   $n = max( 0, min( 5, (int) $n ) );

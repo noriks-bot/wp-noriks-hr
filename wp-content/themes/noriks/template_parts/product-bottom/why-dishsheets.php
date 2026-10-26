@@ -26,7 +26,7 @@ $nds      = get_template_directory_uri() . '/img/dishsheets/';
 $nds_path = get_template_directory() . '/img/dishsheets/';
 $nds_img  = function( $file, $alt ) use ( $nds, $nds_path ) {
   if ( ! $file || ! file_exists( $nds_path . $file ) ) { return ''; }
-  return '<img src="' . esc_url( $nds . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
+  return '<img src="' . esc_url( $nds . $file ) . '" alt="' . esc_attr( $alt ) . '" loading="eager">';
 };
 $nds_video = function( $file, $poster, $label, $cls = '' ) use ( $nds, $nds_path ) {
   if ( ! file_exists( $nds_path . $file ) ) { return ''; }
