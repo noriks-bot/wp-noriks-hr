@@ -1289,3 +1289,11 @@ body.single-product {
                
            }
 
+
+/* Tablica velicina pod ceno - manj razmika zgoraj (~9 px) in spodaj (~7-8 px), za vse izdelke (Dejan 26.10.2026).
+   Globalna povezava (theme): blok cene nad njo ze nosi ~13 px, obrazec pod njo 10 px.
+   Orto povezava: odstevalnik nad njo ima 14 px, #bundle-selector pod njo 8 px. */
+.summary .noriks-global-sizechart { margin: -4px 0 0 !important; }
+.summary .noriks-global-sizechart + form.cart { margin-top: 7px !important; }
+.summary .gck-countdown:has(+ .gck-size-link-wrap) { margin-bottom: 9px !important; }
+.summary .gck-size-link-wrap { margin-top: 0 !important; margin-bottom: 0 !important; }
