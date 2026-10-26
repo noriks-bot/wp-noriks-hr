@@ -68,6 +68,7 @@ function noriks_product_type_map() : array {
         'odorpro' => array( 'orto-odorpro' ),
         'zipcomp' => array( 'orto-zipcomp' ),
         'webshot' => array( 'orto-webshot' ),
+        'gelcushion' => array( 'orto-gelcushion' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
