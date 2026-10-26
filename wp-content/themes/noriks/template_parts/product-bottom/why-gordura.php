@@ -10,13 +10,14 @@
    3. izbirnik Velicina (P-2XG = S-3XL) in Cor Bege/Marrom/Preto (pri nas Velicina S-3XL + Boja)
    4. tablica velikosti (pri nas size-chart)
    Brez videov, tabel in karuselov na originalu.
+ * BARVA ORIGINALA: #890053 (slivova akcentna barva gumbov, zvezdic in oznak na originalu); svetel ton za --bg #ecd6e3, akcent #890053
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/gordura/';
 ?>
 <div class="wgordura">
 
-  <section class="wgordura__s wgordura__las">
+  <section class="wgordura__s wgordura__las wgordura__s--bg">
     <div class="wgordura__lv">
       <div class="wgordura__kicker">KARAKTERISTIKE PROIZVODA</div>
       <h2 class="wgordura__h2">Četiri stvari koje <em>osjetite svaki dan</em></h2>
@@ -29,7 +30,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s wgordura__s--bg">
+  <section class="wgordura__s">
     <div class="wgordura__v">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-01.webp' ); ?>" alt="Body koji nosite uz svoj grudnjak" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -43,7 +44,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s">
+  <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-02.webp' ); ?>" alt="Kroj koji prati tijelo s obje strane" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -57,7 +58,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s wgordura__s--bg">
+  <section class="wgordura__s">
     <div class="wgordura__v">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-03.webp' ); ?>" alt="Kukice po cijeloj dužini prednje trake" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -71,7 +72,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s">
+  <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-04.webp' ); ?>" alt="Četiri koraka do ravno namještenog bodyja" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -85,7 +86,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s wgordura__s--bg">
+  <section class="wgordura__s">
     <div class="wgordura__v">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-05.webp' ); ?>" alt="Okomiti šavovi koji drže oblik u struku" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -99,7 +100,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s">
+  <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'gordura-06.webp' ); ?>" alt="Široke naramenice koje ne upadaju u ramena" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -113,7 +114,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s wgordura__s--bg">
+  <section class="wgordura__s">
     <div class="wgordura__v">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-07.webp' ); ?>" alt="Kratke nogavice s čipkastim rubom" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -127,7 +128,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s">
+  <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-09.webp' ); ?>" alt="Bež, smeđa ili crna — prema odjeći" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -141,7 +142,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s wgordura__s--bg">
+  <section class="wgordura__s">
     <div class="wgordura__v">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-11.webp' ); ?>" alt="Prvi sloj ispod haljine, suknje ili hlača" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -155,7 +156,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s">
+  <section class="wgordura__s wgordura__s--bg">
     <div class="wgordura__v wgordura__v--rev">
       <div class="wgordura__media"><img src="<?php echo esc_url( $wdir . 'shapebody-10.webp' ); ?>" alt="Šest veličina, od S do 3XL" loading="lazy" decoding="async"></div>
       <div class="wgordura__tekst">
@@ -169,7 +170,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
     </div>
   </section>
 
-  <section class="wgordura__s wgordura__s--bg">
+  <section class="wgordura__s">
     <div class="wgordura__v">
       <div class="wgordura__media wgordura__media--pecat">
         <div class="wgordura__pecat" role="img" aria-label="30 dana za povrat">
@@ -186,17 +187,17 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
         <h2 class="wgordura__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wgordura__p">NORIKS ShapeBody isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
         <div class="wgordura__pogoji wgordura__pogoji--ob">
-        <div class="wgordura__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div class="wgordura__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div class="wgordura__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div class="wgordura__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
+        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+        <div class="wgordura__pog"><span class="wgordura__pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
   </div>
   </section>
 </div>
 <style>
-.wgordura__lv{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box;text-align:center}
+.wgordura__lv{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;text-align:center}
 .wgordura__lg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
 .wgordura__lk{background:#fff;border:1px solid #ece8e2;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.06);padding:28px 18px;display:flex;flex-direction:column;align-items:center;gap:6px}
 .wgordura__lki{width:84px;height:84px;border-radius:50%;background:#f4f3ef;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
@@ -207,7 +208,7 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
 .wgordura{color:#1c1c1c;font-family:inherit}
 .wgordura__s{padding:56px 0;background:#fff}
 .wgordura__s--bg{background:#f4f3ef}
-.wgordura__v{max-width:1440px;margin:0 auto;padding:0 10px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wgordura__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .wgordura__v--rev .wgordura__media{order:2}
 .wgordura__v--rev .wgordura__tekst{order:1}
 .wgordura__v--polna{grid-template-columns:1fr;gap:28px}
@@ -248,4 +249,21 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
   .wgordura__pecat-num{font-size:64px}
   .wgordura__pecat-top,.wgordura__pecat-bot{font-size:10px;max-width:118px}
 }
+/* dizajn.py */
+.wgordura__s{padding:72px 0}.wgordura__s.wgordura__s--bg{background:#ecd6e3}.wgordura__s.wgordura__traka{padding:40px 0}.wgordura__s.wgordura__traka:not(.wgordura__s--bg){background:#fff}
+.wgordura__kicker{color:#890053;letter-spacing:1.8px;font-size:12.5px}.wgordura__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#890053;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.wgordura__h2 em{color:#890053}.wgordura__dva .wgordura__zak{border-left:3px solid #890053;padding-left:14px}
+.wgordura__media,.wgordura__polna{box-shadow:0 14px 34px rgba(137,0,83,.22);border:1px solid rgba(137,0,83,.25)}
+.wgordura__k{border:1px solid rgba(137,0,83,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wgordura__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(137,0,83,.22)}
+.wgordura__pog>div{border:1px solid rgba(137,0,83,.35);border-radius:16px;padding:28px 18px;transition:transform .2s,box-shadow .2s}.wgordura__pog>div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(137,0,83,.22)}
+span.wgordura__pi{opacity:1;width:58px;height:58px;border-radius:50%;background:#dcb2cb;border:1px solid #890053;color:#890053;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.wgordura__pi svg{width:28px;height:28px}
+.wgordura__red3 span.wgordura__pi{width:44px;height:44px;margin-bottom:8px}.wgordura__red3 .wgordura__pi svg{width:22px;height:22px}.wgordura__red3>div{border-color:rgba(137,0,83,.35)}
+.wgordura__pog strong{color:#1c1c1c}.wgordura__st,.wgordura__kv li::before{background:#890053}.wgordura__tab th{background:#890053!important}
+.wgordura__ti{background:linear-gradient(135deg,#890053,#a33879);box-shadow:0 6px 14px rgba(137,0,83,.30)}.wgordura__tk{border-color:rgba(137,0,83,.30)}
+.wgordura__ime{display:flex;align-items:center;gap:10px}.wgordura__av{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#dcb2cb;border:1px solid #890053;color:#890053;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+div.wgordura__pog{text-align:center;border:1px solid rgba(137,0,83,.35);border-radius:16px;transition:transform .2s,box-shadow .2s}div.wgordura__pog:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(137,0,83,.22)}div.wgordura__pog>strong,div.wgordura__pog>span:not(.wgordura__pi){display:block}
+.wgordura__pus{color:#890053}.wgordura__plavo{background:#890053;margin-top:-72px}.wgordura__k--temna{background:#890053}
+@media (max-width:860px){.wgordura__s{padding:46px 0}.wgordura__s.wgordura__traka{padding:30px 0}.wgordura__plavo{margin-top:-46px}.wgordura__pog>div{padding:22px 12px}}
+@media (max-width:767px){.wgordura__lv,.wgordura__v{padding:0 16px}}
+/* /dizajn.py */
 </style>
