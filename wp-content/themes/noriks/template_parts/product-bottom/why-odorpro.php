@@ -1,260 +1,73 @@
 <?php
 /**
- * NORIKS OdorPro — why sekcije v vrstnem redu originala: uklanja li mirise (+ izjava kupca), kako se koristi (3 koraka),
- * punjenja, vlasnici ljubimaca (izjave), prestanite prikrivati, kauc, zasto ga biraju kupci, mnenja, usporedba sa
- * svijecama/difuzorima/sprejevima, cesta pitanja, NORIKS pogoji (namesto 90 dni vracila originala).
- * Izpusceno: tuje stevilke kupcev in odstotki ankete, imena zbirk punjenj, popust na prihodnja punjenja, videi z logotipom.
+ * NORIKS OdorPro — why sekcije po natancni strukturi originala (belorna.com/products/belorna-pistola-anti-odori-per-animali). Generirano s struk.py.
+ *
+ * STRUKTURA ORIGINALA:
+   1. naslov + drsnik 3 video mnenj kupcev (vlasnici ljubimaca) - IZPUSCENO: na vseh videih je na napravi logotip tuje znamke, en video s tujo znamko na puloverju
+   2. tekoci trak prednosti (kompaktan dizajn, stevilo kupcev, jamstvo, uklanja mirise, neutralizira na izvoru, bezicno) - pri nas trak s 4 celicami, NORIKS stevilo kupcev in 30 dana namesto tujih
+   3. slika levo (animacija: obicni sprej vs ultrafina maglica), besedilo desno - prestanite prikrivati, pocnite uklanjati
+   4. besedilo levo, slika desno - vas kauc je mjesto gdje miris zivi
+   5. slika levo (kolaz kupcev), besedilo desno - zasto ga kupci biraju (tuje stevilo kupcev izpusceno)
+   6. naslov + 3 kartice mnenj v vrsti (fotografija kupca z napravo + 5 zvezdic + naslov + citat + ime)
+   7. trije veliki odstotki iz ankete originala (90 % / 94 % / 95 %) - IZPUSCENO: tuje stevilke ankete
+   8. naslov + primerjalna tabela NORIKS OdorPro vs svijece/difuzori/sprejevi (5 vrstic kljukica/krizec)
+   9. FAQ (pri nas Informacije o proizvodu, FAQ_HR_odorpro.php) in mnenja (HR_odorpro.php)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wdir = get_template_directory_uri() . '/img/odorpro/';
 ?>
-<div class="wodp">
-
-  <section class="wodp__s wodp__s--bg">
-    <div class="wodp__v">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-kauc-macka.webp?v=1' ); ?>" alt="NORIKS OdorPro raspršuje ultrafinu maglicu po kauču na kojem spava mačka" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">PITANJE KOJE SVI POSTAVLJAJU</div>
-        <h2 class="wodp__h2">Uklanja li zaista <em>mirise ljubimaca?</em></h2>
-        <p class="wodp__p">Većina sprejeva miris ljubimaca samo nakratko prekrije jakim parfemom. Čim parfem izblijedi, stari miris se vraća – jer je i dalje u tkanini.</p>
-        <p class="wodp__p">NORIKS OdorPro pomaže neutralizirati tvrdokorne mirise duboko u ležaljkama za ljubimce, kaučima, tepisima, autosjedalima i namještaju, pa prostor ponovno miriše svježe – a ne na osvježivač. Idealan je za miris mokrog psa, mačjeg pijeska, nezgoda ljubimaca i svakodnevni miris koji se zadržava u kući.</p>
-        <div class="wodp__citati">
-          <blockquote><p>„Imam tri psa i gosti su miris primijetili čim bi ušli. Sada više ne.”</p><cite>Sofija – Zagreb</cite></blockquote>
-        </div>
-        <p class="wodp__zak">Ne prikriva miris – uklanja ga ondje gdje nastaje.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s">
-    <div class="wodp__v wodp__v--rev">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-maglica.webp?v=1' ); ?>" alt="Ruka raspršuje ultrafinu maglicu NORIKS OdorPro na jastuk – maglica doseže vlakna" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">KAKO SE KORISTI</div>
-        <h2 class="wodp__h2">Jednostavno, <em>u 3 koraka</em></h2>
-        <div class="wodp__koraci">
-          <div><strong>1</strong><span>Napunite spremnik vodom.</span></div>
-          <div><strong>2</strong><span>Dodajte nekoliko kapi bio-enzimskog punjenja.</span></div>
-          <div><strong>3</strong><span>Raspršite po kauču, tepihu, ležaljci, unutrašnjosti auta, zavjesama ili oko posude s pijeskom.</span></div>
-        </div>
-        <p class="wodp__p">Ultrafina maglica suši se za nekoliko minuta, ne ostavlja mrlje i zahvaljujući bioaktivnim enzimima neutralizira mirise na izvoru.</p>
-        <p class="wodp__p">Uređaj je bežičan i punjiv, pa ga lako nosite iz sobe u sobu ili u auto – bez kabela i bez traženja utičnice.</p>
-        <p class="wodp__zak">Razliku ćete primijetiti već nakon prve upotrebe.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s wodp__s--bg">
-    <div class="wodp__v">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-punjenje.webp?v=1' ); ?>" alt="Bočica bio-enzimskog punjenja NORIKS OdorPro – dezodorans biljnog podrijetla" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">PUNJENJA</div>
-        <h2 class="wodp__h2">Kako funkcioniraju <em>punjenja?</em></h2>
-        <p class="wodp__p">Punjenja su koncentrirane bio-enzimske formule obogaćene prirodnim esencijama. Svaka bočica je mali koncentrat: dovoljno je nekoliko kapi u vodi iz spremnika da se mirisi neutraliziraju, a prostor dobije nježan, nenametljiv miris.</p>
-        <p class="wodp__p">Miris možete promijeniti kad god želite – samo ispraznite spremnik i napunite ga ponovno. Formula je biljnog podrijetla, razgrađuje miris na izvoru i namijenjena je upotrebi na tkaninama u domu s ljubimcima.</p>
-        <div class="wodp__kart">
-          <div><strong>Biljnog podrijetla</strong><span>bio-enzimska formula</span></div>
-          <div><strong>Koncentrat</strong><span>nekoliko kapi po punjenju spremnika</span></div>
-          <div><strong>Za tkanine</strong><span>za ljubimce i tkanine</span></div>
-        </div>
-        <p class="wodp__zak">Nekoliko kapi – i dom ponovno miriše svježe.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s">
-    <div class="wodp__v wodp__v--rev">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-kupac.webp?v=1' ); ?>" alt="Kupac pokazuje svoj NORIKS OdorPro ispred ogledala" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">IZ DOMOVA NAŠIH KUPACA</div>
-        <h2 class="wodp__h2">Vlasnici ljubimaca su <em>oduševljeni</em></h2>
-        <p class="wodp__p">Vlasnici pasa i mačaka koriste ga svaki dan – na kauču, u autu, oko ležaljke i posude s pijeskom. Najčešće kažu da je ovo prvi uređaj nakon kojeg miris nije bio samo prekriven, nego je doista nestao.</p>
-        <ul class="wodp__lista">
-          <li><strong>Kompaktan dizajn</strong> – stane u ladicu i u pretinac u autu,</li>
-          <li><strong>bežičan i prenosiv</strong> – punite ga i nosite kamo god treba,</li>
-          <li><strong>neutralizira na izvoru</strong> – maglica doseže vlakna u kojima miris živi.</li>
-        </ul>
-        <p class="wodp__zak">Više od 120.000 kupaca NORIKS – prosječna ocjena 4,8.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s wodp__s--bg">
-    <div class="wodp__v">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-kapljice.webp?v=1' ); ?>" alt="Usporedba: obični raspršivač i NORIKS OdorPro s kapljicama 100 puta manjim" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">NANO MAGLICA</div>
-        <h2 class="wodp__h2">Prestanite prikrivati. <em>Počnite uklanjati.</em></h2>
-        <p class="wodp__p">Svijeće, difuzori i sprejevi samo dodaju miris preko mirisa ljubimca koji se uvukao u vaše tkanine. Kad njihov parfem izblijedi, problem je i dalje ondje.</p>
-        <p class="wodp__p">Nano maglica NORIKS OdorPro ima kapljice i do 100 puta manje od klasičnih raspršivača. Zato neutralizatore mirisa nosi duboko u vlakna, ondje gdje miris doista živi – pa gosti prestanu primjećivati ono što vi više ni ne osjetite.</p>
-        <p class="wodp__zak">Manje kapljice – dublje u tkaninu – manje mirisa.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s">
-    <div class="wodp__v wodp__v--rev">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-dnevna-soba.webp?v=1' ); ?>" alt="Žena raspršuje NORIKS OdorPro u dnevnoj sobi" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">GDJE MIRIS ŽIVI</div>
-        <h2 class="wodp__h2">Vaš kauč je mjesto <em>gdje miris doista živi</em></h2>
-        <p class="wodp__p">Masnoća i perut sa krzna uvlače se sve dublje svaki put kad ljubimac skoči na kauč. U većini domova kauč je izvor broj jedan mirisa ljubimaca – i prvo mjesto koje gosti primijete.</p>
-        <p class="wodp__p">Maglica NORIKS OdorPro taloži se u tkaninu, ondje gdje miris nastaje. Isto vrijedi i za tepihe, deke, jastuke, zavjese i sjedala u autu – sve površine od tkanine na kojima ljubimac voli ležati.</p>
-        <p class="wodp__zak">Tretirajte izvor – ne zrak oko njega.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s wodp__s--bg">
-    <div class="wodp__v">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-kupci.webp?v=1' ); ?>" alt="Kolaž fotografija kupaca s uređajem NORIKS OdorPro" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">ZAŠTO GA BIRAJU</div>
-        <h2 class="wodp__h2">Zašto ga biraju <em>tisuće kupaca</em></h2>
-        <p class="wodp__p">Tisuće kupaca koriste NORIKS OdorPro kako bi uklonili tvrdokorne mirise ljubimaca, dima i svakodnevice iz doma, auta, kauča i tkanina – bez agresivnih sprejeva i jakih parfema.</p>
-        <p class="wodp__p">Uređaj je malen, bežičan i uvijek spreman: maglicu raspršite za nekoliko sekundi, a tkanina se suši za nekoliko minuta. Bez mrlja, bez teškog mirisa i bez dugog čišćenja.</p>
-        <p class="wodp__zak">Svježiji dom za nekoliko sekundi.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s">
-    <div class="wodp__v wodp__v--rev">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-uredaj.webp?v=1' ); ?>" alt="Bijeli bežični raspršivač NORIKS OdorPro sa spremnikom" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">ZAŠTO GA SVI VOLE</div>
-        <h2 class="wodp__h2">Što kažu <em>kupci</em></h2>
-        <div class="wodp__citati">
-          <blockquote><p><strong>Koristim ga svaki dan.</strong> „Auto mi je uvijek mirisao na mokrog psa nakon što sam svog zlatnog retrivera vozila posvuda. Ovaj uređaj je potpuno promijenio situaciju.”</p><cite>Jelena G. – Split</cite></blockquote>
-          <blockquote><p><strong>Prvi koji je uklonio miris.</strong> „Kauč i dnevni boravak uvijek su mirisali na psa, koliko god čistila. Ovo je prvo što je miris doista uklonilo.”</p><cite>Maja P. – Rijeka</cite></blockquote>
-          <blockquote><p><strong>Bolji od svakog spreja.</strong> „Imam dvije mačke i posudu s pijeskom u stanu. Raspršio sam ga jednom i cijeli stan za nekoliko minuta zamjetno svježije miriše.”</p><cite>Mihael B. – Osijek</cite></blockquote>
-        </div>
-        <p class="wodp__zak">Svježiji dom počinje ovdje.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s wodp__s--bg">
-    <div class="wodp__v">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-znacajke.webp?v=1' ); ?>" alt="Šest ključnih značajki NORIKS OdorPro: plavo svjetlo, nano raspršivanje, brzo punjenje, bežičan, baterija, široka pokrivenost" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">USPOREDBA</div>
-        <h2 class="wodp__h2">NORIKS OdorPro protiv <em>svijeća, difuzora i sprejeva</em></h2>
-        <p class="wodp__p">Većina vlasnika ljubimaca već je isprobala svaku svijeću, difuzor i sprej u trgovini. Evo po čemu je NORIKS OdorPro drugačiji:</p>
-        <div class="wodp__scroll">
-          <table class="wodp__tab">
-            <tr><th></th><th>NORIKS OdorPro</th><th>Ostali</th></tr>
-            <tr><td>Neutralizira miris na izvoru</td><td>✓</td><td>✗</td></tr>
-            <tr><td>Bez jakog parfema koji prikriva</td><td>✓</td><td>✗</td></tr>
-            <tr><td>Za ljubimce i tkanine</td><td>✓</td><td>✗</td></tr>
-            <tr><td>Djeluje na svim površinama od tkanine</td><td>✓</td><td>✗</td></tr>
-            <tr><td>Dugoročno rješenje, ne privremeno</td><td>✓</td><td>✗</td></tr>
-          </table>
-        </div>
-        <p class="wodp__zak">Zato gosti prestanu primjećivati miris – zauvijek.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s">
-    <div class="wodp__v wodp__v--rev">
-      <div class="wodp__media"><img src="<?php echo esc_url( $wdir . 'noriks-odorpro-lezaljka.webp?v=1' ); ?>" alt="NORIKS OdorPro raspršuje maglicu po ležaljci za psa" loading="lazy" decoding="async"></div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">IMATE PITANJA?</div>
-        <h2 class="wodp__h2">Česta <em>pitanja</em></h2>
-        <p class="wodp__p"><strong>Uklanja li zaista mirise ljubimaca?</strong> NORIKS OdorPro je napravljen tako da tvrdokorne mirise neutralizira, umjesto da ih prekrije jakim parfemom. Brzo osvježi prostor i zrak ostaje zamjetno čišći.</p>
-        <p class="wodp__p"><strong>Kod kojih mirisa pomaže?</strong> Kod mirisa mokrog psa, mačjeg pijeska, nezgoda ljubimaca, ležaljki, kauča, tepiha, deka, autosjedala i drugih tvrdokornih mirisa.</p>
-        <p class="wodp__p"><strong>Ostavlja li jak miris parfema?</strong> Ne. Osvježava dom bez jakog kemijskog mirisa ili parfema koji ostavljaju mnogi sprejevi.</p>
-        <p class="wodp__p"><strong>Koliko brzo djeluje?</strong> Većina kupaca svježiji miris primijeti nekoliko sekundi nakon raspršivanja. Kod jačih mirisa pomaže još nekoliko raspršivanja.</p>
-        <p class="wodp__zak">Sva pitanja i odgovore pronaći ćete i ispod.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wodp__s wodp__s--bg">
-    <div class="wodp__v">
-      <div class="wodp__media wodp__media--pecat">
-        <div class="wodp__pecat" role="img" aria-label="30 dana za povrat">
-          <div class="wodp__pecat-in">
-            <span class="wodp__pecat-top">Pravo na povrat</span>
-            <span class="wodp__pecat-num">30</span>
-            <span class="wodp__pecat-dani">DANA</span>
-            <span class="wodp__pecat-bot">Bez rizika</span>
-          </div>
-        </div>
-      </div>
-      <div class="wodp__tekst">
-        <div class="wodp__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wodp__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wodp__p">Isprobajte NORIKS OdorPro kod kuće – na kauču, u autu i oko ležaljke. Ako ne primijetite razliku u mirisu, imate 30 dana za povrat novca, bez kompliciranja i bez pitanja.</p>
-        <div class="wodp__pogoji">
-          <div class="wodp__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-          <div class="wodp__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-          <div class="wodp__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-          <div class="wodp__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-        </div>
-        <p class="wodp__zak">Bez brige, bez stresa – svježiji dom.</p>
-      </div>
-    </div>
-  </section>
+<div class="wsodorpro">
+<section class="wsodorpro__s wsodorpro__traka"><div class="wsodorpro__v wsodorpro__red4"><div><strong>Uklanja mirise ljubimaca</strong><span>neutralizira ih na izvoru</span></div><div><strong>Bežičan i prenosiv</strong><span>kompaktan dizajn</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div><div><strong>30 dana</strong><span>za povrat novca</span></div></div></section>
+<section class="wsodorpro__s"><div class="wsodorpro__v wsodorpro__dva"><div class="wsodorpro__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/odorpro/noriks-odorpro-sprej-maglica.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsodorpro__kicker">Bez prikrivanja</div><h2 class="wsodorpro__h2">Prestanite prikrivati. <em>Počnite uklanjati.</em></h2><p class="wsodorpro__p">Svijeće, difuzori i sprejevi samo prekriju miris ljubimca koji se uvukao u vaše tkanine jačim mirisom parfema. Čim parfem izblijedi, stari miris se vraća – jer je i dalje u tkanini.</p><p class="wsodorpro__p">NORIKS OdorPro raspršuje ultrafinu maglicu koja neutralizatore mirisa nosi duboko u vlakna, tamo gdje miris zaista živi. Običan sprej ostavi mokru mrlju na površini – maglica se ravnomjerno spusti po cijeloj tkanini i osuši za nekoliko minuta, bez mrlja.</p><p class="wsodorpro__p">Tako gosti prestanu primjećivati ono što vi više i ne osjećate.</p><p class="wsodorpro__zak">Ne prikriva miris – uklanja ga ondje gdje nastaje.</p></div></div></section>
+<section class="wsodorpro__s wsodorpro__s--bg"><div class="wsodorpro__v wsodorpro__dva wsodorpro__dva--rev"><div class="wsodorpro__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/odorpro/noriks-odorpro-dnevna-soba.webp' ); ?>" alt="Vaš kauč je mjesto gdje miris zaista živi" loading="lazy" decoding="async"></div><div><div class="wsodorpro__kicker">Kauč</div><h2 class="wsodorpro__h2">Vaš kauč je mjesto gdje <em>miris zaista živi</em></h2><p class="wsodorpro__p">Masnoća i perut prodiru sve dublje svaki put kad ljubimac skoči na kauč. U većini domova kauč je izvor broj jedan mirisa ljubimaca – i prvo mjesto koje gosti primijete.</p><p class="wsodorpro__p">NORIKS OdorPro se taloži u tkaninu, tamo gdje miris zaista živi: na kauč, tepih, ležaljku za psa, deku, zavjese i autosjedala.</p><p class="wsodorpro__p">Napunite spremnik vodom, dodajte nekoliko kapi bio-enzimskog punjenja i raspršite. Bežičan je i puni se, pa ga nosite iz sobe u sobu i u auto.</p><ul class="wsodorpro__kv"><li><em>Kauč i fotelje</em></li><li><em>Tepisi, deke i zavjese</em></li><li><em>Ležaljke za pse i mačke, kutija s pijeskom</em></li><li><em>Sjedala u autu</em></li></ul><p class="wsodorpro__zak">Tamo gdje ljubimac leži – tamo raspršite.</p></div></div></section>
+<section class="wsodorpro__s"><div class="wsodorpro__v wsodorpro__dva"><div class="wsodorpro__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/odorpro/noriks-odorpro-kupci.webp' ); ?>" alt="Zašto ga kupci biraju" loading="lazy" decoding="async"></div><div><div class="wsodorpro__kicker">Kupci</div><h2 class="wsodorpro__h2">Zašto ga kupci <em>biraju</em></h2><p class="wsodorpro__p">Tisuće kupaca koriste NORIKS OdorPro kako bi uklonili tvrdokorne mirise ljubimaca, dima i svakodnevice iz kuće, auta, kauča i tkanina – bez agresivnih sprejeva i jakih parfema.</p><p class="wsodorpro__p">Najviše ga vole vlasnici pasa i mačaka: za miris mokrog psa, kutiju s pijeskom, nezgode ljubimaca i ležaljke koje se ne mogu oprati svaki dan.</p><p class="wsodorpro__p">Ne ostavlja jak kemijski miris ni miris parfema – prostor jednostavno miriše čisto.</p><p class="wsodorpro__zak">Svjež dom bez maskiranja mirisa.</p></div></div></section>
+<section class="wsodorpro__s wsodorpro__s--bg"><div class="wsodorpro__v"><div class="wsodorpro__kicker wsodorpro__c">Iskustva kupaca</div><h2 class="wsodorpro__h2 wsodorpro__c">Evo zašto ga <em>svi vole</em></h2><p class="wsodorpro__p wsodorpro__c">Vlasnici ljubimaca o tome što se promijenilo kod kuće i u autu.</p><div class="wsodorpro__grid wsodorpro__g3"><div class="wsodorpro__k"><div class="wsodorpro__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/odorpro/noriks-odorpro-kupac.webp' ); ?>" alt="Koristim ga svaki dan" loading="lazy" decoding="async"></div><div class="wsodorpro__kt"><span class="wsodorpro__zv">★★★★★</span><strong>Koristim ga svaki dan</strong><p>Auto mi je uvijek mirisao na mokrog psa jer svugdje vozim svog zlatnog retrivera. OdorPro je to potpuno promijenio.</p><span class="wsodorpro__ime">Ivana G.</span></div></div><div class="wsodorpro__k"><div class="wsodorpro__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/odorpro/noriks-odorpro-kupac-2.webp' ); ?>" alt="Prvo što je uklonilo miris" loading="lazy" decoding="async"></div><div class="wsodorpro__kt"><span class="wsodorpro__zv">★★★★★</span><strong>Prvo što je uklonilo miris</strong><p>Kauč i dnevni boravak su uvijek mirisali na psa, koliko god čistila. Ovo je prvo što je miris stvarno uklonilo.</p><span class="wsodorpro__ime">Maja P.</span></div></div><div class="wsodorpro__k"><div class="wsodorpro__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/odorpro/noriks-odorpro-kupac-3.webp' ); ?>" alt="Bolji od svih sprejeva" loading="lazy" decoding="async"></div><div class="wsodorpro__kt"><span class="wsodorpro__zv">★★★★★</span><strong>Bolji od svih sprejeva</strong><p>Imam dvije mačke i kutiju s pijeskom u stanu. Raspršila sam jednom i cijeli stan je za nekoliko minuta mirisao puno svježije.</p><span class="wsodorpro__ime">Mirjana B.</span></div></div></div></div></section>
+<section class="wsodorpro__s"><div class="wsodorpro__v"><div class="wsodorpro__kicker wsodorpro__c">Usporedba</div><h2 class="wsodorpro__h2 wsodorpro__c">NORIKS OdorPro <em>protiv svijeća, difuzora i sprejeva</em></h2><p class="wsodorpro__p wsodorpro__c">Većina vlasnika ljubimaca već je isprobala svaku svijeću, difuzor i sprej. Evo po čemu je NORIKS OdorPro drugačiji – i zašto gosti zauvijek prestanu primjećivati miris.</p><div class="wsodorpro__tw"><table class="wsodorpro__tab"><thead><tr><th><span></span></th><th><span>NORIKS OdorPro</span></th><th><span>Ostali</span></th></tr></thead><tbody><tr><td>Neutralizira miris na izvoru</td><td class="wsodorpro__da">✓</td><td class="wsodorpro__ne">✕</td></tr><tr><td>Bez jakog parfema koji prikriva miris</td><td class="wsodorpro__da">✓</td><td class="wsodorpro__ne">✕</td></tr><tr><td>Siguran za ljubimce i djecu</td><td class="wsodorpro__da">✓</td><td class="wsodorpro__ne">✕</td></tr><tr><td>Djeluje na svakoj tkanini</td><td class="wsodorpro__da">✓</td><td class="wsodorpro__ne">✕</td></tr><tr><td>Dugoročno rješenje, ne privremeno</td><td class="wsodorpro__da">✓</td><td class="wsodorpro__ne">✕</td></tr></tbody></table></div><p class="wsodorpro__zak">Jednom uklonjen miris ne treba prekrivati svaki dan.</p></div></section>
+<section class="wsodorpro__s wsodorpro__s--bg"><div class="wsodorpro__v"><div class="wsodorpro__kicker wsodorpro__c">KUPUJTE BEZ BRIGE</div><h2 class="wsodorpro__h2 wsodorpro__c">Uz NORIKS kupujete <em>bez rizika</em></h2><p class="wsodorpro__p wsodorpro__c">NORIKS OdorPro isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p><div class="wsodorpro__red4 wsodorpro__pog"><div><strong>30 dana</strong><span>za povrat novca</span></div><div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div><div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div></div></div></section>
 </div>
 <style>
-.wodp{color:#1c1c1c;font-family:inherit}
-.wodp__s{padding:56px 0;background:#fff}
-.wodp__s--bg{background:#f4f3ef}
-.wodp__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.wodp__v--rev .wodp__media{order:2}
-.wodp__v--rev .wodp__tekst{order:1}
-.wodp__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
-.wodp__media img,.wodp__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wodp__tekst{min-width:0}
-.wodp__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
-.wodp__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
-.wodp__h2 em{font-style:italic}
-.wodp__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
-.wodp__lista{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px;padding-left:22px}
-.wodp__lista li{margin:0 0 6px}
-.wodp__kart{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 16px}
-.wodp__kart div,.wodp__koraci div{background:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.06);padding:12px 14px}
-.wodp__s:not(.wodp__s--bg) .wodp__kart div,.wodp__s:not(.wodp__s--bg) .wodp__koraci div{background:#f4f3ef}
-.wodp__kart strong{display:block;font-size:15px;font-weight:800;margin:0 0 4px}
-.wodp__kart span,.wodp__koraci span{font-size:14px;line-height:1.5;color:#333}
-.wodp__koraci{display:grid;gap:10px;margin:0 0 16px}
-.wodp__koraci div{display:flex;gap:12px;align-items:center}
-.wodp__koraci strong{flex:0 0 32px;height:32px;border-radius:50%;background:#1c1c1c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800}
-.wodp__scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 14px}
-.wodp__tab{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border-radius:12px;overflow:hidden}
-.wodp__tab th,.wodp__tab td{padding:9px 12px;border-bottom:1px solid rgba(0,0,0,.07);text-align:left}
-.wodp__tab th{font-weight:800}
-.wodp__tab th:not(:first-child),.wodp__tab td:not(:first-child){text-align:center;white-space:nowrap}
-.wodp__tab td:nth-child(2){color:#1f8a4c;font-weight:800}
-.wodp__tab td:nth-child(3){color:#c0392b;font-weight:800}
-.wodp__citati{display:grid;gap:10px;margin:0 0 16px}
-.wodp__citati blockquote{margin:0;background:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.06);padding:14px 16px}
-.wodp__s:not(.wodp__s--bg) .wodp__citati blockquote{background:#f4f3ef}
-.wodp__citati p{font-size:14.5px;line-height:1.55;color:#333;margin:0 0 6px;font-style:italic}
-.wodp__citati cite{font-size:13px;font-style:normal;font-weight:700;color:#555}
-.wodp__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wodp__pogoji{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 16px}
-.wodp__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:18px 14px;text-align:center}
-.wodp__pog strong{display:block;font-size:16px;font-weight:800;margin:0 0 6px}
-.wodp__pog span{font-size:14px;color:#444}
-/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
-.wodp__media--pecat{display:flex;align-items:center;justify-content:center;background:#fff}
-.wodp__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
-.wodp__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.wodp__pecat-top,.wodp__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
-.wodp__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
-.wodp__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
-@media (max-width:860px){
-  .wodp__s{padding:38px 0}
-  .wodp__v{grid-template-columns:1fr;gap:22px}
-  .wodp__v--rev .wodp__media,.wodp__media{order:0}
-  .wodp__v--rev .wodp__tekst,.wodp__tekst{order:1}
-  .wodp__kart{grid-template-columns:1fr}
-  .wodp__pecat{width:230px;height:230px}
-  .wodp__pecat-in{width:170px;height:170px}
-  .wodp__pecat-num{font-size:64px}
-  .wodp__pecat-top,.wodp__pecat-bot{font-size:10px;max-width:118px}
-}
+.wsodorpro{color:#1c1c1c;font-family:inherit}
+.wsodorpro__s{padding:56px 0;background:#fff}.wsodorpro__s--bg{background:#f4f3ef}
+.wsodorpro__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsodorpro__c{text-align:center}
+.wsodorpro__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wsodorpro__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsodorpro__h2 em{font-style:italic}
+.wsodorpro__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wsodorpro__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
+.wsodorpro__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wsodorpro__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wsodorpro__red4 strong{display:block;font-size:18px;font-weight:800}.wsodorpro__red4 span{font-size:13.5px;opacity:.85}
+.wsodorpro__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wsodorpro__dva--rev>div:first-child{order:2}
+.wsodorpro__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wsodorpro__media img,.wsodorpro__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsodorpro__polna{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);margin-top:10px}.wsodorpro__polna img,.wsodorpro__polna video{width:100%;height:auto;display:block}
+.wsodorpro__grid{display:grid;gap:22px;margin-top:22px}.wsodorpro__g2{grid-template-columns:repeat(2,1fr)}.wsodorpro__g3{grid-template-columns:repeat(3,1fr)}.wsodorpro__g4{grid-template-columns:repeat(4,1fr)}.wsodorpro__g5{grid-template-columns:repeat(5,1fr)}
+.wsodorpro__k{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wsodorpro__k--temna{background:#1d2b4f;border:0}.wsodorpro__k--temna p,.wsodorpro__k--temna strong{color:#fff}
+.wsodorpro__km img,.wsodorpro__km video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.wsodorpro__km--v video{aspect-ratio:9/16}
+.wsodorpro__kt{padding:16px 18px 20px}.wsodorpro__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wsodorpro__kt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wsodorpro__ime{display:block;margin-top:8px;font-weight:700;font-size:14px}.wsodorpro__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wsodorpro__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}.wsodorpro__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #eee}.wsodorpro__red3 strong{display:block;font-size:15px}.wsodorpro__red3 span{font-size:13px;color:#555}
+.wsodorpro__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wsodorpro__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wsodorpro__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wsodorpro__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wsodorpro__kv{list-style:none;margin:0 0 6px;padding:0}.wsodorpro__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wsodorpro__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wsodorpro__tw{overflow-x:auto}.wsodorpro__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+.wsodorpro__tab th,.wsodorpro__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsodorpro__tab th{background:#1d2b4f!important;color:#fff!important;font-weight:700}.wsodorpro__tab td:first-child,.wsodorpro__tab th:first-child{text-align:left}
+.wsodorpro__thimg{display:block;width:96px;max-width:100%;height:auto;margin:0 auto 8px;border-radius:10px}.wsodorpro__th span{display:block}
+.wsodorpro__km--ikona{padding:22px 0 0;text-align:center}.wsodorpro__km--ikona img{width:72px;height:72px;aspect-ratio:auto;object-fit:contain;margin:0 auto}.wsodorpro__km--ikona+.wsodorpro__kt{text-align:center}
+.wsodorpro__da{color:#1f8a4c;font-weight:800}.wsodorpro__ne{color:#c0392b;font-weight:800}
+.wsodorpro__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wsodorpro__pog{margin-top:22px}.wsodorpro__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsodorpro__pog span{color:#444;opacity:1}
+.wsodorpro__karw{position:relative}.wsodorpro__kar{grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.wsodorpro__kar::-webkit-scrollbar{display:none}.wsodorpro__kar>*{scroll-snap-align:start}
+.wsodorpro__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}.wsodorpro__pus--l{left:-14px}.wsodorpro__pus--d{right:-14px}
+@media (max-width:860px){.wsodorpro__kar{grid-auto-columns:82%}.wsodorpro__pus--l{left:4px}.wsodorpro__pus--d{right:4px}}
+@media (max-width:860px){.wsodorpro__s{padding:38px 0}.wsodorpro__dva{grid-template-columns:1fr;gap:22px}.wsodorpro__dva--rev>div:first-child{order:0}
+.wsodorpro__g3,.wsodorpro__g4,.wsodorpro__g5{grid-template-columns:1fr 1fr}.wsodorpro__red4{grid-template-columns:1fr 1fr}.wsodorpro__plavo{margin-top:-38px}}
+@media (max-width:560px){.wsodorpro__g2,.wsodorpro__g3,.wsodorpro__g4{grid-template-columns:1fr}}
 </style>
+<script>
+(function(){document.querySelectorAll('.wsodorpro__kar').forEach(function(k){
+  var w=document.createElement('div');w.className='wsodorpro__karw';k.parentNode.insertBefore(w,k);w.appendChild(k);
+  ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wsodorpro__pus wsodorpro__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
+    b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
+});})();
+</script>
