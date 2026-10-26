@@ -48,7 +48,7 @@ $wdir = get_template_directory_uri() . '/img/quiet/';
 
   <section class="wquiet__s wquiet__s--bg">
     <div class="wquiet__v">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-03-paket.jpg' ); ?>" alt="Paket NORIKS Quiet: čepići, nastavci u četiri veličine i kutijica" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-03-cepici.jpg' ); ?>" alt="Bijeli višekratni čepići za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">U PAKETU</div>
         <h2 class="wquiet__h2">Višekratni, lako se čiste <em>i uvijek su uz vas</em></h2>
@@ -111,7 +111,7 @@ $wdir = get_template_directory_uri() . '/img/quiet/';
 
   <section class="wquiet__s wquiet__s--bg">
     <div class="wquiet__v">
-      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-07-ured.jpg' ); ?>" alt="Kupac koristi bijele čepiće za uši NORIKS Quiet" loading="lazy" decoding="async"></div>
+      <div class="wquiet__media"><img src="<?php echo esc_url( $wdir . 'nqt-07-ured.jpg' ); ?>" alt="Kupci s čepićima NORIKS Quiet u uredu" loading="lazy" decoding="async"></div>
       <div class="wquiet__tekst">
         <div class="wquiet__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wquiet__h2">Što misle <em>naši kupci</em></h2>
