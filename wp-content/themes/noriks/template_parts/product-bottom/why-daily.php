@@ -88,7 +88,7 @@ $wdir = get_template_directory_uri() . '/img/daily/';
         <p class="wdaily__p">U svakoj dnevnoj vrećici su vitamini i minerali te prahovi povrća i voća u veganskom gumenom medvjediću na bazi pektina.</p>
         <div class="wdaily__kart">
           <div><strong>Povrće</strong><span>kelj, špinat, brokula, peršin, pšenična trava, ječmena trava, spirulina, klorela, cikla i shiitake</span></div>
-          <div><strong>Voće</strong><span>jagoda, borovnica, malina, jabuka, limun, acerola, šipak i goji</span></div>
+          <div><strong>Voće</strong><span>jagoda, borovnica, malina, jabuka, limun, acerola, nar i goji</span></div>
         </div>
         <p class="wdaily__p">Vegansko: bez želatine, bez alkohola i bez sastojaka životinjskog podrijetla.</p>
         <p class="wdaily__zak">Vegan · bez želatine · bez alkohola.</p>
