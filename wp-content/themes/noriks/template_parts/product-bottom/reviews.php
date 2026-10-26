@@ -1201,7 +1201,7 @@
 
            <?php elseif ( noriks_is_type( 'travel' ) ): ?>
 
-            Tisuće vlasnika pasa već koristi NORIKS Travel posteljicu – 5 cm pjene koja ublažava pritisak na kukove i zglobove, skidiva navlaka na patent zatvarač i neklizuća baza koja drži posteljicu na mjestu čak i na zavojima.
+            Tisuće vlasnika pasa već koristi NORIKS Travel posteljicu – 5 cm elastične pjene koja zadržava oblik, skidiva navlaka na patent zatvarač i neklizuća baza koja drži posteljicu na mjestu čak i na zavojima.
 
 
            <?php else: ?>
