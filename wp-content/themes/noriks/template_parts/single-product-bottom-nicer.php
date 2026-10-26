@@ -101,6 +101,9 @@ if ( noriks_is_type( 'travel' ) ) {
 if ( noriks_is_type( 'daily' ) ) {
     include $noriks_pb_dir . 'why-daily.php';
 }
+if ( noriks_is_type( 'gelsit' ) ) {
+    include $noriks_pb_dir . 'why-gelsit.php';
+}
 if ( noriks_is_type( 'struja' ) ) {
     include $noriks_pb_dir . 'why-struja.php';
 }
