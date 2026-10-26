@@ -911,7 +911,7 @@ function gck_render_bundle_selector() {
     }
 
     $gck_no_attrs    = has_term( array( 'orto-widebeam', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-calm', 'orto-classics', 'orto-corrector', 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-calm', 'orto-corrector', 'orto-titaniumpan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
     $gck_size_link_force = has_term( array( 'orto-corrector', 'orto-relief', 'orto-titaniumpan', 'orto-anklesleeve', 'orto-silkboxers', 'orto-mattresstopper', 'orto-kidspillow', 'orto-cashmeresweater' ), 'product_cat', $product_id );
@@ -935,7 +935,8 @@ function gck_render_bundle_selector() {
     $gck_single_color = has_term( array( 'orto-webshot', 'orto-sunover', 'orto-quiet', 'orto-tacpro', 'orto-salon', 'orto-home', 'orto-snug', 'orto-raincoat', 'orto-seatcover', 'orto-litterbox', 'orto-sleepearplugs', 'orto-travelpillow', 'orto-fleeceshawl', 'orto-bottlesling', 'orto-pillorganizer', 'orto-ultrasoniccleaner', 'orto-antitheftbag', 'orto-showertowel', 'orto-birdie', 'orto-birdie-3', 'orto-cashmeresweater' ), 'product_cat', $product_id );
 
     // NORIKS ComfortJeans: treci izbornik Duljina (L26–L36) uz Boju i Velicinu, kao na originalu (Colour / Length / Waist Size).
-    $gck_extra_select = has_term( array( 'orto-sr', 'orto-comfortjeans' ), 'product_cat', $product_id );
+    // NORIKS Classics: Nijansa (krugovi) + Velicina + Prsti, kot Color / Size / Style originala.
+    $gck_extra_select = has_term( array( 'orto-sr', 'orto-comfortjeans', 'orto-classics' ), 'product_cat', $product_id );
     $gck_extra_attr   = null;
 
     if ( ! $gck_no_attrs && ! $gck_single_size && ! $gck_single_color && ! $gck_shgifts && count( $custom_attrs ) < 2 ) return;
@@ -947,6 +948,18 @@ function gck_render_bundle_selector() {
 
     if ( $gck_extra_select && ! empty( $split['others'] ) ) {
         $gck_extra_attr = $split['others'][0];
+    }
+
+    // NORIKS Classics: 'nijans' se sicer prepozna kot velicina - tu atribute razporedi po imenu.
+    if ( has_term( 'orto-classics', 'product_cat', $product_id ) ) {
+        $colors = array(); $sizes = array(); $gck_extra_attr = null;
+        foreach ( $custom_attrs as $k => $a ) {
+            $it = array( 'key' => $k, 'label' => (string) $a->get_name(), 'field_key' => 'attribute_' . $k, 'values' => (array) $a->get_options() );
+            $n  = strtolower( remove_accents( $it['label'] ) );
+            if ( strpos( $n, 'nijans' ) !== false ) $colors[] = $it;
+            elseif ( strpos( $n, 'prst' ) !== false ) $gck_extra_attr = $it;
+            else $sizes[] = $it;
+        }
     }
 
     // KneeFix (dva izbornika): ne oslanjaj se na prepoznavanje naziva atributa.
@@ -1498,6 +1511,26 @@ function gck_render_bundle_selector() {
       /* u cipu ide samo konacna cijena po komadu, bez precrtane */
       #bundle-selector .bundle-option .gck-per-chip .gck-per-old { display: none !important; }
       #bundle-selector .bundle-option br { display: none !important; }
+    </style>
+    <?php endif; ?>
+
+    <?php
+    // NORIKS Classics: Nijansa kao krugovi u tonovima koze (Vanilija ... Moka), uz Velicinu i Prste.
+    if ( has_term( array( 'orto-classics' ), 'product_cat', $product_id ) ) :
+    ?>
+    <style>
+      #bundle-selector .color-swatches { display: flex !important; gap: 8px; flex-wrap: wrap; }
+      #bundle-selector .color-swatches .swatch { width: 40px !important; height: 40px !important; border-radius: 50% !important;
+          border: 2px solid #e3ddd6 !important; background: #fff; }
+      #bundle-selector .color-swatches .swatch.active { border-color: #1b1b1b !important; transform: scale(1.06); }
+      #bundle-selector .color-swatches .swatch-circle { width: 28px !important; height: 28px !important; border-radius: 50% !important;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); }
+      #bundle-selector .swatch-circle.color-vanilija { background: #ecd0b2 !important; }
+      #bundle-selector .swatch-circle.color-med      { background: #d6a679 !important; }
+      #bundle-selector .swatch-circle.color-karamela { background: #b9845a !important; }
+      #bundle-selector .swatch-circle.color-kakao    { background: #8b5c3e !important; }
+      #bundle-selector .swatch-circle.color-moka     { background: #5c3c2a !important; }
+      #bundle-selector .bundle-attr-row { flex-wrap: wrap; gap: 8px; }
     </style>
     <?php endif; ?>
 
