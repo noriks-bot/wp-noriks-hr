@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wsclassics__kv{list-style:none;margin:0 0 6px;padding:0}.wsclassics__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
 .wsclassics__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
 .wsclassics__tw{overflow-x:auto}.wsclassics__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
-.wsclassics__tab th,.wsclassics__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsclassics__tab th{background:#1d2b4f;color:#fff;font-weight:700}.wsclassics__tab td:first-child,.wsclassics__tab th:first-child{text-align:left}
+.wsclassics__tab th,.wsclassics__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsclassics__tab th{background:#1d2b4f!important;color:#fff!important;font-weight:700}.wsclassics__tab td:first-child,.wsclassics__tab th:first-child{text-align:left}
 .wsclassics__da{color:#1f8a4c;font-weight:800}.wsclassics__ne{color:#c0392b;font-weight:800}
 .wsclassics__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
 .wsclassics__pog{margin-top:22px}.wsclassics__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsclassics__pog span{color:#444;opacity:1}

@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wsphonestrap__kv{list-style:none;margin:0 0 6px;padding:0}.wsphonestrap__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
 .wsphonestrap__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
 .wsphonestrap__tw{overflow-x:auto}.wsphonestrap__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
-.wsphonestrap__tab th,.wsphonestrap__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsphonestrap__tab th{background:#1d2b4f;color:#fff;font-weight:700}.wsphonestrap__tab td:first-child,.wsphonestrap__tab th:first-child{text-align:left}
+.wsphonestrap__tab th,.wsphonestrap__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsphonestrap__tab th{background:#1d2b4f!important;color:#fff!important;font-weight:700}.wsphonestrap__tab td:first-child,.wsphonestrap__tab th:first-child{text-align:left}
 .wsphonestrap__da{color:#1f8a4c;font-weight:800}.wsphonestrap__ne{color:#c0392b;font-weight:800}
 .wsphonestrap__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
 .wsphonestrap__pog{margin-top:22px}.wsphonestrap__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsphonestrap__pog span{color:#444;opacity:1}
