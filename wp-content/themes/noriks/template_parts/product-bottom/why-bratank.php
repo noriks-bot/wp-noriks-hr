@@ -22,6 +22,7 @@
  * z originala vkljucene tudi v why sekcije (kupci, znacilnosti, prije/poslije, packshot).
  * FAQ originala je v reviews.php ($bratank_faq), mnenja za karusel teme v auto_reviews/HR_bratank.php.
  * Izpusceno (NORIKS stil): promo pasica »FALL SALE« z odstevalnikom, glava, noga, trgovinski moduli.
+ * BARVA ORIGINALA: #b57e7e (rozni akcent originala, spremenljivka --rose na lunara-comfort.com); svetel ton za --bg #f6eded
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -72,7 +73,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 
 <!-- 1) PRIDRUZITE SE 120.000+ ZADOVOLJNIH KUPACA -->
-<section class="nbt-sec">
+<section class="nbt-sec nbt-tint nbt-sec--bg">
   <div class="nbt-wrap">
     <p class="nbt-kicker">Recenzije kupaca</p>
     <h2 class="nbt-h2">Pridružite se više od <em>120.000 zadovoljnih kupaca.</em></h2>
@@ -84,7 +85,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
       <article class="nbt-rv">
         <span class="nbt-stars" aria-label="5 od 5 zvjezdica"><?php echo str_repeat( '<i>' . $nbt_star . '</i>', 5 ); ?></span>
         <p class="nbt-rv__txt"><?php echo esc_html( $r['tekst'] ); ?></p>
-        <p class="nbt-rv__name"><strong><?php echo esc_html( $r['ime'] ); ?></strong></p>
+        <p class="nbt-rv__name"><i class="nbt-av" aria-hidden="true"><?php echo esc_html( mb_substr( $r['ime'], 0, 1 ) ); ?></i><strong><?php echo esc_html( $r['ime'] ); ?></strong></p>
       </article>
       <?php endforeach; ?>
     </div>
@@ -93,7 +94,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 </section>
 
 <!-- 2) STO SMO PROMIJENILI + KAKO DJELUJE — SLOJ PO SLOJ -->
-<section class="nbt-sec nbt-tint">
+<section class="nbt-sec">
   <div class="nbt-wrap">
     <p class="nbt-kicker">Što smo promijenili</p>
     <h2 class="nbt-h2">Što smo promijenili — <em>i zašto je osjećaj drukčiji</em></h2>
@@ -119,7 +120,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 </section>
 
 <!-- 3) VASA NOVA JUTARNJA RUTINA -->
-<section class="nbt-sec">
+<section class="nbt-sec nbt-tint nbt-sec--bg">
   <div class="nbt-wrap">
     <p class="nbt-kicker">Jutarnja rutina</p>
     <h2 class="nbt-h2">Vaša nova <em>jutarnja rutina</em></h2>
@@ -139,7 +140,7 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 </section>
 
 <!-- 4) USPOREDBA -->
-<section class="nbt-sec nbt-tint">
+<section class="nbt-sec">
   <div class="nbt-wrap">
     <p class="nbt-kicker">Usporedba</p>
     <h2 class="nbt-h2">Nije svaka potpora <em>jednaka.</em></h2>
@@ -179,17 +180,17 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 
 
 <!-- 5) NORIKS POGOJI -->
-<section class="nbt-sec">
+<section class="nbt-sec nbt-tint nbt-sec--bg">
   <div class="nbt-wrap">
     <p class="nbt-kicker">Kupujte bez brige</p>
     <h2 class="nbt-h2">Uz NORIKS kupujete <em>bez rizika.</em></h2>
     <div class="nbt-media nbt-media--sm"><?php echo $nbt_img( 'bt-05-bez.webp', 'NORIKS BraTank majica s ugrađenim grudnjakom u bež boji' ); ?></div>
     <p class="nbt-sub">Majicu isprobajte kod kuće, uz svoju odjeću i svoj dan. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
     <div class="nbt-pogoji">
-      <div class="nbt-pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-      <div class="nbt-pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-      <div class="nbt-pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-      <div class="nbt-pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
+      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/><path d="M12 8v4l2.6 2"/></svg></span><strong>30 dana</strong><span>za povrat novca</span></div>
+      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
+      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg></span><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
+      <div class="nbt-pog"><span class="nbt-pi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.8 5 5.8"/></svg></span><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
     </div>
   </div>
 </section>
@@ -290,7 +291,16 @@ $nbt_star = '<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColo
 
 /* galerija izdelka: sličice največ v 2 vrstah (5 na vrsto), ostale slike so dosegljive z drsenjem glavne slike */
 .product_cat-orto-bratank .flex-control-thumbs li:nth-child(n+11) { display: none !important; }
-
+/* dizajn */
+.nbt-sec{--nbt-tint:#f6eded;padding:72px 0}.nbt-sec.nbt-sec--bg{background:#f6eded}
+.nbt-kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#b57e7e;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.nbt-rv,.nbt-card{border-radius:16px;border-color:rgba(181,126,126,.35);box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.nbt-rv:hover,.nbt-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(181,126,126,.22)}
+.nbt-callout{border-radius:0 16px 16px 0;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.nbt-rv__name{display:flex;align-items:center;gap:10px;font-weight:700}.nbt-av{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#ecdcdc;border:1px solid #b57e7e;color:#8f5656;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
+.nbt-pog{text-align:center;background:#fff;border:1px solid rgba(181,126,126,.35);border-radius:16px;padding:28px 18px;transition:transform .2s,box-shadow .2s}.nbt-pog:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(181,126,126,.22)}
+.nbt-pog strong,.nbt-pog span:not(.nbt-pi){display:block}span.nbt-pi{width:58px;height:58px;border-radius:50%;background:#ecdcdc;border:1px solid #b57e7e;color:#8f5656;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.nbt-pi svg{width:28px;height:28px}
+@media (max-width:767px){.nbt-sec{padding:46px 0}.nbt-wrap{padding:0 16px}.nbt-pog{padding:22px 12px}}
+/* /dizajn */
 </style>
 <script>
 (function(){var k=document.querySelector('.nbt-revs'),n=document.querySelector('.nbt-kar');if(!k||!n)return;
