@@ -80,6 +80,8 @@ div.wsslippers__pog{text-align:center;border:1px solid rgba(80,113,139,.35);bord
 @media (max-width:767px){.wsslippers__v{padding:0 16px}}
 /* /dizajn.py */
 /* brez-obrob */ .wsslippers__av,.wsslippers__k,.wsslippers__media,.wsslippers__pog>div,.wsslippers__polna,span.wsslippers__pi{border:0!important}
+/* Kartica samo z medijem (brez napisa): brez belega pasu pod videom/sliko - samo medij z zaobljenimi robovi (Dejan 26.10.2026). */
+.wsslippers__kt:empty{display:none}.wsslippers__k:has(>.wsslippers__kt:empty){background:transparent;border:0;box-shadow:none}.wsslippers__k:has(>.wsslippers__kt:empty):hover{box-shadow:none}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsslippers__kar').forEach(function(k){

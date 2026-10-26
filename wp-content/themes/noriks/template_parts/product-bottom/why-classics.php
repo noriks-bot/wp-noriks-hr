@@ -87,6 +87,8 @@ div.wsclassics__pog{text-align:center;border:1px solid rgba(228,188,165,.35);bor
 @media (max-width:767px){.wsclassics__v{padding:0 16px}}
 /* /dizajn.py */
 /* brez-obrob */ .wsclassics__av,.wsclassics__k,.wsclassics__media,.wsclassics__pog>div,.wsclassics__polna,.wsclassics__red4:not(.wsclassics__pog)>div,.wsclassics__tk,span.wsclassics__pi{border:0!important}
+/* Kartica samo z medijem (brez napisa): brez belega pasu pod videom/sliko - samo medij z zaobljenimi robovi (Dejan 26.10.2026). */
+.wsclassics__kt:empty{display:none}.wsclassics__k:has(>.wsclassics__kt:empty){background:transparent;border:0;box-shadow:none}.wsclassics__k:has(>.wsclassics__kt:empty):hover{box-shadow:none}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsclassics__kar').forEach(function(k){

@@ -79,6 +79,8 @@ div.wsmamafit__pog{text-align:center;border:1px solid rgba(189,181,170,.35);bord
 @media (max-width:767px){.wsmamafit__v{padding:0 16px}}
 /* /dizajn.py */
 /* brez-obrob */ .wsmamafit__av,.wsmamafit__k,.wsmamafit__media,.wsmamafit__pog>div,.wsmamafit__polna,span.wsmamafit__pi{border:0!important}
+/* Kartica samo z medijem (brez napisa): brez belega pasu pod videom/sliko - samo medij z zaobljenimi robovi (Dejan 26.10.2026). */
+.wsmamafit__kt:empty{display:none}.wsmamafit__k:has(>.wsmamafit__kt:empty){background:transparent;border:0;box-shadow:none}.wsmamafit__k:has(>.wsmamafit__kt:empty):hover{box-shadow:none}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsmamafit__kar').forEach(function(k){

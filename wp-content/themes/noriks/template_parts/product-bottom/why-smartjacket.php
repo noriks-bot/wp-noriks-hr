@@ -85,6 +85,8 @@ div.wssmartjacket__pog{text-align:center;border:1px solid rgba(251,206,55,.35);b
 @media (max-width:767px){.wssmartjacket__v{padding:0 16px}}
 /* /dizajn.py */
 /* brez-obrob */ .wssmartjacket__av,.wssmartjacket__k,.wssmartjacket__media,.wssmartjacket__pog>div,.wssmartjacket__polna,span.wssmartjacket__pi{border:0!important}
+/* Kartica samo z medijem (brez napisa): brez belega pasu pod videom/sliko - samo medij z zaobljenimi robovi (Dejan 26.10.2026). */
+.wssmartjacket__kt:empty{display:none}.wssmartjacket__k:has(>.wssmartjacket__kt:empty){background:transparent;border:0;box-shadow:none}.wssmartjacket__k:has(>.wssmartjacket__kt:empty):hover{box-shadow:none}
 </style>
 <script>
 (function(){document.querySelectorAll('.wssmartjacket__kar').forEach(function(k){
