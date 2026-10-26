@@ -104,6 +104,9 @@ if ( noriks_is_type( 'daily' ) ) {
 if ( noriks_is_type( 'zipcomp' ) ) {
     include $noriks_pb_dir . 'why-zipcomp.php';
 }
+if ( noriks_is_type( 'webshot' ) ) {
+    include $noriks_pb_dir . 'why-webshot.php';
+}
 if ( noriks_is_type( 'sculptleg' ) ) {
     include $noriks_pb_dir . 'why-sculptleg.php';
 }

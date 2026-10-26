@@ -67,6 +67,7 @@ function noriks_product_type_map() : array {
         'vinocool' => array( 'orto-vinocool' ),
         'odorpro' => array( 'orto-odorpro' ),
         'zipcomp' => array( 'orto-zipcomp' ),
+        'webshot' => array( 'orto-webshot' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
