@@ -1301,5 +1301,6 @@ body.single-product {
 .summary .gck-countdown:has(~ .gck-size-link-wrap) { margin-bottom: 9px !important; }
 .summary .gck-size-link-wrap { display: flex; justify-content: flex-end; margin-top: 0 !important; margin-bottom: 0 !important; }
 /* Orto povezava brez odstevalnika (v .gck-benefits-box): forma ima 16 px zgoraj, pod povezavo prazen 10 px razdelilnik + #bundle-selector 8 px. */
-.summary .gck-benefits-box > .gck-size-link:first-child { display: flex; width: max-content; margin-top: -7px !important; }
+.summary .gck-benefits-box > .gck-size-link:first-child { display: flex; width: max-content; }
+.summary .gck-benefits-box:has(> .gck-size-link:first-child) { margin-top: -22px !important; }
 .summary .gck-benefits-box:has(> .gck-size-link:first-child) ~ #bundle-selector { margin-top: -2px !important; }
