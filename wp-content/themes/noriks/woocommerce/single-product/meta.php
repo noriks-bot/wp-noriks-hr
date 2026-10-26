@@ -101,7 +101,7 @@ global $product;
     <?php if ( noriks_is_type( 'ortopas' ) ) : ?>
     <!-- Ortopas: kartica "Provjereno od strane liječnika" (slika) -->
     <div class="ortopas-doctor-card" style="margin:14px 0;">
-      <img src="https://noriks.com/hr/wp-content/uploads/2026/07/ortopas-hr-11.png"
+      <img src="https://noriks.com/hr/wp-content/uploads/2026/10/ortopas-hr-11.webp"
            alt="Provjereno od strane liječnika — NORIKS ortopedski pojas"
            style="width:100%; height:auto; display:block; border-radius:10px;"
            loading="lazy" decoding="async">
