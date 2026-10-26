@@ -5511,7 +5511,7 @@ $hoodie_faq = array(
 
 $utilitypants_faq = array(
   array('questioon' => 'Koju veličinu da naručim?',
-    'answer'    => 'Kroj je <strong>normalan do uzak</strong>. Ako ste između dvije veličine, <strong>preporučujemo da naručite veću veličinu</strong>. Prije kupnje pogledajte tablicu veličina: veličine od S (struk 78–82 cm) do 3XL (struk 103–109 cm).'),
+    'answer'    => 'Kroj je <strong>normalan do uzak</strong>. Ako ste između dvije veličine, <strong>preporučujemo da naručite veću veličinu</strong>. Prije kupnje pogledajte tablicu veličina: veličine od S (struk 78–82 cm) do 3XL (struk 102–107 cm).'),
   array('questioon' => 'Jesu li hlače stvarno vodootporne?',
     'answer'    => 'Da. Ojačani <strong>softshell</strong> ne upija vodu kao tradicionalne radne hlače od platna ili traperice — voda se jednostavno odbija od tkanine, pa ostajete <strong>suhi i udobni cijeli dan</strong>, i po kiši i kad klečite na mokrom tlu.'),
   array('questioon' => 'Koliko džepova imaju?',

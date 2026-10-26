@@ -1476,7 +1476,7 @@ if ( ! function_exists( 'noriks_utilitypants_sizes' ) ) {
             array( 'L', '86–91',   '102–107', '180–185', '106', '77,8' ),
             array( 'XL', '91–96',   '107–112', '185–190', '108', '78,6' ),
             array( '2XL', '96–102',  '112–118', '185–190', '110', '79,4' ),
-            array( '3XL', '103–109', '119–125', '190–195', '111', '80,2' ),
+            array( '3XL', '102–107', '119–125', '190–195', '111', '80,2' ),
         );
     }
 }
@@ -1608,7 +1608,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
-            'utilitypants' => array( 'S' => '78 do 82 cm', 'M' => '82 do 86 cm', 'L' => '86 do 91 cm', 'XL' => '91 do 96 cm', '2XL' => '96 do 102 cm', '3XL' => '103 do 109 cm' ),
+            'utilitypants' => array( 'S' => '78 do 82 cm', 'M' => '82 do 86 cm', 'L' => '86 do 91 cm', 'XL' => '91 do 96 cm', '2XL' => '96 do 102 cm', '3XL' => '102 do 107 cm' ),
             'bratank'      => array( 'S' => '76 do 80 cm', 'M' => '81 do 85 cm', 'L' => '86 do 91 cm', 'XL' => '92 do 97 cm', '2XL' => '98 do 103 cm', '3XL' => '104 do 109 cm', '4XL' => '110 do 115 cm' ),
             'brassiere'    => array( 'XS' => '77 do 83 cm', 'S' => '82 do 88 cm', 'M' => '87 do 93 cm', 'L' => '92 do 98 cm', 'XL' => '97 do 103 cm', '2XL' => '102 do 108 cm', '3XL' => '107 do 113 cm', '4XL' => '112 do 118 cm', '5XL' => '117 do 123 cm' ),
             'hands'        => array( 'S' => '17,8 do 19,1 cm', 'M' => '19,1 do 21,6 cm', 'L' => '21,6 do 22,9 cm' ),
