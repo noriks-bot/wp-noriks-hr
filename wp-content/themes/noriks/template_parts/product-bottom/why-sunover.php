@@ -100,7 +100,7 @@ $wdir = get_template_directory_uri() . '/img/sunover/';
 
   <section class="wsun__s wsun__s--bg">
     <div class="wsun__v">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-svaki-dan.jpg' ); ?>" alt="NORIKS SunOver na cesti, na plaži, u vrtu i na ručku" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-svaki-dan.jpg' ); ?>" alt="NORIKS SunOver model Luna, crveni okvir s polariziranim lećama" loading="lazy" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">ŠTO KAŽU KUPCI</div>
         <h2 class="wsun__h2">Kupci <em>o njima</em></h2>
@@ -117,7 +117,7 @@ $wdir = get_template_directory_uri() . '/img/sunover/';
 
   <section class="wsun__s">
     <div class="wsun__v wsun__v--rev">
-      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-voznja.webp' ); ?>" alt="Vožnja bez i s polariziranim naočalama NORIKS SunOver" loading="lazy" decoding="async"></div>
+      <div class="wsun__media"><img src="<?php echo esc_url( $wdir . 'sunover-voznja.webp' ); ?>" alt="NORIKS SunOver, crno-ljubičasti okvir s polariziranim lećama" loading="lazy" decoding="async"></div>
       <div class="wsun__tekst">
         <div class="wsun__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wsun__h2">Česta <em>pitanja</em></h2>
