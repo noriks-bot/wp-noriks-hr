@@ -9,7 +9,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s wflops__s--bg">
     <div class="wflops__v">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-01.webp' ); ?>" alt="Završavate li dan s umornim i bolnim stopalima?" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-rumena.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u žutoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Umorna stopala</div>
         <h2 class="wflops__h2">Završavate li dan s <em>umornim i bolnim stopalima</em>?</h2>
@@ -22,7 +22,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s">
     <div class="wflops__v wflops__v--rev">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-02.webp' ); ?>" alt="Odaberite svoj idealan paket" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-bez.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u bež boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Odaberite paket</div>
         <h2 class="wflops__h2">Odaberite <em>svoj idealan paket</em></h2>
@@ -35,7 +35,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s wflops__s--bg">
     <div class="wflops__v">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-03.webp' ); ?>" alt="Osjećate da vaša stopala nikad ne odmaraju?" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-siva.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u sivoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Poznat osjećaj?</div>
         <h2 class="wflops__h2">Osjećate da vaša stopala <em>nikad ne odmaraju</em>?</h2>
@@ -48,7 +48,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s">
     <div class="wflops__v wflops__v--rev">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-04.webp' ); ?>" alt="EVA materijal: maksimalna mekoća" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-bijela.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u bijeloj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Materijal</div>
         <h2 class="wflops__h2">EVA materijal: <em>maksimalna mekoća</em></h2>
@@ -61,7 +61,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s wflops__s--bg">
     <div class="wflops__v">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-05.webp' ); ?>" alt="Mekoća pod stopalima, kao da hodate po oblacima" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-svijetloplava.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u svijetloplavoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Mekoća</div>
         <h2 class="wflops__h2">Mekoća pod stopalima, <em>kao da hodate po oblacima</em></h2>
@@ -74,7 +74,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s">
     <div class="wflops__v wflops__v--rev">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-06.webp' ); ?>" alt="Recenzije koje potvrđuju mekoću" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-roza.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u roza boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Mnenja</div>
         <h2 class="wflops__h2">Recenzije koje <em>potvrđuju mekoću</em></h2>
@@ -87,7 +87,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s wflops__s--bg">
     <div class="wflops__v">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-07.webp' ); ?>" alt="Kako ih koristiti: 1, 2, 3" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-zelena.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u zelenoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Upotreba</div>
         <h2 class="wflops__h2">Kako ih koristiti: <em>1, 2, 3</em></h2>
@@ -100,7 +100,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s">
     <div class="wflops__v wflops__v--rev">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-08.webp' ); ?>" alt="Uštedite više s više parova" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-ljubicasta.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u ljubičastoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Više parova</div>
         <h2 class="wflops__h2">Uštedite više <em>s više parova</em></h2>
@@ -113,7 +113,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s wflops__s--bg">
     <div class="wflops__v">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-09.webp' ); ?>" alt="Odgovori prije kupnje" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-smeda.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u smeđoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Česta pitanja</div>
         <h2 class="wflops__h2">Odgovori <em>prije kupnje</em></h2>
@@ -126,7 +126,7 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 
   <section class="wflops__s">
     <div class="wflops__v wflops__v--rev">
-      <div class="wflops__media"><img src="<?php echo esc_url( $wdir . 'flops-10.webp' ); ?>" alt="Primite paket kod kuće, platite tek kad stigne" loading="lazy" decoding="async"></div>
+      <div class="wflops__media wflops__media--packshot"><img src="<?php echo esc_url( $wdir . 'noriks-flops-crna.webp' ); ?>" alt="NORIKS Flops papuče od EVA materijala u crnoj boji" loading="lazy" decoding="async"></div>
       <div class="wflops__tekst">
         <div class="wflops__kicker">Dostava</div>
         <h2 class="wflops__h2">Primite paket kod kuće, <em>platite tek kad stigne</em></h2>
@@ -163,6 +163,8 @@ $wdir = get_template_directory_uri() . '/img/flops/';
 .wflops__v--polna{grid-template-columns:1fr;gap:28px}
 .wflops__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
 .wflops__media img,.wflops__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wflops__media--packshot{background:#fff}
+.wflops__media--packshot img{object-fit:contain}
 .wflops__media--polna{aspect-ratio:auto}
 .wflops__media--polna img,.wflops__media--polna video{height:auto}
 .wflops__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
