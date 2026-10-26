@@ -66,6 +66,7 @@ function noriks_product_type_map() : array {
         'sunover' => array( 'orto-sunover' ),
         'vinocool' => array( 'orto-vinocool' ),
         'odorpro' => array( 'orto-odorpro' ),
+        'zipcomp' => array( 'orto-zipcomp' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
@@ -599,6 +600,17 @@ if ( ! function_exists( 'noriks_gordura_sizes' ) ) {
             array( 'GG',  'XL' ),
             array( 'XG',  '2XL' ),
             array( '2XG', '3XL' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_zipcomp_sizes' ) ) {
+    /** NORIKS ZipComp: velicina, broj cipele, opseg lista, visina (original covexia.es, Guia de tallas S/M–XXL). */
+    function noriks_zipcomp_sizes() {
+        return array(
+            array( 'S/M',  '36 – 40', '23 – 36 cm', '1,50 – 1,70 m' ),
+            array( 'L/XL', '40 – 44', '36 – 45 cm', '1,70 – 1,95 m' ),
+            array( 'XXL',  '44 – 48', '45 – 56 cm', '1,85 – 2,05 m' ),
         );
     }
 }
@@ -1583,6 +1595,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Body dolazi u <strong>šest veličina</strong> s oznakama kao na originalu (P – 2XG). U drugom stupcu je odgovarajuća međunarodna oznaka.',
                 'glava' => array( 'Veličina', 'Međunarodna oznaka' ), 'vrstice' => noriks_gordura_sizes(),
                 'opomba' => 'Odaberite veličinu koju inače nosite.' );
+        }
+        if ( noriks_is_type( 'zipcomp', $product_id ) ) {
+            return array( 'uvod' => 'Izmjerite <strong>opseg lista na najširem dijelu</strong> – to određuje veličinu, a ne broj cipele.',
+                'glava' => array( 'Veličina', 'Broj cipele', 'Opseg lista', 'Visina' ), 'vrstice' => noriks_zipcomp_sizes(),
+                'opomba' => 'Između dvije veličine? Uvijek uzmite veću.' );
         }
         if ( noriks_is_type( 'sculptleg', $product_id ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
