@@ -1528,11 +1528,11 @@ if ( ! function_exists( 'noriks_insoles_sizes' ) ) {
     /** NORIKS Insoles — ortopedski ulošci za potporu stopala: velicina, EU broj (samo EUR, Dejan 26.10.2026). */
     function noriks_insoles_sizes() {
         return array(
-            array( 'XS', '35 – 38' ),
-            array( 'S', '38,5 – 41,5' ),
-            array( 'M', '42 – 44' ),
-            array( 'L', '44,5 – 46,5' ),
-            array( 'XL', '47 – 48' ),
+            array( 'XS', '35 do 38' ),
+            array( 'S', '38,5 do 41,5' ),
+            array( 'M', '42 do 44' ),
+            array( 'L', '44,5 do 46,5' ),
+            array( 'XL', '47 do 48' ),
         );
     }
 }
