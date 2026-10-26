@@ -1531,7 +1531,6 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-kakao    { background: #8b5c3e !important; }
       #bundle-selector .swatch-circle.color-moka     { background: #5c3c2a !important; }
       #bundle-selector .bundle-attr-row { flex-wrap: wrap; gap: 8px; }
-      #bundle-selector .bundle-pair .gck-extra-select { flex: 0 0 auto !important; max-width: none !important; width: auto !important; min-width: 192px !important; }
     </style>
     <?php endif; ?>
 
@@ -6436,7 +6435,7 @@ function gck_render_bundle_selector() {
               return { value: o.value, label: o.text.trim(), color: null,
                        pick: function(){ xsel.value = o.value; xsel.dispatchEvent(new Event('change', { bubbles: true })); } };
             });
-            var xDD = makeDD({ items: xItems, width: '152px', hasColor: false, grow: false });
+            var xDD = makeDD({ items: xItems, width: 'auto', minWidth: '152px', hasColor: false, grow: false });
             xDD.classList.add('gck-dd-extra');
             row.appendChild(xDD);
             css(xsel, {'display':'none'});
