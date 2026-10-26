@@ -1235,7 +1235,7 @@ if ( ! function_exists( 'noriks_cashmeresweater_sizes' ) ) {
      *  length 54 / sleeve 45 / shoulder 73 / bust 144 cm). Jedna velicina, opusteni kroj. */
     function noriks_cashmeresweater_sizes() {
         return array(
-            array( 'M', 'US 6–10', '130 – 134 cm', '54 cm', '45 cm', '73 cm', '144 cm' ),
+            array( 'M', 'EU 36–40', '130 – 134 cm', '54 cm', '45 cm', '73 cm', '144 cm' ),
         );
     }
 }

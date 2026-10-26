@@ -178,10 +178,10 @@ $ntk_ugc = array(
     <div class="ntk-copy">
       <div class="ntk-scroll">
         <table class="ntk-size">
-          <thead><tr><th>Veličina</th><th>EU veličina</th><th>UK / AU</th><th>Struk (cm)</th><th>Bokovi (cm)</th><th>Duljina nogavice</th></tr></thead>
+          <thead><tr><th>Veličina</th><th>EU veličina</th><th>Struk (cm)</th><th>Bokovi (cm)</th><th>Duljina nogavice</th></tr></thead>
           <tbody>
             <?php foreach ( $ntk_sizes as $r ) : ?>
-            <tr><td><?php echo esc_html( $r[0] ); ?></td><td><?php echo esc_html( $r[1] ); ?></td><td><?php echo esc_html( $r[2] ); ?></td><td><?php echo esc_html( $r[3] ); ?></td><td><?php echo esc_html( $r[4] ); ?></td><td><?php echo esc_html( $r[5] ); ?></td></tr>
+            <tr><td><?php echo esc_html( $r[0] ); ?></td><td><?php echo esc_html( $r[1] ); ?></td><td><?php echo esc_html( $r[3] ); ?></td><td><?php echo esc_html( $r[4] ); ?></td><td><?php echo esc_html( $r[5] ); ?></td></tr>
             <?php endforeach; ?>
           </tbody>
         </table>

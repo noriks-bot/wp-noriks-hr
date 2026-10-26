@@ -20,14 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">US veličina</th><th scope="col">Opseg struka</th><th scope="col">Opseg struka (inči)</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Opseg struka</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_sculptbrief_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td><?php echo esc_html( $r[1] ); ?></td>
-              <td><?php echo esc_html( $r[2] ); ?> cm</td>
-              <td><?php echo esc_html( $r[3] ); ?></td></tr>
+              <td><?php echo esc_html( $r[2] ); ?> cm</td></tr>
           <?php endforeach; ?>
         </tbody>
       </table>

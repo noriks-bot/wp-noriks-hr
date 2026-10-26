@@ -24,20 +24,19 @@ $nmb_cups = array( 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' );
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Traka EU</th><th scope="col">US</th><th scope="col">Ispod grudi</th>
+          <tr><th scope="col">Traka EU</th><th scope="col">Ispod grudi</th>
             <?php foreach ( $nmb_cups as $c ) : ?><th scope="col"><?php echo esc_html( $c ); ?></th><?php endforeach; ?></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_minimizerbra_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td class="kwsc-nw"><?php echo esc_html( $r[1] ); ?></td>
               <td class="kwsc-nw"><?php echo esc_html( $r[2] ); ?></td>
               <?php foreach ( $r[3] as $v ) : ?><td class="kwsc-nw<?php echo $v === '' ? ' kwsc-na' : ''; ?>"><?php echo $v === '' ? '–' : esc_html( $v ); ?></td><?php endforeach; ?></tr>
           <?php endforeach; ?>
         </tbody>
       </table>
     </div>
-    <p class="kwsc-note" style="margin:-8px 0 18px;">*Košarica E odgovara američkoj DD, a F američkoj DDD. Rasponi košarica namjerno se preklapaju: odaberite košaricu u čijoj se sredini nalazi vaša mjera, a ako ste točno na granici, uzmite veću.</p>
+    <p class="kwsc-note" style="margin:-8px 0 18px;">*Rasponi košarica namjerno se preklapaju: odaberite košaricu u čijoj se sredini nalazi vaša mjera, a ako ste točno na granici, uzmite veću.</p>
 
     <div class="kwsc-how">
       <h3>Kako se izmjeriti</h3>

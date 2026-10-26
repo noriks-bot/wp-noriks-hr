@@ -22,16 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">EU</th><th scope="col">Duljina uloška</th><th scope="col">Širina</th><th scope="col">UK</th><th scope="col">US muški</th><th scope="col">US ženski</th></tr>
+          <tr><th scope="col">EU</th><th scope="col">Duljina uloška</th><th scope="col">Širina</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_widetoeshoes_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
               <td class="kwsc-nw"><?php echo esc_html( $r[1] ); ?></td>
-              <td><?php echo esc_html( $r[2] ); ?></td>
-              <td><?php echo esc_html( $r[3] ); ?></td>
-              <td><?php echo esc_html( $r[4] ); ?></td>
-              <td><?php echo esc_html( $r[5] ); ?></td></tr>
+              <td><?php echo esc_html( $r[2] ); ?></td></tr>
           <?php endforeach; ?>
         </tbody>
       </table>

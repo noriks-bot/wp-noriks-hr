@@ -112,7 +112,7 @@ $ncm_cls = function() use ( &$ncm_n ) { $ncm_n++; return ( $ncm_n % 2 ) ? ' ncm-
       <div class="ncm-copy">
         <p class="ncm-kicker">Kroj i veličina</p>
         <h2 class="ncm-h2">Opušteni kroj, <em>jedna veličina</em></h2>
-        <p>Pulover dolazi u jednoj veličini – <strong>M</strong>, koja odgovara američkim veličinama <strong>US 6–10</strong>.</p>
+        <p>Pulover dolazi u jednoj veličini – <strong>M</strong>, koja odgovara veličinama <strong>EU 36–40</strong>.</p>
         <?php if ( $ncm_mjere ) : $r = $ncm_mjere[0]; ?>
         <dl class="ncm-specs">
           <div><dt>Duljina</dt><dd><?php echo esc_html( $r[3] ); ?></dd></div>

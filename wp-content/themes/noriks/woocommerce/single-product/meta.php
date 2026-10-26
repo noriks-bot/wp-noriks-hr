@@ -803,7 +803,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <strong>NORIKS MinimizerBra</strong> je rashlađujući minimizer grudnjak s punim pokrićem, izgrađen oko <strong>krutog središnjeg panela za razdvajanje</strong>. Gotovo svaki minimizer radi na principu kompresije: gura tkivo zajedno i prema naprijed, pa se ono nagomila u sredini prsa i stvara »policu« zbog koje se pripijene majice napuhnu, a košulje razmiču među gumbima. NORIKS MinimizerBra umjesto toga razdvaja — kruti panel oslanja se na prsnu kost i drži svaku stranu punijih grudi u njezinu prostoru tijekom cijelog dana kretanja. Nema mase, nema police, nema efekta šatora.<br><br><strong>Kako je izrađen:</strong><br>• Kruti panel za razdvajanje — oslanja se na prsnu kost i ne urušava se do podneva<br>• Potpuno bez podstave — bez dodatnog volumena<br>• Košarica s punim pokrićem — drži oblik punijih grudi umjesto da ih spljošti<br>• Debele podstavljene naramenice i široka traka — težina se raspoređuje preko leđa<br>• Rashlađujuća, prozračna tkanina — bez nakupljanja topline ispod grudi<br>• Žica koja ne bode — oblikuje košaricu bez urezivanja<br><br><strong>Boje:</strong> bež, crna, bijela i boja kave.<br><strong>Veličine:</strong> trake 70 – 115 i košarice B – I (74 veličine) — svoju veličinu pronađite u tablici veličina; ako ste između dvije veličine, uzmite veću. U paketu za svaki komad zasebno birate boju i veličinu.
          <?php elseif( noriks_is_type( 'cashmeresweater', $current_product_id ) ): ?>
 
-                <strong>NORIKS CashmereSweater</strong> je pulover s okruglim izrezom izrađen od <strong>mješavine kašmira i svile</strong> – nevjerojatno mekan, prirodnog i lepršavog pada. Dizajniran je sa <strong>spuštenim ramenima i opuštenim krojem</strong>, pa odiše jednostavnom, nenametljivom elegancijom. Svestran je i savršeno ide uz hlače ili suknje – od radnog dana do vikenda.<br><br><strong>Sastav:</strong> 74,7 % kašmir, 25,3 % mulberry svila (osim rebrastih rubova)<br><strong>Njega:</strong> preporučujemo profesionalno kemijsko čišćenje<br><strong>Kroj:</strong> opušteni kroj sa spuštenim ramenima, okrugli izrez<br><br><strong>Boje:</strong> sivosmeđa, čokoladno smeđa, bijela, svijetlosiva, tamnosiva, crna, nježno ružičasta, ljubičasto crvena, ljubičasta, plava, sivoplava, borovo zelena, crvena i bordo.<br><strong>Veličina:</strong> jedna veličina – M (US 6–10). Duljina 54 cm, duljina rukava 45 cm, širina ramena 73 cm, opseg prsa 144 cm.
+                <strong>NORIKS CashmereSweater</strong> je pulover s okruglim izrezom izrađen od <strong>mješavine kašmira i svile</strong> – nevjerojatno mekan, prirodnog i lepršavog pada. Dizajniran je sa <strong>spuštenim ramenima i opuštenim krojem</strong>, pa odiše jednostavnom, nenametljivom elegancijom. Svestran je i savršeno ide uz hlače ili suknje – od radnog dana do vikenda.<br><br><strong>Sastav:</strong> 74,7 % kašmir, 25,3 % mulberry svila (osim rebrastih rubova)<br><strong>Njega:</strong> preporučujemo profesionalno kemijsko čišćenje<br><strong>Kroj:</strong> opušteni kroj sa spuštenim ramenima, okrugli izrez<br><br><strong>Boje:</strong> sivosmeđa, čokoladno smeđa, bijela, svijetlosiva, tamnosiva, crna, nježno ružičasta, ljubičasto crvena, ljubičasta, plava, sivoplava, borovo zelena, crvena i bordo.<br><strong>Veličina:</strong> jedna veličina – M (EU 36–40). Duljina 54 cm, duljina rukava 45 cm, širina ramena 73 cm, opseg prsa 144 cm.
 
          <?php elseif( noriks_is_type( 'nursingbra', $current_product_id ) ): ?>
 
@@ -1128,12 +1128,12 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <tbody>
                 <?php
                 $kwm_sizes = array(
-                  array( 'S',   'US 0–4',   '78 – 83 cm',  '65 – 71 cm' ),
-                  array( 'M',   'US 6–8',   '83 – 89 cm',  '71 – 77 cm' ),
-                  array( 'L',   'US 10–12', '89 – 95 cm',  '77 – 83 cm' ),
-                  array( 'XL',  'US 14',     '95 – 102 cm', '83 – 88 cm' ),
-                  array( '2XL', 'US 16–18', '102 – 108 cm','88 – 94 cm' ),
-                  array( '3XL', 'US 20',     '108 – 115 cm','94 – 100 cm' ),
+                  array( 'S',   'EU 30–34',  '78 – 83 cm',  '65 – 71 cm' ),
+                  array( 'M',   'EU 36–38',  '83 – 89 cm',  '71 – 77 cm' ),
+                  array( 'L',   'EU 40–42', '89 – 95 cm',  '77 – 83 cm' ),
+                  array( 'XL',  'EU 44',     '95 – 102 cm', '83 – 88 cm' ),
+                  array( '2XL', 'EU 46–48', '102 – 108 cm','88 – 94 cm' ),
+                  array( '3XL', 'EU 50',     '108 – 115 cm','94 – 100 cm' ),
                 );
                 foreach ( $kwm_sizes as $i => $r ) :
                   $bg = ( $i % 2 ) ? '#fbf7f8' : '#fff'; ?>
@@ -1284,7 +1284,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <tr style="background:#d2632e;color:#fff;">
                   <th style="padding:9px 10px;text-align:left;">Veličina</th>
                   <th style="padding:9px 10px;text-align:left;">EU broj obuće</th>
-                  <th style="padding:9px 10px;text-align:left;">US broj (muški)</th>
                 </tr>
               </thead>
               <tbody>
@@ -1294,7 +1293,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 10px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 10px;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 10px;"><?php echo esc_html( $r[2] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -1518,8 +1516,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <tr style="background:#9e7446;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
                   <th style="padding:9px 8px;text-align:left;">Unutarnja duljina</th>
-                  <th style="padding:9px 8px;text-align:left;">US žene</th>
-                  <th style="padding:9px 8px;text-align:left;">US muškarci</th>
                 </tr>
               </thead>
               <tbody>
@@ -1529,8 +1525,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -1687,7 +1681,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <tr style="background:#1f568e;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">Veličina</th>
                   <th style="padding:9px 8px;text-align:left;">Opseg struka (cm)</th>
-                  <th style="padding:9px 8px;text-align:left;">Opseg struka (inči)</th>
                 </tr>
               </thead>
               <tbody>
@@ -1697,7 +1690,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -1783,9 +1775,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <th style="padding:9px 8px;text-align:left;">EU</th>
                   <th style="padding:9px 8px;text-align:left;">Uložak</th>
                   <th style="padding:9px 8px;text-align:left;">Širina</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
-                  <th style="padding:9px 8px;text-align:left;">US M</th>
-                  <th style="padding:9px 8px;text-align:left;">US Ž</th>
                 </tr>
               </thead>
               <tbody>
@@ -1796,9 +1785,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[5] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -1816,7 +1802,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
                   <th style="padding:9px 8px;text-align:left;">Unutarnja duljina</th>
                 </tr>
@@ -1827,7 +1812,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
                   </tr>
@@ -1847,7 +1831,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
-                  <th style="padding:9px 8px;text-align:left;">US (muške)</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
                 </tr>
               </thead>
@@ -1857,7 +1840,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
@@ -2027,8 +2009,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#1f568e;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
-                  <th style="padding:9px 8px;text-align:left;">US (muške / ženske)</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
                 </tr>
               </thead>
@@ -2038,8 +2018,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f2f6fb' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
@@ -2058,8 +2036,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
-                  <th style="padding:9px 8px;text-align:left;">US (ženske)</th>
-                  <th style="padding:9px 8px;text-align:left;">US (muške)</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
                   <th style="padding:9px 8px;text-align:left;">Širina stopala</th>
                 </tr>
@@ -2070,8 +2046,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
                   </tr>
@@ -2091,7 +2065,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:8px 6px;text-align:left;white-space:nowrap;">Traka</th>
-                  <th style="padding:8px 6px;text-align:left;white-space:nowrap;">US</th>
                   <th style="padding:8px 6px;text-align:left;white-space:nowrap;">Ispod grudi</th>
                   <?php foreach ( array( 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' ) as $nmb_c ) : ?>
                   <th style="padding:8px 6px;text-align:left;"><?php echo esc_html( $nmb_c ); ?></th>
@@ -2104,7 +2077,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:8px 6px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:8px 6px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:8px 6px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                     <?php foreach ( $r[3] as $v ) : ?>
                     <td style="padding:8px 6px;white-space:nowrap;"><?php echo $v === '' ? '–' : esc_html( $v ); ?></td>
@@ -2114,18 +2086,17 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             </div>
-            <p style="margin:14px 0 0;line-height:1.6;">Košarica E odgovara američkoj DD, a F američkoj DDD; »–« znači da se veličina ne izrađuje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+            <p style="margin:14px 0 0;line-height:1.6;">»–« znači da se veličina ne izrađuje. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
         <?php elseif( noriks_is_type( 'cashmeresweater', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;"><strong>Jedna veličina – M</strong> (US 6–10). Opušteni kroj sa spuštenim ramenima.</p>
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Jedna veličina – M</strong> (EU 36–40). Opušteni kroj sa spuštenim ramenima.</p>
             <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 8px;text-align:left;">US</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina rukava</th>
                   <th style="padding:9px 8px;text-align:left;">Širina ramena</th>
@@ -2138,7 +2109,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[5] ); ?></td>
@@ -2154,15 +2124,14 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'nursingbra', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;">Veličinu (S – 4XL) pronađite na sjecištu svoje <strong>košarice</strong> (redak) i <strong>trake</strong> prema opsegu ispod grudi (stupac, EU / UK).</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu (S – 4XL) pronađite na sjecištu svoje <strong>košarice</strong> (redak) i <strong>trake</strong> prema opsegu ispod grudi (stupac, EU).</p>
             <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
             <table style="width:100%;border-collapse:collapse;font-size:13px;">
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:8px 6px;text-align:left;white-space:nowrap;">Košarica</th>
-                  <th style="padding:8px 6px;text-align:left;white-space:nowrap;">UK</th>
                   <?php foreach ( noriks_nursingbra_bands() as $nnb_b ) : ?>
-                  <th style="padding:8px 6px;text-align:center;white-space:nowrap;"><?php echo esc_html( $nnb_b[0] ); ?><br><span style="font-weight:400;font-size:11px;">UK <?php echo esc_html( $nnb_b[1] ); ?></span></th>
+                  <th style="padding:8px 6px;text-align:center;white-space:nowrap;"><?php echo esc_html( $nnb_b[0] ); ?></th>
                   <?php endforeach; ?>
                 </tr>
               </thead>
@@ -2172,7 +2141,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7ece2' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:8px 6px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:8px 6px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
                     <?php foreach ( $r[2] as $v ) : ?>
                     <td style="padding:8px 6px;white-space:nowrap;text-align:center;"><?php echo $v === '' ? '–' : esc_html( $v ); ?></td>
                     <?php endforeach; ?>
@@ -2407,9 +2375,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                 <tr style="background:#3f6b45;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
                   <th style="padding:9px 8px;text-align:left;">Stopalo</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
-                  <th style="padding:9px 8px;text-align:left;">US Ž</th>
-                  <th style="padding:9px 8px;text-align:left;">US M</th>
                 </tr>
               </thead>
               <tbody>
@@ -2419,9 +2384,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
                     <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[4] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -2439,8 +2401,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">EU</th>
-                  <th style="padding:9px 8px;text-align:left;">US</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
                 </tr>
               </thead>
               <tbody>
@@ -2449,8 +2409,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
-                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -2537,15 +2495,13 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'raincoat', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;"><strong>Oversized kroj</strong> — namjerno širok, moderne i upečatljive siluete. Jedna veličina odgovara veličinama <strong>EU 36–50</strong> (UK 8–22 / US 4–18).</p>
+            <p style="margin:0 0 14px;line-height:1.6;"><strong>Oversized kroj</strong> — namjerno širok, moderne i upečatljive siluete. Jedna veličina odgovara veličinama <strong>EU 36–50</strong>.</p>
             <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#a9683f;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">Veličina</th>
                   <th style="padding:9px 8px;text-align:left;">EU</th>
-                  <th style="padding:9px 8px;text-align:left;">UK</th>
-                  <th style="padding:9px 8px;text-align:left;">US</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina</th>
                   <th style="padding:9px 8px;text-align:left;">Opseg grudi</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina rukava</th>
@@ -2557,7 +2513,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f7f2ec' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
-                    <?php for ( $c = 1; $c <= 6; $c++ ) : ?><td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[ $c ] ); ?></td><?php endfor; ?>
+                    <?php foreach ( array( 1, 4, 5, 6 ) as $c ) : ?><td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[ $c ] ); ?></td><?php endforeach; ?>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -2777,7 +2733,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               <thead>
                 <tr style="background:#2E2420;color:#fff;">
                   <th style="padding:9px 8px;text-align:left;">Veličina</th>
-                  <th style="padding:9px 8px;text-align:left;">US veličina</th>
                   <th style="padding:9px 8px;text-align:left;">Opseg struka (cm)</th>
                 </tr>
               </thead>
@@ -2787,7 +2742,6 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
                   $bg = ( $i % 2 ) ? '#f4f0eb' : '#fff'; ?>
                   <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
                     <td style="padding:9px 8px;font-weight:700;"><?php echo esc_html( $r[0] ); ?></td>
-                    <td style="padding:9px 8px;"><?php echo esc_html( $r[1] ); ?></td>
                     <td style="padding:9px 8px;"><?php echo esc_html( $r[2] ); ?></td>
                   </tr>
                 <?php endforeach; ?>

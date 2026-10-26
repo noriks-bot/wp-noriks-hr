@@ -57,7 +57,7 @@ $nrc_rows = array(
     'naslov' => 'Oversized kroj — <em>jedna veličina</em>',
     'tekst'  => array(
       '<strong>Namjerno širok kroj</strong>, moderne i upečatljive siluete.',
-      'Jedna veličina — osmišljena da odgovara veličinama <strong>EU 36–50</strong> (UK 8–22 / US 4–18).',
+      'Jedna veličina — osmišljena da odgovara veličinama <strong>EU 36–50</strong>.',
       '<strong>Model 1:</strong> visina 175 cm, grudi 81 cm, struk 66 cm, bokovi 96 cm, veličina haljine EU 36<br><strong>Model 2:</strong> visina 175 cm, grudi 89 cm (32C), struk 69 cm, bokovi 86 cm<br><strong>Model 3:</strong> visina 175 cm, grudi 89 cm (32C), struk 66 cm, bokovi 86 cm' ),
     'big'    => 'Duljina 60 cm · opseg grudi 155 cm · duljina rukava 75 cm.' ),
   array( 'slika' => 'rc-16-tamnocrvena-kapuljaca.webp', 'oznaka' => 'Tehnologija',

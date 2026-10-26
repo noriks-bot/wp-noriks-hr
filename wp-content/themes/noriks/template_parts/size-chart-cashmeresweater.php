@@ -19,18 +19,17 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
   </div>
 
   <div class="kwsc-body">
-    <p class="kwsc-lead"><strong>Jedna veličina – M</strong> (US 6–10). Opušteni kroj sa spuštenim ramenima.</p>
+    <p class="kwsc-lead"><strong>Jedna veličina – M</strong> (EU 36–40). Opušteni kroj sa spuštenim ramenima.</p>
 
     <h3 class="kwsc-h3">Mjere proizvoda</h3>
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">US</th><th scope="col">Duljina</th><th scope="col">Duljina rukava</th><th scope="col">Širina ramena</th><th scope="col">Opseg prsa</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Duljina</th><th scope="col">Duljina rukava</th><th scope="col">Širina ramena</th><th scope="col">Opseg prsa</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_cashmeresweater_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td class="kwsc-nw"><?php echo esc_html( $r[1] ); ?></td>
               <td class="kwsc-nw"><?php echo esc_html( $r[3] ); ?></td>
               <td class="kwsc-nw"><?php echo esc_html( $r[4] ); ?></td>
               <td class="kwsc-nw"><?php echo esc_html( $r[5] ); ?></td>
@@ -45,12 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Veličina</th><th scope="col">US</th><th scope="col">Opseg prsa</th></tr>
+          <tr><th scope="col">Veličina</th><th scope="col">Opseg prsa</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_cashmeresweater_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td class="kwsc-nw"><?php echo esc_html( $r[1] ); ?></td>
               <td class="kwsc-nw"><?php echo esc_html( $r[2] ); ?></td></tr>
           <?php endforeach; ?>
         </tbody>

@@ -23,13 +23,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">Košarica EU</th><th scope="col">UK</th>
-            <?php foreach ( noriks_nursingbra_bands() as $b ) : ?><th scope="col"><?php echo esc_html( $b[0] ); ?><span class="kwsc-sub">UK <?php echo esc_html( $b[1] ); ?></span></th><?php endforeach; ?></tr>
+          <tr><th scope="col">Košarica EU</th>
+            <?php foreach ( noriks_nursingbra_bands() as $b ) : ?><th scope="col"><?php echo esc_html( $b[0] ); ?></th><?php endforeach; ?></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_nursingbra_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td class="kwsc-nw"><?php echo esc_html( $r[1] ); ?></td>
               <?php foreach ( $r[2] as $v ) : ?><td class="kwsc-nw<?php echo $v === '' ? ' kwsc-na' : ''; ?>"><?php echo $v === '' ? '–' : esc_html( $v ); ?></td><?php endforeach; ?></tr>
           <?php endforeach; ?>
         </tbody>

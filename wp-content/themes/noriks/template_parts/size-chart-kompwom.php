@@ -29,22 +29,22 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
           <tr><th scope="col">Veličina</th><th scope="col">Opseg grudi</th><th scope="col">Opseg struka</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">S <span class="kwsc-us">US 0–4</span></th>
+          <tr><th scope="row">S <span class="kwsc-us">EU 30–34</span></th>
               <td>78 – 83 cm</td>
               <td>65 – 71 cm</td></tr>
-          <tr><th scope="row">M <span class="kwsc-us">US 6–8</span></th>
+          <tr><th scope="row">M <span class="kwsc-us">EU 36–38</span></th>
               <td>83 – 89 cm</td>
               <td>71 – 77 cm</td></tr>
-          <tr><th scope="row">L <span class="kwsc-us">US 10–12</span></th>
+          <tr><th scope="row">L <span class="kwsc-us">EU 40–42</span></th>
               <td>89 – 95 cm</td>
               <td>77 – 83 cm</td></tr>
-          <tr><th scope="row">XL <span class="kwsc-us">US 14</span></th>
+          <tr><th scope="row">XL <span class="kwsc-us">EU 44</span></th>
               <td>95 – 102 cm</td>
               <td>83 – 88 cm</td></tr>
-          <tr><th scope="row">2XL <span class="kwsc-us">US 16–18</span></th>
+          <tr><th scope="row">2XL <span class="kwsc-us">EU 46–48</span></th>
               <td>102 – 108 cm</td>
               <td>88 – 94 cm</td></tr>
-          <tr><th scope="row">3XL <span class="kwsc-us">US 20</span></th>
+          <tr><th scope="row">3XL <span class="kwsc-us">EU 50</span></th>
               <td>108 – 115 cm</td>
               <td>94 – 100 cm</td></tr>
         </tbody>

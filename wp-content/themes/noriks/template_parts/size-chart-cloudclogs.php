@@ -22,13 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">EU</th><th scope="col">US (muške / ženske)</th><th scope="col">UK</th><th scope="col">Duljina stopala</th></tr>
+          <tr><th scope="col">EU</th><th scope="col">Duljina stopala</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_cloudclogs_sizes() as $r ) : ?>
           <tr><th scope="row"><?php echo esc_html( $r[0] ); ?></th>
-              <td class="kwsc-nw2"><?php echo esc_html( $r[1] ); ?></td>
-              <td class="kwsc-nw2"><?php echo esc_html( $r[2] ); ?></td>
               <td class="kwsc-nw"><?php echo esc_html( $r[3] ); ?></td></tr>
           <?php endforeach; ?>
         </tbody>
