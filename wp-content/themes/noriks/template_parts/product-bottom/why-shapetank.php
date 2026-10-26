@@ -154,7 +154,17 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
   </section>
 
   <section class="wst__s">
-    <div class="wst__v wst__v--puna">
+    <div class="wst__v wst__v--rev">
+      <div class="wst__media wst__media--pecat">
+        <div class="wst__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="wst__pecat-in">
+            <span class="wst__pecat-top">Pravo na povrat</span>
+            <span class="wst__pecat-num">30</span>
+            <span class="wst__pecat-dani">DANA</span>
+            <span class="wst__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
       <div class="wst__tekst">
         <div class="wst__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wst__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
@@ -211,6 +221,12 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 .wst__pog{background:#f4f3ef;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:18px 14px;text-align:center}
 .wst__pog strong{display:block;font-size:16px;font-weight:800;margin:0 0 6px}
 .wst__pog span{font-size:14px;color:#444}
+.wst__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.wst__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#3d86ee 0%,#1a6be0 50%,#0b2a55 100%);box-shadow:0 0 0 10px #d9e5f7,0 0 0 14px #1a6be0,0 18px 40px rgba(11,42,85,.18)}
+.wst__pecat-in{width:206px;height:206px;border-radius:50%;background:#16191e;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wst__pecat-top,.wst__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#c9dbf6}
+.wst__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#fff}
+.wst__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
 @media (max-width:860px){
   .wst__s{padding:38px 0}
   .wst__kart{grid-template-columns:1fr}
@@ -218,5 +234,8 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
   .wst__v--rev .wst__media,.wst__media{order:0}
   .wst__v--rev .wst__tekst,.wst__tekst{order:1}
   .wst__v--puna .wst__pogoji{grid-template-columns:1fr 1fr}
+  .wst__pecat{width:230px;height:230px}
+  .wst__pecat-in{width:170px;height:170px}
+  .wst__pecat-num{font-size:64px}
 }
 </style>
