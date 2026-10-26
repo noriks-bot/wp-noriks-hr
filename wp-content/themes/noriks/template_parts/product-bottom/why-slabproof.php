@@ -188,5 +188,6 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
   .wslabproof__pecat{width:230px;height:230px}
   .wslabproof__pecat-in{width:170px;height:170px}
   .wslabproof__pecat-num{font-size:64px}
+  .wslabproof__pecat-top,.wslabproof__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

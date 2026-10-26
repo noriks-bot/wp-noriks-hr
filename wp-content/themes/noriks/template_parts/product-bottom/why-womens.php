@@ -174,5 +174,6 @@ $wdir = get_template_directory_uri() . '/img/womens/';
   .wwomens__pecat{width:230px;height:230px}
   .wwomens__pecat-in{width:170px;height:170px}
   .wwomens__pecat-num{font-size:64px}
+  .wwomens__pecat-top,.wwomens__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

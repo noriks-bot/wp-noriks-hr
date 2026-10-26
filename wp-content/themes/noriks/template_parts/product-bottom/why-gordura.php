@@ -216,5 +216,6 @@ $wdir = get_template_directory_uri() . '/img/gordura/';
   .wgordura__pecat{width:230px;height:230px}
   .wgordura__pecat-in{width:170px;height:170px}
   .wgordura__pecat-num{font-size:64px}
+  .wgordura__pecat-top,.wgordura__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

@@ -209,5 +209,6 @@ $wdir = get_template_directory_uri() . '/img/travel/';
   .wtravel__pecat{width:230px;height:230px}
   .wtravel__pecat-in{width:170px;height:170px}
   .wtravel__pecat-num{font-size:64px}
+  .wtravel__pecat-top,.wtravel__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

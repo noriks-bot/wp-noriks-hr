@@ -174,5 +174,6 @@ $wdir = get_template_directory_uri() . '/img/retrobox/';
   .wretrobox__pecat{width:230px;height:230px}
   .wretrobox__pecat-in{width:170px;height:170px}
   .wretrobox__pecat-num{font-size:64px}
+  .wretrobox__pecat-top,.wretrobox__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

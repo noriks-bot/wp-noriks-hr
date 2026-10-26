@@ -160,5 +160,6 @@ $wdir = get_template_directory_uri() . '/img/classics/';
   .wclassics__pecat{width:230px;height:230px}
   .wclassics__pecat-in{width:170px;height:170px}
   .wclassics__pecat-num{font-size:64px}
+  .wclassics__pecat-top,.wclassics__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

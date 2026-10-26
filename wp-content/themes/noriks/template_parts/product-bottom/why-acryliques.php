@@ -174,5 +174,6 @@ $wdir = get_template_directory_uri() . '/img/acryliques/';
   .wacryliques__pecat{width:230px;height:230px}
   .wacryliques__pecat-in{width:170px;height:170px}
   .wacryliques__pecat-num{font-size:64px}
+  .wacryliques__pecat-top,.wacryliques__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

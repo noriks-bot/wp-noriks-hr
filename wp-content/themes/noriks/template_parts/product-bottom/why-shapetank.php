@@ -237,5 +237,6 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
   .wst__pecat{width:230px;height:230px}
   .wst__pecat-in{width:170px;height:170px}
   .wst__pecat-num{font-size:64px}
+  .wst__pecat-top,.wst__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

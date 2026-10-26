@@ -231,5 +231,6 @@ $wdir = get_template_directory_uri() . '/img/daily/';
   .wdaily__pecat{width:230px;height:230px}
   .wdaily__pecat-in{width:170px;height:170px}
   .wdaily__pecat-num{font-size:64px}
+  .wdaily__pecat-top,.wdaily__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

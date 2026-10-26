@@ -188,5 +188,6 @@ $wdir = get_template_directory_uri() . '/img/destapacan/';
   .wdestapacan__pecat{width:230px;height:230px}
   .wdestapacan__pecat-in{width:170px;height:170px}
   .wdestapacan__pecat-num{font-size:64px}
+  .wdestapacan__pecat-top,.wdestapacan__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

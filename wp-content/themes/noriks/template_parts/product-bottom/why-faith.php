@@ -178,5 +178,6 @@ $wdir = get_template_directory_uri() . '/img/faith/';
   .wfaith__pecat{width:230px;height:230px}
   .wfaith__pecat-in{width:170px;height:170px}
   .wfaith__pecat-num{font-size:64px}
+  .wfaith__pecat-top,.wfaith__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

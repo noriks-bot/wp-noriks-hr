@@ -225,5 +225,6 @@ $wdir = get_template_directory_uri() . '/img/flops/';
   .wflops__pecat{width:230px;height:230px}
   .wflops__pecat-in{width:170px;height:170px}
   .wflops__pecat-num{font-size:64px}
+  .wflops__pecat-top,.wflops__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

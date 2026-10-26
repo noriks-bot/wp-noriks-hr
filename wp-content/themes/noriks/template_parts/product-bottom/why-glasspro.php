@@ -238,5 +238,6 @@ $ngv_mnenja = array(
   .ngv-pecat{width:230px;height:230px}
   .ngv-pecat-in{width:170px;height:170px}
   .ngv-pecat-num{font-size:64px}
+  .ngv-pecat-top,.ngv-pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

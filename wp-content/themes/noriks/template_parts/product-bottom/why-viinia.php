@@ -174,5 +174,6 @@ $wdir = get_template_directory_uri() . '/img/viinia/';
   .wviinia__pecat{width:230px;height:230px}
   .wviinia__pecat-in{width:170px;height:170px}
   .wviinia__pecat-num{font-size:64px}
+  .wviinia__pecat-top,.wviinia__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

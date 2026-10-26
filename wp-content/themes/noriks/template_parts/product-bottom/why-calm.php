@@ -273,5 +273,6 @@ $wdir = get_template_directory_uri() . '/img/calm/';
   .wcalm__pecat{width:230px;height:230px}
   .wcalm__pecat-in{width:170px;height:170px}
   .wcalm__pecat-num{font-size:64px}
+  .wcalm__pecat-top,.wcalm__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

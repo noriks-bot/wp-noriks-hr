@@ -188,5 +188,6 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
   .wcalendar__pecat{width:230px;height:230px}
   .wcalendar__pecat-in{width:170px;height:170px}
   .wcalendar__pecat-num{font-size:64px}
+  .wcalendar__pecat-top,.wcalendar__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>

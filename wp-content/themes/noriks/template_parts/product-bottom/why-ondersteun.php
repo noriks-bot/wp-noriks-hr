@@ -188,5 +188,6 @@ $wdir = get_template_directory_uri() . '/img/ondersteun/';
   .wondersteun__pecat{width:230px;height:230px}
   .wondersteun__pecat-in{width:170px;height:170px}
   .wondersteun__pecat-num{font-size:64px}
+  .wondersteun__pecat-top,.wondersteun__pecat-bot{font-size:10px;max-width:118px}
 }
 </style>
