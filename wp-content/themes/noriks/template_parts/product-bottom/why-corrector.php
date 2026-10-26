@@ -102,7 +102,7 @@ $slika = function ( $dat, $alt ) {
 .ncorrector{font-family:inherit;color:#121030}
 .ncorrector__sekcija{padding:46px 0}
 .ncorrector__sekcija--bg{background:#f6f5f2}
-.ncorrector__v{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.ncorrector__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .ncorrector__sekcija:nth-child(even) .ncorrector__v{direction:rtl}
 .ncorrector__sekcija:nth-child(even) .ncorrector__tekst,.ncorrector__sekcija:nth-child(even) .ncorrector__media{direction:ltr}
 .ncorrector__kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a8781;margin-bottom:8px}

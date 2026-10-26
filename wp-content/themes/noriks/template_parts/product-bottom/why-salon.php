@@ -110,7 +110,7 @@ $video = function ( $dat ) {
 .nsalon{font-family:inherit;color:#121030}
 .nsalon__sekcija{padding:46px 0}
 .nsalon__sekcija--bg{background:#f6f5f2}
-.nsalon__v{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.nsalon__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .nsalon__sekcija:nth-child(even) .nsalon__v{direction:rtl}
 .nsalon__sekcija:nth-child(even) .nsalon__tekst,.nsalon__sekcija:nth-child(even) .nsalon__media{direction:ltr}
 .nsalon__kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a8781;margin-bottom:8px}
@@ -118,7 +118,7 @@ $video = function ( $dat ) {
 .nsalon__p{font-size:16px;line-height:1.6;margin:0}
 .nsalon__media img{width:100%;height:auto;display:block;border-radius:12px}
 @media(max-width:860px){.nsalon__v{grid-template-columns:1fr}.nsalon__h2{font-size:24px}}
-.nsalon__v--video{display:block;max-width:1180px}
+.nsalon__v--video{display:block;max-width:1240px}
 .nsalon__glava{max-width:760px;margin:0 auto 26px;text-align:center}
 .nsalon__videi{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .nsalon__vid video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.08);background:#000}

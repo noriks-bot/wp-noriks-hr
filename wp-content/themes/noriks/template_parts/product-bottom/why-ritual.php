@@ -91,7 +91,7 @@ $slika = function ( $dat, $alt ) {
 .nritual{font-family:inherit;color:#121030}
 .nritual__sekcija{padding:46px 0}
 .nritual__sekcija--bg{background:#f6f5f2}
-.nritual__v{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.nritual__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .nritual__sekcija:nth-child(even) .nritual__v{direction:rtl}
 .nritual__sekcija:nth-child(even) .nritual__tekst,.nritual__sekcija:nth-child(even) .nritual__media{direction:ltr}
 .nritual__kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a8781;margin-bottom:8px}

@@ -102,7 +102,7 @@ $slika = function ( $dat, $alt ) {
 .ndevotions{font-family:inherit;color:#121030}
 .ndevotions__sekcija{padding:46px 0}
 .ndevotions__sekcija--bg{background:#f6f5f2}
-.ndevotions__v{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.ndevotions__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .ndevotions__sekcija:nth-child(even) .ndevotions__v{direction:rtl}
 .ndevotions__sekcija:nth-child(even) .ndevotions__tekst,.ndevotions__sekcija:nth-child(even) .ndevotions__media{direction:ltr}
 .ndevotions__kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a8781;margin-bottom:8px}
