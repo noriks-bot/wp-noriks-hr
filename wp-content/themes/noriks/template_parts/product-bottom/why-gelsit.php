@@ -156,7 +156,7 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
 
   <section class="wgsit__s">
     <div class="wgsit__v wgsit__v--rev">
-      <div class="wgsit__media"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-temperatura.webp' ); ?>" alt="Ruka podiže navlaku s gel jastuka NORIKS GelSit – otvorene saće propuštaju zrak" loading="lazy" decoding="async"></div>
+      <div class="wgsit__media wgsit__media--kv"><img src="<?php echo esc_url( $wdir . 'noriks-gelsit-temperatura.webp' ); ?>" alt="Ruka podiže navlaku s gel jastuka NORIKS GelSit – otvorene saće propuštaju zrak" loading="lazy" decoding="async"></div>
       <div class="wgsit__tekst">
         <div class="wgsit__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wgsit__h2">Česta <em>pitanja</em></h2>
@@ -207,6 +207,7 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
 .wgsit__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
 .wgsit__media img,.wgsit__media video{width:100%;height:100%;object-fit:cover;display:block}
 .wgsit__tekst{min-width:0}
+.wgsit__media--kv{aspect-ratio:1/1}
 .wgsit__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wgsit__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
 .wgsit__h2 em{font-style:italic}
