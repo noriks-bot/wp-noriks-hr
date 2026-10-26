@@ -6,12 +6,13 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/silkcase/';
+$wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 ?>
 <div class="wsilk">
 
   <section class="wsilk__s wsilk__s--bg">
     <div class="wsilk__v">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-detalj.webp' ); ?>" alt="Bijela svilena jastučnica NORIKS SilkCase" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-detalj.webp' . $wv ); ?>" alt="Bijela svilena jastučnica NORIKS SilkCase" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">100 % MULBERRY SVILA</div>
         <h2 class="wsilk__h2">Najčišća svila <em>za njegovane noći</em></h2>
@@ -30,7 +31,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s">
     <div class="wsilk__v wsilk__v--rev">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-kupci.webp' ); ?>" alt="Kupac spava na tamnoplavoj svilenoj jastučnici NORIKS SilkCase" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-kupci.webp' . $wv ); ?>" alt="Kupac spava na tamnoplavoj svilenoj jastučnici NORIKS SilkCase" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">ISKUSTVO NORIKS</div>
         <h2 class="wsilk__h2">Zašto nam vjeruje <em>120.000 kupaca</em></h2>
@@ -48,7 +49,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s wsilk__s--bg">
     <div class="wsilk__v">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-30-noci.webp' ); ?>" alt="Mirno spavanje na bijeloj svilenoj jastučnici" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-30-noci.webp' . $wv ); ?>" alt="Mirno spavanje na bijeloj svilenoj jastučnici" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">RAZLIKA ZA 30 DANA</div>
         <h2 class="wsilk__h2">Koža, kosa i odmor – <em>bez truda</em></h2>
@@ -61,7 +62,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s">
     <div class="wsilk__v wsilk__v--rev">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-koza.webp' ); ?>" alt="Lice obasjano jutarnjim svjetlom" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-koza.webp' . $wv ); ?>" alt="Lice obasjano jutarnjim svjetlom" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">KOŽA</div>
         <h2 class="wsilk__h2">Otkrijte čarobni dodir sna – <em>za vašu kožu</em></h2>
@@ -74,7 +75,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s wsilk__s--bg">
     <div class="wsilk__v">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-kosa.webp' ); ?>" alt="Glatka sjajna kosa ujutro" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-kosa.webp' . $wv ); ?>" alt="Glatka sjajna kosa ujutro" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">KOSA</div>
         <h2 class="wsilk__h2">Ustanite s kosom <em>koja izgleda uredno</em></h2>
@@ -87,7 +88,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s">
     <div class="wsilk__v wsilk__v--rev">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-san.webp' ); ?>" alt="Odmor na ružičastoj svilenoj jastučnici" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-san.webp' . $wv ); ?>" alt="Odmor na ružičastoj svilenoj jastučnici" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">SAN</div>
         <h2 class="wsilk__h2">Svježa, prozračna površina <em>cijelu noć</em></h2>
@@ -100,7 +101,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s wsilk__s--bg">
     <div class="wsilk__v">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-poklon.webp' ); ?>" alt="Mint svilena jastučnica NORIKS SilkCase kao poklon" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-poklon.webp' . $wv ); ?>" alt="Mint svilena jastučnica NORIKS SilkCase kao poklon" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">POKLON</div>
         <h2 class="wsilk__h2">Umijeće <em>darivanja</em></h2>
@@ -113,7 +114,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s">
     <div class="wsilk__v wsilk__v--rev">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-njega.webp' ); ?>" alt="Njegovano lice u sjeni zavjese" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-njega.webp' . $wv ); ?>" alt="Njegovano lice u sjeni zavjese" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">NJEGA DOK SPAVATE</div>
         <h2 class="wsilk__h2">Vaša večernja rutina <em>ostaje na licu</em></h2>
@@ -126,7 +127,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s wsilk__s--bg">
     <div class="wsilk__v">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-tamna-tresnja.webp' ); ?>" alt="Svilena jastučnica NORIKS SilkCase u boji tamne trešnje" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-tamna-tresnja.webp' . $wv ); ?>" alt="Svilena jastučnica NORIKS SilkCase u boji tamne trešnje" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">TREBATE POMOĆ?</div>
         <h2 class="wsilk__h2">Česta <em>pitanja</em></h2>
@@ -141,7 +142,7 @@ $wdir = get_template_directory_uri() . '/img/silkcase/';
 
   <section class="wsilk__s">
     <div class="wsilk__v wsilk__v--rev">
-      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-sampanjac.webp' ); ?>" alt="Svilena jastučnica NORIKS SilkCase u boji šampanjca" loading="lazy" decoding="async"></div>
+      <div class="wsilk__media"><img src="<?php echo esc_url( $wdir . 'silkcase-sampanjac.webp' . $wv ); ?>" alt="Svilena jastučnica NORIKS SilkCase u boji šampanjca" loading="lazy" decoding="async"></div>
       <div class="wsilk__tekst">
         <div class="wsilk__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wsilk__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>

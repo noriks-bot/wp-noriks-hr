@@ -6,14 +6,15 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wdir = get_template_directory_uri() . '/img/shapetank/';
+$wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
 ?>
 <div class="wst">
 
   <section class="wst__s wst__s--bg">
     <div class="wst__v">
       <div class="wst__media wst__media--duo">
-        <figure><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-prije.webp' ); ?>" alt="Muškarac krupnije građe bez kompresijske majice" loading="lazy" decoding="async"><figcaption>Bez</figcaption></figure>
-        <figure><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-poslije.webp' ); ?>" alt="Isti muškarac u sivoj kompresijskoj majici bez rukava NORIKS ShapeTank" loading="lazy" decoding="async"><figcaption>S NORIKS ShapeTank</figcaption></figure>
+        <figure><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-prije.webp' . $wv ); ?>" alt="Muškarac krupnije građe bez kompresijske majice" loading="lazy" decoding="async"><figcaption>Bez</figcaption></figure>
+        <figure><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-poslije.webp' . $wv ); ?>" alt="Isti muškarac u sivoj kompresijskoj majici bez rukava NORIKS ShapeTank" loading="lazy" decoding="async"><figcaption>S NORIKS ShapeTank</figcaption></figure>
       </div>
       <div class="wst__tekst">
         <div class="wst__kicker">VIDLJIVA RAZLIKA ODMAH</div>
@@ -33,7 +34,7 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 
   <section class="wst__s">
     <div class="wst__v wst__v--rev">
-      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-3-zone.webp' ); ?>" alt="Ciljana kompresija NORIKS ShapeTank u tri zone: prsa, bokovi i trbuh" loading="lazy" decoding="async"></div>
+      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-3-zone.webp' . $wv ); ?>" alt="Ciljana kompresija NORIKS ShapeTank u tri zone: prsa, bokovi i trbuh" loading="lazy" decoding="async"></div>
       <div class="wst__tekst">
         <div class="wst__kicker">KAKO FUNKCIONIRA</div>
         <h2 class="wst__h2">Ciljana kompresija <em>u tri zone</em></h2>
@@ -52,7 +53,7 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 
   <section class="wst__s wst__s--bg">
     <div class="wst__v">
-      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-duzi-kroj.webp' ); ?>" alt="Dulji kroj NORIKS ShapeTank prekriva cijeli trbuh i ostaje u hlačama" loading="lazy" decoding="async"></div>
+      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-duzi-kroj.webp' . $wv ); ?>" alt="Dulji kroj NORIKS ShapeTank prekriva cijeli trbuh i ostaje u hlačama" loading="lazy" decoding="async"></div>
       <div class="wst__tekst">
         <div class="wst__kicker">DULJI KROJ</div>
         <h2 class="wst__h2">Ne podiže se. <em>Prekriva cijeli trbuh.</em></h2>
@@ -71,7 +72,7 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 
   <section class="wst__s">
     <div class="wst__v wst__v--rev">
-      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-sa-i-bez.webp' ); ?>" alt="Isti muškarac u majici sa i bez NORIKS ShapeTank ispod" loading="lazy" decoding="async"></div>
+      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-sa-i-bez.webp' . $wv ); ?>" alt="Isti muškarac u majici sa i bez NORIKS ShapeTank ispod" loading="lazy" decoding="async"></div>
       <div class="wst__tekst">
         <div class="wst__kicker">NAPRAVLJENA ZA KRUPNIJE MUŠKARCE</div>
         <h2 class="wst__h2">Ne samo velika veličina, <em>nego pravi kroj</em></h2>
@@ -95,7 +96,7 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 
   <section class="wst__s wst__s--bg">
     <div class="wst__v">
-      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-bijela.webp' ); ?>" alt="NORIKS ShapeTank u bijeloj boji na krupnijem muškarcu" loading="lazy" decoding="async"></div>
+      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-bijela.webp' . $wv ); ?>" alt="NORIKS ShapeTank u bijeloj boji na krupnijem muškarcu" loading="lazy" decoding="async"></div>
       <div class="wst__tekst">
         <div class="wst__kicker">TABLICA VELIČINA</div>
         <h2 class="wst__h2">Veličinu birate <em>prema težini</em></h2>
@@ -120,7 +121,7 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 
   <section class="wst__s">
     <div class="wst__v wst__v--rev">
-      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-siva.webp' ); ?>" alt="NORIKS ShapeTank u sivoj boji, tanka tkanina koja prianja uz tijelo" loading="lazy" decoding="async"></div>
+      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-siva.webp' . $wv ); ?>" alt="NORIKS ShapeTank u sivoj boji, tanka tkanina koja prianja uz tijelo" loading="lazy" decoding="async"></div>
       <div class="wst__tekst">
         <div class="wst__kicker">MATERIJAL I NOŠENJE</div>
         <h2 class="wst__h2">Ispod košulje se <em>gotovo ne vidi</em></h2>
@@ -139,7 +140,7 @@ $wdir = get_template_directory_uri() . '/img/shapetank/';
 
   <section class="wst__s wst__s--bg">
     <div class="wst__v">
-      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-crna-sprijeda.webp' ); ?>" alt="NORIKS ShapeTank u crnoj boji sprijeda" loading="lazy" decoding="async"></div>
+      <div class="wst__media"><img src="<?php echo esc_url( $wdir . 'noriks-shapetank-crna-sprijeda.webp' . $wv ); ?>" alt="NORIKS ShapeTank u crnoj boji sprijeda" loading="lazy" decoding="async"></div>
       <div class="wst__tekst">
         <div class="wst__kicker">IMATE JOŠ PITANJA?</div>
         <h2 class="wst__h2">Česta <em>pitanja</em></h2>

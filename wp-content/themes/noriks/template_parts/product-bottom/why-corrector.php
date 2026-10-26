@@ -4,7 +4,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $slika = function ( $dat, $alt ) {
-    $url = get_template_directory_uri() . '/img/corrector/' . $dat;
+    $url = get_template_directory_uri() . '/img/corrector/' . $dat . '?v=20261026b'; // verzija - Cloudflare je drzal stare slike
     return '<img src="' . esc_url( $url ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async">';
 };
 ?>
