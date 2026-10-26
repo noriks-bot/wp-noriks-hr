@@ -152,17 +152,29 @@ $ngv_mnenja = array(
 
   <!-- 8) NORIKS POGOJI -->
   <section class="ngv-s">
-    <div class="ngv-wrap ngv-c">
+    <div class="ngv-v ngv-v--rev">
+      <div class="ngv-media ngv-media--pecat">
+        <div class="ngv-pecat" role="img" aria-label="30 dana za povrat">
+          <div class="ngv-pecat-in">
+            <span class="ngv-pecat-top">Pravo na povrat</span>
+            <span class="ngv-pecat-num">30</span>
+            <span class="ngv-pecat-dani">DANA</span>
+            <span class="ngv-pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
+      <div class="ngv-tekst">
       <div class="ngv-kicker">Kupujte bez brige</div>
       <h2 class="ngv-h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-      <p class="ngv-p ngv-p--sredina">Isprobajte NORIKS GlassPro na površini koja vas najviše živcira. Ako niste zadovoljni, imate 30 dana za povrat novca — bez kompliciranja.</p>
-      <div class="ngv-pogoji">
+      <p class="ngv-p">Isprobajte NORIKS GlassPro na površini koja vas najviše živcira. Ako niste zadovoljni, imate 30 dana za povrat novca — bez kompliciranja.</p>
+      <div class="ngv-pogoji ngv-pogoji--ob">
         <div class="ngv-pog"><strong>30 dana</strong><span>za povrat novca</span></div>
         <div class="ngv-pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
         <div class="ngv-pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
         <div class="ngv-pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
+  </div>
   </section>
 </div>
 
@@ -212,5 +224,19 @@ $ngv_mnenja = array(
   .ngv-pogoji{grid-template-columns:1fr 1fr}
   .ngv-tab{font-size:13px}
   .ngv-tab th,.ngv-tab td{padding:9px 6px}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.ngv-media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.ngv-s--bg .ngv-media--pecat{background:#fff}
+.ngv-pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.ngv-pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.ngv-pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ngv-pecat-top,.ngv-pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.ngv-pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.ngv-pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:768px){
+  .ngv-pecat{width:230px;height:230px}
+  .ngv-pecat-in{width:170px;height:170px}
+  .ngv-pecat-num{font-size:64px}
 }
 </style>

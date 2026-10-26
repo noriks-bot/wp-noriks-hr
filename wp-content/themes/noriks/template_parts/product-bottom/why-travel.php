@@ -134,19 +134,29 @@ $wdir = get_template_directory_uri() . '/img/travel/';
   </section>
 
   <section class="wtravel__s">
-    <div class="wtravel__v wtravel__v--polna">
-      <div class="wtravel__tekst wtravel__tekst--sredina">
+    <div class="wtravel__v wtravel__v--rev">
+      <div class="wtravel__media wtravel__media--pecat">
+        <div class="wtravel__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="wtravel__pecat-in">
+            <span class="wtravel__pecat-top">Pravo na povrat</span>
+            <span class="wtravel__pecat-num">30</span>
+            <span class="wtravel__pecat-dani">DANA</span>
+            <span class="wtravel__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
+      <div class="wtravel__tekst">
         <div class="wtravel__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wtravel__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wtravel__p">NORIKS Travel posteljicu isprobajte u svom automobilu. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja. Pridružite se zajednici od 120.000 zadovoljnih kupaca.</p>
-      </div>
-      <div class="wtravel__pogoji">
+        <div class="wtravel__pogoji wtravel__pogoji--ob">
         <div class="wtravel__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
         <div class="wtravel__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
         <div class="wtravel__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
         <div class="wtravel__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
+  </div>
   </section>
 </div>
 <style>
@@ -185,5 +195,19 @@ $wdir = get_template_directory_uri() . '/img/travel/';
   .wtravel__v--rev .wtravel__media,.wtravel__media{order:0}
   .wtravel__v--rev .wtravel__tekst,.wtravel__tekst{order:1}
   .wtravel__pogoji{grid-template-columns:1fr 1fr}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.wtravel__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.wtravel__s--bg .wtravel__media--pecat{background:#fff}
+.wtravel__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.wtravel__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.wtravel__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wtravel__pecat-top,.wtravel__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.wtravel__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.wtravel__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:860px){
+  .wtravel__pecat{width:230px;height:230px}
+  .wtravel__pecat-in{width:170px;height:170px}
+  .wtravel__pecat-num{font-size:64px}
 }
 </style>

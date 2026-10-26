@@ -120,19 +120,29 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
   </section>
 
   <section class="wcalendar__s wcalendar__s--bg">
-    <div class="wcalendar__v wcalendar__v--polna">
-      <div class="wcalendar__tekst wcalendar__tekst--sredina">
+    <div class="wcalendar__v">
+      <div class="wcalendar__media wcalendar__media--pecat">
+        <div class="wcalendar__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="wcalendar__pecat-in">
+            <span class="wcalendar__pecat-top">Pravo na povrat</span>
+            <span class="wcalendar__pecat-num">30</span>
+            <span class="wcalendar__pecat-dani">DANA</span>
+            <span class="wcalendar__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
+      <div class="wcalendar__tekst">
         <div class="wcalendar__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wcalendar__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wcalendar__p">NORIKS Calendar isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-      </div>
-      <div class="wcalendar__pogoji">
+        <div class="wcalendar__pogoji wcalendar__pogoji--ob">
         <div class="wcalendar__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
         <div class="wcalendar__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
         <div class="wcalendar__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
         <div class="wcalendar__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
+  </div>
   </section>
 </div>
 <style>
@@ -164,5 +174,19 @@ $wdir = get_template_directory_uri() . '/img/calendar/';
   .wcalendar__v--rev .wcalendar__media,.wcalendar__media{order:0}
   .wcalendar__v--rev .wcalendar__tekst,.wcalendar__tekst{order:1}
   .wcalendar__pogoji{grid-template-columns:1fr 1fr}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.wcalendar__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.wcalendar__s--bg .wcalendar__media--pecat{background:#fff}
+.wcalendar__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.wcalendar__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.wcalendar__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wcalendar__pecat-top,.wcalendar__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.wcalendar__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.wcalendar__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:860px){
+  .wcalendar__pecat{width:230px;height:230px}
+  .wcalendar__pecat-in{width:170px;height:170px}
+  .wcalendar__pecat-num{font-size:64px}
 }
 </style>

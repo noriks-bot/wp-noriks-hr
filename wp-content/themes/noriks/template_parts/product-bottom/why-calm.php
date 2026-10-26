@@ -184,12 +184,22 @@ $wdir = get_template_directory_uri() . '/img/calm/';
   </section>
 
   <section class="wcalm__s">
-    <div class="wcalm__v wcalm__v--puna">
+    <div class="wcalm__v">
+      <div class="wcalm__media wcalm__media--pecat">
+        <div class="wcalm__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="wcalm__pecat-in">
+            <span class="wcalm__pecat-top">Pravo na povrat</span>
+            <span class="wcalm__pecat-num">30</span>
+            <span class="wcalm__pecat-dani">DANA</span>
+            <span class="wcalm__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
       <div class="wcalm__tekst">
         <div class="wcalm__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wcalm__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wcalm__p">Isprobajte NORIKS Calm i pronađite svoj omiljeni okus. Ako niste zadovoljni, imate 30 dana za povrat – bez kompliciranja. Pridružite se zajednici od 120.000 zadovoljnih kupaca.</p>
-        <div class="wcalm__pogoji">
+        <div class="wcalm__pogoji wcalm__pogoji--ob">
           <div class="wcalm__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
           <div class="wcalm__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
           <div class="wcalm__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
@@ -249,5 +259,19 @@ $wdir = get_template_directory_uri() . '/img/calm/';
   .wcalm__v--rev .wcalm__media,.wcalm__media{order:0}
   .wcalm__v--rev .wcalm__tekst,.wcalm__tekst{order:1}
   .wcalm__v--puna .wcalm__pogoji{grid-template-columns:1fr 1fr}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.wcalm__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.wcalm__s--bg .wcalm__media--pecat{background:#fff}
+.wcalm__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.wcalm__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.wcalm__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wcalm__pecat-top,.wcalm__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.wcalm__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.wcalm__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:860px){
+  .wcalm__pecat{width:230px;height:230px}
+  .wcalm__pecat-in{width:170px;height:170px}
+  .wcalm__pecat-num{font-size:64px}
 }
 </style>

@@ -120,19 +120,29 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
   </section>
 
   <section class="wtacpro__s wtacpro__s--bg">
-    <div class="wtacpro__v wtacpro__v--polna">
-      <div class="wtacpro__tekst wtacpro__tekst--sredina">
+    <div class="wtacpro__v">
+      <div class="wtacpro__media wtacpro__media--pecat">
+        <div class="wtacpro__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="wtacpro__pecat-in">
+            <span class="wtacpro__pecat-top">Pravo na povrat</span>
+            <span class="wtacpro__pecat-num">30</span>
+            <span class="wtacpro__pecat-dani">DANA</span>
+            <span class="wtacpro__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
+      <div class="wtacpro__tekst">
         <div class="wtacpro__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wtacpro__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wtacpro__p">NORIKS TacPro isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja. Pridružite se zajednici od 120.000 zadovoljnih kupaca.</p>
-      </div>
-      <div class="wtacpro__pogoji">
+        <div class="wtacpro__pogoji wtacpro__pogoji--ob">
         <div class="wtacpro__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
         <div class="wtacpro__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
         <div class="wtacpro__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
         <div class="wtacpro__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
+  </div>
   </section>
 </div>
 <style>
@@ -164,5 +174,19 @@ $wdir = get_template_directory_uri() . '/img/tacpro/';
   .wtacpro__v--rev .wtacpro__media,.wtacpro__media{order:0}
   .wtacpro__v--rev .wtacpro__tekst,.wtacpro__tekst{order:1}
   .wtacpro__pogoji{grid-template-columns:1fr 1fr}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.wtacpro__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.wtacpro__s--bg .wtacpro__media--pecat{background:#fff}
+.wtacpro__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.wtacpro__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.wtacpro__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wtacpro__pecat-top,.wtacpro__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.wtacpro__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.wtacpro__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:860px){
+  .wtacpro__pecat{width:230px;height:230px}
+  .wtacpro__pecat-in{width:170px;height:170px}
+  .wtacpro__pecat-num{font-size:64px}
 }
 </style>

@@ -106,19 +106,29 @@ $wdir = get_template_directory_uri() . '/img/womens/';
   </section>
 
   <section class="wwomens__s">
-    <div class="wwomens__v wwomens__v--polna">
-      <div class="wwomens__tekst wwomens__tekst--sredina">
+    <div class="wwomens__v wwomens__v--rev">
+      <div class="wwomens__media wwomens__media--pecat">
+        <div class="wwomens__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="wwomens__pecat-in">
+            <span class="wwomens__pecat-top">Pravo na povrat</span>
+            <span class="wwomens__pecat-num">30</span>
+            <span class="wwomens__pecat-dani">DANA</span>
+            <span class="wwomens__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
+      <div class="wwomens__tekst">
         <div class="wwomens__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="wwomens__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="wwomens__p">NORIKS ortopedske cipele za žene isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-      </div>
-      <div class="wwomens__pogoji">
+        <div class="wwomens__pogoji wwomens__pogoji--ob">
         <div class="wwomens__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
         <div class="wwomens__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
         <div class="wwomens__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
         <div class="wwomens__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
+  </div>
   </section>
 </div>
 <style>
@@ -150,5 +160,19 @@ $wdir = get_template_directory_uri() . '/img/womens/';
   .wwomens__v--rev .wwomens__media,.wwomens__media{order:0}
   .wwomens__v--rev .wwomens__tekst,.wwomens__tekst{order:1}
   .wwomens__pogoji{grid-template-columns:1fr 1fr}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.wwomens__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.wwomens__s--bg .wwomens__media--pecat{background:#fff}
+.wwomens__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.wwomens__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.wwomens__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.wwomens__pecat-top,.wwomens__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.wwomens__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.wwomens__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:860px){
+  .wwomens__pecat{width:230px;height:230px}
+  .wwomens__pecat-in{width:170px;height:170px}
+  .wwomens__pecat-num{font-size:64px}
 }
 </style>

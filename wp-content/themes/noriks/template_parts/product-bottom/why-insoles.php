@@ -148,19 +148,29 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
   </section>
 
   <section class="winsoles__s winsoles__s--bg">
-    <div class="winsoles__v winsoles__v--polna">
-      <div class="winsoles__tekst winsoles__tekst--sredina">
+    <div class="winsoles__v">
+      <div class="winsoles__media winsoles__media--pecat">
+        <div class="winsoles__pecat" role="img" aria-label="30 dana za povrat">
+          <div class="winsoles__pecat-in">
+            <span class="winsoles__pecat-top">Pravo na povrat</span>
+            <span class="winsoles__pecat-num">30</span>
+            <span class="winsoles__pecat-dani">DANA</span>
+            <span class="winsoles__pecat-bot">Bez rizika</span>
+          </div>
+        </div>
+      </div>
+      <div class="winsoles__tekst">
         <div class="winsoles__kicker">KUPUJTE BEZ BRIGE</div>
         <h2 class="winsoles__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
         <p class="winsoles__p">NORIKS Insoles isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-      </div>
-      <div class="winsoles__pogoji">
+        <div class="winsoles__pogoji winsoles__pogoji--ob">
         <div class="winsoles__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
         <div class="winsoles__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
         <div class="winsoles__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
         <div class="winsoles__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
       </div>
     </div>
+  </div>
   </section>
 </div>
 <style>
@@ -192,5 +202,19 @@ $wdir = get_template_directory_uri() . '/img/insoles/';
   .winsoles__v--rev .winsoles__media,.winsoles__media{order:0}
   .winsoles__v--rev .winsoles__tekst,.winsoles__tekst{order:1}
   .winsoles__pogoji{grid-template-columns:1fr 1fr}
+}
+/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
+.winsoles__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
+.winsoles__s--bg .winsoles__media--pecat{background:#fff}
+.winsoles__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.winsoles__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
+.winsoles__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.winsoles__pecat-top,.winsoles__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
+.winsoles__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
+.winsoles__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
+@media (max-width:860px){
+  .winsoles__pecat{width:230px;height:230px}
+  .winsoles__pecat-in{width:170px;height:170px}
+  .winsoles__pecat-num{font-size:64px}
 }
 </style>
