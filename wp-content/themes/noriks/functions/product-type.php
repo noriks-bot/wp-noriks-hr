@@ -69,6 +69,7 @@ function noriks_product_type_map() : array {
         'zipcomp' => array( 'orto-zipcomp' ),
         'webshot' => array( 'orto-webshot' ),
         'gelcushion' => array( 'orto-gelcushion' ),
+        'noiron' => array( 'orto-noiron' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
@@ -626,6 +627,24 @@ if ( ! function_exists( 'noriks_zipcomp_sizes' ) ) {
             array( 'S/M',  '36 – 40', '23 – 36 cm', '1,50 – 1,70 m' ),
             array( 'L/XL', '40 – 44', '36 – 45 cm', '1,70 – 1,95 m' ),
             array( 'XXL',  '44 – 48', '45 – 56 cm', '1,85 – 2,05 m' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_noiron_sizes' ) ) {
+    /** NORIKS NoIron: velicina (ovratnik), sirina ramena, opseg prsa, duzina kosulje, duzina rukava v cm - 1:1 z originala (bellutia, tablica dugih rukava). */
+    function noriks_noiron_sizes() {
+        return array(
+            array( '39 (XXS)', '44,8 cm', '100 cm', '72 cm', '61 cm' ),
+            array( '40 (XS)',  '46 cm',   '104 cm', '74 cm', '62,5 cm' ),
+            array( '41 (S)',   '47,2 cm', '108 cm', '74 cm', '63,5 cm' ),
+            array( '42 (M)',   '48,4 cm', '112 cm', '76 cm', '65 cm' ),
+            array( '43 (L)',   '49,6 cm', '116 cm', '76 cm', '65 cm' ),
+            array( '44 (XL)',  '50,8 cm', '120 cm', '78 cm', '66,5 cm' ),
+            array( '45 (2XL)', '52 cm',   '124 cm', '78 cm', '66,5 cm' ),
+            array( '46 (3XL)', '53,2 cm', '128 cm', '78 cm', '67 cm' ),
+            array( '47 (4XL)', '54,4 cm', '132 cm', '80 cm', '67 cm' ),
+            array( '48 (5XL)', '55,6 cm', '136 cm', '81 cm', '68,5 cm' ),
         );
     }
 }
@@ -1620,6 +1639,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Izmjerite <strong>opseg lista na najširem dijelu</strong> – to određuje veličinu, a ne broj cipele.',
                 'glava' => array( 'Veličina', 'Broj cipele', 'Opseg lista', 'Visina' ), 'vrstice' => noriks_zipcomp_sizes(),
                 'opomba' => 'Između dvije veličine? Uvijek uzmite veću.' );
+        }
+        if ( noriks_is_type( 'noiron', $product_id ) ) {
+            return array( 'uvod' => 'Broj veličine je <strong>opseg ovratnika u cm</strong> (39–48), u zagradi je slovna oznaka. Košulja je <strong>slim kroja</strong> – naručite veličinu koju inače nosite.',
+                'glava' => array( 'Veličina', 'Širina ramena', 'Opseg prsa', 'Dužina košulje', 'Dužina rukava' ), 'vrstice' => noriks_noiron_sizes(),
+                'opomba' => 'Mjere su mjere košulje u cm. Ako ste između dvije veličine, uzmite veću.' );
         }
         if ( noriks_is_type( 'sculptleg', $product_id ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',

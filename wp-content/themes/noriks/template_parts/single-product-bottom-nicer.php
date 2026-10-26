@@ -110,6 +110,9 @@ if ( noriks_is_type( 'webshot' ) ) {
 if ( noriks_is_type( 'gelcushion' ) ) {
     include $noriks_pb_dir . 'why-gelcushion.php';
 }
+if ( noriks_is_type( 'noiron' ) ) {
+    include $noriks_pb_dir . 'why-noiron.php';
+}
 if ( noriks_is_type( 'sculptleg' ) ) {
     include $noriks_pb_dir . 'why-sculptleg.php';
 }
