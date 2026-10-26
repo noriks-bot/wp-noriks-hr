@@ -83,9 +83,9 @@ $wdir = get_template_directory_uri() . '/img/gelsit/';
         <p class="wgsit__p">Jezgra jastuka izrađena je od elastičnog gela u obliku saća. Kad sjednete, ćelije se pomiču i mijenjaju oblik zajedno s vama – kod svakog udaha i svakog malog pomaka – pa se težina neprestano raspoređuje i nijedno mjesto ne nosi sav teret predugo.</p>
         <p class="wgsit__p">Za razliku od drugih gel jastuka, NORIKS GelSit ima <strong>ugrađeni izrez za trtičnu kost</strong>: na mjestu gdje je pritisak najjači podloge jednostavno nema. Otvoreni kanali saća propuštaju zrak, pa jastuk ostaje svjež i suh i nakon više sati sjedenja.</p>
         <div class="wgsit__kart">
-          <div><strong>Saće od gela</strong><span>raspoređuje težinu po cijelom sjedalu</span></div>
-          <div><strong>Izrez za trtičnu kost</strong><span>bez dodira na najosjetljivijem mjestu</span></div>
-          <div><strong>Otvoreni kanali</strong><span>zrak cirkulira, jastuk ostaje svjež</span></div>
+          <div><span class="wgsit__pi wgsit__pi--s"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5l3 1.7v3.5l-3 1.7-3-1.7V6.2z"/><path d="M14 4.5l3 1.7v3.5l-3 1.7-3-1.7V6.2z"/><path d="M10.5 11.5l3 1.7v3.5l-3 1.7-3-1.7v-3.5z"/><path d="M17.5 11.5l3 1.7v3.5l-3 1.7-3-1.7v-3.5z"/></svg></span><strong>Saće od gela</strong><span>raspoređuje težinu po cijelom sjedalu</span></div>
+          <div><span class="wgsit__pi wgsit__pi--s"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M10 18v-3a2 2 0 0 1 4 0v3"/></svg></span><strong>Izrez za trtičnu kost</strong><span>bez dodira na najosjetljivijem mjestu</span></div>
+          <div><span class="wgsit__pi wgsit__pi--s"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg></span><strong>Otvoreni kanali</strong><span>zrak cirkulira, jastuk ostaje svjež</span></div>
         </div>
         <p class="wgsit__zak">Svjež, suh i udoban – cijeli dan.</p>
       </div>
@@ -296,5 +296,6 @@ div.wgsit__pog{text-align:center;border:1px solid rgba(14,82,73,.35);border-radi
 @media (max-width:860px){.wgsit__s{padding:46px 0}.wgsit__s.wgsit__traka{padding:30px 0}.wgsit__plavo{margin-top:-46px}.wgsit__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wgsit__v{padding:0 16px}}
 .wgsit__brojke span.wgsit__pi{width:48px;height:48px;margin:0 auto 10px}.wgsit__brojke .wgsit__pi svg{width:24px;height:24px}.wgsit__brojke strong{color:#0e5249}
+.wgsit__kart span.wgsit__pi{width:42px;height:42px;margin:0 0 10px}.wgsit__kart .wgsit__pi svg{width:22px;height:22px}
 /* /dizajn.py */
 </style>
