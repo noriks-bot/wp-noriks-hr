@@ -70,6 +70,7 @@ function noriks_product_type_map() : array {
         'webshot' => array( 'orto-webshot' ),
         'gelcushion' => array( 'orto-gelcushion' ),
         'noiron' => array( 'orto-noiron' ),
+        'widebeam' => array( 'orto-widebeam' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),

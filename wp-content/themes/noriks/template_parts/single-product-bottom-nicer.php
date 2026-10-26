@@ -113,6 +113,9 @@ if ( noriks_is_type( 'gelcushion' ) ) {
 if ( noriks_is_type( 'noiron' ) ) {
     include $noriks_pb_dir . 'why-noiron.php';
 }
+if ( noriks_is_type( 'widebeam' ) ) {
+    include $noriks_pb_dir . 'why-widebeam.php';
+}
 if ( noriks_is_type( 'sculptleg' ) ) {
     include $noriks_pb_dir . 'why-sculptleg.php';
 }
