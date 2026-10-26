@@ -1,179 +1,70 @@
 <?php
 /**
- * NORIKS Akrilni flomasteri — why sekcije 1:1 z originalom (7 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ * NORIKS Flomasteri — why sekcije po natancni strukturi originala (monpetitcurieux.fr/products/feutres-acrylique). Generirano s struk.py.
+ *
+ * STRUKTURA ORIGINALA:
+   1. c_problem — video levo, besedilo desno (problem: crnilo prodre skozi list)
+   2. c_solution — video desno, besedilo levo + 3 stevilke v vrsti
+   3. c_steps — 3 koraki v vrsti, vsak z videom
+   4. c_wall — mreza fotografij pobarvanih strani (8 na originalu; pri nas 5 brez tujih napisov: Grenoble, Egypt in skatla z znamko izpusceni)
+   5. c_family — karusel 7 videov kreatork s skatlo tuje znamke (izpusceno, znamka na vsakem posnetku)
+   6. c_compare — primerjalna tabela (mi / flomastri na alkohol)
+   7. c_box — video levo + seznam vsebine paketa
+   8. FAQ — harmonika (pri nas v reviews.php)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wdir = get_template_directory_uri() . '/img/acryliques/';
 ?>
-<div class="wacryliques">
-
-  <section class="wacryliques__s wacryliques__s--bg">
-    <div class="wacryliques__v">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-09.webp' ); ?>" alt="Obojite jednu stranicu… i upropastite onu na poleđini" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">POZNATO?</div>
-        <h2 class="wacryliques__h2">Obojite jednu stranicu… i <em>upropastite onu na poleđini</em></h2>
-        <p class="wacryliques__p">Sat vremena sjedite nad tajanstvenom bojankom i polako popunjavate polje po polje. Okrenete list — i vidite da je tinta prošla kroz papir. Sljedeći crtež je umrljan prije nego što ste ga uopće počeli bojati. Sav trud i strpljenje u tom su trenutku napola izgubljeni.</p>
-        <p class="wacryliques__p">Kod tankih stranica u knjigama za bojanje to je pravilo, a ne iznimka. Obični flomasteri natapaju papir, a boja se pojavljuje s druge strane u obliku mrlja i sjena koje se više ne mogu ukloniti. Što je papir tanji, to je problem veći, a knjige za bojanje gotovo uvijek imaju tanke listove.</p>
-        <p class="wacryliques__p">Tako svaka obojena stranica žrtvuje još jednu. Pola knjige ostaje neiskorišteno, a ono što ste htjeli raditi s užitkom pretvara se u oprezno bojanje na pola snage. Bojanje bi trebalo opuštati, a ne stvarati brigu o tome što se događa s druge strane lista. Umjesto da uživate u bojama, stalno provjeravate poleđinu.</p>
-        <p class="wacryliques__zak">S flomasterima koji probijaju papir, svaka obojena stranica uzima još jednu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s">
-    <div class="wacryliques__v wacryliques__v--rev">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-10.webp' ); ?>" alt="S NORIKS Akrilnim flomasterima poleđina ostaje netaknuta" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">RJEŠENJE</div>
-        <h2 class="wacryliques__h2">S NORIKS Akrilnim flomasterima <em>poleđina ostaje netaknuta</em></h2>
-        <p class="wacryliques__p">Akrilna tinta NORIKS Akrilnih flomastera ne prolazi kroz list, čak ni na tankim stranicama knjiga za bojanje. Boja se zadržava na papiru umjesto da ga natopi, pa crtež na drugoj strani ostaje čist. To vrijedi i za tanke stranice popularnih knjiga za bojanje s likovima iz crtića.</p>
-        <p class="wacryliques__p">Bojite prednju stranu, a poleđina ostaje spremna za sljedeći put. Nema mrlja, nema sjena boje s druge strane i nema straha da ćete uništiti crtež koji vas tek čeka. Svaka stranica u knjizi tako ostaje iskoristiva, i s prednje i sa stražnje strane.</p>
-        <p class="wacryliques__p">Boja prekriva čisto već od prvog prolaza na tamnim tonovima, bez tragova preklapanja. Rezultat su ravne, ujednačene površine umjesto prugastih poteza. Na tamnim tonovima nije potrebno prelaziti istu površinu više puta, pa je stranica gotova brže.</p>
-        <p class="wacryliques__zak">Obojite prednju stranu bez straha — poleđina mirno čeka svoj red.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s wacryliques__s--bg">
-    <div class="wacryliques__v">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-11.webp' ); ?>" alt="Jednostavno kao običan flomaster" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">KAKO SE KORISTI</div>
-        <h2 class="wacryliques__h2">Jednostavno <em>kao običan flomaster</em></h2>
-        <p class="wacryliques__p">Prije prve upotrebe protresite flomaster sa zatvorenom kapicom tridesetak sekundi. Zatim skinite kapicu i počnite bojati — vrh klizi po papiru bez pritiskanja. Vrh je čvrst, pa i najmlađi dobivaju lijep rezultat bez snažnog pritiskanja.</p>
-        <p class="wacryliques__p">Tamne boje prekrivaju u jednom sloju. Za svijetle boje (bijelu, bež i pastelne tonove) nanesite 2 do 3 tanka sloja i između njih pričekajte nekoliko sekundi da se osuše, kao kod svih akrilnih flomastera. Svijetli tonovi tako dobivaju punu, ravnomjernu boju bez prugastih poteza.</p>
-        <p class="wacryliques__p">Svaki flomaster ima dva vrha s dvije različite boje — jedan je za veće površine, a drugi za detalje. Tako s jednim flomasterom pokrivate i široka polja i fine rubove. Nema stalnog mijenjanja flomastera usred crteža. Kad završite, vratite kapice na oba kraja i flomaster je spreman za sljedeće bojanje.</p>
-        <p class="wacryliques__zak">Protresite, skinite kapicu i bojite — ništa više.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s">
-    <div class="wacryliques__v wacryliques__v--rev">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-07.webp' ); ?>" alt="Prave stranice, obojane od pravih ljudi" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">PRAVE STRANICE</div>
-        <h2 class="wacryliques__h2">Prave stranice, <em>obojane od pravih ljudi</em></h2>
-        <p class="wacryliques__p">Ove slike dolaze iz videozapisa kreatorica koje su bojale ovim flomasterima. Riječ je o stvarnim stranicama iz knjiga za bojanje, a ne o pripremljenim reklamnim primjerima. Svaka slika pokazuje rezultat koji možete postići i sami, kod kuće.</p>
-        <p class="wacryliques__p">Na njima se vide žive, ravne površine bez prugastih poteza i bez tragova preklapanja. Boja leži glatko i ujednačeno, s mat i baršunastim izgledom. Takav izgled teško je postići običnim flomasterima, koji ostavljaju vidljive poteze.</p>
-        <p class="wacryliques__p">Tamni tonovi pokrivaju već u prvom prolazu, a svjetlije nijanse dobivaju punu boju nakon nekoliko tankih slojeva. Upravo tako izgleda i vaša stranica kad je završite. Od tajanstvenih bojanki s brojevima do velikih ilustracija likova — boja svuda leži jednako ravno.</p>
-        <p class="wacryliques__zak">Žive boje na prednjoj strani, čista stranica na poleđini — na svakoj stranici knjige.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s wacryliques__s--bg">
-    <div class="wacryliques__v">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-13.webp' ); ?>" alt="Dobile su ih i isprobale kod kuće" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">ISPROBANO</div>
-        <h2 class="wacryliques__h2">Dobile su ih i <em>isprobale kod kuće</em></h2>
-        <p class="wacryliques__p">Kreatorice su primile kutiju s flomasterima, otvorile je pred kamerom i isprobale ih na svojim bojankama. Bez scenarija — samo papir, flomaster i prvi potezi. Vidi se cijeli put, od otvaranja kutije do prve obojene stranice.</p>
-        <p class="wacryliques__p">Prvo što primijete jest da tinta ne prolazi na drugu stranu lista. Zatim slijede boje koje odmah prekrivaju tamne tonove i vrh koji klizi bez pritiska. Tamne boje prekrivaju u jednom sloju, a za svijetle je dovoljno nekoliko tankih. Bez čekanja i bez razmišljanja o tome hoće li poleđina ostati čista.</p>
-        <p class="wacryliques__p">Dvostruki vrh s dvije boje na svakom flomasteru znači da je izbor tonova dvostruko veći nego što se na prvi pogled čini. Sve je spremno za bojanje odmah nakon otvaranja. Nije potreban nikakav dodatni pribor ni priprema.</p>
-        <p class="wacryliques__zak">Otvorite kutiju, okrenite list — i poleđina je i dalje čista.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s">
-    <div class="wacryliques__v wacryliques__v--rev">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-02.webp' ); ?>" alt="NORIKS Akrilni flomasteri ili flomasteri na bazi alkohola?" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">USPOREDBA</div>
-        <h2 class="wacryliques__h2">NORIKS Akrilni flomasteri ili <em>flomasteri na bazi alkohola?</em></h2>
-        <p class="wacryliques__p">Flomasteri na bazi alkohola probijaju list, imaju samo jednu boju po flomasteru, na crnom papiru su prozirni i imaju miris otapala. Obični flomasteri ostavljaju tragove preklapanja i traže više slojeva. Kod tankih stranica to znači umrljanu poleđinu već nakon prvog crteža.</p>
-        <p class="wacryliques__p">NORIKS Akrilni flomasteri ostavljaju poleđinu stranice netaknutom, imaju 2 boje po flomasteru i prekrivaju čak i na crnom papiru. Tinta je na bazi vode i nema miris otapala. Uz to jedan flomaster daje dva tona, pa je u kutiji upola manje flomastera za isti broj boja.</p>
-        <p class="wacryliques__p">Svijetle boje (bijela, bež, pastelne) traže 2 do 3 tanka sloja, kao kod svih akrilnih flomastera. Tamne boje su neprozirne već od prvog prolaza, s glatkom i ujednačenom površinom. Nakon prvog sloja odmah vidite koliko boja pokriva, pa u svakom trenutku znate kakav rezultat možete očekivati.</p>
-        <p class="wacryliques__zak">Dvije boje po flomasteru, čista poleđina stranice i bojanje bez mirisa otapala.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s wacryliques__s--bg">
-    <div class="wacryliques__v">
-      <div class="wacryliques__media"><img src="<?php echo esc_url( $wdir . 'acryliques-14.webp' ); ?>" alt="Sve za bojanje odmah nakon otvaranja" loading="lazy" decoding="async"></div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">U PAKETU</div>
-        <h2 class="wacryliques__h2">Sve za bojanje <em>odmah nakon otvaranja</em></h2>
-        <p class="wacryliques__p">Flomasteri stižu u ilustriranoj kutiji za pohranu, spremnoj za poklon. Birate između šest veličina: 24, 48, 72, 96, 120 ili 168 boja. Kutija drži flomastere uredno složene, pa svaku boju lako pronađete.</p>
-        <p class="wacryliques__p">Svi flomasteri su dvostrani — na svakom kraju je druga boja. Zato kutija sa 168 boja sadrži 84 flomastera, a svaki od njih nudi dva tona. Jedan vrh koristite za ravne površine, a drugi za detalje. Akril se drži i na kartonu, drvu ili kamenčićima — najprije napravite probu na malom dijelu.</p>
-        <p class="wacryliques__p">Tinta je na bazi vode i dok je svježa lako se skida vodom i sapunom, a kad se osuši postaje otporna. Ako nakon svakog bojanja dobro zatvorite kapice, flomasteri traju više mjeseci. Preporučeno od 3. godine uz nadzor, zbog kapica.</p>
-        <p class="wacryliques__zak">Jedna kutija, dvije boje na svakom flomasteru — i sve je spremno za prvu stranicu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wacryliques__s">
-    <div class="wacryliques__v wacryliques__v--rev">
-      <div class="wacryliques__media wacryliques__media--pecat">
-        <div class="wacryliques__pecat" role="img" aria-label="30 dana za povrat">
-          <div class="wacryliques__pecat-in">
-            <span class="wacryliques__pecat-top">Pravo na povrat</span>
-            <span class="wacryliques__pecat-num">30</span>
-            <span class="wacryliques__pecat-dani">DANA</span>
-            <span class="wacryliques__pecat-bot">Bez rizika</span>
-          </div>
-        </div>
-      </div>
-      <div class="wacryliques__tekst">
-        <div class="wacryliques__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wacryliques__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wacryliques__p">NORIKS Akrilni flomasteri isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-        <div class="wacryliques__pogoji wacryliques__pogoji--ob">
-        <div class="wacryliques__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div class="wacryliques__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div class="wacryliques__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div class="wacryliques__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-      </div>
-    </div>
-  </div>
-  </section>
+<div class="wsacryliques">
+<section class="wsacryliques__s wsacryliques__s--bg"><div class="wsacryliques__v wsacryliques__dva"><div class="wsacryliques__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-problem.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsacryliques__kicker">Problem</div><h2 class="wsacryliques__h2">Bojite stranicu… i <em>uništite onu na poleđini</em></h2><p class="wsacryliques__p">Sat vremena na tajanstvenoj bojanci. Okrenete list – tinta je probila, a sljedeći crtež je umrljan prije nego što ste počeli.</p><p class="wsacryliques__p">S flomasterima koji probijaju papir, svaka obojena stranica žrtvuje drugu.</p></div></div></section>
+<section class="wsacryliques__s"><div class="wsacryliques__v wsacryliques__dva wsacryliques__dva--rev"><div class="wsacryliques__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-rjesenje.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsacryliques__kicker">Rješenje</div><h2 class="wsacryliques__h2">S NORIKS flomasterima <em>crtež na poleđini ostaje netaknut</em></h2><p class="wsacryliques__p">Akrilna tinta ne prolazi kroz list, čak ni na tankim stranicama bojanki. Bojite lice, a poleđina ostaje spremna za sljedeći put.</p><div class="wsacryliques__red3"><div><strong>2 boje</strong><span>u svakom flomasteru</span></div><div><strong>84 flomastera</strong><span>u kutiji od 168 boja</span></div><div><strong>1 sloj</strong><span>na tamnim bojama</span></div></div></div></div></section>
+<section class="wsacryliques__s wsacryliques__s--bg"><div class="wsacryliques__v"><h2 class="wsacryliques__h2 wsacryliques__c">Jednostavno <em>kao flomaster</em></h2><div class="wsacryliques__grid wsacryliques__g3"><div class="wsacryliques__k"><div class="wsacryliques__km wsacryliques__km--v"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-korak-1.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div class="wsacryliques__kt"><strong>1. Protresite i otvorite</strong><p>Protresite zatvoreni flomaster tridesetak sekundi, zatim skinite poklopac.</p></div></div><div class="wsacryliques__k"><div class="wsacryliques__km wsacryliques__km--v"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-korak-2.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div class="wsacryliques__kt"><strong>2. Bojite</strong><p>Vrh klizi bez napora. Na svijetlim bojama 2 do 3 tanka sloja.</p></div></div><div class="wsacryliques__k"><div class="wsacryliques__km wsacryliques__km--v"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-korak-3.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div class="wsacryliques__kt"><strong>3. Divite se</strong><p>Žive, ravnomjerne boje – a stranica na poleđini čeka svoj red.</p></div></div></div></div></section>
+<section class="wsacryliques__s"><div class="wsacryliques__v"><h2 class="wsacryliques__h2 wsacryliques__c">Prave stranice, <em>obojene od pravih ljudi</em></h2><p class="wsacryliques__p wsacryliques__c">Bez montaže – ove fotografije su iz videa kupaca koji su bojali našim flomasterima.</p><div class="wsacryliques__grid wsacryliques__g5"><div class="wsacryliques__k"><div class="wsacryliques__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-stranica-1.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsacryliques__kt"></div></div><div class="wsacryliques__k"><div class="wsacryliques__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-stranica-2.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsacryliques__kt"></div></div><div class="wsacryliques__k"><div class="wsacryliques__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-stranica-3.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsacryliques__kt"></div></div><div class="wsacryliques__k"><div class="wsacryliques__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-stranica-4.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsacryliques__kt"></div></div><div class="wsacryliques__k"><div class="wsacryliques__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-stranica-5.webp' ); ?>" alt="" loading="lazy" decoding="async"></div><div class="wsacryliques__kt"></div></div></div></div></section>
+<section class="wsacryliques__s wsacryliques__s--bg"><div class="wsacryliques__v"><h2 class="wsacryliques__h2 wsacryliques__c">NORIKS ili <em>flomasteri na alkohol</em>?</h2><div class="wsacryliques__tw"><table class="wsacryliques__tab"><thead><tr><th></th><th>NORIKS Flomasteri</th><th>Flomasteri na alkohol</th></tr></thead><tbody><tr><td>Poleđina stranice ostaje netaknuta</td><td class="wsacryliques__da">✓</td><td class="wsacryliques__ne">✕</td></tr><tr><td>2 boje u svakom flomasteru</td><td class="wsacryliques__da">✓</td><td class="wsacryliques__ne">✕</td></tr><tr><td>Pokrivaju i na crnom papiru</td><td class="wsacryliques__da">✓</td><td class="wsacryliques__ne">✕</td></tr><tr><td>Bez mirisa otapala</td><td class="wsacryliques__da">✓</td><td class="wsacryliques__ne">✕</td></tr></tbody></table></div><p class="wsacryliques__zak">Svijetle boje (bijela, bež, pastelne) traže 2 do 3 tanka sloja, kao kod svih akrilnih flomastera.</p></div></section>
+<section class="wsacryliques__s"><div class="wsacryliques__v wsacryliques__dva"><div class="wsacryliques__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/acryliques/noriks-acryliques-paket.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div><div class="wsacryliques__kicker">Što dobivate</div><h2 class="wsacryliques__h2">Sve za bojanje <em>čim otvorite</em></h2><ul class="wsacryliques__kv"><li>Kutija za spremanje, od 24 do 168 boja po izboru</li><li>Flomasteri s dvostrukim vrhom: jedna boja na svakom kraju (168 boja = 84 flomastera)</li></ul></div></div></section>
+<section class="wsacryliques__s wsacryliques__s--bg"><div class="wsacryliques__v"><div class="wsacryliques__kicker wsacryliques__c">KUPUJTE BEZ BRIGE</div><h2 class="wsacryliques__h2 wsacryliques__c">Uz NORIKS kupujete <em>bez rizika</em></h2><p class="wsacryliques__p wsacryliques__c">NORIKS Flomasteri isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p><div class="wsacryliques__red4 wsacryliques__pog"><div><strong>30 dana</strong><span>za povrat novca</span></div><div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div><div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div></div></div></section>
 </div>
 <style>
-.wacryliques{color:#1c1c1c;font-family:inherit}
-.wacryliques__s{padding:56px 0;background:#fff}
-.wacryliques__s--bg{background:#f4f3ef}
-.wacryliques__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.wacryliques__v--rev .wacryliques__media{order:2}
-.wacryliques__v--rev .wacryliques__tekst{order:1}
-.wacryliques__v--polna{grid-template-columns:1fr;gap:28px}
-.wacryliques__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
-.wacryliques__media img,.wacryliques__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wacryliques__media--polna{aspect-ratio:auto}
-.wacryliques__media--polna img,.wacryliques__media--polna video{height:auto}
-.wacryliques__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
-.wacryliques__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
-.wacryliques__h2 em{font-style:italic}
-.wacryliques__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
-.wacryliques__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wacryliques__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
-.wacryliques__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.wacryliques__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
-.wacryliques__s:not(.wacryliques__s--bg) .wacryliques__pog{background:#f4f3ef;box-shadow:none}
-.wacryliques__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
-.wacryliques__pog span{font-size:14px;color:#444}
-@media (max-width:860px){
-  .wacryliques__s{padding:38px 0}
-  .wacryliques__v{grid-template-columns:1fr;gap:22px}
-  .wacryliques__v--rev .wacryliques__media,.wacryliques__media{order:0}
-  .wacryliques__v--rev .wacryliques__tekst,.wacryliques__tekst{order:1}
-  .wacryliques__pogoji{grid-template-columns:1fr 1fr}
-}
-/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
-.wacryliques__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
-.wacryliques__s--bg .wacryliques__media--pecat{background:#fff}
-.wacryliques__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.wacryliques__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
-.wacryliques__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.wacryliques__pecat-top,.wacryliques__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
-.wacryliques__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
-.wacryliques__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
-@media (max-width:860px){
-  .wacryliques__pecat{width:230px;height:230px}
-  .wacryliques__pecat-in{width:170px;height:170px}
-  .wacryliques__pecat-num{font-size:64px}
-  .wacryliques__pecat-top,.wacryliques__pecat-bot{font-size:10px;max-width:118px}
-}
+.wsacryliques{color:#1c1c1c;font-family:inherit}
+.wsacryliques__s{padding:56px 0;background:#fff}.wsacryliques__s--bg{background:#f4f3ef}
+.wsacryliques__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsacryliques__c{text-align:center}
+.wsacryliques__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wsacryliques__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsacryliques__h2 em{font-style:italic}
+.wsacryliques__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wsacryliques__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
+.wsacryliques__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wsacryliques__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wsacryliques__red4 strong{display:block;font-size:18px;font-weight:800}.wsacryliques__red4 span{font-size:13.5px;opacity:.85}
+.wsacryliques__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wsacryliques__dva--rev>div:first-child{order:2}
+.wsacryliques__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wsacryliques__media img,.wsacryliques__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsacryliques__polna{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);margin-top:10px}.wsacryliques__polna img,.wsacryliques__polna video{width:100%;height:auto;display:block}
+.wsacryliques__grid{display:grid;gap:22px;margin-top:22px}.wsacryliques__g2{grid-template-columns:repeat(2,1fr)}.wsacryliques__g3{grid-template-columns:repeat(3,1fr)}.wsacryliques__g4{grid-template-columns:repeat(4,1fr)}.wsacryliques__g5{grid-template-columns:repeat(5,1fr)}
+.wsacryliques__k{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wsacryliques__k--temna{background:#1d2b4f;border:0}.wsacryliques__k--temna p,.wsacryliques__k--temna strong{color:#fff}
+.wsacryliques__km img,.wsacryliques__km video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.wsacryliques__km--v video{aspect-ratio:9/16}
+.wsacryliques__kt{padding:16px 18px 20px}.wsacryliques__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wsacryliques__kt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wsacryliques__ime{display:block;margin-top:8px;font-weight:700;font-size:14px}.wsacryliques__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wsacryliques__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}.wsacryliques__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #eee}.wsacryliques__red3 strong{display:block;font-size:15px}.wsacryliques__red3 span{font-size:13px;color:#555}
+.wsacryliques__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wsacryliques__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wsacryliques__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wsacryliques__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wsacryliques__kv{list-style:none;margin:0 0 6px;padding:0}.wsacryliques__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wsacryliques__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wsacryliques__tw{overflow-x:auto}.wsacryliques__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+.wsacryliques__tab th,.wsacryliques__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsacryliques__tab th{background:#1d2b4f;color:#fff;font-weight:700}.wsacryliques__tab td:first-child,.wsacryliques__tab th:first-child{text-align:left}
+.wsacryliques__da{color:#1f8a4c;font-weight:800}.wsacryliques__ne{color:#c0392b;font-weight:800}
+.wsacryliques__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wsacryliques__pog{margin-top:22px}.wsacryliques__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsacryliques__pog span{color:#444;opacity:1}
+.wsacryliques__karw{position:relative}.wsacryliques__kar{grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.wsacryliques__kar::-webkit-scrollbar{display:none}.wsacryliques__kar>*{scroll-snap-align:start}
+.wsacryliques__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}.wsacryliques__pus--l{left:-14px}.wsacryliques__pus--d{right:-14px}
+@media (max-width:860px){.wsacryliques__kar{grid-auto-columns:82%}.wsacryliques__pus--l{left:4px}.wsacryliques__pus--d{right:4px}}
+@media (max-width:860px){.wsacryliques__s{padding:38px 0}.wsacryliques__dva{grid-template-columns:1fr;gap:22px}.wsacryliques__dva--rev>div:first-child{order:0}
+.wsacryliques__g3,.wsacryliques__g4,.wsacryliques__g5{grid-template-columns:1fr 1fr}.wsacryliques__red4{grid-template-columns:1fr 1fr}.wsacryliques__plavo{margin-top:-38px}}
+@media (max-width:560px){.wsacryliques__g2,.wsacryliques__g3,.wsacryliques__g4{grid-template-columns:1fr}}
 </style>
+<script>
+(function(){document.querySelectorAll('.wsacryliques__kar').forEach(function(k){
+  var w=document.createElement('div');w.className='wsacryliques__karw';k.parentNode.insertBefore(w,k);w.appendChild(k);
+  ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wsacryliques__pus wsacryliques__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
+    b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
+});})();
+</script>
