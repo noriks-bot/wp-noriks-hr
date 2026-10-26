@@ -1,165 +1,73 @@
 <?php
 /**
- * NORIKS Classics — why sekcije 1:1 z originalom (6 vsebinskih + NORIKS pogoji). Generirano z why.js.
+ * NORIKS Classics — why sekcije po natancni strukturi originala (myfleecies.com/products/fleecies). Generirano s struk.py.
+ *
+ * STRUKTURA ORIGINALA:
+   1. horizontal ticker — tekoci trak prednosti (pri nas staticen trak 4 prednosti, tekoci trakovi so prepovedani)
+   2. No More Diaper Booty — slika levo, besedilo desno
+   3. Soft & Cozy Fleece Lining — slika desno, besedilo levo
+   4. Sheer Look, Fleece Comfort — slika levo, besedilo desno
+   5. Shades for Any Skin Tone — slika desno, besedilo levo
+   6. Open & Closed Foot Styles — slika levo, besedilo desno
+   7. Old vs New — 2 sliki druga ob drugi (stari kroj z dvema savoma / novi kroj z enim)
+   8. Loved by 110,000+ — karusel 3 video mnenj kupk (pri nas 120.000+, napisi komentarjev zabrisani)
+   9. Customer Reviews — widget mnenj (pri nas zavihek mnenj)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wdir = get_template_directory_uri() . '/img/classics/';
 ?>
-<div class="wclassics">
-
-  <section class="wclassics__s wclassics__s--bg">
-    <div class="wclassics__v">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-09.webp' ); ?>" alt="Zbogom naboranoj stražnjici" loading="lazy" decoding="async"></div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">KROJ S JEDNIM ŠAVOM</div>
-        <h2 class="wclassics__h2">Zbogom <em>naboranoj stražnjici</em></h2>
-        <p class="wclassics__p">Klasične flis tajice imaju dva šava preko stražnjice, a upravo oni stvaraju onaj nezgrapni, naborani izgled koji podsjeća na pelenu. NORIKS Classics izrađene su s <em>jednim jedinim šavom</em> koji se pruža po sredini, pa tkanina leži glatko i prati liniju tijela. Nema dvostrukih rubova koji se zbijaju jedan uz drugoga i nema viška tkanine na stražnjem dijelu. Jedan šav po sredini ujedno je i jedini spoj na stražnjem dijelu, pa nema mjesta na kojem bi se tkanina skupljala.</p>
-        <p class="wclassics__p">Ravan pojas i jedan šav znače da se ništa ne nabire i ne grbi ispod odjeće. Tajice se pod haljinom, suknjom ili trapericama vide kao obične najlonke, a ne kao debelo termo rublje. Pojas ostaje ravan i ne zarezuje, a kroj se ne pomiče dok sjedite, hodate ili se saginjete. Zato ih možete nositi cijeli dan, od jutra do večeri, bez stalnog namještanja i povlačenja. Ispod uske haljine nema vidljivih rubova.</p>
-        <p class="wclassics__p">Tako napokon možete nositi suknje i haljine i kad je vani hladno, bez kompromisa između topline i izgleda. Upravo je to bila ideja: tajice koje griju kao flis, a pod odjećom se ponašaju kao tanke najlonke. NORIKS Classics napravljene su za svakodnevne zimske kombinacije, od posla do izlaska.</p>
-        <p class="wclassics__zak">Jedan šav, glatka linija i ravan pojas — bez pelena-efekta ispod haljine.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wclassics__s">
-    <div class="wclassics__v wclassics__v--rev">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-10.webp' ); ?>" alt="Mekana i topla iznutra" loading="lazy" decoding="async"></div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">FLIS PODSTAVA</div>
-        <h2 class="wclassics__h2">Mekana i <em>topla</em> iznutra</h2>
-        <p class="wclassics__p">S unutarnje strane NORIKS Classics nalazi se mekana, ugodna flis podstava. Flis je utkan u unutarnju stranu tkanine, a ne samo položen na nju, pa toplina dolazi iznutra, bez dodatne debljine izvana. Na koži se osjeća mekano i toplo već od prvog navlačenja. Upravo zato izgledaju kao tajice, a ne kao termo rublje ispod odjeće.</p>
-        <p class="wclassics__p">Podstava je tanka, ali ugodna, i namijenjena je za sve hladne dane — od blagih jesenskih 15 °C pa sve do pravih zimskih -5 °C. Toplo vam je na putu do posla, u šetnji ili na večernjem izlasku, a ipak se ne pregrijavate kad uđete u zatvoreni prostor. Jedne tajice tako pokrivaju cijelu sezonu, od prvih hladnih jutara do najhladnijih zimskih dana.</p>
-        <p class="wclassics__p">Flis namjerno završava malo ispod gležnja. Stopalo ostaje glatko i tanko, pa preko tajica možete obući udobne čarape, a nogama u čizmama neće biti prevruće ni znojne. Tako je toplina tamo gdje vam treba, a obuća vam i dalje lijepo pristaje. Mnoge kupce upravo to iznenadi: nema osjećaja da je stopalo nagurano u premalu cipelu. Preko tankog dijela oko stopala obuća pristaje kao i uz obične najlonke.</p>
-        <p class="wclassics__zak">Toplina flisa iznutra, izgled tankih najlonki izvana — od 15 °C do -5 °C.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wclassics__s wclassics__s--bg">
-    <div class="wclassics__v">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-11.webp' ); ?>" alt="Izgled najlonki, udobnost flisa" loading="lazy" decoding="async"></div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">IZGLED NAJLONKI</div>
-        <h2 class="wclassics__h2">Izgled najlonki, <em>udobnost flisa</em></h2>
-        <p class="wclassics__p">Izvana NORIKS Classics izgledaju kao tanke najlonke, a iznutra se osjećaju kao mekani flis. Gusto pletivo daje ujednačen, gladak izgled nogu, a ne vidljiv sloj najlona preko kože. Zbog toga ih nitko ne prepoznaje kao zimske tajice — izgledaju kao obične najlonke. Uz čizme, gležnjače ili balerinke kombinacija izgleda uredno i dotjerano. Nose se uz suknje i haljine, ali i ispod traperica i poslovnih hlača.</p>
-        <p class="wclassics__p">Tajice nisu prozirne ni kad se rastegnu. Flis podstava nalazi se s unutarnje strane gustog pletiva, pa boja ostaje ista i preko bedara, bokova i koljena — zato ih možete nositi same ispod haljine ili suknje bez razmišljanja. Ne izgledaju glomazno, jer toplina dolazi od podstave iznutra, a ne od debljine izvana. Tkanina je otporna na zapinjanje, pa ih ne morate navlačiti sa strahom kao tanke najlonke.</p>
-        <p class="wclassics__p">Tkanina se rasteže u svim smjerovima, pa jedna veličina pokriva širi raspon nego obične najlonke. Ako ste između dvije veličine ili ste viši rasta, uzmite veću — dobit ćete više duljine kroz nogu i tijelo, a pojas će ostati tamo gdje treba. Sve su veličine izražene kao raspon upravo zato što je materijal rastezljiv, a pristajanje se može malo razlikovati ovisno o građi tijela.</p>
-        <p class="wclassics__zak">Izgledaju kao najlonke, griju kao flis i ne prosijavaju ni kad se rastegnu.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wclassics__s">
-    <div class="wclassics__v wclassics__v--rev">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-12.webp' ); ?>" alt="Nijansa za svaki ton kože" loading="lazy" decoding="async"></div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">NIJANSE ZA SVAKU KOŽU</div>
-        <h2 class="wclassics__h2">Nijansa za <em>svaki ton kože</em></h2>
-        <p class="wclassics__p">NORIKS Classics dolaze u pet nijansi — Vanilla, Honey, Caramel, Cocoa i Mocha — od najsvjetlije do najtamnije, pa lako odaberete onu koja je najbliža vašoj boji kože. Dovoljno je usporediti nijanse s tonom svoje kože i odabrati onu koja joj je najbliža. Nijanse su složene od najsvjetlije prema najtamnijoj, pa je izbor brz i jednostavan. Svaka nijansa dostupna je u svim veličinama i u oba modela stopala.</p>
-        <p class="wclassics__p">Vanilla je namijenjena svijetloj puti s ružičastim ili neutralnim podtonom i stapa se s kožom bez sivkastog odsjaja. Caramel je za srednju do preplanulu put sa zlatnim podtonom i toplim tonom koji se uklapa u svjetlosmeđu kožu. Honey, Cocoa i Mocha pokrivaju tonove između i one tamnije. Za svaku nijansu vrijedi isto: bez sivkastog odsjaja i bez neprirodnog sjaja na nozi.</p>
-        <p class="wclassics__p">Budući da nisu prozirne, nijansa na nogama izgleda ujednačeno i glatko, a ne kao sloj najlona preko kože. Noge izgledaju njegovano i ravnomjerno, i uz haljinu i uz suknju. Isti kroj, ista podstava i ista udobnost — razlikuje se samo nijansa. Kad je nijansa dobro odabrana, tajice se na nozi gotovo ne primjećuju kao poseban sloj.</p>
-        <p class="wclassics__zak">Pet nijansi, od Vanilla do Mocha — odaberite onu najbližu svojoj koži.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wclassics__s wclassics__s--bg">
-    <div class="wclassics__v">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-15.webp?v=2' ); ?>" alt="Zatvoreni ili otvoreni prsti" loading="lazy" decoding="async"></div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">DVA MODELA STOPALA</div>
-        <h2 class="wclassics__h2">Zatvoreni ili <em>otvoreni prsti</em></h2>
-        <p class="wclassics__p">NORIKS Classics birate u dva modela: sa zatvorenim prstima, kao klasične najlonke, ili bez prstiju, s otvorenim stopalom. Tako ih možete uskladiti s obućom koju nosite i s prilikom za koju se oblačite. Model se bira zasebno za svaku nijansu i veličinu. Izbor modela ne utječe na toplinu ni na kroj.</p>
-        <p class="wclassics__p">Model sa zatvorenim prstima ide uz čizme, gležnjače i zatvorene cipele. Model bez prstiju zgodan je kad želite nositi otvorenu obuću ili kad ne volite tkaninu preko prstiju. Oba modela imaju isti kroj s jednim šavom i istu flis podstavu. Ako niste sigurni, model sa zatvorenim prstima najsvestraniji je za svakodnevno nošenje uz zimsku obuću.</p>
-        <p class="wclassics__p">U oba modela flis završava ispod gležnja, pa stopalo ostaje tanko i ne grije previše u obući. Dizajn stopala drži tajice na mjestu, a da pritom ne steže kao premala cipela. Preko tankog stopala bez problema možete navući i deblje čarape za dodatnu udobnost u čizmama.</p>
-        <p class="wclassics__zak">Isti kroj i ista toplina — vi birate zatvorene ili otvorene prste.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wclassics__s">
-    <div class="wclassics__v wclassics__v--rev">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-13.webp' ); ?>" alt="Dva šava su prošlost" loading="lazy" decoding="async"></div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">STARO PROTIV NOVOG</div>
-        <h2 class="wclassics__h2">Dva šava su <em>prošlost</em></h2>
-        <p class="wclassics__p">Stari model flis tajica imao je dva šava preko stražnjice, zbog čega se tkanina nabirala i stvarala neudoban, naborani izgled. Novi model NORIKS Classics ima samo jedan šav po sredini — to je najveća razlika između starog i novog kroja. Upravo je taj dvostruki šav bio najčešći razlog zašto flis tajice nisu izgledale dobro ispod uskih haljina i suknji. Novi kroj zadržava sve što je bilo dobro — flis podstavu i izgled najlonki — a uklanja ono što je smetalo.</p>
-        <p class="wclassics__p">Razlika se vidi odmah: nema nabiranja, nema grbanja, a tajice leže ravno pod svakom odjećom — pod trapericama, haljinama, suknjama i poslovnom odjećom. Ravan pojas dodatno pomaže da se ništa ne ocrtava kroz tkaninu. Tajice se tako mogu nositi i ispod uske, pripijene odjeće, gdje bi se dvostruki šav odmah vidio. Novi kroj je ono što ove tajice razlikuje od uobičajenih flis tajica.</p>
-        <p class="wclassics__p">Da bi vam dugo trajale, perite ih ručno i sušite na zraku, navlačite ih zarolane umjesto povlačenja i čuvajte ih od čičak-trake i oštrog prstenja. Ako ih perete u perilici, odaberite program za osjetljivo rublje i hladnu vodu. Uz takvu njegu služit će vam sezonama. Flis je utkan u tkaninu, pa uz pravilnu njegu ostaje mekan i ne skuplja se u grudice.</p>
-        <p class="wclassics__zak">Novi kroj s jednim šavom: ravno, glatko i bez naboranog stražnjeg dijela.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wclassics__s wclassics__s--bg">
-    <div class="wclassics__v">
-      <div class="wclassics__media wclassics__media--pecat">
-        <div class="wclassics__pecat" role="img" aria-label="30 dana za povrat">
-          <div class="wclassics__pecat-in">
-            <span class="wclassics__pecat-top">Pravo na povrat</span>
-            <span class="wclassics__pecat-num">30</span>
-            <span class="wclassics__pecat-dani">DANA</span>
-            <span class="wclassics__pecat-bot">Bez rizika</span>
-          </div>
-        </div>
-      </div>
-      <div class="wclassics__tekst">
-        <div class="wclassics__kicker">KUPUJTE BEZ BRIGE</div>
-        <h2 class="wclassics__h2">Uz NORIKS kupujete <em>bez rizika</em></h2>
-        <p class="wclassics__p">NORIKS Classics isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat — bez kompliciranja i bez pitanja.</p>
-        <div class="wclassics__pogoji wclassics__pogoji--ob">
-        <div class="wclassics__pog"><strong>30 dana</strong><span>za povrat novca</span></div>
-        <div class="wclassics__pog"><strong>Besplatna dostava</strong><span>iznad 70 €</span></div>
-        <div class="wclassics__pog"><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div>
-        <div class="wclassics__pog"><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div>
-      </div>
-    </div>
-  </div>
-  </section>
+<div class="wsclassics">
+<section class="wsclassics__s wsclassics__traka"><div class="wsclassics__v wsclassics__red4"><div><strong>Za svaku veličinu</strong><span>XS-S do XL-2XL</span></div><div><strong>Protiv kidanja</strong><span>izdržljiva tkanina</span></div><div><strong>Flis podstava</strong><span>toplo i udobno</span></div><div><strong>Jedan šav</strong><span>bez nabora straga</span></div></div></section>
+<section class="wsclassics__s"><div class="wsclassics__v wsclassics__dva"><div class="wsclassics__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-bez-savova.webp' ); ?>" alt="Bez nabora straga" loading="lazy" decoding="async"></div><div><div class="wsclassics__kicker">Novi kroj</div><h2 class="wsclassics__h2">Bez nabora <em>straga</em></h2><p class="wsclassics__p">Klasične tajice s flisom imaju dva šava koji straga stvaraju nabor i neprirodan izgled. NORIKS Classics imaju samo jedan šav – stražnjica izgleda glatko i prirodno.</p><p class="wsclassics__p">Tajice prate liniju tijela, a ne stvaraju vrećasti izgled.</p><p class="wsclassics__zak">Gladak izgled iz svakog kuta.</p></div></div></section>
+<section class="wsclassics__s wsclassics__s--bg"><div class="wsclassics__v wsclassics__dva wsclassics__dva--rev"><div class="wsclassics__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-flis.webp' ); ?>" alt="Mekana i topla flis podstava" loading="lazy" decoding="async"></div><div><div class="wsclassics__kicker">Iznutra</div><h2 class="wsclassics__h2">Mekana i topla <em>flis podstava</em></h2><p class="wsclassics__p">S unutarnje strane tajice imaju mekanu flis podstavu koja grije i u najhladnijim danima.</p><p class="wsclassics__p">Izvana izgledaju kao tanke najlonke, a iznutra su tople kao trenirka.</p><p class="wsclassics__zak">Toplina bez debelog izgleda.</p></div></div></section>
+<section class="wsclassics__s"><div class="wsclassics__v wsclassics__dva"><div class="wsclassics__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-proziran.webp' ); ?>" alt="Proziran izgled, toplina flisa" loading="lazy" decoding="async"></div><div><div class="wsclassics__kicker">Izgled</div><h2 class="wsclassics__h2">Proziran izgled, <em>toplina flisa</em></h2><p class="wsclassics__p">Vanjski sloj daje proziran izgled pravih najlonki, a flis ispod njega čuva toplinu.</p><p class="wsclassics__p">Tkanina je rastezljiva i otporna na kidanje – možete je slobodno povući, a ona se vrati u oblik.</p><p class="wsclassics__zak">Elegantno uz suknju, haljinu ili čizme.</p></div></div></section>
+<section class="wsclassics__s wsclassics__s--bg"><div class="wsclassics__v wsclassics__dva wsclassics__dva--rev"><div class="wsclassics__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-nijanse.webp' ); ?>" alt="Nijansa koja prati vašu kožu" loading="lazy" decoding="async"></div><div><div class="wsclassics__kicker">Nijanse</div><h2 class="wsclassics__h2">Nijansa koja <em>prati vašu kožu</em></h2><p class="wsclassics__p">Proziran vanjski sloj stapa se s tonom kože, pa tajice izgledaju kao prave najlonke – a ne kao debele zimske hulahopke.</p><p class="wsclassics__p">Odaberite nijansu najbližu svom tonu kože.</p><p class="wsclassics__zak">Prirodan izgled, cijelu zimu.</p></div></div></section>
+<section class="wsclassics__s"><div class="wsclassics__v wsclassics__dva"><div class="wsclassics__media"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-prsti.webp' ); ?>" alt="Zatvoreni ili otvoreni prsti" loading="lazy" decoding="async"></div><div><div class="wsclassics__kicker">Stopala</div><h2 class="wsclassics__h2">Zatvoreni ili <em>otvoreni prsti</em></h2><p class="wsclassics__p">Model sa zatvorenim prstima nosite uz čizme i zatvorene cipele, a model bez prstiju uz sandale i cipele s otvorenim prstima.</p><p class="wsclassics__p">Oba modela imaju istu toplu flis podstavu i isti udoban struk.</p></div></div></section>
+<section class="wsclassics__s wsclassics__s--bg"><div class="wsclassics__v"><h2 class="wsclassics__h2 wsclassics__c">Stari kroj <em>protiv novog</em></h2><div class="wsclassics__grid wsclassics__g2"><div class="wsclassics__k"><div class="wsclassics__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-stari-kroj.webp' ); ?>" alt="STARO – dva šava" loading="lazy" decoding="async"></div><div class="wsclassics__kt"><strong>STARO – dva šava</strong><p>Dva šava straga stvaraju nabor i neprirodan izgled.</p></div></div><div class="wsclassics__k"><div class="wsclassics__km"><img src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-novi-kroj.webp' ); ?>" alt="NOVO – jedan šav" loading="lazy" decoding="async"></div><div class="wsclassics__kt"><strong>NOVO – jedan šav</strong><p>Samo jedan šav – glatko i prirodno, bez nabora.</p></div></div></div><p class="wsclassics__zak">Recite zbogom neudobnom kroju s dva šava!</p></div></section>
+<section class="wsclassics__s"><div class="wsclassics__v"><h2 class="wsclassics__h2 wsclassics__c">Vole ih <em>120.000+</em> zadovoljnih kupaca</h2><div class="wsclassics__grid wsclassics__g3 wsclassics__kar"><div class="wsclassics__k"><div class="wsclassics__km wsclassics__km--v"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-kupci-1.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div class="wsclassics__kt"></div></div><div class="wsclassics__k"><div class="wsclassics__km wsclassics__km--v"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-kupci-2.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div class="wsclassics__kt"></div></div><div class="wsclassics__k"><div class="wsclassics__km wsclassics__km--v"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/classics/noriks-classics-kupci-3.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div><div class="wsclassics__kt"></div></div></div></div></section>
+<section class="wsclassics__s wsclassics__s--bg"><div class="wsclassics__v"><div class="wsclassics__kicker wsclassics__c">KUPUJTE BEZ BRIGE</div><h2 class="wsclassics__h2 wsclassics__c">Uz NORIKS kupujete <em>bez rizika</em></h2><p class="wsclassics__p wsclassics__c">NORIKS Classics isprobajte kod kuće. Ako vam ne odgovara, imate 30 dana za povrat – bez kompliciranja i bez pitanja.</p><div class="wsclassics__red4 wsclassics__pog"><div><strong>30 dana</strong><span>za povrat novca</span></div><div><strong>Besplatna dostava</strong><span>iznad 70 €</span></div><div><strong>Plaćanje pouzećem</strong><span>platite kad paket stigne</span></div><div><strong>120.000 kupaca</strong><span>prosječna ocjena 4,8</span></div></div></div></section>
 </div>
 <style>
-.wclassics{color:#1c1c1c;font-family:inherit}
-.wclassics__s{padding:56px 0;background:#fff}
-.wclassics__s--bg{background:#f4f3ef}
-.wclassics__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.wclassics__v--rev .wclassics__media{order:2}
-.wclassics__v--rev .wclassics__tekst{order:1}
-.wclassics__v--polna{grid-template-columns:1fr;gap:28px}
-.wclassics__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#eee}
-.wclassics__media img,.wclassics__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wclassics__media--polna{aspect-ratio:auto}
-.wclassics__media--polna img,.wclassics__media--polna video{height:auto}
-.wclassics__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
-.wclassics__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}
-.wclassics__h2 em{font-style:italic}
-.wclassics__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
-.wclassics__zak{font-size:16px;font-weight:800;line-height:1.5;color:#1c1c1c;margin:6px 0 0}
-.wclassics__tekst--sredina{text-align:center;max-width:820px;margin:0 auto}
-.wclassics__pogoji{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.wclassics__pog{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px;text-align:center}
-.wclassics__s:not(.wclassics__s--bg) .wclassics__pog{background:#f4f3ef;box-shadow:none}
-.wclassics__pog strong{display:block;font-size:17px;font-weight:800;margin:0 0 6px}
-.wclassics__pog span{font-size:14px;color:#444}
-@media (max-width:860px){
-  .wclassics__s{padding:38px 0}
-  .wclassics__v{grid-template-columns:1fr;gap:22px}
-  .wclassics__v--rev .wclassics__media,.wclassics__media{order:0}
-  .wclassics__v--rev .wclassics__tekst,.wclassics__tekst{order:1}
-  .wclassics__pogoji{grid-template-columns:1fr 1fr}
-}
-/* zadnja sekcija: pecat 30 dana kot vizual ob NORIKS pogojih */
-.wclassics__media--pecat{display:flex;align-items:center;justify-content:center;background:#f4f3ef}
-.wclassics__s--bg .wclassics__media--pecat{background:#fff}
-.wclassics__pogoji--ob{grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.wclassics__pecat{width:280px;height:280px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#4a4a4a 0%,#2a2a2a 55%,#111 100%);box-shadow:0 0 0 10px #e9e6df,0 0 0 14px #2a2a2a,0 18px 40px rgba(0,0,0,.16)}
-.wclassics__pecat-in{width:206px;height:206px;border-radius:50%;background:#fff;color:#1c1c1c;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.wclassics__pecat-top,.wclassics__pecat-bot{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;max-width:150px;line-height:1.3;color:#666}
-.wclassics__pecat-num{font-size:78px;font-weight:800;line-height:1;margin:4px 0 0;color:#1c1c1c}
-.wclassics__pecat-dani{font-size:22px;font-weight:700;letter-spacing:.12em;margin:0 0 6px}
-@media (max-width:860px){
-  .wclassics__pecat{width:230px;height:230px}
-  .wclassics__pecat-in{width:170px;height:170px}
-  .wclassics__pecat-num{font-size:64px}
-  .wclassics__pecat-top,.wclassics__pecat-bot{font-size:10px;max-width:118px}
-}
+.wsclassics{color:#1c1c1c;font-family:inherit}
+.wsclassics__s{padding:56px 0;background:#fff}.wsclassics__s--bg{background:#f4f3ef}
+.wsclassics__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.wsclassics__c{text-align:center}
+.wsclassics__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
+.wsclassics__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wsclassics__h2 em{font-style:italic}
+.wsclassics__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
+.wsclassics__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
+.wsclassics__traka{padding:22px 0;background:#1d2b4f;color:#fff}
+.wsclassics__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wsclassics__red4 strong{display:block;font-size:18px;font-weight:800}.wsclassics__red4 span{font-size:13.5px;opacity:.85}
+.wsclassics__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wsclassics__dva--rev>div:first-child{order:2}
+.wsclassics__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
+.wsclassics__media img,.wsclassics__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsclassics__polna{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);margin-top:10px}.wsclassics__polna img,.wsclassics__polna video{width:100%;height:auto;display:block}
+.wsclassics__grid{display:grid;gap:22px;margin-top:22px}.wsclassics__g2{grid-template-columns:repeat(2,1fr)}.wsclassics__g3{grid-template-columns:repeat(3,1fr)}.wsclassics__g4{grid-template-columns:repeat(4,1fr)}
+.wsclassics__k{background:#fff;border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.wsclassics__k--temna{background:#1d2b4f;border:0}.wsclassics__k--temna p,.wsclassics__k--temna strong{color:#fff}
+.wsclassics__km img,.wsclassics__km video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.wsclassics__km--v video{aspect-ratio:9/16}
+.wsclassics__kt{padding:16px 18px 20px}.wsclassics__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wsclassics__kt p{margin:0;font-size:15px;line-height:1.6;color:#333}
+.wsclassics__ime{display:block;margin-top:8px;font-weight:700;font-size:14px}.wsclassics__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:6px}
+.wsclassics__red3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 18px}.wsclassics__red3 div{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #eee}.wsclassics__red3 strong{display:block;font-size:15px}.wsclassics__red3 span{font-size:13px;color:#555}
+.wsclassics__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wsclassics__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+.wsclassics__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wsclassics__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
+.wsclassics__kv{list-style:none;margin:0 0 6px;padding:0}.wsclassics__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
+.wsclassics__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wsclassics__tw{overflow-x:auto}.wsclassics__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
+.wsclassics__tab th,.wsclassics__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsclassics__tab th{background:#1d2b4f;color:#fff;font-weight:700}.wsclassics__tab td:first-child,.wsclassics__tab th:first-child{text-align:left}
+.wsclassics__da{color:#1f8a4c;font-weight:800}.wsclassics__ne{color:#c0392b;font-weight:800}
+.wsclassics__plavo{background:#1d2b4f;color:#fff;text-align:center;font-weight:700;padding:12px 16px;margin:-56px 0 40px;font-size:15px}
+.wsclassics__pog{margin-top:22px}.wsclassics__pog>div{background:#fff;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:22px 16px}.wsclassics__pog span{color:#444;opacity:1}
+.wsclassics__karw{position:relative}.wsclassics__kar{grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.wsclassics__kar::-webkit-scrollbar{display:none}.wsclassics__kar>*{scroll-snap-align:start}
+.wsclassics__pus{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:22px;line-height:42px;cursor:pointer;z-index:2;color:#1d2b4f;padding:0}.wsclassics__pus--l{left:-14px}.wsclassics__pus--d{right:-14px}
+@media (max-width:860px){.wsclassics__kar{grid-auto-columns:82%}.wsclassics__pus--l{left:4px}.wsclassics__pus--d{right:4px}}
+@media (max-width:860px){.wsclassics__s{padding:38px 0}.wsclassics__dva{grid-template-columns:1fr;gap:22px}.wsclassics__dva--rev>div:first-child{order:0}
+.wsclassics__g3,.wsclassics__g4{grid-template-columns:1fr 1fr}.wsclassics__red4{grid-template-columns:1fr 1fr}.wsclassics__plavo{margin-top:-38px}}
+@media (max-width:560px){.wsclassics__g2,.wsclassics__g3,.wsclassics__g4{grid-template-columns:1fr}}
 </style>
+<script>
+(function(){document.querySelectorAll('.wsclassics__kar').forEach(function(k){
+  var w=document.createElement('div');w.className='wsclassics__karw';k.parentNode.insertBefore(w,k);w.appendChild(k);
+  ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wsclassics__pus wsclassics__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
+    b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
+});})();
+</script>
