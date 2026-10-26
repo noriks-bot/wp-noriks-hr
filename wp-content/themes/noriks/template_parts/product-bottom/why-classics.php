@@ -65,7 +65,7 @@ $wdir = get_template_directory_uri() . '/img/classics/';
 
   <section class="wclassics__s wclassics__s--bg">
     <div class="wclassics__v">
-      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-15.webp' ); ?>" alt="Zatvoreni ili otvoreni prsti" loading="lazy" decoding="async"></div>
+      <div class="wclassics__media"><img src="<?php echo esc_url( $wdir . 'classics-15.webp?v=2' ); ?>" alt="Zatvoreni ili otvoreni prsti" loading="lazy" decoding="async"></div>
       <div class="wclassics__tekst">
         <div class="wclassics__kicker">DVA MODELA STOPALA</div>
         <h2 class="wclassics__h2">Zatvoreni ili <em>otvoreni prsti</em></h2>
