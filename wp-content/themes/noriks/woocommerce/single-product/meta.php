@@ -967,7 +967,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'slippers', $current_product_id ) ): ?>
 
-                <strong>NORIKS Slippers</strong> su tople, mekane papuče s <strong>debelim, ojačanim potplatom</strong> — za jutra kod kuće i za brze izlaske van. Amortizacija je <strong>3x deblja od običnih papuča</strong>, pa stopala dobivaju potporu koja im treba, bez gubitka mekanog, ugodnog osjećaja.<br><br><strong>Zašto ćete ih voljeti:</strong><br>• <strong>Potplat mekan kao oblak</strong> — debela amortizacija za svaki korak<br>• <strong>Iznimno mekana podstava od flisa</strong> — toplo i ugodno, a ne prevruće<br>• <strong>Pranje u perilici</strong> — na nježnom programu u hladnoj vodi<br>• <strong>Za unutra i za van</strong> — protuklizni, vodootporni potplat za kratke izlaske<br>• <strong>Izdržljiva izrada</strong> — čvrsti šavovi i izdržljive tkanine zadržavaju oblik i udobnost<br><br><strong>Veličina i pristajanje:</strong> papuče su unisex i odgovaraju standardnim veličinama; u početku se mogu činiti malo uske, ali se materijal brzo prilagodi stopalu. Za najveću udobnost preporučujemo da odaberete <strong>jedan broj veći</strong> — papuče su najudobnije s malo više mjesta. Dostupne su u jedanaest boja (zelena, plava, smeđa, siva, ljubičasta, crvena, crna, roza, narančasta, crveni karo i zeleni karo) i u veličinama od EU 34–35 do EU 48–49.
+                <strong>NORIKS Slippers</strong> su tople, mekane papuče s <strong>debelim, ojačanim potplatom</strong> — za jutra kod kuće i za brze izlaske van. Amortizacija je <strong>3x deblja od običnih papuča</strong>, pa stopala dobivaju potporu koja im treba, bez gubitka mekanog, ugodnog osjećaja.<br><br><strong>Zašto ćete ih voljeti:</strong><br>• <strong>Potplat mekan kao oblak</strong> — debela amortizacija za svaki korak<br>• <strong>Iznimno mekana podstava od flisa</strong> — toplo i ugodno, a ne prevruće<br>• <strong>Pranje u perilici</strong> — na nježnom programu u hladnoj vodi<br>• <strong>Za unutra i za van</strong> — protuklizni, vodootporni potplat za kratke izlaske<br>• <strong>Izdržljiva izrada</strong> — čvrsti šavovi i izdržljive tkanine zadržavaju oblik i udobnost<br><br><strong>Veličina i pristajanje:</strong> papuče su unisex i odgovaraju standardnim veličinama; u početku se mogu činiti malo uske, ali se materijal brzo prilagodi stopalu. Za najveću udobnost preporučujemo da odaberete <strong>jedan broj veći</strong> — papuče su najudobnije s malo više mjesta. Dostupne su u jedanaest boja (zelena, plava, smeđa, siva, ljubičasta, crvena, crna, roza, narančasta, crveni karo i zeleni karo) i u veličinama od XS - 34 do 35 pa sve do 4XL - 48 do 49.
 
          <?php elseif( noriks_is_type( 'anklesleeve', $current_product_id ) ): ?>
 
@@ -1460,7 +1460,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
                 <tr style="background:#5f7f57;color:#fff;">
-                  <th style="padding:9px 8px;text-align:left;">EU</th>
+                  <th style="padding:9px 8px;text-align:left;">Veličina (EU)</th>
                   <th style="padding:9px 8px;text-align:left;">Duljina stopala</th>
                 </tr>
               </thead>

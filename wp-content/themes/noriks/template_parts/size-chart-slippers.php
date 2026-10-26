@@ -2,7 +2,7 @@
 /**
  * Tablica velicina za NORIKS Slippers (orto-slippers) — tople papuce s debelim potplatom.
  * Izvor tabele: noriks_slippers_sizes() v functions/product-type.php (ista kot v akordeonu in FAQ).
- * Podatki 1:1 s tablic originala ("US Size Chart" + "UK & International Size Chart"): EU 34–35 do 48–49,
+ * Podatki 1:1 s tablic originala ("US Size Chart" + "UK & International Size Chart"): EU 34–35 do 48–49 (prikaz: XS - 34 do 35 ... 4XL - 48 do 49),
  * duljina stopala v cm, UK in US velikosti (tablica zgrajena v HTML, brez slike z znamko).
  *
  * VAZNO: id #custom-size-chart-modal i klasa .show su ugovor koji ocekuje vticnik
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     <div class="kwsc-scroll">
       <table class="kwsc-table">
         <thead>
-          <tr><th scope="col">EU</th><th scope="col">Duljina stopala</th></tr>
+          <tr><th scope="col">Veličina (EU)</th><th scope="col">Duljina stopala</th></tr>
         </thead>
         <tbody>
           <?php foreach ( noriks_slippers_sizes() as $r ) : ?>

@@ -1361,14 +1361,14 @@ if ( ! function_exists( 'noriks_slippers_sizes' ) ) {
      *  1:1 s tablice velicin originala ("US Size Chart" + "UK & International Size Chart", 8 velicin). */
     function noriks_slippers_sizes() {
         return array(
-            array( 'EU 34–35', '20,3–21,5 cm' ),
-            array( 'EU 36–37', '21,6–22,7 cm' ),
-            array( 'EU 38–39', '22,8–24,0 cm' ),
-            array( 'EU 40–41', '24,1–25,3 cm' ),
-            array( 'EU 42–43', '25,4–26,5 cm' ),
-            array( 'EU 44–45', '26,6–27,8 cm' ),
-            array( 'EU 46–47', '27,9–29,0 cm' ),
-            array( 'EU 48–49', '29,1–30,2 cm' ),
+            array( 'XS - 34 do 35', '20,3–21,5 cm' ),
+            array( 'S - 36 do 37', '21,6–22,7 cm' ),
+            array( 'M - 38 do 39', '22,8–24,0 cm' ),
+            array( 'L - 40 do 41', '24,1–25,3 cm' ),
+            array( 'XL - 42 do 43', '25,4–26,5 cm' ),
+            array( '2XL - 44 do 45', '26,6–27,8 cm' ),
+            array( '3XL - 46 do 47', '27,9–29,0 cm' ),
+            array( '4XL - 48 do 49', '29,1–30,2 cm' ),
         );
     }
 }
