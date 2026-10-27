@@ -18,7 +18,8 @@ $fis_science = array(
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
 $fis_i = get_template_directory_uri() . '/img/fisiorest/';
-$fis_hero_video = $fis_v . 'hero-v2.mp4';
+$fis_ver = '?v=20261027';
+$fis_hero_video = $fis_v . 'hero-v2.mp4' . $fis_ver;
 
 // 3) Preporučuju stručnjaci
 $fis_experts = array(
@@ -35,16 +36,16 @@ $fis_ugc = array(
 );
 // 5) ThermoTrac 3-u-1
 $fis_thermo = array(
-    array( 'vid' => $fis_v.'v10.mp4', 'title' => 'Terapija trakcijom' ),
-    array( 'vid' => $fis_v.'v07.mp4', 'title' => 'Terapija vibracijom' ),
-    array( 'vid' => $fis_v.'v05.mp4', 'title' => 'Terapija toplinom' ),
+    array( 'vid' => $fis_v.'v10.mp4' . $fis_ver, 'title' => 'Terapija trakcijom' ),
+    array( 'vid' => $fis_v.'v07.mp4' . $fis_ver, 'title' => 'Terapija vibracijom' ),
+    array( 'vid' => $fis_v.'v05.mp4' . $fis_ver, 'title' => 'Terapija toplinom' ),
 );
 // 6) Četiri poboljšanja
 $fis_upgrades = array(
-    array( 't' => 'Punjiva baterija',             'd' => 'Ponesite ga bilo kamo — baterija od 2500 mAh traje do 2 sata.' , 'ico' => 'battery-v2.png' ),
-    array( 't' => 'Navlaka od dudove svile',      'd' => 'Omotan u rashlađujuću svilu za mekan, luksuzan osjećaj.' , 'ico' => 'silk-v2.png' ),
-    array( 't' => 'Isključivanje nakon 30 min',   'd' => 'Četiri sesije po 30 minuta na jedno punjenje, bez brige.' , 'ico' => 'timer-v2.png' ),
-    array( 't' => 'Regulirana toplina',           'd' => 'Grijanje na 50 °C uz naprednu ThermoTrac tehnologiju.' , 'ico' => 'heat-v2.png' ),
+    array( 't' => 'Punjiva baterija',             'd' => 'Ponesite ga bilo kamo — baterija od 2500 mAh traje do 2 sata.' , 'ico' => 'battery-v2.png?v=20261027' ),
+    array( 't' => 'Navlaka od dudove svile',      'd' => 'Omotan u rashlađujuću svilu za mekan, luksuzan osjećaj.' , 'ico' => 'silk-v2.png?v=20261027' ),
+    array( 't' => 'Isključivanje nakon 30 min',   'd' => 'Četiri sesije po 30 minuta na jedno punjenje, bez brige.' , 'ico' => 'timer-v2.png?v=20261027' ),
+    array( 't' => 'Regulirana toplina',           'd' => 'Grijanje na 50 °C uz naprednu ThermoTrac tehnologiju.' , 'ico' => 'heat-v2.png?v=20261027' ),
 );
 ?>
 
@@ -151,14 +152,14 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Dizajnirano od inženjera. Izrađeno prema PT standardima</h2>
       <p>Uložili smo više od 50.000 € i 2 godine razvoja kako bismo osigurali da NORIKS nije samo maser za vrat. To je sveobuhvatan uređaj za terapiju vrata koji zaista liječi uzrok. Svaka narudžba prolazi detaljnu kontrolu kvalitete kako bi stigla u savršenom stanju.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' . $fis_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
 <!-- ============ 8) 14x jeftinije ============ -->
 <section class="fis-cheaper">
   <div class="fis-wrap fis-row2">
-    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' ); ?>" alt="NORIKS FisioRest uređaj za vrat" loading="eager"></div>
+    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' . $fis_ver ); ?>" alt="NORIKS FisioRest uređaj za vrat" loading="eager"></div>
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">SIGURNA I OPUŠTAJUĆA TERAPIJA</p>
       <h2 class="fis-h2">14× jeftinije od tjednih termina</h2>
