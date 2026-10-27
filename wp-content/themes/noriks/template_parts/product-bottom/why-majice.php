@@ -1,156 +1,272 @@
-<!-- product-bottom: MAJICE (majice / orto-majice / black-friday) -->
+<?php
+/**
+ * product-bottom: MAJICE (majice / orto-majice / black-friday / majica-darila)
+ *
+ * Nove sekcije (2026-10-27) — zamenjajo stari why blok + primerjalno tabelo.
+ * Razredi fis-* so isti kot na FisioRest strani, nk-* so novi (NORIKS majica).
+ * Mediji: img/majica*, img/majica-videos, img/majica-icons, img/majica-barve.
+ * Za port na drug trg se spremeni SAMO besedilo — struktura, razredi in poti ostanejo.
+ */
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
+$mj_ver  = '?v=20261027';
+$mj_img  = get_template_directory_uri() . '/img/majica/';
+$mj_vid  = get_template_directory_uri() . '/img/majica-videos/';
+$mj_ico  = get_template_directory_uri() . '/img/majica-icons/';
+$mj_col  = get_template_directory_uri() . '/img/majica-barve/';
+?>
 
-
-
-<section class="why-section">
-  <div class="container why-container">
-
-    <!-- Left Video -->
-    <div class="why-col">
-      <div class="video-wrapper">
-        <video preload="metadata" 
-          autoplay muted loop playsinline 
-          class="why-video">
-          <source src="https://noriks.com/hr/wp-content/uploads/2025/09/noriks_gif_hr_2-1.mp4" type="video/mp4">
-          Vaš preglednik ne podržava video.
-        </video>
+<section class="fis-science">
+  <div class="fis-wrap">
+    <div class="fis-box">
+      <h2 class="fis-title">Napravljena za prave muškarce: 4 razlike koje odmah primijetiš</h2>
+      <div class="fis-grid">
+        <div class="fis-card"><h3 class="fis-card-title">Trbuh ostaje pokriven</h3><p class="fis-card-text">Duži kroj <strong>ostaje spušten</strong>, čak i kad se sagneš ili podigneš ruke.</p></div>
+        <div class="fis-card"><h3 class="fis-card-title">Ramena bez stiskanja</h3><p class="fis-card-text">Širi kroj prsa i ramena <strong>naglašava figuru</strong> bez zatezanja ispod pazuha.</p></div>
+        <div class="fis-card"><h3 class="fis-card-title">Oblik i nakon pranja</h3><p class="fis-card-text">Ringspun pamuk <strong>se ne skuplja i ne rasteže</strong>, izrez ostaje ravan.</p></div>
+        <div class="fis-card"><h3 class="fis-card-title">Ništa ne grebe</h3><p class="fis-card-text">Otisnuta etiketa umjesto ušivene, <strong>mekano na koži</strong> cijeli dan.</p></div>
       </div>
     </div>
-
-    <!-- Right Content -->
-    <div class="why-col why-content">
-      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-        <?php echo get_field( 'singlepp_content_part_h1', 'options' ); ?>
-      </h2>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong><?php echo get_field( 'singlepp_content_part_t_1', 'options' ); ?></strong></p>
-        <p class="description"><?php echo get_field( 'singlepp_content_part_t_2', 'options' ); ?></p>
-      </div>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong><?php echo get_field( 'singlepp_content_part_t_3', 'options' ); ?></strong></p>
-        <p class="description"><?php echo get_field( 'singlepp_content_part_t_4', 'options' ); ?></p>
-      </div>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong><?php echo get_field( 'singlepp_content_part_t_5', 'options' ); ?></strong></p>
-        <p class="description"><?php echo get_field( 'singlepp_content_part_t_6', 'options' ); ?></p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-
-  
-  
-  
-  
-  
-  
-<!-- table section -->
-
-  
-  
-<section class="comparison-section" style="padding-top: 30px;" >
-    <div class="comparison-intro">
-     <!-- <h4 class="highlight"><?php echo get_field("_comp_table_t1", "options"); ?></h4>-->
-      <h1 style="color:white;"><?php echo get_field("_comp_table_t2", "options"); ?></h1>
-      <p style="    opacity: 0.6;" class="note"><?php echo get_field("_comp_table_t3", "options"); ?></p>
-    </div>
-  </section>
-  
-  
-<section class="comparison-table-section">
- 
- <div class="comparison-container">
-   <table class="comparison-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th class="brand-column">
-                <?php echo get_field("_comp_table_inside_1", "options"); ?><br>
-            <div class="price"><?php echo get_field("_comp_table_inside_3", "options"); ?></div>
-          </th>
-          <th class="other-brand"><?php echo get_field("_comp_table_inside_2", "options"); ?><br><span><?php echo get_field("_comp_table_inside_4", "options"); ?></span></th>
-        </tr>
-      </thead>
-      <tbody>
-          
-          <?php
-          $_comp_table_fieldlines = get_field("_comp_table_fieldlines","options");
-          ?>
-          
-            <?php if ($_comp_table_fieldlines): ?>
-             <?php foreach ($_comp_table_fieldlines as $item): ?>
-          
-                    <tr>
-                      <td><?php echo $item['text']; ?></td>
-                      <td class="bg-best"><span  style="background: #496d8f;" class="checkmark">✔</span></td>
-                      <td class="bg-bad"><span class="crossmark">✖</span></td>
-                    </tr>
-                    
-            <?php endforeach; ?>
-        <?php endif; ?>
-       
-       
-      </tbody>
-    </table>
-
-    <p style="    opacity: 0.6;" class="small-note">
-      <?php echo get_field("_comp_table_bottom_text", "options"); ?>
-    </p>
+<section class="fis-hero">
+  <video class="fis-hero-vid" src="<?php echo esc_url( $mj_vid . 'majica-hero.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video>
+  <div class="fis-hero-overlay"></div>
+  <div class="fis-hero-inner">
+    <h2 class="fis-hero-title">Majica koja napokon dobro sjedi. Od jutra do večeri.</h2>
   </div>
 </section>
 
-
-
-<section class="why-section">
-  <div class="container why-container">
-
-    <!-- Left Video -->
-    <div class="why-col">
-      <div class="video-wrapper">
-          <img loading="eager" decoding="async" style="width: 100%;       
-    aspect-ratio: 1/1; 
-    object-fit: cover;  " src="<?php echo get_template_directory_uri(); ?>/img/majice-3 (1).jpeg">
-      </div>
+<section class="fis-experts">
+  <div class="fis-wrap fis-exp-grid">
+    <div class="fis-exp-quote">
+      <h2 class="fis-h2">Materijal koji osjetiš</h2>
+      <p>Izrađena od <strong>ringspun pamuka</strong>, koji je mekši i čvršći od običnog pamuka. Majica je prozračna, zadržava oblik i ne gužva se.</p>
+      <p>✔ Gusta, a lagana tkanina<br>✔ Ne prozire se, čak ni bijela<br>✔ Boja ostaje živa i nakon pranja</p>
+      <p class="fis-exp-author"><strong>Tkanina izbliza</strong><br>Pogledaj kako je majica izrađena.</p>
     </div>
-
-    <!-- Right Content -->
-    <div class="why-col why-content">
-      <h2 style="color: #222; text-align:left; margin-left: 20px; font-family: 'Barlow', sans-serif; color:#222223;">
-        ZAŠTO ĆE TI OVA MAJICA POSTATI STANDARD?
-      </h2>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong>Dizajnirana za stvarni život
-</strong></p>
-        <p class="description">Ova majica napravljena je za cjelodnevno nošenje, od jutra do večeri. Ne traži prilagođavanje ni razmišljanje — jednostavno stoji dobro u svakoj situaciji.
-</p>
-      </div>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong>Kroj koji razumije tijelo
-</strong></p>
-        <p class="description">Kroj je razvijan da prati liniju tijela bez stezanja i naglašava ono što treba. Rezultat je uredan, samopouzdan izgled bez osjećaja nelagode.
-</p>
-      </div>
-
-      <div style="margin-left: 20px;" class="why-point">
-        <p><strong>Osjeti razliku već pri prvom nošenju
-</strong></p>
-        <p class="description">Materijal je mekan, lagan i prozračan na koži. Nakon prvog nošenja jasno je zašto ova majica brzo postaje ona koju najčešće biraš.
-</p>
-      </div>
+    <div class="fis-exp-cards">
+      <div class="fis-exp-card nk-media"><video src="<?php echo esc_url( $mj_vid . 'majica-fabric.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video><div class="fis-exp-cap"><div class="fis-exp-name">Mekana tkanina</div><div class="fis-exp-role">Mekša od običnog pamuka</div></div></div>
+      <div class="fis-exp-card nk-media"><video src="<?php echo esc_url( $mj_vid . 'majica-stretch.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video><div class="fis-exp-cap"><div class="fis-exp-name">Vraća se u oblik</div><div class="fis-exp-role">Ne rasteže se nošenjem</div></div></div>
+      <div class="fis-exp-card nk-media"><video src="<?php echo esc_url( $mj_vid . 'majica-collar.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video><div class="fis-exp-cap"><div class="fis-exp-name">Čisti šavovi</div><div class="fis-exp-role">Bez ušivene etikete</div></div></div>
     </div>
-
   </div>
 </section>
 
-  
-<!-- table section -->
+<section class="nk-colors">
+  <div class="fis-wrap">
+    <h2 class="fis-h2 fis-center">7 boja koje ostaju kao nove</h2>
+    <p class="nk-colors-sub">Boje ne blijede i ne ispiru se, ni nakon brojnih pranja.</p>
+    <div class="nk-col-grid">
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-crna.jpg' . $mj_ver ); ?>" alt="NORIKS majica crna" loading="lazy"><span>Crna</span></div>
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-bela.jpg' . $mj_ver ); ?>" alt="NORIKS majica bijela" loading="lazy"><span>Bijela</span></div>
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-siva.jpg' . $mj_ver ); ?>" alt="NORIKS majica siva" loading="lazy"><span>Siva</span></div>
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-bez.jpg' . $mj_ver ); ?>" alt="NORIKS majica bež" loading="lazy"><span>Bež</span></div>
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-temnomodra.jpg' . $mj_ver ); ?>" alt="NORIKS majica tamnoplava" loading="lazy"><span>Tamnoplava</span></div>
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-rjava.jpg' . $mj_ver ); ?>" alt="NORIKS majica smeđa" loading="lazy"><span>Smeđa</span></div>
+      <div class="nk-col"><img src="<?php echo esc_url( $mj_col . 'majica-barva-zelena.jpg' . $mj_ver ); ?>" alt="NORIKS majica zelena" loading="lazy"><span>Zelena</span></div>
+    </div>
+    <div class="nk-col-note"><span>✔ Boja ne blijedi</span><span>✔ Bijela ostaje bijela</span><span>✔ Crna ostaje crna</span></div>
+  </div>
+</section>
 
+<section class="fis-ugc">
+  <div class="fis-wrap">
+    <div class="fis-ugc-grid">
+      <div class="fis-ugc-card"><div class="fis-ugc-media nk-media"><img src="<?php echo esc_url( $mj_img . 'majica-kupec-1.jpg' . $mj_ver ); ?>" alt="" loading="lazy"></div><p class="fis-ugc-cap">„Dobra dužina, i za više muškarce.“</p></div>
+      <div class="fis-ugc-card"><div class="fis-ugc-media nk-media"><img src="<?php echo esc_url( $mj_img . 'majica-kupec-2.jpg' . $mj_ver ); ?>" alt="" loading="lazy"></div><p class="fis-ugc-cap">„Izgleda kvalitetno i tako se i osjeća.“</p></div>
+      <div class="fis-ugc-card"><div class="fis-ugc-media nk-media"><img src="<?php echo esc_url( $mj_img . 'majica-kupec-3.jpg' . $mj_ver ); ?>" alt="" loading="lazy"></div><p class="fis-ugc-cap">„Materijal ne grebe i djeluje stvarno kvalitetno.“</p></div>
+      <div class="fis-ugc-card"><div class="fis-ugc-media nk-media"><img src="<?php echo esc_url( $mj_img . 'majica-kupec-4.jpg' . $mj_ver ); ?>" alt="" loading="lazy"></div><p class="fis-ugc-cap">„Kroj je stvarno uspio, ni preuska ni preširoka.“</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fis-thermo">
+  <div class="fis-wrap">
+    <p class="fis-eyebrow"><strong>NORIKS</strong> kroj</p>
+    <h2 class="fis-h2 fis-center">3 stvari koje čine razliku</h2>
+    <div class="fis-thermo-grid">
+      <div class="fis-thermo-card nk-media"><video src="<?php echo esc_url( $mj_vid . 'majica-arms.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video><div class="fis-thermo-label">Duži kroj</div></div>
+      <div class="fis-thermo-card nk-media"><video src="<?php echo esc_url( $mj_vid . 'majica-shelf.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video><div class="fis-thermo-label">Šira ramena</div></div>
+      <div class="fis-thermo-card nk-media"><video src="<?php echo esc_url( $mj_vid . 'majica-wash.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video><div class="fis-thermo-label">Ne gužva se</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="fis-upg">
+  <div class="fis-wrap">
+    <h2 class="fis-h2 fis-center">Četiri detalja koja su važna</h2>
+    <div class="fis-upg-grid">
+      <div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo esc_url( $mj_ico . 'ikona-1.svg' . $mj_ver ); ?>"><div class="fis-upg-title">Ringspun pamuk</div><p class="fis-upg-text">Mekši i trajniji od običnog pamuka, pa majica dugo ostaje lijepa.</p></div>
+      <div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo esc_url( $mj_ico . 'ikona-2.svg' . $mj_ver ); ?>"><div class="fis-upg-title">Bez ušivene etikete</div><p class="fis-upg-text">Otisnuta oznaka koja ne grebe za vratom.</p></div>
+      <div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo esc_url( $mj_ico . 'ikona-3.svg' . $mj_ver ); ?>"><div class="fis-upg-title">Bočni šavovi</div><p class="fis-upg-text">Kroj prati tijelo i ne okreće se oko struka.</p></div>
+      <div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo esc_url( $mj_ico . 'ikona-4.svg' . $mj_ver ); ?>"><div class="fis-upg-title">Veličine S–4XL</div><p class="fis-upg-text">Dosljedne veličine i besplatna zamjena u roku od 30 dana.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fis-eng">
+  <div class="fis-wrap fis-row2">
+    <div class="fis-row2-copy">
+      <h2 class="fis-h2">Razvijena za mušku figuru. Provjerena u svakodnevici.</h2>
+      <p>Kroj smo usavršavali na muškarcima svih građa, od S do 4XL, dok nije sjeo bez zatezanja na prsima i bez podizanja iznad struka. Svaku narudžbu prije slanja pregledamo kako bi stigla besprijekorna.</p>
+    </div>
+    <div class="fis-row2-media nk-media nk-wide"><video src="<?php echo esc_url( $mj_vid . 'majica-pack.mp4' . $mj_ver ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+  </div>
+</section>
+
+<section class="fis-cheaper">
+  <div class="fis-wrap fis-row2">
+    <div class="fis-row2-media nk-media"><img src="<?php echo esc_url( $mj_img . 'majica-6-za-ceno-2.jpg' . $mj_ver ); ?>" alt="" loading="lazy"></div>
+    <div class="fis-row2-copy">
+      <p class="fis-eyebrow">PAMETNA KUPNJA</p>
+      <h2 class="fis-h2">6 majica po cijeni dvije iz trgovine</h2>
+      <p>Jedna kvalitetna majica u trgovini košta 29–39 €. U NORIKS paketu 3+3 GRATIS dobivaš šest majica za 69,99 €, odnosno 11,67 € po komadu. Bez kompromisa u kroju ili materijalu, uz 30 dana za zamjenu veličine.</p>
+    </div>
+  </div>
+</section>
+
+<section class="nk-cmp">
+  <div class="fis-wrap">
+    <h2 class="fis-h2 fis-center">NORIKS protiv ostalih marki</h2>
+    <p class="nk-cmp-sub">Nisu sve majice jednake. Evo zašto se naše isplate.</p>
+    <div class="nk-cmp-card">
+      <div class="nk-cmp-row nk-cmp-head"><div></div><div><div class="nk-cmp-brand">NORIKS</div><div class="nk-cmp-price">11,67–17,49 €</div><div class="nk-cmp-note">po komadu, ovisno o paketu</div></div><div><div class="nk-cmp-brand">Ostale marke</div><div class="nk-cmp-price">29–39 €</div><div class="nk-cmp-note">po komadu</div></div></div>
+      <div class="nk-cmp-row"><div>Kroj koji naglašava prsa i ruke</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Dosljedne veličine od S do 4XL</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Duži kroj, trbuh ostaje pokriven</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Mekana, lagana i prozračna tkanina</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Zadržava oblik i boju nakon pranja</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Bez etikete koja grebe za vratom</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>30 dana za besplatnu zamjenu veličine</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+    </div>
+    <p class="nk-cmp-foot">Najniža cijena 11,67 € po komadu u paketu 3+3 GRATIS.</p>
+  </div>
+</section>
+
+<style>
+/* --- skupno --- */
+.fis-wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.fis-h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:#1c1c1c;line-height:1.2;margin:0 0 18px}
+.fis-center{text-align:center}
+.fis-eyebrow{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px}
+
+/* 1) 4 razlike */
+.fis-science{background:#f4f4f4;padding:44px 0}
+.fis-box{background:transparent;border-radius:0;padding:0}
+.fis-title{font-size:clamp(23px,2.9vw,32px);font-weight:800;color:#1c1c1c;line-height:1.2;margin:0 0 26px}
+.fis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.fis-card{padding:0 22px;border-left:1px solid #dcdcdc}
+.fis-card:first-child{border-left:0;padding-left:0}
+.fis-card-title{font-size:17px;font-weight:800;color:#1c1c1c;margin:0 0 10px}
+.fis-card-text{font-size:15px;line-height:1.55;color:#333;margin:0}
+
+/* 2) hero video */
+.fis-hero{position:relative;width:100%;min-height:520px;display:flex;align-items:center;overflow:hidden}
+.fis-hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fis-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.05) 55%)}
+.fis-hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 40px;width:100%;box-sizing:border-box}
+.fis-hero-title{color:#fff;font-weight:800;font-size:clamp(27px,4vw,46px);line-height:1.15;max-width:640px;margin:0;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+
+/* 3) materijal */
+.fis-experts{padding:44px 0}
+.fis-exp-grid{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}
+.fis-exp-quote p{font-size:15.5px;line-height:1.6;color:#333;margin:0 0 14px}
+.fis-exp-author{color:#1c1c1c}
+.fis-exp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fis-exp-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#222}
+.fis-exp-card video,.fis-exp-card img{width:100%;height:100%;object-fit:cover;display:block}
+.fis-exp-cap{position:absolute;left:0;right:0;bottom:0;padding:14px;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.75),rgba(0,0,0,0))}
+.fis-exp-name{font-weight:800;font-size:18px}
+.fis-exp-role{font-size:13px}
+
+/* 4) boje */
+.nk-colors{padding:36px 0;background:#fff}
+.nk-colors .fis-h2{margin-bottom:6px}
+.nk-colors-sub{text-align:center;color:#444;font-size:15px;margin:0 0 22px}
+.nk-col-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;max-width:1040px;margin:0 auto}
+.nk-col{display:flex;flex-direction:column;align-items:center;gap:8px;background:#f4f4f4;border-radius:12px;padding:8px 8px 12px}
+.nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.nk-col span{font-size:13px;font-weight:700;color:#1c1c1c}
+.nk-col-note{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:18px;font-size:14px;font-weight:600;color:#1c1c1c}
+
+/* 5) mnenja kupcev */
+.fis-ugc{background:#223047;padding:40px 0}
+.fis-ugc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fis-ugc-media{border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#000}
+.fis-ugc-media video,.fis-ugc-media img{width:100%;height:100%;object-fit:cover;display:block}
+.fis-ugc-cap{color:#eee;font-size:14px;line-height:1.5;margin:10px 0 0}
+
+/* 6) 3 stvari */
+.fis-thermo{background:#f0efe9;padding:44px 0}
+.fis-thermo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fis-thermo-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#111}
+.fis-thermo-card video{width:100%;height:100%;object-fit:cover;display:block}
+.fis-thermo-label{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:800;font-size:18px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+/* 7) 4 detalja */
+.fis-upg{padding:44px 0}
+.fis-upg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.fis-upg-ico{width:56px;height:56px;object-fit:contain;display:block;margin:0 auto 14px}
+.fis-upg-title{font-weight:800;color:#1c1c1c;margin:0 0 8px;font-size:16px}
+.fis-upg-text{font-size:14px;line-height:1.5;color:#444;margin:0}
+
+/* 8 + 9) dvostolpna bloka */
+.fis-eng,.fis-cheaper{padding:40px 0}
+.fis-cheaper{background:#f4f4f4}
+.fis-row2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.fis-row2-copy p{font-size:15.5px;line-height:1.65;color:#333}
+.fis-row2-media{border-radius:16px;overflow:hidden}
+.fis-row2-media video,.fis-row2-media img{width:100%;height:auto;display:block}
+.fis-cheaper .fis-row2-media{aspect-ratio:1/1}
+.fis-cheaper .fis-row2-media video,.fis-cheaper .fis-row2-media img{height:100%;object-fit:cover}
+
+/* mediji, ki polnijo okvir */
+.nk-media{position:relative;overflow:hidden;background:#eee}
+.nk-media>video,.nk-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.nk-wide{aspect-ratio:16/10}
+
+/* 10) primerjava */
+.nk-cmp{padding:48px 0;background:#fff}
+.nk-cmp .fis-h2{margin-bottom:8px}
+.nk-cmp-sub{text-align:center;color:#444;font-size:15.5px;margin:0 auto 26px;max-width:620px}
+.nk-cmp-card{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid #e6e6e6;box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:center;border-top:1px solid #ececec}
+.nk-cmp-row:first-child{border-top:0}
+.nk-cmp-row>div{padding:14px 18px;font-size:15px;color:#1c1c1c}
+.nk-cmp-row>div:nth-child(2){background:#fffbe0;text-align:center}
+.nk-cmp-row>div:nth-child(3){text-align:center;color:#8a8a8a}
+.nk-cmp-head>div{padding:20px 18px}
+.nk-cmp-head>div:nth-child(2){background:#1c1c1c;color:#fff}
+.nk-cmp-head>div:nth-child(3){background:#f4f4f4}
+.nk-cmp-brand{font-weight:800;font-size:15px;letter-spacing:.5px;text-transform:uppercase}
+.nk-cmp-price{font-weight:800;font-size:22px;margin-top:4px;font-variant-numeric:tabular-nums}
+.nk-cmp-head>div:nth-child(2) .nk-cmp-price{color:#F5D900}
+.nk-cmp-note{font-size:12px;opacity:.8;margin-top:2px}
+.nk-yes,.nk-no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-weight:800;font-size:15px}
+.nk-yes{background:#1c1c1c;color:#F5D900}
+.nk-no{background:#ececec;color:#9a9a9a}
+.nk-cmp-foot{text-align:center;font-size:13px;color:#666;margin-top:14px}
+
+@media (max-width:900px){
+  .fis-exp-grid{grid-template-columns:1fr;gap:24px}
+  .fis-ugc-grid{grid-template-columns:1fr 1fr}
+  .fis-thermo-grid{grid-template-columns:1fr}
+  .fis-upg-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .fis-row2{grid-template-columns:1fr;gap:22px}
+  .fis-cheaper .fis-row2-media{order:2}
+}
+@media (max-width:820px){
+  .fis-grid{grid-template-columns:1fr 1fr;gap:22px 0}
+  .fis-card:nth-child(odd){border-left:0;padding-left:0}
+}
+@media (max-width:768px){.fis-hero{min-height:380px}.fis-hero-inner{padding:0 22px}}
+@media (max-width:760px){.nk-col-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:600px){.nk-cmp-row>div{padding:12px 10px;font-size:13.5px}.nk-cmp-price{font-size:17px}}
+@media (max-width:560px){.fis-exp-cards{grid-template-columns:1fr 1fr}.fis-ugc-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.fis-grid{grid-template-columns:1fr}.fis-card{border-left:0;padding-left:0}}
+</style>
