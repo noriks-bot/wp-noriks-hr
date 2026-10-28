@@ -834,4 +834,8 @@ if ( noriks_is_type( 'mamabelt' ) ) {
     include $noriks_pb_dir . 'why-mamabelt.php';
 }
 
+if ( noriks_is_type( 'tusfilter' ) ) {
+    include $noriks_pb_dir . 'why-tusfilter.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
