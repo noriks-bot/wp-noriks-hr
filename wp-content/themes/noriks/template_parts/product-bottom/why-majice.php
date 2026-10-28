@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-$mj_ver  = '?v=20261027';
+$mj_ver  = '?v=20261028';
 $mj_img  = get_template_directory_uri() . '/img/majica/';
 $mj_vid  = get_template_directory_uri() . '/img/majica-videos/';
 $mj_ico  = get_template_directory_uri() . '/img/majica-icons/';
