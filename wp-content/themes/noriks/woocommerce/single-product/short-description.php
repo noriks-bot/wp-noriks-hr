@@ -40,6 +40,9 @@ if ( ! $short_description ) {
     list-style: none !important; text-indent: 0 !important; margin: 0 0 7px !important;
     line-height: 1.45 !important; font-size: 15.5px !important; color: #1b1533;
     display: block !important; position: relative !important; padding-left: 31px !important; }
+  /* why datoteke s svojim li { padding-left: 0 } ne smejo potisniti kljukice cez besedilo (FreshSeal, David 28. 10.) */
+  .woocommerce div.product .woocommerce-product-details__short-description ul li:has(> .nsp-tick) {
+    display: block !important; position: relative !important; padding-left: 31px !important; }
   .woocommerce-product-details__short-description ul li::marker { content: "" !important; }
   .woocommerce-product-details__short-description ul li::before { content: none !important; }
   .woocommerce-product-details__short-description .nsp-tick {
