@@ -99,6 +99,7 @@ div.wsshapeshorts__pog{text-align:center;border:1px solid rgba(243,217,79,.35);b
 @media (max-width:767px){.wsshapeshorts__v{padding:0 16px}}
 /* /dizajn.py */
 .wsshapeshorts__v>.wsshapeshorts__zak{text-align:center}
+.wsshapeshorts__polna{display:flex;justify-content:center;background:#fdf9e3}.wsshapeshorts__polna video{width:auto;max-width:100%;height:680px;object-fit:cover}.wsshapeshorts__kar .wsshapeshorts__km:not(.wsshapeshorts__km--v) img{aspect-ratio:1/1;object-fit:cover}@media (max-width:860px){.wsshapeshorts__polna video{height:auto;width:100%;max-height:560px}}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsshapeshorts__kar').forEach(function(k){
