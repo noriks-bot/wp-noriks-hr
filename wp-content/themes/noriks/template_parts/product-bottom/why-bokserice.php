@@ -445,7 +445,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 
   /* 6) splošno: manj praznega prostora, berljivi naslovi */
   .fis-h2{font-size:clamp(21px,6.4vw,26px)!important;line-height:1.2!important}
-  .fis-thermo,.fis-ugc,.fis-experts,.nk-colors,.fis-upg,.fis-eng,.fis-cheaper,.nk-cmp{padding-top:36px!important;padding-bottom:36px!important}
+  .fis-thermo,.fis-ugc,.fis-experts,.nk-colors,.fis-upg,.fis-eng,.fis-cheaper,.nk-cmp{padding-top:22px!important;padding-bottom:22px!important}
 
   /* 7) sekcija ocen */
   .nk-rev .nk-sum{gap:10px!important}
@@ -483,52 +483,48 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
   .nk-col{flex-basis:calc((100% - 60px)/7)!important}
 }
 
-/* Krmilo pod vrstico, ki se drsa vstran (samo telefon): puscici + crtice po karticah. */
+/* Krmilo pod vrstico, ki se drsa vstran (samo telefon): puscici + tanek drsnik. */
 .nk-sc{display:none}
 @media (max-width:767px){
-  .nk-sc{display:flex;align-items:center;justify-content:center;gap:18px;margin:18px auto 0}
-  .nk-sc-btn{flex:none;width:40px;height:40px;padding:0;border-radius:50%;cursor:pointer;
-    border:1px solid rgba(0,0,0,.07);background:#fff;display:grid;place-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.07);transition:opacity .2s,transform .12s,box-shadow .2s;
+  .nk-sc{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px auto 0}
+  .nk-sc-btn{flex:none;width:30px;height:30px;padding:0;border-radius:50%;cursor:pointer;
+    border:1px solid rgba(0,0,0,.08);background:#fff;display:grid;place-items:center;
+    box-shadow:0 1px 5px rgba(0,0,0,.06);transition:opacity .2s,transform .12s;
     -webkit-tap-highlight-color:transparent}
-  .nk-sc-btn:active{transform:scale(.94);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .nk-sc-btn:active{transform:scale(.92)}
   .nk-sc-btn[disabled]{opacity:.22;box-shadow:none}
-  .nk-sc-btn svg{width:16px;height:16px;display:block;stroke:#1c1c1c}
-  .nk-sc-dots{display:flex;align-items:center;gap:6px}
-  .nk-sc-dots b{display:block;width:7px;height:4px;border-radius:999px;background:rgba(0,0,0,.16);
-    cursor:pointer;transition:width .28s cubic-bezier(.4,0,.2,1),background .28s}
-  .nk-sc-dots b.on{width:24px;background:#1c1c1c}
-  .fis-ugc .nk-sc-btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);box-shadow:none}
+  .nk-sc-btn svg{width:13px;height:13px;display:block;stroke:#1c1c1c}
+  .nk-sc-bar{position:relative;flex:0 1 72px;height:3px;border-radius:999px;background:rgba(0,0,0,.14)}
+  .nk-sc-bar i{position:absolute;top:0;bottom:0;left:0;border-radius:999px;background:#1c1c1c;
+    transition:left .22s ease,width .22s ease}
+  .fis-ugc .nk-sc-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);box-shadow:none}
   .fis-ugc .nk-sc-btn svg{stroke:#fff}
-  .fis-ugc .nk-sc-dots b{background:rgba(255,255,255,.3)}
-  .fis-ugc .nk-sc-dots b.on{background:#fff}
+  .fis-ugc .nk-sc-bar{background:rgba(255,255,255,.3)}
+  .fis-ugc .nk-sc-bar i{background:#fff}
 }
 </style>
 <script>
 (function(){
   if (window.nkScReady) return;
   window.nkScReady = true;
-  var CH = '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4.5L7.5 12 15 19.5"/></svg>';
+  var CH = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4.5L7.5 12 15 19.5"/></svg>';
   function init(){
     var rows = document.querySelectorAll('.fis-exp-cards, .fis-ugc-grid, .fis-thermo-grid');
     Array.prototype.forEach.call(rows, function(row){
       if (row.nextElementSibling && row.nextElementSibling.classList.contains('nk-sc')) return;
-      var n = row.children.length;
-      if (n < 2) return;
+      if (row.children.length < 2) return;
 
-      var dots = '';
-      for (var k = 0; k < n; k++) dots += '<b' + (k ? '' : ' class="on"') + '></b>';
       var ctl = document.createElement('div');
       ctl.className = 'nk-sc';
       ctl.innerHTML =
         '<button type="button" class="nk-sc-btn" data-dir="-1" aria-label="Prethodno">' + CH + '</button>' +
-        '<div class="nk-sc-dots">' + dots + '</div>' +
+        '<div class="nk-sc-bar"><i></i></div>' +
         '<button type="button" class="nk-sc-btn" data-dir="1" aria-label="Sljedece">' +
           CH.replace('<svg ', '<svg style="transform:rotate(180deg)" ') + '</button>';
       row.parentNode.insertBefore(ctl, row.nextSibling);
 
-      var bs = ctl.querySelectorAll('.nk-sc-dots b');
-      var btns = ctl.querySelectorAll('.nk-sc-btn');
+      var thumb = ctl.querySelector('.nk-sc-bar i');
+      var btns  = ctl.querySelectorAll('.nk-sc-btn');
 
       function step(){
         var first = row.firstElementChild;
@@ -538,22 +534,18 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
         return first.getBoundingClientRect().width + gap;
       }
       function update(){
-        var max = row.scrollWidth - row.clientWidth;
+        var vis = row.clientWidth, all = row.scrollWidth, max = all - vis;
         if (max <= 4) { ctl.style.display = 'none'; return; }
         ctl.style.display = '';
-        var i = Math.min(n - 1, Math.round(row.scrollLeft / step()));
-        for (var k = 0; k < n; k++) bs[k].classList.toggle('on', k === i);
+        var w = Math.max(20, vis / all * 100);
+        thumb.style.width = w + '%';
+        thumb.style.left = (row.scrollLeft / max) * (100 - w) + '%';
         btns[0].disabled = row.scrollLeft <= 1;
         btns[1].disabled = row.scrollLeft >= max - 1;
       }
       Array.prototype.forEach.call(btns, function(b){
         b.addEventListener('click', function(){
           row.scrollBy({ left: step() * parseInt(b.dataset.dir, 10), behavior: 'smooth' });
-        });
-      });
-      Array.prototype.forEach.call(bs, function(b, k){
-        b.addEventListener('click', function(){
-          row.scrollTo({ left: step() * k, behavior: 'smooth' });
         });
       });
       row.addEventListener('scroll', update, { passive: true });
