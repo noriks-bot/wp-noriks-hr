@@ -103,6 +103,8 @@ div.wstusfilter__pog{text-align:center;border:1px solid rgba(0,95,44,.35);border
 .wstusfilter__znak{position:absolute;left:14px;bottom:14px;width:74px;height:74px;border-radius:50%;background:#005f2c;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:19px;line-height:1}.wstusfilter__znak small{font-size:10px;font-weight:600;margin-top:3px;text-transform:uppercase}
 .wstusfilter__dvoj{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;background:transparent;box-shadow:none;overflow:visible;border-radius:0}
 .wstusfilter__dvoj img{aspect-ratio:9/14;height:auto!important;object-fit:cover;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.10)}
+.wstusfilter__pp,.wstusfilter__dvoj{border:0!important;box-shadow:none!important;background:transparent!important}
+.wstusfilter__ppv,.wstusfilter__dvoj img{box-shadow:0 14px 34px rgba(0,95,44,.22)!important}
 </style>
 <script>
 (function(){document.querySelectorAll('.wstusfilter__kar').forEach(function(k){
