@@ -1357,7 +1357,7 @@
 
            <?php elseif ( noriks_is_type( 'neckgrip' ) ): ?>
 
-           Tisuće kupaca već se opušta uz NORIKS NeckGrip – bežični masažer s četiri glave i ugodnom toplinom.
+           Tisuće kupaca već se opušta uz NORIKS NeckGrip – grijani masažer za vrat na koji legnete, s četiri masažne glave.
 
            <?php elseif ( noriks_is_type( 'shiftclog' ) ): ?>
 
