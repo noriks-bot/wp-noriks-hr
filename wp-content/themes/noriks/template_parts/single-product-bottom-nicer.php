@@ -806,4 +806,8 @@ if ( noriks_is_type( 'steampro' ) ) {
     include $noriks_pb_dir . 'why-steampro.php';
 }
 
+if ( noriks_is_type( 'neckgrip' ) ) {
+    include $noriks_pb_dir . 'why-neckgrip.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
