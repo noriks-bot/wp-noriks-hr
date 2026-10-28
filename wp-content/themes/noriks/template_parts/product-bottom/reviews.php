@@ -2474,8 +2474,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
 
   // Avatar pools based on page category
   // Leak boxers + kompresijske majice + tacpro + insoles + glasspro + destapacan + calendar: text-only (no photos). Others: existing pools.
-<<<<<<< Updated upstream
-  $avatar_type = ( $is_zipcomp_page || $is_webshot_page || $is_gelcushion_page || $is_noiron_page || $is_widebeam_page || $is_sculptleg_page || $is_vinocool_page || $is_mamafit_page || $is_odorpro_page || $is_gelsit_page || $is_struja_page || $is_calm_page || $is_shapetank_page || $is_sunover_page || $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_insoles_page || $is_glasspro_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
+  $avatar_type = ( $is_zipcomp_page || $is_webshot_page || $is_gelcushion_page || $is_noiron_page || $is_sunstep_page || $is_widebeam_page || $is_sculptleg_page || $is_vinocool_page || $is_mamafit_page || $is_odorpro_page || $is_gelsit_page || $is_struja_page || $is_calm_page || $is_shapetank_page || $is_sunover_page || $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_insoles_page || $is_glasspro_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
   // MAJICE i BOKSERICE (majice / orto-majice / black-friday / majica-darila /
   // bokserice / orto-bokserice / bokserice-sastavi-paket): recenzije BEZ fotografija.
   // Isti gate kao why-majice.php i why-bokserice.php; ostali proizvodi zadrzavaju
@@ -2486,9 +2485,6 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
     $avatar_type = '';
   }
 
-=======
-  $avatar_type = ( $is_zipcomp_page || $is_webshot_page || $is_gelcushion_page || $is_noiron_page || $is_sunstep_page || $is_widebeam_page || $is_sculptleg_page || $is_vinocool_page || $is_mamafit_page || $is_odorpro_page || $is_gelsit_page || $is_struja_page || $is_calm_page || $is_shapetank_page || $is_sunover_page || $is_silkcase_page || $is_muslin_page || $is_quiet_page || $is_daily_page || $is_travel_page || $is_flops_page || $is_salon_page || $is_corrector_page || $is_ritual_page || $is_classics_page || $is_faith_page || $is_devotions_page || $is_retrobox_page || $is_draps_page || $is_slabproof_page || $is_womens_page || $is_gordura_page || $is_midnight_page || $is_acryliques_page || $is_leakboxers_page || $is_kompmajice_page || $is_tacpro_page || $is_insoles_page || $is_glasspro_page || $is_destapacan_page || $is_calendar_page || $is_birdie_page ) ? '' : ( $is_nogavice_page ? 'nogavice' : ( $is_bokserice_page ? 'bokserice' : 'majice' ) );
->>>>>>> Stashed changes
   $avatar_pool = $avatar_type ? get_review_avatar_pool($avatar_type) : array();
 
   // On single-product landing pages (leak boxers / kompresijske majice) the cards should
