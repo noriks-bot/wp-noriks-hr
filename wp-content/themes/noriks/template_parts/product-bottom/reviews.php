@@ -663,7 +663,7 @@
 
           <?php elseif ( noriks_is_type( 'wakeband' ) ): ?>
 
-           Niste jedini koji prespavaju budilicu – i bude sve osim sebe.
+           Niste jedini koje kreštava budilica trgne iz sna – i probudi cijelu kuću.
 
           <?php elseif ( noriks_is_type( 'sculptleg' ) ): ?>
 
@@ -1385,7 +1385,7 @@
 
            <?php elseif ( noriks_is_type( 'wakeband' ) ): ?>
 
-           Tisuće čvrstih spavača već ustaje uz NORIKS WakeBand – tihu vibracijsku budilicu na zapešću koja budi samo njih.
+           Tisuće kupaca već se budi mirno uz NORIKS WakeBand – tihu vibracijsku budilicu na zapešću koja budi samo njih, bez buke i bez stresa.
 
            <?php elseif ( noriks_is_type( 'sculptleg' ) ): ?>
 
@@ -1856,7 +1856,7 @@
   if ( $is_aircircle_page ) { $rv_fallback_title = 'NORIKS AirCircle | Tihi ventilator 360° s daljinskim upravljačem'; }
   if ( $is_sunstep_page ) { $rv_fallback_title = 'NORIKS SunStep | Prozračne ljetne dječje cipelice-čarape'; }
   if ( $is_widebeam_page ) { $rv_fallback_title = 'NORIKS WideBeam | LED čeona svjetiljka 230° sa senzorom pokreta'; }
-  if ( $is_wakeband_page ) { $rv_fallback_title = 'NORIKS WakeBand | Vibracijska budilica na zapešću za čvrste spavače'; }
+  if ( $is_wakeband_page ) { $rv_fallback_title = 'NORIKS WakeBand | Tiha vibracijska budilica na zapešću za mirno buđenje'; }
   if ( $is_seatsleep_page ) { $rv_fallback_title = 'NORIKS SeatSleep | Putni jastuk s maskom koji se pričvršćuje za sjedalo'; }
   if ( $is_sculptleg_page ) { $rv_fallback_title = 'NORIKS SculptLeg | Kompresijske tajice visokog struka s 3D trakama'; }
   if ( $is_vinocool_page ) { $rv_fallback_title = 'NORIKS VinoCool | Štapić za hlađenje vina s izljevom'; }

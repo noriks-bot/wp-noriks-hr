@@ -1,8 +1,8 @@
 <?php
 // NORIKS WakeBand — FAQ (Informacije o proizvodu), podatki z originala (verzija Standard) + NORIKS pogoji (brez tujega jamstva).
 return array(
-  array( 'Hoće li me ovo stvarno probuditi?', 'Većina budilica ne budi čvrste spavače jer mozak nauči ignorirati zvuk. NORIKS WakeBand vibrira izravno na zapešću – to je fizički osjet koji mozak ne može tek tako isključiti, koliko god duboko spavali. Vibracija traje dok je ne zaustavite pritiskom na gumb.' ),
-  array( 'Kome je namijenjena?', 'Čvrstim spavačima koji ne čuju zvuk budilice, onima koji prespavaju ili previše puta stisnu odgodu, parovima kojima treba tiho buđenje i svima koji ustaju prije ostatka kuće.' ),
+  array( 'Hoće li me ovo stvarno probuditi?', 'Da – i to mirno. Na zvuk budilice mozak se s vremenom navikne, a vibracija na zapešću je fizički osjet koji ne ignorira. NORIKS WakeBand vas budi nježnom vibracijom umjesto kreštavog alarma, pa se ne trgnete iz sna, a ostali u sobi spavaju dalje. Vibracija traje dok je ne zaustavite pritiskom na gumb.' ),
+  array( 'Kome je namijenjena?', 'Svima koji se žele buditi mirno, bez kreštavog alarma i stresa; parovima i obiteljima kojima treba tiho buđenje bez budenja drugih; onima koji ustaju prije ostatka kuće te onima koji prespavaju zvuk budilice ili previše puta stisnu odgodu.' ),
   array( 'Kako se postavlja alarm?', 'Pritisnite i držite gumb 3 sekunde, namjestite vrijeme buđenja i gotovo. Ne trebate mobitel, aplikaciju ni Bluetooth. Možete postaviti do 3 alarma.' ),
   array( 'Hoće li smetati partneru?', 'Ne. Vibracija ostaje samo na vašem zapešću – partner je neće ni osjetiti ni čuti.' ),
   array( 'Kako se puni?', 'Izvadite zaslon iz narukvice i utaknite ga u bilo koji standardni USB priključak (računalo ili punjač). Kabel nije potreban. Jedno punjenje traje do 14 dana.' ),
