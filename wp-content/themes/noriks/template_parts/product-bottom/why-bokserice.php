@@ -198,7 +198,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-colors .fis-h2{margin-bottom:6px}
 .nk-colors-sub{text-align:center;color:#444;font-size:15px;margin:0 0 22px}
 .nk-col-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f4f4f4;border-radius:8px;padding:10px 8px 12px}
+.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f9f9f9;border-radius:8px;padding:10px 8px 12px}
 .nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .nk-col svg{width:64px;height:64px}
 .nk-col span{font-size:13px;font-weight:700;color:#1c1c1c}
@@ -279,7 +279,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .fis-eyebrow{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px}
 
 /* 1) 4 razlike */
-.fis-science{background:#f4f4f4;padding:44px 0}
+.fis-science{background:#f9f9f9;padding:44px 0}
 .fis-box{background:transparent;border-radius:0;padding:0}
 .fis-title{font-size:clamp(23px,2.9vw,32px);font-weight:800;color:#1c1c1c;line-height:1.2;margin:0 0 26px}
 .fis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -312,7 +312,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-colors .fis-h2{margin-bottom:6px}
 .nk-colors-sub{text-align:center;color:#444;font-size:15px;margin:0 0 22px}
 .nk-col-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f4f4f4;border-radius:8px;padding:10px 8px 12px}
+.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f9f9f9;border-radius:8px;padding:10px 8px 12px}
 .nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .nk-col span{font-size:13px;font-weight:700;color:#1c1c1c}
 .nk-col-note{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:18px;font-size:14px;font-weight:600;color:#1c1c1c}
@@ -325,7 +325,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .fis-ugc-cap{color:#eee;font-size:14px;line-height:1.5;margin:10px 0 0}
 
 /* 6) 3 stvari */
-.fis-thermo{background:#f0efe9;padding:44px 0}
+.fis-thermo{background:#f9f9f9;padding:44px 0}
 .fis-thermo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .fis-thermo-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:#111}
 .fis-thermo-card video{width:100%;height:100%;object-fit:cover;display:block}
@@ -340,7 +340,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 
 /* 8 + 9) dvostolpna bloka */
 .fis-eng,.fis-cheaper{padding:40px 0}
-.fis-cheaper{background:#f4f4f4}
+.fis-cheaper{background:#f9f9f9}
 .fis-row2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .fis-row2-copy p{font-size:15.5px;line-height:1.65;color:#333}
 .fis-row2-media{border-radius:8px;overflow:hidden}
