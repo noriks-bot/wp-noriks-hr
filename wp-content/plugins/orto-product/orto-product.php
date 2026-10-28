@@ -381,6 +381,12 @@ function gck_size_priced_totals( array $table, array $sizes ) {
     return array( $sale_c / 100, $reg_c / 100 );
 }
 
+// Privzeta izbira v izbirniku ponud (meta orto_privzeta_velikost / orto_privzeta_barva), kadar ni prva moznost -
+// npr. ShapeShorts XL-2XL. Enostavni izdelki nimajo default_attributes, zato meta.
+function gck_privzeto( $product_id, string $vrsta ) : string {
+    return $product_id ? trim( (string) get_post_meta( $product_id, 'orto_privzeta_' . $vrsta, true ) ) : '';
+}
+
 function gck_is_orto_bundle_enabled( $product_id ) : bool {
     if ( ! $product_id ) return false;
     $flag = get_post_meta( $product_id, '_singlepp_orto_ison', true );
@@ -7136,7 +7142,7 @@ function gck_render_bundle_selector() {
 
                                             <?php foreach ( $color_values as $val ) :
                                                 $slug = sanitize_title( $val ); ?>
-                                                <div class="swatch" data-value="<?php echo esc_attr( $val ); ?>" title="<?php echo esc_attr( $val ); ?>">
+                                                <div class="swatch<?php echo $val === gck_privzeto( $product_id, 'barva' ) ? ' is-default' : ''; ?>" data-value="<?php echo esc_attr( $val ); ?>" title="<?php echo esc_attr( $val ); ?>">
                                                     <span class="swatch-circle color-<?php echo esc_attr( $slug ); ?>"></span>
                                                 </div>
                                             <?php endforeach; ?>
@@ -7156,7 +7162,7 @@ function gck_render_bundle_selector() {
                                             data-garment-group="<?php echo (int) $g_index; ?>"
                                             name="pairs[<?php echo esc_attr( $offer_id ); ?>][<?php echo $i; ?>][<?php echo esc_attr( $target_size_field_key ); ?>]">
                                             <?php foreach ( $size_values as $val ) : ?>
-                                                <option value="<?php echo esc_attr( $val ); ?>">
+                                                <option value="<?php echo esc_attr( $val ); ?>"<?php selected( $val, gck_privzeto( $product_id, 'velikost' ) ); ?>>
                                                     <?php // Oznaka „S - 36 do 38" (crka + EU razpon / mera), vrednost ostane gola crka (Dejan 26.10.2026).
                                                     echo esc_html( function_exists( 'noriks_velikost_oznaka' ) ? noriks_velikost_oznaka( $val, $product_id ) : $val ); ?>
                                                 </option>
@@ -7242,7 +7248,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.bundle-pairs').forEach(wrap => {
         wrap.querySelectorAll('.bundle-pair').forEach(pair => {
             pair.querySelectorAll('.color-swatches').forEach(swGroup => {
-                const firstSwatch = swGroup.querySelector('.swatch');
+                const firstSwatch = swGroup.querySelector('.swatch.is-default') || swGroup.querySelector('.swatch');
                 const hidden      = swGroup.querySelector('.swatch-input');
                 if (firstSwatch && hidden) {
                     swGroup.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
@@ -7251,7 +7257,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
             pair.querySelectorAll('select').forEach(sel => {
-                const firstOpt = sel.querySelector('option:nth-child(1)');
+                const firstOpt = sel.querySelector('option[selected]') || sel.querySelector('option:nth-child(1)');
                 if (firstOpt) sel.value = firstOpt.value;
             });
         });
