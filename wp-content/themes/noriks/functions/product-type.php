@@ -40,6 +40,7 @@ function noriks_product_type_map() : array {
         // --- sub-variants / special buckets ---
         'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         // Orthopedic back belt (ortopedski pojas za leđa).
+        'leakbrief' => array( 'orto-leakbrief' ),
         'tusfilter' => array( 'orto-tusfilter' ),
         'mamabelt' => array( 'orto-mamabelt' ),
         'beltfit' => array( 'orto-beltfit' ),
@@ -693,6 +694,22 @@ if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
             array( '3XL', '54 – 56', '113 – 120 cm', '133 – 141 cm' ),
             array( '4XL', '58 – 60', '121 – 129 cm', '142 – 150 cm' ),
             array( '5XL', '62 – 64', '130 – 138 cm', '151 – 159 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
+    /** NORIKS LeakBrief: velicine po originalu (UK 4-20 -> EU 32-48), opseg struka in bokova v cm 1:1 z originalom. */
+    function noriks_leakbrief_sizes() {
+        return array(
+            array( 'XS',  '32 – 34', '64 – 69', '84 – 89' ),
+            array( 'S',   '34 – 36', '69 – 74', '91 – 97' ),
+            array( 'M',   '36 – 38', '74 – 79', '97 – 102' ),
+            array( 'L',   '38 – 40', '79 – 86', '104 – 109' ),
+            array( 'XL',  '40 – 42', '86 – 91', '109 – 114' ),
+            array( '2XL', '42 – 44', '91 – 97', '114 – 119' ),
+            array( '3XL', '44 – 46', '99 – 102', '122 – 127' ),
+            array( '4XL', '46 – 48', '104 – 109', '127 – 132' ),
         );
     }
 }
@@ -1699,6 +1716,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
+            'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
             'tradesman'    => array( 'M' => '39 do 42', 'L' => '42,5 do 46', 'XL' => '46,5 do 49,5' ),
             'diskret'      => array( 'S' => 'košarice AA do B', 'M' => 'košarice B do F', 'L' => 'košarice F do G' ),
@@ -1834,6 +1852,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka', 'Opseg bokova' ), 'vrstice' => noriks_sculptleg_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite manju.' );
+        }
+        if ( noriks_is_type( 'leakbrief', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
+                'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_leakbrief_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'shiftclog', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>. Klompe su unisex.',

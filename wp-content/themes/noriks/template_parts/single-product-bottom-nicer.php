@@ -838,4 +838,8 @@ if ( noriks_is_type( 'tusfilter' ) ) {
     include $noriks_pb_dir . 'why-tusfilter.php';
 }
 
+if ( noriks_is_type( 'leakbrief' ) ) {
+    include $noriks_pb_dir . 'why-leakbrief.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
