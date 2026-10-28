@@ -359,6 +359,12 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-kompwom' );
             return;
         }
+        // Izdelek z lastno tablico v noriks_size_tabela() (isti podatki kot harmonika spodaj) dobi skupni modal,
+        // ne privzete tablice majic (ShiftClog 28.10.: modal je kazal majice; velja za vse nove izdelke).
+        if ( function_exists( 'noriks_size_tabela' ) && noriks_size_tabela() ) {
+            get_template_part( 'template_parts/size-chart-tabela' );
+            return;
+        }
         // Brez velikosti ni privzete tabele majic (Dejan, 22.10.2026).
         if ( function_exists( 'noriks_ima_velicine' ) && ! noriks_ima_velicine() ) { return; }
         get_template_part( 'template_parts/size-chart-modal' );
