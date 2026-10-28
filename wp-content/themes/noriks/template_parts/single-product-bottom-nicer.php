@@ -798,4 +798,8 @@ if ( noriks_is_type( 'freshseal' ) ) {
     include $noriks_pb_dir . 'why-freshseal.php';
 }
 
+if ( noriks_is_type( 'tradesman' ) ) {
+    include $noriks_pb_dir . 'why-tradesman.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';

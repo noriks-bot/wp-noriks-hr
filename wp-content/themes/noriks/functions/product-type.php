@@ -40,7 +40,8 @@ function noriks_product_type_map() : array {
         // --- sub-variants / special buckets ---
         'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         // Orthopedic back belt (ortopedski pojas za leđa).
-        'freshseal' => array( 'orto-freshseal' ),
+        'tradesman' => array( 'orto-tradesman' ),
+    'freshseal' => array( 'orto-freshseal' ),
     'flomasteri' => array( 'orto-flomasteri' ),
     'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         // Bunion corrector (korektor čukljeva / halux valgus).
@@ -683,6 +684,17 @@ if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
             array( '3XL', '54 – 56', '113 – 120 cm', '133 – 141 cm' ),
             array( '4XL', '58 – 60', '121 – 129 cm', '142 – 150 cm' ),
             array( '5XL', '62 – 64', '130 – 138 cm', '151 – 159 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_tradesman_sizes' ) ) {
+    /** NORIKS Tradesman: velicina po broju cipele (original masonclothing.com, US Men/Women -> EU). */
+    function noriks_tradesman_sizes() {
+        return array(
+            array( 'M',  '39 – 42', '37,5 – 40,5' ),
+            array( 'L',  '42,5 – 46', '41 – 44' ),
+            array( 'XL', '46,5 – 49,5', '–' ),
         );
     }
 }
@@ -1653,6 +1665,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
+            'tradesman'    => array( 'M' => '39 do 42', 'L' => '42,5 do 46', 'XL' => '46,5 do 49,5' ),
             'alpakacrew'   => array( 'S' => '35 do 37,5', 'M' => '39 do 42,5', 'L' => '43 do 46', 'XL' => '46,5 do 49,5' ),
             'shapeshorts'  => array( 'XS-S' => '64 do 76 cm', 'M-L' => '77 do 90 cm', 'XL-2XL' => '91 do 112 cm', '3XL' => '112 do 127 cm', '4XL' => '128 do 140 cm' ),
             'utilitypants' => array( 'S' => '78 do 82 cm', 'M' => '82 do 86 cm', 'L' => '86 do 91 cm', 'XL' => '91 do 96 cm', '2XL' => '96 do 102 cm', '3XL' => '102 do 107 cm' ),
@@ -1785,6 +1798,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka', 'Opseg bokova' ), 'vrstice' => noriks_sculptleg_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite manju.' );
+        }
+        if ( noriks_is_type( 'tradesman', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>.',
+                'glava' => array( 'Veličina', 'Broj cipele (EU) – muški', 'Broj cipele (EU) – ženski' ), 'vrstice' => noriks_tradesman_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'alpakacrew', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>.',
