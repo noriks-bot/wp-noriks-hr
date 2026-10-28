@@ -365,7 +365,9 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
 /* Krmilo pod vrstico, ki se drsa vstran (samo telefon): puscici + tanek drsnik. */
 .nk-sc{display:none}
 @media (max-width:767px){
-  .nk-sc{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px auto 0}
+  /* width:100% - v .fis-exp-grid je krmilo mrezni element in se skrci na vsebino */
+  .nk-sc{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px auto 0;
+    width:100%;box-sizing:border-box}
   .nk-sc-btn{flex:none;width:30px;height:30px;padding:0;border-radius:50%;cursor:pointer;
     border:1px solid rgba(0,0,0,.08);background:#fff;display:grid;place-items:center;
     box-shadow:0 1px 5px rgba(0,0,0,.06);transition:opacity .2s,transform .12s;
@@ -373,7 +375,7 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
   .nk-sc-btn:active{transform:scale(.92)}
   .nk-sc-btn[disabled]{opacity:.22;box-shadow:none}
   .nk-sc-btn svg{width:13px;height:13px;display:block;stroke:#1c1c1c}
-  .nk-sc-bar{position:relative;flex:0 1 72px;height:3px;border-radius:999px;background:rgba(0,0,0,.14)}
+  .nk-sc-bar{position:relative;flex:0 0 72px;height:3px;border-radius:999px;background:rgba(0,0,0,.14)}
   .nk-sc-bar i{position:absolute;top:0;bottom:0;left:0;border-radius:999px;background:#1c1c1c;
     transition:left .22s ease,width .22s ease}
   .fis-ugc .nk-sc-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);box-shadow:none}
