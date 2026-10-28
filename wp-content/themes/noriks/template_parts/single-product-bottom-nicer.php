@@ -826,4 +826,8 @@ if ( noriks_is_type( 'neckgrip' ) ) {
     include $noriks_pb_dir . 'why-neckgrip.php';
 }
 
+if ( noriks_is_type( 'beltfit' ) ) {
+    include $noriks_pb_dir . 'why-beltfit.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
