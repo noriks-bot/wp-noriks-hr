@@ -75,7 +75,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <ul><li>Zadržavaju zrak</li><li>Zadržavaju vlagu</li><li>Nisu hermetički zatvorene</li></ul>
       </div>
       <div class="nsl-negcard">
-        <?php echo $sl_img( 'seal-alt-3-stolni.jpg', 'Stolni aparat za vakuumiranje' ); ?>
+        <?php echo $sl_img( 'seal-alt-3-stolni-v2.jpg', 'Stolni aparat za vakuumiranje' ); ?>
         <h3>Stolni aparati za vakuumiranje</h3>
         <ul><li>Teški i glomazni</li><li>Vrećicu treba rezati</li><li>Kompliciran rad</li></ul>
       </div>
@@ -90,7 +90,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
     <p class="nsl-tagline">Tri stvari koje kupci najčešće spominju nakon prvog tjedna korištenja.</p>
 
     <div class="nsl-row">
-      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-1.mp4', 'seal-vid-1.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
+      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-1-v2.mp4', 'seal-vid-1-v2.jpg', 'Vakuumiranje avokada u nekoliko sekundi' ); ?></div>
       <div class="nsl-copy">
         <span class="nsl-spark">✦</span>
         <h3 class="nsl-h3">Čuva hranu svježom</h3>
@@ -108,7 +108,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
         <div class="nsl-dot"></div>
         <div class="nsl-stat"><span>91 %</span><p>korisnika prijavilo je primjetnu uštedu na namirnicama zbog manje bačene hrane.</p></div>
       </div>
-      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-2.mp4', 'seal-vid-2.jpg', 'Avokado ostaje svjež u vakuumskoj vrećici' ); ?></div>
+      <div class="nsl-media nsl-sq"><?php echo $sl_vid( 'seal-vid-2-v2.mp4', 'seal-vid-2-v2.jpg', 'Avokado ostaje svjež u vakuumskoj vrećici' ); ?></div>
     </div>
 
     <div class="nsl-row">
