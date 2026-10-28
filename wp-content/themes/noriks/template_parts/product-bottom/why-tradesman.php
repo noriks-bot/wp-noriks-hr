@@ -62,6 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 @media (max-width:860px){.wstradesman__s{padding:38px 0}.wstradesman__dva{grid-template-columns:1fr;gap:22px}.wstradesman__dva--rev>div:first-child{order:0}
 .wstradesman__sred{grid-template-columns:1fr;gap:22px}.wstradesman__sm{max-width:300px;margin:0 auto;order:-1}.wstradesman__g3,.wstradesman__g4,.wstradesman__g5{grid-template-columns:1fr 1fr}.wstradesman__red4{grid-template-columns:1fr 1fr}.wstradesman__plavo{margin-top:-38px}}
 @media (max-width:560px){.wstradesman__g2,.wstradesman__g3,.wstradesman__g4{grid-template-columns:1fr}}
+@media (max-width:560px){.wstradesman__tab{font-size:13px}.wstradesman__tab th,.wstradesman__tab td{padding:10px 6px}.wstradesman__tab th:first-child,.wstradesman__tab td:first-child{padding-left:10px}}
 /* dizajn.py */
 .wstradesman__s{padding:72px 0}.wstradesman__s.wstradesman__s--bg{background:#f6e3e0}.wstradesman__s.wstradesman__traka{padding:40px 0}.wstradesman__s.wstradesman__traka:not(.wstradesman__s--bg){background:#fff}
 .wstradesman__kicker{color:#bd4b3b;letter-spacing:1.8px;font-size:12.5px}.wstradesman__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#c9503f;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
