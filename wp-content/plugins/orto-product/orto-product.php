@@ -932,6 +932,8 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
+    } elseif ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) {
+        $gck_offer_badges = array( 1 => 'NAJBOLJA PONUDA' );
     } else {
         $gck_offer_badges = array();
     }
@@ -5203,9 +5205,8 @@ function gck_render_bundle_selector() {
           position: absolute !important; top: 0 !important; right: 18px !important; left: auto !important; transform: translateY(-50%) !important;
           background: #8fd0f5 !important; color: #fff !important; font-size: 11px !important; font-weight: 800 !important; letter-spacing: .5px !important;
           height: 22px !important; line-height: 22px !important; padding: 0 14px !important; border-radius: 4px !important; text-transform: uppercase; z-index: 3;
-          font-size: 0 !important;
       }
-      #bundle-selector .gck-popular-badge::after { content: "Najbolja ponuda"; font-size: 11px; }
+      #bundle-selector .gck-popular-badge:not(.gck-popular-badge--offer) { display: none !important; }
       #bundle-selector .bundle-option .bundle-option-content { margin: 0 !important; padding: 0 !important; }
       @media (max-width: 560px) {
           #bundle-selector .bundle-option { grid-template-columns: auto 48px minmax(0,1fr) auto; column-gap: 10px; padding: 12px !important; }
