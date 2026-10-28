@@ -4,7 +4,7 @@
  *
  * STRUKTURA ORIGINALA:
    1. naslov HAPPY FEET FROM ALL OVER AUSTRALIA + karusel 10 fotografij kupcev s klompami - pri nas karusel 8 fotografij z originala (2 fotografiji z vrecko s tujo znamko izpusceni)
-   2. besedilo levo, slika desno: Say goodbye to rigid footwear + primerjava tenisica / klompa (napisi lokalizirani, 'priporocilo ortopeda' zamenjano z 'za cijeli dan na nogama'); zdravstvene trditve (zivci, kolena, kukovi) izpuscene
+   2. besedilo levo, slika desno: Say goodbye to rigid footwear + infografika tenisica proti klompi (slika z napisi; napisi lokalizirani, 'priporocilo ortopeda' zamenjano z 'za cijeli dan na nogama'); zdravstvene trditve (zivci, kolena, kukovi) izpuscene
    3. slika levo (obicne cipele vs klompe, stopala), besedilo desno: Experience the freedom of natural movement
    4. besedilo levo, slika desno (moski s klompami v ambulanti): Recommended by orthopedists - pri nas brez trditve o priporocilu strokovnjakov: za vsakodnevno nosenje, delo in zunaj
    5. slika levo (4 detajli: lako obuvanje, sirok prednji dio, potpora pete, protiv klizanja), besedilo desno s 5 kljukicami (All day comfort) - zdravstvene trditve (artritis, nevropatija, plantarni fasciitis, cirkulacija) izpuscene
