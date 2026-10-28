@@ -168,7 +168,7 @@ endif;
  *
  * Varianta "bokserice-ispod-kupacih" (morske) obdrzi svoje stare sekcije.
  */
-$bx_ver = '?v=20261028b';
+$bx_ver = '?v=20261028c';
 $bx_img = get_template_directory_uri() . '/img/boksarice/';
 $bx_vid = get_template_directory_uri() . '/img/boksarice-videos/';
 $bx_ico = get_template_directory_uri() . '/img/boksarice-icons/';
