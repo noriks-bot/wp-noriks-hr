@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-$mj_ver  = '?v=20261028';
+$mj_ver  = '?v=20261028b';
 $mj_img  = get_template_directory_uri() . '/img/majica/';
 $mj_vid  = get_template_directory_uri() . '/img/majica-videos/';
 $mj_ico  = get_template_directory_uri() . '/img/majica-icons/';
@@ -130,53 +130,25 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
   </div>
 </section>
 
-<?php
-/* Vsebina tabele pride iz istih ACF polj kot stara primerjalna tabela
-   (_comp_table_*, Moznosti), da je urejljiva in prevedena po trgih.
-   Ce je polje prazno, se uporabi besedilo iz dizajna. */
-$mj_cmp = function ( $key, $fallback ) {
-    $v = function_exists( 'get_field' ) ? get_field( $key, 'options' ) : '';
-    $v = is_string( $v ) ? trim( wp_strip_all_tags( $v ) ) : '';
-    return $v !== '' ? $v : $fallback;
-};
-$mj_rows = function_exists( 'get_field' ) ? get_field( '_comp_table_fieldlines', 'options' ) : array();
-if ( ! is_array( $mj_rows ) || ! $mj_rows ) {
-    $mj_rows = array_map( function ( $t ) { return array( 'text' => $t ); }, array(
-        'Kroj koji naglašava prsa i ruke',
-        'Dosljedne veličine od S do 4XL',
-        'Duži kroj, trbuh ostaje pokriven',
-        'Mekana, lagana i prozračna tkanina',
-        'Zadržava oblik i boju nakon pranja',
-        'Bez etikete koja grebe za vratom',
-        '30 dana za besplatnu zamjenu veličine',
-    ) );
-}
-?>
+<!-- Vrstice so prevzete iz stare primerjalne tabele (ACF _comp_table_fieldlines,
+     prebrano enkrat 28. 10. 2026 in trdo zapisano). Glava, naslov in opomba
+     ostanejo iz dizajna. -->
 <section class="nk-cmp">
   <div class="fis-wrap">
-    <h2 class="fis-h2 fis-center"><?php echo esc_html( $mj_cmp( '_comp_table_t2', 'NORIKS protiv ostalih marki' ) ); ?></h2>
-    <p class="nk-cmp-sub"><?php echo esc_html( $mj_cmp( '_comp_table_t3', 'Nisu sve majice jednake. Evo zašto se naše isplate.' ) ); ?></p>
+    <h2 class="fis-h2 fis-center">NORIKS protiv ostalih marki</h2>
+    <p class="nk-cmp-sub">Nisu sve majice jednake. Evo zašto se naše isplate.</p>
     <div class="nk-cmp-card">
-      <div class="nk-cmp-row nk-cmp-head">
-        <div></div>
-        <div>
-          <div class="nk-cmp-brand"><?php echo esc_html( $mj_cmp( '_comp_table_inside_1', 'NORIKS' ) ); ?></div>
-          <div class="nk-cmp-price"><?php echo esc_html( $mj_cmp( '_comp_table_inside_3', '11,67–17,49 €' ) ); ?></div>
-          <div class="nk-cmp-note">po komadu, ovisno o paketu</div>
-        </div>
-        <div>
-          <div class="nk-cmp-brand"><?php echo esc_html( $mj_cmp( '_comp_table_inside_2', 'Ostale marke' ) ); ?></div>
-          <div class="nk-cmp-price"><?php echo esc_html( $mj_cmp( '_comp_table_inside_4', '29–39 €' ) ); ?></div>
-          <div class="nk-cmp-note">po komadu</div>
-        </div>
-      </div>
-      <?php foreach ( $mj_rows as $mj_row ) :
-        $mj_text = isset( $mj_row['text'] ) ? trim( wp_strip_all_tags( $mj_row['text'] ) ) : '';
-        if ( $mj_text === '' ) { continue; } ?>
-        <div class="nk-cmp-row"><div><?php echo esc_html( $mj_text ); ?></div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <?php endforeach; ?>
+      <div class="nk-cmp-row nk-cmp-head"><div></div><div><div class="nk-cmp-brand">NORIKS</div><div class="nk-cmp-price">11,67–17,49 €</div><div class="nk-cmp-note">po komadu, ovisno o paketu</div></div><div><div class="nk-cmp-brand">Ostale marke</div><div class="nk-cmp-price">29–39 €</div><div class="nk-cmp-note">po komadu</div></div></div>
+      <div class="nk-cmp-row"><div>Laskavi kroj za prsa i ruke</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Dosljedne veličine od S do 3XL</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Dodatna dužina da trbuh ostane pokriven</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Super mekana tkanina – lagana, prozračna i nevjerojatno udobna</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Zadržava oblik, čak i nakon mnogo pranja</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Elegantan, stilski i bezvremenski dizajn</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Bez iritantnih, svrbežnih etiketa na vratu</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row"><div>Jamstvo savršenog pristajanja</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
     </div>
-    <p class="nk-cmp-foot"><?php echo esc_html( $mj_cmp( '_comp_table_bottom_text', 'Najniža cijena 11,67 € po komadu u paketu 3+3 GRATIS.' ) ); ?></p>
+    <p class="nk-cmp-foot">Najniža cijena 11,67 € po komadu u paketu 3+3 GRATIS.</p>
   </div>
 </section>
 
@@ -267,7 +239,11 @@ if ( ! is_array( $mj_rows ) || ! $mj_rows ) {
 .nk-cmp .fis-h2{margin-bottom:8px}
 .nk-cmp-sub{text-align:center;color:#444;font-size:15.5px;margin:0 auto 26px;max-width:620px}
 .nk-cmp-card{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid #e6e6e6;box-shadow:0 2px 14px rgba(0,0,0,.06)}
-.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:center;border-top:1px solid #ececec}
+.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:stretch;border-top:1px solid #ececec}
+/* celice se raztegnejo cez celo visino vrstice (sicer pri dvovrsticnem besedilu
+   obarvan stolpec ne sega do roba), vsebina ostane navpicno na sredini */
+.nk-cmp-row>div{display:flex;flex-direction:column;justify-content:center}
+.nk-cmp-row>div:nth-child(2),.nk-cmp-row>div:nth-child(3){align-items:center}
 .nk-cmp-row:first-child{border-top:0}
 .nk-cmp-row>div{padding:14px 18px;font-size:15px;color:#1c1c1c}
 .nk-cmp-row>div:nth-child(2){background:#f39c1217;text-align:center}

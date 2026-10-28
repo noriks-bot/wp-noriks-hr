@@ -168,7 +168,7 @@ endif;
  *
  * Varianta "bokserice-ispod-kupacih" (morske) obdrzi svoje stare sekcije.
  */
-$bx_ver = '?v=20261028';
+$bx_ver = '?v=20261028b';
 $bx_img = get_template_directory_uri() . '/img/boksarice/';
 $bx_vid = get_template_directory_uri() . '/img/boksarice-videos/';
 $bx_ico = get_template_directory_uri() . '/img/boksarice-icons/';
@@ -240,7 +240,11 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-cmp .fis-h2{margin-bottom:8px}
 .nk-cmp-sub{text-align:center;color:#444;font-size:15.5px;margin:0 auto 26px;max-width:620px}
 .nk-cmp-card{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid #e6e6e6;box-shadow:0 2px 14px rgba(0,0,0,.06)}
-.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:center;border-top:1px solid #ececec}
+.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:stretch;border-top:1px solid #ececec}
+/* celice se raztegnejo cez celo visino vrstice (sicer pri dvovrsticnem besedilu
+   obarvan stolpec ne sega do roba), vsebina ostane navpicno na sredini */
+.nk-cmp-row>div{display:flex;flex-direction:column;justify-content:center}
+.nk-cmp-row>div:nth-child(2),.nk-cmp-row>div:nth-child(3){align-items:center}
 .nk-cmp-row:first-child{border-top:0}
 .nk-cmp-row>div{padding:14px 18px;font-size:15px;color:#1c1c1c}
 .nk-cmp-row>div:nth-child(2){background:#f39c1217;text-align:center}
@@ -358,7 +362,11 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-cmp .fis-h2{margin-bottom:8px}
 .nk-cmp-sub{text-align:center;color:#444;font-size:15.5px;margin:0 auto 26px;max-width:620px}
 .nk-cmp-card{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid #e6e6e6;box-shadow:0 2px 14px rgba(0,0,0,.06)}
-.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:center;border-top:1px solid #ececec}
+.nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:stretch;border-top:1px solid #ececec}
+/* celice se raztegnejo cez celo visino vrstice (sicer pri dvovrsticnem besedilu
+   obarvan stolpec ne sega do roba), vsebina ostane navpicno na sredini */
+.nk-cmp-row>div{display:flex;flex-direction:column;justify-content:center}
+.nk-cmp-row>div:nth-child(2),.nk-cmp-row>div:nth-child(3){align-items:center}
 .nk-cmp-row:first-child{border-top:0}
 .nk-cmp-row>div{padding:14px 18px;font-size:15px;color:#1c1c1c}
 .nk-cmp-row>div:nth-child(2){background:#f39c1217;text-align:center}
