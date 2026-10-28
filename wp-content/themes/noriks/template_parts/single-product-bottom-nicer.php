@@ -147,6 +147,10 @@ if ( noriks_is_type( 'shapeshorts' ) ) {
     include $noriks_pb_dir . 'why-shapeshorts.php';
 }
 
+if ( noriks_is_type( 'diskret' ) ) {
+    include $noriks_pb_dir . 'why-diskret.php';
+}
+
 if ( noriks_is_type( 'alpakacrew' ) ) {
     include $noriks_pb_dir . 'why-alpakacrew.php';
 }
