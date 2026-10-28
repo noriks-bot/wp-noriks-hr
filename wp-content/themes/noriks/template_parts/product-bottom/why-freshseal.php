@@ -14,7 +14,7 @@
    7. brez vakuuma / vakuumirano - dva stolpca, 3-dnevni test
    8. primerjalna tabela FreshSeal / stolni aparati
    9. mnenja kupcev
- * BARVA ORIGINALA: #c4192a (rdeca barva originala - rdec krog za aparatom, stolpec primerjalne tabele, gumbi)
+ * BARVA ORIGINALA: #c3192a (rdeca barva originala - rdec krog za aparatom, stolpec primerjalne tabele, gumbi)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
@@ -64,7 +64,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </div></div>
 
 <!-- 1) Druge metode pohrane -->
-<section class="nsl-sec nsl-white">
+<section class="nsl-sec nsl-grey nsl-sec--bg">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Druge metode pohrane</h2>
     <p class="nsl-tagline">Zašto hrana u običnoj vrećici ili posudi ne izdrži dugo — u sve tri metode ostaje zrak.</p>
@@ -89,7 +89,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 2) Zasto ljudi vole NORIKS FreshSeal -->
-<section class="nsl-sec nsl-grey">
+<section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Zašto ljudi <em>vole</em> NORIKS FreshSeal</h2>
     <p class="nsl-tagline">Tri stvari koje kupci najčešće spominju nakon prvog tjedna korištenja.</p>
@@ -130,7 +130,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 3) Sest znacajki oko proizvoda -->
-<section class="nsl-sec nsl-white">
+<section class="nsl-sec nsl-grey nsl-sec--bg">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Zatvorite brže. Spremite pametnije. Bacajte manje.</h2>
     <p class="nsl-tagline">Sve što uređaj radi umjesto vas — bez kabela, bez postavki i bez čekanja.</p>
@@ -151,7 +151,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 4) Cetiri koraka -->
-<section class="nsl-sec nsl-grey">
+<section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Radi u 4 jednostavna koraka</h2>
     <p class="nsl-tagline">Od pune vrećice do vakuumirane hrane u manje od pet sekundi.</p>
@@ -181,7 +181,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 5) Inovativne vakuumske vrecice -->
-<section class="nsl-sec nsl-white">
+<section class="nsl-sec nsl-grey nsl-sec--bg">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Inovativne vakuumske vrećice</h2>
     <p class="nsl-tagline">Vrećice koje se peru i koriste iznova — sigurne za zamrzivač, mikrovalnu i perilicu posuđa.</p>
@@ -201,7 +201,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 6) Bez vakuuma vs. vakuumirano — drsnik -->
-<section class="nsl-sec nsl-rose nsl-sec-tight">
+<section class="nsl-sec nsl-rose nsl-sec-tight nsl-sec--bg2">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Bez vakuuma vs. vakuumirano</h2>
     <p class="nsl-sub nsl-center">*Prema trodnevnom testu čuvanja u stvarnim uvjetima</p>
@@ -217,7 +217,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 7) Vakuumiranje. Iznova osmisljeno. — usporedna tablica -->
-<section class="nsl-sec nsl-grey">
+<section class="nsl-sec nsl-white">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Vakuumiranje. Iznova osmišljeno.</h2>
     <p class="nsl-tagline">Isti posao kao kod velikih stolnih aparata, bez njihovih mana.</p>
@@ -241,7 +241,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 </section>
 
 <!-- 8) Sto kazu nasi kupci -->
-<section class="nsl-sec nsl-white">
+<section class="nsl-sec nsl-grey nsl-sec--bg">
   <div class="nsl-wrap">
     <h2 class="nsl-h2 nsl-center">Što kažu naši kupci</h2>
     <p class="nsl-tagline">Poruke kupaca koji FreshSeal koriste u kuhinji svaki dan.</p>
@@ -327,7 +327,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-note { font-size: 13.5px; color: #6b6b6b; margin: 16px 0 0; }
 .nsl-note-gap { margin-top: 64px; }
 .nsl-marquee-end { margin-top: -14px; }
-.nsl-tagline { max-width: 720px; margin: -22px auto 34px; text-align: center; font-size: 16px; line-height: 1.55; color: #5f5f5f; }
+.nsl-tagline { max-width: none; margin: -22px auto 34px; text-align: center; font-size: 16px; line-height: 1.55; color: #5f5f5f; }
 
 /* traka */
 .nsl-marquee { background: #ffeff2; overflow: hidden; padding: 13px 0; }
@@ -362,7 +362,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-radial { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 34px; align-items: center; }
 .nsl-rc img { width: 100%; height: auto; display: block; }
 .nsl-radial-lg { margin-top: 12px; grid-template-columns: 1fr 1.65fr 1fr; gap: 14px; align-items: stretch; }
-.nsl-radial-lg .nsl-rc { max-width: 700px; margin: 0 auto; }
+.nsl-radial-lg .nsl-rc { max-width: 58%; margin: 0 auto; }
 /* napisi tocno na visini crtkanih crt v grafiki (18,4 % in 60,4 % visine slike) */
 .nsl-radial-lg .nsl-rl, .nsl-radial-lg .nsl-rr { display: block; position: relative; }
 .nsl-radial-lg .nsl-rlab { position: absolute; width: 100%; transform: translateY(-50%); }
@@ -404,7 +404,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-step img, .nsl-step .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; display: block; }
 
 /* 6) usporedba */
-.nsl-vs2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 900px; margin: 0 auto; }
+.nsl-vs2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 74%; margin: 0 auto; }
 .nsl-vs2 figure { margin: 0; }
 .nsl-vs2 img, .nsl-vs2 .nsl-video { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; display: block; }
 .nsl-vs2 figcaption { text-align: center; padding-top: 12px; }
@@ -414,11 +414,11 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 
 /* 6) drsnik prej/potem */
 .nsl-sub { font-size: 15.5px; color: #6b6b6b; margin: -32px 0 26px; }
-.nsl-ba { position: relative; max-width: 640px; margin: 0 auto; border-radius: 14px; overflow: hidden;
+.nsl-ba { position: relative; container-type: inline-size; max-width: 52%; margin: 0 auto; border-radius: 14px; overflow: hidden;
   background: #e7e7ed; user-select: none; touch-action: pan-y; }
 .nsl-ba img { width: 100%; height: auto; display: block; }
 .nsl-ba-over { position: absolute; inset: 0; width: 50%; overflow: hidden; }
-.nsl-ba-over img { width: 640px; max-width: none; height: 100%; object-fit: cover; object-position: left center; }
+.nsl-ba-over img { width: 100cqw; max-width: none; height: 100%; object-fit: cover; object-position: left center; }
 .nsl-ba-lab { position: absolute; top: 14px; padding: 7px 14px; border-radius: 7px; font-size: 14.5px; font-weight: 800; color: #fff; z-index: 3; }
 .nsl-ba-l { left: 14px; background: #3a3a3a; }
 .nsl-ba-r { right: 14px; background: #c3192a; }
@@ -432,7 +432,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 4; margin: 0; }
 
 /* 7) usporedna tablica */
-.nsl-cmp { position: relative; max-width: 860px; margin: 0 auto; }
+.nsl-cmp { position: relative; max-width: 70%; margin: 0 auto; }
 .nsl-cmp { margin-bottom: 26px; }
 /* bela podlaga tablice na sivoj sekciji */
 .nsl-cmp:before { content: ""; position: absolute; top: -16px; bottom: -18px; left: -22px; right: -22px;
@@ -474,6 +474,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   border-radius: 12px; color: #8b8b8b; font-size: 14px; text-align: center; padding: 12px; }
 
 @media (max-width: 900px) {
+  .nsl-ba, .nsl-vs2, .nsl-cmp, .nsl-radial-lg .nsl-rc { max-width: none; }
   .nsl-marquee { margin-top: 26px; padding: 11px 0; }
   .nsl-marquee-end { margin-top: -13px; }
   .nsl-marquee span { font-size: 12.5px; }
