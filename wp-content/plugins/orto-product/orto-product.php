@@ -910,6 +910,9 @@ function gck_render_bundle_selector() {
         $gck_offer_subs = array( 'Set za kupaonicu', 'Paket za cijeli dom', 'Paket za obitelj i prijatelje' );
     } elseif ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Uređaj + 10 vrećica', 'Uređaj + 20 vrećica', 'Uređaj + 30 vrećica' );
+    } elseif ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) {
+        // Flomasteri: kartice kot na originalu (monpetitcurieux.fr) - naslov + podnaslov pod njim.
+        $gck_offer_subs = array( 'Od 24 do 168 boja', '2 kompleta po izboru', '3 kompleta po izboru' );
     } else {
         $gck_offer_subs = array();
     }
@@ -920,6 +923,10 @@ function gck_render_bundle_selector() {
     $gck_offer_imgs = has_term( array( 'orto-seal' ), 'product_cat', $product_id )
         ? array( 'seal-paket-10-v2.jpg', 'seal-paket-20-v2.jpg', 'seal-paket-30-v2.jpg' )
         : array();
+    // Flomasteri: slicica kompleta v vsaki kartici kot na originalu (pot z / = relativno na /img/).
+    if ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) {
+        $gck_offer_imgs = array( 'acryliques/noriks-acryliques-kartica.webp', 'acryliques/noriks-acryliques-kartica.webp', 'acryliques/noriks-acryliques-kartica.webp' );
+    }
     // Kartusi iznad kartice ponude (index => tekst).
     if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
@@ -5162,6 +5169,52 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
+    <?php if ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* NORIKS Flomasteri: kartice ponud kot na originalu (monpetitcurieux.fr) - sličica kompleta, naslov + podnaslov,
+         cena desno s prečrtano pod njo, oznaka "Paket" nad izbirnikom, modri rob, značka na 2. kartici. */
+      #bundle-selector .bundle-option {
+          display: grid !important; grid-template-columns: auto 56px minmax(0,1fr) auto; grid-template-rows: auto auto auto;
+          column-gap: 12px; row-gap: 0; align-items: center; padding: 14px 16px !important;
+          border: 1.5px solid #cfe2f1 !important; background: #f7fbfe !important; border-radius: 10px !important;
+      }
+      #bundle-selector .bundle-option.active { border-color: #2f8fd0 !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(47,143,208,.10); }
+      #bundle-selector .bundle-option > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; align-self: center !important; accent-color: #2f8fd0; border-color: #2f8fd0 !important; }
+      #bundle-selector .bundle-option input[type="radio"]::before { background: #2f8fd0 !important; }
+      #bundle-selector .bundle-option .gck-offer-img { grid-column: 2; grid-row: 1 / span 2; width: 56px; height: 56px; object-fit: contain; display: block; border-radius: 6px; background: #fff; align-self: center !important; }
+      #bundle-selector .bundle-option .gck-offer-head { grid-column: 3; grid-row: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.2; }
+      #bundle-selector .bundle-option .bundle-option-title { font-size: 16px; font-weight: 800; color: #1d2b4f; }
+      #bundle-selector .bundle-option .gck-offer-sub { grid-column: 3; grid-row: 2; margin: 2px 0 0 !important; font-size: 12.5px; line-height: 1.25; color: #6b7785; }
+      #bundle-selector .bundle-option .bundle-total-line { grid-column: 4; grid-row: 1 / span 2; display: flex !important; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0 !important; text-align: right; }
+      #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 18px; font-weight: 800; color: #1d2b4f; order: 1; }
+      #bundle-selector .bundle-option .bundle-total-line .gck-regular-price { font-size: 13px; color: #c0392b; margin: 0 !important; order: 2; }
+      #bundle-selector .bundle-option .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+      #bundle-selector .bundle-option .gck-per-chip, #bundle-selector .bundle-option .gck-discount-badge { display: none !important; }
+      #bundle-selector .bundle-option > br, #bundle-selector .bundle-option .gck-hl-break { display: none !important; }
+      /* izbirnik paketa pod naslovom, z oznako "Paket" kot na originalu */
+      #bundle-selector .bundle-option .bundle-pairs { grid-column: 1 / -1; grid-row: 3; margin: 12px 0 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+      #bundle-selector .bundle-option .bundle-pairs::before { content: "Paket"; flex-basis: 100%; font-size: 12.5px; color: #4a5563; margin: 0 0 -2px; }
+      #bundle-selector .bundle-option:not(.active) .bundle-pairs { display: none !important; }
+      #bundle-selector .bundle-option .gck-size-select { font-size: 13.5px !important; padding: 6px 28px 6px 10px !important; min-height: 0 !important; height: auto !important; border-radius: 6px !important; border: 1px solid #cfd8e3 !important; background-color: #fff !important; width: auto !important; }
+      #bundle-selector label.bundle-option ~ label.bundle-option { margin-top: 18px !important; }
+      /* samo ena značka: "NAJBOLJA PONUDA" na 2. kartici (svetlo modra kot na originalu) */
+      #bundle-selector .gck-popular-badge-2 { display: none !important; }
+      #bundle-selector .gck-popular-badge {
+          position: absolute !important; top: 0 !important; right: 18px !important; left: auto !important; transform: translateY(-50%) !important;
+          background: #8fd0f5 !important; color: #fff !important; font-size: 11px !important; font-weight: 800 !important; letter-spacing: .5px !important;
+          height: 22px !important; line-height: 22px !important; padding: 0 14px !important; border-radius: 4px !important; text-transform: uppercase; z-index: 3;
+          font-size: 0 !important;
+      }
+      #bundle-selector .gck-popular-badge::after { content: "Najbolja ponuda"; font-size: 11px; }
+      #bundle-selector .bundle-option .bundle-option-content { margin: 0 !important; padding: 0 !important; }
+      @media (max-width: 560px) {
+          #bundle-selector .bundle-option { grid-template-columns: auto 48px minmax(0,1fr) auto; column-gap: 10px; padding: 12px !important; }
+          #bundle-selector .bundle-option .gck-offer-img { width: 48px; height: 48px; }
+          #bundle-selector .bundle-option .bundle-option-title { font-size: 14.5px; }
+          #bundle-selector .bundle-option .bundle-total-line .line-total { font-size: 16px; }
+      }
+    </style>
+    <?php endif; ?>
     <?php if ( has_term( array( 'orto-seal' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* NORIKS ChefSeal: kartica ponude sa slicicom paketa, kao na referenci. */
@@ -6901,7 +6954,7 @@ function gck_render_bundle_selector() {
                     
   
 
-<?php if ( ! empty( $gck_offer_imgs ) && isset( $gck_offer_imgs[ $loop_index ] ) ) : ?><img class="gck-offer-img" src="<?php echo esc_url( get_template_directory_uri() . '/img/seal/' . $gck_offer_imgs[ $loop_index ] ); ?>" alt="" loading="lazy"><?php endif; ?><span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
+<?php if ( ! empty( $gck_offer_imgs ) && isset( $gck_offer_imgs[ $loop_index ] ) ) : ?><img class="gck-offer-img" src="<?php echo esc_url( get_template_directory_uri() . ( false !== strpos( $gck_offer_imgs[ $loop_index ], '/' ) ? '/img/' : '/img/seal/' ) . $gck_offer_imgs[ $loop_index ] ); ?>" alt="" loading="lazy"><?php endif; ?><span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
                   if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?>
                 
                   <?php
