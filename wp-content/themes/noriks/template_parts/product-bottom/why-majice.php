@@ -359,4 +359,45 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
   .fis-science .fis-grid{grid-template-columns:repeat(4,1fr)!important}
   .nk-col{flex-basis:calc((100% - 60px)/7)!important}
 }
+
+/* Namig, da se vrstica drsa vstran (samo telefon): tanek drsnik pod vrstico. */
+.nk-sc-bar{display:none}
+@media (max-width:767px){
+  .nk-sc-bar{display:block;position:relative;height:4px;border-radius:999px;
+    background:rgba(0,0,0,.12);margin:12px auto 0;max-width:120px}
+  .nk-sc-bar i{position:absolute;top:0;bottom:0;left:0;width:40%;border-radius:999px;background:#1c1c1c}
+  .fis-ugc .nk-sc-bar{background:rgba(255,255,255,.25)}
+  .fis-ugc .nk-sc-bar i{background:#fff}
+}
 </style>
+<script>
+(function(){
+  if (window.nkScBarReady) return;
+  window.nkScBarReady = true;
+  function init(){
+    var rows = document.querySelectorAll('.fis-exp-cards, .fis-ugc-grid, .fis-thermo-grid');
+    Array.prototype.forEach.call(rows, function(row){
+      if (row.nextElementSibling && row.nextElementSibling.classList.contains('nk-sc-bar')) return;
+      var bar = document.createElement('div');
+      bar.className = 'nk-sc-bar';
+      bar.innerHTML = '<i></i>';
+      row.parentNode.insertBefore(bar, row.nextSibling);
+      var thumb = bar.firstChild;
+      function update(){
+        var vis = row.clientWidth, all = row.scrollWidth;
+        if (all <= vis + 4) { bar.style.display = 'none'; return; }
+        bar.style.display = '';
+        var w = Math.max(18, vis / all * 100);
+        thumb.style.width = w + '%';
+        thumb.style.left = (row.scrollLeft / (all - vis)) * (100 - w) + '%';
+      }
+      row.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
