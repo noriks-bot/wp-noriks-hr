@@ -70,6 +70,7 @@ function noriks_product_type_map() : array {
         'webshot' => array( 'orto-webshot' ),
         'gelcushion' => array( 'orto-gelcushion' ),
         'noiron' => array( 'orto-noiron' ),
+        'sunstep' => array( 'orto-sunstep' ),
         'widebeam' => array( 'orto-widebeam' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
@@ -628,6 +629,19 @@ if ( ! function_exists( 'noriks_zipcomp_sizes' ) ) {
             array( 'S/M',  '36 – 40', '23 – 36 cm', '1,50 – 1,70 m' ),
             array( 'L/XL', '40 – 44', '36 – 45 cm', '1,70 – 1,95 m' ),
             array( 'XXL',  '44 – 48', '45 – 56 cm', '1,85 – 2,05 m' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_sunstep_sizes' ) ) {
+    /** NORIKS SunStep: velicina (crka + EU razpon), dob, duljina cipelice v cm - 1:1 z originala (tinyexplorings, Size Chart: 11,5 / 12,5 / 13,5 / 14,8 cm),
+     *  EU stevilka preracunana iz duljine cipelice (samo EU, Dejan 26.10.2026). */
+    function noriks_sunstep_sizes() {
+        return array(
+            array( 'XS - 18 do 19', '6–12 mjeseci', '11,5 cm' ),
+            array( 'S - 20 do 21', '12–18 mjeseci', '12,5 cm' ),
+            array( 'M - 22 do 23', '18–24 mjeseca', '13,5 cm' ),
+            array( 'L - 24 do 25', '2–4 godine', '14,8 cm' ),
         );
     }
 }
@@ -1723,6 +1737,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Izmjerite <strong>opseg lista na najširem dijelu</strong> – to određuje veličinu, a ne broj cipele.',
                 'glava' => array( 'Veličina', 'Broj cipele', 'Opseg lista', 'Visina' ), 'vrstice' => noriks_zipcomp_sizes(),
                 'opomba' => 'Između dvije veličine? Uvijek uzmite veću.' );
+        }
+        if ( noriks_is_type( 'sunstep', $product_id ) ) {
+            return array( 'uvod' => 'Izmjerite <strong>duljinu stopala</strong> i usporedite je s duljinom cipelice. Veličina L odgovara djeci od 2 do 5 godina.',
+                'glava' => array( 'Veličina (EU)', 'Dob', 'Duljina cipelice' ), 'vrstice' => noriks_sunstep_sizes(),
+                'opomba' => 'Ako je dijete između dvije veličine, uzmite veću – cipelica je elastična.' );
         }
         if ( noriks_is_type( 'noiron', $product_id ) ) {
             return array( 'uvod' => 'Broj veličine je <strong>opseg ovratnika u cm</strong> (39–48), u zagradi je slovna oznaka. Košulja je <strong>slim kroja</strong> – naručite veličinu koju inače nosite.',

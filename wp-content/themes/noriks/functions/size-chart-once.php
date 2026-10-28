@@ -289,7 +289,7 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             return;
         }
         // NORIKS Classics (velicine 1:1 z originala) in NORIKS SoftBack (EU + kosarica 1:1 z originala) - skupni modal.
-        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'classics' ) || noriks_is_type( 'ondersteun' ) || noriks_is_type( 'mamafit' ) || noriks_is_type( 'noiron' ) || noriks_is_type( 'zipcomp' ) || noriks_is_type( 'draps' ) || noriks_is_type( 'sculptleg' ) || noriks_is_type( 'gordura' ) ) ) {
+        if ( function_exists( 'noriks_is_type' ) && ( noriks_is_type( 'classics' ) || noriks_is_type( 'ondersteun' ) || noriks_is_type( 'mamafit' ) || noriks_is_type( 'noiron' ) || noriks_is_type( 'sunstep' ) || noriks_is_type( 'zipcomp' ) || noriks_is_type( 'draps' ) || noriks_is_type( 'sculptleg' ) || noriks_is_type( 'gordura' ) ) ) {
             get_template_part( 'template_parts/size-chart-tabela' );
             return;
         }
