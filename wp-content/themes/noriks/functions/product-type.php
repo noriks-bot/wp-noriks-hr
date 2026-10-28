@@ -718,12 +718,12 @@ if ( ! function_exists( 'noriks_shiftclog_sizes' ) ) {
     /** NORIKS ShiftClog: velicina po broju cipele (original thesnuggisandals.com, US Women 6-14.5 / Men 4.5-13 -> EU). */
     function noriks_shiftclog_sizes() {
         return array(
-            array( 'XS',  '36 – 37' ),
-            array( 'S',   '38 – 39' ),
-            array( 'M',   '40 – 41' ),
-            array( 'L',   '42 – 43' ),
-            array( 'XL',  '44 – 45' ),
-            array( '2XL', '46 – 47' ),
+            array( 'XS',  '36 do 37' ),
+            array( 'S',   '38 do 39' ),
+            array( 'M',   '40 do 41' ),
+            array( 'L',   '42 do 43' ),
+            array( 'XL',  '44 do 45' ),
+            array( '2XL', '46 do 47' ),
         );
     }
 }
@@ -732,9 +732,9 @@ if ( ! function_exists( 'noriks_tradesman_sizes' ) ) {
     /** NORIKS Tradesman: velicina po broju cipele (original masonclothing.com, US Men/Women -> EU). */
     function noriks_tradesman_sizes() {
         return array(
-            array( 'M',  '39 – 42', '37,5 – 40,5' ),
-            array( 'L',  '42,5 – 46', '41 – 44' ),
-            array( 'XL', '46,5 – 49,5', '–' ),
+            array( 'M',  '39 do 42', '37,5 do 40,5' ),
+            array( 'L',  '42,5 do 46', '41 do 44' ),
+            array( 'XL', '46,5 do 49,5', '–' ),
         );
     }
 }
@@ -754,10 +754,10 @@ if ( ! function_exists( 'noriks_alpakacrew_sizes' ) ) {
     /** NORIKS AlpakaCrew: velicina po broju cipele (original hollowsocks.com, US Men/Women -> EU). */
     function noriks_alpakacrew_sizes() {
         return array(
-            array( 'S',  '35 – 37,5' ),
-            array( 'M',  '39 – 42,5' ),
-            array( 'L',  '43 – 46' ),
-            array( 'XL', '46,5 – 49,5' ),
+            array( 'S',  '35 do 37,5' ),
+            array( 'M',  '39 do 42,5' ),
+            array( 'L',  '43 do 46' ),
+            array( 'XL', '46,5 do 49,5' ),
         );
     }
 }
