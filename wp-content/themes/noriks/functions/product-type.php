@@ -73,6 +73,7 @@ function noriks_product_type_map() : array {
         'sunstep' => array( 'orto-sunstep' ),
         'aircircle' => array( 'orto-aircircle' ),
         'widebeam' => array( 'orto-widebeam' ),
+        'wakeband' => array( 'orto-wakeband' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'gelsit' => array( 'orto-gelsit' ),
