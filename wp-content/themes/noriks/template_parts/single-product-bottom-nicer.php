@@ -113,6 +113,9 @@ if ( noriks_is_type( 'gelcushion' ) ) {
 if ( noriks_is_type( 'sunstep' ) ) {
     include $noriks_pb_dir . 'why-sunstep.php';
 }
+if ( noriks_is_type( 'aircircle' ) ) {
+    include $noriks_pb_dir . 'why-aircircle.php';
+}
 if ( noriks_is_type( 'noiron' ) ) {
     include $noriks_pb_dir . 'why-noiron.php';
 }

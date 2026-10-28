@@ -71,6 +71,7 @@ function noriks_product_type_map() : array {
         'gelcushion' => array( 'orto-gelcushion' ),
         'noiron' => array( 'orto-noiron' ),
         'sunstep' => array( 'orto-sunstep' ),
+        'aircircle' => array( 'orto-aircircle' ),
         'widebeam' => array( 'orto-widebeam' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
