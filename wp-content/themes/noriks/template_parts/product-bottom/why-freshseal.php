@@ -59,7 +59,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 <!-- 0) traka s jamstvima -->
 <div class="nsl-marquee"><div class="nsl-marquee-track">
   <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-    <span>30 DANA ZA POVRAT</span><i>✦</i><span>2 GODINE JAMSTVA</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
+    <span>30 DANA ZA POVRAT</span><i>✦</i><span>PLAĆANJE POUZEĆEM</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
   <?php endfor; ?>
 </div></div>
 
@@ -144,7 +144,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
       <div class="nsl-rr">
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_box ); ?><div class="nsl-rtxt"><strong>Kompaktno i lagano</strong></div></div>
         <div class="nsl-rlab"><?php echo $sl_ico( $ico_power ); ?><div class="nsl-rtxt"><strong>Rad jednim gumbom</strong></div></div>
-        <div class="nsl-rlab"><?php echo $sl_ico( $ico_shield ); ?><div class="nsl-rtxt"><strong>Dvije godine jamstva</strong></div></div>
+        <div class="nsl-rlab"><?php echo $sl_ico( $ico_shield ); ?><div class="nsl-rtxt"><strong>30 dana za povrat</strong></div></div>
       </div>
     </div>
   </div>
@@ -276,7 +276,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 
 <div class="nsl-marquee nsl-marquee-end"><div class="nsl-marquee-track">
   <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-    <span>30 DANA ZA POVRAT</span><i>✦</i><span>2 GODINE JAMSTVA</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
+    <span>30 DANA ZA POVRAT</span><i>✦</i><span>PLAĆANJE POUZEĆEM</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
   <?php endfor; ?>
 </div></div>
 
