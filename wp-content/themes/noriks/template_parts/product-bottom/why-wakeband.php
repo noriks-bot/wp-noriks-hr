@@ -88,6 +88,7 @@ div.wswakeband__pog{text-align:center;border:1px solid rgba(19,45,64,.35);border
 @media (max-width:860px){.wswakeband__s{padding:46px 0}.wswakeband__s.wswakeband__traka{padding:30px 0}.wswakeband__plavo{margin-top:-46px}.wswakeband__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wswakeband__v{padding:0 16px}}
 /* /dizajn.py */
+.wswakeband__v>.wswakeband__zak{text-align:center}
 </style>
 <script>
 (function(){document.querySelectorAll('.wswakeband__kar').forEach(function(k){
