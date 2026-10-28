@@ -702,14 +702,14 @@ if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
     /** NORIKS LeakBrief: velicine po originalu (UK 4-20 -> EU 32-48), opseg struka in bokova v cm 1:1 z originalom. */
     function noriks_leakbrief_sizes() {
         return array(
-            array( 'XS',  '32 – 34', '64 – 69', '84 – 89' ),
-            array( 'S',   '34 – 36', '69 – 74', '91 – 97' ),
-            array( 'M',   '36 – 38', '74 – 79', '97 – 102' ),
-            array( 'L',   '38 – 40', '79 – 86', '104 – 109' ),
-            array( 'XL',  '40 – 42', '86 – 91', '109 – 114' ),
-            array( '2XL', '42 – 44', '91 – 97', '114 – 119' ),
-            array( '3XL', '44 – 46', '99 – 102', '122 – 127' ),
-            array( '4XL', '46 – 48', '104 – 109', '127 – 132' ),
+            array( 'XS',  '32 do 34', '64 – 69', '84 – 89' ),
+            array( 'S',   '34 do 36', '69 – 74', '91 – 97' ),
+            array( 'M',   '36 do 38', '74 – 79', '97 – 102' ),
+            array( 'L',   '38 do 40', '79 – 86', '104 – 109' ),
+            array( 'XL',  '40 do 42', '86 – 91', '109 – 114' ),
+            array( '2XL', '42 do 44', '91 – 97', '114 – 119' ),
+            array( '3XL', '44 do 46', '99 – 102', '122 – 127' ),
+            array( '4XL', '46 do 48', '104 – 109', '127 – 132' ),
         );
     }
 }
