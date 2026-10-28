@@ -291,6 +291,8 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
 
   /* 2) hero video: višji, besedilo spodaj */
   .fis-hero{min-height:62vh!important;align-items:flex-end!important;padding-bottom:28px}
+  /* oseba je v desni tretjini kadra; brez tega cover obreze na sredino in se vidi samo kuhinja */
+  .fis-hero-vid{object-position:88% center}
   .fis-hero-overlay{background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0) 60%)!important}
   .fis-hero-title{font-size:clamp(24px,7.4vw,32px)!important}
 
