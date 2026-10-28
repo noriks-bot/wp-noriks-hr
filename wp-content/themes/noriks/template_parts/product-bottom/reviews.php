@@ -1373,7 +1373,7 @@
 
            <?php elseif ( noriks_is_type( 'tusfilter' ) ): ?>
 
-           Tisuće kupaca već se tušira uz NORIKS filter za tuš – zamjenski uložak koji se mijenja svaka 3 mjeseca.
+           Tisuće kupaca već se tušira uz NORIKS PureShower – tuš-glavu s filtrom od 15 slojeva za mekšu kožu i kosu.
 
            <?php elseif ( noriks_is_type( 'leakbrief' ) ): ?>
 
@@ -1841,7 +1841,7 @@
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
   if ( $is_leakbrief_page ) { $rv_fallback_title = 'NORIKS LeakBrief | Bešavne gaćice za propuštanje mokraće'; }
-  if ( $is_tusfilter_page ) { $rv_fallback_title = 'NORIKS filter za tuš | Zamjenski uložak za 3 mjeseca'; }
+  if ( $is_tusfilter_page ) { $rv_fallback_title = 'NORIKS PureShower | Tuš-glava s filtrom od 15 slojeva'; }
   if ( $is_mamabelt_page ) { $rv_fallback_title = 'NORIKS MamaBelt | Pojas za trudnice u autu'; }
   if ( $is_beltfit_page ) { $rv_fallback_title = 'NORIKS BeltFit | Tanki kožni remen bez rupa'; }
   if ( $is_shiftclog_page ) { $rv_fallback_title = 'NORIKS ShiftClog | Radne klompe s mekanim đonom'; }
