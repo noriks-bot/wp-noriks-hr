@@ -197,9 +197,9 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-colors{padding:36px 0;background:#fff}
 .nk-colors .fis-h2{margin-bottom:6px}
 .nk-colors-sub{text-align:center;color:#444;font-size:15px;margin:0 0 22px}
-.nk-col-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;max-width:900px;margin:0 auto}
-.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f4f4f4;border-radius:12px;padding:14px 6px 12px}
-.nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.nk-col-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f4f4f4;border-radius:8px;padding:10px 8px 12px}
+.nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .nk-col svg{width:64px;height:64px}
 .nk-col span{font-size:13px;font-weight:700;color:#1c1c1c}
 .nk-col-note{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:18px;font-size:14px;font-weight:600;color:#1c1c1c}
@@ -243,17 +243,17 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:center;border-top:1px solid #ececec}
 .nk-cmp-row:first-child{border-top:0}
 .nk-cmp-row>div{padding:14px 18px;font-size:15px;color:#1c1c1c}
-.nk-cmp-row>div:nth-child(2){background:#fffbe0;text-align:center}
+.nk-cmp-row>div:nth-child(2){background:#f39c1217;text-align:center}
 .nk-cmp-row>div:nth-child(3){text-align:center;color:#8a8a8a}
 .nk-cmp-head>div{padding:20px 18px}
 .nk-cmp-head>div:nth-child(2){background:#1c1c1c;color:#fff}
 .nk-cmp-head>div:nth-child(3){background:#f4f4f4}
 .nk-cmp-brand{font-weight:800;font-size:15px;letter-spacing:.5px;text-transform:uppercase}
 .nk-cmp-price{font-weight:800;font-size:22px;margin-top:4px;font-variant-numeric:tabular-nums}
-.nk-cmp-head>div:nth-child(2) .nk-cmp-price{color:#F5D900}
+.nk-cmp-head>div:nth-child(2) .nk-cmp-price{color:#f39c12}
 .nk-cmp-note{font-size:12px;opacity:.8;margin-top:2px}
 .nk-yes,.nk-no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-weight:800;font-size:15px}
-.nk-yes{background:#1c1c1c;color:#F5D900}
+.nk-yes{background:#1c1c1c;color:#f39c12}
 .nk-no{background:#ececec;color:#9a9a9a}
 .nk-cmp-foot{text-align:center;font-size:13px;color:#666;margin-top:14px}
 @media (max-width:600px){.nk-cmp-row>div{padding:12px 10px;font-size:13.5px}.nk-cmp-price{font-size:17px}}</style>
@@ -301,7 +301,7 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .fis-exp-quote p{font-size:15.5px;line-height:1.6;color:#333;margin:0 0 14px}
 .fis-exp-author{color:#1c1c1c}
 .fis-exp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.fis-exp-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#222}
+.fis-exp-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:3/4;background:#222}
 .fis-exp-card video,.fis-exp-card img{width:100%;height:100%;object-fit:cover;display:block}
 .fis-exp-cap{position:absolute;left:0;right:0;bottom:0;padding:14px;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.75),rgba(0,0,0,0))}
 .fis-exp-name{font-weight:800;font-size:18px}
@@ -311,23 +311,23 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-colors{padding:36px 0;background:#fff}
 .nk-colors .fis-h2{margin-bottom:6px}
 .nk-colors-sub{text-align:center;color:#444;font-size:15px;margin:0 0 22px}
-.nk-col-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;max-width:1040px;margin:0 auto}
-.nk-col{display:flex;flex-direction:column;align-items:center;gap:8px;background:#f4f4f4;border-radius:12px;padding:8px 8px 12px}
-.nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.nk-col-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.nk-col{display:flex;flex-direction:column;align-items:center;gap:6px;background:#f4f4f4;border-radius:8px;padding:10px 8px 12px}
+.nk-col img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .nk-col span{font-size:13px;font-weight:700;color:#1c1c1c}
 .nk-col-note{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:18px;font-size:14px;font-weight:600;color:#1c1c1c}
 
 /* 5) mnenja kupcev */
 .fis-ugc{background:#223047;padding:40px 0}
 .fis-ugc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.fis-ugc-media{border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#000}
+.fis-ugc-media{border-radius:8px;overflow:hidden;aspect-ratio:3/4;background:#000}
 .fis-ugc-media video,.fis-ugc-media img{width:100%;height:100%;object-fit:cover;display:block}
 .fis-ugc-cap{color:#eee;font-size:14px;line-height:1.5;margin:10px 0 0}
 
 /* 6) 3 stvari */
 .fis-thermo{background:#f0efe9;padding:44px 0}
 .fis-thermo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.fis-thermo-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#111}
+.fis-thermo-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:#111}
 .fis-thermo-card video{width:100%;height:100%;object-fit:cover;display:block}
 .fis-thermo-label{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:800;font-size:18px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
 
@@ -343,15 +343,15 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .fis-cheaper{background:#f4f4f4}
 .fis-row2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .fis-row2-copy p{font-size:15.5px;line-height:1.65;color:#333}
-.fis-row2-media{border-radius:16px;overflow:hidden}
+.fis-row2-media{border-radius:8px;overflow:hidden}
 .fis-row2-media video,.fis-row2-media img{width:100%;height:auto;display:block}
-.fis-cheaper .fis-row2-media{aspect-ratio:1/1}
+.fis-cheaper .fis-row2-media{aspect-ratio:4/3}
 .fis-cheaper .fis-row2-media video,.fis-cheaper .fis-row2-media img{height:100%;object-fit:cover}
 
 /* mediji, ki polnijo okvir */
 .nk-media{position:relative;overflow:hidden;background:#eee}
 .nk-media>video,.nk-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.nk-wide{aspect-ratio:16/10}
+.nk-wide{aspect-ratio:4/3}
 
 /* 10) primerjava */
 .nk-cmp{padding:48px 0;background:#fff}
@@ -361,17 +361,17 @@ $bx_col = get_template_directory_uri() . '/img/boksarice-barve/';
 .nk-cmp-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);align-items:center;border-top:1px solid #ececec}
 .nk-cmp-row:first-child{border-top:0}
 .nk-cmp-row>div{padding:14px 18px;font-size:15px;color:#1c1c1c}
-.nk-cmp-row>div:nth-child(2){background:#fffbe0;text-align:center}
+.nk-cmp-row>div:nth-child(2){background:#f39c1217;text-align:center}
 .nk-cmp-row>div:nth-child(3){text-align:center;color:#8a8a8a}
 .nk-cmp-head>div{padding:20px 18px}
 .nk-cmp-head>div:nth-child(2){background:#1c1c1c;color:#fff}
 .nk-cmp-head>div:nth-child(3){background:#f4f4f4}
 .nk-cmp-brand{font-weight:800;font-size:15px;letter-spacing:.5px;text-transform:uppercase}
 .nk-cmp-price{font-weight:800;font-size:22px;margin-top:4px;font-variant-numeric:tabular-nums}
-.nk-cmp-head>div:nth-child(2) .nk-cmp-price{color:#F5D900}
+.nk-cmp-head>div:nth-child(2) .nk-cmp-price{color:#f39c12}
 .nk-cmp-note{font-size:12px;opacity:.8;margin-top:2px}
 .nk-yes,.nk-no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-weight:800;font-size:15px}
-.nk-yes{background:#1c1c1c;color:#F5D900}
+.nk-yes{background:#1c1c1c;color:#f39c12}
 .nk-no{background:#ececec;color:#9a9a9a}
 .nk-cmp-foot{text-align:center;font-size:13px;color:#666;margin-top:14px}
 
