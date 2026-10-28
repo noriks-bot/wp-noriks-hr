@@ -802,4 +802,8 @@ if ( noriks_is_type( 'tradesman' ) ) {
     include $noriks_pb_dir . 'why-tradesman.php';
 }
 
+if ( noriks_is_type( 'steampro' ) ) {
+    include $noriks_pb_dir . 'why-steampro.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';

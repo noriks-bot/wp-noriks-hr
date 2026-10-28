@@ -40,7 +40,8 @@ function noriks_product_type_map() : array {
         // --- sub-variants / special buckets ---
         'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         // Orthopedic back belt (ortopedski pojas za leđa).
-        'tradesman' => array( 'orto-tradesman' ),
+        'steampro' => array( 'orto-steampro' ),
+    'tradesman' => array( 'orto-tradesman' ),
     'freshseal' => array( 'orto-freshseal' ),
     'flomasteri' => array( 'orto-flomasteri' ),
     'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
