@@ -77,6 +77,7 @@ function noriks_product_type_map() : array {
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'shapeshorts' => array( 'orto-shapeshorts' ),
+        'alpakacrew' => array( 'orto-alpakacrew' ),
         'gelsit' => array( 'orto-gelsit' ),
         'struja' => array( 'orto-struja' ),
         'calm' => array( 'orto-calm' ),
@@ -680,6 +681,18 @@ if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
             array( '3XL', '54 – 56', '113 – 120 cm', '133 – 141 cm' ),
             array( '4XL', '58 – 60', '121 – 129 cm', '142 – 150 cm' ),
             array( '5XL', '62 – 64', '130 – 138 cm', '151 – 159 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_alpakacrew_sizes' ) ) {
+    /** NORIKS AlpakaCrew: velicina po broju cipele (original hollowsocks.com, US Men/Women -> EU). */
+    function noriks_alpakacrew_sizes() {
+        return array(
+            array( 'S',  '35 – 37,5' ),
+            array( 'M',  '39 – 42,5' ),
+            array( 'L',  '43 – 46' ),
+            array( 'XL', '46,5 – 49,5' ),
         );
     }
 }
@@ -1638,6 +1651,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
+            'alpakacrew'   => array( 'S' => '35 do 37,5', 'M' => '39 do 42,5', 'L' => '43 do 46', 'XL' => '46,5 do 49,5' ),
             'shapeshorts'  => array( 'XS-S' => '64 do 76 cm', 'M-L' => '77 do 90 cm', 'XL-2XL' => '91 do 112 cm', '3XL' => '112 do 127 cm', '4XL' => '128 do 140 cm' ),
             'utilitypants' => array( 'S' => '78 do 82 cm', 'M' => '82 do 86 cm', 'L' => '86 do 91 cm', 'XL' => '91 do 96 cm', '2XL' => '96 do 102 cm', '3XL' => '102 do 107 cm' ),
             'bratank'      => array( 'S' => '76 do 80 cm', 'M' => '81 do 85 cm', 'L' => '86 do 91 cm', 'XL' => '92 do 97 cm', '2XL' => '98 do 103 cm', '3XL' => '104 do 109 cm', '4XL' => '110 do 115 cm' ),
@@ -1769,6 +1783,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka', 'Opseg bokova' ), 'vrstice' => noriks_sculptleg_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite manju.' );
+        }
+        if ( noriks_is_type( 'alpakacrew', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>.',
+                'glava' => array( 'Veličina', 'Broj cipele (EU)' ), 'vrstice' => noriks_alpakacrew_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'shapeshorts', $product_id ) ) {
             return array( 'uvod' => 'Izmjerite <strong>opseg struka</strong> (u visini pupka) i odaberite veličinu prema tablici.',

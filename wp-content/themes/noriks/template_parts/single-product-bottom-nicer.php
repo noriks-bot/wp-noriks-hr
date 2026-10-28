@@ -142,6 +142,10 @@ if ( noriks_is_type( 'mamafit' ) ) {
 if ( noriks_is_type( 'shapeshorts' ) ) {
     include $noriks_pb_dir . 'why-shapeshorts.php';
 }
+
+if ( noriks_is_type( 'alpakacrew' ) ) {
+    include $noriks_pb_dir . 'why-alpakacrew.php';
+}
 if ( noriks_is_type( 'gelsit' ) ) {
     include $noriks_pb_dir . 'why-gelsit.php';
 }
