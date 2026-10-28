@@ -151,6 +151,10 @@ if ( noriks_is_type( 'diskret' ) ) {
     include $noriks_pb_dir . 'why-diskret.php';
 }
 
+if ( noriks_is_type( 'leash' ) ) {
+    include $noriks_pb_dir . 'why-leash.php';
+}
+
 if ( noriks_is_type( 'titancrep' ) ) {
     include $noriks_pb_dir . 'why-titancrep.php';
 }

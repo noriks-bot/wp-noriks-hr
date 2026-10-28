@@ -83,6 +83,7 @@ function noriks_product_type_map() : array {
         'mamafit' => array( 'orto-mamafit' ),
         'shapeshorts' => array( 'orto-shapeshorts' ),
         'diskret' => array( 'orto-diskret' ),
+        'leash' => array( 'orto-leash' ),
         'titancrep' => array( 'orto-titancrep' ),
         'alpakacrew' => array( 'orto-alpakacrew' ),
         'gelsit' => array( 'orto-gelsit' ),
