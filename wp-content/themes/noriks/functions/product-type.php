@@ -42,6 +42,7 @@ function noriks_product_type_map() : array {
         // Orthopedic back belt (ortopedski pojas za leđa).
         'neckgrip' => array( 'orto-neckgrip' ),
     'steampro' => array( 'orto-steampro' ),
+    'shiftclog' => array( 'orto-shiftclog' ),
     'tradesman' => array( 'orto-tradesman' ),
     'freshseal' => array( 'orto-freshseal' ),
     'flomasteri' => array( 'orto-flomasteri' ),
@@ -689,6 +690,20 @@ if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
             array( '3XL', '54 – 56', '113 – 120 cm', '133 – 141 cm' ),
             array( '4XL', '58 – 60', '121 – 129 cm', '142 – 150 cm' ),
             array( '5XL', '62 – 64', '130 – 138 cm', '151 – 159 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_shiftclog_sizes' ) ) {
+    /** NORIKS ShiftClog: velicina po broju cipele (original thesnuggisandals.com, US Women 6-14.5 / Men 4.5-13 -> EU). */
+    function noriks_shiftclog_sizes() {
+        return array(
+            array( 'XS',  '36 – 37' ),
+            array( 'S',   '38 – 39' ),
+            array( 'M',   '40 – 41' ),
+            array( 'L',   '42 – 43' ),
+            array( 'XL',  '44 – 45' ),
+            array( '2XL', '46 – 47' ),
         );
     }
 }
@@ -1681,6 +1696,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
+            'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
             'tradesman'    => array( 'M' => '39 do 42', 'L' => '42,5 do 46', 'XL' => '46,5 do 49,5' ),
             'diskret'      => array( 'S' => 'košarice AA do B', 'M' => 'košarice B do F', 'L' => 'košarice F do G' ),
             'alpakacrew'   => array( 'S' => '35 do 37,5', 'M' => '39 do 42,5', 'L' => '43 do 46', 'XL' => '46,5 do 49,5' ),
@@ -1815,6 +1831,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka', 'Opseg bokova' ), 'vrstice' => noriks_sculptleg_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite manju.' );
+        }
+        if ( noriks_is_type( 'shiftclog', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>. Klompe su unisex.',
+                'glava' => array( 'Veličina', 'Broj cipele (EU)' ), 'vrstice' => noriks_shiftclog_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'tradesman', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>.',
