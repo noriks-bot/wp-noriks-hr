@@ -76,6 +76,7 @@ function noriks_product_type_map() : array {
         'wakeband' => array( 'orto-wakeband' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
+        'shapeshorts' => array( 'orto-shapeshorts' ),
         'gelsit' => array( 'orto-gelsit' ),
         'struja' => array( 'orto-struja' ),
         'calm' => array( 'orto-calm' ),
@@ -679,6 +680,19 @@ if ( ! function_exists( 'noriks_sculptleg_sizes' ) ) {
             array( '3XL', '54 – 56', '113 – 120 cm', '133 – 141 cm' ),
             array( '4XL', '58 – 60', '121 – 129 cm', '142 – 150 cm' ),
             array( '5XL', '62 – 64', '130 – 138 cm', '151 – 159 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_shapeshorts_sizes' ) ) {
+    /** NORIKS ShapeShorts: velicina po opsegu struka (original shapermen.in: 25-30 / 30.5-35.5 / 36-44 / 44-50 / 50.5-55 in -> cm). */
+    function noriks_shapeshorts_sizes() {
+        return array(
+            array( 'XS-S',   '64 – 76 cm' ),
+            array( 'M-L',    '77 – 90 cm' ),
+            array( 'XL-2XL', '91 – 112 cm' ),
+            array( '3XL',    '112 – 127 cm' ),
+            array( '4XL',    '128 – 140 cm' ),
         );
     }
 }
@@ -1624,6 +1638,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
+            'shapeshorts'  => array( 'XS-S' => '64 do 76 cm', 'M-L' => '77 do 90 cm', 'XL-2XL' => '91 do 112 cm', '3XL' => '112 do 127 cm', '4XL' => '128 do 140 cm' ),
             'utilitypants' => array( 'S' => '78 do 82 cm', 'M' => '82 do 86 cm', 'L' => '86 do 91 cm', 'XL' => '91 do 96 cm', '2XL' => '96 do 102 cm', '3XL' => '102 do 107 cm' ),
             'bratank'      => array( 'S' => '76 do 80 cm', 'M' => '81 do 85 cm', 'L' => '86 do 91 cm', 'XL' => '92 do 97 cm', '2XL' => '98 do 103 cm', '3XL' => '104 do 109 cm', '4XL' => '110 do 115 cm' ),
             'brassiere'    => array( 'XS' => '77 do 83 cm', 'S' => '82 do 88 cm', 'M' => '87 do 93 cm', 'L' => '92 do 98 cm', 'XL' => '97 do 103 cm', '2XL' => '102 do 108 cm', '3XL' => '107 do 113 cm', '4XL' => '112 do 118 cm', '5XL' => '117 do 123 cm' ),
@@ -1754,6 +1769,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Tajice su krojene standardno – odaberite <strong>veličinu koju inače nosite za hlače</strong>. Provjerite opseg struka i bokova.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka', 'Opseg bokova' ), 'vrstice' => noriks_sculptleg_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite manju.' );
+        }
+        if ( noriks_is_type( 'shapeshorts', $product_id ) ) {
+            return array( 'uvod' => 'Izmjerite <strong>opseg struka</strong> (u visini pupka) i odaberite veličinu prema tablici.',
+                'glava' => array( 'Veličina', 'Opseg struka' ), 'vrstice' => noriks_shapeshorts_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'mamafit', $product_id ) ) {
             return array( 'uvod' => 'Izmjerite <strong>opseg struka</strong> i odaberite svoju uobičajenu veličinu – tkanina se prilagođava tijelu.',

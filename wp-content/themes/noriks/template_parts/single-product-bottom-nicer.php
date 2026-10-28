@@ -138,6 +138,10 @@ if ( noriks_is_type( 'odorpro' ) ) {
 if ( noriks_is_type( 'mamafit' ) ) {
     include $noriks_pb_dir . 'why-mamafit.php';
 }
+
+if ( noriks_is_type( 'shapeshorts' ) ) {
+    include $noriks_pb_dir . 'why-shapeshorts.php';
+}
 if ( noriks_is_type( 'gelsit' ) ) {
     include $noriks_pb_dir . 'why-gelsit.php';
 }
