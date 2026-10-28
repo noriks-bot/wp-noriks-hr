@@ -6681,17 +6681,6 @@ function gck_render_bundle_selector() {
         </a>
     </div>
     <?php endif; ?>
-    <?php // Enakomeren ritem 12 px nad izbirnikom paketov - SAMO majice in bokserice.
-    if ( function_exists( 'noriks_is_type' )
-      && ( noriks_is_type( 'majice' ) || noriks_is_type( 'majica-darila' )
-        || noriks_is_type( 'bokserice' ) || noriks_is_black_friday() ) ) : ?>
-    <style>
-      .gck-benefits-list { margin-bottom: 12px !important; }
-      .gck-countdown     { margin: 12px 0 !important; }
-      .gck-size-link-wrap{ margin: 12px 0 !important; }
-      #bundle-selector   { margin-top: 12px !important; }
-    </style>
-    <?php endif; ?>
     <div id="bundle-selector" class="bundle-box<?php echo $gck_single_size ? ' is-single-size' : ''; ?><?php echo $gck_no_attrs ? ' is-no-attrs' : ''; ?>" data-split-garments="<?php echo $gck_split_garments ? '1' : '0'; ?>">
         <?php
         $default_index = ( $precheck_second && count( $offers ) > 2 ) ? 2 : 0;

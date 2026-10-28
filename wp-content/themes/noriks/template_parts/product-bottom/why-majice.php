@@ -153,6 +153,14 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
 </section>
 
 <style>
+/* Enakomeren ritem 12 px v zgornjem delu strani. Ta datoteka se izrise samo pri
+   majicah in boksericah, zato pravila ne morejo uiti na druge izdelke. */
+.gck-benefits-list{margin-bottom:12px!important}
+.gck-countdown{margin:12px 0!important}
+.gck-size-link-wrap{margin:12px 0!important}
+#bundle-selector{margin-top:12px!important}
+
+
 /* --- skupno --- */
 .fis-wrap{max-width:1180px;margin:0 auto;padding:0 16px}
 .fis-h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:#1c1c1c;line-height:1.2;margin:0 0 18px}
