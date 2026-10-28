@@ -830,4 +830,8 @@ if ( noriks_is_type( 'beltfit' ) ) {
     include $noriks_pb_dir . 'why-beltfit.php';
 }
 
+if ( noriks_is_type( 'mamabelt' ) ) {
+    include $noriks_pb_dir . 'why-mamabelt.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
