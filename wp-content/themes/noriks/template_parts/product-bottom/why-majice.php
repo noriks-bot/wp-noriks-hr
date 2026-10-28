@@ -130,21 +130,53 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
   </div>
 </section>
 
+<?php
+/* Vsebina tabele pride iz istih ACF polj kot stara primerjalna tabela
+   (_comp_table_*, Moznosti), da je urejljiva in prevedena po trgih.
+   Ce je polje prazno, se uporabi besedilo iz dizajna. */
+$mj_cmp = function ( $key, $fallback ) {
+    $v = function_exists( 'get_field' ) ? get_field( $key, 'options' ) : '';
+    $v = is_string( $v ) ? trim( wp_strip_all_tags( $v ) ) : '';
+    return $v !== '' ? $v : $fallback;
+};
+$mj_rows = function_exists( 'get_field' ) ? get_field( '_comp_table_fieldlines', 'options' ) : array();
+if ( ! is_array( $mj_rows ) || ! $mj_rows ) {
+    $mj_rows = array_map( function ( $t ) { return array( 'text' => $t ); }, array(
+        'Kroj koji naglašava prsa i ruke',
+        'Dosljedne veličine od S do 4XL',
+        'Duži kroj, trbuh ostaje pokriven',
+        'Mekana, lagana i prozračna tkanina',
+        'Zadržava oblik i boju nakon pranja',
+        'Bez etikete koja grebe za vratom',
+        '30 dana za besplatnu zamjenu veličine',
+    ) );
+}
+?>
 <section class="nk-cmp">
   <div class="fis-wrap">
-    <h2 class="fis-h2 fis-center">NORIKS protiv ostalih marki</h2>
-    <p class="nk-cmp-sub">Nisu sve majice jednake. Evo zašto se naše isplate.</p>
+    <h2 class="fis-h2 fis-center"><?php echo esc_html( $mj_cmp( '_comp_table_t2', 'NORIKS protiv ostalih marki' ) ); ?></h2>
+    <p class="nk-cmp-sub"><?php echo esc_html( $mj_cmp( '_comp_table_t3', 'Nisu sve majice jednake. Evo zašto se naše isplate.' ) ); ?></p>
     <div class="nk-cmp-card">
-      <div class="nk-cmp-row nk-cmp-head"><div></div><div><div class="nk-cmp-brand">NORIKS</div><div class="nk-cmp-price">11,67–17,49 €</div><div class="nk-cmp-note">po komadu, ovisno o paketu</div></div><div><div class="nk-cmp-brand">Ostale marke</div><div class="nk-cmp-price">29–39 €</div><div class="nk-cmp-note">po komadu</div></div></div>
-      <div class="nk-cmp-row"><div>Kroj koji naglašava prsa i ruke</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <div class="nk-cmp-row"><div>Dosljedne veličine od S do 4XL</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <div class="nk-cmp-row"><div>Duži kroj, trbuh ostaje pokriven</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <div class="nk-cmp-row"><div>Mekana, lagana i prozračna tkanina</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <div class="nk-cmp-row"><div>Zadržava oblik i boju nakon pranja</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <div class="nk-cmp-row"><div>Bez etikete koja grebe za vratom</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
-      <div class="nk-cmp-row"><div>30 dana za besplatnu zamjenu veličine</div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <div class="nk-cmp-row nk-cmp-head">
+        <div></div>
+        <div>
+          <div class="nk-cmp-brand"><?php echo esc_html( $mj_cmp( '_comp_table_inside_1', 'NORIKS' ) ); ?></div>
+          <div class="nk-cmp-price"><?php echo esc_html( $mj_cmp( '_comp_table_inside_3', '11,67–17,49 €' ) ); ?></div>
+          <div class="nk-cmp-note">po komadu, ovisno o paketu</div>
+        </div>
+        <div>
+          <div class="nk-cmp-brand"><?php echo esc_html( $mj_cmp( '_comp_table_inside_2', 'Ostale marke' ) ); ?></div>
+          <div class="nk-cmp-price"><?php echo esc_html( $mj_cmp( '_comp_table_inside_4', '29–39 €' ) ); ?></div>
+          <div class="nk-cmp-note">po komadu</div>
+        </div>
+      </div>
+      <?php foreach ( $mj_rows as $mj_row ) :
+        $mj_text = isset( $mj_row['text'] ) ? trim( wp_strip_all_tags( $mj_row['text'] ) ) : '';
+        if ( $mj_text === '' ) { continue; } ?>
+        <div class="nk-cmp-row"><div><?php echo esc_html( $mj_text ); ?></div><div><span class="nk-yes">✓</span></div><div><span class="nk-no">✕</span></div></div>
+      <?php endforeach; ?>
     </div>
-    <p class="nk-cmp-foot">Najniža cijena 11,67 € po komadu u paketu 3+3 GRATIS.</p>
+    <p class="nk-cmp-foot"><?php echo esc_html( $mj_cmp( '_comp_table_bottom_text', 'Najniža cijena 11,67 € po komadu u paketu 3+3 GRATIS.' ) ); ?></p>
   </div>
 </section>
 
