@@ -794,4 +794,8 @@ if ( noriks_is_type( 'retrobox' ) ) {
     include $noriks_pb_dir . 'why-retrobox.php';
 }
 
+if ( noriks_is_type( 'freshseal' ) ) {
+    include $noriks_pb_dir . 'why-freshseal.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
