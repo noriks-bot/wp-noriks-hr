@@ -74,6 +74,7 @@ function noriks_product_type_map() : array {
         'aircircle' => array( 'orto-aircircle' ),
         'widebeam' => array( 'orto-widebeam' ),
         'wakeband' => array( 'orto-wakeband' ),
+        'seatsleep' => array( 'orto-seatsleep' ),
         'sculptleg' => array( 'orto-sculptleg' ),
         'mamafit' => array( 'orto-mamafit' ),
         'shapeshorts' => array( 'orto-shapeshorts' ),

@@ -126,6 +126,10 @@ if ( noriks_is_type( 'widebeam' ) ) {
 if ( noriks_is_type( 'wakeband' ) ) {
     include $noriks_pb_dir . 'why-wakeband.php';
 }
+
+if ( noriks_is_type( 'seatsleep' ) ) {
+    include $noriks_pb_dir . 'why-seatsleep.php';
+}
 if ( noriks_is_type( 'sculptleg' ) ) {
     include $noriks_pb_dir . 'why-sculptleg.php';
 }
