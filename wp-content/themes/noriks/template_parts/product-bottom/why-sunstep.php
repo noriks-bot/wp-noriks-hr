@@ -92,6 +92,7 @@ div.wssunstep__pog{text-align:center;border:1px solid rgba(38,193,198,.35);borde
 @media (max-width:767px){.wssunstep__v{padding:0 16px}}
 /* /dizajn.py */
 /* brez-obrob */ .wssunstep__av,.wssunstep__k,.wssunstep__media,.wssunstep__pog>div,.wssunstep__polna,span.wssunstep__pi{border:0!important}
+.wssunstep__v>.wssunstep__zak{text-align:center;margin-top:24px}
 </style>
 <script>
 (function(){document.querySelectorAll('.wssunstep__kar').forEach(function(k){
