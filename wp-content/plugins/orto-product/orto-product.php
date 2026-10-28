@@ -1038,7 +1038,7 @@ function gck_render_bundle_selector() {
       .summary .gck-size-link { margin-top: 0 !important; margin-bottom: 0 !important; }
       .summary .gck-size-link + * { margin-top: 8px !important; }
       .summary .gck-stock-pill, .summary .gck-countdown-box, .summary .gck-urgency { margin: 8px 0 !important; }
-      #bundle-selector { margin-top: 8px !important; }
+      #bundle-selector { margin-top: 12px !important; }
 
       /* Kartice ponud: tanki robovi (kot na FisioRest). */
       #bundle-selector .bundle-option { border-width: 1px !important; }
@@ -1289,7 +1289,7 @@ function gck_render_bundle_selector() {
 
       .gck-timer-bar { background: #f39c12; color: #fff; padding: 4px 14px; border-radius: 4px; text-align: center; font-weight: 600; font-size: 15px; }
       .gck-benefits-box { margin-top:-15px; color: #000; }
-      .gck-benefits-list { list-style:none; margin:0 0 8px; padding:0; margin-top:-25px !important; }
+      .gck-benefits-list { list-style:none; margin:0 0 12px; padding:0; margin-top:-25px !important; }
       .gck-benefits-list li { font-size:15px; line-height:1.6; margin:0 0 4px; display:flex; align-items:flex-start; }
       .gck-check { margin-right:6px; font-size:14px; }
 
@@ -5661,7 +5661,7 @@ function gck_render_bundle_selector() {
               background:#fdeeee;
               border:1px solid #f3c9c9;
               border-left:5px solid #c00;
-              border-radius:4px; padding:14px 16px; margin:14px 0;
+              border-radius:4px; padding:14px 16px; margin:12px 0;
               font-family:'Roboto', sans-serif; color:#333; text-align:left;
           }
           .gck-countdown__head{
@@ -5676,7 +5676,7 @@ function gck_render_bundle_selector() {
           @keyframes gckCdPulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.18); } }
           @media (prefers-reduced-motion: reduce){ .gck-countdown__icon{ animation:none; } }
           @media (max-width: 767px){
-              .gck-countdown{ padding:12px 13px; margin:11px 0; }
+              .gck-countdown{ padding:12px 13px; margin:12px 0; }
               .gck-countdown__head{ font-size:15px; }
               .gck-countdown__icon{ font-size:16px; }
               .gck-countdown__body{ font-size:13px; }
@@ -5739,7 +5739,7 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
 
     <?php if ( $show_countdown && ( ( ! function_exists( 'noriks_ima_velicine' ) || noriks_ima_velicine( $product_id ) ) && ( $gck_size_link_force || ( ! $gck_no_attrs && ! $gck_single_size ) ) ) && ! has_term( array( 'orto-ondersteun', 'orto-snug', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-phonestrap', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-litterbox', 'orto-sleepearplugs', 'orto-travelpillow', 'orto-fleeceshawl', 'orto-bottlesling', 'orto-pillorganizer', 'orto-ultrasoniccleaner', 'orto-antitheftbag', 'orto-showertowel', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-vacuumsealer', 'orto-airtravel', 'orto-seatcover', 'orto-bracelet', 'orto-kneebrace', 'orto-kneetape', 'orto-red', 'orto-home', 'orto-seal', 'orto-sr', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-leak-boxers', 'orto-kompresijske-majice', 'orto-kneefix', 'orto-controlpro', 'orto-kneeheat', 'orto-pre', 'orto-hug', 'orto-lift', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-norikshershairmagic', 'noriks-dental' ), 'product_cat', $product_id ) ) : ?>
-    <div class="gck-size-link-wrap" style="text-align:right; margin:0 0 8px 0;">
+    <div class="gck-size-link-wrap" style="text-align:right; margin:12px 0;">
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right: 5px; width: 23px; height: 23px; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                 <path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.84375"></path>
@@ -6674,7 +6674,7 @@ function gck_render_bundle_selector() {
     <?php endif; ?>
     <?php // Leak boxers + kompresijske majice: size-chart link top-right, directly above the bundle buttons.
     if ( has_term( array( 'orto-leak-boxers', 'orto-kompresijske-majice' ), 'product_cat', $product_id ) ) : ?>
-    <div class="gck-size-link-wrap" style="text-align:right; margin:0 0 10px 0;">
+    <div class="gck-size-link-wrap" style="text-align:right; margin:12px 0;">
         <a id="open-size-chartCustom" href="#size-chart" class="gck-size-link">
             <svg style="margin-right:5px;width:20px;height:20px;display:inline-block;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none"><path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.84375"></path></svg>
             Tablica veličina

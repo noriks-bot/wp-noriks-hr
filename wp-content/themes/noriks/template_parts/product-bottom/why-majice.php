@@ -258,7 +258,7 @@ $mj_col  = get_template_directory_uri() . '/img/majica-barve/';
 .nk-yes,.nk-no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-weight:800;font-size:15px}
 .nk-yes{background:#1c1c1c;color:#f39c12}
 .nk-no{background:#ececec;color:#9a9a9a}
-.nk-cmp-foot{text-align:center;font-size:13px;color:#666;margin-top:14px}
+.nk-cmp-foot{text-align:center;font-size:13px;font-style:italic;color:#666;margin-top:14px}
 
 @media (max-width:900px){
   .fis-exp-grid{grid-template-columns:1fr;gap:24px}
