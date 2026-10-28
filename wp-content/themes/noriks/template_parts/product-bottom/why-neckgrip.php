@@ -97,6 +97,7 @@ div.wsneckgrip__pog{text-align:center;border:1px solid rgba(139,107,88,.35);bord
 @media (max-width:860px){.wsneckgrip__s{padding:46px 0}.wsneckgrip__s.wsneckgrip__traka{padding:30px 0}.wsneckgrip__plavo{margin-top:-46px}.wsneckgrip__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wsneckgrip__v{padding:0 16px}}
 /* /dizajn.py */
+.wsneckgrip__dva .wsneckgrip__tab td:first-child{width:36%;font-weight:700}.wsneckgrip__dva .wsneckgrip__tab td:last-child{text-align:left}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsneckgrip__kar').forEach(function(k){
