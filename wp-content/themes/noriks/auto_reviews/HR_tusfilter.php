@@ -1,5 +1,5 @@
 <?php
-// NORIKS filter za tuš | Zamjenski uložak za 90 dana — mnenja kupcev (prevedena z originala in dopolnjena, brez zdravstvenih trditev).
+// NORIKS filter za tuš | Zamjenski uložak za 3 mjeseca — mnenja kupcev (prevedena z originala in dopolnjena, brez zdravstvenih trditev).
 $auto_reviews_en = array(
     array("name" => "Veronika M.", "text" => "Pravi spa doživljaj kod kuće – kosa mi je podatnija, a koža blista nakon tuširanja."),
     array("name" => "Roberta K.", "text" => "Tuširanje mi je kao u spa centru, a kosa i koža su mi puno ugodnije."),

@@ -1369,7 +1369,7 @@
 
            <?php elseif ( noriks_is_type( 'tusfilter' ) ): ?>
 
-           Tisuće kupaca već se tušira uz NORIKS filter za tuš – zamjenski uložak koji se mijenja svakih 90 dana.
+           Tisuće kupaca već se tušira uz NORIKS filter za tuš – zamjenski uložak koji se mijenja svaka 3 mjeseca.
 
            <?php elseif ( noriks_is_type( 'seatsleep' ) ): ?>
 
@@ -1831,7 +1831,7 @@
   if ( $is_maternityleggings_page ) { $rv_fallback_title = 'NORIKS MaternityLeggings tajice za trudnice'; }
   if ( $is_dograincoat_page ) { $rv_fallback_title = 'NORIKS DogRaincoat kabanica za pse'; }
   if ( $is_travelpillow_page ) { $rv_fallback_title = 'NORIKS TravelPillow putni jastuk za vrat'; }
-  if ( $is_tusfilter_page ) { $rv_fallback_title = 'NORIKS filter za tuš | Zamjenski uložak za 90 dana'; }
+  if ( $is_tusfilter_page ) { $rv_fallback_title = 'NORIKS filter za tuš | Zamjenski uložak za 3 mjeseca'; }
   if ( $is_mamabelt_page ) { $rv_fallback_title = 'NORIKS MamaBelt | Pojas za trudnice u autu'; }
   if ( $is_beltfit_page ) { $rv_fallback_title = 'NORIKS BeltFit | Tanki kožni remen bez rupa'; }
   if ( $is_shiftclog_page ) { $rv_fallback_title = 'NORIKS ShiftClog | Radne klompe s mekanim đonom'; }
