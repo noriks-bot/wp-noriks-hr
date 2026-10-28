@@ -14,6 +14,7 @@
    7. brez vakuuma / vakuumirano - dva stolpca, 3-dnevni test
    8. primerjalna tabela FreshSeal / stolni aparati
    9. mnenja kupcev
+   + NORIKS pogoji (skupni noriks-pogoji.php)
  * BARVA ORIGINALA: #c3192a (rdeca barva originala - rdec krog za aparatom, stolpec primerjalne tabele, gumbi)
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -200,18 +201,26 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   </div>
 </section>
 
-<!-- 6) Bez vakuuma vs. vakuumirano — drsnik -->
+<!-- 6) Bez vakuuma vs. vakuumirano — drsnik (lijevo) + tekst (desno), preko cijele sirine -->
 <section class="nsl-sec nsl-rose nsl-sec-tight nsl-sec--bg2">
   <div class="nsl-wrap">
-    <h2 class="nsl-h2 nsl-center">Bez vakuuma vs. vakuumirano</h2>
-    <p class="nsl-sub nsl-center">*Prema trodnevnom testu čuvanja u stvarnim uvjetima</p>
-    <div class="nsl-ba" id="nslBa">
-      <img class="nsl-ba-under" src="<?php echo esc_url( $sl . 'seal-avokado-vakuum-v2.jpg' ); ?>" alt="Vakuumirani avokado nakon tri dana" loading="eager">
-      <div class="nsl-ba-over"><img src="<?php echo esc_url( $sl . 'seal-avokado-bez-v2.jpg' ); ?>" alt="Avokado bez vakuuma nakon tri dana" loading="eager"></div>
-      <span class="nsl-ba-lab nsl-ba-l">Bez vakuuma</span>
-      <span class="nsl-ba-lab nsl-ba-r">Vakuumirano</span>
-      <div class="nsl-ba-handle"><i></i></div>
-      <input class="nsl-ba-range" type="range" min="0" max="100" value="50" aria-label="Povuci za usporedbu">
+    <div class="nsl-row nsl-row-ba">
+      <div class="nsl-ba" id="nslBa">
+        <img class="nsl-ba-under" src="<?php echo esc_url( $sl . 'seal-avokado-vakuum-v2.jpg' ); ?>" alt="Vakuumirani avokado nakon tri dana" loading="eager">
+        <div class="nsl-ba-over"><img src="<?php echo esc_url( $sl . 'seal-avokado-bez-v2.jpg' ); ?>" alt="Avokado bez vakuuma nakon tri dana" loading="eager"></div>
+        <span class="nsl-ba-lab nsl-ba-l">Bez vakuuma</span>
+        <span class="nsl-ba-lab nsl-ba-r">Vakuumirano</span>
+        <div class="nsl-ba-handle"><i></i></div>
+        <input class="nsl-ba-range" type="range" min="0" max="100" value="50" aria-label="Povuci za usporedbu">
+      </div>
+      <div class="nsl-copy">
+        <span class="nsl-spark">✦</span>
+        <h2 class="nsl-h2 nsl-h2-row">Bez vakuuma <em>vs.</em> vakuumirano</h2>
+        <p>Ista polovica avokada, tri dana u hladnjaku. Lijevo je ostavljena na zraku, desno je zatvorena u vakuumsku vrećicu s NORIKS FreshSealom.</p>
+        <p>Povucite klizač lijevo i desno i usporedite: bez zraka u vrećici hrana <strong>dulje zadržava boju i svježinu</strong>, pa manje toga završi u smeću.</p>
+        <div class="nsl-dot"></div>
+        <p class="nsl-sub">*Prema trodnevnom testu čuvanja u stvarnim uvjetima</p>
+      </div>
     </div>
   </div>
 </section>
@@ -274,11 +283,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
   </div>
 </section>
 
-<div class="nsl-marquee nsl-marquee-end"><div class="nsl-marquee-track">
-  <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-    <span>30 DANA ZA POVRAT</span><i>✦</i><span>PLAĆANJE POUZEĆEM</span><i>✦</i><span>BESPLATNA DOSTAVA IZNAD 70 €</span><i>✦</i>
-  <?php endfor; ?>
-</div></div>
+<section class="nsl-sec npg-s"><?php $npg = array( 'izdelek' => 'NORIKS FreshSeal', 'barva' => '#c3192a' ); include __DIR__ . '/noriks-pogoji.php'; ?></section>
 
 <script>
 (function(){
@@ -349,6 +354,8 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 /* 2) izmenicne vrstice */
 .nsl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; margin-bottom: 64px; }
 .nsl-row:last-child { margin-bottom: 0; }
+.nsl-h2-row { text-align: left; margin-bottom: 18px; }
+.nsl-row-ba .nsl-sub { font-size: 13.5px; color: #6b6b6b; margin: 0; }
 .nsl-sq { aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; background: #ececed; }
 .nsl-sq img, .nsl-sq .nsl-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .nsl-copy { max-width: 500px; }
@@ -414,7 +421,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 
 /* 6) drsnik prej/potem */
 .nsl-sub { font-size: 15.5px; color: #6b6b6b; margin: -32px 0 26px; }
-.nsl-ba { position: relative; container-type: inline-size; max-width: 52%; margin: 0 auto; border-radius: 14px; overflow: hidden;
+.nsl-ba { position: relative; container-type: inline-size; width: 100%; margin: 0; border-radius: 14px; overflow: hidden;
   background: #e7e7ed; user-select: none; touch-action: pan-y; }
 .nsl-ba img { width: 100%; height: auto; display: block; }
 .nsl-ba-over { position: absolute; inset: 0; width: 50%; overflow: hidden; }
@@ -432,7 +439,7 @@ $ico_recyc = '<path d="M7 7l2-3 2 3"/><path d="M9 4v9H5l2.5 4"/><path d="M15 20h
 .nsl-ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 4; margin: 0; }
 
 /* 7) usporedna tablica */
-.nsl-cmp { position: relative; max-width: 70%; margin: 0 auto; }
+.nsl-cmp { position: relative; max-width: none; margin: 0 22px; }
 .nsl-cmp { margin-bottom: 26px; }
 /* bela podlaga tablice na sivoj sekciji */
 .nsl-cmp:before { content: ""; position: absolute; top: -16px; bottom: -18px; left: -22px; right: -22px;
