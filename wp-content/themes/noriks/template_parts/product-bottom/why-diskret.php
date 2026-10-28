@@ -89,6 +89,8 @@ div.wsdiskret__pog{text-align:center;border:1px solid rgba(218,100,117,.35);bord
 @media (max-width:767px){.wsdiskret__v{padding:0 16px}}
 /* /dizajn.py */
 .wsdiskret__v>.wsdiskret__zak{text-align:center}
+.wsdiskret__dva>*{min-width:0}
+.wsdiskret__tw{max-width:100%;-webkit-overflow-scrolling:touch}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsdiskret__kar').forEach(function(k){
