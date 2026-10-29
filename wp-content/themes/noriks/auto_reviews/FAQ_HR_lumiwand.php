@@ -11,6 +11,6 @@ return array(
   array( 'Kada ću vidjeti rezultate?', 'Od 1. do 2. tjedna prva poboljšanja i manje nadraženosti, od 3. do 4. tjedna bolja udobnost i osjet te manje boli tijekom intimnosti, a od 5. do 6. tjedna puni rezultati. Ključ je dosljednost – 3 puta tjedno.' ),
   array( 'Kako se čisti?', 'Nakon svakog korištenja operite ga antibakterijskim sapunom i toplom vodom te ga osušite čistim ručnikom prije spremanja. Uređaj nije potpuno vodootporan, pa ga ne uranjajte u vodu.' ),
   array( 'Je li pakiranje diskretno?', 'Da. Paket stiže bez oznaka sadržaja – nitko neće znati što je unutra.' ),
-  array( 'Što je u paketu?', 'NORIKS LumiWand uređaj, upute za uporabu, dnevnik tretmana za 90 dana, USB kabel za punjenje i kvalitetna poklon kutija.' ),
+  array( 'Što je u paketu?', 'NORIKS LumiWand uređaj, upute za uporabu, dnevnik tretmana za 3 mjeseca, USB kabel za punjenje i kvalitetna poklon kutija.' ),
   array( 'Mogu li ga vratiti?', 'Da. Imate 30 dana za povrat novca. Dostava je besplatna za narudžbe iznad 70 €, a plaćate pouzećem kad paket stigne.' ),
 );

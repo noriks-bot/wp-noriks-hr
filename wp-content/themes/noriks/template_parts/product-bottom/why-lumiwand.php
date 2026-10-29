@@ -148,7 +148,7 @@ $lmw_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
     <ol class="wslmw__paket">
       <li><span>1</span><div><strong>NORIKS LumiWand uređaj</strong><p>Glavni dio kompleta: uređaj od medicinskog silikona s crvenim svjetlom, nježnom toplinom i zvučnom vibracijom.</p></div></li>
       <li><span>2</span><div><strong>Upute za uporabu</strong><p>Načini vibracije, razine jačine, punjenje, trajanje baterije i sve osnove – da od prvog tretmana znate što radite.</p></div></li>
-      <li><span>3</span><div><strong>Dnevnik tretmana za 90 dana</strong><p>Zabilježite svaki tretman i pratite napredak iz tjedna u tjedan – dosljednost donosi rezultate.</p></div></li>
+      <li><span>3</span><div><strong>Dnevnik tretmana za 3 mjeseca</strong><p>Zabilježite svaki tretman i pratite napredak iz tjedna u tjedan – dosljednost donosi rezultate.</p></div></li>
       <li><span>4</span><div><strong>USB kabel za punjenje</strong><p>Uređaj je uvijek napunjen i spreman – bez baterija i bez muke.</p></div></li>
       <li><span>5</span><div><strong>Podrška kupcima</strong><p>Imate pitanje o korištenju ili narudžbi? NORIKS podrška vam rado pomaže.</p></div></li>
       <li><span>6</span><div><strong>Kvalitetna poklon kutija</strong><p>Čuva uređaj zaštićenim i diskretno spremljenim – lako ga ponesete gdje god idete.</p></div></li>
