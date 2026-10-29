@@ -39,7 +39,7 @@ $wspt_razlogi = array(
 		'p' => array( 'Tava se brzo zagrije, a toplina se raspoređuje po cijelom dnu ravnomjerno – bez hladnih rubova i zagorjele sredine. Meso dobije lijepu koricu, povrće se zapeče, a sokovi ostaju u jelu.',
 			'Ravnomjerno pečenje znači manje miješanja i manje nagađanja: jelo je pečeno jednako od ruba do sredine i ima puniji okus.' ),
 		'zak' => 'Jednako pečeno od ruba do sredine.' ),
-	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-4.webp', 'alt' => 'Jaje pečeno na klasičnoj tavi s puno ulja i na tavi od titana s malo ulja', 'znacka' => '3× manje ulja', 'naslov' => '<em>3 puta manje</em> ulja',
+	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-4.webp', 'alt' => 'Jaje pečeno na klasičnoj tavi s puno ulja i na tavi od titana s malo ulja', 'znacka' => '', 'naslov' => '<em>3 puta manje</em> ulja',
 		'p' => array( 'Više ne morate utapati hranu u ulju da biste uspjeli s jelom. Kovana površina traži samo kap masnoće za isti rezultat – jaje, palačinka ili odrezak ne zalijepe se ni s malo ulja.',
 			'Manje ulja u tavi znači lakše jelo na tanjuru i manje masnih mrlja po štednjaku.' ),
 		'zak' => 'Kap ulja je dovoljna.' ),
@@ -113,7 +113,7 @@ $wspt_recenzije = array(
   <div class="wspt__razlogi">
     <?php foreach ( $wspt_razlogi as $n => $r ) : ?>
     <div class="wspt__dva<?php echo $n % 2 ? ' wspt__dva--rev' : ''; ?>">
-      <div class="wspt__media"><?php echo isset( $r['video'] ) ? $wspt_vid( $r['video'] ) : '<img src="' . esc_url( $wspt_tema . $r['slika'] ) . '" alt="' . esc_attr( $r['alt'] ) . '" loading="eager" decoding="async">'; ?><span class="wspt__znacka"><?php echo esc_html( $r['znacka'] ); ?></span></div>
+      <div class="wspt__media"><?php echo isset( $r['video'] ) ? $wspt_vid( $r['video'] ) : '<img src="' . esc_url( $wspt_tema . $r['slika'] ) . '" alt="' . esc_attr( $r['alt'] ) . '" loading="eager" decoding="async">'; ?><?php if ( $r['znacka'] ) : ?><span class="wspt__znacka"><?php echo esc_html( $r['znacka'] ); ?></span><?php endif; ?></div>
       <div>
         <span class="wspt__st"><?php echo (int) $n + 1; ?></span>
         <h3 class="wspt__h3"><?php echo wp_kses( $r['naslov'], array( 'em' => array() ) ); ?></h3>
