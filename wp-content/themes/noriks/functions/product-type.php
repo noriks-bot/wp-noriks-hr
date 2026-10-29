@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
         'puretitan' => array( 'orto-puretitan' ),
+        'popuptent' => array( 'orto-popuptent' ),
         'ratchet' => array( 'orto-ratchet' ),
         'leakbrief' => array( 'orto-leakbrief' ),
         'tusfilter' => array( 'orto-tusfilter' ),

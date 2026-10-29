@@ -850,6 +850,10 @@ if ( noriks_is_type( 'puretitan' ) ) {
     include $noriks_pb_dir . 'why-puretitan.php';
 }
 
+if ( noriks_is_type( 'popuptent' ) ) {
+    include $noriks_pb_dir . 'why-popuptent.php';
+}
+
 if ( noriks_is_type( 'ratchet' ) ) {
     include $noriks_pb_dir . 'why-ratchet.php';
 }
