@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'leakbrief' => array( 'orto-leakbrief' ),
         'tusfilter' => array( 'orto-tusfilter' ),
         'mamabelt' => array( 'orto-mamabelt' ),
+        'tactical' => array( 'orto-tactical' ),
         'beltfit' => array( 'orto-beltfit' ),
         'neckgrip' => array( 'orto-neckgrip' ),
     'steampro' => array( 'orto-steampro' ),
