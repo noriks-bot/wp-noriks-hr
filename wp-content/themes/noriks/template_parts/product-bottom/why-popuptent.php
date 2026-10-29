@@ -213,7 +213,7 @@ $wspu_prednosti = array(
 .wspu__tw{overflow-x:auto;margin:6px 0 4px}
 .wspu__tab{width:100%;border-collapse:collapse;font-size:15px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(45,84,79,.10)}
 .wspu__tab th,.wspu__tab td{padding:12px 16px;text-align:left;border-bottom:1px solid #e3ebe9;vertical-align:top}
-.wspu__tab th{background:#2d544f;color:#fff;font-weight:700;width:34%}.wspu__tab tr:last-child th,.wspu__tab tr:last-child td{border-bottom:0}
+.wspu__tab th{background:#2d544f !important;color:#fff !important;font-weight:700;width:34%}.wspu__tab tr:last-child th,.wspu__tab tr:last-child td{border-bottom:0}
 .wspu__ocena{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:15px;color:#444;margin:-4px 0 0}
 .wspu__ocena strong{font-size:17px;color:#1c1c1c}
 .wspu__zv{color:#e0a33c;letter-spacing:2px;font-size:17px}
