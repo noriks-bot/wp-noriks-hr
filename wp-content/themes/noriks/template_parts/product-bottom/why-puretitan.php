@@ -195,6 +195,7 @@ $wspt_recenzije = array(
 .wspt__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wspt__dva--rev>div:first-child{order:2}
 .wspt__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(39,59,132,.20);aspect-ratio:4/5;background:#1c1c1c}
 .wspt__media img,.wspt__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wspt__razlogi .wspt__media{aspect-ratio:1/1}
 .wspt__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#273b84;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wspt__st{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#273b84;color:#fff;font-size:20px;font-weight:800;margin:0 0 14px;box-shadow:0 6px 14px rgba(39,59,132,.30)}
 /* problem */
