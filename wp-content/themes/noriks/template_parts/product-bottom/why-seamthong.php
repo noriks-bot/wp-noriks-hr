@@ -142,7 +142,7 @@ $wst_mnenja = array(
 .wsth__s{padding:72px 0;background:#fff}.wsth__s.wsth__s--bg{background:#f6f1ec}
 .wsth__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wsth__c{text-align:center}
-.wsth__kicker{font-size:12.5px;letter-spacing:1.8px;text-transform:uppercase;color:#7a5f48;margin:0 0 8px;font-weight:700}
+.wsth__kicker{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:#7a5f48;margin:0 0 8px;font-weight:700}
 .wsth__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#c4b3a3;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wsth__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#2b211a}.wsth__h2 em{font-style:italic;color:#7a5f48}
 .wsth__p{font-size:15.5px;line-height:1.65;color:#3d342d;margin:0 0 14px}.wsth__p em{font-style:normal;font-weight:700;color:#2b211a}
@@ -192,7 +192,7 @@ $wst_mnenja = array(
 .wsth__km img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .wsth__kt{padding:20px 22px 22px;flex:1;display:flex;flex-direction:column}.wsth__kt p{margin:8px 0 14px;font-size:15.5px;line-height:1.55;color:#3d342d;flex:1}
 .wsth__zv{color:#e0a33c;letter-spacing:2px}
-.wsth__ime{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}.wsth__ime small{display:block;font-weight:500;color:#8a7f76;font-size:12.5px}
+.wsth__ime{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}.wsth__ime small{display:block;font-weight:500;color:#8a7f76;font-size:13px}
 .wsth__av{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#ede3d8;color:#7a5f48;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
 @media (max-width:860px){.wsth__s{padding:46px 0}
 .wsth__dva{grid-template-columns:1fr;gap:24px}.wsth__dva--rev>div:first-child{order:0}
@@ -201,5 +201,5 @@ $wst_mnenja = array(
 .wsth__mkar{grid-auto-columns:84%}
 .wsth__tab{font-size:14px}.wsth__tab th,.wsth__tab td{padding:11px 10px}.wsth__tab th:first-child,.wsth__tab td:first-child{display:none}.wsth__tab .wsth__ok,.wsth__tab .wsth__x{flex-basis:18px;width:18px;height:18px;font-size:10px;margin-right:6px}}
 @media (max-width:767px){.wsth__v{padding:0 16px}}
-@media (max-width:380px){.wsth__pk{font-size:12.5px;padding:9px 10px;gap:8px}.wsth__pi{flex-basis:32px;width:32px;height:32px}}
+@media (max-width:380px){.wsth__pk{font-size:13px;padding:9px 10px;gap:8px}.wsth__pi{flex-basis:32px;width:32px;height:32px}}
 </style>
