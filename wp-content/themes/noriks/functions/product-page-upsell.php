@@ -72,16 +72,16 @@ function noriks_pp_upsell_register_fields() {
  * ============================================================ */
 function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
-		'product_id' => 2801,                    // Zelene Bokserice (varijabilni proizvod)
+		'product_id' => 2829,                    // Sive Bokserice (varijabilni proizvod)
 		'qty'        => 4,                       // uvijek 4 komada, iste veličine
 		'total'      => 19.99,                   // ista cijena kao thank you upsell (4 komada)
-		'title'      => '4x Zelene Bokserice',
+		'title'      => '4x Sive Bokserice',
 		'desc'       => 'Prozračne i mekane — dodajte ih uz narudžbu uz %s%% popusta.', // %s = izracunati popust
 		'size_attr'  => 'Veličina',
 		// Interna oznaka paketa (SKU konvencija kao kod bundle proizvoda + UPSELL na kraju).
-		'sku'        => 'NORIKS-BOX-GREEN-4-PACK-UPSELL',
+		'sku'        => 'NORIKS-BOX-GRAY-4-PACK-UPSELL',
 		// Kompozitna slika 4 komada na svijetlo sivoj podlozi (kvadratna).
-		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-zelene.png',
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-sive.png',
 	) );
 }
 
