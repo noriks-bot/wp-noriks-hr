@@ -7871,6 +7871,10 @@ function gck_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
         );
         if ( isset( $gck_pu_lines[ $gck_pu_idx ] ) ) { $lines = $gck_pu_lines[ $gck_pu_idx ]; }
     }
+    // NORIKS SeamThong: enota je komplet 2 tange (David 29.10.: kompleti 2/4/6) - skladisce mora videti, da gre za 2 kosa.
+    if ( has_term( 'orto-seamthong', 'product_cat', $product_id ) && is_array( $lines ) ) {
+        foreach ( $lines as $gck_k => $gck_l ) { $lines[ $gck_k ] = 'Komplet 2 tange – ' . $gck_l; }
+    }
 
     $total      = (float) $offer['total'];
 
