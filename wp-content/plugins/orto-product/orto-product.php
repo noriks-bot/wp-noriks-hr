@@ -932,6 +932,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-popuptent' ), 'product_cat', $product_id ) ) {
         // PopUp: vsak gumb svoja velikost kot na originalu (David 29.10.: jasno, za koliko oseb).
         $gck_offer_subs = array( 'Mali šator + cerada gratis', 'Veliki šator + cerada gratis', 'Mali + veliki šator + 2 cerade gratis' );
+    } elseif ( has_term( array( 'orto-seamthong' ), 'product_cat', $product_id ) ) {
+        // SeamThong: v vsakem kompletu vsaka tanga svoja velikost in barva (David 29.10.).
+        $gck_offer_subs = array( 'Svaka tanga u veličini i boji po izboru', 'Svaka tanga u veličini i boji po izboru', 'Svaka tanga u veličini i boji po izboru' );
     } elseif ( has_term( array( 'orto-tactical' ), 'product_cat', $product_id ) ) {
         // TacBelt: jedna velicina (David 29.10.: mora biti jasno, da je remen za vse velicine).
         $gck_offer_subs = array( 'Jedna veličina za sve – do 120 cm', 'Jedna veličina do 120 cm · svaki u boji po izboru', 'Jedna veličina do 120 cm · svaki u boji po izboru' );
@@ -2343,6 +2346,13 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-seamthong' ), 'product_cat', $product_id ) ) : ?>
     <style>
+      /* NORIKS SeamThong: vsaka tanga v kompletu ima svoj izbor - oznaka 1. tanga, 2. tanga ... (David 29.10.). */
+      #bundle-selector .bundle-pairs { counter-reset: gckthong; }
+      #bundle-selector .bundle-pairs .bundle-pair { counter-increment: gckthong; }
+      #bundle-selector .bundle-pairs .bundle-pair:before {
+          content: counter(gckthong) ". tanga"; display: block; font-size: 12px; font-weight: 800; color: #7a7a7a;
+          letter-spacing: .06em; text-transform: uppercase; margin: 0 0 6px;
+      }
       /* NORIKS SeamThong: Boja bez / crna / maslinasta / smeda (nijanse gacica na originalu) kot krogci. */
       .swatch-circle.color-bez, #bundle-selector .swatch-circle.color-bez { background: #d9bfa0 !important; }
       .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #1c1c1e !important; }
@@ -7324,7 +7334,11 @@ function gck_render_bundle_selector() {
                         <?php if ( $gck_pass['label'] !== null ) : ?>
                             <div class="gck-pair-label<?php echo $gck_pass['gratis'] ? ' is-gratis' : ''; ?>"><?php echo esc_html( $gck_pass['label'] ); ?></div>
                         <?php endif; ?>
-                    <?php for ( $i = 1; $i <= $pairs; $i++ ) : ?>
+                    <?php
+                    // NORIKS SeamThong: komplet = 2 tange, vsaka tanga svoja velikost in barva (David 29.10.).
+                    $gck_rows = has_term( 'orto-seamthong', 'product_cat', $product_id ) ? $pairs * 2 : $pairs;
+                    ?>
+                    <?php for ( $i = 1; $i <= $gck_rows; $i++ ) : ?>
                         <?php if ( $gck_pass['group'] === null && $gck_show_sections && $gck_paid > 0 && $i === 1 ) : ?>
                             <div class="gck-pair-label">Izaberi <?php echo (int) $gck_paid; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_paid, false, $gck_garment ) ); ?></div>
                         <?php endif; ?>
@@ -7878,9 +7892,10 @@ function gck_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
         );
         if ( isset( $gck_pu_lines[ $gck_pu_idx ] ) ) { $lines = $gck_pu_lines[ $gck_pu_idx ]; }
     }
-    // NORIKS SeamThong: enota je komplet 2 tange (David 29.10.: kompleti 2/4/6) - skladisce mora videti, da gre za 2 kosa.
+    // NORIKS SeamThong: komplet = 2 tange, vsaka tanga ima svojo velikost in barvo (David 29.10.) - ena vrstica na tango.
     if ( has_term( 'orto-seamthong', 'product_cat', $product_id ) && is_array( $lines ) ) {
-        foreach ( $lines as $gck_k => $gck_l ) { $lines[ $gck_k ] = 'Komplet 2 tange – ' . $gck_l; }
+        $lines = array_slice( array_values( $lines ), 0, $pairs_selected * 2 );
+        foreach ( $lines as $gck_k => $gck_l ) { $lines[ $gck_k ] = 'Tanga ' . ( $gck_k + 1 ) . ': ' . $gck_l; }
     }
 
     $total      = (float) $offer['total'];
