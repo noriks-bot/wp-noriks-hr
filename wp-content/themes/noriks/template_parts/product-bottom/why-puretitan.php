@@ -39,7 +39,7 @@ $wspt_razlogi = array(
 		'p' => array( 'Tava se brzo zagrije, a toplina se raspoređuje po cijelom dnu ravnomjerno – bez hladnih rubova i zagorjele sredine. Meso dobije lijepu koricu, povrće se zapeče, a sokovi ostaju u jelu.',
 			'Ravnomjerno pečenje znači manje miješanja i manje nagađanja: jelo je pečeno jednako od ruba do sredine i ima puniji okus.' ),
 		'zak' => 'Jednako pečeno od ruba do sredine.' ),
-	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-4.webp', 'alt' => 'Jaje pečeno na klasičnoj tavi s puno ulja i na tavi od titana s malo ulja', 'znacka' => '', 'naslov' => '<em>3 puta manje</em> ulja',
+	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-4.webp?v=2', 'alt' => 'Jaje pečeno na klasičnoj tavi s puno ulja i na tavi od titana s malo ulja', 'znacka' => '', 'naslov' => '<em>3 puta manje</em> ulja',
 		'p' => array( 'Više ne morate utapati hranu u ulju da biste uspjeli s jelom. Kovana površina traži samo kap masnoće za isti rezultat – jaje, palačinka ili odrezak ne zalijepe se ni s malo ulja.',
 			'Manje ulja u tavi znači lakše jelo na tanjuru i manje masnih mrlja po štednjaku.' ),
 		'zak' => 'Kap ulja je dovoljna.' ),
@@ -51,16 +51,16 @@ $wspt_razlogi = array(
 		'p' => array( 'Topla voda, malo deterdženta i jedan potez spužvom – i tava je kao nova. Budući da se hrana ne lijepi i ne zagori, nema ribanja ni namakanja preko noći.',
 			'Tava je prikladna i za perilicu posuđa, ali vjerojatno vam neće ni trebati.' ),
 		'zak' => 'Spužva, voda – i gotovo.' ),
-	array( 'video' => '/img/puretitan/noriks-puretitan-razlog-7.mp4', 'znacka' => 'Iz metala', 'naslov' => 'Izrađena od metala, <em>napravljena da traje</em>',
+	array( 'video' => '/img/puretitan/noriks-puretitan-razlog-7.mp4?v=2', 'znacka' => 'Iz metala', 'naslov' => 'Izrađena od metala, <em>napravljena da traje</em>',
 		'p' => array( 'Ovo nije tava za jednokratnu upotrebu s premazom koji samo izgleda kao titan. Izrađena je od metala, otporna je i napravljena da godinama ostane u vašoj kuhinji.',
 			'Metalne lopatice, pjenjače i hvataljke smijete koristiti bez straha – nema premaza koji bi se izgrebao ili ogulio.' ),
 		'zak' => 'Kupite jednom – kuhajte godinama.' ),
 );
 $wspt_kupci = array(
-	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-1.mp4', 'ime' => 'Vesna S.', 't' => 'Snimila sam svoj prvi recept na ovoj tavi. Dosta mi je bilo kuhanja na tavi s koje se ljušti premaz. Sad kuham opušteno i ništa se ne lijepi. Preporučujem 100 %!' ),
+	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-1.mp4?v=2', 'ime' => 'Vesna S.', 't' => 'Snimila sam svoj prvi recept na ovoj tavi. Dosta mi je bilo kuhanja na tavi s koje se ljušti premaz. Sad kuham opušteno i ništa se ne lijepi. Preporučujem 100 %!' ),
 	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-2.webp', 'alt' => 'Pečena piletina s krumpirom u tavi od čistog titana', 'ime' => 'Katarina M.', 't' => 'Prva piletina u novoj tavi. Malo sam se bojala da će se bez premaza zalijepiti, ali nimalo. I pranje mi je trajalo samo dvije minute. Zadovoljna sam kupnjom.' ),
 	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-3.mp4', 'ime' => 'Petra V.', 't' => 'Uzela sam je da se riješim stare tave s premazom, a na kraju me najviše oduševila kvaliteta pečenja. Jela mi uvijek uspiju bez puno truda.' ),
-	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-4.webp', 'alt' => 'Kupac drži tavu od čistog titana na vrtnom roštilju', 'ime' => 'Ante D.', 't' => 'Kuham gotovo svaki dan i na tavi još nema ni ogrebotine. Jasno – najbolja investicija koju sam mogao napraviti za svoju kuhinju.' ),
+	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-4.webp?v=2', 'alt' => 'Kupac drži tavu od čistog titana na vrtnom roštilju', 'ime' => 'Ante D.', 't' => 'Kuham gotovo svaki dan i na tavi još nema ni ogrebotine. Jasno – najbolja investicija koju sam mogao napraviti za svoju kuhinju.' ),
 	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-5.mp4', 'ime' => 'Elena R.', 't' => 'Moj specijalitet su polpete. Na staroj tavi su se lijepile, raspadale i stalno sam morala strugati. Sad same kližu, a pečenje je puno ujednačenije.' ),
 	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-6.webp', 'alt' => 'Majka s djecom u kuhinji drži tavu od čistog titana', 'ime' => 'Elizabeta B.', 't' => 'Htjela sam tavu bez premaza na kojoj mirno kuham za cijelu obitelj. Djeca jedu svoja omiljena jela, a ja ne razmišljam o tome što se ljušti s tave.' ),
 );
@@ -80,7 +80,7 @@ $wspt_recenzije = array(
   <h2 class="wspt__h2 wspt__c">NORIKS PureTitan <em>u stvarnoj kuhinji</em></h2>
   <p class="wspt__p wspt__c">Jaja, odresci, riba i povrće – pogledajte kako se hrana na kovanoj površini od čistog titana peče i odvaja bez premaza i bez puno ulja.</p>
   <div class="wspt__kar wspt__kar--vid" data-wspt-kar>
-    <?php foreach ( array( '/img/puretitan/noriks-puretitan-na-djelu-1.mp4', '/img/puretitan/noriks-puretitan-na-djelu-2.mp4', '/img/puretitan/noriks-puretitan-na-djelu-3.mp4', '/img/puretitan/noriks-puretitan-na-djelu-4.mp4', '/img/puretitan/noriks-puretitan-na-djelu-5.mp4' ) as $wspt_v ) : ?>
+    <?php foreach ( array( '/img/puretitan/noriks-puretitan-na-djelu-1.mp4', '/img/puretitan/noriks-puretitan-na-djelu-2.mp4', '/img/puretitan/noriks-puretitan-na-djelu-3.mp4', '/img/puretitan/noriks-puretitan-na-djelu-4.mp4?v=2', '/img/puretitan/noriks-puretitan-na-djelu-5.mp4' ) as $wspt_v ) : ?>
     <div class="wspt__vk"><?php echo $wspt_vid( $wspt_v ); ?></div>
     <?php endforeach; ?>
   </div>
