@@ -42,6 +42,7 @@ function noriks_product_type_map() : array {
         // Orthopedic back belt (ortopedski pojas za leđa).
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
+        'dryseam' => array( 'orto-dryseam' ),
         'puretitan' => array( 'orto-puretitan' ),
         'popuptent' => array( 'orto-popuptent' ),
         'ratchet' => array( 'orto-ratchet' ),
@@ -716,6 +717,22 @@ if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
             array( '2XL', '42 do 44', '91 – 97', '114 – 119' ),
             array( '3XL', '44 do 46', '99 – 102', '122 – 127' ),
             array( '4XL', '46 do 48', '104 – 109', '127 – 132' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_dryseam_sizes' ) ) {
+    /** NORIKS DrySeam: tablica originala loeah.nl (Maat EU, Taille cm, Heupen cm) 1:1, prodajane velicine XS-4XL. */
+    function noriks_dryseam_sizes() {
+        return array(
+            array( 'XS',  '32 do 34', '64 – 68', '84 – 90' ),
+            array( 'S',   '34 do 36', '69 – 73', '91 – 96' ),
+            array( 'M',   '36 do 38', '74 – 79', '97 – 102' ),
+            array( 'L',   '38 do 40', '80 – 85', '103 – 108' ),
+            array( 'XL',  '40 do 42', '86 – 91', '109 – 114' ),
+            array( '2XL', '42 do 44', '92 – 97', '115 – 120' ),
+            array( '3XL', '44 do 46', '98 – 104', '121 – 127' ),
+            array( '4XL', '46 do 48', '105 – 110', '128 – 133' ),
         );
     }
 }
@@ -1761,6 +1778,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
+            'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
             'kneesleeve'   => array( 'S' => '35 do 45 cm', 'M' => '46 do 50 cm', 'L' => '51 do 57 cm', 'XL' => '58 do 63 cm', '2XL' => '64 do 69 cm', '3XL' => '70 do 75 cm' ),
             'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
@@ -1906,6 +1924,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         if ( noriks_is_type( 'leakbrief', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_leakbrief_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'dryseam', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
+                'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_dryseam_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'seamthong', $product_id ) ) {

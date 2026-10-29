@@ -866,4 +866,8 @@ if ( noriks_is_type( 'seamthong' ) ) {
     include $noriks_pb_dir . 'why-seamthong.php';
 }
 
+if ( noriks_is_type( 'dryseam' ) ) {
+    include $noriks_pb_dir . 'why-dryseam.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
