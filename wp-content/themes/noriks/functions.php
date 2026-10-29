@@ -26,6 +26,7 @@ include(get_template_directory() . '/functions/cpts.php');
 include(get_template_directory() . '/functions/options.php');
 include(get_template_directory() . '/functions/single_product_mods.php');
 include(get_template_directory() . '/functions/gallery-videos.php'); // videi v galeriji izdelka (meta _noriks_galerija_videi)
+include(get_template_directory() . '/functions/video-autoplay.php'); // rezerva za samodejno predvajanje videov (Safari): muted/playsinline, play ob vidnosti, gumb ▶
 include(get_template_directory() . '/functions/discounts.php');
 include(get_template_directory() . '/functions/fb_attribution.php');
 
