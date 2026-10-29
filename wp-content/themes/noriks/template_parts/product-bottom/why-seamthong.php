@@ -198,7 +198,8 @@ $wst_mnenja = array(
 .wsth__dva{grid-template-columns:1fr;gap:24px}.wsth__dva--rev>div:first-child{order:0}
 .wsth__pred{grid-template-columns:1fr 1fr}.wsth__uvod{grid-template-columns:1fr;gap:0}.wsth__usp{grid-template-columns:1fr;gap:16px}
 .wsth__stat{grid-template-columns:1fr;gap:10px}.wsth__stat>div{display:flex;align-items:center;gap:14px;padding:14px 16px}.wsth__stat strong{margin:0;font-size:26px;flex:0 0 72px}
-.wsth__mkar{grid-auto-columns:84%}}
+.wsth__mkar{grid-auto-columns:84%}
+.wsth__tab{font-size:14px}.wsth__tab th,.wsth__tab td{padding:11px 10px}.wsth__tab th:first-child,.wsth__tab td:first-child{display:none}.wsth__tab .wsth__ok,.wsth__tab .wsth__x{flex-basis:18px;width:18px;height:18px;font-size:10px;margin-right:6px}}
 @media (max-width:767px){.wsth__v{padding:0 16px}}
 @media (max-width:380px){.wsth__pk{font-size:12.5px;padding:9px 10px;gap:8px}.wsth__pi{flex-basis:32px;width:32px;height:32px}}
 </style>
