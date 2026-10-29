@@ -850,4 +850,8 @@ if ( noriks_is_type( 'ratchet' ) ) {
     include $noriks_pb_dir . 'why-ratchet.php';
 }
 
+if ( noriks_is_type( 'kneesleeve' ) ) {
+    include $noriks_pb_dir . 'why-kneesleeve.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
