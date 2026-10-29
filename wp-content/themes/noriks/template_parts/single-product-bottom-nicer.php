@@ -874,4 +874,8 @@ if ( noriks_is_type( 'dryseam' ) ) {
     include $noriks_pb_dir . 'why-dryseam.php';
 }
 
+if ( noriks_is_type( 'lumiwand' ) ) {
+    include $noriks_pb_dir . 'why-lumiwand.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
