@@ -36,7 +36,7 @@ $wth_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 </div></section>
 
 <section class="wstwh__s"><div class="wstwh__v wstwh__dva wstwh__dva--rev">
-  <div class="wstwh__media wstwh__media--tamno"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/twisthook/noriks-twisthook-tehnologija-video.mp4' ); ?>" poster="<?php echo esc_url( get_template_directory_uri() . '/img/twisthook/noriks-twisthook-tehnologija-video.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="auto"></video><span class="wstwh__znacka">Zakreni i zaključaj</span></div>
+  <div class="wstwh__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/twisthook/noriks-twisthook-tehnologija-video.mp4' ); ?>" poster="<?php echo esc_url( get_template_directory_uri() . '/img/twisthook/noriks-twisthook-tehnologija-video.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="auto"></video><span class="wstwh__znacka">Zakreni i zaključaj</span></div>
   <div>
     <div class="wstwh__kicker">Kako drži</div>
     <h2 class="wstwh__h2">Sustav Zakreni i zaključaj: <em>vakuum koji ne popušta</em></h2>
@@ -118,7 +118,6 @@ $wth_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 .wstwh__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wstwh__dva--rev>div:first-child{order:2}
 .wstwh__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(29,28,28,.18);aspect-ratio:4/5;background:#1d1c1c}
 .wstwh__media img,.wstwh__media video{width:100%;height:100%;object-fit:cover;display:block}
-.wstwh__media--tamno video{object-fit:contain;background:#000}
 .wstwh__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#1d1c1c;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wstwh__kv{list-style:none;margin:4px 0 6px;padding:0}.wstwh__kv li{position:relative;padding-left:32px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
 .wstwh__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;background:#a8834a;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
