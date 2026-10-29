@@ -846,4 +846,8 @@ if ( noriks_is_type( 'leakbrief' ) ) {
     include $noriks_pb_dir . 'why-leakbrief.php';
 }
 
+if ( noriks_is_type( 'ratchet' ) ) {
+    include $noriks_pb_dir . 'why-ratchet.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
