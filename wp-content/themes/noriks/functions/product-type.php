@@ -42,6 +42,7 @@ function noriks_product_type_map() : array {
         // Orthopedic back belt (ortopedski pojas za leđa).
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
+        'puretitan' => array( 'orto-puretitan' ),
         'ratchet' => array( 'orto-ratchet' ),
         'leakbrief' => array( 'orto-leakbrief' ),
         'tusfilter' => array( 'orto-tusfilter' ),
@@ -1268,6 +1269,17 @@ if ( ! function_exists( 'noriks_sleepset_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_puretitan_sizes' ) ) {
+    /** NORIKS PureTitan: velicina (= ime opcije Velicina), promjer, za koliko osoba. 1:1 z originala (vodic za velicine na strani izdelka). */
+    function noriks_puretitan_sizes() {
+        return array(
+            array( '26 cm', 'promjer 26 cm', '3 jaja · 1–2 porcije – za brzo svakodnevno kuhanje' ),
+            array( '28 cm', 'promjer 28 cm', '5 jaja · 2–3 porcije – najčešći izbor za svaki dan' ),
+            array( '30 cm', 'promjer 30 cm', '8 jaja · 3–4 porcije – za obitelj i veće obroke' ),
+        );
+    }
+}
+
 if ( ! function_exists( 'noriks_silkcase_sizes' ) ) {
     /** NORIKS SilkCase: velicina (= ime opcije Velicina), dimenzije (cm). 1:1 z originala (kinubrand.com, Tamaño). */
     function noriks_silkcase_sizes() {
@@ -1830,6 +1842,10 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Četiri veličine – od <strong>prekrivača za kauč</strong> do pokrivača za <strong>veliki obiteljski krevet</strong>.',
                 'glava' => array( 'Veličina', 'Dimenzije' ), 'vrstice' => $v,
                 'opomba' => 'Muslin je prirodan i lagano elastičan materijal, pa su manja odstupanja u dimenzijama normalna.' );
+        }
+        if ( noriks_is_type( 'puretitan', $product_id ) ) {
+            return array( 'uvod' => 'Tava dolazi u tri promjera – odaberite prema <strong>broju osoba za koje kuhate</strong>.',
+                'glava' => array( 'Veličina', 'Promjer', 'Za koga' ), 'vrstice' => noriks_puretitan_sizes(), 'opomba' => '' );
         }
         if ( noriks_is_type( 'silkcase', $product_id ) ) {
             return array( 'uvod' => 'Odaberite veličinu prema <strong>dimenzijama svojeg jastuka</strong>.',
