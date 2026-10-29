@@ -8010,3 +8010,65 @@ function gck_shgifts_free_gifts_notice() {
     <?php
 }
 
+// ============================================================
+// LUMIWAND: 4 POKLONA UZ KUPNJU (display only, orto-lumiwand)
+// ============================================================
+/**
+ * Seznam brezplacnih daril pod kartico ponude, nad gumbom - kot na originalu
+ * (mivourr.com/products/vglow, blok "4 FREE Gifts Included"). Samo prikaz,
+ * brez vnosov in brez vpliva na kosarico. Cene daril preracunane z originala (USD x 0,89015, na ,99).
+ */
+add_action( 'woocommerce_before_add_to_cart_button', 'gck_lumiwand_free_gifts', 50 );
+function gck_lumiwand_free_gifts() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+        return;
+    }
+    global $product;
+    if ( ! $product instanceof WC_Product || ! has_term( 'orto-lumiwand', 'product_cat', $product->get_id() ) ) {
+        return;
+    }
+    $img   = get_template_directory_uri() . '/img/lumiwand/';
+    $gifts = array(
+        array( 'E-knjiga: plan transformacije u 12 tjedana', 'noriks-lumiwand-poklon-ebook.webp', '26,99 €' ),
+        array( 'Diskretna torbica za pohranu', 'noriks-lumiwand-poklon-torbica.webp', '8,99 €' ),
+        array( 'Poklon iznenađenja', 'noriks-lumiwand-poklon-iznenadenja.webp', '44,99 €' ),
+        array( 'Besplatna dostava', 'noriks-lumiwand-poklon-dostava.webp', '8,99 €' ),
+    );
+    ?>
+    <style>
+      .gck-lmg{ margin:10px 0 14px; background:#faf3f3; border:1.5px solid #93404f; border-radius:8px; padding:4px; box-sizing:border-box; width:100%; }
+      .gck-lmg__head{ display:flex; justify-content:space-between; align-items:center; gap:10px; padding:11px 10px 8px; }
+      .gck-lmg__title{ margin:0; font-size:16px; font-weight:700; color:#211a28; line-height:1.2; }
+      .gck-lmg__sum{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
+      .gck-lmg__sum s{ color:#9ca3af; font-size:14px; }
+      .gck-lmg__free{ background:#93404f; color:#fff; font-weight:700; font-size:13px; padding:3px 7px; border-radius:4px; text-transform:uppercase; letter-spacing:.3px; line-height:1; }
+      .gck-lmg__list{ list-style:none; margin:0; padding:0; }
+      .gck-lmg__item{ display:flex; align-items:center; gap:12px; padding:7px 8px; margin:2px 0; border-radius:6px; }
+      .gck-lmg__item img{ width:34px; height:34px; object-fit:contain; flex-shrink:0; border-radius:4px; }
+      .gck-lmg__name{ flex-grow:1; min-width:0; font-size:14px; font-weight:600; color:#211a28; line-height:1.3; }
+      .gck-lmg__price{ display:flex; gap:8px; flex-shrink:0; font-size:13px; white-space:nowrap; }
+      .gck-lmg__price s{ color:#9ca3af; }
+      .gck-lmg__price b{ color:#211a28; font-weight:600; }
+      @media (max-width:480px){
+        .gck-lmg__title{ font-size:15px; }
+        .gck-lmg__name{ font-size:13px; }
+        .gck-lmg__price{ font-size:12px; gap:6px; }
+      }
+    </style>
+    <div class="gck-lmg">
+        <div class="gck-lmg__head">
+            <p class="gck-lmg__title">4 poklona uz kupnju</p>
+            <div class="gck-lmg__sum"><s>89,96 €</s><span class="gck-lmg__free">Besplatno</span></div>
+        </div>
+        <ul class="gck-lmg__list">
+            <?php foreach ( $gifts as $g ) : ?>
+                <li class="gck-lmg__item">
+                    <img src="<?php echo esc_url( $img . $g[1] ); ?>" alt="<?php echo esc_attr( $g[0] ); ?>" width="34" height="34">
+                    <span class="gck-lmg__name"><?php echo esc_html( $g[0] ); ?></span>
+                    <span class="gck-lmg__price"><s><?php echo esc_html( $g[2] ); ?></s><b>0,00 €</b></span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php
+}
