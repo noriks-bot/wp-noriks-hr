@@ -312,13 +312,13 @@ function gck_size_prices( $product_id ) : array {
     }
     if ( $product_id && has_term( 'orto-tusfilter', 'product_cat', $product_id ) ) {
         // NORIKS PureShower: original (eskiin.com/pages/wm-hh) Wall Mount USD 115 (Autoship) / 149, Handheld USD 139 / 169;
-        // Cena po Davidovem komentarju (28. 10. 2026): 39,00 EUR za obe varijaciji, redna 69,99 (-44 %). Privzeto zidna kot na originalu.
+        // Cena po Davidovem komentarju (28. 10. 2026: 39,00 za obe varijaciji) -> 38,99 zaradi pravila ,99; redna 69,99 (-44 %). Privzeto zidna kot na originalu.
         // 2 kosa -20 %, 3 kosi -30 % na kos.
         return array(
             'default' => 'Zidna tuš-glava',
             'sizes'   => array(
-                'Zidna tuš-glava' => array( 39.00, 69.99 ),
-                'Ručna tuš-glava' => array( 39.00, 69.99 ),
+                'Zidna tuš-glava' => array( 38.99, 69.99 ),
+                'Ručna tuš-glava' => array( 38.99, 69.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
         );
