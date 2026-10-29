@@ -20,48 +20,49 @@
  * BARVA ORIGINALA: #273b84 (temno modre oznake in gumbi na infografikah originala); svetel ton za --bg #eef1f8, akcent #273b84
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$wspt_img = get_template_directory_uri() . '/img/puretitan/';
+$wspt_tema = get_template_directory_uri();
+$wspt_img = $wspt_tema . '/img/puretitan/';
 $wspt_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
-$wspt_vid = function ( $ime ) use ( $wspt_img ) {
-	return '<video src="' . esc_url( $wspt_img . $ime . '.mp4' ) . '" poster="' . esc_url( $wspt_img . $ime . '.jpg' ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video>';
+$wspt_vid = function ( $pot ) use ( $wspt_tema ) {
+	return '<video src="' . esc_url( $wspt_tema . $pot ) . '" poster="' . esc_url( $wspt_tema . str_replace( '.mp4', '.jpg', $pot ) ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video>';
 };
 $wspt_razlogi = array(
-	array( 'video' => 'noriks-puretitan-razlog-1', 'znacka' => 'Bez premaza', 'naslov' => 'Površina na kojoj se <em>ništa ne lijepi</em>',
+	array( 'video' => '/img/puretitan/noriks-puretitan-razlog-1.mp4', 'znacka' => 'Bez premaza', 'naslov' => 'Površina na kojoj se <em>ništa ne lijepi</em>',
 		'p' => array( 'Čisti titan prirodno slabo prianja uz hranu, a kovana površina tave stvara tisuće sitnih izbočina koje smanjuju dodir hrane s dnom. Upravo ta kombinacija čini da se jaja, riba i meso odvajaju sami – bez ikakvog premaza.',
 			'Ne trebate posebne trikove ni dugo predgrijavanje kao kod obične inox tave. Kuhate normalno, okrenete lopaticom i hrana klizi.' ),
 		'zak' => 'Jaje klizne s tave – i bez premaza.' ),
-	array( 'slika' => 'noriks-puretitan-razlog-2', 'alt' => 'Klasična tava s oštećenim premazom i tava od čistog titana na plinskom štednjaku', 'znacka' => 'Bez PFAS', 'naslov' => 'Bez premaza – <em>bez PFAS, PTFE i PFOA</em>',
+	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-2.webp', 'alt' => 'Klasična tava s oštećenim premazom i tava od čistog titana na plinskom štednjaku', 'znacka' => 'Bez PFAS', 'naslov' => 'Bez premaza – <em>bez PFAS, PTFE i PFOA</em>',
 		'p' => array( 'Kod klasične tave premaz se s vremenom troši, a sitni komadići premaza završavaju u jelu. NORIKS PureTitan nema premaza koji bi se mogao ljuštiti – kuhate izravno na površini od čistog titana.',
 			'Nema kemijskog sloja, nema impregnacije i nema skrivenih dodataka. U tavi je samo ono što ste u nju stavili: vaša hrana.' ),
 		'zak' => 'Samo titan i vaša hrana – ništa između.' ),
-	array( 'slika' => 'noriks-puretitan-razlog-3', 'alt' => 'Losos s tjesteninom u tavi od čistog titana', 'znacka' => 'Ravnomjerno', 'naslov' => 'Titan za <em>puniji okus</em>',
+	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-3.webp', 'alt' => 'Losos s tjesteninom u tavi od čistog titana', 'znacka' => 'Ravnomjerno', 'naslov' => 'Titan za <em>puniji okus</em>',
 		'p' => array( 'Tava se brzo zagrije, a toplina se raspoređuje po cijelom dnu ravnomjerno – bez hladnih rubova i zagorjele sredine. Meso dobije lijepu koricu, povrće se zapeče, a sokovi ostaju u jelu.',
 			'Ravnomjerno pečenje znači manje miješanja i manje nagađanja: jelo je pečeno jednako od ruba do sredine i ima puniji okus.' ),
 		'zak' => 'Jednako pečeno od ruba do sredine.' ),
-	array( 'slika' => 'noriks-puretitan-razlog-4', 'alt' => 'Jaje pečeno na klasičnoj tavi s puno ulja i na tavi od titana s malo ulja', 'znacka' => '3× manje ulja', 'naslov' => '<em>3 puta manje</em> ulja',
+	array( 'slika' => '/img/puretitan/noriks-puretitan-razlog-4.webp', 'alt' => 'Jaje pečeno na klasičnoj tavi s puno ulja i na tavi od titana s malo ulja', 'znacka' => '3× manje ulja', 'naslov' => '<em>3 puta manje</em> ulja',
 		'p' => array( 'Više ne morate utapati hranu u ulju da biste uspjeli s jelom. Kovana površina traži samo kap masnoće za isti rezultat – jaje, palačinka ili odrezak ne zalijepe se ni s malo ulja.',
 			'Manje ulja u tavi znači lakše jelo na tanjuru i manje masnih mrlja po štednjaku.' ),
 		'zak' => 'Kap ulja je dovoljna.' ),
-	array( 'video' => 'noriks-puretitan-razlog-5', 'znacka' => 'Sve ploče', 'naslov' => 'Za <em>sve vrste ploča</em>',
+	array( 'video' => '/img/puretitan/noriks-puretitan-razlog-5.mp4', 'znacka' => 'Sve ploče', 'naslov' => 'Za <em>sve vrste ploča</em>',
 		'p' => array( 'Indukcija, plin, električna ploča, staklokeramika ili pećnica – tava radi na svim vrstama ploča i bez muke se uklapa u vašu kuhinju.',
 			'Dno tave napravljeno je za indukciju, a u pećnici izdrži do 260 °C. Meso zapečete na ploči, a završite u pećnici – u istoj tavi.' ),
 		'zak' => 'Jedna tava za ploču i pećnicu.' ),
-	array( 'video' => 'noriks-puretitan-razlog-6', 'znacka' => 'Perilica posuđa', 'naslov' => 'Čisti se <em>u par sekundi</em>',
+	array( 'video' => '/img/puretitan/noriks-puretitan-razlog-6.mp4', 'znacka' => 'Perilica posuđa', 'naslov' => 'Čisti se <em>u par sekundi</em>',
 		'p' => array( 'Topla voda, malo deterdženta i jedan potez spužvom – i tava je kao nova. Budući da se hrana ne lijepi i ne zagori, nema ribanja ni namakanja preko noći.',
 			'Tava je prikladna i za perilicu posuđa, ali vjerojatno vam neće ni trebati.' ),
 		'zak' => 'Spužva, voda – i gotovo.' ),
-	array( 'video' => 'noriks-puretitan-razlog-7', 'znacka' => 'Iz metala', 'naslov' => 'Izrađena od metala, <em>napravljena da traje</em>',
+	array( 'video' => '/img/puretitan/noriks-puretitan-razlog-7.mp4', 'znacka' => 'Iz metala', 'naslov' => 'Izrađena od metala, <em>napravljena da traje</em>',
 		'p' => array( 'Ovo nije tava za jednokratnu upotrebu s premazom koji samo izgleda kao titan. Izrađena je od metala, otporna je i napravljena da godinama ostane u vašoj kuhinji.',
 			'Metalne lopatice, pjenjače i hvataljke smijete koristiti bez straha – nema premaza koji bi se izgrebao ili ogulio.' ),
 		'zak' => 'Kupite jednom – kuhajte godinama.' ),
 );
 $wspt_kupci = array(
-	array( 'video' => 'noriks-puretitan-kupac-1', 'ime' => 'Vesna S.', 't' => 'Snimila sam svoj prvi recept na ovoj tavi. Dosta mi je bilo kuhanja na tavi s koje se ljušti premaz. Sad kuham opušteno i ništa se ne lijepi. Preporučujem 100 %!' ),
-	array( 'slika' => 'noriks-puretitan-kupac-2', 'alt' => 'Pečena piletina s krumpirom u tavi od čistog titana', 'ime' => 'Katarina M.', 't' => 'Prva piletina u novoj tavi. Malo sam se bojala da će se bez premaza zalijepiti, ali nimalo. I pranje mi je trajalo samo dvije minute. Zadovoljna sam kupnjom.' ),
-	array( 'video' => 'noriks-puretitan-kupac-3', 'ime' => 'Petra V.', 't' => 'Uzela sam je da se riješim stare tave s premazom, a na kraju me najviše oduševila kvaliteta pečenja. Jela mi uvijek uspiju bez puno truda.' ),
-	array( 'slika' => 'noriks-puretitan-kupac-4', 'alt' => 'Kupac drži tavu od čistog titana na vrtnom roštilju', 'ime' => 'Ante D.', 't' => 'Kuham gotovo svaki dan i na tavi još nema ni ogrebotine. Jasno – najbolja investicija koju sam mogao napraviti za svoju kuhinju.' ),
-	array( 'video' => 'noriks-puretitan-kupac-5', 'ime' => 'Elena R.', 't' => 'Moj specijalitet su polpete. Na staroj tavi su se lijepile, raspadale i stalno sam morala strugati. Sad same kližu, a pečenje je puno ujednačenije.' ),
-	array( 'slika' => 'noriks-puretitan-kupac-6', 'alt' => 'Majka s djecom u kuhinji drži tavu od čistog titana', 'ime' => 'Elizabeta B.', 't' => 'Htjela sam tavu bez premaza na kojoj mirno kuham za cijelu obitelj. Djeca jedu svoja omiljena jela, a ja ne razmišljam o tome što se ljušti s tave.' ),
+	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-1.mp4', 'ime' => 'Vesna S.', 't' => 'Snimila sam svoj prvi recept na ovoj tavi. Dosta mi je bilo kuhanja na tavi s koje se ljušti premaz. Sad kuham opušteno i ništa se ne lijepi. Preporučujem 100 %!' ),
+	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-2.webp', 'alt' => 'Pečena piletina s krumpirom u tavi od čistog titana', 'ime' => 'Katarina M.', 't' => 'Prva piletina u novoj tavi. Malo sam se bojala da će se bez premaza zalijepiti, ali nimalo. I pranje mi je trajalo samo dvije minute. Zadovoljna sam kupnjom.' ),
+	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-3.mp4', 'ime' => 'Petra V.', 't' => 'Uzela sam je da se riješim stare tave s premazom, a na kraju me najviše oduševila kvaliteta pečenja. Jela mi uvijek uspiju bez puno truda.' ),
+	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-4.webp', 'alt' => 'Kupac drži tavu od čistog titana na vrtnom roštilju', 'ime' => 'Ante D.', 't' => 'Kuham gotovo svaki dan i na tavi još nema ni ogrebotine. Jasno – najbolja investicija koju sam mogao napraviti za svoju kuhinju.' ),
+	array( 'video' => '/img/puretitan/noriks-puretitan-kupac-5.mp4', 'ime' => 'Elena R.', 't' => 'Moj specijalitet su polpete. Na staroj tavi su se lijepile, raspadale i stalno sam morala strugati. Sad same kližu, a pečenje je puno ujednačenije.' ),
+	array( 'slika' => '/img/puretitan/noriks-puretitan-kupac-6.webp', 'alt' => 'Majka s djecom u kuhinji drži tavu od čistog titana', 'ime' => 'Elizabeta B.', 't' => 'Htjela sam tavu bez premaza na kojoj mirno kuham za cijelu obitelj. Djeca jedu svoja omiljena jela, a ja ne razmišljam o tome što se ljušti s tave.' ),
 );
 $wspt_recenzije = array(
 	array( 'Kuham opuštenije', 'Prije nisam razmišljala o površini na kojoj kuham… sad pazim na to. Postalo je automatski i iskreno, promijenilo je cijeli moj pogled na kuhanje. Hvala!', 'Natalija P.' ),
@@ -79,9 +80,9 @@ $wspt_recenzije = array(
   <h2 class="wspt__h2 wspt__c">NORIKS PureTitan <em>u stvarnoj kuhinji</em></h2>
   <p class="wspt__p wspt__c">Jaja, odresci, riba i povrće – pogledajte kako se hrana na kovanoj površini od čistog titana peče i odvaja bez premaza i bez puno ulja.</p>
   <div class="wspt__kar wspt__kar--vid" data-wspt-kar>
-    <?php for ( $i = 1; $i <= 5; $i++ ) : ?>
-    <div class="wspt__vk"><?php echo $wspt_vid( 'noriks-puretitan-na-djelu-' . $i ); ?></div>
-    <?php endfor; ?>
+    <?php foreach ( array( '/img/puretitan/noriks-puretitan-na-djelu-1.mp4', '/img/puretitan/noriks-puretitan-na-djelu-2.mp4', '/img/puretitan/noriks-puretitan-na-djelu-3.mp4', '/img/puretitan/noriks-puretitan-na-djelu-4.mp4', '/img/puretitan/noriks-puretitan-na-djelu-5.mp4' ) as $wspt_v ) : ?>
+    <div class="wspt__vk"><?php echo $wspt_vid( $wspt_v ); ?></div>
+    <?php endforeach; ?>
   </div>
   <p class="wspt__zak">Kuhate normalno – a hrana se odvaja sama.</p>
 </div></section>
@@ -93,7 +94,7 @@ $wspt_recenzije = array(
   <div class="wspt__kar wspt__kar--kup" data-wspt-kar>
     <?php foreach ( $wspt_kupci as $k ) : ?>
     <div class="wspt__kk">
-      <div class="wspt__kkm"><?php echo isset( $k['video'] ) ? $wspt_vid( $k['video'] ) : '<img src="' . esc_url( $wspt_img . $k['slika'] . '.webp' ) . '" alt="' . esc_attr( $k['alt'] ) . '" loading="eager" decoding="async">'; ?></div>
+      <div class="wspt__kkm"><?php echo isset( $k['video'] ) ? $wspt_vid( $k['video'] ) : '<img src="' . esc_url( $wspt_tema . $k['slika'] ) . '" alt="' . esc_attr( $k['alt'] ) . '" loading="eager" decoding="async">'; ?></div>
       <div class="wspt__kkt">
         <span class="wspt__prov"><?php echo $wspt_svg; ?><circle cx="12" cy="12" r="9"/><path d="M7.8 12.3l2.8 2.8 5.6-5.8"/></svg>Provjereni kupac</span>
         <p>„<?php echo esc_html( $k['t'] ); ?>“</p>
@@ -112,7 +113,7 @@ $wspt_recenzije = array(
   <div class="wspt__razlogi">
     <?php foreach ( $wspt_razlogi as $n => $r ) : ?>
     <div class="wspt__dva<?php echo $n % 2 ? ' wspt__dva--rev' : ''; ?>">
-      <div class="wspt__media"><?php echo isset( $r['video'] ) ? $wspt_vid( $r['video'] ) : '<img src="' . esc_url( $wspt_img . $r['slika'] . '.webp' ) . '" alt="' . esc_attr( $r['alt'] ) . '" loading="eager" decoding="async">'; ?><span class="wspt__znacka"><?php echo esc_html( $r['znacka'] ); ?></span></div>
+      <div class="wspt__media"><?php echo isset( $r['video'] ) ? $wspt_vid( $r['video'] ) : '<img src="' . esc_url( $wspt_tema . $r['slika'] ) . '" alt="' . esc_attr( $r['alt'] ) . '" loading="eager" decoding="async">'; ?><span class="wspt__znacka"><?php echo esc_html( $r['znacka'] ); ?></span></div>
       <div>
         <span class="wspt__st"><?php echo (int) $n + 1; ?></span>
         <h3 class="wspt__h3"><?php echo wp_kses( $r['naslov'], array( 'em' => array() ) ); ?></h3>
