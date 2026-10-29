@@ -41,6 +41,7 @@ function noriks_product_type_map() : array {
         'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         // Orthopedic back belt (ortopedski pojas za leđa).
         'kneesleeve' => array( 'orto-kneesleeve' ),
+        'seamthong' => array( 'orto-seamthong' ),
         'ratchet' => array( 'orto-ratchet' ),
         'leakbrief' => array( 'orto-leakbrief' ),
         'tusfilter' => array( 'orto-tusfilter' ),
@@ -713,6 +714,19 @@ if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
             array( '2XL', '42 do 44', '91 – 97', '114 – 119' ),
             array( '3XL', '44 do 46', '99 – 102', '122 – 127' ),
             array( '4XL', '46 do 48', '104 – 109', '127 – 132' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_seamthong_sizes' ) ) {
+    /** NORIKS SeamThong: tablica originala ambarwear.store (US 0-12, struk/bokovi u incima) -> EU konfekcija + cm. */
+    function noriks_seamthong_sizes() {
+        return array(
+            array( 'XS', '30 do 32', '61 – 66', '91 – 94' ),
+            array( 'S',  '32 do 34', '69 – 71', '94 – 97' ),
+            array( 'M',  '34 do 38', '74 – 76', '99 – 102' ),
+            array( 'L',  '38 do 40', '79 – 81', '104 – 109' ),
+            array( 'XL', '40 do 42', '84 – 86', '112 – 114' ),
         );
     }
 }
@@ -1734,6 +1748,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
+            'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
             'kneesleeve'   => array( 'S' => '35 do 45 cm', 'M' => '46 do 50 cm', 'L' => '51 do 57 cm', 'XL' => '58 do 63 cm', '2XL' => '64 do 69 cm', '3XL' => '70 do 75 cm' ),
             'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
             'tradesman'    => array( 'M' => '39 do 42', 'L' => '42,5 do 46', 'XL' => '46,5 do 49,5' ),
@@ -1875,6 +1890,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_leakbrief_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'seamthong', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
+                'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_seamthong_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću za više udobnosti ili manju za čvršće pristajanje.' );
         }
         if ( noriks_is_type( 'kneesleeve', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bedra</strong> – izmjerite ga metrom na najširem dijelu bedra.',

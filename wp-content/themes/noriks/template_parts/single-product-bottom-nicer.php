@@ -854,4 +854,8 @@ if ( noriks_is_type( 'kneesleeve' ) ) {
     include $noriks_pb_dir . 'why-kneesleeve.php';
 }
 
+if ( noriks_is_type( 'seamthong' ) ) {
+    include $noriks_pb_dir . 'why-seamthong.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
