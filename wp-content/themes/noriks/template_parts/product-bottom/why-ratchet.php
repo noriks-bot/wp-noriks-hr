@@ -29,7 +29,7 @@ $wsr_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
       <div class="wsratchet__sf"><span class="wsratchet__ik"><?php echo $wsr_svg; ?><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><strong>Spreman za svaki dan</strong><p>Od radnog dana do vikenda: remen sigurno drži, udoban je cijeli dan i uredno izgleda – dodatak koji ćete uzimati svako jutro.</p></div>
     </div>
     <div class="wsratchet__sm">
-      <div class="wsratchet__cmp" style="--poz:50%">
+      <div class="wsratchet__cmp wsratchet__comparison" style="--poz:50%">
         <img class="wsratchet__cmp-a" src="<?php echo esc_url( $wsr_img . 'noriks-ratchet-novi-remen.webp' ); ?>" alt="Novi remen bez rupa s automatskom kopčom" loading="eager" decoding="async">
         <div class="wsratchet__cmp-b"><img src="<?php echo esc_url( $wsr_img . 'noriks-ratchet-stari-remen.webp' ); ?>" alt="Stari kožni remen s razvučenim rupama" loading="eager" decoding="async"></div>
         <span class="wsratchet__cmp-l" aria-hidden="true"></span>
@@ -47,7 +47,7 @@ $wsr_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 </div></section>
 
 <section class="wsratchet__s"><div class="wsratchet__v wsratchet__dva">
-  <div class="wsratchet__media"><video src="<?php echo esc_url( $wsr_img . 'noriks-ratchet-nosenje-video.mp4' ); ?>" poster="<?php echo esc_url( $wsr_img . 'noriks-ratchet-nosenje-video.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="auto"></video><span class="wsratchet__znacka">Klik – i pristaje</span></div>
+  <div class="wsratchet__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/ratchet/noriks-ratchet-nosenje-video.mp4' ); ?>" poster="<?php echo esc_url( get_template_directory_uri() . '/img/ratchet/noriks-ratchet-nosenje-video.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="auto"></video><span class="wsratchet__znacka">Klik – i pristaje</span></div>
   <div>
     <div class="wsratchet__kicker">Samozaporna kopča</div>
     <h2 class="wsratchet__h2">Lako se stavlja. Lako se skida. <em>Svaki put točna mjera.</em></h2>
@@ -63,7 +63,7 @@ $wsr_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 </div></section>
 
 <section class="wsratchet__s wsratchet__s--bg"><div class="wsratchet__v wsratchet__dva wsratchet__dva--rev">
-  <div class="wsratchet__media"><video src="<?php echo esc_url( $wsr_img . 'noriks-ratchet-poklon-video.mp4' ); ?>" poster="<?php echo esc_url( $wsr_img . 'noriks-ratchet-poklon-video.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="auto"></video><span class="wsratchet__znacka">U poklon kutiji</span></div>
+  <div class="wsratchet__media"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/ratchet/noriks-ratchet-poklon-video.mp4' ); ?>" poster="<?php echo esc_url( get_template_directory_uri() . '/img/ratchet/noriks-ratchet-poklon-video.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="auto"></video><span class="wsratchet__znacka">U poklon kutiji</span></div>
   <div>
     <div class="wsratchet__kicker">Poklon koji se nosi</div>
     <h2 class="wsratchet__h2">Poklonite nešto što će <em>stvarno nositi</em></h2>
