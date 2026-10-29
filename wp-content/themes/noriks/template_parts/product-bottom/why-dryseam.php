@@ -88,7 +88,7 @@ $ndry_svg = '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke=
 
 <section class="ndry__s">
   <div class="ndry__v ndry__dva">
-    <div class="ndry__media"><video poster="<?php echo esc_url( $ndry_img . 'noriks-dryseam-4-sloja.jpg' ); ?>" src="<?php echo esc_url( $ndry_img . 'noriks-dryseam-4-sloja.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
+    <div class="ndry__media ndry__media--anim"><video poster="<?php echo esc_url( $ndry_img . 'noriks-dryseam-4-sloja.jpg' ); ?>" src="<?php echo esc_url( $ndry_img . 'noriks-dryseam-4-sloja.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
     <div>
       <div class="ndry__kicker">Nova tehnologija</div>
       <h2 class="ndry__h2">Četiri sloja <em>protiv curenja</em></h2>
@@ -173,6 +173,7 @@ $ndry_svg = '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke=
 .ndry__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .ndry__media{border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(6,70,40,.14);aspect-ratio:4/5;background:#fff}
 .ndry__media img,.ndry__media video{width:100%;height:100%;object-fit:cover;display:block}
+.ndry__media--anim video{object-fit:contain;padding:28px;box-sizing:border-box}
 .ndry__tocke{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:16px}.ndry__tocke li{display:flex;gap:16px;align-items:flex-start;list-style:none}
 .ndry__st{flex:0 0 42px;height:42px;border-radius:50%;background:#064628;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
 .ndry__tocke strong{font-size:16.5px}.ndry__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
