@@ -8245,7 +8245,7 @@ function gck_popuptent_autumn_sale() {
                 <div class="gck-jes__t">Veliko jesensko sniženje</div>
                 <div class="gck-jes__s">Redovna cijena ovakvog šatora je 499,99 € – sada uz ogroman popust.</div>
             </div>
-            <div class="gck-jes__pct"><small>DO</small>−80%</div>
+            <div class="gck-jes__pct"><small>DO</small>−76%</div>
         </div>
     </div>
     <?php
