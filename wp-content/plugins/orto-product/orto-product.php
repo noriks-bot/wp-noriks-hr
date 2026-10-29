@@ -7705,6 +7705,7 @@ document.addEventListener('DOMContentLoaded', function () {
             card.querySelectorAll('.gck-per-old').forEach(el => el.textContent = fmtCard(Math.round(t.reg / qty)) + '€');
             card.querySelectorAll('.line-total').forEach(el => el.textContent = fmtCard(t.sale) + '€');
             card.querySelectorAll('.gck-regular-price').forEach(el => el.textContent = fmtCard(t.reg) + '€');
+            card.querySelectorAll('.gck-offer-save').forEach(el => el.textContent = 'Uštedite ' + fmtHr(t.reg - t.sale) + ' €');
         });
 
         const active = selector.querySelector('input[name="bundle_option"]:checked');
