@@ -928,7 +928,10 @@ function gck_render_bundle_selector() {
         $gck_offer_subs = array( 'Od 24 do 168 boja', '2 kompleta po izboru', '3 kompleta po izboru' );
     } elseif ( has_term( array( 'orto-twisthook' ), 'product_cat', $product_id ) ) {
         // TwistHook: 1 komplet = 4 kukice (David 29.10.: mora biti jasno, koliko kukica dobis).
-        $gck_offer_subs = array( 'Dobivate 4 kukice', 'Dobivate 8 kukica', 'Dobivate 12 kukica' );
+        $gck_offer_subs = array( '1 komplet u boji po izboru', '2 kompleta u bojama po izboru', '3 kompleta u bojama po izboru' );
+    } elseif ( has_term( array( 'orto-popuptent' ), 'product_cat', $product_id ) ) {
+        // PopUp: vsak gumb svoja velikost kot na originalu (David 29.10.: jasno, za koliko oseb).
+        $gck_offer_subs = array( 'Mali šator + cerada gratis', 'Veliki šator + cerada gratis', 'Mali + veliki šator + 2 cerade gratis' );
     } else {
         $gck_offer_subs = array();
     }
@@ -943,6 +946,19 @@ function gck_render_bundle_selector() {
     if ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) {
         $gck_offer_imgs = array( 'acryliques/noriks-acryliques-kartica.webp', 'acryliques/noriks-acryliques-kartica.webp', 'acryliques/noriks-acryliques-kartica.webp' );
     }
+    // Premium kartice ponud (David 29.10.: „1x kom" izgleda poceni) - slicica izdelka v kartici, opisni naslov,
+    // vrstica „Ustedite X €" in znacka kot na originalih (Kaching). Slicica: komplet z originala ali glavna slika izdelka.
+    $gck_premium_cards = has_term( array( 'orto-puretitan', 'orto-seamthong', 'orto-kneesleeve', 'orto-popuptent', 'orto-twisthook', 'orto-lumiwand' ), 'product_cat', $product_id );
+    if ( $gck_premium_cards && empty( $gck_offer_imgs ) ) {
+        if ( has_term( 'orto-puretitan', 'product_cat', $product_id ) ) {
+            $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
+        } elseif ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
+            $gck_offer_imgs = array( 'popuptent/noriks-popuptent-kartica-mali.webp', 'popuptent/noriks-popuptent-kartica-veliki.webp', 'popuptent/noriks-popuptent-kartica-obiteljski.webp' );
+        } else {
+            $gck_thumb = get_the_post_thumbnail_url( $product_id, 'woocommerce_thumbnail' );
+            if ( $gck_thumb ) { $gck_offer_imgs = array( $gck_thumb, $gck_thumb, $gck_thumb ); }
+        }
+    }
     // Kartusi iznad kartice ponude (index => tekst).
     if ( has_term( array( 'orto-cloath', 'orto-cloud' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 1 => 'NAJPRODAVANIJE', 2 => 'NAJBOLJA CIJENA' );
@@ -950,6 +966,8 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array( 2 => 'NAJBOLJA VRIJEDNOST' );
     } elseif ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) {
         $gck_offer_badges = array( 1 => 'NAJBOLJA PONUDA' );
+    } elseif ( $gck_premium_cards ) {
+        $gck_offer_badges = array( 2 => 'NAJBOLJA PONUDA' );
     } else {
         $gck_offer_badges = array();
     }
@@ -5401,6 +5419,80 @@ function gck_render_bundle_selector() {
     </style>
     <?php endif; ?>
 
+    <?php if ( $gck_premium_cards ) : ?>
+    <style>
+      /* Premium kartice ponud (David 29.10.): slicica izdelka, opisni naslov, Ustedite X €, cena desno - kot Kaching na originalih. */
+      #bundle-selector label.bundle-option.gck-prem {
+          display: grid !important;
+          grid-template-columns: auto 64px minmax(0,1fr) auto;
+          grid-template-rows: auto auto;
+          column-gap: 12px; row-gap: 0; align-items: center;
+          padding: 14px 16px !important;
+          border: 2px solid #ece4e4 !important; background: #fff !important; border-radius: 14px !important;
+          box-shadow: 0 1px 3px rgba(0,0,0,.04);
+      }
+      #bundle-selector label.bundle-option.gck-prem.active {
+          border-color: #c3192a !important; background: #fff7f7 !important;
+          box-shadow: 0 0 0 3px rgba(195,25,42,.08);
+      }
+      #bundle-selector label.gck-prem > input[type="radio"] { grid-column: 1; grid-row: 1 / span 2; align-self: center !important; accent-color: #c3192a; margin: 0 !important; }
+      #bundle-selector label.gck-prem .gck-offer-img {
+          grid-column: 2; grid-row: 1 / span 2; align-self: center !important;
+          width: 64px; height: 64px; object-fit: contain; display: block;
+          background: #fff; border-radius: 10px; border: 1px solid #f0e6e6;
+      }
+      #bundle-selector label.gck-prem .gck-offer-head {
+          grid-column: 3; grid-row: 1; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; line-height: 1.2; margin: 0 !important;
+      }
+      #bundle-selector label.gck-prem .bundle-option-title { font-size: 16.5px; font-weight: 800; letter-spacing: -.01em; color: #141414; }
+      #bundle-selector label.gck-prem .gck-offer-prices { display: inline-flex; align-items: center; margin: 0 !important; }
+      #bundle-selector label.gck-prem .gck-per-chip,
+      #bundle-selector label.gck-prem .gck-hl-break,
+      #bundle-selector label.gck-prem > br { display: none !important; }
+      #bundle-selector label.gck-prem .gck-discount-badge { margin: 0 !important; }
+      #bundle-selector label.gck-prem .gck-offer-sub {
+          grid-column: 3; grid-row: 2; display: flex !important; flex-direction: column; gap: 1px;
+          margin: 3px 0 0 !important; font-size: 13px; line-height: 1.3; color: #555 !important; font-weight: 500;
+      }
+      #bundle-selector label.gck-prem .gck-offer-save { color: #1f8a4c; font-weight: 700; font-size: 13px; }
+      #bundle-selector label.gck-prem .bundle-total-line {
+          grid-column: 4; grid-row: 1 / span 2;
+          display: flex !important; flex-direction: column; align-items: flex-end; gap: 2px;
+          margin: 0 !important; text-align: right;
+      }
+      #bundle-selector label.gck-prem .bundle-total-line .line-total { font-size: 20px; font-weight: 800; color: #141414; order: 1; }
+      #bundle-selector label.gck-prem .bundle-total-line .gck-regular-price { font-size: 14px; color: #9aa3ad; text-decoration: line-through; margin: 0 !important; order: 2; }
+      #bundle-selector label.gck-prem .bundle-total-line > span:not(.line-total):not(.gck-regular-price) { display: none !important; }
+      /* izbirniki (velicina/boja) v izbrani kartici cez celo sirino pod vsebino */
+      #bundle-selector label.gck-prem .bundle-pairs { grid-column: 2 / -1; grid-row: 3; margin: 10px 0 0 !important; }
+      #bundle-selector label.gck-prem .bundle-pairs:empty { display: none !important; }
+      #bundle-selector label.gck-prem .bundle-pairs > small { display: none !important; }
+      #bundle-selector label.gck-prem ~ label.gck-prem { margin-top: 20px !important; }
+      #bundle-selector label.gck-prem .gck-popular-badge,
+      #bundle-selector label.gck-prem .gck-popular-badge-2 {
+          position: absolute !important; top: 0 !important; right: 18px !important; left: auto !important; bottom: auto !important; margin: 0 !important;
+          transform: translateY(-50%) !important;
+          display: inline-flex !important; align-items: center; justify-content: center;
+          padding: 0 12px !important; height: 24px !important; line-height: 1 !important;
+          font-size: 11px !important; font-weight: 800 !important; letter-spacing: .02em !important;
+          border-radius: 999px !important; white-space: nowrap; z-index: 3;
+          background: #c3192a !important; color: #fff !important;
+      }
+      #bundle-selector label.gck-prem:has(.gck-popular-badge),
+      #bundle-selector label.gck-prem:has(.gck-popular-badge-2) { padding-top: 18px !important; }
+      @media (max-width: 560px) {
+          #bundle-selector label.bundle-option.gck-prem { grid-template-columns: auto 52px minmax(0,1fr) auto; column-gap: 10px; padding: 12px 12px !important; }
+          #bundle-selector label.gck-prem .gck-offer-img { width: 52px; height: 52px; }
+          #bundle-selector label.gck-prem .bundle-option-title { font-size: 15px; }
+          #bundle-selector label.gck-prem .gck-offer-sub,
+          #bundle-selector label.gck-prem .gck-offer-save { font-size: 12px; }
+          #bundle-selector label.gck-prem .bundle-total-line .line-total { font-size: 17px; }
+          #bundle-selector label.gck-prem .bundle-total-line .gck-regular-price { font-size: 12.5px; }
+          #bundle-selector label.gck-prem .bundle-pairs { grid-column: 1 / -1; }
+      }
+    </style>
+    <?php endif; ?>
+
     <?php
     // Polar NORIKS Cloth: kartica ponude kao na referenci — naslov i naziv paketa lijevo,
     // cijena desno u istom redu, precrtana stara cijena ispod nje.
@@ -6956,6 +7048,8 @@ function gck_render_bundle_selector() {
         if ( has_term( array( 'orto-pillorganizer' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         // NORIKS Polo: kao na originalu je predizbrana zadnja ponuda (6x kom).
         if ( has_term( array( 'orto-polo' ), 'product_cat', $product_id ) && count( $offers ) > 2 ) { $default_index = 2; }
+        // NORIKS PopUp: kao na originalu je predizabran veliki sator (do 3 osobe).
+        if ( has_term( array( 'orto-popuptent' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         $loop_index    = 0;
 
         foreach ( $offers as $offer_id => $data ) :
@@ -7003,7 +7097,7 @@ function gck_render_bundle_selector() {
                 : 0;
         ?>
             <label style="position: relative; <?php if ( ( ( $loop_index == 1 ||  $loop_index == 3 ) && ! $show_group_titles ) || ( ! empty( $gck_offer_badges ) && isset( $gck_offer_badges[ $loop_index ] ) ) ) : ?> margin-top: 25px;  <?php endif; ?>"
-                   class="bundle-option<?php echo $is_default ? ' active' : ''; ?>">
+                   class="bundle-option<?php echo $is_default ? ' active' : ''; ?><?php echo $gck_premium_cards ? ' gck-prem' : ''; ?>">
 
                 <?php if ( ! empty( $gck_offer_badges ) && isset( $gck_offer_badges[ $loop_index ] ) ) : ?>
                     <div class="gck-popular-badge gck-popular-badge--offer"><?php echo esc_html( $gck_offer_badges[ $loop_index ] ); ?></div>
@@ -7031,7 +7125,7 @@ function gck_render_bundle_selector() {
                     
   
 
-<?php if ( ! empty( $gck_offer_imgs ) && isset( $gck_offer_imgs[ $loop_index ] ) ) : ?><img class="gck-offer-img" src="<?php echo esc_url( get_template_directory_uri() . ( false !== strpos( $gck_offer_imgs[ $loop_index ], '/' ) ? '/img/' : '/img/seal/' ) . $gck_offer_imgs[ $loop_index ] ); ?>" alt="" loading="lazy"><?php endif; ?><span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
+<?php if ( ! empty( $gck_offer_imgs ) && isset( $gck_offer_imgs[ $loop_index ] ) ) : ?><img class="gck-offer-img" src="<?php echo esc_url( 0 === strpos( $gck_offer_imgs[ $loop_index ], 'http' ) ? $gck_offer_imgs[ $loop_index ] : get_template_directory_uri() . ( false !== strpos( $gck_offer_imgs[ $loop_index ], '/' ) ? '/img/' : '/img/seal/' ) . $gck_offer_imgs[ $loop_index ] ); ?>" alt=""><?php endif; ?><span class="gck-offer-head"><span class="bundle-option-title"><?php echo esc_html( $data['title'] ); ?></span><?php
                   if ( ! empty( $gck_offer_tags ) && isset( $gck_offer_tags[ $loop_index ] ) ) : ?><span class="gck-offer-tag"><?php echo esc_html( $gck_offer_tags[ $loop_index ] ); ?></span><?php endif; ?>
                 
                   <?php
@@ -7067,7 +7161,9 @@ function gck_render_bundle_selector() {
                 <?php endif; ?>
                 </span><!-- /.gck-offer-head -->
 
-                <?php if ( ! empty( $gck_offer_subs ) && isset( $gck_offer_subs[ $loop_index ] ) ) : ?>
+                <?php if ( $gck_premium_cards ) : $gck_save = (float) $data['regular'] - (float) $data['total']; ?>
+                  <span class="gck-offer-sub"><?php if ( ! empty( $gck_offer_subs[ $loop_index ] ) ) : ?><span class="gck-offer-sub-txt"><?php echo esc_html( $gck_offer_subs[ $loop_index ] ); ?></span><?php endif; ?><?php if ( $gck_save > 0 ) : ?><span class="gck-offer-save">Uštedite <?php echo esc_html( number_format( $gck_save, 2, ',', '.' ) ); ?> €</span><?php endif; ?></span>
+                <?php elseif ( ! empty( $gck_offer_subs ) && isset( $gck_offer_subs[ $loop_index ] ) ) : ?>
                   <span class="gck-offer-sub"><?php echo esc_html( $gck_offer_subs[ $loop_index ] ); ?></span>
                 <?php endif; ?>
 
@@ -7765,6 +7861,16 @@ function gck_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
     } else {
         $lines = gck_build_pair_lines( $pairs_data, $p1, $p2 );
     }
+    // NORIKS PopUp: vsaka kartica je svoja velikost - v kosarici in narocilu mora pisati, kateri sator (David 29.10.).
+    if ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
+        $gck_pu_idx   = (int) substr( strrchr( (string) $offer_id, '_' ), 1 );
+        $gck_pu_lines = array(
+            0 => array( 'Mali šator (do 2 osobe) + cerada' ),
+            1 => array( 'Veliki šator (do 3 osobe) + cerada' ),
+            2 => array( 'Mali šator (do 2 osobe) + cerada', 'Veliki šator (do 3 osobe) + cerada' ),
+        );
+        if ( isset( $gck_pu_lines[ $gck_pu_idx ] ) ) { $lines = $gck_pu_lines[ $gck_pu_idx ]; }
+    }
 
     $total      = (float) $offer['total'];
 
@@ -8071,6 +8177,50 @@ function gck_lumiwand_free_gifts() {
                 </li>
             <?php endforeach; ?>
         </ul>
+    </div>
+    <?php
+}
+// ============================================================
+// POPUP: VELIKO JESENSKO SNIZENJE (display only, orto-popuptent)
+// ============================================================
+/**
+ * Jesenski pas nad karticami ponud (David 29.10.: cela stran kot veliko jesensko znizanje,
+ * redna cena takega satora je 500 €). Samo prikaz, brez vpliva na kosarico.
+ */
+add_action( 'woocommerce_before_add_to_cart_button', 'gck_popuptent_autumn_sale', 4 );
+function gck_popuptent_autumn_sale() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+        return;
+    }
+    global $product;
+    if ( ! $product instanceof WC_Product || ! has_term( 'orto-popuptent', 'product_cat', $product->get_id() ) ) {
+        return;
+    }
+    ?>
+    <style>
+      .gck-jes{ margin:4px 0 22px; border-radius:12px; overflow:hidden; background:linear-gradient(100deg,#7a2e0e 0%,#b8501b 45%,#d9822b 100%); color:#fff; position:relative; box-shadow:0 6px 18px rgba(122,46,14,.22); }
+      .gck-jes__in{ display:flex; align-items:center; gap:14px; padding:14px 18px; position:relative; z-index:1; }
+      .gck-jes__ico{ flex-shrink:0; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.16); display:flex; align-items:center; justify-content:center; }
+      .gck-jes__txt{ flex-grow:1; min-width:0; }
+      .gck-jes__k{ font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; opacity:.85; }
+      .gck-jes__t{ font-size:19px; font-weight:900; line-height:1.15; letter-spacing:-.01em; text-transform:uppercase; }
+      .gck-jes__s{ font-size:13px; opacity:.92; margin-top:2px; }
+      .gck-jes__pct{ flex-shrink:0; background:#fff; color:#9b3a12; font-weight:900; font-size:20px; line-height:1; padding:9px 11px; border-radius:10px; text-align:center; }
+      .gck-jes__pct small{ display:block; font-size:9.5px; font-weight:800; letter-spacing:.08em; margin-bottom:2px; }
+      .gck-jes__leaf{ position:absolute; opacity:.13; z-index:0; }
+      @media (max-width:480px){ .gck-jes__in{ padding:12px 13px; gap:10px; } .gck-jes__ico{ width:38px; height:38px; } .gck-jes__t{ font-size:16px; } .gck-jes__s{ font-size:12px; } .gck-jes__pct{ font-size:17px; padding:8px 9px; } }
+    </style>
+    <div class="gck-jes">
+        <svg class="gck-jes__leaf" style="right:70px;top:-14px" width="90" height="90" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2l1.6 4.2L17 4l-.6 4.4L21 8l-2.8 3.2L22 13l-4.2 1 1.4 4.2-4-2L13 21h-2l-2.2-4.8-4 2L6.2 14 2 13l3.8-1.8L3 8l4.6.4L7 4l3.4 2.2z"/></svg>
+        <div class="gck-jes__in">
+            <span class="gck-jes__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+            <div class="gck-jes__txt">
+                <div class="gck-jes__k">Samo ove jeseni</div>
+                <div class="gck-jes__t">Veliko jesensko sniženje</div>
+                <div class="gck-jes__s">Redovna cijena ovakvog šatora je 499,99 € – sada uz ogroman popust.</div>
+            </div>
+            <div class="gck-jes__pct"><small>DO</small>−80%</div>
+        </div>
     </div>
     <?php
 }
