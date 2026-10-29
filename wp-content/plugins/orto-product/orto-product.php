@@ -926,6 +926,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-acryliques' ), 'product_cat', $product_id ) ) {
         // Flomasteri: kartice kot na originalu (monpetitcurieux.fr) - naslov + podnaslov pod njim.
         $gck_offer_subs = array( 'Od 24 do 168 boja', '2 kompleta po izboru', '3 kompleta po izboru' );
+    } elseif ( has_term( array( 'orto-twisthook' ), 'product_cat', $product_id ) ) {
+        // TwistHook: 1 komplet = 4 kukice (David 29.10.: mora biti jasno, koliko kukica dobis).
+        $gck_offer_subs = array( 'Dobivate 4 kukice', 'Dobivate 8 kukica', 'Dobivate 12 kukica' );
     } else {
         $gck_offer_subs = array();
     }
