@@ -966,6 +966,9 @@ function gck_render_bundle_selector() {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
         } elseif ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'popuptent/noriks-popuptent-kartica-mali.webp', 'popuptent/noriks-popuptent-kartica-veliki.webp', 'popuptent/noriks-popuptent-kartica-obiteljski.webp' );
+        } elseif ( has_term( 'orto-dryseam', 'product_cat', $product_id ) ) {
+            // David 29.10.: v gumbu samo izdelek na beli podlagi (glavna slika je primerjava ulosci / gacice).
+            $gck_offer_imgs = array( 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp' );
         } else {
             $gck_thumb = get_the_post_thumbnail_url( $product_id, 'woocommerce_thumbnail' );
             if ( $gck_thumb ) { $gck_offer_imgs = array( $gck_thumb, $gck_thumb, $gck_thumb ); }
