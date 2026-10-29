@@ -46,6 +46,7 @@ function noriks_product_type_map() : array {
         'puretitan' => array( 'orto-puretitan' ),
         'popuptent' => array( 'orto-popuptent' ),
         'ratchet' => array( 'orto-ratchet' ),
+        'twisthook' => array( 'orto-twisthook' ),
         'leakbrief' => array( 'orto-leakbrief' ),
         'tusfilter' => array( 'orto-tusfilter' ),
         'mamabelt' => array( 'orto-mamabelt' ),
