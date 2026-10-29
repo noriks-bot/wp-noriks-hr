@@ -6962,6 +6962,8 @@ function gck_render_bundle_selector() {
             // SHGIFTS is a single fixed set (4+1+1); render only the first offer row
             // even if the bundle meta happens to carry more than one.
             if ( $gck_shgifts && $loop_index > 0 ) break;
+            // LumiWand: kot na originalu se kupi samo 1 kom (+ 4 pokloni pod ponudbo) - David 29.10.
+            if ( $loop_index > 0 && has_term( 'orto-lumiwand', 'product_cat', $product_id ) ) break;
 
             $pairs = (int) ( $data['qty'] ?? 0 );
             if ( $pairs <= 0 ) continue;
