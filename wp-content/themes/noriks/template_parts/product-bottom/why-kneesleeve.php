@@ -94,7 +94,7 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 </div></section>
 
 <section class="wsknee__s"><div class="wsknee__v wsknee__dva wsknee__dva--rev">
-  <div class="wsknee__media"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-za-sve-aktivnosti.webp' ); ?>" alt="Kompresijski rukavi za trčanje, teretanu, nogomet, planinarenje i dugo stajanje" loading="eager" decoding="async"></div>
+  <div class="wsknee__media wsknee__media--kv"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-za-sve-aktivnosti.webp' ); ?>" alt="Kompresijski rukavi za trčanje, teretanu, nogomet, planinarenje i dugo stajanje" loading="eager" decoding="async"></div>
   <div>
     <div class="wsknee__kicker">Jedan proizvod, puno situacija</div>
     <h2 class="wsknee__h2">Jedno rješenje <em>za sve što radite</em></h2>
@@ -203,6 +203,7 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 .wsknee__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wsknee__dva--rev>div:first-child{order:2}
 .wsknee__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.14);aspect-ratio:4/5;background:#e9e9e9}
 .wsknee__media img,.wsknee__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsknee__media--kv{aspect-ratio:1/1;background:#fff}.wsknee__media--kv img{object-fit:contain}
 .wsknee__media--cela{aspect-ratio:auto;background:#fff}.wsknee__media--cela img{height:auto;object-fit:contain}
 .wsknee__znacka{position:absolute;left:16px;top:16px;background:#d8dc1e;color:#1c1c1c;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wsknee__kv{list-style:none;margin:4px 0 6px;padding:0}.wsknee__kv li{position:relative;padding-left:32px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
@@ -219,7 +220,7 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 .wsknee__km img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
 .wsknee__kt{padding:20px 22px 22px;flex:1;display:flex;flex-direction:column}.wsknee__kt strong{display:block;font-size:17px;margin:0 0 6px}.wsknee__kt p{margin:0 0 12px;font-size:15.5px;line-height:1.55;color:#333;flex:1}
 .wsknee__k--tekst .wsknee__kt{padding:28px 26px}
-.wsknee__oz{display:inline-block;align-self:flex-start;background:#d8dc1e;color:#1c1c1c;font-size:11.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:20px;margin-bottom:10px}
+.wsknee__oz{display:inline-block;align-self:flex-start;background:#d8dc1e;color:#1c1c1c;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:20px;margin-bottom:10px}
 .wsknee__zv{color:#e0a33c;letter-spacing:2px;display:block;margin-bottom:8px}
 .wsknee__ime{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
 .wsknee__av{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#eef0b4;color:#5c5e0c;font-style:normal;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center}
