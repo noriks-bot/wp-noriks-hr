@@ -932,6 +932,12 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-popuptent' ), 'product_cat', $product_id ) ) {
         // PopUp: vsak gumb svoja velikost kot na originalu (David 29.10.: jasno, za koliko oseb).
         $gck_offer_subs = array( 'Mali šator + cerada gratis', 'Veliki šator + cerada gratis', 'Mali + veliki šator + 2 cerade gratis' );
+    } elseif ( has_term( array( 'orto-tactical' ), 'product_cat', $product_id ) ) {
+        // TacBelt: jedna velicina (David 29.10.: mora biti jasno, da je remen za vse velicine).
+        $gck_offer_subs = array( 'Jedna veličina za sve – do 120 cm', 'Jedna veličina do 120 cm · svaki u boji po izboru', 'Jedna veličina do 120 cm · svaki u boji po izboru' );
+    } elseif ( has_term( array( 'orto-ratchet' ), 'product_cat', $product_id ) ) {
+        // AutoLock: jedna velicina (David 29.10.: mora biti jasno, da je remen za vse velicine).
+        $gck_offer_subs = array( 'Jedna veličina za sve – do 130 cm', 'Jedna veličina do 130 cm · svaki u boji po izboru', 'Jedna veličina do 130 cm · svaki u boji po izboru' );
     } else {
         $gck_offer_subs = array();
     }
@@ -948,7 +954,7 @@ function gck_render_bundle_selector() {
     }
     // Premium kartice ponud (David 29.10.: „1x kom" izgleda poceni) - slicica izdelka v kartici, opisni naslov,
     // vrstica „Ustedite X €" in znacka kot na originalih (Kaching). Slicica: komplet z originala ali glavna slika izdelka.
-    $gck_premium_cards = has_term( array( 'orto-puretitan', 'orto-seamthong', 'orto-kneesleeve', 'orto-popuptent', 'orto-twisthook', 'orto-lumiwand' ), 'product_cat', $product_id );
+    $gck_premium_cards = has_term( array( 'orto-puretitan', 'orto-seamthong', 'orto-kneesleeve', 'orto-popuptent', 'orto-twisthook', 'orto-lumiwand', 'orto-tactical', 'orto-ratchet' ), 'product_cat', $product_id );
     if ( $gck_premium_cards && empty( $gck_offer_imgs ) ) {
         if ( has_term( 'orto-puretitan', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
