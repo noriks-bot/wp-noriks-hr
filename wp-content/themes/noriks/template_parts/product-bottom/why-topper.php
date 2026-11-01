@@ -151,6 +151,8 @@ $wtp_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 @media (max-width:860px){.wstop__s{padding:46px 0}
 .wstop__dva{grid-template-columns:1fr;gap:24px}.wstop__dva--rev>div:first-child{order:0}
 .wstop__grid{grid-template-columns:1fr;gap:14px}
-.wstop__al{flex:0 0 calc((100% - 20px) / 3)}}
+.wstop__alati{flex-direction:column;flex-wrap:nowrap;gap:8px}
+.wstop__al{flex:0 0 auto;display:flex;align-items:center;gap:12px;padding:9px 14px;text-align:left;font-size:15px}
+.wstop__al .wstop__ai{width:34px;height:34px;margin:0;flex:0 0 34px}.wstop__al .wstop__ai svg{width:18px;height:18px}}
 @media (max-width:767px){.wstop__v{padding:0 16px}}
 </style>

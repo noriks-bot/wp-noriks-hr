@@ -812,7 +812,7 @@
           
           
           </h1>
-    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;">
+    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px; font-size: 14px; line-height: 1.45;">
         
            <?php if ( noriks_is_type( 'fisiorest' ) ): ?>
 
