@@ -3,7 +3,8 @@
  * NORIKS 3D Topperi — digitalni komplet 750+ slojevitih 3D toppera za torte (PDF / PNG / SVG): why sekcije po strukturi originala
  * (novadigitall.online/products/cake-topper-kit-3d, prej mechanics-2026.myshopify.com).
  *
- * STRUKTURA ORIGINALA (stran nima lastnih sekcij - vsa vsebina je v opisu pod gumbom, od vrha navzdol):
+ * STRUKTURA ORIGINALA:
+   (stran nima lastnih sekcij - vsa vsebina je v opisu pod gumbom, od vrha navzdol)
    1. uvod: krepek stavek 750+ layered 3D cake topper designs + 2 odstavka (odpri datoteko, natisni, izrezi, zlozi; brez znanja dizajna, brez plotterja, SVG za Cricut/Silhouette) - pri nas slika levo + besedilo desno
    2. naslov What you get + seznam 5 tock s krepkim naslovom (750+ dizajnov po temah, 3 formati, prava velikost po slojih, novi dizajni vsak teden, dozivljenjski dostop) - pri nas slika desno + seznam 5 tock z ikonami (cik-cak)
    3. naslov 6 bonuses included + seznam 6 bonusov (komercialna licenca, crke in stevilke, sezonski paket, mini cupcake topperji, pozivnice, vodic za tisk in sestavljanje) - pri nas naslov + siroka slika kompleta z bonusi + 6 kartic z ikonami (3 v vrsti)
