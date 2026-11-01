@@ -878,4 +878,8 @@ if ( noriks_is_type( 'lumiwand' ) ) {
     include $noriks_pb_dir . 'why-lumiwand.php';
 }
 
+if ( noriks_is_type( 'topper' ) ) {
+    include $noriks_pb_dir . 'why-topper.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
