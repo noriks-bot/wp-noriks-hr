@@ -26,7 +26,7 @@ $wrs_zv  = '<span class="wrs__zv" aria-label="5 od 5">★★★★★</span>';
 <div class="wrs">
 
 <section class="wrs__s wrs__s--bg"><div class="wrs__v wrs__dva">
-  <div class="wrs__media"><img src="<?php echo esc_url( $wrs_img . 'noriks-runshort-detalj-2u1.webp' ); ?>" alt="NORIKS RunShort kratke hlače za trčanje 2-u-1 – lagani vanjski sloj i crne kompresijske hlačice ispod" loading="eager" decoding="async"><span class="wrs__znacka">2-u-1</span></div>
+  <div class="wrs__media"><img src="<?php echo esc_url( $wrs_img . 'noriks-runshort-04-detalj-pojas.webp' ); ?>" alt="NORIKS RunShort kratke hlače za trčanje 2-u-1 – lagani vanjski sloj i crne kompresijske hlačice ispod" loading="eager" decoding="async"><span class="wrs__znacka">2-u-1</span></div>
   <div>
     <div class="wrs__kicker">Kratke hlače za trčanje</div>
     <h2 class="wrs__h2">Napravljene za brzinu, udaljenost – <em>i sve između</em></h2>
