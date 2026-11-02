@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wem_img = get_template_directory_uri() . '/img/emsbunion/';
 $wem_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 $wem_slika = function ( $f, $alt ) use ( $wem_img ) {
-	return '<img src="' . esc_url( $wem_img . $f ) . '" alt="' . esc_attr( $alt ) . '" loading="eager" decoding="async">';
+	return '<img src="' . esc_url( $wem_img . $f . '?v=2' ) . '" alt="' . esc_attr( $alt ) . '" loading="eager" decoding="async">';
 };
 ?>
 <div class="wem">
