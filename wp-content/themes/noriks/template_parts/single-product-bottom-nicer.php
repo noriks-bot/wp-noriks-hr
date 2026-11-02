@@ -886,4 +886,8 @@ if ( noriks_is_type( 'brewer' ) ) {
     include $noriks_pb_dir . 'why-brewer.php';
 }
 
+if ( noriks_is_type( 'runshort' ) ) {
+    include $noriks_pb_dir . 'why-runshort.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';

@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'lumiwand' => array( 'orto-lumiwand' ),
         'topper' => array( 'orto-topper' ),
         'brewer' => array( 'orto-brewer' ),
+        'runshort' => array( 'orto-runshort' ),
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
         'dryseam' => array( 'orto-dryseam' ),
@@ -721,6 +722,19 @@ if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
             array( '2XL', '42 do 44', '91 – 97', '114 – 119' ),
             array( '3XL', '44 do 46', '99 – 102', '122 – 127' ),
             array( '4XL', '46 do 48', '104 – 109', '127 – 132' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_runshort_sizes' ) ) {
+    /** NORIKS RunShort: tablica originala runnractive.com (Shorts: Waist / Hips v cm) S-XL 1:1, 2XL nadaljuje isti korak (+4 / +5 cm). */
+    function noriks_runshort_sizes() {
+        return array(
+            array( 'S',   '44 do 46', '74', '105' ),
+            array( 'M',   '46 do 48', '78', '110' ),
+            array( 'L',   '48 do 50', '82', '115' ),
+            array( 'XL',  '50 do 52', '86', '120' ),
+            array( '2XL', '52 do 54', '90', '125' ),
         );
     }
 }
@@ -1782,6 +1796,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
+            'runshort'     => array( 'S' => '44 do 46', 'M' => '46 do 48', 'L' => '48 do 50', 'XL' => '50 do 52', '2XL' => '52 do 54' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
             'kneesleeve'   => array( 'S' => '35 do 45 cm', 'M' => '46 do 50 cm', 'L' => '51 do 57 cm', 'XL' => '58 do 63 cm', '2XL' => '64 do 69 cm', '3XL' => '70 do 75 cm' ),
@@ -1927,6 +1942,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         if ( noriks_is_type( 'leakbrief', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_leakbrief_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'runshort', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
+                'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_runshort_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'dryseam', $product_id ) ) {
