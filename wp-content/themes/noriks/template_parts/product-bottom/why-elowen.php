@@ -97,7 +97,7 @@ $wel_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wel__s{padding:72px 0;background:#fff}.wel__s.wel__s--bg{background:#f6f1ea}
 .wel__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wel__c{text-align:center}
-.wel__kicker{font-size:12.5px;letter-spacing:1.8px;text-transform:uppercase;color:#7a6243;margin:0 0 8px;font-weight:700}
+.wel__kicker{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:#7a6243;margin:0 0 8px;font-weight:700}
 .wel__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#a68a64;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wel__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#2b2620}.wel__h2 em{font-style:italic;color:#7a6243}
 .wel__p{font-size:15.5px;line-height:1.65;color:#3d372f;margin:0 0 14px}
@@ -107,7 +107,7 @@ $wel_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wel__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wel__dva--rev>div:first-child{order:2}
 .wel__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(110,84,45,.16);aspect-ratio:4/5;background:#efe8dd}
 .wel__media img{width:100%;height:100%;object-fit:cover;display:block}
-.wel__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#6e5430;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.wel__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#6e5430;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wel__zv{color:#d4a52b;letter-spacing:2px;font-size:15px;display:inline-block}
 .wel__pi{flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:#efe6d9;color:#7a6243;display:flex;align-items:center;justify-content:center}
 .wel__pred{list-style:none;margin:6px 0 4px;padding:0;display:grid;gap:12px}
@@ -141,7 +141,7 @@ $wel_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
   .wel__grid--4{gap:12px}.wel__kt{padding:12px 12px 14px}.wel__kt strong{font-size:15px}.wel__kt p{font-size:13.5px}
   .wel__vidovi{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:6px}
   .wel__vidovi>.wel__vid{flex:0 0 70%;scroll-snap-align:center}
-  .wel__podaci{grid-template-columns:1fr 1fr 1fr;gap:8px}.wel__podaci>div{padding:12px 6px}.wel__podaci strong{font-size:13.5px}.wel__podaci small{font-size:12px}
+  .wel__podaci{grid-template-columns:1fr 1fr 1fr;gap:8px}.wel__podaci>div{padding:12px 6px}.wel__podaci strong{font-size:13.5px}.wel__podaci small{font-size:13px}
   .wel__kar{grid-auto-columns:78%;gap:14px}.wel__pus--l{left:4px}.wel__pus--d{right:4px}
 }
 </style>
