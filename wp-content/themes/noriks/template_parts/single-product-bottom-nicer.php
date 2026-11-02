@@ -890,6 +890,10 @@ if ( noriks_is_type( 'elowen' ) ) {
     include $noriks_pb_dir . 'why-elowen.php';
 }
 
+if ( noriks_is_type( 'emsbunion' ) ) {
+    include $noriks_pb_dir . 'why-emsbunion.php';
+}
+
 if ( noriks_is_type( 'runshort' ) ) {
     include $noriks_pb_dir . 'why-runshort.php';
 }

@@ -45,6 +45,7 @@ function noriks_product_type_map() : array {
         'brewer' => array( 'orto-brewer' ),
         'elowen' => array( 'orto-elowen' ),
         'runshort' => array( 'orto-runshort' ),
+        'emsbunion' => array( 'orto-emsbunion' ),
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
         'dryseam' => array( 'orto-dryseam' ),
