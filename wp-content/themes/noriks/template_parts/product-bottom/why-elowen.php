@@ -4,7 +4,7 @@
  * (shopelowen.com/products/elowen-wrap).
  *
  * STRUKTURA ORIGINALA:
-   1. pod ceno 3 kljukice (manjsi od steklenice za vodo, ostane na ramenih z odprtinami za roke, se ne mecka) - pri nas slika levo (primerjava z bocom za vodu, napis lokaliziran v HR) + 3 prednosti z ikonami desno
+   1. pod ceno 3 kljukice (manjsi od steklenice za vodo, ostane na ramenih z odprtinami za roke, se ne mecka) - pri nas slika levo (slozen ogrtac ob boci za vodu, napis lokaliziran v HR) + 3 prednosti z ikonami desno
    2. harmonike pod gumbom: One size fits all (~180 x 70 cm), Details & fit, Fabric (100 % merino, nega), Shipping & returns - pri nas slika desno (detalj tkanine) + besedilo kroj in tkanina levo (Shipping & returns IZPUSCENO - tuji pogoji, namesto tega NORIKS pogoji)
    3. The Wrap You'll Reach for Every Day: naslov + 4 kartice v vrsti (slika zgoraj, naslov + besedilo spodaj) - pri nas naslov + mreza 4 kartice s slikami z originala
    4. One Wrap. Three Ways. Every Season.: 3 videi v vrsti (9:16, nacini nosenja) na bez podlagi - pri nas naslov + 3 videi z originala v vrsti (mp4, brez zvoka, poster)
