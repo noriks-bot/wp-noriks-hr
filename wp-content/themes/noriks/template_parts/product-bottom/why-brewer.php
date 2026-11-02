@@ -267,6 +267,7 @@ $wbr_zv  = '<span class="wbr__zv" aria-label="5 od 5">★★★★★</span>';
   .wbr__ocjena{flex-direction:column;align-items:stretch;gap:14px;padding:18px}
   .wbr__media--video{max-width:340px}
   .wbr__harm p{margin-left:0}
+  .wbr__tab{min-width:0;font-size:13px}.wbr__tab th,.wbr__tab td{padding:11px 8px}.wbr__tab thead th{font-size:13px}
   .wbr__spec th{width:44%}.wbr__spec th,.wbr__spec td{padding:9px 12px;font-size:14px}
 }
 </style>
