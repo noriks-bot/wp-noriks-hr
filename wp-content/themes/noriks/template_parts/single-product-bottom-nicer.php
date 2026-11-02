@@ -898,4 +898,8 @@ if ( noriks_is_type( 'runshort' ) ) {
     include $noriks_pb_dir . 'why-runshort.php';
 }
 
+if ( noriks_is_type( 'comptank' ) ) {
+    include $noriks_pb_dir . 'why-comptank.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
