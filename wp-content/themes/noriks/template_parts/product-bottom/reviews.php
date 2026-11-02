@@ -6169,7 +6169,7 @@ $bracelet_faq = array(
 
 $winecooler_faq = array(
   array('questioon' => 'Kako funkcionira ponuda za više komada?',
-    'answer'    => 'Jednostavno odaberite ponudu <strong>2x kom</strong>, <strong>4x kom</strong> ili <strong>6x kom</strong> — u košaricu ide odabrani broj hladnjaka za vino, a popust se obračunava automatski.'),
+    'answer'    => 'Jednostavno odaberite ponudu <strong>1x kom</strong>, <strong>2x kom</strong> ili <strong>3x kom</strong> — u košaricu ide odabrani broj hladnjaka za vino, a popust se obračunava automatski.'),
   array('questioon' => 'Koje načine plaćanja mogu koristiti?',
     'answer'    => 'Kod nas možete platiti putem Apple Paya, Google Paya, Mastercarda i Vise.'),
   array('questioon' => 'Kako funkcionira?',
