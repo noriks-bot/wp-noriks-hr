@@ -213,7 +213,7 @@ $wem_slika = function ( $f, $alt ) use ( $wem_img ) {
 .wem__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(15,60,55,.15);aspect-ratio:4/5;background:#e3f1ec}
 .wem__media img{width:100%;height:100%;object-fit:cover;display:block}
 .wem__media--kv{aspect-ratio:1/1}
-.wem__polna{max-width:760px;margin:22px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(15,60,55,.15)}
+.wem__polna{width:62%;margin:22px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(15,60,55,.15)}
 .wem__polna img{width:100%;height:auto;display:block}
 .wem__ne{list-style:none;margin:4px 0 14px;padding:0;display:grid;gap:8px}
 .wem__ne li{list-style:none;position:relative;padding:10px 14px 10px 44px;background:#fff;border-radius:12px;font-size:15px;line-height:1.45;box-shadow:0 3px 10px rgba(15,60,55,.06)}
@@ -254,5 +254,6 @@ $wem_slika = function ( $f, $alt ) use ( $wem_img ) {
   .wem__grid{grid-template-columns:1fr;gap:14px}
   .wem__tab{font-size:13px}.wem__tab th,.wem__tab td{padding:11px 8px}
   .wem__upoz{flex-direction:column;padding:20px}
+  .wem__polna{width:100%}
 }
 </style>
