@@ -182,7 +182,7 @@ $wbr_zv  = '<span class="wbr__zv" aria-label="5 od 5">★★★★★</span>';
 .wbr__s{padding:72px 0;background:#fff}.wbr__s.wbr__s--bg{background:#f6f1e9}
 .wbr__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wbr__c{text-align:center}
-.wbr__kicker{font-size:12.5px;letter-spacing:1.8px;text-transform:uppercase;color:#8a6a3e;margin:0 0 8px;font-weight:700}
+.wbr__kicker{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:#8a6a3e;margin:0 0 8px;font-weight:700}
 .wbr__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#b89a6a;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wbr__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#2b2620}.wbr__h2 em{font-style:italic;color:#8a6a3e}
 .wbr__p{font-size:15.5px;line-height:1.65;color:#3d372f;margin:0 0 14px}
@@ -196,12 +196,12 @@ $wbr_zv  = '<span class="wbr__zv" aria-label="5 od 5">★★★★★</span>';
 .wbr__media--bijela{background:#fff}.wbr__media--bijela img{object-fit:contain}
 .wbr__media--video{aspect-ratio:9/16;max-width:420px;width:100%;margin:0 auto;background:#efe6d8}
 .wbr__media--video video{width:100%;height:100%;object-fit:cover;display:block}
-.wbr__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#6e5430;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.wbr__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#6e5430;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wbr__zv{color:#d4a52b;letter-spacing:2px;font-size:15px;display:inline-block}
 /* ocjena */
 .wbr__ocjena{display:flex;gap:26px;align-items:center;background:#fff;border-radius:16px;padding:20px 24px;margin:0 0 18px;box-shadow:0 8px 24px rgba(110,84,45,.09)}
 .wbr__broj{text-align:center;flex:0 0 auto}.wbr__broj strong{display:block;font-size:46px;line-height:1;color:#8a6a3e;font-weight:800}
-.wbr__broj span{display:block;font-size:12.5px;color:#6b6358;margin-top:4px}
+.wbr__broj span{display:block;font-size:13px;color:#6b6358;margin-top:4px}
 .wbr__stupci{flex:1;display:grid;gap:6px}
 .wbr__st{display:grid;grid-template-columns:34px 1fr 40px;gap:8px;align-items:center;font-size:13px;color:#4a4339}
 .wbr__st i{display:block;height:8px;border-radius:8px;background:#efe6d8;overflow:hidden}.wbr__st b{display:block;height:100%;background:#b89a6a;border-radius:8px}
@@ -225,7 +225,7 @@ $wbr_zv  = '<span class="wbr__zv" aria-label="5 od 5">★★★★★</span>';
 .wbr__ni,.wbr__mi,.wbr__hi{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#f3ebdf;color:#8a6a3e;display:flex;align-items:center;justify-content:center}
 .wbr__ni svg,.wbr__mi svg,.wbr__hi svg{width:22px;height:22px}
 .wbr__kv{list-style:none;margin:4px 0 6px;padding:0}.wbr__kv li{position:relative;padding-left:32px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
-.wbr__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;background:#b89a6a;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wbr__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;background:#b89a6a;color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
 .wbr__kv em{font-style:normal;font-weight:800}
 /* materijali */
 .wbr__mat{display:grid;gap:12px;margin:6px 0 4px}
@@ -252,7 +252,7 @@ $wbr_zv  = '<span class="wbr__zv" aria-label="5 od 5">★★★★★</span>';
 .wbr__tab td.wbr__nas{background:#fbf7f0;font-weight:700;color:#2b2620}
 .wbr__tab tr:last-child td{border-bottom:0}
 .wbr__da{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#b89a6a;color:#fff;align-items:center;justify-content:center;font-size:13px;margin-right:4px}
-.wbr__ne{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#eee;color:#9a9a9a;align-items:center;justify-content:center;font-size:12px;margin-right:4px}
+.wbr__ne{display:inline-flex;width:24px;height:24px;border-radius:50%;background:#eee;color:#9a9a9a;align-items:center;justify-content:center;font-size:13px;margin-right:4px}
 .wbr__spec{width:100%;border-collapse:collapse;font-size:14.5px}
 .wbr__spec th,.wbr__spec td{padding:10px 16px;text-align:left;border-bottom:1px solid #f0e8dc;line-height:1.45}
 .wbr__spec th{width:38%;font-weight:700;color:#8a6a3e;background:#fbf7f0}
