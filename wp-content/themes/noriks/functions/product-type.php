@@ -580,12 +580,12 @@ if ( ! function_exists( 'noriks_stepcloud_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_slabproof_sizes' ) ) {
-    /** NORIKS SlabProof: velicina, EU broj obuce, US muski broj (original). */
+    /** NORIKS SlabProof: velicine samo po EU broju obuce, brez crk (Dejan 2.11., isto kot Tradesman). */
     function noriks_slabproof_sizes() {
         return array(
-            array( 'M',  '39 – 42', '6 – 9' ),
-            array( 'L',  '43 – 45', '9,5 – 12' ),
-            array( 'XL', '46 – 49', '12,5 – 15' ),
+            array( '39–42' ),
+            array( '43–45' ),
+            array( '46–49' ),
         );
     }
 }
@@ -782,12 +782,12 @@ if ( ! function_exists( 'noriks_shiftclog_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_tradesman_sizes' ) ) {
-    /** NORIKS Tradesman: velicina po broju cipele (original masonclothing.com, US Men/Women -> EU). */
+    /** NORIKS Tradesman: velicine samo po EU broju obuce, brez crk (Dejan 2.11., isto kot SlabProof). */
     function noriks_tradesman_sizes() {
         return array(
-            array( 'M',  '39 do 42', '37,5 do 40,5' ),
-            array( 'L',  '42,5 do 46', '41 do 44' ),
-            array( 'XL', '46,5 do 49,5', '–' ),
+            array( '39–42' ),
+            array( '43–45' ),
+            array( '46–49' ),
         );
     }
 }
@@ -1785,7 +1785,6 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
             'kneesleeve'   => array( 'S' => '35 do 45 cm', 'M' => '46 do 50 cm', 'L' => '51 do 57 cm', 'XL' => '58 do 63 cm', '2XL' => '64 do 69 cm', '3XL' => '70 do 75 cm' ),
             'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
-            'tradesman'    => array( 'M' => '39 do 42', 'L' => '42,5 do 46', 'XL' => '46,5 do 49,5' ),
             'diskret'      => array( 'S' => 'košarice AA do B', 'M' => 'košarice B do F', 'L' => 'košarice F do G' ),
             'alpakacrew'   => array( 'S' => '35 do 37,5', 'M' => '39 do 42,5', 'L' => '43 do 46', 'XL' => '46,5 do 49,5' ),
             'shapeshorts'  => array( 'XS-S' => '64 do 76 cm', 'M-L' => '77 do 90 cm', 'XL-2XL' => '91 do 112 cm', '3XL' => '112 do 127 cm', '4XL' => '128 do 140 cm' ),
@@ -1951,7 +1950,7 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         }
         if ( noriks_is_type( 'tradesman', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>.',
-                'glava' => array( 'Veličina', 'Broj cipele (EU) – muški', 'Broj cipele (EU) – ženski' ), 'vrstice' => noriks_tradesman_sizes(),
+                'glava' => array( 'Broj cipele (EU)' ), 'vrstice' => noriks_tradesman_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'diskret', $product_id ) ) {

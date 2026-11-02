@@ -15,7 +15,7 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
         <h2 class="wslabproof__h2">Radna čarapa s jastučićem, <em>krojena ispod gležnja</em></h2>
         <p class="wslabproof__p">NORIKS SlabProof je radna čarapa s jastučićem za beton, krojena ispod gležnja. Napravljena je za radne cipele, zaštitne tenisice s čeličnom kapicom i vruće dane u kratkim hlačama, kad visoka čarapa samo smeta.</p>
         <p class="wslabproof__p">Ispod stopala je isti jastuk kao i kod višeg modela: gust ispod pete i prednjeg dijela stopala, gdje beton najjače udara. Preko gornjeg dijela stopala ide mrežasti dio, peta i prsti su ojačani, a povišeni jezičac na peti sprječava da stražnji dio cipele trlja kožu.</p>
-        <p class="wslabproof__p">Čarapa je crna i dolazi u tri veličine: M, L i XL. Pere se strojno na hladnom i suši u sušilici na niskoj temperaturi, zajedno s radnom odjećom — bez ručnog pranja i posebnog deterdženta.</p>
+        <p class="wslabproof__p">Čarapa je crna i dolazi u tri veličine: 39–42, 43–45 i 46–49. Pere se strojno na hladnom i suši u sušilici na niskoj temperaturi, zajedno s radnom odjećom — bez ručnog pranja i posebnog deterdženta.</p>
         <p class="wslabproof__zak">Jastuk za beton, u kroju za niske radne cipele.</p>
       </div>
     </div>
