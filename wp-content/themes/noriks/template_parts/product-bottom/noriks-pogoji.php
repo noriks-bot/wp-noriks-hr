@@ -47,7 +47,7 @@ $npg_el      = array(
 <style>
 section.npg-s{padding:52px 0 !important}
 .npg{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;text-align:center}
-.npg__kicker{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#6b6b6b;margin:0 0 8px}
+.npg__kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#6b6b6b;margin:0 0 8px}
 .npg__kicker::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--npg-ink)}
 .npg__h2{font-size:clamp(24px,3vw,32px);font-weight:800;line-height:1.2;margin:0 0 10px;color:#1c1c1c}
 .npg__h2 em{font-style:italic;color:var(--npg-ink)}
