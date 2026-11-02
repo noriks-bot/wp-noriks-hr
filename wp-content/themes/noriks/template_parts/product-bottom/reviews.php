@@ -4761,7 +4761,7 @@ $glasspro_faq = array(
 
 $slabproof_faq = array(
   array('questioon' => 'Koju veličinu da naručim? Imam veliko stopalo.',
-    'answer'    => 'Tri veličine: <strong>M</strong> za EU 39–42, <strong>L</strong> za EU 43–45 i <strong>XL</strong> za EU 46–49. Naručite svoj uobičajeni broj obuće.'),
+    'answer'    => 'Tri veličine po EU broju obuće: <strong>39–42</strong>, <strong>43–45</strong> i <strong>46–49</strong>. Naručite svoj uobičajeni broj obuće.'),
   array('questioon' => 'Jesu li od vune? Ne podnosim da grebe.',
     'answer'    => 'Nema vune, ni jedne niti. Ništa ne grebe, nema osipa i noga se ne kuha kad je vruće. Pletivo odvodi znoj s kože umjesto da ga zadržava.'),
   array('questioon' => 'Neće mi se stopala kupati u znoju?',
