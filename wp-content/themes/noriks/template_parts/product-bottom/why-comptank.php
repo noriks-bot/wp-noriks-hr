@@ -202,7 +202,7 @@ $wct_nav = '<span class="wct__nav" aria-hidden="true"><svg viewBox="0 0 24 24" w
 .wct__ov{position:relative;height:650px;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(30,40,60,.16);display:flex;align-items:center;justify-content:center;text-align:center}
 .wct__ov img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
 .wct__ov::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.7)}
-.wct__ovt{position:relative;z-index:1;max-width:760px;padding:0 24px;color:#fff}
+.wct__ovt{position:relative;z-index:1;max-width:62%;padding:0 24px;color:#fff}
 .wct__ovt .wct__kicker{color:#fff}.wct__ovt .wct__kicker::before{background:#fff}
 .wct__ovp{font-size:19px;line-height:1.6;margin:0 0 16px;color:#fff}
 .wct__ovpot{font-size:16px;font-weight:800;margin:8px 0 0;color:#fff}
@@ -221,7 +221,7 @@ $wct_nav = '<span class="wct__nav" aria-hidden="true"><svg viewBox="0 0 24 24" w
   .wct__grid--4{gap:12px}
   .wct__kt{padding:16px 10px 16px}.wct__kt h3{font-size:14.5px}.wct__kt p{font-size:13px}
   .wct__ki{width:44px;height:44px;margin-top:-38px}
-  .wct__ov{height:500px}.wct__ovp{font-size:16px;margin-bottom:12px}.wct__ovt{padding:0 18px}
+  .wct__ov{height:500px}.wct__ovt{max-width:100%}.wct__ovp{font-size:16px;margin-bottom:12px}.wct__ovt{padding:0 18px}
   .wct__pp{gap:10px}.wct__ppl{font-size:13px;padding:7px 12px;bottom:10px}
   .wct__tab th,.wct__tab td{padding:11px 8px;font-size:14px}
 }
