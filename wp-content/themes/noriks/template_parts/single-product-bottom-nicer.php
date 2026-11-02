@@ -886,6 +886,10 @@ if ( noriks_is_type( 'brewer' ) ) {
     include $noriks_pb_dir . 'why-brewer.php';
 }
 
+if ( noriks_is_type( 'elowen' ) ) {
+    include $noriks_pb_dir . 'why-elowen.php';
+}
+
 if ( noriks_is_type( 'runshort' ) ) {
     include $noriks_pb_dir . 'why-runshort.php';
 }

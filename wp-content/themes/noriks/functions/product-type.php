@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'lumiwand' => array( 'orto-lumiwand' ),
         'topper' => array( 'orto-topper' ),
         'brewer' => array( 'orto-brewer' ),
+        'elowen' => array( 'orto-elowen' ),
         'runshort' => array( 'orto-runshort' ),
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
