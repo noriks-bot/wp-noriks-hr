@@ -197,7 +197,7 @@ $wem_slika = function ( $f, $alt ) use ( $wem_img ) {
 .wem__s--trak{padding:28px 0}
 .wem__v{width:100%;max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wem__c{text-align:center}
-.wem__kicker{font-size:12.5px;letter-spacing:1.8px;text-transform:uppercase;color:#157a6d;margin:0 0 8px;font-weight:700}
+.wem__kicker{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:#157a6d;margin:0 0 8px;font-weight:700}
 .wem__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#1d9484;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wem__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#0f2a44}.wem__h2 em{font-style:italic;color:#157a6d}
 .wem__h3{font-size:20px;font-weight:800;margin:0 0 8px;color:#0f2a44}
@@ -228,7 +228,7 @@ $wem_slika = function ( $f, $alt ) use ( $wem_img ) {
 .wem__k{background:#fff;border-radius:16px;padding:28px 26px 24px;text-align:center;box-shadow:0 8px 24px rgba(15,60,55,.09);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center}
 .wem__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,60,55,.15)}
 .wem__k .wem__ki{width:56px;height:56px;margin:0 auto 12px;border:1px solid #a9dccf}
-.wem__oz{font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:#157a6d;margin:0 0 8px}
+.wem__oz{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:#157a6d;margin:0 0 8px}
 .wem__k p{font-size:15px;line-height:1.55;color:#3a4853;margin:0}
 .wem__opomba{font-size:13px;color:#5d6a74;text-align:center;margin:20px 0 0;line-height:1.5}
 .wem__tabwrap{width:100%;overflow-x:auto;margin-top:22px;border-radius:16px;box-shadow:0 8px 24px rgba(15,60,55,.10);background:#fff}
