@@ -42,6 +42,7 @@ function noriks_product_type_map() : array {
         // Orthopedic back belt (ortopedski pojas za leđa).
         'lumiwand' => array( 'orto-lumiwand' ),
         'topper' => array( 'orto-topper' ),
+        'brewer' => array( 'orto-brewer' ),
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
         'dryseam' => array( 'orto-dryseam' ),

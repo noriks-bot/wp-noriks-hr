@@ -882,4 +882,8 @@ if ( noriks_is_type( 'topper' ) ) {
     include $noriks_pb_dir . 'why-topper.php';
 }
 
+if ( noriks_is_type( 'brewer' ) ) {
+    include $noriks_pb_dir . 'why-brewer.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
