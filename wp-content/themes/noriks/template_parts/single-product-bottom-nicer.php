@@ -131,6 +131,10 @@ if ( noriks_is_type( 'wakealarm' ) ) {
     include $noriks_pb_dir . 'why-wakealarm.php';
 }
 
+if ( noriks_is_type( 'earcalm' ) ) {
+    include $noriks_pb_dir . 'why-earcalm.php';
+}
+
 if ( noriks_is_type( 'seatsleep' ) ) {
     include $noriks_pb_dir . 'why-seatsleep.php';
 }
