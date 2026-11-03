@@ -123,7 +123,7 @@ $wgs_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 .wgs__mn-n{font-size:17px;margin-top:10px}
 .wgs__mk p{margin:8px 0 18px;font-size:16px;line-height:1.6;color:#2a344a;flex:1}
 .wgs__mh{display:flex;align-items:center;gap:12px}
-.wgs__mh strong{display:block;font-size:15px}.wgs__mh span{font-size:13px;color:#66718a}.wgs__mh .wgs__zv{margin-left:auto;font-size:13px}
+.wgs__mh strong{display:block;font-size:15px}.wgs__mh span{font-size:13px;color:#66718a}.wgs__mh .wgs__zv{margin-left:auto;font-size:13px;color:#e0a33c}
 .wgs__mh .wgs__av{width:44px;height:44px;border-radius:50%;background:#2f6fd6;color:#fff;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
 @media (max-width:1024px){.wgs__kar,.wgs__sport{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:767px){
