@@ -264,7 +264,7 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   .wsp__dva{grid-template-columns:1fr;gap:26px}
   .wsp__klizi{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:8px;scrollbar-width:none}.wsp__klizi::-webkit-scrollbar{display:none}
   .wsp__klizi>.wsp__k{flex:0 0 78%;scroll-snap-align:center}
-  .wsp__grid--3{grid-template-columns:1fr}.wsp__grid--4{gap:12px}.wsp__kt{padding:12px 12px 14px}.wsp__kt strong{font-size:15px}.wsp__kt p{font-size:13.5px}
+  .wsp__grid--3{grid-template-columns:1fr}.wsp__km--tel img{max-height:300px;margin:0 auto}.wsp__usk .wsp__ustel{max-width:90px}.wsp__grid--4{gap:12px}.wsp__kt{padding:12px 12px 14px}.wsp__kt strong{font-size:15px}.wsp__kt p{font-size:13.5px}
   .wsp__vidovi{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:6px}.wsp__vidovi>.wsp__vid{flex:0 0 70%;scroll-snap-align:center}
   .wsp__podaci{grid-template-columns:1fr 1fr;gap:8px}.wsp__podaci>div{padding:12px 6px}.wsp__podaci strong{font-size:14px}
   .wsp__usk{grid-template-columns:90px 1fr;gap:16px;padding:18px}
