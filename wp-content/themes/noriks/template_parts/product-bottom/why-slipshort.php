@@ -95,6 +95,20 @@ div.wsslipshort__pog{text-align:center;border:1px solid rgba(107,93,82,.35);bord
 .wsslipshort__faq .wsslipshort__kt{text-align:left}.wsslipshort__faq .wsslipshort__st{flex:none;width:34px;height:34px;font-size:13px;margin-bottom:10px}
 @media (max-width:560px){.wsslipshort__vs{grid-template-columns:1fr}.wsslipshort__ins{width:38%}}
 .wsslipshort__tab td:first-child{font-weight:700}
+/* popravek 03.11.: en rob na element (samo senca), kicker >= 13 px, mobil tabela velicin v okvirju, Sjedite/Saginjete/Hodate v vrstici */
+.wsslipshort__kicker{font-size:13px}
+.wsslipshort__k,.wsslipshort__pog>div,div.wsslipshort__pog,.wsslipshort__polna,.wsslipshort__media,.wsslipshort__red4:not(.wsslipshort__pog)>div,.wsslipshort__tk{border:0!important}
+.wsslipshort__k{box-shadow:0 8px 24px rgba(107,93,82,.12)}.wsslipshort__pog>div{box-shadow:0 8px 24px rgba(107,93,82,.12)}
+.wsslipshort__red3>div{border:0!important;box-shadow:0 4px 14px rgba(107,93,82,.10)}
+.wsslipshort__dva>*{min-width:0}.wsslipshort__tw{max-width:100%;-webkit-overflow-scrolling:touch;border-radius:14px}
+.wsslipshort__tab td,.wsslipshort__tab th{white-space:nowrap}
+@media (max-width:560px){
+.wsslipshort__tab{font-size:13.5px}.wsslipshort__tab th,.wsslipshort__tab td{padding:10px 8px}
+.wsslipshort__red3{grid-template-columns:1fr;gap:10px}
+.wsslipshort__red3>div{flex-direction:row!important;align-items:center!important;text-align:left;gap:12px;padding:10px 14px}
+.wsslipshort__red3 span.wsslipshort__pi{margin:0;flex:0 0 40px;width:40px;height:40px}
+.wsslipshort__red3 strong{flex:0 0 auto}.wsslipshort__red3 span:not(.wsslipshort__pi){margin-left:auto}
+}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsslipshort__kar').forEach(function(k){
