@@ -22,10 +22,10 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wst_t   = get_template_directory_uri() . '/img/straw/';
-$wst_i   = function ( $f ) use ( $wst_t ) { return esc_url( $wst_t . $f . '?v=2' ); };
+$wst_i   = function ( $f ) use ( $wst_t ) { return esc_url( $wst_t . $f . '?v=w0311b' ); };
 $wst_vid = function ( $pot, $alt ) {
 	$u = get_template_directory_uri();
-	return '<video src="' . esc_url( $u . $pot . '?v=2' ) . '" poster="' . esc_url( $u . preg_replace( '/\.mp4$/', '.jpg', $pot ) . '?v=2' ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="' . esc_attr( $alt ) . '"></video>';
+	return '<video src="' . esc_url( $u . $pot . '?v=w0311b' ) . '" poster="' . esc_url( $u . preg_replace( '/\.mp4$/', '.jpg', $pot ) . '?v=w0311b' ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="' . esc_attr( $alt ) . '"></video>';
 };
 $wst_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 $wst_da  = '<span class="wst__da" aria-label="da"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9.5 17.5 20 7"/></svg></span>';
