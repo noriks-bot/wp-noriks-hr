@@ -103,7 +103,7 @@ div.wsslipshort__pog{text-align:center;border:1px solid rgba(107,93,82,.35);bord
 .wsslipshort__dva>*{min-width:0}.wsslipshort__tw{max-width:100%;-webkit-overflow-scrolling:touch;border-radius:14px}
 .wsslipshort__tab td,.wsslipshort__tab th{white-space:nowrap}
 @media (max-width:560px){
-.wsslipshort__tab{font-size:13px}.wsslipshort__tab th,.wsslipshort__tab td{padding:10px 6px}.wsslipshort__tab th{white-space:normal;line-height:1.3}
+.wsslipshort__tab{font-size:13px}.wsslipshort__tab th,.wsslipshort__tab td{padding:10px 4px}.wsslipshort__tab td:first-child,.wsslipshort__tab th:first-child{padding-left:10px}.wsslipshort__tab th{white-space:normal;line-height:1.3}
 .wsslipshort__red3{grid-template-columns:1fr;gap:10px}
 .wsslipshort__red3>div{flex-direction:row!important;align-items:center!important;text-align:left;gap:12px;padding:10px 14px}
 .wsslipshort__red3 span.wsslipshort__pi{margin:0;flex:0 0 40px;width:40px;height:40px}
