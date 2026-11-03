@@ -67,9 +67,9 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   <h2 class="wsp__h2 wsp__c">Pogledajte zašto su <em>prešli na karticu</em></h2>
   <p class="wsp__p wsp__c"><span class="wsp__ocj"><strong>4,8</strong> <span class="wsp__zv">★★★★★</span> na temelju 1.081 recenzije</span></p>
   <div class="wsp__grid wsp__grid--3 wsp__vidovi">
-    <div class="wsp__vid"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-1.mp4' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-1.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><span class="wsp__vz">Najpametniji tracker?</span></div>
-    <div class="wsp__vid"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-2.mp4' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-2.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><span class="wsp__vz">Izgleda kao prava kartica</span></div>
-    <div class="wsp__vid"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-3.mp4' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-3.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><span class="wsp__vz">Okrugli tracker? 6/10</span></div>
+    <div class="wsp__vid"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-1.mp4?v=2' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-1.jpg?v=2' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><span class="wsp__vz">Najpametniji tracker?</span></div>
+    <div class="wsp__vid"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-2.mp4?v=2' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-2.jpg?v=2' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><span class="wsp__vz">Izgleda kao prava kartica</span></div>
+    <div class="wsp__vid"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-3.mp4?v=2' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-3.jpg?v=2' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><span class="wsp__vz">Okrugli tracker? 6/10</span></div>
   </div>
 </div></section>
 
@@ -91,8 +91,8 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   <p class="wsp__p wsp__c">Kad je kartica blizu bilo kojeg Apple uređaja, njena lokacija se osvježava u aplikaciji Find My – anonimno i šifrirano.</p>
   <div class="wsp__grid wsp__grid--3">
     <div class="wsp__k"><div class="wsp__km wsp__km--tel"><img src="<?php echo $wsp_i( 'noriks-spotminder-mreza-1.webp' ); ?>" alt="iPhone u blizini prepoznaje izgubljenu stvar" loading="eager" decoding="async"></div><div class="wsp__kt wsp__kt--c"><span class="wsp__st">1</span><strong>Prepoznaje izgubljeno</strong><p>Obližnji iPhone neprimjetno prepozna vašu karticu.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--tel"><img src="<?php echo $wsp_i( 'noriks-spotminder-mreza-2.webp' ); ?>" alt="Lokacija stvari osvježava se na karti" loading="eager" decoding="async"></div><div class="wsp__kt wsp__kt--c"><span class="wsp__st">2</span><strong>Osvježava lokaciju</strong><p>Lokacija se šalje u mrežu – samo vi je vidite.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--tel"><img src="<?php echo $wsp_i( 'noriks-spotminder-mreza-3.webp' ); ?>" alt="Novčanik prikazan u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsp__kt wsp__kt--c"><span class="wsp__st">3</span><strong>Pronađite u Find My</strong><p>Otvorite aplikaciju i vaša stvar je na karti.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--tel"><img src="<?php echo $wsp_i( 'noriks-spotminder-mreza-2.webp?v=2' ); ?>" alt="Lokacija stvari osvježava se na karti" loading="eager" decoding="async"></div><div class="wsp__kt wsp__kt--c"><span class="wsp__st">2</span><strong>Osvježava lokaciju</strong><p>Lokacija se šalje u mrežu – samo vi je vidite.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--tel"><img src="<?php echo $wsp_i( 'noriks-spotminder-mreza-3.webp?v=2' ); ?>" alt="Novčanik prikazan u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsp__kt wsp__kt--c"><span class="wsp__st">3</span><strong>Pronađite u Find My</strong><p>Otvorite aplikaciju i vaša stvar je na karti.</p></div></div>
   </div>
 </div></section>
 
@@ -102,12 +102,12 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   <p class="wsp__p wsp__c">Zrakoplovna tvrtka javlja status prtljage. Find My pokazuje gdje je vaša kartica.</p>
   <div class="wsp__usp">
     <div class="wsp__usk">
-      <div class="wsp__ustel"><img src="<?php echo $wsp_i( 'noriks-spotminder-zrakoplovna.webp' ); ?>" alt="Obavijesti zrakoplovne tvrtke o statusu prtljage" loading="eager" decoding="async"></div>
+      <div class="wsp__ustel"><img src="<?php echo $wsp_i( 'noriks-spotminder-zrakoplovna.webp?v=2' ); ?>" alt="Obavijesti zrakoplovne tvrtke o statusu prtljage" loading="eager" decoding="async"></div>
       <div><span class="wsp__oz wsp__oz--siva">Obavijesti zrakoplovne tvrtke</span><h3 class="wsp__h3">Prijava, utovar i dostava</h3>
         <ul class="wsp__lista wsp__lista--ne"><li><strong>Samo kod skeniranja</strong> – praznine između obavijesti, bez stvarne lokacije.</li><li><strong>Ne vidite torbu</strong> – samo status, ne i mjesto.</li><li><strong>Ovisi o prijevozniku</strong> – obavijesti mogu kasniti.</li></ul></div>
     </div>
     <div class="wsp__usk wsp__usk--nasa">
-      <div class="wsp__ustel"><img src="<?php echo $wsp_i( 'noriks-spotminder-find-my-prtljaga.webp' ); ?>" alt="Prtljaga s NORIKS karticom prikazana na karti zračne luke u Find My" loading="eager" decoding="async"></div>
+      <div class="wsp__ustel"><img src="<?php echo $wsp_i( 'noriks-spotminder-find-my-prtljaga.webp?v=2' ); ?>" alt="Prtljaga s NORIKS karticom prikazana na karti zračne luke u Find My" loading="eager" decoding="async"></div>
       <div><span class="wsp__oz">NORIKS kartica + Find My</span><h3 class="wsp__h3">Lokacija, vrijeme i zvuk</h3>
         <ul class="wsp__lista"><li><strong>Zadnja poznata lokacija</strong> – vidite je na karti.</li><li><strong>Mreža Find My</strong> – osvježavaju je obližnji Apple uređaji.</li><li><strong>Zvučni signal</strong> – pronađite je kad ste blizu.</li></ul></div>
     </div>
@@ -129,8 +129,8 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   <div class="wsp__kicker wsp__c">Mogućnosti</div>
   <h2 class="wsp__h2 wsp__c">Sve što trebate – <em>u 1,8 mm</em></h2>
   <div class="wsp__grid wsp__grid--4">
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-prati-sve.webp' ); ?>" alt="Aplikacija Find My prikazuje stvari na karti" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Pratite sve</strong><p>Novčanik, ruksak, kofer i više – sve iz aplikacije Find My koju već imate.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-spajanje.webp' ); ?>" alt="Novčanik povezan u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Spajanje u sekundi</strong><p>Bez dodatnih aplikacija i postavki – dodirnite, povežite i pratite.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-prati-sve.webp?v=2' ); ?>" alt="Aplikacija Find My prikazuje stvari na karti" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Pratite sve</strong><p>Novčanik, ruksak, kofer i više – sve iz aplikacije Find My koju već imate.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-spajanje.webp?v=2' ); ?>" alt="Novčanik povezan u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Spajanje u sekundi</strong><p>Bez dodatnih aplikacija i postavki – dodirnite, povežite i pratite.</p></div></div>
     <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-baterija.webp' ); ?>" alt="NORIKS kartica za praćenje na bežičnom punjaču" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Baterija do 8 mjeseci</strong><p>Punjiva i napravljena da traje – bez mijenjanja baterija.</p></div></div>
     <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-02.webp' ); ?>" alt="Obični tracker debljine 8 mm i NORIKS kartica debljine 1,8 mm u novčaniku" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Ultra tanka</strong><p>1,8 mm prema oko 9,9 mm boka mobitela – novčanik ostaje ravan.</p></div></div>
   </div>
@@ -143,7 +143,7 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   <div class="wsp__grid wsp__grid--3">
     <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-povezi.webp' ); ?>" alt="NORIKS kartica uz iPhone s aplikacijom Find My" loading="eager" decoding="async"></div><div class="wsp__kt"><span class="wsp__st">1</span><strong>Povežite s Find My</strong><p>Približite je iPhoneu i dodirnite jednom. Bez aplikacija, bez muke – kartica je spremna za nekoliko sekundi.</p></div></div>
     <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-spremi.webp' ); ?>" alt="NORIKS kartica ulazi u novčanik" loading="eager" decoding="async"></div><div class="wsp__kt"><span class="wsp__st">2</span><strong>Spremite je</strong><p>Stavite je u novčanik, torbu ili putovnicu. Tanka je, sigurna i ostaje skrivena dok vam ne zatreba.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-postavljanje.mp4' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-postavljanje.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div><div class="wsp__kt"><span class="wsp__st">3</span><strong>Pratite, zvonite, pronađite</strong><p>U Find My vidite lokaciju. Kad je blizu, dodirnite Pusti zvuk i čut ćete je i kroz torbu ili jastuke.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><video src="<?php echo esc_url( get_template_directory_uri() . '/img/spotminder/noriks-spotminder-video-postavljanje.mp4?v=2' ); ?>" poster="<?php echo $wsp_i( 'noriks-spotminder-video-postavljanje.jpg?v=2' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div><div class="wsp__kt"><span class="wsp__st">3</span><strong>Pratite, zvonite, pronađite</strong><p>U Find My vidite lokaciju. Kad je blizu, dodirnite Pusti zvuk i čut ćete je i kroz torbu ili jastuke.</p></div></div>
   </div>
 </div></section>
 
@@ -167,10 +167,10 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   <div class="wsp__kicker wsp__c">Uvijek s vama</div>
   <h2 class="wsp__h2 wsp__c">Vaše stvari – <em>uvijek nadohvat ruke</em></h2>
   <div class="wsp__grid wsp__grid--4">
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-novcanik.webp' ); ?>" alt="Lokacija novčanika s NORIKS karticom na iPhoneu" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Novčanik</strong><p>Provjerite lokaciju ili primite obavijest da ste ga zaboravili.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-prtljaga.webp' ); ?>" alt="NORIKS kartica u koferu i lokacija prtljage na iPhoneu" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Prtljaga</strong><p>Vidite gdje je prtljaga tijekom cijelog puta.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-auto.webp' ); ?>" alt="Lokacija parkiranog auta u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Auto</strong><p>Provjerite zadnju poznatu lokaciju auta u Find My.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-ruksak.webp' ); ?>" alt="NORIKS kartica ulazi u ruksak" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Ruksak</strong><p>Pustite zvuk kad je ruksak negdje u blizini.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-novcanik.webp?v=2' ); ?>" alt="Lokacija novčanika s NORIKS karticom na iPhoneu" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Novčanik</strong><p>Provjerite lokaciju ili primite obavijest da ste ga zaboravili.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-prtljaga.webp?v=2' ); ?>" alt="NORIKS kartica u koferu i lokacija prtljage na iPhoneu" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Prtljaga</strong><p>Vidite gdje je prtljaga tijekom cijelog puta.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-auto.webp?v=2' ); ?>" alt="Lokacija parkiranog auta u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Auto</strong><p>Provjerite zadnju poznatu lokaciju auta u Find My.</p></div></div>
+    <div class="wsp__k"><div class="wsp__km wsp__km--kv"><img src="<?php echo $wsp_i( 'noriks-spotminder-nadohvat-ruksak.webp?v=2' ); ?>" alt="NORIKS kartica ulazi u ruksak" loading="eager" decoding="async"></div><div class="wsp__kt"><strong>Ruksak</strong><p>Pustite zvuk kad je ruksak negdje u blizini.</p></div></div>
   </div>
 </div></section>
 
@@ -183,7 +183,7 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
       <?php
       $wsp_koraci = array( 'Otvorite aplikaciju „Find My”', 'Dodirnite „Dodaj stvar”', 'Uključite karticu – pritisnite NORIKS ikonu', 'Odaberite „Ostali podržani predmet”', 'Stvar se povezuje s vašim Apple ID-om', 'Gotovo – kartica je na karti!' );
       foreach ( $wsp_koraci as $wsp_n => $wsp_t ) : ?>
-      <div class="wsp__kk"><div class="wsp__kkm"><img src="<?php echo $wsp_i( 'noriks-spotminder-korak-' . ( $wsp_n + 1 ) . '.webp' ); ?>" alt="<?php echo esc_attr( 'Korak ' . ( $wsp_n + 1 ) . ': ' . $wsp_t ); ?>" loading="eager" decoding="async"></div><div class="wsp__kkt"><span class="wsp__st"><?php echo (int) ( $wsp_n + 1 ); ?></span><strong><?php echo esc_html( $wsp_t ); ?></strong></div></div>
+      <div class="wsp__kk"><div class="wsp__kkm"><img src="<?php echo $wsp_i( 'noriks-spotminder-korak-' . ( $wsp_n + 1 ) . '.webp?v=2' ); ?>" alt="<?php echo esc_attr( 'Korak ' . ( $wsp_n + 1 ) . ': ' . $wsp_t ); ?>" loading="eager" decoding="async"></div><div class="wsp__kkt"><span class="wsp__st"><?php echo (int) ( $wsp_n + 1 ); ?></span><strong><?php echo esc_html( $wsp_t ); ?></strong></div></div>
       <?php endforeach; ?>
     </div>
     <button type="button" class="wsp__pus wsp__pus--l" aria-label="Prethodno">&#8249;</button>
