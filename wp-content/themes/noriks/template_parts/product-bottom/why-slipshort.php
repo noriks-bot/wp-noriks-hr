@@ -101,7 +101,8 @@ div.wsslipshort__pog{text-align:center;border:1px solid rgba(107,93,82,.35);bord
 .wsslipshort__k{box-shadow:0 8px 24px rgba(107,93,82,.12)}.wsslipshort__pog>div{box-shadow:0 8px 24px rgba(107,93,82,.12)}
 .wsslipshort__red3>div{border:0!important;box-shadow:0 4px 14px rgba(107,93,82,.10)}
 .wsslipshort__dva>*{min-width:0}.wsslipshort__tw{max-width:100%;-webkit-overflow-scrolling:touch;border-radius:14px}
-.wsslipshort__tab td,.wsslipshort__tab th{white-space:nowrap}
+.wsslipshort__dva--tab .wsslipshort__tab td,.wsslipshort__dva--tab .wsslipshort__tab th{white-space:nowrap}
+@media (max-width:560px){.wsslipshort__v>.wsslipshort__tw .wsslipshort__tab{table-layout:fixed}.wsslipshort__v>.wsslipshort__tw .wsslipshort__tab th,.wsslipshort__v>.wsslipshort__tw .wsslipshort__tab td{white-space:normal;overflow-wrap:anywhere;hyphens:auto;vertical-align:top;text-align:left;line-height:1.4}.wsslipshort__v>.wsslipshort__tw .wsslipshort__tab th:first-child,.wsslipshort__v>.wsslipshort__tw .wsslipshort__tab td:first-child{width:26%}}
 @media (max-width:560px){
 .wsslipshort__tab{font-size:13px}.wsslipshort__tab th,.wsslipshort__tab td{padding:10px 4px}.wsslipshort__tab td:first-child,.wsslipshort__tab th:first-child{padding-left:10px}.wsslipshort__tab th{white-space:normal;line-height:1.3}
 .wsslipshort__red3{grid-template-columns:1fr;gap:10px}
