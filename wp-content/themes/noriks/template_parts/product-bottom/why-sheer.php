@@ -160,6 +160,8 @@ $wsh_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wsh__banner img{height:auto;min-height:480px;object-fit:cover}
 .wsh__bt{position:absolute;top:50%;right:32px;transform:translateY(-50%);width:42%;background:rgba(255,255,255,.95);border-radius:16px;padding:30px 30px 26px;box-shadow:0 10px 30px rgba(0,0,0,.12);box-sizing:border-box}
 .wsh__banner--rev .wsh__bt{right:auto;left:32px}
+.wsh__banner--rev img{min-height:680px}
+.wsh__banner--rev .wsh__h2{margin-bottom:12px}.wsh__banner--rev .wsh__p{margin-bottom:10px}
 .wsh__kv{list-style:none;margin:4px 0 0;padding:0}.wsh__kv li{position:relative;padding-left:30px;margin:0 0 10px;font-size:15px;line-height:1.5;list-style:none}
 .wsh__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#8a7f76;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
 .wsh__podaci{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:6px 0 0}
@@ -176,7 +178,7 @@ $wsh_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
   .wsh__ti{flex-direction:column;align-items:flex-start;gap:10px;padding:16px 14px}.wsh__ti strong{font-size:15px}
   .wsh__mn{grid-template-columns:1fr;gap:14px}
   .wsh__kartice{grid-template-columns:1fr;gap:16px}
-  .wsh__banner{border-radius:16px}.wsh__banner img{min-height:0;aspect-ratio:4/5;object-fit:cover}
+  .wsh__banner{border-radius:16px}.wsh__banner img,.wsh__banner--rev img{min-height:0;aspect-ratio:4/5;object-fit:cover}
   .wsh__bt,.wsh__banner--rev .wsh__bt{position:static;transform:none;width:100%;border-radius:0;box-shadow:none;padding:22px 18px 20px;background:#fff}
 }
 </style>
