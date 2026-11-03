@@ -902,6 +902,10 @@ if ( noriks_is_type( 'spotminder' ) ) {
     include $noriks_pb_dir . 'why-spotminder.php';
 }
 
+if ( noriks_is_type( 'kneewrap' ) ) {
+    include $noriks_pb_dir . 'why-kneewrap.php';
+}
+
 if ( noriks_is_type( 'capri' ) ) {
     include $noriks_pb_dir . 'why-capri.php';
 }

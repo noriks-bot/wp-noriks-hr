@@ -46,6 +46,7 @@ function noriks_product_type_map() : array {
         'elowen' => array( 'orto-elowen' ),
         'runshort' => array( 'orto-runshort' ),
         'spotminder' => array( 'orto-spotminder' ),
+        'kneewrap' => array( 'orto-kneewrap' ),
         'capri' => array( 'orto-capri' ),
         'comptank' => array( 'orto-comptank' ),
         'emsbunion' => array( 'orto-emsbunion' ),
@@ -727,6 +728,21 @@ if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
             array( '2XL', '42 do 44', '91 – 97', '114 – 119' ),
             array( '3XL', '44 do 46', '99 – 102', '122 – 127' ),
             array( '4XL', '46 do 48', '104 – 109', '127 – 132' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_kneewrap_sizes' ) ) {
+    /** NORIKS KneeWrap: mere z originala (opseg bedra 15 cm iznad sredine koljena v incih, teza v lb) preracunane v cm in kg. */
+    function noriks_kneewrap_sizes() {
+        return array(
+            array( 'XS',   '34,5 do 39 cm',   '50 do 57 kg' ),
+            array( 'S',    '39 do 44,5 cm',   '57 do 66 kg' ),
+            array( 'M',    '44,5 do 49 cm',   '66 do 79 kg' ),
+            array( 'L',    '49 do 53,5 cm',   '79 do 91 kg' ),
+            array( 'XL',   '53,5 do 59 cm',   '91 do 100 kg' ),
+            array( 'XXL',  '59 do 65,5 cm',   '100 do 113 kg' ),
+            array( 'XXXL', '65,5 do 73,5 cm', '113 do 136 kg' ),
         );
     }
 }
@@ -1831,6 +1847,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
+            'kneewrap'     => array( 'XS' => '34,5 do 39 cm', 'S' => '39 do 44,5 cm', 'M' => '44,5 do 49 cm', 'L' => '49 do 53,5 cm', 'XL' => '53,5 do 59 cm', 'XXL' => '59 do 65,5 cm', 'XXXL' => '65,5 do 73,5 cm' ),
             'capri'        => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66', '4XL' => '68 do 70', '5XL' => '72 do 74' ),
             'comptank'     => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66' ),
             'runshort'     => array( 'S' => '44 do 46', 'M' => '46 do 48', 'L' => '48 do 50', 'XL' => '50 do 52', '2XL' => '52 do 54' ),
@@ -1980,6 +1997,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_leakbrief_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'kneewrap', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bedra</strong>, izmjerenom oko 15 cm iznad sredine koljena.',
+                'glava' => array( 'Veličina', 'Opseg bedra', 'Težina (preporuka)' ), 'vrstice' => noriks_kneewrap_sizes(),
+                'opomba' => 'Opseg bedra je važniji od težine. Između dvije veličine? Uzmite veću.' );
         }
         if ( noriks_is_type( 'capri', $product_id ) ) {
             return array( 'uvod' => 'Majica ima <strong>normalan kroj</strong> – naručite veličinu koju inače nosite.',
