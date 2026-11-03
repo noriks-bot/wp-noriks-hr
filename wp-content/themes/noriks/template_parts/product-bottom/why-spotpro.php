@@ -85,7 +85,7 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
 </div></section>
 
 <section class="wsq__s wsq__s--bg"><div class="wsq__v wsq__dva">
-  <div class="wsq__media wsq__media--siroka"><img src="<?php echo $wsq_i( 'noriks-spotpro-mfi.webp' ); ?>" alt="Unutrašnjost NORIKS PRO kartice: PVC, baterija, zvučnik i čipset" loading="eager" decoding="async"></div>
+  <div class="wsq__media wsq__media--siroka"><img src="<?php echo $wsq_i( 'noriks-spotpro-mfi.webp?v=p0311' ); ?>" alt="Unutrašnjost NORIKS PRO kartice: PVC, baterija, zvučnik i čipset" loading="eager" decoding="async"></div>
   <div>
     <div class="wsq__kicker">Apple certificirana tehnologija</div>
     <h2 class="wsq__h2">Pametna iznutra, <em>pouzdana izvana</em></h2>
