@@ -914,6 +914,10 @@ if ( noriks_is_type( 'adapter' ) ) {
     include $noriks_pb_dir . 'why-adapter.php';
 }
 
+if ( noriks_is_type( 'straw' ) ) {
+    include $noriks_pb_dir . 'why-straw.php';
+}
+
 if ( noriks_is_type( 'capri' ) ) {
     include $noriks_pb_dir . 'why-capri.php';
 }
