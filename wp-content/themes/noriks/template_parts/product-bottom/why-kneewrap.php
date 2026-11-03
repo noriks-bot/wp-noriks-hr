@@ -4,7 +4,8 @@
  * (anacondafightwear.co/products/anaconda-knee-brace-pair; ta stran je testna - 1 slika in "Testing description here",
  * zato je vsebina z glavne strani istega izdelka /products/anaconda-knee-brace).
  *
- * STRUKTURA ORIGINALA (opis pod gumbom, od vrha navzdol):
+ * (opis pod gumbom, od vrha navzdol)
+ * STRUKTURA ORIGINALA:
    1. naslov "Helping 500,000+ Athletes Train With Confidence" + podnaslov + pasica s 4 okroglimi slikami (Double straps, Gel padding, Full flexibility, Eases discomfort) + uvodno besedilo - pri nas naslov + podnaslov + lokalizirana pasica + uvodno besedilo (brez tuje stevilke kupcev)
    2. slika + "Straps Support Your Knee Without Reducing Mobility" - pri nas slika levo, besedilo desno
    3. slika + "Gel Padding Helps Absorb Impact" - pri nas slika desno, besedilo levo
@@ -103,7 +104,7 @@ $wkw_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wkw__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1b1b1b}.wkw__h2 em{font-style:italic;color:#5a5a5a}
 .wkw__p{font-size:15.5px;line-height:1.65;color:#3a3a3a;margin:0 0 14px}
 .wkw__zak{font-size:16px;font-weight:800;line-height:1.5;margin:18px 0 0;border-left:3px solid #3c3c3c;padding-left:14px}
-.wkw__pasica{margin:8px auto 26px;max-width:880px}.wkw__pasica img{width:100%;height:auto;display:block}
+.wkw__pasica{margin:8px auto 26px;width:72%}.wkw__pasica img{width:100%;height:auto;display:block}
 .wkw__stolpca{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .wkw__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wkw__dva--rev>div:first-child{order:2}
 .wkw__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.16);aspect-ratio:4/5;background:#e3e3e3}
@@ -127,7 +128,7 @@ $wkw_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wkw__mh strong{display:block;font-size:15px}.wkw__mh span{font-size:13px;color:#6b6b6b}.wkw__mh .wkw__zv{margin-left:auto;font-size:13px;color:#e0a33c}
 @media (max-width:767px){
   .wkw__s{padding:48px 0}.wkw__v{padding:0 16px}
-  .wkw__stolpca{grid-template-columns:1fr;gap:0}
+  .wkw__stolpca{grid-template-columns:1fr;gap:0}.wkw__pasica{width:100%}
   .wkw__dva{grid-template-columns:1fr;gap:26px}.wkw__dva--rev>div:first-child{order:0}
   .wkw__podaci{gap:8px}.wkw__podaci>div{padding:12px 6px}.wkw__podaci strong{font-size:14px}
   .wkw__mn{grid-template-columns:1fr;gap:14px}
