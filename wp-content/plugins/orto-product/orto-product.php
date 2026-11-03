@@ -828,6 +828,10 @@ function gck_hr_majice_phrase( int $n, bool $free = false, string $type = 'majic
         elseif ( in_array( $n % 10, array( 2, 3, 4 ), true ) && ! in_array( $n % 100, array( 12, 13, 14 ), true ) ) { $adj = 'besplatna'; $noun = 'grudnjaka'; }
         else { $adj = 'besplatnih'; $noun = 'grudnjaka'; }
         return $free ? ( $adj . ' ' . $noun ) : $noun;
+    } elseif ( $type === 'gacice' ) {
+        // gacice so pluralia tantum: 1-4 gacice / besplatne gacice, 5+ gacica / besplatnih gacica.
+        if ( $is1 || $is234 ) { $adj = 'besplatne'; $noun = 'gaćice'; } else { $adj = 'besplatnih'; $noun = 'gaćica'; }
+        return $free ? ( $adj . ' ' . $noun ) : $noun;
     } elseif ( $type === 'steznica' ) {
         $stem = 'steznic'; // steznicu / steznice / steznica
     } elseif ( $type === 'kosulja' ) {
@@ -907,6 +911,9 @@ function gck_render_bundle_selector() {
     ) {
         // KneeFix je steznica za koljeno, ne majica.
         $gck_garment = 'steznica';
+    } elseif ( has_term( array( 'orto-dryseam' ), 'product_cat', $product_id ) ) {
+        // DrySeam: gacice (oznake Izaberi 1 gacice / Izaberi jos 1 besplatne gacice).
+        $gck_garment = 'gacice';
     } elseif (
         has_term( array( 'orto-sr' ), 'product_cat', $product_id )
         || ( stripos( (string) $product->get_slug(), 'noriks-sr' ) !== false )
@@ -952,6 +959,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-emsbunion' ), 'product_cat', $product_id ) ) {
         // EMS Bunion: korektor cuklja - 1 za lijevo ali desno stopalo, 2 = oba stopala (kot Both Feet na originalu).
         $gck_offer_subs = array( '1 uređaj · lijevo ili desno stopalo', '2 uređaja – za oba stopala', '3 uređaja – oba stopala + za poklon' );
+    } elseif ( has_term( array( 'orto-dryseam' ), 'product_cat', $product_id ) ) {
+        // DrySeam (David 3.11.): ponudbe kot na originalu in v oglasih - 1+1, 2+2 in 3+4 GRATIS.
+        $gck_offer_subs = array( '2 gaćice – plaćate jedne', '4 gaćice – plaćate dvoje', '7 gaćica – plaćate troje' );
     } elseif ( has_term( array( 'orto-busyboard' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Boja i verzija po izboru', 'Svaka ploča u boji i verziji po izboru', 'Svaka ploča u boji i verziji po izboru' );
     } elseif ( has_term( array( 'orto-spotpro' ), 'product_cat', $product_id ) ) {
