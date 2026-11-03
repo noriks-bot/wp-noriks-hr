@@ -20,12 +20,12 @@ $wsl_t   = get_template_directory_uri();
 $wsl_i   = function ( $f ) use ( $wsl_t ) { return esc_url( $wsl_t . '/img/skinlift/' . $f ); };
 $wsl_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 $wsl_mnenja = array(
-	array( 1, 'Pilar, 45 godina', 'Lako sam ga uklopila, samo 5 minuta dnevno. Postupno sam primijetila da mi je koža glađa i blistavija.' ),
-	array( 2, 'Sara, 42 godine', 'Koža mi se jako promijenila – primijetila sam da je puno čvršća i hidratiziranija.' ),
-	array( 3, 'Rocio, 29 godina', 'Koristim ga 3 puta tjedno. Kad ga koristite, učinak osjetite odmah. Preporučila bih ga već od 29. godine.' ),
-	array( 4, 'Lucia, 31 godina', 'Tijekom tretmana primijetila sam da mi koža više blista. Jako mi se sviđa kako me gel hidratizira. Preporučila bih ga, ako ga koristite redovito.' ),
-	array( 5, 'Irene, 44 godine', 'Ono što sam zapravo primijetila je veća čvrstoća. Preporučila bih ga ženama mojih godina.' ),
-	array( 6, 'Denisse, 43 godine', 'Već je dio moje rutine, već mi treba. Sviđa mi se jer je to vrijeme koje posvetim sebi i njezi kože.' ),
+	array( '/img/skinlift/noriks-skinlift-mnenje-1.mp4', 'Pilar, 45 godina', 'Lako sam ga uklopila, samo 5 minuta dnevno. Postupno sam primijetila da mi je koža glađa i blistavija.' ),
+	array( '/img/skinlift/noriks-skinlift-mnenje-2.mp4', 'Sara, 42 godine', 'Koža mi se jako promijenila – primijetila sam da je puno čvršća i hidratiziranija.' ),
+	array( '/img/skinlift/noriks-skinlift-mnenje-3.mp4', 'Rocio, 29 godina', 'Koristim ga 3 puta tjedno. Kad ga koristite, učinak osjetite odmah. Preporučila bih ga već od 29. godine.' ),
+	array( '/img/skinlift/noriks-skinlift-mnenje-4.mp4', 'Lucia, 31 godina', 'Tijekom tretmana primijetila sam da mi koža više blista. Jako mi se sviđa kako me gel hidratizira. Preporučila bih ga, ako ga koristite redovito.' ),
+	array( '/img/skinlift/noriks-skinlift-mnenje-5.mp4', 'Irene, 44 godine', 'Ono što sam zapravo primijetila je veća čvrstoća. Preporučila bih ga ženama mojih godina.' ),
+	array( '/img/skinlift/noriks-skinlift-mnenje-6.mp4', 'Denisse, 43 godine', 'Već je dio moje rutine, već mi treba. Sviđa mi se jer je to vrijeme koje posvetim sebi i njezi kože.' ),
 );
 ?>
 <div class="wsl">
@@ -78,7 +78,7 @@ $wsl_mnenja = array(
     <div class="wsl__kar">
       <?php foreach ( $wsl_mnenja as $m ) : ?>
       <figure class="wsl__vk">
-        <div class="wsl__vm"><video src="<?php echo $wsl_i( 'noriks-skinlift-mnenje-' . $m[0] . '.mp4' ); ?>" poster="<?php echo $wsl_i( 'noriks-skinlift-mnenje-' . $m[0] . '.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="Video mnenje kupke – <?php echo esc_attr( $m[1] ); ?>"></video></div>
+        <div class="wsl__vm"><video src="<?php echo esc_url( $wsl_t . $m[0] ); ?>" poster="<?php echo esc_url( $wsl_t . str_replace( '.mp4', '.jpg', $m[0] ) ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="Video mnenje kupke – <?php echo esc_attr( $m[1] ); ?>"></video></div>
         <figcaption><span class="wsl__zv">★★★★★</span><p>„<?php echo esc_html( $m[2] ); ?>"</p><strong><?php echo esc_html( $m[1] ); ?></strong></figcaption>
       </figure>
       <?php endforeach; ?>
