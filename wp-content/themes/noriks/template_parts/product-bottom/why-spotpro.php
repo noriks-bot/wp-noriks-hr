@@ -9,7 +9,7 @@
    3. Built For The Things You Carry Every Day: 3 kartice s sliko in besedilom (Fits Anywhere, 1 Charge Lasts 8 Months, Track It On The Map) - pri nas 3 kartice s sliko
    4. Animated features: 4 zavihki s slikami (Track everything, How to connect, Battery life, Ultra thin) - pri nas 4 kartice s slikami
    5. Premium Apple-Certified Technology: slika (razstavljena kartica MFi) + 2 tocki (Find My Integration, Precision Engineering) - pri nas slika levo + besedilo desno
-   6. Set it up in under 45 seconds: 3 koraki s slikami (Connect Card, Add to Wallet, Track & Ring - animacija) - pri nas 3 stevilcni koraki s slikami
+   6. Set it up in under 45 seconds: 3 koraki s slikami (Connect Card, Add to Wallet, Track & Ring - animacija) - pri nas 3 stevilcni koraki, tretji kot video z originala (del z angleskim zaslonom izpuscen)
    7. Looks Like a Credit Card, Not a Tracker: naslov + besedilo na ozadju s fotografijo kartice - pri nas besedilo levo + fotografija desno
    8. Why Choose: primerjalna tabela (znamka proti okroglemu trackerju, 5 vrstic) - pri nas tabela NORIKS PRO proti okroglemu trackerju
    9. How to setup: karusel 6 korakov s posnetki zaslona - pri nas karusel 6 korakov (HR zasloni) s puscicami
@@ -20,7 +20,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wsq_img = get_template_directory_uri() . '/img/spotpro/';
-$wsq_i   = function ( $f ) use ( $wsq_img ) { return esc_url( $wsq_img . 'noriks-spotpro-' . $f . '.webp' ); };
+$wsq_i   = function ( $f ) use ( $wsq_img ) { return esc_url( $wsq_img . $f ); };
 $wsq_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 $wsq_ik  = array(
 	'radar'   => '<circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4"/><path d="M7.8 16.2a6 6 0 0 1 0-8.4"/><path d="M19 5a10 10 0 0 1 0 14"/><path d="M5 19A10 10 0 0 1 5 5"/>',
@@ -41,9 +41,9 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
   <h2 class="wsq__h2 wsq__c">Milijuni Apple uređaja <em>pomažu vam pronaći stvari</em></h2>
   <p class="wsq__p wsq__c">Kad je kartica blizu bilo kojeg Apple uređaja, njezina se lokacija anonimno osvježava u aplikaciji Find My – i kad ste vi kilometrima daleko.</p>
   <div class="wsq__grid wsq__grid--3">
-    <div class="wsq__k"><div class="wsq__km wsq__km--tel"><img src="<?php echo $wsq_i( 'mreza-1' ); ?>" alt="Obavijest na iPhoneu: ostavljen je novčanik s NORIKS PRO karticom" loading="eager" decoding="async"></div><div class="wsq__kt wsq__kt--c"><span class="wsq__ikmala"><?php echo $wsq_ikona( 'radar' ); ?></span><strong>Otkriva zaboravljene stvari</strong><p>Ako novčanik ostane iza vas, iPhone vas odmah upozori da ga više nema u blizini.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km wsq__km--tel"><img src="<?php echo $wsq_i( 'mreza-2' ); ?>" alt="Popis uređaja u aplikaciji Find My s novčanikom" loading="eager" decoding="async"></div><div class="wsq__kt wsq__kt--c"><span class="wsq__ikmala"><?php echo $wsq_ikona( 'pin' ); ?></span><strong>Osvježava lokaciju</strong><p>Svaki obližnji Apple uređaj šifrirano javi gdje se kartica nalazi – vi to vidite na karti.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km wsq__km--tel"><img src="<?php echo $wsq_i( 'mreza-3' ); ?>" alt="Lokacija novčanika i tipka za zvuk u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt wsq__kt--c"><span class="wsq__ikmala"><?php echo $wsq_ikona( 'search' ); ?></span><strong>Pronađite je u Find My</strong><p>Otvorite Find My, pogledajte lokaciju, zatražite upute ili pustite zvuk kad ste blizu.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--tel"><img src="<?php echo $wsq_i( 'noriks-spotpro-mreza-1.webp' ); ?>" alt="Obavijest na iPhoneu: ostavljen je novčanik s NORIKS PRO karticom" loading="eager" decoding="async"></div><div class="wsq__kt wsq__kt--c"><span class="wsq__ikmala"><?php echo $wsq_ikona( 'radar' ); ?></span><strong>Otkriva zaboravljene stvari</strong><p>Ako novčanik ostane iza vas, iPhone vas odmah upozori da ga više nema u blizini.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--tel"><img src="<?php echo $wsq_i( 'noriks-spotpro-mreza-2.webp' ); ?>" alt="Popis uređaja u aplikaciji Find My s novčanikom" loading="eager" decoding="async"></div><div class="wsq__kt wsq__kt--c"><span class="wsq__ikmala"><?php echo $wsq_ikona( 'pin' ); ?></span><strong>Osvježava lokaciju</strong><p>Svaki obližnji Apple uređaj šifrirano javi gdje se kartica nalazi – vi to vidite na karti.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--tel"><img src="<?php echo $wsq_i( 'noriks-spotpro-mreza-3.webp' ); ?>" alt="Lokacija novčanika i tipka za zvuk u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt wsq__kt--c"><span class="wsq__ikmala"><?php echo $wsq_ikona( 'search' ); ?></span><strong>Pronađite je u Find My</strong><p>Otvorite Find My, pogledajte lokaciju, zatražite upute ili pustite zvuk kad ste blizu.</p></div></div>
   </div>
   <p class="wsq__zak">Bez dodatne aplikacije i bez pretplate – sve radi preko Find My koji već imate na iPhoneu.</p>
 </div></section>
@@ -52,8 +52,8 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
   <div class="wsq__kicker wsq__c">PRO ili standardna</div>
   <h2 class="wsq__h2 wsq__c">PRO kartica – <em>izgleda kao prava bankovna kartica</em></h2>
   <div class="wsq__vs">
-    <div class="wsq__vsk wsq__vsk--pro"><span class="wsq__vsz">PRO</span><img src="<?php echo $wsq_i( 'pro-kartica' ); ?>" alt="NORIKS kartica za praćenje PRO – crna kartica s čipom" loading="eager" decoding="async"></div>
-    <div class="wsq__vsk"><span class="wsq__vsz wsq__vsz--siva">Standardna</span><img src="<?php echo $wsq_i( 'standardna' ); ?>" alt="Standardna NORIKS kartica za praćenje" loading="eager" decoding="async"></div>
+    <div class="wsq__vsk wsq__vsk--pro"><span class="wsq__vsz">PRO</span><img src="<?php echo $wsq_i( 'noriks-spotpro-pro-kartica.webp' ); ?>" alt="NORIKS kartica za praćenje PRO – crna kartica s čipom" loading="eager" decoding="async"></div>
+    <div class="wsq__vsk"><span class="wsq__vsz wsq__vsz--siva">Standardna</span><img src="<?php echo $wsq_i( 'noriks-spotpro-standardna.webp' ); ?>" alt="Standardna NORIKS kartica za praćenje" loading="eager" decoding="async"></div>
   </div>
   <div class="wsq__grid wsq__grid--3 wsq__tocke">
     <div class="wsq__k wsq__k--ik"><span class="wsq__ikona"><?php echo $wsq_ikona( 'card' ); ?></span><strong>Prerušena u bankovnu karticu</strong><p>Isti profil, rubovi i završna obrada kao prava kreditna kartica. PRO leži skriveno u novčaniku, pa je lopov neće primijetiti.</p></div>
@@ -67,9 +67,9 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
   <h2 class="wsq__h2 wsq__c">Napravljena za stvari <em>koje nosite svaki dan</em></h2>
   <p class="wsq__p wsq__c">Pravi izgled bankovne kartice. Bez logotipa, bez debljine – samo čista mat površina koja nestane u novčaniku.</p>
   <div class="wsq__grid wsq__grid--3">
-    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'novcanik' ); ?>" alt="NORIKS PRO kartica ulazi u kožni novčanik" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Stane svugdje</span><strong>Uklopi se bilo gdje</strong><p>Punjiva kartica za praćenje izgleda kao bankovna – klizne u svaki novčanik ili držač kartica i diskretno čuva vaše stvari.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'punjenje' ); ?>" alt="NORIKS PRO kartica na bežičnom punjaču" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Mir u glavi</span><strong>Jedno punjenje traje 8 mjeseci</strong><p>Kompatibilna s Qi i MagSafe punjačima. Brzo punjenje od 2 sata napaja karticu do 8 mjeseci.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'prati-karta' ); ?>" alt="Muškarac prati novčanik na karti u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Prati s bilo kojeg mjesta</span><strong>Pratite je na karti</strong><p>Bili kod kuće ili na drugom kraju svijeta – Apple Find My pokazuje točno gdje je, a kartica ostaje nevidljiva u novčaniku.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'noriks-spotpro-novcanik.webp' ); ?>" alt="NORIKS PRO kartica ulazi u kožni novčanik" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Stane svugdje</span><strong>Uklopi se bilo gdje</strong><p>Punjiva kartica za praćenje izgleda kao bankovna – klizne u svaki novčanik ili držač kartica i diskretno čuva vaše stvari.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'noriks-spotpro-punjenje.webp' ); ?>" alt="NORIKS PRO kartica na bežičnom punjaču" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Mir u glavi</span><strong>Jedno punjenje traje 8 mjeseci</strong><p>Kompatibilna s Qi i MagSafe punjačima. Brzo punjenje od 2 sata napaja karticu do 8 mjeseci.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'noriks-spotpro-prati-karta.webp' ); ?>" alt="Muškarac prati novčanik na karti u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Prati s bilo kojeg mjesta</span><strong>Pratite je na karti</strong><p>Bili kod kuće ili na drugom kraju svijeta – Apple Find My pokazuje točno gdje je, a kartica ostaje nevidljiva u novčaniku.</p></div></div>
   </div>
 </div></section>
 
@@ -77,15 +77,15 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
   <div class="wsq__kicker wsq__c">Mogućnosti</div>
   <h2 class="wsq__h2 wsq__c">Sve što trebate – <em>u kartici od 1,8 mm</em></h2>
   <div class="wsq__grid wsq__grid--4">
-    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'prati-sve' ); ?>" alt="Predmeti na karti u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Pratite sve</span><p>Novčanik, ruksak, kofer i drugo – sve na jednom mjestu u aplikaciji Find My koju već koristite.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'spajanje' ); ?>" alt="Novčanik povezan u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Kako je povezati</span><p>Uparite karticu u nekoliko sekundi preko Apple Find My. Bez dodatnih aplikacija – dodirnete, povežete i pratite.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'baterija' ); ?>" alt="NORIKS PRO kartica na bežičnom punjaču" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Trajanje baterije</span><p>Do 8 mjeseci na jedno punjenje – punjiva i napravljena da traje.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'ultra-tanka' ); ?>" alt="NORIKS PRO kartica debljine 1,8 mm uz bok iPhonea" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Ultra tanka</span><p>Samo 1,8 mm u usporedbi s oko 9,9 mm bočnog profila iPhonea – klizne u novčanik bez dodatne debljine.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'noriks-spotpro-prati-sve.webp' ); ?>" alt="Predmeti na karti u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Pratite sve</span><p>Novčanik, ruksak, kofer i drugo – sve na jednom mjestu u aplikaciji Find My koju već koristite.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'noriks-spotpro-spajanje.webp' ); ?>" alt="Novčanik povezan u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Kako je povezati</span><p>Uparite karticu u nekoliko sekundi preko Apple Find My. Bez dodatnih aplikacija – dodirnete, povežete i pratite.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'noriks-spotpro-baterija.webp' ); ?>" alt="NORIKS PRO kartica na bežičnom punjaču" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Trajanje baterije</span><p>Do 8 mjeseci na jedno punjenje – punjiva i napravljena da traje.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km wsq__km--crna"><img src="<?php echo $wsq_i( 'noriks-spotpro-ultra-tanka.webp' ); ?>" alt="NORIKS PRO kartica debljine 1,8 mm uz bok iPhonea" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__oz">Ultra tanka</span><p>Samo 1,8 mm u usporedbi s oko 9,9 mm bočnog profila iPhonea – klizne u novčanik bez dodatne debljine.</p></div></div>
   </div>
 </div></section>
 
 <section class="wsq__s wsq__s--bg"><div class="wsq__v wsq__dva">
-  <div class="wsq__media wsq__media--siroka"><img src="<?php echo $wsq_i( 'mfi' ); ?>" alt="Unutrašnjost NORIKS PRO kartice: PVC, baterija, zvučnik i čipset" loading="eager" decoding="async"></div>
+  <div class="wsq__media wsq__media--siroka"><img src="<?php echo $wsq_i( 'noriks-spotpro-mfi.webp' ); ?>" alt="Unutrašnjost NORIKS PRO kartice: PVC, baterija, zvučnik i čipset" loading="eager" decoding="async"></div>
   <div>
     <div class="wsq__kicker">Apple certificirana tehnologija</div>
     <h2 class="wsq__h2">Pametna iznutra, <em>pouzdana izvana</em></h2>
@@ -103,14 +103,14 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
   <h2 class="wsq__h2 wsq__c">Postavite je <em>za manje od 45 sekundi</em></h2>
   <p class="wsq__p wsq__c">Većina kupaca je poveže i počne pratiti za manje od minute. Evo kako:</p>
   <div class="wsq__grid wsq__grid--3">
-    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'povezi' ); ?>" alt="Povezivanje NORIKS PRO kartice s iPhoneom" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__st">1</span><strong>Povežite s Apple Find My</strong><p>Približite karticu iPhoneu i dodirnite jednom. Bez aplikacija i bez stresa – kartica je spremna za nekoliko sekundi.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'spremi' ); ?>" alt="NORIKS PRO kartica se sprema u novčanik" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__st">2</span><strong>Spremite je na sigurno</strong><p>Stavite je u novčanik, torbu ili putovnicu. Tanka je, sigurna i ostaje skrivena dok vam ne zatreba.</p></div></div>
-    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'zvoni' ); ?>" alt="Tipka Pusti zvuk u aplikaciji Find My" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__st">3</span><strong>Pratite, zazvonite, pronađite</strong><p>U Find My provjerite lokaciju. Ako je u blizini, dodirnite Pusti zvuk i čujete je jasno, čak i kroz torbu ili jastuke.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'noriks-spotpro-povezi.webp' ); ?>" alt="Povezivanje NORIKS PRO kartice s iPhoneom" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__st">1</span><strong>Povežite s Apple Find My</strong><p>Približite karticu iPhoneu i dodirnite jednom. Bez aplikacija i bez stresa – kartica je spremna za nekoliko sekundi.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km"><img src="<?php echo $wsq_i( 'noriks-spotpro-spremi.webp' ); ?>" alt="NORIKS PRO kartica se sprema u novčanik" loading="eager" decoding="async"></div><div class="wsq__kt"><span class="wsq__st">2</span><strong>Spremite je na sigurno</strong><p>Stavite je u novčanik, torbu ili putovnicu. Tanka je, sigurna i ostaje skrivena dok vam ne zatreba.</p></div></div>
+    <div class="wsq__k"><div class="wsq__km"><video src="<?php echo $wsq_i( 'noriks-spotpro-pronadi.mp4' ); ?>" poster="<?php echo $wsq_i( 'noriks-spotpro-pronadi.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="Muškarac pronalazi novčanik pomoću aplikacije Find My"></video></div><div class="wsq__kt"><span class="wsq__st">3</span><strong>Pratite, zazvonite, pronađite</strong><p>U Find My provjerite lokaciju. Ako je u blizini, dodirnite Pusti zvuk i čujete je jasno, čak i kroz torbu ili jastuke.</p></div></div>
   </div>
 </div></section>
 
 <section class="wsq__s wsq__s--bg"><div class="wsq__v wsq__dva wsq__dva--rev">
-  <div class="wsq__media wsq__media--siroka wsq__media--tamna"><img src="<?php echo $wsq_i( 'kao-kartica' ); ?>" alt="Crna NORIKS PRO kartica izgleda kao bankovna kartica" loading="eager" decoding="async"></div>
+  <div class="wsq__media wsq__media--siroka wsq__media--tamna"><img src="<?php echo $wsq_i( 'noriks-spotpro-kao-kartica.webp' ); ?>" alt="Crna NORIKS PRO kartica izgleda kao bankovna kartica" loading="eager" decoding="async"></div>
   <div>
     <div class="wsq__kicker">Neprimjetna</div>
     <h2 class="wsq__h2">Izgleda kao bankovna kartica, <em>a ne kao tracker</em></h2>
@@ -145,7 +145,7 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
       <?php
       $wsq_koraci = array( 'Otvorite aplikaciju „Find My”', 'Dodirnite „Dodaj predmet”', 'Uključite karticu', 'Odaberite „Drugi podržani predmet”', 'Predmet se povezuje s vašim Apple ID-om', 'Gotovo – kartica je na karti!' );
       foreach ( $wsq_koraci as $wsq_n => $wsq_t ) : ?>
-      <div class="wsq__kk"><div class="wsq__kkm"><img src="<?php echo $wsq_i( 'korak-' . ( $wsq_n + 1 ) ); ?>" alt="<?php echo esc_attr( 'Korak ' . ( $wsq_n + 1 ) . ': ' . $wsq_t ); ?>" loading="eager" decoding="async"></div><div class="wsq__kkt"><span class="wsq__st"><?php echo (int) ( $wsq_n + 1 ); ?></span><strong><?php echo esc_html( $wsq_t ); ?></strong></div></div>
+      <div class="wsq__kk"><div class="wsq__kkm"><img src="<?php echo $wsq_i( 'noriks-spotpro-korak-' . ( $wsq_n + 1 ) . '.webp' ); ?>" alt="<?php echo esc_attr( 'Korak ' . ( $wsq_n + 1 ) . ': ' . $wsq_t ); ?>" loading="eager" decoding="async"></div><div class="wsq__kkt"><span class="wsq__st"><?php echo (int) ( $wsq_n + 1 ); ?></span><strong><?php echo esc_html( $wsq_t ); ?></strong></div></div>
       <?php endforeach; ?>
     </div>
     <button type="button" class="wsq__pus wsq__pus--l" aria-label="Prethodno">&#8249;</button>
@@ -177,7 +177,7 @@ $wsq_ikona = function ( $k ) use ( $wsq_svg, $wsq_ik ) { return $wsq_svg . $wsq_
 .wsq__grid--4{grid-template-columns:repeat(4,1fr)}.wsq__grid--3{grid-template-columns:repeat(3,1fr)}
 .wsq__k{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(20,40,80,.10);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .wsq__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,40,80,.16)}
-.wsq__km img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.wsq__km img,.wsq__km video{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .wsq__km--tel{background:#0b0b0d}.wsq__km--tel img{aspect-ratio:780/1000;object-fit:cover}
 .wsq__km--crna{background:#000}
 .wsq__kt{padding:18px 20px 22px}.wsq__kt strong{display:block;font-size:16.5px;margin-bottom:6px}.wsq__kt p{margin:0;font-size:14.5px;line-height:1.55;color:#3a4458}
