@@ -954,4 +954,8 @@ if ( noriks_is_type( 'spotpro' ) ) {
     include $noriks_pb_dir . 'why-spotpro.php';
 }
 
+if ( noriks_is_type( 'busyboard' ) ) {
+    include $noriks_pb_dir . 'why-busyboard.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
