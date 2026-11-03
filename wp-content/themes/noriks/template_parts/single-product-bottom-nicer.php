@@ -902,6 +902,10 @@ if ( noriks_is_type( 'spotminder' ) ) {
     include $noriks_pb_dir . 'why-spotminder.php';
 }
 
+if ( noriks_is_type( 'capri' ) ) {
+    include $noriks_pb_dir . 'why-capri.php';
+}
+
 if ( noriks_is_type( 'comptank' ) ) {
     include $noriks_pb_dir . 'why-comptank.php';
 }

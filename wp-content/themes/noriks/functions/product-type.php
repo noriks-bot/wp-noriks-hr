@@ -46,6 +46,7 @@ function noriks_product_type_map() : array {
         'elowen' => array( 'orto-elowen' ),
         'runshort' => array( 'orto-runshort' ),
         'spotminder' => array( 'orto-spotminder' ),
+        'capri' => array( 'orto-capri' ),
         'comptank' => array( 'orto-comptank' ),
         'emsbunion' => array( 'orto-emsbunion' ),
         'kneesleeve' => array( 'orto-kneesleeve' ),
@@ -726,6 +727,22 @@ if ( ! function_exists( 'noriks_leakbrief_sizes' ) ) {
             array( '2XL', '42 do 44', '91 – 97', '114 – 119' ),
             array( '3XL', '44 do 46', '99 – 102', '122 – 127' ),
             array( '4XL', '46 do 48', '104 – 109', '127 – 132' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_capri_sizes' ) ) {
+    /** NORIKS Capri: original (wearbreeze.es) nima mer - normalen kroj, obicajna velicina; standardne EU moske konfekcijske stevilke. */
+    function noriks_capri_sizes() {
+        return array(
+            array( 'S',   '44 do 46', 'S' ),
+            array( 'M',   '48 do 50', 'M' ),
+            array( 'L',   '52 do 54', 'L' ),
+            array( 'XL',  '56 do 58', 'XL' ),
+            array( '2XL', '60 do 62', '2XL' ),
+            array( '3XL', '64 do 66', '3XL' ),
+            array( '4XL', '68 do 70', '4XL' ),
+            array( '5XL', '72 do 74', '5XL' ),
         );
     }
 }
@@ -1814,6 +1831,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
+            'capri'        => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66', '4XL' => '68 do 70', '5XL' => '72 do 74' ),
             'comptank'     => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66' ),
             'runshort'     => array( 'S' => '44 do 46', 'M' => '46 do 48', 'L' => '48 do 50', 'XL' => '50 do 52', '2XL' => '52 do 54' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
@@ -1962,6 +1980,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_leakbrief_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'capri', $product_id ) ) {
+            return array( 'uvod' => 'Majica ima <strong>normalan kroj</strong> – naručite veličinu koju inače nosite.',
+                'glava' => array( 'Veličina', 'EU', 'Uobičajena majica' ), 'vrstice' => noriks_capri_sizes(),
+                'opomba' => 'Između dvije veličine i volite opušteniji kroj? Uzmite veću.' );
         }
         if ( noriks_is_type( 'comptank', $product_id ) ) {
             return array( 'uvod' => 'Naručite <strong>veličinu majice koju inače nosite</strong> – za udobno, oblikujuće pristajanje. Za jaču kompresiju uzmite veličinu manje.',
