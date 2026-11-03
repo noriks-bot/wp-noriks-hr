@@ -15,7 +15,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wgs_t   = get_template_directory_uri();
-$wgs_i   = function ( $f ) use ( $wgs_t ) { return esc_url( $wgs_t . '/img/gripsocks/' . $f ); };
+$wgs_i   = function ( $f ) use ( $wgs_t ) { return esc_url( $wgs_t . '/img/gripsocks/' . $f . '?v=2' ); };
 $wgs_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 ?>
 <div class="wgs">
