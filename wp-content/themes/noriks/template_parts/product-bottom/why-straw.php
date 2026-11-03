@@ -23,8 +23,9 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wst_t   = get_template_directory_uri() . '/img/straw/';
 $wst_i   = function ( $f ) use ( $wst_t ) { return esc_url( $wst_t . $f ); };
-$wst_vid = function ( $f, $alt ) use ( $wst_t ) {
-	return '<video src="' . esc_url( $wst_t . $f . '.mp4' ) . '" poster="' . esc_url( $wst_t . $f . '.jpg' ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="' . esc_attr( $alt ) . '"></video>';
+$wst_vid = function ( $pot, $alt ) {
+	$u = get_template_directory_uri();
+	return '<video src="' . esc_url( $u . $pot ) . '" poster="' . esc_url( $u . preg_replace( '/\.mp4$/', '.jpg', $pot ) ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="' . esc_attr( $alt ) . '"></video>';
 };
 $wst_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 $wst_da  = '<span class="wst__da" aria-label="da"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9.5 17.5 20 7"/></svg></span>';
@@ -48,17 +49,17 @@ $wst_tab = array(
   <h2 class="wst__h2 wst__c">Obitelji mu vjeruju – <em>pogledajte sami</em></h2>
   <p class="wst__p wst__c">Mutna lokva, potok, šalica vode iz dvorišta – kupci su je isprobali na vodi koju inače nikad ne biste pili. Evo što se dogodilo.</p>
   <div class="wst__ugc">
-    <div class="wst__uk"><?php echo $wst_vid( 'noriks-straw-video-potok', 'Kupac pije vodu iz potoka kroz NORIKS AquaStraw' ); ?></div>
-    <div class="wst__uk"><?php echo $wst_vid( 'noriks-straw-video-blato', 'Kupkinja pije iz šalice s blatnom vodom kroz NORIKS AquaStraw' ); ?></div>
-    <div class="wst__uk"><?php echo $wst_vid( 'noriks-straw-video-rijeka', 'Kupkinja pije iz rijeke kroz NORIKS AquaStraw' ); ?></div>
-    <div class="wst__uk"><?php echo $wst_vid( 'noriks-straw-video-salica', 'Muškarac pije prljavu vodu iz dvorišta kroz NORIKS AquaStraw' ); ?></div>
-    <div class="wst__uk"><?php echo $wst_vid( 'noriks-straw-video-lokva', 'Kupac pije iz lokve kroz NORIKS AquaStraw' ); ?></div>
+    <div class="wst__uk"><?php echo $wst_vid( '/img/straw/noriks-straw-video-potok.mp4', 'Kupac pije vodu iz potoka kroz NORIKS AquaStraw' ); ?></div>
+    <div class="wst__uk"><?php echo $wst_vid( '/img/straw/noriks-straw-video-blato.mp4', 'Kupkinja pije iz šalice s blatnom vodom kroz NORIKS AquaStraw' ); ?></div>
+    <div class="wst__uk"><?php echo $wst_vid( '/img/straw/noriks-straw-video-rijeka.mp4', 'Kupkinja pije iz rijeke kroz NORIKS AquaStraw' ); ?></div>
+    <div class="wst__uk"><?php echo $wst_vid( '/img/straw/noriks-straw-video-salica.mp4', 'Muškarac pije prljavu vodu iz dvorišta kroz NORIKS AquaStraw' ); ?></div>
+    <div class="wst__uk"><?php echo $wst_vid( '/img/straw/noriks-straw-video-lokva.mp4', 'Kupac pije iz lokve kroz NORIKS AquaStraw' ); ?></div>
   </div>
 </div></section>
 
 <section class="wst__s"><div class="wst__v">
   <div class="wst__dva">
-    <div class="wst__media wst__media--kv"><?php echo $wst_vid( 'noriks-straw-video-filtar', 'Unutrašnjost NORIKS AquaStraw filtra – četiri faze filtracije' ); ?><span class="wst__znacka">4 faze</span></div>
+    <div class="wst__media wst__media--kv"><?php echo $wst_vid( '/img/straw/noriks-straw-video-filtar.mp4', 'Unutrašnjost NORIKS AquaStraw filtra – četiri faze filtracije' ); ?><span class="wst__znacka">4 faze</span></div>
     <div>
       <div class="wst__kicker">Kako radi</div>
       <h2 class="wst__h2">Napravljena da radi <em>kad je najvažnije</em></h2>
