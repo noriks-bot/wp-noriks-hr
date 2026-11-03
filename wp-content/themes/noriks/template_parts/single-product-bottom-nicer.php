@@ -874,6 +874,10 @@ if ( noriks_is_type( 'seamthong' ) ) {
     include $noriks_pb_dir . 'why-seamthong.php';
 }
 
+if ( noriks_is_type( 'slipshort' ) ) {
+    include $noriks_pb_dir . 'why-slipshort.php';
+}
+
 if ( noriks_is_type( 'dryseam' ) ) {
     include $noriks_pb_dir . 'why-dryseam.php';
 }

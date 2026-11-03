@@ -59,6 +59,7 @@ function noriks_product_type_map() : array {
         'emsbunion' => array( 'orto-emsbunion' ),
         'kneesleeve' => array( 'orto-kneesleeve' ),
         'seamthong' => array( 'orto-seamthong' ),
+        'slipshort' => array( 'orto-slipshort' ),
         'dryseam' => array( 'orto-dryseam' ),
         'puretitan' => array( 'orto-puretitan' ),
         'popuptent' => array( 'orto-popuptent' ),
@@ -834,6 +835,19 @@ if ( ! function_exists( 'noriks_dryseam_sizes' ) ) {
             array( '2XL', '42 do 44', '92 – 97', '115 – 120' ),
             array( '3XL', '44 do 46', '98 – 104', '121 – 127' ),
             array( '4XL', '46 do 48', '105 – 110', '128 – 133' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_slipshort_sizes' ) ) {
+    /** NORIKS oblikujuce hlacice: tablica originala bellashapewear.com (US hlace 4-18, struk/bokovi/duljina u incima) -> EU konfekcija + cm. */
+    function noriks_slipshort_sizes() {
+        return array(
+            array( 'S',   '34 do 36', '69 – 71', '94 – 97',   '39' ),
+            array( 'M',   '38 do 40', '72 – 77', '98 – 102',  '41' ),
+            array( 'L',   '40 do 42', '79 – 81', '103 – 107', '43' ),
+            array( 'XL',  '44 do 46', '83 – 88', '108 – 113', '45' ),
+            array( 'XXL', '46 do 48', '89 – 94', '114 – 119', '47' ),
         );
     }
 }
@@ -1886,6 +1900,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'comptank'     => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66' ),
             'runshort'     => array( 'S' => '44 do 46', 'M' => '46 do 48', 'L' => '48 do 50', 'XL' => '50 do 52', '2XL' => '52 do 54' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
+            'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
             'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
             'kneesleeve'   => array( 'S' => '35 do 45 cm', 'M' => '46 do 50 cm', 'L' => '51 do 57 cm', 'XL' => '58 do 63 cm', '2XL' => '64 do 69 cm', '3XL' => '70 do 75 cm' ),
             'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
@@ -2066,6 +2081,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
                 'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)' ), 'vrstice' => noriks_dryseam_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'slipshort', $product_id ) ) {
+            return array( 'uvod' => 'Pronađite svoju <strong>uobičajenu EU veličinu hlača</strong> ili veličinu odaberite prema opsegu struka i bokova.',
+                'glava' => array( 'Veličina', 'EU', 'Opseg struka (cm)', 'Opseg bokova (cm)', 'Duljina (cm)' ), 'vrstice' => noriks_slipshort_sizes(),
+                'opomba' => 'Između dvije veličine ili su vam struk i bokovi u različitim veličinama? Uzmite veću – premala veličina je glavni razlog zašto se pojas spušta.' );
         }
         if ( noriks_is_type( 'seamthong', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu struka i bokova</strong>. Obično odgovara vaša uobičajena veličina.',
