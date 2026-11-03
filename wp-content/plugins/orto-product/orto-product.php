@@ -952,6 +952,12 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-emsbunion' ), 'product_cat', $product_id ) ) {
         // EMS Bunion: korektor cuklja - 1 za lijevo ali desno stopalo, 2 = oba stopala (kot Both Feet na originalu).
         $gck_offer_subs = array( '1 uređaj · lijevo ili desno stopalo', '2 uređaja – za oba stopala', '3 uređaja – oba stopala + za poklon' );
+    } elseif ( has_term( array( 'orto-wakealarm' ), 'product_cat', $product_id ) ) {
+        // WakeAlarm: jasno, koliko narukvic dobis (David 3.11.: gumbi kot povsod).
+        $gck_offer_subs = array( '1 vibracijska narukvica', '2 narukvice – za vas i partnera', '3 narukvice – za cijelu obitelj' );
+    } elseif ( has_term( array( 'orto-earcalm' ), 'product_cat', $product_id ) ) {
+        // EarCalm: jasno, koliko uredjajev dobis.
+        $gck_offer_subs = array( '1 uređaj za smirivanje zvonjenja', '2 uređaja – za vas i bližnju osobu', '3 uređaja – za cijelu obitelj' );
     } elseif ( has_term( array( 'orto-busyboard' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Boja i verzija po izboru', 'Svaka ploča u boji i verziji po izboru', 'Svaka ploča u boji i verziji po izboru' );
     } elseif ( has_term( array( 'orto-spotpro' ), 'product_cat', $product_id ) ) {
