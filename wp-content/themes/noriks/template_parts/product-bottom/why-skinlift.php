@@ -189,7 +189,7 @@ $wsl_mnenja = array(
 @media (max-width:767px){
   .wsl__s{padding:48px 0}.wsl__v{padding:0 16px}
   .wsl__dva{grid-template-columns:1fr;gap:26px}.wsl__dva--rev>div:first-child{order:0}
-  .wsl__br{grid-template-columns:1fr 1fr 1fr;gap:10px}.wsl__bk{padding:16px 8px}.wsl__bk span{font-size:12.5px}
+  .wsl__br{grid-template-columns:1fr 1fr 1fr;gap:10px}.wsl__bk{padding:16px 8px}.wsl__bk strong{font-size:24px;white-space:nowrap}.wsl__bk span{font-size:12.5px}
   .wsl__kg{grid-template-columns:1fr;gap:18px}
   .wsl__ig{grid-template-columns:1fr 1fr;gap:12px}.wsl__ik4 figcaption{padding:0 12px 16px}.wsl__ik4 figcaption p{font-size:13.5px}
   .wsl__kar{grid-auto-columns:80%;gap:14px}.wsl__pus--l{left:4px}.wsl__pus--d{right:4px}
