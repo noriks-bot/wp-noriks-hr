@@ -1044,7 +1044,8 @@ function gck_render_bundle_selector() {
             // David 3.11.: gumbi kot povsod - v kartici samo izdelek na beli podlagi (glavne slike imajo napise / ozadje).
             $gck_k = 'busyboard';
             foreach ( array( 'wakealarm', 'earcalm', 'gripsocks' ) as $gck_kk ) { if ( has_term( 'orto-' . $gck_kk, 'product_cat', $product_id ) ) { $gck_k = $gck_kk; break; } }
-            $gck_offer_imgs = array_fill( 0, 3, $gck_k . '/noriks-' . $gck_k . '-kartica.webp' );
+            // EarCalm 3.11.: nov izrez pisala na cisto beli podlagi - ?v=2 zaradi Cloudflare predpomnilnika.
+            $gck_offer_imgs = array_fill( 0, 3, $gck_k . '/noriks-' . $gck_k . '-kartica.webp' . ( 'earcalm' === $gck_k ? '?v=2' : '' ) );
         } else {
             $gck_thumb = get_the_post_thumbnail_url( $product_id, 'woocommerce_thumbnail' );
             if ( $gck_thumb ) { $gck_offer_imgs = array( $gck_thumb, $gck_thumb, $gck_thumb ); }
