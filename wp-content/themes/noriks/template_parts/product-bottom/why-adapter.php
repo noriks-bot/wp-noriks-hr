@@ -167,6 +167,7 @@ $wad_tab = array(
 .wad__red+.wad__red{margin-top:64px}
 .wad__media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,58,.16);aspect-ratio:4/5;background:#dfe6f3}
 .wad__media img{width:100%;height:100%;object-fit:cover;display:block}
+.wad__red .wad__media{aspect-ratio:4/3}
 .wad__media--sv{aspect-ratio:auto;background:#f1f4f9}.wad__media--sv img{height:auto;object-fit:contain}
 .wad__znacka{position:absolute;left:16px;top:16px;background:#fff;color:#14203a;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wad__test{display:flex;gap:14px;align-items:flex-start;background:#eef2fa;border-radius:14px;padding:16px 18px;margin:4px 0 18px}
