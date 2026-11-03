@@ -5,7 +5,7 @@
  *
  * (opis pod gumbom, od vrha navzdol)
  * STRUKTURA ORIGINALA:
-   1. "A Closer Look" - 4 okrogle video zgodbe kupk s kratkimi napisi (Define Curls, Defined Bouncy ...) - pri nas 4 kartice s slikami z originala v vrsti
+   1. "A Closer Look" - 4 okrogle video zgodbe kupk s kratkimi napisi (Define Curls, Defined Bouncy ...) - pri nas 4 kartice v vrsti (video z originala z NORIKS namesto tuje znamke + 3 slike)
    2. "Benefits of the ..." - 3 kartice v vrsti (slika zgoraj, naslov + besedilo spodaj) na svetli podlagi: XL zdjela, ionska tehnologija, digitalna kontrola temperature
    3. "Our Secret's Out!" - ocena + mnenja kupcev (widget) - pri nas ocena NORIKS + 4 kartice mnenj (prevedena z originala)
    4. primerjalna tabela (tip, duljina, gustoca, stanje kose + lastnosti) - pri nas tabela za koga je izdelek + specifikacije z originala (brez tujih modelov), slika levo
@@ -26,7 +26,7 @@ $wsu_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
   <p class="wsu__p wsu__c wsu__uv">Sušilo i difuzor u jednom aparatu, napravljen samo za valovitu, kovrčavu i afro kosu. Bez nastavka koji treba montirati, skidati ili koji pada usred sušenja.</p>
   <div class="wsu__zg">
     <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-02-prije-poslije.webp' ); ?>" alt="Kovrčava kosa prije i poslije sušenja s NORIKS Supreme" loading="eager" decoding="async"><span class="wsu__znacka">Prije / poslije</span></div><figcaption><strong>Definirane kovrče</strong><span>bez frizza, s jasnim uvojcima</span></figcaption></figure>
-    <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-03-susenje-kovrca.webp' ); ?>" alt="Žena suši valovitu kosu s NORIKS Supreme sušilom s difuzorom" loading="eager" decoding="async"></div><figcaption><strong>Kovrče s volumenom</strong><span>difuzor nosi kosu od vrhova do korijena</span></figcaption></figure>
+    <figure class="wsu__zk"><div class="wsu__zm"><video src="<?php echo $wsu_i( 'noriks-supreme-video-susenje.mp4' ); ?>" poster="<?php echo $wsu_i( 'noriks-supreme-video-susenje.jpg' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="Sušenje valovite kose s NORIKS Supreme sušilom s difuzorom"></video><span class="wsu__znacka">Video</span></div><figcaption><strong>Kovrče s volumenom</strong><span>difuzor nosi kosu od vrhova do korijena</span></figcaption></figure>
     <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-05-definirane-kovrce.webp' ); ?>" alt="Žena s gustim kovrčama drži NORIKS Supreme sušilo" loading="eager" decoding="async"></div><figcaption><strong>Kovrče koje odskaču</strong><span>mekane, sjajne i elastične</span></figcaption></figure>
     <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-04-u-ruci.webp' ); ?>" alt="NORIKS Supreme sušilo s XL difuzorom u ruci" loading="eager" decoding="async"></div><figcaption><strong>Sve u jednoj ruci</strong><span>sušilo i XL difuzor kao jedan aparat</span></figcaption></figure>
   </div>
@@ -109,7 +109,7 @@ $wsu_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wsu__zg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:26px 0 0}
 .wsu__zk{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(120,40,90,.10);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .wsu__zk:hover,.wsu__pk:hover,.wsu__mk:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(120,40,90,.16)}
-.wsu__zm{position:relative;aspect-ratio:4/5}.wsu__zm img{width:100%;height:100%;object-fit:cover;display:block}
+.wsu__zm{position:relative;aspect-ratio:4/5}.wsu__zm img,.wsu__zm video{width:100%;height:100%;object-fit:cover;display:block}
 .wsu__zk figcaption{padding:16px 18px 18px}.wsu__zk figcaption strong{display:block;font-size:16px;margin-bottom:4px}.wsu__zk figcaption span{font-size:14px;color:#6b5763;line-height:1.5}
 .wsu__znacka{position:absolute;left:14px;top:14px;background:#fff;color:#2a1a24;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:6px 11px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .wsu__znacka--m{background:#a33e7e;color:#fff}
