@@ -7,7 +7,7 @@
  * STRUKTURA ORIGINALA:
    1. 4 prednosti v vrsti z ikono kljukice (Anti-Slip Technology, Increased Performance, Premium Comfort, Goodbye Blisters) - pri nas mreza 4 kartic z ikonami
    2. tekoci trak "Pros Choose ..." (ime tuje znamke) - pri nas staticen trak prednosti z ikonami (tekoci trakovi in tuja znamka prepovedani)
-   3. drsnik 4 profesionalnih igralcev ragbija s fotografijo in klubom - pri nas 4 kartice s sliko po sportih (brez imen in fotografij tujih sportasev - to bi bila izmisljena priporocila)
+   3. drsnik (karusel) 4 profesionalnih igralcev ragbija s fotografijo in klubom - pri nas 4 kartice s sliko po sportih (namizje mreza, mobilno karusel s scroll-snap) (brez imen in fotografij tujih sportasev - to bi bila izmisljena priporocila)
    4. video levo + besedilo desno ("It's Time to Upgrade", 9 barv, velikosti) - pri nas video (napisi prevedeni) levo, besedilo desno
    5. Customer Reviews (widget z mnenji) - pri nas ocena + 4 kartice mnenj (prevedena z originala)
    6. pogoji trgovine - pri nas skupna sekcija NORIKS pogoji
@@ -130,7 +130,7 @@ $wgs_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
   .wgs__s{padding:48px 0}.wgs__s.wgs__s--traka{padding:24px 0}.wgs__v{padding:0 16px}
   .wgs__kar{grid-template-columns:1fr;gap:12px}
   .wgs__traka{grid-template-columns:repeat(2,1fr);row-gap:12px}.wgs__traka>div{justify-content:flex-start}.wgs__traka>div+div{border-left:0}.wgs__traka strong{font-size:14px}
-  .wgs__sport{grid-template-columns:repeat(2,1fr);gap:12px}.wgs__st{padding:14px}.wgs__st strong{font-size:15px}.wgs__st p{font-size:13.5px}
+  .wgs__sport{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;-webkit-overflow-scrolling:touch}.wgs__sk{flex:0 0 72%;scroll-snap-align:start}.wgs__st{padding:14px}.wgs__st strong{font-size:15px}.wgs__st p{font-size:13.5px}
   .wgs__dva{grid-template-columns:1fr;gap:26px}
   .wgs__vel{grid-template-columns:repeat(2,1fr)}
   .wgs__mn{grid-template-columns:1fr;gap:14px}
