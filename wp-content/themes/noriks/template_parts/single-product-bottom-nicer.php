@@ -938,4 +938,8 @@ if ( noriks_is_type( 'comptank' ) ) {
     include $noriks_pb_dir . 'why-comptank.php';
 }
 
+if ( noriks_is_type( 'spotpro' ) ) {
+    include $noriks_pb_dir . 'why-spotpro.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
