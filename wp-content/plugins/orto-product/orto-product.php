@@ -1030,9 +1030,10 @@ function gck_render_bundle_selector() {
         } elseif ( has_term( 'orto-dryseam', 'product_cat', $product_id ) ) {
             // David 29.10.: v gumbu samo izdelek na beli podlagi (glavna slika je primerjava ulosci / gacice).
             $gck_offer_imgs = array( 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp' );
-        } elseif ( has_term( array( 'orto-wakealarm', 'orto-earcalm', 'orto-busyboard' ), 'product_cat', $product_id ) ) {
+        } elseif ( has_term( array( 'orto-wakealarm', 'orto-earcalm', 'orto-busyboard', 'orto-gripsocks' ), 'product_cat', $product_id ) ) {
             // David 3.11.: gumbi kot povsod - v kartici samo izdelek na beli podlagi (glavne slike imajo napise / ozadje).
-            $gck_k = has_term( 'orto-wakealarm', 'product_cat', $product_id ) ? 'wakealarm' : ( has_term( 'orto-earcalm', 'product_cat', $product_id ) ? 'earcalm' : 'busyboard' );
+            $gck_k = 'busyboard';
+            foreach ( array( 'wakealarm', 'earcalm', 'gripsocks' ) as $gck_kk ) { if ( has_term( 'orto-' . $gck_kk, 'product_cat', $product_id ) ) { $gck_k = $gck_kk; break; } }
             $gck_offer_imgs = array_fill( 0, 3, $gck_k . '/noriks-' . $gck_k . '-kartica.webp' );
         } else {
             $gck_thumb = get_the_post_thumbnail_url( $product_id, 'woocommerce_thumbnail' );
