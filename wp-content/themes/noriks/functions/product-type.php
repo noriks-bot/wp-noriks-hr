@@ -49,6 +49,7 @@ function noriks_product_type_map() : array {
         'kneewrap' => array( 'orto-kneewrap' ),
         'capri' => array( 'orto-capri' ),
         'supreme' => array( 'orto-supreme' ),
+        'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
         'straw' => array( 'orto-straw' ),
         'adapter' => array( 'orto-adapter' ),

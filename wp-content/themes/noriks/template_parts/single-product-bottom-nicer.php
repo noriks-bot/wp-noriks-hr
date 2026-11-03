@@ -926,6 +926,10 @@ if ( noriks_is_type( 'supreme' ) ) {
     include $noriks_pb_dir . 'why-supreme.php';
 }
 
+if ( noriks_is_type( 'skinlift' ) ) {
+    include $noriks_pb_dir . 'why-skinlift.php';
+}
+
 if ( noriks_is_type( 'capri' ) ) {
     include $noriks_pb_dir . 'why-capri.php';
 }
