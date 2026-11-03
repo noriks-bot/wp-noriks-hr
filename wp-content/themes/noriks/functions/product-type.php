@@ -48,6 +48,7 @@ function noriks_product_type_map() : array {
         'spotminder' => array( 'orto-spotminder' ),
         'kneewrap' => array( 'orto-kneewrap' ),
         'capri' => array( 'orto-capri' ),
+        'gripsocks' => array( 'orto-gripsocks' ),
         'straw' => array( 'orto-straw' ),
         'adapter' => array( 'orto-adapter' ),
         'sheer' => array( 'orto-sheer' ),
@@ -758,6 +759,18 @@ if ( ! function_exists( 'noriks_sheer_sizes' ) ) {
             array( 'S-M',   '36 do 38', '71 do 81 cm',  '91 do 102 cm' ),
             array( 'L-XL',  '40 do 42', '84 do 97 cm',  '104 do 119 cm' ),
             array( 'XXL',   '44 do 46', '94 do 109 cm', '117 do 130 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_gripsocks_sizes' ) ) {
+    /** NORIKS GripSocks: velikosti z originala (US stevilke cevljev) preracunane v EU. */
+    function noriks_gripsocks_sizes() {
+        return array(
+            array( 'XS', '35 do 38' ),
+            array( 'S',  '38,5 do 43' ),
+            array( 'M',  '44 do 47' ),
+            array( 'L',  '47,5 do 49' ),
         );
     }
 }
@@ -1864,6 +1877,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'kneewrap'     => array( 'XS' => '34,5 do 39 cm', 'S' => '39 do 44,5 cm', 'M' => '44,5 do 49 cm', 'L' => '49 do 53,5 cm', 'XL' => '53,5 do 59 cm', 'XXL' => '59 do 65,5 cm', 'XXXL' => '65,5 do 73,5 cm' ),
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
+            'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'capri'        => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66', '4XL' => '68 do 70', '5XL' => '72 do 74' ),
             'comptank'     => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66' ),
             'runshort'     => array( 'S' => '44 do 46', 'M' => '46 do 48', 'L' => '48 do 50', 'XL' => '50 do 52', '2XL' => '52 do 54' ),
@@ -2023,6 +2037,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bokova</strong>. Čarape su skraćene duljine – za visinu od 150 do 163 cm.',
                 'glava' => array( 'Veličina', 'EU', 'Struk', 'Bokovi' ), 'vrstice' => noriks_sheer_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'gripsocks', $product_id ) ) {
+            return array( 'uvod' => 'Odaberite veličinu prema <strong>EU broju cipele</strong>.',
+                'glava' => array( 'Veličina', 'EU broj cipele' ), 'vrstice' => noriks_gripsocks_sizes(),
+                'opomba' => 'Između dvije veličine? Za čvršće pristajanje uzmite manju, za udobnije veću.' );
         }
         if ( noriks_is_type( 'capri', $product_id ) ) {
             return array( 'uvod' => 'Majica ima <strong>normalan kroj</strong> – naručite veličinu koju inače nosite.',
