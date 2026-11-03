@@ -48,6 +48,7 @@ function noriks_product_type_map() : array {
         'spotminder' => array( 'orto-spotminder' ),
         'kneewrap' => array( 'orto-kneewrap' ),
         'capri' => array( 'orto-capri' ),
+        'supreme' => array( 'orto-supreme' ),
         'gripsocks' => array( 'orto-gripsocks' ),
         'straw' => array( 'orto-straw' ),
         'adapter' => array( 'orto-adapter' ),

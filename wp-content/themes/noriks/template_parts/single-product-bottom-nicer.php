@@ -922,6 +922,10 @@ if ( noriks_is_type( 'gripsocks' ) ) {
     include $noriks_pb_dir . 'why-gripsocks.php';
 }
 
+if ( noriks_is_type( 'supreme' ) ) {
+    include $noriks_pb_dir . 'why-supreme.php';
+}
+
 if ( noriks_is_type( 'capri' ) ) {
     include $noriks_pb_dir . 'why-capri.php';
 }

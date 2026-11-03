@@ -1,0 +1,12 @@
+<?php
+// NORIKS Supreme Ionic XL — FAQ (Informacije o proizvodu), podatki z originala + NORIKS pogoji.
+return array(
+  array( 'Po čemu se razlikuje od običnog sušila s difuzorom?', 'NORIKS Supreme Ionic XL je sušilo i difuzor u jednom, napravljen posebno za valovitu, kovrčavu i afro kosu. Integrirana XL zdjela, kontrolirani protok zraka, keramika s arganovim uljem, dvostruka ionska tehnologija i digitalna kontrola temperature zajedno suše kovrče i čuvaju njihov prirodni oblik, mekoću i sjaj. Nema odvojenog nastavka koji treba montirati, skidati ili koji pada tijekom sušenja.' ),
+  array( 'Za koga je najbolji?', 'Posebno za dužu, gušću i na frizz sklonu valovitu kosu, kovrče i afro uvojke. U XL zdjelu stane više kose odjednom, a 3 razine topline, 2 brzine i tipka za hladni zrak omogućuju sušenje po vašoj mjeri. Može se koristiti i na kraćoj ili tanjoj kosi – počnite s nižom toplinom i protokom zraka.' ),
+  array( 'Koje postavke topline i zraka trebam koristiti?', 'Ovisi o gustoći, duljini, poroznosti i stanju kose. Tanke i osjetljive kovrče: niža toplina i protok. Srednje guste: srednja toplina, pa prilagodite. Guste kovrče: više topline ili zraka u prvom dijelu sušenja. Kad kosa leži u zdjeli, manji protok zraka smanjuje pomicanje kovrča.' ),
+  array( 'Je li prikladan za tanku, suhu, obojenu, trajnu ili afro kosu?', 'Da. Kod tanke, suhe, obojene, trajne ili osjetljive kose počnite s nižom toplinom i protokom ili s tipkom za hladni zrak i prilagodite prema tome kako kosa reagira. Kod gušćih kovrča XL zdjela i dodatne kombinacije topline i zraka olakšavaju prilagodbu.' ),
+  array( 'Kako se koristi?', 'Svježe opranu kosu 10–20 minuta umotajte u ručnik od mikrovlakana dok ne bude vlažna, ali ne mokra. Raščešljajte češljem s rijetkim zupcima i nanesite kremu za kovrče ili regenerator bez ispiranja. Sušite na višoj toplini, prvo vrhove, 3–5 sekundi po dijelu. Zatim smanjite toplinu i protok i sušite korijen za volumen. Završite tipkom za hladni zrak da se kovrče učvrste.' ),
+  array( 'Koje su tehničke karakteristike?', 'Snaga 700 W, dimenzije 15 × 19 × 15 cm, težina 0,69 kg, duljina kabela 2,5 m. 3 razine topline, 2 brzine i tipka za hladni zrak.' ),
+  array( 'Mogu li ga vratiti ako mi ne odgovara?', 'Da. Imate 30 dana za povrat novca – bez kompliciranja.' ),
+  array( 'Kako plaćam i koliko košta dostava?', 'Plaćate pouzećem, kad paket stigne. Dostava je besplatna za narudžbe iznad 70 €.' ),
+);
