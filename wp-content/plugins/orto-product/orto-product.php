@@ -1029,8 +1029,8 @@ function gck_render_bundle_selector() {
     // attribute guards so it always renders regardless of product attributes.
     $gck_shgifts = has_term( 'orto-majica-darila', 'product_cat', $product_id );
 
-    // KneeFix: dva izbornika (Velicina + Stranica) umjesto swatcheva boje.
-    $gck_side_select = has_term( 'orto-kneefix', 'product_cat', $product_id );
+    // KneeFix: dva izbornika (Velicina + Stranica) umjesto swatcheva boje. KneeWrap: Velicina + Bocni stabilizator.
+    $gck_side_select = has_term( array( 'orto-kneefix', 'orto-kneewrap' ), 'product_cat', $product_id );
 
     // NORIKS FlexShirt kosulja: TRI izbora kao na originalu (Boja + Velicina + Rukav).
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']
