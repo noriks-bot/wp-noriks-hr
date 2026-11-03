@@ -910,6 +910,10 @@ if ( noriks_is_type( 'sheer' ) ) {
     include $noriks_pb_dir . 'why-sheer.php';
 }
 
+if ( noriks_is_type( 'adapter' ) ) {
+    include $noriks_pb_dir . 'why-adapter.php';
+}
+
 if ( noriks_is_type( 'capri' ) ) {
     include $noriks_pb_dir . 'why-capri.php';
 }
