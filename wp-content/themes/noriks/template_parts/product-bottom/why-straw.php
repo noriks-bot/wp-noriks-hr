@@ -197,7 +197,7 @@ $wst_tab = array(
 .wst__mk p{margin:10px 0 18px;font-size:16px;line-height:1.6;color:#2f251e;flex:1}
 .wst__mh{display:flex;align-items:center;gap:12px}
 .wst__av{width:44px;height:44px;border-radius:50%;background:#bf4101;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
-.wst__mh strong{display:block;font-size:15px}.wst__mh span{font-size:13px;color:#6b5d53}.wst__mh .wst__zv{margin-left:auto;font-size:13px}
+.wst__mh strong{display:block;font-size:15px}.wst__mh span{font-size:13px;color:#6b5d53}.wst__mh .wst__av{color:#fff;font-size:17px}.wst__mh .wst__zv{margin-left:auto;font-size:13px}
 .wst__jam{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}
 .wst__jz{width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e0651f,#a63a03);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 18px 40px rgba(166,58,3,.30),inset 0 0 0 10px rgba(255,255,255,.18);margin:0 auto}
 .wst__jz span{font-size:110px;font-weight:800;line-height:1}.wst__jz small{font-size:24px;font-weight:800;letter-spacing:6px}

@@ -145,7 +145,7 @@ $wsh_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 .wsh__mk p{margin:10px 0 18px;font-size:16px;line-height:1.6;color:#2d2925;flex:1}
 .wsh__mh{display:flex;align-items:center;gap:12px}
 .wsh__av{width:44px;height:44px;border-radius:50%;background:#8a7f76;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
-.wsh__mh strong{display:block;font-size:15px}.wsh__mh span{font-size:13px;color:#6d655e}.wsh__mh .wsh__zv{margin-left:auto;font-size:13px;color:#e0a33c}
+.wsh__mh strong{display:block;font-size:15px}.wsh__mh span{font-size:13px;color:#6d655e}.wsh__mh .wsh__av{color:#fff;font-size:17px}.wsh__mh .wsh__zv{margin-left:auto;font-size:13px;color:#e0a33c}
 .wsh__kartice{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:26px;align-items:stretch}
 .wsh__k{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(80,62,48,.09);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
 .wsh__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(80,62,48,.15)}
