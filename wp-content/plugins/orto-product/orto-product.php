@@ -1021,7 +1021,7 @@ function gck_render_bundle_selector() {
     }
     // Premium kartice ponud (David 29.10.: „1x kom" izgleda poceni) - slicica izdelka v kartici, opisni naslov,
     // vrstica „Ustedite X €" in znacka kot na originalih (Kaching). Slicica: komplet z originala ali glavna slika izdelka.
-    $gck_premium_cards = has_term( array( 'orto-puretitan', 'orto-seamthong', 'orto-slipshort', 'orto-kneesleeve', 'orto-popuptent', 'orto-twisthook', 'orto-lumiwand', 'orto-topper', 'orto-brewer', 'orto-elowen', 'orto-runshort', 'orto-comptank', 'orto-capri', 'orto-supreme', 'orto-skinlift', 'orto-gripsocks', 'orto-straw', 'orto-adapter', 'orto-sheer', 'orto-kneewrap', 'orto-spotminder', 'orto-spotpro', 'orto-busyboard', 'orto-emsbunion', 'orto-tactical', 'orto-ratchet', 'orto-steampro', 'orto-neckgrip', 'orto-diskret', 'orto-titancrep', 'orto-leash', 'orto-shiftclog', 'orto-beltfit', 'orto-mamabelt', 'orto-tusfilter', 'orto-leakbrief', 'orto-dryseam' ), 'product_cat', $product_id );
+    $gck_premium_cards = has_term( array( 'orto-puretitan', 'orto-wakealarm', 'orto-earcalm', 'orto-seamthong', 'orto-slipshort', 'orto-kneesleeve', 'orto-popuptent', 'orto-twisthook', 'orto-lumiwand', 'orto-topper', 'orto-brewer', 'orto-elowen', 'orto-runshort', 'orto-comptank', 'orto-capri', 'orto-supreme', 'orto-skinlift', 'orto-gripsocks', 'orto-straw', 'orto-adapter', 'orto-sheer', 'orto-kneewrap', 'orto-spotminder', 'orto-spotpro', 'orto-busyboard', 'orto-emsbunion', 'orto-tactical', 'orto-ratchet', 'orto-steampro', 'orto-neckgrip', 'orto-diskret', 'orto-titancrep', 'orto-leash', 'orto-shiftclog', 'orto-beltfit', 'orto-mamabelt', 'orto-tusfilter', 'orto-leakbrief', 'orto-dryseam' ), 'product_cat', $product_id );
     if ( $gck_premium_cards && empty( $gck_offer_imgs ) ) {
         if ( has_term( 'orto-puretitan', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
@@ -1030,6 +1030,10 @@ function gck_render_bundle_selector() {
         } elseif ( has_term( 'orto-dryseam', 'product_cat', $product_id ) ) {
             // David 29.10.: v gumbu samo izdelek na beli podlagi (glavna slika je primerjava ulosci / gacice).
             $gck_offer_imgs = array( 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp' );
+        } elseif ( has_term( array( 'orto-wakealarm', 'orto-earcalm', 'orto-busyboard' ), 'product_cat', $product_id ) ) {
+            // David 3.11.: gumbi kot povsod - v kartici samo izdelek na beli podlagi (glavne slike imajo napise / ozadje).
+            $gck_k = has_term( 'orto-wakealarm', 'product_cat', $product_id ) ? 'wakealarm' : ( has_term( 'orto-earcalm', 'product_cat', $product_id ) ? 'earcalm' : 'busyboard' );
+            $gck_offer_imgs = array_fill( 0, 3, $gck_k . '/noriks-' . $gck_k . '-kartica.webp' );
         } else {
             $gck_thumb = get_the_post_thumbnail_url( $product_id, 'woocommerce_thumbnail' );
             if ( $gck_thumb ) { $gck_offer_imgs = array( $gck_thumb, $gck_thumb, $gck_thumb ); }
