@@ -8,7 +8,7 @@
    1. trak dokazov: 3 stevilke v vrsti (ocena 4.8/5, stevilo kupcev, 30 dni za preizkus) - pri nas 3 kartice z ikonami (4,8 / 1.081 recenzij, 120.000 kupaca, 30 dana) - brez tujih stevilk
    2. Compatibility: slika levo, tekst desno (naslov, test v 10 sekundah, 3 kljukice) - pri nas slika levo (lokalizirana), besedilo desno
    3. Reviews "What drivers say after a month": 5 kartic s fotografijo, citatom, imenom in avtom - pri nas 5 kartic (3 + 2 sredinsko, mobilno karusel), prevedeni citati, hrvaska imena
-   4. Features: 3 bloki slika + besedilo (plug in once / plug and play / fits almost any car) - pri nas 3 vrstice cik-cak (slika levo, desno, levo)
+   4. Features: 3 bloki slika + besedilo (plug in once / plug and play / fits almost any car) - pri nas 3 vrstice cik-cak, nadaljuje izmenjavo za Kompatibilnost (slika desno, levo, desno)
    5. Stats: naslov + 3 velike odstotne stevilke (anketa kupcev 30 dni po nakupu) - pri nas 3 kartice z ikonami in velikimi stevilkami (brez tuje stevilke anketiranih)
    6. Compare your options: primerjalna tabela 4 stolpci x 9 vrstic - pri nas <table> z istimi vrsticami in kljukicami
    7. Questions (7 vprasanj) - pri nas v FAQ spodaj (auto_reviews/FAQ_HR_adapter.php)
@@ -83,7 +83,7 @@ $wad_tab = array(
 </div></section>
 
 <section class="wad__s"><div class="wad__v">
-  <div class="wad__dva wad__red">
+  <div class="wad__dva wad__dva--rev wad__red">
     <div class="wad__media"><img src="<?php echo $wad_i( 'noriks-adapter-u-autu-nocu.webp' ); ?>" alt="NORIKS CarPlay Air utaknut u USB priključak u autu" loading="eager" decoding="async"><span class="wad__znacka">Jednom utaknete</span></div>
     <div>
       <div class="wad__kicker">Utaknite jednom</div>
@@ -93,7 +93,7 @@ $wad_tab = array(
       <ul class="wad__kv"><li>Spaja se svaki put kad uđete u auto</li><li>Nema više kabela po autu</li><li>Mobitel ostaje u džepu</li></ul>
     </div>
   </div>
-  <div class="wad__dva wad__dva--rev wad__red">
+  <div class="wad__dva wad__red">
     <div class="wad__media"><img src="<?php echo $wad_i( 'noriks-adapter-pozivi-karta-glazba.webp' ); ?>" alt="Pozivi, navigacija i glazba bežično na zaslonu auta s NORIKS CarPlay Air" loading="eager" decoding="async"><span class="wad__znacka">Bez kašnjenja</span></div>
     <div>
       <div class="wad__kicker">Utakni i vozi</div>
@@ -107,7 +107,7 @@ $wad_tab = array(
       </div>
     </div>
   </div>
-  <div class="wad__dva wad__red">
+  <div class="wad__dva wad__dva--rev wad__red">
     <div class="wad__media"><img src="<?php echo $wad_i( 'noriks-adapter-bez-kabela.webp' ); ?>" alt="Usporedba: NORIKS CarPlay Air bez kabela i zapetljani kabeli" loading="eager" decoding="async"><span class="wad__znacka">USB-A + USB-C</span></div>
     <div>
       <div class="wad__kicker">Za gotovo svaki auto</div>
