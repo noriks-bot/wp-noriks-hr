@@ -786,14 +786,15 @@ if ( ! function_exists( 'noriks_capri_sizes' ) ) {
     /** NORIKS Capri: original (wearbreeze.es) nima mer - normalen kroj, obicajna velicina; standardne EU moske konfekcijske stevilke. */
     function noriks_capri_sizes() {
         return array(
-            array( 'S',   '44 do 46', 'S' ),
-            array( 'M',   '48 do 50', 'M' ),
-            array( 'L',   '52 do 54', 'L' ),
-            array( 'XL',  '56 do 58', 'XL' ),
-            array( '2XL', '60 do 62', '2XL' ),
-            array( '3XL', '64 do 66', '3XL' ),
-            array( '4XL', '68 do 70', '4XL' ),
-            array( '5XL', '72 do 74', '5XL' ),
+            // David 4.11.: original nima tablice - EU konfekcijska stevilka + standardni EU opseg prsa za mosko majico
+            array( 'S',   '44 – 46', '88 – 95 cm' ),
+            array( 'M',   '48 – 50', '96 – 103 cm' ),
+            array( 'L',   '52 – 54', '104 – 111 cm' ),
+            array( 'XL',  '56 – 58', '112 – 119 cm' ),
+            array( '2XL', '60 – 62', '120 – 127 cm' ),
+            array( '3XL', '64 – 66', '128 – 135 cm' ),
+            array( '4XL', '68 – 70', '136 – 143 cm' ),
+            array( '5XL', '72 – 74', '144 – 151 cm' ),
         );
     }
 }
@@ -2067,9 +2068,9 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
                 'opomba' => 'Između dvije veličine? Za čvršće pristajanje uzmite manju, za udobnije veću.' );
         }
         if ( noriks_is_type( 'capri', $product_id ) ) {
-            return array( 'uvod' => 'Majica ima <strong>normalan kroj</strong> – naručite veličinu koju inače nosite.',
-                'glava' => array( 'Veličina', 'EU', 'Uobičajena majica' ), 'vrstice' => noriks_capri_sizes(),
-                'opomba' => 'Između dvije veličine i volite opušteniji kroj? Uzmite veću.' );
+            return array( 'uvod' => 'Majica ima <strong>atletski, pripijen kroj</strong> od elastične tkanine – naručite <strong>veličinu koju inače nosite</strong>. Niste sigurni? Izmjerite <strong>opseg prsa</strong> i pronađite ga u tablici.',
+                'glava' => array( 'Veličina', 'EU veličina', 'Opseg prsa' ), 'vrstice' => noriks_capri_sizes(),
+                'opomba' => 'Opseg prsa mjerite metrom ispod pazuha, preko najšireg dijela prsa. Između dvije veličine ili volite opušteniji kroj? Uzmite veću.' );
         }
         if ( noriks_is_type( 'comptank', $product_id ) ) {
             return array( 'uvod' => 'Naručite <strong>veličinu majice koju inače nosite</strong> – za udobno, oblikujuće pristajanje. Želite <strong>jači stisak</strong> i ravniji trbuh? Uzmite jednu veličinu manje (npr. inače nosite L → uzmite M).',
