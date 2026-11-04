@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
       <ol>
         <li>Pronađite svoj uobičajeni broj cipele (EU) u tablici.</li>
         <li>Ako ste između dvije veličine, uzmite veću.</li>
-        <li>Potpora se prodaje po komadu — za oba gležnja odaberite ponudu 2x (par); za svaki komad možete odabrati drugu veličinu.</li>
+        <li>U kompletu dobivate par — potporu za obje noge. Ako trebate različite veličine, odaberite ponudu 2 ili 3 para i za svaki par odaberite veličinu.</li>
       </ol>
       <p class="kwsc-note">Ako vam veličina ne odgovara, imate pravo na povrat ili zamjenu u roku od 30 dana.</p>
     </div>

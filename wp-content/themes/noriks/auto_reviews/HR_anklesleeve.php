@@ -6,7 +6,7 @@ $auto_reviews_en = array(
     array("name" => "Ana B.", "text" => "Nakon uganuća sam se bojala vratiti na trening. S ovom potporom imam puno više samopouzdanja."),
     array("name" => "Petra Š.", "text" => "Lagana je i prozračna, nosim je i cijeli dan na poslu. Noge mi navečer nisu umorne kao prije."),
     array("name" => "Luka M.", "text" => "Igram nogomet i nosim je ispod štitnika. Drži se na mjestu cijelu utakmicu i ne klizi."),
-    array("name" => "Tomislav N.", "text" => "Uzeo sam ponudu za par, za oba gležnja. Odličan omjer cijene i kvalitete."),
+    array("name" => "Tomislav N.", "text" => "U kompletu dobiješ par, za oba gležnja. Odličan omjer cijene i kvalitete."),
     array("name" => "Maja C.", "text" => "Šav je stvarno tanak, u cipeli ga uopće ne osjećam. Lako se navlači i skida."),
     array("name" => "Dario V.", "text" => "Rukomet treniram već 15 godina, a ovo je prva potpora za gležanj koja mi ne smeta pri skokovima."),
     array("name" => "Ivana R.", "text" => "Imam usko stopalo i broj 38, veličina S je baš kako treba. Dobra potpora za šetnje i planinarenje."),
