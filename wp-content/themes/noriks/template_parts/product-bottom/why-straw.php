@@ -22,10 +22,10 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wst_t   = get_template_directory_uri() . '/img/straw/';
-$wst_i   = function ( $f ) use ( $wst_t ) { return esc_url( $wst_t . $f . '?v=w0311b' ); };
+$wst_i   = function ( $f ) use ( $wst_t ) { return esc_url( $wst_t . $f . '?v=w0411a' ); };
 $wst_vid = function ( $pot, $alt ) {
 	$u = get_template_directory_uri();
-	return '<video src="' . esc_url( $u . $pot . '?v=w0311b' ) . '" poster="' . esc_url( $u . preg_replace( '/\.mp4$/', '.jpg', $pot ) . '?v=w0311b' ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="' . esc_attr( $alt ) . '"></video>';
+	return '<video src="' . esc_url( $u . $pot . '?v=w0411a' ) . '" poster="' . esc_url( $u . preg_replace( '/\.mp4$/', '.jpg', $pot ) . '?v=w0411a' ) . '" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="' . esc_attr( $alt ) . '"></video>';
 };
 $wst_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 $wst_da  = '<span class="wst__da" aria-label="da"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 9.5 17.5 20 7"/></svg></span>';
@@ -142,7 +142,7 @@ $wst_tab = array(
   <div class="wst__kicker wst__c">Prave obitelji</div>
   <h2 class="wst__h2 wst__c">Pravi mir <em>za cijelu obitelj</em></h2>
   <div class="wst__fm">
-    <div class="wst__fk2"><div class="wst__ff"><img src="<?php echo $wst_i( 'noriks-straw-kupac-robert.webp' ); ?>" alt="Kupac Robert drži NORIKS AquaStraw" loading="eager" decoding="async"></div><div class="wst__ft"><span class="wst__zv">★★★★★</span><strong>Rade savršeno</strong><p>Slamke su točno onakve kako su opisane. Jako jednostavne za korištenje. Sad se osjećam pripremljeno za izvanredne situacije jer znam da mogu piti čistu vodu.</p><span class="wst__ime">Robert T., Osijek</span></div></div>
+    <div class="wst__fk2"><div class="wst__ff"><img src="<?php echo $wst_i( 'noriks-straw-kupac-robert-v2.webp' ); ?>" alt="Kupac Robert drži NORIKS AquaStraw" loading="eager" decoding="async"></div><div class="wst__ft"><span class="wst__zv">★★★★★</span><strong>Rade savršeno</strong><p>Slamke su točno onakve kako su opisane. Jako jednostavne za korištenje. Sad se osjećam pripremljeno za izvanredne situacije jer znam da mogu piti čistu vodu.</p><span class="wst__ime">Robert T., Osijek</span></div></div>
     <div class="wst__fk2"><div class="wst__ff"><img src="<?php echo $wst_i( 'noriks-straw-kupac-lorena.webp' ); ?>" alt="Kupkinja pije vodu iz rijeke kroz NORIKS AquaStraw" loading="eager" decoding="async"></div><div class="wst__ft"><span class="wst__zv">★★★★★</span><strong>Kupila sam za cijelu obitelj</strong><p>Stigle su u dobrom stanju, dobro zapakirane. Nekoliko sam dala sestri, nekoliko kćeri za nju i oca o kojem brine, a imam i za sina kad dođe u posjet.</p><span class="wst__ime">Lorena N., Split</span></div></div>
     <div class="wst__fk2"><div class="wst__ff"><img src="<?php echo $wst_i( 'noriks-straw-kupac-karmen.webp' ); ?>" alt="Muškarac pije iz potoka kroz NORIKS AquaStraw" loading="eager" decoding="async"></div><div class="wst__ft"><span class="wst__zv">★★★★★</span><strong>Sin ju je isprobao</strong><p>Upravo je padala kiša pa je sin otišao do lokve, zagrabio vode i popio – kaže da radi odlično! Imam 75 godina pa ću mu vjerovati na riječ.</p><span class="wst__ime">Karmen A., Varaždin</span></div></div>
   </div>
