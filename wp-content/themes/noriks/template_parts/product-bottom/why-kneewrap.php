@@ -67,7 +67,7 @@ $wkw_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 </div></section>
 
 <section class="wkw__s wkw__s--bg"><div class="wkw__v wkw__dva wkw__dva--rev">
-  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-04-trening-noriks.webp' ); ?>" alt="NORIKS KneeWrap steznici na oba koljena tijekom treninga" loading="eager" decoding="async"><span class="wkw__znacka">Kompresija</span></div>
+  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-04-trening-noriks-2.webp' ); ?>" alt="NORIKS KneeWrap steznici na oba koljena tijekom treninga" loading="eager" decoding="async"><span class="wkw__znacka">Kompresija</span></div>
   <div>
     <div class="wkw__kicker">Oporavak</div>
     <h2 class="wkw__h2">Kompresija <em>podupire oporavak</em></h2>
