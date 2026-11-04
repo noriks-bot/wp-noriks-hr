@@ -1480,7 +1480,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
         <?php elseif( noriks_is_type( 'anklesleeve', $current_product_id ) ): ?>
 
           <div class="noriks-size">
-            <p style="margin:0 0 14px;line-height:1.6;">Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>. Potpora se prodaje po komadu — za oba gležnja odaberite ponudu 2x (par).</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Veličinu odaberite prema svom <strong>broju cipele (EU)</strong>. U kompletu dobivate par — potporu za obje noge.</p>
             <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
             <table style="width:100%;border-collapse:collapse;font-size:14px;">
               <thead>
