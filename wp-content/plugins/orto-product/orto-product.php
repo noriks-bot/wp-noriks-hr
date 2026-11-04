@@ -962,6 +962,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-dryseam' ), 'product_cat', $product_id ) ) {
         // DrySeam (David 3.11.): ponudbe kot na originalu in v oglasih - 1+1, 2+2 in 3+4 GRATIS.
         $gck_offer_subs = array( '2 gaćice – plaćate jedne', '4 gaćice – plaćate dvoje', '7 gaćica – plaćate troje' );
+    } elseif ( has_term( array( 'orto-leakbrief' ), 'product_cat', $product_id ) ) {
+        // LeakBrief (David 4.11.): v gumbu jasno, da so gacice perive in za veckratno uporabo.
+        $gck_offer_subs = array( 'Perive · za višekratnu upotrebu', 'Svake u veličini i boji po izboru · perive', 'Svake u veličini i boji po izboru · perive' );
     } elseif ( has_term( array( 'orto-busyboard' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( 'Boja i verzija po izboru', 'Svaka ploča u boji i verziji po izboru', 'Svaka ploča u boji i verziji po izboru' );
     } elseif ( has_term( array( 'orto-spotpro' ), 'product_cat', $product_id ) ) {
@@ -1037,6 +1040,9 @@ function gck_render_bundle_selector() {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
         } elseif ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'popuptent/noriks-popuptent-kartica-mali.webp', 'popuptent/noriks-popuptent-kartica-veliki.webp', 'popuptent/noriks-popuptent-kartica-obiteljski.webp' );
+        } elseif ( has_term( 'orto-leakbrief', 'product_cat', $product_id ) ) {
+            // David 4.11.: v gumbu samo gatke na beli podlagi, ne prva slika galerije (primerjava ulosci / gacice).
+            $gck_offer_imgs = array_fill( 0, 3, 'leakbrief/noriks-leakbrief-kartica.webp' );
         } elseif ( has_term( 'orto-dryseam', 'product_cat', $product_id ) ) {
             // David 29.10.: v gumbu samo izdelek na beli podlagi (glavna slika je primerjava ulosci / gacice).
             $gck_offer_imgs = array( 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp', 'dryseam/noriks-dryseam-kartica.webp' );
