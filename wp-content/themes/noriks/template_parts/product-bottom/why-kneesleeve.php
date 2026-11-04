@@ -1,6 +1,6 @@
 <?php
 /**
- * NORIKS KneeSleeve — kompresijski rukavi za koljena i noge: why sekcije po strukturi originala (reabtec.com/products/knitec-compression-supports-for-knees-and-legs).
+ * NORIKS KneeSleeve — kompresijske navlake za koljena i noge: why sekcije po strukturi originala (reabtec.com/products/knitec-compression-supports-for-knees-and-legs).
  *
  * STRUKTURA ORIGINALA:
    1. trak logotipov medijev (Runner's World, Men's Health) - pri nas trak 4 prednosti z ikonami (tujih medijev in znamk ne kazemo)
@@ -27,7 +27,7 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 <div class="wsknee">
 
 <section class="wsknee__s wsknee__s--bg wsknee__traka"><div class="wsknee__v wsknee__tmreza">
-  <div class="wsknee__tk"><span class="wsknee__ti"><?php echo $wsk_svg; ?><path d="M12 3c3 3.5 5 6.3 5 9a5 5 0 0 1-10 0c0-2.7 2-5.5 5-9z"/></svg></span><div class="wsknee__tt"><strong>Lagani i prozračni</strong><span>Pletivo koje diše i na dugim treninzima</span></div></div>
+  <div class="wsknee__tk"><span class="wsknee__ti"><?php echo $wsk_svg; ?><path d="M12 3c3 3.5 5 6.3 5 9a5 5 0 0 1-10 0c0-2.7 2-5.5 5-9z"/></svg></span><div class="wsknee__tt"><strong>Lagane i prozračne</strong><span>Pletivo koje diše i na dugim treninzima</span></div></div>
   <div class="wsknee__tk"><span class="wsknee__ti"><?php echo $wsk_svg; ?><rect x="4" y="5" width="16" height="5" rx="2.5"/><path d="M7 7.5h.01M10 7.5h.01M13 7.5h.01M16 7.5h.01"/><path d="M8 10v9M16 10v9"/></svg></span><div class="wsknee__tt"><strong>Silikon protiv klizanja</strong><span>Ostaju na mjestu i na dugim stazama</span></div></div>
   <div class="wsknee__tk"><span class="wsknee__ti"><?php echo $wsk_svg; ?><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><div class="wsknee__tt"><strong>Ciljana kompresija</strong><span>Obuhvaća koljeno, list i bedro</span></div></div>
   <div class="wsknee__tk"><span class="wsknee__ti"><?php echo $wsk_svg; ?><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v4M6 12l3-3 4 1 3 3 3 1"/></svg></span><div class="wsknee__tt"><strong>Za svaki sport</strong><span>Trčanje, teretana, nogomet, Hyrox</span></div></div>
@@ -36,13 +36,13 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 <section class="wsknee__s"><div class="wsknee__v">
   <div class="wsknee__kicker wsknee__c">Nose ih oni koji treniraju</div>
   <h2 class="wsknee__h2 wsknee__c">Sportaši im vjeruju – <em>na stazi, terenu i u teretani</em></h2>
-  <p class="wsknee__p wsknee__c">Treneri, trkači i natjecatelji nose ih tamo gdje koljena i noge najviše rade: na atletskoj stazi, u teretani i na natjecanjima. Kompresija prati svaki pokret, a rukavi ostaju na mjestu od prvog do zadnjeg ponavljanja.</p>
+  <p class="wsknee__p wsknee__c">Treneri, trkači i natjecatelji nose ih tamo gdje koljena i noge najviše rade: na atletskoj stazi, u teretani i na natjecanjima. Kompresija prati svaki pokret, a navlake ostaju na mjestu od prvog do zadnjeg ponavljanja.</p>
   <div class="wsknee__grid wsknee__g3">
-    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-sportas-1.webp' ); ?>" alt="Sportaš na atletskoj stazi s kompresijskim rukavima na nogama" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__oz">Atletika</span><strong>Trener sportske izvedbe</strong><p>Na stazi svaki dan: brzina, snaga i pravilan pokret – uz kompresiju koja ne smeta.</p></div></div>
-    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-sportasica-2.webp' ); ?>" alt="Sportašica odmara na atletskoj stazi u kompresijskim rukavima" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__oz">Trčanje</span><strong>Trkačica na duge staze</strong><p>Kilometri na stazi i cesti – rukavi se ne spuštaju i ne žuljaju ni na dugim treninzima.</p></div></div>
-    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-sportas-3.webp' ); ?>" alt="Natjecatelj Hyrox s vrećom na ramenima i kompresijskim rukavom na koljenu" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__oz">Hyrox</span><strong>Natjecatelj i trener</strong><p>Iskoraci, čučnjevi i nošenje tereta – stabilan osjećaj u koljenu kroz cijelu utrku.</p></div></div>
+    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-sportas-1.webp' ); ?>" alt="Sportaš na atletskoj stazi s kompresijskim navlakama na nogama" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__oz">Atletika</span><strong>Trener sportske izvedbe</strong><p>Na stazi svaki dan: brzina, snaga i pravilan pokret – uz kompresiju koja ne smeta.</p></div></div>
+    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-sportasica-2.webp' ); ?>" alt="Sportašica odmara na atletskoj stazi u kompresijskim navlakama" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__oz">Trčanje</span><strong>Trkačica na duge staze</strong><p>Kilometri na stazi i cesti – navlake se ne spuštaju i ne žuljaju ni na dugim treninzima.</p></div></div>
+    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-sportas-3.webp' ); ?>" alt="Natjecatelj Hyrox s vrećom na ramenima i kompresijskom navlakom na koljenu" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__oz">Hyrox</span><strong>Natjecatelj i trener</strong><p>Iskoraci, čučnjevi i nošenje tereta – stabilan osjećaj u koljenu kroz cijelu utrku.</p></div></div>
   </div>
-  <p class="wsknee__zak">Od prvog treninga do natjecanja – rukavi koji rade s vama.</p>
+  <p class="wsknee__zak">Od prvog treninga do natjecanja – navlake koje rade s vama.</p>
 </div></section>
 
 <section class="wsknee__s wsknee__s--bg"><div class="wsknee__v wsknee__dva">
@@ -51,11 +51,11 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
     <div class="wsknee__kicker">Pokretljivost i izvedba</div>
     <h2 class="wsknee__h2">Vratite kontrolu nad <em>svojim pokretom</em></h2>
     <p class="wsknee__p">Više <em>udobnosti</em>, više <em>potpore</em> i bolji <em>osjećaj u pokretu</em> – to je obećanje novog modela. Kad vas koljena opterećuju nakon dugog dana ili teškog treninga, svaki korak može biti izazov.</p>
-    <p class="wsknee__p">Zato su rukavi NORIKS KneeSleeve napravljeni s ciljanim ojačanjem oko koljena i duž cijele noge – da se krećete slobodnije, trenirate sigurnije i živite bez ograničenja. Kompresijsko pletivo obuhvaća koljeno, list i bedro i prati svaki pokret.</p>
+    <p class="wsknee__p">Zato su navlake NORIKS KneeSleeve napravljene s ciljanim ojačanjem oko koljena i duž cijele noge – da se krećete slobodnije, trenirate sigurnije i živite bez ograničenja. Kompresijsko pletivo obuhvaća koljeno, list i bedro i prati svaki pokret.</p>
     <ul class="wsknee__kv">
       <li><em>Ciljana kompresija</em> – potpora oko koljena i duž noge</li>
       <li><em>Pletivo koje prati pokret</em> – bez ograničavanja</li>
-      <li><em>Silikonski rub</em> – rukav ostaje na mjestu</li>
+      <li><em>Silikonski rub</em> – navlaka ostaje na mjestu</li>
     </ul>
     <p class="wsknee__zak">Krećite se slobodnije – korak po korak.</p>
   </div>
@@ -66,23 +66,23 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
   <div>
     <div class="wsknee__kicker">Potpora koljenu</div>
     <h2 class="wsknee__h2">Stabilnost i zaštita <em>za vaša koljena</em></h2>
-    <p class="wsknee__p">Rukavi obavijaju koljena poput druge kože i daju precizan, ravnomjeran oslonac oko zgloba. Ne stežu na jednom mjestu, nego raspoređuju pritisak po cijeloj površini – pa ih jedva osjetite.</p>
+    <p class="wsknee__p">Navlake obavijaju koljena poput druge kože i daju precizan, ravnomjeran oslonac oko zgloba. Ne stežu na jednom mjestu, nego raspoređuju pritisak po cijeloj površini – pa ih jedva osjetite.</p>
     <p class="wsknee__p">Prate vas tijekom dugog ili intenzivnog napora i daju <em>veću stabilnost</em> i <em>trajnu udobnost</em> – od zagrijavanja do zadnjeg kilometra. Mnogi ih nose i na dugim šetnjama ili kad cijeli dan provode na nogama.</p>
     <ul class="wsknee__kv">
       <li><em>Druga koža</em> – tanko pletivo od samo 2 mm</li>
       <li><em>Ravnomjeran oslonac</em> – bez točaka pritiska</li>
-      <li><em>Za dug napor</em> – udobni i nakon više sati</li>
+      <li><em>Za dug napor</em> – udobne i nakon više sati</li>
     </ul>
     <p class="wsknee__zak">Više sigurnosti u svakom koraku.</p>
   </div>
 </div></section>
 
 <section class="wsknee__s wsknee__s--bg"><div class="wsknee__v wsknee__dva">
-  <div class="wsknee__media"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kompresija.webp' ); ?>" alt="Kompresijski rukavi obuhvaćaju koljeno i list" loading="eager" decoding="async"></div>
+  <div class="wsknee__media"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kompresija.webp' ); ?>" alt="Kompresijske navlake obuhvaćaju koljeno i list" loading="eager" decoding="async"></div>
   <div>
     <div class="wsknee__kicker">Tijekom i nakon treninga</div>
     <h2 class="wsknee__h2">Ugodna kompresija <em>i lakše noge</em></h2>
-    <p class="wsknee__p">Rukavi su napravljeni da ih nosite tijekom treninga i nakon njega. Ravnomjerna kompresija obuhvaća mišiće bedra i lista, pa noge manje „lebde" u pokretu, a umor se lakše podnosi.</p>
+    <p class="wsknee__p">Navlake su napravljene da ih nosite tijekom treninga i nakon njega. Ravnomjerna kompresija obuhvaća mišiće bedra i lista, pa noge manje „lebde" u pokretu, a umor se lakše podnosi.</p>
     <p class="wsknee__p">Zato ih mnogi ostave na nogama i nakon sportske aktivnosti – za ugodniji osjećaj dok se odmarate, putujete kući ili radite istezanje. Pletivo diše, pa ni nakon dužeg nošenja ne postaje vruće i ljepljivo.</p>
     <ul class="wsknee__kv">
       <li><em>Za vrijeme treninga</em> – osjećaj stabilnosti i kontrole</li>
@@ -94,12 +94,12 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 </div></section>
 
 <section class="wsknee__s"><div class="wsknee__v wsknee__dva wsknee__dva--rev">
-  <div class="wsknee__media wsknee__media--kv"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-za-sve-aktivnosti.webp' ); ?>" alt="Kompresijski rukavi za trčanje, teretanu, nogomet, planinarenje i dugo stajanje" loading="eager" decoding="async"></div>
+  <div class="wsknee__media wsknee__media--kv"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-za-sve-aktivnosti.webp' ); ?>" alt="Kompresijske navlake za trčanje, teretanu, nogomet, planinarenje i dugo stajanje" loading="eager" decoding="async"></div>
   <div>
     <div class="wsknee__kicker">Jedan proizvod, puno situacija</div>
     <h2 class="wsknee__h2">Jedno rješenje <em>za sve što radite</em></h2>
-    <p class="wsknee__p">Od trčanja i teretane do nogometa, planinarenja ili posla na kojem cijeli dan stojite – kompresijski rukavi prilagođavaju se vašim potrebama i daju pouzdanu udobnost, stabilnost i zaštitu u svakom koraku.</p>
-    <p class="wsknee__p">Za ravnomjeran oslonac preporučujemo nošenje u <em>paru</em> – jer kad se jedno koljeno muči, drugo preuzima teret. Zato rukavi dolaze kao par, za lijevu i desnu nogu.</p>
+    <p class="wsknee__p">Od trčanja i teretane do nogometa, planinarenja ili posla na kojem cijeli dan stojite – kompresijske navlake prilagođavaju se vašim potrebama i daju pouzdanu udobnost, stabilnost i zaštitu u svakom koraku.</p>
+    <p class="wsknee__p">Za ravnomjeran oslonac preporučujemo nošenje u <em>paru</em> – jer kad se jedno koljeno muči, drugo preuzima teret. Zato navlake dolaze kao par, za lijevu i desnu nogu.</p>
     <div class="wsknee__red3">
       <div><span class="wsknee__pi"><?php echo $wsk_svg; ?><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v4M6 12l3-3 4 1 3 3 3 1"/></svg></span><strong>Trčanje</strong><span>ceste i staze</span></div>
       <div><span class="wsknee__pi"><?php echo $wsk_svg; ?><path d="M4 9v6M7 7v10M17 7v10M20 9v6M7 12h10"/></svg></span><strong>Teretana</strong><span>čučnjevi, iskoraci</span></div>
@@ -113,7 +113,7 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
   <div class="wsknee__kicker wsknee__c">Iskustva kupaca</div>
   <h2 class="wsknee__h2 wsknee__c">Što kažu oni koji <em>s njima treniraju</em></h2>
   <div class="wsknee__grid wsknee__g3">
-    <div class="wsknee__k wsknee__k--tekst"><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><strong>Opet treniram bez straha</strong><p>Godinama sam se mučio s koljenima, a ovi rukavi su napravili pravu razliku. Opet mogu trenirati bez stalnog straha od svakog pokreta.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">D</i>Dario K.</span></div></div>
+    <div class="wsknee__k wsknee__k--tekst"><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><strong>Opet treniram bez straha</strong><p>Godinama sam se mučio s koljenima, a ove navlake su napravile pravu razliku. Opet mogu trenirati bez stalnog straha od svakog pokreta.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">D</i>Dario K.</span></div></div>
     <div class="wsknee__k wsknee__k--tekst"><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><strong>Velika razlika na treningu</strong><p>Čim sam ih počeo nositi na treninzima, primijetio sam veliku razliku – više stabilnosti i puno više samopouzdanja u pokretu.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">G</i>Goran P.</span></div></div>
     <div class="wsknee__k wsknee__k--tekst"><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><strong>Bez trljanja i žuljanja</strong><p>Kupio sam ih pred ultramaraton i stigli su dan prije. Prešao sam više od 100.000 koraka bez ikakvog trljanja i žuljanja. Preporuka svakom tko trči duge staze.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">N</i>Nikola A.</span></div></div>
   </div>
@@ -124,13 +124,13 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
   <div class="wsknee__kicker wsknee__c">Nova generacija</div>
   <h2 class="wsknee__h2 wsknee__c">Lakši. Prozračniji. <em>Jači.</em></h2>
   <div class="wsknee__dvastolpca">
-    <p class="wsknee__p">Nova generacija kompresijskih rukava napravljena je da pruži optimalnu potporu i prati vašu izvedbu dugoročno. Zahvaljujući elastičnosti i <em>ciljanoj kompresiji</em> prilagođavaju se vašim pokretima – za fluidnu pokretljivost i najveću udobnost.</p>
+    <p class="wsknee__p">Nova generacija kompresijskih navlaka napravljena je da pruži optimalnu potporu i prati vašu izvedbu dugoročno. Zahvaljujući elastičnosti i <em>ciljanoj kompresiji</em> prilagođavaju se vašim pokretima – za fluidnu pokretljivost i najveću udobnost.</p>
     <p class="wsknee__p">Njihov <em>lagan i otporan</em> dizajn odgovara zahtjevima sportaša i sportašica, a pritom čuva <em>slobodu pokreta</em> tijekom vježbanja. U usporedbi sa starijim modelom pletivo je tanje, glatkije i bez debelih šavova.</p>
   </div>
   <div class="wsknee__grid wsknee__g3 wsknee__galerija3">
-    <div class="wsknee__gm"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-trcanje-park.webp' ); ?>" alt="Trkač u kompresijskim rukavima na mostu" loading="eager" decoding="async"></div>
-    <div class="wsknee__gm"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-v2-detalji.webp' ); ?>" alt="Detalji rukava: silikon protiv klizanja, potpora zglobu, kompresija lista" loading="eager" decoding="async"></div>
-    <div class="wsknee__gm"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-usporedba.webp' ); ?>" alt="Usporedba nove i stare verzije rukava" loading="eager" decoding="async"></div>
+    <div class="wsknee__gm"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-trcanje-park.webp' ); ?>" alt="Trkač u kompresijskim navlakama na mostu" loading="eager" decoding="async"></div>
+    <div class="wsknee__gm"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-v2-detalji.webp' ); ?>" alt="Detalji navlaka: silikon protiv klizanja, potpora zglobu, kompresija lista" loading="eager" decoding="async"></div>
+    <div class="wsknee__gm"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-usporedba.webp' ); ?>" alt="Usporedba nove i stare verzije navlaka" loading="eager" decoding="async"></div>
   </div>
   <p class="wsknee__zak">Tanje pletivo, ista potpora – i potpuna sloboda pokreta.</p>
 </div></section>
@@ -140,7 +140,7 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
   <div>
     <div class="wsknee__kicker">Veličine</div>
     <h2 class="wsknee__h2">Nove veličine za <em>još bolje pristajanje</em></h2>
-    <p class="wsknee__p">Tablica veličina prilagođena je širem rasponu građe tijela – da rukavi pristaju čvrsto, a ne stežu. Za pravu veličinu izmjerite opseg bedra na najširem dijelu i pogledajte tablicu.</p>
+    <p class="wsknee__p">Tablica veličina prilagođena je širem rasponu građe tijela – da navlake pristaju čvrsto, a ne stežu. Za pravu veličinu izmjerite opseg bedra na najširem dijelu i pogledajte tablicu.</p>
     <div class="wsknee__tw"><table class="wsknee__tab"><thead><tr><th>Veličina</th><th>Opseg bedra</th></tr></thead><tbody>
       <tr><td>S - 35 do 45 cm</td><td>35 do 45 cm</td></tr>
       <tr><td>M - 46 do 50 cm</td><td>46 do 50 cm</td></tr>
@@ -158,9 +158,9 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
   <h2 class="wsknee__h2 wsknee__c">Fotografije kupaca – <em>u stvarnom treningu</em></h2>
   <p class="wsknee__p wsknee__c">Kupci ih nose na travi, na podlozi za vježbanje i na cesti – evo kako izgledaju na njima.</p>
   <div class="wsknee__grid wsknee__g3">
-    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kupac-1.webp' ); ?>" alt="Kupac nosi crni kompresijski rukav na travi" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><p>Zasad odlično – vrlo su udobni i mogu ih nositi cijeli dan.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">S</i>Snježana D.</span></div></div>
-    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kupac-2.webp' ); ?>" alt="Kupac u kompresijskim rukavima na podlozi za vježbanje" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><p>Jako mi se sviđa potpora koju daju – trčim s više samopouzdanja. Lakše ih je navući od kompresijskih tajica.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">S</i>Sanja D.</span></div></div>
-    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kupac-3.webp' ); ?>" alt="Kupac u kompresijskim rukavima i tenisicama na cesti" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><p>Odlična kvaliteta! Nosio sam ih na dugim trčanjima i u teretani – odlična potpora koljenima. Toplo preporučujem.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">M</i>Mihael L.</span></div></div>
+    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kupac-1.webp' ); ?>" alt="Kupac nosi crnu kompresijsku navlaku na travi" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><p>Zasad odlično – vrlo su udobne i mogu ih nositi cijeli dan.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">S</i>Snježana D.</span></div></div>
+    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kupac-2.webp' ); ?>" alt="Kupac u kompresijskim navlakama na podlozi za vježbanje" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><p>Jako mi se sviđa potpora koju daju – trčim s više samopouzdanja. Lakše ih je navući od kompresijskih tajica.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">S</i>Sanja D.</span></div></div>
+    <div class="wsknee__k"><div class="wsknee__km"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-kupac-3.webp' ); ?>" alt="Kupac u kompresijskim navlakama i tenisicama na cesti" loading="eager" decoding="async"></div><div class="wsknee__kt"><span class="wsknee__zv">★★★★★</span><p>Odlična kvaliteta! Nosio sam ih na dugim trčanjima i u teretani – odlična potpora koljenima. Toplo preporučujem.</p><span class="wsknee__ime"><i class="wsknee__av" aria-hidden="true">M</i>Mihael L.</span></div></div>
   </div>
   <p class="wsknee__zak">Pristaju, ostaju na mjestu i izgledaju dobro.</p>
 </div></section>
@@ -168,13 +168,13 @@ $wsk_svg = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="
 <section class="wsknee__s wsknee__s--bg"><div class="wsknee__v">
   <div class="wsknee__kicker wsknee__c">Stvarni ljudi, stvarni treninzi</div>
   <h2 class="wsknee__h2 wsknee__c">Pogledajte ih <em>u pokretu</em></h2>
-  <p class="wsknee__p wsknee__c">Trčanje, istezanje, skokovi i duge šetnje – rukavi koji mijenjaju način na koji se krećete, korak po korak.</p>
+  <p class="wsknee__p wsknee__c">Trčanje, istezanje, skokovi i duge šetnje – navlake koje mijenjaju način na koji se krećete, korak po korak.</p>
   <div class="wsknee__kar">
-    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-1.webp' ); ?>" alt="Trkač u kompresijskim rukavima na mostu" loading="eager" decoding="async"></div>
-    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-2.webp' ); ?>" alt="Sportaš navlači kompresijski rukav" loading="eager" decoding="async"></div>
-    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-3.webp' ); ?>" alt="Trčanje u parku s kompresijskim rukavima" loading="eager" decoding="async"></div>
-    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-4.webp' ); ?>" alt="Skok na stazi u kompresijskim rukavima" loading="eager" decoding="async"></div>
-    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-5.webp' ); ?>" alt="Sportaš u kompresijskim rukavima pri zalasku sunca" loading="eager" decoding="async"></div>
+    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-1.webp' ); ?>" alt="Trkač u kompresijskim navlakama na mostu" loading="eager" decoding="async"></div>
+    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-2.webp' ); ?>" alt="Sportaš navlači kompresijsku navlaku" loading="eager" decoding="async"></div>
+    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-3.webp' ); ?>" alt="Trčanje u parku s kompresijskim navlakama" loading="eager" decoding="async"></div>
+    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-4.webp' ); ?>" alt="Skok na stazi u kompresijskim navlakama" loading="eager" decoding="async"></div>
+    <div class="wsknee__km2"><img src="<?php echo esc_url( $wsk_img . 'noriks-kneesleeve-ugc-5.webp' ); ?>" alt="Sportaš u kompresijskim navlakama pri zalasku sunca" loading="eager" decoding="async"></div>
   </div>
   <p class="wsknee__zak">Isprobajte i osjetite razliku u pokretu.</p>
 </div></section>

@@ -962,6 +962,9 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-dryseam' ), 'product_cat', $product_id ) ) {
         // DrySeam (David 3.11.): ponudbe kot na originalu in v oglasih - 1+1, 2+2 in 3+4 GRATIS.
         $gck_offer_subs = array( '2 gaćice – plaćate jedne', '4 gaćice – plaćate dvoje', '7 gaćica – plaćate troje' );
+    } elseif ( has_term( array( 'orto-kneesleeve' ), 'product_cat', $product_id ) ) {
+        // KneeSleeve (David 4.11.): v kompletu navlaka za obe nogi.
+        $gck_offer_subs = array( 'Komplet za obje noge – lijevu i desnu', '2 kompleta – za obje noge', '3 kompleta – za obje noge' );
     } elseif ( has_term( array( 'orto-leakbrief' ), 'product_cat', $product_id ) ) {
         // LeakBrief (David 4.11.): v gumbu jasno, da so gacice perive in za veckratno uporabo.
         $gck_offer_subs = array( 'Perive · za višekratnu upotrebu', 'Svake u veličini i boji po izboru · perive', 'Svake u veličini i boji po izboru · perive' );

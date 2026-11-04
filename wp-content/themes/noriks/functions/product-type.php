@@ -1904,7 +1904,8 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
             'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
-            'kneesleeve'   => array( 'S' => '35 do 45 cm', 'M' => '46 do 50 cm', 'L' => '51 do 57 cm', 'XL' => '58 do 63 cm', '2XL' => '64 do 69 cm', '3XL' => '70 do 75 cm' ),
+            // KneeSleeve (David 4.11.): v gumbih jasno, da je mera opseg bedra.
+            'kneesleeve'   => array( 'S' => 'opseg bedra 35 do 45 cm', 'M' => 'opseg bedra 46 do 50 cm', 'L' => 'opseg bedra 51 do 57 cm', 'XL' => 'opseg bedra 58 do 63 cm', '2XL' => 'opseg bedra 64 do 69 cm', '3XL' => 'opseg bedra 70 do 75 cm' ),
             'shiftclog'    => array( 'XS' => '36 do 37', 'S' => '38 do 39', 'M' => '40 do 41', 'L' => '42 do 43', 'XL' => '44 do 45', '2XL' => '46 do 47' ),
             'diskret'      => array( 'S' => 'košarice AA do B', 'M' => 'košarice B do F', 'L' => 'košarice F do G' ),
             'alpakacrew'   => array( 'S' => '35 do 37,5', 'M' => '39 do 42,5', 'L' => '43 do 46', 'XL' => '46,5 do 49,5' ),

@@ -1485,7 +1485,7 @@
 
            <?php elseif ( noriks_is_type( 'kneesleeve' ) ): ?>
 
-           Tisuće sportaša već trenira u NORIKS KneeSleeve rukavima – ciljana kompresija, silikon protiv klizanja i prozračno pletivo.
+           Tisuće sportaša već trenira u NORIKS KneeSleeve navlakama – ciljana kompresija, silikon protiv klizanja i prozračno pletivo.
 
            <?php elseif ( noriks_is_type( 'dryseam' ) ): ?>
 
@@ -2106,7 +2106,7 @@
   if ( $is_mamabelt_page ) { $rv_fallback_title = 'NORIKS MamaBelt | Pojas za trudnice u autu'; }
   if ( $is_beltfit_page ) { $rv_fallback_title = 'NORIKS BeltFit | Tanki kožni remen bez rupa'; }
   if ( $is_tactical_page ) { $rv_fallback_title = 'NORIKS TacBelt | Taktički remen bez rupa'; }
-  if ( $is_kneesleeve_page ) { $rv_fallback_title = 'NORIKS KneeSleeve | Kompresijski rukavi za koljena i noge'; }
+  if ( $is_kneesleeve_page ) { $rv_fallback_title = 'NORIKS KneeSleeve | Kompresijske navlake za koljena i noge'; }
   if ( $is_dryseam_page ) { $rv_fallback_title = 'NORIKS DrySeam | Bešavne gaćice za umjereno propuštanje mokraće'; }
   if ( $is_seamthong_page ) { $rv_fallback_title = 'NORIKS SeamThong | Nevidljive bešavne tange'; }
   if ( $is_slipshort_page ) { $rv_fallback_title = 'NORIKS oblikujuće hlačice | Bešavne hlačice visokog struka koje se ne spuštaju'; }
