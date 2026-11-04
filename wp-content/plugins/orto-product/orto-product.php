@@ -7244,6 +7244,8 @@ function gck_render_bundle_selector() {
         if ( has_term( array( 'orto-polo' ), 'product_cat', $product_id ) && count( $offers ) > 2 ) { $default_index = 2; }
         // NORIKS PopUp: kao na originalu je predizabran veliki sator (do 3 osobe).
         if ( has_term( array( 'orto-popuptent' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
+        // NORIKS GripSocks: predizbrana ponuda 2 para (David 4.11.).
+        if ( has_term( array( 'orto-gripsocks' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         $loop_index    = 0;
 
         foreach ( $offers as $offer_id => $data ) :
