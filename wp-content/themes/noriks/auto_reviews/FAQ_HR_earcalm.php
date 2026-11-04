@@ -2,6 +2,7 @@
 // NORIKS EarCalm — FAQ (Informacije o proizvodu), podatki z originala + NORIKS pogoji.
 return array(
   array( 'Kako se koristi?', 'Uključite uređaj i odaberite razinu od 1 do 9. Prislonite vrh iza uha – na kost, ne u uho – i držite oko 60 sekundi. To je cijela rutina. Ponovite kad god se zvonjenje vrati.' ),
+  array( 'Koliko često ga mogu koristiti?', 'Kad god vam zvonjenje zasmeta – jedna upotreba traje oko 60 sekundi. Mnogi ga koriste svaki dan, npr. navečer prije spavanja, a zbog džepne veličine i punjenja preko USB-a imate ga uvijek pri ruci.' ),
   array( 'S kojom razinom da počnem?', 'Počnite s razinom 1. Ako vam je ugodno, jačinu postupno povećavajte – razinu uvijek vidite na zaslonu i sami je birate, od 1 do 9.' ),
   array( 'Kako djeluje?', 'NORIKS EarCalm koristi neuromuskularnu stimulaciju (NMS). Unaprijed je programiran da vibrira na frekvenciji koja smiruje preaktivne živce zbog kojih zvoni, zuji ili šišti u ušima.' ),
   array( 'Boli li?', 'Ne. Uređaj je napravljen za bezbolnu upotrebu, a jačinu odabirete sami – od nježne do jače.' ),
