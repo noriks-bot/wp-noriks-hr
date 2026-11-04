@@ -15,7 +15,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wsu_t   = get_template_directory_uri();
-$wsu_i   = function ( $f ) use ( $wsu_t ) { return esc_url( $wsu_t . '/img/supreme/' . $f ); };
+$wsu_i   = function ( $f ) use ( $wsu_t ) { return esc_url( $wsu_t . '/img/supreme/' . $f . '?v=s0411' ); };
 $wsu_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 ?>
 <div class="wsu">
@@ -28,7 +28,7 @@ $wsu_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
     <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-02-prije-poslije.webp' ); ?>" alt="Kovrčava kosa prije i poslije sušenja s NORIKS Supreme" loading="eager" decoding="async"><span class="wsu__znacka">Prije / poslije</span></div><figcaption><strong>Definirane kovrče</strong><span>bez frizza, s jasnim uvojcima</span></figcaption></figure>
     <figure class="wsu__zk"><div class="wsu__zm"><video src="<?php echo esc_url( $wsu_t . '/img/supreme/noriks-supreme-video-susenje.mp4?v=s0311b' ); ?>" poster="<?php echo esc_url( $wsu_t . '/img/supreme/noriks-supreme-video-susenje.jpg?v=s0311b' ); ?>" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="Sušenje valovite kose s NORIKS Supreme sušilom s difuzorom"></video><span class="wsu__znacka">Video</span></div><figcaption><strong>Kovrče s volumenom</strong><span>difuzor nosi kosu od vrhova do korijena</span></figcaption></figure>
     <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-05-definirane-kovrce-zlato.webp' ); ?>" alt="Žena s gustim kovrčama drži NORIKS Supreme sušilo" loading="eager" decoding="async"></div><figcaption><strong>Kovrče koje odskaču</strong><span>mekane, sjajne i elastične</span></figcaption></figure>
-    <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-04-u-ruci-zlato.webp' ); ?>" alt="NORIKS Supreme sušilo s XL difuzorom u ruci" loading="eager" decoding="async"></div><figcaption><strong>Sve u jednoj ruci</strong><span>sušilo i XL difuzor kao jedan aparat</span></figcaption></figure>
+    <figure class="wsu__zk"><div class="wsu__zm"><img src="<?php echo $wsu_i( 'noriks-supreme-04-u-ruci-zlato2.webp' ); ?>" alt="NORIKS Supreme sušilo s XL difuzorom u ruci" loading="eager" decoding="async"></div><figcaption><strong>Sve u jednoj ruci</strong><span>sušilo i XL difuzor kao jedan aparat</span></figcaption></figure>
   </div>
 </div></section>
 
