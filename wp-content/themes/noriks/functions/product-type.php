@@ -1899,7 +1899,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
-            'kneewrap'     => array( 'XS' => '34,5 do 39 cm', 'S' => '39 do 44,5 cm', 'M' => '44,5 do 49 cm', 'L' => '49 do 53,5 cm', 'XL' => '53,5 do 59 cm', 'XXL' => '59 do 65,5 cm', 'XXXL' => '65,5 do 73,5 cm' ),
+            'kneewrap'     => array( 'XS' => 'opseg bedra 34,5 do 39 cm', 'S' => 'opseg bedra 39 do 44,5 cm', 'M' => 'opseg bedra 44,5 do 49 cm', 'L' => 'opseg bedra 49 do 53,5 cm', 'XL' => 'opseg bedra 53,5 do 59 cm', 'XXL' => 'opseg bedra 59 do 65,5 cm', 'XXXL' => 'opseg bedra 65,5 do 73,5 cm' ), // David 4.11.: jasno, da so cm opseg bedra
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),

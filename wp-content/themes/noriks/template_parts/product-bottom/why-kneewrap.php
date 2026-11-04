@@ -67,15 +67,15 @@ $wkw_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 </div></section>
 
 <section class="wkw__s wkw__s--bg"><div class="wkw__v wkw__dva wkw__dva--rev">
-  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-09-bocni-stabilizator.webp' ); ?>" alt="NORIKS KneeWrap steznik s bočnim stabilizatorom (opruga)" loading="eager" decoding="async"><span class="wkw__znacka">Kompresija</span></div>
+  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-04-trening-etiketa.webp' ); ?>" alt="NORIKS KneeWrap steznici na oba koljena tijekom treninga" loading="eager" decoding="async"><span class="wkw__znacka">Kompresija</span></div>
   <div>
     <div class="wkw__kicker">Oporavak</div>
     <h2 class="wkw__h2">Kompresija <em>podupire oporavak</em></h2>
     <p class="wkw__p">Nelagoda koja dolazi s ozlijeđenim koljenom može vas danima nakon treninga držati ukočenima. NORIKS KneeWrap komprimira zglob i tako podupire zdravlje zgloba.</p>
-    <p class="wkw__p">To pomaže smanjiti nelagodu u koljenu – zato mnogi sportaši nakon treninga osjete manje problema i manju ukočenost. Po želji ga uzmite s <strong>bočnim stabilizatorom</strong> za dodatnu stabilnost sa strane.</p>
+    <p class="wkw__p">To pomaže smanjiti nelagodu u koljenu – zato mnogi sportaši nakon treninga osjete manje problema i manju ukočenost.</p>
     <div class="wkw__podaci">
       <div><span class="wkw__pi"><?php echo $wkw_svg; ?><path d="M8 4h8M8 20h8M9 4c-2 5-2 11 0 16M15 4c2 5 2 11 0 16"/></svg></span><strong>Kompresija</strong><small>čvrsto oko zgloba</small></div>
-      <div><span class="wkw__pi"><?php echo $wkw_svg; ?><path d="M12 3v18M8 6c2 1 6 1 8 0M8 12c2 1 6 1 8 0M8 18c2 1 6 1 8 0"/></svg></span><strong>Stabilizator</strong><small>opcija s bočnom oprugom</small></div>
+      <div><span class="wkw__pi"><?php echo $wkw_svg; ?><path d="M12 3v18M8 6c2 1 6 1 8 0M8 12c2 1 6 1 8 0M8 18c2 1 6 1 8 0"/></svg></span><strong>Ravnomjerno</strong><small>pritisak oko cijelog zgloba</small></div>
       <div><span class="wkw__pi"><?php echo $wkw_svg; ?><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span><strong>XS do XXXL</strong><small>prema opsegu bedra</small></div>
     </div>
   </div>

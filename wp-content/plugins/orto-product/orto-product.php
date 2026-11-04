@@ -1074,7 +1074,7 @@ function gck_render_bundle_selector() {
     }
 
     $gck_no_attrs    = has_term( array( 'orto-supreme', 'orto-skinlift', 'orto-straw', 'orto-adapter', 'orto-popuptent', 'orto-leash', 'orto-titancrep', 'orto-neckgrip', 'orto-steampro', 'orto-freshseal', 'orto-widebeam', 'orto-wakeband', 'orto-wakealarm', 'orto-earcalm', 'orto-seatsleep', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-lumiwand', 'orto-topper', 'orto-brewer', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-calm', 'orto-tusfilter', 'orto-corrector', 'orto-titaniumpan', 'orto-puretitan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-sheer', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel', 'orto-runshort', 'orto-emsbunion' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-calm', 'orto-tusfilter', 'orto-corrector', 'orto-titaniumpan', 'orto-puretitan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-sheer', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel', 'orto-runshort', 'orto-emsbunion', 'orto-kneewrap' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
     $gck_size_link_force = has_term( array( 'orto-corrector', 'orto-relief', 'orto-titaniumpan', 'orto-anklesleeve', 'orto-silkboxers', 'orto-mattresstopper', 'orto-kidspillow', 'orto-cashmeresweater', 'orto-runshort', 'orto-comptank', 'orto-capri', 'orto-gripsocks', 'orto-sheer', 'orto-kneewrap' ), 'product_cat', $product_id );
@@ -1088,8 +1088,8 @@ function gck_render_bundle_selector() {
     // attribute guards so it always renders regardless of product attributes.
     $gck_shgifts = has_term( 'orto-majica-darila', 'product_cat', $product_id );
 
-    // KneeFix: dva izbornika (Velicina + Stranica) umjesto swatcheva boje. KneeWrap: Velicina + Bocni stabilizator.
-    $gck_side_select = has_term( array( 'orto-kneefix', 'orto-kneewrap' ), 'product_cat', $product_id );
+    // KneeFix: dva izbornika (Velicina + Stranica) umjesto swatcheva boje. KneeWrap: od 4.11. (David) samo Velicina, brez izbire stabilizatorja.
+    $gck_side_select = has_term( array( 'orto-kneefix' ), 'product_cat', $product_id );
 
     // NORIKS FlexShirt kosulja: TRI izbora kao na originalu (Boja + Velicina + Rukav).
     // Treci atribut se ne prepoznaje kao boja ni velicina, pa zavrsi u $split['others']

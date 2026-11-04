@@ -2,7 +2,7 @@
 // NORIKS KneeWrap | Steznik za koljeno — mnenja kupcev (vecinoma prevedena z originala, hrvaška imena, brez tujih znamk).
 $auto_reviews_en = array(
     array("name" => "Kristina L.", "text" => "Najbolja kupnja ikad. Mama ima loša koljena i čeka operaciju, a ove godine je morala odustati od planinarenja. Kupila sam joj ove steznike i štapove i ovaj mjesec je prehodala oko 20 km! Sad ih nosi skoro stalno jer bez njih osjeti da joj koljeno „klizi”."),
-    array("name" => "Kristina F.", "text" => "Uzela sam steznik sa stabilizatorom zbog kroničnih tegoba s koljenom i nesigurnog osjećaja u zglobu kod svakodnevnih pokreta. Ljekarničke navlake su mi stalno klizile prema dolje – ovo je ogroman napredak."),
+    array("name" => "Kristina F.", "text" => "Uzela sam steznik zbog kroničnih tegoba s koljenom i nesigurnog osjećaja u zglobu kod svakodnevnih pokreta. Ljekarničke navlake su mi stalno klizile prema dolje – ovo je ogroman napredak."),
     array("name" => "Dragan D.", "text" => "Još ga nisam koristio na jiu-jitsu treningu, ali čim sam ga obukao osjetio sam koliko će mi pomoći da koljena ostanu zdrava što duže."),
     array("name" => "Šime N.", "text" => "Ako tražite steznik za koljeno, ovo je taj. Dugo sam istraživao razne modele i drago mi je da sam našao ovaj. Dobro osmišljen, kvalitetan i stvarno radi ono što obećava."),
     array("name" => "Josipa S.", "text" => "Naručena veličina mi je bila premala, ali zamjena je riješena brzo i bez ikakve rasprave. Rijetko pišem recenzije, ali ovo zaslužuje pohvalu."),
