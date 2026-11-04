@@ -9,7 +9,7 @@
    2. Compare Standard vs Pro (tabela z drugim izdelkom Pro) - IZPUSCENO, ker Pro kartice ne prodajamo
    3. Details & Size: specifikacije (85 x 54 x 1,8 mm, baterija do 8 mjeseci, Find My, zvuk, privatnost, bez pretplate) + sadrzaj paketa - pri nas slika levo + specifikacije z ikonami desno (Shipping & Returns, 100-day, Lifetime Guarantee IZPUSCENO - tuji pogoji, namesto tega NORIKS pogoji)
    4. Loved by thousands: 6 video mnenj v vrsti (karusel) - pri nas 3 video mnenja s HR napisi (ostali 3 so ploski posnetek ulice, navodila z znamko in kopija) v vrsti
-   5. Color coded, your way: naslov + 4 kartice (slika zgoraj, ime barve + besedilo spodaj) - pri nas enako, 4 kartice
+   5. Color coded, your way: naslov + 4 kartice (slika zgoraj, ime barve + besedilo spodaj) - pri nas 2 kartici (crna, ruzicasta - samo ti barvi prodajamo, David 4.11.)
    6. 2.3 Billion Apple Devices: naslov + 3 koraki s telefoni (Detects / Updates / Find it) - pri nas 3 kartice s slikami telefonov in ikonami
    7. A Better View of Your Bag's Journey: primerjava 2 stolpca (Airline updates proti Apple Find My) s slikama telefonov in 3 tockami - pri nas enako, 2 stolpca
    8. Built For The Things You Carry: 3 kartice z ikonami (novcanik, baterija, putovanja) - pri nas 3 kartice z ikonami
@@ -76,11 +76,9 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
 <section class="wsp__s"><div class="wsp__v">
   <div class="wsp__kicker wsp__c">Boja po namjeni</div>
   <h2 class="wsp__h2 wsp__c">Svaka boja <em>ima svoj posao</em></h2>
-  <p class="wsp__p wsp__c">Ladica puna istih crnih trackera je pogađanje. Četiri boje pretvaraju je u komplet koji se sam slaže.</p>
-  <div class="wsp__grid wsp__grid--4">
+  <p class="wsp__p wsp__c">Ladica puna istih crnih trackera je pogađanje. Dvije boje – crna i ružičasta – odmah vam kažu koja je kartica čija.</p>
+  <div class="wsp__grid wsp__grid--2">
     <div class="wsp__k"><div class="wsp__km"><img src="<?php echo $wsp_i( 'noriks-spotminder-boja-2.webp' ); ?>" alt="Crna NORIKS kartica za praćenje ulazi u kožnu torbu za laptop" loading="eager" decoding="async"></div><div class="wsp__kt"><span class="wsp__tocka" style="background:#1c1c1e"></span><strong>Vi – crna</strong><p>Torba za posao, navlaka za laptop. Ona koja je uvijek s vama i nikad ne izlazi iz svakodnevice.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km"><img src="<?php echo $wsp_i( 'noriks-spotminder-boja-3.webp?v=3' ); ?>" alt="Tamnoplava NORIKS kartica za praćenje iznad novčanika" loading="eager" decoding="async"></div><div class="wsp__kt"><span class="wsp__tocka" style="background:#23365c"></span><strong>Putovanja – tamnoplava</strong><p>Putna mapa, karta za ukrcaj, dokumenti. Sve što je najvažnije kad ste daleko od kuće.</p></div></div>
-    <div class="wsp__k"><div class="wsp__km"><img src="<?php echo $wsp_i( 'noriks-spotminder-boja-4.webp' ); ?>" alt="Narančasta NORIKS kartica za praćenje na ručki kofera" loading="eager" decoding="async"></div><div class="wsp__kt"><span class="wsp__tocka" style="background:#f07a2b"></span><strong>Prtljaga – narančasta</strong><p>Predana prtljaga i torba u kabini. Boja koju na traci za prtljagu ugledate prije svih.</p></div></div>
     <div class="wsp__k"><div class="wsp__km"><img src="<?php echo $wsp_i( 'noriks-spotminder-boja-5.webp' ); ?>" alt="Ružičasta NORIKS kartica za praćenje ulazi u novčanik" loading="eager" decoding="async"></div><div class="wsp__kt"><span class="wsp__tocka" style="background:#d9939d"></span><strong>Obitelj – ružičasta</strong><p>Poklon, zajednička torba, stvari o kojima se cijela kuća brine. I o ovoj se brine.</p></div></div>
   </div>
 </div></section>
@@ -271,6 +269,8 @@ $wsp_i   = function ( $f ) use ( $wsp_img ) { return esc_url( $wsp_img . $f ); }
   .wsp__tab{font-size:14px}.wsp__tab th,.wsp__tab td{padding:12px 10px}
   .wsp__kar{grid-auto-columns:72%;gap:14px}.wsp__pus--l{left:4px}.wsp__pus--d{right:4px}
 }
+.wsp__grid--2{grid-template-columns:1fr 1fr}.wsp__grid--2 .wsp__k{flex-direction:row;align-items:center}.wsp__grid--2 .wsp__km{flex:0 0 46%}.wsp__grid--2 .wsp__kt{padding:22px 26px}
+@media (max-width:767px){.wsp__grid--2{grid-template-columns:1fr;gap:14px}.wsp__grid--2 .wsp__km{flex-basis:42%}.wsp__grid--2 .wsp__kt{padding:14px 16px}}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsp__karw').forEach(function(w){var k=w.querySelector('.wsp__kar');
