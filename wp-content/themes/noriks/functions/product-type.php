@@ -802,12 +802,14 @@ if ( ! function_exists( 'noriks_comptank_sizes' ) ) {
     /** NORIKS CompTank: original (in-shape.co) nima mer - narocite obicajno velicino majice; standardne EU moske konfekcijske stevilke, za jaco kompresijo velicina manj (navodilo originala). */
     function noriks_comptank_sizes() {
         return array(
-            array( 'S',   '44 do 46', 'S (uobičajena)', '–' ),
-            array( 'M',   '48 do 50', 'M (uobičajena)', 'S' ),
-            array( 'L',   '52 do 54', 'L (uobičajena)', 'M' ),
-            array( 'XL',  '56 do 58', 'XL (uobičajena)', 'L' ),
-            array( '2XL', '60 do 62', '2XL (uobičajena)', 'XL' ),
-            array( '3XL', '64 do 66', '3XL (uobičajena)', '2XL' ),
+            // David 4.11.: tablica po logiki originala (Fit Quiz: obicajna velikost majice, za jacji stisk velikost manj)
+            // + standardni EU opseg prsi za mosko majico; v gumbih samo S, M, L ...
+            array( 'S',   '88 – 96 cm',   'S',   'M' ),
+            array( 'M',   '96 – 104 cm',  'M',   'L' ),
+            array( 'L',   '104 – 112 cm', 'L',   'XL' ),
+            array( 'XL',  '112 – 120 cm', 'XL',  '2XL' ),
+            array( '2XL', '120 – 128 cm', '2XL', '3XL' ),
+            array( '3XL', '128 – 136 cm', '3XL', '–' ),
         );
     }
 }
@@ -1899,7 +1901,6 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'capri'        => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66', '4XL' => '68 do 70', '5XL' => '72 do 74' ),
-            'comptank'     => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66' ),
             'runshort'     => array( 'S' => '44 do 46', 'M' => '46 do 48', 'L' => '48 do 50', 'XL' => '50 do 52', '2XL' => '52 do 54' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
@@ -2071,8 +2072,8 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
                 'opomba' => 'Između dvije veličine i volite opušteniji kroj? Uzmite veću.' );
         }
         if ( noriks_is_type( 'comptank', $product_id ) ) {
-            return array( 'uvod' => 'Naručite <strong>veličinu majice koju inače nosite</strong> – za udobno, oblikujuće pristajanje. Za jaču kompresiju uzmite veličinu manje.',
-                'glava' => array( 'Veličina', 'EU', 'Uobičajena majica', 'Za jaču kompresiju' ), 'vrstice' => noriks_comptank_sizes(),
+            return array( 'uvod' => 'Naručite <strong>veličinu majice koju inače nosite</strong> – za udobno, oblikujuće pristajanje. Želite <strong>jači stisak</strong> i ravniji trbuh? Uzmite jednu veličinu manje (npr. inače nosite L → uzmite M).',
+                'glava' => array( 'Veličina', 'Opseg prsa', 'Inače nosite', 'Za jači stisak, ako inače nosite' ), 'vrstice' => noriks_comptank_sizes(),
                 'opomba' => 'Između dvije veličine i želite lakši stisak? Uzmite veću.' );
         }
         if ( noriks_is_type( 'runshort', $product_id ) ) {
