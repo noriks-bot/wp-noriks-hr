@@ -56,7 +56,7 @@ $wkw_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 </div></section>
 
 <section class="wkw__s"><div class="wkw__v wkw__dva">
-  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-ne-klizi.webp' ); ?>" alt="Muškarac u NORIKS KneeWrap steznicima na oba koljena" loading="eager" decoding="async"></div>
+  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-ne-klizi-2.webp' ); ?>" alt="Muškarac u NORIKS KneeWrap steznicima na oba koljena" loading="eager" decoding="async"></div>
   <div>
     <div class="wkw__kicker">Ostaje na mjestu</div>
     <h2 class="wkw__h2">Nikad ne sklizne <em>tijekom treninga</em></h2>
@@ -67,7 +67,7 @@ $wkw_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="
 </div></section>
 
 <section class="wkw__s wkw__s--bg"><div class="wkw__v wkw__dva wkw__dva--rev">
-  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-04-trening-etiketa.webp' ); ?>" alt="NORIKS KneeWrap steznici na oba koljena tijekom treninga" loading="eager" decoding="async"><span class="wkw__znacka">Kompresija</span></div>
+  <div class="wkw__media"><img src="<?php echo $wkw_i( 'noriks-kneewrap-04-trening-noriks.webp' ); ?>" alt="NORIKS KneeWrap steznici na oba koljena tijekom treninga" loading="eager" decoding="async"><span class="wkw__znacka">Kompresija</span></div>
   <div>
     <div class="wkw__kicker">Oporavak</div>
     <h2 class="wkw__h2">Kompresija <em>podupire oporavak</em></h2>
