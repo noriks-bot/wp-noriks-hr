@@ -86,7 +86,7 @@ div.wsbodysculpt__pog{text-align:center;border:1px solid rgba(252,2,161,.35);bor
 @media (max-width:860px){.wsbodysculpt__s{padding:46px 0}.wsbodysculpt__s.wsbodysculpt__traka{padding:30px 0}.wsbodysculpt__plavo{margin-top:-46px}.wsbodysculpt__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wsbodysculpt__v{padding:0 16px}}
 /* /dizajn.py */
-.wsbodysculpt__k{border:0!important}.wsbodysculpt__media,.wsbodysculpt__polna{border:0!important}
+.wsbodysculpt__v>.wsbodysculpt__zak{text-align:center}.wsbodysculpt__tab td:first-child{min-width:120px}@media (max-width:560px){.wsbodysculpt__red3{grid-template-columns:1fr}.wsbodysculpt__red3>div{display:flex;align-items:center;gap:14px;text-align:left}.wsbodysculpt__red3 span.wsbodysculpt__pi{margin:0;flex:0 0 44px}.wsbodysculpt__red3 strong{flex:0 0 74px}}.wsbodysculpt__k{border:0!important}.wsbodysculpt__media,.wsbodysculpt__polna{border:0!important}
 .wsbodysculpt__red3 div{border:0!important;box-shadow:0 6px 18px rgba(223,2,142,.10)}.wsbodysculpt__red3 strong{font-size:26px;color:#df028e}
 </style>
 <script>
