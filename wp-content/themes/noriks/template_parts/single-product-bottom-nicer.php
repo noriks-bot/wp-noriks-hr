@@ -1037,6 +1037,11 @@ if ( noriks_is_type( 'kleanpro' ) ) {
     include $noriks_pb_dir . 'why-kleanpro.php';
 }
 
+// NORIKS BioChips (orto-biochips) - naljepnica za uredaje
+if ( noriks_is_type( 'biochips' ) ) {
+    include $noriks_pb_dir . 'why-biochips.php';
+}
+
 // NORIKS Grandpa (orto-grandpa) - skijaska maska s realisticnim licem
 if ( noriks_is_type( 'grandpa' ) ) {
     include $noriks_pb_dir . 'why-grandpa.php';
