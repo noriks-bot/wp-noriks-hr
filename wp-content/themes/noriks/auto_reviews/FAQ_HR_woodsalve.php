@@ -1,0 +1,17 @@
+<?php
+// NORIKS WoodRevive — FAQ (Informacije o proizvodu), 1:1 z originala (Frequently Asked Question) + NORIKS pogoji, brez tujih znamk.
+return array(
+  array( 'Hoće li promijeniti boju mojih ormarića?', 'Ne. Ne sadrži boju ni bajc – ništa što bi moglo pomaknuti nijansu, napraviti mrlje ili pruge na drvu, bez obzira na vrstu i nijansu drva. Uklanja mrtvu koprenu, pa se vidi boja koju vaši ormarići već imaju. Ako želite, najprije isprobajte na skrivenom mjestu – lako se obriše.' ),
+  array( 'Moji ormarići nisu izgrebeni, nego ravni i mutni. Hoće li pomoći?', 'Upravo tako izgleda mrtav završni sloj – na medenom hrastu djeluje narančasto, na trešnji i orahu tamno i blatno. Vraćanje bistrine završnog sloja najčešća je svrha za koju se balzam koristi. Dubina i prava boja se vraćaju.' ),
+  array( 'Djeluje li na ormarićima koji su godinama čišćeni sprejevima za poliranje?', 'Da – tim ormarićima je najpotrebniji. Najprije suhom krpom obrišite nakupljeni sloj, a zatim nanesite balzam.' ),
+  array( 'Probao/la sam flomastere i ulja za drvo. Po čemu je ovo drugačije?', 'Takva sredstva dodaju boju na površinu, a zrak ostaje u ogrebotini ispod. Pri prvom čišćenju boja nestane. Ulje iz balzama ulazi u ogrebotinu i istiskuje zrak, a vosak je odozgo zatvara, pa rezultat ostaje – čak i na podovima koje perete svaki tjedan.' ),
+  array( 'Djeluje li na ormarićima od laminata ili folije?', 'Ne, i radije vam to kažemo sada. Prođite noktom po unutarnjem rubu vrata – ako osjetite godove drva, djelovat će. Ako je površina glatka kao plastika, nemojte trošiti novac. Većina ormarića ugrađenih prije 2010. od pravog je drva.' ),
+  array( 'Je li siguran za upotrebu u kuhinji, blizu hrane?', 'Da. Hladno prešano ulje sjemenki konoplje, pčelinji vosak, jojoba i shea maslac – bez isparenja i bez ičega što biste morali držati podalje od police s hranom ili znatiželjnog psa.' ),
+  array( 'Koliko mi treba za cijelu kuhinju?', 'Jedna posuda od 227 g obično je dovoljna za sva vrata i prednje strane ladica u kuhinji, a ostane i za namještaj.' ),
+  array( 'Na kojim vrstama drva djeluje?', 'Djeluje na gotovo svim vrstama drva: hrast, mahagonij, orah, bor, trešnja, javor i tikovina. Za blagovaonske stolove, stoliće, komode, radne stolove, ormariće, rukohvate i ostalo. Uvijek najprije isprobajte na malom skrivenom mjestu.' ),
+  array( 'Hoće li stol ostati ljepljiv ili mastan?', 'Ne. Za razliku od sprejeva za poliranje koji se s vremenom nakupljaju, balzam se potpuno upije u drvo. Nakon poliranja ostaje glatka, prirodna površina bez ostataka – tanjuri i čaše mogu ići izravno na stol.' ),
+  array( 'Koliko često ga trebam nanositi?', 'Za većinu kućanstava jedno nanošenje svaka 2–3 mjeseca drži namještaj lijepim. Za stolove koji se brišu svakodnevno nanosite ga jednom u tri mjeseca. Nanošenje stvara zaštitni sloj protiv novih oštećenja.' ),
+  array( 'Stol ima tragove čaša, ogrebotine i izblijedio je. Trebam li više proizvoda?', 'Ne – upravo za to je balzam napravljen. Jedno nanošenje rješava tragove vode, tragove topline, ogrebotine, suhoću i izblijedjelost odjednom: ulje prodire i popravlja, a vosak vraća sjaj i štiti.' ),
+  array( 'Koliko brzo stiže i kako plaćam?', 'Dostava je besplatna za narudžbe iznad 70 €, a plaćate pouzećem – kad paket stigne. NORIKS ima više od 120.000 kupaca i ocjenu 4,8.' ),
+  array( 'Što ako mi ne odgovara?', 'Imate 30 dana za povrat novca – bez kompliciranja i bez pitanja.' ),
+);
