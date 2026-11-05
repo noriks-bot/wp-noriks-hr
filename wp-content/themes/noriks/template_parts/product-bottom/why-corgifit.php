@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wscorgifit__kv li strong,.wscorgifit__kv li em{font-style:normal;font-weight:800;color:#1c1c1c}
 .wscorgifit__tab td:first-child{font-weight:700;white-space:nowrap}
 @media (max-width:860px){.wscorgifit__karw:has(.wscorgifit__kt){padding:0}.wscorgifit__karw:has(.wscorgifit__kt) .wscorgifit__pus{display:none}}
-.wscorgifit__ok{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#5a6aa1;color:#fff;font-size:11px;margin-right:6px;vertical-align:-3px}
+.wscorgifit__ok{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#5a6aa1;color:#fff;font-size:13px;margin-right:6px;vertical-align:-3px}
 .wscorgifit__tab--usp td{text-align:left}.wscorgifit__tab--usp td:nth-child(2){background:#f3f5fb;font-weight:600}.wscorgifit__tw--usp{margin:8px 0 6px;box-shadow:0 8px 24px rgba(90,106,161,.12);border-radius:14px}
 .wscorgifit__opomba{font-size:13px;color:#666;margin:6px 0 0}
 </style>
