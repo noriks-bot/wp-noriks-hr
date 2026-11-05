@@ -42,6 +42,7 @@ function noriks_product_type_map() : array {
         // Orthopedic back belt (ortopedski pojas za leđa).
         'sleekbrush' => array( 'orto-sleekbrush' ),
         'perfclogs' => array( 'orto-perfclogs' ),
+        'cardwallet' => array( 'orto-cardwallet' ),
         'novaflow' => array( 'orto-novaflow' ),
         'biochips' => array( 'orto-biochips' ),
         'grandpa' => array( 'orto-grandpa' ),

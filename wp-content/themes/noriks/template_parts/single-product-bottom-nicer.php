@@ -1037,6 +1037,11 @@ if ( noriks_is_type( 'kleanpro' ) ) {
     include $noriks_pb_dir . 'why-kleanpro.php';
 }
 
+// NORIKS CardSafe (orto-cardwallet) - tanki novcanik s RFID zastitom
+if ( noriks_is_type( 'cardwallet' ) ) {
+    include $noriks_pb_dir . 'why-cardwallet.php';
+}
+
 // NORIKS NovaFlow (orto-novaflow) - uredaj za terapiju sinusa crvenim svjetlom
 if ( noriks_is_type( 'novaflow' ) ) {
     include $noriks_pb_dir . 'why-novaflow.php';
