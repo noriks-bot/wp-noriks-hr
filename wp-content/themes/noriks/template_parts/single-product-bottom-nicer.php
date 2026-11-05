@@ -988,4 +988,8 @@ if ( noriks_is_type( 'leggings' ) ) {
     include $noriks_pb_dir . 'why-leggings.php';
 }
 
+if ( noriks_is_type( 'kleanpro' ) ) {
+    include $noriks_pb_dir . 'why-kleanpro.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
