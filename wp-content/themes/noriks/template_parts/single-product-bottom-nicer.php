@@ -975,6 +975,11 @@ if ( noriks_is_type( 'pawfence' ) ) {
     include $noriks_pb_dir . 'why-pawfence.php';
 }
 
+// NORIKS Slide novcanik (orto-wallet) - tanki aluminijski novcanik s RFID zastitom
+if ( noriks_is_type( 'wallet' ) ) {
+    include $noriks_pb_dir . 'why-wallet.php';
+}
+
 if ( noriks_is_type( 'supreme' ) ) {
     include $noriks_pb_dir . 'why-supreme.php';
 }

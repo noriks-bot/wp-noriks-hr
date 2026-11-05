@@ -58,6 +58,7 @@ function noriks_product_type_map() : array {
         'nyslipper' => array( 'orto-nyslipper' ),
         'boxbag' => array( 'orto-boxbag' ),
         'pawfence' => array( 'orto-pawfence' ),
+        'wallet' => array( 'orto-wallet' ),
         'bodysculpt' => array( 'orto-bodysculpt' ),
         'travelvac' => array( 'orto-travelvac' ),
         'corgifit' => array( 'orto-corgifit' ),
