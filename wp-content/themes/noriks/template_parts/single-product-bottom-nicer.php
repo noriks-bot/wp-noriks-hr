@@ -975,6 +975,11 @@ if ( noriks_is_type( 'tank' ) ) {
     include $noriks_pb_dir . 'why-tank.php';
 }
 
+// NORIKS AquaPro (orto-straw2) - prijenosna slamka za filtriranje vode
+if ( noriks_is_type( 'straw2' ) ) {
+    include $noriks_pb_dir . 'why-straw2.php';
+}
+
 // NORIKS BoxBag (orto-boxbag) - vreca za boks s usisnim podnozjem
 if ( noriks_is_type( 'boxbag' ) ) {
     include $noriks_pb_dir . 'why-boxbag.php';
