@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 @media (max-width:560px){.wssweeper__tab{font-size:13px}.wssweeper__tab th,.wssweeper__tab td{padding:10px 6px}.wssweeper__tab th:first-child,.wssweeper__tab td:first-child{padding-left:10px}}
 /* dizajn.py */
 .wssweeper__s{padding:72px 0}.wssweeper__s.wssweeper__s--bg{background:#ffe4d7}.wssweeper__s.wssweeper__traka{padding:40px 0}.wssweeper__s.wssweeper__traka:not(.wssweeper__s--bg){background:#fff}
-.wssweeper__kicker{color:#c74303;letter-spacing:1.8px;font-size:12.5px}.wssweeper__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#fe5603;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.wssweeper__kicker{color:#c74303;letter-spacing:1.8px;font-size:13.5px}.wssweeper__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#fe5603;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wssweeper__h2 em{color:#c74303}.wssweeper__dva .wssweeper__zak{border-left:3px solid #fe5603;padding-left:14px}
 .wssweeper__media,.wssweeper__polna{box-shadow:0 14px 34px rgba(254,86,3,.22);border:1px solid rgba(254,86,3,.25)}
 .wssweeper__k{border:1px solid rgba(254,86,3,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wssweeper__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(254,86,3,.22)}
@@ -91,6 +91,8 @@ div.wssweeper__pog{text-align:center;border:1px solid rgba(254,86,3,.35);border-
 @media (max-width:767px){.wssweeper__v{padding:0 16px}}
 /* /dizajn.py */
 .wssweeper__v>.wssweeper__zak{text-align:center}
+/* en sam rob: samo senca, brez obrobe (kartice, trak, mediji) */
+.wssweeper__k,.wssweeper__tk,.wssweeper__media,.wssweeper__polna{border:0!important}
 </style>
 <script>
 (function(){document.querySelectorAll('.wssweeper__kar').forEach(function(k){
