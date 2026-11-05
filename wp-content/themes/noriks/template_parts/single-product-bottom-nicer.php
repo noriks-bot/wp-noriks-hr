@@ -1037,6 +1037,11 @@ if ( noriks_is_type( 'kleanpro' ) ) {
     include $noriks_pb_dir . 'why-kleanpro.php';
 }
 
+// NORIKS CloudStep (orto-perfclogs) - 3D klompe mekane kao oblak
+if ( noriks_is_type( 'perfclogs' ) ) {
+    include $noriks_pb_dir . 'why-perfclogs.php';
+}
+
 if ( noriks_is_type( 'sleekbrush' ) ) {
     include $noriks_pb_dir . 'why-sleekbrush.php';
 }
