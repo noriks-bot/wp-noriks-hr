@@ -960,6 +960,11 @@ if ( noriks_is_type( 'gripsocks' ) ) {
     include $noriks_pb_dir . 'why-gripsocks.php';
 }
 
+// NORIKS NY Slipper (orto-nyslipper) - kucne papuce s dvije trake
+if ( noriks_is_type( 'nyslipper' ) ) {
+    include $noriks_pb_dir . 'why-nyslipper.php';
+}
+
 if ( noriks_is_type( 'supreme' ) ) {
     include $noriks_pb_dir . 'why-supreme.php';
 }

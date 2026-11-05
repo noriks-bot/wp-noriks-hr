@@ -55,6 +55,7 @@ function noriks_product_type_map() : array {
         'supreme' => array( 'orto-supreme' ),
         'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
+        'nyslipper' => array( 'orto-nyslipper' ),
         'bodysculpt' => array( 'orto-bodysculpt' ),
         'travelvac' => array( 'orto-travelvac' ),
         'corgifit' => array( 'orto-corgifit' ),
@@ -786,6 +787,18 @@ if ( ! function_exists( 'noriks_sheer_sizes' ) ) {
             array( 'S-M',   '36 do 38', '71 do 81 cm',  '91 do 102 cm' ),
             array( 'L-XL',  '40 do 42', '84 do 97 cm',  '104 do 119 cm' ),
             array( 'XXL',   '44 do 46', '94 do 109 cm', '117 do 130 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_nyslipper_sizes' ) ) {
+    /** NORIKS NY Slipper: velikosti z originala v parih (US 5-6 do 11-12), etiketa v copati nosi EU par 36-37 do 42-43. */
+    function noriks_nyslipper_sizes() {
+        return array(
+            array( 'S',  '36 do 37' ),
+            array( 'M',  '38 do 39' ),
+            array( 'L',  '40 do 41' ),
+            array( 'XL', '42 do 43' ),
         );
     }
 }
@@ -1946,6 +1959,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kneewrap'     => array( 'XS' => 'opseg bedra 34,5 do 39 cm', 'S' => 'opseg bedra 39 do 44,5 cm', 'M' => 'opseg bedra 44,5 do 49 cm', 'L' => 'opseg bedra 49 do 53,5 cm', 'XL' => 'opseg bedra 53,5 do 59 cm', 'XXL' => 'opseg bedra 59 do 65,5 cm', 'XXXL' => 'opseg bedra 65,5 do 73,5 cm' ), // David 4.11.: jasno, da so cm opseg bedra
             'leggings'     => array( 'XS/S' => '40 do 63 kg', 'M/L' => '59 do 84 kg', 'L/XL' => '79 do 100 kg', '2XL/3XL' => '98 do 136 kg' ),
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
+            'nyslipper'    => array( 'S' => '36 do 37', 'M' => '38 do 39', 'L' => '40 do 41', 'XL' => '42 do 43' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
@@ -2114,6 +2128,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bokova</strong>. Čarape su skraćene duljine – za visinu od 150 do 163 cm.',
                 'glava' => array( 'Veličina', 'EU', 'Struk', 'Bokovi' ), 'vrstice' => noriks_sheer_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'nyslipper', $product_id ) ) {
+            return array( 'uvod' => 'Veličine dolaze u parovima – odaberite par u koji ulazi vaš <strong>EU broj cipele</strong>. Na etiketi u papuči piše EU par (npr. 38-39).',
+                'glava' => array( 'Veličina', 'EU broj cipele' ), 'vrstice' => noriks_nyslipper_sizes(),
+                'opomba' => 'Između dva para? Uzmite veći. Široko stopalo ili visok rist: također veći par – trake se ne podešavaju.' );
         }
         if ( noriks_is_type( 'gripsocks', $product_id ) ) {
             return array( 'uvod' => 'Odaberite veličinu prema <strong>EU broju cipele</strong>.',
