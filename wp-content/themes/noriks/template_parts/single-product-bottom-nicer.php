@@ -984,4 +984,8 @@ if ( noriks_is_type( 'busyboard' ) ) {
     include $noriks_pb_dir . 'why-busyboard.php';
 }
 
+if ( noriks_is_type( 'leggings' ) ) {
+    include $noriks_pb_dir . 'why-leggings.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';

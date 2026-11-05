@@ -40,6 +40,7 @@ function noriks_product_type_map() : array {
         // --- sub-variants / special buckets ---
         'kompresijske-nogavice'   => array( 'kompresijske-carape', 'orto-kompresijske-carape' ),
         // Orthopedic back belt (ortopedski pojas za leđa).
+        'leggings' => array( 'orto-leggings' ),
         'spotpro' => array( 'orto-spotpro' ),
         'busyboard' => array( 'orto-busyboard' ),
     'lumiwand' => array( 'orto-lumiwand' ),
@@ -760,6 +761,18 @@ if ( ! function_exists( 'noriks_kneewrap_sizes' ) ) {
             array( 'XL',   '53,5 do 59 cm',   '91 do 100 kg' ),
             array( 'XXL',  '59 do 65,5 cm',   '100 do 113 kg' ),
             array( 'XXXL', '65,5 do 73,5 cm', '113 do 136 kg' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_leggings_sizes' ) ) {
+    /** NORIKS Thermal Sculpt: velikosti z originala po telesni tezi (XS/S 40-63 kg ... 2XL/3XL 98-136 kg); med dvema velikostma vecja (navodilo originala). */
+    function noriks_leggings_sizes() {
+        return array(
+            array( 'XS/S',    '40 do 63 kg' ),
+            array( 'M/L',     '59 do 84 kg' ),
+            array( 'L/XL',    '79 do 100 kg' ),
+            array( '2XL/3XL', '98 do 136 kg' ),
         );
     }
 }
@@ -1930,6 +1943,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'kneewrap'     => array( 'XS' => 'opseg bedra 34,5 do 39 cm', 'S' => 'opseg bedra 39 do 44,5 cm', 'M' => 'opseg bedra 44,5 do 49 cm', 'L' => 'opseg bedra 49 do 53,5 cm', 'XL' => 'opseg bedra 53,5 do 59 cm', 'XXL' => 'opseg bedra 59 do 65,5 cm', 'XXXL' => 'opseg bedra 65,5 do 73,5 cm' ), // David 4.11.: jasno, da so cm opseg bedra
+            'leggings'     => array( 'XS/S' => '40 do 63 kg', 'M/L' => '59 do 84 kg', 'L/XL' => '79 do 100 kg', '2XL/3XL' => '98 do 136 kg' ),
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
@@ -2089,6 +2103,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bedra</strong>, izmjerenom oko 15 cm iznad sredine koljena.',
                 'glava' => array( 'Veličina', 'Opseg bedra', 'Težina (preporuka)' ), 'vrstice' => noriks_kneewrap_sizes(),
                 'opomba' => 'Opseg bedra je važniji od težine. Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'leggings', $product_id ) ) {
+            return array( 'uvod' => 'Veličinu odaberite prema svojoj <strong>tjelesnoj težini</strong>. Ton odaberite prema boji <strong>svoje prave kože</strong> – ako dvojite između dva tona, uzmite svjetliji.',
+                'glava' => array( 'Veličina', 'Tjelesna težina' ), 'vrstice' => noriks_leggings_sizes(),
+                'opomba' => 'Između dvije veličine? Uzmite veću. Ako ste visoki, također uzmite veću veličinu.' );
         }
         if ( noriks_is_type( 'sheer', $product_id ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bokova</strong>. Čarape su skraćene duljine – za visinu od 150 do 163 cm.',
