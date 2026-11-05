@@ -970,6 +970,11 @@ if ( noriks_is_type( 'boots' ) ) {
     include $noriks_pb_dir . 'why-boots.php';
 }
 
+// NORIKS Comfort (orto-tank) - majica s ugradenim grudnjakom
+if ( noriks_is_type( 'tank' ) ) {
+    include $noriks_pb_dir . 'why-tank.php';
+}
+
 // NORIKS BoxBag (orto-boxbag) - vreca za boks s usisnim podnozjem
 if ( noriks_is_type( 'boxbag' ) ) {
     include $noriks_pb_dir . 'why-boxbag.php';
