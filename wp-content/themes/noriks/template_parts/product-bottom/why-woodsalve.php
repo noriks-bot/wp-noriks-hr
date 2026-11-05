@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 @media (max-width:560px){.wswoodsalve__tab{font-size:13px}.wswoodsalve__tab th,.wswoodsalve__tab td{padding:10px 6px}.wswoodsalve__tab th:first-child,.wswoodsalve__tab td:first-child{padding-left:10px}}
 /* dizajn.py */
 .wswoodsalve__s{padding:72px 0}.wswoodsalve__s.wswoodsalve__s--bg{background:#ece2dd}.wswoodsalve__s.wswoodsalve__traka{padding:40px 0}.wswoodsalve__s.wswoodsalve__traka:not(.wswoodsalve__s--bg){background:#fff}
-.wswoodsalve__kicker{color:#8b4a2b;letter-spacing:1.8px;font-size:12.5px}.wswoodsalve__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#8b4a2b;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.wswoodsalve__kicker{color:#8b4a2b;letter-spacing:1.8px;font-size:13px}.wswoodsalve__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#8b4a2b;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wswoodsalve__h2 em{color:#8b4a2b}.wswoodsalve__dva .wswoodsalve__zak{border-left:3px solid #8b4a2b;padding-left:14px}
 .wswoodsalve__media,.wswoodsalve__polna{box-shadow:0 14px 34px rgba(139,74,43,.22);border:1px solid rgba(139,74,43,.25)}
 .wswoodsalve__k{border:1px solid rgba(139,74,43,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wswoodsalve__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(139,74,43,.22)}
