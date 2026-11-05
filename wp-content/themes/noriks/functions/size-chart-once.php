@@ -123,6 +123,11 @@ if ( ! function_exists( 'noriks_size_chart_once' ) ) {
             get_template_part( 'template_parts/size-chart-titaniumpan' );
             return;
         }
+        // NORIKS CorgiFit: velicine XS–L po tezini, opsegu vrata in prsa iz tablice originala.
+        if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'corgifit' ) ) {
+            get_template_part( 'template_parts/size-chart-corgifit' );
+            return;
+        }
         // NORIKS Harness: velicine XS–XL po opsegu prsa i pasmine iz tablice originala.
         if ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'harness' ) ) {
             get_template_part( 'template_parts/size-chart-harness' );

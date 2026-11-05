@@ -926,6 +926,11 @@ if ( noriks_is_type( 'adapter' ) ) {
     include $noriks_pb_dir . 'why-adapter.php';
 }
 
+// NORIKS CorgiFit (orto-corgifit) — oprsnica za korgije
+if ( noriks_is_type( 'corgifit' ) ) {
+    include $noriks_pb_dir . 'why-corgifit.php';
+}
+
 if ( noriks_is_type( 'sconces' ) ) {
     include $noriks_pb_dir . 'why-sconces.php';
 }

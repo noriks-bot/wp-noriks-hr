@@ -215,7 +215,7 @@ $is_mixed_bundle = noriks_is_mixed_bundle( $current_product_id );
 // Novi izdelki brez lastne veje: Detalji o proizvodu = opis izdelka iz WooCommerce,
 // savjeti za pranje za majice se ne prikazejo (prej je bilo tu besedilo za majice 70 % pamuk).
 $noriks_opis_iz_wc = false;
-foreach ( array( 'leakbrief', 'tusfilter', 'mamabelt', 'beltfit', 'tactical', 'ratchet', 'twisthook', 'lumiwand', 'topper', 'brewer', 'runshort', 'comptank', 'spotminder', 'spotpro', 'busyboard', 'capri', 'supreme', 'skinlift', 'gripsocks', 'bodysculpt', 'sconces', 'woodsalve', 'sweeper', 'straw', 'adapter', 'sheer', 'kneewrap', 'elowen', 'emsbunion', 'seamthong', 'slipshort', 'dryseam', 'kneesleeve', 'shiftclog', 'leash', 'titancrep', 'diskret', 'neckgrip', 'steampro', 'tradesman', 'freshseal', 'zipcomp', 'webshot', 'gelcushion', 'noiron', 'sunstep', 'aircircle', 'widebeam', 'wakeband', 'wakealarm', 'earcalm', 'seatsleep', 'sculptleg', 'vinocool', 'mamafit', 'shapeshorts', 'alpakacrew', 'odorpro', 'gelsit', 'struja', 'calm', 'shapetank', 'classics', 'flops', 'destapacan', 'tacpro', 'ondersteun', 'insoles', 'glasspro', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'retrobox', 'devotions', 'ritual', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
+foreach ( array( 'corgifit', 'leakbrief', 'tusfilter', 'mamabelt', 'beltfit', 'tactical', 'ratchet', 'twisthook', 'lumiwand', 'topper', 'brewer', 'runshort', 'comptank', 'spotminder', 'spotpro', 'busyboard', 'capri', 'supreme', 'skinlift', 'gripsocks', 'bodysculpt', 'sconces', 'woodsalve', 'sweeper', 'straw', 'adapter', 'sheer', 'kneewrap', 'elowen', 'emsbunion', 'seamthong', 'slipshort', 'dryseam', 'kneesleeve', 'shiftclog', 'leash', 'titancrep', 'diskret', 'neckgrip', 'steampro', 'tradesman', 'freshseal', 'zipcomp', 'webshot', 'gelcushion', 'noiron', 'sunstep', 'aircircle', 'widebeam', 'wakeband', 'wakealarm', 'earcalm', 'seatsleep', 'sculptleg', 'vinocool', 'mamafit', 'shapeshorts', 'alpakacrew', 'odorpro', 'gelsit', 'struja', 'calm', 'shapetank', 'classics', 'flops', 'destapacan', 'tacpro', 'ondersteun', 'insoles', 'glasspro', 'calendar', 'viinia', 'birdie', 'acryliques', 'midnight', 'gordura', 'womens', 'draps', 'retrobox', 'devotions', 'ritual', 'corrector', 'salon', 'faith', 'travel' ) as $noriks_t ) {
     if ( noriks_is_type( $noriks_t, $current_product_id ) ) { $noriks_opis_iz_wc = true; break; }
 }
 
@@ -2459,6 +2459,37 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
               </tbody>
             </table>
             <p style="margin:14px 0 0;line-height:1.6;">Postavite je na ravnu, čvrstu podlogu u zatvorenom prostoru, s dovoljno mjesta za ulaz i vađenje ladice. Ako vam ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
+          </div>
+
+        <?php elseif( noriks_is_type( 'corgifit', $current_product_id ) ): ?>
+
+          <div class="noriks-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Mekanim krojačkim metrom izmjerite <strong>opseg vrata</strong> i <strong>opseg prsa</strong> svog korgija – prsa na najširem dijelu, odmah iza prednjih nogu. Veličine od <strong>XS do L</strong>.</p>
+            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#111;color:#fff;">
+                  <th style="padding:9px 8px;text-align:left;">Veličina</th>
+                  <th style="padding:9px 8px;text-align:left;">Težina</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg vrata</th>
+                  <th style="padding:9px 8px;text-align:left;">Opseg prsa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                foreach ( noriks_corgifit_sizes() as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#eef0f7' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:9px 8px;font-weight:700;white-space:nowrap;"><?php echo esc_html( $r[0] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[1] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[2] ); ?></td>
+                    <td style="padding:9px 8px;white-space:nowrap;"><?php echo esc_html( $r[3] ); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            </div>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Savjet:</strong> težina je samo polazna točka – svaki korgi građen je malo drugačije. Između dvije veličine? Opseg prsa je najvažnija mjera. Ako vam veličina ne odgovara, imate 30 dana za povrat ili zamjenu.</p>
           </div>
 
         <?php elseif( noriks_is_type( 'harness', $current_product_id ) ): ?>

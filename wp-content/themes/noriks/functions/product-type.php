@@ -54,6 +54,7 @@ function noriks_product_type_map() : array {
         'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
         'bodysculpt' => array( 'orto-bodysculpt' ),
+        'corgifit' => array( 'orto-corgifit' ),
         'sconces' => array( 'orto-sconces' ),
         'woodsalve' => array( 'orto-woodsalve' ),
         'sweeper' => array( 'orto-sweeper' ),
@@ -1070,6 +1071,19 @@ if ( ! function_exists( 'noriks_titaniumpan_sizes' ) ) {
             array( '26 cm', '26 cm (10")', '1–2 porcije', '2–3 jaja', 'Za jednu osobu' ),
             array( '28 cm', '28 cm (11")', '2–3 porcije', '4–5 jaja', 'Najpopularnija' ),
             array( '30 cm', '30 cm (12")', '3–4 porcije', '6–8 jaja', 'Za obitelj' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_corgifit_sizes' ) ) {
+    /** NORIKS CorgiFit: velicina, tezina, opseg vrata, opseg prsa.
+     *  1:1 s tablice velicin originala (Size Guide: XS-L, lb in palci pretvorjeni v kg in cm). */
+    function noriks_corgifit_sizes() {
+        return array(
+            array( 'XS - 36 do 43 cm', '1 do 7 kg', '28 do 33 cm', '36 do 43 cm' ),
+            array( 'S - 46 do 56 cm', '7 do 14 kg', '36 do 43 cm', '46 do 56 cm' ),
+            array( 'M - 58 do 76 cm', '14 do 27 kg', '46 do 56 cm', '58 do 76 cm' ),
+            array( 'L - 79 do 102 cm', '28 do 36 kg', '58 do 69 cm', '79 do 102 cm' ),
         );
     }
 }
