@@ -13,7 +13,7 @@
    8. EASY TO INSTALL IN JUST A FEW MINUTES - besedilo levo, slika spalnice desno - pri nas slika levo (cik-cak), besedilo desno + 4 koraki iz harmonike How does it work? z okvirja izdelka
    9. trak zaupanja s 3 ikonami (Free Tracked Shipping, 2 Years-Warranty, 24/7 Customer Support) - pri nas NORIKS pogoji (skupni del noriks-pogoji.php)
    10. FAQ - harmonika 8 vprasanj - pri nas v FAQ Informacije o proizvodu pod mnenji (reviews.php)
- * BARVA ORIGINALA: #f1ebe1 (bez/krem ozadje sekcije mnenj in strani originala; akcent zlata mesingasta barva lamp #b08d4a); svetel ton za --bg #f4efe6, akcent #8c6d32
+ * BARVA ORIGINALA: #f1ebe1 (bez/krem ozadje sekcije mnenj in strani originala; akcent zlata mesingasta barva lamp #b08d4a); svetel ton za --bg #f1ebe1, akcent #8c6d32
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
@@ -30,14 +30,14 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </div>
 <style>
 .wssconces{color:#1c1c1c;font-family:inherit}
-.wssconces__s{padding:56px 0;background:#fff}.wssconces__s--bg{background:#f4efe6}
+.wssconces__s{padding:56px 0;background:#fff}.wssconces__s--bg{background:#f1ebe1}
 .wssconces__v{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 .wssconces__c{text-align:center}
 .wssconces__kicker{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#555;margin:0 0 8px;font-weight:700}
 .wssconces__h2{font-size:clamp(24px,3vw,34px);font-weight:800;line-height:1.2;margin:0 0 18px;color:#1c1c1c}.wssconces__h2 em{font-style:italic}
 .wssconces__p{font-size:15.5px;line-height:1.65;color:#333;margin:0 0 14px}
 .wssconces__zak{font-size:16px;font-weight:800;line-height:1.5;margin:16px 0 0}
-.wssconces__traka{padding:36px 0;background:linear-gradient(135deg,#f4efe6 0%,#faf7f1 100%);color:#1c1c1c}.wssconces__tmreza{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wssconces__tk{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(140,109,50,.08);border-radius:16px;padding:20px 18px;box-shadow:0 8px 24px rgba(140,109,50,.08)}.wssconces__ti{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#8c6d32,#b08d4a);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(140,109,50,.25)}.wssconces__tt strong{display:block;font-size:16.5px;font-weight:800;line-height:1.25;color:#1c1c1c}.wssconces__tt span{display:block;font-size:13.5px;line-height:1.4;color:#5a5f6b;margin-top:3px}@media (max-width:860px){.wssconces__traka{padding:28px 0}.wssconces__tmreza{grid-template-columns:1fr 1fr;gap:12px}.wssconces__tk{flex-direction:column;text-align:center;padding:18px 12px;gap:10px}.wssconces__tt strong{font-size:15px}}
+.wssconces__traka{padding:36px 0;background:linear-gradient(135deg,#f1ebe1 0%,#faf7f1 100%);color:#1c1c1c}.wssconces__tmreza{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wssconces__tk{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(140,109,50,.08);border-radius:16px;padding:20px 18px;box-shadow:0 8px 24px rgba(140,109,50,.08)}.wssconces__ti{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#8c6d32,#b08d4a);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(140,109,50,.25)}.wssconces__tt strong{display:block;font-size:16.5px;font-weight:800;line-height:1.25;color:#1c1c1c}.wssconces__tt span{display:block;font-size:13.5px;line-height:1.4;color:#5a5f6b;margin-top:3px}@media (max-width:860px){.wssconces__traka{padding:28px 0}.wssconces__tmreza{grid-template-columns:1fr 1fr;gap:12px}.wssconces__tk{flex-direction:column;text-align:center;padding:18px 12px;gap:10px}.wssconces__tt strong{font-size:15px}}
 .wssconces__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}.wssconces__red4 strong{display:block;font-size:18px;font-weight:800}.wssconces__red4 span{font-size:13.5px;opacity:.85}
 .wssconces__dva{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.wssconces__dva--12{grid-template-columns:1fr 2fr;margin-top:10px}.wssconces__dva--rev>div:first-child{order:2}.wssconces__dva--tab{grid-template-columns:1fr 1.15fr}
 .wssconces__media{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.10);aspect-ratio:4/5;background:#fff}
