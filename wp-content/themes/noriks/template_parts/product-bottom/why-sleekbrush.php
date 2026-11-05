@@ -93,7 +93,7 @@ $sb_postotci = array(
 .wssleek__trak{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .wssleek__tk{display:flex;align-items:center;gap:16px;background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 8px 24px rgba(90,47,140,.10);transition:transform .2s,box-shadow .2s}
 .wssleek__tk:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(90,47,140,.16)}
-.wssleek__tk strong{display:block;font-size:16.5px;font-weight:800;line-height:1.3;margin:0 0 3px}.wssleek__tk span{font-size:14px;color:#555;line-height:1.4}
+.wssleek__tk strong{display:block;font-size:16.5px;font-weight:800;line-height:1.3;margin:0 0 3px}.wssleek__tk div>span{font-size:14px;color:#555;line-height:1.4}
 .wssleek__ti{flex:0 0 58px;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#7b4bb5,#5a2f8c);color:#fff;display:flex!important;align-items:center;justify-content:center}
 .wssleek__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .wssleek__dva--rev>div:first-child{order:2}
