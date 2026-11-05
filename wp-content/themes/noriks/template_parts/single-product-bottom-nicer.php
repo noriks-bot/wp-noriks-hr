@@ -926,6 +926,10 @@ if ( noriks_is_type( 'adapter' ) ) {
     include $noriks_pb_dir . 'why-adapter.php';
 }
 
+if ( noriks_is_type( 'sconces' ) ) {
+    include $noriks_pb_dir . 'why-sconces.php';
+}
+
 if ( noriks_is_type( 'woodsalve' ) ) {
     include $noriks_pb_dir . 'why-woodsalve.php';
 }
