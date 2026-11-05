@@ -13,6 +13,7 @@
    7. slika (druzina pakira torbo) + "Why Every Family Needs" - pri nas slika DESNO, besedilo LEVO
    8. "Read What Our Customers Have To Say": mreza 8 kartic mnenj (naslov, besedilo, ime, paket) - pri nas karusel 8 kartic, hrvaska imena
    9. NORIKS pogoji (skupni del noriks-pogoji.php); tuja dozivljenjska garancija izpuscena
+ * VIDEO: lokalni posnetek /img/straw2/noriks-straw2-video-filtracija.mp4 (GIF originala -> mp4, ffmpeg) s posterjem .jpg
  * BARVA ORIGINALA: #2f7fc1 (svetlo modra slamica in modri toni vode na slikah originala); svetel ton za --bg #eaf3fb
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
