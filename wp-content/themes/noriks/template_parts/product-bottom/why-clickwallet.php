@@ -100,6 +100,8 @@ div.wsclickwallet__pog{text-align:center;border:1px solid rgba(136,99,84,.35);bo
 .wsclickwallet__ba-crta>span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#fff;color:#7d5a4c;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.2);font-size:22px;font-weight:800;letter-spacing:2px}
 .wsclickwallet__ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
 .wsclickwallet__g3 .wsclickwallet__kt strong{font-size:16.5px}
+.wsclickwallet__k,.wsclickwallet__pog>div{border:0;box-shadow:0 8px 24px rgba(125,90,76,.12)}
+.wsclickwallet__media.wsclickwallet__ba{aspect-ratio:16/10}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsclickwallet__kar').forEach(function(k){
