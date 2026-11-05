@@ -970,6 +970,11 @@ if ( noriks_is_type( 'boxbag' ) ) {
     include $noriks_pb_dir . 'why-boxbag.php';
 }
 
+// NORIKS PawFence (orto-pawfence) - GPS ograda i ogrlica za trening pasa
+if ( noriks_is_type( 'pawfence' ) ) {
+    include $noriks_pb_dir . 'why-pawfence.php';
+}
+
 if ( noriks_is_type( 'supreme' ) ) {
     include $noriks_pb_dir . 'why-supreme.php';
 }
