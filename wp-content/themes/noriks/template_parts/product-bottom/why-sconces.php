@@ -77,6 +77,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wssconces__kar .wssconces__k:not(:has(.wssconces__kt)){background:transparent;box-shadow:0 8px 24px rgba(0,0,0,.10)}
 .wssconces__karw:has(.wssconces__kt){padding:0 34px}.wssconces__karw:has(.wssconces__kt) .wssconces__pus--l{left:-8px}.wssconces__karw:has(.wssconces__kt) .wssconces__pus--d{right:-8px}
 @media (max-width:860px){.wssconces__karw:has(.wssconces__kt){padding:0}.wssconces__karw:has(.wssconces__kt) .wssconces__pus{display:none}}
+/* trak prednosti: en sam rob - samo senca */
+.wssconces__tk{border:0!important}
 </style>
 <script>
 (function(){document.querySelectorAll('.wssconces__kar').forEach(function(k){
