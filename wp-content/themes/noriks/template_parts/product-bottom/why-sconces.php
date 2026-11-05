@@ -75,6 +75,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wssconces__k{border:0!important;box-shadow:0 8px 24px rgba(140,109,50,.12)}.wssconces__media,.wssconces__polna{border:0!important}
 .wssconces__h2 em{color:#8c6d32}.wssconces__kicker{color:#8c6d32}.wssconces__v>.wssconces__zak{text-align:center}
 .wssconces__kar .wssconces__k:not(:has(.wssconces__kt)){background:transparent;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+.wssconces__karw:has(.wssconces__kt){padding:0 34px}.wssconces__karw:has(.wssconces__kt) .wssconces__pus--l{left:-8px}.wssconces__karw:has(.wssconces__kt) .wssconces__pus--d{right:-8px}
+@media (max-width:860px){.wssconces__karw:has(.wssconces__kt){padding:0}.wssconces__karw:has(.wssconces__kt) .wssconces__pus{display:none}}
 </style>
 <script>
 (function(){document.querySelectorAll('.wssconces__kar').forEach(function(k){
