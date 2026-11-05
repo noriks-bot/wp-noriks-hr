@@ -1069,4 +1069,8 @@ if ( noriks_is_type( 'backrelax' ) ) {
     include $noriks_pb_dir . 'why-backrelax.php';
 }
 
+if ( noriks_is_type( 'clickwallet' ) ) {
+    include $noriks_pb_dir . 'why-clickwallet.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
