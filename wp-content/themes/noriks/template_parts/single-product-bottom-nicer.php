@@ -1037,6 +1037,9 @@ if ( noriks_is_type( 'kleanpro' ) ) {
     include $noriks_pb_dir . 'why-kleanpro.php';
 }
 
+if ( noriks_is_type( 'sleekbrush' ) ) {
+    include $noriks_pb_dir . 'why-sleekbrush.php';
+}
 if ( noriks_is_type( 'backrelax' ) ) {
     include $noriks_pb_dir . 'why-backrelax.php';
 }
