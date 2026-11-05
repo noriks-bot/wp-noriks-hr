@@ -99,6 +99,7 @@ div.wsbiochips__pog{text-align:center;border:1px solid rgba(233,186,63,.35);bord
 /* /dizajn.py */
 .wsbiochips__k{border:0!important;box-shadow:0 8px 24px rgba(233,186,63,.16)}.wsbiochips__media,.wsbiochips__polna{border:0!important}
 .wsbiochips__v>.wsbiochips__zak{text-align:center}.wsbiochips__media--cela{background:#0b0b0c}
+.wsbiochips__media:not(.wsbiochips__media--cela) img{object-fit:contain;background:#fff;padding:4%;box-sizing:border-box}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsbiochips__kar').forEach(function(k){
