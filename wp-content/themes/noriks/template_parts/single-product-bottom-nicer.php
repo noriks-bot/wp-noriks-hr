@@ -1073,4 +1073,8 @@ if ( noriks_is_type( 'clickwallet' ) ) {
     include $noriks_pb_dir . 'why-clickwallet.php';
 }
 
+if ( noriks_is_type( 'pawfile' ) ) {
+    include $noriks_pb_dir . 'why-pawfile.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
