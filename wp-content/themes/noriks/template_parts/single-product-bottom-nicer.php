@@ -926,6 +926,10 @@ if ( noriks_is_type( 'adapter' ) ) {
     include $noriks_pb_dir . 'why-adapter.php';
 }
 
+if ( noriks_is_type( 'sweeper' ) ) {
+    include $noriks_pb_dir . 'why-sweeper.php';
+}
+
 if ( noriks_is_type( 'bodysculpt' ) ) {
     include $noriks_pb_dir . 'why-bodysculpt.php';
 }

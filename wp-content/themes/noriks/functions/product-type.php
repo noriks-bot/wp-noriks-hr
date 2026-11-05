@@ -54,6 +54,7 @@ function noriks_product_type_map() : array {
         'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
         'bodysculpt' => array( 'orto-bodysculpt' ),
+        'sweeper' => array( 'orto-sweeper' ),
         'straw' => array( 'orto-straw' ),
         'adapter' => array( 'orto-adapter' ),
         'sheer' => array( 'orto-sheer' ),
@@ -1420,6 +1421,17 @@ if ( ! function_exists( 'noriks_puretitan_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_sweeper_sizes' ) ) {
+    /** NORIKS Sweeper: velicina (= ime opcije Velicina), sirina ciscenja, povrsina. 1:1 z originala (Which size is right for your yard?), inci -> cm, akri -> m2. */
+    function noriks_sweeper_sizes() {
+        return array(
+            array( '53 cm', 'širina čišćenja 53 cm', 'do oko 1.000 m² – mala dvorišta i uski prostori' ),
+            array( '66 cm', 'širina čišćenja 66 cm', '1.000 do 2.000 m² – prosječno obiteljsko dvorište' ),
+            array( '76 cm', 'širina čišćenja 76 cm', '2.000 m² i više – velike parcele i dugi travnjaci' ),
+        );
+    }
+}
+
 if ( ! function_exists( 'noriks_silkcase_sizes' ) ) {
     /** NORIKS SilkCase: velicina (= ime opcije Velicina), dimenzije (cm). 1:1 z originala (kinubrand.com, Tamaño). */
     function noriks_silkcase_sizes() {
@@ -1987,6 +1999,10 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Četiri veličine – od <strong>prekrivača za kauč</strong> do pokrivača za <strong>veliki obiteljski krevet</strong>.',
                 'glava' => array( 'Veličina', 'Dimenzije' ), 'vrstice' => $v,
                 'opomba' => 'Muslin je prirodan i lagano elastičan materijal, pa su manja odstupanja u dimenzijama normalna.' );
+        }
+        if ( noriks_is_type( 'sweeper', $product_id ) ) {
+            return array( 'uvod' => 'Čistač dolazi u tri širine – odaberite prema <strong>veličini svojeg dvorišta</strong>.',
+                'glava' => array( 'Veličina', 'Širina', 'Za dvorište' ), 'vrstice' => noriks_sweeper_sizes(), 'opomba' => 'Sve veličine imaju isti metalni okvir, iste četke i 10 razina visine.' );
         }
         if ( noriks_is_type( 'puretitan', $product_id ) ) {
             return array( 'uvod' => 'Tava dolazi u tri promjera – odaberite prema <strong>broju osoba za koje kuhate</strong>.',

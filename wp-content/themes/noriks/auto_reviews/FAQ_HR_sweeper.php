@@ -1,0 +1,14 @@
+<?php
+// NORIKS Sweeper — FAQ (Informacije o proizvodu), podatki z originala + NORIKS pogoji.
+return array(
+  array( 'Pokupi li pokošenu travu nakon košnje?', 'Da, i mnogima je to omiljena upotreba. Najprije pokosite travu, a zatim prođite čistačem. Pokupi pokošenu travu koju kosilica izbaci i ostavi, pa dobijete uredan travnjak umjesto redova pokošene trave. Usput skuplja i lagani filc, što je dobro za travu ispod.' ),
+  array( 'Je li ga teško gurati?', 'Ne, ako je visina četki pravilno podešena. Visina se podešava u 10 razina, pa četke možete podignuti ili spustiti ovisno o travi i otpadu. Na gušćoj travi malo podignite četke – lakše se gura, a i dalje skuplja otpad.' ),
+  array( 'Na kojim površinama radi?', 'Radi na travnjaku, umjetnoj travi, prilazu, pločniku, terasi i drugim tvrdim vanjskim površinama. Visinu četki podesite za površinu koju čistite i pometite otpad isto kao na travnjaku.' ),
+  array( 'Što sve može pokupiti?', 'Lišće je tek početak. Pokupi žir, borove iglice, slamu, orahe, šišarke, plodove likvidambara, pokošenu travu, sitne grančice, suhi izmet ljubimaca, sjemenke i ostali rastresiti otpad iz dvorišta. Koristan je i za čišćenje nakon košnje ili prozračivanja travnjaka. Bez benzina, baterija i kabela.' ),
+  array( 'Može li pokupiti pseći izmet?', 'Da, može pokupiti suhi, čvrsti izmet koji leži na površini travnjaka. Kao i kod ostalog otpada, najbolje radi kad je suho i leži na travi, a ne utisnuto u nju.' ),
+  array( 'Radi li na kosini ili neravnom travnjaku?', 'Da, ali što je teren neravniji ili strmiji, to rezultati mogu više varirati. Podesiva visina četki pomaže da ga prilagodite svojem travnjaku. Na izbočinama, udubinama ili kosinama možda ćete trebati prilagoditi visinu ili napraviti još jedan prolaz.' ),
+  array( 'Hoće li oštetiti travu?', 'Ako je visina četki pravilno podešena, ne bi trebao. Četke mete rastresiti otpad s površine i ne kopaju po travnjaku. Počnite s malo višim četkama i spuštajte ih dok ne dobijete željeno skupljanje.' ),
+  array( 'Koju veličinu odabrati?', '53 cm je najbolji za manja dvorišta i uske prostore (do oko 1.000 m²). 66 cm je ravnoteža između pokrivenosti i okretnosti i najčešći je izbor (1.000 do 2.000 m²). 76 cm ima najširi zahvat za velika dvorišta (2.000 m² i više). Sve tri rade na isti način – razlika je samo u tome koliko površine pokrijete jednim prolazom.' ),
+  array( 'Koliko je sastavljanja?', 'Vrlo malo. Glavni dio stiže predsastavljen, a sastavljanje traje 5–10 minuta: pričvrstite ručku i sabirnu vreću, podesite visinu četki i spremni ste. Ne treba poseban alat. U paketu: čistač, sabirna vreća, pribor za montažu i upute.' ),
+  array( 'Mogu li ga vratiti ako mi ne odgovara?', 'Da. Imate 30 dana za povrat novca – bez kompliciranja i bez pitanja. Dostava je besplatna iznad 70 €, a možete platiti pouzećem kad paket stigne.' ),
+);
