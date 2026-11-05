@@ -100,7 +100,7 @@ div.wsrollpro__pog{text-align:center;border:1px solid rgba(20,18,75,.35);border-
 .wsrollpro__g3 .wsrollpro__kt strong{font-size:16.5px}
 .wsrollpro__k,.wsrollpro__pog>div{border:0;box-shadow:0 8px 24px rgba(43,39,128,.12)}
 .wsrollpro__media.wsrollpro__ba{aspect-ratio:16/10}
-.wsrollpro__g2 .wsrollpro__km img{aspect-ratio:16/10}
+.wsrollpro__vk .wsrollpro__km{background:#ecebf6;padding:18px 0 10px;text-align:center}.wsrollpro__vk .wsrollpro__km img{width:120px;height:120px;aspect-ratio:1/1;object-fit:contain;margin:0 auto}.wsrollpro__vk .wsrollpro__kt{text-align:center}
 .wsrollpro__vk{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;align-items:center;margin-top:22px}.wsrollpro__vk>.wsrollpro__grid{margin-top:0}.wsrollpro__media--vid{aspect-ratio:1/1}
 @media (max-width:860px){.wsrollpro__vk{grid-template-columns:1fr}}
 </style>
