@@ -53,6 +53,7 @@ function noriks_product_type_map() : array {
         'supreme' => array( 'orto-supreme' ),
         'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
+        'bodysculpt' => array( 'orto-bodysculpt' ),
         'straw' => array( 'orto-straw' ),
         'adapter' => array( 'orto-adapter' ),
         'sheer' => array( 'orto-sheer' ),
