@@ -13,22 +13,22 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NISKI KROJ</div>
         <h2 class="wslabproof__h2">Radna čarapa s jastučićem, <em>krojena ispod gležnja</em></h2>
-        <p class="wslabproof__p">NORIKS SlabProof je radna čarapa s jastučićem za beton, krojena ispod gležnja. Napravljena je za radne cipele, zaštitne tenisice s čeličnom kapicom i vruće dane u kratkim hlačama, kad visoka čarapa samo smeta.</p>
-        <p class="wslabproof__p">Ispod stopala je isti jastuk kao i kod višeg modela: gust ispod pete i prednjeg dijela stopala, gdje beton najjače udara. Preko gornjeg dijela stopala ide mrežasti dio, peta i prsti su ojačani, a povišeni jezičac na peti sprječava da stražnji dio cipele trlja kožu.</p>
+        <p class="wslabproof__p">NORIKS SlabProof je radna čarapa s jastučićem za cijeli dan na nogama, krojena ispod gležnja. Napravljena je za radne cipele, zaštitne tenisice s čeličnom kapicom i vruće dane u kratkim hlačama, kad visoka čarapa samo smeta.</p>
+        <p class="wslabproof__p">Ispod stopala je isti jastuk kao i kod višeg modela: gust ispod pete i prednjeg dijela stopala, gdje korak najjače udara. Preko gornjeg dijela stopala ide mrežasti dio, peta i prsti su ojačani, a povišeni jezičac na peti sprječava da stražnji dio cipele trlja kožu.</p>
         <p class="wslabproof__p">Čarapa je crna i dolazi u tri veličine: 39–42, 43–45 i 46–49. Pere se strojno na hladnom i suši u sušilici na niskoj temperaturi, zajedno s radnom odjećom — bez ručnog pranja i posebnog deterdženta.</p>
-        <p class="wslabproof__zak">Jastuk za beton, u kroju za niske radne cipele.</p>
+        <p class="wslabproof__zak">Jastuk za svaki radni dan, u kroju za niske radne cipele.</p>
       </div>
     </div>
   </section>
 
   <section class="wslabproof__s">
     <div class="wslabproof__v wslabproof__v--rev">
-      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Jastučenje točno tamo gdje beton udara najjače" loading="eager" decoding="async"></div>
+      <div class="wslabproof__media"><img src="<?php echo esc_url( $wdir . 'slabproof-05.webp' ); ?>" alt="Jastučenje točno tamo gdje korak udara najjače" loading="eager" decoding="async"></div>
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">ZONSKO JASTUČENJE</div>
-        <h2 class="wslabproof__h2">Jastučenje točno tamo gdje <em>beton udara najjače</em></h2>
+        <h2 class="wslabproof__h2">Jastučenje točno tamo gdje <em>korak udara najjače</em></h2>
         <p class="wslabproof__p">Jastučenje nismo izmislili mi. Ali NORIKS SlabProof je čarapa čije je jastučenje napravljeno za pod na kojem stojite cijeli dan: gusto ondje gdje udaraju peta i prednji dio stopala, a tanko svugdje drugdje, da nikad ne napuni cipelu i ne stisne stopalo.</p>
-        <p class="wslabproof__p">Gusti jastučići smješteni su ispod pete i ispod prednjeg dijela stopala, točno na mjestima gdje beton najviše tuče pri svakom koraku. Na ostatku stopala čarapa je tanka, pa ublažava korak, a da se cipela ne čini tijesnom. Jastučići su raspoređeni prema mjestima udara, a ne ravnomjerno po cijelom stopalu.</p>
+        <p class="wslabproof__p">Gusti jastučići smješteni su ispod pete i ispod prednjeg dijela stopala, točno na mjestima koja pri svakom koraku trpe najjači udarac. Na ostatku stopala čarapa je tanka, pa ublažava korak, a da se cipela ne čini tijesnom. Jastučići su raspoređeni prema mjestima udara, a ne ravnomjerno po cijelom stopalu.</p>
         <p class="wslabproof__p">Niski kroj ispod gležnja napravljen je za radne cipele, zaštitne tenisice s čeličnom kapicom i vruće dane u kratkim hlačama. Ispod stopala je isto zonsko jastučenje kao i kod višeg modela, samo što čarapa završava ispod gležnja. Jezičac na peti dodatno štiti petu od ruba niske cipele.</p>
         <p class="wslabproof__zak">Gusto ispod pete i prednjeg dijela stopala, tanko svugdje drugdje.</p>
       </div>
@@ -69,10 +69,10 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">NISU KRIVE CIPELE</div>
         <h2 class="wslabproof__h2">Nikad nije bila <em>do cipela</em></h2>
-        <p class="wslabproof__p">Zaštitne cipele napravljene su da štite prste, a ne da jastuče stopalo. To im je posao. Ali beton ne popušta ni milimetar, i svaki korak negdje mora otići. Kad cipela ne može više, ostaje čarapa.</p>
-        <p class="wslabproof__p">Ista cipela, isti beton. Jedino što se promijenilo je čarapa. Smjene od dvanaest sati na betonu su kao vožnja kamionom bez amortizera — a jedino što taj udarac može ublažiti je otprilike dva i pol centimetra čarape.</p>
+        <p class="wslabproof__p">Zaštitne cipele napravljene su da štite prste, a ne da jastuče stopalo. To im je posao. Ali tvrda podloga ne popušta ni milimetar, i svaki korak negdje mora otići. Kad cipela ne može više, ostaje čarapa.</p>
+        <p class="wslabproof__p">Ista cipela, isti posao. Jedino što se promijenilo je čarapa. Smjene od dvanaest sati na nogama su kao vožnja kamionom bez amortizera — a jedino što taj udarac može ublažiti je otprilike dva i pol centimetra čarape.</p>
         <p class="wslabproof__p">Zato je NORIKS SlabProof napravljen tako da tih dva i pol centimetra bude kako treba: gusti jastuk ispod pete i prednjeg dijela stopala, a ostatak tanak i prozračan.</p>
-        <p class="wslabproof__zak">Ista cipela, isti beton — samo druga čarapa.</p>
+        <p class="wslabproof__zak">Ista cipela, isti posao — samo druga čarapa.</p>
       </div>
     </div>
   </section>
@@ -97,10 +97,10 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">USPOREDBA</div>
         <h2 class="wslabproof__h2">Nisu sve radne čarape <em>napravljene jednako</em></h2>
-        <p class="wslabproof__p">Jeftini multipak, skupi par od vune ili čarapa napravljena za beton na kojem stvarno stojite. Usporedili smo ih po stvarima koje se na poslu broje: bez rupa nakon godine na betonu, jastučenje tamo gdje beton udara, svježina u radnoj cipeli. Svaka od tih stavki vidi se tek nakon nekoliko tjedana na poslu.</p>
+        <p class="wslabproof__p">Jeftini multipak, skupi par od vune ili čarapa napravljena za posao koji stvarno radite. Usporedili smo ih po stvarima koje se na poslu broje: bez rupa nakon godine rada, jastučenje tamo gdje korak udara, svježina u radnoj cipeli. Svaka od tih stavki vidi se tek nakon nekoliko tjedana na poslu.</p>
         <p class="wslabproof__p">Gledali smo i to da nema svrbeža od vune ni pregrijavanja te da stražnji dio cipele ne trlja petu. Jeftini multipak je jeftin, a onda se kupuje opet; vuna ima višu cijenu; NORIKS SlabProof kupujete jednom za dugo.</p>
         <p class="wslabproof__p">Dobra vuna traje, to joj priznajemo. Ali ljeti grebe i u radnoj cipeli grije. NORIKS SlabProof napravljen je za pod na kojem stojite, a ne za planinarsku stazu.</p>
-        <p class="wslabproof__zak">Napravljena za beton, a ne za planinu.</p>
+        <p class="wslabproof__zak">Napravljena za posao, a ne za planinu.</p>
       </div>
     </div>
   </section>
@@ -111,8 +111,8 @@ $wdir = get_template_directory_uri() . '/img/slabproof/';
       <div class="wslabproof__tekst">
         <div class="wslabproof__kicker">TKO IH RADI</div>
         <h2 class="wslabproof__h2">Nije ih osmislio trgovac čarapama, nego <em>električar</em></h2>
-        <p class="wslabproof__p">Iza ove čarape stoji električar s dvadeset i dvije godine staža, uglavnom na velikim gradilištima: bolnice, skladišta, distribucijski centri. Betonski podovi i dani od dvanaest sati. Godinama je radio na nogama, na istom betonu kao i vi.</p>
-        <p class="wslabproof__p">S dvadeset godina to ne osjetiš. S četrdeset i pet su ti stopala gotova do ručka, a potrošiš paket čarapa mjesečno — probijene pete, mokro do podneva. Čarape su postajale sve tanje i kraće, pune rupa nakon mjesec dana, a nitko nije radio čarapu za čovjeka koji cijeli dan stoji na betonu.</p>
+        <p class="wslabproof__p">Iza ove čarape stoji električar s dvadeset i dvije godine staža, uglavnom na velikim gradilištima: bolnice, skladišta, distribucijski centri. Tvrdi podovi i dani od dvanaest sati. Godinama je radio na nogama, baš kao i vi.</p>
+        <p class="wslabproof__p">S dvadeset godina to ne osjetiš. S četrdeset i pet su ti stopala gotova do ručka, a potrošiš paket čarapa mjesečno — probijene pete, mokro do podneva. Čarape su postajale sve tanje i kraće, pune rupa nakon mjesec dana, a nitko nije radio čarapu za čovjeka koji cijeli dan radi na nogama.</p>
         <p class="wslabproof__p">Zato je napravio svoju: ojačanu ondje gdje uvijek pukne, suhu i takvu da ostane na mjestu. Godinu dana nosio ju je na poslu prije nego što je bila spremna za druge.</p>
         <p class="wslabproof__zak">Napravljeno od majstora, za majstore.</p>
       </div>

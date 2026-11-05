@@ -255,7 +255,7 @@
 
           <?php elseif ( noriks_is_type( 'slabproof' ) ): ?>
 
-           Niste jedini kojima stopala gore nakon smjene na betonu.
+           Niste jedini kojima stopala gore nakon cijele smjene na nogama.
 
           <?php elseif ( noriks_is_type( 'glasspro' ) ): ?>
 
@@ -1093,7 +1093,7 @@
 
            <?php elseif ( noriks_is_type( 'slabproof' ) ): ?>
 
-            Tisuće majstora već radi u NORIKS SlabProof čarapama – zonsko jastučenje ondje gdje beton udara, ojačana peta i prsti te suha stopala cijelu smjenu.
+            Tisuće majstora već radi u NORIKS SlabProof čarapama – zonsko jastučenje ondje gdje korak najjače udara, ojačana peta i prsti te suha stopala cijelu smjenu.
 
            <?php elseif ( noriks_is_type( 'glasspro' ) ): ?>
 
