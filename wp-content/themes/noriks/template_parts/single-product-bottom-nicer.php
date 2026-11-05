@@ -1077,4 +1077,8 @@ if ( noriks_is_type( 'pawfile' ) ) {
     include $noriks_pb_dir . 'why-pawfile.php';
 }
 
+if ( noriks_is_type( 'rollpro' ) ) {
+    include $noriks_pb_dir . 'why-rollpro.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
