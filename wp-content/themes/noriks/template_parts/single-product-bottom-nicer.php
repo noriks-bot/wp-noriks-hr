@@ -965,6 +965,11 @@ if ( noriks_is_type( 'nyslipper' ) ) {
     include $noriks_pb_dir . 'why-nyslipper.php';
 }
 
+// NORIKS BoxBag (orto-boxbag) - vreca za boks s usisnim podnozjem
+if ( noriks_is_type( 'boxbag' ) ) {
+    include $noriks_pb_dir . 'why-boxbag.php';
+}
+
 if ( noriks_is_type( 'supreme' ) ) {
     include $noriks_pb_dir . 'why-supreme.php';
 }

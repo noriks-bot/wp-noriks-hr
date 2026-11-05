@@ -56,6 +56,7 @@ function noriks_product_type_map() : array {
         'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
         'nyslipper' => array( 'orto-nyslipper' ),
+        'boxbag' => array( 'orto-boxbag' ),
         'bodysculpt' => array( 'orto-bodysculpt' ),
         'travelvac' => array( 'orto-travelvac' ),
         'corgifit' => array( 'orto-corgifit' ),
