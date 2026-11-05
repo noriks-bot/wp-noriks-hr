@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wsbodysculpt__tocke{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}.wsbodysculpt__tocke li{display:flex;gap:14px;align-items:flex-start;list-style:none}
 .wsbodysculpt__st{flex:0 0 40px;height:40px;border-radius:50%;background:#1d2b4f;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}.wsbodysculpt__tocke p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#333}
 .wsbodysculpt__kv{list-style:none;margin:0 0 6px;padding:0}.wsbodysculpt__kv li{position:relative;padding-left:30px;margin:0 0 12px;font-size:15.5px;line-height:1.55;list-style:none}
-.wsbodysculpt__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.wsbodysculpt__kv li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#1d2b4f;color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
 .wsbodysculpt__tw{overflow-x:auto}.wsbodysculpt__tab{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;font-size:15px}
 .wsbodysculpt__tab th,.wsbodysculpt__tab td{padding:12px 14px;border-bottom:1px solid #eee;text-align:center}.wsbodysculpt__tab th{background:#1d2b4f!important;color:#fff!important;font-weight:700}.wsbodysculpt__tab td:first-child,.wsbodysculpt__tab th:first-child{text-align:left}
 .wsbodysculpt__thimg{display:block;width:96px;max-width:100%;height:auto;margin:0 auto 8px;border-radius:10px}.wsbodysculpt__th span{display:block}
@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 @media (max-width:560px){.wsbodysculpt__tab{font-size:13px}.wsbodysculpt__tab th,.wsbodysculpt__tab td{padding:10px 6px}.wsbodysculpt__tab th:first-child,.wsbodysculpt__tab td:first-child{padding-left:10px}}
 /* dizajn.py */
 .wsbodysculpt__s{padding:72px 0}.wsbodysculpt__s.wsbodysculpt__s--bg{background:#fdeef6}.wsbodysculpt__s.wsbodysculpt__traka{padding:40px 0}.wsbodysculpt__s.wsbodysculpt__traka:not(.wsbodysculpt__s--bg){background:#fff}
-.wsbodysculpt__kicker{color:#df028e;letter-spacing:1.8px;font-size:12.5px}.wsbodysculpt__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#fc02a1;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
+.wsbodysculpt__kicker{color:#df028e;letter-spacing:1.8px;font-size:13px}.wsbodysculpt__kicker::before{content:"";display:inline-block;width:22px;height:2px;background:#fc02a1;vertical-align:middle;margin:-2px 10px 0 0;border-radius:2px}
 .wsbodysculpt__h2 em{color:#df028e}.wsbodysculpt__dva .wsbodysculpt__zak{border-left:3px solid #fc02a1;padding-left:14px}
 .wsbodysculpt__media,.wsbodysculpt__polna{box-shadow:0 14px 34px rgba(252,2,161,.22);border:1px solid rgba(252,2,161,.25)}
 .wsbodysculpt__k{border:1px solid rgba(252,2,161,.35);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}.wsbodysculpt__k:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(252,2,161,.22)}
