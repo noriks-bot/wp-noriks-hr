@@ -1037,6 +1037,11 @@ if ( noriks_is_type( 'kleanpro' ) ) {
     include $noriks_pb_dir . 'why-kleanpro.php';
 }
 
+// NORIKS NovaFlow (orto-novaflow) - uredaj za terapiju sinusa crvenim svjetlom
+if ( noriks_is_type( 'novaflow' ) ) {
+    include $noriks_pb_dir . 'why-novaflow.php';
+}
+
 // NORIKS BioChips (orto-biochips) - naljepnica za uredaje
 if ( noriks_is_type( 'biochips' ) ) {
     include $noriks_pb_dir . 'why-biochips.php';
