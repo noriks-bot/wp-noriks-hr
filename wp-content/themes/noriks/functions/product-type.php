@@ -56,6 +56,7 @@ function noriks_product_type_map() : array {
         'skinlift' => array( 'orto-skinlift' ),
         'gripsocks' => array( 'orto-gripsocks' ),
         'nyslipper' => array( 'orto-nyslipper' ),
+        'boots' => array( 'orto-boots' ),
         'boxbag' => array( 'orto-boxbag' ),
         'pawfence' => array( 'orto-pawfence' ),
         'wallet' => array( 'orto-wallet' ),
@@ -791,6 +792,26 @@ if ( ! function_exists( 'noriks_sheer_sizes' ) ) {
             array( 'S-M',   '36 do 38', '71 do 81 cm',  '91 do 102 cm' ),
             array( 'L-XL',  '40 do 42', '84 do 97 cm',  '104 do 119 cm' ),
             array( 'XXL',   '44 do 46', '94 do 109 cm', '117 do 130 cm' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_boots_sizes' ) ) {
+    /** NORIKS ThermaBoots: EU brojevi 37-48 z originala (UK stolpec izpuscen), duzina stopala in unutarnja duzina cizme v cm. */
+    function noriks_boots_sizes() {
+        return array(
+            array( '37', '22,8 cm', '23,8 cm' ),
+            array( '38', '23,4 cm', '24,4 cm' ),
+            array( '39', '24,0 cm', '25,0 cm' ),
+            array( '40', '24,6 cm', '25,6 cm' ),
+            array( '41', '25,2 cm', '26,2 cm' ),
+            array( '42', '25,8 cm', '26,8 cm' ),
+            array( '43', '26,4 cm', '27,4 cm' ),
+            array( '44', '27,0 cm', '28,0 cm' ),
+            array( '45', '27,6 cm', '28,6 cm' ),
+            array( '46', '28,2 cm', '29,2 cm' ),
+            array( '47', '28,8 cm', '29,8 cm' ),
+            array( '48', '29,4 cm', '30,4 cm' ),
         );
     }
 }
@@ -1963,6 +1984,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'kneewrap'     => array( 'XS' => 'opseg bedra 34,5 do 39 cm', 'S' => 'opseg bedra 39 do 44,5 cm', 'M' => 'opseg bedra 44,5 do 49 cm', 'L' => 'opseg bedra 49 do 53,5 cm', 'XL' => 'opseg bedra 53,5 do 59 cm', 'XXL' => 'opseg bedra 59 do 65,5 cm', 'XXXL' => 'opseg bedra 65,5 do 73,5 cm' ), // David 4.11.: jasno, da so cm opseg bedra
             'leggings'     => array( 'XS/S' => '40 do 63 kg', 'M/L' => '59 do 84 kg', 'L/XL' => '79 do 100 kg', '2XL/3XL' => '98 do 136 kg' ),
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
+            'boots'        => array( '37' => 'stopalo do 22,8 cm', '38' => 'stopalo do 23,4 cm', '39' => 'stopalo do 24,0 cm', '40' => 'stopalo do 24,6 cm', '41' => 'stopalo do 25,2 cm', '42' => 'stopalo do 25,8 cm', '43' => 'stopalo do 26,4 cm', '44' => 'stopalo do 27,0 cm', '45' => 'stopalo do 27,6 cm', '46' => 'stopalo do 28,2 cm', '47' => 'stopalo do 28,8 cm', '48' => 'stopalo do 29,4 cm' ),
             'nyslipper'    => array( 'S' => '36 do 37', 'M' => '38 do 39', 'L' => '40 do 41', 'XL' => '42 do 43' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
@@ -2132,6 +2154,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličinu odaberite prema <strong>opsegu bokova</strong>. Čarape su skraćene duljine – za visinu od 150 do 163 cm.',
                 'glava' => array( 'Veličina', 'EU', 'Struk', 'Bokovi' ), 'vrstice' => noriks_sheer_sizes(),
                 'opomba' => 'Između dvije veličine? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'boots', $product_id ) ) {
+            return array( 'uvod' => 'ThermaBoots odgovaraju standardnoj veličini – odaberite svoj uobičajeni <strong>EU broj cipele</strong>. Niste sigurni? Izmjerite <strong>dužinu stopala</strong> i pronađite je u tablici.',
+                'glava' => array( 'Veličina (EU)', 'Dužina stopala', 'Unutarnja dužina' ), 'vrstice' => noriks_boots_sizes(),
+                'opomba' => 'Stopalo mjerite stojeći, od pete do najduljeg prsta. Između dva broja? Uzmite veći – unutra je runo.' );
         }
         if ( noriks_is_type( 'nyslipper', $product_id ) ) {
             return array( 'uvod' => 'Veličine dolaze u parovima – odaberite par u koji ulazi vaš <strong>EU broj cipele</strong>. Na etiketi u papuči piše EU par (npr. 38-39).',

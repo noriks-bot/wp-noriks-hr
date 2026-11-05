@@ -965,6 +965,11 @@ if ( noriks_is_type( 'nyslipper' ) ) {
     include $noriks_pb_dir . 'why-nyslipper.php';
 }
 
+// NORIKS ThermaBoots (orto-boots) - zimske vodootporne cizme s runom
+if ( noriks_is_type( 'boots' ) ) {
+    include $noriks_pb_dir . 'why-boots.php';
+}
+
 // NORIKS BoxBag (orto-boxbag) - vreca za boks s usisnim podnozjem
 if ( noriks_is_type( 'boxbag' ) ) {
     include $noriks_pb_dir . 'why-boxbag.php';
