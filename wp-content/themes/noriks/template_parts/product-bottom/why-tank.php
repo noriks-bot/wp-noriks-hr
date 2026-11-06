@@ -4,7 +4,7 @@
  * (avouria.com/products/avourias-built-in-comfort-bra-tanktop).
  *
  * STRUKTURA ORIGINALA:
-   1. naslov "50,000+ Women LOVE US!" + "See Why We're The Most Shared Bra Fix On Facebook" + drsnik 8 video mnenj (video, citat, ime in starost) - pri nas naslov + karusel 6 videov z istih posnetkov (brez zvoka), citati prevedeni, hrvaska imena; 2 videa z vzganimi angleskimi podnapisi in tujo znamko izpuscena, napisa "Pickleball OOTD" / "Casual Weekend Outfit" izrezana
+   1. naslov "50,000+ Women LOVE US!" + "See Why We're The Most Shared Bra Fix On Facebook" + drsnik 8 video mnenj (video, citat, ime in starost) - pri nas naslov + karusel 8 videov v istem vrstnem redu (brez zvoka), citati prevedeni, hrvaska imena; vzgani angleski podnapisi v videih 7 in 8 prevedeni v HR, tuja znamka -> NORIKS, napisa "Pickleball OOTD" / "Casual Weekend Outfit" izrezana
    2. tekoci trak prednosti (lahko vracilo, dostava, ocena, jamstvo, brez zice) - pri nas trak 4 prednosti z ikonami (NORIKS pogoji namesto tujih)
    3. "THE PROBLEM" - slika (hrbet z zarezanim nedrckom) + "The Truth About Your Bra" (3 odstavki) - pri nas slika LEVO, besedilo DESNO
    4. "THE SOLUTION" - slika (zenska v majici) + "The Built-In Bra You'll Forget You Have On" (6 tock) - pri nas slika DESNO, besedilo LEVO s 6 tockami z ikonami
@@ -13,7 +13,7 @@
    7. "NO RISK PROMISE" - jamstvo 90 dni - pri nas 30 dana z NORIKS pogoji (sredinsko, 3 tocke z ikonami)
    8. FAQ (7 vprasanj) - pri nas v FAQ Informacije o proizvodu (auto_reviews/FAQ_HR_tank.php)
    9. NORIKS pogoji (skupni del noriks-pogoji.php)
- * VIDEI: 6 lokalnih posnetkov /img/tank/noriks-tank-video-1.mp4 do -6.mp4 (ffmpeg, 480p, brez zvoka) s posterji .jpg
+ * VIDEI: 8 lokalnih posnetkov /img/tank/noriks-tank-video-1.mp4 do -8.mp4 (ffmpeg, 480p, brez zvoka) s posterji .jpg
  * BARVA ORIGINALA: #c9a58a (nude/bez barva majice in toplih tonov strani originala); svetel ton za --bg #f7efe9
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -40,9 +40,11 @@ $tk_li = function ( $ik, $naslov, $tekst ) use ( $tk_svg, $tk_ik ) {
 $tk_videi = array(
 	array( 'noriks-tank-video-1.mp4', 'noriks-tank-video-1.jpg', '„Nikad više neću nositi običan grudnjak.“', 'Danica, 64 godine' ),
 	array( 'noriks-tank-video-2.mp4', 'noriks-tank-video-2.jpg', '„Obožavam svoju. Tako je udobna!“', 'Marta, 66 godina' ),
+	array( 'noriks-tank-video-7.mp4', 'noriks-tank-video-7.jpg', '„Zbogom, grudnjaci!“', 'Sanja, 70 godina' ),
 	array( 'noriks-tank-video-3.mp4', 'noriks-tank-video-3.jpg', '„Napokon nema više boli u ramenima!“', 'Renata, 43 godine' ),
 	array( 'noriks-tank-video-4.mp4', 'noriks-tank-video-4.jpg', '„Udobnost koja stvarno traje.“', 'Snježana, 69 godina' ),
 	array( 'noriks-tank-video-5.mp4', 'noriks-tank-video-5.jpg', '„Iskreno, kupila sam je za svaki dan!“', 'Ljiljana, 74 godine' ),
+	array( 'noriks-tank-video-8.mp4', 'noriks-tank-video-8.jpg', '„Obožavam majicu s ugrađenim grudnjakom!“', 'Lea, 62 godine' ),
 	array( 'noriks-tank-video-6.mp4', 'noriks-tank-video-6.jpg', '„Odlična majica za svaki dan!“', 'Monika, 41 godina' ),
 );
 ?>
