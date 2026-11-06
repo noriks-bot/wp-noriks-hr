@@ -12,5 +12,5 @@ return array(
   array( 'Pružaju li potporu gležnju?', 'Da. Čizme prekrivaju gležanj, što daje dodatnu potporu i stabilnost na neravnom terenu.' ),
   array( 'Jesu li za muškarce i za žene?', 'Da, dizajn je unisex. Dolaze u bojama Crna, Siva i Smeđa, u EU brojevima od 37 do 48.' ),
   array( 'Mogu li ih prati u perilici?', 'Ne preporučujemo. Očistite ih vlažnom krpom, a tvrdokorne mrlje mekanom četkom s malo blagog sapuna i vode, zatim ih osušite na zraku. Pranje u perilici može oštetiti vodootpornost i runo.' ),
-  array( 'Što ako mi ne odgovaraju?', 'Imate 30 dana za povrat novca ili zamjenu veličine. Dostava je besplatna za narudžbe iznad 70 €, a plaćate pouzećem – tek kad paket stigne.' ),
+  array( 'Što ako mi ne odgovaraju?', 'Imate 30 dana za povrat novca. Dostava je besplatna za narudžbe iznad 70 €, a plaćate pouzećem – tek kad paket stigne.' ),
 );

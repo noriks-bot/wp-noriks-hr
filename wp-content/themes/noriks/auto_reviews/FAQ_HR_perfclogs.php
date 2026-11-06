@@ -9,5 +9,5 @@ return array(
   array( 'Mogu li ih nositi kao papuče?', 'Da. Remen s kopčom stavite preko pete kad želite siguran korak kao u cipeli, ili ga podignite naprijed i nosite ih kao papuče.' ),
   array( 'Kako se održavaju?', 'Isperite ih mlakom vodom ili obrišite vlažnom krpom s malo blagog sapuna i ostavite da se osuše na zraku, dalje od izravnog sunca i grijanja.' ),
   array( 'Za koga su i koje boje postoje?', 'Dizajn je unisex. Dostupne su u bojama Crna, Bijela, Plava, Ružičasta i Siva, u EU brojevima od 39 do 46.' ),
-  array( 'Što ako mi ne odgovaraju?', 'Imate 30 dana za povrat novca ili zamjenu veličine. Dostava je besplatna za narudžbe iznad 70 €, a plaćate pouzećem – tek kad paket stigne.' ),
+  array( 'Što ako mi ne odgovaraju?', 'Imate 30 dana za povrat novca. Dostava je besplatna za narudžbe iznad 70 €, a plaćate pouzećem – tek kad paket stigne.' ),
 );
