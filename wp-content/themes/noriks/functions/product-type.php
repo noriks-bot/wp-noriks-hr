@@ -1047,13 +1047,16 @@ if ( ! function_exists( 'noriks_shapeshorts_sizes' ) ) {
 if ( ! function_exists( 'noriks_mamafit_sizes' ) ) {
     /** NORIKS MamaFit: velicina po opsegu struka + EU velicina (original belayan.com, Guide des tailles S–3XL). */
     function noriks_mamafit_sizes() {
+        // Isti izdelek kot NORIKS Slim, zato ista tabela velicin (XS-3XL),
+        // le stolpca sta v vrstnem redu te tabele: velicina, obseg struka, EU.
         return array(
-            array( 'S',   '62 – 68 cm',  '34 – 36' ),
-            array( 'M',   '68 – 76 cm',  '38 – 40' ),
-            array( 'L',   '76 – 82 cm',  '40 – 42' ),
-            array( 'XL',  '82 – 90 cm',  '44 – 46' ),
-            array( '2XL', '88 – 100 cm', '48 – 50' ),
-            array( '3XL', '92 – 112 cm', '50 – 52+' ),
+            array( 'XS',  '64 – 69 cm',   '32 – 34' ),
+            array( 'S',   '71 – 74 cm',   '36' ),
+            array( 'M',   '76 – 81 cm',   '38 – 40' ),
+            array( 'L',   '86 – 94 cm',   '42 – 44' ),
+            array( 'XL',  '99 – 104 cm',  '46 – 48' ),
+            array( '2XL', '107 – 112 cm', '50 – 52' ),
+            array( '3XL', '114 – 118 cm', '54 – 56' ),
         );
     }
 }
