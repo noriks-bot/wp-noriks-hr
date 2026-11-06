@@ -103,12 +103,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wspawfence__tab td.wspawfence__da{background:#fdf3ee}
 .wspawfence__da span{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#df6439;color:#fff;align-items:center;justify-content:center}
 .wspawfence__ne span{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#eee;color:#999;align-items:center;justify-content:center}
-@media (max-width:1100px){.wspawfence__tmreza{grid-template-columns:repeat(3,1fr)}.wspawfence__g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1100px){.wspawfence__tmreza{grid-template-columns:repeat(6,1fr)}.wspawfence__tk{grid-column:span 2}.wspawfence__tk:nth-child(4){grid-column:2/4}.wspawfence__tk:nth-child(5){grid-column:4/6}.wspawfence__g4{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:767px){
 .wspawfence__s{padding:44px 0}.wspawfence__v{padding:0 16px}
 .wspawfence__dva,.wspawfence__g3{grid-template-columns:1fr;gap:24px}
 .wspawfence__dva--rev>div:first-child{order:0}
 .wspawfence__tmreza,.wspawfence__g4{grid-template-columns:1fr 1fr;gap:12px}
+.wspawfence__tmreza .wspawfence__tk{grid-column:auto}.wspawfence__tmreza .wspawfence__tk:last-child:nth-child(odd){grid-column:1/-1}
 .wspawfence__tk{flex-direction:column;text-align:center;padding:16px 10px}
 .wspawfence__g6{grid-template-columns:1fr 1fr}
 .wspawfence__rgrid{grid-auto-columns:84%;gap:16px}
