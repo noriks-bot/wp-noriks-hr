@@ -15,7 +15,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $wsu_t   = get_template_directory_uri();
-$wsu_i   = function ( $f ) use ( $wsu_t ) { return esc_url( $wsu_t . '/img/supreme/' . $f . '?v=s0411' ); };
+$wsu_i   = function ( $f ) use ( $wsu_t ) { return esc_url( $wsu_t . '/img/supreme/' . $f . '?v=s0611' ); };
 $wsu_svg = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
 ?>
 <div class="wsu">
