@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wspillow__rk strong{font-size:17px;font-weight:800;color:#13224f;margin:10px 0 8px;line-height:1.35}
 .wspillow__rk p{font-size:15px;line-height:1.6;color:#3d3d3d;margin:8px 0 16px;flex:1}
 .wspillow__zv{display:block;width:84px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f5a623' d='M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z'/%3E%3C/svg%3E") repeat-x;background-size:16.8px 16px}
-.wspillow__mi{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;color:#13224f}.wspillow__mi small{display:block;font-weight:600;font-size:12.5px;color:#3d6fd1}
+.wspillow__mi{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;color:#13224f}.wspillow__mi small{display:block;font-weight:600;font-size:13px;color:#3d6fd1}
 .wspillow__av{flex:0 0 38px;height:38px;border-radius:50%;background:#1f3c88;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
 .wspillow__zone{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
 .wspillow__zone li{display:flex;gap:14px;align-items:center;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 6px 18px rgba(19,34,79,.06);font-size:15.5px;line-height:1.5;color:#333}

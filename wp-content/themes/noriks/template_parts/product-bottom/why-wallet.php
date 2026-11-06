@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wswallet__rk{background:#fff;border-radius:18px;padding:26px 24px;box-shadow:0 10px 26px rgba(20,20,20,.07);display:flex;flex-direction:column}
 .wswallet__rk p{font-size:15.5px;line-height:1.6;color:#333;margin:12px 0 18px;flex:1}
 .wswallet__zv{display:block;width:84px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c9a35b' d='M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z'/%3E%3C/svg%3E") repeat-x;background-size:16.8px 16px}
-.wswallet__mi{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;color:#141414}.wswallet__mi small{display:block;font-weight:600;font-size:12.5px;color:#9a7b4f}
+.wswallet__mi{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;color:#141414}.wswallet__mi small{display:block;font-weight:600;font-size:13px;color:#9a7b4f}
 .wswallet__av{flex:0 0 38px;height:38px;border-radius:50%;background:#141414;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
 .wswallet__bento{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;margin-top:26px;height:620px}
 .wswallet__gi{border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(20,20,20,.08)}.wswallet__gi:first-child{grid-row:1/3}
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wswallet__dva,.wswallet__g2,.wswallet__g3{grid-template-columns:1fr;gap:24px}
 .wswallet__dva--rev>div:first-child{order:0}
 .wswallet__red{margin-top:36px}
-.wswallet__st{grid-template-columns:repeat(3,1fr);gap:8px}.wswallet__st>div{padding:14px 6px}.wswallet__st strong{font-size:22px}.wswallet__st span{font-size:12px}
+.wswallet__st{grid-template-columns:repeat(3,1fr);gap:8px}.wswallet__st>div{padding:14px 6px}.wswallet__st strong{font-size:22px}.wswallet__st span{font-size:13px}
 .wswallet__bento{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}
 .wswallet__gi{aspect-ratio:4/5}.wswallet__gi:first-child{grid-row:auto;grid-column:1/3;aspect-ratio:4/4}
 }

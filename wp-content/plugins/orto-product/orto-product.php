@@ -1023,7 +1023,7 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-pillow' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 jastuk s jastučnicom', '2 jastuka – za vas i partnera', '3 jastuka – najbolja vrijednost' );
     } elseif ( has_term( array( 'orto-pawfence' ), 'product_cat', $product_id ) ) {
-        $gck_offer_subs = array( 'ogrlica + daljinski upravljač', '2 kompleta – za dva psa', '3 kompleta – najbolja vrijednost' );
+        $gck_offer_subs = array( '1 ogrlica + 1 daljinski upravljač', '2 ogrlice + 1 daljinski – za dva psa', '3 ogrlice + 1 daljinski – za tri psa' );
     } elseif ( has_term( array( 'orto-boxbag' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 vreća · izdanje po izboru', '2 vreće – kombinirajte izdanja', '3 vreće – za cijelu obitelj' );
     } elseif ( has_term( array( 'orto-backrelax' ), 'product_cat', $product_id ) ) {
