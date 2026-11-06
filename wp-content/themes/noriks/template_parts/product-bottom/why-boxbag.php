@@ -49,7 +49,7 @@ p.wsboxbag__c{max-width:none}
 .wsboxbag__vt span{font-size:15px;line-height:1.5;color:#555}
 .wsboxbag__nav{position:absolute;top:calc((100% - 18px - 74px)/2);transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#0a0a0a;box-shadow:0 6px 18px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;padding:0}
 .wsboxbag__nav--l{left:-10px}.wsboxbag__nav--r{right:-10px}
-.wsboxbag__media--vid{aspect-ratio:1/1;background:#0a0a0a}
+.wsboxbag__media.wsboxbag__media--vid{aspect-ratio:1/1;background:#0a0a0a}
 .wsboxbag__media video{width:100%;height:100%;object-fit:cover;display:block}
 .wsboxbag__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
 .wsboxbag__stats>div{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:20px 22px;box-shadow:0 8px 24px rgba(10,10,10,.06)}
