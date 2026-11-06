@@ -523,13 +523,13 @@ if ( ! function_exists( 'noriks_slim_sizes' ) ) {
     /** NORIKS Slim: velicina, EU velicina, opseg struka — ena tabela za akordeon in modal. */
     function noriks_slim_sizes() {
         return array(
-            array( 'XS',  '32 – 34', '64 – 69 cm' ),
-            array( 'S',   '36',      '71 – 74 cm' ),
-            array( 'M',   '38 – 40', '76 – 81 cm' ),
-            array( 'L',   '42 – 44', '86 – 94 cm' ),
-            array( 'XL',  '46 – 48', '99 – 104 cm' ),
-            array( '2XL', '50 – 52', '107 – 112 cm' ),
-            array( '3XL', '54 – 56', '114 – 118 cm' ),
+            array( 'XS',  '32 – 34',  '58 – 66 cm' ),
+            array( 'S',   '34 – 36',  '67 – 75 cm' ),
+            array( 'M',   '38 – 40',  '76 – 83 cm' ),
+            array( 'L',   '42 – 44',  '84 – 93 cm' ),
+            array( 'XL',  '46 – 48',  '94 – 103 cm' ),
+            array( '2XL', '50 – 52',  '104 – 113 cm' ),
+            array( '3XL', '54 – 56',  '114 – 126 cm' ),
         );
     }
 }
@@ -1050,13 +1050,13 @@ if ( ! function_exists( 'noriks_mamafit_sizes' ) ) {
         // Isti izdelek kot NORIKS Slim, zato ista tabela velicin (XS-3XL),
         // le stolpca sta v vrstnem redu te tabele: velicina, obseg struka, EU.
         return array(
-            array( 'XS',  '64 – 69 cm',   '32 – 34' ),
-            array( 'S',   '71 – 74 cm',   '36' ),
-            array( 'M',   '76 – 81 cm',   '38 – 40' ),
-            array( 'L',   '86 – 94 cm',   '42 – 44' ),
-            array( 'XL',  '99 – 104 cm',  '46 – 48' ),
-            array( '2XL', '107 – 112 cm', '50 – 52' ),
-            array( '3XL', '114 – 118 cm', '54 – 56' ),
+            array( 'XS',  '58 – 66 cm', '32 – 34' ),
+            array( 'S',   '67 – 75 cm', '34 – 36' ),
+            array( 'M',   '76 – 83 cm', '38 – 40' ),
+            array( 'L',   '84 – 93 cm', '42 – 44' ),
+            array( 'XL',  '94 – 103 cm', '46 – 48' ),
+            array( '2XL', '104 – 113 cm', '50 – 52' ),
+            array( '3XL', '114 – 126 cm', '54 – 56' ),
         );
     }
 }
@@ -2015,12 +2015,12 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
         if ( ! function_exists( 'noriks_is_type' ) ) { return array(); }
         $o = array(
             'sculptleg'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
-            'mamafit'      => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 50', '3XL' => '50 do 52' ),
+            'mamafit'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56' ),
             // ShapeBody: original nima mer (P-2XG) - standardne EU zenske konfekcijske stevilke.
             'gordura'      => array( 'S' => '36 do 38', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '42 do 44', '2XL' => '44 do 46', '3XL' => '46 do 48' ),
             'insoles'      => array( 'XS' => '35 do 38', 'S' => '38,5 do 41,5', 'M' => '42 do 44', 'L' => '44,5 do 46,5', 'XL' => '47 do 48' ),
             'smartjacket'  => array( 'XS' => '34 do 36', 'S' => '36 do 38', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '46 do 48', '3XL' => '48 do 50', '4XL' => '50 do 52' ),
-            'slim'         => array( 'XS' => '32 do 34', 'S' => '36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
+            'slim'         => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
