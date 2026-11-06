@@ -92,7 +92,7 @@ $br_tablica = array(
 .wsbackrelax__km{position:relative}.wsbackrelax__km video{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .wsbackrelax__st{position:absolute;left:14px;top:14px;min-width:40px;height:40px;border-radius:20px;background:#1e6fb8;color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;padding:0 8px;box-shadow:0 4px 12px rgba(0,0,0,.2)}
 .wsbackrelax__kt{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column}
-.wsbackrelax__kor{font-size:12.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#17589a;margin:0 0 4px}
+.wsbackrelax__kor{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#17589a;margin:0 0 4px}
 .wsbackrelax__nm{display:block;font-size:17px;font-weight:800;line-height:1.35;margin:0 0 8px}
 .wsbackrelax__kt p{margin:0;font-size:15px;line-height:1.55;color:#444}
 .wsbackrelax__ki{width:52px;height:52px;border-radius:50%;background:#d4e4f5;color:#17589a;display:flex;align-items:center;justify-content:center;margin:0 0 12px;box-shadow:inset 0 0 0 1.5px #1e6fb8}
@@ -110,7 +110,7 @@ $br_tablica = array(
 .wsbackrelax__s{padding:48px 0}
 .wsbackrelax__dva{grid-template-columns:1fr;gap:26px}.wsbackrelax__dva--rev>div:first-child{order:0}
 .wsbackrelax__g3{grid-template-columns:1fr}
-.wsbackrelax__stat{grid-template-columns:1fr 1fr 1fr;gap:10px}.wsbackrelax__stat>div{padding:14px 8px}.wsbackrelax__stat strong{font-size:22px}.wsbackrelax__stat span{font-size:12.5px}
+.wsbackrelax__stat{grid-template-columns:1fr 1fr 1fr;gap:10px}.wsbackrelax__stat>div{padding:14px 8px}.wsbackrelax__stat strong{font-size:22px}.wsbackrelax__stat span{font-size:13px}
 }
 @media (max-width:767px){.wsbackrelax__v{padding:0 16px}}
 @media (max-width:560px){.wsbackrelax__h2{font-size:25px}.wsbackrelax__tab th,.wsbackrelax__tab td{padding:12px 10px;font-size:14px}}
