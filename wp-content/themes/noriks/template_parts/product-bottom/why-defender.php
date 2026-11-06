@@ -111,6 +111,7 @@ foreach ( array(
 .wsdefender__p{font-size:16px;line-height:1.65;color:#333;margin:0 0 14px}
 .wsdefender__zak{font-size:16.5px;font-weight:800;line-height:1.5;margin:20px 0 0;padding-left:14px;border-left:3px solid #f26522}
 .wsdefender__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.wsdefender__dva>div{min-width:0}
 .wsdefender__dva--rev>div:first-child{order:2}
 .wsdefender__dva--tab{grid-template-columns:5fr 7fr}
 .wsdefender__media{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(140,60,10,.16);aspect-ratio:4/5;background:#fff}
@@ -169,7 +170,7 @@ foreach ( array(
 @media (max-width:1024px){.wsdefender__g4{grid-template-columns:repeat(2,1fr)}.wsdefender__trak{grid-template-columns:repeat(2,1fr);row-gap:16px}.wsdefender__tc:nth-child(3){border-left:0}}
 @media (max-width:860px){
 .wsdefender__s{padding:48px 0}.wsdefender__s--traka{padding:26px 0}
-.wsdefender__dva,.wsdefender__dva--tab{grid-template-columns:1fr;gap:26px}.wsdefender__dva--rev>div:first-child{order:0}
+.wsdefender__dva,.wsdefender__dva--tab{grid-template-columns:minmax(0,1fr);gap:26px}.wsdefender__dva--rev>div:first-child{order:0}
 .wsdefender__g3{grid-template-columns:1fr}
 .wsdefender__kar{grid-auto-columns:82%}.wsdefender__pus--l{left:4px}.wsdefender__pus--d{right:4px}
 }
