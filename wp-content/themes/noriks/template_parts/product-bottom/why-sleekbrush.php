@@ -100,7 +100,7 @@ $sb_postotci = array(
 .wssleek__media{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(90,47,140,.16);aspect-ratio:4/5;background:#fff}
 .wssleek__media img,.wssleek__media video{width:100%;height:100%;object-fit:cover;display:block}
 .wssleek__media--kv{aspect-ratio:1/1}
-.wssleek__znacka{position:absolute;left:16px;top:16px;background:#6b3fa0;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.wssleek__znacka{position:absolute;left:16px;top:16px;background:#6b3fa0;color:#fff;font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
 .wssleek__dvaik{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 0}
 .wssleek__dvaik>div{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:12px 14px;box-shadow:0 6px 20px rgba(90,47,140,.08)}
 .wssleek__s--bg .wssleek__dvaik>div{background:#fff}
@@ -130,7 +130,7 @@ $sb_postotci = array(
 .wssleek__ki{width:56px;height:56px;border-radius:50%;background:#e4d8f3;color:#5a2f8c;display:flex;align-items:center;justify-content:center;margin:0 0 12px;box-shadow:inset 0 0 0 1.5px #6b3fa0}
 .wssleek__broj{display:block;font-size:48px;font-weight:900;color:#5a2f8c;line-height:1;margin:0 0 10px}
 .wssleek__pk p{margin:0 0 12px;font-size:16px;line-height:1.5;color:#333;font-weight:600;flex:1}
-.wssleek__fn{font-size:12.5px;color:#888}
+.wssleek__fn{font-size:13px;color:#888}
 .wssleek__ba{position:relative;margin:26px 0 0;border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(90,47,140,.16);aspect-ratio:16/10;user-select:none}
 .wssleek__ba>img,.wssleek__ba-pr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .wssleek__ba-pr{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--sb-poz)) 0 0)}
