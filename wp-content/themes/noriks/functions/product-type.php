@@ -107,7 +107,7 @@ function noriks_product_type_map() : array {
     'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         // Bunion corrector (korektor čukljeva / halux valgus).
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
-        // FisioRest (novi proizvod).
+        // NeckRelax (novi proizvod).
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'glasspro'                 => array( 'orto-glasspro' ),
         // NORIKS TacPro taktične slušalke

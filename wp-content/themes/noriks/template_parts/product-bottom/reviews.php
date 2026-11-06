@@ -1001,7 +1001,7 @@
         
            <?php if ( noriks_is_type( 'fisiorest' ) ): ?>
 
-           Tisuće ljudi već koristi NORIKS FisioRest za manje bolova i napetosti u vratu – trakcija, vibracija i toplina u jednom uređaju.
+           Tisuće ljudi već koristi NORIKS NeckRelax za manje bolova i napetosti u vratu – trakcija, vibracija i toplina u jednom uređaju.
 
            <?php elseif ( noriks_is_type( 'bunion' ) ): ?>
 
@@ -2318,7 +2318,7 @@
                      : ( $is_norikshers_page ? 'NORIKS HERS'
                      : ( $is_leakboxers_page ? 'NORIKS upijajuće bokserice'
                      : ( $is_kompmajice_page ? 'NORIKS FIT kompresijska majica'
-                     : ( $is_fisiorest_page ? 'NORIKS FisioRest'
+                     : ( $is_fisiorest_page ? 'NORIKS NeckRelax'
                      : ( $is_bunion_page ? 'NORIKS korektor čukljeva'
                      : ( $is_ortopas_page ? 'Ortopedski pojas za leđa'
                      : ( $is_nogavice_page ? 'Kompresijske čarape sa zatvaračem' : 'Jedna Siva Majica' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )  ));
@@ -4130,35 +4130,35 @@ $insoles_faq = array(
   )
 );
 
-// FisioRest — product FAQ (prijevod engleske reference, NORIKS).
+// NeckRelax — product FAQ (prijevod engleske reference, NORIKS).
 $fisiorest_faq = array(
   array(
-    'questioon' => 'Kako NORIKS FisioRest djeluje?',
-    'answer'    => 'FisioRest kombinira trakciju, toplinu i vibracijsku masažu s ergonomskim dizajnom od memorijske pjene. Ova tehnologija isteže vrat pod točno pravim kutom i rasterećuje vratnu kralježnicu. Zatim umirujuća topla masaža potiče dotok krvi bogate kisikom i hranjivim tvarima u mišiće te tako pomaže regeneraciji tkiva.'
+    'questioon' => 'Kako NORIKS NeckRelax djeluje?',
+    'answer'    => 'NeckRelax kombinira trakciju, toplinu i vibracijsku masažu s ergonomskim dizajnom od memorijske pjene. Ova tehnologija isteže vrat pod točno pravim kutom i rasterećuje vratnu kralježnicu. Zatim umirujuća topla masaža potiče dotok krvi bogate kisikom i hranjivim tvarima u mišiće te tako pomaže regeneraciji tkiva.'
   ),
   array(
-    'questioon' => 'Po čemu je FisioRest bolji od drugih uređaja?',
-    'answer'    => 'NORIKS FisioRest poseban je jer objedinjuje <strong>tri terapije u jednoj</strong> — toplinu, masažu i nježnu trakciju — koje opuštaju mišiće i ponovno poravnavaju vrat za dugotrajno olakšanje. Uz to je <strong>bežičan, siguran za spavanje i omotan rashlađujućom svilom</strong> za udobnost kakvu drugdje nećete pronaći.'
+    'questioon' => 'Po čemu je NeckRelax bolji od drugih uređaja?',
+    'answer'    => 'NORIKS NeckRelax poseban je jer objedinjuje <strong>tri terapije u jednoj</strong> — toplinu, masažu i nježnu trakciju — koje opuštaju mišiće i ponovno poravnavaju vrat za dugotrajno olakšanje. Uz to je <strong>bežičan, siguran za spavanje i omotan rashlađujućom svilom</strong> za udobnost kakvu drugdje nećete pronaći.'
   ),
   array(
-    'questioon' => 'Kako se koristi FisioRest?',
+    'questioon' => 'Kako se koristi NeckRelax?',
     'answer'    => '1. Napunite ga priloženim USB-C kabelom i punjačem otprilike 4 do 6 sati. 2. Držite tipku za masažu ili toplinu 5 sekundi dok se lampica ne upali. 3. Ponovnim pritiskom tipki mijenjate brzinu masaže i postavke topline. 4. Uživajte u opuštajućoj masaži!'
   ),
   array(
-    'questioon' => 'Koliko dugo bih trebao koristiti FisioRest?',
+    'questioon' => 'Koliko dugo bih trebao koristiti NeckRelax?',
     'answer'    => 'Preporučujemo da započnete s 15 minuta kako bi se vrat privikao. S vremenom možete napredovati do pune sesije. Za orijentaciju: ciklus nježne topline, masaže i trakcije traje 30 minuta, što je obično idealno vrijeme da se vrat opusti i vrati svoju prirodnu krivinu.'
   ),
   array(
-    'questioon' => 'Je li FisioRest bežičan?',
-    'answer'    => 'Da! NORIKS FisioRest je potpuno bežičan i punjiv za svakodnevnu uporabu.'
+    'questioon' => 'Je li NeckRelax bežičan?',
+    'answer'    => 'Da! NORIKS NeckRelax je potpuno bežičan i punjiv za svakodnevnu uporabu.'
   ),
   array(
-    'questioon' => 'Kako se čisti FisioRest?',
-    'answer'    => 'Tkanina je otporna na masnoće i prašinu, no preporučujemo da FisioRest nakon uporabe obrišete dezinfekcijskom maramicom jer navlaka jastuka nije periva.'
+    'questioon' => 'Kako se čisti NeckRelax?',
+    'answer'    => 'Tkanina je otporna na masnoće i prašinu, no preporučujemo da NeckRelax nakon uporabe obrišete dezinfekcijskom maramicom jer navlaka jastuka nije periva.'
   ),
   array(
     'questioon' => 'Je li siguran za sve?',
-    'answer'    => 'NORIKS FisioRest osmišljen je tako da odgovara svima, bez obzira na dob ili spol. No svaka je situacija drukčija. Za detaljne smjernice prilagođene vašim potrebama preporučujemo savjetovanje s liječnikom.'
+    'answer'    => 'NORIKS NeckRelax osmišljen je tako da odgovara svima, bez obzira na dob ili spol. No svaka je situacija drukčija. Za detaljne smjernice prilagođene vašim potrebama preporučujemo savjetovanje s liječnikom.'
   ),
   array(
     'questioon' => 'Mogu li ga vratiti ako ne vidim rezultate?',

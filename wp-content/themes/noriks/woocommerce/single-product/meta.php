@@ -3410,7 +3410,7 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
         'kidsnest' => array( 'noriks-kidsnest.pdf', 'NORIKS KidsNest — dječji ortopedski jastuk' ),
         'kneefix' => array( 'noriks-kneefix.pdf', 'NORIKS KneeFix — ortopedska steznica za koljeno' ),
         'ortopedski-jastuk' => array( 'noriks-ergosit.pdf', 'NORIKS ErgoSit — ortopedski jastuk za sjedenje' ),
-        'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS FisioRest — uređaj za vrat' ),
+        'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS NeckRelax — uređaj za vrat' ),
         'bunion' => array( 'noriks-bunion-fix.pdf', 'NORIKS Bunion Fix — korektor čukljeva' ),
         'ortopas' => array( 'noriks-ortopas.pdf', 'NORIKS ortopedski pojas za leđa' ),
     );

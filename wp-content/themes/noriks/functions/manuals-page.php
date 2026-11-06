@@ -48,7 +48,7 @@ function noriks_manuals_list() {
         array(
             'file'  => 'noriks-fisiorest.pdf',
             'sku'   => 'NORIKS-FISIOREST',
-            'title' => 'NORIKS FisioRest — uređaj za vrat',
+            'title' => 'NORIKS NeckRelax — uređaj za vrat',
             'sub'   => 'Trakcija, toplina i vibracijska masaža u sesiji od 15 do 30 minuta.',
         ),
         array(

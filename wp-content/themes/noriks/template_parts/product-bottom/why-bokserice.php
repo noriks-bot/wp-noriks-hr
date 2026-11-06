@@ -162,7 +162,7 @@ endif;
  *
  * Nove sekcije (2026-10-27) — zamenjajo stare why bloke
  * ("Fleksibilan rez", "Manje trošenja", "Dovoljno prostora za sve").
- * Razredi fis-* so isti kot na FisioRest/majica strani, nk-* so novi.
+ * Razredi fis-* so isti kot na NeckRelax/majica strani, nk-* so novi.
  * Mediji: img/boksarice*, img/boksarice-videos, img/boksarice-icons, img/boksarice-barve.
  * Za port na drug trg se spremeni SAMO besedilo — struktura, razredi in poti ostanejo.
  *

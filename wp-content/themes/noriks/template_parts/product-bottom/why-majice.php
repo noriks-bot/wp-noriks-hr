@@ -3,7 +3,7 @@
  * product-bottom: MAJICE (majice / orto-majice / black-friday / majica-darila)
  *
  * Nove sekcije (2026-10-27) — zamenjajo stari why blok + primerjalno tabelo.
- * Razredi fis-* so isti kot na FisioRest strani, nk-* so novi (NORIKS majica).
+ * Razredi fis-* so isti kot na NeckRelax strani, nk-* so novi (NORIKS majica).
  * Mediji: img/majica*, img/majica-videos, img/majica-icons, img/majica-barve.
  * Za port na drug trg se spremeni SAMO besedilo — struktura, razredi in poti ostanejo.
  */

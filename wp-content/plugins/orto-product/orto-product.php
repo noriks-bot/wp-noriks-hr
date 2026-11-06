@@ -1271,10 +1271,10 @@ function gck_render_bundle_selector() {
       .summary .gck-stock-pill, .summary .gck-countdown-box, .summary .gck-urgency { margin: 8px 0 !important; }
       #bundle-selector { margin-top: 8px !important; }
 
-      /* Kartice ponud: tanki robovi (kot na FisioRest). */
+      /* Kartice ponud: tanki robovi (kot na NeckRelax). */
       #bundle-selector .bundle-option { border-width: 1px !important; }
       #bundle-selector .bundle-option.active { border-width: 2px !important; }
-      /* Znacka popusta je zelena (kot na FisioRest), cena na kos ostane v barvi izdelka. */
+      /* Znacka popusta je zelena (kot na NeckRelax), cena na kos ostane v barvi izdelka. */
       #bundle-selector .gck-discount-badge { background: #2f7d4f !important; color: #fff !important; }
 
       .single_add_to_cart_button {
