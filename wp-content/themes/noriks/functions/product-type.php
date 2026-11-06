@@ -825,22 +825,15 @@ if ( ! function_exists( 'noriks_tank_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_perfclogs_sizes' ) ) {
-    /** NORIKS CloudStep: EU brojevi 39-46 iz tablice originala (US/UK stolpca izpuscena), duzina stopala v cm. */
+    /** NORIKS CloudStep: EU brojevi 39-46 iz tablice originala (US/UK izpuscena), zdruzeni v crkovne velikosti (oblika 'crka - EU od do'), duzina stopala v cm. */
     function noriks_perfclogs_sizes() {
         return array(
-            array( '39', '24,0 cm' ),
-            array( '39,5', '24,5 cm' ),
-            array( '40', '25,0 cm' ),
-            array( '40,5', '25,5 cm' ),
-            array( '41', '26,0 cm' ),
-            array( '42', '26,5 cm' ),
-            array( '42,5', '27,0 cm' ),
-            array( '43', '27,5 cm' ),
-            array( '44', '28,0 cm' ),
-            array( '44,5', '28,5 cm' ),
-            array( '45', '29,0 cm' ),
-            array( '45,5', '29,5 cm' ),
-            array( '46', '30,0 cm' ),
+            array( 'XS - 39 do 39,5', '24,0 do 24,5 cm' ),
+            array( 'S - 40 do 40,5', '25,0 do 25,5 cm' ),
+            array( 'M - 41 do 42', '26,0 do 26,5 cm' ),
+            array( 'L - 42,5 do 43', '27,0 do 27,5 cm' ),
+            array( 'XL - 44 do 44,5', '28,0 do 28,5 cm' ),
+            array( 'XXL - 45 do 46', '29,0 do 30,0 cm' ),
         );
     }
 }
@@ -2034,7 +2027,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'leggings'     => array( 'XS/S' => '40 do 63 kg', 'M/L' => '59 do 84 kg', 'L/XL' => '79 do 100 kg', '2XL/3XL' => '98 do 136 kg' ),
             'sheer'        => array( 'XS-S' => '30 do 34', 'S-M' => '36 do 38', 'L-XL' => '40 do 42', 'XXL' => '44 do 46' ),
             'tank'         => array( 'S' => 'opseg prsa 84 do 89 cm', 'M' => 'opseg prsa 89 do 97 cm', 'L' => 'opseg prsa 97 do 104 cm', 'XL' => 'opseg prsa 104 do 112 cm', '2XL' => 'opseg prsa 112 do 119 cm', '3XL' => 'opseg prsa 119 do 127 cm', '4XL' => 'opseg prsa 127 do 135 cm' ),
-            'perfclogs'    => array( '39' => 'stopalo do 24,0 cm', '39,5' => 'stopalo do 24,5 cm', '40' => 'stopalo do 25,0 cm', '40,5' => 'stopalo do 25,5 cm', '41' => 'stopalo do 26,0 cm', '42' => 'stopalo do 26,5 cm', '42,5' => 'stopalo do 27,0 cm', '43' => 'stopalo do 27,5 cm', '44' => 'stopalo do 28,0 cm', '44,5' => 'stopalo do 28,5 cm', '45' => 'stopalo do 29,0 cm', '45,5' => 'stopalo do 29,5 cm', '46' => 'stopalo do 30,0 cm' ),
+            'perfclogs'    => array( 'XS' => '39 do 39,5', 'S' => '40 do 40,5', 'M' => '41 do 42', 'L' => '42,5 do 43', 'XL' => '44 do 44,5', 'XXL' => '45 do 46' ),
             'boots'        => array( '37' => 'stopalo do 22,8 cm', '38' => 'stopalo do 23,4 cm', '39' => 'stopalo do 24,0 cm', '40' => 'stopalo do 24,6 cm', '41' => 'stopalo do 25,2 cm', '42' => 'stopalo do 25,8 cm', '43' => 'stopalo do 26,4 cm', '44' => 'stopalo do 27,0 cm', '45' => 'stopalo do 27,6 cm', '46' => 'stopalo do 28,2 cm', '47' => 'stopalo do 28,8 cm', '48' => 'stopalo do 29,4 cm' ),
             'nyslipper'    => array( 'S' => '36 do 37', 'M' => '38 do 39', 'L' => '40 do 41', 'XL' => '42 do 43' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
@@ -2213,7 +2206,7 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
         }
         if ( noriks_is_type( 'perfclogs', $product_id ) ) {
             return array( 'uvod' => 'CloudStep klompe odgovaraju standardnoj veličini – odaberite svoj uobičajeni <strong>EU broj cipele</strong>. Niste sigurni? Izmjerite <strong>dužinu stopala</strong> i pronađite je u tablici.',
-                'glava' => array( 'Veličina (EU)', 'Dužina stopala' ), 'vrstice' => noriks_perfclogs_sizes(),
+                'glava' => array( 'Veličina (EU broj)', 'Dužina stopala' ), 'vrstice' => noriks_perfclogs_sizes(),
                 'opomba' => 'Stopalo mjerite stojeći, od pete do najduljeg prsta. Između dva broja? Uzmite veći.' );
         }
         if ( noriks_is_type( 'boots', $product_id ) ) {
