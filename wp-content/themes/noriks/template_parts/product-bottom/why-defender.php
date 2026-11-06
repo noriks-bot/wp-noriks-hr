@@ -141,7 +141,7 @@ foreach ( array(
 .wsdefender__kt p{margin:0 0 14px;font-size:15.5px;line-height:1.55;color:#333;flex:1}
 .wsdefender__oc{display:flex;align-items:center;gap:6px;margin:0 0 8px;font-size:14px}.wsdefender__oc b{color:#c94e12}
 .wsdefender__zv{display:inline-flex;gap:2px}
-.wsdefender__kor{font-size:12.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#c94e12;margin:0 0 4px}
+.wsdefender__kor{font-size:13.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#c94e12;margin:0 0 4px}
 .wsdefender__ok{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:#1c1c1c}
 .wsdefender__ok i{width:24px;height:24px;border-radius:50%;background:#fde0cc;color:#c94e12;display:inline-flex;align-items:center;justify-content:center}
 .wsdefender__br{font-size:36px;font-weight:900;color:#f26522;line-height:1;margin:0 0 6px}
@@ -159,7 +159,7 @@ foreach ( array(
 .wsdefender__tab td:first-child{text-align:left;font-weight:800;padding-left:16px}
 .wsdefender__tab td.wsdefender__nas{background:#fff6f0;font-weight:700}
 .wsdefender__tab tbody tr:last-child td{border-bottom:0}
-.wsdefender__da,.wsdefender__ne{display:inline-flex;width:20px;height:20px;border-radius:50%;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-right:6px;vertical-align:-4px}
+.wsdefender__da,.wsdefender__ne{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center;font-size:13.5px;font-weight:800;margin-right:6px;vertical-align:-4px}
 .wsdefender__da{background:#f26522;color:#fff}.wsdefender__ne{background:#eee;color:#999}
 .wsdefender__karw{position:relative}
 .wsdefender__kar{grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
