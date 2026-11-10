@@ -202,7 +202,7 @@ $nwc_testimonials = array(
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">ISPLATIVA KUPNJA</p>
       <h2 class="fis-h2">3 komada: jedan za vas, dva za poklon</h2>
-      <p>Jedan WineCooler stoji <span data-price="1">24,99 €</span>. U paketu od 3 kom plaćate <span data-price="3">54,99 €</span>, odnosno samo <span data-price="3-unit">18,33 €</span> po komadu. Uz 30 dana za povrat novca.</p>
+      <p>Jedan WineCooler stoji <span data-price="1">29,99 €</span>. U paketu od 3 kom plaćate <span data-price="3">54,99 €</span>, odnosno samo <span data-price="3-unit">18,33 €</span> po komadu. Uz 30 dana za povrat novca.</p>
     </div>
   </div>
 </section>
