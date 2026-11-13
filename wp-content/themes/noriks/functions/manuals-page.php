@@ -81,6 +81,90 @@ function noriks_manuals_list() {
             'title' => 'NORIKS udlaga protiv hrkanja',
             'sub'   => 'Oblikuje se po vašem ugrizu; pet zamjenjivih traka za postupno podešavanje.',
         ),
+        array(
+            'file'  => 'noriks-slim.pdf',
+            'sku'   => 'NORIKS-SLIM',
+            'title' => 'NORIKS Slim — oblikujuće gaćice visokog struka',
+            'sub'   => 'Ukriženi pojas 360°, visok struk i bešavno pletivo za svakodnevno nošenje.',
+        ),
+        array(
+            'file'  => 'noriks-redrelief.pdf',
+            'sku'   => 'NORIKS-RED',
+            'title' => 'NORIKS RedRelief — terapija crvenim svjetlom za zapešće',
+            'sub'   => 'Dvostruka valna duljina 660 nm i 850 nm, 48 dvostrukih LED dioda, seansa od 15 minuta.',
+        ),
+        array(
+            'file'  => 'noriks-pal.pdf',
+            'sku'   => 'NORIKS-PAL',
+            'title' => 'NORIKS Pal — štap za hodanje s drugom ručkom',
+            'sub'   => 'Druga ručka za ustajanje, četiri nožice, svjetiljka i alarm. Sklopiv i podesiv po visini.',
+        ),
+        array(
+            'file'  => 'noriks-polar-cloth.pdf',
+            'sku'   => 'NORIKS-CLOATH',
+            'title' => 'Polar NORIKS Cloth XXL — krpa za čišćenje samo vodom',
+            'sub'   => 'Format 60 × 40 cm, dvostrana izvedba, upija do 600 ml vode. Bez sprejeva i bez kemikalija.',
+        ),
+        array(
+            'file'  => 'noriks-slabproof.pdf',
+            'sku'   => 'NORIKS-SLABPROOF',
+            'title' => 'NORIKS SlabProof — radne čarape s jastučićem',
+            'sub'   => 'Niski kroj ispod gležnja, zonsko jastučenje ispod pete i prednjeg dijela stopala.',
+        ),
+        array(
+            'file'  => 'noriks-controlpro.pdf',
+            'sku'   => 'NORIKS-CONTROLPRO',
+            'title' => 'NORIKS ControlPro — trenažer mišića zdjeličnog dna',
+            'sub'   => 'Vježba s otporom između koljena: tri serije od deset stiskova dnevno, bez umetanja i bez aplikacije.',
+        ),
+        array(
+            'file'  => 'noriks-tradesman.pdf',
+            'sku'   => 'NORIKS-SLABPROOF-2',
+            'title' => 'NORIKS Tradesman — radne čarape s jastučićem i potporom svoda',
+            'sub'   => 'Bambus, zonsko jastučenje, traka ispod svoda i dvostruka manžeta za duge smjene u radnim čizmama.',
+        ),
+        array(
+            'file'  => 'noriks-bowl.pdf',
+            'sku'   => 'NORIKS-BOWL',
+            'title' => 'NORIKS Bowl — ortopedska zdjelica za pse s nagibom 15°',
+            'sub'   => 'Povišena na 11 cm i nagnuta 15° — pas jede u prirodnijem položaju, bez savijanja vrata do poda.',
+        ),
+        array(
+            'file'  => 'noriks-cloud.pdf',
+            'sku'   => 'NORIKS-CLOUD',
+            'title' => 'NORIKS Cloud — ortopedski jastuk među koljena',
+            'sub'   => 'Za spavanje na boku: drži koljena i bokove u liniji, s podesivom trakom koja ga drži na mjestu cijelu noć.',
+        ),
+        array(
+            'file'  => 'noriks-kneeheat.pdf',
+            'sku'   => 'NORIKS-KNEEHEAT',
+            'title' => 'NORIKS KneeHeat — grijanje, kompresija i masaža koljena',
+            'sub'   => 'Tri terapije u jednoj seansi: toplina do 42 °C, zračna kompresija i vibracija 60 Hz. Seansa traje 12 minuta.',
+        ),
+        array(
+            'file'  => 'noriks-mamafit.pdf',
+            'sku'   => 'NORIKS-SLIM-2',
+            'title' => 'NORIKS MamaFit — poslijeporođajne kompresijske gaćice 360°',
+            'sub'   => 'Visok struk i ukrižena kompresija 360° — potpora trbuha sprijeda, sa strane i straga.',
+        ),
+        array(
+            'file'  => 'noriks-snug.pdf',
+            'sku'   => 'NORIKS-SNUG',
+            'title' => 'NORIKS Snug — jastuk za cijelo tijelo u obliku slova S',
+            'sub'   => 'Podupire ramena, bokove i koljena odjednom. Dimenzije 105 × 30 cm, rashladna navlaka.',
+        ),
+        array(
+            'file'  => 'noriks-hyd.pdf',
+            'sku'   => 'NORIKS-HYD',
+            'title' => 'NORIKS HYD — boca za vodikovu vodu s PEM elektrolizom',
+            'sub'   => 'Pretvara običnu vodu u vodikovu. Ciklus od 3 ili 10 minuta, trajni filtar, staklo i nehrđajući čelik.',
+        ),
+        array(
+            'file'  => 'noriks-winecooler.pdf',
+            'sku'   => 'NORIKS-WINECOOLER',
+            'title' => 'NORIKS WineCooler — hladnjak za vino s nalijevačem',
+            'sub'   => 'Štapić od nehrđajućeg čelika koji hladi bocu iznutra i nalijeva bez kapanja.',
+        ),
     );
 }
 

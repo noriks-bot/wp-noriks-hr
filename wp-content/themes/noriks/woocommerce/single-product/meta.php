@@ -3413,6 +3413,20 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
         'fisiorest' => array( 'noriks-fisiorest.pdf', 'NORIKS NeckRelax — uređaj za vrat' ),
         'bunion' => array( 'noriks-bunion-fix.pdf', 'NORIKS Bunion Fix — korektor čukljeva' ),
         'ortopas' => array( 'noriks-ortopas.pdf', 'NORIKS ortopedski pojas za leđa' ),
+        'slim' => array( 'noriks-slim.pdf', 'NORIKS Slim — oblikujuće gaćice visokog struka' ),
+        'red' => array( 'noriks-redrelief.pdf', 'NORIKS RedRelief — terapija crvenim svjetlom za zapešće' ),
+        'pal' => array( 'noriks-pal.pdf', 'NORIKS Pal — štap za hodanje s drugom ručkom' ),
+        'cloath' => array( 'noriks-polar-cloth.pdf', 'Polar NORIKS Cloth XXL — krpa za čišćenje samo vodom' ),
+        'slabproof' => array( 'noriks-slabproof.pdf', 'NORIKS SlabProof — radne čarape s jastučićem' ),
+        'controlpro' => array( 'noriks-controlpro.pdf', 'NORIKS ControlPro — trenažer mišića zdjeličnog dna' ),
+        'tradesman' => array( 'noriks-tradesman.pdf', 'NORIKS Tradesman — radne čarape s jastučićem i potporom svoda' ),
+        'bowl' => array( 'noriks-bowl.pdf', 'NORIKS Bowl — ortopedska zdjelica za pse s nagibom 15°' ),
+        'cloud' => array( 'noriks-cloud.pdf', 'NORIKS Cloud — ortopedski jastuk među koljena' ),
+        'kneeheat' => array( 'noriks-kneeheat.pdf', 'NORIKS KneeHeat — grijanje, kompresija i masaža koljena' ),
+        'mamafit' => array( 'noriks-mamafit.pdf', 'NORIKS MamaFit — poslijeporođajne kompresijske gaćice 360°' ),
+        'snug' => array( 'noriks-snug.pdf', 'NORIKS Snug — jastuk za cijelo tijelo u obliku slova S' ),
+        'hyd' => array( 'noriks-hyd.pdf', 'NORIKS HYD — boca za vodikovu vodu s PEM elektrolizom' ),
+        'winecooler' => array( 'noriks-winecooler.pdf', 'NORIKS WineCooler — hladnjak za vino s nalijevačem' ),
     );
     $noriks_manual = null;
     if ( function_exists('noriks_is_type') ) {
