@@ -370,18 +370,18 @@ function gck_size_prices( $product_id ) : array {
     }
     if ( $product_id && has_term( 'orto-travelvac', 'product_cat', $product_id ) ) {
         // NORIKS TravelVac (David 16.11.): vec vrecic v setu = visja cena. Original (tryrhona.com/products/rhona-travelvac-pro)
-        // 6 / 9 / 12 / 15 Pack EUR 57,95 / 69,95 / 79,95 / 85,95 -> isto razmerje od nase cene 6 vrecic 29,99 (redna 49,99),
-        // zaokrozeno na ,99 (popust ~40 %). Kolicina: 2 kosa -20 %, 3 kosi -30 % na kos (exact, kot meta ponud 47,98 / 62,97).
+        // 6 / 9 / 12 / 15 Pack EUR 57,95 / 69,95 / 79,95 / 85,95 -> David 16.11.: najcenejsi paket (6 vrecic) 57,99,
+        // ostali stopnjevano kot na originalu (69,99 / 79,99 / 85,99); redna = akcijska / 0,6 na ,99 (popust ~40 %).
+        // Kolicina: 2 kosa -20 %, 3 kosi -30 %, zaokrozeno na ,99 (meta ponud 57,99 / 91,99 / 121,99).
         return array(
             'default' => '6 vrećica - 2 S, 2 M, 2 L',
             'sizes'   => array(
-                '6 vrećica - 2 S, 2 M, 2 L'  => array( 29.99, 49.99 ),
-                '9 vrećica - 3 S, 3 M, 3 L'  => array( 35.99, 59.99 ),
-                '12 vrećica - 4 S, 4 M, 4 L' => array( 40.99, 68.99 ),
-                '15 vrećica - 5 S, 5 M, 5 L' => array( 43.99, 73.99 ),
+                '6 vrećica - 2 S, 2 M, 2 L'  => array( 57.99, 96.99 ),
+                '9 vrećica - 3 S, 3 M, 3 L'  => array( 69.99, 116.99 ),
+                '12 vrećica - 4 S, 4 M, 4 L' => array( 79.99, 133.99 ),
+                '15 vrećica - 5 S, 5 M, 5 L' => array( 85.99, 143.99 ),
             ),
-            'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.6999 ),
-            'exact'   => true,
+            'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
         );
     }
     if ( $product_id && has_term( 'orto-vacuumsealer', 'product_cat', $product_id ) ) {
