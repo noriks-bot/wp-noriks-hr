@@ -22,6 +22,7 @@ include(get_template_directory() . '/functions/product-page-upsell.php'); // ups
 include(get_template_directory() . '/functions/pack-switcher.php'); // izbor velicine paketa + druge kombinacije boja (X-paket proizvodi)
 include(get_template_directory() . '/functions/flash-deals-banner.php'); // traka Flash Deals na kategoriji ljetne rasprodaje
 include(get_template_directory() . '/functions/manuals-page.php'); // podstranica /upute/ s PDF uputama
+include(get_template_directory() . '/functions/black-friday.php'); // Black Friday pristajalna stran /black-friday/
 include(get_template_directory() . '/functions/cpts.php');
 include(get_template_directory() . '/functions/options.php');
 include(get_template_directory() . '/functions/single_product_mods.php');
