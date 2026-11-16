@@ -95,3 +95,19 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
 });})();
 </script>
+<script>
+/* David 16.11.: izbira seta vrecic (6/9/12/15) pokaze sliko tega seta v galeriji */
+(function(){
+var M={'6':/travelvac-galerija-2[-.]/,'9':/travelvac-galerija-1[-.]/,'12':/travelvac-galerija-3[-.]/,'15':/travelvac-galerija-4[-.]/};
+function pokazi(v){
+  var m=String(v||'').match(/^\s*(\d+)\s*vre/); if(!m||!M[m[1]]) return; var re=M[m[1]];
+  var sl=document.querySelectorAll('.woocommerce-product-gallery__image'), idx=-1;
+  for(var i=0;i<sl.length;i++){var t=(sl[i].getAttribute('data-thumb')||'')+' '+((sl[i].querySelector('img')||{}).src||'');if(re.test(t)){idx=i;break;}}
+  if(idx<0) return;
+  var g=window.jQuery&&jQuery('.woocommerce-product-gallery').data('flexslider');
+  if(g&&g.flexAnimate){g.flexAnimate(idx);return;}
+  var th=document.querySelectorAll('.flex-control-thumbs li img'); if(th[idx]) th[idx].click();
+}
+document.addEventListener('change',function(e){var s=e.target; if(s&&s.tagName==='SELECT'){var o=s.options[s.selectedIndex]; pokazi(o?(o.value||o.text):'');}},true);
+})();
+</script>

@@ -3,6 +3,7 @@
 return array(
   array( 'Smijem li pumpu ponijeti u avion?', 'Pumpa ima ugrađenu bateriju, pa je većina zrakoplovnih kompanija traži u ručnoj prtljazi. Pravila se razlikuju od prijevoznika do prijevoznika, zato prije putovanja provjerite uvjete svoje zrakoplovne kompanije.' ),
   array( 'Kako radi vakuumska pumpa?', 'Pumpu napunite unaprijed. Bežična je i snažna – jedno puno punjenje dovoljno je za do 90 vrećica, pa vakuumirate više puta zaredom bez uključivanja u struju. Puni se preko USB-C priključka.' ),
+  array( 'Koliko vrećica dobivam?', 'Set birate pri narudžbi: 6 vrećica (2 male, 2 srednje, 2 velike), 9 vrećica (po 3), 12 vrećica (po 4) ili 15 vrećica (po 5). Uz svaki set dobivate bežičnu punjivu električnu pumpu.' ),
   array( 'Mogu li vrećice koristiti više puta?', 'Da. Vrećice su izrađene od kvalitetnih materijala namijenjenih višekratnoj upotrebi – štedite prostor i ujedno smanjujete plastični otpad.' ),
   array( 'Što mogu spremiti u vrećice?', 'Savršene su za odjeću, deke, jastuke, poplune, ručnike i druge mekane stvari. Ne preporučuju se za hranu ni za oštre ili tvrde predmete.' ),
   array( 'Gube li vrećice zrak s vremenom?', 'Ako su pravilno zatvorene i neoštećene, vrećice ostaju sabijene mjesecima. Provjerite je li trostruki zatvarač potpuno zatvoren i povremeno ga provjerite.' ),
