@@ -168,19 +168,7 @@ function gck_size_prices( $product_id ) : array {
             'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
         );
     }
-    if ( $product_id && has_term( 'orto-sweeper', 'product_cat', $product_id ) ) {
-        // NORIKS Sweeper: original (ironridgetools.com, USD) 21 in 229,99, 26 in 299,99, 30 in 349,99; USD x 0,89015 na ,99
-        // -> akcijska 204,99 / 266,99 / 311,99, redna 2x (popust -50 %). Privzeta 66 cm (26 in) kot na originalu. 2 kosa -20 %, 3 kosi -30 % na kos.
-        return array(
-            'default' => '66 cm',
-            'sizes'   => array(
-                '53 cm' => array( 204.99, 409.99 ),
-                '66 cm' => array( 266.99, 533.99 ),
-                '76 cm' => array( 311.99, 623.99 ),
-            ),
-            'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
-        );
-    }
+    // NORIKS Sweeper: cena po velikosti ni vec tu - vsaka kartica ponude je svoja velikost (David 16.11.), cene so v meta ponud.
     if ( $product_id && has_term( 'orto-puretitan', 'product_cat', $product_id ) ) {
         // NORIKS PureTitan: original (titanoxufficiale.com, EUR) 26 cm 59,99 (120,00), 28 cm 64,99 (130,00), 30 cm 69,99 (140,00)
         // -> akcijska = cena originala, redna na ,99 (popust -50 %). 2 kosa -20 %, 3 kosi -30 % na kos.
@@ -1011,7 +999,8 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-woodsalve' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 posuda · 227 g – za cijelu kuhinju', '2 posude – kuhinja i namještaj', '3 posude – za cijelu kuću i poklon' );
     } elseif ( has_term( array( 'orto-sweeper' ), 'product_cat', $product_id ) ) {
-        $gck_offer_subs = array( '1 čistač · širina po izboru', '2 čistača – za vas i susjeda', '3 čistača – za cijelu ulicu' );
+        // Sweeper: vsaka kartica 1 cistac v svoji velikosti (David 16.11., kot na originalu "Choose your size").
+        $gck_offer_subs = array( 'Za manja dvorišta i brza čišćenja', 'Najpopularnija – većina dvorišta u par prolaza', 'Za velika dvorišta – najmanje prolaza' );
     } elseif ( has_term( array( 'orto-bodysculpt' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 uređaj · s USB kabelom i uputama', '2 uređaja – za vas i poklon', '3 uređaja – za cijelu obitelj' );
     } elseif ( has_term( array( 'orto-straw' ), 'product_cat', $product_id ) ) {
@@ -1141,8 +1130,8 @@ function gck_render_bundle_selector() {
         $gck_offer_badges = array();
     }
 
-    $gck_no_attrs    = has_term( array( 'orto-pillow', 'orto-pawfence', 'orto-travelvac', 'orto-woodsalve', 'orto-bodysculpt', 'orto-supreme', 'orto-skinlift', 'orto-straw', 'orto-straw2', 'orto-adapter', 'orto-popuptent', 'orto-leash', 'orto-titancrep', 'orto-neckgrip', 'orto-steampro', 'orto-freshseal', 'orto-widebeam', 'orto-wakeband', 'orto-wakealarm', 'orto-earcalm', 'orto-seatsleep', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-lumiwand', 'orto-topper', 'orto-brewer', 'orto-kleanpro', 'orto-backrelax', 'orto-pawfile', 'orto-rollpro', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
-    $gck_single_size = has_term( array( 'orto-calm', 'orto-tusfilter', 'orto-corrector', 'orto-titaniumpan', 'orto-puretitan', 'orto-sweeper', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-sheer', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel', 'orto-runshort', 'orto-emsbunion', 'orto-kneewrap' ), 'product_cat', $product_id );
+    $gck_no_attrs    = has_term( array( 'orto-pillow', 'orto-sweeper', 'orto-pawfence', 'orto-travelvac', 'orto-woodsalve', 'orto-bodysculpt', 'orto-supreme', 'orto-skinlift', 'orto-straw', 'orto-straw2', 'orto-adapter', 'orto-popuptent', 'orto-leash', 'orto-titancrep', 'orto-neckgrip', 'orto-steampro', 'orto-freshseal', 'orto-widebeam', 'orto-wakeband', 'orto-wakealarm', 'orto-earcalm', 'orto-seatsleep', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-lumiwand', 'orto-topper', 'orto-brewer', 'orto-kleanpro', 'orto-backrelax', 'orto-pawfile', 'orto-rollpro', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $product_id );
+    $gck_single_size = has_term( array( 'orto-calm', 'orto-tusfilter', 'orto-corrector', 'orto-titaniumpan', 'orto-puretitan', 'orto-relief', 'orto-kneetape', 'orto-ortopas', 'orto-kidsnest', 'orto-norikshershairmagic', 'noriks-dental', 'orto-lift', 'orto-hug', 'orto-pre', 'orto-anklesleeve', 'orto-slabproof', 'orto-sheer', 'orto-insoles', 'orto-silkboxers', 'orto-vacuumsealer', 'orto-acryliques', 'orto-mattresstopper', 'orto-kidspillow', 'orto-airtravel', 'orto-runshort', 'orto-emsbunion', 'orto-kneewrap' ), 'product_cat', $product_id );
 
     // Relief ima en sam izbirnik (velicina), a tabelo velicin vseeno potrebuje.
     $gck_size_link_force = has_term( array( 'orto-corrector', 'orto-relief', 'orto-titaniumpan', 'orto-anklesleeve', 'orto-silkboxers', 'orto-mattresstopper', 'orto-kidspillow', 'orto-cashmeresweater', 'orto-runshort', 'orto-comptank', 'orto-capri', 'orto-gripsocks', 'orto-nyslipper', 'orto-boots', 'orto-perfclogs', 'orto-tank', 'orto-sheer', 'orto-leggings', 'orto-kneewrap' ), 'product_cat', $product_id );
@@ -7471,6 +7460,8 @@ function gck_render_bundle_selector() {
         if ( has_term( array( 'orto-polo' ), 'product_cat', $product_id ) && count( $offers ) > 2 ) { $default_index = 2; }
         // NORIKS PopUp: kao na originalu je predizabran veliki sator (do 3 osobe).
         if ( has_term( array( 'orto-popuptent' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
+        // NORIKS Sweeper: kao na originalu je predizabrana srednja velicina (66 cm / 26 in, "Most popular size").
+        if ( has_term( array( 'orto-sweeper' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         // NORIKS GripSocks: predizbrana ponuda 2 para (David 4.11.).
         if ( has_term( array( 'orto-gripsocks' ), 'product_cat', $product_id ) && count( $offers ) > 1 ) { $default_index = 1; }
         $loop_index    = 0;
@@ -8299,6 +8290,12 @@ function gck_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
         );
         if ( isset( $gck_pu_lines[ $gck_pu_idx ] ) ) { $lines = $gck_pu_lines[ $gck_pu_idx ]; }
     }
+    // NORIKS Sweeper: vsaka kartica je svoja velikost (David 16.11.) - v kosarici in narocilu pise sirina cistaca.
+    if ( has_term( 'orto-sweeper', 'product_cat', $product_id ) ) {
+        $gck_sw_idx   = (int) substr( strrchr( (string) $offer_id, '_' ), 1 );
+        $gck_sw_lines = array( 0 => array( 'Širina 53 cm' ), 1 => array( 'Širina 66 cm' ), 2 => array( 'Širina 76 cm' ) );
+        if ( isset( $gck_sw_lines[ $gck_sw_idx ] ) ) { $lines = $gck_sw_lines[ $gck_sw_idx ]; }
+    }
     // NORIKS SeamThong: komplet = 2 tange, vsaka tanga ima svojo velikost in barvo (David 29.10.) - ena vrstica na tango.
     if ( has_term( 'orto-seamthong', 'product_cat', $product_id ) && is_array( $lines ) ) {
         $lines = array_slice( array_values( $lines ), 0, $pairs_selected * 2 );
@@ -8546,6 +8543,93 @@ function gck_shgifts_free_gifts_notice() {
                     <div class="gck-fg__price"><s><?php echo esc_html( $g['price'] ); ?></s></div>
                 </div>
             <?php endforeach; ?>
+        </div>
+    </div>
+    <?php
+}
+
+// ============================================================
+// SWEEPER: PREDNOSTI + UKLJUCENO BESPLATNO (display only, orto-sweeper)
+// ============================================================
+/**
+ * Kot na originalu (ironridgetools.com/products/push-lawn-sweeper), po Davidovem komentarju 16.11.:
+ * nad karticami 4 prednosti z ikonami (Works on Grass & Turf, No Gas or Cords, Triangular Formation Brushes,
+ * Adjustable Brush Height), pod karticami blok "Included free with every order" (1-year warranty $29, 3 lawn bags $50;
+ * USD x 0,89015 na ,99). Samo prikaz, brez vpliva na kosarico.
+ */
+add_action( 'woocommerce_before_add_to_cart_button', 'gck_sweeper_prednosti', 3 );
+function gck_sweeper_prednosti() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+        return;
+    }
+    global $product;
+    if ( ! $product instanceof WC_Product || ! has_term( 'orto-sweeper', 'product_cat', $product->get_id() ) ) {
+        return;
+    }
+    $svg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">%s</svg>';
+    $items = array(
+        array( 'Radi na travi i umjetnoj travi', '<path d="M3 20h18"/><path d="M6 20c0-4 1-7 3-9"/><path d="M10 20c0-5 .5-9 2-12"/><path d="M14 20c0-4 1-7 3-9"/><path d="M18 20c0-3 .5-5 2-7"/>' ),
+        array( 'Bez benzina i kabela', '<path d="M9 7V3M15 7V3"/><path d="M7 7h10v4a5 5 0 0 1-10 0z"/><path d="M12 16v5"/><path d="M4 4l16 16"/>' ),
+        array( 'Trostruke V-četke', '<path d="M12 4l8 14H4z"/><circle cx="12" cy="4" r="1.6"/><circle cx="20" cy="18" r="1.6"/><circle cx="4" cy="18" r="1.6"/>' ),
+        array( 'Podesiva visina četki', '<path d="M12 3v18"/><path d="M8 7l4-4 4 4"/><path d="M8 17l4 4 4-4"/><path d="M5 12h3M16 12h3"/>' ),
+    );
+    ?>
+    <style>
+      .gck-swp{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 14px; margin:6px 0 16px; padding:0; list-style:none; }
+      .gck-swp li{ display:flex; align-items:center; gap:9px; margin:0; font-size:15px; font-weight:700; color:#1c1c1c; line-height:1.3; }
+      .gck-swp__i{ flex:0 0 36px; width:36px; height:36px; border-radius:50%; background:#fe5603; display:flex; align-items:center; justify-content:center; }
+      @media (max-width:480px){ .gck-swp{ gap:10px; } .gck-swp li{ font-size:13.5px; } .gck-swp__i{ flex-basis:32px; width:32px; height:32px; } }
+    </style>
+    <ul class="gck-swp">
+        <?php foreach ( $items as $it ) : ?>
+            <li><span class="gck-swp__i"><?php echo sprintf( $svg, $it[1] ); // phpcs:ignore ?></span><?php echo esc_html( $it[0] ); ?></li>
+        <?php endforeach; ?>
+    </ul>
+    <?php
+}
+
+add_action( 'woocommerce_before_add_to_cart_button', 'gck_sweeper_ukljuceno', 50 );
+function gck_sweeper_ukljuceno() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) {
+        return;
+    }
+    global $product;
+    if ( ! $product instanceof WC_Product || ! has_term( 'orto-sweeper', 'product_cat', $product->get_id() ) ) {
+        return;
+    }
+    $img = get_template_directory_uri() . '/img/sweeper/';
+    ?>
+    <style>
+      .gck-swi{ margin:12px 0 16px; border:1.5px dashed #fe5603; border-radius:12px; background:#fff7f2; padding:12px 12px 14px; box-sizing:border-box; width:100%; }
+      .gck-swi__h{ display:flex; align-items:center; justify-content:center; gap:8px; margin:0 0 10px; font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#c74303; }
+      .gck-swi__g{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+      .gck-swi__t{ background:#fff; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.06); padding:10px 8px 12px; text-align:center; }
+      .gck-swi__b{ position:relative; height:92px; display:flex; align-items:center; justify-content:center; margin-bottom:6px; }
+      .gck-swi__b img, .gck-swi__b svg{ max-height:88px; width:auto; display:block; }
+      .gck-swi__v{ position:absolute; top:0; right:0; background:#1c1c1c; color:#fff; font-size:10.5px; font-weight:800; letter-spacing:.04em; padding:3px 6px; border-radius:5px; line-height:1.2; }
+      .gck-swi__n{ font-size:14.5px; font-weight:800; color:#1c1c1c; text-transform:uppercase; line-height:1.2; }
+      .gck-swi__f{ margin-top:3px; font-size:12.5px; font-weight:800; color:#1f8a4c; text-transform:uppercase; letter-spacing:.04em; }
+      @media (max-width:480px){ .gck-swi__b{ height:76px; } .gck-swi__b img, .gck-swi__b svg{ max-height:72px; } .gck-swi__n{ font-size:13px; } }
+    </style>
+    <div class="gck-swi">
+        <p class="gck-swi__h"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c74303" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18"/><path d="M12 8c-2-4-6-4-6-1.5S9 8 12 8zM12 8c2-4 6-4 6-1.5S15 8 12 8z"/></svg>Uključeno besplatno uz svaku narudžbu</p>
+        <div class="gck-swi__g">
+            <div class="gck-swi__t">
+                <div class="gck-swi__b">
+                    <svg width="96" height="90" viewBox="0 0 100 94" role="img" aria-label="1 godina jamstva"><path d="M50 4 L88 18 V44 C88 68 70 84 50 90 C30 84 12 68 12 44 V18 Z" fill="#fff" stroke="#1f5a32" stroke-width="6" stroke-linejoin="round"/><text x="50" y="47" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="34" fill="#fe5603">1</text><text x="50" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#1f5a32">GODINA</text><text x="50" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#1f5a32">JAMSTVA</text></svg>
+                    <span class="gck-swi__v">25,99 €</span>
+                </div>
+                <div class="gck-swi__n">1 godina jamstva</div>
+                <div class="gck-swi__f">Besplatno</div>
+            </div>
+            <div class="gck-swi__t">
+                <div class="gck-swi__b">
+                    <img src="<?php echo esc_url( $img . 'noriks-sweeper-poklon-vrece.webp' ); ?>" alt="3 vreće za travnjak napunjene lišćem" width="88" height="88">
+                    <span class="gck-swi__v">44,99 €</span>
+                </div>
+                <div class="gck-swi__n">3 vreće za travnjak</div>
+                <div class="gck-swi__f">Besplatno</div>
+            </div>
         </div>
     </div>
     <?php
