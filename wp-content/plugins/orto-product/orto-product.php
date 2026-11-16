@@ -8284,16 +8284,18 @@ function gck_add_cart_item_data( $cart_item_data, $product_id, $variation_id ) {
     if ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
         $gck_pu_idx   = (int) substr( strrchr( (string) $offer_id, '_' ), 1 );
         $gck_pu_lines = array(
-            0 => array( 'Mali šator (do 2 osobe) + cerada' ),
-            1 => array( 'Veliki šator (do 3 osobe) + cerada' ),
-            2 => array( 'Mali šator (do 2 osobe) + cerada', 'Veliki šator (do 3 osobe) + cerada' ),
+            // id ponude je "<qty>__<zaporedna st. vrstice od 1>" (prej 0-based - v kosarici napacen sator)
+            1 => array( 'Mali šator (do 2 osobe) + cerada' ),
+            2 => array( 'Veliki šator (do 3 osobe) + cerada' ),
+            3 => array( 'Mali šator (do 2 osobe) + cerada', 'Veliki šator (do 3 osobe) + cerada' ),
         );
         if ( isset( $gck_pu_lines[ $gck_pu_idx ] ) ) { $lines = $gck_pu_lines[ $gck_pu_idx ]; }
     }
     // NORIKS Sweeper: vsaka kartica je svoja velikost (David 16.11.) - v kosarici in narocilu pise sirina cistaca.
     if ( has_term( 'orto-sweeper', 'product_cat', $product_id ) ) {
         $gck_sw_idx   = (int) substr( strrchr( (string) $offer_id, '_' ), 1 );
-        $gck_sw_lines = array( 0 => array( 'Širina 53 cm' ), 1 => array( 'Širina 66 cm' ), 2 => array( 'Širina 76 cm' ) );
+        // id ponude je "<qty>__<zaporedna st. vrstice od 1>"
+        $gck_sw_lines = array( 1 => array( 'Širina 53 cm' ), 2 => array( 'Širina 66 cm' ), 3 => array( 'Širina 76 cm' ) );
         if ( isset( $gck_sw_lines[ $gck_sw_idx ] ) ) { $lines = $gck_sw_lines[ $gck_sw_idx ]; }
     }
     // NORIKS SeamThong: komplet = 2 tange, vsaka tanga ima svojo velikost in barvo (David 29.10.) - ena vrstica na tango.
