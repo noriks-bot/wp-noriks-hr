@@ -1098,6 +1098,9 @@ function gck_render_bundle_selector() {
         if ( has_term( 'orto-sweeper', 'product_cat', $product_id ) ) {
             // David 16.11.: vsaka kartica slika svoje velikosti (53 / 66 / 76 cm, napis sirine na sliki)
             $gck_offer_imgs = array( 'sweeper/noriks-sweeper-galerija-6.webp', 'sweeper/noriks-sweeper-galerija-8.webp', 'sweeper/noriks-sweeper-galerija-9.webp' );
+        } elseif ( has_term( 'orto-pawfence', 'product_cat', $product_id ) ) {
+            // David 16.11.: v kartici se jasno vidi, kaj dobite (1 / 2 / 3 ogrlice + 1 daljinski, kompleti z originala)
+            $gck_offer_imgs = array( 'pawfence/noriks-pawfence-12-komplet-1.webp', 'pawfence/noriks-pawfence-13-komplet-2.webp', 'pawfence/noriks-pawfence-14-komplet-3.webp' );
         } elseif ( has_term( 'orto-puretitan', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
         } elseif ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
