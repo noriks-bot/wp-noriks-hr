@@ -103,4 +103,19 @@ $nys_mnenja = array(
   ['l','d'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='wsnyslipper__pus wsnyslipper__pus--'+s;b.setAttribute('aria-label',s==='l'?'Prethodno':'Sljedeće');b.innerHTML=s==='l'?'&#8249;':'&#8250;';
     b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
 });})();
+/* David 16.11.: izbira barve pokaze papuce v tej barvi (vse 4 barve originala na zacetku galerije) */
+(function(){
+var M={'Bež':/nyslipper-01[-.]/,'Crna':/nyslipper-06[-.]/,'Siva':/nyslipper-10[-.]/,'Krem':/nyslipper-14[-.]/};
+function pokazi(v){
+  v=(v||'').trim(); var re=M[v]; if(!re) return;
+  var sl=document.querySelectorAll('.woocommerce-product-gallery__image'), idx=-1;
+  for(var i=0;i<sl.length;i++){var t=(sl[i].getAttribute('data-thumb')||'')+' '+((sl[i].querySelector('img')||{}).src||'');if(re.test(t)){idx=i;break;}}
+  if(idx<0) return;
+  var g=window.jQuery&&jQuery('.woocommerce-product-gallery').data('flexslider');
+  if(g&&g.flexAnimate){g.flexAnimate(idx);return;}
+  var th=document.querySelectorAll('.flex-control-thumbs li img'); if(th[idx]) th[idx].click();
+}
+document.addEventListener('change',function(e){var s=e.target; if(s&&s.tagName==='SELECT'){var o=s.options[s.selectedIndex]; pokazi(o?(o.value&&M[o.value]?o.value:o.text):'');}},true);
+document.addEventListener('click',function(e){var s=e.target.closest&&e.target.closest('[data-value]');if(s) pokazi(s.getAttribute('data-value'));},true);
+})();
 </script>
