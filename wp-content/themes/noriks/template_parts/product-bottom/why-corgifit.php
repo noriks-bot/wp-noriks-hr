@@ -75,6 +75,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wscorgifit__ok{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#5a6aa1;color:#fff;font-size:13px;margin-right:6px;vertical-align:-3px}
 .wscorgifit__tab--usp td{text-align:left}.wscorgifit__tab--usp td:nth-child(2){background:#f3f5fb;font-weight:600}.wscorgifit__tw--usp{margin:8px 0 6px;box-shadow:0 8px 24px rgba(90,106,161,.12);border-radius:14px}
 .wscorgifit__opomba{font-size:13px;color:#666;margin:6px 0 0}
+/* David 16.11.: v galeriji vidne vse barve - glavna slika + 16 packshotov barv so prve sličice, zato 4 vrste (20) namesto 2 */
+.single-product div.product.product_cat-orto-corgifit .woocommerce-product-gallery .flex-control-thumbs li:nth-child(n+11):nth-child(-n+20){display:block !important}
 </style>
 <script>
 (function(){document.querySelectorAll('.wscorgifit__kar').forEach(function(k){
