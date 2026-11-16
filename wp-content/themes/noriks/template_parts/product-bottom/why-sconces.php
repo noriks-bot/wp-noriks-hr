@@ -87,3 +87,19 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
     b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
 });})();
 </script>
+<script>
+/* David 16.11.: izbira barve pokaze sliko izdelka v tej barvi (packshoti barv so v galeriji takoj za glavno sliko) */
+(function(){
+var M={'Zlatna':'galerija-1-','Crna':'galerija-10','Srebrna':'galerija-12','Ružičasto zlatna':'galerija-15','Bijela':'galerija-16'};
+function pokazi(v){
+  var key=M[v]; if(!key) return;
+  var sl=document.querySelectorAll('.woocommerce-product-gallery__image'); var idx=-1;
+  for(var i=0;i<sl.length;i++){var t=sl[i].getAttribute('data-thumb')||'';if(t.indexOf(key)>-1){idx=i;break;}}
+  if(idx<0) return;
+  var g=window.jQuery&&jQuery('.woocommerce-product-gallery').data('flexslider');
+  if(g&&g.flexAnimate){g.flexAnimate(idx);return;}
+  var th=document.querySelectorAll('.flex-control-thumbs li img'); if(th[idx]) th[idx].click();
+}
+document.addEventListener('click',function(e){var s=e.target.closest&&e.target.closest('.swatch[data-value]');if(s) pokazi(s.getAttribute('data-value'));},true);
+})();
+</script>
