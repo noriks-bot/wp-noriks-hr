@@ -101,4 +101,19 @@ p.wsboxbag__c{max-width:none}
 </style>
 <script>
 (function(){document.querySelectorAll('.wsboxbag__kar').forEach(function(k){var g=k.querySelector('.wsboxbag__vgrid');k.querySelectorAll('.wsboxbag__nav').forEach(function(b){b.addEventListener('click',function(){var c=g.querySelector('.wsboxbag__vk');var w=c?c.getBoundingClientRect().width+20:300;g.scrollBy({left:b.classList.contains('wsboxbag__nav--l')?-w:w,behavior:'smooth'});});});});})();
+/* David 16.11.: izbira drzave pokaze vreco tega izdanja (vseh 5 izdanj na zacetku galerije) */
+(function(){
+var M={'Brazil':/boxbag-01-brazil/,'Engleska':/boxbag-05-engleska/,'Njemačka':/boxbag-08-njemacka/,'Meksiko':/boxbag-11-meksiko/,'SAD':/boxbag-14-sad/};
+function pokazi(v){
+  v=(v||'').trim(); var re=M[v]; if(!re) return;
+  var sl=document.querySelectorAll('.woocommerce-product-gallery__image'), idx=-1;
+  for(var i=0;i<sl.length;i++){var t=(sl[i].getAttribute('data-thumb')||'')+' '+((sl[i].querySelector('img')||{}).src||'');if(re.test(t)){idx=i;break;}}
+  if(idx<0) return;
+  var g=window.jQuery&&jQuery('.woocommerce-product-gallery').data('flexslider');
+  if(g&&g.flexAnimate){g.flexAnimate(idx);return;}
+  var th=document.querySelectorAll('.flex-control-thumbs li img'); if(th[idx]) th[idx].click();
+}
+document.addEventListener('change',function(e){var s=e.target; if(s&&s.tagName==='SELECT'){var o=s.options[s.selectedIndex]; pokazi(o?(o.value&&M[o.value]?o.value:o.text):'');}},true);
+document.addEventListener('click',function(e){var s=e.target.closest&&e.target.closest('[data-value]');if(s) pokazi(s.getAttribute('data-value'));},true);
+})();
 </script>
