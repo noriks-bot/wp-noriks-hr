@@ -997,7 +997,8 @@ function gck_render_bundle_selector() {
     } elseif ( has_term( array( 'orto-sconces' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 set · 2 zidne lampe – boja po izboru', '2 seta – 4 lampe za dvije sobe', '3 seta – 6 lampi za cijeli dom' );
     } elseif ( has_term( array( 'orto-woodsalve' ), 'product_cat', $product_id ) ) {
-        $gck_offer_subs = array( '1 posuda · 227 g – za cijelu kuhinju', '2 posude – kuhinja i namještaj', '3 posude – za cijelu kuću i poklon' );
+        // WoodRevive (David 16.11.): ponudbe kot na originalu - kupi 1 dobis 1 gratis (1+1, 2+2, 3+3).
+        $gck_offer_subs = array( '2 posude po 227 g – plaćate jednu', '4 posude – plaćate dvije', '6 posuda – plaćate tri' );
     } elseif ( has_term( array( 'orto-sweeper' ), 'product_cat', $product_id ) ) {
         // Sweeper: vsaka kartica 1 cistac v svoji velikosti (David 16.11., kot na originalu "Choose your size").
         $gck_offer_subs = array( 'Za manja dvorišta i brza čišćenja', 'Najpopularnija – većina dvorišta u par prolaza', 'Za velika dvorišta – najmanje prolaza' );
