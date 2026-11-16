@@ -8635,6 +8635,30 @@ function gck_sweeper_ukljuceno() {
         </div>
     </div>
     <?php
+    // Cena pod naslovom sledi izbrani kartici (vsaka kartica je svoja velikost; izdelek ima ceno 1. kartice, privzeta je 66 cm).
+    $gck_sw_cene = array();
+    foreach ( gck_get_bundle_offers( $product->get_id() ) as $gck_oid => $gck_o ) {
+        $gck_sw_cene[ $gck_oid ] = array( (float) $gck_o['total'], (float) $gck_o['regular'] );
+    }
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var C = <?php echo wp_json_encode( $gck_sw_cene ); ?>;
+        var fmt = function (v) { return v.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+        function osvezi() {
+            var r = document.querySelector('#bundle-selector input[name="bundle_option"]:checked');
+            var price = document.querySelector('.summary p.price');
+            if (!r || !price || !C[r.value]) return;
+            var amt = function (v) { return '<bdi>' + fmt(v) + '&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>'; };
+            var del = price.querySelector('del .woocommerce-Price-amount'), ins = price.querySelector('ins .woocommerce-Price-amount');
+            if (del) del.innerHTML = amt(C[r.value][1]);
+            if (ins) ins.innerHTML = amt(C[r.value][0]);
+        }
+        document.querySelectorAll('#bundle-selector input[name="bundle_option"]').forEach(function (r) { r.addEventListener('change', osvezi); });
+        osvezi();
+    });
+    </script>
+    <?php
 }
 
 // ============================================================
