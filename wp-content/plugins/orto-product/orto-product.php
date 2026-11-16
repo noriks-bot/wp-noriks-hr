@@ -372,7 +372,7 @@ function gck_size_prices( $product_id ) : array {
         // NORIKS TravelVac (David 16.11.): vec vrecic v setu = visja cena. Original (tryrhona.com/products/rhona-travelvac-pro)
         // 6 / 9 / 12 / 15 Pack EUR 57,95 / 69,95 / 79,95 / 85,95 -> David 16.11.: najcenejsi paket (6 vrecic) 57,99,
         // ostali stopnjevano kot na originalu (69,99 / 79,99 / 85,99); redna = akcijska / 0,6 na ,99 (popust ~40 %).
-        // Kolicina: 2 kosa -20 %, 3 kosi -30 %, zaokrozeno na ,99 (meta ponud 57,99 / 91,99 / 121,99).
+        // Kolicina: 2 kosa -20 %, 3 kosi -30 %, cena na kos na ,99 (meta ponud 57,99 / 91,98 / 122,97).
         return array(
             'default' => '6 vrećica - 2 S, 2 M, 2 L',
             'sizes'   => array(
@@ -382,6 +382,7 @@ function gck_size_prices( $product_id ) : array {
                 '15 vrećica - 5 S, 5 M, 5 L' => array( 85.99, 143.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
+            'kos99'   => true,
         );
     }
     if ( $product_id && has_term( 'orto-vacuumsealer', 'product_cat', $product_id ) ) {
@@ -430,7 +431,13 @@ function gck_size_priced_totals( array $table, array $sizes ) {
     if ( ! empty( $table['unit_off'][ $qty ] ) ) {
         $sale_c -= (int) round( $table['unit_off'][ $qty ] * 100 ) * $qty; // fiksni popust na kos (npr. Kaching "amount")
     }
-    if ( $qty > 1 && ! empty( $table['exact'] ) ) {
+    if ( $qty > 1 && ! empty( $table['kos99'] ) ) {
+        // cena na kos zaokrozena na najblizjo ,99, paket = kos x kolicina (npr. 2 x 45,99 = 91,98)
+        $unit_c = $sale_c * $table['factor'][ $qty ];
+        $lo     = floor( $unit_c / 100 ) * 100 - 1;
+        $hi     = $lo + 100;
+        $sale_c = (int) ( ( $unit_c - $lo <= $hi - $unit_c ) ? $lo : $hi ) * $qty;
+    } elseif ( $qty > 1 && ! empty( $table['exact'] ) ) {
         $sale_c = (int) round( $sale_c * $table['factor'][ $qty ] ); // cene 1:1 z originala (brez .99)
     } elseif ( $qty > 1 ) {
         $sale_c = (int) floor( round( $sale_c * $table['factor'][ $qty ] ) / 100 ) * 100 - 1;
