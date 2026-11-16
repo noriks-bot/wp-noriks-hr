@@ -5375,7 +5375,7 @@ function gck_render_bundle_selector() {
 
     <?php if ( has_term( array( 'orto-corgifit' ), 'product_cat', $product_id ) ) : ?>
     <style>
-      /* NORIKS CorgiFit: 11 boja kot krogci (Red / Brown / Black / Lavender / Bright Pink / Light Pink / Forest Green / Gray / Yellow / Royal Blue / Navy na originalu), barve z vzorcev originala. */
+      /* NORIKS CorgiFit: 16 boja kot krogci (Red / Brown / Black / Lavender / Bright Pink / Light Pink / Forest Green / Gray / Yellow / Royal Blue / Navy na originalu), barve z vzorcev originala. */
       .swatch-circle.color-crvena, #bundle-selector .swatch-circle.color-crvena { background: #ea2524 !important; }
       .swatch-circle.color-smeda, #bundle-selector .swatch-circle.color-smeda { background: #b57148 !important; }
       .swatch-circle.color-crna, #bundle-selector .swatch-circle.color-crna { background: #212121 !important; }
@@ -5387,6 +5387,12 @@ function gck_render_bundle_selector() {
       .swatch-circle.color-zuta, #bundle-selector .swatch-circle.color-zuta { background: #fad21c !important; }
       .swatch-circle.color-plava, #bundle-selector .swatch-circle.color-plava { background: #7897da !important; }
       .swatch-circle.color-tamnoplava, #bundle-selector .swatch-circle.color-tamnoplava { background: #2e3d5d !important; }
+      /* David 16.11.: se 5 barv originala (Orange / Lime / Mint / Aqua / Sand) */
+      .swatch-circle.color-narancasta, #bundle-selector .swatch-circle.color-narancasta { background: #f5631c !important; }
+      .swatch-circle.color-limeta, #bundle-selector .swatch-circle.color-limeta { background: #c6e94a !important; }
+      .swatch-circle.color-menta, #bundle-selector .swatch-circle.color-menta { background: #9fe0c9 !important; }
+      .swatch-circle.color-tirkizna, #bundle-selector .swatch-circle.color-tirkizna { background: #3fcfdc !important; }
+      .swatch-circle.color-bez, #bundle-selector .swatch-circle.color-bez { background: #d9c6a2 !important; }
     </style>
     <?php endif; ?>
 

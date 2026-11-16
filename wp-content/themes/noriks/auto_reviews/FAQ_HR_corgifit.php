@@ -8,6 +8,6 @@ return array(
   array( 'Što ako ne odgovara?', 'Bez brige – imate 30 dana za povrat ili zamjenu veličine.' ),
   array( 'Kako se čisti?', 'Jednostavno. Operite je ručno blagim sapunom i toplom vodom, a zatim je ostavite da se potpuno osuši na zraku prije sljedeće šetnje.' ),
   array( 'Je li udobna za svakodnevne šetnje?', 'Da. Oprsnica spaja lagane materijale, pokrivenost prsa i podesive trake za udobno pristajanje u svakodnevnim avanturama.' ),
-  array( 'U kojim bojama dolazi?', 'U 11 boja: crvena, smeđa, crna, lavanda, jarko ružičasta, svijetlo ružičasta, šumsko zelena, siva, žuta, kraljevsko plava i tamnoplava.' ),
+  array( 'U kojim bojama dolazi?', 'U 16 boja: crvena, smeđa, crna, lavanda, jarko ružičasta, svijetlo ružičasta, šumsko zelena, siva, žuta, kraljevsko plava, tamnoplava, narančasta, limeta, menta, tirkizna i bež.' ),
   array( 'Kako se plaća i koliko traje dostava?', 'Plaćate pouzećem, kad paket stigne. Dostava je besplatna za narudžbe iznad 70 €.' ),
 );
