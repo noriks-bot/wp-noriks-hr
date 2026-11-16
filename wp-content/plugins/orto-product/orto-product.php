@@ -8577,7 +8577,7 @@ function gck_sweeper_prednosti() {
     );
     ?>
     <style>
-      .gck-swp{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 14px; margin:6px 0 16px; padding:0; list-style:none; }
+      .gck-swp{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 14px; margin:6px 0 20px; padding:0; list-style:none; }
       .gck-swp li{ display:flex; align-items:center; gap:9px; margin:0; font-size:15px; font-weight:700; color:#1c1c1c; line-height:1.3; }
       .gck-swp__i{ flex:0 0 36px; width:36px; height:36px; border-radius:50%; background:#fe5603; display:flex; align-items:center; justify-content:center; }
       @media (max-width:480px){ .gck-swp{ gap:10px; } .gck-swp li{ font-size:13.5px; } .gck-swp__i{ flex-basis:32px; width:32px; height:32px; } }
@@ -8611,14 +8611,14 @@ function gck_sweeper_ukljuceno() {
       .gck-swi__v{ position:absolute; top:0; right:0; background:#1c1c1c; color:#fff; font-size:10.5px; font-weight:800; letter-spacing:.04em; padding:3px 6px; border-radius:5px; line-height:1.2; }
       .gck-swi__n{ font-size:14.5px; font-weight:800; color:#1c1c1c; text-transform:uppercase; line-height:1.2; }
       .gck-swi__f{ margin-top:3px; font-size:12.5px; font-weight:800; color:#1f8a4c; text-transform:uppercase; letter-spacing:.04em; }
-      @media (max-width:480px){ .gck-swi__b{ height:76px; } .gck-swi__b img, .gck-swi__b svg{ max-height:72px; } .gck-swi__n{ font-size:13px; } }
+      @media (max-width:480px){ .gck-swi__h{ font-size:11.5px; letter-spacing:.05em; } .gck-swi__b{ height:76px; } .gck-swi__b img, .gck-swi__b svg{ max-height:72px; } .gck-swi__n{ font-size:13px; } }
     </style>
     <div class="gck-swi">
         <p class="gck-swi__h"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c74303" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18"/><path d="M12 8c-2-4-6-4-6-1.5S9 8 12 8zM12 8c2-4 6-4 6-1.5S15 8 12 8z"/></svg>Uključeno besplatno uz svaku narudžbu</p>
         <div class="gck-swi__g">
             <div class="gck-swi__t">
                 <div class="gck-swi__b">
-                    <svg width="96" height="90" viewBox="0 0 100 94" role="img" aria-label="1 godina jamstva"><path d="M50 4 L88 18 V44 C88 68 70 84 50 90 C30 84 12 68 12 44 V18 Z" fill="#fff" stroke="#1f5a32" stroke-width="6" stroke-linejoin="round"/><text x="50" y="47" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="34" fill="#fe5603">1</text><text x="50" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="11" fill="#1f5a32">GODINA</text><text x="50" y="74" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#1f5a32">JAMSTVA</text></svg>
+                    <svg width="96" height="90" viewBox="0 0 100 94" role="img" aria-label="1 godina jamstva"><path d="M50 4 L88 18 V44 C88 68 70 84 50 90 C30 84 12 68 12 44 V18 Z" fill="#fff" stroke="#1f5a32" stroke-width="6" stroke-linejoin="round"/><text x="50" y="43" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="30" fill="#fe5603">1</text><text x="50" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#1f5a32">GODINA</text><text x="50" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="8.5" fill="#1f5a32">JAMSTVA</text></svg>
                     <span class="gck-swi__v">25,99 €</span>
                 </div>
                 <div class="gck-swi__n">1 godina jamstva</div>
