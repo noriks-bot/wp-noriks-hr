@@ -118,6 +118,7 @@ function noriks_bf_prag() {
  * Dejansko znizanje — SAMO za nakupe s teh pristajalnih strani.
  * Strani izdelkov, katalog in cene izdelkov ostanejo nespremenjeni.
  * ------------------------------------------------------------------ */
+if ( ! defined( 'NORIKS_BF_MAJICA_SKU' ) ) { define( 'NORIKS_BF_MAJICA_SKU', 'NORIKS-SHIRTS-ORTO-BF' ); }   // Black Friday kopija ORTO majice
 if ( ! defined( 'NORIKS_BF_POPUST' ) ) { define( 'NORIKS_BF_POPUST', 35 ); }   // ciljni odstotek; lepa cena pristane med 30 in 40 %
 
 /**
@@ -213,6 +214,22 @@ function noriks_bf_meta_postavke( $item, $cart_item_key, $values, $order ) {
         if ( $slug !== '' && ! in_array( $slug, $strani, true ) ) { $strani[] = $slug; }
         $order->update_meta_data( '_noriks_bf_stran', implode( ',', $strani ) );
     }
+}
+
+/**
+ * Barva vzorca za vrednost atributa (npr. "Crna" -> #000). Ista paleta kot barvni krogci
+ * na strani izdelka: prepisana iz vticnika orto-product tega trga (.color-<slug>).
+ */
+function noriks_bf_barva( $vrednost ) {
+    static $po_slugu = null, $po_vrednosti = null;
+    if ( $po_slugu === null ) {
+        $po_slugu     = array( 'black' => '#000', 'crna' => '#000', 'ljubicasta' => '#8f6fb0', 'ljubicasto' => '#8f6fb0', 'tamnosiva' => '#4a4a4f', 'blue' => '#203240', 'modra' => '#203240', 'plava' => '#203240', 'green' => '#294d3b', 'zelena' => '#294d3b', 'gray' => '#706d78', 'siva' => '#706d78', 'crvena' => '#ba212f', 'white' => '#fff', 'bela' => '#fff', 'bijela' => '#fff', 'bez' => '#e4e0cf', 'krom' => 'linear-gradient(135deg,#e9ecef 0%,#b9c0c7 50%,#eef1f4 100%)', 'zlatna' => 'linear-gradient(135deg,#e7c66a 0%,#c9a227 55%,#f0dc9a 100%)', 'svijetloplava' => '#c5d2ec', 'grafitna' => '#3d3a40', 'bordo' => '#61282f', 'petrol' => '#0a4467', 'leopard' => '#a5573a', 'smeda' => '#9f6f4e', 'taupe' => '#a89684', 'kapucino' => '#a89684', 'tirkizna' => '#57bfb5', 'breskva' => '#f0bfa2', 'krem' => '#f0e7d6', 'roza' => '#f2b8c6', 'tamnoplava' => '#2a3262', 'vanilija' => '#ecd0b2', 'med' => '#d6a679', 'karamela' => '#b9845a', 'kakao' => '#8b5c3e', 'moka' => '#5c3c2a', 'boja-koze' => '#ecd9bd', 'lila' => '#d8c1ee', 'fuksija' => '#d81b72', 'sljiva' => '#5b2147', 'kava' => '#6b4a3a', 'maslinasta' => '#6d6b33', 'stara-roza' => '#c08a7d', 'vinsko-crvena' => '#6e1f2e', 'paunovo-zelena' => '#1f8a8f', 'zuta' => '#f2d43c', 'svijetloljubicasta' => '#cfd3ec', 'narancasta' => '#f0581a', 'mentol' => '#a9c8a6', 'ruzicasta' => '#f2c4cc', 'bijela-s-dzepom' => '#f6f6f4', 'paunova-zelena' => '#1f8a8a', 'mat-crna' => '#1d1c1c', 'bruseno-zlatna' => '#c9a75e', 'grafit' => '#5c5b59', 'sjajno-zlatna' => 'linear-gradient(135deg,#f5d77a,#d4a72c 55%,#f0cf6a)', 'plava-plus' => 'linear-gradient(135deg,#1f4fb8 50%,#1fbea9 50%)', 'ruzicasta-plus' => 'linear-gradient(135deg,#f19bb8 50%,#1fbea9 50%)', 'tamnocrvena' => '#6e1f2b', 'nebeskoplava' => '#8fb8de', 'svijetlosmeda' => '#8a6a3e', 'karbon' => 'repeating-linear-gradient(45deg,#2a2a2a 0 3px,#3d3d3d 3px 6px)', 'srebrna' => 'linear-gradient(135deg,#e4e8ec 0%,#b9c1c9 55%,#eef1f4 100%)', 'sampanjac' => '#d9c39a', 'crna-i-zlatna' => 'linear-gradient(135deg,#141414 0 55%,#c9a35b 55% 100%)', 'tamnosmeda' => '#4a3226', 'crna-i-srebrna' => 'linear-gradient(135deg,#141414 0 55%,#c0c0c0 55% 100%)', 'brazil' => 'linear-gradient(135deg,#1f9a3e 0 55%,#f6d000 55% 100%)', 'sad' => 'linear-gradient(135deg,#1f2d5c 0 50%,#d2202f 50% 100%)', 'njemacka' => 'linear-gradient(180deg,#111 0 33%,#d2202f 33% 66%,#f2b800 66% 100%)', 'meksiko' => 'linear-gradient(90deg,#127a3f 0 33%,#fff 33% 66%,#c8102e 66% 100%)', 'engleska' => 'linear-gradient(90deg,#fff 0 42%,#cf142b 42% 58%,#fff 58% 100%)', 'svijetlosiva' => '#cfcac6', 'vinska' => '#7e1d32', 'srebrnosiva' => '#7f8794', 'bronca' => '#7a5038', 'espresso' => '#3f2a20', 'svijetlo-bez' => '#d8c7a8', 'maslinasto-zelena' => '#4f5a32', 'pjescana' => '#a08654', 'zlatna-crna' => 'linear-gradient(135deg, #d4b26a 50%, #1c1c1e 50%)', 'zlatna-smeda' => 'linear-gradient(135deg, #d4b26a 50%, #a8642f 50%)', 'srebrna-crna' => 'linear-gradient(135deg, #c9cdd2 50%, #1c1c1e 50%)', 'srebrna-smeda' => 'linear-gradient(135deg, #c9cdd2 50%, #a8642f 50%)', 'karamel' => '#a77a55', 'cokolada' => '#4b2e25', 'paunovo-plava' => '#0f6f9e', 'stara-ruza' => '#d29b95', 'petrolej' => '#0f6f7a', 'camel' => '#b0946f', 'vanilija-svijetla' => '#ecc5ac', 'latte-preplanula' => '#d09b6b', 'karamela-broncana' => '#7e3f00', 'espresso-tamna' => '#5c4033', 'neon-zelena' => '#b5e43a', 'nebesko-plava' => '#8cc4e8', 'pepeljasto-siva' => '#8e8b86', 'prirodno-smeda' => '#7a5638', 'ruzicasto-ljubicasta' => 'linear-gradient(135deg, #d9467a 0 40%, #c4a8ea 40% 62%, #4a2a5e 62% 100%)', 'plavo-zlatno-crna' => 'linear-gradient(135deg, #24405f 0 40%, #b8955a 40% 62%, #1d1d1f 62% 100%)', 'zeleno-smeda' => 'linear-gradient(135deg, #6f7a4a 0 40%, #5b3a2e 40% 62%, #c9a57c 62% 100%)', 'neon-bijelo-tamnoplava' => 'linear-gradient(135deg, #d4f56a 0 40%, #e8e8ea 40% 62%, #1f2c4a 62% 100%)', 'tirkizno-bijelo-ljubicasta' => 'linear-gradient(135deg, #2cc4e0 0 40%, #ececf2 40% 62%, #a98ad6 62% 100%)', 'maskirna-ljubicasta' => 'repeating-linear-gradient(45deg, #b49ae6 0 5px, #ddd0f4 5px 10px)', 'maskirna-tirkizna' => 'repeating-linear-gradient(45deg, #45c4c0 0 5px, #1f7f8a 5px 10px)', 'maskirna-siva' => 'repeating-linear-gradient(45deg, #b3adb8 0 5px, #dcd8e0 5px 10px)', 'crno-crvena' => 'linear-gradient(90deg, #151515 0 44%, #c0262d 44% 56%, #151515 56% 100%)', 'tamnoljubicasta' => '#4b1a3f', 'kaki-s-krem-prugama' => 'repeating-linear-gradient(180deg, #4f5628 0 5px, #ece5cf 5px 7px)', 'krem-sa-sivosmedim-prugama' => 'repeating-linear-gradient(180deg, #f3efe4 0 5px, #9b7f79 5px 7px)', 'biserno-bijela' => '#f4f3ef', 'oniks-crna' => '#1d1f23', 'mint-zelena' => '#8bb79f', 'njezno-ruzicasta' => '#edbcd9', 'zelena-cvjetna' => 'linear-gradient(135deg, #9aa886 50%, #b7c3ab 50%)', 'plava-cvjetna' => 'linear-gradient(135deg, #88aec6 50%, #b0cad8 50%)', 'karirana-zelena' => 'conic-gradient(from 90deg, #6f7860 25%, #ffffff 0 50%, #6f7860 0 75%, #ffffff 0)', 'karirana-kaki' => 'conic-gradient(from 90deg, #8ba5a9 25%, #9a503d 0 50%, #e44e2b 0 75%, #fcefef 0)', 'karirana-bez' => 'conic-gradient(from 90deg, #e6dccb 25%, #ffffff 0 50%, #e6dccb 0 75%, #ffffff 0)', 'karirana-sivo-crna' => 'conic-gradient(from 90deg, #151716 25%, #6a7587 0 50%, #151716 0 75%, #6a7587 0)', 'karirana-crna' => 'conic-gradient(from 90deg, #1f1f1f 25%, #ffffff 0 50%, #1f1f1f 0 75%, #ffffff 0)', 'mint' => '#a7bdba', 'njezno-roza' => '#f7e3ec', 'zarko-roza' => '#fb67aa', 'leopard-pastelni' => 'linear-gradient(135deg, #fa98c0 50%, #8ec7f6 50%)', 'leopard-oniks' => 'linear-gradient(135deg, #4c4e5a 50%, #000000 50%)', 'kaki' => '#8e7c68', 'tamnozelena' => '#1f4a34', 'sivoplava' => '#5d8bb8', 'lososova' => '#eaa690', 'boja-kave' => '#a9825f', 'sivosmeda' => '#7b6e63', 'cokoladno-smeda' => '#3e2a22', 'ljubicasto-crvena' => '#b0306f', 'borovo-zelena' => '#4f5a2e', 'sivo-smeda' => '#8a7366', 'bez-cipka' => '#ead2bf', 'prirodna-bez' => '#f4e4b4', 'jarko-narancasta' => '#fd8617', 'ruzicasti-vrtlog' => 'linear-gradient(135deg, #f9c9e6 0 50%, #ef6fb8 50% 100%)', 'ljubicasti-tigar' => 'linear-gradient(135deg, #e7b8d6 0 50%, #6a2457 50% 100%)', 'sivi-tigar' => 'linear-gradient(135deg, #ece6df 0 50%, #2b2b2b 50% 100%)', 'bjelokosni-tigar' => 'linear-gradient(135deg, #e9cf9f 0 50%, #1f1b17 50% 100%)', 'plavi-tigar' => 'linear-gradient(135deg, #c9dcef 0 50%, #22406f 50% 100%)', 'maslinasti-tigar' => 'linear-gradient(135deg, #b7ab7c 0 50%, #1f1d14 50% 100%)', 'bengalski-tigar' => 'linear-gradient(135deg, #d5944a 0 50%, #2a1f17 50% 100%)', 'jarko-ruzicasta' => '#f2357a', 'plavi-val' => 'linear-gradient(135deg, #e8f3fb 0 50%, #7fbde8 50% 100%)', 'lavanda' => '#a9a6e0', 'ruzicasti-kvarc' => 'linear-gradient(135deg, #fde3e7 0 50%, #f19aa8 50% 100%)', 'ciklama' => '#c4369a', 'antracit' => 'linear-gradient(135deg, #717171 0 50%, #4b4b4b 50% 100%)', 'sumsko-zelena' => 'linear-gradient(135deg, #8b9889 0 50%, #5f655e 50% 100%)', 'srednje-plava' => '#2d5480', 'vintage-plava' => '#4a7399', 'isprana-crna' => '#3a3b3f', 'prljavobijela' => '#ebe7da', 'kadulja-zelena' => '#7f9680', 'tamnoljubicasta-s-leptir-rukavima' => '#6f364c', 'terakota' => 'linear-gradient(135deg, #c2602f 0 55%, #1d1d1f 55% 100%)', 'petrolej-plava' => 'linear-gradient(135deg, #2f5f74 0 55%, #1d1d1f 55% 100%)', 'bijelo-siva' => 'linear-gradient(135deg, #f4f3f0 0 50%, #2a2a2c 50% 100%)', 'bez-zelena' => 'linear-gradient(135deg, #efe9de 0 50%, #93ae9c 50% 100%)', 'bez-crvena' => 'linear-gradient(135deg, #efe9de 0 50%, #8b1c2c 50% 100%)', 'crno-bijela' => 'linear-gradient(135deg, #1d1d1f 0 50%, #f2eee6 50% 100%)', 'bez-siva' => 'linear-gradient(135deg, #f1efea 0 50%, #b9b9b7 50% 100%)', 'starinska-roza' => '#e2a4b0', 'svijetlozuta' => '#f3eeb2', 'svijetloruzicasta' => '#f4cde0', 'mentol-zelena' => '#7fcfbf', 'bijela-sa-srcima' => 'radial-gradient(circle at 30% 32%, #c2303f 0 2.5px, transparent 3px), radial-gradient(circle at 70% 64%, #c2303f 0 2.5px, transparent 3px), #f7f4ef', 'smeda-sa-srcima' => 'radial-gradient(circle at 30% 32%, #f3ead9 0 2.5px, transparent 3px), radial-gradient(circle at 70% 64%, #f3ead9 0 2.5px, transparent 3px), #4a2c1e', 'bjelokosna' => '#efe8d6', 'classic-plavo-zrcalo' => '#2f6fd6', 'cross-oniks' => '#2a2a2c', 'cross-rubin-sljiva' => 'linear-gradient(135deg, #6b2340 0 50%, #e7a9c0 50% 100%)', 'cross-svijetloruzicasto-zrcalo' => '#f2b8c6', 'cross-ljubicasto-zrcalo' => '#9b6fe0', 'cross-crno-ruzicasta' => 'linear-gradient(135deg, #1d1d1f 0 50%, #f0b6c8 50% 100%)', 'cross-ponocni-cvijet' => 'linear-gradient(135deg, #1c2440 0 55%, #d46a8a 55% 100%)', 'cross-cvjetno-zrcalo' => 'repeating-linear-gradient(45deg, #e46a8a 0 5px, #2a2a2c 5px 9px)', 'cross-oceansko-tirkizna' => '#2bb3b8', 'cross-sljiva' => '#6b3a5e', 'cross-kornjacevina' => 'repeating-linear-gradient(45deg, #6b3b1a 0 5px, #c98a3c 5px 9px)', 'cross-ruzicasta' => '#f0a8bc', 'xl-svijetloruzicasto-zrcalo' => '#f5c2cf', 'luna-bordo' => '#7a1f33', 'luna-kornjacevina' => 'repeating-linear-gradient(45deg, #5a3216 0 5px, #c98a3c 5px 9px)', 'luna-crveno-crna' => 'linear-gradient(135deg, #b3202a 0 50%, #1d1d1f 50% 100%)', 'luna-ljubicasta' => '#8a5cc4', 'luna-smeda' => '#6b4a2e', 'classic-slim' => '#3a3a3c', 'classic-ruzicasto-zrcalo' => '#f08fb0', 'classic-prozirna' => '#e8e8e6', 'classic-crna' => '#1d1d1f', 'classic-crno-ruzicasto-zrcalo' => 'linear-gradient(135deg, #1d1d1f 0 50%, #f08fb0 50% 100%)', 'classic-zeleno-zrcalo' => '#3fa45a', 'tresnjin-cvijet' => '#efc3d0', 'nocno-plava' => '#26336b', 'neon-ruzicasta' => '#f0287a', 'tamna-tresnja' => '#7a1a2c', 'limun' => '#f3e27a', 'baby-plava' => '#b8d3ee', 'tigar-limitirano-izdanje' => 'repeating-linear-gradient(45deg, #d98a2b 0 5px, #1d1d1f 5px 9px)', 'koraljna' => '#e88f7a', 'tamno-siva' => '#84868b', 'svijetlo-siva' => '#cfd0d2', 'krem-bijela' => '#efe9dc', 'ledeno-plava' => '#cfe1ee', 'pudrasto-ljubicasta' => '#d8b8b6', 'medeno-zuta' => '#efa83a', 'malina' => '#d42a5c', 'puder' => '#fac8ba', 'limeta' => '#c6e94a', 'menta' => '#9fe0c9', 'maskirna' => 'linear-gradient(135deg, #8a7a55 0 33%, #d2bf94 33% 66%, #4f4a33 66% 100%)', 'biserna' => '#e8e1d4' );
+        $po_vrednosti = array(  );
+    }
+    $vrednost = trim( (string) $vrednost );
+    if ( isset( $po_vrednosti[ $vrednost ] ) ) { return $po_vrednosti[ $vrednost ]; }
+    $slug = sanitize_title( $vrednost );
+    return isset( $po_slugu[ $slug ] ) ? $po_slugu[ $slug ] : '';
 }
 
 /**
@@ -354,6 +371,12 @@ function noriks_bf_kartica( $p ) {
         $k['ponudbe'][ $i ]['pop'] = $pp;
         if ( $k['nacin'] !== 'ogled' && $pp > $k['pop_max'] ) { $k['pop_max'] = $pp; }
     }
+    // Barvni vzorci v izbirniku: atribut je barvni, ce ima vsaj polovica vrednosti znano barvo.
+    foreach ( $k['attrs'] as $ai => $a ) {
+        $b = array(); $zadetki = 0;
+        foreach ( $a['v'] as $v ) { $c = noriks_bf_barva( $v[0] ); $b[] = $c; if ( $c !== '' ) { $zadetki++; } }
+        $k['attrs'][ $ai ]['b'] = ( $zadetki > 0 && $zadetki * 2 >= count( $a['v'] ) ) ? $b : array();
+    }
     $k['prodaja'] = (int) $p->get_total_sales();
     return $k;
 }
@@ -397,7 +420,8 @@ function noriks_bf_je_tipa( $id, $tipi ) {
 /**
  * Majice, bokserice in kompleti: objavljeni, z akcijsko ceno. Vkljuceni so tudi
  * izdelki, skriti iz kataloga — glavne strani ponudb (SHIRTS-ORTO, BOXERS-ORTO, SHBOX)
- * so skrite na skoraj vseh trgih. Izloceni so izdelki za upsell (SKU z UPSELL/MYSTERY) in starter paketi;
+ * Izloceni so izdelki za upsell (SKU z UPSELL/MYSTERY), starter paketi in vse ORTO strani ponudb;
+ * namesto njih je med majicami Black Friday kopija ORTO majice (NORIKS_BF_MAJICA_SKU);
  * po prodaji padajoce. $tipi = kateri tipi (privzeto vsi), $s_slabproof = dodaj se
  * SlabProof nogavice (tudi ce so skrite).
  */
@@ -415,6 +439,8 @@ function noriks_bf_oblacila( $tipi = null, $s_slabproof = false ) {
         $videni[ $pid ] = true;
         if ( preg_match( '/UPSELL|MYSTERY|STARTER/i', (string) $p->get_sku() ) || ! noriks_bf_je_tipa( $pid, $tipi ) ) { continue; }
         if ( has_term( array( 'starter-paketi', 'orto-starter' ), 'product_cat', $pid ) ) { continue; }   // starter paketov na teh straneh ni
+        // ORTO strani ponudb (izbirnik paketov) niso na teh straneh; edina izjema je Black Friday kopija majice, ki se doda spodaj.
+        if ( function_exists( 'gck_is_orto_bundle_enabled' ) && gck_is_orto_bundle_enabled( $pid ) ) { continue; }
         $k = noriks_bf_kartica( $p );
         if ( ! $k ) { continue; }
         $k['vrsta'] = $n++;
@@ -422,6 +448,14 @@ function noriks_bf_oblacila( $tipi = null, $s_slabproof = false ) {
         $dodani[ $pid ] = true;
     }
     $ven = noriks_bf_uredi( $ven );
+    // Black Friday kopija najbolje prodajane ORTO majice (SKU NORIKS-SHIRTS-ORTO-BF) — vedno prva med majicami.
+    if ( in_array( 'majice', $tipi, true ) && function_exists( 'wc_get_product_id_by_sku' ) ) {
+        $bid = wc_get_product_id_by_sku( NORIKS_BF_MAJICA_SKU );
+        if ( $bid && ! isset( $dodani[ $bid ] ) ) {
+            $k = noriks_bf_kartica( wc_get_product( $bid ) );
+            if ( $k ) { $k['vrsta'] = -2; array_unshift( $ven, $k ); $dodani[ $bid ] = true; }
+        }
+    }
     if ( $s_slabproof && function_exists( 'wc_get_product_id_by_sku' ) ) {
         $sid = wc_get_product_id_by_sku( 'NORIKS-SLABPROOF' );
         if ( $sid && ! isset( $dodani[ $sid ] ) ) {
@@ -457,6 +491,12 @@ function noriks_bf_info() {
         $v = wp_get_attachment_image_url( $iid, 'woocommerce_single' );
         $m = wp_get_attachment_image_url( $iid, 'woocommerce_thumbnail' );
         if ( $v ) { $slike[] = array( $v, $m ? $m : $v ); }
+    }
+    $slug   = isset( $_REQUEST['stran'] ) ? sanitize_title( wp_unslash( $_REQUEST['stran'] ) ) : '';
+    $strani = noriks_bf_strani();
+    if ( $slike && isset( $strani[ $slug ]['dogodek'] ) && $strani[ $slug ]['dogodek'] === 'cm' && $p->get_sku() === NORIKS_BF_MAJICA_SKU ) {
+        $cm_slika = get_template_directory_uri() . '/img/bf/majica-cyber-monday.jpg';
+        $slike[0] = array( $cm_slika, $cm_slika );
     }
     wp_send_json_success( array(
         'ime'    => $p->get_name(),
