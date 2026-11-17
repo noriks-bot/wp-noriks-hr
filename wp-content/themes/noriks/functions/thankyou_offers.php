@@ -23,6 +23,9 @@ function noriks_ty2_default_unit_prices() {
         'NORIKS-BOXERS-ORTO' => 4.99,
         'NORIKS-SHIRTS-ORTO' => 7.99,
         'NORIKS-KOMPSFIT'    => 9.99,
+        // 17. 11. 2026: v koraku 2 namesto bokseric — 50 % akcijske cene (39,99 €)
+        'NORIKS-KIDSNEST'    => 19.99,
+        'NORIKS-KNEEFIX'     => 19.99,
     );
 }
 
@@ -46,8 +49,9 @@ function noriks_ty2_row_price( $row ) {
 function noriks_ty2_default_offers() {
     $rows = array(
         // slike so obstojece slike paketov iz knjiznice medijev; barve mesanih paketov so enake kot na sliki
-        array( 'sku' => 'NORIKS-BOXERS-ORTO', 'qty' => 5, 'color' => 'Crna', 'cat' => 'BOKSERICE', 'label' => '5x Crne bokserice', 'img' => 'sku:NORIKS-BOX-BLACK-5-PACK' ),
-        array( 'sku' => 'NORIKS-BOXERS-ORTO', 'qty' => 5, 'color' => 'Crna, Crna, Siva, Siva, Zelena', 'cat' => 'BOKSERICE', 'label' => '5x Bokserice miješanih boja', 'img' => 'sku:NORIKS-BOX-BUNDLE-5-SECOND' ),
+        // 17. 11. 2026 (Dejan): bokserica v ponudbi po nakupu ni vec — namesto njih KidsNest in KneeFix po boljsi ceni
+        array( 'uid' => 'kidsnest1', 'sku' => 'NORIKS-KIDSNEST', 'qty' => 1, 'color' => '', 'cat' => 'JASTUK', 'label' => '1x KidsNest dječji jastuk', 'img' => '' ),
+        array( 'uid' => 'kneefix1',  'sku' => 'NORIKS-KNEEFIX',  'qty' => 1, 'color' => '', 'cat' => 'STEZNICA', 'label' => '1x KneeFix steznica za koljeno', 'img' => '' ),
         array( 'sku' => 'NORIKS-SHIRTS-ORTO', 'qty' => 3, 'color' => 'Crna', 'cat' => 'MAJICE', 'label' => '3x Crne majice', 'img' => 'sku:NORIKS-ALL-BLACK-3-PACK' ),
         array( 'sku' => 'NORIKS-SHIRTS-ORTO', 'qty' => 6, 'color' => 'Crna', 'cat' => 'MAJICE', 'label' => '6x Crnih majica', 'img' => 'sku:NORIKS-ALL-BLACK-6-PACK' ),
         array( 'sku' => 'NORIKS-SHIRTS-ORTO', 'qty' => 3, 'color' => 'Crna, Siva, Bijela', 'cat' => 'MAJICE', 'label' => '3x Majice miješanih boja', 'img' => 'sku:NORIKS-MONOCHROME-3-PACK' ),
@@ -56,13 +60,37 @@ function noriks_ty2_default_offers() {
         array( 'sku' => 'NORIKS-KOMPSFIT',    'qty' => 3, 'color' => 'Crna', 'cat' => 'MAJICA', 'label' => '3x Crne KOMPSFIT majice', 'img' => 'ks-hr-03.webp' )
     );
     foreach ( $rows as $i => &$r ) {
-        $r['uid']    = 'd' . $i;
+        if ( empty( $r['uid'] ) ) { $r['uid'] = 'd' . $i; }   // majice in KOMPSFIT obdrzijo stare kljuce d2–d7
         $r['active'] = 1;
         $r['unit']   = '';
         $r['price']  = '';
     }
     return $rows;
 }
+
+/**
+ * Enkratna selitev shranjenih ponudb (17. 11. 2026): ce so ponudbe ze shranjene v adminu,
+ * iz njih odstranimo bokserice in na zacetek dodamo KidsNest in KneeFix. Ostale vrstice
+ * (majice, KOMPSFIT, rocno dodane) ostanejo, kot jih je uredil admin.
+ */
+add_action( 'init', function () {
+    if ( get_option( 'noriks_ty2_selitev_brez_bokseric' ) ) { return; }
+    $saved = get_option( NORIKS_TY2_OPTION, null );
+    if ( is_array( $saved ) ) {
+        $ima = array(); $ostale = array();
+        foreach ( $saved as $r ) {
+            $sku = strtoupper( (string) ( $r['sku'] ?? '' ) );
+            if ( strpos( $sku, 'BOXERS' ) !== false || strpos( $sku, 'BOX-' ) !== false ) { continue; }
+            $ima[ $sku ] = true; $ostale[] = $r;
+        }
+        $nove = array();
+        foreach ( noriks_ty2_default_offers() as $r ) {
+            if ( in_array( $r['sku'], array( 'NORIKS-KIDSNEST', 'NORIKS-KNEEFIX' ), true ) && empty( $ima[ $r['sku'] ] ) ) { $nove[] = $r; }
+        }
+        update_option( NORIKS_TY2_OPTION, array_merge( $nove, $ostale ) );
+    }
+    update_option( 'noriks_ty2_selitev_brez_bokseric', 1 );
+}, 20 );
 
 /** Vse vrstice (tudi neaktivne) — za admin. */
 function noriks_ty2_all_offers() {
@@ -85,9 +113,12 @@ function noriks_ty2_unit_price( $p ) {
     return $unit;
 }
 
-/** Barve in velikosti iz atributov izdelka. */
+/**
+ * Barve in velikosti iz atributov izdelka. Tretja vrednost je izbira, ki je ponudba ne
+ * more dolociti namesto kupca (stran pri KneeFix: Lijevo / Desno): array( name, options ) ali null.
+ */
 function noriks_ty2_attr_options( $p ) {
-    $colors = array(); $sizes = array();
+    $colors = array(); $sizes = array(); $choice = null;
     foreach ( $p->get_attributes() as $attr ) {
         if ( ! is_object( $attr ) ) { continue; }
         $aname = strtolower( $attr->get_name() );
@@ -95,10 +126,11 @@ function noriks_ty2_attr_options( $p ) {
             ? wp_list_pluck( wc_get_product_terms( $p->get_id(), $attr->get_name(), array( 'fields' => 'all' ) ), 'name' )
             : (array) $attr->get_options();
         // imena atributov se razlikujejo po trgih: Barva/Boja/Color, Velikost/Velicina/Size
-        if ( strpos( $aname, 'barv' ) !== false || strpos( $aname, 'boj' ) !== false || strpos( $aname, 'color' ) !== false ) { $colors = $opts; }
+        if ( strpos( $aname, 'stran' ) !== false ) { $choice = array( 'name' => $attr->get_name(), 'options' => array_values( $opts ) ); }
+        elseif ( strpos( $aname, 'barv' ) !== false || strpos( $aname, 'boj' ) !== false || strpos( $aname, 'color' ) !== false ) { $colors = $opts; }
         elseif ( strpos( $aname, 'veliko' ) !== false || strpos( $aname, 'veličin' ) !== false || strpos( $aname, 'velicin' ) !== false || strpos( $aname, 'size' ) !== false ) { $sizes = $opts; }
     }
-    return array( $colors, $sizes );
+    return array( $colors, $sizes, $choice );
 }
 
 /** Ena kartica iz izdelka; null, ce izdelka ni ali nima cene. */
@@ -154,7 +186,9 @@ function noriks_ty2_pick_size( $sizes, $customer_size ) {
  */
 function noriks_ty2_contents( $piece_colors, $sku, $fallback_name ) {
     $sku = strtoupper( (string) $sku );
-    if ( strpos( $sku, 'KOMPSFIT' ) !== false )  { $noun = array( 'KOMPSFIT majica', 'KOMPSFIT majice' ); }
+    if ( strpos( $sku, 'KIDSNEST' ) !== false )      { $noun = array( 'ortopedski dječji jastuk', 'ortopedska dječja jastuka' ); }
+    elseif ( strpos( $sku, 'KNEEFIX' ) !== false )   { $noun = array( 'ortopedska steznica za koljeno', 'ortopedske steznice za koljeno' ); }
+    elseif ( strpos( $sku, 'KOMPSFIT' ) !== false )  { $noun = array( 'KOMPSFIT majica', 'KOMPSFIT majice' ); }
     elseif ( strpos( $sku, 'BOX' ) !== false )   { $noun = array( 'bokserice', 'bokserice' ); }
     elseif ( strpos( $sku, 'SHIRT' ) !== false ) { $noun = array( 'majica', 'majice' ); }
     else { $noun = array( $fallback_name, $fallback_name ); }
@@ -251,9 +285,12 @@ function noriks_ty2_card( $key, $p, $qty, $cat, $label, $price, $color = 'mix', 
     $new = ( $price === '' || $price === null ) ? round( $old * 0.5, 2 ) : round( (float) $price, 2 );
     if ( $new <= 0 ) { return null; }
 
-    list( $colors, $sizes ) = noriks_ty2_attr_options( $p );
+    list( $colors, $sizes, $choice ) = noriks_ty2_attr_options( $p );
     $piece_colors = noriks_ty2_piece_colors( $color, $colors, $qty );
     if ( null === $piece_colors ) { return null; }
+    // velikosti, ki niso oblacilne (starost, teza): kupec jih mora izbrati sam, brez privzete
+    $oblacilne = false;
+    foreach ( (array) $sizes as $sz ) { if ( preg_match( '/^(XS|S|M|L|XL|[2-6]XL|X{2,6}L)$/i', trim( (string) $sz ) ) ) { $oblacilne = true; break; } }
     $img_id  = $p->get_image_id();
     $img_url = noriks_ty2_img_url( $img );
 
@@ -272,6 +309,8 @@ function noriks_ty2_card( $key, $p, $qty, $cat, $label, $price, $color = 'mix', 
         'piece_colors' => $piece_colors,  // barva vsakega kosa — doloci jo ponuda, ne kupec
         'contents'     => noriks_ty2_contents( $piece_colors, $p->get_sku(), $p->get_name() ),
         'sizes'      => $sizes,
+        'choice'     => $choice,                                   // npr. Stranica: Lijevo / Desno (izbere kupec)
+        'pick'       => ( $sizes && ! $oblacilne ),               // velikost brez privzete vrednosti
         'variable'   => $p->is_type( 'variable' ),
         'link'       => get_permalink( $p->get_id() ),
     );
@@ -314,8 +353,58 @@ function noriks_ty2_build_cards( $order = false, $exclude_id = 0 ) {
     return $cards;
 }
 
+/**
+ * Korak 1 kot "+1 istega izdelka": izdelki, pri katerih kupcu ponudimo se en kos tega,
+ * kar je pravkar kupil (namesto crne majice). Za dodatni izdelek dodaj vrstico sem;
+ * cena na kos je v noriks_ty2_default_unit_prices().
+ */
+function noriks_ty2_step1_products() {
+    return array(
+        'NORIKS-KOMPSFIT' => array(
+            'imena' => array( 1 => '1x KOMPSFIT majica', 2 => '2x KOMPSFIT majice', 3 => '3x KOMPSFIT majice' ),
+            'img'   => 'ks-hr-03.webp',
+        ),
+    );
+}
+
+/**
+ * Kartice koraka 1 za to narocilo (kolicina => kartica) ali prazno polje, ce v narocilu
+ * ni izdelka s seznama — takrat korak 1 ponudi crno majico. Barva je barva kupljenega kosa.
+ */
+function noriks_ty2_step1_cards( $order ) {
+    if ( ! $order ) { return array(); }
+    $seznam = noriks_ty2_step1_products();
+    $cene   = noriks_ty2_default_unit_prices();
+    foreach ( $order->get_items() as $it ) {
+        if ( ! is_a( $it, 'WC_Order_Item_Product' ) || $it->get_meta( '_noriks_upsell' ) ) { continue; }
+        $p = wc_get_product( $it->get_product_id() );
+        $sku = $p ? strtoupper( (string) $p->get_sku() ) : '';
+        if ( ! isset( $seznam[ $sku ] ) ) { continue; }
+        list( $colors ) = noriks_ty2_attr_options( $p );
+        $barva = '';
+        $prvi  = (string) $it->get_meta( '1' );               // "Crna - L"
+        foreach ( (array) $colors as $c ) {
+            if ( $prvi !== '' && mb_stripos( $prvi, (string) $c ) === 0 ) { $barva = (string) $c; break; }
+        }
+        if ( $barva === '' && $colors ) { $barva = in_array( 'Crna', $colors, true ) ? 'Crna' : (string) reset( $colors ); }
+        $kljuc = 's1' . strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace( 'NORIKS-', '', $sku ) ) );
+        $unit  = isset( $cene[ $sku ] ) ? (float) $cene[ $sku ] : 0;
+        $ven   = array();
+        foreach ( $seznam[ $sku ]['imena'] as $q => $ime ) {
+            $card = noriks_ty2_card( $kljuc . $q, $p, $q, '', $ime, $unit > 0 ? round( $unit * $q, 2 ) : '', $barva, $seznam[ $sku ]['img'] );
+            if ( $card ) { $ven[ (int) $q ] = $card; }
+        }
+        if ( $ven ) { return $ven; }
+    }
+    return array();
+}
+
 /** Kartica po kljucu — cena in izdelek za dodajanje pridejo od tu, ne iz brskalnika. */
 function noriks_ty2_find_card( $key, $order = false ) {
+    if ( strpos( $key, 's1' ) === 0 ) {          // korak 1 (+1 istega izdelka)
+        foreach ( noriks_ty2_step1_cards( $order ) as $c ) { if ( $c['key'] === $key ) { return $c; } }
+        return null;
+    }
     foreach ( noriks_ty2_build_cards( $order ) as $c ) {
         if ( $c['key'] === $key ) { return $c; }
     }

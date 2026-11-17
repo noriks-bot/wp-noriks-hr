@@ -2,7 +2,7 @@
 /**
  * Thankyou page — Post-purchase upsell with two-step flow
  *
- * Step 1: Single product offer (bokserice)
+ * Step 1: Single product offer (crna majica, ali +1 kupljenega izdelka, npr. KOMPSFIT)
  * Step 2: 6-product grid (after "Ne želim" or after adding 1 item)
  *
  * Style: Red background, no border-radius, red buttons
@@ -13,33 +13,30 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-// ─── Upsell product config — detect what to offer ───
-// Check if order has ONLY bokserice (no majice, no komplet)
-$has_only_bokserice = true;
-$has_bokserice = false;
-foreach ( $order->get_items() as $item ) {
-    $name = strtolower( $item->get_name() );
-    $product = $item->get_product();
-    $sku = $product ? strtolower( $product->get_sku() ) : '';
-    // Check if item is majica
-    // Categories are the source of truth
-    $cats = wp_get_post_terms( $item->get_product_id(), 'product_cat', array('fields' => 'slugs') );
-    $cat_str = is_array($cats) ? strtolower(implode(' ', $cats)) : '';
-    // Majica: category has "majic" OR name has "majic"
-    $is_majica = ( strpos($cat_str, 'majic') !== false || strpos($name, 'majic') !== false );
-    // Bokserice: category has "boxer/bokser/orto" OR SKU has "box" OR name has "bokser/airflow"
-    $is_boks = ( strpos($cat_str, 'boxer') !== false || strpos($cat_str, 'bokser') !== false || strpos($cat_str, 'orto') !== false || strpos($sku, 'box') !== false || strpos($name, 'bokser') !== false || strpos($name, 'airflow') !== false );
-    // Komplet
-    $is_komplet = ( strpos($name, 'komplet') !== false || strpos($cat_str, 'komplet') !== false );
-    if ( $is_boks ) $has_bokserice = true;
-    if ( $is_majica || $is_komplet ) $has_only_bokserice = false;
-}
-if ( !$has_bokserice ) $has_only_bokserice = false;
+// ─── Korak 1: kaj ponudimo ───
+// Vedno CRNA MAJICA. Izjema: ce je kupec kupil izdelek s seznama noriks_ty2_step1_products()
+// (npr. KOMPSFIT), mu ponudimo se en kos ISTEGA izdelka. Bokseric v koraku 1 ni vec (17. 11. 2026).
+$s1_cards = function_exists( 'noriks_ty2_step1_cards' ) ? noriks_ty2_step1_cards( $order ) : array();
+$upsell_is_majice = empty( $s1_cards );
+$s1_keys = array(); $s1_regular = array(); $s1_color = ''; $s1_sizes = array();
 
-// ONLY bokserice in order → upsell MAJICE, else → upsell BOKSERICE
-$upsell_is_majice = $has_only_bokserice;
-
-if ( $upsell_is_majice ) {
+if ( $s1_cards ) {
+    // +1 istega izdelka: cene, slike in dodajanje gredo prek kartic (isti mehanizem kot korak 2)
+    $s1_first          = reset( $s1_cards );
+    $upsell_product_id = (int) $s1_first['product_id'];
+    $upsell_name       = (string) $s1_first['label'];
+    $upsell_qty_prices = $upsell_qty_names = $upsell_qty_images = array();
+    foreach ( $s1_cards as $s1_q => $s1_c ) {
+        $upsell_qty_prices[ $s1_q ] = (float) $s1_c['new'];
+        $upsell_qty_names[ $s1_q ]  = (string) $s1_c['label'];
+        $upsell_qty_images[ $s1_q ] = (string) $s1_c['img'];
+        $s1_regular[ $s1_q ]        = (float) $s1_c['old'];
+        $s1_keys[ $s1_q ]           = (string) $s1_c['key'];
+    }
+    $s1_color = (string) ( $s1_first['piece_colors'][0] ?? '' );
+    $s1_sizes = (array) $s1_first['sizes'];
+    $upsell_title_text = 'Dodaj još jedan komad – posebna cijena';
+} else {
     $upsell_product_id = 250; // Crna majica (variable)
     $upsell_name       = 'Crne Majice';
     $upsell_qty_prices = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
@@ -50,20 +47,9 @@ if ( $upsell_is_majice ) {
         6 => 'https://noriks.com/hr/wp-content/uploads/2026/01/15xcrnamajica.png',
     );
     $upsell_title_text = 'Dodaj majice sada – 50% popusta';
-} else {
-    $upsell_product_id = 2829; // Sive Bokserice (siva verzija, ista struktura kot crna)
-    $upsell_name       = 'Sive Bokserice';
-    $upsell_qty_prices = array( 1 => 4.99, 3 => 14.97, 5 => 24.95 );
-    $upsell_qty_names  = array( 1 => '1x Sive Bokserice', 3 => '3x Sive Bokserice', 5 => '5x Sivih Bokserica' );
-    $upsell_qty_images = array(
-        1 => get_template_directory_uri() . '/img/upsell/siva-1x-v2.webp',
-        3 => get_template_directory_uri() . '/img/upsell/siva-3x-v2.png',
-        5 => get_template_directory_uri() . '/img/upsell/siva-5x-v2.png',
-    );
-    $upsell_title_text = 'Dodaj bokserice sada – 50% popusta';
 }
 $upsell_product    = wc_get_product( $upsell_product_id );
-$upsell_image      = $upsell_qty_images[1];
+$upsell_image      = reset( $upsell_qty_images );
 // Get unit price from first variation (variable products have empty parent price)
 $upsell_unit_price = 15.99;
 if ( $upsell_product && $upsell_product->is_type('variable') ) {
@@ -72,11 +58,18 @@ if ( $upsell_product && $upsell_product->is_type('variable') ) {
 } elseif ( $upsell_product ) {
     $upsell_unit_price = (float) $upsell_product->get_regular_price() ?: (float) $upsell_product->get_price();
 }
-$upsell_sale_price = $upsell_qty_prices[1];
+$upsell_sale_price = reset( $upsell_qty_prices );
 // Regular prices per qty (unit price * qty)
 $upsell_qty_regular = array();
 foreach ($upsell_qty_prices as $q => $p) {
     $upsell_qty_regular[$q] = $upsell_unit_price * $q;
+}
+// +1 istega izdelka: precrtana cena je akcijska cena izdelka (iz kartice), znacka pa dejanski popust
+$upsell_badge_pct = 50;
+if ( $s1_cards ) {
+    $upsell_qty_regular = $s1_regular;
+    $s1_q1 = array_key_first( $upsell_qty_prices );
+    if ( ! empty( $s1_regular[ $s1_q1 ] ) ) { $upsell_badge_pct = (int) round( ( 1 - $upsell_qty_prices[ $s1_q1 ] / $s1_regular[ $s1_q1 ] ) * 100 ); }
 }
 $default_qty = array_key_first($upsell_qty_prices); // 1
 
@@ -736,11 +729,16 @@ body.woocommerce-order-received .woocommerce {
                             <div class="tyu1-card__prices">
                                 <span class="tyu1-card__old" id="ty-upsell-regular"><?php echo number_format($upsell_qty_regular[$default_qty], 2, ',', '.'); ?>€</span>
                                 <span class="tyu1-card__new" id="ty-upsell-price"><?php echo number_format($upsell_qty_prices[$default_qty], 2, ',', '.'); ?>€</span>
-                                <span class="tyu1-card__badge">-50%</span>
+                                <span class="tyu1-card__badge">-<?php echo (int) $upsell_badge_pct; ?>%</span>
                             </div>
                             <div class="tyu1-card__select">
                                 <select class="variation-select" id="ty-variation-select">
-                                    <?php if ( $upsell_variations ) : ?>
+                                    <?php if ( $s1_cards ) : ?>
+                                        <?php $s1_pick = function_exists( 'noriks_ty2_pick_size' ) ? noriks_ty2_pick_size( $s1_sizes, $customer_size ) : ''; ?>
+                                        <?php foreach ( $s1_sizes as $s1_sz ) : ?>
+                                        <option value="<?php echo esc_attr( $s1_sz ); ?>" <?php selected( $s1_sz, $s1_pick ); ?>><?php echo esc_html( trim( $s1_color . ', ' . $s1_sz, ', ' ) ); ?></option>
+                                        <?php endforeach; ?>
+                                    <?php elseif ( $upsell_variations ) : ?>
                                         <?php foreach ( $upsell_variations as $v ) : ?>
                                         <option value="<?php echo $v['id']; ?>" <?php selected( strtolower($v['size']), strtolower($customer_size) ); ?>>Crna, <?php echo esc_html( $v['size'] ); ?></option>
                                         <?php endforeach; ?>
@@ -830,11 +828,26 @@ body.woocommerce-order-received .woocommerce {
 
                     <?php /* barva je dolocena v ponudbi — kupec izbere samo velikost */ ?>
 
+                    <?php if ( ! empty( $c['choice']['options'] ) ) : /* npr. KneeFix: Stranica (Lijevo / Desno) */ ?>
+                    <div class="tyu2-field">
+                        <span class="tyu2-field__lab"><?php echo esc_html( $c['choice']['name'] ); ?>:</span>
+                        <select class="tyu2-select tyu2-choice" data-dd="size" data-ime="<?php echo esc_attr( $c['choice']['name'] ); ?>">
+                            <option value="">Odaberite</option>
+                            <?php foreach ( $c['choice']['options'] as $c_opt ) : ?>
+                            <option value="<?php echo esc_attr( $c_opt ); ?>"><?php echo esc_html( $c_opt ); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <?php endif; ?>
+
                     <?php if ( $c['sizes'] ) : ?>
                     <div class="tyu2-field">
                         <span class="tyu2-field__lab">Veličina:</span>
                         <select class="tyu2-select tyu2-size" data-dd="size">
                             <?php $c_pick = function_exists( 'noriks_ty2_pick_size' ) ? noriks_ty2_pick_size( $c['sizes'], $customer_size ) : $customer_size; ?>
+                            <?php if ( ! empty( $c['pick'] ) ) : /* starost / teza: kupec mora izbrati sam */ ?>
+                            <option value="">Odaberite</option>
+                            <?php endif; ?>
                             <?php foreach ( $c['sizes'] as $sz ) : ?>
                             <option value="<?php echo esc_attr( $sz ); ?>" <?php selected( $sz, $c_pick ); ?>><?php echo esc_html( $sz ); ?></option>
                             <?php endforeach; ?>
@@ -1094,18 +1107,35 @@ body.woocommerce-order-received .woocommerce {
             var qty      = qtyRadio ? parseInt(qtyRadio.value, 10) : 1;
 
             var fd = new FormData();
+            <?php if ( $s1_cards ) : /* +1 istega izdelka: izdelek, kolicino in ceno doloci streznik po kljucu kartice */ ?>
+            var s1Keys = <?php echo wp_json_encode( $s1_keys ); ?>;
+            fd.append('action', 'noriks_add_upsell_step2');
+            fd.append('order_id', orderId);
+            fd.append('offer_key', s1Keys[qty] || '');
+            fd.append('upsell_size', select ? select.value : '');
+            fd.append('nonce', nonce);
+            <?php else : ?>
             fd.append('action', 'noriks_add_upsell');
             fd.append('order_id', orderId);
             fd.append('product_id', <?php echo (int) $upsell_product_id; ?>);
             fd.append('variation_id', select ? select.value : '');
             fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
             fd.append('quantity', qty);
-            fd.append('upsell_type', '<?php echo $upsell_is_majice ? "post_purchase_step1_majica" : "post_purchase_step1_bokserica"; ?>');
+            fd.append('upsell_type', 'post_purchase_step1_majica');
             fd.append('nonce', nonce);
+            <?php endif; ?>
 
             fetch(ajaxUrl, { method: 'POST', body: fd })
                 .then(function(r) { return r.json(); })
-                .then(function() {
+                .then(function(d) {
+                    <?php if ( $s1_cards ) : ?>
+                    if (!d || !d.success) {
+                        addBtn.dataset.busy = '0';
+                        addBtn.innerHTML = 'Dodaj u narudžbu <span>→</span>';
+                        if (d && d.data) { alert(d.data); }
+                        return;
+                    }
+                    <?php endif; ?>
                     addBtn.textContent = '✓ Dodano';
                     addBtn.classList.add('added');
                     if (select) select.disabled = true;
@@ -1239,6 +1269,15 @@ body.woocommerce-order-received .woocommerce {
 
                 var colorSel = card.querySelector('.tyu2-color');
                 var sizeSel  = card.querySelector('.tyu2-size');
+                var choiceSel = card.querySelector('.tyu2-choice');
+                // izbira strani / velikosti je obvezna, kjer ni privzete vrednosti
+                var manjka = (choiceSel && !choiceSel.value) ? ('Odaberite: ' + (choiceSel.getAttribute('data-ime') || '')) : ((sizeSel && !sizeSel.value) ? 'Odaberite veličinu' : '');
+                if (manjka) {
+                    addBtnG.dataset.busy = '0';
+                    addBtnG.innerHTML = '<span class="tyu2-btn__plus">+</span> Dodajte u narudžbu';
+                    alert(manjka);
+                    return;
+                }
 
                 // cena in izdelek se na strezniku preberejo iz ponudbe po kljucu — brskalnik ju ne posilja
                 var fd = new FormData();
@@ -1247,6 +1286,7 @@ body.woocommerce-order-received .woocommerce {
                 fd.append('offer_key', addBtnG.getAttribute('data-offer'));
                 if (colorSel) fd.append('upsell_color', colorSel.value);
                 if (sizeSel)  fd.append('upsell_size', sizeSel.value);
+                if (choiceSel) fd.append('upsell_choice', choiceSel.value);
                 fd.append('nonce', nonce);
 
                 fetch(ajaxUrl, { method: 'POST', body: fd })

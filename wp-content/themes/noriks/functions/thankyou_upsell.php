@@ -489,6 +489,13 @@ function noriks_handle_add_upsell_step2() {
     $size = sanitize_text_field( wp_unslash( $_POST['upsell_size'] ?? '' ) );
     if ( $card['sizes'] && ! in_array( $size, $card['sizes'], true ) ) { wp_send_json_error( 'Odaberite veličinu' ); }
     if ( ! $card['sizes'] ) { $size = ''; }
+    // izbira, ki je ponudba ne doloci namesto kupca (stran pri KneeFix)
+    $choice = sanitize_text_field( wp_unslash( $_POST['upsell_choice'] ?? '' ) );
+    if ( ! empty( $card['choice']['options'] ) ) {
+        if ( ! in_array( $choice, $card['choice']['options'], true ) ) { wp_send_json_error( 'Odaberite: ' . $card['choice']['name'] ); }
+    } else {
+        $choice = '';
+    }
     $piece_colors = array_values( (array) $card['piece_colors'] );
     $color = $piece_colors[0] ?? '';
 
@@ -504,7 +511,8 @@ function noriks_handle_add_upsell_step2() {
     $total  = (float) $card['new'];
     $piece_labels = array();
     for ( $i = 0; $i < $pieces; $i++ ) {
-        $pl = implode( ' - ', array_filter( array( $piece_colors[ $i ] ?? $color, $size ) ) );
+        // isti zapis kot na produktni strani: "Crna - L", pri KneeFix "Desno - M (50–75 kg)"
+        $pl = implode( ' - ', array_filter( array( $choice !== '' ? $choice : ( $piece_colors[ $i ] ?? $color ), $size ) ) );
         $piece_labels[] = $pl !== '' ? $pl : $product->get_name();
     }
     $piece_label = implode( ', ', array_unique( $piece_labels ) );
@@ -522,7 +530,11 @@ function noriks_handle_add_upsell_step2() {
     }
     $item->add_meta_data( '_bundle_pairs', $pieces, true );
     $item->add_meta_data( '_offer_id', $pieces . '__ty2', true );
-    $item->add_meta_data( '_noriks_upsell', 'post_purchase_step2', true );
+    // kljuc "s1…" = korak 1 (+1 istega izdelka), npr. post_purchase_step1_kompsfit
+    $upsell_tip = ( strpos( $offer_key, 's1' ) === 0 )
+        ? 'post_purchase_step1_' . strtolower( preg_replace( '/[^A-Za-z0-9]/', '', str_replace( 'NORIKS-', '', strtoupper( (string) $card['sku'] ) ) ) )
+        : 'post_purchase_step2';
+    $item->add_meta_data( '_noriks_upsell', $upsell_tip, true );
     $item->add_meta_data( '_noriks_upsell_pieces', $pieces, true );
     $item->add_meta_data( '_noriks_upsell_sku', $card['sku'], true );
     $item->add_meta_data( '_noriks_upsell_label', $card['label'], true );
@@ -533,7 +545,8 @@ function noriks_handle_add_upsell_step2() {
     $order->save();
 
     $order->add_order_note( sprintf(
-        'Thank you upsell (korak 2): %s [%s] — %d kom, %s, ukupno %s',
+        'Thank you upsell (%s): %s [%s] — %d kom, %s, ukupno %s',
+        strpos( $offer_key, 's1' ) === 0 ? 'korak 1' : 'korak 2',
         $product->get_name(),
         $card['label'],
         $pieces,
