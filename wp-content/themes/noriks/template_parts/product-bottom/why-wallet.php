@@ -3,7 +3,7 @@
  * NORIKS Slide novcanik - tanki aluminijski novcanik za kartice s RFID zastitom - why sekcije po natancni strukturi originala (Venice Wallet).
  *
  * STRUKTURA ORIGINALA:
-   1. "THE FEATURES - Crafted from the finest materials": slika izdelka + "Reinforced hinges" slika + besedilo - pri nas 2 kartici s sliko, ikono in besedilom (David 17.11.: slika sarke na soncnih ocalih ne prikazuje denarnice -> 2. kartica = stezaljka za novcanice z originalne galerije)
+   1. "THE FEATURES - Crafted from the finest materials": slika izdelka + "Reinforced hinges" slika + besedilo - pri nas 2 kartici s sliko, ikono in besedilom (David 17.11.: slika sarke na soncnih ocalih ne prikazuje denarnice -> 2. kartica = stezaljka za novcanice, slika z originala)
    2. "THE DETAILS - Built with intention": uvod + 4 vrstice slika/besedilo z oznako 01-04 (tanek, izvlek kartic, RFID, barve) - pri nas iste 4 vrstice cik-cak
    3. "Specifications - Every number earns its place": tabela 8 vrstic - pri nas tabela 7 vrstic (inci -> mm/cm, tuja garancija 1 leto izpuscena) + slika levo
    4. FAQ (5 vprasanj) - pri nas v FAQ Informacije o proizvodu (FAQ_HR_wallet.php), brez tujih darilnih bonov in tuje garancije
