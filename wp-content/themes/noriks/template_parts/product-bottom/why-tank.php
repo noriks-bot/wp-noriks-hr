@@ -13,7 +13,7 @@
    7. "NO RISK PROMISE" - jamstvo 90 dni - pri nas 30 dana z NORIKS pogoji (sredinsko, 3 tocke z ikonami)
    8. FAQ (7 vprasanj) - pri nas v FAQ Informacije o proizvodu (auto_reviews/FAQ_HR_tank.php)
    9. NORIKS pogoji (skupni del noriks-pogoji.php)
- * VIDEI: 8 lokalnih posnetkov /img/tank/noriks-tank-video-1.mp4 do -8.mp4 (ffmpeg, 480p, brez zvoka) s posterji .jpg
+ * VIDEI: 8 lokalnih posnetkov /img/tank/noriks-tank-video-1.mp4 do -8.mp4 (ffmpeg, 480p, brez zvoka) s posterji .jpg; vsi videi s hrvaskimi podnapisi (1-4 prevod govora originala, 5 in 6 brez govora - citat kartice, 7 in 8 prevedeni vzgani napisi)
  * BARVA ORIGINALA: #c9a58a (nude/bez barva majice in toplih tonov strani originala); svetel ton za --bg #f7efe9
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
