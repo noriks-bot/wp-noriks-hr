@@ -375,7 +375,7 @@ function noriks_handle_add_upsell() {
 
     // Prices depend on product type (bokserice vs majice)
     $bokserice_prices = array( 1 => 4.99, 3 => 14.97, 5 => 24.95 );
-    $majice_prices    = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
+    $majice_prices    = array( 1 => 7.99, 3 => 19.99, 6 => 34.99 );
     // ─── Detect product type: exact same logic as frontend thankyou.php ───
     $_detect_id = $product_id ?: $product->get_id();
     $_detect_prod = wc_get_product( $_detect_id );

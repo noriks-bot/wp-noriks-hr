@@ -39,7 +39,7 @@ if ( $s1_cards ) {
 } else {
     $upsell_product_id = 250; // Crna majica (variable)
     $upsell_name       = 'Crne Majice';
-    $upsell_qty_prices = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
+    $upsell_qty_prices = array( 1 => 7.99, 3 => 19.99, 6 => 34.99 );
     $upsell_qty_names  = array( 1 => '1x Crna Majica', 3 => '3x Crne Majice', 6 => '6x Crnih Majica' );
     $upsell_qty_images = array(
         1 => 'https://noriks.com/hr/wp-content/uploads/2025/09/black-1.jpg',
@@ -70,6 +70,10 @@ if ( $s1_cards ) {
     $upsell_qty_regular = $s1_regular;
     $s1_q1 = array_key_first( $upsell_qty_prices );
     if ( ! empty( $s1_regular[ $s1_q1 ] ) ) { $upsell_badge_pct = (int) round( ( 1 - $upsell_qty_prices[ $s1_q1 ] / $s1_regular[ $s1_q1 ] ) * 100 ); }
+} else {
+    // crna majica: znacka kaze dejanski popust prve opcije (7,99 namesto 24,99 = -68 %)
+    $m_q1 = array_key_first( $upsell_qty_prices );
+    if ( ! empty( $upsell_qty_regular[ $m_q1 ] ) ) { $upsell_badge_pct = (int) round( ( 1 - $upsell_qty_prices[ $m_q1 ] / $upsell_qty_regular[ $m_q1 ] ) * 100 ); }
 }
 $default_qty = array_key_first($upsell_qty_prices); // 1
 
