@@ -11,7 +11,7 @@ $auto_reviews_en = array(
     array("name" => "Ana V.", "text" => "Kupila sam ga suprugu za rođendan. Stigao je u lijepoj kutiji, nije trebalo ni zamatati."),
     array("name" => "Filip D.", "text" => "U glavni pretinac stane mi šest kartica, a u vanjske džepove osobna i nekoliko novčanica. Sasvim dovoljno za svaki dan."),
     array("name" => "Maja R.", "text" => "Karticu koju najčešće koristim držim u vanjskom džepu pa beskontaktno plaćanje radi bez vađenja."),
-    array("name" => "Dino P.", "text" => "Šarke su čvrste, nakon dva mjeseca svakodnevnog nošenja ništa ne zvecka i ne klima se."),
+    array("name" => "Dino P.", "text" => "Stezaljka straga čvrsto drži novčanice, nakon dva mjeseca svakodnevnog nošenja ništa ne zvecka i ne klima se."),
     array("name" => "Lucija H.", "text" => "Crna sa zlatnom izgleda stvarno elegantno. Kolege su odmah pitale gdje sam ga kupila."),
     array("name" => "Krešimir J.", "text" => "Bio sam skeptičan prema tankim novčanicima, ali ovaj je promišljeno napravljen. Novčanice drži stezaljka straga i ne ispadaju."),
     array("name" => "Martina G.", "text" => "Naručili smo dva, zeleni i plavi. Brza dostava i plaćanje pouzećem, sve bez problema."),
