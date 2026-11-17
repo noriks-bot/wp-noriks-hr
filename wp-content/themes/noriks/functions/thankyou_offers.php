@@ -30,6 +30,17 @@ function noriks_ty2_default_unit_prices() {
 }
 
 /**
+ * Privzete cene PAKETA po SKU in kolicini — ista lestvica kot v koraku 1
+ * (17. 11. 2026: majice 1x 7,99 / 3x 19,99 / 6x 34,99), da korak 2 ni drazji od koraka 1.
+ * Veljajo, ce v adminu cena po komadu ni vpisana; za ostale kolicine velja cena po komadu.
+ */
+function noriks_ty2_default_pack_prices() {
+    return array(
+        'NORIKS-SHIRTS-ORTO' => array( 1 => 7.99, 3 => 19.99, 6 => 34.99 ),
+    );
+}
+
+/**
  * Koncna cena paketa za vrstico ponudbe: cena po komadu × kolicina.
  * Vrne '' (= 50 % akcijske cene), ce ni ne vpisane ne privzete cene po komadu.
  */
@@ -39,6 +50,9 @@ function noriks_ty2_row_price( $row ) {
     if ( $unit <= 0 ) {
         // starejsi zapis: koncna cena za celoten paket
         if ( isset( $row['price'] ) && is_numeric( $row['price'] ) && (float) $row['price'] > 0 ) { return (float) $row['price']; }
+        $paketi = noriks_ty2_default_pack_prices();
+        $sku_v  = strtoupper( $row['sku'] ?? '' );
+        if ( isset( $paketi[ $sku_v ][ $qty ] ) ) { return (float) $paketi[ $sku_v ][ $qty ]; }
         $map  = noriks_ty2_default_unit_prices();
         $unit = $map[ strtoupper( $row['sku'] ?? '' ) ] ?? 0;
     }
@@ -91,6 +105,26 @@ add_action( 'init', function () {
     }
     update_option( 'noriks_ty2_selitev_brez_bokseric', 1 );
 }, 20 );
+
+/**
+ * Enkratna selitev (17. 11. 2026): v shranjenih ponudbah je bila pri majicah lahko rocno
+ * vpisana stara privzeta cena 7,99 na kos (3x = 23,97, 6x = 47,94). Tako vpisano ceno
+ * izpraznimo, da velja nova lestvica paketov (3x 19,99 / 6x 34,99). Druge vpisane cene ostanejo.
+ */
+add_action( 'init', function () {
+    if ( get_option( 'noriks_ty2_selitev_majice_lestvica' ) ) { return; }
+    $saved = get_option( NORIKS_TY2_OPTION, null );
+    if ( is_array( $saved ) ) {
+        $sprememba = false;
+        foreach ( $saved as &$r ) {
+            if ( strtoupper( (string) ( $r['sku'] ?? '' ) ) !== 'NORIKS-SHIRTS-ORTO' ) { continue; }
+            if ( isset( $r['unit'] ) && is_numeric( $r['unit'] ) && abs( (float) $r['unit'] - 7.99 ) < 0.001 ) { $r['unit'] = ''; $sprememba = true; }
+        }
+        unset( $r );
+        if ( $sprememba ) { update_option( NORIKS_TY2_OPTION, $saved ); }
+    }
+    update_option( 'noriks_ty2_selitev_majice_lestvica', 1 );
+}, 21 );
 
 /** Vse vrstice (tudi neaktivne) — za admin. */
 function noriks_ty2_all_offers() {
@@ -532,7 +566,7 @@ function noriks_ty2_admin_page() {
            <strong>Boja</strong>: jedna boja (npr. Crna) za sve komade, popis boja redom (npr. Crna, Siva, Bijela) ili »miješano« = boje proizvoda redom. Kupac bira samo veličinu.
            <strong>Slika</strong>: kliknite <em>Odaberi sliku</em> pa je odaberite ili učitajte u knjižnicu medija. Prazno = glavna slika proizvoda iz ponude.
            (U polje ispod gumba možete upisati i <code>sku:SKU-PROIZVODA</code> = glavna slika tog proizvoda ili ime datoteke iz knjižnice.)<br>
-           <strong>Cijena po komadu</strong> množi se s količinom (npr. 4,99 × 3 = 14,97). Prazno = zadana cijena po komadu (bokserice 4,99, majica 7,99, KOMPSFIT 9,99), za ostale proizvode 50&nbsp;% akcijske cijene.
+           <strong>Cijena po komadu</strong> množi se s količinom (npr. 4,99 × 3 = 14,97). Prazno = zadana cijena: majice paket 3x 19,99 / 6x 34,99 (ostale količine 7,99 po komadu), KOMPSFIT 9,99 po komadu, za ostale proizvode 50&nbsp;% akcijske cijene.
            <?php if ( ! $is_saved ) : ?><br><em>Trenutno vrijede zadane ponude iz koda — nakon prvog spremanja postaju uredive ovdje.</em><?php endif; ?></p>
 
         <form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
@@ -560,6 +594,8 @@ function noriks_ty2_admin_page() {
                     $card = $prod ? noriks_ty2_card( 'x', $prod, $r['qty'], '', '', noriks_ty2_row_price( $r ), $r['color'] ?? 'mix', $r['img'] ?? '' ) : null;
                     $dmap = noriks_ty2_default_unit_prices();
                     $ph   = isset( $dmap[ $r['sku'] ] ) ? number_format( $dmap[ $r['sku'] ], 2, ',', '' ) : '50 %';
+                    $pmap = noriks_ty2_default_pack_prices();
+                    if ( isset( $pmap[ $r['sku'] ][ (int) $r['qty'] ] ) ) { $ph = 'paket ' . number_format( $pmap[ $r['sku'] ][ (int) $r['qty'] ], 2, ',', '' ); }
                 ?>
                     <tr>
                         <td><button type="button" class="button ty2-up" title="Gor">↑</button> <button type="button" class="button ty2-down" title="Dol">↓</button></td>
