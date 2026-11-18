@@ -372,17 +372,23 @@ function gck_size_prices( $product_id ) : array {
         // NORIKS TravelVac (David 16.11.): vec vrecic v setu = visja cena. Original (tryrhona.com/products/rhona-travelvac-pro)
         // 6 / 9 / 12 / 15 Pack EUR 57,95 / 69,95 / 79,95 / 85,95 -> David 16.11.: najcenejsi paket (6 vrecic) 57,99,
         // ostali stopnjevano kot na originalu (69,99 / 79,99 / 85,99); redna = akcijska / 0,6 na ,99 (popust ~40 %).
-        // Kolicina: 2 kosa -20 %, 3 kosi -30 %, cena na kos na ,99 (meta ponud 57,99 / 91,98 / 122,97).
+        // David 18.11.: 6 vrecic 1x 49,99 / 2x 79,99 / 3x 104,99 (meta ponud, orto_rocna_cena). 'packs' = fiksne cene paketov
+        // (skupaj za kolicino) po setu; vecji seti v istem razmerju (x1,6 / x2,1), lepe cene ,99 skupaj in na kos.
         return array(
             'default' => '6 vrećica - 2 S, 2 M, 2 L',
             'sizes'   => array(
-                '6 vrećica - 2 S, 2 M, 2 L'  => array( 57.99, 96.99 ),
+                '6 vrećica - 2 S, 2 M, 2 L'  => array( 49.99, 96.99 ),
                 '9 vrećica - 3 S, 3 M, 3 L'  => array( 69.99, 116.99 ),
                 '12 vrećica - 4 S, 4 M, 4 L' => array( 79.99, 133.99 ),
                 '15 vrećica - 5 S, 5 M, 5 L' => array( 85.99, 143.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
-            'kos99'   => true,
+            'packs'   => array(
+                '6 vrećica - 2 S, 2 M, 2 L'  => array( 1 => 49.99, 2 => 79.99, 3 => 104.99 ),
+                '9 vrećica - 3 S, 3 M, 3 L'  => array( 1 => 69.99, 2 => 111.99, 3 => 146.99 ),
+                '12 vrećica - 4 S, 4 M, 4 L' => array( 1 => 79.99, 2 => 127.99, 3 => 167.99 ),
+                '15 vrećica - 5 S, 5 M, 5 L' => array( 1 => 85.99, 2 => 137.99, 3 => 179.99 ),
+            ),
         );
     }
     if ( $product_id && has_term( 'orto-vacuumsealer', 'product_cat', $product_id ) ) {
@@ -424,6 +430,17 @@ function gck_size_priced_totals( array $table, array $sizes ) {
         if ( ! isset( $table['sizes'][ $s ] ) ) return null;
         $sale_c += (int) round( $table['sizes'][ $s ][0] * 100 );
         $reg_c  += (int) round( $table['sizes'][ $s ][1] * 100 );
+    }
+    if ( ! empty( $table['packs'] ) ) {
+        // fiksne cene paketov: vsota (cena paketa izbranega seta / kolicina), mesani izbor zaokrozen navzdol na ,99
+        $pack_c = 0;
+        foreach ( $sizes as $s ) {
+            if ( empty( $table['packs'][ $s ][ $qty ] ) ) return null;
+            $pack_c += (int) round( $table['packs'][ $s ][ $qty ] * 100 ) / $qty;
+        }
+        $pack_c = (int) round( $pack_c );
+        if ( $pack_c % 100 !== 99 ) $pack_c = (int) floor( $pack_c / 100 ) * 100 - 1;
+        return array( $pack_c / 100, $reg_c / 100 );
     }
     if ( $qty > 1 && ! empty( $table['reg_from_sale'] ) ) {
         $reg_c = $sale_c; // precrtana cena paketa = vsota akcijskih cen (kot Kaching na originalu)
@@ -8126,6 +8143,17 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!p) return null;
             sale += Math.round(p[0] * 100);
             reg  += Math.round(p[1] * 100);
+        }
+        if (SP.packs) { // fiksne cene paketov (isto kot PHP)
+            let pack = 0;
+            for (const s of sizes) {
+                const pp = SP.packs[s] && SP.packs[s][sizes.length];
+                if (!pp) return null;
+                pack += Math.round(pp * 100) / sizes.length;
+            }
+            pack = Math.round(pack);
+            if (pack % 100 !== 99) pack = Math.floor(pack / 100) * 100 - 1;
+            return { sale: pack, reg };
         }
         if (sizes.length > 1 && SP.reg_from_sale) reg = sale; // precrtana cena paketa = vsota akcijskih cen
         if (SP.unit_off && SP.unit_off[sizes.length]) sale -= Math.round(SP.unit_off[sizes.length] * 100) * sizes.length; // fiksni popust na kos
