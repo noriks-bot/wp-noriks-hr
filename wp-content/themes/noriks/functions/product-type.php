@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'filterless' => array( 'orto-filterless' ),
     'purifier' => array( 'orto-purifier' ),
     'aparat' => array( 'orto-aparat' ),
+    'duoseat' => array( 'orto-duoseat' ),
     'neurosoothe' => array( 'orto-neurosoothe' ),
     'slouchsocks' => array( 'orto-slouchsocks' ),
     'rollpro' => array( 'orto-rollpro' ),
