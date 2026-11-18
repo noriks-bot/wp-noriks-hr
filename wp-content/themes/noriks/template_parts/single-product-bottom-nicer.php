@@ -1089,6 +1089,10 @@ if ( noriks_is_type( 'slouchsocks' ) ) {
     include $noriks_pb_dir . 'why-slouchsocks.php';
 }
 
+if ( noriks_is_type( 'aparat' ) ) {
+    include $noriks_pb_dir . 'why-aparat.php';
+}
+
 if ( noriks_is_type( 'purifier' ) ) {
     include $noriks_pb_dir . 'why-purifier.php';
 }
