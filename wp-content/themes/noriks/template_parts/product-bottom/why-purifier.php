@@ -87,6 +87,7 @@ div.wspurifier__pog{text-align:center;border:1px solid rgba(46,120,234,.35);bord
 @media (max-width:860px){.wspurifier__s{padding:46px 0}.wspurifier__s.wspurifier__traka{padding:30px 0}.wspurifier__plavo{margin-top:-46px}.wspurifier__pog>div{padding:22px 12px}}
 @media (max-width:767px){.wspurifier__v{padding:0 16px}}
 /* /dizajn.py */
+.wspurifier__s:nth-of-type(6) .wspurifier__kt strong{font-size:40px;line-height:1.1;color:#2b71dc;font-weight:800;margin-bottom:10px}
 </style>
 <script>
 (function(){document.querySelectorAll('.wspurifier__kar').forEach(function(k){
