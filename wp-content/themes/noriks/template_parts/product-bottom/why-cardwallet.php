@@ -97,3 +97,19 @@ div.wscardwallet__pog{text-align:center;border:1px solid rgba(217,74,79,.35);bor
     b.addEventListener('click',function(){var x=k.firstElementChild;var d=x?x.getBoundingClientRect().width+22:300;k.scrollBy({left:s==='l'?-d:d,behavior:'smooth'});});w.appendChild(b);});
 });})();
 </script>
+<script>
+/* David 18.11.: izbira barve pokaze novcanik v tej barvi (packshoti vseh 5 barv so v galeriji takoj za glavno sliko) */
+(function(){
+var M={'Crna':'cardwallet-crna','Smeđa':'cardwallet-smeda','Svijetlosmeđa':'cardwallet-svijetlosmeda','Karbon':'cardwallet-karbon','Plava':'cardwallet-plava'};
+function pokazi(v){
+  var key=M[v]; if(!key) return;
+  var sl=document.querySelectorAll('.woocommerce-product-gallery__image'); var idx=-1;
+  for(var i=0;i<sl.length;i++){var t=sl[i].getAttribute('data-thumb')||'';if(t.indexOf(key)>-1){idx=i;break;}}
+  if(idx<0) return;
+  var g=window.jQuery&&jQuery('.woocommerce-product-gallery').data('flexslider');
+  if(g&&g.flexAnimate){g.flexAnimate(idx);return;}
+  var th=document.querySelectorAll('.flex-control-thumbs li img'); if(th[idx]) th[idx].click();
+}
+document.addEventListener('click',function(e){var s=e.target.closest&&e.target.closest('.swatch[data-value]');if(s) pokazi(s.getAttribute('data-value'));},true);
+})();
+</script>

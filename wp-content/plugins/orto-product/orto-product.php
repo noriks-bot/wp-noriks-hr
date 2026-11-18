@@ -1148,7 +1148,11 @@ function gck_render_bundle_selector() {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
         } elseif ( has_term( 'orto-biochips', 'product_cat', $product_id ) ) {
             // David 18.11.: na slicici v kartici toliko nalepk, kot jih je v ponudbi (1 / 2 / 3).
-            $gck_offer_imgs = array( 'biochips/noriks-biochips-crna-1.webp', 'biochips/noriks-biochips-crna-2.webp', 'biochips/noriks-biochips-crna-3.webp' );
+            // 18.11.: slika 2 kosov znova 1024 px, belo ozadje, enako merilo kot 1/3 - ?v=2 zaradi predpomnilnika.
+            $gck_offer_imgs = array( 'biochips/noriks-biochips-crna-1.webp', 'biochips/noriks-biochips-crna-2.webp?v=2', 'biochips/noriks-biochips-crna-3.webp' );
+        } elseif ( has_term( 'orto-pawfile', 'product_cat', $product_id ) ) {
+            // David 18.11.: v karticah ponud slika, ne animacija (glavna slika izdelka je GIF z originala).
+            $gck_offer_imgs = array_fill( 0, 3, 'pawfile/noriks-pawfile-kutija.webp' );
         } elseif ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'popuptent/noriks-popuptent-kartica-mali.webp', 'popuptent/noriks-popuptent-kartica-veliki.webp', 'popuptent/noriks-popuptent-kartica-obiteljski.webp' );
         } elseif ( has_term( 'orto-leakbrief', 'product_cat', $product_id ) ) {
