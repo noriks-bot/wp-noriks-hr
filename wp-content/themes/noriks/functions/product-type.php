@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'filterless' => array( 'orto-filterless' ),
     'purifier' => array( 'orto-purifier' ),
     'neurosoothe' => array( 'orto-neurosoothe' ),
+    'slouchsocks' => array( 'orto-slouchsocks' ),
     'rollpro' => array( 'orto-rollpro' ),
     'pawfile' => array( 'orto-pawfile' ),
     'clickwallet' => array( 'orto-clickwallet' ),
@@ -867,6 +868,16 @@ if ( ! function_exists( 'noriks_nyslipper_sizes' ) ) {
             array( 'M',  '38 do 39' ),
             array( 'L',  '40 do 41' ),
             array( 'XL', '42 do 43' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_slouchsocks_sizes' ) ) {
+    /** NORIKS CozySlouch: dve velikosti z originala (US zenske st. cevljev 5-8 in 8.5-12) preracunani v EU. */
+    function noriks_slouchsocks_sizes() {
+        return array(
+            array( 'S', '35 do 39' ),
+            array( 'L', '39,5 do 43' ),
         );
     }
 }
@@ -2035,6 +2046,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'boots'        => array( '37' => 'stopalo do 22,8 cm', '38' => 'stopalo do 23,4 cm', '39' => 'stopalo do 24,0 cm', '40' => 'stopalo do 24,6 cm', '41' => 'stopalo do 25,2 cm', '42' => 'stopalo do 25,8 cm', '43' => 'stopalo do 26,4 cm', '44' => 'stopalo do 27,0 cm', '45' => 'stopalo do 27,6 cm', '46' => 'stopalo do 28,2 cm', '47' => 'stopalo do 28,8 cm', '48' => 'stopalo do 29,4 cm' ),
             'nyslipper'    => array( 'S' => '36 do 37', 'M' => '38 do 39', 'L' => '40 do 41', 'XL' => '42 do 43' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
+            'slouchsocks'  => array( 'S' => '35 do 39', 'L' => '39,5 do 43' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
             'seamthong'    => array( 'XS' => '30 do 32', 'S' => '32 do 34', 'M' => '34 do 38', 'L' => '38 do 40', 'XL' => '40 do 42' ),
@@ -2222,6 +2234,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličine dolaze u parovima – odaberite par u koji ulazi vaš <strong>EU broj cipele</strong>. Na etiketi u papuči piše EU par (npr. 38-39).',
                 'glava' => array( 'Veličina', 'EU broj cipele' ), 'vrstice' => noriks_nyslipper_sizes(),
                 'opomba' => 'Između dva para? Uzmite veći. Široko stopalo ili visok rist: također veći par – trake se ne podešavaju.' );
+        }
+        if ( noriks_is_type( 'slouchsocks', $product_id ) ) {
+            return array( 'uvod' => 'Dvije veličine – odaberite prema svom <strong>EU broju cipele</strong>. Rastezljivo pletivo prilagodi se stopalu i listu, mjerenje lista nije potrebno.',
+                'glava' => array( 'Veličina', 'EU broj cipele' ), 'vrstice' => noriks_slouchsocks_sizes(),
+                'opomba' => 'Broj 39 i manji: uzmite S. Broj 39,5 i veći: uzmite L. Čarape su do iznad gležnja – manžeta sjedi tik iznad gležanjske kosti.' );
         }
         if ( noriks_is_type( 'gripsocks', $product_id ) ) {
             return array( 'uvod' => 'Odaberite veličinu prema <strong>EU broju cipele</strong>.',
