@@ -1085,4 +1085,8 @@ if ( noriks_is_type( 'neurosoothe' ) ) {
     include $noriks_pb_dir . 'why-neurosoothe.php';
 }
 
+if ( noriks_is_type( 'purifier' ) ) {
+    include $noriks_pb_dir . 'why-purifier.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
