@@ -45,6 +45,7 @@ function noriks_product_type_map() : array {
     'aparat' => array( 'orto-aparat' ),
     'duoseat' => array( 'orto-duoseat' ),
     'mshirt' => array( 'orto-mshirt' ),
+    'chewtoy' => array( 'orto-chewtoy' ),
     'neurosoothe' => array( 'orto-neurosoothe' ),
     'slouchsocks' => array( 'orto-slouchsocks' ),
     'rollpro' => array( 'orto-rollpro' ),
