@@ -1081,4 +1081,8 @@ if ( noriks_is_type( 'rollpro' ) ) {
     include $noriks_pb_dir . 'why-rollpro.php';
 }
 
+if ( noriks_is_type( 'neurosoothe' ) ) {
+    include $noriks_pb_dir . 'why-neurosoothe.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
