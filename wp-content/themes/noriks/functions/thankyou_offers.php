@@ -23,6 +23,7 @@ function noriks_ty2_default_unit_prices() {
         'NORIKS-BOXERS-ORTO' => 4.99,
         'NORIKS-SHIRTS-ORTO' => 7.99,
         'NORIKS-KOMPSFIT'    => 9.99,
+        'NORIKS-SLIM'        => 14.99,   // +1 Slim v koraku 1: 50 % akcijske cene
         // 17. 11. 2026: v koraku 2 namesto bokseric — 50 % akcijske cene (39,99 €)
         'NORIKS-KIDSNEST'    => 19.99,
         'NORIKS-KNEEFIX'     => 19.99,
@@ -398,6 +399,12 @@ function noriks_ty2_step1_products() {
             'imena' => array( 1 => '1x KOMPSFIT majica', 2 => '2x KOMPSFIT majice', 3 => '3x KOMPSFIT majice' ),
             'img'   => 'ks-hr-03.webp',
         ),
+        // Slim: kupec izbere barvo IN velikost (privzeto barva kupljenega kosa)
+        'NORIKS-SLIM' => array(
+            'imena' => array( 1 => '1x Slim oblikujuće gaćice', 2 => '2x Slim oblikujuće gaćice', 3 => '3x Slim oblikujuće gaćice' ),
+            'img'   => '',
+            'izbira_barve' => true,
+        ),
     );
 }
 
@@ -426,7 +433,11 @@ function noriks_ty2_step1_cards( $order ) {
         $ven   = array();
         foreach ( $seznam[ $sku ]['imena'] as $q => $ime ) {
             $card = noriks_ty2_card( $kljuc . $q, $p, $q, '', $ime, $unit > 0 ? round( $unit * $q, 2 ) : '', $barva, $seznam[ $sku ]['img'] );
-            if ( $card ) { $ven[ (int) $q ] = $card; }
+            if ( $card ) {
+                // barvo izbere kupec (strezni del jo preveri proti barvam izdelka)
+                $card['pick_color'] = ! empty( $seznam[ $sku ]['izbira_barve'] ) && count( (array) $card['colors'] ) > 1;
+                $ven[ (int) $q ] = $card;
+            }
         }
         if ( $ven ) { return $ven; }
     }
