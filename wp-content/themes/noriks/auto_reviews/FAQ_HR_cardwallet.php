@@ -1,6 +1,7 @@
 <?php
 // NORIKS CardSafe — FAQ (Informacije o proizvodu), podatki z originala + NORIKS pogoji. Brez tujih jamstev (90 dni in 12 mesecev izpusceno).
 return array(
+  array( 'Što točno dobivam u paketu?', 'Dobivate samo novčanik NORIKS CardSafe u odabranoj boji – 1, 2 ili 3 novčanika, ovisno o odabranoj ponudi. Kartica-lokator i bankovne kartice koje vidite na slikama nisu uključene.' ),
   array( 'Je li novčanik stvarno siguran od beskontaktne krađe podataka?', 'Da. CardSafe ima ugrađenu troslojnu RFID zaštitu koja blokira signale neovlaštenih čitača. Vaše kartice su zaštićene u tramvaju, na ulici i na svakom mjestu s puno ljudi.' ),
   array( 'Koliko kartica mogu nositi?', 'Do 11 kartica: 7 u aluminijskom pretincu s RFID zaštitom i 4 s unutarnje strane. Uz to stanu novčanice i kovanice u stražnjem pretincu s patentnim zatvaračem.' ),
   array( 'Je li predebeo kad je pun?', 'Naprotiv. I potpuno pun je i dalje 2x kompaktniji od klasičnog novčanika. Savršeno stane u prednji ili stražnji džep i ne deformira ga.' ),

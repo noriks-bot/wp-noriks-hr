@@ -1062,7 +1062,10 @@ function gck_render_bundle_selector() {
         $gck_offer_subs = array( '1 kutija · za jednu mačku', '2 kutije – za dvije mačke ili dvije sobe', '3 kutije – za cijelu obitelj' );
     } elseif ( has_term( array( 'orto-rollpro' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 valjak · za jednu osobu', '2 valjka – za vas i partnera', '3 valjka – za cijelu obitelj' );
-    } elseif ( has_term( array( 'orto-cardwallet', 'orto-clickwallet' ), 'product_cat', $product_id ) ) {
+    } elseif ( has_term( array( 'orto-cardwallet' ), 'product_cat', $product_id ) ) {
+        // David 18.11.: jasno, da kupec dobi samo novcanik - kartica-lokator in kartice s slik niso v paketu.
+        $gck_offer_subs = array( 'Samo novčanik · kartica-lokator nije uključena', '2 novčanika · kartica-lokator nije uključena', '3 novčanika · kartica-lokator nije uključena' );
+    } elseif ( has_term( array( 'orto-clickwallet' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 novčanik · boja po izboru', '2 novčanika – za vas i za poklon', '3 novčanika – za cijelu obitelj' );
     } elseif ( has_term( array( 'orto-novaflow' ), 'product_cat', $product_id ) ) {
         $gck_offer_subs = array( '1 uređaj · za jednu osobu', '2 uređaja – za vas i partnera', '3 uređaja – za cijelu obitelj' );
@@ -1143,6 +1146,9 @@ function gck_render_bundle_selector() {
             $gck_offer_imgs = array( 'pawfence/noriks-pawfence-12-komplet-1.webp', 'pawfence/noriks-pawfence-13-komplet-2.webp', 'pawfence/noriks-pawfence-14-komplet-3.webp' );
         } elseif ( has_term( 'orto-puretitan', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'puretitan/noriks-puretitan-komplet-1.webp', 'puretitan/noriks-puretitan-komplet-2.webp', 'puretitan/noriks-puretitan-komplet-3.webp' );
+        } elseif ( has_term( 'orto-biochips', 'product_cat', $product_id ) ) {
+            // David 18.11.: na slicici v kartici toliko nalepk, kot jih je v ponudbi (1 / 2 / 3).
+            $gck_offer_imgs = array( 'biochips/noriks-biochips-crna-1.webp', 'biochips/noriks-biochips-crna-2.webp', 'biochips/noriks-biochips-crna-3.webp' );
         } elseif ( has_term( 'orto-popuptent', 'product_cat', $product_id ) ) {
             $gck_offer_imgs = array( 'popuptent/noriks-popuptent-kartica-mali.webp', 'popuptent/noriks-popuptent-kartica-veliki.webp', 'popuptent/noriks-popuptent-kartica-obiteljski.webp' );
         } elseif ( has_term( 'orto-leakbrief', 'product_cat', $product_id ) ) {
