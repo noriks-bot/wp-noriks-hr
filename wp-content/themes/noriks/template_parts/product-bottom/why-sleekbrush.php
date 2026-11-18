@@ -157,3 +157,19 @@ $sb_postotci = array(
 @media (max-width:767px){.wssleek__v{padding:0 16px}.wssleek__str--l{left:4px}.wssleek__str--d{right:4px}}
 @media (max-width:560px){.wssleek__h2{font-size:25px}.wssleek__trak{gap:12px}.wssleek__tk{flex-direction:column;text-align:center;padding:20px 14px;gap:10px}.wssleek__dvaik{grid-template-columns:1fr}.wssleek__tab th,.wssleek__tab td{padding:12px 10px;font-size:14px}.wssleek__broj{font-size:42px}}
 </style>
+<script>
+/* David 18.11.: izbira barve pokaze cetko v tej barvi (packshoti vseh 4 barv originala so v galeriji takoj za glavno sliko) */
+(function(){
+var M={'Crna':'sleekbrush-crna-hr','Bijela':'sleekbrush-bijela-hr','Ružičasta':'sleekbrush-roza-hr','Šampanjac':'sleekbrush-sampanj-hr'};
+function pokazi(v){
+  var key=M[v]; if(!key) return;
+  var sl=document.querySelectorAll('.woocommerce-product-gallery__image'); var idx=-1;
+  for(var i=0;i<sl.length;i++){var t=sl[i].getAttribute('data-thumb')||'';if(t.indexOf(key)>-1){idx=i;break;}}
+  if(idx<0) return;
+  var g=window.jQuery&&jQuery('.woocommerce-product-gallery').data('flexslider');
+  if(g&&g.flexAnimate){g.flexAnimate(idx);return;}
+  var th=document.querySelectorAll('.flex-control-thumbs li img'); if(th[idx]) th[idx].click();
+}
+document.addEventListener('click',function(e){var s=e.target.closest&&e.target.closest('.swatch[data-value]');if(s) pokazi(s.getAttribute('data-value'));},true);
+})();
+</script>
