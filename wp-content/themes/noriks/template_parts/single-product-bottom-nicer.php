@@ -1089,4 +1089,8 @@ if ( noriks_is_type( 'purifier' ) ) {
     include $noriks_pb_dir . 'why-purifier.php';
 }
 
+if ( noriks_is_type( 'filterless' ) ) {
+    include $noriks_pb_dir . 'why-filterless.php';
+}
+
 include $noriks_pb_dir . 'reviews.php';
