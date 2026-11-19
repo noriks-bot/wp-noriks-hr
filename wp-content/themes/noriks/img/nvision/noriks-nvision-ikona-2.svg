@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="ce_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4922A"></stop>
+      <stop offset="100%" stop-color="#B8781E"></stop>
+    </linearGradient>
+    <linearGradient id="ce_fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4922A" stop-opacity="0.25"></stop>
+      <stop offset="100%" stop-color="#D4922A" stop-opacity="0.08"></stop>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="40" cy="40" r="28" fill="url(#ce_fill)" stroke="url(#ce_grad)" stroke-width="2.5"></circle>
+  
+  <path d="M40 12 A28 28 0 0 1 40 68 Z" fill="url(#ce_grad)"></path>
+  
+  <path d="M40 18 A22 22 0 0 0 40 62" fill="none" stroke="#D4922A" stroke-width="1" stroke-opacity="0.3"></path>
+  
+  <circle cx="31" cy="30" r="3" fill="#D4922A" fill-opacity="0.15"></circle>
+  
+  <line x1="22" y1="32" x2="18" y2="28" stroke="#D4922A" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.4"></line>
+  <line x1="20" y1="40" x2="15" y2="40" stroke="#D4922A" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.4"></line>
+  <line x1="22" y1="48" x2="18" y2="52" stroke="#D4922A" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.4"></line>
+</svg>
