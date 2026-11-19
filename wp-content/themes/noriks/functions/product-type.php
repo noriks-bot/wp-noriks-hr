@@ -43,6 +43,7 @@ function noriks_product_type_map() : array {
         'filterless' => array( 'orto-filterless' ),
     'purifier' => array( 'orto-purifier' ),
     'uvlight' => array( 'orto-uvlight' ),
+    'periodbelt' => array( 'orto-periodbelt' ),
     'roadpillow' => array( 'orto-roadpillow' ),
     'nvision' => array( 'orto-nvision' ),
     'survival' => array( 'orto-survival' ),
