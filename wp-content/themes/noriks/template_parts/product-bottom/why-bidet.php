@@ -118,7 +118,7 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 	</div>
 </div></section>
 <script>
-(function(){document.querySelectorAll('[data-wsbd-kar]').forEach(function(k){var t=k.querySelector('[data-trk]'),p=k.querySelector('[data-prev]'),n=k.querySelector('[data-next]');function st(){var m=t.scrollWidth-t.clientWidth-4;p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft>m;}p.addEventListener('click',function(){t.scrollBy({left:-t.clientWidth,behavior:'smooth'});});n.addEventListener('click',function(){t.scrollBy({left:t.clientWidth,behavior:'smooth'});});t.addEventListener('scroll',st,{passive:true});st();});})();
+(function(){document.querySelectorAll('[data-wsbd-kar]').forEach(function(k){var t=k.querySelector('[data-trk]'),p=k.querySelector('[data-prev]'),n=k.querySelector('[data-next]');function st(){var m=t.scrollWidth-t.clientWidth-4;p.classList.toggle('is-off',t.scrollLeft<4);n.classList.toggle('is-off',t.scrollLeft>m);}p.addEventListener('click',function(){t.scrollBy({left:-t.clientWidth,behavior:'smooth'});});n.addEventListener('click',function(){t.scrollBy({left:t.clientWidth,behavior:'smooth'});});t.addEventListener('scroll',st,{passive:true});st();});})();
 </script>
 
 <section class="wsbd__s wsbd__s--bg"><div class="wsbd__v">
@@ -209,7 +209,7 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 .wsbd__captx{font-size:18px;font-weight:800;line-height:1.35}
 .wsbd__capend{margin-top:8px;font-size:14.5px;line-height:1.5;color:#cfe0d5}
 .wsbd__nav{position:absolute;top:calc(50% - 46px);transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#1d3b2c;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.22);cursor:pointer;padding:0;z-index:2;transition:opacity .2s}
-.wsbd__nav--prev{left:12px}.wsbd__nav--next{right:12px}.wsbd__nav:disabled{opacity:0;pointer-events:none}
+.wsbd__nav--prev{left:12px}.wsbd__nav--next{right:12px}.wsbd__kar .wsbd__nav.is-off{opacity:0!important;visibility:hidden;pointer-events:none}
 .wsbd__cijeli{margin-top:48px;padding-top:40px;border-top:1px solid #e3ebe5}
 .wsbd__h3{font-size:clamp(22px,2.4vw,28px);font-weight:800;line-height:1.25;margin:0 0 12px;color:#1d3b2c}.wsbd__h3 em{font-style:italic;color:#2f5d46;font-weight:700}
 .wsbd__fv{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(29,59,44,.16);aspect-ratio:600/474;background:#dde8e0}
