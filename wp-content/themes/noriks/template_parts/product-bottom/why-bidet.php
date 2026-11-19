@@ -118,7 +118,7 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 	</div>
 </div></section>
 <script>
-(function(){document.querySelectorAll('[data-wsbd-kar]').forEach(function(k){var t=k.querySelector('[data-trk]'),p=k.querySelector('[data-prev]'),n=k.querySelector('[data-next]');function st(){var m=t.scrollWidth-t.clientWidth-4;p.classList.toggle('is-off',t.scrollLeft<4);n.classList.toggle('is-off',t.scrollLeft>m);}p.addEventListener('click',function(){t.scrollBy({left:-t.clientWidth,behavior:'smooth'});});n.addEventListener('click',function(){t.scrollBy({left:t.clientWidth,behavior:'smooth'});});t.addEventListener('scroll',st,{passive:true});st();});})();
+(function(){document.querySelectorAll('[data-wsbd-kar]').forEach(function(k){var t=k.querySelector('[data-trk]'),p=k.querySelector('[data-prev]'),n=k.querySelector('[data-next]');function st(){var m=t.scrollWidth-t.clientWidth-4;p.classList.toggle('is-off',t.scrollLeft<4);n.classList.toggle('is-off',t.scrollLeft>m);}p.addEventListener('click',function(){t.scrollBy({left:-t.clientWidth,behavior:'smooth'});});n.addEventListener('click',function(){t.scrollBy({left:t.clientWidth,behavior:'smooth'});});t.addEventListener('scroll',st,{passive:true});window.addEventListener('resize',st);window.addEventListener('load',st);setTimeout(st,300);st();});})();
 </script>
 
 <section class="wsbd__s wsbd__s--bg"><div class="wsbd__v">
