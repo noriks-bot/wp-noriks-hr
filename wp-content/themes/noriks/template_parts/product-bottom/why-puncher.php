@@ -4,7 +4,7 @@
  * (leathosco.com/products/leathos-hole-puncher-kit-general).
  *
  * STRUKTURA ORIGINALA:
-   1. "30,845+ Happy Customers" - karusel 8 medijev kupcev (4 fotografije + 4 videi) - pri nas karusel 8 medijev (scroll-snap), stevilka kupcev -> 120.000
+   1. "30,845+ Happy Customers" - karusel 8 medijev kupcev (4 fotografije + 4 videi) - pri nas karusel 6 medijev (scroll-snap; 2 videa z znamko izpuscena), stevilka kupcev -> 120.000
    2. "Stop Punching Holes With an Awl and Crop-A-Dile!" - samo naslov - pri nas naslov na vrhu naslednje sekcije (brez tuje znamke)
    3. "How Does the Spring Spin Cut Mechanism Works" - animacija (GIF) levo, tekst desno - pri nas video levo, tekst desno
    4. "Multiple Sizes" - slika nastavkov z merami + tekst - pri nas slika desno, tekst levo + 6 velikosti
@@ -15,7 +15,7 @@
    9. "Faster, Easier ... or Your Money Back" - slika + tekst o 30 dneh - pri nas slika levo, tekst desno (30 dana za povrat)
    Zakljucek: NORIKS pogoji. Bonus e-knjige, Black Friday trak in igra s popustom izpusceni (ponudbe ni pri nas).
  * SLIKE: /img/puncher/noriks-puncher-kupac-1.webp ... kupac-4.webp, noriks-puncher-galerija-03.webp, noriks-puncher-izdrzljiv.webp, noriks-puncher-kanal.webp, noriks-puncher-povrat.webp
- * VIDEI: /img/puncher/noriks-puncher-mehanizam.mp4 /img/puncher/noriks-puncher-video-1.mp4 ... video-4.mp4 (+ poster .jpg); znamka na rocaju v videih kupcev ni prekrita (premikajoc se predmet)
+ * VIDEI: /img/puncher/noriks-puncher-mehanizam.mp4 /img/puncher/noriks-puncher-video-2.mp4 /img/puncher/noriks-puncher-video-4.mp4 (+ poster .jpg); uvodni prizori s tujo znamko na skatli odrezani, 2 videa odpiranja skatle (znamka ves cas v kadru) izpuscena - karusel ima 6 medijev
  * BARVA ORIGINALA: #d9c2af (bez/les - ozadja sekcij in barva lesenega rocaja na originalu); svetel ton za --bg #f6efe8, akcent #8a6a4f
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -47,12 +47,10 @@ $pu_li = function ( $items ) use ( $pu_svg, $pu_ik ) {
 		<?php
 		$pu_m = array(
 			array( 'img', 'noriks-puncher-kupac-1.webp', 'Kupac buši rupe u kartonu za uvez bilježnice' ),
-			array( 'vid', 'noriks-puncher-video-1.mp4', 'noriks-puncher-video-1.jpg', 'Kupac koristi ručni bušač rupa' ),
-			array( 'vid', 'noriks-puncher-video-2.mp4', 'noriks-puncher-video-2.jpg', 'Kupac pokazuje bušač rupa u kutiji' ),
+			array( 'vid', 'noriks-puncher-video-2.mp4', 'noriks-puncher-video-2.jpg', 'Bušenje rupa u kartonu na podlozi za rezanje' ),
 			array( 'img', 'noriks-puncher-kupac-2.webp', 'Kupac buši rupe za uvez na radnom stolu' ),
 			array( 'img', 'noriks-puncher-kupac-3.webp', 'Kartica iz NORIKS kompleta bušača' ),
-			array( 'vid', 'noriks-puncher-video-3.mp4', 'noriks-puncher-video-3.jpg', 'Bušenje rupe u papiru' ),
-			array( 'vid', 'noriks-puncher-video-4.mp4', 'noriks-puncher-video-4.jpg', 'Bušač rupa s nastavcima u kutiji' ),
+			array( 'vid', 'noriks-puncher-video-4.mp4', 'noriks-puncher-video-4.jpg', 'Kupac buši rupe za uvez na podlozi za rezanje' ),
 			array( 'img', 'noriks-puncher-kupac-4.webp', 'Kupac drži bušač i nastavke na dlanu' ),
 		);
 		foreach ( $pu_m as $m ) {
