@@ -1109,6 +1109,10 @@ if ( noriks_is_type( 'survival' ) ) {
     include $noriks_pb_dir . 'why-survival.php';
 }
 
+if ( noriks_is_type( 'uvlight' ) ) {
+    include $noriks_pb_dir . 'why-uvlight.php';
+}
+
 if ( noriks_is_type( 'purifier' ) ) {
     include $noriks_pb_dir . 'why-purifier.php';
 }
