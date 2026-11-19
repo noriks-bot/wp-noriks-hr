@@ -1138,6 +1138,10 @@ if ( noriks_is_type( 'puncher' ) ) {
     include $noriks_pb_dir . 'why-puncher.php';
 }
 
+if ( noriks_is_type( 'bidet' ) ) {
+    include $noriks_pb_dir . 'why-bidet.php';
+}
+
 if ( noriks_is_type( 'uvlight' ) ) {
     include $noriks_pb_dir . 'why-uvlight.php';
 }
