@@ -7133,7 +7133,7 @@ function gck_render_bundle_selector() {
         css(btn, {'display':'flex','align-items':'center','gap':'8px','width':'100%','box-sizing':'border-box',
                   'border':'1px solid ' + BORDER,'border-radius':'4px','background':'#fff','cursor':'pointer',
                   'padding':'4px 26px 4px 10px','font-size':'18px','font-weight':'600','color':'#333',
-                  'text-align':'left','min-height':'38px','line-height':'1.3','white-space':'nowrap'});
+                  'text-align':'left','min-height':'40px','line-height':'1.3','white-space':'nowrap'});
         var sw = document.createElement('span');
         css(sw, {'flex':'0 0 20px','width':'20px','height':'20px','border-radius':'4px',
                  'border':'1px solid rgba(0,0,0,.2)','display':opts.hasColor ? 'block' : 'none'});
@@ -7395,7 +7395,7 @@ function gck_render_bundle_selector() {
       #bundle-selector .gck-cdd-btn {
           display: flex; align-items: center; gap: 9px; width: 100%; box-sizing: border-box;
           border: 1px solid #111; border-radius: 4px; background: #fff; cursor: pointer;
-          padding: 8px 26px 8px 10px; font-size: 15px; font-weight: 600; color: #333; text-align: left; min-height: 38px;
+          padding: 8px 26px 8px 10px; font-size: 15px; font-weight: 600; color: #333; text-align: left; min-height: 40px;
       }
       #bundle-selector .gck-cdd-sw { flex: 0 0 20px; width: 20px; height: 20px; border-radius: 4px; border: 1px solid rgba(0,0,0,.2); }
       #bundle-selector .gck-cdd-car { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;
