@@ -2156,6 +2156,17 @@ function gck_render_bundle_selector() {
       .gck-size-link { color: #a8705a !important; }
     </style>
     <?php endif; ?>
+    <?php if ( has_term( array( 'orto-postpartum' ), 'product_cat', $product_id ) ) : ?>
+    <style>
+      /* BirthWrap (Mitja 19.11.): barve krogcev po haljinah z galerije originala (roza, tamno roza, svijetloplava). */
+      .swatch-circle.color-ruzicasta                    { background: #d9a7b4 !important; }
+      .swatch-circle.color-tamnoruzicasta               { background: #b8566f !important; }
+      .swatch-circle.color-plava                        { background: #9db8de !important; }
+      #bundle-selector .swatch-circle.color-ruzicasta      { background: #d9a7b4 !important; }
+      #bundle-selector .swatch-circle.color-tamnoruzicasta { background: #b8566f !important; }
+      #bundle-selector .swatch-circle.color-plava          { background: #9db8de !important; }
+    </style>
+    <?php endif; ?>
     <?php if ( has_term( array( 'orto-celleg' ), 'product_cat', $product_id ) ) : ?>
     <style>
       /* izbornik boje cita nijansu s probnog elementa IZVAN #bundle-selector,
