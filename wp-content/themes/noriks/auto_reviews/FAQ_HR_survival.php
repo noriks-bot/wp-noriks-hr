@@ -1,0 +1,13 @@
+<?php
+// NORIKS AquaKit — FAQ (Informacije o proizvodu), podatki z originala + NORIKS pogoji. Brez tujih jamstava (90 dni, dozivljenjsko), brez e-prirocnikov in tujega e-naslova.
+return array(
+  array( 'Što dobivam u kompletu?', 'Cijeli sustav, svih 7 dijelova: gravitacijsku vreću od 3,8 l, filter od 0,1 mikrona, crijevo s ventilom, vrećicu za čistu vodu, nastavak za pijenje, štrcaljku za ispiranje i traku s karabinerom. Upute za postavljanje nalaze se u pakiranju.' ),
+  array( 'Trebam li ga uključiti u struju ili nešto dodati?', 'Ne. Radi isključivo na gravitaciju – nema utikača, baterija ni tableta. Zato možete računati na njega i kad nestane struje: napunite vreću na potoku, bari ili jezeru, objesite je i čista voda teče.' ),
+  array( 'Kako se koristi?', 'Zagrabite vodu iz izvora slatke vode u vreću od 3,8 l, zarolajte vrh i objesite je na čvrsto mjesto iznad posude koju želite napuniti. Voda prolazi kroz crijevo i filter od 0,1 mikrona i u posudu stiže kao čista voda za piće.' ),
+  array( 'Odakle mogu uzeti vodu?', 'Iz prirodnih izvora slatke vode: potoka, rijeke, jezera, bare ili skupljene kišnice. Birajte što bistriju vodu. Ako je mutna, pustite je da se slegne u kanti i u vreću ulijte samo bistri dio, jer gusti mulj brže začepljuje svaki filter. Ne koristite morsku vodu ni vodu koja bi mogla sadržavati kemikalije.' ),
+  array( 'Što filter uklanja?', 'Prema laboratorijskim testovima uklanja 99,99 % bakterija iz vode, parazita, protozoa, mikroplastike i taloga zahvaljujući membrani od šupljih vlakana od 0,1 mikrona. Namijenjen je prirodnoj slatkoj vodi – ne koristite ga za morsku vodu ni vodu s kemikalijama, gorivom ili teškim metalima.' ),
+  array( 'Koliko vode daje jedan filter?', 'Jedan filter daje do 5.600 litara čiste vode. Količina ovisi o čistoći izvora i održavanju: mutna voda i preskočeno ispiranje skraćuju vijek, zato filter isperite nakon svake upotrebe.' ),
+  array( 'Gdje ga čuvati i što sa smrzavanjem?', 'U kompletu za nuždu, autu ili ruksaku kraj vrata – samo da je čist i suh. Mokri filter se nikad ne smije smrznuti jer smrzavanje može oštetiti membranu. Ako ga spremate u garažu ili auto zimi, prije toga ga potpuno osušite.' ),
+  array( 'Kakvo održavanje treba?', 'Samo ispiranje nakon svake upotrebe ili ranije ako protok oslabi. Napunite priloženu štrcaljku čistom vodom i protisnite je kroz filter u suprotnom smjeru. Zatim filter potpuno osušite prije spremanja. Ništa drugo nije potrebno.' ),
+  array( 'Kako mogu platiti i vratiti proizvod?', 'Plaćate pouzećem kad paket stigne, a dostava je besplatna iznad 70 €. Ako vam proizvod ne odgovara, imate 30 dana za povrat novca.' ),
+);
