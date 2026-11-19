@@ -247,7 +247,7 @@ $pb_zv = '<span class="wspb__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg 
 .wspb__trak{grid-template-columns:1fr;gap:14px}.wspb__tc{border-left:0;justify-content:flex-start}
 .wspb__dva{grid-template-columns:minmax(0,1fr);gap:26px}
 .wspb__g3{grid-template-columns:1fr}
-.wspb__kar3{grid-auto-columns:84%;align-items:start}.wspb__pus{display:none}.wspb__karw{padding:0}.wspb__kar3 .wspb__rk p{flex:none}
+.wspb__kar3{grid-auto-columns:84%;align-items:stretch}.wspb__pus{display:none}.wspb__karw{padding:0}.wspb__kar3>.wspb__rk{height:100%;box-sizing:border-box}.wspb__kar3 .wspb__rk p{flex:1 0 auto}
 .wspb__kar{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .wspb__kar::-webkit-scrollbar{display:none}.wspb__kar>*{scroll-snap-align:start}
 }
@@ -256,7 +256,7 @@ $pb_zv = '<span class="wspb__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg 
 .wspb__tab{min-width:0;font-size:13.5px;table-layout:fixed}.wspb__tab th,.wspb__tab td{padding:11px 8px}
 .wspb__tab th:nth-child(1){width:46%}.wspb__tab th:nth-child(2){width:28%}.wspb__tab th:nth-child(3){width:26%}
 .wspb__tab th{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;word-break:keep-all;overflow-wrap:normal}.wspb__da,.wspb__ne{width:22px;height:22px;font-size:12px}}
-@media (max-width:400px){.wspb__tab th,.wspb__tab td{padding:10px 5px}.wspb__tab th{font-size:12px;letter-spacing:-.1px}
+@media (max-width:400px){.wspb__tab th,.wspb__tab td{padding:10px 5px}.wspb__tab th{font-size:13px;letter-spacing:-.2px}
 .wspb__tab th:nth-child(1){width:40%}.wspb__tab th:nth-child(2){width:30%}.wspb__tab th:nth-child(3){width:30%}}
 </style>
 <script>
