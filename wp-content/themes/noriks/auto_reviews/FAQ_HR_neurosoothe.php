@@ -1,6 +1,7 @@
 <?php
 // NORIKS NeuroSoothe — FAQ (Informacije o proizvodu), podatki z originala + NORIKS pogoji. Brez Amazona, dozivljenjske garancije in 90 dni.
 return array(
+  array( 'Što dobivam u paketu?', 'Ponuda 1x kom sadrži: 1 NORIKS NeuroSoothe obuvak (za jedno stopalo), 1 upravljač s kabelom i zaslonom, 1 adapter za utičnicu i 1 USB kabel za napajanje s prijenosne baterije. Prijenosna baterija nije uključena. Za oba stopala odaberite ponudu 2x kom – dobivate dva obuvka, svaki sa svojim upravljačem, adapterom i USB kabelom.' ),
   array( 'Koliko brzo ću osjetiti rezultate?', 'Mnogi korisnici navode olakšanje nakon 7 – 14 dana. Većina primijeti jasno poboljšanje osjeta i udobnosti do 4. tjedna svakodnevnog korištenja.' ),
   array( 'Koliko dugo trebam nositi obuvak svaki dan?', 'Za najbolje rezultate preporučujemo 20 do 30 minuta dnevno. Možete ga nositi dok gledate televiziju, čitate ili obavljate lagane poslove sjedeći.' ),
   array( 'Moram li sjediti dok ga nosim?', 'Da, NORIKS NeuroSoothe koristite sjedeći. Tako obuvak pravilno naliježe na stopalo, a vi se opustite tijekom cijele terapije.' ),
