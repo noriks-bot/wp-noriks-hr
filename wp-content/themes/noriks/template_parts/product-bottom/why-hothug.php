@@ -41,14 +41,13 @@ $hh_zv = '<span class="whh__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg v
 	<div class="whh__grid whh__g4 whh__kar">
 		<?php
 		$hh_v = array(
-			array( 'kapljica', 'Brzo, jednostavno i prirodno', 'Malo vruće vode iz kuhala i spremni ste – bez struje i bez punjenja baterije.', 'Punjenje termofora vrućom vodom u kuhinji' ),
-			array( 'oblak', 'Mekano i ugodno', 'Navlaka od mekanog plišanog krzna ugodna je na koži i lijepo se priljubi uz tijelo.', 'Mekana plišana navlaka nosivog termofora' ),
-			array( 'strelice', 'Prilagodljivo', 'Nosite ga na donjem dijelu leđa, sprijeda na trbuhu ili na gornjem dijelu leđa – gdje vam treba.', 'Nosivi termofor na donjem dijelu leđa, sprijeda i na gornjem dijelu leđa' ),
-			array( 'hod', 'Uvijek sa sobom', 'Ne vidi se ispod veste ili dukserice, pa ga možete nositi kod kuće, na poslu ili vani.', 'Nosivi termofor ispod dukserice' ),
+			array( 'kapljica', 'Brzo, jednostavno i prirodno', 'Malo vruće vode iz kuhala i spremni ste – bez struje i bez punjenja baterije.', 'Punjenje termofora vrućom vodom u kuhinji', 'noriks-hothug-video-1.mp4', 'noriks-hothug-video-1.jpg' ),
+			array( 'oblak', 'Mekano i ugodno', 'Navlaka od mekanog plišanog krzna ugodna je na koži i lijepo se priljubi uz tijelo.', 'Mekana plišana navlaka nosivog termofora', 'noriks-hothug-video-2.mp4', 'noriks-hothug-video-2.jpg' ),
+			array( 'strelice', 'Prilagodljivo', 'Nosite ga na donjem dijelu leđa, sprijeda na trbuhu ili na gornjem dijelu leđa – gdje vam treba.', 'Nosivi termofor na donjem dijelu leđa, sprijeda i na gornjem dijelu leđa', 'noriks-hothug-video-3.mp4', 'noriks-hothug-video-3.jpg' ),
+			array( 'hod', 'Uvijek sa sobom', 'Ne vidi se ispod veste ili dukserice, pa ga možete nositi kod kuće, na poslu ili vani.', 'Nosivi termofor ispod dukserice', 'noriks-hothug-video-4.mp4', 'noriks-hothug-video-4.jpg' ),
 		);
-		foreach ( $hh_v as $i => $v ) {
-			$n = $i + 1;
-			echo '<div class="whh__vk"><div class="whh__vm"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="' . esc_url( $hh_u . 'noriks-hothug-video-' . $n . '.jpg' ) . '" aria-label="' . esc_attr( $v[3] ) . '"><source src="' . esc_url( $hh_u . 'noriks-hothug-video-' . $n . '.mp4' ) . '" type="video/mp4"></video></div><div class="whh__vt"><span class="whh__ki whh__ki--s">' . $hh_svg( $hh_ik[ $v[0] ], 22 ) . '</span><div><strong>' . esc_html( $v[1] ) . '</strong><p>' . esc_html( $v[2] ) . '</p></div></div></div>';
+		foreach ( $hh_v as $v ) {
+			echo '<div class="whh__vk"><div class="whh__vm"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="' . esc_url( $hh_u . $v[5] ) . '" aria-label="' . esc_attr( $v[3] ) . '"><source src="' . esc_url( $hh_u . $v[4] ) . '" type="video/mp4"></video></div><div class="whh__vt"><span class="whh__ki whh__ki--s">' . $hh_svg( $hh_ik[ $v[0] ], 22 ) . '</span><div><strong>' . esc_html( $v[1] ) . '</strong><p>' . esc_html( $v[2] ) . '</p></div></div></div>';
 		}
 		?>
 	</div>
@@ -67,12 +66,12 @@ $hh_zv = '<span class="whh__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg v
 	<div class="whh__grid whh__g3 whh__kar">
 		<?php
 		$hh_m = array(
-			array( 'mnenje-1', 'Izum koji mijenja život', 'Iskreno, bila sam dirnuta kad sam ga prvi put koristila. Imam adenomiozu i endometriozu i dosta patim od grčeva kojima ne pomažu ni lijekovi protiv bolova – obično bih samo gurnula termofor u trenirku i nadala se najboljem. Ovaj termofor savršeno pogađa mjesto grčeva. Najviše volim to što se ne vidi ispod veste, pa mogu imati gotovo normalan dan u uredu. Obožavam ga, svim prijateljicama sam već dosadila pričajući o njemu, a mislim da sam dvije nagovorila da ga kupe!' ),
-			array( 'mnenje-2', 'Nevjerojatan proizvod', 'Ovo je stvarno toliko dobro! Iznenadila me kvaliteta materijala – tako je ugodan i mekan. Nosim ga cijeli dan s malim termoforom sprijeda ili straga, ovisno o tome što mi tijelo traži.' ),
-			array( 'mnenje-3', 'Oduševljena sam!', 'Nevjerojatan proizvod. Kupila sam ga prije otprilike tjedan dana i doslovno ga od tada nisam skinula! Tako je koristan, pogotovo kad morate obaviti stvari, a trebate nešto što smiruje bol i grčeve kod endometrioze. Toplo preporučujem!' ),
+			array( 'noriks-hothug-mnenje-1.webp', 'Izum koji mijenja život', 'Iskreno, bila sam dirnuta kad sam ga prvi put koristila. Imam adenomiozu i endometriozu i dosta patim od grčeva kojima ne pomažu ni lijekovi protiv bolova – obično bih samo gurnula termofor u trenirku i nadala se najboljem. Ovaj termofor savršeno pogađa mjesto grčeva. Najviše volim to što se ne vidi ispod veste, pa mogu imati gotovo normalan dan u uredu. Obožavam ga, svim prijateljicama sam već dosadila pričajući o njemu, a mislim da sam dvije nagovorila da ga kupe!' ),
+			array( 'noriks-hothug-mnenje-2.webp', 'Nevjerojatan proizvod', 'Ovo je stvarno toliko dobro! Iznenadila me kvaliteta materijala – tako je ugodan i mekan. Nosim ga cijeli dan s malim termoforom sprijeda ili straga, ovisno o tome što mi tijelo traži.' ),
+			array( 'noriks-hothug-mnenje-3.webp', 'Oduševljena sam!', 'Nevjerojatan proizvod. Kupila sam ga prije otprilike tjedan dana i doslovno ga od tada nisam skinula! Tako je koristan, pogotovo kad morate obaviti stvari, a trebate nešto što smiruje bol i grčeve kod endometrioze. Toplo preporučujem!' ),
 		);
 		foreach ( $hh_m as $m ) {
-			echo '<div class="whh__rf"><div class="whh__rfm"><img src="' . esc_url( $hh_u . 'noriks-hothug-' . $m[0] . '.webp' ) . '" alt="' . esc_attr( 'Kupac s NORIKS HotHug nosivim termoforom - ' . $m[1] ) . '" decoding="async"></div><div class="whh__rft"><strong class="whh__nm">' . esc_html( $m[1] ) . '</strong>' . $hh_zv . '<p>' . esc_html( $m[2] ) . '</p><span class="whh__ime"><i class="whh__av">' . $hh_svg( $hh_ik['stit'], 16 ) . '</i>Provjereni kupac</span></div></div>';
+			echo '<div class="whh__rf"><div class="whh__rfm"><img src="' . esc_url( $hh_u . $m[0] ) . '" alt="' . esc_attr( 'Kupac s NORIKS HotHug nosivim termoforom - ' . $m[1] ) . '" decoding="async"></div><div class="whh__rft"><strong class="whh__nm">' . esc_html( $m[1] ) . '</strong>' . $hh_zv . '<p>' . esc_html( $m[2] ) . '</p><span class="whh__ime"><i class="whh__av">' . $hh_svg( $hh_ik['stit'], 16 ) . '</i>Provjereni kupac</span></div></div>';
 		}
 		?>
 	</div>
