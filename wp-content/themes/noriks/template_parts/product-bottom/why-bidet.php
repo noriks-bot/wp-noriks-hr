@@ -5,13 +5,13 @@
  *
  * STRUKTURA ORIGINALA:
    1. "If it was on your hand you'd wash it, not wipe it" - 3 statistike z viri v vrsti + primerjalna tabela toaletni papir / bide (sliki rola in nastavek v glavi) - pri nas 3 kartice z ikonami (grid) + tabela z dvema slikama
-   2. "5 steps. 10 minutes." - video namestitve + 5 korakov + kaj potrebujete / ne potrebujete - pri nas video levo, 5 ostevilcenih korakov desno + 2 seznama (zeleni pas z angleskimi napisi odrezan z videa, koraki v HTML)
+   2. "5 steps. 10 minutes." - karusel 5 videov korakov (Step 1 of 5 ... 5 of 5, puscici levo/desno) + kaj potrebujete / ne potrebujete, celoten video namestitve - pri nas karusel 5 videov levo (Korak 1 od 5 ..., puscici), seznama desno, pod njima celoten video namestitve (zeleni pas z angleskimi napisi odrezan)
    3. "The reviews keep saying the same thing" - 3 mnenja (avatar, ime, kraj) v vrsti - pri nas 3 kartice mnenj (grid), hrvaska imena in kraji
    4. "Why you'll love it." - 4 kartice s sliko in kratkim besedilom - pri nas 4 kartice s sliko v vrsti (grid)
    5. FAQ - pri nas auto_reviews/FAQ_HR_bidet.php
    Zakljucek: NORIKS pogoji (tuj 100-dnevni preizkus -> 30 dana za povrat). Black Friday trak izpuscen.
  * SLIKE: /img/bidet/noriks-bidet-papir.webp /img/bidet/noriks-bidet-nastavak.webp /img/bidet/noriks-bidet-kartica-1.webp ... kartica-4.webp
- * VIDEI: /img/bidet/noriks-bidet-ugradnja.mp4 (+ poster noriks-bidet-ugradnja.jpg)
+ * VIDEI: /img/bidet/noriks-bidet-korak-1.mp4 ... korak-5.mp4 (karusel korakov), /img/bidet/noriks-bidet-ugradnja.mp4 (+ posterji .jpg)
  * BARVA ORIGINALA: #1d3b2c (temno zelena skatla, pasovi in gumbi na originalu); svetel ton za --bg #eef3ef, akcent #2f5d46
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -70,19 +70,29 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 	<p class="wsbd__nap">Odgovara većini standardnih dvodijelnih WC školjki, okruglih ili izduženih. Isprobajte ga 30 dana – ako vam se ne svidi, vratite ga.</p>
 </div></section>
 
-<section class="wsbd__s"><div class="wsbd__v wsbd__dva">
-	<div class="wsbd__media wsbd__media--v"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="<?php echo esc_url( $bd_u . 'noriks-bidet-ugradnja.jpg' ); ?>" aria-label="Ugradnja bide nastavka korak po korak"><source src="<?php echo esc_url( $bd_u . 'noriks-bidet-ugradnja.mp4' ); ?>" type="video/mp4"></video></div>
+<section class="wsbd__s"><div class="wsbd__v">
+	<div class="wsbd__dva wsbd__dva--top">
+	<div class="wsbd__kar" data-wsbd-kar role="group" aria-roledescription="carousel" aria-label="Ugradnja bide nastavka u pet kratkih videa">
+		<div class="wsbd__trk" data-trk>
+			<?php
+			$bd_k = array( 'Zatvorite dovod vode.', 'Odvijte dasku i podignite je.', 'Spojite T-adapter i crijeva.', 'Postavite nastavak na školjku.', 'Vratite dasku i pritegnite vijke.' );
+			foreach ( $bd_k as $i => $k ) {
+				$bars = '';
+				for ( $j = 0; $j < 5; $j++ ) { $bars .= '<i class="' . ( $j < $i ? 'is-done' : ( $j === $i ? 'is-now' : '' ) ) . '"></i>'; }
+				echo '<div class="wsbd__sl"><div class="wsbd__clip"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="' . esc_url( $bd_u . 'noriks-bidet-korak-' . ( $i + 1 ) . '.jpg' ) . '" aria-label="' . esc_attr( 'Korak ' . ( $i + 1 ) . ' od 5: ' . $k ) . '"><source src="' . esc_url( $bd_u . 'noriks-bidet-korak-' . ( $i + 1 ) . '.mp4' ) . '" type="video/mp4"></video></div>';
+				echo '<div class="wsbd__cap"><div class="wsbd__caprow"><span class="wsbd__capst">Korak ' . ( $i + 1 ) . ' od 5</span><span class="wsbd__bars" aria-hidden="true">' . $bars . '</span></div><div class="wsbd__captx">' . esc_html( $k ) . '</div>';
+				if ( 4 === $i ) { echo '<div class="wsbd__capend">Ponovno otvorite vodu – i to je to.<br>Sve gotovo za manje od 10 minuta.</div>'; }
+				echo '</div></div>';
+			}
+			?>
+		</div>
+		<button type="button" class="wsbd__nav wsbd__nav--prev" data-prev aria-label="Prethodni korak"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+		<button type="button" class="wsbd__nav wsbd__nav--next" data-next aria-label="Sljedeći korak"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+	</div>
 	<div>
 		<div class="wsbd__kicker">Ugradnja</div>
 		<h2 class="wsbd__h2">5 koraka. 10 minuta. <em>Toliko je jednostavno.</em></h2>
-		<ol class="wsbd__kor">
-			<?php
-			foreach ( array( 'Zatvorite dovod vode.', 'Odvijte dasku i podignite je.', 'Spojite T-adapter i crijeva.', 'Postavite nastavak na školjku.', 'Vratite dasku i pritegnite vijke.' ) as $i => $k ) {
-				echo '<li><span class="wsbd__st">' . ( $i + 1 ) . '</span><span>' . esc_html( $k ) . '</span></li>';
-			}
-			?>
-		</ol>
-		<p class="wsbd__p">Ponovno otvorite vodu – i to je to. Sve gotovo za manje od 10 minuta.</p>
+		<p class="wsbd__p">Povucite ili kliknite strelice i pogledajte svaki korak u kratkom videu.</p>
 		<div class="wsbd__pt">
 			<div><strong>Što vam treba</strong><ul>
 				<li><span class="wsbd__ki wsbd__ki--s"><?php echo $bd_svg( $bd_ik['kutija'], 18 ); ?></span>Kutija – sve je unutra</li>
@@ -95,9 +105,21 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 				<li><span class="wsbd__ki wsbd__ki--s wsbd__ki--ne"><?php echo $bd_svg( $bd_ik['ne'], 18 ); ?></span>Utičnica</li>
 			</ul></div>
 		</div>
-		<p class="wsbd__z">U kutiji su jednostavne upute korak po korak.</p>
+		<p class="wsbd__z">U kutiji su jednostavne upute korak po korak i video cijele ugradnje.</p>
+	</div>
+	</div>
+	<div class="wsbd__dva wsbd__cijeli">
+		<div>
+			<div class="wsbd__kicker">Cijela ugradnja</div>
+			<h3 class="wsbd__h3">Od zatvaranja vode do prvog pranja – <em>u jednom videu</em></h3>
+			<p class="wsbd__p">Svih pet koraka zaredom, bez rezova. Pogledajte koliko je jednostavno prije nego što otvorite kutiju.</p>
+		</div>
+		<div class="wsbd__fv"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="<?php echo esc_url( $bd_u . 'noriks-bidet-ugradnja.jpg' ); ?>" aria-label="Cijela ugradnja bide nastavka"><source src="<?php echo esc_url( $bd_u . 'noriks-bidet-ugradnja.mp4' ); ?>" type="video/mp4"></video></div>
 	</div>
 </div></section>
+<script>
+(function(){document.querySelectorAll('[data-wsbd-kar]').forEach(function(k){var t=k.querySelector('[data-trk]'),p=k.querySelector('[data-prev]'),n=k.querySelector('[data-next]');function st(){var m=t.scrollWidth-t.clientWidth-4;p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft>m;}p.addEventListener('click',function(){t.scrollBy({left:-t.clientWidth,behavior:'smooth'});});n.addEventListener('click',function(){t.scrollBy({left:t.clientWidth,behavior:'smooth'});});t.addEventListener('scroll',st,{passive:true});st();});})();
+</script>
 
 <section class="wsbd__s wsbd__s--bg"><div class="wsbd__v">
 	<div class="wsbd__kicker wsbd__c">Ocjena 4,8 od 1.081 recenzije</div>
@@ -122,7 +144,7 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 	<div class="wsbd__grid wsbd__g4">
 		<?php
 		$bd_c = array(
-			array( 'noriks-bidet-kartica-1.webp', 'Vrlo jednostavno za korištenje', 'Samo okrenite kotačić za pranje. To je sve.' ),
+			array( 'noriks-bidet-kartica-1.webp?v=2', 'Vrlo jednostavno za korištenje', 'Samo okrenite kotačić za pranje. To je sve.' ),
 			array( 'noriks-bidet-kartica-2.webp', 'Brza, laka ugradnja', 'Oko 10 minuta. Bez vodoinstalatera i bez utičnice.' ),
 			array( 'noriks-bidet-kartica-3.webp', 'Svježa, čista voda', 'Koristi isti vodovod iz kojeg pijete i perete zube.' ),
 			array( 'noriks-bidet-kartica-4.webp', 'Isplati se sam', 'Uštedite oko 270 € godišnje na toaletnom papiru.' ),
@@ -173,6 +195,25 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 .wsbd__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wsbd__dva>div{min-width:0}
 .wsbd__media{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(29,59,44,.16);aspect-ratio:4/5;background:#dde8e0}
 .wsbd__media img,.wsbd__media video{width:100%;height:100%;object-fit:cover;display:block}
+.wsbd__dva--top{align-items:center}
+.wsbd__kar{position:relative;min-width:0}
+.wsbd__trk{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:18px;box-shadow:0 14px 36px rgba(29,59,44,.16);background:#1d3b2c}
+.wsbd__trk::-webkit-scrollbar{display:none}
+.wsbd__sl{flex:0 0 100%;scroll-snap-align:start;display:flex;flex-direction:column}
+.wsbd__clip{aspect-ratio:5/4;background:#dde8e0}
+.wsbd__clip video{width:100%;height:100%;object-fit:cover;display:block}
+.wsbd__cap{background:#1d3b2c;color:#fff;padding:16px 22px 18px;flex:1}
+.wsbd__caprow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px}
+.wsbd__capst{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#cfe0d5}
+.wsbd__bars{display:flex;gap:5px}.wsbd__bars i{display:block;width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.25)}.wsbd__bars i.is-done{background:#9cc3ab}.wsbd__bars i.is-now{background:#fff}
+.wsbd__captx{font-size:18px;font-weight:800;line-height:1.35}
+.wsbd__capend{margin-top:8px;font-size:14.5px;line-height:1.5;color:#cfe0d5}
+.wsbd__nav{position:absolute;top:calc(50% - 46px);transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#1d3b2c;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.22);cursor:pointer;padding:0;z-index:2;transition:opacity .2s}
+.wsbd__nav--prev{left:12px}.wsbd__nav--next{right:12px}.wsbd__nav:disabled{opacity:0;pointer-events:none}
+.wsbd__cijeli{margin-top:48px;padding-top:40px;border-top:1px solid #e3ebe5}
+.wsbd__h3{font-size:clamp(22px,2.4vw,28px);font-weight:800;line-height:1.25;margin:0 0 12px;color:#1d3b2c}.wsbd__h3 em{font-style:italic;color:#2f5d46;font-weight:700}
+.wsbd__fv{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(29,59,44,.16);aspect-ratio:600/474;background:#dde8e0}
+.wsbd__fv video{width:100%;height:100%;object-fit:cover;display:block}
 .wsbd__kor{list-style:none;margin:6px 0 16px;padding:0;display:flex;flex-direction:column;gap:12px}
 .wsbd__kor li{display:flex;align-items:center;gap:14px;font-size:16px;font-weight:700;color:#1d3b2c;margin:0;list-style:none}
 .wsbd__st{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#1d3b2c;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
@@ -199,5 +240,6 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 .wsbd__g3{grid-template-columns:1fr}
 }
 @media (max-width:767px){.wsbd__v{padding:0 16px}}
+@media (max-width:600px){.wsbd__tab{min-width:0;table-layout:fixed;font-size:13px}.wsbd__tab th,.wsbd__tab td{padding:10px 7px;overflow-wrap:anywhere;hyphens:auto}.wsbd__tab th:first-child,.wsbd__tab td:first-child{width:26%}.wsbd__tab th:first-child{font-size:13px}.wsbd__tab th img{width:52px;height:52px}.wsbd__tab th span{display:block;font-size:12.5px;line-height:1.25}.wsbd__da,.wsbd__ne{display:flex;width:20px;height:20px;margin:0 0 4px}.wsbd__captx{font-size:16px}.wsbd__cap{padding:14px 16px}.wsbd__nav{width:40px;height:40px}.wsbd__cijeli{margin-top:32px;padding-top:28px}}
 @media (max-width:560px){.wsbd__h2{font-size:25px}.wsbd__pt{grid-template-columns:1fr}.wsbd__g4{gap:14px}.wsbd__ct{padding:14px}.wsbd__ct strong{font-size:15px}.wsbd__ct p{font-size:13.5px}}
 </style>
