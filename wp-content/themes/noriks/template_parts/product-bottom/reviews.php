@@ -1790,7 +1790,7 @@
 
            <?php elseif ( noriks_is_type( 'chewtoy' ) ): ?>
 
-           Tisuće pasa već se igra s NORIKS ChewBuddy – ojačani pliš, užad za vučenje i pištalica, 23 životinje.
+           Tisuće pasa već se igra s NORIKS ChewBuddy – ojačani pliš, užad za vučenje i pištalica, 24 životinje.
 
            <?php elseif ( noriks_is_type( 'postpartum' ) ): ?>
 
