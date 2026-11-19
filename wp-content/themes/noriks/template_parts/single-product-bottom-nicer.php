@@ -1118,6 +1118,10 @@ if ( noriks_is_type( 'nvision' ) ) {
     include $noriks_pb_dir . 'why-nvision.php';
 }
 
+if ( noriks_is_type( 'roadpillow' ) ) {
+    include $noriks_pb_dir . 'why-roadpillow.php';
+}
+
 if ( noriks_is_type( 'uvlight' ) ) {
     include $noriks_pb_dir . 'why-uvlight.php';
 }
