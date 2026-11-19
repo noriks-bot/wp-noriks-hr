@@ -11,6 +11,8 @@
    5. pri nas NORIKS pogoji (original nima jamstvene sekcije; tuje vracilo 365 dni ne prenasamo)
    FAQ originala (Questions) -> auto_reviews/FAQ_HR_roadpillow.php; mnenja -> auto_reviews/HR_roadpillow.php. Black Friday trak izpuscen.
  * VIDEO: /img/roadpillow/noriks-roadpillow-video.mp4
+ * SLIKE: /img/roadpillow/noriks-roadpillow-uporaba-1.webp /img/roadpillow/noriks-roadpillow-uporaba-2.webp /img/roadpillow/noriks-roadpillow-uporaba-3.webp /img/roadpillow/noriks-roadpillow-uporaba-4.webp
+ * SLIKE: /img/roadpillow/noriks-roadpillow-mnenje-1.webp /img/roadpillow/noriks-roadpillow-mnenje-2.webp /img/roadpillow/noriks-roadpillow-mnenje-3.webp /img/roadpillow/noriks-roadpillow-mnenje-4.webp /img/roadpillow/noriks-roadpillow-mnenje-5.webp
  * BARVA ORIGINALA: #4f8f86 (mentolno-zelena barva okvirjev, oznak in ozadja videa #e6f1ef na originalu); svetel ton za --bg #e9f3f1, akcent #2f6f66
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
