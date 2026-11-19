@@ -1000,6 +1000,11 @@ if ( noriks_is_type( 'defender' ) ) {
     include $noriks_pb_dir . 'why-defender.php';
 }
 
+// NORIKS Defender (orto-lockd) - brava za volan s kopcom pojasa
+if ( noriks_is_type( 'lockd' ) ) {
+    include $noriks_pb_dir . 'why-lockd.php';
+}
+
 // NORIKS jastuk leptir (orto-pillow) - ortopedski jastuk z izrezi za ramena
 if ( noriks_is_type( 'pillow' ) ) {
     include $noriks_pb_dir . 'why-pillow.php';

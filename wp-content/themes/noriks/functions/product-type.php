@@ -83,6 +83,7 @@ function noriks_product_type_map() : array {
         'pawfence' => array( 'orto-pawfence' ),
         'wallet' => array( 'orto-wallet' ),
         'defender' => array( 'orto-defender' ),
+        'lockd' => array( 'orto-lockd' ),
         'pillow' => array( 'orto-pillow' ),
         'bodysculpt' => array( 'orto-bodysculpt' ),
         'travelvac' => array( 'orto-travelvac' ),
