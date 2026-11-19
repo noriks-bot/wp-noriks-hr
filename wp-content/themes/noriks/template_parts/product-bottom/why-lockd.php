@@ -38,7 +38,7 @@ $lk_svg = function ( $d, $s = 24 ) {
 };
 $lk_zv = '<span class="wslk__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg viewBox="0 0 20 20" width="17" height="17" fill="currentColor" aria-hidden="true" style="display:inline-block;margin-right:2px"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>', 5 ) . '</span>';
 $lk_vid = function ( $ime ) use ( $lk_u ) {
-	return '<video src="' . esc_url( $lk_u . $ime . '.mp4' ) . '" poster="' . esc_url( $lk_u . $ime . '.jpg' ) . '" autoplay muted loop playsinline preload="metadata"></video>';
+	return '<video src="' . esc_url( $lk_u . $ime . '.mp4?v=2' ) . '" poster="' . esc_url( $lk_u . $ime . '.jpg?v=2' ) . '" autoplay muted loop playsinline preload="metadata"></video>';
 };
 $lk_ok = '<span class="wslk__da">✓</span>';
 $lk_ne = '<span class="wslk__ne">✕</span>';
@@ -127,7 +127,7 @@ $lk_ne = '<span class="wslk__ne">✕</span>';
 		<?php
 		foreach ( array( array( 88, '88 %', 'lopova zaobiđe auto na kojem je postavljena' ), array( 98, '98 %', 'kupaca je koristi svaki put kad parkira' ), array( 96, '96 %', 'kupaca bi je preporučilo drugom vozaču' ), array( 100, '120.000', 'kupaca NORIKS-a, prosječna ocjena 4,8' ) ) as $b ) {
 			$off = round( 276.5 * ( 1 - $b[0] / 100 ), 1 );
-			echo '<div class="wslk__krk"><div class="wslk__ring"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" class="wslk__rb"/><circle cx="50" cy="50" r="44" class="wslk__rf" style="stroke-dashoffset:' . esc_attr( $off ) . '"/></svg><b>' . esc_html( $b[1] ) . '</b></div><p>' . esc_html( $b[2] ) . '</p></div>';
+			echo '<div class="wslk__krk"><div class="wslk__ring' . ( strlen( $b[1] ) > 5 ? ' wslk__ring--dug' : '' ) . '"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" class="wslk__rb"/><circle cx="50" cy="50" r="44" class="wslk__rf" style="stroke-dashoffset:' . esc_attr( $off ) . '"/></svg><b>' . esc_html( $b[1] ) . '</b></div><p>' . esc_html( $b[2] ) . '</p></div>';
 		}
 		?>
 	</div>
@@ -282,7 +282,7 @@ $lk_ne = '<span class="wslk__ne">✕</span>';
 .wslk__ring{position:relative;width:132px;height:132px;margin:0 auto 14px}
 .wslk__ring svg{width:100%;height:100%;transform:rotate(-90deg)}
 .wslk__rb{fill:none;stroke:#fde0cc;stroke-width:8}.wslk__rf{fill:none;stroke:#f26b1d;stroke-width:8;stroke-linecap:round;stroke-dasharray:276.5}
-.wslk__ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#0f1d3a}
+.wslk__ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#0f1d3a}.wslk__ring--dug b{font-size:20px;letter-spacing:-.2px}
 .wslk__krk p{margin:0;font-size:15px;line-height:1.5;color:#333}
 .wslk__ime{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-weight:800;font-size:14.5px;color:#0f1d3a}.wslk__ime small{font-weight:600;color:#777;font-size:13px}
 .wslk__av{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#fde0cc;color:#c9530f;font-style:normal;font-weight:800}
@@ -301,23 +301,23 @@ $lk_ne = '<span class="wslk__ne">✕</span>';
 .wslk__tab tbody tr:last-child td{border-bottom:0}
 .wslk__da,.wslk__ne{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-right:8px;vertical-align:middle}
 .wslk__da{background:#f26b1d;color:#fff}.wslk__ne{background:#eee;color:#999}
-.wslk__karw{position:relative}
+.wslk__karw{position:relative;padding:0 60px}
 .wslk__kar3{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:calc((100% - 44px)/3);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .wslk__kar3::-webkit-scrollbar{display:none}.wslk__kar3>*{scroll-snap-align:start}
 .wslk__pus{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:24px;line-height:1;color:#0f1d3a;cursor:pointer;z-index:2}
-.wslk__pus--l{left:-14px}.wslk__pus--d{right:-14px}
+.wslk__pus--l{left:0}.wslk__pus--d{right:0}
 @media (max-width:1024px){.wslk__g4{grid-template-columns:repeat(2,1fr)}.wslk__trak{grid-template-columns:repeat(2,1fr);row-gap:16px}.wslk__tc:nth-child(3){border-left:0}.wslk__trak--kv{grid-template-columns:1fr}.wslk__trak--kv .wslk__tc{border-left:0;justify-content:flex-start}}
 @media (max-width:860px){
 .wslk__s{padding:48px 0}.wslk__s--traka{padding:26px 0}
 .wslk__dva{grid-template-columns:minmax(0,1fr);gap:26px}.wslk__dva--rev>div:first-child{order:0}
 .wslk__g3,.wslk__g2{grid-template-columns:1fr}
-.wslk__kar3{grid-auto-columns:84%}.wslk__pus--l{left:4px}.wslk__pus--d{right:4px}
+.wslk__kar3{grid-auto-columns:84%;flex:0 0 100%;width:100%}.wslk__karw{padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:0 14px}.wslk__pus{position:static;transform:none;margin-top:16px}
 .wslk__kar,.wslk__vk{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .wslk__kar::-webkit-scrollbar,.wslk__vk::-webkit-scrollbar{display:none}.wslk__kar>*,.wslk__vk>*{scroll-snap-align:start}
 .wslk__vk{grid-auto-columns:62%}
 }
 @media (max-width:767px){.wslk__v{padding:0 16px}}
-@media (max-width:560px){.wslk__h2{font-size:25px}.wslk__kr{grid-template-columns:1fr 1fr;gap:12px}.wslk__krk{padding:20px 12px}.wslk__ring{width:100px;height:100px}.wslk__ring b{font-size:21px}.wslk__krk p{font-size:13.5px}.wslk__trak{grid-template-columns:1fr 1fr}.wslk__tc{flex-direction:column;text-align:center;padding:6px 8px}.wslk__trak--kv{grid-template-columns:1fr}.wslk__trak--kv .wslk__tc{flex-direction:row;text-align:left}.wslk__brz{align-items:flex-start}}
+@media (max-width:560px){.wslk__h2{font-size:25px}.wslk__kr{grid-template-columns:1fr 1fr;gap:12px}.wslk__krk{padding:20px 12px}.wslk__ring{width:100px;height:100px}.wslk__ring b{font-size:21px}.wslk__ring--dug b{font-size:15px}.wslk__krk p{font-size:13.5px}.wslk__trak{grid-template-columns:1fr 1fr}.wslk__tc{flex-direction:column;text-align:center;padding:6px 8px}.wslk__trak--kv{grid-template-columns:1fr}.wslk__trak--kv .wslk__tc{flex-direction:row;text-align:left}.wslk__brz{align-items:flex-start}}
 </style>
 <script>
 (function(){document.querySelectorAll('.wslk__kar3').forEach(function(k){
