@@ -42,9 +42,9 @@ $hh_zv = '<span class="whh__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg v
 		<?php
 		$hh_v = array(
 			array( 'kapljica', 'Brzo, jednostavno i prirodno', 'Malo vruće vode iz kuhala i spremni ste – bez struje i bez punjenja baterije.', 'Punjenje termofora vrućom vodom u kuhinji', 'noriks-hothug-video-1.mp4', 'noriks-hothug-video-1.jpg' ),
-			array( 'oblak', 'Mekano i ugodno', 'Navlaka od mekanog plišanog krzna ugodna je na koži i lijepo se priljubi uz tijelo.', 'Mekana plišana navlaka nosivog termofora', 'noriks-hothug-video-2.mp4', 'noriks-hothug-video-2.jpg' ),
+			array( 'oblak', 'Mekano i ugodno', 'Navlaka od mekanog plišanog krzna ugodna je na koži i lijepo se priljubi uz tijelo.', 'Mekana plišana navlaka nosivog termofora', 'noriks-hothug-video-2.mp4?v=2', 'noriks-hothug-video-2.jpg?v=2' ),
 			array( 'strelice', 'Prilagodljivo', 'Nosite ga na donjem dijelu leđa, sprijeda na trbuhu ili na gornjem dijelu leđa – gdje vam treba.', 'Nosivi termofor na donjem dijelu leđa, sprijeda i na gornjem dijelu leđa', 'noriks-hothug-video-3.mp4', 'noriks-hothug-video-3.jpg' ),
-			array( 'hod', 'Uvijek sa sobom', 'Ne vidi se ispod veste ili dukserice, pa ga možete nositi kod kuće, na poslu ili vani.', 'Nosivi termofor ispod dukserice', 'noriks-hothug-video-4.mp4', 'noriks-hothug-video-4.jpg' ),
+			array( 'hod', 'Uvijek sa sobom', 'Ne vidi se ispod veste ili dukserice, pa ga možete nositi kod kuće, na poslu ili vani.', 'Nosivi termofor ispod dukserice', 'noriks-hothug-video-4.mp4?v=2', 'noriks-hothug-video-4.jpg?v=2' ),
 		);
 		foreach ( $hh_v as $v ) {
 			echo '<div class="whh__vk"><div class="whh__vm"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="' . esc_url( $hh_u . $v[5] ) . '" aria-label="' . esc_attr( $v[3] ) . '"><source src="' . esc_url( $hh_u . $v[4] ) . '" type="video/mp4"></video></div><div class="whh__vt"><span class="whh__ki whh__ki--s">' . $hh_svg( $hh_ik[ $v[0] ], 22 ) . '</span><div><strong>' . esc_html( $v[1] ) . '</strong><p>' . esc_html( $v[2] ) . '</p></div></div></div>';
