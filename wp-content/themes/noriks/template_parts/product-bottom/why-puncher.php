@@ -15,6 +15,7 @@
    9. "Faster, Easier ... or Your Money Back" - slika + tekst o 30 dneh - pri nas slika levo, tekst desno (30 dana za povrat)
    Zakljucek: NORIKS pogoji. Bonus e-knjige, Black Friday trak in igra s popustom izpusceni (ponudbe ni pri nas).
  * SLIKE: /img/puncher/noriks-puncher-kupac-1.webp ... kupac-4.webp, noriks-puncher-galerija-03.webp, noriks-puncher-izdrzljiv.webp, noriks-puncher-kanal.webp, noriks-puncher-povrat.webp
+ * VIDEI: /img/puncher/noriks-puncher-mehanizam.mp4 /img/puncher/noriks-puncher-video-1.mp4 ... video-4.mp4 (+ poster .jpg); znamka na rocaju v videih kupcev ni prekrita (premikajoc se predmet)
  * BARVA ORIGINALA: #d9c2af (bez/les - ozadja sekcij in barva lesenega rocaja na originalu); svetel ton za --bg #f6efe8, akcent #8a6a4f
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
