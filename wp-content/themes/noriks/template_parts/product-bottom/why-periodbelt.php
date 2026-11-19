@@ -255,7 +255,9 @@ $pb_zv = '<span class="wspb__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg 
 @media (max-width:560px){.wspb__h2{font-size:25px}.wspb__g4:not(.wspb__kar){grid-template-columns:1fr}
 .wspb__tab{min-width:0;font-size:13.5px;table-layout:fixed}.wspb__tab th,.wspb__tab td{padding:11px 8px}
 .wspb__tab th:nth-child(1){width:46%}.wspb__tab th:nth-child(2){width:28%}.wspb__tab th:nth-child(3){width:26%}
-.wspb__tab th{font-size:13px;line-height:1.3}.wspb__da,.wspb__ne{width:22px;height:22px;font-size:12px}}
+.wspb__tab th{font-size:13px;line-height:1.3;hyphens:none;-webkit-hyphens:none;word-break:keep-all;overflow-wrap:normal}.wspb__da,.wspb__ne{width:22px;height:22px;font-size:12px}}
+@media (max-width:400px){.wspb__tab th,.wspb__tab td{padding:10px 5px}.wspb__tab th{font-size:12px;letter-spacing:-.1px}
+.wspb__tab th:nth-child(1){width:40%}.wspb__tab th:nth-child(2){width:30%}.wspb__tab th:nth-child(3){width:30%}}
 </style>
 <script>
 (function(){document.querySelectorAll('.wspb__kar3').forEach(function(k){
