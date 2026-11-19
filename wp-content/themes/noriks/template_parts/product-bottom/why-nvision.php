@@ -244,14 +244,16 @@ $nv_zv = '<span class="wsnv__zv" aria-label="5 zvjezdica">★★★★★</span>
 .wsnv__kar3{grid-auto-columns:calc((100% - 44px)/3)}.wsnv__kar4{grid-auto-columns:calc((100% - 66px)/4)}
 .wsnv__kar3::-webkit-scrollbar,.wsnv__kar4::-webkit-scrollbar{display:none}.wsnv__kar3>*,.wsnv__kar4>*{scroll-snap-align:start}
 .wsnv__pus{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:24px;line-height:1;color:#141823;cursor:pointer;z-index:2}
-.wsnv__pus--l{left:-14px}.wsnv__pus--d{right:-14px}
+.wsnv__pus--l{left:-22px}.wsnv__pus--d{right:-22px}
+.wsnv__rk{padding:24px 30px}
 @media (max-width:1024px){.wsnv__sred{grid-template-columns:1fr 1fr}.wsnv__sm{grid-column:1/-1;grid-row:1;max-width:460px;width:100%;margin:0 auto}.wsnv__kar4{grid-auto-columns:calc((100% - 44px)/3)}}
 @media (max-width:860px){
 .wsnv__s{padding:48px 0}
 .wsnv__dva{grid-template-columns:minmax(0,1fr);gap:26px}
 .wsnv__g3{grid-template-columns:1fr}
 .wsnv__sred{grid-template-columns:1fr}
-.wsnv__kar3{grid-auto-columns:84%}.wsnv__kar4{grid-auto-columns:72%}.wsnv__pus--l{left:4px}.wsnv__pus--d{right:4px}
+.wsnv__kar3{grid-auto-columns:84%}.wsnv__kar4{grid-auto-columns:72%}.wsnv__pus{display:none}
+.wsnv__rk{padding:22px}
 .wsnv__vk{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .wsnv__vk::-webkit-scrollbar{display:none}.wsnv__vk>*{scroll-snap-align:start}
 }
