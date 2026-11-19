@@ -261,7 +261,7 @@ $nv_zv = '<span class="wsnv__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg 
 @media (max-width:560px){.wsnv__h2{font-size:25px}.wsnv__ba{aspect-ratio:4/5}
 .wsnv__kicker.wsnv__c{flex-direction:column;gap:8px;text-align:center}
 .wsnv__tab{min-width:0;font-size:13.5px}.wsnv__tab th,.wsnv__tab td{padding:10px 7px}
-.wsnv__tab th:nth-child(1){width:37%}.wsnv__tab th:nth-child(2){width:26%}.wsnv__tab th:nth-child(3){width:37%}
+.wsnv__tab th:nth-child(1){width:35%}.wsnv__tab th:nth-child(2){width:31%}.wsnv__tab th:nth-child(3){width:34%}.wsnv__tab th{padding-left:4px;padding-right:4px}
 .wsnv__tab th{font-size:13px;line-height:1.3}.wsnv__tab th img{height:52px;max-width:100%;margin-bottom:6px}
 .wsnv__da,.wsnv__ne{width:18px;height:18px;font-size:11px;margin-right:5px}
 .wsnv__tab td:not(.wsnv__c){hyphens:auto;-webkit-hyphens:auto}}
