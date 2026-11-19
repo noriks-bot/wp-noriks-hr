@@ -1098,6 +1098,10 @@ if ( noriks_is_type( 'chewtoy' ) ) {
     include $noriks_pb_dir . 'why-chewtoy.php';
 }
 
+if ( noriks_is_type( 'postpartum' ) ) {
+    include $noriks_pb_dir . 'why-postpartum.php';
+}
+
 if ( noriks_is_type( 'mshirt' ) ) {
     include $noriks_pb_dir . 'why-mshirt.php';
 }

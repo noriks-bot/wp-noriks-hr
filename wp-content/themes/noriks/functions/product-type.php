@@ -50,6 +50,7 @@ function noriks_product_type_map() : array {
     'aparat' => array( 'orto-aparat' ),
     'duoseat' => array( 'orto-duoseat' ),
     'mshirt' => array( 'orto-mshirt' ),
+    'postpartum' => array( 'orto-postpartum' ),
     'chewtoy' => array( 'orto-chewtoy' ),
     'neurosoothe' => array( 'orto-neurosoothe' ),
     'slouchsocks' => array( 'orto-slouchsocks' ),
@@ -878,6 +879,19 @@ if ( ! function_exists( 'noriks_nyslipper_sizes' ) ) {
             array( 'M',  '38 do 39' ),
             array( 'L',  '40 do 41' ),
             array( 'XL', '42 do 43' ),
+        );
+    }
+}
+
+if ( ! function_exists( 'noriks_postpartum_sizes' ) ) {
+    /** NORIKS BirthWrap: tabela originala (Size guide) - EU stevilke, opseg grudi in duzina v cm (palci preracunani). */
+    function noriks_postpartum_sizes() {
+        return array(
+            array( 'S', '30 do 34', '81–89 cm', '100 cm' ),
+            array( 'M', '36 do 38', '90–97 cm', '101 cm' ),
+            array( 'L', '40 do 42', '98–104 cm', '102 cm' ),
+            array( 'XL', '44 do 46', '105–112 cm', '103 cm' ),
+            array( '2XL', '48 do 52', '113–122 cm', '104 cm' ),
         );
     }
 }
@@ -2071,6 +2085,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'boots'        => array( '37' => 'stopalo do 22,8 cm', '38' => 'stopalo do 23,4 cm', '39' => 'stopalo do 24,0 cm', '40' => 'stopalo do 24,6 cm', '41' => 'stopalo do 25,2 cm', '42' => 'stopalo do 25,8 cm', '43' => 'stopalo do 26,4 cm', '44' => 'stopalo do 27,0 cm', '45' => 'stopalo do 27,6 cm', '46' => 'stopalo do 28,2 cm', '47' => 'stopalo do 28,8 cm', '48' => 'stopalo do 29,4 cm' ),
             'nyslipper'    => array( 'S' => '36 do 37', 'M' => '38 do 39', 'L' => '40 do 41', 'XL' => '42 do 43' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
+            'postpartum'   => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 52' ),
             'mshirt'       => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66', '4XL' => '68 do 70' ),
             'slouchsocks'  => array( 'S' => '35 do 39', 'L' => '39,5 do 43' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
@@ -2260,6 +2275,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Veličine dolaze u parovima – odaberite par u koji ulazi vaš <strong>EU broj cipele</strong>. Na etiketi u papuči piše EU par (npr. 38-39).',
                 'glava' => array( 'Veličina', 'EU broj cipele' ), 'vrstice' => noriks_nyslipper_sizes(),
                 'opomba' => 'Između dva para? Uzmite veći. Široko stopalo ili visok rist: također veći par – trake se ne podešavaju.' );
+        }
+        if ( noriks_is_type( 'postpartum', $product_id ) ) {
+            return array( 'uvod' => 'Naručite <strong>veličinu koju ste nosili prije trudnoće</strong>. Preklop sprijeda i elastični struk rastu s trbuhom.',
+                'glava' => array( 'Veličina', 'EU veličina', 'Opseg grudi', 'Dužina' ), 'vrstice' => noriks_postpartum_sizes(),
+                'opomba' => 'Kako izmjeriti: omotajte metar oko najpunijeg dijela grudi, ruke opuštene. Između dvije veličine, nosite visoko ili očekujete blizance? Uzmite veću.' );
         }
         if ( noriks_is_type( 'mshirt', $product_id ) ) {
             return array( 'uvod' => 'Odaberite svoju uobičajenu <strong>EU veličinu odjeće</strong>. Košulja ima suvremeni atletski kroj i rasteže se uz tijelo.',
