@@ -240,6 +240,6 @@ $bd_ne = '<span class="wsbd__ne"><svg viewBox="0 0 24 24" width="14" height="14"
 .wsbd__g3{grid-template-columns:1fr}
 }
 @media (max-width:767px){.wsbd__v{padding:0 16px}}
-@media (max-width:600px){.wsbd__tab{min-width:0;table-layout:fixed;font-size:13px}.wsbd__tab th,.wsbd__tab td{padding:10px 7px;overflow-wrap:anywhere;hyphens:auto}.wsbd__tab th:first-child,.wsbd__tab td:first-child{width:26%}.wsbd__tab th:first-child{font-size:13px}.wsbd__tab th img{width:52px;height:52px}.wsbd__tab th span{display:block;font-size:12.5px;line-height:1.25}.wsbd__da,.wsbd__ne{display:flex;width:20px;height:20px;margin:0 0 4px}.wsbd__captx{font-size:16px}.wsbd__cap{padding:14px 16px}.wsbd__nav{width:40px;height:40px}.wsbd__cijeli{margin-top:32px;padding-top:28px}}
+@media (max-width:600px){.wsbd__tab{min-width:0;table-layout:fixed;font-size:13px}.wsbd__tab th,.wsbd__tab td{padding:10px 7px;overflow-wrap:anywhere;hyphens:auto}.wsbd__tab th:first-child,.wsbd__tab td:first-child{width:26%}.wsbd__tab th:first-child{font-size:13px}.wsbd__tab th img{width:52px;height:52px}.wsbd__tab th span{display:block;font-size:13px;line-height:1.25}.wsbd__da,.wsbd__ne{display:flex;width:20px;height:20px;margin:0 0 4px}.wsbd__captx{font-size:16px}.wsbd__cap{padding:14px 16px}.wsbd__nav{width:40px;height:40px}.wsbd__cijeli{margin-top:32px;padding-top:28px}}
 @media (max-width:560px){.wsbd__h2{font-size:25px}.wsbd__pt{grid-template-columns:1fr}.wsbd__g4{gap:14px}.wsbd__ct{padding:14px}.wsbd__ct strong{font-size:15px}.wsbd__ct p{font-size:13.5px}}
 </style>
