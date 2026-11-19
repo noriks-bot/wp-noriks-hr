@@ -1130,6 +1130,10 @@ if ( noriks_is_type( 'periodbelt' ) ) {
     include $noriks_pb_dir . 'why-periodbelt.php';
 }
 
+if ( noriks_is_type( 'hothug' ) ) {
+    include $noriks_pb_dir . 'why-hothug.php';
+}
+
 if ( noriks_is_type( 'uvlight' ) ) {
     include $noriks_pb_dir . 'why-uvlight.php';
 }
