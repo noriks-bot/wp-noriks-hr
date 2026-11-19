@@ -99,7 +99,7 @@ $rp_svg = function ( $d, $s = 24 ) {
 			array( 'mnenje-5', 'Supruga obično zaspi na suvozačkom sjedalu, ali nikad joj nije udobno. Iznenadio sam je ovim jastukom i obožava ga – koristi ga na putovanjima i na kraćim vožnjama.', 'Jakov T.' ),
 		);
 		foreach ( $rp_m as $m ) {
-			echo '<div class="wsrp__rk"><div class="wsrp__rkm"><img src="' . esc_url( $rp_u . 'noriks-roadpillow-' . $m[0] . '.webp' ) . '" alt="' . esc_attr( 'Kupac s NORIKS RoadPillow jastukom - ' . $m[2] ) . '" decoding="async"></div><div class="wsrp__rkt"><span class="wsrp__zv" aria-label="5 zvjezdica">★★★★★</span><p>' . esc_html( $m[1] ) . '</p><span class="wsrp__ime"><i class="wsrp__av">' . esc_html( mb_substr( $m[2], 0, 1 ) ) . '</i>' . esc_html( $m[2] ) . ' <small>' . $rp_svg( $rp_ik['stit'], 14 ) . ' Provjereni kupac</small></span></div></div>';
+			echo '<div class="wsrp__rk"><div class="wsrp__rkm"><img src="' . esc_url( $rp_u . 'noriks-roadpillow-' . $m[0] . '.webp' ) . '" alt="' . esc_attr( 'Kupac s NORIKS RoadPillow jastukom - ' . $m[2] ) . '" decoding="async"></div><div class="wsrp__rkt"><span class="wsrp__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg viewBox="0 0 20 20" width="17" height="17" fill="currentColor" aria-hidden="true" style="display:inline-block;margin-right:2px"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>', 5 ) . '</span><p>' . esc_html( $m[1] ) . '</p><span class="wsrp__ime"><i class="wsrp__av">' . esc_html( mb_substr( $m[2], 0, 1 ) ) . '</i>' . esc_html( $m[2] ) . ' <small>' . $rp_svg( $rp_ik['stit'], 14 ) . ' Provjereni kupac</small></span></div></div>';
 		}
 		?>
 	</div>

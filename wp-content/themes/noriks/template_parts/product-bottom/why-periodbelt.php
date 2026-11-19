@@ -39,7 +39,7 @@ $pb_ik = array(
 $pb_svg = function ( $d, $s = 24 ) {
 	return '<svg viewBox="0 0 24 24" width="' . (int) $s . '" height="' . (int) $s . '" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . $d . '</svg>';
 };
-$pb_zv = '<span class="wspb__zv" aria-label="5 zvjezdica">★★★★★</span>';
+$pb_zv = '<span class="wspb__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg viewBox="0 0 20 20" width="17" height="17" fill="currentColor" aria-hidden="true" style="display:inline-block;margin-right:2px"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>', 5 ) . '</span>';
 ?>
 <div class="wspb">
 
