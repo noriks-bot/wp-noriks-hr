@@ -4,7 +4,7 @@
  *
  * STRUKTURA ORIGINALA:
    1. video levo (svjetlo se pali, UV ciklus) + Protection That Runs While You Sleep + 3 tocke desno - pri nas video levo (mp4 z originala, odrezani crni pasovi), besedilo + 3 tocke z ikonami desno
-   2. Their Words, Their Bathroom Experience - 3 objave kupcev v slogu drustvenih omrezij (avatar, ime, cas, besedilo, fotografija, vsecki, komentarji) - pri nas 3 kartice objav s fotografijami z originala (tretja lokalizirana s Higgsfieldom)
+   2. Their Words, Their Bathroom Experience - 3 objave kupcev v slogu drustvenih omrezij (avatar, ime, cas, besedilo, fotografija, vsecki, komentarji) - pri nas 3 kartice objav (mobil: karusel s scroll-snap) s fotografijami z originala (tretja lokalizirana s Higgsfieldom)
    3. Prevent Falls Before They Happen - besedilo + drsnik Before/After (2 sliki) - pri nas drsnik Prije/Poslije desno (cik-cak), besedilo levo
    4. slika (3 koraki namestitve) + Set It and Forget It + 4 tocke - pri nas slika levo, besedilo s 4 kljukicami desno (cik-cak) (slika lokalizirana s Higgsfieldom)
    5. 30-Day Money Back Guarantee - pri nas NORIKS pogoji
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 .wsuvl__kv{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}.wsuvl__kv li{display:flex;gap:12px;align-items:center;font-size:15.5px;line-height:1.5;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 6px 18px rgba(106,76,201,.10);list-style:none}.wsuvl__kv li svg{flex:0 0 30px;width:30px;height:30px;padding:6px;box-sizing:border-box;border-radius:50%;background:#6a4cc9;color:#fff}
 .wsuvl__red4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;margin-top:22px}.wsuvl__pog>div{background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.07);padding:26px 16px}.wsuvl__pog strong{display:block;font-size:17px;font-weight:800}.wsuvl__pog span{display:block;font-size:13.5px;color:#555}
 span.wsuvl__pi{width:56px;height:56px;border-radius:50%;background:#e4dcf8;color:#6a4cc9;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
-@media (max-width:860px){.wsuvl__s{padding:46px 0}.wsuvl__dva{grid-template-columns:1fr;gap:24px}.wsuvl__dva--rev>div:first-child{order:0}.wsuvl__g3{grid-template-columns:1fr}.wsuvl__red4{grid-template-columns:1fr 1fr}.wsuvl__g3{max-width:460px;margin-left:auto;margin-right:auto}}
+@media (max-width:860px){.wsuvl__s{padding:46px 0}.wsuvl__dva{grid-template-columns:1fr;gap:24px}.wsuvl__dva--rev>div:first-child{order:0}.wsuvl__g3{grid-template-columns:1fr}.wsuvl__red4{grid-template-columns:1fr 1fr}.wsuvl__g3.wsuvl__grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:8px}.wsuvl__g3>*{scroll-snap-align:start}}
 @media (max-width:767px){.wsuvl__v{padding:0 16px}}
 </style>
 <script>
