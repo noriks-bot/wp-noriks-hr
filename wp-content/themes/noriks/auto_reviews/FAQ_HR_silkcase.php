@@ -7,6 +7,6 @@ return array(
   array( 'Zašto je mulberry svila bolja od drugih svila?', 'Mulberry svila ima duga i čista vlakna koja daju mekoću, izdržljivost i sjaj. Naša jastučnica izrađena je od mulberry svile težine 22 momme.' ),
   array( 'Kako svila djeluje na kosu?', 'Glatka površina svile smanjuje trenje, pa se kosa manje zapliće i manje se kovrča tijekom noći. Svila upija manje od pamuka, pa kosa ujutro ostaje mekana.' ),
   array( 'Kako njegovati svilenu jastučnicu?', 'Perite je na programu za osjetljivo rublje ili ručno na 30 °C bez centrifuge. Objesite da se osuši, a suhu izglačajte za glatku, svilenkastu završnicu.' ),
-  array( 'Je li svila prirodna?', 'Da, svila je prirodno i biorazgradivo vlakno. Tkanina ima certifikat Oeko-Tex® i bez dodanih umjetnih kemikalija je.' ),
+  array( 'Je li svila prirodna?', 'Da, svila je prirodno i biorazgradivo vlakno. Tkanina je bez dodanih umjetnih kemikalija.' ),
   array( 'Kakva su pravila dostave i povrata?', 'Dostava je besplatna za narudžbe iznad 70 €, a platiti možete pouzećem. Ako niste zadovoljni, imate 30 dana za povrat.' ),
 );

@@ -21,7 +21,6 @@ $wdir = get_template_directory_uri() . '/img/muslin/';
           <li><strong>Iznimno mekan</strong> – ugodan na dodir od prvog dana.</li>
           <li><strong>Mekši nakon svakog pranja</strong> – s vremenom je samo bolji.</li>
           <li><strong>Uvijek prozračan</strong> – zrak slobodno prolazi kroz tkaninu.</li>
-          <li><strong>Oeko-Tex®</strong> – tkanina s certifikatom.</li>
         </ul>
         <p class="wmuslin__zak">Lagan kao pamučna košulja, topao kao omiljena deka.</p>
       </div>

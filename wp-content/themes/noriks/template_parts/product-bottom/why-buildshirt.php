@@ -226,14 +226,13 @@ $nbs_img  = function( $file, $alt ) use ( $nbs, $nbs_path ) {
     <div class="nbs-chips">
       <span><strong>Original</strong>Mi smo bili prvi.</span>
       <span><strong>Vlastiti kroj</strong>Naš kroj, naša tvornica.</span>
-      <span><strong>OEKO-TEX 100</strong>Certificirana tkanina.</span>
       <span><strong>Točna veličina</strong>Naručite svoju uobičajenu.</span>
     </div>
     <div class="nbs-cmptbl">
       <table>
         <tbody>
           <tr><td class="nbs-orig"><strong>Original</strong><span>Dva puna sloja preko grudi, po kroju koji je naš.</span></td><td class="nbs-kop"><strong>Kopija</strong><span>Jedan tanki sloj jerseya iz kataloga.</span></td></tr>
-          <tr><td class="nbs-orig"><strong>Original</strong><span>OEKO-TEX Standard 100: 66 % poliamid, 34 % elastan.</span></td><td class="nbs-kop"><strong>Kopija</strong><span>Bez certifikata i bez specifikacije tkanine.</span></td></tr>
+          <tr><td class="nbs-orig"><strong>Original</strong><span>Točna specifikacija tkanine: 66 % poliamid, 34 % elastan.</span></td><td class="nbs-kop"><strong>Kopija</strong><span>Bez specifikacije tkanine.</span></td></tr>
           <tr><td class="nbs-orig"><strong>Original</strong><span>Točna veličina, XS do 6XL, ponovno gradirano.</span></td><td class="nbs-kop"><strong>Kopija</strong><span>Tablica veličina prepisana s veleprodajne stranice.</span></td></tr>
           <tr><td class="nbs-orig"><strong>Original</strong><span>4,8/5 od tisuća žena, 30 dana jamstva, besplatna zamjena.</span></td><td class="nbs-kop"><strong>Kopija</strong><span>Posuđene fotografije i bez adrese za povrat.</span></td></tr>
         </tbody>

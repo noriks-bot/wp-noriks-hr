@@ -21,7 +21,6 @@ $wv   = '?v=20261026b'; // verzija slik - Cloudflare je drzal stare slike
         <div class="wsilk__kart">
           <div><strong>Tkanina</strong><span>mulberry svila, 22 momme</span></div>
           <div><strong>Zatvaranje</strong><span>skriveni patentni zatvarač</span></div>
-          <div><strong>Certifikat</strong><span>Oeko-Tex® – odgovorna proizvodnja</span></div>
           <div><strong>Bez dodataka</strong><span>bez dodanih umjetnih kemikalija, nikad testirano na životinjama</span></div>
         </div>
         <p class="wsilk__zak">Prirodna, biorazgradiva svila – za sve tipove kože, i one najosjetljivije.</p>

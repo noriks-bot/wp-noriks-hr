@@ -4240,7 +4240,7 @@ $kompmajice_faq = array(
 $leakboxers_faq = array(
   array(
     'questioon' => 'Zašto je više od 123.000 muškaraca odabralo NORIKS?',
-    'answer'    => 'NORIKS su najupijajuće perive bokserice za muško curenje mokraće: drže do 300 ml, Oeko-Tex® su certificirane i bez štetnih tvari, perive i višekratne (ekološka alternativa jednokratnim ulošcima), dizajnirane za cjelodnevnu udobnost i samopouzdanje. Čak 87 % kupaca ponovno naruči nakon prve kupnje.'
+    'answer'    => 'NORIKS su najupijajuće perive bokserice za muško curenje mokraće: drže do 300 ml, ne sadrže štetne tvari, perive i višekratne (ekološka alternativa jednokratnim ulošcima), dizajnirane za cjelodnevnu udobnost i samopouzdanje. Čak 87 % kupaca ponovno naruči nakon prve kupnje.'
   ),
   array(
     'questioon' => 'Koliko upijaju?',
@@ -4283,7 +4283,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Kako NORIKS ErgoSit ublažava bol pri sjedenju?', 'answer' => 'ErgoSit ima izrez za trticu koji uklanja izravan pritisak na trtičnu kost i išijasni živac, dok anatomski oblik od memory pjene visoke gustoće ravnomjerno raspoređuje težinu po kukovima i bedrima. Time se rasterećuju osjetljive točke i podupire zdravo, uspravno držanje.' ),
   array( 'questioon' => 'Gdje sve mogu koristiti jastuk?', 'answer' => 'Bilo gdje gdje sjedite — u automobilu, na uredskoj stolici, stolici za blagovanje, invalidskim kolicima ili kod kuće. Stabilna baza protiv klizanja drži ga na mjestu pa udobnost ide s vama cijeli dan.' ),
   array( 'questioon' => 'Splošnjava li se pjena s vremenom?', 'answer' => 'Ne. ErgoSit koristi memory pjenu visoke gustoće koja zadržava oblik i čvrstoću i nakon dugotrajne svakodnevne uporabe, za razliku od jeftinih jastuka koji brzo splasnu.' ),
-  array( 'questioon' => 'Može li se navlaka prati?', 'answer' => 'Da. Navlaka se skida i može se prati u perilici, pa jastuk ostaje svjež i čist. Tkanina je prozračna, hipoalergena i OEKO-TEX® certificirana.' ),
+  array( 'questioon' => 'Može li se navlaka prati?', 'answer' => 'Da. Navlaka se skida i može se prati u perilici, pa jastuk ostaje svjež i čist. Tkanina je prozračna i hipoalergena.' ),
   array( 'questioon' => 'Odgovara li mojoj stolici ili sjedalu?', 'answer' => 'ErgoSit je univerzalnog oblika i pristaje većini autosjedala, uredskih i kuhinjskih stolica te invalidskih kolica. Nema veličina — jedan model odgovara svima.' ),
   array( 'questioon' => 'Za koliko vremena osjetim razliku?', 'answer' => 'Većina korisnika osjeti manje pritiska na trtici i udobnije sjedenje već od prvog dana. Za bolje držanje i manje boli u leđima učinak se dodatno gradi kroz redovitu uporabu.' ),
   array( 'questioon' => 'Postoji li jamstvo povrata novca?', 'answer' => 'Da, svaki NORIKS ErgoSit dolazi s jamstvom udobnosti od 30 dana. Ako ne osjetite manje boli i više udobnosti, kontaktirajte nas i riješit ćemo to.' ),
@@ -4293,7 +4293,7 @@ $jastuk_faq = array(
 $kidsnest_faq = array(
   array( 'questioon' => 'Koliko brzo ću vidjeti da disanje na usta prestaje?', 'answer' => 'Većina roditelja primjećuje tiše disanje i manje buđenja s otvorenim ustima unutar prvih 5–7 noći. Do 14. noći kod većine djece hrkanje se smiruje, a usnice ostaju zatvorene. Punu razliku — vidljivo bolji položaj i mirniji san — roditelji najčešće opisuju oko 21. do 30. dana. Koristite ga svaku noć.' ),
   array( 'questioon' => 'Za koju dob je KidsNest namijenjen?', 'answer' => 'KidsNest dolazi u tri veličine: 1–3, 3–9 i 9–14 godina. Najvažniji prozor je između 3. i 9. godine, kada se nepce i čeljust najintenzivnije razvijaju — ali svaka dob ima svoju veličinu i svoju korist.' ),
-  array( 'questioon' => 'Je li siguran? Što je unutra?', 'answer' => 'KidsNest je izrađen od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA. Otporan je na grinje i prozračan, a navlaka se skida i pere u perilici.' ),
+  array( 'questioon' => 'Je li siguran? Što je unutra?', 'answer' => 'KidsNest je izrađen od hipoalergenske memorijske pjene — bez formaldehida, teških metala i BPA. Otporan je na grinje i prozračan, a navlaka se skida i pere u perilici.' ),
   array( 'questioon' => 'Hoće li ga moje dijete stvarno koristiti?', 'answer' => 'Da. Ergonomski oblik osjeća se kao podrška, ne kao nešto čudno — većina djece navikne se u 1–2 noći. Roditelji često javljaju da djeca nakon prvog tjedna ne žele spavati bez njega. 3-zonska struktura prirodno prihvaća glavu — nema "pravilnog načina", nema borbe prije spavanja.' ),
   array( 'questioon' => 'Djeluje li ako moje dijete već diše na usta?', 'answer' => 'Da — upravo za takvu djecu je dizajniran. 3-zonska struktura pomaže spriječiti naginjanje glave unatrag, zbog kojeg se usta otvaraju u snu. Kod većine djece unutar 7–30 noći usnice se prirodno zatvaraju i disanje kroz nos se vraća.' ),
   array( 'questioon' => 'Što ako mom djetetu ne pomogne?', 'answer' => 'Neka dijete spava na KidsNestu 30 noći. Ako ne vidite razliku — manje disanja na usta, tiše noći, mirniji san — javite nam se i vraćamo novac. Bez pitanja i bez sitnih slova.' ),
@@ -4562,7 +4562,7 @@ $cloud_faq = array(
   ),
   array(
     'questioon' => 'Od čega je jastuk napravljen?',
-    'answer'    => 'Jezgra je od memorijske pjene medicinske kvalitete s perforacijama koje osiguravaju protok zraka. Navlaka je od prozračne tkanine, skida se i pere. Materijali su certificirani po OEKO-TEX® STANDARD 100 i CertiPUR-EU.',
+    'answer'    => 'Jezgra je od memorijske pjene medicinske kvalitete s perforacijama koje osiguravaju protok zraka. Navlaka je od prozračne tkanine, skida se i pere. Pjena je certificirana po CertiPUR-EU.',
   ),
   array(
     'questioon' => 'Je li pretvrd ili premekan?',

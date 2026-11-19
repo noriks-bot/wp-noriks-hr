@@ -485,7 +485,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
       <div class="accordion-content">
         <ul style="margin:8px 0 12px; padding-left:18px;">
           <li style="margin:0 0 8px;"><strong>Vanjska navlaka:</strong> Prozračna pletenina, skida se i pere u perilici, hipoalergena</li>
-          <li style="margin:0 0 8px;"><strong>Jezgra:</strong> OrthoFlex™ adaptivna pjena | Netoksična, OEKO-TEX® certificirana | Dizajnirana za rasterećenje pritiska + poravnanje držanja</li>
+          <li style="margin:0 0 8px;"><strong>Jezgra:</strong> OrthoFlex™ adaptivna pjena | Netoksična | Dizajnirana za rasterećenje pritiska + poravnanje držanja</li>
         </ul>
       </div>
     </div>
@@ -524,7 +524,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
-                NORIKS KidsNest izrađen je od hipoalergenske, OEKO-TEX® certificirane memorijske pjene — bez formaldehida, teških metala i BPA — s prozračnom pletenom navlakom.<br><br>Njegova 3-zonska ergonomska struktura nježno prihvaća glavu, podupire vrat i pomaže održati kralježnicu u prirodnom poravnanju — čak i kad se dijete tijekom noći puno okreće. Tako potiče disanje kroz nos i mirniji, dublji san.<br><br>Dostupan u tri veličine (1–3, 3–9 i 9–14 godina), raste s vašim djetetom i pruža pravu visinu potpore u svakoj fazi razvoja.
+                NORIKS KidsNest izrađen je od hipoalergenske memorijske pjene — bez formaldehida, teških metala i BPA — s prozračnom pletenom navlakom.<br><br>Njegova 3-zonska ergonomska struktura nježno prihvaća glavu, podupire vrat i pomaže održati kralježnicu u prirodnom poravnanju — čak i kad se dijete tijekom noći puno okreće. Tako potiče disanje kroz nos i mirniji, dublji san.<br><br>Dostupan u tri veličine (1–3, 3–9 i 9–14 godina), raste s vašim djetetom i pruža pravu visinu potpore u svakoj fazi razvoja.
 
          <?php elseif( noriks_is_type( 'nosilka', $current_product_id ) ): ?>
 
@@ -564,7 +564,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'cloud', $current_product_id ) ): ?>
 
-                <strong>NORIKS Cloud</strong> je ortopedski jastuk za koljena namijenjen spavanju na boku. Postavlja se između koljena i drži kukove, zdjelicu i kralježnicu u prirodnoj liniji — bez uvijanja donjeg dijela leđa i bez pritiska koljena o koljeno.<br><br>Za razliku od običnog jastuka koji se tijekom noći splošti i ispadne, NORIKS Cloud ima podesivu traku s drukerima. Traka ide oko noge i drži jastuk točno na mjestu — i kad se okrenete na drugu stranu. Traka se skida, pa jastuk možete koristiti i pod gležnjeve ili pod vrat.<br><br>Jezgra je od memorijske pjene medicinske kvalitete s ugrađenim perforacijama: dovoljno čvrsta da drži razmak nogu, dovoljno mekana da se prilagodi tijelu i prozračna, pa se ne pregrijava. Zadržava oblik godinama.<br><br>Navlaka se skida i pere u stroju na 40 °C. Materijali su certificirani po OEKO-TEX® STANDARD 100 i CertiPUR-EU, a dizajn je rađen prema švicarskim standardima kvalitete.
+                <strong>NORIKS Cloud</strong> je ortopedski jastuk za koljena namijenjen spavanju na boku. Postavlja se između koljena i drži kukove, zdjelicu i kralježnicu u prirodnoj liniji — bez uvijanja donjeg dijela leđa i bez pritiska koljena o koljeno.<br><br>Za razliku od običnog jastuka koji se tijekom noći splošti i ispadne, NORIKS Cloud ima podesivu traku s drukerima. Traka ide oko noge i drži jastuk točno na mjestu — i kad se okrenete na drugu stranu. Traka se skida, pa jastuk možete koristiti i pod gležnjeve ili pod vrat.<br><br>Jezgra je od memorijske pjene medicinske kvalitete s ugrađenim perforacijama: dovoljno čvrsta da drži razmak nogu, dovoljno mekana da se prilagodi tijelu i prozračna, pa se ne pregrijava. Zadržava oblik godinama.<br><br>Navlaka se skida i pere u stroju na 40 °C. Pjena je certificirana po CertiPUR-EU, a dizajn je rađen prema švicarskim standardima kvalitete.
 
          <?php elseif( noriks_is_type( 'cloath', $current_product_id ) ): ?>
 
@@ -664,7 +664,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'seatcushion', $current_product_id ) ): ?>
 
-                <strong>NORIKS SeatCushion</strong> — ortopedski jastuk za sjedenje s potporom za donja leđa. <strong>Izrez za trticu</strong> uklanja izravan pritisak s trtice, a oblikovana površina podupire kralježnicu i vraća zdravo držanje. Memorijska pjena visoke gustoće ravnomjerno raspoređuje težinu na kukove i bedra, pa noge ne utrnu.<br><br><strong>Vanjska navlaka:</strong> prozračna pletena tkanina, skidljiva i periva, hipoalergena.<br><strong>Jezgra:</strong> prilagodljiva ortopedska memorijska pjena – netoksična, s certifikatom OEKO-TEX®, osmišljena za ublažavanje pritiska i pravilno držanje.<br><strong>Dimenzije:</strong> 44 × 42 cm, visina naslona 32 cm.<br><br><strong>Za svako sjedalo:</strong> protuklizna podloga drži ga na mjestu na autosjedalima, uredskim i blagovaonskim stolicama te invalidskim kolicima.
+                <strong>NORIKS SeatCushion</strong> — ortopedski jastuk za sjedenje s potporom za donja leđa. <strong>Izrez za trticu</strong> uklanja izravan pritisak s trtice, a oblikovana površina podupire kralježnicu i vraća zdravo držanje. Memorijska pjena visoke gustoće ravnomjerno raspoređuje težinu na kukove i bedra, pa noge ne utrnu.<br><br><strong>Vanjska navlaka:</strong> prozračna pletena tkanina, skidljiva i periva, hipoalergena.<br><strong>Jezgra:</strong> prilagodljiva ortopedska memorijska pjena – netoksična, osmišljena za ublažavanje pritiska i pravilno držanje.<br><strong>Dimenzije:</strong> 44 × 42 cm, visina naslona 32 cm.<br><br><strong>Za svako sjedalo:</strong> protuklizna podloga drži ga na mjestu na autosjedalima, uredskim i blagovaonskim stolicama te invalidskim kolicima.
          <?php elseif( noriks_is_type( 'breadbag', $current_product_id ) ): ?>
 
                 <strong>NORIKS BreadBag</strong> — vrećica za kruh od pamuka i <strong>pravog pčelinjeg voska</strong>. Vosak je utrljan duboko u tkaninu, pa vrećica diše taman koliko treba: vlaga izlazi polako, <strong>korica ostaje hrskava, a sredina mekana</strong> – kruh ostaje <strong>do 3× dulje svjež</strong>. Bez plastike, bez hladnjaka, jednostavno na radnoj ploči.<br><br>

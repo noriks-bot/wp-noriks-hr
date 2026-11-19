@@ -22,7 +22,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <!-- ============ 1) Marquee (tamna traka, vrti se) ============ -->
 <div class="oj-marquee" aria-hidden="true">
   <div class="oj-marquee-track">
-    <?php $oj_ticker = array('PROZRAČNO I PERIVO','SAVRŠENO PORAVNANJE','STABILITYCORE™ PJENA','OEKO-TEX® CERTIFICIRANO','HIPOALERGENO','SILKFLEX™ NAVLAKA');
+    <?php $oj_ticker = array('PROZRAČNO I PERIVO','SAVRŠENO PORAVNANJE','STABILITYCORE™ PJENA','HIPOALERGENO','SILKFLEX™ NAVLAKA');
     for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_ticker as $t ) { echo '<span class="oj-tick">'.esc_html($t).'</span><span class="oj-dot">•</span>'; } } ?>
   </div>
 </div>
@@ -83,7 +83,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-stills-sec">
   <div class="oj-trustbar" aria-hidden="true">
     <div class="oj-trustbar-track">
-      <?php $oj_trust = array('120.000+ KUPACA','OCJENA 4,8/5','OEKO-TEX®','PREPORUKA LIJEČNIKA','30 DANA JAMSTVA','ORTOPEDSKI DIZAJN');
+      <?php $oj_trust = array('120.000+ KUPACA','OCJENA 4,8/5','PREPORUKA LIJEČNIKA','30 DANA JAMSTVA','ORTOPEDSKI DIZAJN');
       for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item">'.esc_html($t).'</span><span class="oj-trust-dot">•</span>'; } } ?>
     </div>
   </div>

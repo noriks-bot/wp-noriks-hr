@@ -50,7 +50,7 @@ $nsk_kses = array( 'strong' => array(), 'em' => array(), 'br' => array() );
 $nsk_specs = array(
   array( 'Vanjska navlaka', 'prozračna pletena tkanina, skidljiva i periva, hipoalergena' ),
   array( 'Jezgra', 'prilagodljiva ortopedska memorijska pjena' ),
-  array( 'Sigurnost', 'netoksična pjena s certifikatom OEKO-TEX®' ),
+  array( 'Sigurnost', 'netoksična pjena' ),
   array( 'Namjena', 'osmišljen za ublažavanje pritiska i pravilno držanje' ),
 );
 $nsk_special = array(
@@ -60,7 +60,7 @@ $nsk_special = array(
 );
 
 /* 2) trak prednosti (tekoči trak originala, tu statičen) */
-$nsk_strip = array( 'Stabilna jezgra od pjene', 'Certifikat OEKO-TEX®', 'Hipoalergen', 'Svilenkasto mekana navlaka', 'Prozračan i periv', 'Savršeno poravnanje' );
+$nsk_strip = array( 'Stabilna jezgra od pjene', 'Hipoalergen', 'Svilenkasto mekana navlaka', 'Prozračan i periv', 'Savršeno poravnanje' );
 
 /* 3) videi kupcev (utišani, hrvaški napisi) */
 $nsk_vids = array(
