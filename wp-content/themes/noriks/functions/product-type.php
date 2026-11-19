@@ -45,6 +45,7 @@ function noriks_product_type_map() : array {
     'uvlight' => array( 'orto-uvlight' ),
     'periodbelt' => array( 'orto-periodbelt' ),
     'hothug' => array( 'orto-hothug' ),
+    'puncher' => array( 'orto-puncher' ),
     'roadpillow' => array( 'orto-roadpillow' ),
     'nvision' => array( 'orto-nvision' ),
     'survival' => array( 'orto-survival' ),
