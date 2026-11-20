@@ -2168,6 +2168,11 @@ function gck_render_bundle_selector() {
       #bundle-selector .swatch-circle.color-ruzicasta      { background: #d9a7b4 !important; }
       #bundle-selector .swatch-circle.color-tamnoruzicasta { background: #b8566f !important; }
       #bundle-selector .swatch-circle.color-plava          { background: #9db8de !important; }
+      /* BirthWrap (David 20.11.): jasna oznaka velikosti v karticah ponud */
+      #bundle-selector .gck-vel-info { font-size: 13px; line-height: 1.45; color: #4a3f42; background: #f7eef0; border-radius: 8px; padding: 8px 10px; margin: 2px 0 10px; }
+      #bundle-selector .gck-vel-info strong { color: #1c1c1c; }
+      #bundle-selector .gck-vel-info-link { color: #a8536b; font-weight: 700; text-decoration: underline; white-space: nowrap; }
+      #bundle-selector .gck-vel-label { font-size: 14px; margin: 4px 0 4px; }
     </style>
     <?php endif; ?>
     <?php if ( has_term( array( 'orto-celleg' ), 'product_cat', $product_id ) ) : ?>
@@ -7863,6 +7868,13 @@ function gck_render_bundle_selector() {
                         <?php endif; ?>
                         <?php if ( $gck_pass['group'] === null && $gck_show_sections && $gck_free > 0 && $i === ( $gck_paid + 1 ) ) : ?>
                             <div class="gck-pair-label is-gratis">Izaberi još <?php echo (int) $gck_free; ?> <?php echo esc_html( gck_hr_majice_phrase( $gck_free, true, $gck_garment ) ); ?></div>
+                        <?php endif; ?>
+                        <?php // NORIKS BirthWrap (David 20.11.): v vsaki kartici jasno, kaj pomeni velikost + povezava do tablice velicin.
+                        if ( $gck_pass['group'] === null && has_term( 'orto-postpartum', 'product_cat', $product_id ) ) : ?>
+                            <?php if ( $i === 1 ) : ?>
+                            <div class="gck-vel-info">Veličina = <strong>EU broj odjeće</strong> (S = EU 30 do 34, M = 36 do 38, L = 40 do 42, XL = 44 do 46, 2XL = 48 do 52). Naručite veličinu koju ste nosili <strong>prije trudnoće</strong>. <a href="#size-chart" class="gck-vel-info-link" onclick="event.preventDefault();event.stopPropagation();var o=document.getElementById('open-size-chartCustom');if(o){o.click();}">Tablica veličina ›</a></div>
+                            <?php endif; ?>
+                            <div class="gck-pair-label gck-vel-label"><?php echo $gck_rows > 1 ? 'Haljina ' . (int) $i . ' – veličina i boja:' : 'Veličina i boja:'; ?></div>
                         <?php endif; ?>
                         <div class="bundle-pair">
                             <?php foreach ( $attr_groups as $g_index => $group ) :
