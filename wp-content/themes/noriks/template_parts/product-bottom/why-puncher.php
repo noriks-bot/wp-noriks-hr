@@ -47,11 +47,11 @@ $pu_li = function ( $items ) use ( $pu_svg, $pu_ik ) {
 		<?php
 		$pu_m = array(
 			array( 'img', 'noriks-puncher-kupac-1.webp', 'Kupac buši rupe u kartonu za uvez bilježnice' ),
-			array( 'vid', 'noriks-puncher-video-1.mp4?v=4', 'noriks-puncher-video-1.jpg?v=4', 'Kupac otvara NORIKS kutiju s bušačem i nastavcima' ),
+			array( 'vid', 'noriks-puncher-video-1.mp4?v=5', 'noriks-puncher-video-1.jpg?v=5', 'Kupac otvara NORIKS kutiju s bušačem i nastavcima' ),
 			array( 'vid', 'noriks-puncher-video-2.mp4', 'noriks-puncher-video-2.jpg', 'Bušenje rupa u kartonu na podlozi za rezanje' ),
 			array( 'img', 'noriks-puncher-kupac-2.webp', 'Kupac buši rupe za uvez na radnom stolu' ),
 			array( 'img', 'noriks-puncher-kupac-3.webp', 'Kartica iz NORIKS kompleta bušača' ),
-			array( 'vid', 'noriks-puncher-video-3.mp4?v=4', 'noriks-puncher-video-3.jpg?v=4', 'Zadovoljna kupkinja drži otvorenu NORIKS kutiju s bušačem' ),
+			array( 'vid', 'noriks-puncher-video-3.mp4?v=5', 'noriks-puncher-video-3.jpg?v=5', 'Zadovoljna kupkinja drži otvorenu NORIKS kutiju s bušačem' ),
 			array( 'vid', 'noriks-puncher-video-4.mp4?v=3', 'noriks-puncher-video-4.jpg?v=3', 'Kupac buši rupe za uvez na podlozi za rezanje' ),
 			array( 'img', 'noriks-puncher-kupac-4.webp', 'Kupac drži bušač i nastavke na dlanu' ),
 		);
