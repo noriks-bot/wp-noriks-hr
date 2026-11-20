@@ -1189,6 +1189,10 @@ body.single-product {
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li:nth-child(n+11) {
   display: none !important;
 }
+/* Izjema (David 20.11.): ChewBuddy ima 24 zivali - v galeriji morajo biti vidni VSI primeri izdelka. */
+.single-product div.product.product_cat-orto-chewtoy .woocommerce-product-gallery .flex-control-thumbs li:nth-child(n+11) {
+  display: block !important;
+}
 
 .single-product div.product .woocommerce-product-gallery .flex-control-nav.flex-control-thumbs,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
