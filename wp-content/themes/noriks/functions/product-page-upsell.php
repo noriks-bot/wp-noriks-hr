@@ -35,10 +35,10 @@ function noriks_pp_upsell_register_fields() {
 		'fields' => array(
 			array(
 				'key'          => 'field_noriks_pp_upsell',
-				'label'        => 'Prikaži upsell ispod gumba (4x Zelene Bokserice)',
+				'label'        => 'Prikaži upsell ispod gumba (2x crne zimske čarape SlabProof)',
 				'name'         => 'noriks_pp_upsell',
 				'type'         => 'true_false',
-				'instructions' => 'Dodaje okvir "Kupi zajedno i uštedi" odmah ispod gumba Dodaj u košaricu. Kupac bira veličinu, a 4 komada se dodaju po upsell cijeni. Vrijedi samo za ovaj proizvod.',
+				'instructions' => 'Dodaje okvir "Kupi zajedno i uštedi" odmah ispod gumba Dodaj u košaricu. Kupac bira veličinu, a 2 para se dodaju po upsell cijeni. Vrijedi samo za ovaj proizvod.',
 				'ui'           => 1,
 			),
 			array(
