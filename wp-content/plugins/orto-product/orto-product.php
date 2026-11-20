@@ -8904,3 +8904,54 @@ function gck_popuptent_autumn_sale() {
     </div>
     <?php
 }
+
+/* ChewBuddy (David 20.11.): slicica v kartici ponude sledi izbrani igracki - ko kupec izbere zival,
+   se v kartici pokaze slika te zivali (pri 2x/3x slika prve izbrane igracke v kartici).
+   Slike: galerija izdelka, ime datoteke vsebuje slug zivali (noriks-chewtoy-NN-<zival>). */
+add_action( 'wp_footer', 'gck_chewtoy_offer_img_js', 30 );
+function gck_chewtoy_offer_img_js() {
+    if ( ! function_exists( 'is_product' ) || ! is_product() ) { return; }
+    $pid = get_the_ID();
+    if ( ! has_term( 'orto-chewtoy', 'product_cat', $pid ) ) { return; }
+    $product = wc_get_product( $pid );
+    if ( ! $product ) { return; }
+    $ids = array_merge( array( (int) $product->get_image_id() ), $product->get_gallery_image_ids() );
+    $map = array();
+    foreach ( $product->get_attributes() as $attr ) {
+        foreach ( (array) $attr->get_options() as $opt ) {
+            $name = is_numeric( $opt ) && ( $t = get_term( (int) $opt ) ) && ! is_wp_error( $t ) ? $t->name : $opt;
+            $slug = sanitize_title( remove_accents( $name ) );
+            foreach ( $ids as $id ) {
+                $file = basename( (string) get_attached_file( $id ) );
+                if ( $id && preg_match( '/-\d+-' . preg_quote( $slug, '/' ) . '(-\d+)?\.[a-z]+$/', $file ) ) {
+                    $map[ $name ] = wp_get_attachment_image_url( $id, 'woocommerce_thumbnail' );
+                    break;
+                }
+            }
+        }
+    }
+    if ( ! $map ) { return; }
+    ?>
+<script>
+(function(){
+  var M = <?php echo wp_json_encode( $map ); ?>;
+  function upd(){
+    document.querySelectorAll('#bundle-selector .gck-offer-img').forEach(function(img){
+      var card = img.closest('.bundle-option') || img.closest('label');
+      if(!card) return;
+      var sw = card.querySelector('.color-swatches .swatch.active');
+      var src = sw && M[sw.getAttribute('data-value')];
+      if(src && img.getAttribute('src') !== src){ img.setAttribute('src', src); img.removeAttribute('srcset'); }
+    });
+  }
+  function start(){
+    var box = document.getElementById('bundle-selector');
+    if(!box) return;
+    upd();
+    new MutationObserver(upd).observe(box, { subtree: true, attributes: true, attributeFilter: ['class'] });
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', start); } else { start(); }
+})();
+</script>
+    <?php
+}
