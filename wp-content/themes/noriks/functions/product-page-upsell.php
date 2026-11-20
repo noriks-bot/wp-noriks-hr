@@ -94,7 +94,8 @@ function noriks_pp_upsell_config() {
 		'aria'       => 'Veličina čarapa',
 		// Interna oznaka paketa (SKU konvencija kao kod bundle proizvoda + UPSELL na kraju).
 		'sku'        => 'NORIKS-SLABPROOF-2-PACK-UPSELL',
-		'image'      => '', // prazno => glavna slika proizvoda (crne carape)
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-2x-slabproof-carape.webp', // 2 para (slika iz galerije izdelka)
+		'badge'      => true, // okrugla znacka s popustom na slici
 	) );
 }
 
@@ -125,7 +126,8 @@ function noriks_pp_upsell_sizes() {
 		if ( ! $product->is_in_stock() || ! $product->is_purchasable() ) {
 			return $out;
 		}
-		foreach ( array_filter( array_map( 'trim', explode( ',', (string) $product->get_attribute( $cfg['size_attr'] ) ) ) ) as $size ) {
+		// get_attribute() vrednosti locuje z " | " (ne z vejico).
+		foreach ( array_filter( array_map( 'trim', preg_split( '/[|,]/', (string) $product->get_attribute( $cfg['size_attr'] ) ) ) ) as $size ) {
 			$out[ $size ] = 0;
 		}
 		return $out;
@@ -194,6 +196,9 @@ function noriks_pp_upsell_render() {
 			<div class="npu-grid">
 				<span class="npu-img-wrap">
 					<img class="npu-img" src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $cfg['title'] ); ?>" loading="lazy">
+					<?php if ( ! empty( $cfg['badge'] ) && $discount > 0 ) : ?>
+						<span class="npu-badge">-<?php echo (int) $discount; ?>%</span>
+					<?php endif; ?>
 				</span>
 
 				<div class="npu-info">
@@ -214,7 +219,7 @@ function noriks_pp_upsell_render() {
 						<span class="npu-check-text">Dodaj u kupnju</span>
 					</label>
 
-					<select class="npu-size" name="noriks_pp_upsell_size" aria-label="<?php echo esc_attr( $cfg['aria'] ?? 'Veličina' ); ?>">
+					<select class="npu-size npu-size--wide" name="noriks_pp_upsell_size" aria-label="<?php echo esc_attr( $cfg['aria'] ?? 'Veličina' ); ?>">
 						<?php foreach ( array_keys( $sizes ) as $size ) : ?>
 							<option value="<?php echo esc_attr( $size ); ?>"><?php echo esc_html( $size ); ?></option>
 						<?php endforeach; ?>
@@ -407,6 +412,15 @@ function noriks_pp_upsell_cart_item_name( $name, $cart_item, $cart_item_key ) {
 		return esc_html( $cart_item['_noriks_pp_upsell_title'] );
 	}
 	return $name;
+}
+
+/* Cijena stavke u mini kosarici = cijena paketa (inace prikaze redovnu cijenu proizvoda). */
+add_filter( 'woocommerce_cart_item_price', 'noriks_pp_upsell_cart_item_price', 20, 3 );
+function noriks_pp_upsell_cart_item_price( $price, $cart_item, $cart_item_key ) {
+	if ( ! empty( $cart_item['_noriks_pp_upsell'] ) && isset( $cart_item['_noriks_pp_upsell_unit'] ) ) {
+		return wc_price( (float) $cart_item['_noriks_pp_upsell_unit'] );
+	}
+	return $price;
 }
 
 /* Kolicina se ne moze mijenjati — prikazuje se samo broj komada u paketu. */
@@ -844,6 +858,21 @@ function noriks_pp_upsell_styles() {
 		background-size: 6px 6px, 6px 6px; background-repeat: no-repeat;
 	}
 	.npu-wrap .npu-size:focus { outline: 2px solid var(--npu-accent); outline-offset: 1px; }
+	/* carape: velicine 39–42 itd. — siri izbornik */
+	.npu-wrap .npu-size.npu-size--wide { min-width: 130px; max-width: none; }
+	/* okrugla znacka s popustom na slici */
+	.npu-wrap .npu-img-wrap { position: relative; }
+	.npu-wrap .npu-badge {
+		position: absolute; top: 6px; left: 6px; z-index: 2;
+		width: 54px; height: 54px; border-radius: 50%;
+		display: flex; align-items: center; justify-content: center;
+		background: #e3191c; color: #fff !important;
+		font-size: 17px !important; font-weight: 800 !important; line-height: 1 !important; letter-spacing: -.5px;
+		box-shadow: 0 2px 6px rgba(0,0,0,.25);
+	}
+	@media (max-width: 560px) {
+		.npu-wrap .npu-badge { width: 46px; height: 46px; font-size: 15px !important; top: 4px; left: 4px; }
+	}
 
 	@media (max-width: 560px) {
 		/* mobitel: slika poravnata s vrhom naslova, kvacica u tekstualnom stupcu,
