@@ -38,7 +38,7 @@ $lk_svg = function ( $d, $s = 24 ) {
 };
 $lk_zv = '<span class="wslk__zv" aria-label="5 zvjezdica">' . str_repeat( '<svg viewBox="0 0 20 20" width="17" height="17" fill="currentColor" aria-hidden="true" style="display:inline-block;margin-right:2px"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg>', 5 ) . '</span>';
 $lk_vid = function ( $ime ) use ( $lk_u ) {
-	return '<video src="' . esc_url( $lk_u . $ime . '.mp4?v=3' ) . '" poster="' . esc_url( $lk_u . $ime . '.jpg?v=3' ) . '" autoplay muted loop playsinline preload="metadata"></video>';
+	return '<video src="' . esc_url( $lk_u . $ime . '.mp4?v=4' ) . '" poster="' . esc_url( $lk_u . $ime . '.jpg?v=4' ) . '" autoplay muted loop playsinline preload="metadata"></video>';
 };
 $lk_ok = '<span class="wslk__da">✓</span>';
 $lk_ne = '<span class="wslk__ne">✕</span>';
