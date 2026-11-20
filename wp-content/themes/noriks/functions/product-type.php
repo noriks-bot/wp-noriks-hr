@@ -2090,7 +2090,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'postpartum'   => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 52' ),
             // MuscleFit (David 20.11.): razumljivo za EU trg - EU stevilka + opseg prsa v cm.
-            'mshirt'       => array( 'S' => 'EU 44 do 46, prsa 88 do 92 cm', 'M' => 'EU 48 do 50, prsa 96 do 100 cm', 'L' => 'EU 52 do 54, prsa 104 do 108 cm', 'XL' => 'EU 56 do 58, prsa 112 do 116 cm', '2XL' => 'EU 60 do 62, prsa 120 do 124 cm', '3XL' => 'EU 64 do 66, prsa 128 do 132 cm', '4XL' => 'EU 68 do 70, prsa 136 do 140 cm' ),
+            'mshirt'       => array( 'S' => 'EU 44 do 46', 'M' => 'EU 48 do 50', 'L' => 'EU 52 do 54', 'XL' => 'EU 56 do 58', '2XL' => 'EU 60 do 62', '3XL' => 'EU 64 do 66', '4XL' => 'EU 68 do 70' ), // Mitja 20.11.: opseg prsa samo v tablici, v izbirniku bi bil odrezan na mobilu
             'slouchsocks'  => array( 'S' => '35 do 39', 'L' => '39,5 do 43' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
