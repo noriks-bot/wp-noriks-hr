@@ -466,6 +466,14 @@ function noriks_bf_sestava( $sku ) {
 }
 
 /**
+ * 20.11.2026: izdelki, ki na strani izdelka nimajo izbire (seznam $gck_no_attrs v orto-product.php).
+ * Odvecni atributi (npr. velikost bokov pri NeckRelax/ErgoSit) se zato tudi na BF kartici ne prikazejo.
+ */
+function noriks_bf_brez_izbire( $id ) {
+    return has_term( array( 'orto-pillow', 'orto-sweeper', 'orto-pawfence', 'orto-woodsalve', 'orto-bodysculpt', 'orto-supreme', 'orto-skinlift', 'orto-straw', 'orto-straw2', 'orto-adapter', 'orto-popuptent', 'orto-leash', 'orto-titancrep', 'orto-neckgrip', 'orto-steampro', 'orto-freshseal', 'orto-widebeam', 'orto-wakeband', 'orto-wakealarm', 'orto-earcalm', 'orto-seatsleep', 'orto-daily', 'orto-vinocool', 'orto-odorpro', 'orto-gelcushion', 'orto-gelsit', 'orto-struja', 'orto-ritual', 'orto-retrobox', 'orto-faith', 'orto-devotions', 'orto-womens', 'orto-midnight', 'orto-viinia', 'orto-destapacan', 'orto-bracelet', 'orto-winecooler', 'orto-catfountain', 'orto-dishsheets', 'orto-phonestrap', 'orto-pal', 'orto-bowl', 'orto-gelseat', 'orto-kneebrace', 'orto-red', 'orto-seal', 'orto-snore', 'orto-cloud', 'orto-cloath', 'orto-hyd', 'orto-bunion', 'orto-flomasteri', 'orto-lumiwand', 'orto-topper', 'orto-brewer', 'orto-kleanpro', 'orto-backrelax', 'orto-pawfile', 'orto-rollpro', 'orto-neurosoothe', 'orto-purifier', 'orto-uvlight', 'orto-periodbelt', 'orto-puncher', 'orto-bidet', 'orto-roadpillow', 'orto-nvision', 'orto-survival', 'orto-aparat', 'orto-duoseat', 'orto-filterless', 'orto-fisiorest', 'orto-glasspro', 'orto-norikshers', 'orto-noriks-hers', 'orto-ortopedski-jastuk', 'orto-controlpro', 'orto-kneeheat', 'orto-cards', 'noriks-cards', 'orto-noriks-cards', 'orto-norikshersbrush', 'orto-petdental', 'orto-calmingcollar', 'orto-therapillow', 'orto-grillbasket', 'orto-seatcushion', 'orto-groundingmat', 'orto-neckmassager', 'orto-upholsterycleaner', 'orto-kneelight', 'orto-travelkit', 'orto-breadbag', 'orto-pethairglove', 'orto-dualpillow', 'orto-calendar' ), 'product_cat', $id );
+}
+
+/**
  * Podatki za eno kartico ali null, ce izdelek ni za prikaz.
  * nacin: orto  = izbirnik paketov (posljemo bundle_option + pairs)
  *        var   = variabilen izdelek z enim atributom (posljemo atribut)
@@ -495,6 +503,7 @@ function noriks_bf_kartica( $p, $fiksna = 0 ) {
                 $k['ponudbe'][] = array( 'id' => (string) $po['id'], 'kos' => max( 1, (int) $po['qty'] ), 'paket' => trim( (string) $po['title'] ), 'red' => $pr, 'akc' => noriks_bf_cena( $pa ) );
             }
             $lastni = function_exists( 'gck_get_custom_attributes_in_order' ) ? gck_get_custom_attributes_in_order( $p ) : array();
+            if ( noriks_bf_brez_izbire( $id ) ) { $lastni = array(); } // 20.11.: kot stran izdelka - npr. NeckRelax/ErgoSit brez izbire velikosti
             if ( count( $lastni ) > 2 && count( $lastni ) <= 4 && ! has_term( 'orto-majica-darila', 'product_cat', $id ) ) {
                 // 3-4 izbire (npr. barva in velikost majice + bokseric): v vrstnem redu izdelka, izbira se v modalu
                 foreach ( $lastni as $lk => $la ) {
