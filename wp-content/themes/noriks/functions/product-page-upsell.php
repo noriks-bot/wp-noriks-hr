@@ -70,11 +70,22 @@ function noriks_pp_upsell_register_fields() {
 /* ============================================================
  * 2) Konfiguracija upsell ponude
  * ============================================================ */
+/** ID izdelka po SKU (enak na vseh namestitvah); $fallback, ce SKU ne najde nicesar. */
+function noriks_pp_upsell_id_by_sku( $sku, $fallback = 0 ) {
+	static $cache = array();
+	if ( ! isset( $cache[ $sku ] ) ) {
+		$id            = function_exists( 'wc_get_product_id_by_sku' ) ? (int) wc_get_product_id_by_sku( $sku ) : 0;
+		$cache[ $sku ] = $id ? $id : (int) $fallback;
+	}
+	return $cache[ $sku ];
+}
+
 function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
 		// 20.11.2026: bokserice umaknjene -> 2 para SlabProof carapa (jednostavan proizvod,
 		// velicina iz atributa proizvoda). Bokserice su bile: 2781, 4x, 19.99, NORIKS-BOX-BLACK-4-PACK-UPSELL.
-		'product_id' => 22918,                   // NORIKS SlabProof carape (jednostavan proizvod)
+		// Po SKU, ne po ID: devhr in produkcija imata razlicne ID-je (produkcija 22918, devhr 9175).
+		'product_id' => noriks_pp_upsell_id_by_sku( 'NORIKS-SLABPROOF', 22918 ), // SlabProof carape (jednostavan proizvod)
 		'qty'        => 2,                       // uvijek 2 para, iste velicine
 		'total'      => 9.99,                    // cijena za oba para
 		'title'      => '2x Crne zimske čarape',
