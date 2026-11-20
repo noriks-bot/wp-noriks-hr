@@ -900,16 +900,16 @@ if ( ! function_exists( 'noriks_postpartum_sizes' ) ) {
 }
 
 if ( ! function_exists( 'noriks_mshirt_sizes' ) ) {
-    /** NORIKS MuscleFit: original nima tabele mer (samo S-4XL in kviz) - standardne EU moske konfekcijske stevilke. */
+    /** NORIKS MuscleFit: original nima tabele mer (samo S-4XL in kviz) - standardne EU moske konfekcijske stevilke + opseg prsa (EU st. x 2 cm). David 20.11.: razumljivo za EU trg. */
     function noriks_mshirt_sizes() {
         return array(
-            array( 'S', '44 do 46' ),
-            array( 'M', '48 do 50' ),
-            array( 'L', '52 do 54' ),
-            array( 'XL', '56 do 58' ),
-            array( '2XL', '60 do 62' ),
-            array( '3XL', '64 do 66' ),
-            array( '4XL', '68 do 70' ),
+            array( 'S', 'EU 44 do 46', '88 do 92 cm' ),
+            array( 'M', 'EU 48 do 50', '96 do 100 cm' ),
+            array( 'L', 'EU 52 do 54', '104 do 108 cm' ),
+            array( 'XL', 'EU 56 do 58', '112 do 116 cm' ),
+            array( '2XL', 'EU 60 do 62', '120 do 124 cm' ),
+            array( '3XL', 'EU 64 do 66', '128 do 132 cm' ),
+            array( '4XL', 'EU 68 do 70', '136 do 140 cm' ),
         );
     }
 }
@@ -2089,7 +2089,8 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'nyslipper'    => array( 'S' => '36 do 37', 'M' => '38 do 39', 'L' => '40 do 41', 'XL' => '42 do 43' ),
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'postpartum'   => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 52' ),
-            'mshirt'       => array( 'S' => '44 do 46', 'M' => '48 do 50', 'L' => '52 do 54', 'XL' => '56 do 58', '2XL' => '60 do 62', '3XL' => '64 do 66', '4XL' => '68 do 70' ),
+            // MuscleFit (David 20.11.): razumljivo za EU trg - EU stevilka + opseg prsa v cm.
+            'mshirt'       => array( 'S' => 'EU 44 do 46, prsa 88 do 92 cm', 'M' => 'EU 48 do 50, prsa 96 do 100 cm', 'L' => 'EU 52 do 54, prsa 104 do 108 cm', 'XL' => 'EU 56 do 58, prsa 112 do 116 cm', '2XL' => 'EU 60 do 62, prsa 120 do 124 cm', '3XL' => 'EU 64 do 66, prsa 128 do 132 cm', '4XL' => 'EU 68 do 70, prsa 136 do 140 cm' ),
             'slouchsocks'  => array( 'S' => '35 do 39', 'L' => '39,5 do 43' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
             'slipshort'    => array( 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', 'XXL' => '46 do 48' ),
@@ -2285,9 +2286,9 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
                 'opomba' => 'Kako izmjeriti: omotajte metar oko najpunijeg dijela grudi, ruke opuštene. Između dvije veličine, nosite visoko ili očekujete blizance? Uzmite veću.' );
         }
         if ( noriks_is_type( 'mshirt', $product_id ) ) {
-            return array( 'uvod' => 'Odaberite svoju uobičajenu <strong>EU veličinu odjeće</strong>. Košulja ima suvremeni atletski kroj i rasteže se uz tijelo.',
-                'glava' => array( 'Veličina', 'EU veličina' ), 'vrstice' => noriks_mshirt_sizes(),
-                'opomba' => 'Između dvije veličine? Za opušteniji kroj uzmite veću. Pamuk se u sušilici na niskoj temperaturi može minimalno skupiti (oko 5 %).' );
+            return array( 'uvod' => 'Odaberite svoju uobičajenu <strong>EU veličinu odjeće</strong> ili izmjerite <strong>opseg prsa</strong>. Košulja ima suvremeni atletski kroj i rasteže se uz tijelo.',
+                'glava' => array( 'Veličina', 'EU veličina', 'Opseg prsa' ), 'vrstice' => noriks_mshirt_sizes(),
+                'opomba' => 'Kako izmjeriti: metar oko najšireg dijela prsa, ispod pazuha, ruke opuštene. Između dvije veličine? Za opušteniji kroj uzmite veću. Pamuk se u sušilici na niskoj temperaturi može minimalno skupiti (oko 5 %).' );
         }
         if ( noriks_is_type( 'slouchsocks', $product_id ) ) {
             return array( 'uvod' => 'Dvije veličine – odaberite prema svom <strong>EU broju cipele</strong>. Rastezljivo pletivo prilagodi se stopalu i listu, mjerenje lista nije potrebno.',
