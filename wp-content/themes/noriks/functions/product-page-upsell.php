@@ -72,16 +72,18 @@ function noriks_pp_upsell_register_fields() {
  * ============================================================ */
 function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
-		'product_id' => 2781,                    // Crne Bokserice (varijabilni proizvod)
-		'qty'        => 4,                       // uvijek 4 komada, iste veličine
-		'total'      => 19.99,                   // ista cijena kao thank you upsell (4 komada)
-		'title'      => '4x Crne Bokserice',
-		'desc'       => 'Prozračne i mekane — dodajte ih uz narudžbu uz %s%% popusta.', // %s = izracunati popust
+		// 20.11.2026: bokserice umaknjene -> 2 para SlabProof carapa (jednostavan proizvod,
+		// velicina iz atributa proizvoda). Bokserice su bile: 2781, 4x, 19.99, NORIKS-BOX-BLACK-4-PACK-UPSELL.
+		'product_id' => 22918,                   // NORIKS SlabProof carape (jednostavan proizvod)
+		'qty'        => 2,                       // uvijek 2 para, iste velicine
+		'total'      => 9.99,                    // cijena za oba para
+		'title'      => '2x Crne zimske čarape',
+		'desc'       => 'Tople i udobne — dodajte ih uz narudžbu uz %s%% popusta.', // %s = izracunati popust
 		'size_attr'  => 'Veličina',
+		'aria'       => 'Veličina čarapa',
 		// Interna oznaka paketa (SKU konvencija kao kod bundle proizvoda + UPSELL na kraju).
-		'sku'        => 'NORIKS-BOX-BLACK-4-PACK-UPSELL',
-		// Kompozitna slika 4 komada na svijetlo sivoj podlozi (kvadratna).
-		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-crne.png',
+		'sku'        => 'NORIKS-SLABPROOF-2-PACK-UPSELL',
+		'image'      => '', // prazno => glavna slika proizvoda (crne carape)
 	) );
 }
 
@@ -104,7 +106,17 @@ function noriks_pp_upsell_sizes() {
 	$product = wc_get_product( $cfg['product_id'] );
 	$out     = array();
 
-	if ( ! $product || ! $product->is_type( 'variable' ) ) {
+	if ( ! $product ) {
+		return $out;
+	}
+	// Jednostavan proizvod (npr. carape): velicine iz atributa, bez varijacija (id 0).
+	if ( ! $product->is_type( 'variable' ) ) {
+		if ( ! $product->is_in_stock() || ! $product->is_purchasable() ) {
+			return $out;
+		}
+		foreach ( array_filter( array_map( 'trim', explode( ',', (string) $product->get_attribute( $cfg['size_attr'] ) ) ) ) as $size ) {
+			$out[ $size ] = 0;
+		}
 		return $out;
 	}
 	foreach ( $product->get_children() as $vid ) {
@@ -145,8 +157,8 @@ function noriks_pp_upsell_render() {
 	}
 
 	// Redovna cijena = zbroj redovnih cijena pojedinačnih komada.
-	$unit_regular = 0.0;
-	foreach ( $sizes as $vid ) {
+	$unit_regular = $product->is_type( 'variable' ) ? 0.0 : (float) $product->get_regular_price();
+	foreach ( ( $unit_regular > 0 ? array() : $sizes ) as $vid ) {
 		$var = wc_get_product( $vid );
 		if ( $var ) {
 			$unit_regular = (float) $var->get_regular_price();
@@ -191,7 +203,7 @@ function noriks_pp_upsell_render() {
 						<span class="npu-check-text">Dodaj u kupnju</span>
 					</label>
 
-					<select class="npu-size" name="noriks_pp_upsell_size" aria-label="Veličina bokserica">
+					<select class="npu-size" name="noriks_pp_upsell_size" aria-label="<?php echo esc_attr( $cfg['aria'] ?? 'Veličina' ); ?>">
 						<?php foreach ( array_keys( $sizes ) as $size ) : ?>
 							<option value="<?php echo esc_attr( $size ); ?>"><?php echo esc_html( $size ); ?></option>
 						<?php endforeach; ?>
@@ -301,8 +313,8 @@ function noriks_pp_upsell_maybe_add( $cart_item_key, $product_id, $quantity, $va
 	}
 
 	$variation_id_upsell = (int) $sizes[ $size ];
-	$var                 = wc_get_product( $variation_id_upsell );
-	if ( ! $var ) {
+	$var                 = $variation_id_upsell ? wc_get_product( $variation_id_upsell ) : null;
+	if ( $variation_id_upsell && ! $var ) {
 		return;
 	}
 
@@ -319,20 +331,28 @@ function noriks_pp_upsell_maybe_add( $cart_item_key, $product_id, $quantity, $va
 	// PAKET: u kosaricu ide JEDNA stavka (kolicina 1) s cijenom cijelog paketa.
 	// Tako kupac ne moze mijenjati kolicinu niti razbiti ponudu na komade.
 	$busy = true;
+	// Upsell izdelek je lahko orto paket (npr. SlabProof): gck_add_cart_item_data bi mu sicer pripel
+	// izbiro paketa GLAVNEGA izdelka iz $_POST (napacne vrstice in cena). Med dodajanjem jo umaknemo.
+	$npu_post_keep = array();
+	foreach ( array( 'bundle_option', 'pairs' ) as $npu_k ) {
+		if ( isset( $_POST[ $npu_k ] ) ) { $npu_post_keep[ $npu_k ] = $_POST[ $npu_k ]; unset( $_POST[ $npu_k ] ); }
+	}
 	WC()->cart->add_to_cart(
 		(int) $cfg['product_id'],
 		1,
 		$variation_id_upsell,
-		$var->get_variation_attributes(),
+		$var ? $var->get_variation_attributes() : array(),
 		array(
 			'_noriks_pp_upsell'       => 1,
 			'_noriks_pp_upsell_unit'  => (float) $cfg['total'], // cijena cijelog paketa (kolicina 1)
 			'_noriks_pp_upsell_qty'   => $qty,                  // koliko komada paket sadrzi
 			'_noriks_pp_upsell_title' => (string) $cfg['title'],
 			'_noriks_pp_upsell_lines' => $lines,                // sadrzaj paketa, red po red
-			'_noriks_pp_upsell_key'   => md5( 'npu' . $variation_id_upsell . microtime( true ) ),
+			'_noriks_pp_upsell_sku'   => (string) $cfg['sku'],
+			'_noriks_pp_upsell_key'   => md5( 'npu' . $variation_id_upsell . $size . microtime( true ) ),
 		)
 	);
+	foreach ( $npu_post_keep as $npu_k => $npu_v ) { $_POST[ $npu_k ] = $npu_v; }
 	$busy = false;
 }
 
