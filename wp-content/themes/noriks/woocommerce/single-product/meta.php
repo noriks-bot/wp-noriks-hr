@@ -3416,7 +3416,7 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
         'slim' => array( 'noriks-slim.pdf', 'NORIKS Slim — oblikujuće gaćice visokog struka' ),
         'red' => array( 'noriks-redrelief.pdf', 'NORIKS RedRelief — terapija crvenim svjetlom za zapešće' ),
         'pal' => array( 'noriks-pal.pdf', 'NORIKS Pal — štap za hodanje s drugom ručkom' ),
-        'cloath' => array( 'noriks-polar-cloth.pdf', 'NORIKS DuoDry — dvostrana krpa od mikrovlakana' ),
+        'cloath' => array( 'noriks-duodry.pdf', 'NORIKS DuoDry — dvostrana krpa od mikrovlakana' ),
         'slabproof' => array( 'noriks-slabproof.pdf', 'NORIKS SlabProof — radne čarape s jastučićem' ),
         'controlpro' => array( 'noriks-controlpro.pdf', 'NORIKS ControlPro — trenažer mišića zdjeličnog dna' ),
         'tradesman' => array( 'noriks-tradesman.pdf', 'NORIKS Tradesman — radne čarape s jastučićem i potporom svoda' ),

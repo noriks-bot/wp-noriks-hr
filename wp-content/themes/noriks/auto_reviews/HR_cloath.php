@@ -1,5 +1,5 @@
 <?php
-// Review pool za Polar NORIKS Cloth XXL (orto-cloath). Samo tekst, bez fotografija.
+// Review pool za NORIKS DuoDry (orto-cloath). Samo tekst, bez fotografija.
 $auto_reviews_en = array(
     array("name" => "Maja K.",      "text" => "Tuš-kabinu brišem svaki drugi dan i konačno nema mrlja od vode. Bez ijednog spreja, samo voda i krpa."),
     array("name" => "Ivan P.",      "text" => "Kupio sam paket od šest komada. Jedna je stalno u kupaonici, jedna u kuhinji, jedna u autu. Za staklo je najbolja."),
@@ -15,6 +15,6 @@ $auto_reviews_en = array(
     array("name" => "Vesna T.",     "text" => "Ne ostavlja mrlje ni na crnim slavinama, a to je do sada bio najveći problem."),
     array("name" => "Nikolina Ć.",  "text" => "Prozore perem samo vodom i ovom krpom. Prvi put bez sredstva i bez pruga."),
     array("name" => "Josip V.",     "text" => "Debela je i teška, osjeti se da nije jeftina mikrofibra. Nakon deset pranja i dalje jednaka."),
-    array("name" => "Martina G.",   "text" => "Kupila sam paket 3+3 i to se stvarno isplati. Jedna je uvijek u pranju, druga u upotrebi."),
+    array("name" => "Martina G.",   "text" => "Kupila sam paket od 6 krpa i to se stvarno isplati. Jedna je uvijek u pranju, druga u upotrebi."),
     array("name" => "Zoran L.",     "text" => "Radnu ploču u kuhinji obrišem u par poteza i nema tragova vode. Jednostavno radi."),
 );

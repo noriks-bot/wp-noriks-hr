@@ -47,7 +47,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-<?php if ( ! ( function_exists( 'noriks_is_type' ) && noriks_is_type( 'cloath' ) ) ) : /* DuoDry 23.11.2026: samo prave ocene — tega izdelka še nihče ni ocenil */ ?>
 <div class="rating">
     <div class="stars">
       ★★★★★
@@ -56,7 +55,6 @@ if ( ! defined( 'ABSPATH' ) ) {
       <a style="color:black;" href="#reviews-section">Izvrsno 4.8 | <?php echo get_field('singlepp_reviews_text_1', 'option'); ?> <?php echo get_field('singlepp_reviews_text_2', 'option'); ?></a>
     </div>
   </div>
-<?php endif; ?>
  
 
 

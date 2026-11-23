@@ -100,10 +100,10 @@ function noriks_manuals_list() {
             'sub'   => 'Druga ručka za ustajanje, četiri nožice, svjetiljka i alarm. Sklopiv i podesiv po visini.',
         ),
         array(
-            'file'  => 'noriks-polar-cloth.pdf',
+            'file'  => 'noriks-duodry.pdf',
             'sku'   => 'NORIKS-CLOATH',
-            'title' => 'Polar NORIKS Cloth XXL — krpa za čišćenje samo vodom',
-            'sub'   => 'Format 60 × 40 cm, dvostrana izvedba, upija do 600 ml vode. Bez sprejeva i bez kemikalija.',
+            'title' => 'NORIKS DuoDry — dvostrana krpa od mikrovlakana',
+            'sub'   => 'Format 60 × 40 cm za kupaonicu i kuhinju. Jedna strana skuplja vodu i prljavštinu, druga polira.',
         ),
         array(
             'file'  => 'noriks-slabproof.pdf',

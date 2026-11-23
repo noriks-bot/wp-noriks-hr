@@ -40,7 +40,6 @@
         }
       
   </style>
-<?php $ndd_brez_ocen = function_exists( 'noriks_is_type' ) && noriks_is_type( 'cloath' ); if ( $ndd_brez_ocen ) { ob_start(); } /* DuoDry 23.11.2026: samo prave ocene */ ?>
   <div  style="background: #f9f9f9; padding-top: 30px;" >
 <section style="background: #f9f9f9; max-width: 1440px;" class="comparison-section comparison-section-gray">
     <div style="background: #f9f9f9;padding: 0;padding-left: 10px;
@@ -1126,7 +1125,7 @@
 
            <?php elseif ( noriks_is_type( 'cloath' ) ): ?>
 
-           Više od 138.000 kućanstava već čisti staklo samo vodom – bez sprejeva i bez tragova.
+           Više od 138.000 kućanstava već čisti kupaonicu i kuhinju krpom NORIKS DuoDry.
 
            <?php elseif ( noriks_is_type( 'bra' ) ): ?>
 
@@ -2089,7 +2088,6 @@
     </div>
   </section>
   </div>
-<?php if ( $ndd_brez_ocen ) { ob_end_clean(); } ?>
   
   
   <style>
@@ -3624,7 +3622,6 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
   $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $ndd_brez_ocen ) { ob_start(); } ?>
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
   <div class="container basic-reviews-section-container" style="width:100%;max-width:1440px;padding-top:20px!important;margin:0 auto;padding-left: 10px; padding-right: 10px;">
 
@@ -3847,7 +3844,6 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     });
   });
 </script>
-<?php if ( $ndd_brez_ocen ) { ob_end_clean(); } ?>
 
 <!-- new review styling -->
 <style>
