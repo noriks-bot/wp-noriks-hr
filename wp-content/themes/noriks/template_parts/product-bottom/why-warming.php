@@ -202,15 +202,15 @@ $wm_svg = function ( $d, $s = 24 ) {
 .wswm__z.wswm__zc{text-align:center;border-left:0;padding-left:0;margin-top:26px}
 .wswm__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wswm__dva>div{min-width:0}
 .wswm__dva--rev>.wswm__media{order:2}
-.wswm__media{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(30,80,140,.14);aspect-ratio:4/5;background:#dcebf9;position:relative}
+.wswm__media{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(30,80,140,.14);aspect-ratio:4/5;background:#cfe6fa;position:relative}
 .wswm__media img,.wswm__media video{width:100%;height:100%;object-fit:cover;display:block}
 .wswm__media.wswm__media--sq{aspect-ratio:1/1}
-.wswm__fi{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#dcebf9;color:#2f6fb0;display:inline-flex;align-items:center;justify-content:center}
-.wswm__ki{width:52px;height:52px;border-radius:50%;background:#dcebf9;border:1.5px solid #9fc8ef;color:#2f6fb0;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;flex:0 0 52px}
+.wswm__fi{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#cfe6fa;color:#2f6fb0;display:inline-flex;align-items:center;justify-content:center}
+.wswm__ki{width:52px;height:52px;border-radius:50%;background:#cfe6fa;border:1.5px solid #9fc8ef;color:#2f6fb0;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;flex:0 0 52px}
 .wswm__chk{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
 .wswm__chk li{display:flex;gap:12px;align-items:center;font-size:15.5px;line-height:1.45;color:#10233d;font-weight:600}
 .wswm__ugc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
-.wswm__uv{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:9/16;box-shadow:0 12px 30px rgba(30,80,140,.14);background:#dcebf9}
+.wswm__uv{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:9/16;box-shadow:0 12px 30px rgba(30,80,140,.14);background:#cfe6fa}
 .wswm__uv video{width:100%;height:100%;object-fit:cover;display:block}
 .wswm__ly{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
 .wswm__ly li{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px rgba(30,80,140,.08);font-size:15px;line-height:1.5;color:#3b4d66}
