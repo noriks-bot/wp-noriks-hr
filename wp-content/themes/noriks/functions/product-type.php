@@ -49,6 +49,7 @@ function noriks_product_type_map() : array {
     'trainer' => array( 'orto-trainer' ),
     'calmpulse' => array( 'orto-calmpulse' ),
     'warming' => array( 'orto-warming' ),
+    'cozymat' => array( 'orto-cozymat' ),
     'bidet' => array( 'orto-bidet' ),
     'roadpillow' => array( 'orto-roadpillow' ),
     'nvision' => array( 'orto-nvision' ),
@@ -1714,6 +1715,18 @@ if ( ! function_exists( 'noriks_cashmeresweater_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_cozymat_sizes' ) ) {
+    /** NORIKS CozyMat: velicina, mjere podloge, tezina ljubimca - 1:1 z originala (vermeira.com, Size Chart; inci -> cm, lbs -> kg). */
+    function noriks_cozymat_sizes() {
+        return array(
+            array( 'S',  '61 × 46 cm',  'do 11 kg' ),
+            array( 'M',  '76 × 51 cm',  'do 18 kg' ),
+            array( 'L',  '89 × 58 cm',  'do 29 kg' ),
+            array( 'XL', '104 × 74 cm', 'do 41 kg' ),
+        );
+    }
+}
+
 if ( ! function_exists( 'noriks_warming_sizes' ) ) {
     /** NORIKS WarmNest: velicina, mjere podloge, tezina ljubimca - 1:1 z originala (senairy.com, Size Guide; inci -> cm, lbs -> kg). */
     function noriks_warming_sizes() {
@@ -2106,6 +2119,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'postpartum'   => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 52' ),
             // MuscleFit (David 20.11.): razumljivo za EU trg - EU stevilka + opseg prsa v cm.
             // WarmNest: velicino doloca tezina ljubimca (original Size Guide, lbs -> kg).
+            'cozymat'      => array( 'S' => '0 do 11 kg', 'M' => '11 do 18 kg', 'L' => '18 do 29 kg', 'XL' => '29 do 41 kg' ),
             'warming'      => array( 'S' => '0 do 11 kg', 'M' => '11 do 18 kg', 'L' => '18 do 29 kg', 'XL' => '29 do 41 kg' ),
             'mshirt'       => array( 'S' => 'EU 44 do 46', 'M' => 'EU 48 do 50', 'L' => 'EU 52 do 54', 'XL' => 'EU 56 do 58', '2XL' => 'EU 60 do 62', '3XL' => 'EU 64 do 66', '4XL' => 'EU 68 do 70' ), // Mitja 20.11.: opseg prsa samo v tablici, v izbirniku bi bil odrezan na mobilu
             'slouchsocks'  => array( 'S' => '35 do 39', 'L' => '39,5 do 43' ),
@@ -2301,6 +2315,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Naručite <strong>veličinu koju ste nosili prije trudnoće</strong>. Preklop sprijeda i elastični struk rastu s trbuhom.',
                 'glava' => array( 'Veličina', 'EU veličina', 'Opseg grudi', 'Dužina' ), 'vrstice' => noriks_postpartum_sizes(),
                 'opomba' => 'Kako izmjeriti: omotajte metar oko najpunijeg dijela grudi, ruke opuštene. Između dvije veličine, nosite visoko ili očekujete blizance? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'cozymat', $product_id ) ) {
+            return array( 'uvod' => 'Odaberite veličinu prema <strong>težini ljubimca</strong> – podloga mora biti dovoljno velika da ljubimac na njoj udobno leži.',
+                'glava' => array( 'Veličina', 'Mjere podloge', 'Težina ljubimca' ), 'vrstice' => noriks_cozymat_sizes(),
+                'opomba' => 'Ako je težina ljubimca između dvije veličine, uzmite veću za dodatnu udobnost.' );
         }
         if ( noriks_is_type( 'warming', $product_id ) ) {
             return array( 'uvod' => 'Odaberite veličinu prema <strong>težini ljubimca</strong> – podloga mora biti dovoljno velika da ljubimac na njoj leži bez visenja preko rubova.',

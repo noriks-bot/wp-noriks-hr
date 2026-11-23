@@ -1150,6 +1150,10 @@ if ( noriks_is_type( 'warming' ) ) {
     include $noriks_pb_dir . 'why-warming.php';
 }
 
+if ( noriks_is_type( 'cozymat' ) ) {
+    include $noriks_pb_dir . 'why-cozymat.php';
+}
+
 if ( noriks_is_type( 'bidet' ) ) {
     include $noriks_pb_dir . 'why-bidet.php';
 }
