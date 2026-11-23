@@ -88,7 +88,7 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 </div></section>
 
 <section class="wstr__s wstr__s--bg"><div class="wstr__v wstr__dva">
-	<div class="wstr__media"><img src="<?php echo esc_url( $tr_u . 'noriks-trainer-galerija-01.webp' ); ?>" alt="NORIKS trenažer podlaktice u ruci, uz kutiju" decoding="async"></div>
+	<div class="wstr__media wstr__media--sq"><img src="<?php echo esc_url( $tr_u . 'noriks-trainer-galerija-01.webp' ); ?>" alt="NORIKS trenažer podlaktice u ruci, uz kutiju" decoding="async"></div>
 	<div>
 		<div class="wstr__kicker">O proizvodu</div>
 		<h2 class="wstr__h2">Prava veličina i snaga podlaktice – <em>5 minuta dnevno</em></h2>
@@ -204,7 +204,7 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 .wstr__ki{width:56px;height:56px;border-radius:50%;background:#dfe9ff;border:1.5px solid #9dbbff;color:#1d4fc4;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0 0 12px}
 .wstr__k h3{font-size:18px;font-weight:800;margin:0 0 8px;color:#0f1a33}
 .wstr__k p{margin:0;font-size:15.5px;line-height:1.55;color:#36405a}
-.wstr__pill{display:inline-block;background:#1e6bff;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin:0 0 10px}
+.wstr__pill{display:table;margin-left:auto!important;margin-right:auto!important;background:#1e6bff;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin:0 0 10px}
 .wstr__kar{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 66px)/4);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:26px;padding-bottom:6px}
 .wstr__kar::-webkit-scrollbar{display:none}
 .wstr__km{scroll-snap-align:start;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(20,50,120,.12);aspect-ratio:9/16;background:#dfe6f3}
@@ -219,6 +219,7 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 .wstr__tst p{margin:0;font-size:15.5px;line-height:1.6;color:#36405a}
 .wstr__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wstr__dva>div{min-width:0}
 .wstr__dva--rev>.wstr__media{order:2}
+.wstr__media--sq{aspect-ratio:1/1}
 .wstr__media{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(20,50,120,.14);aspect-ratio:4/5;background:#e3eaf7;position:relative}
 .wstr__media img{width:100%;height:100%;object-fit:cover;display:block}
 .wstr__stage img{position:absolute;inset:0;opacity:0;transition:opacity .55s ease}.wstr__stage img.is-on{opacity:1}
