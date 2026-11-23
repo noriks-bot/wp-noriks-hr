@@ -1142,6 +1142,10 @@ if ( noriks_is_type( 'trainer' ) ) {
     include $noriks_pb_dir . 'why-trainer.php';
 }
 
+if ( noriks_is_type( 'calmpulse' ) ) {
+    include $noriks_pb_dir . 'why-calmpulse.php';
+}
+
 if ( noriks_is_type( 'bidet' ) ) {
     include $noriks_pb_dir . 'why-bidet.php';
 }

@@ -47,6 +47,7 @@ function noriks_product_type_map() : array {
     'hothug' => array( 'orto-hothug' ),
     'puncher' => array( 'orto-puncher' ),
     'trainer' => array( 'orto-trainer' ),
+    'calmpulse' => array( 'orto-calmpulse' ),
     'bidet' => array( 'orto-bidet' ),
     'roadpillow' => array( 'orto-roadpillow' ),
     'nvision' => array( 'orto-nvision' ),
