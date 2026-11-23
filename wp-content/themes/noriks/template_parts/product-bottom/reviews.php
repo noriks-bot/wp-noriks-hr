@@ -4215,15 +4215,15 @@ $destapacan_faq = array(
 $kompmajice_faq = array(
   array(
     'questioon' => 'Za koga je NORIKS FIT namijenjen?',
-    'answer'    => 'NORIKS FIT stvoren je za muškarce koji žele vitkiji izgled, vratiti samopouzdanje u vlastito tijelo, ispraviti držanje, osjećati se energičnije tijekom dana i izgledati vitkije ispod bilo koje odjeće.'
+    'answer'    => 'Za muškarce koji žele zaglađen trbuh i ravniju siluetu ispod košulje — u uredu, na događanjima ili na treningu. Majica oblikuje postavu dok je nosite.'
   ),
   array(
     'questioon' => 'Kako NORIKS FIT majica zapravo djeluje?',
-    'answer'    => 'NORIKS FIT koristi naprednu ionsku kompresijsku tkaninu koja aktivira prirodni odgovor tijela. Mikro-tkana vlakna potiču zdravu cirkulaciju i pomažu vam održati uspravno držanje od jutra do večeri. Uz redovito nošenje daje vidljivo oblikovaniji torzo, bolju poravnatost kralježnice i više samopouzdanja.'
+    'answer'    => 'Tri zone kompresije — gusta mreža na trbuhu, potporni pojasevi na bokovima i V-pojas na prsima — zaglađuju siluetu čim majicu obučete. Lagani pritisak na leđima podsjeća vas da se ne grbite. Učinak traje dok majicu nosite.'
   ),
   array(
-    'questioon' => 'Koliko brzo ću primijetiti rezultate?',
-    'answer'    => 'Svako tijelo je različito, ali većina kupaca prijavljuje vidljivu promjenu unutar prvih 30 dana. Za najbolji učinak nosite NORIKS FIT svakodnevno i kombinirajte ga s uravnoteženom prehranom i redovitim kretanjem.'
+    'questioon' => 'Kada se vidi razlika?',
+    'answer'    => 'Odmah kad je obučete — trbuh i bokovi su zaglađeni, a košulja ljepše pada. Majica ne mijenja tijelo trajno; oblikuje siluetu dok je nosite.'
   ),
   array(
     'questioon' => 'Vidi li se ispod košulje?',

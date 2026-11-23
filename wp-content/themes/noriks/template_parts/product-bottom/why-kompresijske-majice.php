@@ -1,224 +1,244 @@
 <?php
 /**
- * product-bottom: NORIKS FIT — KOMPRESIJSKE MAJICE (orto-kompresijske-majice)
- * Muška kompresijska/oblikujuća majica.
- * Prave HTML sekcije (tekst + slika lijevo/desno, video, usporedba). Brand NORIKS FIT.
- * FAQ i recenzije rendera zajednička reviews.php sekcija (ne ovdje).
- * Slike: img/kompsfit/ , video: img/kompsfit-videos/
+ * product-bottom: NORIKS FIT — kompresijska majica (orto-kompresijske-majice).
+ *
+ * 23.11.2026 predelano: stari bloki (»Trenutni učinak«, »Vratite samopouzdanje i snagu«,
+ * »tajno oružje protiv pivskog trbuha«, prije/poslije, tabela »Zašto NORIKS FIT? … Ostali ✕«,
+ * »3.575 provjerenih recenzija« z zgodbami) zamenjani z novimi sekcijami iz
+ * ~/Desktop/kompsfit-za-programerja/sekcije-HR.html (sistem fis-*, kot why-cloath.php).
+ *
+ * Vrstni red: 4 razlogi → video hero → kompresija + 3 videi → kje nositi (3 videi)
+ * → 4 podrobnosti (ikone) → nega (video) → paket 2+1 (slika + cena).
+ * Sredstva: img/noriks-fit/ (videi stisnjeni). Cene v zadnji sekciji (data-price) — ob spremembi cene popravi.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$km  = get_template_directory_uri() . '/img/kompsfit/';
-$kmv = get_template_directory_uri() . '/img/kompsfit-videos/';
+$nf = esc_url( get_template_directory_uri() . '/img/noriks-fit/' );
 ?>
-
-<!-- ============ 1) Video demo (slika/video + tekst) ============ -->
-<section class="kmf-sec">
-  <div class="kmf-wrap kmf-row2 kmf-rev">
-    <div class="kmf-media"><video src="<?php echo esc_url( $kmv.'demo.mp4' ); ?>" autoplay muted loop playsinline preload="metadata"></video></div>
-    <div class="kmf-copy">
-      <p class="kmf-eyebrow">Trenutni učinak</p>
-      <h2 class="kmf-h2">Oblikuje siluetu <em>čim ga obučete</em></h2>
-      <p>Ciljana kompresija ravnomjerno steže trbuh i bokove, izglađuje „love handles“ i podiže držanje — bez stezanja koje ograničava disanje ili pokret.</p>
-      <ul class="kmf-check">
-        <li>Zaglađen trbuh i prsa</li>
-        <li>Uspravnije, budno držanje</li>
-        <li>Nevidljivo ispod bilo koje košulje</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 2) Vratite samopouzdanje i snagu (tekst + slika) ============ -->
-<section class="kmf-sec kmf-alt">
-  <div class="kmf-wrap kmf-row2">
-    <div class="kmf-copy">
-      <p class="kmf-eyebrow">NORIKS FIT</p>
-      <h2 class="kmf-h2">Vratite samopouzdanje i snagu</h2>
-      <p>Ako želite da vam odjeća bolje pristaje i da se cijeli dan osjećate podržano, NORIKS FIT je stvoren za vas.</p>
-      <p>Izrađen od <strong>ionske kompresijske tkanine</strong>, pruža pripijen, potporni kroj koji izglađuje siluetu i nudi cjelodnevnu udobnost — oštriji izgled, bolja svjesnost o držanju i samopouzdanje koje dolazi kad se osjećate dobro u onome što nosite.</p>
-      <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
-    </div>
-    <div class="kmf-media kmf-hero-media"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT kompresijska majica ispod košulje" loading="eager"></div>
-  </div>
-</section>
-
-<!-- ============ 3) Tajno oružje protiv pivskog trbuha ============ -->
-<section class="kmf-sec">
-  <div class="kmf-wrap">
-    <h2 class="kmf-h2 kmf-center kmf-upper">Vaše novo tajno oružje protiv pivskog trbuha</h2>
-    <div class="kmf-weapon-grid">
-      <div class="kmf-feat-col">
-        <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Zbogom „dad bod“.</p></div>
-        <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Pivski trbuh? Nestao.</p></div>
-        <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Slaninice? Zaključane.</p></div>
-      </div>
-      <div class="kmf-weapon-media"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT oblikuje trbuh i siluetu" loading="eager"></div>
-      <div class="kmf-feat-col">
-        <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Prsa? Zaglađena.</p></div>
-        <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Nevidljivo. Nezaustavljivo.</p></div>
-        <div class="kmf-feat"><span class="kmf-feat-ic">✓</span><p>Košulja pristaje. Konačno.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 3b) Prije / Poslije (tekst + slika) ============ -->
-<section class="kmf-sec">
-  <div class="kmf-wrap kmf-row2">
-    <div class="kmf-copy">
-      <p class="kmf-eyebrow">Vidljiva razlika</p>
-      <h2 class="kmf-h2">Prije i poslije NORIKS FIT-a</h2>
-      <p>Uspravnije držanje, zaglađen trbuh i oštrija silueta — čim ga obučete.</p>
-      <ul class="kmf-check">
-        <li>Vidljivo uspravnije držanje</li>
-        <li>Zaglađen trbuh i „love handles“</li>
-        <li>Oštrija silueta ispod svake majice</li>
-      </ul>
-      <a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a>
-    </div>
-    <div class="kmf-media"><img src="<?php echo esc_url( $km.'ks-hr-04.webp' ); ?>" alt="Prije i poslije NORIKS FIT" loading="eager"></div>
-  </div>
-</section>
-
 <style>
-.kmf-sub{color:#5b5b5b;font-size:16px;line-height:1.6;max-width:620px;margin:0 auto 22px;text-align:center;}
-.kmf-ba{max-width:760px;margin:22px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);}
-.kmf-ba img{width:100%;height:auto;display:block;}
-.kmf-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:28px;}
-.kmf-ic{text-align:center;}
-.kmf-ic img{width:56px;height:56px;object-fit:contain;margin:0 auto 12px;display:block;}
-.kmf-ic p{margin:0;font-weight:700;font-size:15px;color:#141414;line-height:1.35;}
-@media(max-width:700px){.kmf-icons{grid-template-columns:repeat(2,1fr);gap:18px;}}
-</style>
+/* 2) Video hero */
+  .fis-hero { position: relative; width: 100vw; left: 50%; margin-left: -50vw; min-height: 520px; display: flex; align-items: center; overflow: hidden; }
+  .fis-hero-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .fis-hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.05) 55%); }
+  .fis-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; padding: 0 40px; width: 100%; box-sizing: border-box; }
+  .fis-hero-title { color: #fff; font-weight: 800; font-size: clamp(27px,4vw,46px); line-height: 1.15; max-width: 640px; margin: 0; text-shadow: 0 2px 14px rgba(0,0,0,0.4); }
+  @media (max-width: 768px) { .fis-hero { min-height: 380px; } .fis-hero-inner { padding: 0 22px; } }
 
-<!-- ============ 4) Zašto NORIKS FIT? (usporedba) ============ -->
-<section class="kmf-sec kmf-alt">
-  <div class="kmf-wrap">
-    <h2 class="kmf-h2 kmf-center">Zašto NORIKS FIT?</h2>
-    <p class="kmf-sub">Usporedite NORIKS FIT s običnim kompresijskim majicama i vidite razliku koja se osjeti čim ga obučete.</p>
-    <div class="kmf-cmp-row">
-      <div class="kmf-cmp-media"><img src="<?php echo esc_url( $km.'compare.webp' ); ?>" alt="NORIKS FIT u odnosu na obične majice" loading="eager"></div>
-      <div class="kmf-table">
-        <div class="kmf-t-head">
-          <span class="kmf-t-feature"></span>
-          <span class="kmf-t-col kmf-t-us">NORIKS FIT</span>
-          <span class="kmf-t-col kmf-t-them">Ostali</span>
-        </div>
-        <?php
-        $kmf_rows = array(
-          'Cjelodnevna udobnost kompresije',
-          'Izdržljiv, visokokvalitetan materijal',
-          'Nevidljiv ispod bilo koje košulje',
-          'Ujedno i sportska majica',
-          'Lagana tkanina koja odvodi vlagu',
-        );
-        foreach ( $kmf_rows as $row ) : ?>
-          <div class="kmf-t-row">
-            <span class="kmf-t-feature"><?php echo esc_html( $row ); ?></span>
-            <span class="kmf-t-col kmf-t-us"><span class="kmf-yes">✓</span></span>
-            <span class="kmf-t-col kmf-t-them"><span class="kmf-no">✕</span></span>
-          </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <div class="kmf-cta-wrap"><a class="kmf-cta" href="#bundle-selector">Naruči svoj NORIKS FIT →</a></div>
-  </div>
-</section>
+  /* zajednički */
+  .fis-h2 { font-size: clamp(24px,3vw,34px); font-weight: 800; color: #1c1c1c; line-height: 1.2; margin: 0 0 18px; }
+  .fis-center { text-align: center; }
+  .fis-eyebrow { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #555; margin: 0 0 8px; }
 
-<!-- ============ 5) Recenzije (testimonijali sa slikama) ============ -->
-<section class="kmf-sec">
-  <div class="kmf-wrap">
-    <div class="kmf-rev-top">
-      <span class="kmf-rev-stars">★★★★★</span>
-      <span class="kmf-rev-head">3.575 provjerenih recenzija — izvrsno, 4,8 od 5 zvjezdica</span>
-    </div>
-    <div class="kmf-rev-cards">
-      <div class="kmf-rev-card">
-        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'wear.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="eager"></div>
-        <p class="kmf-rev-txt">„Bit ću iskren — bio sam skeptičan. Uvijek sam imao onaj trbuščić koji sam skrivao pod širokim majicama. Nakon 4 tjedna nošenja NORIKS-a 4 sata dnevno, skinuo sam nekoliko centimetara u struku i počeo stajati uspravno bez razmišljanja. Ramena su se otvorila, a djevojka je rekla da izgledam kao da 'blistam'.“</p>
-        <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Ivan M. — 34 g.</span></div>
-      </div>
-      <div class="kmf-rev-card">
-        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'persona.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="eager"></div>
-        <p class="kmf-rev-txt">„Cijeli dan sjedim za stolom. Pogrbljen, napuhnut, bez samopouzdanja. NORIKS me doslovno natjerao da sjedim uspravno bez ikakvog truda. Za 10 dana napetost u leđima je nestala, a košulje su počele bolje pristajati. Sad ga nosim u ured — diskretan je, prozračan, i iskreno? Prestao sam se skrivati od kamera.“</p>
-        <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Marko P. — 42 g.</span></div>
-      </div>
-      <div class="kmf-rev-card">
-        <div class="kmf-rev-photo"><img src="<?php echo esc_url( $km.'hero.webp' ); ?>" alt="NORIKS FIT recenzija kupca" loading="eager"></div>
-        <p class="kmf-rev-txt">„Tri godine sam odbijao izlaske jer sam mrzio ono što vidim u ogledalu dok se oblačim. NORIKS je prvi put da sam prestao ratovati s vlastitim odrazom. Jutros sam se obukao za 5 minuta. Bez namještanja. Bez izbjegavanja ogledala. To je to.“</p>
-        <div class="kmf-rev-foot"><span class="kmf-rev-badge">★★★★★ Provjeren</span><span class="kmf-rev-name">Tomislav K. — 27 g.</span></div>
-      </div>
-    </div>
-    <div class="kmf-cta-wrap"><a class="kmf-cta" href="#bundle-selector">Odaberi svoju veličinu →</a></div>
-  </div>
-</section>
+  /* 3) Stručnjaci */
+  .fis-experts { padding: 44px 0; }
+  .fis-exp-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
+  .fis-exp-quote p { font-size: 15.5px; line-height: 1.6; color: #333; margin: 0 0 14px; }
+  .fis-exp-author { color: #1c1c1c; }
+  .fis-exp-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .fis-exp-card { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #222; }
+  .fis-exp-card video,
+  .fis-exp-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fis-exp-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px; color: #fff; background: linear-gradient(0deg, rgba(0,0,0,.75), rgba(0,0,0,0)); }
+  .fis-exp-name { font-weight: 800; font-size: 18px; }
+  .fis-exp-role { font-size: 13px; }
+  .fis-exp-org { font-size: 12px; font-style: italic; opacity: .9; }
 
-<style>
-/* 5) testimonijali */
-.kmf-rev-top{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:26px;}
-.kmf-rev-top .kmf-rev-stars{color:#00b67a;font-size:22px;letter-spacing:2px;}
-.kmf-rev-head{font-weight:700;font-size:17px;color:#141414;text-align:center;}
-.kmf-rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.kmf-rev-card{border:1px solid #e4e4e4;border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
-.kmf-rev-photo img{width:100%;height:300px;object-fit:cover;display:block;}
-.kmf-rev-txt{padding:16px 16px 8px;margin:0;font-size:14px;line-height:1.55;color:#333;flex:1;}
-.kmf-rev-foot{padding:0 16px 16px;display:flex;flex-direction:column;gap:4px;}
-.kmf-rev-badge{color:#00b67a;font-size:13px;font-weight:700;}
-.kmf-rev-name{font-weight:700;font-size:14px;color:#141414;}
-@media(max-width:860px){.kmf-rev-cards{grid-template-columns:1fr;}}
-</style>
+  /* 4) UGC */
+  .fis-ugc { background: #223047; padding: 40px 0; }
+  .fis-ugc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .fis-ugc-media { border-radius: 12px; overflow: hidden; aspect-ratio: 3/4; background: #000; }
+  .fis-ugc-media video,
+  .fis-ugc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fis-ugc-cap { color: #eee; font-size: 14px; line-height: 1.5; margin: 10px 0 0; }
 
-<style>
-.kmf-sec{padding:48px 0;background:#fff;}
-.kmf-alt{background:#f5f6f7;}
-.kmf-wrap{max-width:1100px;margin:0 auto;padding:0 18px;}
-.kmf-row2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
-.kmf-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700;color:#8a8f96;margin:0 0 6px;}
-.kmf-h2{font-size:clamp(24px,3.2vw,34px);line-height:1.15;font-weight:800;color:#141414;margin:0 0 16px;font-family:inherit;}
-.kmf-h2 em{font-style:italic;color:#141414;}
-.kmf-center{text-align:center;}
-.kmf-upper{text-transform:uppercase;font-size:clamp(20px,2.6vw,26px);}
-.kmf-copy p{font-size:16px;line-height:1.65;color:#3a3a3a;margin:0 0 14px;}
-.kmf-media img,.kmf-media video{width:100%;height:auto;display:block;border-radius:16px;}
-.kmf-media video{background:#000;}
-.kmf-hero-media img{max-height:460px;object-fit:cover;object-position:center 18%;}
-.kmf-check{list-style:none;margin:6px 0 0;padding:0;}
-.kmf-check li{position:relative;padding:0 0 10px 28px;font-size:15.5px;color:#141414;}
-.kmf-check li:before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;background:#141414;color:#fff;border-radius:50%;font-size:12px;text-align:center;line-height:20px;}
-.kmf-cta{display:inline-block;margin-top:8px;background:#141414;color:#fff;font-weight:700;font-size:16px;padding:14px 30px;border-radius:10px;text-decoration:none;}
-.kmf-cta-wrap{text-align:center;margin-top:30px;}
+  /* 5) ThermoTrac */
+  .fis-thermo { background: #f0efe9; padding: 44px 0; }
+  .fis-thermo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fis-thermo-card { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; background: #111; }
+  .fis-thermo-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fis-thermo-label { position: absolute; left: 16px; bottom: 14px; color: #fff; font-weight: 800; font-size: 18px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
 
-/* 3) weapon */
-.kmf-weapon-grid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:24px;align-items:center;margin-top:26px;}
-.kmf-weapon-media img{width:100%;height:auto;border-radius:14px;display:block;}
-.kmf-feat-col{display:flex;flex-direction:column;gap:34px;}
-.kmf-feat{text-align:center;}
-.kmf-feat-ic{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1.5px solid #141414;border-radius:50%;font-size:19px;margin-bottom:10px;}
-.kmf-feat p{margin:0;font-weight:700;font-size:14.5px;text-transform:uppercase;letter-spacing:.02em;color:#141414;}
+  /* 6) Upgrades */
+  .fis-upg { padding: 44px 0; }
+  .fis-upg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+  .fis-upg-ico { width: 56px; height: 56px; object-fit: contain; display: block; margin: 0 auto 14px; }
+  .fis-upg-title { font-weight: 800; color: #1c1c1c; margin: 0 0 8px; font-size: 16px; }
+  .fis-upg-text { font-size: 14px; line-height: 1.5; color: #444; margin: 0; }
 
-/* 4) compare */
-.kmf-cmp-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;margin-top:24px;}
-.kmf-cmp-media img{width:100%;height:auto;border-radius:14px;display:block;}
-.kmf-table{border-radius:14px;overflow:hidden;border:1px solid #e4e4e4;background:#fff;}
-.kmf-t-head,.kmf-t-row{display:grid;grid-template-columns:1fr 100px 100px;align-items:center;}
-.kmf-t-head{background:#141414;color:#fff;}
-.kmf-t-head .kmf-t-col{color:#fff;font-weight:700;text-align:center;padding:13px 6px;font-size:14px;}
-.kmf-t-feature{padding:14px 16px;font-size:14px;color:#141414;line-height:1.35;}
-.kmf-t-head .kmf-t-feature{color:#fff;}
-.kmf-t-row{border-top:1px solid #eee;}
-.kmf-t-row:nth-child(even){background:#fafafa;}
-.kmf-t-col{text-align:center;font-size:16px;}
-.kmf-yes{color:#2fae4e;font-weight:800;}
-.kmf-no{color:#c9c9c9;font-weight:800;}
+  /* 7 + 8) row2 */
+  .fis-eng, .fis-cheaper { padding: 40px 0; }
+  .fis-cheaper { background: #f4f4f4; }
+  .fis-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .fis-row2-copy p { font-size: 15.5px; line-height: 1.65; color: #333; }
+  .fis-row2-media { border-radius: 16px; overflow: hidden; }
+  .fis-row2-media video,
+  .fis-row2-media img { width: 100%; height: auto; display: block; }
+  .fis-cheaper .fis-row2-media { aspect-ratio: 1 / 1; }
+  .fis-cheaper .fis-row2-media video,
+  .fis-cheaper .fis-row2-media img { height: 100%; object-fit: cover; }
 
-@media(max-width:860px){
-  .kmf-row2{grid-template-columns:1fr;gap:22px;}
-  .kmf-rev .kmf-media{order:-1;}
-  .kmf-cmp-row{grid-template-columns:1fr;gap:20px;}
+  @media (max-width: 900px) {
+    .fis-exp-grid { grid-template-columns: 1fr; gap: 24px; }
+    .fis-ugc-grid { grid-template-columns: 1fr 1fr; }
+    .fis-thermo-grid { grid-template-columns: 1fr; }
+    .fis-upg-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+    .fis-row2 { grid-template-columns: 1fr; gap: 22px; }
+    .fis-cheaper .fis-row2-media { order: 2; }
+  }
+  @media (max-width: 560px) {
+    .fis-exp-cards { grid-template-columns: 1fr 1fr; }
+    .fis-ugc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* 1) Znanstveno potkrijepljeno — siva kartica */
+  .fis-science { background: #f4f4f4; padding: 44px 0; }
+  .fis-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  .fis-box { background: transparent; border-radius: 0; padding: 0; }
+  .fis-title { font-size: clamp(23px,2.9vw,32px); font-weight: 800; color: #1c1c1c; line-height: 1.2; margin: 0 0 26px; }
+  .fis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .fis-card { padding: 0 22px; border-left: 1px solid #dcdcdc; }
+  .fis-card:first-child { border-left: 0; padding-left: 0; }
+  .fis-card-title { font-size: 17px; font-weight: 800; color: #1c1c1c; margin: 0 0 10px; }
+  .fis-card-text { font-size: 15px; line-height: 1.55; color: #333; margin: 0; }
+  @media (max-width: 820px) {
+    .fis-grid { grid-template-columns: 1fr 1fr; gap: 22px 0; }
+    .fis-card:nth-child(odd) { border-left: 0; padding-left: 0; }
+  }
+  @media (max-width: 480px) {
+    .fis-grid { grid-template-columns: 1fr; }
+    .fis-card { border-left: 0; padding-left: 0; }
+  }
+
+  /* Nema "Tablica veličina" linka na FisioRest-u (identično kao bunion). */
+  .noriks-global-sizechart, .gck-size-link, .gck-size-link-wrap,
+  #open-size-chart, #open-size-chartCustom { display: none !important; }
+
+  /* Kratki opis: sakrij standardne točke (•), razmaci. */
+  .woocommerce-product-details__short-description ul { list-style: none; margin: 8px 0 26px; padding-left: 0; }
+  .woocommerce-product-details__short-description ul li { list-style: none; padding-left: 0; margin-left: 0; }
+  .woocommerce-product-details__short-description p:has(+ ul) { margin-top: 20px; margin-bottom: 4px; }
+/* NORIKS majica — dodatki za nove sekcije */
+.nk-media{position:relative;overflow:hidden;background:#eee}
+.nk-media>video,.nk-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.fis-cheaper .nk-media{aspect-ratio:1/1}
+.pv-wide,.nk-wide{aspect-ratio:16/10}
+.fis-hero{left:auto!important;margin-left:0!important;width:100%!important}
+
+/* ===== NORIKS – mobilna prilagoditev sekcij (telefon, do 767 px) =====
+   Velja za majico in boksarice (isti razredi). Dodaj na KONEC sekcije.css. */
+@media (max-width:767px){
+  /* 1) 4 razlike: kartice 2 x 2 namesto dolgega seznama */
+  .fis-science{padding:30px 0!important}
+  .fis-science .fis-title{font-size:22px!important;line-height:1.25!important;margin-bottom:16px!important}
+  .fis-science .fis-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}
+  .fis-science .fis-card{background:#fff;border:0!important;border-radius:14px;padding:14px 12px!important}
+  .fis-science .fis-card-title{font-size:15px!important;line-height:1.25;margin:0 0 6px!important}
+  .fis-science .fis-card-text{font-size:13.5px!important;line-height:1.45!important}
+
+  /* 2) hero video: višji, besedilo spodaj */
+  .fis-hero{min-height:62vh!important;align-items:flex-end!important;padding-bottom:28px}
+  .fis-hero-overlay{background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0) 60%)!important}
+  .fis-hero-title{font-size:clamp(24px,7.4vw,32px)!important}
+
+  /* 3) vrstice, ki se drsajo vstran (videi materiala, mnenja kupcev, 3 stvari) */
+  .fis-exp-cards,.fis-ugc-grid,.fis-thermo-grid{display:flex!important;gap:12px!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px!important;padding:0 16px 4px!important;scroll-padding-left:16px}
+  .fis-exp-cards::-webkit-scrollbar,.fis-ugc-grid::-webkit-scrollbar,.fis-thermo-grid::-webkit-scrollbar{display:none}
+  .fis-exp-card{flex:0 0 64%!important;scroll-snap-align:start}
+  .fis-ugc-card{flex:0 0 76%!important;scroll-snap-align:start}
+  .fis-thermo-card{flex:0 0 80%!important;scroll-snap-align:start;aspect-ratio:4/5!important}
+  .fis-ugc-cap{font-size:14px!important;line-height:1.4}
+  .fis-exp-grid{gap:18px!important}
+
+  /* 4) barve: polne vrstice, zadnja na sredini */
+  .nk-col-grid{display:flex!important;flex-wrap:wrap;justify-content:center;gap:10px!important}
+  .nk-col{flex:0 0 calc((100% - 30px)/4);box-sizing:border-box;padding:6px!important}
+  .nk-col-grid:has(> .nk-col:nth-child(5):last-child) .nk-col,
+  .nk-col-grid:has(> .nk-col:nth-child(6):last-child) .nk-col{flex-basis:calc((100% - 20px)/3)}
+  .nk-col{min-width:0}
+  .nk-col span{font-size:clamp(10px,3.1vw,12px)!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .nk-col-note{gap:6px 14px!important;font-size:13.5px}
+
+  /* 5) primerjalna tabela: ozki stolpci, brez lomljenja besed */
+  .nk-cmp-row{grid-template-columns:minmax(0,1fr) 96px 84px!important}
+  .nk-cmp-row>div{padding:12px 8px!important;font-size:13.5px!important;line-height:1.35}
+  .nk-cmp-head>div{padding:14px 6px!important}
+  .nk-cmp-brand{font-size:12px!important;letter-spacing:0!important;line-height:1.2;word-break:keep-all;overflow-wrap:normal;hyphens:none}
+  .nk-cmp-price{font-size:15px!important;line-height:1.2}
+  .nk-cmp-note{font-size:11px!important;line-height:1.25}
+
+  /* 6) splošno: manj praznega prostora, berljivi naslovi */
+  .fis-h2{font-size:clamp(21px,6.4vw,26px)!important;line-height:1.2!important}
+  .fis-thermo,.fis-ugc,.fis-experts,.nk-colors,.fis-upg,.fis-eng,.fis-cheaper,.nk-cmp{padding-top:36px!important;padding-bottom:36px!important}
+
+  /* 7) sekcija ocen */
+  .nk-rev .nk-sum{gap:10px!important}
+  .nk-rev .nk-sum .nk-box{padding:16px!important}
+  .nk-rev .nk-feat{display:flex!important;gap:12px!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px!important;padding:0 16px 4px!important;scroll-padding-left:16px}
+  .nk-rev .nk-feat::-webkit-scrollbar,.nk-rev .nk-chips::-webkit-scrollbar{display:none}
+  .nk-rev .nk-feat>.nk-box{flex:0 0 80%;scroll-snap-align:start}
+  .nk-rev .nk-chips{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none;margin-left:-16px!important;margin-right:-16px!important;padding:0 16px!important}
+  .nk-rev .nk-chip{flex:none;white-space:nowrap}
+  .nk-rev .nk-list .nk-card:nth-child(n+4){display:none}  /* na telefonu prve 3, ostale z gumbom »Več ocen« */
 }
-@media(max-width:600px){
-  .kmf-weapon-grid{grid-template-columns:1fr;gap:20px;}
-  .kmf-weapon-media{order:-1;}
-  .kmf-feat-col{flex-direction:row;justify-content:space-around;gap:12px;}
+
+/* zelo ozki telefoni (320–374 px, npr. iPhone SE 1. gen., manjši Android) */
+@media (max-width:374px){
+  .fis-wrap{padding-left:12px!important;padding-right:12px!important}
+  .fis-science .fis-grid{gap:8px!important}
+  .fis-science .fis-card{padding:12px 10px!important}
+  .fis-science .fis-card-title{font-size:14px!important}
+  .fis-science .fis-card-text{font-size:12.5px!important}
+  .fis-exp-cards,.fis-ugc-grid,.fis-thermo-grid,.nk-rev .nk-feat{margin:0 -12px!important;padding:0 12px 4px!important;scroll-padding-left:12px}
+  .fis-exp-card{flex-basis:72%!important}.fis-ugc-card{flex-basis:82%!important}.fis-thermo-card{flex-basis:86%!important}.nk-rev .nk-feat>.nk-box{flex-basis:86%}
+  .nk-col-grid{gap:6px!important}.nk-col{flex-basis:calc((100% - 18px)/4);padding:4px!important}
+  .nk-col-grid:has(> .nk-col:nth-child(5):last-child) .nk-col,.nk-col-grid:has(> .nk-col:nth-child(6):last-child) .nk-col{flex-basis:calc((100% - 12px)/3)}
+  .nk-cmp-row{grid-template-columns:minmax(0,1fr) 86px 72px!important}
+  .nk-cmp-row>div{font-size:12.5px!important;padding:10px 6px!important}
+  .nk-cmp-price{font-size:13.5px!important}
+}
+/* veliki telefoni (430–767 px, npr. Pro Max, Galaxy Ultra, zložljivi): več kartic naenkrat */
+@media (min-width:430px) and (max-width:767px){
+  .fis-exp-card{flex-basis:46%!important}.fis-ugc-card{flex-basis:58%!important}.fis-thermo-card{flex-basis:64%!important}.nk-rev .nk-feat>.nk-box{flex-basis:62%}
+}
+@media (min-width:560px) and (max-width:767px){
+  .fis-exp-card{flex-basis:36%!important}.fis-ugc-card{flex-basis:40%!important}.fis-thermo-card{flex-basis:46%!important;aspect-ratio:3/4!important}.nk-rev .nk-feat>.nk-box{flex-basis:46%}
+  .fis-science .fis-grid{grid-template-columns:repeat(4,1fr)!important}
+  .nk-col{flex-basis:calc((100% - 60px)/7)!important}
 }
 </style>
+<div class="nfit-why">
+<section class="fis-science"><div class="fis-wrap"><div class="fis-box"><h2 class="fis-title">4 razloga zašto će vam postati omiljena majica</h2><div class="fis-grid">
+<div class="fis-card"><h3 class="fis-card-title">Zaglađena silueta</h3><p class="fis-card-text">Ciljana kompresija <strong>zagladi trbuh i bokove</strong> čim je obučete.</p></div>
+<div class="fis-card"><h3 class="fis-card-title">Uspravnije držanje</h3><p class="fis-card-text">Lagani pritisak na leđima <strong>podsjeća vas da se ne grbite</strong>.</p></div>
+<div class="fis-card"><h3 class="fis-card-title">Nevidljiva</h3><p class="fis-card-text">Tanka je i pripijena – <strong>ispod košulje se ne vidi</strong>.</p></div>
+<div class="fis-card"><h3 class="fis-card-title">Prozračna</h3><p class="fis-card-text">Lagana tkanina <strong>odvodi vlagu</strong> i cijeli dan ostaje ugodna.</p></div>
+</div></div></div></section>
+
+<section class="fis-hero"><video class="fis-hero-vid" src="<?php echo $nf; ?>noriks-fit-hero.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-hero-overlay"></div><div class="fis-hero-inner"><h2 class="fis-hero-title">Košulja koja konačno lijepo pada.</h2></div></section>
+
+<section class="fis-experts"><div class="fis-wrap fis-exp-grid"><div class="fis-exp-quote"><h2 class="fis-h2">Kompresija na pravim mjestima</h2>
+<p>NORIKS FIT ima tri zone: gustu mrežu na trbuhu, potporne pojaseve na bokovima i V-pojas na prsima. Zajedno <strong>zaglađuju siluetu</strong> bez stezanja koje bi ograničavalo disanje ili pokret.</p>
+<p>✔ Zagladi trbuh, bokove i prsa<br>✔ Ne roluje se prema gore<br>✔ Bez rukava, okrugli izrez</p>
+<p class="fis-exp-author"><strong>Pogledajte izbliza</strong><br>Zone kompresije, materijal i držanje.</p></div>
+<div class="fis-exp-cards">
+<div class="fis-exp-card nk-media"><video src="<?php echo $nf; ?>noriks-fit-zones.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-exp-cap"><div class="fis-exp-name">Tri zone</div><div class="fis-exp-role">Trbuh, bokovi, prsa</div></div></div>
+<div class="fis-exp-card nk-media"><video src="<?php echo $nf; ?>noriks-fit-fabric.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-exp-cap"><div class="fis-exp-name">Elastična tkanina</div><div class="fis-exp-role">Rasteže se s pokretom</div></div></div>
+<div class="fis-exp-card nk-media"><video src="<?php echo $nf; ?>noriks-fit-posture.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-exp-cap"><div class="fis-exp-name">Držanje</div><div class="fis-exp-role">Ramena ostaju otvorena</div></div></div>
+</div></div></section>
+
+<section class="fis-thermo"><div class="fis-wrap"><p class="fis-eyebrow">Gdje je nositi</p><h2 class="fis-h2 fis-center">U uredu, ispod košulje i na treningu</h2><div class="fis-thermo-grid">
+<div class="fis-thermo-card nk-media"><video src="<?php echo $nf; ?>noriks-fit-office.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-thermo-label">U uredu cijeli dan</div></div>
+<div class="fis-thermo-card nk-media"><video src="<?php echo $nf; ?>noriks-fit-shirt.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-thermo-label">Ispod bijele košulje</div></div>
+<div class="fis-thermo-card nk-media"><video src="<?php echo $nf; ?>noriks-fit-gym.mp4" muted autoplay loop playsinline preload="metadata"></video><div class="fis-thermo-label">Na treningu</div></div>
+</div></div></section>
+
+<section class="fis-upg"><div class="fis-wrap"><h2 class="fis-h2 fis-center">Detalji koji čine razliku</h2><div class="fis-upg-grid">
+<div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo $nf; ?>ikona-1.svg"><div class="fis-upg-title">Tri zone kompresije</div><p class="fis-upg-text">Trbuh, bokovi i prsa – svaka zona ima svoj zadatak.</p></div>
+<div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo $nf; ?>ikona-2.svg"><div class="fis-upg-title">Nevidljiva ispod odjeće</div><p class="fis-upg-text">Tanka tkanina i okrugli izrez, bez rukava.</p></div>
+<div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo $nf; ?>ikona-3.svg"><div class="fis-upg-title">Odvodi vlagu</div><p class="fis-upg-text">Lagana i prozračna, i kad je toplo.</p></div>
+<div class="fis-upg-card"><img class="fis-upg-ico" alt="" src="<?php echo $nf; ?>ikona-4.svg"><div class="fis-upg-title">Lako održavanje</div><p class="fis-upg-text">Strojno pranje na hladnom, sušenje na zraku.</p></div>
+</div></div></section>
+
+<section class="fis-eng"><div class="fis-wrap fis-row2"><div class="fis-row2-copy"><h2 class="fis-h2">Lako održavanje</h2><p>Perite je strojno na hladnom, nježnom programu, bez izbjeljivača i omekšivača. Sušite je na zraku – tako dulje zadržava kompresiju i oblik.</p></div><div class="fis-row2-media nk-media nk-wide"><video src="<?php echo $nf; ?>noriks-fit-dry.mp4" muted autoplay loop playsinline preload="metadata"></video></div></div></section>
+
+<section class="fis-cheaper"><div class="fis-wrap fis-row2"><div class="fis-row2-media nk-media"><img src="<?php echo $nf; ?>noriks-fit-2plus1.webp" alt="NORIKS FIT" loading="lazy"></div><div class="fis-row2-copy"><p class="fis-eyebrow">ISPLATIVA KUPNJA</p><h2 class="fis-h2">Jedna za nošenje, jedna za pranje, jedna za teretanu</h2><p>Jedna majica stoji <span data-price="1">29,99 €</span>. U paketu 2+1 GRATIS dobivate 3 majice za <span data-price="3">59,98 €</span>, odnosno samo <span data-price="3-unit">19,99 €</span> po komadu. Uz 30 dana za povrat novca ili zamjenu veličine.</p></div></div></section>
+</div>

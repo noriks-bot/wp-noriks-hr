@@ -74,7 +74,7 @@ global $product;
           <div class="feature">
           
   <img src="<?php echo get_template_directory_uri(); ?>/img/cod_icon_.png" alt="Customer Support Icon" class="feature__icon info-icon">
-          <p class="feature__text">Plaćanje i pouzećem</p>
+          <p class="feature__text">Plaćanje pouzećem</p>
         </div>
         
         
@@ -1019,7 +1019,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
 
-                NORIKS FIT izrađen je od napredne ionske kompresijske tkanine koja pruža pripijen, potporni kroj. Ciljana kompresija ravnomjerno steže trbuh i bokove, izglađuje siluetu i podupire uspravno držanje — bez stezanja koje ograničava disanje ili pokret.<br><br>Mikro-tkana vlakna potiču cirkulaciju i pomažu vam da tijekom dana stojite uspravnije i osjećate se sigurnije. Tkanina je lagana, prozračna i odvodi vlagu, pa ostajete suhi i ugodno.<br><br>Tanak i diskretan kroj čini ga nevidljivim ispod bilo koje košulje, a ujedno može poslužiti i kao sportska majica. Rezultat: oštriji izgled, bolje držanje i samopouzdanje — čim ga obučete.
+                <strong>NORIKS FIT</strong> je muška kompresijska majica bez rukava koja zagladi trbuh i bokove čim je obučete. Ima tri zone kompresije: gustu mrežu na trbuhu, potporne pojaseve na bokovima i V-pojas na prsima — zajedno zaglađuju siluetu bez stezanja koje bi ograničavalo disanje ili pokret.<br><br>Lagani pritisak na leđima podsjeća vas da se ne grbite, a ramena ostaju otvorena. Učinak traje dok majicu nosite.<br><br>Tkanina je tanka, elastična i prozračna (80 % najlon, 20 % elastan), odvodi vlagu i ne roluje se prema gore. Okrugli izrez i kroj bez rukava čine je nevidljivom ispod košulje, a možete je nositi i na treningu.
 
          <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
 
