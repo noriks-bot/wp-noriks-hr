@@ -251,7 +251,7 @@ $cp_svg = function ( $d, $s = 24 ) {
 .wscp__rh>div{flex:1;min-width:0}
 .wscp__rh strong{display:block;font-size:16px;color:#0f2a2c}
 .wscp__av{width:44px;height:44px;border-radius:50%;background:#dcf0f1;color:#2b8a90;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
-.wscp__ver{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;font-weight:700;color:#2b8a90}
+.wscp__ver{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:#2b8a90}
 .wscp__ver svg{background:#2b8a90;color:#fff;border-radius:50%;padding:2px}
 .wscp__zv{color:#f5b301;letter-spacing:1px;font-size:15px}
 .wscp__r h3{font-size:17px;font-weight:800;margin:0 0 6px;color:#0f2a2c}

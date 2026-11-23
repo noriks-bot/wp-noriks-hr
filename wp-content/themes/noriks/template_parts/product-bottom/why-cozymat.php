@@ -11,7 +11,7 @@
    5. video + tekst "Keep Your Pets Safe, Warm, and Cozy" - pri nas video desno, tekst levo
    6. video + tekst "Relieve Arthritis & Reduce Joint Pain" + kljukica - pri nas video levo, tekst desno
    7. animacija (gif) + tekst "Protect Your Pet: The Warmth That Calms" - pri nas video (gif -> mp4) desno, tekst levo
-   8. "See Why Both Parents & Pets Love It!" - karusel 4 videov kupcev - pri nas mreza 3 videov z HR napisi (4. video ima tujo znamko na nasivki - izpuscen)
+   8. "See Why Both Parents & Pets Love It!" - karusel 4 videov kupcev - pri nas 4 videi v istem vrstnem redu z HR napisi (tuja znamka na nasivki 3. videa zamenjana z NORIKS), mobil karusel
    9. video + tekst "Cozy Comfort, All Season Long" - pri nas video levo, tekst desno
   10. "Free E-Guide With Every Order" - darilo, ki ga NORIKS ne nudi - izpusceno
   11. "Loved By 30,000+ Happy Pawrents" - 4 mnenja s fotografijo ljubimca - pri nas 4 kartice v mrezi (120.000 kupcev)
@@ -21,7 +21,7 @@
   15. FAQ (7 vprasanj) - pri nas FAQ v zavihku Informacije o proizvodu (auto_reviews/FAQ_HR_cozymat.php)
    Zakljucek: NORIKS pogoji. Tuja znamka, 60-dnevno jamstvo, e-vodic in Black Friday odstevalnik izpusceni.
  * SLIKE: /img/cozymat/noriks-cozymat-galerija-06.webp, -kupac-1..3.webp, -macka-1..4.webp (galerija lokalizirana s Higgsfieldom)
- * VIDEI: /img/cozymat/noriks-cozymat-toplina, -zglobovi, -mirno, -sezona, -ugc-1..3 (.mp4 + poster .jpg); napisi v UGC prevedeni v HR (ffmpeg)
+ * VIDEI: /img/cozymat/noriks-cozymat-toplina, -zglobovi, -mirno, -sezona, -ugc-1..4 (.mp4 + poster .jpg); napisi v UGC prevedeni v HR (ffmpeg)
  * BARVA ORIGINALA: #8a5a3b (toplo rjava - ozadja slik, gumbi in podloga na originalu); svetel ton za --bg #f6efe8, akcent #8a5a3b
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -150,7 +150,7 @@ $cz_vid = function ( $f, $alt ) use ( $cz_u ) {
 	<h2 class="wscz__h2 wscz__c">Pogledajte zašto je vole <em>i vlasnici i ljubimci</em></h2>
 	<div class="wscz__ugc">
 		<?php
-		foreach ( array( array( 'noriks-cozymat-ugc-1', 'Mačka na smeđoj podlozi na krevetu' ), array( 'noriks-cozymat-ugc-2', 'Mačka se igra na sivoj podlozi na kauču' ), array( 'noriks-cozymat-ugc-3', 'Pas leži na sivoj podlozi na krevetu' ) ) as $u ) {
+		foreach ( array( array( 'noriks-cozymat-ugc-1', 'Mačka na smeđoj podlozi na krevetu' ), array( 'noriks-cozymat-ugc-2', 'Mačka se igra na sivoj podlozi na kauču' ), array( 'noriks-cozymat-ugc-4', 'Pas spava na sivoj podlozi na krevetu' ), array( 'noriks-cozymat-ugc-3', 'Pas leži na sivoj podlozi na krevetu' ) ) as $u ) {
 			echo '<figure class="wscz__uv">' . $cz_vid( $u[0], $u[1] ) . '</figure>';
 		}
 		?>
@@ -270,7 +270,7 @@ $cz_vid = function ( $f, $alt ) use ( $cz_u ) {
 .wscz__rh{display:flex;align-items:center;gap:12px}
 .wscz__rh img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px}
 .wscz__rh>div{flex:1;min-width:0}.wscz__rh strong{display:block;font-size:16px;color:#2b1d14}
-.wscz__ver{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;font-weight:700;color:#8a5a3b}
+.wscz__ver{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:#8a5a3b}
 .wscz__ver svg{background:#8a5a3b;color:#fff;border-radius:50%;padding:2px}
 .wscz__zv{color:#f5b301;letter-spacing:1px;font-size:15px}
 .wscz__r--img{padding:0;overflow:hidden;justify-content:flex-start;gap:0}
@@ -284,7 +284,7 @@ $cz_vid = function ( $f, $alt ) use ( $cz_u ) {
 .wscz__help{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .wscz__help span{display:inline-flex;align-items:center;gap:6px;background:#fff;border-radius:999px;padding:7px 12px;font-size:14px;font-weight:600;color:#2b1d14}
 .wscz__help i{display:inline-flex;width:20px;height:20px;border-radius:50%;background:#8a5a3b;color:#fff;align-items:center;justify-content:center}
-.wscz__ugc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+.wscz__ugc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:26px}
 .wscz__uv{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:9/16;box-shadow:0 12px 30px rgba(90,55,30,.14);background:#efe3d7}
 .wscz__uv video{width:100%;height:100%;object-fit:cover;display:block}
 .wscz__tw{margin-top:26px;overflow-x:auto}

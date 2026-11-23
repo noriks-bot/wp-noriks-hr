@@ -204,7 +204,7 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 .wstr__ki{width:56px;height:56px;border-radius:50%;background:#dfe9ff;border:1.5px solid #9dbbff;color:#1d4fc4;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0 0 12px}
 .wstr__k h3{font-size:18px;font-weight:800;margin:0 0 8px;color:#0f1a33}
 .wstr__k p{margin:0;font-size:15.5px;line-height:1.55;color:#36405a}
-.wstr__pill{display:table;margin-left:auto!important;margin-right:auto!important;background:#1e6bff;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin:0 0 10px}
+.wstr__pill{display:table;margin-left:auto!important;margin-right:auto!important;background:#1e6bff;color:#fff;font-size:13px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin:0 0 10px}
 .wstr__kar{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 66px)/4);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:26px;padding-bottom:6px}
 .wstr__kar::-webkit-scrollbar{display:none}
 .wstr__km{scroll-snap-align:start;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(20,50,120,.12);aspect-ratio:9/16;background:#dfe6f3}
@@ -213,7 +213,7 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 .wstr__tst img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 52px}
 .wstr__tsth{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 6px}
 .wstr__tsth strong{font-size:16px;color:#0f1a33}
-.wstr__ver{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;font-weight:700;color:#1d4fc4}
+.wstr__ver{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:#1d4fc4}
 .wstr__ver svg{background:#1e6bff;color:#fff;border-radius:50%;padding:2px}
 .wstr__zv{color:#f5b301;letter-spacing:1px}
 .wstr__tst p{margin:0;font-size:15.5px;line-height:1.6;color:#36405a}
@@ -235,7 +235,7 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 .wstr__ba{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .wstr__ba figure{position:relative;margin:0;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(20,50,120,.12);aspect-ratio:3/4;background:#e3eaf7}
 .wstr__ba img{width:100%;height:100%;object-fit:cover;display:block}
-.wstr__tag{position:absolute;left:8px;bottom:8px;background:#fff;color:#0f1a33;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;border-radius:8px;padding:5px 9px}
+.wstr__tag{position:absolute;left:8px;bottom:8px;background:#fff;color:#0f1a33;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;border-radius:8px;padding:5px 9px}
 .wstr__tag--po{background:#1e6bff;color:#fff}
 .wstr__tw{margin-top:26px;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(20,50,120,.10)}
 .wstr__tab{width:100%;border-collapse:collapse;background:#fff;font-size:16px}
