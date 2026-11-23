@@ -293,7 +293,8 @@ $cz_vid = function ( $f, $alt ) use ( $cz_u ) {
 .wscz__tab td:first-child,.wscz__tab th:first-child{text-align:left;color:#2b1d14;font-weight:600}
 .wscz__tab thead th{font-size:15px;font-weight:800;color:#5a4a3f}
 .wscz__tab tr:last-child td{border-bottom:0}
-.wscz__tab .wscz__tn{background:#8a5a3b;color:#fff;width:22%}
+.wscz__tab tr td,.wscz__tab tr th{background:#fff!important}
+.wscz__tab tr .wscz__tn{background:#8a5a3b!important;color:#fff;width:22%}
 .wscz__tab thead .wscz__tn{font-size:17px;letter-spacing:1px}
 .wscz__da,.wscz__ne{display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center}
 .wscz__da{background:#fff;color:#8a5a3b}.wscz__da--siv{background:#efe3d7}
