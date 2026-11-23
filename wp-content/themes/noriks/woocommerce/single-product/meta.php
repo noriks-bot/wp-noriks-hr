@@ -568,7 +568,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'cloath', $current_product_id ) ): ?>
 
-                <strong>Polar NORIKS Cloth XXL</strong> je krpa od guste mikrovlaknaste tkanine formata 60 × 40 cm koja staklo, pločice i slavine očisti samo vodom — bez sprejeva i bez kemikalija.<br><br>Dvostrani dizajn radi dva posla odjednom: čupava strana skuplja prljavštinu, kamenac i vodu, a mrežasta strana polira do sjaja. Zato nema mutnog filma koji ostavljaju obične krpe.<br><br>Tkanina upija do 600 ml vode odjednom, pa nakon nekoliko poteza tuš-kabina, pločice i slavine ostaju suhi — bez kapljica i bez čekanja.<br><br>Krpa ne pušta vlakna, ne blijedi i ne para se. Perite je u stroju na 40 °C i spremna je za sljedeću upotrebu — izdrži stotine ciklusa.
+                <strong>NORIKS DuoDry</strong> je dvostrana krpa od gustih mikrovlakana formata 60 × 40 cm za kupaonicu i kuhinju. Jedna strana skuplja vodu i prljavštinu, druga polira.<br><br>Čupava strana pere — skuplja prljavštinu, kamenac i vodu. Mrežasta strana staklo, pločice i slavine ispolira do sjaja, bez mutnog filma i bez vlakana. Tako brišete uz manje sredstava za čišćenje.<br><br>Gusta vlakna upiju puno vode odjednom, pa pult, sudoper i tuš-kabina ostaju suhi nakon nekoliko poteza. Petlja za vješanje drži krpu uvijek pri ruci.<br><br>Krpa ne pušta vlakna, ne blijedi i ne para se. Perite je u stroju na 40 °C i spremna je za sljedeću upotrebu — izdrži stotine pranja.
 
          <?php elseif( noriks_is_type( 'bra', $current_product_id ) ): ?>
 
@@ -3416,7 +3416,7 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
         'slim' => array( 'noriks-slim.pdf', 'NORIKS Slim — oblikujuće gaćice visokog struka' ),
         'red' => array( 'noriks-redrelief.pdf', 'NORIKS RedRelief — terapija crvenim svjetlom za zapešće' ),
         'pal' => array( 'noriks-pal.pdf', 'NORIKS Pal — štap za hodanje s drugom ručkom' ),
-        'cloath' => array( 'noriks-polar-cloth.pdf', 'Polar NORIKS Cloth XXL — krpa za čišćenje samo vodom' ),
+        'cloath' => array( 'noriks-polar-cloth.pdf', 'NORIKS DuoDry — dvostrana krpa od mikrovlakana' ),
         'slabproof' => array( 'noriks-slabproof.pdf', 'NORIKS SlabProof — radne čarape s jastučićem' ),
         'controlpro' => array( 'noriks-controlpro.pdf', 'NORIKS ControlPro — trenažer mišića zdjeličnog dna' ),
         'tradesman' => array( 'noriks-tradesman.pdf', 'NORIKS Tradesman — radne čarape s jastučićem i potporom svoda' ),

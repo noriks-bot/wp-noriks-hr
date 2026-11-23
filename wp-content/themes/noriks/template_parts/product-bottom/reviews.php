@@ -40,6 +40,7 @@
         }
       
   </style>
+<?php $ndd_brez_ocen = function_exists( 'noriks_is_type' ) && noriks_is_type( 'cloath' ); if ( $ndd_brez_ocen ) { ob_start(); } /* DuoDry 23.11.2026: samo prave ocene */ ?>
   <div  style="background: #f9f9f9; padding-top: 30px;" >
 <section style="background: #f9f9f9; max-width: 1440px;" class="comparison-section comparison-section-gray">
     <div style="background: #f9f9f9;padding: 0;padding-left: 10px;
@@ -2088,6 +2089,7 @@
     </div>
   </section>
   </div>
+<?php if ( $ndd_brez_ocen ) { ob_end_clean(); } ?>
   
   
   <style>
@@ -2460,7 +2462,7 @@
                      : ( $is_bokserice_page ? 'NORIKS bokserice'
                      : ( $is_snore_page ? 'NORIKS udlaga protiv hrkanja'
                      : ( $is_cloud_page ? 'NORIKS Cloud jastuk za koljena'
-                     : ( $is_cloath_page ? 'Polar NORIKS Cloth XXL krpa'
+                     : ( $is_cloath_page ? 'NORIKS DuoDry krpa'
                      : ( $is_bra_page ? 'NORIKS BRA grudnjak'
                      : ( $is_ondersteun_page ? 'NORIKS SoftBack grudnjak'
                      : ( $is_hyd_page ? 'NORIKS HYD boca za vodikovu vodu'
@@ -3622,6 +3624,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
   $ship_count = count($auto_reviews_ship);
 ?>
 
+<?php if ( $ndd_brez_ocen ) { ob_start(); } ?>
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
   <div class="container basic-reviews-section-container" style="width:100%;max-width:1440px;padding-top:20px!important;margin:0 auto;padding-left: 10px; padding-right: 10px;">
 
@@ -3844,6 +3847,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
     });
   });
 </script>
+<?php if ( $ndd_brez_ocen ) { ob_end_clean(); } ?>
 
 <!-- new review styling -->
 <style>
@@ -4582,7 +4586,7 @@ $cloud_faq = array(
   ),
 );
 
-// Polar NORIKS Cloth (orto-cloath) — product FAQ za "Informacije o Proizvodu".
+// NORIKS DuoDry (orto-cloath) — product FAQ za "Informacije o Proizvodu".
 $cloath_faq = array(
   array(
     'questioon' => 'Što ako nisam zadovoljan kupnjom?',
@@ -4614,7 +4618,7 @@ $cloath_faq = array(
   ),
   array(
     'questioon' => 'Je li dobra kao poklon?',
-    'answer'    => 'Jest — paketi 3+3 i 8+4 su među najčešćim darovima za useljenje i blagdane. Krpa dolazi uredno složena i spremna za darivanje.',
+    'answer'    => 'Jest — paketi od 4 i 6 krpa česti su darovi za useljenje i blagdane. Krpe dolaze uredno složene i spremne za darivanje.',
   ),
 );
 
