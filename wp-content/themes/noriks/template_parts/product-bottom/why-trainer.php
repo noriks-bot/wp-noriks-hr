@@ -219,9 +219,10 @@ $tr_li = function ( $items ) use ( $tr_svg, $tr_ik ) {
 .wstr__tst p{margin:0;font-size:15.5px;line-height:1.6;color:#36405a}
 .wstr__dva{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.wstr__dva>div{min-width:0}
 .wstr__dva--rev>.wstr__media{order:2}
-.wstr__media--sq{aspect-ratio:1/1}
 .wstr__media{border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(20,50,120,.14);aspect-ratio:4/5;background:#e3eaf7;position:relative}
 .wstr__media img{width:100%;height:100%;object-fit:cover;display:block}
+.wstr__media.wstr__media--sq{aspect-ratio:1/1;height:auto}
+.wstr__media.wstr__media--sq img{height:auto;aspect-ratio:1/1;object-fit:contain}
 .wstr__stage img{position:absolute;inset:0;opacity:0;transition:opacity .55s ease}.wstr__stage img.is-on{opacity:1}
 .wstr__stag{position:absolute;top:18px;left:18px;z-index:2;background:#1e6bff;color:#fff;font-size:15px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;border-radius:10px;padding:7px 14px;box-shadow:0 6px 18px rgba(30,107,255,.4)}
 .wstr__steps{display:flex;flex-direction:column;gap:12px;margin-top:18px}
