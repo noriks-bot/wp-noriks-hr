@@ -608,7 +608,7 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
 
          <?php elseif( noriks_is_type( 'slim', $current_product_id ) ): ?>
 
-                <strong>NORIKS Slim</strong> su oblikujuće gaćice visokog struka. Široki pojas prelazi ukriženo preko trbuha i nastavlja se na bokove i leđa, pa je kompresija raspoređena oko cijelog struka, a ne stisnuta u jednu liniju.<br><br>Trbuh je zaglađen, struk izgleda uži, a odjeća pada ravnije — bez nabora iznad hlača i bez ruba koji se ocrtava ispod haljine.<br><br>Pletivo je tanko, mekano i prozračno, s elastičnim mrežastim umecima i pamučnim ulošcem. Gaćice se ne rolaju prema dolje i ne klize tijekom dana, pa ih obučete ujutro i zaboravite do večeri.<br><br>Dostupne su u šest boja (crna, boja kože, tamnoplava, lila, fuksija i šljiva) i veličinama od XS do 5XL. Veličinu birajte prema opsegu struka; ako ste između dvije veličine, uzmite veću.
+                <strong>NORIKS Slim</strong> su oblikujuće gaćice visokog struka. Široki pojas prelazi ukriženo preko trbuha i nastavlja se na bokove i leđa, pa je kompresija raspoređena oko cijelog struka, a ne stisnuta u jednu liniju.<br><br>Trbuh je zaglađen, struk izgleda uži, a odjeća pada ravnije — bez nabora iznad hlača i bez ruba koji se ocrtava ispod haljine.<br><br>Pletivo je tanko, mekano i prozračno, s elastičnim mrežastim umecima i pamučnim ulošcem. Gaćice se ne rolaju prema dolje i ne klize tijekom dana, pa ih obučete ujutro i zaboravite do večeri.<br><br>Dostupne su u šest boja (crna, boja kože, tamnoplava, lila, fuksija i šljiva) i veličinama od XS do 3XL. Veličinu birajte prema opsegu struka; ako ste između dvije veličine, uzmite veću.
 
          <?php elseif( noriks_is_type( 'bowl', $current_product_id ) ): ?>
 
@@ -3331,6 +3331,10 @@ if( !$is_boxers && !$is_carape && ! noriks_is_type( 'cloath', $current_product_i
              <?php elseif( noriks_is_type( 'bratank', $current_product_id ) ): ?>
 
                 Strojno pranje na hladnom, na nježnom programu. Koristite vrećicu za pranje rublja kako biste zaštitili majicu. Sušite isključivo na zraku. Ne izbjeljivati, ne glačati i ne čistiti kemijski.
+
+             <?php elseif( noriks_is_type( 'slim', $current_product_id ) ): ?>
+
+                Ručno ili u stroju na 30 °C u vrećici za rublje. Bez izbjeljivača, glačanja i sušilice – sušite na zraku.
 
              <?php elseif( noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
 

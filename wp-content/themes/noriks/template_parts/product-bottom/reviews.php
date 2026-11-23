@@ -5320,7 +5320,7 @@ $hug_faq = array(
 // On sock products, swap the list only for the "Informacije o Proizvodu" container.
 $slim_faq = array(
   array('questioon' => 'Kako odabrati veličinu?',
-    'answer'    => 'Izmjerite <strong>opseg struka</strong> na najužem dijelu trupa, malo iznad pupka, i usporedite s tablicom veličina (XS do 5XL). Ako ste između dvije veličine, uzmite <strong>veću</strong>.'),
+    'answer'    => 'Izmjerite <strong>opseg struka</strong> na najužem dijelu trupa, malo iznad pupka, i usporedite s tablicom veličina (XS do 3XL). Ako ste između dvije veličine, uzmite <strong>veću</strong>.'),
   array('questioon' => 'Rolaju li se prema dolje?',
     'answer'    => 'Ne. Široki ukriženi pojas prelazi oko cijelog struka — sprijeda, sa strane i straga — pa se pritisak raspoređuje umjesto da stišće u jednoj liniji. Gaćice ostaju na mjestu i kad sjedite.'),
   array('questioon' => 'Vide li se ispod odjeće?',

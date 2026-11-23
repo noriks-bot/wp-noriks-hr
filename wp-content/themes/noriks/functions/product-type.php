@@ -2076,7 +2076,7 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'gordura'      => array( 'S' => '36 do 38', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '42 do 44', '2XL' => '44 do 46', '3XL' => '46 do 48' ),
             'insoles'      => array( 'XS' => '35 do 38', 'S' => '38,5 do 41,5', 'M' => '42 do 44', 'L' => '44,5 do 46,5', 'XL' => '47 do 48' ),
             'smartjacket'  => array( 'XS' => '34 do 36', 'S' => '36 do 38', 'M' => '38 do 40', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '46 do 48', '3XL' => '48 do 50', '4XL' => '50 do 52' ),
-            'slim'         => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56', '4XL' => '58 do 60', '5XL' => '62 do 64' ),
+            'slim'         => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '38 do 40', 'L' => '42 do 44', 'XL' => '46 do 48', '2XL' => '50 do 52', '3XL' => '54 do 56' ),
             'kompwom'      => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44', '2XL' => '46 do 48', '3XL' => '50' ),
             // velikost doloca mera (opseg struka / grudi / dlana / noge, tezina)
             'leakbrief'    => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
