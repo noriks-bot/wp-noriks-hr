@@ -1146,6 +1146,10 @@ if ( noriks_is_type( 'calmpulse' ) ) {
     include $noriks_pb_dir . 'why-calmpulse.php';
 }
 
+if ( noriks_is_type( 'warming' ) ) {
+    include $noriks_pb_dir . 'why-warming.php';
+}
+
 if ( noriks_is_type( 'bidet' ) ) {
     include $noriks_pb_dir . 'why-bidet.php';
 }

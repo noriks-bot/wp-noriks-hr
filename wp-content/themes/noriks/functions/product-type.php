@@ -48,6 +48,7 @@ function noriks_product_type_map() : array {
     'puncher' => array( 'orto-puncher' ),
     'trainer' => array( 'orto-trainer' ),
     'calmpulse' => array( 'orto-calmpulse' ),
+    'warming' => array( 'orto-warming' ),
     'bidet' => array( 'orto-bidet' ),
     'roadpillow' => array( 'orto-roadpillow' ),
     'nvision' => array( 'orto-nvision' ),
@@ -1713,6 +1714,18 @@ if ( ! function_exists( 'noriks_cashmeresweater_sizes' ) ) {
     }
 }
 
+if ( ! function_exists( 'noriks_warming_sizes' ) ) {
+    /** NORIKS WarmNest: velicina, mjere podloge, tezina ljubimca - 1:1 z originala (senairy.com, Size Guide; inci -> cm, lbs -> kg). */
+    function noriks_warming_sizes() {
+        return array(
+            array( 'S',  '61 × 46 cm',  'do 11 kg' ),
+            array( 'M',  '76 × 51 cm',  '11 do 18 kg' ),
+            array( 'L',  '89 × 58 cm',  '18 do 29 kg' ),
+            array( 'XL', '104 × 74 cm', '29 do 41 kg' ),
+        );
+    }
+}
+
 if ( ! function_exists( 'noriks_dogbed_sizes' ) ) {
     /** NORIKS DogBed: velicina, vanjske mjere D x S x V (cm), unutarnji prostor za lezanje (cm), duljina psa, idealna tezina, pasmine.
      *  1:1 s tablice originala (doulia-store.com, »Guide des tailles«; »ako ste u dvojbi, odaberite vecu velicinu«). */
@@ -2092,6 +2105,8 @@ if ( ! function_exists( 'noriks_velikost_oznake' ) ) {
             'gripsocks'    => array( 'XS' => '35 do 38', 'S' => '38,5 do 43', 'M' => '44 do 47', 'L' => '47,5 do 49' ),
             'postpartum'   => array( 'S' => '30 do 34', 'M' => '36 do 38', 'L' => '40 do 42', 'XL' => '44 do 46', '2XL' => '48 do 52' ),
             // MuscleFit (David 20.11.): razumljivo za EU trg - EU stevilka + opseg prsa v cm.
+            // WarmNest: velicino doloca tezina ljubimca (original Size Guide, lbs -> kg).
+            'warming'      => array( 'S' => '0 do 11 kg', 'M' => '11 do 18 kg', 'L' => '18 do 29 kg', 'XL' => '29 do 41 kg' ),
             'mshirt'       => array( 'S' => 'EU 44 do 46', 'M' => 'EU 48 do 50', 'L' => 'EU 52 do 54', 'XL' => 'EU 56 do 58', '2XL' => 'EU 60 do 62', '3XL' => 'EU 64 do 66', '4XL' => 'EU 68 do 70' ), // Mitja 20.11.: opseg prsa samo v tablici, v izbirniku bi bil odrezan na mobilu
             'slouchsocks'  => array( 'S' => '35 do 39', 'L' => '39,5 do 43' ),
             'dryseam'      => array( 'XS' => '32 do 34', 'S' => '34 do 36', 'M' => '36 do 38', 'L' => '38 do 40', 'XL' => '40 do 42', '2XL' => '42 do 44', '3XL' => '44 do 46', '4XL' => '46 do 48' ),
@@ -2286,6 +2301,11 @@ if ( ! function_exists( 'noriks_size_tabela' ) ) {
             return array( 'uvod' => 'Naručite <strong>veličinu koju ste nosili prije trudnoće</strong>. Preklop sprijeda i elastični struk rastu s trbuhom.',
                 'glava' => array( 'Veličina', 'EU veličina', 'Opseg grudi', 'Dužina' ), 'vrstice' => noriks_postpartum_sizes(),
                 'opomba' => 'Kako izmjeriti: omotajte metar oko najpunijeg dijela grudi, ruke opuštene. Između dvije veličine, nosite visoko ili očekujete blizance? Uzmite veću.' );
+        }
+        if ( noriks_is_type( 'warming', $product_id ) ) {
+            return array( 'uvod' => 'Odaberite veličinu prema <strong>težini ljubimca</strong> – podloga mora biti dovoljno velika da ljubimac na njoj leži bez visenja preko rubova.',
+                'glava' => array( 'Veličina', 'Mjere podloge', 'Težina ljubimca' ), 'vrstice' => noriks_warming_sizes(),
+                'opomba' => 'Između dvije veličine ili se ljubimac voli ispružiti? Uzmite veću za dodatnu udobnost.' );
         }
         if ( noriks_is_type( 'mshirt', $product_id ) ) {
             return array( 'uvod' => 'Odaberite svoju uobičajenu <strong>EU veličinu odjeće</strong> ili izmjerite <strong>opseg prsa</strong>. Košulja ima suvremeni atletski kroj i rasteže se uz tijelo.',
