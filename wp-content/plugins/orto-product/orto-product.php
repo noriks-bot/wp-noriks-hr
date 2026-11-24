@@ -8281,7 +8281,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (sizes.length > 1 && SP.reg_from_sale) reg = sale; // precrtana cena paketa = vsota akcijskih cen
         if (SP.unit_off && SP.unit_off[sizes.length]) sale -= Math.round(SP.unit_off[sizes.length] * 100) * sizes.length; // fiksni popust na kos
-        if (sizes.length > 1 && SP.exact) sale = Math.round(sale * f); // cene 1:1 z originala (brez .99)
+        if (sizes.length > 1 && SP.kos99) { // cena na kos na najblizjo ,99, paket = kos x kolicina (isto kot PHP)
+            const unit = sale * f / sizes.length, lo = Math.floor(unit / 100) * 100 - 1, hi = lo + 100;
+            sale = ((unit - lo <= hi - unit) ? lo : hi) * sizes.length;
+        } else if (sizes.length > 1 && SP.exact) sale = Math.round(sale * f); // cene 1:1 z originala (brez .99)
         else if (sizes.length > 1) sale = Math.floor(Math.round(sale * f) / 100) * 100 - 1;
         return { sale, reg };
     }
