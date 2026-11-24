@@ -241,13 +241,14 @@ function gck_size_prices( $product_id ) : array {
                 'XL' => array( 105.99, 211.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.85, 3 => 0.8 ),
+            'kos99'   => true, // cena na kos na ,99, paket = kos x kolicina (S: 2 x 51,99 / 3 x 48,99)
         );
     }
     if ( $product_id && has_term( 'orto-warming', 'product_cat', $product_id ) ) {
         // NORIKS WarmNest: original (senairy.com) kaze $39 / $41 / $45 / $47 (precrtano $78 / $82 / $90 / $94, enako za vse barve).
         // David 24. 11.: cena enaka kot pri konkurenci -> 38,99 / 40,99 / 44,99 / 46,99; redna 2x akcijska (-50 % kot na originalu).
         // Paketi kot na originalu (quantity-break): 2 kosa = 63 % cene na kos ($49,14 / $24,57 kos), 3 kosi = 51 % ($59,67 / $19,89 kos)
-        // -> S: 48,99 / 58,99. Privzeta velikost S (prva varianta originala Grey / S).
+        // -> S: 49,98 / 59,97. Privzeta velikost S (prva varianta originala Grey / S).
         return array(
             'default' => 'S',
             'sizes'   => array(
@@ -257,6 +258,7 @@ function gck_size_prices( $product_id ) : array {
                 'XL' => array( 46.99, 93.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.63, 3 => 0.51 ),
+            'kos99'   => true, // cena na kos na ,99, paket = kos x kolicina (S: 2 x 24,99 / 3 x 19,99)
         );
     }
     if ( $product_id && has_term( 'orto-dogbed', 'product_cat', $product_id ) ) {
@@ -482,7 +484,7 @@ function gck_size_priced_totals( array $table, array $sizes ) {
     }
     if ( $qty > 1 && ! empty( $table['kos99'] ) ) {
         // cena na kos zaokrozena na najblizjo ,99, paket = kos x kolicina (npr. 2 x 45,99 = 91,98)
-        $unit_c = $sale_c * $table['factor'][ $qty ];
+        $unit_c = $sale_c * $table['factor'][ $qty ] / $qty; // povprecna akcijska cena na kos izbranih velikosti x faktor
         $lo     = floor( $unit_c / 100 ) * 100 - 1;
         $hi     = $lo + 100;
         $sale_c = (int) ( ( $unit_c - $lo <= $hi - $unit_c ) ? $lo : $hi ) * $qty;
