@@ -228,31 +228,31 @@ function gck_size_prices( $product_id ) : array {
         );
     }
     if ( $product_id && has_term( 'orto-cozymat', 'product_cat', $product_id ) ) {
-        // NORIKS CozyMat: original (vermeira.com) S 61, M 76, L 91, XL 106 (AUD, enako za vse barve), precrtano 2x;
-        // AUD x 0,57 zaokrozeno na ,99 -> 34,99 / 42,99 / 50,99 / 59,99, redna 2x akcijska (-50 % kot na originalu).
+        // NORIKS CozyMat: original (vermeira.com) kaze $61 / $76 / $91 / $106 (enako za vse barve).
+        // David 24. 11.: cena enaka kot pri konkurenci -> 60,99 / 75,99 / 90,99 / 105,99; redna 2x akcijska (-50 %).
         // 2 kosa -20 %, 3 kosi -30 % na kos. Privzeta velikost S (prva varianta originala Gray / S).
         return array(
             'default' => 'S',
             'sizes'   => array(
-                'S'  => array( 34.99, 69.99 ),
-                'M'  => array( 42.99, 85.99 ),
-                'L'  => array( 50.99, 101.99 ),
-                'XL' => array( 59.99, 119.99 ),
+                'S'  => array( 60.99, 121.99 ),
+                'M'  => array( 75.99, 151.99 ),
+                'L'  => array( 90.99, 181.99 ),
+                'XL' => array( 105.99, 211.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
         );
     }
     if ( $product_id && has_term( 'orto-warming', 'product_cat', $product_id ) ) {
-        // NORIKS WarmNest: original (senairy.com, USD) S 39, M 41, L 45, XL 47 (enako za vse barve); USD x 0,89015 zaokrozeno
-        // na ,99 -> 34,99 / 36,99 / 39,99 / 41,99; redna 2x akcijska (-50 %, original kaze precrtano 78 USD za S).
+        // NORIKS WarmNest: original (senairy.com) kaze $39 / $41 / $45 / $47 (precrtano $78 / $82 / $90 / $94, enako za vse barve).
+        // David 24. 11.: cena enaka kot pri konkurenci -> 38,99 / 40,99 / 44,99 / 46,99; redna 2x akcijska (-50 % kot na originalu).
         // 2 kosa -20 %, 3 kosi -30 % na kos. Privzeta velikost S (prva varianta originala Grey / S).
         return array(
             'default' => 'S',
             'sizes'   => array(
-                'S'  => array( 34.99, 69.99 ),
-                'M'  => array( 36.99, 73.99 ),
-                'L'  => array( 39.99, 79.99 ),
-                'XL' => array( 41.99, 83.99 ),
+                'S'  => array( 38.99, 77.99 ),
+                'M'  => array( 40.99, 81.99 ),
+                'L'  => array( 44.99, 89.99 ),
+                'XL' => array( 46.99, 93.99 ),
             ),
             'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
         );
