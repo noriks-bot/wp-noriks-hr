@@ -397,7 +397,9 @@ function noriks_ty2_step1_products() {
     return array(
         'NORIKS-KOMPSFIT' => array(
             'imena' => array( 1 => '1x KOMPSFIT majica', 2 => '2x KOMPSFIT majice', 3 => '3x KOMPSFIT majice' ),
-            'img'   => 'ks-hr-03.webp',
+            // 24. 11. 2026: cista fotografija treh majic (kot CZ/PL) namesto infografike ks-hr-03.webp —
+            // HR je pri +1 KOMPSFIT vzel 12 % kupcev po povzetju, CZ 23 %, PL 20 %
+            'img'   => 'https://noriks.com/hr/wp-content/uploads/2026/07/01_ljetna-rasprodaja_HR.jpg',
         ),
         // Slim: kupec izbere barvo IN velikost (privzeto barva kupljenega kosa)
         'NORIKS-SLIM' => array(
