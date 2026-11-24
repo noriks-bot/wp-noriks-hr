@@ -230,7 +230,8 @@ function gck_size_prices( $product_id ) : array {
     if ( $product_id && has_term( 'orto-cozymat', 'product_cat', $product_id ) ) {
         // NORIKS CozyMat: original (vermeira.com) kaze $61 / $76 / $91 / $106 (enako za vse barve).
         // David 24. 11.: cena enaka kot pri konkurenci -> 60,99 / 75,99 / 90,99 / 105,99; redna 2x akcijska (-50 %).
-        // 2 kosa -20 %, 3 kosi -30 % na kos. Privzeta velikost S (prva varianta originala Gray / S).
+        // Paketi kot na originalu (Kaching): 2x Mats -15 %, 3x Mats -20 % na kos (David 24. 11.: enako kot konkurenca).
+        // Privzeta velikost S (prva varianta originala Gray / S).
         return array(
             'default' => 'S',
             'sizes'   => array(
@@ -239,13 +240,14 @@ function gck_size_prices( $product_id ) : array {
                 'L'  => array( 90.99, 181.99 ),
                 'XL' => array( 105.99, 211.99 ),
             ),
-            'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
+            'factor'  => array( 1 => 1, 2 => 0.85, 3 => 0.8 ),
         );
     }
     if ( $product_id && has_term( 'orto-warming', 'product_cat', $product_id ) ) {
         // NORIKS WarmNest: original (senairy.com) kaze $39 / $41 / $45 / $47 (precrtano $78 / $82 / $90 / $94, enako za vse barve).
         // David 24. 11.: cena enaka kot pri konkurenci -> 38,99 / 40,99 / 44,99 / 46,99; redna 2x akcijska (-50 % kot na originalu).
-        // 2 kosa -20 %, 3 kosi -30 % na kos. Privzeta velikost S (prva varianta originala Grey / S).
+        // Paketi kot na originalu (quantity-break): 2 kosa = 63 % cene na kos ($49,14 / $24,57 kos), 3 kosi = 51 % ($59,67 / $19,89 kos)
+        // -> S: 48,99 / 58,99. Privzeta velikost S (prva varianta originala Grey / S).
         return array(
             'default' => 'S',
             'sizes'   => array(
@@ -254,7 +256,7 @@ function gck_size_prices( $product_id ) : array {
                 'L'  => array( 44.99, 89.99 ),
                 'XL' => array( 46.99, 93.99 ),
             ),
-            'factor'  => array( 1 => 1, 2 => 0.8, 3 => 0.7 ),
+            'factor'  => array( 1 => 1, 2 => 0.63, 3 => 0.51 ),
         );
     }
     if ( $product_id && has_term( 'orto-dogbed', 'product_cat', $product_id ) ) {
