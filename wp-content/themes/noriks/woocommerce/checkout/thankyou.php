@@ -750,6 +750,7 @@ body.woocommerce-order-received .woocommerce {
                                     <?php endforeach; ?>
                                 </select>
                                 <?php endif; ?>
+                                <?php if ( ! $s1_cards || $s1_sizes ) : /* izdelek brez velikosti (prevleka Snug): samo izbira barve */ ?>
                                 <select class="variation-select" id="ty-variation-select" data-dd="size">
                                     <?php if ( $s1_cards ) : ?>
                                         <?php $s1_pick = function_exists( 'noriks_ty2_pick_size' ) ? noriks_ty2_pick_size( $s1_sizes, $customer_size ) : ''; ?>
@@ -771,6 +772,7 @@ body.woocommerce-order-received .woocommerce {
                                         <option value="">Crna, XXL</option>
                                     <?php endif; ?>
                                 </select>
+                                <?php endif; ?>
                             </div>
                             <div class="tyu1-card__stock">🔥 Vrijedi samo uz ovu narudžbu</div>
                         </div>
